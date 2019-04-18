@@ -1,0 +1,19 @@
+{
+  "name": "@ui5/dts-generator",
+  "description": "Generates TypeScript Definitions from UI5 api.json files",
+  "version": "1.64.0",
+  "license": "Apache-2.0",
+  "main": "lib/api.js",
+  "dependencies": {
+    "lodash": "4.17.11",
+    "lodash.combinations": "^18.9.19",
+    "prettier": "1.17.0",
+    "sanitize-html": "^1.20.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.3"
+  },
+  "scripts": {
+    "test": "echo TBD"
+  }
+}

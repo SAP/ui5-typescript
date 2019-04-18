@@ -1,0 +1,466 @@
+{
+  "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
+  "version": "1.64.1",
+  "symbols": [
+    {
+      "kind": "namespace",
+      "name": "sap.ui.integration",
+      "basename": "integration",
+      "resource": "sap/ui/integration/library.js",
+      "module": "sap/ui/integration/library",
+      "export": "",
+      "static": true,
+      "visibility": "public",
+      "description": "SAPUI5 library with controls specialized for SAP Fiori apps."
+    },
+    {
+      "kind": "class",
+      "name": "sap.ui.integration.widgets.Card",
+      "basename": "Card",
+      "resource": "sap/ui/integration/widgets/Card.js",
+      "module": "sap/ui/integration/widgets/Card",
+      "export": "",
+      "static": true,
+      "visibility": "public",
+      "since": "1.62",
+      "extends": "sap.ui.core.Control",
+      "implements": ["sap.f.ICard"],
+      "description": "A control that represents a container with a header and content.\n\n<h3>Overview</h3> Cards are small user interface elements which provide the most important information from an application related to a specific role or task in a compact manner allowing for actions to be executed. Cards can be described as small representations of an application which can be integrated in different systems.\n\nThe integration card is defined in a declarative way by using a manifest.json allowing it to: <ul> <li>Be easily integrated in an applications</li> <li>Be easily reused across different applications.</li> <li>Be easily understandable by other technologies.</li> <li>Be self-contained. No need for external configuration.</li> <li>Be easily reconfigured in different application layers (including backend).</li> <li>Separate the roles of the card developer and the application developer.</li> </ul>\n\nCard developer role - Describe the card in a manifest.json defining: <ul> <li>Header</li> <li>Content</li> <li>Data source</li> <li>Possible actions</li> </ul>\n\nApplication developer role - Integrate the card into an application defining: <ul> <li>Dimensions of the card inside a layout of choice, using the width and height properties.</li> <li>Behavior for the described actions in the manifest.json, using the action event.</li> </ul>\n\n<h3>Usage</h3>\n\nThe \"sap.app\" type property of the manifest have to be set to \"card\". The namespace used to define a card is \"sap.card\". Every card have a type. Which can be one of: List, Analytical, Timeline, Object.\n\nExample manifest.json:\n\n<pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\",\n    ...\n  },\n  \"sap.ui5\": {\n    ...\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": { ... },\n    \"content\": { ... }\n  }\n}\n</code>\n</pre>\n\nExamples of header sections:\n\nThe default header type can contain title, subtitle, icon and status. <pre>\n <code>\n{\n  ...\n  \"sap.card\": {\n    \"header\": {\n      \"title\": \"An example title\",\n      \"subTitle\": \"Some subtitle\",\n      \"icon\": {\n        \"src\": \"sap-icon://business-objects-experience\"\n      },\n      \"status\": {\n        \"text\": \"5 of 20\"\n      }\n    },\n    ...\n  }\n}\n </code>\n </pre>\n\nThe numeric header type can contain title, subtitle, unitOfMeasurement, details, main indicator and side indicators. <pre>\n <code>\n{\n  ...\n  \"sap.card\": {\n    \"header\": {\n      \"type\": \"Numeric\",\n      \"title\": \"Project Cloud Transformation\",\n      \"subTitle\": \"Revenue\",\n      \"unitOfMeasurement\": \"EUR\",\n      \"mainIndicator\": {\n        \"number\": \"44\",\n        \"unit\": \"%\",\n        \"trend\": \"Down\",\n        \"state\": \"Critical\"\n      },\n      \"details\": \"Some details\",\n      \"sideIndicators\": [\n        {\n          \"title\": \"Target\",\n          \"number\": \"17\",\n          \"unit\": \"%\"\n        },\n        {\n          \"title\": \"Deviation\",\n          \"number\": \"5\",\n          \"unit\": \"%\"\n        }\n      ]\n    },\n    ...\n  }\n}\n </code>\n </pre>\n\nThe content of the card is created based on the card type. Possible card types: <ul> <li>List</li> <li>Object</li> <li>Timeline</li> <li>Analytical</li> </ul>\n\nList card contains a set of items. \"item\" property defines the template for all the items of the list. \"data\" property provides the data. Example: <pre>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"data\": {\n        \"json\": [{\n            \"Name\": \"Comfort Easy\",\n            \"Description\": \"32 GB Digital Assistant with high-resolution color screen\",\n            \"Highlight\": \"Error\"\n          },\n          {\n            \"Name\": \"ITelO Vault\",\n            \"Description\": \"Digital Organizer with State-of-the-Art Storage Encryption\",\n            \"Highlight\": \"Warning\"\n          },\n          {\n            \"Name\": \"Notebook Professional 15\",\n            \"Description\": \"Notebook Professional 15 description\",\n            \"Highlight\": \"Success\"\n          }\n        ]\n      },\n      \"item\": {\n        \"title\": {\n          \"label\": \"{{title_label}}\",\n          \"value\": \"{Name}\"\n        },\n        \"description\": {\n          \"label\": \"{{description_label}}\",\n          \"value\": \"{Description}\"\n        },\n        \"highlight\": \"{Highlight}\"\n      }\n    }\n  }\n}\n</pre>\n\nAnalytical card contains a chart visualization configuration. Supported chart types are Line, StackedBar, StackedColumn, Donut. Example: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"Analytical\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"chartType\": \"Line\",\n      \"legend\": {\n        \"visible\": true,\n        \"position\": \"Bottom\",\n        \"alignment\": \"Left\"\n      },\n      \"plotArea\": {\n        \"dataLabel\": {\n          \"visible\": true\n        },\n        \"categoryAxisText\": {\n          \"visible\": false\n        },\n        \"valueAxisText\": {\n          \"visible\": false\n        }\n      },\n      \"title\": {\n        \"text\": \"Line chart\",\n        \"visible\": true,\n        \"alignment\": \"Left\"\n      },\n      \"measureAxis\": \"valueAxis\",\n      \"dimensionAxis\": \"categoryAxis\",\n      \"data\": {\n        \"json\": {\n          \"list\": [\n            {\n              \"Week\": \"CW14\",\n              \"Revenue\": 431000.22,\n              \"Cost\": 230000.00,\n              \"Cost1\": 24800.63,\n              \"Cost2\": 205199.37,\n              \"Cost3\": 199999.37,\n              \"Target\": 500000.00,\n              \"Budget\": 210000.00\n            },\n            {\n              \"Week\": \"CW15\",\n              \"Revenue\": 494000.30,\n              \"Cost\": 238000.00,\n              \"Cost1\": 99200.39,\n              \"Cost2\": 138799.61,\n              \"Cost3\": 200199.37,\n              \"Target\": 500000.00,\n              \"Budget\": 224000.00\n            }\n          ]\n        },\n        \"path\": \"/list\"\n      },\n      \"dimensions\": [\n        {\n          \"label\": \"Weeks\",\n          \"value\": \"{Week}\"\n        }\n      ],\n      \"measures\": [\n        {\n          \"label\": \"Revenue\",\n          \"value\": \"{Revenue}\"\n        },\n        {\n          \"label\": \"Cost\",\n          \"value\": \"{Cost}\"\n        }\n      ]\n    }\n  }\n}\n</code>\n</pre>\n\nObject card contains information about an object. It is structured in groups. Every group can have a title and items. The items contain display name (label) and value. Example: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n\t    \"type\": \"Object\",\n     \"header\": {\n       ...\n     },\n     \"content\": {\n       \"groups\": [\n         {\n           \"title\": \"Group title\",\n           \"items\": [\n             {\n               \"label\": \"Name\",\n               \"value\": \"Ivan\"\n             },\n             {\n               \"label\": \"Surname\",\n               \"value\": \"Petrov\"\n             },\n             {\n               \"label\": \"Phone\",\n               \"value\": \"+1 1234 1234555\"\n             }\n           ]\n         },\n         {\n           \"title\": \"Organization\",\n           \"items\": [\n             {\n               \"label\": \"Company Name\",\n               \"value\": \"Sap\",\n               \"icon\": {\n                 \"src\": \"../images/Woman_avatar_02.png\"\n               }\n             }\n           ]\n         }\n       ]\n     }\n  }\n}\n</code>\n</pre>\n\nTimeline card contains a set of timeline items. \"item\" property defines the template for all the items of the timeline. Example: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"Timeline\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"data\": {\n        \"json\": [\n          {\n            \"Title\": \"Weekly sync: Marketplace / Design Stream\",\n            \"Description\": \"MRR WDF18 C3.2(GLASSBOX)\",\n            \"Icon\": \"sap-icon://appointment-2\",\n            \"Time\": \"10:00 - 10:30\"\n          },\n          {\n            \"Title\": \"Video Conference for FLP@SF, S4,Hybris\",\n            \"Icon\": \"sap-icon://my-view\",\n            \"Time\": \"14:00 - 15:30\"\n          },\n          {\n            \"Title\": \"Call 'Project Nimbus'\",\n            \"Icon\": \"sap-icon://outgoing-call\",\n            \"Time\": \"16:00 - 16:30\"\n          }\n        ]\n      },\n      \"item\": {\n        \"dateTime\": {\n          \"value\": \"{Time}\"\n        },\n        \"description\" : {\n          \"value\": \"{Description}\"\n        },\n        \"title\": {\n          \"value\": \"{Title}\"\n        },\n        \"icon\": {\n          \"src\": \"{Icon}\"\n        }\n      }\n    }\n  }\n}\n</code>\n</pre>\n\nItem based cards (Timeline and List) have an additional content property \"maxItems\" which defines the maximum number of items the card can have.\n\n<h3>Data handling</h3> In order to add data to the card you can add a data section to the card, header or content. The card will automatically create an unnamed model which then can be used to resolve binding syntaxes inside the card manifest.\n\nStatic data: <pre>\n<code>\n{\n  ...\n  \"content\": {\n    \"data\": {\n      \"json\": {\n        \"items\": [\n          {\n            \"Title\": \"Weekly sync: Marketplace / Design Stream\",\n            \"Description\": \"MRR WDF18 C3.2(GLASSBOX)\",\n            \"Icon\": \"sap-icon://appointment-2\",\n            \"Time\": \"10:00 - 10:30\"\n          },\n          {\n            \"Title\": \"Video Conference for FLP@SF, S4,Hybris\",\n            \"Icon\": \"sap-icon://my-view\",\n            \"Time\": \"14:00 - 15:30\"\n          }\n        ]\n      },\n      \"path\": \"/items\"\n    },\n    ...\n  }\n}\n</code>\n</pre>\n\nRequesting data: <pre>\n<code>\n{\n  ...\n  \"content\": {\n    \"data\": {\n      \"request\": {\n        \"url\": \"/path/to/data\"\n      },\n      \"path\": \"/items\"\n    },\n    ...\n  }\n}\n</code>\n</pre>\n\n<h3>Actions</h3> Actions adds behavior to the card. To add a navigation action to the header and to the items you can configure it inside the manifest. Actions have: <ul> <li>Type</li> <li>Parameters</li> <li>Enabled flag (true by default)</li> </ul>\n\nIn the example below navigation action is added both to the header and the list items: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": {\n      \"title\": \"Request list content Card\",\n      \"subTitle\": \"Card Subtitle\",\n      \"icon\": {\n        \"src\": \"sap-icon://accept\"\n      },\n      \"status\": \"100 of 200\",\n      \"actions\": [\n        {\n          \"type\": \"Navigation\",\n          \"parameters\": {\n            \"url\": \"/some/relative/path\"\n          }\n        }\n      ]\n    },\n    \"content\": {\n      \"data\": {\n        \"request\": {\n          \"url\": \"./cardcontent/someitems_services2.json\"\n        },\n        \"path\": \"/items\"\n      },\n      \"item\": {\n        \"icon\": {\n          \"src\": \"{icon}\"\n        },\n        \"title\": {\n          \"value\": \"{Name}\"\n        },\n        \"description\": {\n          \"value\": \"{Description}\"\n        },\n        \"actions\": [\n          {\n            \"type\": \"Navigation\",\n            \"enabled\": \"{= ${url}}\",\n            \"parameters\": {\n              \"url\": \"{url}\"\n            }\n          }\n        ]\n      }\n    }\n  }\n}\n</code>\n</pre>\n\n<i>When to use</i> <ul> <li>When the card have to be reused across applications.</li> <li>When easy integration and configuration is needed.</li> </ul>\n\n<i>When not to use</i> <ul> <li>When more header and content flexibility is needed.</li> <li>When you have to achieve simple card visualization. For such cases, use: {@link sap.f.Card Card}.</li> <li>When an application model have to be used. For such cases, use: {@link sap.f.Card Card}.</li> <li>When complex behavior is needed. For such cases, use: {@link sap.f.Card Card}.</li> </ul>",
+      "ui5-metamodel": true,
+      "ui5-metadata": {
+        "stereotype": "control",
+        "properties": [
+          {
+            "name": "manifest",
+            "type": "any",
+            "defaultValue": "",
+            "group": "Misc",
+            "visibility": "public",
+            "description": "The URL of the manifest or an object.",
+            "methods": ["getManifest", "setManifest"]
+          },
+          {
+            "name": "width",
+            "type": "sap.ui.core.CSSSize",
+            "defaultValue": "100%",
+            "group": "Appearance",
+            "visibility": "public",
+            "description": "Defines the width of the card.",
+            "methods": ["getWidth", "setWidth"]
+          },
+          {
+            "name": "height",
+            "type": "sap.ui.core.CSSSize",
+            "defaultValue": "auto",
+            "group": "Appearance",
+            "visibility": "public",
+            "description": "Defines the height of the card.",
+            "methods": ["getHeight", "setHeight"]
+          }
+        ],
+        "aggregations": [
+          {
+            "name": "_header",
+            "singularName": "_header",
+            "type": "sap.f.cards.IHeader",
+            "cardinality": "0..1",
+            "visibility": "hidden",
+            "description": "Defines the header of the card.",
+            "methods": ["get_header", "destroy_header", "set_header"]
+          },
+          {
+            "name": "_content",
+            "singularName": "_content",
+            "type": "sap.ui.core.Control",
+            "cardinality": "0..1",
+            "visibility": "hidden",
+            "description": "Defines the content of the card.",
+            "methods": ["get_content", "destroy_content", "set_content"]
+          }
+        ],
+        "associations": [
+          {
+            "name": "hostConfigurationId",
+            "singularName": "hostConfigurationId",
+            "type": "sap.ui.core.Control",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "description": "The ID of the host configuration.",
+            "methods": ["getHostConfigurationId", "setHostConfigurationId"]
+          }
+        ],
+        "events": [
+          {
+            "name": "action",
+            "visibility": "public",
+            "description": "Fired when an action is triggered on the card.",
+            "experimental": {
+              "since": "1.64",
+              "text": "Disclaimer: this property is in a beta state - incompatible API changes may be done before its official public release. Use at your own discretion."
+            },
+            "parameters": {
+              "actionSource": {
+                "name": "actionSource",
+                "type": "sap.ui.core.Control",
+                "description": "The action source."
+              },
+              "manifestParameters": {
+                "name": "manifestParameters",
+                "type": "object",
+                "description": "The manifest parameters related to the triggered action."
+              },
+              "type": {
+                "name": "type",
+                "type": "sap.ui.integration.CardActionType",
+                "description": "The type of the action."
+              }
+            },
+            "methods": ["attachAction", "detachAction", "fireAction"]
+          }
+        ]
+      },
+      "constructor": {
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "sId",
+            "type": "string",
+            "optional": true,
+            "description": "ID for the new control, generated automatically if no ID is given"
+          },
+          {
+            "name": "mSettings",
+            "type": "object",
+            "optional": true,
+            "description": "Initial settings for the new control"
+          }
+        ],
+        "description": "Constructor for a new <code>Card</code>.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
+      },
+      "events": [
+        {
+          "name": "action",
+          "visibility": "public",
+          "parameters": [
+            {
+              "name": "oControlEvent",
+              "type": "sap.ui.base.Event",
+              "parameterProperties": {
+                "getSource": {
+                  "name": "getSource",
+                  "type": "sap.ui.base.EventProvider",
+                  "optional": false
+                },
+                "getParameters": {
+                  "name": "getParameters",
+                  "type": "object",
+                  "optional": false,
+                  "parameterProperties": {
+                    "actionSource": {
+                      "name": "actionSource",
+                      "type": "sap.ui.core.Control",
+                      "optional": false,
+                      "description": "The action source."
+                    },
+                    "manifestParameters": {
+                      "name": "manifestParameters",
+                      "type": "object",
+                      "optional": false,
+                      "description": "The manifest parameters related to the triggered action."
+                    },
+                    "type": {
+                      "name": "type",
+                      "type": "sap.ui.integration.CardActionType",
+                      "optional": false,
+                      "description": "The type of the action."
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "description": "Fired when an action is triggered on the card.",
+          "experimental": {
+            "since": "1.64",
+            "text": "Disclaimer: this property is in a beta state - incompatible API changes may be done before its official public release. Use at your own discretion."
+          }
+        }
+      ],
+      "methods": [
+        {
+          "name": "attachAction",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oData",
+              "type": "object",
+              "optional": true,
+              "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
+            },
+            {
+              "name": "fnFunction",
+              "type": "function",
+              "optional": false,
+              "description": "The function to be called when the event occurs"
+            },
+            {
+              "name": "oListener",
+              "type": "object",
+              "optional": true,
+              "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.integration.widgets.Card</code> itself"
+            }
+          ],
+          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:action action} event of this <code>sap.ui.integration.widgets.Card</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.\n\nFired when an action is triggered on the card.",
+          "experimental": {
+            "since": "1.64",
+            "text": "Disclaimer: this property is in a beta state - incompatible API changes may be done before its official public release. Use at your own discretion."
+          }
+        },
+        {
+          "name": "detachAction",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "fnFunction",
+              "type": "function",
+              "optional": false,
+              "description": "The function to be called, when the event occurs"
+            },
+            {
+              "name": "oListener",
+              "type": "object",
+              "optional": true,
+              "description": "Context object on which the given function had to be called"
+            }
+          ],
+          "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:action action} event of this <code>sap.ui.integration.widgets.Card</code>.\n\nThe passed function and listener object must match the ones used for event registration.",
+          "experimental": {
+            "since": "1.64",
+            "text": "Disclaimer: this property is in a beta state - incompatible API changes may be done before its official public release. Use at your own discretion."
+          }
+        },
+        {
+          "name": "extend",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "function",
+            "description": "Created class / constructor function"
+          },
+          "parameters": [
+            {
+              "name": "sClassName",
+              "type": "string",
+              "optional": false,
+              "description": "Name of the class being created"
+            },
+            {
+              "name": "oClassInfo",
+              "type": "object",
+              "optional": true,
+              "description": "Object literal with information about the class"
+            },
+            {
+              "name": "FNMetaImpl",
+              "type": "function",
+              "optional": true,
+              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
+            }
+          ],
+          "description": "Creates a new subclass of class sap.ui.integration.widgets.Card with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}."
+        },
+        {
+          "name": "fireAction",
+          "visibility": "protected",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "mParameters",
+              "type": "object",
+              "optional": true,
+              "parameterProperties": {
+                "actionSource": {
+                  "name": "actionSource",
+                  "type": "sap.ui.core.Control",
+                  "optional": true,
+                  "description": "The action source."
+                },
+                "manifestParameters": {
+                  "name": "manifestParameters",
+                  "type": "object",
+                  "optional": true,
+                  "description": "The manifest parameters related to the triggered action."
+                },
+                "type": {
+                  "name": "type",
+                  "type": "sap.ui.integration.CardActionType",
+                  "optional": true,
+                  "description": "The type of the action."
+                }
+              },
+              "description": "Parameters to pass along with the event"
+            }
+          ],
+          "description": "Fires event {@link #event:action action} to attached listeners.",
+          "experimental": {
+            "since": "1.64",
+            "text": "Disclaimer: this property is in a beta state - incompatible API changes may be done before its official public release. Use at your own discretion."
+          }
+        },
+        {
+          "name": "getCardContent",
+          "visibility": "protected",
+          "returnValue": {
+            "type": "sap.ui.core.Control",
+            "description": "The content of the card"
+          },
+          "description": "Implements sap.f.ICard interface."
+        },
+        {
+          "name": "getCardHeader",
+          "visibility": "protected",
+          "returnValue": {
+            "type": "sap.f.cards.IHeader",
+            "description": "The header of the card"
+          },
+          "description": "Implements sap.f.ICard interface."
+        },
+        {
+          "name": "getHeight",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.CSSSize",
+            "description": "Value of property <code>height</code>"
+          },
+          "description": "Gets current value of property {@link #getHeight height}.\n\nDefines the height of the card.\n\nDefault value is <code>auto</code>."
+        },
+        {
+          "name": "getHostConfigurationId",
+          "visibility": "public",
+          "returnValue": { "type": "sap.ui.core.ID" },
+          "description": "ID of the element which is the current target of the association {@link #getHostConfigurationId hostConfigurationId}, or <code>null</code>."
+        },
+        {
+          "name": "getManifest",
+          "visibility": "public",
+          "returnValue": {
+            "type": "any",
+            "description": "Value of property <code>manifest</code>"
+          },
+          "description": "Gets current value of property {@link #getManifest manifest}.\n\nThe URL of the manifest or an object.\n\nDefault value is <code>empty string</code>."
+        },
+        {
+          "name": "getMetadata",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "sap.ui.base.Metadata",
+            "description": "Metadata object describing this class"
+          },
+          "description": "Returns a metadata object for class sap.ui.integration.widgets.Card."
+        },
+        {
+          "name": "getWidth",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.CSSSize",
+            "description": "Value of property <code>width</code>"
+          },
+          "description": "Gets current value of property {@link #getWidth width}.\n\nDefines the width of the card.\n\nDefault value is <code>100%</code>."
+        },
+        {
+          "name": "setHeight",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sHeight",
+              "type": "sap.ui.core.CSSSize",
+              "optional": false,
+              "description": "New value for property <code>height</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getHeight height}.\n\nDefines the height of the card.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>auto</code>."
+        },
+        {
+          "name": "setHostConfigurationId",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oHostConfigurationId",
+              "type": "sap.ui.core.ID|sap.ui.core.Control",
+              "optional": false,
+              "description": "ID of an element which becomes the new target of this hostConfigurationId association; alternatively, an element instance may be given"
+            }
+          ],
+          "description": "Sets the associated {@link #getHostConfigurationId hostConfigurationId}."
+        },
+        {
+          "name": "setManifest",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Pointer to the control instance to allow method chaining."
+          },
+          "parameters": [
+            {
+              "name": "vValue",
+              "type": "string|Object",
+              "optional": false,
+              "description": "The manifest object or its URL."
+            }
+          ],
+          "description": "Setter for card manifest."
+        },
+        {
+          "name": "setWidth",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sWidth",
+              "type": "sap.ui.core.CSSSize",
+              "optional": false,
+              "description": "New value for property <code>width</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getWidth width}.\n\nDefines the width of the card.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>100%</code>."
+        }
+      ]
+    },
+    {
+      "kind": "class",
+      "name": "Service",
+      "basename": "Service",
+      "resource": "sap/ui/integration/services/Service.js",
+      "module": "sap/ui/integration/services/Service",
+      "visibility": "restricted",
+      "experimental": {},
+      "constructor": {
+        "visibility": "restricted",
+        "description": "Base class for all services. To inherit use the extend method <code>Service.extend<code>"
+      }
+    }
+  ]
+}

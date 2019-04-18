@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "none",
+    "noEmit": true,
+    "checkJs": true,
+    "allowJs": true,
+    "types": ["@openui5/types"]
+  },
+  "include": ["**/*.js"]
+}
