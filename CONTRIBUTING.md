@@ -1,5 +1,8 @@
 # Contribution Guide
 
+This is the common contribution guide for this mono-repo.
+See each individual package's CONTRIBUTING.md for package specific details.
+
 ## Development Environment
 
 ### pre-requisites
