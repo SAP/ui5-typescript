@@ -2,7 +2,7 @@
  * This is a Beta version of the OpenUI5 TypeScript Signatures.
  * Significant changes may occur in future versions,
  * including potential breaking changes.
-*/
+ */
 /// <reference path="./sap.f.d.ts" />
 /// <reference path="./sap.tnt.d.ts" />
 /// <reference path="./sap.ui.codeeditor.d.ts" />
