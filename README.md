@@ -22,6 +22,10 @@ In the future it **_may_** contain additional packages, for example:
 This project is in an experimental **_Beta State_**. Significant changes are likely to occur,
 including potential **breaking changes**.
 
+## Support
+
+Please open [issues](https://github.com/SAP/ui5-typescript/issues) on github.
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md).
