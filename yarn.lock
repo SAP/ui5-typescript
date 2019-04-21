@@ -1341,6 +1341,11 @@ catharsis@~0.8.9:
   dependencies:
     underscore-contrib "~0.3.0"
 
+chai-match@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/chai-match/-/chai-match-1.1.1.tgz#39fb0a2e6b7c8f6386dcfead48d148a915fa6c46"
+  integrity sha1-OfsKLmt8j2OG3P6tSNFIqRX6bEY=
+
 chai@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/chai/-/chai-4.2.0.tgz#760aa72cf20e3795e84b12877ce0e83737aa29e5"

@@ -18,7 +18,7 @@ jobs:
       - run: yarn
       - run: yarn run ci
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-      - run: npm publish
+      - run: yarn run lerna:publish
 
 workflows:
   version: 2
