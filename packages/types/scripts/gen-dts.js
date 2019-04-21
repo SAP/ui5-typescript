@@ -1,9 +1,9 @@
 const { jsonToDTS } = require("@ui5/dts-generator");
 const { emptyDirSync, readJsonSync, writeFileSync } = require("fs-extra");
 const { resolve, basename } = require("path");
-const childProcess = require("child_process");
 const klawSync = require("klaw-sync");
 const _ = require("lodash");
+const disclaimer = require("./disclaimer");
 
 const outputDir = resolve(__dirname, "../types");
 emptyDirSync(outputDir);
@@ -29,7 +29,7 @@ const dtsResults = jsonToDTS(inputJsons);
 _.forEach(dtsResults, dtsResult => {
   writeFileSync(
     resolve(outputDir, dtsResult.library + ".d.ts"),
-    dtsResult.dtsText,
+    disclaimer.message + dtsResult.dtsText,
     "UTF8"
   );
 });
