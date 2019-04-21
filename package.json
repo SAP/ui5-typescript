@@ -13,7 +13,7 @@
   "scripts": {
     "lerna:version": "lerna version",
     "lerna:publish": "lerna publish from-git --yes",
-    "lerna:nightly": "lerna run nightly",
+    "lerna:nightly": "lerna run nightly --stream",
     "ci": "npm-run-all format:validate build test",
     "build": "lerna run build",
     "test": "lerna run test",

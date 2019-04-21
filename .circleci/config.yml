@@ -44,7 +44,7 @@ workflows:
     triggers:
       - schedule:
           # TODO: change to nightly
-          cron: "20 * * * *"
+          cron: "46 * * * *"
           filters:
             branches:
               only:
