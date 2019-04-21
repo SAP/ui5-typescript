@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       - run: yarn
-      - run: yarn run nightly
+      - run: yarn run lerna:nightly
   deploy:
     docker:
       - image: circleci/node:10
@@ -43,7 +43,7 @@ workflows:
     triggers:
       - schedule:
           # TODO: change to nightly
-          cron: "10 * * * *"
+          cron: "12 * * * *"
           filters:
             branches:
               only:
