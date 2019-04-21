@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build-node12:
+  build-node10:
     docker:
       - image: circleci/node:10
     working_directory: ~/repo
@@ -22,12 +22,23 @@ jobs:
 
 workflows:
   version: 2
-  build:
+  commit:
     jobs:
-      - build-node12
+      - build-node10
       - deploy:
           filters:
             tags:
               only: /^v[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
+  nightly:
+    triggers:
+      - schedule:
+          # TODO: change to nightly
+          cron: "*/5 * * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build-node10
