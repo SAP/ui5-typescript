@@ -43,8 +43,9 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          # TODO: change to nightly
-          cron: "50 * * * *"
+          # This is UTC time
+          # https://crontab.guru/#30_9_*_*_*
+          cron: "30 9 * * *"
           filters:
             branches:
               only:
