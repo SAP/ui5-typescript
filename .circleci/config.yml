@@ -9,6 +9,14 @@ jobs:
       - run: yarn
       - run: yarn run ci
 
+  master-check:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn run nightly
   deploy:
     docker:
       - image: circleci/node:10
@@ -35,7 +43,7 @@ workflows:
     triggers:
       - schedule:
           # TODO: change to nightly
-          cron: "42 * * * *"
+          cron: "10 * * * *"
           filters:
             branches:
               only:

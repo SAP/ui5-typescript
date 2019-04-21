@@ -17,6 +17,7 @@
     "test": "tsc && mocha \"./test/**/*spec.js\"",
     "gen:api-json": "node ./scripts/gen-api-json.js",
     "gen:dts": "node ./scripts/gen-dts.js",
-    "precommit": "npm-run-all gen:dts && git add ./types"
+    "precommit": "npm-run-all gen:dts && git add ./types",
+    "nightly": "node ./scripts/gen-api-json.js --tag=master && node ./scripts/gen-dts.js"
   }
 }

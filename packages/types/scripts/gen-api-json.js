@@ -3,13 +3,20 @@ const { resolve } = require("path");
 const { readJsonSync, emptyDirSync, copySync } = require("fs-extra");
 const _ = require("lodash");
 const klawSync = require("klaw-sync");
+const minimist = require("minimist");
 
 const tempDir = resolve(__dirname, "../temp");
 emptyDirSync(tempDir);
+const argv = minimist(process.argv.slice(2));
 
-const pkgPath = resolve(__dirname, "../package.json");
-const pkgJson = readJsonSync(pkgPath);
-const versionTag = pkgJson.openUI5Version;
+let versionTag = undefined;
+if (argv.tag) {
+  versionTag = argv.tag;
+} else {
+  const pkgPath = resolve(__dirname, "../package.json");
+  const pkgJson = readJsonSync(pkgPath);
+  versionTag = pkgJson.openUI5Version;
+}
 
 function execute(command, options) {
   const defaultOptions = { cwd: tempDir, stdio: "inherit" };
