@@ -45,6 +45,9 @@ This is a temporary measure due to the dts-generator containing "directives" nee
 to successfully compile ui5 api.json files to TypeScript d.ts files for **specific** OpenUI5 versions.
 In the future this coupling would hopefully be severed and the dts-generator would have its own versions life-cycle.
 
+The de-coupling of the patch versions is done to allow releasing TypeScript definitions "fixes" separately from
+OpenUI5 versions, This is not a concern because according to [semantic Versioning][semver] patch versions should not include API changes
+
 ### Release Process
 
 - Update the CHANGELOG.md files for all packages.
@@ -58,3 +61,5 @@ In the future this coupling would hopefully be severed and the dts-generator wou
 - Once the tag build has finished successfully inspect the npm registry to see the new version
   for all the packages of this mono-repo.
   - `npm view [package-name] version`
+
+[semver]: https://semver.org/#semantic-versioning-200
