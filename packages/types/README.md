@@ -90,12 +90,12 @@ There are two kinds of UI5 source code.
 
 For UI5 source code using the legacy global imports no additional changes would be needed, simply,
 open your project in an IDE (VSCode / Eclipse Theia / IntelliJ WebStorm)
-that support TypeScript definitions based languages services and start coding.
+that supports TypeScript definitions based languages services and start coding.
 
 #### sap.ui.define Imports
 
-For UI5 source code using the newer `sap.ui.define` syntax an additional JSDocs parameter is needed.
-This parameter "helps" the TypeScript compiler understand the UI5 import syntax and "link" the correct types.
+For UI5 source code using the newer `sap.ui.define` syntax, an additional JSDocs parameter is needed.
+This parameter "helps" the TypeScript compiler understand the UI5 import syntax and "link" to the correct types signature.
 
 ```javascript
 sap.ui.define(
