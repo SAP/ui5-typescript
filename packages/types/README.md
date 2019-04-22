@@ -25,8 +25,12 @@ Try it out now:
 
 ## Perquisites
 
-- TypeScript version >= 3.2.4
 - Modern nodejs version.
+
+## Limitations
+
+- The TypeScript signatures provided in this package require TypeScript version >= 3.2.4
+  to compile successfully.
 
 ## Installation
 
