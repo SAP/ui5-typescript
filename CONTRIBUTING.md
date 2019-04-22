@@ -55,6 +55,8 @@ OpenUI5 versions, This is not a concern because according to [semantic Versionin
 
 - Update the CHANGELOG.md files for all packages.
   - Include a version number and date.
+- Update the api.json files if relevant.
+  - See [api.json files guide](./packages/types/CONTRIBUTING.md#Generated Files).
 - Commit changes to master.
 - `yarn run lerna:version`
 - Follow the lerna CLI instruction and choose a new version mode matching the version number

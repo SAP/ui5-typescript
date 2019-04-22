@@ -15,6 +15,7 @@ describe("Version Consistency Assumptions", () => {
     expect(apiJsonVersion).to.match(/\d+\.\d+\.\d+/);
   });
 
+  // TODO: we may not be able to keep this test and also support the flow of updating the OpenUI5 version
   it("ensures the major and minor version always match between the Type's package and OpenUI5", () => {
     const typesVerParts = /(\d+)\.(\d+)\.\d+/.exec(typesVersion);
     const majorTypes = typesVerParts[1];
