@@ -1,6 +1,6 @@
 # Contribution Guide
 
-This is the @openui5/types package contribution.
+This is the @openui5/types package contribution guide.
 Please read the shared [mono-repo contribution](../../CONTRIBUTING.md) guide first.
 
 ## Generated Files
