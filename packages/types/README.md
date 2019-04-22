@@ -10,7 +10,7 @@ These signatures can be used to:
 1. Enable advanced content assist in IDEs, e.g: (VSCode / IntelliJ / Webstorm) for OpenUI5.
 1. Integrate type checking for OpenUI5 applications using the TypeScript compiler.
 
-These two capabilities are available for both OpenUI5 apps written in TypeScript **and** in JavaScript.
+These two capabilities are available both for OpenUI5 apps written in TypeScript **and** in JavaScript.
 
 ## Status
 
