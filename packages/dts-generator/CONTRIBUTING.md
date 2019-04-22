@@ -17,3 +17,10 @@ Due to these reasons there are many heuristics and transformations happening dur
 Inspect the source code the the log when the dts-generator is executed to learn more.
 
 ## Testing
+
+With hundred of thousands of lines of (not well defined) input.
+And a very complex output structure (d.ts format), unit-test is very nearly impossible
+for the package. Instead we employ end-to-end testing via snapshot testing methodology in
+the main(only) consumer of this package (@openui5/types).
+
+See [@openui5/types contribution guide](../types/CONTRIBUTING.md) for details.
