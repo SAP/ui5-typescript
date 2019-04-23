@@ -1,5 +1,5 @@
 {
-  "name": "@openui5/types",
+  "name": "@openui5/ts-types",
   "description": "OpenUI5 TypeScript Definitions",
   "version": "1.64.0",
   "license": "Apache-2.0",

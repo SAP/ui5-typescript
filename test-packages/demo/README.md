@@ -1,7 +1,7 @@
 # UI5-TypeScript Demo
 
 This is a minimal project that can be used as a playground to
-inspect the UI5-TypeScript project. particularly the @openui5/types npm package.
+inspect the UI5-TypeScript project. particularly the @openui5/ts-types npm package.
 
 ## Perquisites
 

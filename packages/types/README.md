@@ -1,6 +1,6 @@
-![npm (scoped)](https://img.shields.io/npm/v/@openui5/types.svg)
+![npm (scoped)](https://img.shields.io/npm/v/@openui5/ts-types.svg)
 
-# @openui5/types
+# @openui5/ts-types
 
 This npm package contain the types signatures for all the SAP OpenUI5 libraries,
 ( sap.ui.core / sap.m / sap.f / ... ).
@@ -36,17 +36,17 @@ Try it out now:
 
 For the latest version:
 
-- `npm install @openui5/types --dev`
+- `npm install @openui5/ts-types --dev`
 
 It is recommended to align with the specific OpenUI5 version you may be using, e.g for OpenUI5 1.64:
 
-- `npm install @openui5/types@1.64 --dev`
+- `npm install @openui5/ts-types@1.64 --dev`
 
 Note that the version matching is only for the major and minor versions.
-**By design** the patch versions of @openui5/types do not match the patch version of the OpenUI5 runtime.
-This is done to enable a **de-coupled life-cycle** for the @openui5/types package.
+**By design** the patch versions of @openui5/ts-types do not match the patch version of the OpenUI5 runtime.
+This is done to enable a **de-coupled life-cycle** for the @openui5/ts-types package.
 
-Also Note that the @openui5/types package is **only available since version 1.64 of OpenUI5 runtime**.
+Also Note that the @openui5/ts-types package is **only available since version 1.64 of OpenUI5 runtime**.
 
 ## Usage
 
@@ -68,7 +68,7 @@ The most simple [tsconfig.json][ts-config] would look like this:
     "noEmit": true,
     "checkJs": true,
     "allowJs": true,
-    "types": ["@openui5/types"]
+    "types": ["@openui5/ts-types"]
   }
 }
 ```
@@ -79,8 +79,8 @@ The important things to note are:
 - `"noEmit": true` as we are not interested in generating any code.
 - `"checkJs": true, "allowJs": true` to enable the TypeScript based language service to inspect
   our UI5 Javascript files.
-- `"types": ["@openui5/types"]` to help the TypeScript based language service resolve the global
-  type definitions from the @openui5/types package.
+- `"types": ["@openui5/ts-types"]` to help the TypeScript based language service resolve the global
+  type definitions from the @openui5/ts-types package.
 
 ### UI5 Source Code
 

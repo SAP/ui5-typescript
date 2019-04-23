@@ -1,6 +1,6 @@
 # Contribution Guide
 
-This is the @openui5/types package contribution guide.
+This is the @openui5/ts-types package contribution guide.
 Please read the shared [mono-repo contribution](../../CONTRIBUTING.md) guide first.
 
 ## Generated Files
@@ -8,7 +8,7 @@ Please read the shared [mono-repo contribution](../../CONTRIBUTING.md) guide fir
 This package includes many generated files, which **should not** be modified directly.
 
 - [The OpenIU5 api.json files](./input)
-  - These files are **not** part of the @openui5/types npm package, see [.npmignore](./.npmignore).
+  - These files are **not** part of the @openui5/ts-types npm package, see [.npmignore](./.npmignore).
   - These files are generated using the [gen-api-json.js](./scripts/gen-api-json.js) script.
     - The version of SAP OpenUI5 sources used to generate the api.json files is listed in the `openUI5Version`
       entry in the [package.json](./package.json).
@@ -17,7 +17,7 @@ This package includes many generated files, which **should not** be modified dir
     **may** be consumed directly from the @openui5 npm packages e.g: (@openui5/sap.m) which would simplify
     the development flows on this package.
 - [The OpenUI5 TypeScript Signatures](./types)
-  - These files are the main content of the of the @openui5/types npm package.
+  - These files are the main content of the of the @openui5/ts-types npm package.
   - These files are generated using the [gen-dts.js](./scripts/gen-dts.js) script.
   - These generated files are committed to the source code to enable a ["snapshot testing"](https://jestjs.io/docs/en/snapshot-testing)
     development methodology (See relevant section below).

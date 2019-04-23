@@ -42,7 +42,7 @@ Please refrain from integrating multiple testing libraries to keep things consis
 For the initial release all (both) the packages will use the **same version**.
 This version would match the major and minor versions of the OpenUI5 project, but **not the patch version**.
 
-The coupling between @openui5/types and the openui5 runtime versions is self explanatory.
+The coupling between @openui5/ts-types and the openui5 runtime versions is self explanatory.
 The coupling between @ui5/dts-generator and the openui5 runtime versions is less obvious.
 This is a temporary measure due to the dts-generator containing "directives" needed
 to successfully compile ui5 api.json files to TypeScript d.ts files for **specific** OpenUI5 versions.
