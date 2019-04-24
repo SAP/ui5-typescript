@@ -9,6 +9,7 @@ used as an **internal** dev-dependency in this mono repo.
 At this time it is only used in the [@openui5/ts-types](../types) package during development flows.
 
 ## TODO:
+
 In the future this package **may** be used as the basis for creating a **public consumable** UI5 build chain tool
 that would generate TypeScript signatures for SAP UI5 libraries.
 
