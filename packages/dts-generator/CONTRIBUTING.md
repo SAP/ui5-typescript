@@ -23,4 +23,4 @@ And a very complex output structure (d.ts format), unit-test is very nearly impo
 for the package. Instead we employ end-to-end testing via snapshot testing methodology in
 the main(only) consumer of this package (@openui5/ts-types).
 
-See [@openui5/ts-types contribution guide](../types/CONTRIBUTING.md) for details.
+See [@openui5/ts-types contribution guide](../ts-types/CONTRIBUTING.md) for details.

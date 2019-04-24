@@ -28,7 +28,7 @@ This project's output is tens of thousand of codes of TypeScript signatures code
 This scenario is not simple to test, but one thing we can still do is carefully inspect the diffs
 due to each change we make.
 
-The [package.json](./package.json) of @types/openui5 defines a **precommit** npm task
+The [package.json](./package.json) of @openui5/ts-types defines a **precommit** npm task
 which re-generates the d.ts files and add them to the commit.
 In addition, there is a [snapshots.spec.js](./test/snapshots.spec.js) unit test which
 verifies that the generated d.ts files are up-to-date.
