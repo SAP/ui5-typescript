@@ -22,7 +22,7 @@ It currently contains two packages:
 
 ## TODO
 
-In the future it **_may_** contain additional packages, for example:
+In the future this repo **_may_** contain additional npm packages, for example:
 
 - A [UI5-Tooling][ui5-tooling] module that enables the creation of TypeScript signatures for 3rd party UI5 libraries.
 - Editor related Tooling that would assist in the usage of UI5 TypeScript signatures in popular IDEs (e.g VSCode).
