@@ -8,6 +8,7 @@
     "typescript": "^3.4.3"
   },
   "scripts": {
-    "test": "tsc"
+    "test": "npm run type-check",
+    "type-check": "tsc"
   }
 }

@@ -9,20 +9,37 @@ inspect the UI5-TypeScript project. particularly the @openui5/ts-types npm packa
 
 ## Usage
 
-### Local Dev Env
+### Initial setup
 
-- clone this repo.
-- `cd test-packages/demo`
-- `npm install`
-- Open this folder in your favorite IDE
-  - Assuming it supports languages services based on TypeScript definition files.
-- Open any of the files in the [lib directory](./lib) and try editing and request "Auto-Complete"
-  from your editor in various text positions.
+First open the project in an IDE:
 
-### Using GitPod WebIDE (Using Eclipse Theia)
+- **Option1 - Local Dev Env**
 
-- Open [this package in Gitpod](https://gitpod.io/#https://github.com/sap/ui5-typescript/tree/master/test-packages/demo).
-- `cd test-packages/demo`
-- `npm install`
-- Open any of the files in the [lib directory](./lib) and try editing and request "Auto-Complete"
-  from your editor in various text positions.
+  - clone this repo.
+  - `cd ./ui5-typescript/demo/demo-js`
+  - `npm install`
+  - Open this folder in your favorite IDE.
+
+- Option2 - Using GitPod WebIDE (Using Eclipse Theia)
+
+  - Open [this package in Gitpod](https://gitpod.io/#https://github.com/sap/ui5-typescript/tree/master/demo/demo-js).
+  - `cd ./demo/demo-js`
+  - `npm install`
+
+### The Scenarios
+
+Now try out the demonstrated scenarios:
+
+#### Content Assist
+
+Open any of the files in the [lib directory](./lib)
+begin editing and request "Auto-Complete" (often ctrl-k/cmd-k shortcut)
+from your editor in various text positions.
+
+#### Type Checking on UI5 JavaScript Files
+
+- Modify one of the files in the [lib directory](./lib) in a way to break the code.
+  - e.g: use an invalid constructor argument.
+- Enter this(./demo/demo-js) folder.
+- `npm run type-check`
+- inspect the compilation errors in the command line.
