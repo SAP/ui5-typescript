@@ -33,7 +33,7 @@ workflows:
   version: 2
   commit:
     jobs:
-      - build-node10
+      - build-node10:
         context: ui5-typescript
       - deploy:
           context: ui5-typescript

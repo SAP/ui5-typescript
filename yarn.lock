@@ -688,26 +688,6 @@
     universal-user-agent "^2.0.0"
     url-template "^2.0.8"
 
-"@openui5/sap.m@1.64.0":
-  version "1.64.0"
-  resolved "https://registry.yarnpkg.com/@openui5/sap.m/-/sap.m-1.64.0.tgz#3db6cda739eb0f1b4b8fe66f6528a3d6bacb22a9"
-  integrity sha512-2uU203E+6TfxkI9uGWpu+bigNJw4ocuieyYlejQMSrc2z/uOYQVcjQy/+G3bNhkeQ39EXVQK5ZFR0S0NqSqr1A==
-  dependencies:
-    "@openui5/sap.ui.core" "1.64.0"
-    "@openui5/sap.ui.unified" "1.64.0"
-
-"@openui5/sap.ui.core@1.64.0":
-  version "1.64.0"
-  resolved "https://registry.yarnpkg.com/@openui5/sap.ui.core/-/sap.ui.core-1.64.0.tgz#9450b2205527863efb8f8dccc268733c185d06be"
-  integrity sha512-gRYmuKoqWTJd0YveARbYcMJvVB2TZD8vgdE7japYGbthn9oCEaZPrb9nELP9cBATk5jS7UAHJHS76yLok91ZaA==
-
-"@openui5/sap.ui.unified@1.64.0":
-  version "1.64.0"
-  resolved "https://registry.yarnpkg.com/@openui5/sap.ui.unified/-/sap.ui.unified-1.64.0.tgz#ba9948382998b6fe5ff9f0cb1a5d48c9a5351ca4"
-  integrity sha512-Px0l4Mpg/8ExeaXTdtwkMipFI3jhwRQkQIrLwYQv7mfoxM8Ek25nchmiQC0Z4KYaFtAn7CiLmEckU+riC2Dk0w==
-  dependencies:
-    "@openui5/sap.ui.core" "1.64.0"
-
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
