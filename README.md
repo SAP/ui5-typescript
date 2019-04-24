@@ -18,7 +18,7 @@ It currently contains two packages:
 - [@openui5/ts-types](./packages/ts-types) TypeScript signatures for the [SAP OpenUI5][openui5] project.
 - [dts-generator](./packages/dts-generator) A low level compiler from SAP UI5 api.json format to TypeScript definition files format.
   - This package is used by @openui5/ts-types to generate the SAP OpenUI5 TypeScript signatures.
-  - This is currently a "private" package, not meant for external consumption.
+  - This is currently an "internal" package, not published on npmjs.com.
 
 ## TODO
 
