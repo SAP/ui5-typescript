@@ -8,11 +8,18 @@
 # UI5-TypeScript
 
 UI5-TypeScript is an npm [mono-repo][mono-repo] that contains tooling to support [TypeScript][typescript] in SAP UI5 Projects.
+Learn more about TypeScript and its advantages here:
+
+- https://stackoverflow.com/a/35048303
+- https://channel9.msdn.com/posts/Anders-Hejlsberg-Introducing-TypeScript
+
 It currently contains two packages:
 
 - [@openui5/ts-types](./packages/ts-types) TypeScript signatures for the [SAP OpenUI5][openui5] project.
 - [dts-generator](./packages/dts-generator) A low level compiler from UI5 api.json format to TypeScript definition files format.
   - This is currently a "private" package, not meant for external consumption.
+
+## TODO
 
 In the future it **_may_** contain additional packages, for example:
 
