@@ -21,11 +21,11 @@ including potential **breaking changes**.
 
 Try it out now:
 
-- [Runnable Demo Package](../../test-packages/demo)
+- [Runnable Demo Package](../../demos/demo-js)
 
-## Perquisites
+## Prerequisites
 
-- Modern nodejs version.
+- A [maintained](https://nodejs.org/en/about/releases/) Nodejs version.
 
 ## Limitations
 
