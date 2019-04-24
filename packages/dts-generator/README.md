@@ -1,6 +1,6 @@
 # @ui5/DTS-Generator
 
-This is an "internal" npm package containing the logic for generating
+This is a "repo internal" npm package containing the logic for generating
 TypeScript signatures from SAP UI5 api.json files.
 
 It is currently **not meant for external consumption** and is thus not published to npm and is instead
