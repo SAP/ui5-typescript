@@ -20,7 +20,7 @@ First open the project in an IDE:
   - `npm install`
   - Open this folder in your favorite IDE.
 
-- Option2 - Using GitPod WebIDE (Using Eclipse Theia)
+- **Option2 - Using GitPod WebIDE (Which uses Eclipse Theia)**
 
   - Open [this package in Gitpod](https://gitpod.io/#https://github.com/sap/ui5-typescript/tree/master/demo/demo-js).
   - `cd ./demo/demo-js`
