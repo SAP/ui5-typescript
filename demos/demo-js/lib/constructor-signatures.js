@@ -6,7 +6,8 @@ sap.ui.define(
   function(TooltipBase) {
     const toolTipInstance = new TooltipBase("myID", {
       dependents: null,
-      blocked: true,
+      // uncomment the following line and run `npm run type-check` for an example type check error.
+      // blockedd: true,
       closeDelay: 666
     });
   }

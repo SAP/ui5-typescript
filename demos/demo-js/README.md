@@ -39,7 +39,7 @@ from your editor in various text positions.
 #### Type Checking on UI5 JavaScript Files
 
 - Modify one of the files in the [lib directory](./lib) in a way to break the code.
-  - e.g: use an invalid constructor argument.
+  - e.g: use an [invalid constructor argument](https://github.com/SAP/ui5-typescript/blob/master/demos/demo-js/lib/constructor-signatures.js#L10).
 - Enter this(./demo/demo-js) folder.
 - `npm run type-check`
 - inspect the compilation errors in the command line.
