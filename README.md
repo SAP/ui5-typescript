@@ -8,7 +8,13 @@
 # UI5-TypeScript
 
 UI5-TypeScript is an npm [mono-repo][mono-repo] that contains tooling to support [TypeScript][typescript] in SAP UI5 Projects.
-Learn more about TypeScript and its advantages here:
+These tooling can enable:
+
+- Better IDE integration for SAP UI5 projects (e.g content assist).
+- Using TypeScript compiler to perform type checks on SAP UI5 applications.
+- More easily implementing UI5 applications in TypeScript thus enjoying the general benefits of TypeScript.
+
+Learn more about the general benefits of TypeScript here:
 
 - https://stackoverflow.com/a/35048303
 - https://channel9.msdn.com/posts/Anders-Hejlsberg-Introducing-TypeScript
