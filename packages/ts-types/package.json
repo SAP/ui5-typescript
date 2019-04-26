@@ -19,5 +19,8 @@
     "gen:dts": "node ./scripts/gen-dts.js",
     "precommit": "npm-run-all gen:dts && git add ./types",
     "nightly": "node ./scripts/gen-api-json.js --tag=master && node ./scripts/gen-dts.js && tsc"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
