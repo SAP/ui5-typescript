@@ -21,7 +21,8 @@ including potential **breaking changes**.
 
 Try it out now:
 
-- [Runnable Demo Package](../../demos/demo-js)
+- [Runnable JavaScript Demo Package](../../demos/demo-js)
+- [Runnable TypeScript Demo Package](../../demos/demo-ts)
 
 ## Prerequisites
 
