@@ -1,4 +1,4 @@
-![npm (scoped)](https://img.shields.io/npm/v/@openui5/ts-types.svg)
+[![npm (scoped)](https://img.shields.io/npm/v/@openui5/ts-types.svg)](https://www.npmjs.com/package/@openui5/ts-types)
 
 # @openui5/ts-types
 
