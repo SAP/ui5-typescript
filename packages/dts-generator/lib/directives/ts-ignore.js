@@ -37,6 +37,7 @@ const fqnToIgnore = {
   "sap.ui.rta.Client": KNOWN_ISSUES.STATIC_GET_META_DATA,
   "sap.ui.core.UIComponent": KNOWN_ISSUES.STATIC_GET_META_DATA,
   "sap.ui.table.plugins.SelectionPlugin": KNOWN_ISSUES.STATIC_GET_META_DATA,
+  "sap.f.GridContainerSettings": KNOWN_ISSUES.STATIC_GET_META_DATA,
 
   // General Static Inheritance issues
   "sap.ui.core.mvc.XMLView": KNOWN_ISSUES.GENERAL_STATIC_INHERITANCE_MISMATCH,
