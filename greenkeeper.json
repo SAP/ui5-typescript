@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "demos/demo-js/package.json",
+        "demos/demo-ts/package.json",
+        "package.json",
+        "packages/dts-generator/package.json",
+        "packages/ts-types/package.json"
+      ]
+    }
+  }
+}
