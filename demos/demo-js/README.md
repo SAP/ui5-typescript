@@ -5,7 +5,7 @@ inspect the UI5-TypeScript project. particularly the @openui5/ts-types npm packa
 
 ## Perquisites
 
-- Modern nodejs version.
+- A [maintained](https://nodejs.org/en/about/releases/) Nodejs version.
 
 ## Usage
 
