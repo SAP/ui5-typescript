@@ -37,11 +37,11 @@ Try it out now:
 
 For the latest version:
 
-- `npm install @openui5/ts-types --dev`
+- `npm install @openui5/ts-types --save-dev`
 
 It is recommended to align with the specific OpenUI5 version you may be using, e.g for OpenUI5 1.64:
 
-- `npm install @openui5/ts-types@1.64 --dev`
+- `npm install @openui5/ts-types@1.64 --save-dev`
 
 Note that the version matching is only for the major and minor versions.
 **By design** the patch versions of @openui5/ts-types do not match the patch version of the OpenUI5 runtime.
@@ -56,11 +56,12 @@ Additional scenarios such as developing UI5 applications in TypeScript or using 
 for build time type checks would be added at a later date.
 
 ### Project Configuration
-
 The TypeScript compiler does not resolve global definitions from [scoped npm packages](https://docs.npmjs.com/misc/scope).
 To resolve this a [tsconfig.json][ts-config] file must be added to the root of your npm based project:
 
-The most simple [tsconfig.json][ts-config] would look like this:
+#### UI5 syntax checking
+The following instruction is suitable if you want typescript let you check your syntax.
+The most simple [tsconfig.json][ts-config] for this scenario would look like this:
 
 ```json
 {
@@ -83,6 +84,33 @@ The important things to note are:
 - `"types": ["@openui5/ts-types"]` to help the TypeScript based language service resolve the global
   type definitions from the @openui5/ts-types package.
 
+#### UI5 development
+If you want to create ts files and let typescript generate appropriate js files your [tsconfig.json][ts-config] could look like this 
+
+```json
+{
+  "compilerOptions": {
+    "module": "none",
+    "target": "es5",
+		"sourceMap": true,
+    "noEmit": false,
+    "checkJs": false,
+    "allowJs": false,
+    "types": ["@openui5/ts-types"]
+  }
+}
+```
+
+The important things to note are:
+
+- `"module": "none"` because UI5 has its own unique modules system.
+- `"target": "es5"` let typescript generate es5 files to be able to run on older browsers
+- `"sourceMap": true` let typescript generate sourceMap files to enable browsers to debug your ts files
+- `"noEmit": false` as we want typescript to generate code.
+- `"checkJs": false, "allowJs": false` otherwise typescript tries to rewrite every js file which would lead to a bunch of errors cause the original files can't be overwritten
+- `"types": ["@openui5/ts-types"]` to help the TypeScript based language service resolve the global
+  type definitions from the @openui5/ts-types package.
+
 ### UI5 Source Code
 
 There are two kinds of UI5 source code.
@@ -95,17 +123,13 @@ that supports TypeScript definitions based languages services and start coding.
 
 #### sap.ui.define Imports
 
-For UI5 source code using the newer `sap.ui.define` syntax, an additional JSDocs parameter is needed.
-This parameter "helps" the TypeScript compiler understand the UI5 import syntax and "link" to the correct types signature.
+For UI5 source code using the newer `sap.ui.define` syntax, an additional type declaration is needed.
+This "helps" the TypeScript compiler understand the UI5 import syntax and "link" to the correct types signature.
 
 ```javascript
 sap.ui.define(
   ["sap/ui/core/TooltipBase"], // 1. UI5 runtime import
-  /**
-   *        // 2. Linking TypeScript global signatures (below)
-   * @param {typeof sap.ui.core.TooltipBase} TooltipBase
-   */
-  function(TooltipBase) {
+  function(TooltipBase: typeof sap.ui.core.TooltipBase) { // 2. Type declaration
     // 3. Define function parameter
 
     const toolTipInstance = new TooltipBase("myID", {
@@ -118,7 +142,7 @@ sap.ui.define(
 );
 ```
 
-Note the `@param {typeof sap.ui.core.TooltipBase} TooltipBase` syntax linking the:
+Note the `: typeof sap.ui.core.TooltipBase` syntax linking the:
 
 1. UI5 runtime import `"sap/ui/core/TooltipBase"`.
 2. Linking TypeScript global signatures `{typeof sap.ui.core.TooltipBase}`.
