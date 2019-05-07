@@ -37,11 +37,11 @@ Try it out now:
 
 For the latest version:
 
-- `npm install @openui5/ts-types --dev`
+- `npm install @openui5/ts-types --save-dev`
 
 It is recommended to align with the specific OpenUI5 version you may be using, e.g for OpenUI5 1.64:
 
-- `npm install @openui5/ts-types@1.64 --dev`
+- `npm install @openui5/ts-types@1.64 --save-dev`
 
 Note that the version matching is only for the major and minor versions.
 **By design** the patch versions of @openui5/ts-types do not match the patch version of the OpenUI5 runtime.
