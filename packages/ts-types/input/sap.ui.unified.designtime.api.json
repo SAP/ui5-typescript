@@ -923,14 +923,14 @@
           "name": "getAriaLabelledBy",
           "visibility": "public",
           "since": "1.28.0",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
           "name": "getDisabledDates",
           "visibility": "public",
           "since": "1.38.0",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.DateRange>" },
+          "returnValue": { "type": "sap.ui.unified.DateRange[]" },
           "description": "Gets content of aggregation {@link #getDisabledDates disabledDates}.\n\nDates or date ranges for disabled dates.\n\nTo set a single date (instead of a range), set only the <code>startDate</code> property of the {@link sap.ui.unified.DateRange} class."
         },
         {
@@ -1004,7 +1004,7 @@
           "visibility": "public",
           "since": "1.28.9",
           "returnValue": {
-            "type": "[ 'Array' ].<int>",
+            "type": "int[]",
             "description": "Value of property <code>nonWorkingDays</code>"
           },
           "description": "Gets current value of property {@link #getNonWorkingDays nonWorkingDays}.\n\nIf set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0 to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.\n\n<b>Note:</b> Keep in mind that this property sets only weekly-recurring days as non-working. If you need specific dates or dates ranges, such as national holidays, use the <code>specialDates</code> aggregation to set them. Both the non-working days (from property) and dates (from aggregation) are visualized the same."
@@ -1032,7 +1032,7 @@
         {
           "name": "getSelectedDates",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.DateRange>" },
+          "returnValue": { "type": "sap.ui.unified.DateRange[]" },
           "description": "Gets content of aggregation {@link #getSelectedDates selectedDates}.\n\nDates or date ranges for selected dates.\n\nTo set a single date (instead of a range), set only the <code>startDate</code> property of the {@link sap.ui.unified.DateRange} class."
         },
         {
@@ -1058,9 +1058,7 @@
           "name": "getSpecialDates",
           "visibility": "public",
           "since": "1.24.0",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>"
-          },
+          "returnValue": { "type": "sap.ui.unified.DateTypeRange[]" },
           "description": "Gets content of aggregation {@link #getSpecialDates specialDates}.\n\nDates or date ranges with type, to visualize special days in the <code>Calendar</code>. If one day is assigned to more than one Type, only the first one will be used.\n\nTo set a single date (instead of a range), set only the <code>startDate</code> property of the {@link sap.ui.unified.DateRange} class.\n\n<b>Note:</b> Keep in mind that the <code>NonWorking</code> type is for marking specific dates or date ranges as non-working, where if you need a weekly-reccuring non-working days (weekend), you should use the <code>nonWorkingDays</code> property. Both the non-working days (from property) and dates (from aggregation) are visualized the same."
         },
         {
@@ -1213,7 +1211,7 @@
           "visibility": "public",
           "since": "1.28.0",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -1223,7 +1221,7 @@
           "visibility": "public",
           "since": "1.38.0",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateRange>",
+            "type": "sap.ui.unified.DateRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getDisabledDates disabledDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -1232,7 +1230,7 @@
           "name": "removeAllSelectedDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateRange>",
+            "type": "sap.ui.unified.DateRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSelectedDates selectedDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -1242,7 +1240,7 @@
           "visibility": "public",
           "since": "1.24.0",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>",
+            "type": "sap.ui.unified.DateTypeRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSpecialDates specialDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -1434,7 +1432,7 @@
           "parameters": [
             {
               "name": "sNonWorkingDays",
-              "type": "[ 'Array' ].<int>",
+              "type": "int[]",
               "optional": false,
               "description": "New value for property <code>nonWorkingDays</code>"
             }
@@ -3672,7 +3670,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -3688,7 +3686,7 @@
           "name": "getDisabledDates",
           "visibility": "public",
           "since": "1.38.0",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.DateRange>" },
+          "returnValue": { "type": "sap.ui.unified.DateRange[]" },
           "description": "Gets content of aggregation {@link #getDisabledDates disabledDates}.\n\nDate Ranges for disabled dates"
         },
         {
@@ -3732,7 +3730,7 @@
           "visibility": "public",
           "since": "1.28.9",
           "returnValue": {
-            "type": "[ 'Array' ].<int>",
+            "type": "int[]",
             "description": "Value of property <code>nonWorkingDays</code>"
           },
           "description": "Gets current value of property {@link #getNonWorkingDays nonWorkingDays}.\n\nIf set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0 to 6. If not set, the weekend defined in the locale settings is displayed as non-working days."
@@ -3760,7 +3758,7 @@
         {
           "name": "getSelectedDates",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.DateRange>" },
+          "returnValue": { "type": "sap.ui.unified.DateRange[]" },
           "description": "Gets content of aggregation {@link #getSelectedDates selectedDates}.\n\nDate Ranges for selected dates of the DatePicker"
         },
         {
@@ -3794,9 +3792,7 @@
         {
           "name": "getSpecialDates",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>"
-          },
+          "returnValue": { "type": "sap.ui.unified.DateTypeRange[]" },
           "description": "Gets content of aggregation {@link #getSpecialDates specialDates}.\n\n<code>DateRange</code> with type to visualize special days in the Calendar.\n\n<b>Note:</b> If one day is assigned to more than one DateTypeRange, only the first one will be used. The only exception is when one of the types is <code>NonWorking</code>, then you can have both <code>NonWorking</code> and the other type. For example, you can have <code>NonWorking</code> + <code>Type01</code> but you can't have <code>Type01</code> + <code>Type02</code>."
         },
         {
@@ -3935,7 +3931,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -3945,7 +3941,7 @@
           "visibility": "public",
           "since": "1.38.0",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateRange>",
+            "type": "sap.ui.unified.DateRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getDisabledDates disabledDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -3954,7 +3950,7 @@
           "name": "removeAllSelectedDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateRange>",
+            "type": "sap.ui.unified.DateRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSelectedDates selectedDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -3963,7 +3959,7 @@
           "name": "removeAllSpecialDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>",
+            "type": "sap.ui.unified.DateTypeRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSpecialDates specialDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4118,7 +4114,7 @@
           "parameters": [
             {
               "name": "sNonWorkingDays",
-              "type": "[ 'Array' ].<int>",
+              "type": "int[]",
               "optional": false,
               "description": "New value for property <code>nonWorkingDays</code>"
             }
@@ -5245,7 +5241,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -5295,7 +5291,7 @@
         {
           "name": "getSelectedDates",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.DateRange>" },
+          "returnValue": { "type": "sap.ui.unified.DateRange[]" },
           "description": "Gets content of aggregation {@link #getSelectedDates selectedDates}.\n\nDate ranges for selected dates. If <code>singleSelection</code> is set, only the first entry is used.\n\n<b>Note:</b> Even if only one day is selected, the whole corresponding month is selected."
         },
         {
@@ -5319,9 +5315,7 @@
         {
           "name": "getSpecialDates",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>"
-          },
+          "returnValue": { "type": "sap.ui.unified.DateTypeRange[]" },
           "description": "Gets content of aggregation {@link #getSpecialDates specialDates}.\n\nDate ranges with type to visualize special months in the row. If one day is assigned to more than one type, only the first one will be used.\n\n<b>Note:</b> Even if only one day is set as a special day, the whole corresponding month is displayed in this way."
         },
         {
@@ -5417,7 +5411,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -5426,7 +5420,7 @@
           "name": "removeAllSelectedDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateRange>",
+            "type": "sap.ui.unified.DateRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSelectedDates selectedDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -5435,7 +5429,7 @@
           "name": "removeAllSpecialDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>",
+            "type": "sap.ui.unified.DateTypeRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSpecialDates specialDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -6153,7 +6147,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -6212,7 +6206,7 @@
         {
           "name": "getSelectedDates",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.DateRange>" },
+          "returnValue": { "type": "sap.ui.unified.DateRange[]" },
           "description": "Gets content of aggregation {@link #getSelectedDates selectedDates}.\n\nDate ranges for selected dates. If <code>singleSelection</code> is set, only the first entry is used."
         },
         {
@@ -6236,9 +6230,7 @@
         {
           "name": "getSpecialDates",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>"
-          },
+          "returnValue": { "type": "sap.ui.unified.DateTypeRange[]" },
           "description": "Gets content of aggregation {@link #getSpecialDates specialDates}.\n\nDate ranges with type to visualize special item in the row. If one day is assigned to more than one type, only the first one will be used."
         },
         {
@@ -6334,7 +6326,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -6343,7 +6335,7 @@
           "name": "removeAllSelectedDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateRange>",
+            "type": "sap.ui.unified.DateRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSelectedDates selectedDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -6352,7 +6344,7 @@
           "name": "removeAllSpecialDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>",
+            "type": "sap.ui.unified.DateTypeRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSpecialDates specialDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -8085,9 +8077,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.CalendarLegendItem>"
-          },
+          "returnValue": { "type": "sap.ui.unified.CalendarLegendItem[]" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nItems to be displayed."
         },
         {
@@ -8105,7 +8095,7 @@
           "visibility": "public",
           "since": "1.54",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Value of property <code>standardItems</code>"
           },
           "description": "Gets current value of property {@link #getStandardItems standardItems}.\n\nDetermines the standard items related to the calendar days, such as, today, selected, working and non-working. Values must be one of <code>sap.ui.unified.StandardCalendarLegendItem</code>. Note: for versions 1.50 and 1.52, this property was defined in the the subclass <code>sap.m.PlanningCalendarLegend</code>\n\nDefault value is <code>Today,Selected,WorkingDay,NonWorkingDay</code>."
@@ -8154,7 +8144,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.CalendarLegendItem>",
+            "type": "sap.ui.unified.CalendarLegendItem[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -8204,7 +8194,7 @@
           "parameters": [
             {
               "name": "sStandardItems",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "New value for property <code>standardItems</code>"
             }
@@ -9059,7 +9049,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -9130,7 +9120,7 @@
         {
           "name": "getSelectedDates",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.DateRange>" },
+          "returnValue": { "type": "sap.ui.unified.DateRange[]" },
           "description": "Gets content of aggregation {@link #getSelectedDates selectedDates}.\n\nDate ranges for selected dates of the <code>CalendarMonthInterval</code>.\n\nIf <code>singleSelection</code> is set, only the first entry is used.\n\n<b>Note:</b> Even if only one day is selected, the whole corresponding month is selected."
         },
         {
@@ -9145,9 +9135,7 @@
         {
           "name": "getSpecialDates",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>"
-          },
+          "returnValue": { "type": "sap.ui.unified.DateTypeRange[]" },
           "description": "Gets content of aggregation {@link #getSpecialDates specialDates}.\n\nDate ranges with type to visualize special months in the <code>CalendarMonthInterval</code>. If one day is assigned to more than one type, only the first one will be used.\n\n<b>Note:</b> Even if only one day is set as a special day, the whole corresponding month is displayed in this way."
         },
         {
@@ -9252,7 +9240,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -9261,7 +9249,7 @@
           "name": "removeAllSelectedDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateRange>",
+            "type": "sap.ui.unified.DateRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSelectedDates selectedDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -9270,7 +9258,7 @@
           "name": "removeAllSpecialDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>",
+            "type": "sap.ui.unified.DateTypeRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSpecialDates specialDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -9930,7 +9918,7 @@
                     },
                     "appointments": {
                       "name": "appointments",
-                      "type": "[ 'Array' ].<sap.ui.unified.CalendarAppointment>",
+                      "type": "sap.ui.unified.CalendarAppointment[]",
                       "optional": false,
                       "description": "selected appointments in case a group appointment is selected"
                     },
@@ -10371,7 +10359,7 @@
                 },
                 "appointments": {
                   "name": "appointments",
-                  "type": "[ 'Array' ].<sap.ui.unified.CalendarAppointment>",
+                  "type": "sap.ui.unified.CalendarAppointment[]",
                   "optional": true,
                   "description": "selected appointments in case a group appointment is selected"
                 },
@@ -10447,9 +10435,7 @@
         {
           "name": "getAppointments",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.CalendarAppointment>"
-          },
+          "returnValue": { "type": "sap.ui.unified.CalendarAppointment[]" },
           "description": "Gets content of aggregation {@link #getAppointments appointments}.\n\nAppointments to be displayed in the row. Appointments outside the visible time frame are not rendered.\n\n<b>Note:</b> For performance reasons, only appointments in the visible time range or nearby should be assigned."
         },
         {
@@ -10475,7 +10461,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -10517,9 +10503,7 @@
         {
           "name": "getIntervalHeaders",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.CalendarAppointment>"
-          },
+          "returnValue": { "type": "sap.ui.unified.CalendarAppointment[]" },
           "description": "Gets content of aggregation {@link #getIntervalHeaders intervalHeaders}.\n\nAppointments to be displayed in the top of the intervals. The <code>intervalHeaders</code> are used to visualize public holidays and similar things.\n\nAppointments outside the visible time frame are not rendered.\n\nThe <code>intervalHeaders</code> always fill whole intervals. If they are shorter than one interval, they are not displayed.\n\n<b>Note:</b> For performance reasons, only appointments in the visible time range or nearby should be assigned."
         },
         {
@@ -10561,7 +10545,7 @@
           "name": "getNonWorkingDays",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<int>",
+            "type": "int[]",
             "description": "Value of property <code>nonWorkingDays</code>"
           },
           "description": "Gets current value of property {@link #getNonWorkingDays nonWorkingDays}.\n\nIf set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0 to 6. (Other values will just be ignored.)\n\nIf not set, the weekend defined in the locale settings is displayed as non-working days.\n\n<b>Note:</b> The non working days are only visualized if <code>intervalType</code> is set to day."
@@ -10570,7 +10554,7 @@
           "name": "getNonWorkingHours",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<int>",
+            "type": "int[]",
             "description": "Value of property <code>nonWorkingHours</code>"
           },
           "description": "Gets current value of property {@link #getNonWorkingHours nonWorkingHours}.\n\nIf set, the provided hours are displayed as non-working hours. Valid values inside the array are 0 to 23. (Other values will just be ignored.)\n\n<b>Note:</b> The non working hours are only visualized if <code>intervalType</code> is set to hour."
@@ -10731,7 +10715,7 @@
           "name": "removeAllAppointments",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.CalendarAppointment>",
+            "type": "sap.ui.unified.CalendarAppointment[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getAppointments appointments}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -10740,7 +10724,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -10749,7 +10733,7 @@
           "name": "removeAllIntervalHeaders",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.CalendarAppointment>",
+            "type": "sap.ui.unified.CalendarAppointment[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getIntervalHeaders intervalHeaders}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -10954,7 +10938,7 @@
           "parameters": [
             {
               "name": "sNonWorkingDays",
-              "type": "[ 'Array' ].<int>",
+              "type": "int[]",
               "optional": false,
               "description": "New value for property <code>nonWorkingDays</code>"
             }
@@ -10971,7 +10955,7 @@
           "parameters": [
             {
               "name": "sNonWorkingHours",
-              "type": "[ 'Array' ].<int>",
+              "type": "int[]",
               "optional": false,
               "description": "New value for property <code>nonWorkingHours</code>"
             }
@@ -11777,7 +11761,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -11857,7 +11841,7 @@
         {
           "name": "getSelectedDates",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.DateRange>" },
+          "returnValue": { "type": "sap.ui.unified.DateRange[]" },
           "description": "Gets content of aggregation {@link #getSelectedDates selectedDates}.\n\nDate ranges for selected items of the <code>CalendarTimeInterval</code>.\n\nIf <code>singleSelection</code> is set, only the first entry is used."
         },
         {
@@ -11872,9 +11856,7 @@
         {
           "name": "getSpecialDates",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>"
-          },
+          "returnValue": { "type": "sap.ui.unified.DateTypeRange[]" },
           "description": "Gets content of aggregation {@link #getSpecialDates specialDates}.\n\nDate ranges with type to visualize special items in the <code>CalendarTimeInterval</code>. If one interval is assigned to more than one type, only the first one will be used."
         },
         {
@@ -11979,7 +11961,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -11988,7 +11970,7 @@
           "name": "removeAllSelectedDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateRange>",
+            "type": "sap.ui.unified.DateRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSelectedDates selectedDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11997,7 +11979,7 @@
           "name": "removeAllSpecialDates",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.DateTypeRange>",
+            "type": "sap.ui.unified.DateTypeRange[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSpecialDates specialDates}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13900,13 +13882,13 @@
         {
           "name": "getContent1",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent1 content1}.\n\nThe controls that should be shown in the first content"
         },
         {
           "name": "getContent2",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent2 content2}.\n\nThe controls that should be shown in the second content"
         },
         {
@@ -14003,7 +13985,7 @@
           "name": "removeAllContent1",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent1 content1}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -14012,7 +13994,7 @@
           "name": "removeAllContent2",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent2 content2}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -15334,7 +15316,7 @@
                     },
                     "files": {
                       "name": "files",
-                      "type": "[ 'Array' ].<object>",
+                      "type": "object[]",
                       "optional": false,
                       "description": "Files."
                     }
@@ -15507,7 +15489,7 @@
                     },
                     "requestHeaders": {
                       "name": "requestHeaders",
-                      "type": "[ 'Array' ].<object>",
+                      "type": "object[]",
                       "optional": false,
                       "description": "Http-Request-Headers. Required for receiving \"header\" is to set the property \"sendXHR\" to true. This property is not supported by Internet Explorer 9."
                     }
@@ -15574,7 +15556,7 @@
                     },
                     "requestHeaders": {
                       "name": "requestHeaders",
-                      "type": "[ 'Array' ].<object>",
+                      "type": "object[]",
                       "optional": false,
                       "description": "Http-Request-Headers. Required for receiving \"header\" is to set the property \"sendXHR\" to true. This property is not supported by Internet Explorer 9."
                     }
@@ -15630,7 +15612,7 @@
                     },
                     "requestHeaders": {
                       "name": "requestHeaders",
-                      "type": "[ 'Array' ].<object>",
+                      "type": "object[]",
                       "optional": false,
                       "description": "Http-Request-Headers. Required for receiving \"header\" is to set the property \"sendXHR\" to true. This property is not supported by Internet Explorer 9."
                     }
@@ -15668,7 +15650,7 @@
                     },
                     "requestHeaders": {
                       "name": "requestHeaders",
-                      "type": "[ 'Array' ].<object>",
+                      "type": "object[]",
                       "optional": false,
                       "description": "Http-Request-Headers. Required for receiving \"header\" is to set the property \"sendXHR\" to true. This property is not supported by Internet Explorer 9."
                     }
@@ -16338,7 +16320,7 @@
                 },
                 "files": {
                   "name": "files",
-                  "type": "[ 'Array' ].<object>",
+                  "type": "object[]",
                   "optional": true,
                   "description": "Files."
                 }
@@ -16481,7 +16463,7 @@
                 },
                 "requestHeaders": {
                   "name": "requestHeaders",
-                  "type": "[ 'Array' ].<object>",
+                  "type": "object[]",
                   "optional": true,
                   "description": "Http-Request-Headers. Required for receiving \"header\" is to set the property \"sendXHR\" to true. This property is not supported by Internet Explorer 9."
                 }
@@ -16542,7 +16524,7 @@
                 },
                 "requestHeaders": {
                   "name": "requestHeaders",
-                  "type": "[ 'Array' ].<object>",
+                  "type": "object[]",
                   "optional": true,
                   "description": "Http-Request-Headers. Required for receiving \"header\" is to set the property \"sendXHR\" to true. This property is not supported by Internet Explorer 9."
                 }
@@ -16592,7 +16574,7 @@
                 },
                 "requestHeaders": {
                   "name": "requestHeaders",
-                  "type": "[ 'Array' ].<object>",
+                  "type": "object[]",
                   "optional": true,
                   "description": "Http-Request-Headers. Required for receiving \"header\" is to set the property \"sendXHR\" to true. This property is not supported by Internet Explorer 9."
                 }
@@ -16624,7 +16606,7 @@
                 },
                 "requestHeaders": {
                   "name": "requestHeaders",
-                  "type": "[ 'Array' ].<object>",
+                  "type": "object[]",
                   "optional": true,
                   "description": "Http-Request-Headers. Required for receiving \"header\" is to set the property \"sendXHR\" to true. This property is not supported by Internet Explorer 9."
                 }
@@ -16646,13 +16628,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -16686,7 +16668,7 @@
           "name": "getFileType",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Value of property <code>fileType</code>"
           },
           "description": "Gets current value of property {@link #getFileType fileType}.\n\nThe chosen files will be checked against an array of file types. If at least one file does not fit the file type restriction the upload is prevented. Example: [\"jpg\", \"png\", \"bmp\"]."
@@ -16694,9 +16676,7 @@
         {
           "name": "getHeaderParameters",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.FileUploaderParameter>"
-          },
+          "returnValue": { "type": "sap.ui.unified.FileUploaderParameter[]" },
           "description": "Gets content of aggregation {@link #getHeaderParameters headerParameters}.\n\nThe header parameters for the FileUploader which are only submitted with XHR requests. Header parameters are not supported by Internet Explorer 9."
         },
         {
@@ -16782,7 +16762,7 @@
           "name": "getMimeType",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Value of property <code>mimeType</code>"
           },
           "description": "Gets current value of property {@link #getMimeType mimeType}.\n\nThe chosen files will be checked against an array of mime types. If at least one file does not fit the mime type restriction the upload is prevented. <b>Note:</b> This property is not supported by Internet Explorer & Edge. Example: mimeType [\"image/png\", \"image/jpeg\"]."
@@ -16809,9 +16789,7 @@
           "name": "getParameters",
           "visibility": "public",
           "since": "1.12.2",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.FileUploaderParameter>"
-          },
+          "returnValue": { "type": "sap.ui.unified.FileUploaderParameter[]" },
           "description": "Gets content of aggregation {@link #getParameters parameters}.\n\nThe parameters for the FileUploader which are rendered as a hidden inputfield."
         },
         {
@@ -16834,7 +16812,7 @@
           "parameters": [
             {
               "name": "aBlobs",
-              "type": "[ 'Array' ].<Blob>",
+              "type": "Blob[]",
               "optional": false,
               "description": "The initial Blobs which can be used to determine/calculate a new array of Blobs for further processing."
             }
@@ -17026,7 +17004,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -17035,7 +17013,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -17044,7 +17022,7 @@
           "name": "removeAllHeaderParameters",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.FileUploaderParameter>",
+            "type": "sap.ui.unified.FileUploaderParameter[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getHeaderParameters headerParameters}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -17054,7 +17032,7 @@
           "visibility": "public",
           "since": "1.12.2",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.FileUploaderParameter>",
+            "type": "sap.ui.unified.FileUploaderParameter[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getParameters parameters}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -17206,7 +17184,7 @@
           "parameters": [
             {
               "name": "sFileType",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "New value for property <code>fileType</code>"
             }
@@ -17348,7 +17326,7 @@
           "parameters": [
             {
               "name": "sMimeType",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "New value for property <code>mimeType</code>"
             }
@@ -17936,7 +17914,7 @@
           "parameters": [
             {
               "name": "aBlobs",
-              "type": "[ 'Array' ].<Blob>",
+              "type": "Blob[]",
               "optional": false,
               "description": "The initial Blobs which can be used to determine a new array of Blobs for further processing."
             }
@@ -18287,7 +18265,7 @@
           "name": "getAriaLabelledBy",
           "visibility": "public",
           "since": "1.26.3",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -18302,9 +18280,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.MenuItemBase>"
-          },
+          "returnValue": { "type": "sap.ui.unified.MenuItemBase[]" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nThe available actions to be displayed as items of the menu."
         },
         {
@@ -18431,7 +18407,7 @@
           "visibility": "public",
           "since": "1.26.3",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -18440,7 +18416,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.MenuItemBase>",
+            "type": "sap.ui.unified.MenuItemBase[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -18676,7 +18652,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -18711,7 +18687,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -19785,29 +19761,25 @@
         {
           "name": "getCurtainContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getCurtainContent curtainContent}.\n\nThe content to appear in the curtain area."
         },
         {
           "name": "getCurtainPaneContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getCurtainPaneContent curtainPaneContent}.\n\nThe content to appear in the pane area of the curtain."
         },
         {
           "name": "getHeadEndItems",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.ShellHeadItem>"
-          },
+          "returnValue": { "type": "sap.ui.unified.ShellHeadItem[]" },
           "description": "Gets content of aggregation {@link #getHeadEndItems headEndItems}.\n\nThe buttons shown in the end (right in left-to-right case) of the Shell header. Currently max. 3 visible buttons are supported (when user is set only 1). If a custom header is set this aggregation has no effect."
         },
         {
           "name": "getHeadItems",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.ShellHeadItem>"
-          },
+          "returnValue": { "type": "sap.ui.unified.ShellHeadItem[]" },
           "description": "Gets content of aggregation {@link #getHeadItems headItems}.\n\nThe buttons shown in the begin (left in left-to-right case) of the Shell header. Currently max. 3 visible buttons are supported. If a custom header is set this aggregation has no effect."
         },
         {
@@ -20042,7 +20014,7 @@
           "name": "removeAllCurtainContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getCurtainContent curtainContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -20051,7 +20023,7 @@
           "name": "removeAllCurtainPaneContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getCurtainPaneContent curtainPaneContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -20060,7 +20032,7 @@
           "name": "removeAllHeadEndItems",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.ShellHeadItem>",
+            "type": "sap.ui.unified.ShellHeadItem[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getHeadEndItems headEndItems}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -20069,7 +20041,7 @@
           "name": "removeAllHeadItems",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.unified.ShellHeadItem>",
+            "type": "sap.ui.unified.ShellHeadItem[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getHeadItems headItems}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -20553,7 +20525,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -20644,7 +20616,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -21032,7 +21004,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -21077,7 +21049,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -21384,7 +21356,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content to appear in the main canvas."
         },
         {
@@ -21424,7 +21396,7 @@
         {
           "name": "getPaneContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getPaneContent paneContent}.\n\nThe content to appear in the pane area."
         },
         {
@@ -21520,7 +21492,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -21529,7 +21501,7 @@
           "name": "removeAllPaneContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getPaneContent paneContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -21920,13 +21892,13 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content to appear in the overlay."
         },
         {
@@ -22000,7 +21972,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -22009,7 +21981,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -22289,7 +22261,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content to appear in the main area."
         },
         {
@@ -22315,7 +22287,7 @@
         {
           "name": "getSecondaryContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getSecondaryContent secondaryContent}.\n\nThe content to appear in the secondary area."
         },
         {
@@ -22433,7 +22405,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -22442,7 +22414,7 @@
           "name": "removeAllSecondaryContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSecondaryContent secondaryContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."

@@ -184,7 +184,7 @@
             },
             {
               "name": "aChangeTypes",
-              "type": "[ 'Array' ].<String>",
+              "type": "String[]",
               "optional": true,
               "description": "Types of changes that shall be deleted"
             }
@@ -3924,7 +3924,7 @@
         {
           "name": "getFor",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getFor for}."
         },
         {
@@ -4026,7 +4026,7 @@
           "name": "removeAllFor",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getFor for}."
@@ -4240,7 +4240,7 @@
           "parameters": [
             {
               "name": "aVariantManagementReferences",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "Array of variant management references"
             }

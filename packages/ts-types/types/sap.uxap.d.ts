@@ -1142,7 +1142,7 @@ declare namespace sap {
        *
        * Map external UI5 model and internal Block model
        */
-      getMappings(): any;
+      getMappings(): sap.uxap.ModelMapping[];
       /**
        * Returns a metadata object for class sap.uxap.BlockBase.
        */
@@ -1210,7 +1210,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMappings(): any;
+      removeAllMappings(): sap.uxap.ModelMapping[];
       /**
        * Removes a mapping from the aggregation {@link #getMappings mappings}.
        */
@@ -1374,7 +1374,7 @@ declare namespace sap {
        *
        * A list of all the active link elements in the BreadCrumbs control.
        */
-      getLinks(): any;
+      getLinks(): sap.m.Link[];
       /**
        * Returns a metadata object for class sap.uxap.BreadCrumbs.
        */
@@ -1418,7 +1418,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllLinks(): any;
+      removeAllLinks(): sap.m.Link[];
       /**
        * Removes a link from the aggregation {@link #getLinks links}.
        */
@@ -2369,7 +2369,7 @@ declare namespace sap {
        * along with the `press` event to indicate that a popup shouldn't be opened from that action and a dialog
        * should be used instead.
        */
-      getActions(): any;
+      getActions(): sap.ui.core.Control[];
       /**
        * @SINCE 1.50
        *
@@ -2386,7 +2386,7 @@ declare namespace sap {
        *
        * A list of all the active link elements in the BreadCrumbs control.
        */
-      getBreadCrumbsLinks(): any;
+      getBreadCrumbsLinks(): sap.m.Link[];
       /**
        * @deprecated (since 1.40.1)
        *
@@ -2635,7 +2635,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActions(): any;
+      removeAllActions(): sap.ui.core.Control[];
       /**
        * @deprecated (since 1.50) - use the `breadcrumbs` aggregation instead.
        *
@@ -2643,7 +2643,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllBreadCrumbsLinks(): any;
+      removeAllBreadCrumbsLinks(): sap.m.Link[];
       /**
        * @deprecated (since 1.50) - use the `breadcrumbs` aggregation instead.
        *
@@ -3241,7 +3241,7 @@ declare namespace sap {
        *
        * The list of Objects of type sap.ui.core.Control.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * @deprecated (since 1.40.1)
        *
@@ -3288,7 +3288,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -3864,7 +3864,7 @@ declare namespace sap {
        *
        * Object page header content - the dynamic part of the Object page header.
        */
-      getHeaderContent(): any;
+      getHeaderContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.52
        *
@@ -3955,7 +3955,7 @@ declare namespace sap {
        *
        * The sections that make up the Object page content area.
        */
-      getSections(): any;
+      getSections(): sap.uxap.ObjectPageSection[];
       /**
        * @SINCE 1.44.0
        *
@@ -4178,13 +4178,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllHeaderContent(): any;
+      removeAllHeaderContent(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getSections sections}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSections(): any;
+      removeAllSections(): sap.uxap.ObjectPageSection[];
       /**
        * Removes a headerContent from the aggregation {@link #getHeaderContent headerContent}.
        */
@@ -4787,7 +4787,7 @@ declare namespace sap {
        *
        * Controls to be displayed after this element is unstashed
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Returns a metadata object for class sap.uxap.ObjectPageLazyLoader.
        */
@@ -4823,7 +4823,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -4919,7 +4919,7 @@ declare namespace sap {
        *
        * The list of Subsections.
        */
-      getSubSections(): any;
+      getSubSections(): sap.uxap.ObjectPageSubSection[];
       /**
        * Gets current value of property {@link #getTitleUppercase titleUppercase}.
        *
@@ -4958,7 +4958,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSubSections(): any;
+      removeAllSubSections(): sap.uxap.ObjectPageSubSection[];
       /**
        * Removes a subSection from the aggregation {@link #getSubSections subSections}.
        */
@@ -5294,7 +5294,7 @@ declare namespace sap {
        *
        * Actions available for this Subsection
        */
-      getActions(): any;
+      getActions(): sap.ui.core.Control[];
       /**
        * Gets content of aggregation {@link #getBlocks blocks}.
        *
@@ -5315,7 +5315,7 @@ declare namespace sap {
        * ` <Panel class="sapUxAPObjectPageSubSectionAlignContent" width="auto"></Panel> `
        * ```
        */
-      getBlocks(): any;
+      getBlocks(): sap.ui.core.Control[];
       /**
        * Returns a metadata object for class sap.uxap.ObjectPageSubSection.
        */
@@ -5335,7 +5335,7 @@ declare namespace sap {
        *
        * Additional controls to display when the Show more / See all / (...) button is pressed
        */
-      getMoreBlocks(): any;
+      getMoreBlocks(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getTitleUppercase titleUppercase}.
        *
@@ -5435,19 +5435,19 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActions(): any;
+      removeAllActions(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getBlocks blocks}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllBlocks(): any;
+      removeAllBlocks(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getMoreBlocks moreBlocks}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMoreBlocks(): any;
+      removeAllMoreBlocks(): sap.ui.core.Control[];
       /**
        * Removes a block from the aggregation {@link #getBlocks blocks}.
        */

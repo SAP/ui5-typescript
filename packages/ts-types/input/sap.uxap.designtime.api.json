@@ -532,7 +532,7 @@
         {
           "name": "getMappings",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.uxap.ModelMapping>" },
+          "returnValue": { "type": "sap.uxap.ModelMapping[]" },
           "description": "Gets content of aggregation {@link #getMappings mappings}.\n\nMap external UI5 model and internal Block model"
         },
         {
@@ -622,7 +622,7 @@
           "name": "removeAllMappings",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.uxap.ModelMapping>",
+            "type": "sap.uxap.ModelMapping[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getMappings mappings}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -956,7 +956,7 @@
         {
           "name": "getLinks",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.m.Link>" },
+          "returnValue": { "type": "sap.m.Link[]" },
           "description": "Gets content of aggregation {@link #getLinks links}.\n\nA list of all the active link elements in the BreadCrumbs control."
         },
         {
@@ -1022,7 +1022,7 @@
           "name": "removeAllLinks",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.m.Link>",
+            "type": "sap.m.Link[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getLinks links}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -3064,7 +3064,7 @@
         {
           "name": "getActions",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getActions actions}.\n\nList of actions that will be displayed in the header. You can use ObjectPageHeaderActionButton controls to achieve a different visual representation of the action buttons in the action bar and the action sheet (overflow menu). You can use ObjectPageHeaderLayoutData to display a visual separator.\n\n<b>Note:</b> If an action is placed inside the overflow area, an additional <code>bInOverflow</code> parameter is passed along with the <code>press</code> event to indicate that a popup shouldn't be opened from that action and a dialog should be used instead."
         },
         {
@@ -3077,7 +3077,7 @@
         {
           "name": "getBreadCrumbsLinks",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.m.Link>" },
+          "returnValue": { "type": "sap.m.Link[]" },
           "description": "Gets content of aggregation {@link #getBreadCrumbsLinks breadCrumbsLinks}.\n\nA list of all the active link elements in the BreadCrumbs control.",
           "deprecated": {
             "since": "1.50",
@@ -3387,7 +3387,7 @@
           "name": "removeAllActions",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getActions actions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -3396,7 +3396,7 @@
           "name": "removeAllBreadCrumbsLinks",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.m.Link>",
+            "type": "sap.m.Link[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getBreadCrumbsLinks breadCrumbsLinks}.\n\nAdditionally, it unregisters them from the hosting UIArea.",
@@ -4162,7 +4162,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe list of Objects of type sap.ui.core.Control."
         },
         {
@@ -4229,7 +4229,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -5558,7 +5558,7 @@
         {
           "name": "getHeaderContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getHeaderContent headerContent}.\n\nObject page header content - the dynamic part of the Object page header."
         },
         {
@@ -5642,7 +5642,7 @@
         {
           "name": "getSections",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.uxap.ObjectPageSection>" },
+          "returnValue": { "type": "sap.uxap.ObjectPageSection[]" },
           "description": "Gets content of aggregation {@link #getSections sections}.\n\nThe sections that make up the Object page content area."
         },
         {
@@ -5871,7 +5871,7 @@
           "name": "removeAllHeaderContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -5880,7 +5880,7 @@
           "name": "removeAllSections",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.uxap.ObjectPageSection>",
+            "type": "sap.uxap.ObjectPageSection[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSections sections}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -6499,7 +6499,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nControls to be displayed after this element is unstashed"
         },
         {
@@ -6556,7 +6556,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -6788,9 +6788,7 @@
         {
           "name": "getSubSections",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.uxap.ObjectPageSubSection>"
-          },
+          "returnValue": { "type": "sap.uxap.ObjectPageSubSection[]" },
           "description": "Gets content of aggregation {@link #getSubSections subSections}.\n\nThe list of Subsections."
         },
         {
@@ -6846,7 +6844,7 @@
           "name": "removeAllSubSections",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.uxap.ObjectPageSubSection>",
+            "type": "sap.uxap.ObjectPageSubSection[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSubSections subSections}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7443,13 +7441,13 @@
         {
           "name": "getActions",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getActions actions}.\n\nActions available for this Subsection"
         },
         {
           "name": "getBlocks",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getBlocks blocks}.\n\nControls to be displayed in the subsection\n\n<b>Note:</b> The SAP Fiori Design guidelines require that the <code>ObjectPageHeader</code>'s content and the <code>ObjectPage</code>'s subsection content are aligned vertically. When using {@link sap.ui.layout.form.Form}, {@link sap.m.Panel}, {@link sap.m.Table} and {@link sap.m.List} in the subsection content area of <code>ObjectPage</code>, if the content is not already aligned, you need to adjust their left text offset to achieve the vertical alignment. To do this, apply the <code>sapUxAPObjectPageSubSectionAlignContent</code> CSS class to them and set their <code>width</code> property to <code>auto</code> (if not set by default).\n\nExample:\n\n<pre>\n<code> &lt;Panel class=\"sapUxAPObjectPageSubSectionAlignContent\" width=\"auto\"&gt;&lt;/Panel&gt; </code>\n</pre>"
         },
         {
@@ -7474,7 +7472,7 @@
         {
           "name": "getMoreBlocks",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getMoreBlocks moreBlocks}.\n\nAdditional controls to display when the Show more / See all / (...) button is pressed"
         },
         {
@@ -7627,7 +7625,7 @@
           "name": "removeAllActions",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getActions actions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7636,7 +7634,7 @@
           "name": "removeAllBlocks",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getBlocks blocks}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7645,7 +7643,7 @@
           "name": "removeAllMoreBlocks",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getMoreBlocks moreBlocks}.\n\nAdditionally, it unregisters them from the hosting UIArea."

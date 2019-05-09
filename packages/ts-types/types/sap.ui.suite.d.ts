@@ -208,12 +208,12 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
          * ariaDescribedBy}.
          */
-        getAriaDescribedBy(): any;
+        getAriaDescribedBy(): sap.ui.core.ID[];
         /**
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
          * ariaLabelledBy}.
          */
-        getAriaLabelledBy(): any;
+        getAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Gets current value of property {@link #getColor color}.
          *
@@ -255,11 +255,11 @@ declare namespace sap {
         /**
          * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
          */
-        removeAllAriaDescribedBy(): any;
+        removeAllAriaDescribedBy(): sap.ui.core.ID[];
         /**
          * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
-        removeAllAriaLabelledBy(): any;
+        removeAllAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
          */
@@ -479,12 +479,12 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
          * ariaDescribedBy}.
          */
-        getAriaDescribedBy(): any;
+        getAriaDescribedBy(): sap.ui.core.ID[];
         /**
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
          * ariaLabelledBy}.
          */
-        getAriaLabelledBy(): any;
+        getAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Returns a metadata object for class sap.ui.suite.VerticalProgressIndicator.
          */
@@ -500,11 +500,11 @@ declare namespace sap {
         /**
          * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
          */
-        removeAllAriaDescribedBy(): any;
+        removeAllAriaDescribedBy(): sap.ui.core.ID[];
         /**
          * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
-        removeAllAriaLabelledBy(): any;
+        removeAllAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
          */

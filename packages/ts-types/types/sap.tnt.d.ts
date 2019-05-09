@@ -578,12 +578,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getExpanded expanded}.
        *
@@ -597,7 +597,7 @@ declare namespace sap {
        *
        * The items displayed in the list.
        */
-      getItems(): any;
+      getItems(): sap.tnt.NavigationListItem[];
       /**
        * Returns a metadata object for class sap.tnt.NavigationList.
        */
@@ -649,17 +649,17 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getItems items}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.tnt.NavigationListItem[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -892,7 +892,7 @@ declare namespace sap {
        *
        * The sub items.
        */
-      getItems(): any;
+      getItems(): sap.tnt.NavigationListItem[];
       /**
        * Returns a metadata object for class sap.tnt.NavigationListItem.
        */
@@ -938,7 +938,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.tnt.NavigationListItem[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -1486,7 +1486,7 @@ declare namespace sap {
        *
        * The content section.
        */
-      getMainContents(): any;
+      getMainContents(): sap.ui.core.Control[];
       /**
        * Returns a metadata object for class sap.tnt.ToolPage.
        */
@@ -1536,7 +1536,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMainContents(): any;
+      removeAllMainContents(): sap.ui.core.Control[];
       /**
        * Removes a mainContent from the aggregation {@link #getMainContents mainContents}.
        */

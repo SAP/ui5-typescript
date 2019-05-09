@@ -677,13 +677,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -698,7 +698,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.tnt.NavigationListItem>" },
+          "returnValue": { "type": "sap.tnt.NavigationListItem[]" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nThe items displayed in the list."
         },
         {
@@ -783,7 +783,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -792,7 +792,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -801,7 +801,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.tnt.NavigationListItem>",
+            "type": "sap.tnt.NavigationListItem[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -1244,7 +1244,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.tnt.NavigationListItem>" },
+          "returnValue": { "type": "sap.tnt.NavigationListItem[]" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nThe sub items."
         },
         {
@@ -1311,7 +1311,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.tnt.NavigationListItem>",
+            "type": "sap.tnt.NavigationListItem[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -2259,7 +2259,7 @@
         {
           "name": "getMainContents",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getMainContents mainContents}.\n\nThe content section."
         },
         {
@@ -2331,7 +2331,7 @@
           "name": "removeAllMainContents",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getMainContents mainContents}.\n\nAdditionally, it unregisters them from the hosting UIArea."

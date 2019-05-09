@@ -88,7 +88,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<Object>",
+            "type": "Object[]",
             "description": "Array of history objects in the order of analyses performed. The results of the last analysis are contained in the last element in the array."
           },
           "description": "Returns the history of all executed analyses.",
@@ -196,13 +196,13 @@
         },
         {
           "name": "applicationInfo",
-          "type": "[ 'Array' ].<Object>",
+          "type": "Object[]",
           "visibility": "public",
           "description": "Array with information about the application."
         },
         {
           "name": "technicalInfo",
-          "type": "[ 'Array' ].<Object>",
+          "type": "Object[]",
           "visibility": "public",
           "description": "Technical information."
         },
@@ -214,7 +214,7 @@
         },
         {
           "name": "issues",
-          "type": "[ 'Array' ].<Object>",
+          "type": "Object[]",
           "visibility": "public",
           "description": "Array with all the issues, which were found."
         }
@@ -547,7 +547,7 @@
                 },
                 "components": {
                   "name": "components",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": true,
                   "description": "List of IDs of the components to be analyzed. Use only when the scope type is <code>components</code>."
                 }
@@ -575,7 +575,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.support.AnalysisResult>",
+            "type": "sap.ui.support.AnalysisResult[]",
             "description": "Array of history objects in the order of analyses performed. The results of the last analysis are contained in the last element in the array."
           },
           "description": "Returns the history of all executed analyses."
@@ -662,7 +662,7 @@
           "parameters": [
             {
               "name": "aLibraries",
-              "type": "[ 'Array' ].<Object>",
+              "type": "Object[]",
               "optional": false,
               "description": "The current loaded libraries and their rules"
             }
@@ -690,7 +690,7 @@
           "parameters": [
             {
               "name": "aLibraries",
-              "type": "[ 'Array' ].<Object>",
+              "type": "Object[]",
               "optional": false,
               "description": "The data for the libraries and their rules"
             }

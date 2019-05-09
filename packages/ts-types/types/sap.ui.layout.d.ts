@@ -400,7 +400,7 @@ declare namespace sap {
            *
            * The items contained by the control.
            */
-          getItems(): any;
+          getItems(): sap.ui.core.Control[];
           /**
            * Returns a metadata object for class sap.ui.layout.cssgrid.CSSGrid.
            */
@@ -444,7 +444,7 @@ declare namespace sap {
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllItems(): any;
+          removeAllItems(): sap.ui.core.Control[];
           /**
            * Removes a item from the aggregation {@link #getItems items}.
            */
@@ -3206,7 +3206,7 @@ declare namespace sap {
            * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
            * ariaLabelledBy}.
            */
-          getAriaLabelledBy(): any;
+          getAriaLabelledBy(): sap.ui.core.ID[];
           /**
            * @SINCE 1.20.0
            *
@@ -3233,7 +3233,7 @@ declare namespace sap {
            *
            * Containers with the content of the form. A `FormContainer` represents a group inside the `Form`.
            */
-          getFormContainers(): any;
+          getFormContainers(): sap.ui.layout.form.FormContainer[];
           /**
            * Gets content of aggregation {@link #getLayout layout}.
            *
@@ -3302,13 +3302,13 @@ declare namespace sap {
            *
            * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
            */
-          removeAllAriaLabelledBy(): any;
+          removeAllAriaLabelledBy(): sap.ui.core.ID[];
           /**
            * Removes all the controls from the aggregation {@link #getFormContainers formContainers}.
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllFormContainers(): any;
+          removeAllFormContainers(): sap.ui.layout.form.FormContainer[];
           /**
            * @SINCE 1.28.0
            *
@@ -3486,7 +3486,7 @@ declare namespace sap {
            * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
            * ariaLabelledBy}.
            */
-          getAriaLabelledBy(): any;
+          getAriaLabelledBy(): sap.ui.core.ID[];
           /**
            * Gets current value of property {@link #getExpandable expandable}.
            *
@@ -3512,7 +3512,7 @@ declare namespace sap {
            *
            * The `FormElements` contain the content (labels and fields) of the `FormContainers`.
            */
-          getFormElements(): any;
+          getFormElements(): sap.ui.layout.form.FormElement[];
           /**
            * Returns a metadata object for class sap.ui.layout.form.FormContainer.
            */
@@ -3583,13 +3583,13 @@ declare namespace sap {
            *
            * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
            */
-          removeAllAriaLabelledBy(): any;
+          removeAllAriaLabelledBy(): sap.ui.core.ID[];
           /**
            * Removes all the controls from the aggregation {@link #getFormElements formElements}.
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllFormElements(): any;
+          removeAllFormElements(): sap.ui.layout.form.FormElement[];
           /**
            * @SINCE 1.36.0
            *
@@ -3752,7 +3752,7 @@ declare namespace sap {
            * layout, keyboard support and screen-reader support. Only form controls are allowed. Views are also not
            * supported. Allowed controls implement the interface `sap.ui.core.IFormContent`.
            */
-          getFields(): any;
+          getFields(): sap.ui.core.Control[];
           /**
            * Gets content of aggregation {@link #getLabel label}.
            *
@@ -3817,7 +3817,7 @@ declare namespace sap {
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllFields(): any;
+          removeAllFields(): sap.ui.core.Control[];
           /**
            * Removes a field from the aggregation {@link #getFields fields}.
            */
@@ -4961,7 +4961,7 @@ declare namespace sap {
            * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
            * ariaLabelledBy}.
            */
-          getAriaLabelledBy(): any;
+          getAriaLabelledBy(): sap.ui.core.ID[];
           /**
            * @SINCE 1.36.0
            *
@@ -5097,7 +5097,7 @@ declare namespace sap {
            * `false`. If the `editable` property is set incorrectly, there will be visual issues like wrong label
            * alignment or wrong spacing between the controls.
            */
-          getContent(): any;
+          getContent(): sap.ui.core.Element[];
           /**
            * Gets current value of property {@link #getEditable editable}.
            *
@@ -5352,13 +5352,13 @@ declare namespace sap {
            *
            * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
            */
-          removeAllAriaLabelledBy(): any;
+          removeAllAriaLabelledBy(): sap.ui.core.ID[];
           /**
            * Removes all the controls from the aggregation {@link #getContent content}.
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllContent(): any;
+          removeAllContent(): sap.ui.core.Element[];
           /**
            * @SINCE 1.32.0
            *
@@ -6695,7 +6695,7 @@ declare namespace sap {
          *
          * The Rows to be included in the content of the control
          */
-        getContent(): any;
+        getContent(): sap.ui.layout.BlockLayoutRow[];
         /**
          * @SINCE 1.52
          *
@@ -6741,7 +6741,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.layout.BlockLayoutRow[];
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -6868,7 +6868,7 @@ declare namespace sap {
          *
          * The content to be included inside the cell
          */
-        getContent(): any;
+        getContent(): sap.ui.core.Control[];
         /**
          * Returns a metadata object for class sap.ui.layout.BlockLayoutCell.
          */
@@ -6954,7 +6954,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.core.Control[];
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -7287,13 +7287,13 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAccentCells
          * accentCells}.
          */
-        getAccentCells(): any;
+        getAccentCells(): sap.ui.core.ID[];
         /**
          * Gets content of aggregation {@link #getContent content}.
          *
          * The content cells to be included in the row.
          */
-        getContent(): any;
+        getContent(): sap.ui.layout.BlockLayoutCell[];
         /**
          * Returns a metadata object for class sap.ui.layout.BlockLayoutRow.
          */
@@ -7357,13 +7357,13 @@ declare namespace sap {
          *
          * Removes all the controls in the association named {@link #getAccentCells accentCells}.
          */
-        removeAllAccentCells(): any;
+        removeAllAccentCells(): sap.ui.core.ID[];
         /**
          * Removes all the controls from the aggregation {@link #getContent content}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.layout.BlockLayoutCell[];
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -7605,7 +7605,7 @@ declare namespace sap {
          *
          * Main content controls.
          */
-        getMainContent(): any;
+        getMainContent(): sap.ui.core.Control[];
         /**
          * Returns a metadata object for class sap.ui.layout.DynamicSideContent.
          */
@@ -7632,7 +7632,7 @@ declare namespace sap {
          *
          * Side content controls.
          */
-        getSideContent(): any;
+        getSideContent(): sap.ui.core.Control[];
         /**
          * Gets current value of property {@link #getSideContentFallDown sideContentFallDown}.
          *
@@ -7722,13 +7722,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllMainContent(): any;
+        removeAllMainContent(): sap.ui.core.Control[];
         /**
          * Removes all the controls from the aggregation {@link #getSideContent sideContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllSideContent(): any;
+        removeAllSideContent(): sap.ui.core.Control[];
         /**
          * Removes a mainContent from the aggregation {@link #getMainContent mainContent}.
          */
@@ -7956,7 +7956,7 @@ declare namespace sap {
          *
          * Controls in the fixed part of the layout.
          */
-        getFixContent(): any;
+        getFixContent(): sap.ui.core.Control[];
         /**
          * Gets current value of property {@link #getFixContentSize fixContentSize}.
          *
@@ -8039,7 +8039,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFixContent(): any;
+        removeAllFixContent(): sap.ui.core.Control[];
         /**
          * Removes a fixContent from the aggregation {@link #getFixContent fixContent}.
          */
@@ -8224,7 +8224,7 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
          * ariaLabelledBy}.
          */
-        getAriaLabelledBy(): any;
+        getAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Gets current value of property {@link #getContainerQuery containerQuery}.
          *
@@ -8239,7 +8239,7 @@ declare namespace sap {
          *
          * Controls that are placed into Grid layout.
          */
-        getContent(): any;
+        getContent(): sap.ui.core.Control[];
         /**
          * Gets current value of property {@link #getDefaultIndent defaultIndent}.
          *
@@ -8334,13 +8334,13 @@ declare namespace sap {
          *
          * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
-        removeAllAriaLabelledBy(): any;
+        removeAllAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Removes all the controls from the aggregation {@link #getContent content}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.core.Control[];
         /**
          * @SINCE 1.48.7
          *
@@ -9327,7 +9327,7 @@ declare namespace sap {
          *
          * The controls inside this layout
          */
-        getContent(): any;
+        getContent(): sap.ui.core.Control[];
         /**
          * Returns a metadata object for class sap.ui.layout.HorizontalLayout.
          */
@@ -9363,7 +9363,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.core.Control[];
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -9468,7 +9468,7 @@ declare namespace sap {
          *
          * The Pane that will be shown when there is no suitable pane for ResponsiveSplitter's current width.
          */
-        getPanes(): any;
+        getPanes(): sap.ui.core.Element[];
         /**
          * Checks for the provided `sap.ui.core.Element` in the aggregation {@link #getPanes panes}. and returns
          * its index if found or -1 otherwise.
@@ -9492,7 +9492,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllPanes(): any;
+        removeAllPanes(): sap.ui.core.Element[];
         /**
          * Pane removal
          */
@@ -9594,14 +9594,14 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
          * ariaLabelledBy}.
          */
-        getAriaLabelledBy(): any;
+        getAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Gets content of aggregation {@link #getContent content}.
          *
          * Added content that should be positioned. Every content item should have a ResponsiveFlowLayoutData attached,
          * or otherwise, the default values are used.
          */
-        getContent(): any;
+        getContent(): sap.ui.core.Control[];
         /**
          * Returns a metadata object for class sap.ui.layout.ResponsiveFlowLayout.
          */
@@ -9645,13 +9645,13 @@ declare namespace sap {
          *
          * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
-        removeAllAriaLabelledBy(): any;
+        removeAllAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Removes all the controls from the aggregation {@link #getContent content}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.core.Control[];
         /**
          * @SINCE 1.48.7
          *
@@ -10335,11 +10335,11 @@ declare namespace sap {
             /**
              * An array of values representing the old (pixel-)sizes of the splitter contents
              */
-            oldSizes?: any;
+            oldSizes?: number[];
             /**
              * An array of values representing the new (pixel-)sizes of the splitter contents
              */
-            newSizes?: any;
+            newSizes?: number[];
           }
         ): sap.ui.layout.Splitter;
         /**
@@ -10349,13 +10349,13 @@ declare namespace sap {
          *
          * Returns the current actual content sizes as pixel value - these values can change with every resize.
          */
-        getCalculatedSizes(): any;
+        getCalculatedSizes(): Number[];
         /**
          * Gets content of aggregation {@link #getContentAreas contentAreas}.
          *
          * The content areas to be split. The control will show n-1 splitter bars between n controls in this aggregation.
          */
-        getContentAreas(): any;
+        getContentAreas(): sap.ui.core.Control[];
         /**
          * Gets current value of property {@link #getHeight height}.
          *
@@ -10415,7 +10415,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContentAreas(): any;
+        removeAllContentAreas(): sap.ui.core.Control[];
         /**
          * Removes a contentArea from the aggregation {@link #getContentAreas contentAreas}.
          */
@@ -10692,7 +10692,7 @@ declare namespace sap {
          *
          * Content controls within the layout.
          */
-        getContent(): any;
+        getContent(): sap.ui.core.Control[];
         /**
          * Gets current value of property {@link #getEnabled enabled}.
          *
@@ -10743,7 +10743,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.core.Control[];
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */

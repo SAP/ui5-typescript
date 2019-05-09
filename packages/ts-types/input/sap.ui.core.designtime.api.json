@@ -580,7 +580,7 @@
           "name": "getPseudoTypes",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<String>",
+            "type": "String[]",
             "description": "Array of names identifying {@link module:sap/ui/events/PseudoEvents} that are fulfilled by this very Event instance."
           },
           "description": "Returns an array of names (as strings) identifying {@link module:sap/ui/events/PseudoEvents} that are fulfilled by this very Event instance."
@@ -819,7 +819,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<{type:string, index:int}>",
+            "type": "{type:string,index:int}[]",
             "description": "List of update operations"
           },
           "parameters": [
@@ -1666,7 +1666,7 @@
             },
             {
               "name": "aValues",
-              "type": "[ 'Array' ].<any>",
+              "type": "any[]",
               "optional": true,
               "defaultValue": "[]",
               "description": "The values to be used instead of the placeholders."
@@ -1834,7 +1834,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "A copy of the whitelist"
           },
           "description": "Gets the whitelist for URL validation.",
@@ -4299,7 +4299,7 @@
           "static": true,
           "since": "1.1.2",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "an array containing the recorded log entries"
           },
           "description": "Returns the logged entries recorded so far as an array.\n\nLog entries are plain JavaScript objects with the following properties <ul> <li>timestamp {number} point in time when the entry was created</li> <li>level {int} LogLevel level of the entry</li> <li>message {string} message text of the entry</li> </ul>"
@@ -5108,7 +5108,7 @@
           "static": true,
           "since": "1.36.2",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "all interaction measurements passing the filter function successfully"
           },
           "parameters": [
@@ -5149,7 +5149,7 @@
             },
             {
               "name": "aCategories",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "The function returns only measurements which match these specified categories"
             }
@@ -5180,7 +5180,7 @@
           "static": true,
           "since": "1.34.0",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "all interaction measurements"
           },
           "parameters": [
@@ -5202,7 +5202,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "current array with measurements containing id, info and start-timestamp, end-timestamp, time, duration, categories"
           },
           "parameters": [
@@ -5247,7 +5247,7 @@
           "static": true,
           "since": "1.34.0",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "array of performance timing objects"
           },
           "description": "Gets the current request timings array for type 'resource' safely",
@@ -5308,7 +5308,7 @@
             },
             {
               "name": "aCategories",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "defaultValue": "[\"javascript\"]",
               "description": "An optional categories list for the measurement"
@@ -6186,7 +6186,7 @@
           "name": "getKeys",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "All keys in the property collection"
           },
           "description": "Returns an array of all keys in the property collection."
@@ -6268,7 +6268,7 @@
             },
             {
               "name": "aArgs",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "List of parameter values which should replace the placeholders \"{<i>n</i>}\" (<i>n</i> is the index) in the found locale-specific string value. Note that the replacement is done whenever <code>aArgs</code> is given, no matter whether the text contains placeholders or not and no matter whether <code>aArgs</code> contains a value for <i>n</i> or not."
             }
@@ -6498,7 +6498,7 @@
           "visibility": "restricted",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Sequence of fallback locales in JDK legacy syntax, decreasing priority"
           },
           "parameters": [
@@ -6510,7 +6510,7 @@
             },
             {
               "name": "aSupportedLocales",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "List of supported locales (in JDK legacy syntax, e.g. zh_CN, iw)"
             }
@@ -6586,7 +6586,7 @@
             },
             {
               "name": "aArgs",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "List of parameter values which should replace the placeholders \"{<i>n</i>}\" (<i>n</i> is the index) in the found locale-specific string value. Note that the replacement is done whenever <code>aArgs</code> is given, no matter whether the text contains placeholders or not and no matter whether <code>aArgs</code> contains a value for <i>n</i> or not."
             },
@@ -6769,7 +6769,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "an array containing the recorded log entries"
           },
           "description": "Returns the logged entries recorded so far as an array.\n\nLog entries are plain JavaScript objects with the following properties <ul> <li>timestamp {number} point in time when the entry was created <li>level {module:sap/base/Log.Level} LogLevel level of the entry <li>message {string} message text of the entry </ul>"
@@ -7225,7 +7225,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<module:sap/base/security/URLWhitelist.Entry>",
+            "type": "module:sap/base/security/URLWhitelist.Entry[]",
             "description": "An array with whitelist entries"
           },
           "description": "Gets an array with the whitelist entries"
@@ -7391,7 +7391,7 @@
         },
         {
           "name": "aValues",
-          "type": "[ 'Array' ].<any>",
+          "type": "any[]",
           "optional": true,
           "defaultValue": "[]",
           "description": "The values to be used instead of the placeholders."
@@ -7443,7 +7443,7 @@
         }
       ],
       "returnValue": {
-        "type": "[ 'Array' ].<{type:string, index:int}>",
+        "type": "{type:string,index:int}[]",
         "description": "List of update operations"
       },
       "parameters": [
@@ -7478,13 +7478,13 @@
       "since": "1.58",
       "description": "Sorts the given array in-place and removes any duplicates (identified by \"===\").\n\nUse <code>jQuery.unique()</code> for arrays of DOMElements.",
       "returnValue": {
-        "type": "[ 'Array' ].<any>",
+        "type": "any[]",
         "description": "Same array as given (for chaining)"
       },
       "parameters": [
         {
           "name": "aArray",
-          "type": "[ 'Array' ].<any>",
+          "type": "any[]",
           "optional": false,
           "description": "An Array of any type"
         }
@@ -8082,7 +8082,7 @@
           "name": "getKeys",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "All keys in the property collection"
           },
           "description": "Returns an array of all keys in the property collection."
@@ -8961,7 +8961,7 @@
                 },
                 "scope": {
                   "name": "scope",
-                  "type": "[ 'Array' ].<Element>",
+                  "type": "Element[]",
                   "optional": true,
                   "defaultValue": "[document]",
                   "description": "the DOMNodes(s) which are used for the F6 chain search"
@@ -10027,7 +10027,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<module:sap/ui/performance/Measurement.Entry>",
+            "type": "module:sap/ui/performance/Measurement.Entry[]",
             "description": "filtered array with measurements containing id, info and start-timestamp, end-timestamp, time, duration, categories (false if error)"
           },
           "parameters": [
@@ -10045,7 +10045,7 @@
             },
             {
               "name": "aCategories",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "The function returns only measurements which match these specified categories"
             }
@@ -10145,7 +10145,7 @@
             },
             {
               "name": "aCategories",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "defaultValue": "[\"javascript\"]",
               "description": "An optional categories list for the measurement"
@@ -10976,13 +10976,13 @@
                   "parameterProperties": {
                     "libs": {
                       "name": "libs",
-                      "type": "[ 'Array' ].<string>",
+                      "type": "string[]",
                       "optional": true,
                       "description": "Libraries that should be (pre-)loaded before the Component (experimental setting)"
                     },
                     "components": {
                       "name": "components",
-                      "type": "[ 'Array' ].<string>",
+                      "type": "string[]",
                       "optional": true,
                       "description": "Components that should be (pre-)loaded before the Component (experimental setting)"
                     },
@@ -11116,7 +11116,7 @@
             },
             {
               "name": "aDependencies",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "List of dependencies of the module"
             },
@@ -11938,7 +11938,7 @@
                   "parameterProperties": {
                     "keys": {
                       "name": "keys",
-                      "type": "[ 'Array' ].<(string|Promise)>",
+                      "type": "Array.<string|Promise>",
                       "optional": true,
                       "description": "Array with strings or Promises resolving with strings"
                     }
@@ -12205,7 +12205,7 @@
           "parameters": [
             {
               "name": "aTypes",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "interface types to be registered"
             }
@@ -12653,7 +12653,7 @@
           },
           {
             "name": "aMethods",
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "optional": false,
             "description": "Names of the methods, that should be available in the new facade"
           }
@@ -13489,7 +13489,7 @@
                 },
                 "filters": {
                   "name": "filters",
-                  "type": "[ 'Array' ].<sap.ui.model.Filter>",
+                  "type": "sap.ui.model.Filter[]",
                   "optional": true,
                   "description": "The predefined filters for this aggregation (optional)"
                 },
@@ -13700,7 +13700,7 @@
                 },
                 "parts": {
                   "name": "parts",
-                  "type": "[ 'Array' ].<object>",
+                  "type": "object[]",
                   "optional": true,
                   "description": "Array of binding info objects for the parts of a composite binding; the structure of each binding info is the same as described for the <code>oBindingInfo</code> as a whole.\n\n<b>Note</b>: recursive composite bindings are currently not supported"
                 }
@@ -13726,7 +13726,7 @@
             },
             {
               "name": "aLocalIds",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "an array of local IDs within the cloned hierarchy (internally used)"
             },
@@ -13978,7 +13978,7 @@
           "name": "findAggregatedObjects",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.base.ManagedObject>",
+            "type": "sap.ui.base.ManagedObject[]",
             "description": "Array of aggregated objects that passed the check"
           },
           "parameters": [
@@ -15618,7 +15618,7 @@
           "parameters": [
             {
               "name": "mPredefinedDesignTime",
-              "type": "[ 'Object' ].<string, string>",
+              "type": "Object.<string,string>",
               "optional": false,
               "description": "map containing the module names"
             }
@@ -15948,7 +15948,7 @@
           "name": "getAllPublicMethods",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "array with names of all public methods provided by the described class and its ancestors"
           },
           "description": "Returns an array with the names of all public methods declared by the described class and all its ancestors classes.",
@@ -15988,7 +15988,7 @@
           "name": "getPublicMethods",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "array with names of public methods declared by the described class"
           },
           "description": "Returns an array with the names of the public methods declared by the described class, methods of ancestors are not listed.",
@@ -16113,7 +16113,7 @@
                 },
                 "publicMethods": {
                   "name": "publicMethods",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": false,
                   "description": "array of names of public methods"
                 }
@@ -17435,7 +17435,7 @@
           "static": true,
           "since": "1.56.0",
           "returnValue": {
-            "type": "[ 'Promise' ].<sap.ui.core.Component>",
+            "type": "Promise.<sap.ui.core.Component>",
             "description": "A Promise that resolves with the newly created component instance"
           },
           "parameters": [
@@ -17795,7 +17795,7 @@
           "static": true,
           "since": "1.56.0",
           "returnValue": {
-            "type": "[ 'Promise' ].<function()>",
+            "type": "Promise.<function()>",
             "description": "A Promise that resolves with the loaded component class or <code>undefined</code> in case <code>mOptions.asyncHints.preloadOnly</code> is set to <code>true</code>"
           },
           "parameters": [
@@ -18833,7 +18833,7 @@
           "name": "getComponents",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Required Components."
           },
           "description": "Returns array of components specified in the metadata of the Component. If not specified or the array is empty, the return value is null. <p> <b>Important:</b></br> If a Component is loaded using the manifest URL (or according the \"manifest first\" strategy), this function ignores the entries of the manifest file! It returns only the entries which have been defined in the Component metadata or in the proper Component manifest.",
@@ -18914,7 +18914,7 @@
           "name": "getIncludes",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Included files."
           },
           "description": "Returns the array of the included files that the Component requires such as CSS and JavaScript. If not specified or the array is empty, the return value is null. <p> <b>Important:</b></br> If a Component is loaded using the manifest URL (or according the \"manifest first\" strategy), this function ignores the entries of the manifest file! It returns only the entries which have been defined in the Component metadata or in the proper Component manifest.",
@@ -18927,7 +18927,7 @@
           "name": "getLibs",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Required libraries."
           },
           "description": "Returns array of libraries specified in metadata of the Component, that are automatically loaded when an instance of the component is created. If not specified or the array is empty, the return value is null. <p> <b>Important:</b></br> If a Component is loaded using the manifest URL (or according the \"manifest first\" strategy), this function ignores the entries of the manifest file! It returns only the entries which have been defined in the Component metadata or in the proper Component manifest.",
@@ -19151,7 +19151,7 @@
           "name": "getAppCacheBuster",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "array of base URLs"
           },
           "description": "Base URLs to AppCacheBuster ETag-Index files."
@@ -19680,7 +19680,7 @@
           "name": "getLegacyDateCalendarCustomizing",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "Returns an array contains the customizing data. Each element in the array has properties: dateFormat, islamicMonthStart, gregDate. For details, please see {@link #setLegacyDateCalendarCustomizing}"
           },
           "description": "Returns the currently set customizing data for Islamic calendar support"
@@ -19784,8 +19784,28 @@
           "parameters": [
             {
               "name": "aMappings",
-              "type": "[ 'Array' ].<object>",
+              "type": "object[]",
               "optional": false,
+              "parameterProperties": {
+                "dateFormat": {
+                  "name": "dateFormat",
+                  "type": "string",
+                  "optional": false,
+                  "description": "The date format"
+                },
+                "islamicMonthStart": {
+                  "name": "islamicMonthStart",
+                  "type": "string",
+                  "optional": false,
+                  "description": "The Islamic date"
+                },
+                "gregDate": {
+                  "name": "gregDate",
+                  "type": "string",
+                  "optional": false,
+                  "description": "The corresponding Gregorian date"
+                }
+              },
               "description": "contains the customizing data for the support of Islamic calendar."
             }
           ],
@@ -20030,7 +20050,7 @@
                   "parameterProperties": {
                     "fieldGroupIds": {
                       "name": "fieldGroupIds",
-                      "type": "[ 'Array' ].<string>",
+                      "type": "string[]",
                       "optional": false,
                       "description": "field group IDs of the logical field groups to validate"
                     }
@@ -20169,7 +20189,7 @@
             },
             {
               "name": "aLocalIds",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "an array of local IDs within the cloned hierarchy (internally used)"
             }
@@ -20269,7 +20289,7 @@
               "parameterProperties": {
                 "fieldGroupIds": {
                   "name": "fieldGroupIds",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": true,
                   "description": "field group IDs of the logical field groups to validate"
                 }
@@ -20321,7 +20341,7 @@
           "name": "getControlsByFieldGroupId",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "The list of controls with a field group ID"
           },
           "parameters": [
@@ -20338,7 +20358,7 @@
           "name": "getFieldGroupIds",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "copy of the field group IDs"
           },
           "description": "Returns a copy of the field group IDs array. Modification of the field group IDs need to call {@link #setFieldGroupIds setFieldGroupIds} to apply the changes."
@@ -20553,7 +20573,7 @@
           "parameters": [
             {
               "name": "sFieldGroupIds",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "New value for property <code>fieldGroupIds</code>"
             }
@@ -21173,7 +21193,7 @@
           "name": "byFieldGroupId",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "The list of controls with matching field group IDs"
           },
           "parameters": [
@@ -21854,35 +21874,35 @@
                 },
                 "dependencies": {
                   "name": "dependencies",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": true,
                   "defaultValue": "[]",
                   "description": "List of libraries that this library depends on; names are in dot notation (e.g. \"sap.ui.core\")"
                 },
                 "types": {
                   "name": "types",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": true,
                   "defaultValue": "[]",
                   "description": "List of names of types that this library provides; names are in dot notation (e.g. \"sap.ui.core.CSSSize\")"
                 },
                 "interfaces": {
                   "name": "interfaces",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": true,
                   "defaultValue": "[]",
                   "description": "List of names of interface types that this library provides; names are in dot notation (e.g. \"sap.ui.core.PopupInterface\")"
                 },
                 "controls": {
                   "name": "controls",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": true,
                   "defaultValue": "[]",
                   "description": "Names of control types that this library provides; names are in dot notation (e.g. \"sap.ui.core.ComponentContainer\")"
                 },
                 "elements": {
                   "name": "elements",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": true,
                   "defaultValue": "[]",
                   "description": "Names of element types that this library provides (excluding controls); names are in dot notation (e.g. \"sap.ui.core.Item\")"
@@ -21958,7 +21978,7 @@
           "parameters": [
             {
               "name": "aLibraries",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "set of libraries that should be loaded"
             },
@@ -22114,7 +22134,7 @@
             },
             {
               "name": "aLibraryNames",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "Optional library names to which the configuration should be restricted"
             },
@@ -22469,7 +22489,7 @@
           },
           {
             "name": "aItemDomRefs",
-            "type": "[ 'Array' ].<Element>",
+            "type": "Element[]",
             "optional": false,
             "description": "Array of DOM references representing the items for the navigation"
           },
@@ -22622,7 +22642,7 @@
           "name": "getItemDomRefs",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<Element>",
+            "type": "Element[]",
             "description": "Array of item DOM references"
           },
           "description": "Returns the array of item DOM references"
@@ -22753,7 +22773,7 @@
           "parameters": [
             {
               "name": "aItemDomRefs",
-              "type": "[ 'Array' ].<Element>",
+              "type": "Element[]",
               "optional": false,
               "description": "Array of DOM references or DOM node list object, representing the items"
             }
@@ -23031,7 +23051,7 @@
             },
             {
               "name": "aOffset",
-              "type": "[ 'Array' ].<int>",
+              "type": "int[]",
               "optional": true,
               "defaultValue": "[0,0]",
               "description": "Specifies an additional left and top offset of the target scroll position, relative to the upper left corner of the DOM element"
@@ -25444,7 +25464,7 @@
             },
             {
               "name": "aLocalIds",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "Array of local IDs within the cloned hierarchy (internally used)"
             }
@@ -25634,7 +25654,7 @@
           "name": "findElements",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Element>",
+            "type": "sap.ui.core.Element[]",
             "description": "array of child elements and controls"
           },
           "parameters": [
@@ -25671,14 +25691,14 @@
         {
           "name": "getCustomData",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.CustomData>" },
+          "returnValue": { "type": "sap.ui.core.CustomData[]" },
           "description": "Gets content of aggregation {@link #getCustomData customData}.\n\nCustom Data, a data structure like a map containing arbitrary key value pairs."
         },
         {
           "name": "getDependents",
           "visibility": "public",
           "since": "1.19",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Element>" },
+          "returnValue": { "type": "sap.ui.core.Element[]" },
           "description": "Gets content of aggregation {@link #getDependents dependents}.\n\nDependents are not rendered, but their databinding context and lifecycle are bound to the aggregating Element."
         },
         {
@@ -25725,9 +25745,7 @@
           "name": "getDragDropConfig",
           "visibility": "public",
           "since": "1.56",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.dnd.DragDropBase>"
-          },
+          "returnValue": { "type": "sap.ui.core.dnd.DragDropBase[]" },
           "description": "Gets content of aggregation {@link #getDragDropConfig dragDropConfig}.\n\nDefines the drag-and-drop configuration. <b>Note:</b> This configuration might be ignored due to control {@link sap.ui.core.Element.extend metadata} restrictions."
         },
         {
@@ -25982,7 +26000,7 @@
           "name": "removeAllCustomData",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.CustomData>",
+            "type": "sap.ui.core.CustomData[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getCustomData customData}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -25992,7 +26010,7 @@
           "visibility": "public",
           "since": "1.19",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Element>",
+            "type": "sap.ui.core.Element[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getDependents dependents}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -26002,7 +26020,7 @@
           "visibility": "public",
           "since": "1.56",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.dnd.DragDropBase>",
+            "type": "sap.ui.core.dnd.DragDropBase[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getDragDropConfig dragDropConfig}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -26378,7 +26396,7 @@
           "static": true,
           "since": "1.56.0",
           "returnValue": {
-            "type": "[ 'Promise' ].<Array.<sap.ui.core.Control>>",
+            "type": "Promise.<sap.ui.core.Control[]>",
             "description": "a Promise, which resolves with an array of 0..n controls created from an <code>ExtensionPoint</code>. If <code>mOptions.createDefaultContent</code> is called and returns a Promise, that Promise is returned by <code>ExtensionPoint.load</code>."
           },
           "parameters": [
@@ -26503,7 +26521,7 @@
                 },
                 "relativeRange": {
                   "name": "relativeRange",
-                  "type": "[ 'Array' ].<int>",
+                  "type": "int[]",
                   "optional": true,
                   "description": "the day range used for relative formatting. If oFormatOptions.relatvieScale is set to default value 'day', the relativeRange is by default [-6, 6], which means only the last 6 days, today and the next 6 days are formatted relatively. Otherwise when oFormatOptions.relativeScale is set to 'auto', all dates are formatted relatively."
                 },
@@ -26605,7 +26623,7 @@
                 },
                 "relativeRange": {
                   "name": "relativeRange",
-                  "type": "[ 'Array' ].<int>",
+                  "type": "int[]",
                   "optional": true,
                   "description": "the day range used for relative formatting. If oFormatOptions.relatvieScale is set to default value 'day', the relativeRange is by default [-6, 6], which means only the last 6 days, today and the next 6 days are formatted relatively. Otherwise when oFormatOptions.relativeScale is set to 'auto', all dates are formatted relatively."
                 },
@@ -26707,7 +26725,7 @@
                 },
                 "relativeRange": {
                   "name": "relativeRange",
-                  "type": "[ 'Array' ].<int>",
+                  "type": "int[]",
                   "optional": true,
                   "description": "the day range used for relative formatting. If oFormatOptions.relatvieScale is set to default value 'day', the relativeRange is by default [-6, 6], which means only the last 6 days, today and the next 6 days are formatted relatively. Otherwise when oFormatOptions.relativeScale is set to 'auto', all dates are formatted relatively."
                 },
@@ -29464,7 +29482,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -29583,7 +29601,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -30999,7 +31017,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "an array of ids of the labels referencing the given element"
           },
           "parameters": [
@@ -31494,7 +31512,7 @@
           "name": "getExtensionSubtags",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "the individual extension sections"
           },
           "description": "Get the locale extensions as an array of tokens.\n\nThe leading singleton and the separating dashes are not part of the result. If there is no extensions section in the locale tag, an empty array is returned."
@@ -31531,7 +31549,7 @@
           "name": "getPrivateUseSubtags",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "the tokens of the private use section"
           },
           "description": "Get the locale private use section as an array of tokens.\n\nThe leading singleton and the separating dashes are not part of the result. If there is no private use section in the locale tag, an empty array is returned."
@@ -31581,7 +31599,7 @@
           "name": "getVariantSubtags",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "the individual variant sections"
           },
           "description": "Get the locale variants as an array of individual variants.\n\nThe separating dashes are not part of the result. If there is no variant section in the locale tag, an empty array is returned."
@@ -32499,13 +32517,13 @@
           "visibility": "public",
           "since": "1.34",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "An array of all relative time patterns"
           },
           "parameters": [
             {
               "name": "aScales",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "The scales for which the available patterns should be returned"
             },
@@ -35376,7 +35394,7 @@
             },
             {
               "name": "aLocalIds",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "an array of local IDs within the cloned hierarchy (internally used)"
             }
@@ -35662,7 +35680,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nChild Controls of the view"
         },
         {
@@ -35887,7 +35905,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -36208,7 +36226,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Promise' ].<sap.ui.core.mvc.XMLView>",
+            "type": "Promise.<sap.ui.core.mvc.XMLView>",
             "description": "A Promise that resolves with the view instance or rejects with any thrown error."
           },
           "parameters": [
@@ -36248,7 +36266,7 @@
                   "parameterProperties": {
                     "keys": {
                       "name": "keys",
-                      "type": "[ 'Array' ].<(string|Promise)>",
+                      "type": "Array.<string|Promise>",
                       "optional": true,
                       "description": "Array with strings or Promises resolving with strings"
                     }
@@ -38607,7 +38625,7 @@
           "name": "getRelevantEventsInfo",
           "visibility": "protected",
           "returnValue": {
-            "type": "[ 'Array' ].<Object>",
+            "type": "Object[]",
             "description": "the events info. Each event info object in the array should contain a name property which describes the event name, and an optional paramMapping object where the parameter names in the event are defined for the 'newHash', 'oldHash' and 'fullHash'. If any of them isn't defined in the mapping, the same name is used to get the property value from the event object. Every object can also define a \"updateHashOnly\" option with boolean value to indicate whether the event is only relevant for the RouterHashChanger instances which are going to be created and the event shouldn't be forwarded to the existing RouterHashChanger instances. If this option is set to true, the new hash is saved RouterHashChanger instances but no \"hashChanged\" event is fired on any existing RouterHashChanger instance."
           },
           "description": "Defines the events and its parameters which should be used for tracking the hash changes"
@@ -43030,7 +43048,7 @@
                 },
                 "rules": {
                   "name": "rules",
-                  "type": "[ 'Array' ].<{libName:string, ruleId:string}>",
+                  "type": "{libName:string,ruleId:string}[]",
                   "optional": true,
                   "description": "The rules to check."
                 },
@@ -43400,7 +43418,7 @@
           "visibility": "restricted",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<Array.<string>>",
+            "type": "string[][]",
             "description": "Two dimensional array with scopes in bottom up order"
           },
           "parameters": [
@@ -44056,17 +44074,13 @@
         {
           "name": "getAttributes",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.tmpl.DOMAttribute>"
-          },
+          "returnValue": { "type": "sap.ui.core.tmpl.DOMAttribute[]" },
           "description": "Gets content of aggregation {@link #getAttributes attributes}.\n\nDOM attributes which are rendered as part of the DOM element and bindable"
         },
         {
           "name": "getElements",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.tmpl.DOMElement>"
-          },
+          "returnValue": { "type": "sap.ui.core.tmpl.DOMElement[]" },
           "description": "Gets content of aggregation {@link #getElements elements}.\n\nNested DOM elements to support nested bindable structures"
         },
         {
@@ -44181,7 +44195,7 @@
           "name": "removeAllAttributes",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.tmpl.DOMAttribute>",
+            "type": "sap.ui.core.tmpl.DOMAttribute[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getAttributes attributes}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -44190,7 +44204,7 @@
           "name": "removeAllElements",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.tmpl.DOMElement>",
+            "type": "sap.ui.core.tmpl.DOMElement[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getElements elements}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -45777,13 +45791,13 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nContent that is displayed in the UIArea."
         },
         {
           "name": "getDependents",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getDependents dependents}.\n\nDependent objects whose lifecycle is bound to the UIArea but which are not automatically rendered by the UIArea."
         },
         {
@@ -45968,7 +45982,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -45977,7 +45991,7 @@
           "name": "removeAllDependents",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getDependents dependents}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -46575,9 +46589,7 @@
         {
           "name": "getColumns",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.util.ExportColumn>"
-          },
+          "returnValue": { "type": "sap.ui.core.util.ExportColumn[]" },
           "description": "Gets content of aggregation {@link #getColumns columns}.\n\nColumns for the Export."
         },
         {
@@ -46599,7 +46611,7 @@
         {
           "name": "getRows",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.util.ExportRow>" },
+          "returnValue": { "type": "sap.ui.core.util.ExportRow[]" },
           "description": "Gets content of aggregation {@link #getRows rows}.\n\nRows of the Export."
         },
         {
@@ -46686,7 +46698,7 @@
           "name": "removeAllColumns",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.util.ExportColumn>",
+            "type": "sap.ui.core.util.ExportColumn[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getColumns columns}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -46695,7 +46707,7 @@
           "name": "removeAllRows",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.util.ExportRow>",
+            "type": "sap.ui.core.util.ExportRow[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getRows rows}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -47166,9 +47178,7 @@
         {
           "name": "getCells",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.util.ExportCell>"
-          },
+          "returnValue": { "type": "sap.ui.core.util.ExportCell[]" },
           "description": "Gets content of aggregation {@link #getCells cells}.\n\nCells for the Export."
         },
         {
@@ -47225,7 +47235,7 @@
           "name": "removeAllCells",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.util.ExportCell>",
+            "type": "sap.ui.core.util.ExportCell[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getCells cells}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -47998,7 +48008,7 @@
           "name": "getRequests",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "the value of property <code>rootUri</code>"
           },
           "description": "Getter for property <code>requests</code>.\n\nDefault value is <code>[]</code>"
@@ -48060,7 +48070,7 @@
           "parameters": [
             {
               "name": "requests",
-              "type": "[ 'Array' ].<object>",
+              "type": "object[]",
               "optional": false,
               "description": "new value for property <code>requests</code>"
             }
@@ -48877,7 +48887,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<Element>",
+            "type": "Element[]",
             "description": "Array with the nodes of the controls of the fragment"
           },
           "parameters": [
@@ -50150,7 +50160,7 @@
         {
           "name": "getMultipleLayoutData",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.LayoutData>" },
+          "returnValue": { "type": "sap.ui.core.LayoutData[]" },
           "description": "Gets content of aggregation {@link #getMultipleLayoutData multipleLayoutData}.\n\nAllows multiple LayoutData."
         },
         {
@@ -50197,7 +50207,7 @@
           "name": "removeAllMultipleLayoutData",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.LayoutData>",
+            "type": "sap.ui.core.LayoutData[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getMultipleLayoutData multipleLayoutData}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -51644,7 +51654,7 @@
             },
             {
               "name": "aRangeBorders",
-              "type": "[ 'Array' ].<int>",
+              "type": "int[]",
               "optional": true,
               "description": "The range borders"
             },
@@ -51656,7 +51666,7 @@
             },
             {
               "name": "aRangeNames",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": true,
               "description": "The names of the ranges. The names must be a valid id and consist only of letters and digits. If names are specified, CSS classes are also added to the document root as described above. This behavior can be switched off explicitly by using <code>bSuppressClasses</code>. <b>Note:</b> <code>aRangeBorders</code> with <code>n</code> entries define <code>n+1</code> ranges. Therefore <code>n+1</code> names must be provided."
             },
@@ -52161,19 +52171,19 @@
                 },
                 "paths": {
                   "name": "paths",
-                  "type": "[ 'Object' ].<string, string>",
+                  "type": "Object.<string,string>",
                   "optional": true,
                   "description": "A map of resource locations keyed by a corresponding module ID prefix. When a module is to be loaded, the longest key in <code>paths</code> is searched that is a prefix of the module ID. The module will be loaded from the concatenation of the corresponding value in <code>paths</code> and the remainder of the module ID (after the prefix). If no entry in <code>paths</code> matches, then the module will be loaded from the <code>baseUrl</code>.\n\nThe prefixes (keys) must not contain relative segments (./ or ../), a trailing slash will be removed, and only full name segment matches are considered a match (prefix 'sap/m' does not match a module ID 'sap/main').\n\n<b>Note</b>: In contrast to the \"Common Config\" of the AMD spec, the paths (values in the map) are interpreted relative to <code>document.baseURI</code>, not relative to <code>cfg.baseUrl</code>."
                 },
                 "map": {
                   "name": "map",
-                  "type": "[ 'Object' ].<string, Object.<string, string>>",
+                  "type": "Object.<string,Object.<string,string>>",
                   "optional": true,
                   "description": "A map of maps that defines how to map module IDs to other module IDs (inner maps) in the context of a specific set of modules (keys of outer map).\n\nEach key of the outer map represents a module ID prefix that describes the context for which its value (inner map) has to be used. The special key <code>*</code> describes the default context which applies for any module. Only the most specific matching context will be taken into account.\n\nEach inner map maps a module ID or module ID prefix to another module ID or module ID prefix. Again, only the most specific match is taken into account and only one mapping is evaluated (the evaluation of the mappings is not done recursively).\n\nMatches are always complete matches, a prefix 'a/b/c' does not match the module ID 'a/b/com'."
                 },
                 "shim": {
                   "name": "shim",
-                  "type": "[ 'Object' ].<string, {amd: boolean, deps: Array.<string>, exports: (string|Array.<string>)}>",
+                  "type": "Object.<string,{amd:boolean,deps:string[],exports:string|string[]}>",
                   "optional": true,
                   "description": "Defines additional metadata for modules for which the normal behavior of the AMD APIs is not sufficient.\n\nA typical example are scripts that don't use <code>define</code> or <code>sap.ui.define</code>, but export to a global name. With the <code>exports</code> property, one or more export names can be specified, and the loader can retrieve the exported value after executing the corresponding module. If such a module has dependencies, they can be specified in the <code>deps</code> array and are loaded and executed before executing the module.\n\nThe <code>amd</code> flag of a shim is a ui5loader-specific extension of the standard AMD shims. If set, the ui5loader hides a currently active AMD loader before executing the module and restores it afterwards. Otherwise, it might miss the export of third party modules that check for an AMD loader and register with it instead of exporting to a global name. A future version of the ui5loader might ignore this flag when it acts as an AMD loader by itself.\n\n<b>Note:</b> The ui5loader does not support the <code>init</code> option described by the \"Common Config\" section of the AMD spec."
                 },
@@ -53033,7 +53043,7 @@
           "name": "getAllAttributeNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "List of all attribute names"
           },
           "description": "Get the names of all attributes included in this dimension"
@@ -53533,7 +53543,7 @@
           "name": "getAllHierarchyPropertyNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "List of all property names"
           },
           "description": "Get the names of all properties with an associated hierarchy"
@@ -53542,7 +53552,7 @@
           "name": "getFilterablePropertyNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Array with names of properties that can be filtered."
           },
           "description": "Get names of properties that can be filtered, that is they can be used in $filter expressions"
@@ -53585,7 +53595,7 @@
           "name": "getKeyProperties",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "The list of key property names"
           },
           "description": "Get key properties of this type"
@@ -53655,7 +53665,7 @@
           "name": "getRequiredFilterPropertyNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Array with names of properties that must be filtered."
           },
           "description": "Get names of properties that must be filtered, that is they must appear in every $filter expression"
@@ -53664,7 +53674,7 @@
           "name": "getSortablePropertyNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Array with names of properties that can be sorted."
           },
           "description": "Get names of properties that can be sorted, that is they can be used in $orderby expressions"
@@ -53827,7 +53837,7 @@
           "parameters": [
             {
               "name": "aUI5Filter",
-              "type": "[ 'Array' ].<sap.ui.model.Filter>",
+              "type": "sap.ui.model.Filter[]",
               "optional": false,
               "description": "Array of UI5 filter objects"
             }
@@ -53861,7 +53871,7 @@
           "name": "getExpressionAsUI5FilterArray",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.Filter>",
+            "type": "sap.ui.model.Filter[]",
             "description": "List of filter objects representing this expression"
           },
           "description": "Get an array of SAPUI5 Filter objects corresponding to this expression."
@@ -54030,7 +54040,7 @@
           "name": "getAllQueryResultNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "List of all query result names"
           },
           "description": "Get the names of all query results (entity sets) offered by the model"
@@ -54122,7 +54132,7 @@
           },
           {
             "name": "aWorkaroundID",
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "optional": false,
             "description": "listing all workarounds to be applied."
           }
@@ -54317,7 +54327,7 @@
           "name": "getAllParameterNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "List of all parameter names"
           },
           "description": "Get the names of all parameters part of the parameterization"
@@ -54689,7 +54699,7 @@
           "name": "getAllDimensionNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "List of all dimension names"
           },
           "description": "Get the names of all dimensions included in the query result"
@@ -54707,7 +54717,7 @@
           "name": "getAllMeasureNames",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "List of all measure names"
           },
           "description": "Get the names of all measures included in the query result"
@@ -55387,7 +55397,7 @@
           "name": "getExpressionsAsUI5SorterArray",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.Sorter>",
+            "type": "sap.ui.model.Sorter[]",
             "description": "List of sorter objects representing this expression"
           },
           "description": "Get an array of SAPUI5 Sorter objects corresponding to this expression."
@@ -55864,7 +55874,7 @@
           "parameters": [
             {
               "name": "oEvents",
-              "type": "[ 'Object' ].<string, function()>",
+              "type": "Object.<string,function()>",
               "optional": false
             }
           ],
@@ -55996,7 +56006,7 @@
           "parameters": [
             {
               "name": "oEvents",
-              "type": "[ 'Object' ].<string, function()>",
+              "type": "Object.<string,function()>",
               "optional": false
             }
           ],
@@ -56479,7 +56489,7 @@
           "parameters": [
             {
               "name": "aFilters",
-              "type": "[ 'Array' ].<sap.ui.model.Filter>",
+              "type": "sap.ui.model.Filter[]",
               "optional": false,
               "description": "Array of filter objects"
             },
@@ -56751,7 +56761,7 @@
           },
           {
             "name": "aSorters",
-            "type": "[ 'Array' ].<sap.ui.model.Sorter>",
+            "type": "sap.ui.model.Sorter[]",
             "optional": true,
             "defaultValue": null,
             "description": "Predefined sorter/s contained in an array (optional)"
@@ -56840,7 +56850,7 @@
           "name": "getNodeContexts",
           "visibility": "protected",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "the contexts array"
           },
           "parameters": [
@@ -56869,7 +56879,7 @@
           "name": "getRootContexts",
           "visibility": "protected",
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "the contexts array"
           },
           "parameters": [
@@ -56915,7 +56925,7 @@
           "parameters": [
             {
               "name": "an",
-              "type": "[ 'Array' ].<sap.ui.model.Sorter>",
+              "type": "sap.ui.model.Sorter[]",
               "optional": false,
               "description": "array of Sorter instances which will be applied"
             }
@@ -57358,7 +57368,7 @@
           "name": "getMessages",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Message>",
+            "type": "sap.ui.core.Message[]",
             "description": "the array of all messages or null if no {link:sap.ui.core.messages.ModelManager ModelManager} is used."
           },
           "description": "Returns the array of all state messages or null. This combines the model and control messages."
@@ -57377,7 +57387,7 @@
           "name": "getModelMessages",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Message>",
+            "type": "sap.ui.core.Message[]",
             "description": "the array of messages of the model or null if no {link:sap.ui.core.messages.ModelManager ModelManager} is used."
           },
           "description": "Returns the array of state messages of the model or undefined"
@@ -57869,7 +57879,7 @@
           "name": "getControlMessages",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Message>",
+            "type": "sap.ui.core.Message[]",
             "description": "the array of messages of the control or null if no {link:sap.ui.core.messages.ModelManager ModelManager} is used."
           },
           "description": "Returns the array of state messages of the control or undefined."
@@ -57887,7 +57897,7 @@
           "name": "getMessages",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Message>",
+            "type": "sap.ui.core.Message[]",
             "description": "the array of all messages or null if no {link:sap.ui.core.messages.ModelManager ModelManager} is used."
           },
           "description": "Returns the array of all state messages or null. This combines the model and control messages."
@@ -57906,7 +57916,7 @@
           "name": "getModelMessages",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Message>",
+            "type": "sap.ui.core.Message[]",
             "description": "the array of messages of the model or null if no {link:sap.ui.core.messages.ModelManager ModelManager} is used."
           },
           "description": "Returns the array of state messages of the model or undefined"
@@ -57966,7 +57976,7 @@
           "parameters": [
             {
               "name": "the",
-              "type": "[ 'Array' ].<sap.ui.core.Message>",
+              "type": "sap.ui.core.Message[]",
               "optional": false,
               "description": "control messages"
             }
@@ -58131,7 +58141,7 @@
               },
               "filters": {
                 "name": "filters",
-                "type": "[ 'Array' ].<sap.ui.model.Filter>",
+                "type": "sap.ui.model.Filter[]",
                 "optional": false,
                 "description": "Array of filters on which logical conjunction is applied"
               },
@@ -58894,7 +58904,7 @@
             "parameterProperties": {
               "arrayNames": {
                 "name": "arrayNames",
-                "type": "[ 'Array' ].<string>",
+                "type": "string[]",
                 "optional": true,
                 "description": "Keys of arrays to be used for building the tree structure. If not specified, all arrays and objects in the bound data will be used. Note that for arrays nested inside differently named arrays, you need to add both to <code>arrayNames</code>. You always have to add the complete parent chain. If any array is ignored, its child arrays will be ignored as well even if they have been added to <code>arrayNames</code>."
               }
@@ -59112,7 +59122,7 @@
           "parameters": [
             {
               "name": "aFilters",
-              "type": "[ 'Array' ].<sap.ui.model.Filter>",
+              "type": "sap.ui.model.Filter[]",
               "optional": false,
               "description": "Array of filter objects"
             },
@@ -59129,7 +59139,7 @@
           "name": "getContexts",
           "visibility": "protected",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.Context>",
+            "type": "sap.ui.model.Context[]",
             "description": "the array of contexts for each row of the bound list"
           },
           "parameters": [
@@ -59155,7 +59165,7 @@
           "visibility": "public",
           "since": "1.28",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.Context>",
+            "type": "sap.ui.model.Context[]",
             "description": "the array of contexts for each row of the bound list"
           },
           "description": "Returns an array of currently used binding contexts of the bound control\n\nThis method does not trigger any data requests from the backend or delta calculation, but just returns the context array as last requested by the control. This can be used by the application to get access to the data currently displayed by a list control."
@@ -60775,7 +60785,7 @@
           "parameters": [
             {
               "name": "aParts",
-              "type": "[ 'Array' ].<any>",
+              "type": "any[]",
               "optional": false,
               "description": "array of parts"
             },
@@ -61082,7 +61092,7 @@
           },
           {
             "name": "aValues",
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "optional": false,
             "description": "Array of FilterOperators and their values: [{operator:\"GE\",value1:\"val1\"},{operator:\"LE\",value1:\"val1\"},{operator:\"BT\",value1:\"val1\",value2:\"val2\"}]"
           },
@@ -61725,7 +61735,7 @@
           "name": "getContexts",
           "visibility": "protected",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.Context>",
+            "type": "sap.ui.model.Context[]",
             "description": "the array of contexts for each row of the bound list"
           },
           "parameters": [
@@ -62786,7 +62796,7 @@
           "parameters": [
             {
               "name": "aChangeOperations",
-              "type": "[ 'Array' ].<any>",
+              "type": "any[]",
               "optional": false,
               "description": "an array of change batch operations created via <code>createBatchOperation</code> and <code>sMethod</code> = POST, PUT, MERGE or DELETE"
             }
@@ -62799,7 +62809,7 @@
           "parameters": [
             {
               "name": "aReadOperations",
-              "type": "[ 'Array' ].<any>",
+              "type": "any[]",
               "optional": false,
               "description": "an array of read batch operations created via <code>createBatchOperation</code> and <code>sMethod</code> = GET"
             }
@@ -64779,7 +64789,7 @@
           "parameters": [
             {
               "name": "aValues",
-              "type": "[ 'Array' ].<any>",
+              "type": "any[]",
               "optional": false,
               "description": "Array of part values to be formatted; contains in the following order: amount, currency, currency customizing. The first call to this method where all parts are set determines the currency customizing; subsequent calls use this customizing, so that the corresponding part may be omitted. Changes to the currency customizing part after this first method call are not considered: The currency customizing for this <code>Currency</code> instance remains unchanged."
             },
@@ -64829,7 +64839,7 @@
           "visibility": "public",
           "since": "1.63.0",
           "returnValue": {
-            "type": "[ 'Array' ].<any>",
+            "type": "any[]",
             "description": "An array containing amount and currency in this order. Both, amount and currency, are string values unless the format option <code>parseAsString</code> is <code>false</code>; in this case, the amount is a number."
           },
           "parameters": [
@@ -64847,7 +64857,7 @@
             },
             {
               "name": "aCurrentValues",
-              "type": "[ 'Array' ].<any>",
+              "type": "any[]",
               "optional": false,
               "description": "The current values of all binding parts"
             }
@@ -67765,7 +67775,7 @@
           },
           {
             "name": "aDynamicFormatOptionNames",
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "optional": true,
             "description": "Not supported"
           }
@@ -67820,7 +67830,7 @@
           "parameters": [
             {
               "name": "aValues",
-              "type": "[ 'Array' ].<any>",
+              "type": "any[]",
               "optional": false,
               "description": "Array of part values to be formatted; contains in the following order: measure, unit, unit customizing. The first call to this method where all parts are set determines the unit customizing; subsequent calls use this customizing, so that the corresponding part may be omitted. Changes to the unit customizing part after this first method call are not considered: The unit customizing for this <code>Unit</code> instance remains unchanged."
             },
@@ -67870,7 +67880,7 @@
           "visibility": "public",
           "since": "1.63.0",
           "returnValue": {
-            "type": "[ 'Array' ].<any>",
+            "type": "any[]",
             "description": "An array containing measure and unit in this order. Both, measure and unit, are string values unless the format option <code>parseAsString</code> is <code>false</code>; in this case, the measure is a number."
           },
           "parameters": [
@@ -67888,7 +67898,7 @@
             },
             {
               "name": "aCurrentValues",
-              "type": "[ 'Array' ].<any>",
+              "type": "any[]",
               "optional": false,
               "description": "The current values of all binding parts"
             }
@@ -68477,7 +68487,7 @@
       "properties": [
         {
           "name": "result",
-          "type": "[ 'Array' ].<Error>",
+          "type": "Error[]",
           "visibility": "public",
           "description": "An array of Errors (@see sap.ui.model.v2.ODataAnnotations#error) that occurred while loading a group of annotations"
         }
@@ -68864,7 +68874,7 @@
           "name": "getContexts",
           "visibility": "protected",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.Context>",
+            "type": "sap.ui.model.Context[]",
             "description": "The array of contexts for each row of the bound list"
           },
           "parameters": [
@@ -69130,7 +69140,7 @@
               },
               "metadataNamespaces": {
                 "name": "metadataNamespaces",
-                "type": "[ 'Object' ].<string, string>",
+                "type": "Object.<string,string>",
                 "optional": true,
                 "description": "Map of namespace aliases (alias => URI) that can be used in metadata binding paths; each alias is mapped to a corresponding namespace URI; when an alias is used in a metadata binding path, it addresses a metadata extension that belongs to the corresponding namespace URI; if <code>metadataNamespaces</code> is not given, the following default mappings will be used: <ul> <li><code>\"sap\": \"sap:\"http://www.sap.com/Protocols/SAPData\"</code></li> <li><code> \"m\": \"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\"</code></li> <li><code> \"\": \"http://schemas.microsoft.com/ado/2007/06/edmx</code></li> </ul>"
               },
@@ -69163,7 +69173,7 @@
               },
               "bindableResponseHeaders": {
                 "name": "bindableResponseHeaders",
-                "type": "[ 'Array' ].<string>",
+                "type": "string[]",
                 "optional": true,
                 "defaultValue": null,
                 "description": "Set this array to make custom response headers bindable via the entity's \"__metadata/headers\" property"
@@ -69209,7 +69219,7 @@
                   "parameterProperties": {
                     "result": {
                       "name": "result",
-                      "type": "[ 'Array' ].<Error>",
+                      "type": "Error[]",
                       "optional": false,
                       "description": "An array of Errors"
                     }
@@ -69240,7 +69250,7 @@
                   "parameterProperties": {
                     "result": {
                       "name": "result",
-                      "type": "[ 'Array' ].<sap.ui.model.odata.v2.ODataAnnotations.Source>",
+                      "type": "sap.ui.model.odata.v2.ODataAnnotations.Source[]",
                       "optional": false,
                       "description": "An array consisting of one or several annotation sources and/or errors containing a source property and error details."
                     }
@@ -70265,7 +70275,7 @@
             },
             {
               "name": "aSorters",
-              "type": "[ 'Array' ].<sap.ui.model.Sorter>",
+              "type": "sap.ui.model.Sorter[]",
               "optional": true,
               "description": "An array of predefined sorters"
             }
@@ -71580,13 +71590,13 @@
                 },
                 "filters": {
                   "name": "filters",
-                  "type": "[ 'Array' ].<sap.ui.model.Filter>",
+                  "type": "sap.ui.model.Filter[]",
                   "optional": true,
                   "description": "An array of filters to be included in the request URL"
                 },
                 "sorters": {
                   "name": "sorters",
-                  "type": "[ 'Array' ].<sap.ui.model.Sorter>",
+                  "type": "sap.ui.model.Sorter[]",
                   "optional": true,
                   "description": "An array of sorters to be included in the request URL"
                 },
@@ -72401,7 +72411,7 @@
           "name": "getNodeContexts",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.Context>",
+            "type": "sap.ui.model.Context[]",
             "description": "the contexts array"
           },
           "parameters": [
@@ -72431,7 +72441,7 @@
           "name": "getRootContexts",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.Context>",
+            "type": "sap.ui.model.Context[]",
             "description": "an array containing the contexts for the entities returned by the backend, might be fewer than requested if the backend does not have enough data."
           },
           "parameters": [
@@ -73180,7 +73190,7 @@
           "parameters": [
             {
               "name": "aPathExpressions",
-              "type": "[ 'Array' ].<object>",
+              "type": "object[]",
               "optional": false,
               "description": "The \"14.5.11 Expression edm:NavigationPropertyPath\" or \"14.5.13 Expression edm:PropertyPath\" objects describing which properties need to be loaded because they may have changed due to side effects of a previous update, for example <code>[{$PropertyPath : \"TEAM_ID\"}, {$NavigationPropertyPath : \"EMPLOYEE_2_MANAGER\"}, {$PropertyPath : \"EMPLOYEE_2_TEAM/Team_Id\"}]</code>"
             }
@@ -74046,7 +74056,7 @@
           "visibility": "protected",
           "since": "1.37.0",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.odata.v4.Context>",
+            "type": "sap.ui.model.odata.v4.Context[]",
             "description": "The array of already created contexts with the first entry containing the context for <code>iStart</code>"
           },
           "parameters": [
@@ -74085,7 +74095,7 @@
           "visibility": "public",
           "since": "1.39.0",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.model.odata.v4.Context>",
+            "type": "sap.ui.model.odata.v4.Context[]",
             "description": "The contexts"
           },
           "description": "Returns the contexts that were requested by a control last time. Does not trigger a data request. In the time between the {@link #event:dataRequested} event and the {@link #event:dataReceived} event, the resulting array contains <code>undefined</code> at those indexes where the data is not yet available.",
@@ -74284,7 +74294,7 @@
                 },
                 "groupLevels": {
                   "name": "groupLevels",
-                  "type": "[ 'Array' ].<string>",
+                  "type": "string[]",
                   "optional": true,
                   "description": "A list of groupable property names used to determine group levels. They may, but don't need to, be repeated in <code>oAggregation.group</code>. Group levels cannot be combined with filtering, with the system query option <code>$count</code>, or with an aggregatable property for which a grand total is needed; only a single group level is supported."
                 }
@@ -74362,8 +74372,64 @@
           "parameters": [
             {
               "name": "aAggregation",
-              "type": "[ 'Array' ].<object>",
+              "type": "object[]",
               "optional": false,
+              "parameterProperties": {
+                "name": {
+                  "name": "name",
+                  "type": "string",
+                  "optional": false,
+                  "description": "The name of an OData property. A property which is neither a dimension nor a measure, but for instance a text property or in some cases a unit property, has no further details."
+                },
+                "grouped": {
+                  "name": "grouped",
+                  "type": "boolean",
+                  "optional": true,
+                  "description": "Its presence is used to detect a dimension; the dimension is ignored unless at least one of <code>inResult</code> and <code>visible</code> is <code>true</code>"
+                },
+                "inResult": {
+                  "name": "inResult",
+                  "type": "boolean",
+                  "optional": true,
+                  "description": "Dimensions only: see above"
+                },
+                "visible": {
+                  "name": "visible",
+                  "type": "boolean",
+                  "optional": true,
+                  "description": "Dimensions only: see above"
+                },
+                "total": {
+                  "name": "total",
+                  "type": "boolean",
+                  "optional": true,
+                  "description": "Its presence is used to detect a measure"
+                },
+                "max": {
+                  "name": "max",
+                  "type": "boolean",
+                  "optional": true,
+                  "description": "Measures only: Whether the maximum value (ignoring currencies or units of measure) for this measure is needed (since 1.55.0); filtering and sorting is supported in this case (since 1.58.0)"
+                },
+                "min": {
+                  "name": "min",
+                  "type": "boolean",
+                  "optional": true,
+                  "description": "Measures only: Whether the minimum value (ignoring currencies or units of measure) for this measure is needed (since 1.55.0); filtering and sorting is supported in this case (since 1.58.0)"
+                },
+                "with": {
+                  "name": "with",
+                  "type": "string",
+                  "optional": true,
+                  "description": "Measures only: The name of the method (for example \"sum\") used for aggregation of this measure; see \"3.1.2 Keyword with\" (since 1.55.0)"
+                },
+                "as": {
+                  "name": "as",
+                  "type": "string",
+                  "optional": true,
+                  "description": "Measures only: The alias, that is the name of the dynamic property used for aggregation of this measure; see \"3.1.1 Keyword as\" (since 1.55.0)"
+                }
+              },
               "description": "An array with objects holding the information needed for data aggregation; see also <a href=\"http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/\">OData Extension for Data Aggregation Version 4.0</a>"
             }
           ],
@@ -76421,7 +76487,7 @@
               },
               "enhanceWith": {
                 "name": "enhanceWith",
-                "type": "[ 'Array' ].<(module:sap/base/i18n/ResourceBundle|jQuery.sap.util.ResourceBundle)>",
+                "type": "Array.<module:sap/base/i18n/ResourceBundle|jQuery.sap.util.ResourceBundle>",
                 "optional": true,
                 "description": "Optional list of resource bundles that should enhance the texts from the main bundle; intended for extensibility scenarios, also see the class documentation."
               }
@@ -76713,7 +76779,7 @@
                 },
                 "rowIndices": {
                   "name": "rowIndices",
-                  "type": "[ 'Array' ].<int>",
+                  "type": "int[]",
                   "optional": true,
                   "description": "Other selected indices (if available)"
                 }
@@ -76746,7 +76812,7 @@
           "name": "getSelectedIndices",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<int>",
+            "type": "int[]",
             "description": "array of selected indices"
           },
           "description": "Returns the selected indices as array."
@@ -77416,7 +77482,7 @@
           "parameters": [
             {
               "name": "aFilters",
-              "type": "[ 'Array' ].<sap.ui.model.Filter>",
+              "type": "sap.ui.model.Filter[]",
               "optional": false,
               "description": "Array of sap.ui.model.Filter objects"
             },
@@ -77548,7 +77614,7 @@
           "parameters": [
             {
               "name": "aSorters",
-              "type": "[ 'Array' ].<sap.ui.model.Sorter>",
+              "type": "sap.ui.model.Sorter[]",
               "optional": false,
               "description": "Array of sap.ui.model.Sorter objects"
             }
@@ -77670,7 +77736,7 @@
                 },
                 "rowIndices": {
                   "name": "rowIndices",
-                  "type": "[ 'Array' ].<int>",
+                  "type": "int[]",
                   "optional": true,
                   "description": "Other selected indices (if available)"
                 }
@@ -77722,13 +77788,13 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "a new array containing all sections from aSections merged with oNewSection"
           },
           "parameters": [
             {
               "name": "aSections",
-              "type": "[ 'Array' ].<object>",
+              "type": "object[]",
               "optional": false,
               "description": "the sections into which oNewSection will be merged"
             },
@@ -79235,7 +79301,7 @@
           },
           {
             "name": "violatedConstraints",
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "optional": true,
             "description": "Names of the constraints that will be violated; names should be the same as documented for the type constructor"
           }
@@ -79940,7 +80006,7 @@
           "parameters": [
             {
               "name": "aData",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "the 2D array of strings to be converted"
             },
@@ -79965,13 +80031,13 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<object>",
+            "type": "object[]",
             "description": "- an array of objects equivalent to the input data, with property names normalized"
           },
           "parameters": [
             {
               "name": "aData",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "the 2D array of strings to be converted, with a header row"
             },
@@ -83151,7 +83217,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Promise' ].<(ControlSelector|Error)>",
+            "type": "Promise.<ControlSelector|Error>",
             "description": "Promise for control selector or error"
           },
           "parameters": [
@@ -83177,7 +83243,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Promise' ].<(Element|Error)>",
+            "type": "Promise.<Element|Error>",
             "description": "Promise to be resolved with DOM element or rejected with Error when no suitable representation can be found"
           },
           "parameters": [
@@ -83213,7 +83279,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Promise' ].<(undefined|Error)>",
+            "type": "Promise.<undefined|Error>",
             "description": "Promise to be resolved when the interaction is done or rejected if interaction is not possible"
           },
           "parameters": [
@@ -83258,7 +83324,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Promise' ].<(undefined|Error)>",
+            "type": "Promise.<undefined|Error>",
             "description": "Promise to be resolved when UI5 is awaited, or rejected if timeout is reached The promise will be rejected with an error containing a stringified list of pending work."
           },
           "parameters": [
@@ -83384,7 +83450,7 @@
           "visibility": "restricted",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<{library:string, Array.<dependencies:string>}>",
+            "type": "Array.<{library:string, Array.<dependencies:string>}>",
             "description": "list of the located library and all transitive dependencies for the given component or undefined if the component is not part of the version-info. Each object has two properties: \"library\" and \"dependencies\". The property \"library\" contains the name of the library which contains the component implementation. The property \"dependencies\" is an array with all transitive depenedencies of the component."
           },
           "parameters": [
@@ -83402,13 +83468,13 @@
           "visibility": "restricted",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "the list of all transitive dependencies for the given initial list of libraries"
           },
           "parameters": [
             {
               "name": "aLibraries",
-              "type": "[ 'Array' ].<string>",
+              "type": "string[]",
               "optional": false,
               "description": "a list of libraries for which the transitive dependencies will be extracted from the sap.ui.versioninfo"
             }

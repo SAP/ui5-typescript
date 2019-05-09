@@ -103,11 +103,11 @@ declare namespace sap {
           /**
            * Libraries that should be (pre-)loaded before the Component (experimental setting)
            */
-          libs?: any;
+          libs?: string[];
           /**
            * Components that should be (pre-)loaded before the Component (experimental setting)
            */
-          components?: any;
+          components?: string[];
           /**
            * @since 1.37.0 a `Promise` or and array of `Promise`s for which the Component instantiation should wait
            * (experimental setting)
@@ -3014,7 +3014,7 @@ declare namespace sap {
           /**
            * Names of the methods, that should be available in the new facade
            */
-          aMethods: any
+          aMethods: string[]
         );
       }
       /**
@@ -3524,7 +3524,7 @@ declare namespace sap {
             /**
              * The predefined filters for this aggregation (optional)
              */
-            filters?: any;
+            filters?: sap.ui.model.Filter[];
             /**
              * Name of the key property or a function getting the context as only parameter to calculate a key for entries.
              * This can be used to improve update behaviour in models, where a key is not already available.
@@ -3744,7 +3744,7 @@ declare namespace sap {
              *
              * **Note**: recursive composite bindings are currently not supported
              */
-            parts?: any;
+            parts?: object[];
           }
         ): sap.ui.base.ManagedObject;
         /**
@@ -3795,7 +3795,7 @@ declare namespace sap {
           /**
            * an array of local IDs within the cloned hierarchy (internally used)
            */
-          aLocalIds?: any,
+          aLocalIds?: string[],
           /**
            * configuration object
            */
@@ -4307,7 +4307,7 @@ declare namespace sap {
            * Objects for which this function returns a falsy value will not be added to the result array
            */
           fnCondition?: boolean
-        ): any;
+        ): sap.ui.base.ManagedObject[];
         /**
          * Fires event {@link #event:formatError formatError} to attached listeners.
          */
@@ -5809,7 +5809,7 @@ declare namespace sap {
          * Returns an array with the names of all public methods declared by the described class and all its ancestors
          * classes.
          */
-        getAllPublicMethods(): any;
+        getAllPublicMethods(): string[];
         /**
          * Returns the (constructor of the) described class
          */
@@ -5835,7 +5835,7 @@ declare namespace sap {
          * Returns an array with the names of the public methods declared by the described class, methods of ancestors
          * are not listed.
          */
-        getPublicMethods(): any;
+        getPublicMethods(): string[];
         /**
          * @SINCE 1.56
          *
@@ -5920,7 +5920,7 @@ declare namespace sap {
             /**
              * array of names of public methods
              */
-            publicMethods: any;
+            publicMethods: string[];
           },
           /**
            * constructor function for the metadata object. If not given, it defaults to sap.ui.base.Metadata.
@@ -6292,7 +6292,7 @@ declare namespace sap {
             /**
              * Array of DOM references representing the items for the navigation
              */
-            aItemDomRefs: any,
+            aItemDomRefs: Element[],
             /**
              * Whether the selected element should be in the tab chain or not
              */
@@ -6332,7 +6332,7 @@ declare namespace sap {
           /**
            * Returns the array of item DOM references
            */
-          getItemDomRefs(): any;
+          getItemDomRefs(): Element[];
           /**
            * Returns a metadata object for class sap.ui.core.delegate.ItemNavigation.
            */
@@ -6422,7 +6422,7 @@ declare namespace sap {
             /**
              * Array of DOM references or DOM node list object, representing the items
              */
-            aItemDomRefs: any
+            aItemDomRefs: Element[]
           ): sap.ui.core.delegate.ItemNavigation;
           /**
            * Sets the page size of the item navigation to allow Page Up and Page Down keys.
@@ -6602,7 +6602,7 @@ declare namespace sap {
              * Specifies an additional left and top offset of the target scroll position, relative to the upper left
              * corner of the DOM element
              */
-            aOffset?: any
+            aOffset?: number[]
           ): sap.ui.core.delegate.ScrollEnablement;
           /**
            * @SINCE 1.17
@@ -7952,7 +7952,7 @@ declare namespace sap {
                * are formatted relatively. Otherwise when oFormatOptions.relativeScale is set to 'auto', all dates are
                * formatted relatively.
                */
-              relativeRange?: any;
+              relativeRange?: number[];
               /**
                * if 'auto' is set, new relative time format is switched on for all Date/Time Instances. The relative scale
                * is chosen depending on the difference between the given date and now.
@@ -8031,7 +8031,7 @@ declare namespace sap {
                * are formatted relatively. Otherwise when oFormatOptions.relativeScale is set to 'auto', all dates are
                * formatted relatively.
                */
-              relativeRange?: any;
+              relativeRange?: number[];
               /**
                * if 'auto' is set, new relative time format is switched on for all Date/Time Instances. The relative scale
                * is chosen depending on the difference between the given date and now.
@@ -8107,7 +8107,7 @@ declare namespace sap {
                * are formatted relatively. Otherwise when oFormatOptions.relativeScale is set to 'auto', all dates are
                * formatted relatively.
                */
-              relativeRange?: any;
+              relativeRange?: number[];
               /**
                * if 'auto' is set, new relative time format is switched on for all Date/Time Instances. The relative scale
                * is chosen depending on the difference between the given date and now.
@@ -9296,7 +9296,7 @@ declare namespace sap {
            * The element whose referencing labels should be returned
            */
           oElement: sap.ui.core.Element
-        ): any;
+        ): string[];
         /**
          * @SINCE 1.29.0
          *
@@ -10682,7 +10682,7 @@ declare namespace sap {
             /**
              * an array of local IDs within the cloned hierarchy (internally used)
              */
-            aLocalIds?: any
+            aLocalIds?: string[]
           ): sap.ui.core.Element;
           /**
            * @SINCE 1.56.0
@@ -10882,7 +10882,7 @@ declare namespace sap {
            *
            * Child Controls of the view
            */
-          getContent(): any;
+          getContent(): sap.ui.core.Control[];
           /**
            * Returns the view's Controller instance or null for a controller-less View.
            */
@@ -11049,7 +11049,7 @@ declare namespace sap {
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllContent(): any;
+          removeAllContent(): sap.ui.core.Control[];
           /**
            * Removes a content from the aggregation {@link #getContent content}.
            */
@@ -11993,7 +11993,7 @@ declare namespace sap {
           /**
            * Defines the events and its parameters which should be used for tracking the hash changes
            */
-          getRelevantEventsInfo(): any;
+          getRelevantEventsInfo(): Object[];
           /**
            * Will start listening to hashChanges with the parseHash function. This will also fire a hashchanged event
            * with the initial hash.
@@ -14679,13 +14679,13 @@ declare namespace sap {
            *
            * DOM attributes which are rendered as part of the DOM element and bindable
            */
-          getAttributes(): any;
+          getAttributes(): sap.ui.core.tmpl.DOMAttribute[];
           /**
            * Gets content of aggregation {@link #getElements elements}.
            *
            * Nested DOM elements to support nested bindable structures
            */
-          getElements(): any;
+          getElements(): sap.ui.core.tmpl.DOMElement[];
           /**
            * Returns a metadata object for class sap.ui.core.tmpl.DOMElement.
            */
@@ -14760,13 +14760,13 @@ declare namespace sap {
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllAttributes(): any;
+          removeAllAttributes(): sap.ui.core.tmpl.DOMAttribute[];
           /**
            * Removes all the controls from the aggregation {@link #getElements elements}.
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllElements(): any;
+          removeAllElements(): sap.ui.core.tmpl.DOMElement[];
           /**
            * Removes the DOM attribute for the given name and returns the reference to this DOM element to support
            * method chaining.
@@ -15734,7 +15734,7 @@ declare namespace sap {
            *
            * Columns for the Export.
            */
-          getColumns(): any;
+          getColumns(): sap.ui.core.util.ExportColumn[];
           /**
            * Gets content of aggregation {@link #getExportType exportType}.
            *
@@ -15751,7 +15751,7 @@ declare namespace sap {
            *
            * Rows of the Export.
            */
-          getRows(): any;
+          getRows(): sap.ui.core.util.ExportRow[];
           /**
            * Checks for the provided `sap.ui.core.util.ExportColumn` in the aggregation {@link #getColumns columns}.
            * and returns its index if found or -1 otherwise.
@@ -15807,13 +15807,13 @@ declare namespace sap {
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllColumns(): any;
+          removeAllColumns(): sap.ui.core.util.ExportColumn[];
           /**
            * Removes all the controls from the aggregation {@link #getRows rows}.
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllRows(): any;
+          removeAllRows(): sap.ui.core.util.ExportRow[];
           /**
            * Removes a column from the aggregation {@link #getColumns columns}.
            */
@@ -16090,7 +16090,7 @@ declare namespace sap {
            *
            * Cells for the Export.
            */
-          getCells(): any;
+          getCells(): sap.ui.core.util.ExportCell[];
           /**
            * Returns a metadata object for class sap.ui.core.util.ExportRow.
            */
@@ -16126,7 +16126,7 @@ declare namespace sap {
            *
            * Additionally, it unregisters them from the hosting UIArea.
            */
-          removeAllCells(): any;
+          removeAllCells(): sap.ui.core.util.ExportCell[];
           /**
            * Removes a cell from the aggregation {@link #getCells cells}.
            */
@@ -16588,7 +16588,7 @@ declare namespace sap {
            *
            * Default value is `[]`
            */
-          getRequests(): any;
+          getRequests(): object[];
           /**
            * Getter for property `rootUri`. Has to be relative and requires a trailing '/'. It also needs to match
            * the URI set in OData/JSON models or simple XHR calls in order for the mock server to intercept them.
@@ -16656,7 +16656,7 @@ declare namespace sap {
             /**
              * new value for property `requests`
              */
-            requests: any
+            requests: object[]
           ): void;
           /**
            * Setter for property `rootUri`. All request path URI are prefixed with this root URI if set.
@@ -19054,7 +19054,7 @@ declare namespace sap {
          * ignores the entries of the manifest file! It returns only the entries which have been defined in the
          * Component metadata or in the proper Component manifest.
          */
-        getComponents(): any;
+        getComponents(): string[];
         /**
          * @SINCE 1.15.1
          * @deprecated (since 1.27.1) - Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/config")
@@ -19112,7 +19112,7 @@ declare namespace sap {
          * ignores the entries of the manifest file! It returns only the entries which have been defined in the
          * Component metadata or in the proper Component manifest.
          */
-        getIncludes(): any;
+        getIncludes(): string[];
         /**
          * @deprecated (since 1.27.1) - Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies/libs")
          *
@@ -19123,7 +19123,7 @@ declare namespace sap {
          * ignores the entries of the manifest file! It returns only the entries which have been defined in the
          * Component metadata or in the proper Component manifest.
          */
-        getLibs(): any;
+        getLibs(): string[];
         /**
          * @SINCE 1.27.1
          * @deprecated (since 1.33.0) - Please use the sap.ui.core.Component#getManifest
@@ -19297,7 +19297,7 @@ declare namespace sap {
         /**
          * Base URLs to AppCacheBuster ETag-Index files.
          */
-        getAppCacheBuster(): any;
+        getAppCacheBuster(): string[];
         /**
          * The loading mode (sync|async|batch) of the AppCacheBuster (sync is default)
          */
@@ -19781,7 +19781,7 @@ declare namespace sap {
           /**
            * an array of local IDs within the cloned hierarchy (internally used)
            */
-          aLocalIds?: any
+          aLocalIds?: string[]
         ): sap.ui.core.Element;
         /**
          * Removes event handlers which have been previously attached using {@link #attachBrowserEvent}.
@@ -19851,7 +19851,7 @@ declare namespace sap {
             /**
              * field group IDs of the logical field groups to validate
              */
-            fieldGroupIds?: any;
+            fieldGroupIds?: string[];
           }
         ): sap.ui.core.Control;
         /**
@@ -19931,12 +19931,12 @@ declare namespace sap {
            * ID of the field group or an array of field group IDs to match
            */
           vFieldGroupIds?: string | string[]
-        ): any;
+        ): sap.ui.core.Control[];
         /**
          * Returns a copy of the field group IDs array. Modification of the field group IDs need to call {@link
          * #setFieldGroupIds setFieldGroupIds} to apply the changes.
          */
-        getFieldGroupIds(): any;
+        getFieldGroupIds(): string[];
         /**
          * Returns the DOMNode Id to be used for the "labelFor" attribute of the label.
          *
@@ -20122,7 +20122,7 @@ declare namespace sap {
           /**
            * New value for property `fieldGroupIds`
            */
-          sFieldGroupIds: any
+          sFieldGroupIds: string[]
         ): sap.ui.core.Control;
         /**
          * Sets a new value for property {@link #getVisible visible}.
@@ -20450,7 +20450,7 @@ declare namespace sap {
            * ID of the field group or an array of field group IDs to match
            */
           vFieldGroupIds?: string | string[]
-        ): any;
+        ): sap.ui.core.Control[];
         /**
          * Returns the registered element with the given ID, if any.
          *
@@ -21002,24 +21002,24 @@ declare namespace sap {
             /**
              * List of libraries that this library depends on; names are in dot notation (e.g. "sap.ui.core")
              */
-            dependencies?: any;
+            dependencies?: string[];
             /**
              * List of names of types that this library provides; names are in dot notation (e.g. "sap.ui.core.CSSSize")
              */
-            types?: any;
+            types?: string[];
             /**
              * List of names of interface types that this library provides; names are in dot notation (e.g. "sap.ui.core.PopupInterface")
              */
-            interfaces?: any;
+            interfaces?: string[];
             /**
              * Names of control types that this library provides; names are in dot notation (e.g. "sap.ui.core.ComponentContainer")
              */
-            controls?: any;
+            controls?: string[];
             /**
              * Names of element types that this library provides (excluding controls); names are in dot notation (e.g.
              * "sap.ui.core.Item")
              */
-            elements?: any;
+            elements?: string[];
             /**
              * Indicates whether the library doesn't provide / use theming. When set to true, no library.css will be
              * loaded for this library
@@ -21233,7 +21233,7 @@ declare namespace sap {
           /**
            * Optional library names to which the configuration should be restricted
            */
-          aLibraryNames: any,
+          aLibraryNames: string[],
           /**
            * Base URL below which the CSS file(s) will be loaded from
            */
@@ -21742,7 +21742,7 @@ declare namespace sap {
           /**
            * Array of local IDs within the cloned hierarchy (internally used)
            */
-          aLocalIds?: any
+          aLocalIds?: string[]
         ): sap.ui.core.Element;
         /**
          * @deprecated (since 1.44) - use the more flexible {@link sap.ui.base.ManagedObject.create}.
@@ -21972,7 +21972,7 @@ declare namespace sap {
            * true, if all nested children should be returned.
            */
           bRecursive: boolean
-        ): any;
+        ): sap.ui.core.Element[];
         /**
          * Sets the focus to the stored focus DOM reference
          */
@@ -21988,7 +21988,7 @@ declare namespace sap {
          *
          * Custom Data, a data structure like a map containing arbitrary key value pairs.
          */
-        getCustomData(): any;
+        getCustomData(): sap.ui.core.CustomData[];
         /**
          * @SINCE 1.19
          *
@@ -21997,7 +21997,7 @@ declare namespace sap {
          * Dependents are not rendered, but their databinding context and lifecycle are bound to the aggregating
          * Element.
          */
-        getDependents(): any;
+        getDependents(): sap.ui.core.Element[];
         /**
          * Returns the best suitable DOM Element that represents this UI5 Element. By default the DOM Element with
          * the same ID as this Element is returned. Subclasses should override this method if the lookup via id
@@ -22025,7 +22025,7 @@ declare namespace sap {
          * Defines the drag-and-drop configuration. **Note:** This configuration might be ignored due to control
          * {@link sap.ui.core.Element.extend metadata} restrictions.
          */
-        getDragDropConfig(): any;
+        getDragDropConfig(): sap.ui.core.dnd.DragDropBase[];
         /**
          * Get the context binding object for a specific model name.
          *
@@ -22215,7 +22215,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllCustomData(): any;
+        removeAllCustomData(): sap.ui.core.CustomData[];
         /**
          * @SINCE 1.19
          *
@@ -22223,7 +22223,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllDependents(): any;
+        removeAllDependents(): sap.ui.core.Element[];
         /**
          * @SINCE 1.56
          *
@@ -22231,7 +22231,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllDragDropConfig(): any;
+        removeAllDragDropConfig(): sap.ui.core.dnd.DragDropBase[];
         /**
          * Removes a customData from the aggregation {@link #getCustomData customData}.
          */
@@ -23223,7 +23223,7 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
          * ariaLabelledBy}.
          */
-        getAriaLabelledBy(): any;
+        getAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Gets current value of property {@link #getBackgroundColor backgroundColor}.
          *
@@ -23331,7 +23331,7 @@ declare namespace sap {
         /**
          * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
-        removeAllAriaLabelledBy(): any;
+        removeAllAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
@@ -24263,7 +24263,7 @@ declare namespace sap {
          * The leading singleton and the separating dashes are not part of the result. If there is no extensions
          * section in the locale tag, an empty array is returned.
          */
-        getExtensionSubtags(): any;
+        getExtensionSubtags(): string[];
         /**
          * Get the locale language.
          *
@@ -24286,7 +24286,7 @@ declare namespace sap {
          * The leading singleton and the separating dashes are not part of the result. If there is no private use
          * section in the locale tag, an empty array is returned.
          */
-        getPrivateUseSubtags(): any;
+        getPrivateUseSubtags(): string[];
         /**
          * Get the locale region or `null` if none was specified.
          *
@@ -24332,7 +24332,7 @@ declare namespace sap {
          * The separating dashes are not part of the result. If there is no variant section in the locale tag, an
          * empty array is returned.
          */
-        getVariantSubtags(): any;
+        getVariantSubtags(): string[];
       }
       /**
        * Provides access to locale-specific data, like date formats, number formats, currencies, etc.
@@ -24975,12 +24975,12 @@ declare namespace sap {
           /**
            * The scales for which the available patterns should be returned
            */
-          aScales: any,
+          aScales: string[],
           /**
            * @since 1.32.10, 1.34.4 The style of the scale patterns. The valid values are "wide", "short" and "narrow".
            */
           sStyle?: string
-        ): any;
+        ): object[];
         /**
          * @SINCE 1.31.0
          *
@@ -27364,14 +27364,14 @@ declare namespace sap {
          *
          * Content that is displayed in the UIArea.
          */
-        getContent(): any;
+        getContent(): sap.ui.core.Control[];
         /**
          * Gets content of aggregation {@link #getDependents dependents}.
          *
          * Dependent objects whose lifecycle is bound to the UIArea but which are not automatically rendered by
          * the UIArea.
          */
-        getDependents(): any;
+        getDependents(): sap.ui.core.Control[];
         /**
          * Returns the Core's event provider as new eventing parent to enable control event bubbling to the core
          * to ensure compatibility with the core validation events.
@@ -27488,13 +27488,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.core.Control[];
         /**
          * Removes all the controls from the aggregation {@link #getDependents dependents}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllDependents(): any;
+        removeAllDependents(): sap.ui.core.Control[];
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -27842,7 +27842,7 @@ declare namespace sap {
          *
          * Allows multiple LayoutData.
          */
-        getMultipleLayoutData(): any;
+        getMultipleLayoutData(): sap.ui.core.LayoutData[];
         /**
          * Checks for the provided `sap.ui.core.LayoutData` in the aggregation {@link #getMultipleLayoutData multipleLayoutData}.
          * and returns its index if found or -1 otherwise.
@@ -27873,7 +27873,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllMultipleLayoutData(): any;
+        removeAllMultipleLayoutData(): sap.ui.core.LayoutData[];
         /**
          * Removes a multipleLayoutData from the aggregation {@link #getMultipleLayoutData multipleLayoutData}.
          */
@@ -29282,7 +29282,7 @@ declare namespace sap {
           /**
            * The range borders
            */
-          aRangeBorders?: any,
+          aRangeBorders?: number[],
           /**
            * The unit which should be used for the values given in `aRangeBorders`. The allowed values are `"px"`
            * (default), `"em"` or `"rem"`
@@ -29294,7 +29294,7 @@ declare namespace sap {
            * be switched off explicitly by using `bSuppressClasses`. **Note:** `aRangeBorders` with `n` entries define
            * `n+1` ranges. Therefore `n+1` names must be provided.
            */
-          aRangeNames?: any,
+          aRangeNames?: string[],
           /**
            * Whether or not writing of CSS classes to the document root should be suppressed when `aRangeNames` are
            * provided
@@ -29957,7 +29957,7 @@ declare namespace sap {
             /**
              * Get the names of all attributes included in this dimension
              */
-            getAllAttributeNames(): any;
+            getAllAttributeNames(): string[];
             /**
              * Get all attributes of this dimension
              */
@@ -30256,11 +30256,11 @@ declare namespace sap {
             /**
              * Get the names of all properties with an associated hierarchy
              */
-            getAllHierarchyPropertyNames(): any;
+            getAllHierarchyPropertyNames(): string[];
             /**
              * Get names of properties that can be filtered, that is they can be used in $filter expressions
              */
-            getFilterablePropertyNames(): any;
+            getFilterablePropertyNames(): string[];
             /**
              * Get heading of the property with specified name (identified by property metadata annotation sap:heading)
              */
@@ -30283,7 +30283,7 @@ declare namespace sap {
             /**
              * Get key properties of this type
              */
-            getKeyProperties(): any;
+            getKeyProperties(): string[];
             /**
              * Get label of the property with specified name (identified by property metadata annotation sap:label)
              */
@@ -30317,11 +30317,11 @@ declare namespace sap {
             /**
              * Get names of properties that must be filtered, that is they must appear in every $filter expression
              */
-            getRequiredFilterPropertyNames(): any;
+            getRequiredFilterPropertyNames(): string[];
             /**
              * Get names of properties that can be sorted, that is they can be used in $orderby expressions
              */
-            getSortablePropertyNames(): any;
+            getSortablePropertyNames(): string[];
             /**
              * Get the super-ordinate property related to the property with specified name (identified by property metadata
              * annotation sap:super-ordinate)
@@ -30420,7 +30420,7 @@ declare namespace sap {
               /**
                * Array of UI5 filter objects
                */
-              aUI5Filter: any
+              aUI5Filter: sap.ui.model.Filter[]
             ): sap.ui.model.analytics.odata4analytics.FilterExpression;
             /**
              * Check if request is compliant with basic filter constraints expressed in metadata:
@@ -30440,7 +30440,7 @@ declare namespace sap {
             /**
              * Get an array of SAPUI5 Filter objects corresponding to this expression.
              */
-            getExpressionAsUI5FilterArray(): any;
+            getExpressionAsUI5FilterArray(): sap.ui.model.Filter[];
             /**
              * Get the value for the OData system query option $filter corresponding to this expression.
              */
@@ -30535,7 +30535,7 @@ declare namespace sap {
             /**
              * Get the names of all query results (entity sets) offered by the model
              */
-            getAllQueryResultNames(): any;
+            getAllQueryResultNames(): string[];
             /**
              * Get all query results offered by the model
              */
@@ -30646,7 +30646,7 @@ declare namespace sap {
             /**
              * Get the names of all parameters part of the parameterization
              */
-            getAllParameterNames(): any;
+            getAllParameterNames(): string[];
             /**
              * Get all parameters included in this parameterization
              */
@@ -30871,7 +30871,7 @@ declare namespace sap {
             /**
              * Get the names of all dimensions included in the query result
              */
-            getAllDimensionNames(): any;
+            getAllDimensionNames(): string[];
             /**
              * Get all dimensions included in this query result
              */
@@ -30879,7 +30879,7 @@ declare namespace sap {
             /**
              * Get the names of all measures included in the query result
              */
-            getAllMeasureNames(): any;
+            getAllMeasureNames(): string[];
             /**
              * Get all measures included in this query result
              */
@@ -31320,7 +31320,7 @@ declare namespace sap {
             /**
              * Get an array of SAPUI5 Sorter objects corresponding to this expression.
              */
-            getExpressionsAsUI5SorterArray(): any;
+            getExpressionsAsUI5SorterArray(): sap.ui.model.Sorter[];
             /**
              * Get the value for the OData system query option $orderby corresponding to this expression.
              */
@@ -32180,7 +32180,7 @@ declare namespace sap {
                * add both to `arrayNames`. You always have to add the complete parent chain. If any array is ignored,
                * its child arrays will be ignored as well even if they have been added to `arrayNames`.
                */
-              arrayNames?: any;
+              arrayNames?: string[];
             }
           );
         }
@@ -32359,7 +32359,7 @@ declare namespace sap {
             /**
              * array of parts
              */
-            aParts: any,
+            aParts: any[],
             /**
              * root formatter function; default: `Array.prototype.join(., " ")` in case of multiple parts, just like
              * {@link sap.ui.model.CompositeBinding#getExternalValue getExternalValue}
@@ -33012,7 +33012,7 @@ declare namespace sap {
                * part after this first method call are not considered: The currency customizing for this `Currency` instance
                * remains unchanged.
                */
-              aValues: any,
+              aValues: any[],
               /**
                * The target type; must be "string" or a type with "string" as its {@link sap.ui.base.DataType#getPrimitiveType
                * primitive type}. See {@link sap.ui.model.odata.type} for more information.
@@ -33060,8 +33060,8 @@ declare namespace sap {
               /**
                * The current values of all binding parts
                */
-              aCurrentValues: any
-            ): any;
+              aCurrentValues: any[]
+            ): any[];
             /**
              * @SINCE 1.63.0
              *
@@ -34996,7 +34996,7 @@ declare namespace sap {
               /**
                * Not supported
                */
-              aDynamicFormatOptionNames?: any
+              aDynamicFormatOptionNames?: string[]
             );
 
             /**
@@ -35034,7 +35034,7 @@ declare namespace sap {
                * part after this first method call are not considered: The unit customizing for this `Unit` instance remains
                * unchanged.
                */
-              aValues: any,
+              aValues: any[],
               /**
                * The target type; must be "string" or a type with "string" as its {@link sap.ui.base.DataType#getPrimitiveType
                * primitive type}. See {@link sap.ui.model.odata.type} for more information.
@@ -35082,8 +35082,8 @@ declare namespace sap {
               /**
                * The current values of all binding parts
                */
-              aCurrentValues: any
-            ): any;
+              aCurrentValues: any[]
+            ): any[];
             /**
              * @SINCE 1.63.0
              *
@@ -35740,7 +35740,7 @@ declare namespace sap {
                * The threshold value
                */
               iThreshold?: number
-            ): any;
+            ): sap.ui.model.Context[];
             /**
              * @SINCE 1.24
              *
@@ -35937,7 +35937,7 @@ declare namespace sap {
                 /**
                  * Set this array to make custom response headers bindable via the entity's "__metadata/headers" property
                  */
-                bindableResponseHeaders?: any;
+                bindableResponseHeaders?: string[];
                 /**
                  * When setting this flag to `true` the model tries to calculate a canonical url to the data.
                  */
@@ -36325,7 +36325,7 @@ declare namespace sap {
               /**
                * An array of predefined sorters
                */
-              aSorters?: any
+              aSorters?: sap.ui.model.Sorter[]
             ): sap.ui.model.TreeBinding;
             /**
              * Trigger a request to the function import OData service that was specified in the model constructor.
@@ -37260,11 +37260,11 @@ declare namespace sap {
                 /**
                  * An array of filters to be included in the request URL
                  */
-                filters?: any;
+                filters?: sap.ui.model.Filter[];
                 /**
                  * An array of sorters to be included in the request URL
                  */
-                sorters?: any;
+                sorters?: sap.ui.model.Sorter[];
                 /**
                  * A callback function which is called when the data has been successfully retrieved. The handler can have
                  * the following parameters: `oData` and `response`. The `oData` parameter contains the data of the retrieved
@@ -38104,7 +38104,7 @@ declare namespace sap {
               iLength: number,
 
               iThreshold: number
-            ): any;
+            ): sap.ui.model.Context[];
             /**
              * Returns root contexts for the tree. You can specify the start index and the length for paging requests.
              * This function is not available when the annotation "hierarchy-node-descendant-count-for" is exposed on
@@ -38126,7 +38126,7 @@ declare namespace sap {
                * reduces the number of backend requests, yet these request blow up in size, since more data is loaded.
                */
               iThreshold?: number
-            ): any;
+            ): sap.ui.model.Context[];
             /**
              * Returns the rootLevel
              */
@@ -38863,7 +38863,7 @@ declare namespace sap {
                * previous update, for example `[{$PropertyPath : "TEAM_ID"}, {$NavigationPropertyPath : "EMPLOYEE_2_MANAGER"},
                * {$PropertyPath : "EMPLOYEE_2_TEAM/Team_Id"}]`
                */
-              aPathExpressions: any
+              aPathExpressions: object[]
             ): Promise<any>;
             /**
              * @SINCE 1.39.0
@@ -39379,7 +39379,7 @@ declare namespace sap {
                * paging.
                */
               iMaximumPrefetchSize?: number
-            ): any;
+            ): sap.ui.model.odata.v4.Context[];
             /**
              * @SINCE 1.39.0
              *
@@ -39390,7 +39390,7 @@ declare namespace sap {
              * 	sap.ui.model.ListBinding#getCurrentContexts
              */
             // @ts-ignore
-            getCurrentContexts(): any;
+            getCurrentContexts(): sap.ui.model.odata.v4.Context[];
             /**
              * @SINCE 1.37.0
              *
@@ -39562,7 +39562,7 @@ declare namespace sap {
                  * `$count`, or with an aggregatable property for which a grand total is needed; only a single group level
                  * is supported.
                  */
-                groupLevels?: any;
+                groupLevels?: string[];
               }
             ): void;
             /**
@@ -39618,7 +39618,50 @@ declare namespace sap {
                * An array with objects holding the information needed for data aggregation; see also OData
                * Extension for Data Aggregation Version 4.0
                */
-              aAggregation: any
+              aAggregation: {
+                /**
+                 * The name of an OData property. A property which is neither a dimension nor a measure, but for instance
+                 * a text property or in some cases a unit property, has no further details.
+                 */
+                name: string;
+                /**
+                 * Its presence is used to detect a dimension; the dimension is ignored unless at least one of `inResult`
+                 * and `visible` is `true`
+                 */
+                grouped?: boolean;
+                /**
+                 * Dimensions only: see above
+                 */
+                inResult?: boolean;
+                /**
+                 * Dimensions only: see above
+                 */
+                visible?: boolean;
+                /**
+                 * Its presence is used to detect a measure
+                 */
+                total?: boolean;
+                /**
+                 * Measures only: Whether the maximum value (ignoring currencies or units of measure) for this measure is
+                 * needed (since 1.55.0); filtering and sorting is supported in this case (since 1.58.0)
+                 */
+                max?: boolean;
+                /**
+                 * Measures only: Whether the minimum value (ignoring currencies or units of measure) for this measure is
+                 * needed (since 1.55.0); filtering and sorting is supported in this case (since 1.58.0)
+                 */
+                min?: boolean;
+                /**
+                 * Measures only: The name of the method (for example "sum") used for aggregation of this measure; see "3.1.2
+                 * Keyword with" (since 1.55.0)
+                 */
+                with?: string;
+                /**
+                 * Measures only: The alias, that is the name of the dynamic property used for aggregation of this measure;
+                 * see "3.1.1 Keyword as" (since 1.55.0)
+                 */
+                as?: string;
+              }
             ): object;
           }
           /**
@@ -40981,7 +41024,7 @@ declare namespace sap {
             /**
              * Array of FilterOperators and their values: [{operator:"GE",value1:"val1"},{operator:"LE",value1:"val1"},{operator:"BT",value1:"val1",value2:"val2"}]
              */
-            aValues: any,
+            aValues: object[],
             /**
              * If true the values from aValues will be ANDed; otherwise ORed
              */
@@ -41408,7 +41451,7 @@ declare namespace sap {
             iLength?: number,
 
             iThreshold?: number
-          ): any;
+          ): sap.ui.model.Context[];
           /**
            * @SINCE 1.24
            *
@@ -42238,7 +42281,7 @@ declare namespace sap {
              * an array of change batch operations created via `createBatchOperation` and `sMethod` = POST, PUT, MERGE
              * or DELETE
              */
-            aChangeOperations: any
+            aChangeOperations: any[]
           ): void;
           /**
            * Appends the read batch operations to the end of the batch stack. Only GET batch operations should be
@@ -42249,7 +42292,7 @@ declare namespace sap {
             /**
              * an array of read batch operations created via `createBatchOperation` and `sMethod` = GET
              */
-            aReadOperations: any
+            aReadOperations: any[]
           ): void;
           /**
            * Attach event-handler `fnFunction` to the 'annotationsFailed' event of this `sap.ui.model.odata.ODataModel`.
@@ -43607,12 +43650,12 @@ declare namespace sap {
           /**
            * the sections into which oNewSection will be merged
            */
-          aSections: any,
+          aSections: object[],
           /**
            * the section which should be merged into aNewSections
            */
           oNewSection: object
-        ): any;
+        ): object[];
       }
       /**
        * XML-based DataBinding
@@ -45309,7 +45352,7 @@ declare namespace sap {
           /**
            * Array of filter objects
            */
-          aFilters: any,
+          aFilters: sap.ui.model.Filter[],
           /**
            * Type of the filter which should be adjusted; if no type is given, then any previously configured application
            * filters are cleared and the given filters are used as control filters
@@ -45493,7 +45536,7 @@ declare namespace sap {
           /**
            * Predefined sorter/s contained in an array (optional)
            */
-          aSorters?: any
+          aSorters?: sap.ui.model.Sorter[]
         );
 
         /**
@@ -45559,7 +45602,7 @@ declare namespace sap {
            * determines how many contexts to retrieve beginning from the start index.
            */
           iLength: number
-        ): any;
+        ): object[];
         /**
          * Return root contexts for the tree
          */
@@ -45573,7 +45616,7 @@ declare namespace sap {
            * determines how many contexts to retrieve beginning from the start index.
            */
           iLength: number
-        ): any;
+        ): object[];
         /**
          * Returns if the node has child nodes.
          */
@@ -45593,7 +45636,7 @@ declare namespace sap {
           /**
            * array of Sorter instances which will be applied
            */
-          an: any
+          an: sap.ui.model.Sorter[]
         ): sap.ui.model.ClientTreeBinding;
       }
 
@@ -45963,7 +46006,7 @@ declare namespace sap {
          * Returns the array of all state messages or null. This combines the model and control messages.
          */
         // @ts-ignore
-        getMessages(): any;
+        getMessages(): sap.ui.core.Message[];
         /**
          * Returns a metadata object for class sap.ui.model.CompositeDataState.
          */
@@ -45973,7 +46016,7 @@ declare namespace sap {
          * Returns the array of state messages of the model or undefined
          */
         // @ts-ignore
-        getModelMessages(): any;
+        getModelMessages(): sap.ui.core.Message[];
         /**
          * Returns whether the data state is dirty in the UI control. A data state is dirty in the UI control if
          * the entered value did not yet pass the type validation.
@@ -46317,7 +46360,7 @@ declare namespace sap {
         /**
          * Returns the array of state messages of the control or undefined.
          */
-        getControlMessages(): any;
+        getControlMessages(): sap.ui.core.Message[];
         /**
          * Returns the dirty value of a binding that was rejected by a type validation. This value was of an incorrect
          * type and could not be applied to the model. If the value was not rejected it will return null. In this
@@ -46327,7 +46370,7 @@ declare namespace sap {
         /**
          * Returns the array of all state messages or null. This combines the model and control messages.
          */
-        getMessages(): any;
+        getMessages(): sap.ui.core.Message[];
         /**
          * Returns a metadata object for class sap.ui.model.DataState.
          */
@@ -46336,7 +46379,7 @@ declare namespace sap {
         /**
          * Returns the array of state messages of the model or undefined
          */
-        getModelMessages(): any;
+        getModelMessages(): sap.ui.core.Message[];
         /**
          * Returns the formatted original value of the data. The original value is the last confirmed value.
          */
@@ -46367,7 +46410,7 @@ declare namespace sap {
           /**
            * control messages
            */
-          the: any
+          the: sap.ui.core.Message[]
         ): sap.ui.model.DataState;
         /**
          * Sets the dirty value that was rejected by the type validation.
@@ -46479,7 +46522,7 @@ declare namespace sap {
             /**
              * Array of filters on which logical conjunction is applied
              */
-            filters: any;
+            filters: sap.ui.model.Filter[];
             /**
              * Indicates whether an "AND" logical conjunction is applied on the filters. If it's not set or set to `false`,
              * an "OR" conjunction is applied
@@ -46729,7 +46772,7 @@ declare namespace sap {
           /**
            * Array of filter objects
            */
-          aFilters: any,
+          aFilters: sap.ui.model.Filter[],
           /**
            * Type of the filter which should be adjusted; if no type is given, the behavior depends on the model implementation
            */
@@ -46759,7 +46802,7 @@ declare namespace sap {
            * determines how many contexts to retrieve beginning from the start index.
            */
           iLength?: number
-        ): any;
+        ): sap.ui.model.Context[];
         /**
          * @SINCE 1.28
          *
@@ -46769,7 +46812,7 @@ declare namespace sap {
          * the context array as last requested by the control. This can be used by the application to get access
          * to the data currently displayed by a list control.
          */
-        getCurrentContexts(): any;
+        getCurrentContexts(): sap.ui.model.Context[];
         /**
          * Returns list of distinct values for the given relative binding path
          */
@@ -47858,7 +47901,7 @@ declare namespace sap {
             /**
              * Other selected indices (if available)
              */
-            rowIndices?: any;
+            rowIndices?: number[];
           }
         ): sap.ui.model.SelectionModel;
         /**
@@ -47874,7 +47917,7 @@ declare namespace sap {
         /**
          * Returns the selected indices as array.
          */
-        getSelectedIndices(): any;
+        getSelectedIndices(): number[];
         /**
          * Returns the current selection mode.
          */
@@ -48333,7 +48376,7 @@ declare namespace sap {
           /**
            * Array of sap.ui.model.Filter objects
            */
-          aFilters: any,
+          aFilters: sap.ui.model.Filter[],
           /**
            * Type of the filter which should be adjusted, if it is not given, the standard behaviour applies
            */
@@ -48399,7 +48442,7 @@ declare namespace sap {
           /**
            * Array of sap.ui.model.Sorter objects
            */
-          aSorters: any
+          aSorters: sap.ui.model.Sorter[]
         ): void;
       }
 
@@ -48480,7 +48523,7 @@ declare namespace sap {
             /**
              * Other selected indices (if available)
              */
-            rowIndices?: any;
+            rowIndices?: number[];
           }
         ): sap.ui.model.SelectionModel;
         /**
@@ -48582,7 +48625,7 @@ declare namespace sap {
           /**
            * Names of the constraints that will be violated; names should be the same as documented for the type constructor
            */
-          violatedConstraints?: any
+          violatedConstraints?: string[]
         );
       }
       /**
@@ -49110,7 +49153,7 @@ declare namespace sap {
             /**
              * the 2D array of strings to be converted
              */
-            aData: any,
+            aData: string[],
             /**
              * the normalization function to use to normalize property names. Can also be a string with values "titleCase",
              * "pascalCase", "camelCase", "hyphenated" or "none".
@@ -49146,13 +49189,13 @@ declare namespace sap {
             /**
              * the 2D array of strings to be converted, with a header row
              */
-            aData: any,
+            aData: string[],
             /**
              * the normalization function to use to normalize property names. Can also be a String with values "titleCase",
              * "pascalCase", "camelCase", "hyphenated" or "none".
              */
             vNorm?: string | Function
-          ): any;
+          ): object[];
           /**
            * A simple object containing a series of normalization functions that change a string according to a particular
            * strategy. All strategies do the following normalization as a minimum:

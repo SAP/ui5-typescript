@@ -91,7 +91,7 @@ declare namespace sap {
             /**
              * List of IDs of the components to be analyzed. Use only when the scope type is `components`.
              */
-            components?: any;
+            components?: string[];
           },
           /**
            * This optional parameter allows for selection of subset of rules for the analysis. You can pass:
@@ -154,7 +154,7 @@ declare namespace sap {
           /**
            * The current loaded libraries and their rules
            */
-          aLibraries: any
+          aLibraries: Object[]
         ): void;
         /**
          * Remove rule from RuleSet.
@@ -172,7 +172,7 @@ declare namespace sap {
           /**
            * The data for the libraries and their rules
            */
-          aLibraries: any
+          aLibraries: Object[]
         ): void;
         /**
          * Updates rules from the RuleSet.

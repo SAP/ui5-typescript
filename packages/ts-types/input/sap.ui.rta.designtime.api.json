@@ -183,7 +183,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.rta.service.Action.ActionObject>",
+            "type": "sap.ui.rta.service.Action.ActionObject[]",
             "description": "List of available actions"
           },
           "parameters": [
@@ -414,7 +414,7 @@
         },
         {
           "name": "elements",
-          "type": "[ 'Array' ].<sap.ui.rta.service.Outline.OutlineObject>",
+          "type": "sap.ui.rta.service.Outline.OutlineObject[]",
           "visibility": "restricted",
           "description": "outline data for child nodes"
         }
@@ -541,7 +541,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "[ 'Array' ].<string>",
+            "type": "string[]",
             "description": "Selected control IDs"
           },
           "description": "Gets list of currently selected controls."

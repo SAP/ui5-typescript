@@ -556,7 +556,7 @@ declare namespace sap {
          * Additional side number indicators. For example "Deviation" and "Target". Not more than two side indicators
          * should be used.
          */
-        getSideIndicators(): any;
+        getSideIndicators(): sap.f.cards.NumericSideIndicator[];
         /**
          * @EXPERIMENTAL (since 1.64)
          *
@@ -625,7 +625,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllSideIndicators(): any;
+        removeAllSideIndicators(): sap.f.cards.NumericSideIndicator[];
         /**
          * Removes a sideIndicator from the aggregation {@link #getSideIndicators sideIndicators}.
          */
@@ -3340,7 +3340,7 @@ declare namespace sap {
          * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
          * state.
          */
-        getCustomShareActions(): any;
+        getCustomShareActions(): sap.m.Button[];
         /**
          * Gets content of aggregation {@link #getDeleteAction deleteAction}.
          *
@@ -3419,7 +3419,7 @@ declare namespace sap {
          * **Note:** Buttons that are part of this aggregation will always have their `type` property set to `Transparent`
          * by design.
          */
-        getFooterCustomActions(): any;
+        getFooterCustomActions(): sap.m.Button[];
         /**
          * Gets content of aggregation {@link #getFooterMainAction footerMainAction}.
          *
@@ -3442,7 +3442,7 @@ declare namespace sap {
          *
          * The header content.
          */
-        getHeaderContent(): any;
+        getHeaderContent(): sap.ui.core.Control[];
         /**
          * Gets current value of property {@link #getHeaderExpanded headerExpanded}.
          *
@@ -3627,7 +3627,7 @@ declare namespace sap {
          * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
          * 			state.
          */
-        getTitleContent(): any;
+        getTitleContent(): sap.ui.core.Control[];
         /**
          * Gets content of aggregation {@link #getTitleCustomIconActions titleCustomIconActions}.
          *
@@ -3638,7 +3638,7 @@ declare namespace sap {
          * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
          * state.
          */
-        getTitleCustomIconActions(): any;
+        getTitleCustomIconActions(): sap.m.OverflowToolbarButton[];
         /**
          * Gets content of aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.
          *
@@ -3652,7 +3652,7 @@ declare namespace sap {
          * 	 - Buttons that are part of this aggregation will always have their `type` property set to `Transparent`
          * 			by design.
          */
-        getTitleCustomTextActions(): any;
+        getTitleCustomTextActions(): sap.m.Button[];
         /**
          * Gets content of aggregation {@link #getTitleExpandedContent titleExpandedContent}.
          *
@@ -3660,7 +3660,7 @@ declare namespace sap {
          *
          * **Note:** The controls will be placed in the title`s left area, under the `titleHeading` aggregation.
          */
-        getTitleExpandedContent(): any;
+        getTitleExpandedContent(): sap.ui.core.Control[];
         /**
          * @SINCE 1.58
          *
@@ -3736,7 +3736,7 @@ declare namespace sap {
          * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
          * 			state.
          */
-        getTitleSnappedContent(): any;
+        getTitleSnappedContent(): sap.ui.core.Control[];
         /**
          * @SINCE 1.58
          *
@@ -3991,19 +3991,19 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllCustomShareActions(): any;
+        removeAllCustomShareActions(): sap.m.Button[];
         /**
          * Removes all the controls from the aggregation {@link #getFooterCustomActions footerCustomActions}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFooterCustomActions(): any;
+        removeAllFooterCustomActions(): sap.m.Button[];
         /**
          * Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllHeaderContent(): any;
+        removeAllHeaderContent(): sap.ui.core.Control[];
         /**
          * @SINCE 1.52
          *
@@ -4011,31 +4011,31 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleContent(): any;
+        removeAllTitleContent(): sap.ui.core.Control[];
         /**
          * Removes all the controls from the aggregation {@link #getTitleCustomIconActions titleCustomIconActions}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleCustomIconActions(): any;
+        removeAllTitleCustomIconActions(): sap.m.OverflowToolbarButton[];
         /**
          * Removes all the controls from the aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleCustomTextActions(): any;
+        removeAllTitleCustomTextActions(): sap.m.Button[];
         /**
          * Removes all the controls from the aggregation {@link #getTitleExpandedContent titleExpandedContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleExpandedContent(): any;
+        removeAllTitleExpandedContent(): sap.ui.core.Control[];
         /**
          * Removes all the controls from the aggregation {@link #getTitleSnappedContent titleSnappedContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleSnappedContent(): any;
+        removeAllTitleSnappedContent(): sap.ui.core.Control[];
         /**
          * Removes a customShareAction from the aggregation {@link #getCustomShareActions customShareActions}.
          */
@@ -5807,12 +5807,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getCustomDisplaySize customDisplaySize}.
        *
@@ -5900,11 +5900,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -7048,7 +7048,7 @@ declare namespace sap {
        *
        * The content of the header.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Returns a metadata object for class sap.f.DynamicPageHeader.
        */
@@ -7092,7 +7092,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -7373,7 +7373,7 @@ declare namespace sap {
        * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
        * state.
        */
-      getActions(): any;
+      getActions(): sap.ui.core.Control[];
       /**
        * @SINCE 1.54
        *
@@ -7428,13 +7428,13 @@ declare namespace sap {
        * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
        * state.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Gets content of aggregation {@link #getExpandedContent expandedContent}.
        *
        * The content that is displayed in the `DynamicPageTitle` in expanded state.
        */
-      getExpandedContent(): any;
+      getExpandedContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.52
        *
@@ -7485,7 +7485,7 @@ declare namespace sap {
        * 			control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
        * 			state.
        */
-      getNavigationActions(): any;
+      getNavigationActions(): sap.m.Button[];
       /**
        * @SINCE 1.50
        * @deprecated (since 1.54) - Please use the `areaShrinkRatio` property instead. The value of `areaShrinkRatio`
@@ -7517,7 +7517,7 @@ declare namespace sap {
        * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
        * state.
        */
-      getSnappedContent(): any;
+      getSnappedContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.52
        *
@@ -7697,7 +7697,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActions(): any;
+      removeAllActions(): sap.ui.core.Control[];
       /**
        * @SINCE 1.50
        *
@@ -7705,13 +7705,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getExpandedContent expandedContent}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllExpandedContent(): any;
+      removeAllExpandedContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.52
        *
@@ -7719,13 +7719,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllNavigationActions(): any;
+      removeAllNavigationActions(): sap.m.Button[];
       /**
        * Removes all the controls from the aggregation {@link #getSnappedContent snappedContent}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSnappedContent(): any;
+      removeAllSnappedContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.50
        *
@@ -8828,7 +8828,7 @@ declare namespace sap {
        * like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface
        * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
        */
-      getBeginColumnPages(): any;
+      getBeginColumnPages(): sap.ui.core.Control[];
       /**
        * Returns the currently displayed Begin column page.
        */
@@ -8880,7 +8880,7 @@ declare namespace sap {
        * like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface
        * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
        */
-      getEndColumnPages(): any;
+      getEndColumnPages(): sap.ui.core.Control[];
       /**
        * ID of the element which is the current target of the association {@link #getInitialBeginColumnPage initialBeginColumnPage},
        * or `null`.
@@ -8924,7 +8924,7 @@ declare namespace sap {
        * like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface
        * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
        */
-      getMidColumnPages(): any;
+      getMidColumnPages(): sap.ui.core.Control[];
       /**
        * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getBeginColumnPages beginColumnPages}.
        * and returns its index if found or -1 otherwise.
@@ -9005,19 +9005,19 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllBeginColumnPages(): any;
+      removeAllBeginColumnPages(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getEndColumnPages endColumnPages}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllEndColumnPages(): any;
+      removeAllEndColumnPages(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getMidColumnPages midColumnPages}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMidColumnPages(): any;
+      removeAllMidColumnPages(): sap.ui.core.Control[];
       /**
        * Removes a beginColumnPage from the aggregation {@link #getBeginColumnPages beginColumnPages}.
        */
@@ -9834,7 +9834,7 @@ declare namespace sap {
        *
        * The items contained by the control.
        */
-      getItems(): any;
+      getItems(): sap.ui.core.Control[];
       /**
        * Gets content of aggregation {@link #getLayout layout}.
        *
@@ -9917,7 +9917,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.ui.core.Control[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -10389,7 +10389,7 @@ declare namespace sap {
       /**
        * Implements IGridConfigurable interface.
        */
-      getGridDomRefs(): any;
+      getGridDomRefs(): HTMLElement[];
       /**
        * Returns a metadata object for class sap.f.GridList.
        */
@@ -10945,7 +10945,7 @@ declare namespace sap {
        *
        * **Note:** Only controls implementing the `{@link sap.f.IShellBar}` interface are allowed.
        */
-      getAdditionalContent(): any;
+      getAdditionalContent(): sap.f.IShellBar[];
       /**
        * Gets current value of property {@link #getHomeIcon homeIcon}.
        *
@@ -11097,7 +11097,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAdditionalContent(): any;
+      removeAllAdditionalContent(): sap.f.IShellBar[];
       /**
        * Sets a new value for property {@link #getHomeIcon homeIcon}.
        *

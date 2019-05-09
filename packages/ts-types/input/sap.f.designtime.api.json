@@ -374,13 +374,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
+          "returnValue": { "type": "sap.ui.core.ID[]" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -477,7 +477,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -486,7 +486,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.ID>",
+            "type": "sap.ui.core.ID[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -1998,9 +1998,7 @@
         {
           "name": "getSideIndicators",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.f.cards.NumericSideIndicator>"
-          },
+          "returnValue": { "type": "sap.f.cards.NumericSideIndicator[]" },
           "description": "Gets content of aggregation {@link #getSideIndicators sideIndicators}.\n\nAdditional side number indicators. For example \"Deviation\" and \"Target\". Not more than two side indicators should be used."
         },
         {
@@ -2104,7 +2102,7 @@
           "name": "removeAllSideIndicators",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.f.cards.NumericSideIndicator>",
+            "type": "sap.f.cards.NumericSideIndicator[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSideIndicators sideIndicators}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -3533,7 +3531,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content of the header."
         },
         {
@@ -3599,7 +3597,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4313,7 +4311,7 @@
         {
           "name": "getActions",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getActions actions}.\n\nThe <code>DynamicPageTitle</code> actions. <br><b>Note:</b> The <code>actions</code> aggregation accepts any UI5 control, but it`s recommended to use controls, suitable for {@link sap.m.Toolbar} and {@link sap.m.OverflowToolbar}.\n\n<b>Note:</b> If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped) state."
         },
         {
@@ -4347,13 +4345,13 @@
           "name": "getContent",
           "visibility": "public",
           "since": "1.50",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content is positioned in the <code>DynamicPageTitle</code> middle area and displayed in both expanded and collapsed (snapped) states.\n\n<b>Note:</b> If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped) state."
         },
         {
           "name": "getExpandedContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getExpandedContent expandedContent}.\n\nThe content that is displayed in the <code>DynamicPageTitle</code> in expanded state."
         },
         {
@@ -4383,7 +4381,7 @@
           "name": "getNavigationActions",
           "visibility": "public",
           "since": "1.52",
-          "returnValue": { "type": "[ 'Array' ].<sap.m.Button>" },
+          "returnValue": { "type": "sap.m.Button[]" },
           "description": "Gets content of aggregation {@link #getNavigationActions navigationActions}.\n\nThe <code>DynamicPageTitle</code> navigation actions.\n\n<b>Notes:</b> <ul> <li>The <code>navigationActions</code> position depends on the control size. If the control size is 1280px or bigger, they are rendered right next to the <code>actions</code>. Otherwise, they are rendered in the top-right area, above the <code>actions</code>. If a large number of elements(buttons) are used, there could be visual degradations as the space for the <code>navigationActions</code> is limited.</li> <li>If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped) state.</li> </ul>"
         },
         {
@@ -4403,7 +4401,7 @@
         {
           "name": "getSnappedContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getSnappedContent snappedContent}.\n\nThe content that is displayed in the <code>DynamicPageTitle</code> in collapsed (snapped) state.\n\n<b>Note:</b> If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped) state."
         },
         {
@@ -4645,7 +4643,7 @@
           "name": "removeAllActions",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getActions actions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4655,7 +4653,7 @@
           "visibility": "public",
           "since": "1.50",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4664,7 +4662,7 @@
           "name": "removeAllExpandedContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getExpandedContent expandedContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4674,7 +4672,7 @@
           "visibility": "public",
           "since": "1.52",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.m.Button>",
+            "type": "sap.m.Button[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getNavigationActions navigationActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4683,7 +4681,7 @@
           "name": "removeAllSnappedContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSnappedContent snappedContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7291,7 +7289,7 @@
         {
           "name": "getBeginColumnPages",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getBeginColumnPages beginColumnPages}.\n\nThe content entities between which the <code>FlexibleColumnLayout</code> navigates in the <code>Begin</code> column.\n\nThese should be any control with page semantics. These aggregated controls will receive navigation events like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}."
         },
         {
@@ -7354,7 +7352,7 @@
         {
           "name": "getEndColumnPages",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getEndColumnPages endColumnPages}.\n\nThe content entities between which the <code>FlexibleColumnLayout</code> navigates in the <code>End</code> column.\n\nThese should be any control with page semantics. These aggregated controls will receive navigation events like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}."
         },
         {
@@ -7406,7 +7404,7 @@
         {
           "name": "getMidColumnPages",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getMidColumnPages midColumnPages}.\n\nThe content entities between which the <code>FlexibleColumnLayout</code> navigates in the <code>Mid</code> column.\n\nThese should be any control with page semantics. These aggregated controls will receive navigation events like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}."
         },
         {
@@ -7533,7 +7531,7 @@
           "name": "removeAllBeginColumnPages",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getBeginColumnPages beginColumnPages}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7542,7 +7540,7 @@
           "name": "removeAllEndColumnPages",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getEndColumnPages endColumnPages}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7551,7 +7549,7 @@
           "name": "removeAllMidColumnPages",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getMidColumnPages midColumnPages}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -8279,7 +8277,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nThe items contained by the control."
         },
         {
@@ -8384,7 +8382,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -9085,7 +9083,7 @@
           "name": "getGridDomRefs",
           "visibility": "protected",
           "returnValue": {
-            "type": "[ 'Array' ].<HTMLElement>",
+            "type": "HTMLElement[]",
             "description": "An array with the DOM elements"
           },
           "description": "Implements IGridConfigurable interface."
@@ -12456,7 +12454,7 @@
         {
           "name": "getCustomShareActions",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.m.Button>" },
+          "returnValue": { "type": "sap.m.Button[]" },
           "description": "Gets content of aggregation {@link #getCustomShareActions customShareActions}.\n\nThe <code>customShareActions</code> are placed in the <code>ShareMenu</code> area of the <code>SemanticPage</code> title, right after the semantic actions.\n\n<b>Note:</b> If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state."
         },
         {
@@ -12505,7 +12503,7 @@
         {
           "name": "getFooterCustomActions",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.m.Button>" },
+          "returnValue": { "type": "sap.m.Button[]" },
           "description": "Gets content of aggregation {@link #getFooterCustomActions footerCustomActions}.\n\nThe <code>footerCustomActions</code> are placed in the <code>FooterRight</code> area of the <code>SemanticPage</code> footer, right after the semantic footer actions.\n\n<b>Note:</b> Buttons that are part of this aggregation will always have their <code>type</code> property set to <code>Transparent</code> by design."
         },
         {
@@ -12523,7 +12521,7 @@
         {
           "name": "getHeaderContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getHeaderContent headerContent}.\n\nThe header content."
         },
         {
@@ -12648,27 +12646,25 @@
           "name": "getTitleContent",
           "visibility": "public",
           "since": "1.52",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getTitleContent titleContent}.\n\nThe content, displayed in the title.\n\n<b>Notes:</b> <ul> <li>The controls will be placed in the middle area.</li> <li>If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state.</li> </ul>"
         },
         {
           "name": "getTitleCustomIconActions",
           "visibility": "public",
-          "returnValue": {
-            "type": "[ 'Array' ].<sap.m.OverflowToolbarButton>"
-          },
+          "returnValue": { "type": "sap.m.OverflowToolbarButton[]" },
           "description": "Gets content of aggregation {@link #getTitleCustomIconActions titleCustomIconActions}.\n\nThe <code>titleCustomIconActions</code> are placed in the <code>IconActions</code> area of the <code>SemanticPage</code> title, right before the semantic icon action.\n\n<b>Note:</b> If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state."
         },
         {
           "name": "getTitleCustomTextActions",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.m.Button>" },
+          "returnValue": { "type": "sap.m.Button[]" },
           "description": "Gets content of aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.\n\nThe <code>titleCustomTextActions</code> are placed in the <code>TextActions</code> area of the <code>SemanticPage</code> title, right before the semantic text action.\n\n<b>Notes:</b> <ul> <li>If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state.</li> <li>Buttons that are part of this aggregation will always have their <code>type</code> property set to <code>Transparent</code> by design.</li> </ul>"
         },
         {
           "name": "getTitleExpandedContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getTitleExpandedContent titleExpandedContent}.\n\nThe content,displayed in the title, when the header is in expanded state.\n\n<b>Note:</b> The controls will be placed in the title`s left area, under the <code>titleHeading</code> aggregation."
         },
         {
@@ -12707,7 +12703,7 @@
         {
           "name": "getTitleSnappedContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "returnValue": { "type": "sap.ui.core.Control[]" },
           "description": "Gets content of aggregation {@link #getTitleSnappedContent titleSnappedContent}.\n\nThe content, displayed in the title, when the header is in collapsed state.\n\n<b>Notes:</b> <ul> <li>The controls will be placed in the title`s left area, under the <code>titleHeading</code> aggregation.</li> <li>If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state.</li> </ul>"
         },
         {
@@ -13059,7 +13055,7 @@
           "name": "removeAllCustomShareActions",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.m.Button>",
+            "type": "sap.m.Button[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getCustomShareActions customShareActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13068,7 +13064,7 @@
           "name": "removeAllFooterCustomActions",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.m.Button>",
+            "type": "sap.m.Button[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getFooterCustomActions footerCustomActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13077,7 +13073,7 @@
           "name": "removeAllHeaderContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13087,7 +13083,7 @@
           "visibility": "public",
           "since": "1.52",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleContent titleContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13096,7 +13092,7 @@
           "name": "removeAllTitleCustomIconActions",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.m.OverflowToolbarButton>",
+            "type": "sap.m.OverflowToolbarButton[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleCustomIconActions titleCustomIconActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13105,7 +13101,7 @@
           "name": "removeAllTitleCustomTextActions",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.m.Button>",
+            "type": "sap.m.Button[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13114,7 +13110,7 @@
           "name": "removeAllTitleExpandedContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleExpandedContent titleExpandedContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13123,7 +13119,7 @@
           "name": "removeAllTitleSnappedContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "type": "sap.ui.core.Control[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleSnappedContent titleSnappedContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -15588,7 +15584,7 @@
         {
           "name": "getAdditionalContent",
           "visibility": "public",
-          "returnValue": { "type": "[ 'Array' ].<sap.f.IShellBar>" },
+          "returnValue": { "type": "sap.f.IShellBar[]" },
           "description": "Gets content of aggregation {@link #getAdditionalContent additionalContent}.\n\nAdditional content to be displayed in the control.\n\n<b>Note:</b> Only controls implementing the <code>{@link sap.f.IShellBar}</code> interface are allowed."
         },
         {
@@ -15782,7 +15778,7 @@
           "name": "removeAllAdditionalContent",
           "visibility": "public",
           "returnValue": {
-            "type": "[ 'Array' ].<sap.f.IShellBar>",
+            "type": "sap.f.IShellBar[]",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getAdditionalContent additionalContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."

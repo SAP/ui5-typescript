@@ -5156,19 +5156,19 @@ declare namespace sap {
          *
          * See {@link sap.m.Page#content}
          */
-        getContent(): any;
+        getContent(): sap.ui.core.Control[];
         /**
          * Gets content of aggregation {@link #getCustomFooterContent customFooterContent}.
          *
          * Custom footer buttons
          */
-        getCustomFooterContent(): any;
+        getCustomFooterContent(): sap.m.Button[];
         /**
          * Gets content of aggregation {@link #getCustomHeaderContent customHeaderContent}.
          *
          * Custom header buttons
          */
-        getCustomHeaderContent(): any;
+        getCustomHeaderContent(): sap.m.Button[];
         /**
          * Gets current value of property {@link #getEnableScrolling enableScrolling}.
          *
@@ -5335,19 +5335,19 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): any;
+        removeAllContent(): sap.ui.core.Control[];
         /**
          * Removes all the controls from the aggregation {@link #getCustomFooterContent customFooterContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllCustomFooterContent(): any;
+        removeAllCustomFooterContent(): sap.m.Button[];
         /**
          * Removes all the controls from the aggregation {@link #getCustomHeaderContent customHeaderContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllCustomHeaderContent(): any;
+        removeAllCustomHeaderContent(): sap.m.Button[];
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -5688,7 +5688,7 @@ declare namespace sap {
          *
          * See {@link sap.m.Select#getItems}
          */
-        getItems(): any;
+        getItems(): sap.ui.core.Item[];
         /**
          * Returns a metadata object for class sap.m.semantic.SemanticSelect.
          */
@@ -5737,7 +5737,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllItems(): any;
+        removeAllItems(): sap.ui.core.Item[];
         /**
          * Removes a item from the aggregation {@link #getItems items}.
          */
@@ -6091,7 +6091,7 @@ declare namespace sap {
          *
          * Custom share menu buttons
          */
-        getCustomShareMenuContent(): any;
+        getCustomShareMenuContent(): sap.m.Button[];
         /**
          * Returns a metadata object for class sap.m.semantic.ShareMenuPage.
          */
@@ -6127,7 +6127,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllCustomShareMenuContent(): any;
+        removeAllCustomShareMenuContent(): sap.m.Button[];
         /**
          * Removes a customShareMenuContent from the aggregation {@link #getCustomShareMenuContent customShareMenuContent}.
          */
@@ -6835,7 +6835,7 @@ declare namespace sap {
           /**
            * Collection of request header fields to be send along.
            */
-          aHeaderFields: any
+          aHeaderFields: any[]
         ): void;
         /**
          * Attaches event handler `fnFunction` to the {@link #event:uploadAborted uploadAborted} event of this `sap.m.upload.Uploader`.
@@ -7708,7 +7708,7 @@ declare namespace sap {
             /**
              * Items whose selection status has just been changed.
              */
-            items?: any;
+            items?: sap.m.upload.UploadSetItem[];
           }
         ): sap.m.upload.UploadSet;
         /**
@@ -7751,19 +7751,19 @@ declare namespace sap {
          * Allowed file types for files to be uploaded.
          * If this property is not set, any file can be uploaded.
          */
-        getFileTypes(): any;
+        getFileTypes(): string[];
         /**
          * Gets content of aggregation {@link #getHeaderFields headerFields}.
          *
          * Header fields to be included in the header section of an XHR request.
          */
-        getHeaderFields(): any;
+        getHeaderFields(): sap.ui.core.Item[];
         /**
          * Gets content of aggregation {@link #getIncompleteItems incompleteItems}.
          *
          * Items representing files yet to be uploaded.
          */
-        getIncompleteItems(): any;
+        getIncompleteItems(): sap.m.upload.UploadSetItem[];
         /**
          * Gets current value of property {@link #getInstantUpload instantUpload}.
          *
@@ -7778,7 +7778,7 @@ declare namespace sap {
          *
          * Items representing files that have already been uploaded.
          */
-        getItems(): any;
+        getItems(): sap.m.upload.UploadSetItem[];
         /**
          * Provides access to the instance of the inner {@link sap.m.List} control, so that it can be customized.
          */
@@ -7803,7 +7803,7 @@ declare namespace sap {
          * Allowed media types for files to be uploaded.
          * If this property is not set, any file can be uploaded.
          */
-        getMediaTypes(): any;
+        getMediaTypes(): string[];
         /**
          * Returns a metadata object for class sap.m.upload.UploadSet.
          */
@@ -7953,19 +7953,19 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllHeaderFields(): any;
+        removeAllHeaderFields(): sap.ui.core.Item[];
         /**
          * Removes all the controls from the aggregation {@link #getIncompleteItems incompleteItems}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllIncompleteItems(): any;
+        removeAllIncompleteItems(): sap.m.upload.UploadSetItem[];
         /**
          * Removes all the controls from the aggregation {@link #getItems items}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllItems(): any;
+        removeAllItems(): sap.m.upload.UploadSetItem[];
         /**
          * Removes a headerField from the aggregation {@link #getHeaderFields headerFields}.
          */
@@ -8005,7 +8005,7 @@ declare namespace sap {
           /**
            * New value for property `fileTypes`
            */
-          sFileTypes: any
+          sFileTypes: string[]
         ): sap.m.upload.UploadSet;
         /**
          * Sets a new value for property {@link #getInstantUpload instantUpload}.
@@ -8063,7 +8063,7 @@ declare namespace sap {
           /**
            * New value for property `mediaTypes`
            */
-          sMediaTypes: any
+          sMediaTypes: string[]
         ): sap.m.upload.UploadSet;
         /**
          * Sets a new value for property {@link #getNoDataDescription noDataDescription}.
@@ -8646,7 +8646,7 @@ declare namespace sap {
          *
          * Attributes of the item.
          */
-        getAttributes(): any;
+        getAttributes(): sap.m.ObjectAttribute[];
         /**
          * Gets current value of property {@link #getEnabledEdit enabledEdit}.
          *
@@ -8674,7 +8674,7 @@ declare namespace sap {
          *
          * Markers of the item.
          */
-        getMarkers(): any;
+        getMarkers(): sap.m.ObjectMarker[];
         /**
          * Gets current value of property {@link #getMediaType mediaType}.
          *
@@ -8691,7 +8691,7 @@ declare namespace sap {
          *
          * Statuses of the item.
          */
-        getStatuses(): any;
+        getStatuses(): sap.m.ObjectStatus[];
         /**
          * Gets current value of property {@link #getThumbnailUrl thumbnailUrl}.
          *
@@ -8808,19 +8808,19 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllAttributes(): any;
+        removeAllAttributes(): sap.m.ObjectAttribute[];
         /**
          * Removes all the controls from the aggregation {@link #getMarkers markers}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllMarkers(): any;
+        removeAllMarkers(): sap.m.ObjectMarker[];
         /**
          * Removes all the controls from the aggregation {@link #getStatuses statuses}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllStatuses(): any;
+        removeAllStatuses(): sap.m.ObjectStatus[];
         /**
          * Removes a attribute from the aggregation {@link #getAttributes attributes}.
          */
@@ -20475,15 +20475,15 @@ declare namespace sap {
       /**
        * Gets all of the open dialogs. If there's no dialog open, an empty array is returned.
        */
-      getOpenDialogs(): any;
+      getOpenDialogs(): sap.ui.core.Control[];
       /**
        * Gets all of the open LightBoxes. If there's no dialog open, an empty array is returned.
        */
-      getOpenLightBoxes(): any;
+      getOpenLightBoxes(): sap.m.LightBox[];
       /**
        * Gets all of the open popovers. If there's no popover open, an empty array is returned.
        */
-      getOpenPopovers(): any;
+      getOpenPopovers(): sap.ui.core.Control[];
       /**
        * Returns true if there's at least one dialog managed in the predefined dialog category, otherwise it returns
        * false.
@@ -20881,7 +20881,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getButtons
        * buttons}.
        */
-      getButtons(): any;
+      getButtons(): sap.ui.core.ID[];
       /**
        * Returns a metadata object for class sap.m.ActionSelect.
        */
@@ -20890,7 +20890,7 @@ declare namespace sap {
       /**
        * Remove all buttons from the ActionSelect.
        */
-      removeAllButtons(): any;
+      removeAllButtons(): string[];
       /**
        * Button to be removed from the ActionSelect content.
        */
@@ -21282,7 +21282,7 @@ declare namespace sap {
        * These buttons are added to the content area in ActionSheet control. When button is tapped, the ActionSheet
        * is closed before the tap event listener is called.
        */
-      getButtons(): any;
+      getButtons(): sap.m.Button[];
       /**
        * Gets current value of property {@link #getCancelButtonText cancelButtonText}.
        *
@@ -21381,7 +21381,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllButtons(): any;
+      removeAllButtons(): sap.m.Button[];
       /**
        * Removes a button from the aggregation {@link #getButtons buttons}.
        */
@@ -22098,14 +22098,14 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets content of aggregation {@link #getContentLeft contentLeft}.
        *
        * Represents the left content area, usually containing a button or an app icon. If it is overlapped by
        * the right content, its content will disappear and the text will show an ellipsis.
        */
-      getContentLeft(): any;
+      getContentLeft(): sap.ui.core.Control[];
       /**
        * Gets content of aggregation {@link #getContentMiddle contentMiddle}.
        *
@@ -22113,13 +22113,13 @@ declare namespace sap {
        * here. The content is centrally positioned if there is enough space. If the right or left content overlaps
        * the middle content, the middle content will be centered in the space between the left and the right content.
        */
-      getContentMiddle(): any;
+      getContentMiddle(): sap.ui.core.Control[];
       /**
        * Gets content of aggregation {@link #getContentRight contentRight}.
        *
        * Represents the right content area. Controls such as action buttons or search field can be placed here.
        */
-      getContentRight(): any;
+      getContentRight(): sap.ui.core.Control[];
       /**
        * @SINCE 1.22
        *
@@ -22238,25 +22238,25 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getContentLeft contentLeft}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContentLeft(): any;
+      removeAllContentLeft(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getContentMiddle contentMiddle}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContentMiddle(): any;
+      removeAllContentMiddle(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getContentRight contentRight}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContentRight(): any;
+      removeAllContentRight(): sap.ui.core.Control[];
       /**
        * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
@@ -22434,7 +22434,7 @@ declare namespace sap {
        * of the link will not work since it's incompatible with the concept of the control. The other properties
        * will work, but their effect may be undesirable.
        */
-      getLinks(): any;
+      getLinks(): sap.m.Link[];
       /**
        * Returns a metadata object for class sap.m.Breadcrumbs.
        */
@@ -22476,7 +22476,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllLinks(): any;
+      removeAllLinks(): sap.m.Link[];
       /**
        * @SINCE 1.34
        *
@@ -22640,7 +22640,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getCancelButtonText cancelButtonText}.
        *
@@ -22742,7 +22742,7 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
@@ -22935,7 +22935,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getCustomIcon customIcon}.
        *
@@ -23029,7 +23029,7 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.27.0
        *
@@ -23386,12 +23386,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getEnabled enabled}.
        *
@@ -23471,11 +23471,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -24044,7 +24044,7 @@ declare namespace sap {
        *
        * The content which the carousel displays.
        */
-      getPages(): any;
+      getPages(): sap.ui.core.Control[];
       /**
        * @deprecated (since 1.18.7) - Since 1.18.7 pages are no longer loaded or unloaded. Therefore busy indicator
        * is not necessary any longer.
@@ -24112,7 +24112,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllPages(): any;
+      removeAllPages(): sap.ui.core.Control[];
       /**
        * Removes a page from the aggregation {@link #getPages pages}.
        */
@@ -24587,12 +24587,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.54
        *
@@ -24747,11 +24747,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -25177,7 +25177,7 @@ declare namespace sap {
        *
        * Default value is `gold,darkorange,indianred,darkmagenta,cornflowerblue,deepskyblue,darkcyan,olivedrab,darkslategray,azure,white,lightgray,darkgray,dimgray,black`.
        */
-      getColors(): any;
+      getColors(): sap.ui.core.CSSColor[];
       /**
        * Returns a metadata object for class sap.m.ColorPalette.
        */
@@ -25196,7 +25196,7 @@ declare namespace sap {
         /**
          * New value for property `colors`
          */
-        sColors: any
+        sColors: sap.ui.core.CSSColor[]
       ): sap.m.ColorPalette;
       /**
        * Attaches event handler `fnFunction` to the {@link #event:colorSelect colorSelect} event of this `sap.m.ColorPalette`.
@@ -25329,7 +25329,7 @@ declare namespace sap {
        *
        * Default value is `gold,darkorange,indianred,darkmagenta,cornflowerblue,deepskyblue,darkcyan,olivedrab,darkslategray,azure,white,lightgray,darkgray,dimgray,black`.
        */
-      getColors(): any;
+      getColors(): sap.ui.core.CSSColor[];
       /**
        * Gets current value of property {@link #getDefaultColor defaultColor}.
        *
@@ -25383,7 +25383,7 @@ declare namespace sap {
         /**
          * New value for property `colors`
          */
-        sColors: any
+        sColors: sap.ui.core.CSSColor[]
       ): sap.m.ColorPalettePopover;
       /**
        * Sets a new value for property {@link #getDefaultColor defaultColor}.
@@ -26064,7 +26064,7 @@ declare namespace sap {
        * Every `control` inside the `cells` aggregation defines one cell of the row. **Note:** The order of the
        * `cells` aggregation must match the order of the `columns` aggregation of `sap.m.Table`.
        */
-      getCells(): any;
+      getCells(): sap.ui.core.Control[];
       /**
        * Returns a metadata object for class sap.m.ColumnListItem.
        */
@@ -26130,7 +26130,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllCells(): any;
+      removeAllCells(): sap.ui.core.Control[];
       /**
        * Removes a cell from the aggregation {@link #getCells cells}.
        */
@@ -26797,8 +26797,8 @@ declare namespace sap {
         /**
          * Items to filter.
          */
-        aItems?: any
-      ): any;
+        aItems?: sap.ui.core.Item[]
+      ): sap.ui.core.Item[];
       /**
        * Gets the first item from the aggregation named `items`.
        */
@@ -26827,7 +26827,7 @@ declare namespace sap {
        *
        * Defines the items contained within this control.
        */
-      getItems(): any;
+      getItems(): sap.ui.core.Item[];
       /**
        * Gets the last item from the aggregation named `items`.
        */
@@ -26893,7 +26893,7 @@ declare namespace sap {
         /**
          * Array of objects with information for dom ref and text to be highlighted
          */
-        aItemsDomRefs: any,
+        aItemsDomRefs: object[],
         /**
          * Method for bolding the text
          */
@@ -26931,12 +26931,12 @@ declare namespace sap {
         /**
          * Array of Items
          */
-        aItems: any,
+        aItems: sap.ui.core.Item[],
         /**
          * Second array of items
          */
-        aOtherItems: any
-      ): any;
+        aOtherItems: sap.ui.core.Item[]
+      ): sap.ui.core.Item[];
       /**
        * indicating if a character is currently composing.
        */
@@ -26966,7 +26966,7 @@ declare namespace sap {
        * Removes all the controls in the aggregation named `items`. Additionally unregisters them from the hosting
        * UIArea and clears the selection.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.ui.core.Item[];
       /**
        * Removes an item from the aggregation named `items`.
        */
@@ -27273,7 +27273,7 @@ declare namespace sap {
        *
        * The content of this list item
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Returns a metadata object for class sap.m.CustomListItem.
        */
@@ -27309,7 +27309,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -27474,7 +27474,7 @@ declare namespace sap {
        *
        * The content of this tree item.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Returns a metadata object for class sap.m.CustomTreeItem.
        */
@@ -27510,7 +27510,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -27812,7 +27812,7 @@ declare namespace sap {
        * **Note:** Since 1.48 you could set a non-working day via the sap.ui.unified.CalendarDayType.NonWorking
        * enum type just as any other special date type using sap.ui.unified.DateRangeType.
        */
-      getSpecialDates(): any;
+      getSpecialDates(): sap.ui.core.Element[];
       /**
        * Getter for property `value`.
        *
@@ -27884,7 +27884,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSpecialDates(): any;
+      removeAllSpecialDates(): sap.ui.core.Element[];
       /**
        * @SINCE 1.38.5
        *
@@ -28631,7 +28631,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getDateValue dateValue}.
        *
@@ -28770,7 +28770,7 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.27.0
        *
@@ -29583,12 +29583,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.15.1
        *
@@ -29613,7 +29613,7 @@ declare namespace sap {
        * this aggregation are aligned at the right side (left side in RTL mode) of the footer instead of in the
        * middle of the footer.
        */
-      getButtons(): any;
+      getButtons(): sap.m.Button[];
       /**
        * Gets content of aggregation {@link #getContent content}.
        *
@@ -29621,7 +29621,7 @@ declare namespace sap {
        * **Note:** When the content of the Dialog is comprised of controls that use `position: absolute`, such
        * as `SplitContainer`, the Dialog has to have either `stretch: true` or `contentHeight` set.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.12.1
        *
@@ -29906,11 +29906,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.21.1
        *
@@ -29918,13 +29918,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllButtons(): any;
+      removeAllButtons(): sap.m.Button[];
       /**
        * Removes all the controls from the aggregation {@link #getContent content}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -30796,7 +30796,7 @@ declare namespace sap {
        *
        * Collection of FacetFilterList controls.
        */
-      getLists(): any;
+      getLists(): sap.m.FacetFilterList[];
       /**
        * Gets current value of property {@link #getLiveSearch liveSearch}.
        *
@@ -30888,7 +30888,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllLists(): any;
+      removeAllLists(): sap.m.FacetFilterList[];
       /**
        * Removes a list from the aggregation {@link #getLists lists}.
        */
@@ -31285,7 +31285,7 @@ declare namespace sap {
            * Array of selected items. Items returned are only copies and therefore can only be used to read properties,
            * not set them.
            */
-          selectedItems?: any;
+          selectedItems?: sap.m.FacetFilterItem[];
           /**
            * `True` if the select All checkbox is selected. This will be `false` if all items are actually selected
            * (every FacetFilterItem.selected == true). In that case selectedItems will contain all selected items.
@@ -32565,7 +32565,7 @@ declare namespace sap {
        *
        * Contains {@link sap.m.FeedListItemAction elements} that are displayed in the action sheet.
        */
-      getActions(): any;
+      getActions(): sap.m.FeedListItemAction[];
       /**
        * Gets current value of property {@link #getActiveIcon activeIcon}.
        *
@@ -32745,7 +32745,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActions(): any;
+      removeAllActions(): sap.m.FeedListItemAction[];
       /**
        * Sets a new value for property {@link #getActiveIcon activeIcon}.
        *
@@ -33346,7 +33346,7 @@ declare namespace sap {
        *
        * Flex items within the flexible box layout
        */
-      getItems(): any;
+      getItems(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getJustifyContent justifyContent}.
        *
@@ -34388,7 +34388,7 @@ declare namespace sap {
        *
        * Provides an interface to the tile's layout information consistent in all modes and content densities.
        */
-      getBoundingRects(): any;
+      getBoundingRects(): object[];
       /**
        * Gets current value of property {@link #getFailedText failedText}.
        *
@@ -34496,7 +34496,7 @@ declare namespace sap {
        *
        * The content of the tile.
        */
-      getTileContent(): any;
+      getTileContent(): sap.m.TileContent[];
       /**
        * @SINCE 1.60
        *
@@ -34537,7 +34537,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllTileContent(): any;
+      removeAllTileContent(): sap.m.TileContent[];
       /**
        * Removes a tileContent from the aggregation {@link #getTileContent tileContent}.
        */
@@ -35274,7 +35274,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getBackgroundDesign backgroundDesign}.
        *
@@ -35289,7 +35289,7 @@ declare namespace sap {
        *
        * Content to add to HeaderContainer.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getHeight height}.
        *
@@ -35390,13 +35390,13 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getContent content}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.62.0
        *
@@ -35847,7 +35847,7 @@ declare namespace sap {
        * after each other. The developer has to manage to display the right one or use the content aggregation
        * inside the IconTabFilter (which will be displayed instead if it is set).
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.46
        *
@@ -35908,7 +35908,7 @@ declare namespace sap {
        *
        * The items displayed in the IconTabBar.
        */
-      getItems(): any;
+      getItems(): sap.m.IconTab[];
       /**
        * Returns a metadata object for class sap.m.IconTabBar.
        */
@@ -36025,13 +36025,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getItems items}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.IconTab[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -36313,7 +36313,7 @@ declare namespace sap {
        *
        * If this content is set, it is displayed instead of the general content inside the IconTabBar.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getCount count}.
        *
@@ -36423,7 +36423,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.15.0
        *
@@ -36734,7 +36734,7 @@ declare namespace sap {
        *
        * The items displayed in the IconTabHeader.
        */
-      getItems(): any;
+      getItems(): sap.m.IconTab[];
       /**
        * Returns a metadata object for class sap.m.IconTabHeader.
        */
@@ -36839,7 +36839,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.IconTab[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -37493,12 +37493,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.30.0
        *
@@ -37625,11 +37625,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -38785,7 +38785,7 @@ declare namespace sap {
        * The suggestionColumns and suggestionRows are for tabular input suggestions. This aggregation allows for
        * binding the table columns; for more details see the aggregation "suggestionRows".
        */
-      getSuggestionColumns(): any;
+      getSuggestionColumns(): sap.m.Column[];
       /**
        * @SINCE 1.44
        *
@@ -38809,7 +38809,7 @@ declare namespace sap {
        * it is also possible to add sap.ui.core/ListItems as SuggestionItems (since 1.21.1). For the selected
        * ListItem, only the first value is returned to the input field.
        */
-      getSuggestionItems(): any;
+      getSuggestionItems(): sap.ui.core.Item[];
       /**
        * @SINCE 1.21.1
        *
@@ -39084,7 +39084,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSuggestionColumns(): any;
+      removeAllSuggestionColumns(): sap.m.Column[];
       /**
        * Removes all suggestion items.
        */
@@ -39894,7 +39894,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.26
        *
@@ -39931,7 +39931,7 @@ declare namespace sap {
        *
        * Gets the labels referencing this control.
        */
-      getLabels(): any;
+      getLabels(): sap.m.Label[];
       /**
        * Returns a metadata object for class sap.m.InputBase.
        */
@@ -40083,7 +40083,7 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.27.0
        *
@@ -40409,7 +40409,7 @@ declare namespace sap {
        *
        * Content controls can be added
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getLabel label}.
        *
@@ -40462,7 +40462,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -40987,7 +40987,7 @@ declare namespace sap {
        * Aggregation which holds data about the image and its description. Although multiple LightBoxItems may
        * be added to this aggregation only the first one in the list will be taken into account.
        */
-      getImageContent(): any;
+      getImageContent(): sap.m.LightBoxItem[];
       /**
        * Returns a metadata object for class sap.m.LightBox.
        */
@@ -41056,7 +41056,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllImageContent(): any;
+      removeAllImageContent(): sap.m.LightBoxItem[];
       /**
        * Removes a imageContent from the aggregation {@link #getImageContent imageContent}.
        */
@@ -41347,12 +41347,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.22
        *
@@ -41468,11 +41468,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -42453,7 +42453,7 @@ declare namespace sap {
           /**
            * Array of items whose selection has changed. This parameter can be used for `MultiSelect` mode.
            */
-          listItems?: any;
+          listItems?: sap.m.ListItemBase[];
           /**
            * Indicates whether the `listItem` parameter is selected or not.
            */
@@ -42543,7 +42543,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.54
        *
@@ -42699,7 +42699,7 @@ declare namespace sap {
        *
        * Defines the items contained within this control.
        */
-      getItems(): any;
+      getItems(): sap.m.ListItemBase[];
       /**
        * @SINCE 1.38.0
        *
@@ -42768,7 +42768,7 @@ declare namespace sap {
          * In single selection modes, only the last selected item's binding context is returned in array.
          */
         bAll: boolean
-      ): any;
+      ): object[];
       /**
        * Returns selected list item. When no item is selected, "null" is returned. When "multi-selection" is enabled
        * and multiple items are selected, only the up-most selected item is returned.
@@ -42777,7 +42777,7 @@ declare namespace sap {
       /**
        * Returns an array containing the selected list items. If no items are selected, an empty array is returned.
        */
-      getSelectedItems(): any;
+      getSelectedItems(): sap.m.ListItemBase[];
       /**
        * Gets current value of property {@link #getShowNoData showNoData}.
        *
@@ -42825,7 +42825,7 @@ declare namespace sap {
        * 	 - If sticky column headers are enabled in the `sap.m.Table` control, setting focus on the column headers
        * 			will let the table scroll to the top.
        */
-      getSticky(): any;
+      getSticky(): sap.m.Sticky[];
       /**
        * Gets content of aggregation {@link #getSwipeContent swipeContent}.
        *
@@ -42884,13 +42884,13 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getItems items}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.ListItemBase[];
       /**
        * @SINCE 1.28.0
        *
@@ -43330,7 +43330,7 @@ declare namespace sap {
         /**
          * New value for property `sticky`
          */
-        sSticky: any
+        sSticky: sap.m.Sticky[]
       ): sap.m.ListBase;
       /**
        * Sets the aggregated {@link #getSwipeContent swipeContent}.
@@ -43869,7 +43869,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Returns the accessibility announcement for the content.
        *
@@ -43963,7 +43963,7 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.28.0
        *
@@ -44268,7 +44268,7 @@ declare namespace sap {
        *
        * A list of validation rules (one rule per mask character).
        */
-      getRules(): any;
+      getRules(): sap.m.MaskInputRule[];
       /**
        * Checks for the provided `sap.m.MaskInputRule` in the aggregation {@link #getRules rules}. and returns
        * its index if found or -1 otherwise.
@@ -44299,7 +44299,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllRules(): any;
+      removeAllRules(): sap.m.MaskInputRule[];
       /**
        * Removes a rule from the aggregation {@link #getRules rules}.
        */
@@ -44620,7 +44620,7 @@ declare namespace sap {
        *
        * Defines the items contained within this control.
        */
-      getItems(): any;
+      getItems(): sap.m.MenuItem[];
       /**
        * Returns a metadata object for class sap.m.Menu.
        */
@@ -44694,7 +44694,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.MenuItem[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -44882,12 +44882,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getButtonMode buttonMode}.
        *
@@ -45004,11 +45004,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -45484,7 +45484,7 @@ declare namespace sap {
        *
        * Defines the sub-items contained within this element.
        */
-      getItems(): any;
+      getItems(): sap.m.MenuItem[];
       /**
        * Returns a metadata object for class sap.m.MenuItem.
        */
@@ -45538,7 +45538,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.MenuItem[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -46086,12 +46086,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.54
        *
@@ -46102,7 +46102,7 @@ declare namespace sap {
        * **Note:** Buttons added to this aggregation are both vertically and horizontally centered. Depending
        * on the available space, they may be rendered on several lines.
        */
-      getButtons(): any;
+      getButtons(): sap.m.Button[];
       /**
        * Gets content of aggregation {@link #getCustomDescription customDescription}.
        *
@@ -46232,11 +46232,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.54
        *
@@ -46244,7 +46244,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllButtons(): any;
+      removeAllButtons(): sap.m.Button[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -48176,7 +48176,7 @@ declare namespace sap {
        * A list with message items. If only one item is provided, the initial page will be the details page for
        * the item.
        */
-      getItems(): any;
+      getItems(): sap.m.MessageItem[];
       /**
        * Returns a metadata object for class sap.m.MessageView.
        */
@@ -48224,7 +48224,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.MessageItem[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -48508,7 +48508,7 @@ declare namespace sap {
         /**
          * An array of item keys that identifies the items to be added as selected
          */
-        aKeys: any
+        aKeys: string[]
       ): sap.m.MultiComboBox;
       /**
        * Attaches event handler `fnFunction` to the {@link #event:selectionChange selectionChange} event of this
@@ -48661,7 +48661,7 @@ declare namespace sap {
           /**
            * The selected items which are selected after list box has been closed.
            */
-          selectedItems?: any;
+          selectedItems?: sap.ui.core.Item[];
         }
       ): sap.m.MultiComboBox;
       /**
@@ -48679,7 +48679,7 @@ declare namespace sap {
       /**
        * Retrieves the selected item objects from the association named `selectedItems`.
        */
-      getSelectedItems(): any;
+      getSelectedItems(): sap.ui.core.Item[];
       /**
        * Inserts an item into the aggregation named `items`.
        */
@@ -48727,11 +48727,11 @@ declare namespace sap {
        * Removes all the items in the aggregation named `items`.
        */
       // @ts-ignore
-      removeAllItems(): any;
+      removeAllItems(): sap.ui.core.Item[];
       /**
        * Removes all the controls in the association named selectedItems.
        */
-      removeAllSelectedItems(): any;
+      removeAllSelectedItems(): sap.ui.core.ID[];
       /**
        * Removes an item from the aggregation named `items`.
        */
@@ -48758,7 +48758,7 @@ declare namespace sap {
         /**
          * An array of item keys that identifies the items to be removed
          */
-        aKeys: any
+        aKeys: string[]
       ): sap.m.MultiComboBox;
       /**
        * Setter for association `selectedItems`.
@@ -49028,15 +49028,15 @@ declare namespace sap {
           /**
            * The array of removed tokens. This parameter is used when tokenChange type is "removedAll".
            */
-          tokens?: any;
+          tokens?: sap.m.Token[];
           /**
            * The array of tokens that are added. This parameter is used when tokenChange type is "tokenChanged".
            */
-          addedTokens?: any;
+          addedTokens?: sap.m.Token[];
           /**
            * The array of tokens that are removed. This parameter is used when tokenChange type is "tokenChanged".
            */
-          removedTokens?: any;
+          removedTokens?: sap.m.Token[];
         }
       ): sap.m.MultiInput;
       /**
@@ -49060,11 +49060,11 @@ declare namespace sap {
           /**
            * The array of tokens that are added. This parameter is used when tokenUpdate type is "added".
            */
-          addedTokens?: any;
+          addedTokens?: sap.m.Token[];
           /**
            * The array of tokens that are removed. This parameter is used when tokenUpdate type is "removed".
            */
-          removedTokens?: any;
+          removedTokens?: sap.m.Token[];
         }
       ): boolean;
       /**
@@ -49118,7 +49118,7 @@ declare namespace sap {
        *
        * The currently displayed tokens
        */
-      getTokens(): any;
+      getTokens(): sap.m.Token[];
       /**
        * Checks for the provided `sap.m.Token` in the aggregation {@link #getTokens tokens}. and returns its index
        * if found or -1 otherwise.
@@ -49186,7 +49186,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllTokens(): any;
+      removeAllTokens(): sap.m.Token[];
       /**
        * Function removes all validation callbacks
        */
@@ -49243,7 +49243,7 @@ declare namespace sap {
         /**
          * The new token set
          */
-        aTokens: any
+        aTokens: sap.m.Token[]
       ): sap.m.MultiInput;
       /**
        * Updates the inner input field.
@@ -49810,7 +49810,7 @@ declare namespace sap {
        * These aggregated controls will receive navigation events like {@link sap.m.NavContainerChild#beforeShow
        * beforeShow}, they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}
        */
-      getPages(): any;
+      getPages(): sap.ui.core.Control[];
       /**
        * @SINCE 1.7.1
        *
@@ -49895,7 +49895,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllPages(): any;
+      removeAllPages(): sap.ui.core.Control[];
       /**
        * Removes a page.
        */
@@ -50455,7 +50455,7 @@ declare namespace sap {
        *
        * Action buttons.
        */
-      getButtons(): any;
+      getButtons(): sap.m.Button[];
       /**
        * Gets current value of property {@link #getDatetime datetime}.
        *
@@ -50536,7 +50536,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllButtons(): any;
+      removeAllButtons(): sap.m.Button[];
       /**
        * Removes a button from the aggregation {@link #getButtons buttons}.
        */
@@ -50801,7 +50801,7 @@ declare namespace sap {
        *
        * The NotificationListItems inside the group.
        */
-      getItems(): any;
+      getItems(): sap.m.NotificationListItem[];
       /**
        * Returns a metadata object for class sap.m.NotificationListGroup.
        */
@@ -50856,7 +50856,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.NotificationListItem[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -52195,23 +52195,23 @@ declare namespace sap {
        * this aggregation. The numbers are hidden on tablet and phone size screens. When only one number is provided,
        * it is rendered with additional separator from the main ObjectHeader number.
        */
-      getAdditionalNumbers(): any;
+      getAdditionalNumbers(): sap.m.ObjectNumber[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets content of aggregation {@link #getAttributes attributes}.
        *
        * The list of Object Attributes
        */
-      getAttributes(): any;
+      getAttributes(): sap.m.ObjectAttribute[];
       /**
        * Gets current value of property {@link #getBackgroundDesign backgroundDesign}.
        *
@@ -52385,7 +52385,7 @@ declare namespace sap {
        *  **Note:** You should use either this aggregation or the already deprecated properties - `markFlagged`
        * and `markFavorite`. Using both can lead to unexpected results.
        */
-      getMarkers(): any;
+      getMarkers(): sap.m.ObjectMarker[];
       /**
        * @SINCE 1.16.0
        * @deprecated (since 1.42.0) - replaced by `markers` aggregation. Add {@link sap.m.ObjectMarker} with type
@@ -52512,7 +52512,7 @@ declare namespace sap {
        * The list of Object sap.ui.core.Control. It will only allow sap.m.ObjectStatus and sap.m.ProgressIndicator
        * controls.
        */
-      getStatuses(): any;
+      getStatuses(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getTitle title}.
        *
@@ -52704,27 +52704,27 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAdditionalNumbers(): any;
+      removeAllAdditionalNumbers(): sap.m.ObjectNumber[];
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getAttributes attributes}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAttributes(): any;
+      removeAllAttributes(): sap.m.ObjectAttribute[];
       /**
        * Removes all the controls from the aggregation {@link #getMarkers markers}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMarkers(): any;
+      removeAllMarkers(): sap.m.ObjectMarker[];
       /**
        * @SINCE 1.16.0
        *
@@ -52732,7 +52732,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllStatuses(): any;
+      removeAllStatuses(): sap.ui.core.Control[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -53471,7 +53471,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @deprecated (since 1.24.0) - There is no replacement for the moment.
        *
@@ -53546,7 +53546,7 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
@@ -53780,7 +53780,7 @@ declare namespace sap {
        *
        * List of attributes displayed below the title to the left of the status fields.
        */
-      getAttributes(): any;
+      getAttributes(): sap.m.ObjectAttribute[];
       /**
        * Gets content of aggregation {@link #getFirstStatus firstStatus}.
        *
@@ -53828,7 +53828,7 @@ declare namespace sap {
        *  **Note:** You should use either this aggregation or the already deprecated properties - `markFlagged`,
        * `markFavorite`, and `markLocked`. Using both can lead to unexpected results.
        */
-      getMarkers(): any;
+      getMarkers(): sap.m.ObjectMarker[];
       /**
        * @SINCE 1.16.0
        * @deprecated (since 1.42.0) - replaced by `markers` aggregation. Add {@link sap.m.ObjectMarker} with type
@@ -53993,13 +53993,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAttributes(): any;
+      removeAllAttributes(): sap.m.ObjectAttribute[];
       /**
        * Removes all the controls from the aggregation {@link #getMarkers markers}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMarkers(): any;
+      removeAllMarkers(): sap.m.ObjectMarker[];
       /**
        * Removes a attribute from the aggregation {@link #getAttributes attributes}.
        */
@@ -54367,12 +54367,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Returns a metadata object for class sap.m.ObjectMarker.
        */
@@ -54403,11 +54403,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -54568,7 +54568,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getEmphasized emphasized}.
        *
@@ -54633,7 +54633,7 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -54869,7 +54869,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getIcon icon}.
        *
@@ -54925,7 +54925,7 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -55890,17 +55890,17 @@ declare namespace sap {
            * Contains `columnsItems` that needs to be created in the model. Deprecated as of version 1.50, replaced
            * by new parameter `items`.
            */
-          newItems?: any;
+          newItems?: sap.m.P13nColumnsItem[];
           /**
            * Contains `columnsItems` that needs to be changed in the model. Deprecated as of version 1.50, replaced
            * by new parameter `items`.
            */
-          existingItems?: any;
+          existingItems?: sap.m.P13nColumnsItem[];
           /**
            * Array contains an object for each item in `items` aggregation enriched with index and visibility information.
            * The item order reflects the current order of columns in the panel.
            */
-          items?: any;
+          items?: object[];
         }
       ): sap.m.P13nColumnsPanel;
       /**
@@ -55922,7 +55922,7 @@ declare namespace sap {
        *
        * List of columns that has been changed.
        */
-      getColumnsItems(): any;
+      getColumnsItems(): sap.m.P13nColumnsItem[];
       /**
        * Returns a metadata object for class sap.m.P13nColumnsPanel.
        */
@@ -56008,7 +56008,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllColumnsItems(): any;
+      removeAllColumnsItems(): sap.m.P13nColumnsItem[];
       /**
        * @SINCE 1.26.0
        *
@@ -56276,7 +56276,7 @@ declare namespace sap {
       /**
        * returns array of all defined conditions.
        */
-      getConditions(): any;
+      getConditions(): object[];
       /**
        * Gets current value of property {@link #getContainerQuery containerQuery}.
        *
@@ -56333,7 +56333,7 @@ declare namespace sap {
       /**
        * getter for KeyFields array
        */
-      getKeyFields(): any;
+      getKeyFields(): object[];
       /**
        * Gets current value of property {@link #getLayoutMode layoutMode}.
        *
@@ -56477,7 +56477,7 @@ declare namespace sap {
         /**
          * array of Conditions.
          */
-        aConditions: any
+        aConditions: object[]
       ): void;
       /**
        * Sets a new value for property {@link #getDisableFirstRemoveIcon disableFirstRemoveIcon}.
@@ -56860,7 +56860,7 @@ declare namespace sap {
        *
        * The dialog panels displayed in the dialog.
        */
-      getPanels(): any;
+      getPanels(): sap.m.P13nPanel[];
       /**
        * Gets current value of property {@link #getShowReset showReset}.
        *
@@ -56923,7 +56923,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllPanels(): any;
+      removeAllPanels(): sap.m.P13nPanel[];
       /**
        * Removes a panel from the aggregation {@link #getPanels panels}.
        */
@@ -57392,7 +57392,7 @@ declare namespace sap {
        *
        * Specifies available chart types.
        */
-      getAvailableChartTypes(): any;
+      getAvailableChartTypes(): sap.ui.core.Item[];
       /**
        * Gets current value of property {@link #getChartTypeKey chartTypeKey}.
        *
@@ -57406,7 +57406,7 @@ declare namespace sap {
        *
        * List of columns that has been changed.
        */
-      getDimMeasureItems(): any;
+      getDimMeasureItems(): sap.m.P13nDimMeasureItem[];
       /**
        * Returns a metadata object for class sap.m.P13nDimMeasurePanel.
        */
@@ -57467,13 +57467,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAvailableChartTypes(): any;
+      removeAllAvailableChartTypes(): sap.ui.core.Item[];
       /**
        * Removes all the controls from the aggregation {@link #getDimMeasureItems dimMeasureItems}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllDimMeasureItems(): any;
+      removeAllDimMeasureItems(): sap.m.P13nDimMeasureItem[];
       /**
        * Removes a availableChartType from the aggregation {@link #getAvailableChartTypes availableChartTypes}.
        */
@@ -58021,7 +58021,7 @@ declare namespace sap {
        *
        * Defines filter items.
        */
-      getFilterItems(): any;
+      getFilterItems(): sap.m.P13nFilterItem[];
       /**
        * Getter for the include operations.
        */
@@ -58089,7 +58089,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllFilterItems(): any;
+      removeAllFilterItems(): sap.m.P13nFilterItem[];
       /**
        * Removes a filterItem from the aggregation {@link #getFilterItems filterItems}.
        */
@@ -58118,7 +58118,7 @@ declare namespace sap {
         /**
          * the complete list of conditions
          */
-        aConditions: any
+        aConditions: object[]
       ): sap.m.P13nFilterPanel;
       /**
        * Sets a new value for property {@link #getContainerQuery containerQuery}.
@@ -58633,7 +58633,7 @@ declare namespace sap {
        *
        * Defined group items.
        */
-      getGroupItems(): any;
+      getGroupItems(): sap.m.P13nGroupItem[];
       /**
        * Gets current value of property {@link #getLayoutMode layoutMode}.
        *
@@ -58684,7 +58684,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllGroupItems(): any;
+      removeAllGroupItems(): sap.m.P13nGroupItem[];
       /**
        * Removes a groupItem from the aggregation {@link #getGroupItems groupItems}.
        */
@@ -59005,7 +59005,7 @@ declare namespace sap {
        * the array of values for type bool. e.g. ["", "Off", "On"]. The first entry can be empty (used to blank
        * the value field). Next value represent the false value, last entry the true value.
        */
-      getValues(): any;
+      getValues(): string[];
       /**
        * Gets current value of property {@link #getVisible visible}.
        *
@@ -59259,7 +59259,7 @@ declare namespace sap {
         /**
          * New value for property `values`
          */
-        sValues: any
+        sValues: string[]
       ): sap.m.P13nItem;
       /**
        * Sets a new value for property {@link #getVisible visible}.
@@ -59430,7 +59430,7 @@ declare namespace sap {
        *
        * Defines personalization items (e.g. columns in the `P13nColumnsPanel`).
        */
-      getItems(): any;
+      getItems(): sap.m.P13nItem[];
       /**
        * Returns a metadata object for class sap.m.P13nPanel.
        */
@@ -59535,7 +59535,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.P13nItem[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -59997,7 +59997,7 @@ declare namespace sap {
        *
        * defined Sort Items
        */
-      getSortItems(): any;
+      getSortItems(): sap.m.P13nSortItem[];
       /**
        * Checks for the provided `sap.m.P13nSortItem` in the aggregation {@link #getSortItems sortItems}. and
        * returns its index if found or -1 otherwise.
@@ -60028,7 +60028,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSortItems(): any;
+      removeAllSortItems(): sap.m.P13nSortItem[];
       /**
        * @SINCE 1.28
        *
@@ -60375,7 +60375,7 @@ declare namespace sap {
        *
        * The content of this page
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.29.0
        *
@@ -60434,7 +60434,7 @@ declare namespace sap {
        * and limit the number to one when the application needs to run on smartphones. There is no automatic overflow
        * handling when the space is insufficient. When a customHeader is used, this aggregation will be ignored.
        */
-      getHeaderContent(): any;
+      getHeaderContent(): sap.ui.core.Control[];
       /**
        * @deprecated (since 1.20) - Deprecated since the MVI theme is removed now. This property only affected
        * the NavButton in that theme.
@@ -60604,13 +60604,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllHeaderContent(): any;
+      removeAllHeaderContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -60662,7 +60662,7 @@ declare namespace sap {
          * Specifies an additional left and top offset of the target scroll position, relative to the upper left
          * corner of the DOM element
          */
-        aOffset?: any
+        aOffset?: number[]
       ): sap.m.Page;
       /**
        * Sets a new value for property {@link #getBackgroundDesign backgroundDesign}.
@@ -61717,7 +61717,7 @@ declare namespace sap {
        *
        * Determines the content of the Panel. The content will be visible only when the Panel is expanded.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.22
        *
@@ -61833,7 +61833,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -62258,7 +62258,7 @@ declare namespace sap {
        * A multiple aggregation for buttons that can be added to the footer of the popup dialog. Works only if
        * the PDF viewer is set to open in a popup dialog.
        */
-      getPopupButtons(): any;
+      getPopupButtons(): sap.m.Button[];
       /**
        * @deprecated (since 1.50.0) - replaced by {@link sap.m.PDFViewer#getTitle}.
        *
@@ -62344,7 +62344,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllPopupButtons(): any;
+      removeAllPopupButtons(): sap.m.Button[];
       /**
        * Removes a popupButton from the aggregation {@link #getPopupButtons popupButtons}.
        */
@@ -62979,7 +62979,7 @@ declare namespace sap {
           /**
            * The selected appointments in case a group appointment is selected.
            */
-          appointments?: any;
+          appointments?: sap.ui.unified.CalendarAppointment[];
           /**
            * If set, the appointment was selected using multiple selection (e.g. Shift + single mouse click), meaning
            * more than the current appointment could be selected.
@@ -63039,7 +63039,7 @@ declare namespace sap {
           /**
            * Array of rows whose selection has changed.
            */
-          rows?: any;
+          rows?: sap.m.PlanningCalendarRow[];
         }
       ): sap.m.PlanningCalendar;
       /**
@@ -63089,7 +63089,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.50
        *
@@ -63105,7 +63105,7 @@ declare namespace sap {
        *
        * Default value is `[]`.
        */
-      getBuiltInViews(): any;
+      getBuiltInViews(): string[];
       /**
        * @SINCE 1.54
        *
@@ -63180,17 +63180,17 @@ declare namespace sap {
        *
        * Rows of the `PlanningCalendar`.
        */
-      getRows(): any;
+      getRows(): sap.m.PlanningCalendarRow[];
       /**
        * @SINCE 1.54
        *
        * Holds the selected appointments. If no appointments are selected, an empty array is returned.
        */
-      getSelectedAppointments(): any;
+      getSelectedAppointments(): sap.ui.unified.CalendarAppointment[];
       /**
        * Returns an array containing the selected rows. If no row is selected, an empty array is returned.
        */
-      getSelectedRows(): any;
+      getSelectedRows(): sap.m.PlanningCalendarRow[];
       /**
        * @SINCE 1.50
        *
@@ -63262,7 +63262,7 @@ declare namespace sap {
        *
        * **Note:** If one day is assigned to more than one type, only the first type will be used.
        */
-      getSpecialDates(): any;
+      getSpecialDates(): sap.ui.unified.DateTypeRange[];
       /**
        * Gets current value of property {@link #getStartDate startDate}.
        *
@@ -63303,7 +63303,7 @@ declare namespace sap {
        *
        * The content of the toolbar.
        */
-      getToolbarContent(): any;
+      getToolbarContent(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getViewKey viewKey}.
        *
@@ -63322,7 +63322,7 @@ declare namespace sap {
        *
        * **Note:** If not set, all the default views are available. Their keys are defined in {@link sap.ui.unified.CalendarIntervalType}.
        */
-      getViews(): any;
+      getViews(): sap.m.PlanningCalendarView[];
       /**
        * Gets current value of property {@link #getWidth width}.
        *
@@ -63434,31 +63434,31 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getRows rows}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllRows(): any;
+      removeAllRows(): sap.m.PlanningCalendarRow[];
       /**
        * Removes all the controls from the aggregation {@link #getSpecialDates specialDates}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSpecialDates(): any;
+      removeAllSpecialDates(): sap.ui.unified.DateTypeRange[];
       /**
        * Removes all the controls from the aggregation {@link #getToolbarContent toolbarContent}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllToolbarContent(): any;
+      removeAllToolbarContent(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getViews views}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllViews(): any;
+      removeAllViews(): sap.m.PlanningCalendarView[];
       /**
        * @SINCE 1.40.0
        *
@@ -63575,7 +63575,7 @@ declare namespace sap {
         /**
          * New value for property `builtInViews`
          */
-        sBuiltInViews: any
+        sBuiltInViews: string[]
       ): sap.m.PlanningCalendar;
       /**
        * @SINCE 1.54
@@ -64025,7 +64025,7 @@ declare namespace sap {
        *
        * The legend items which show color and type information about the calendar appointments.
        */
-      getAppointmentItems(): any;
+      getAppointmentItems(): sap.ui.unified.CalendarLegendItem[];
       /**
        * Gets current value of property {@link #getAppointmentItemsHeader appointmentItemsHeader}.
        *
@@ -64078,7 +64078,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAppointmentItems(): any;
+      removeAllAppointmentItems(): sap.ui.unified.CalendarLegendItem[];
       /**
        * Removes a appointmentItem from the aggregation {@link #getAppointmentItems appointmentItems}.
        */
@@ -64514,7 +64514,7 @@ declare namespace sap {
        *
        * **Note:** For performance reasons, only appointments in the visible time range or nearby should be assigned.
        */
-      getAppointments(): any;
+      getAppointments(): sap.ui.unified.CalendarAppointment[];
       /**
        * @SINCE 1.56
        *
@@ -64619,7 +64619,7 @@ declare namespace sap {
        *
        * **Note:** For performance reasons, only appointments in the visible time range or nearby should be assigned.
        */
-      getIntervalHeaders(): any;
+      getIntervalHeaders(): sap.ui.unified.CalendarAppointment[];
       /**
        * Gets current value of property {@link #getKey key}.
        *
@@ -64641,7 +64641,7 @@ declare namespace sap {
        * **Note:** The non-working days are visualized if the `intervalType` property of the {@link sap.m.PlanningCalendarView}
        * is set to `Day`.
        */
-      getNonWorkingDays(): any;
+      getNonWorkingDays(): number[];
       /**
        * Gets current value of property {@link #getNonWorkingHours nonWorkingHours}.
        *
@@ -64651,7 +64651,7 @@ declare namespace sap {
        * **Note:** The non-working hours are visualized if `intervalType` property of the {@link sap.m.PlanningCalendarView}
        * is set to `Hour`.
        */
-      getNonWorkingHours(): any;
+      getNonWorkingHours(): number[];
       /**
        * Gets current value of property {@link #getSelected selected}.
        *
@@ -64674,7 +64674,7 @@ declare namespace sap {
        * in the `PlanningCalendarRow`. If the aggregation is set as another type, the date or date range will
        * be ignored and will not be displayed in the control.
        */
-      getSpecialDates(): any;
+      getSpecialDates(): sap.ui.unified.DateTypeRange[];
       /**
        * Gets current value of property {@link #getText text}.
        *
@@ -64771,13 +64771,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAppointments(): any;
+      removeAllAppointments(): sap.ui.unified.CalendarAppointment[];
       /**
        * Removes all the controls from the aggregation {@link #getIntervalHeaders intervalHeaders}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllIntervalHeaders(): any;
+      removeAllIntervalHeaders(): sap.ui.unified.CalendarAppointment[];
       /**
        * @SINCE 1.56
        *
@@ -64785,7 +64785,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSpecialDates(): any;
+      removeAllSpecialDates(): sap.ui.unified.DateTypeRange[];
       /**
        * Removes a appointment from the aggregation {@link #getAppointments appointments}.
        */
@@ -64965,7 +64965,7 @@ declare namespace sap {
         /**
          * New value for property `nonWorkingDays`
          */
-        sNonWorkingDays: any
+        sNonWorkingDays: number[]
       ): sap.m.PlanningCalendarRow;
       /**
        * Sets a new value for property {@link #getNonWorkingHours nonWorkingHours}.
@@ -64982,7 +64982,7 @@ declare namespace sap {
         /**
          * New value for property `nonWorkingHours`
          */
-        sNonWorkingHours: any
+        sNonWorkingHours: number[]
       ): sap.m.PlanningCalendarRow;
       /**
        * Sets a new value for property {@link #getSelected selected}.
@@ -65701,12 +65701,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.15.1
        *
@@ -65721,7 +65721,7 @@ declare namespace sap {
        *
        * The content inside the popover.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.9.0
        *
@@ -66011,17 +66011,17 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getContent content}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -67658,7 +67658,7 @@ declare namespace sap {
        * Displays a page header, object icon or image, object name with short description, and object information
        * divided in groups
        */
-      getPages(): any;
+      getPages(): sap.m.QuickViewPage[];
       /**
        * Checks for the provided `sap.m.QuickViewPage` in the aggregation {@link #getPages pages}. and returns
        * its index if found or -1 otherwise.
@@ -67693,7 +67693,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllPages(): any;
+      removeAllPages(): sap.m.QuickViewPage[];
       /**
        * Removes a page from the aggregation {@link #getPages pages}.
        */
@@ -67898,7 +67898,7 @@ declare namespace sap {
        *
        * A combination of one label and another control (Link or Text) associated to this label.
        */
-      getElements(): any;
+      getElements(): sap.m.QuickViewGroupElement[];
       /**
        * Gets current value of property {@link #getHeading heading}.
        *
@@ -67950,7 +67950,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllElements(): any;
+      removeAllElements(): sap.m.QuickViewGroupElement[];
       /**
        * Removes a element from the aggregation {@link #getElements elements}.
        */
@@ -68331,7 +68331,7 @@ declare namespace sap {
        *
        * QuickViewGroup consists of a title (optional) and an entity of group elements.
        */
-      getGroups(): any;
+      getGroups(): sap.m.QuickViewGroup[];
       /**
        * Gets current value of property {@link #getHeader header}.
        *
@@ -68407,7 +68407,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllGroups(): any;
+      removeAllGroups(): sap.m.QuickViewGroup[];
       /**
        * Removes a group from the aggregation {@link #getGroups groups}.
        */
@@ -68689,12 +68689,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.25
        *
@@ -68805,11 +68805,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -69175,18 +69175,18 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets content of aggregation {@link #getButtons buttons}.
        *
        * Returns a list of the RadioButtons in a RadioButtonGroup
        */
-      getButtons(): any;
+      getButtons(): sap.m.RadioButton[];
       /**
        * Gets current value of property {@link #getColumns columns}.
        *
@@ -69296,11 +69296,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all radio buttons.
        */
@@ -69522,7 +69522,7 @@ declare namespace sap {
        *
        * Default value is `0,100`.
        */
-      getRange(): any;
+      getRange(): number[];
       /**
        * Gets current value of property {@link #getValue2 value2}.
        *
@@ -69550,7 +69550,7 @@ declare namespace sap {
         /**
          * New value for property `range`
          */
-        sRange: any
+        sRange: number[]
       ): sap.m.RangeSlider;
       /**
        * Sets a new value for property {@link #getValue2 value2}.
@@ -69784,12 +69784,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.50.0
        *
@@ -69883,11 +69883,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -70430,12 +70430,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Getter for beginButton aggregation
        */
@@ -70445,7 +70445,7 @@ declare namespace sap {
        *
        * Content is supported by both variants. Please see the documentation on sap.m.Popover#content and sap.m.Dialog#content
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getContentHeight contentHeight}.
        *
@@ -70627,17 +70627,17 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getContent content}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -71129,7 +71129,7 @@ declare namespace sap {
        *
        * The content of the ScrollContainer.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getFocusable focusable}.
        *
@@ -71220,7 +71220,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -71651,12 +71651,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getEnabled enabled}.
        *
@@ -71769,7 +71769,7 @@ declare namespace sap {
        * 	 - `icon`
        * 	 - `description` - additional text may be used to visually display search item type or category
        */
-      getSuggestionItems(): any;
+      getSuggestionItems(): sap.m.SuggestionItem[];
       /**
        * Gets current value of property {@link #getValue value}.
        *
@@ -71823,11 +71823,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.34
        *
@@ -71835,7 +71835,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSuggestionItems(): any;
+      removeAllSuggestionItems(): sap.m.SuggestionItem[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -72427,12 +72427,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @deprecated (since 1.28.0) - replaced by `items` aggregation
        *
@@ -72443,7 +72443,7 @@ declare namespace sap {
        * of the Button control are evaluated. Setting other properties of the button will have no effect. Alternatively,
        * you can use the createButton method to add buttons.
        */
-      getButtons(): any;
+      getButtons(): sap.m.Button[];
       /**
        * Gets current value of property {@link #getEnabled enabled}.
        *
@@ -72462,7 +72462,7 @@ declare namespace sap {
        * the buttons displayed by the control. The "items" and "buttons" aggregations should NOT be used simultaneously
        * as it causes the control to work incorrectly.
        */
-      getItems(): any;
+      getItems(): sap.m.SegmentedButtonItem[];
       /**
        * Returns a metadata object for class sap.m.SegmentedButton.
        */
@@ -72552,11 +72552,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @deprecated (since 1.28.0) - replaced by `items` aggregation
        *
@@ -72564,7 +72564,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllButtons(): any;
+      removeAllButtons(): sap.m.Button[];
       /**
        * Removes all items from `items` aggregation
        */
@@ -73085,7 +73085,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.16
        *
@@ -73113,8 +73113,8 @@ declare namespace sap {
         /**
          * Items to filter.
          */
-        aItems?: any
-      ): any;
+        aItems?: sap.ui.core.Item[]
+      ): sap.ui.core.Item[];
       /**
        * @SINCE 1.16
        *
@@ -73179,7 +73179,7 @@ declare namespace sap {
        *
        * **Note**: This is the default aggregation.
        */
-      getItems(): any;
+      getItems(): sap.ui.core.Item[];
       /**
        * @SINCE 1.16
        *
@@ -73364,12 +73364,12 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the items in the aggregation named `items`. Additionally unregisters them from the hosting
        * UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.ui.core.Item[];
       /**
        * @SINCE 1.27.0
        *
@@ -73977,7 +73977,7 @@ declare namespace sap {
            * Returns an array containing the visible selected list items. If no items are selected, an empty array
            * is returned.
            */
-          selectedItems?: any;
+          selectedItems?: sap.m.StandardListItem[];
           /**
            * Returns the binding contexts of the selected items including the non-visible items. See {@link sap.m.ListBase#getSelectedContexts
            * getSelectedContexts} of `sap.m.ListBase`. NOTE: In contrast to the parameter "selectedItems", this parameter
@@ -73987,7 +73987,7 @@ declare namespace sap {
            * loaded. Therefore, these items will not be included in the selectedContexts array unless they are displayed
            * at least once.
            */
-          selectedContexts?: any;
+          selectedContexts?: object[];
         }
       ): sap.m.SelectDialog;
       /**
@@ -74067,7 +74067,7 @@ declare namespace sap {
        * The items of the list shown in the search dialog. It is recommended to use a StandardListItem for the
        * dialog but other combinations are also possible.
        */
-      getItems(): any;
+      getItems(): sap.m.ListItemBase[];
       /**
        * Returns a metadata object for class sap.m.SelectDialog.
        */
@@ -74177,7 +74177,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.ListItemBase[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -74719,13 +74719,13 @@ declare namespace sap {
        * group is pressed, a navigation should be triggered via `navTo` method. A maximum of 5 actionGroups is
        * displayed inside the popover, though more can be added to the aggregation.
        */
-      getActionGroups(): any;
+      getActionGroups(): sap.ui.core.Item[];
       /**
        * Gets content of aggregation {@link #getActions actions}.
        *
        * Contains custom actions shown in the responsive toolbar below items on the first page.
        */
-      getActions(): any;
+      getActions(): sap.ui.core.Item[];
       /**
        * Returns the public facade of the SelectionDetails control for non inner framework usages.
        */
@@ -74735,7 +74735,7 @@ declare namespace sap {
        *
        * Contains {@link sap.m.SelectionDetailsItem items} that are displayed on the first page.
        */
-      getItems(): any;
+      getItems(): sap.m.SelectionDetailsItem[];
       /**
        * Returns a metadata object for class sap.m.SelectionDetails.
        */
@@ -74856,19 +74856,19 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActionGroups(): any;
+      removeAllActionGroups(): sap.ui.core.Item[];
       /**
        * Removes all the controls from the aggregation {@link #getActions actions}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActions(): any;
+      removeAllActions(): sap.ui.core.Item[];
       /**
        * Removes all the controls from the aggregation {@link #getItems items}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.SelectionDetailsItem[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -75201,13 +75201,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      static removeAllActionGroups(): any;
+      static removeAllActionGroups(): sap.ui.core.Item[];
       /**
        * Removes all the controls from the aggregation {@link #getActions actions}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      static removeAllActions(): any;
+      static removeAllActions(): sap.ui.core.Item[];
       /**
        * Enables line wrapping for the labels of the of the {@link sap.m.SelectionDetailsItemLine} elements.
        */
@@ -75380,7 +75380,7 @@ declare namespace sap {
        *
        * Contains custom actions shown below the main content of the item.
        */
-      getActions(): any;
+      getActions(): sap.ui.core.Item[];
       /**
        * Gets current value of property {@link #getEnableNav enableNav}.
        *
@@ -75399,7 +75399,7 @@ declare namespace sap {
        * Contains a record of information about, for example, measures and dimensions. These entries are usually
        * obtained via selection in chart controls.
        */
-      getLines(): any;
+      getLines(): sap.m.SelectionDetailsItemLine[];
       /**
        * Returns a metadata object for class sap.m.SelectionDetailsItem.
        */
@@ -75469,13 +75469,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActions(): any;
+      removeAllActions(): sap.ui.core.Item[];
       /**
        * Removes all the controls from the aggregation {@link #getLines lines}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllLines(): any;
+      removeAllLines(): sap.m.SelectionDetailsItemLine[];
       /**
        * Removes a line from the aggregation {@link #getLines lines}.
        */
@@ -75921,11 +75921,13 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Retrieves the default selected item from the aggregation named `items`.
        */
-      getDefaultSelectedItem(aItems?: any): sap.ui.core.Item | null;
+      getDefaultSelectedItem(
+        aItems?: sap.ui.core.Item[]
+      ): sap.ui.core.Item | null;
       /**
        * Gets current value of property {@link #getEnabled enabled}.
        *
@@ -75941,8 +75943,8 @@ declare namespace sap {
         /**
          * items to filter
          */
-        aItems?: any
-      ): any;
+        aItems?: sap.ui.core.Item[]
+      ): sap.ui.core.Item[];
       /**
        * Gets the first item from the aggregation named `items`.
        */
@@ -75972,7 +75974,7 @@ declare namespace sap {
        *
        * Defines the items contained within this control.
        */
-      getItems(): any;
+      getItems(): sap.ui.core.Item[];
       /**
        * @SINCE 1.38
        *
@@ -76074,12 +76076,12 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the items in the aggregation named `items`. Additionally unregisters them from the hosting
        * UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.ui.core.Item[];
       /**
        * @SINCE 1.27.0
        *
@@ -77248,7 +77250,7 @@ declare namespace sap {
        *
        * The controls to be passed to the toolbar.
        */
-      getActions(): any;
+      getActions(): sap.ui.core.Control[];
       /**
        * Gets content of aggregation {@link #getAppointments appointments}.
        *
@@ -77256,7 +77258,7 @@ declare namespace sap {
        * Appointments, longer than a day, will be displayed in all of the affected days. To display an all-day
        * appointment, the appointment must start at 00:00 and end on any day in the future in 00:00h.
        */
-      getAppointments(): any;
+      getAppointments(): sap.ui.unified.CalendarAppointment[];
       /**
        * @SINCE 1.65
        *
@@ -77314,7 +77316,7 @@ declare namespace sap {
        *
        * Holds the selected appointments. If no appointments are selected, an empty array is returned.
        */
-      getSelectedAppointments(): any;
+      getSelectedAppointments(): sap.ui.unified.CalendarAppointment[];
       /**
        * ID of the element which is the current target of the association {@link #getSelectedView selectedView},
        * or `null`.
@@ -77358,7 +77360,7 @@ declare namespace sap {
        *
        * **Note:** If not set, the Week view is available.
        */
-      getViews(): any;
+      getViews(): sap.m.SinglePlanningCalendarView[];
       /**
        * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getActions actions}. and returns
        * its index if found or -1 otherwise.
@@ -77448,19 +77450,19 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActions(): any;
+      removeAllActions(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getAppointments appointments}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAppointments(): any;
+      removeAllAppointments(): sap.ui.unified.CalendarAppointment[];
       /**
        * Removes all the controls from the aggregation {@link #getViews views}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllViews(): any;
+      removeAllViews(): sap.m.SinglePlanningCalendarView[];
       /**
        * Removes a appointment from the aggregation {@link #getAppointments appointments}.
        */
@@ -78300,7 +78302,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.56
        *
@@ -78310,7 +78312,7 @@ declare namespace sap {
        * is used. In the RangeSlider case - the first two. If no custom tooltips are provided, the default are
        * used
        */
-      getCustomTooltips(): any;
+      getCustomTooltips(): sap.m.SliderTooltipBase[];
       /**
        * Gets current value of property {@link #getEnabled enabled}.
        *
@@ -78425,7 +78427,7 @@ declare namespace sap {
       /**
        * Gets the tooltips that should be shown. Returns custom tooltips if provided. Otherwise - default tooltips
        */
-      getUsedTooltips(): any;
+      getUsedTooltips(): sap.m.SliderTooltipBase[];
       /**
        * Gets current value of property {@link #getValue value}.
        *
@@ -78505,7 +78507,7 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.56
        *
@@ -78513,7 +78515,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllCustomTooltips(): any;
+      removeAllCustomTooltips(): sap.m.SliderTooltipBase[];
       /**
        * @SINCE 1.27.0
        *
@@ -79052,7 +79054,7 @@ declare namespace sap {
        *
        * The set of Generic Tiles to be shown in the control.
        */
-      getTiles(): any;
+      getTiles(): sap.m.GenericTile[];
       /**
        * Gets current value of property {@link #getTransitionTime transitionTime}.
        *
@@ -79091,7 +79093,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllTiles(): any;
+      removeAllTiles(): sap.m.GenericTile[];
       /**
        * Removes a tile from the aggregation {@link #getTiles tiles}.
        */
@@ -80392,7 +80394,7 @@ declare namespace sap {
        * These aggregated controls receive navigation events like {@link sap.m.NavContainerChild#beforeShow beforeShow},
        * they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
        */
-      getDetailPages(): any;
+      getDetailPages(): sap.ui.core.Control[];
       /**
        * ID of the element which is the current target of the association {@link #getInitialDetail initialDetail},
        * or `null`.
@@ -80444,7 +80446,7 @@ declare namespace sap {
        * These aggregated controls receive navigation events like {@link sap.m.NavContainerChild#beforeShow beforeShow},
        * they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
        */
-      getMasterPages(): any;
+      getMasterPages(): sap.ui.core.Control[];
       /**
        * Returns a metadata object for class sap.m.SplitContainer.
        */
@@ -80582,13 +80584,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllDetailPages(): any;
+      removeAllDetailPages(): sap.ui.core.Control[];
       /**
        * Removes all the controls from the aggregation {@link #getMasterPages masterPages}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMasterPages(): any;
+      removeAllMasterPages(): sap.ui.core.Control[];
       /**
        * Removes a detailPage from the aggregation {@link #getDetailPages detailPages}.
        */
@@ -81469,7 +81471,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Gets the icon of the `StandardTile` control.
        */
@@ -81533,7 +81535,7 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -81935,12 +81937,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.54
        *
@@ -82137,11 +82139,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -82738,7 +82740,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getCustomTextOff customTextOff}.
        *
@@ -82804,7 +82806,7 @@ declare namespace sap {
        *
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * @SINCE 1.27.0
        *
@@ -83186,7 +83188,7 @@ declare namespace sap {
        *
        * The items displayed in the `TabContainer`.
        */
-      getItems(): any;
+      getItems(): sap.m.TabContainerItem[];
       /**
        * Returns a metadata object for class sap.m.TabContainer.
        */
@@ -83235,7 +83237,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.TabContainerItem[];
       /**
        * Removes an item from the aggregation named `items`.
        */
@@ -83465,7 +83467,7 @@ declare namespace sap {
        *
        * The content displayed for this item.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * @EXPERIMENTAL (since 1.63)
        *
@@ -83541,7 +83543,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -83890,7 +83892,7 @@ declare namespace sap {
            * 2D array of strings with data from the clipboard. The first dimension represents the rows, and the second
            * dimension represents the cells of the tabular data.
            */
-          data?: any;
+          data?: string[][];
         }
       ): boolean;
       /**
@@ -83921,7 +83923,7 @@ declare namespace sap {
          * set true to get the columns in an order that respects personalization settings
          */
         bSort?: Boolean
-      ): any;
+      ): sap.m.Column[];
       /**
        * @SINCE 1.60
        *
@@ -84022,7 +84024,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllColumns(): any;
+      removeAllColumns(): sap.m.Column[];
       /**
        * Removes a column from the aggregation {@link #getColumns columns}.
        */
@@ -84413,7 +84415,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getTables
        * tables}.
        */
-      getTables(): any;
+      getTables(): sap.ui.core.ID[];
       /**
        * Initializes the TablePersoController instance after creation.
        */
@@ -84434,7 +84436,7 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getTables tables}.
        */
-      removeAllTables(): any;
+      removeAllTables(): sap.ui.core.ID[];
       /**
        * Removes an table from the association named {@link #getTables tables}.
        */
@@ -85314,7 +85316,7 @@ declare namespace sap {
            * Returns an array containing the visible selected list items. If no items are selected, an empty array
            * is returned.
            */
-          selectedItems?: any;
+          selectedItems?: sap.m.StandardListItem[];
           /**
            * Returns the binding contexts of the selected items including the non-visible items. Note: In contrast
            * to the parameter "selectedItems", this parameter includes the selected but NOT visible items (due to
@@ -85370,7 +85372,7 @@ declare namespace sap {
        *
        * The columns bindings.
        */
-      getColumns(): any;
+      getColumns(): sap.m.Column[];
       /**
        * Retrieves content height of the select dialog {@link sap.m.Dialog}
        */
@@ -85412,7 +85414,7 @@ declare namespace sap {
        *
        * The items of the table.
        */
-      getItems(): any;
+      getItems(): sap.m.ColumnListItem[];
       /**
        * Returns a metadata object for class sap.m.TableSelectDialog.
        */
@@ -85550,13 +85552,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllColumns(): any;
+      removeAllColumns(): sap.m.Column[];
       /**
        * Removes all the controls from the aggregation {@link #getItems items}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.ColumnListItem[];
       /**
        * Removes a column from the aggregation {@link #getColumns columns}.
        */
@@ -86981,7 +86983,7 @@ declare namespace sap {
        *
        * The Tiles to be displayed by the TileContainer.
        */
-      getTiles(): any;
+      getTiles(): sap.m.Tile[];
       /**
        * Gets current value of property {@link #getWidth width}.
        *
@@ -87031,7 +87033,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllTiles(): any;
+      removeAllTiles(): sap.m.Tile[];
       /**
        * Removes a tile from the aggregation {@link #getTiles tiles}.
        */
@@ -87057,7 +87059,7 @@ declare namespace sap {
         /**
          * optional list of visible tiles in order to avoid filtering them again.
          */
-        aVisibleTiles?: any
+        aVisibleTiles?: sap.m.Tile[]
       ): void;
       /**
        * Scrolls one page to the left.
@@ -87656,7 +87658,7 @@ declare namespace sap {
        *
        * A list of validation rules (one rule per mask character).
        */
-      getRules(): any;
+      getRules(): sap.m.MaskInputRule[];
       /**
        * @SINCE 1.40
        *
@@ -87742,7 +87744,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllRules(): any;
+      removeAllRules(): sap.m.MaskInputRule[];
       /**
        * Removes a rule from the aggregation {@link #getRules rules}.
        */
@@ -88801,12 +88803,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getEditable editable}.
        *
@@ -88858,11 +88860,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -89253,15 +89255,15 @@ declare namespace sap {
           /**
            * the array of removed tokens. This parameter is used when tokenChange type is "removedAll".
            */
-          tokens?: any;
+          tokens?: sap.m.Token[];
           /**
            * the array of tokens that are added. This parameter is used when tokenChange type is "tokenChanged".
            */
-          addedTokens?: any;
+          addedTokens?: sap.m.Token[];
           /**
            * the array of tokens that are removed. This parameter is used when tokenChange type is "tokenChanged".
            */
-          removedTokens?: any;
+          removedTokens?: sap.m.Token[];
         }
       ): sap.m.Tokenizer;
       /**
@@ -89285,23 +89287,23 @@ declare namespace sap {
           /**
            * The array of tokens that are added. This parameter is used when tokenUpdate type is "added".
            */
-          addedTokens?: any;
+          addedTokens?: sap.m.Token[];
           /**
            * The array of tokens that are removed. This parameter is used when tokenUpdate type is "removed".
            */
-          removedTokens?: any;
+          removedTokens?: sap.m.Token[];
         }
       ): boolean;
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): any;
+      getAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getEditable editable}.
        *
@@ -89334,13 +89336,13 @@ declare namespace sap {
       /**
        * Function returns all currently selected tokens
        */
-      getSelectedTokens(): any;
+      getSelectedTokens(): sap.m.Token[];
       /**
        * Gets content of aggregation {@link #getTokens tokens}.
        *
        * the currently displayed tokens
        */
-      getTokens(): any;
+      getTokens(): sap.m.Token[];
       /**
        * Gets the accessibility text aggregation id
        */
@@ -89388,17 +89390,17 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): any;
+      removeAllAriaDescribedBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getTokens tokens}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllTokens(): any;
+      removeAllTokens(): sap.m.Token[];
       /**
        * Function removes all validation callbacks
        */
@@ -89712,13 +89714,13 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): any;
+      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets content of aggregation {@link #getContent content}.
        *
        * The content of the toolbar.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.16.8
        *
@@ -89823,13 +89825,13 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): any;
+      removeAllAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Removes all the controls from the aggregation {@link #getContent content}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
@@ -91129,7 +91131,7 @@ declare namespace sap {
            * Interface definition. Limitation: Internet Explorer 9 supports only single file with property file.name.
            * Since version 1.28.0.
            */
-          files?: any;
+          files?: object[];
         }
       ): sap.m.UploadCollection;
       /**
@@ -91168,7 +91170,7 @@ declare namespace sap {
            * A FileList of individually selected files from the underlying system. Limitation: Internet Explorer 9
            * supports only single file with property file.name. Since version 1.28.0.
            */
-          files?: any;
+          files?: object[];
         }
       ): sap.m.UploadCollection;
       /**
@@ -91216,7 +91218,7 @@ declare namespace sap {
            * A FileList of individually selected files from the underlying system. Limitation: Internet Explorer 9
            * supports only single file with property file.name. Since 1.28.0.
            */
-          files?: any;
+          files?: object[];
         }
       ): sap.m.UploadCollection;
       /**
@@ -91237,7 +91239,7 @@ declare namespace sap {
           /**
            * Array of items whose selection has changed. This parameter can be used for `MultiSelect` mode.
            */
-          selectedItems?: any;
+          selectedItems?: sap.m.UploadCollectionItem[];
           /**
            * Indicates whether the `listItem` parameter is selected or not.
            */
@@ -91269,7 +91271,7 @@ declare namespace sap {
            * A FileList of individually selected files from the underlying system. Limitation: Internet Explorer 9
            * supports only single file. Since 1.28.0.
            */
-          files?: any;
+          files?: object[];
         }
       ): sap.m.UploadCollection;
       /**
@@ -91306,7 +91308,7 @@ declare namespace sap {
            * is reflected by a property in the header-object, with the property value reflecting the header-field's
            * content. This property is not supported by Internet Explorer 9 and lower. Since 1.28.0.
            */
-          files?: any;
+          files?: object[];
         }
       ): sap.m.UploadCollection;
       /**
@@ -91335,14 +91337,14 @@ declare namespace sap {
        * types. If at least one file does not fit the file type requirements, the upload is prevented. Example:
        * ["jpg", "png", "bmp"].
        */
-      getFileType(): any;
+      getFileType(): string[];
       /**
        * Gets content of aggregation {@link #getHeaderParameters headerParameters}.
        *
        * Specifies the header parameters for the FileUploader that are submitted only with XHR requests. Header
        * parameters are not supported by Internet Explorer 8 and 9.
        */
-      getHeaderParameters(): any;
+      getHeaderParameters(): sap.m.UploadCollectionParameter[];
       /**
        * @SINCE 1.44.0
        *
@@ -91368,13 +91370,13 @@ declare namespace sap {
        * Provides access to the internally used request headers to allow adding them to the "Access-Control-Allow-Headers"
        * header parameter if needed.
        */
-      getInternalRequestHeaderNames(): any;
+      getInternalRequestHeaderNames(): string[];
       /**
        * Gets content of aggregation {@link #getItems items}.
        *
        * Uploaded items.
        */
-      getItems(): any;
+      getItems(): sap.m.UploadCollectionItem[];
       /**
        * Gets current value of property {@link #getMaximumFilenameLength maximumFilenameLength}.
        *
@@ -91401,7 +91403,7 @@ declare namespace sap {
        * of MIME types. If at least one file does not fit the MIME type requirements, the upload is prevented.
        * This property is not supported by Internet Explorer 8 and 9. Example: mimeType ["image/png", "image/jpeg"].
        */
-      getMimeType(): any;
+      getMimeType(): string[];
       /**
        * @SINCE 1.34.0
        *
@@ -91459,7 +91461,7 @@ declare namespace sap {
        *
        * Specifies the parameters for the FileUploader that are rendered as a hidden input field.
        */
-      getParameters(): any;
+      getParameters(): sap.m.UploadCollectionParameter[];
       /**
        * Gets current value of property {@link #getSameFilenameAllowed sameFilenameAllowed}.
        *
@@ -91480,7 +91482,7 @@ declare namespace sap {
        *
        * Returns an array containing the selected UploadCollectionItems.
        */
-      getSelectedItems(): any;
+      getSelectedItems(): sap.m.UploadCollectionItem[];
       /**
        * Gets current value of property {@link #getShowSeparators showSeparators}.
        *
@@ -91629,19 +91631,19 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllHeaderParameters(): any;
+      removeAllHeaderParameters(): sap.m.UploadCollectionParameter[];
       /**
        * Removes all the controls from the aggregation {@link #getItems items}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.UploadCollectionItem[];
       /**
        * Removes all the controls from the aggregation {@link #getParameters parameters}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllParameters(): any;
+      removeAllParameters(): sap.m.UploadCollectionParameter[];
       /**
        * Removes a headerParameter from the aggregation {@link #getHeaderParameters headerParameters}.
        */
@@ -91688,7 +91690,7 @@ declare namespace sap {
         /**
          * New value for property `fileType`
          */
-        sFileType: any
+        sFileType: string[]
       ): sap.m.UploadCollection;
       /**
        * @SINCE 1.44.0
@@ -91760,7 +91762,7 @@ declare namespace sap {
         /**
          * New value for property `mimeType`
          */
-        sMimeType: any
+        sMimeType: string[]
       ): sap.m.UploadCollection;
       /**
        * @SINCE 1.34.0
@@ -92473,7 +92475,7 @@ declare namespace sap {
        * aggregation attributes ‘contributor’: ‘B’. As a result, the attributes ‘contributor’:’A’ and ‘contributor’:’B’
        * are displayed. To make sure the title does not appear twice, check if one of the properties is filled.
        */
-      getAttributes(): any;
+      getAttributes(): sap.m.ObjectAttribute[];
       /**
        * @deprecated (since 1.30) - This property is deprecated; use the aggregation attributes instead. However,
        * if the property is filled, it is displayed as an attribute. To make sure the title does not appear twice,
@@ -92537,7 +92539,7 @@ declare namespace sap {
        * Markers of an uploaded item Markers will be displayed after an item has been uploaded But not in Edit
        * mode
        */
-      getMarkers(): any;
+      getMarkers(): sap.m.ObjectMarker[];
       /**
        * Returns a metadata object for class sap.m.UploadCollectionItem.
        */
@@ -92566,7 +92568,7 @@ declare namespace sap {
        *
        * Statuses of an uploaded item Statuses will be displayed after an item has been uploaded
        */
-      getStatuses(): any;
+      getStatuses(): sap.m.ObjectStatus[];
       /**
        * Gets current value of property {@link #getThumbnailUrl thumbnailUrl}.
        *
@@ -92700,7 +92702,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAttributes(): any;
+      removeAllAttributes(): sap.m.ObjectAttribute[];
       /**
        * @SINCE 1.40.0
        *
@@ -92708,7 +92710,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMarkers(): any;
+      removeAllMarkers(): sap.m.ObjectMarker[];
       /**
        * @SINCE 1.30.0
        *
@@ -92716,7 +92718,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllStatuses(): any;
+      removeAllStatuses(): sap.m.ObjectStatus[];
       /**
        * @SINCE 1.30.0
        *
@@ -93272,7 +93274,7 @@ declare namespace sap {
         /**
          * an array of local IDs within the cloned hierarchy (internally used)
          */
-        aLocalIds?: any,
+        aLocalIds?: string[],
         /**
          * configuration object
          */
@@ -93405,7 +93407,7 @@ declare namespace sap {
        *
        * The content of this Custom tab
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getIcon icon}.
        *
@@ -93457,7 +93459,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -93928,7 +93930,7 @@ declare namespace sap {
           /**
            * The selected filters in an array of ViewSettingsItem.
            */
-          filterItems?: any;
+          filterItems?: sap.m.ViewSettingsItem[];
           /**
            * The selected filter items in an object notation format: { key: boolean }. If a custom control filter
            * was displayed (for example, the user clicked on the filter item), the value for its key is set to true
@@ -93978,7 +93980,7 @@ declare namespace sap {
        *
        * The list of all the custom tabs.
        */
-      getCustomTabs(): any;
+      getCustomTabs(): sap.m.ViewSettingsCustomTab[];
       /**
        * Forward method to the inner dialog method: getDomRef.
        */
@@ -93994,7 +93996,7 @@ declare namespace sap {
        *
        * **Note:** It is recommended to use the `sap.m.ViewSettingsFilterItem` as it fits best at the filter page.
        */
-      getFilterItems(): any;
+      getFilterItems(): sap.m.ViewSettingsItem[];
       /**
        * @SINCE 1.42
        *
@@ -94022,7 +94024,7 @@ declare namespace sap {
        *
        * The list of items with key and value that can be grouped on (for example, a list of columns for a table).
        */
-      getGroupItems(): any;
+      getGroupItems(): sap.m.ViewSettingsItem[];
       /**
        * Returns a metadata object for class sap.m.ViewSettingsDialog.
        */
@@ -94036,7 +94038,7 @@ declare namespace sap {
        * The list of preset filter items with key and value that allows the selection of more complex or custom
        * filters. These entries are displayed at the top of the filter tab.
        */
-      getPresetFilterItems(): any;
+      getPresetFilterItems(): sap.m.ViewSettingsItem[];
       /**
        * @SINCE 1.42
        *
@@ -94048,7 +94050,7 @@ declare namespace sap {
        *
        * It can be used to create matching sorters and filters to apply the selected settings to the data.
        */
-      getSelectedFilterItems(): any;
+      getSelectedFilterItems(): sap.m.ViewSettingsItem[];
       /**
        * @deprecated (since 1.42) - replaced by `getSelectedFilterCompoundKeys` method
        *
@@ -94092,7 +94094,7 @@ declare namespace sap {
        *
        * The list of items with key and value that can be sorted over (for example, a list of columns for a table).
        */
-      getSortItems(): any;
+      getSortItems(): sap.m.ViewSettingsItem[];
       /**
        * Gets current value of property {@link #getTitle title}.
        *
@@ -94267,7 +94269,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllCustomTabs(): any;
+      removeAllCustomTabs(): sap.m.ViewSettingsCustomTab[];
       /**
        * Removes all filter Items and resets the remembered page if it was a filter detail page and all of its
        * filter items are being removed.
@@ -94280,7 +94282,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllGroupItems(): any;
+      removeAllGroupItems(): sap.m.ViewSettingsItem[];
       /**
        * @SINCE 1.16
        *
@@ -94288,7 +94290,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllPresetFilterItems(): any;
+      removeAllPresetFilterItems(): sap.m.ViewSettingsItem[];
       /**
        * @SINCE 1.16
        *
@@ -94296,7 +94298,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSortItems(): any;
+      removeAllSortItems(): sap.m.ViewSettingsItem[];
       /**
        * @SINCE 1.30
        *
@@ -94733,7 +94735,7 @@ declare namespace sap {
        * Items with key and value that are logically grouped under this filter item. They are used to display
        * filter details in the ViewSettingsDialog.
        */
-      getItems(): any;
+      getItems(): sap.m.ViewSettingsItem[];
       /**
        * Returns a metadata object for class sap.m.ViewSettingsFilterItem.
        */
@@ -94777,7 +94779,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): any;
+      removeAllItems(): sap.m.ViewSettingsItem[];
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -95235,7 +95237,7 @@ declare namespace sap {
        *
        * The wizard steps to be included in the content of the control.
        */
-      getSteps(): any;
+      getSteps(): sap.m.WizardStep[];
       /**
        * Gets current value of property {@link #getWidth width}.
        *
@@ -95288,7 +95290,7 @@ declare namespace sap {
       /**
        * Removes all steps from the Wizard.
        */
-      removeAllSteps(): any;
+      removeAllSteps(): sap.m.WizardStep[];
       /**
        * Sets association currentStep to the given step.
        */
@@ -95590,7 +95592,7 @@ declare namespace sap {
        *
        * The content of the Wizard Step.
        */
-      getContent(): any;
+      getContent(): sap.ui.core.Control[];
       /**
        * Gets current value of property {@link #getIcon icon}.
        *
@@ -95629,7 +95631,7 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getSubsequentSteps
        * subsequentSteps}.
        */
-      getSubsequentSteps(): any;
+      getSubsequentSteps(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getTitle title}.
        *
@@ -95679,13 +95681,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): any;
+      removeAllContent(): sap.ui.core.Control[];
       /**
        * @SINCE 1.32
        *
        * Removes all the controls in the association named {@link #getSubsequentSteps subsequentSteps}.
        */
-      removeAllSubsequentSteps(): any;
+      removeAllSubsequentSteps(): sap.ui.core.ID[];
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */

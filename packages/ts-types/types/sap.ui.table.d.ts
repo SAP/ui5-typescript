@@ -133,7 +133,7 @@ declare namespace sap {
               /**
                * Array of indices whose selection has been changed (either selected or deselected).
                */
-              indices?: any;
+              indices?: number[];
               /**
                * Indicates whether the selection limit has been reached.
                */
@@ -1672,7 +1672,7 @@ declare namespace sap {
          * the start/end of a selection range, when using Shift-Click to select multiple entries at once.
          */
         // @ts-ignore
-        getSelectedIndex(): any;
+        getSelectedIndex(): number[];
         /**
          * Returns an array containing the row indices of all selected tree nodes (in ascending order).
          *
@@ -1681,7 +1681,7 @@ declare namespace sap {
          * yet loaded" to the client), will not be returned.
          */
         // @ts-ignore
-        getSelectedIndices(): any;
+        getSelectedIndices(): number[];
         /**
          * @deprecated (since 1.44.0) - please use the corresponding binding parameter `sumOnTop` instead.
          *
@@ -2277,7 +2277,7 @@ declare namespace sap {
          * Labels of the column which are displayed in the column header. Define a control for each header row in
          * the table. Use this aggregation if you want to use multiple headers per column.
          */
-        getMultiLabels(): any;
+        getMultiLabels(): sap.ui.core.Control[];
         /**
          * @SINCE 1.11.1
          *
@@ -2422,7 +2422,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllMultiLabels(): any;
+        removeAllMultiLabels(): sap.ui.core.Control[];
         /**
          * @SINCE 1.13.1
          *
@@ -2988,7 +2988,7 @@ declare namespace sap {
          * the cells. This aggregation is managed by the table and must not be manipulated. Only read access is
          * allowed.
          */
-        getCells(): any;
+        getCells(): sap.ui.core.Control[];
         /**
          * Returns the index of the row in the table or -1 if not added to a table. This function considers the
          * scroll position of the table and also takes fixed rows and fixed bottom rows into account.
@@ -3036,7 +3036,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllCells(): any;
+        removeAllCells(): sap.ui.core.Control[];
         /**
          * Removes a cell from the aggregation {@link #getCells cells}.
          */
@@ -3112,7 +3112,7 @@ declare namespace sap {
          *
          * The action items which should be displayed.
          */
-        getItems(): any;
+        getItems(): sap.ui.table.RowActionItem[];
         /**
          * Returns a metadata object for class sap.ui.table.RowAction.
          */
@@ -3157,7 +3157,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllItems(): any;
+        removeAllItems(): sap.ui.table.RowActionItem[];
         /**
          * Removes a item from the aggregation {@link #getItems items}.
          */
@@ -4710,7 +4710,7 @@ declare namespace sap {
              * 2D array of strings with data from the clipboard. The first dimension represents the rows, and the second
              * dimension represents the cells of the tabular data.
              */
-            data?: any;
+            data?: string[][];
           }
         ): boolean;
         /**
@@ -4732,7 +4732,7 @@ declare namespace sap {
             /**
              * array of row indices which selection has been changed (either selected or deselected)
              */
-            rowIndices?: any;
+            rowIndices?: number[];
             /**
              * indicator if "select all" function is used to select rows
              */
@@ -4783,7 +4783,7 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
          * ariaLabelledBy}.
          */
-        getAriaLabelledBy(): any;
+        getAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Returns the control inside the cell with the given row index (in the `rows` aggregation) and column index
          * (in the `columns` aggregation or in the list of visible columns only, depending on parameter `bVisibleColumnIndex`).
@@ -4828,7 +4828,7 @@ declare namespace sap {
          *
          * Columns of the Table
          */
-        getColumns(): any;
+        getColumns(): sap.ui.table.Column[];
         /**
          * In contrast to the function `getFixedColumnCount` which returns the value of the property `fixedColumnCount`,
          * this function returns the actual fixed column count computed based on the table width.
@@ -4990,7 +4990,7 @@ declare namespace sap {
          * Extension section of the Table. If not set, no extension area will be rendered. Note: In case a `sap.m.Toolbar`
          * is used as header the CSS class sapMTBHeader-CTX should be applied on this toolbar.
          */
-        getExtension(): any;
+        getExtension(): sap.ui.core.Control[];
         /**
          * Gets current value of property {@link #getFirstVisibleRow firstVisibleRow}.
          *
@@ -5089,7 +5089,7 @@ declare namespace sap {
          * The following restrictions apply:
          * 	 - Only one MultiSelectionPlugin can be applied. No other plugins can be applied.
          */
-        getPlugins(): any;
+        getPlugins(): sap.ui.table.plugins.SelectionPlugin[];
         /**
          * @SINCE 1.45.0
          *
@@ -5132,7 +5132,7 @@ declare namespace sap {
          *
          * Rows of the Table
          */
-        getRows(): any;
+        getRows(): sap.ui.table.Row[];
         /**
          * Gets content of aggregation {@link #getRowSettingsTemplate rowSettingsTemplate}.
          *
@@ -5155,7 +5155,7 @@ declare namespace sap {
         /**
          * Zero-based indices of selected items, wrapped in an array. An empty array means "no selection".
          */
-        getSelectedIndices(): any;
+        getSelectedIndices(): number[];
         /**
          * Gets current value of property {@link #getSelectionBehavior selectionBehavior}.
          *
@@ -5216,7 +5216,7 @@ declare namespace sap {
          * See:
          * 	sap.ui.table.Table#sort
          */
-        getSortedColumns(): any;
+        getSortedColumns(): sap.ui.table.Column[];
         /**
          * Gets current value of property {@link #getThreshold threshold}.
          *
@@ -5402,19 +5402,19 @@ declare namespace sap {
         /**
          * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
-        removeAllAriaLabelledBy(): any;
+        removeAllAriaLabelledBy(): sap.ui.core.ID[];
         /**
          * Removes all the controls from the aggregation {@link #getColumns columns}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllColumns(): any;
+        removeAllColumns(): sap.ui.table.Column[];
         /**
          * Removes all the controls from the aggregation {@link #getExtension extension}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllExtension(): any;
+        removeAllExtension(): sap.ui.core.Control[];
         /**
          * @SINCE 1.64
          * @EXPERIMENTAL (since 1.64)
@@ -5423,13 +5423,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllPlugins(): any;
+        removeAllPlugins(): sap.ui.table.plugins.SelectionPlugin[];
         /**
          * Removes all the controls from the aggregation {@link #getRows rows}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllRows(): any;
+        removeAllRows(): sap.ui.table.Row[];
         /**
          * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
@@ -6869,7 +6869,7 @@ declare namespace sap {
          * yet loaded" to the client), will not be returned.
          */
         // @ts-ignore
-        getSelectedIndices(): any;
+        getSelectedIndices(): number[];
         /**
          * Gets current value of property {@link #getUseGroupMode useGroupMode}.
          *
