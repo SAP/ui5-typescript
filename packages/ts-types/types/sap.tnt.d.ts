@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.64.1
+// For Library Version: 1.65.1
 
 declare namespace sap {
   /**
@@ -578,12 +578,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): sap.ui.core.ID[];
+      getAriaDescribedBy(): any;
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): sap.ui.core.ID[];
+      getAriaLabelledBy(): any;
       /**
        * Gets current value of property {@link #getExpanded expanded}.
        *
@@ -597,7 +597,7 @@ declare namespace sap {
        *
        * The items displayed in the list.
        */
-      getItems(): sap.tnt.NavigationListItem[];
+      getItems(): any;
       /**
        * Returns a metadata object for class sap.tnt.NavigationList.
        */
@@ -649,17 +649,17 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): sap.ui.core.ID[];
+      removeAllAriaDescribedBy(): any;
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): sap.ui.core.ID[];
+      removeAllAriaLabelledBy(): any;
       /**
        * Removes all the controls from the aggregation {@link #getItems items}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): sap.tnt.NavigationListItem[];
+      removeAllItems(): any;
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -892,7 +892,7 @@ declare namespace sap {
        *
        * The sub items.
        */
-      getItems(): sap.tnt.NavigationListItem[];
+      getItems(): any;
       /**
        * Returns a metadata object for class sap.tnt.NavigationListItem.
        */
@@ -938,7 +938,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllItems(): sap.tnt.NavigationListItem[];
+      removeAllItems(): any;
       /**
        * Removes a item from the aggregation {@link #getItems items}.
        */
@@ -1289,6 +1289,22 @@ declare namespace sap {
      * 	 - If an app implements side navigation in addition to the tool header menu, the menu icon must be the
      * 			first item on the left-hand side of the tool header.
      * 	 - The app menu and the side navigation must not have any dependencies and must work independently.
+     * 			 Fiori 3 theme specifics: In Fiori 3 Default theme the ToolHeader is with dark design unlike most
+     * 			of the other controls. This defines the usage of limited controls inside it, which will result in good
+     * 			design combination.
+     *  The ToolHeader stylizes the contained controls with the Shell color parameters, to match the dark design
+     * requirement. However, that's not a dark theme.
+     *
+     *  Only the following controls are supported:
+     * 	 - sap.m.Text
+     * 	 - sap.m.Title
+     * 	 - sap.m.ObjectStatus
+     * 	 - sap.ui.core.Icon
+     * 	 - sap.m.Button
+     * 	 - sap.m.MenuButton
+     * 	 - sap.m.Select
+     * 	 - sap.m.SearchField
+     * 	 - sap.m.IconTabHeader
      */
     class ToolHeader extends sap.m.OverflowToolbar {
       /**
@@ -1470,7 +1486,7 @@ declare namespace sap {
        *
        * The content section.
        */
-      getMainContents(): sap.ui.core.Control[];
+      getMainContents(): any;
       /**
        * Returns a metadata object for class sap.tnt.ToolPage.
        */
@@ -1520,7 +1536,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMainContents(): sap.ui.core.Control[];
+      removeAllMainContents(): any;
       /**
        * Removes a mainContent from the aggregation {@link #getMainContents mainContents}.
        */

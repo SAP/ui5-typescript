@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.64.1
+// For Library Version: 1.65.1
 
 declare namespace sap {
   /**
@@ -300,6 +300,8 @@ declare namespace sap {
          * Default value is `empty string`.
          */
         getTitle(): string;
+        /**/
+        isReady(): boolean;
         /**
          * Sets a new value for property {@link #getIconDisplayShape iconDisplayShape}.
          *
@@ -554,7 +556,7 @@ declare namespace sap {
          * Additional side number indicators. For example "Deviation" and "Target". Not more than two side indicators
          * should be used.
          */
-        getSideIndicators(): sap.f.cards.NumericSideIndicator[];
+        getSideIndicators(): any;
         /**
          * @EXPERIMENTAL (since 1.64)
          *
@@ -616,12 +618,14 @@ declare namespace sap {
            */
           iIndex: number
         ): sap.f.cards.NumericHeader;
+        /**/
+        isReady(): boolean;
         /**
          * Removes all the controls from the aggregation {@link #getSideIndicators sideIndicators}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllSideIndicators(): sap.f.cards.NumericSideIndicator[];
+        removeAllSideIndicators(): any;
         /**
          * Removes a sideIndicator from the aggregation {@link #getSideIndicators sideIndicators}.
          */
@@ -817,6 +821,21 @@ declare namespace sap {
            */
           sValue: string
         ): sap.f.cards.NumericSideIndicator;
+      }
+      /**
+       * @SINCE 1.65
+       *
+       * Different options for the position of the `Card` header.
+       */
+      enum HeaderPosition {
+        /**
+         * The Header is under the content.
+         */
+        Bottom,
+        /**
+         * The Header is over the content.
+         */
+        Top
       }
     }
 
@@ -1694,9 +1713,12 @@ declare namespace sap {
          * The `titleCustomTextActions` are placed in the `TextActions` area of the `SemanticPage` title, right
          * before the semantic text action.
          *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
+         * **Notes:**
+         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
+         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
+         * 			state.
+         * 	 - Buttons that are part of this aggregation will always have their `type` property set to `Transparent`
+         * 			by design.
          */
         titleCustomTextActions?: sap.m.Button[] | sap.m.Button;
 
@@ -3318,7 +3340,7 @@ declare namespace sap {
          * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
          * state.
          */
-        getCustomShareActions(): sap.m.Button[];
+        getCustomShareActions(): any;
         /**
          * Gets content of aggregation {@link #getDeleteAction deleteAction}.
          *
@@ -3397,7 +3419,7 @@ declare namespace sap {
          * **Note:** Buttons that are part of this aggregation will always have their `type` property set to `Transparent`
          * by design.
          */
-        getFooterCustomActions(): sap.m.Button[];
+        getFooterCustomActions(): any;
         /**
          * Gets content of aggregation {@link #getFooterMainAction footerMainAction}.
          *
@@ -3420,7 +3442,7 @@ declare namespace sap {
          *
          * The header content.
          */
-        getHeaderContent(): sap.ui.core.Control[];
+        getHeaderContent(): any;
         /**
          * Gets current value of property {@link #getHeaderExpanded headerExpanded}.
          *
@@ -3605,7 +3627,7 @@ declare namespace sap {
          * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
          * 			state.
          */
-        getTitleContent(): sap.ui.core.Control[];
+        getTitleContent(): any;
         /**
          * Gets content of aggregation {@link #getTitleCustomIconActions titleCustomIconActions}.
          *
@@ -3616,18 +3638,21 @@ declare namespace sap {
          * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
          * state.
          */
-        getTitleCustomIconActions(): sap.m.OverflowToolbarButton[];
+        getTitleCustomIconActions(): any;
         /**
          * Gets content of aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.
          *
          * The `titleCustomTextActions` are placed in the `TextActions` area of the `SemanticPage` title, right
          * before the semantic text action.
          *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
+         * **Notes:**
+         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
+         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
+         * 			state.
+         * 	 - Buttons that are part of this aggregation will always have their `type` property set to `Transparent`
+         * 			by design.
          */
-        getTitleCustomTextActions(): sap.m.Button[];
+        getTitleCustomTextActions(): any;
         /**
          * Gets content of aggregation {@link #getTitleExpandedContent titleExpandedContent}.
          *
@@ -3635,7 +3660,7 @@ declare namespace sap {
          *
          * **Note:** The controls will be placed in the title`s left area, under the `titleHeading` aggregation.
          */
-        getTitleExpandedContent(): sap.ui.core.Control[];
+        getTitleExpandedContent(): any;
         /**
          * @SINCE 1.58
          *
@@ -3711,7 +3736,7 @@ declare namespace sap {
          * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
          * 			state.
          */
-        getTitleSnappedContent(): sap.ui.core.Control[];
+        getTitleSnappedContent(): any;
         /**
          * @SINCE 1.58
          *
@@ -3966,19 +3991,19 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllCustomShareActions(): sap.m.Button[];
+        removeAllCustomShareActions(): any;
         /**
          * Removes all the controls from the aggregation {@link #getFooterCustomActions footerCustomActions}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFooterCustomActions(): sap.m.Button[];
+        removeAllFooterCustomActions(): any;
         /**
          * Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllHeaderContent(): sap.ui.core.Control[];
+        removeAllHeaderContent(): any;
         /**
          * @SINCE 1.52
          *
@@ -3986,31 +4011,31 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleContent(): sap.ui.core.Control[];
+        removeAllTitleContent(): any;
         /**
          * Removes all the controls from the aggregation {@link #getTitleCustomIconActions titleCustomIconActions}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleCustomIconActions(): sap.m.OverflowToolbarButton[];
+        removeAllTitleCustomIconActions(): any;
         /**
          * Removes all the controls from the aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleCustomTextActions(): sap.m.Button[];
+        removeAllTitleCustomTextActions(): any;
         /**
          * Removes all the controls from the aggregation {@link #getTitleExpandedContent titleExpandedContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleExpandedContent(): sap.ui.core.Control[];
+        removeAllTitleExpandedContent(): any;
         /**
          * Removes all the controls from the aggregation {@link #getTitleSnappedContent titleSnappedContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllTitleSnappedContent(): sap.ui.core.Control[];
+        removeAllTitleSnappedContent(): any;
         /**
          * Removes a customShareAction from the aggregation {@link #getCustomShareActions customShareActions}.
          */
@@ -4790,7 +4815,28 @@ declare namespace sap {
        * The function is used to allow for a common header renderer between different card implementations
        */
       getCardHeader(): sap.f.cards.IHeader;
+      /**
+       * @SINCE 1.65
+       *
+       * Allows for a common header renderer between different card implementations.
+       */
+      getCardHeaderPosition(): any;
     }
+    /**
+     * @SINCE 1.65
+     *
+     * Interface for controls suitable for the `stickySubheaderProvider` association of `{@link sap.f.DynamicPage}`.
+     *
+     * Controls that implemenet this interface should have the following methods:
+     * 	 - `_getStickyContent` - returns the content (control) used in the subheader
+     * 	 - `_returnStickyContent` - accepts control as argument and ensures that the control is placed back
+     * 			in its place in the provider
+     * 	 - `_getStickySubHeaderSticked` - returns boolean value that shows where the sticky content is placed
+     * 			(in its provider or in the `DynamicPage`)
+     * 	 - `_setStickySubHeaderSticked` - accepts a boolean argument to notify the provider where its sticky
+     * 			content is placed
+     */
+    interface IDynamicPageStickyContent {}
     /**
      * @SINCE 1.63
      * @EXPERIMENTAL (since 1.63)
@@ -4840,6 +4886,17 @@ declare namespace sap {
       imageFitType?: sap.f.AvatarImageFitType;
 
       /**
+       * @SINCE 1.65
+       *
+       * Defines the fallback icon displayed in case of wrong image src and no initials set.
+       *
+       * **Notes:**
+       * 	 - If not set, a default fallback icon is displayed depending on the set `displayShape` property.
+       * 	 - Accepted values are only icons from the SAP icon font.
+       */
+      fallbackIcon?: string;
+
+      /**
        * Fired when the user selects the control.
        */
       press?: Function;
@@ -4875,6 +4932,13 @@ declare namespace sap {
        * Defines the height of the card.
        */
       height?: sap.ui.core.CSSSize;
+
+      /**
+       * @SINCE 1.65
+       *
+       * Defines the position of the Card Header.
+       */
+      headerPosition?: any;
 
       /**
        * Defines the header of the card.
@@ -4990,6 +5054,14 @@ declare namespace sap {
        * If not set, no landmarks will be written.
        */
       landmarkInfo?: sap.f.DynamicPageAccessibleLandmarkInfo;
+
+      /**
+       * @SINCE 1.65
+       *
+       * Association of Controls / IDs, that provide sticky subheader content. All controls that provide this
+       * content have to implement the `sap.f.IDynamicPageStickyContent` interface.
+       */
+      stickySubheaderProvider?: sap.f.IDynamicPageStickyContent | string;
     }
 
     interface DynamicPageAccessibleLandmarkInfoOpts
@@ -5392,6 +5464,74 @@ declare namespace sap {
       initialEndColumnPage?: sap.ui.core.Control | string;
     }
 
+    interface GridContainerOpts extends sap.ui.core.ControlOpts {
+      /**
+       * Defines the width of the control
+       */
+      width?: sap.ui.core.CSSSize;
+
+      /**
+       * Defines the height of the control
+       */
+      height?: sap.ui.core.CSSSize;
+
+      /**
+       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
+       */
+      snapToRow?: boolean;
+
+      /**
+       * The items contained by the control.
+       */
+      items?: sap.ui.core.Control[] | sap.ui.core.Control;
+
+      /**
+       * The sap.f.GridContainerSettings applied if no settings are provided for a specific size If no layout
+       * is given, a default layout will be used. See the default values for `sap.f.GridContainerSettings`.
+       */
+      layout?: sap.f.GridContainerSettings;
+
+      /**
+       * The sap.f.GridContainerSettings applied for size "S"
+       */
+      layoutS?: sap.f.GridContainerSettings;
+
+      /**
+       * The sap.f.GridContainerSettings applied for size "M"
+       */
+      layoutM?: sap.f.GridContainerSettings;
+
+      /**
+       * The sap.f.GridContainerSettings applied for size "L"
+       */
+      layoutL?: sap.f.GridContainerSettings;
+
+      /**
+       * The sap.f.GridContainerSettings applied for size "XL"
+       */
+      layoutXL?: sap.f.GridContainerSettings;
+    }
+
+    interface GridContainerItemLayoutDataOpts
+      extends sap.ui.core.LayoutDataOpts {
+      /**
+       * Specifies the number of columns, which the item should take
+       */
+      columns?: number;
+
+      /**
+       * Specifies the minimum number of rows, which the item should take.
+       */
+      minRows?: number;
+
+      /**
+       * @EXPERIMENTAL (since 1.65)
+       *
+       * Specifies the number of rows, which the item should take.
+       */
+      rows?: number;
+    }
+
     interface GridListOpts extends sap.m.ListBaseOpts {
       /**
        * Defines a custom grid layout
@@ -5667,12 +5807,12 @@ declare namespace sap {
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
        * ariaDescribedBy}.
        */
-      getAriaDescribedBy(): sap.ui.core.ID[];
+      getAriaDescribedBy(): any;
       /**
        * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
        * ariaLabelledBy}.
        */
-      getAriaLabelledBy(): sap.ui.core.ID[];
+      getAriaLabelledBy(): any;
       /**
        * Gets current value of property {@link #getCustomDisplaySize customDisplaySize}.
        *
@@ -5721,6 +5861,18 @@ declare namespace sap {
        */
       getDisplaySize(): sap.f.AvatarSize;
       /**
+       * @SINCE 1.65
+       *
+       * Gets current value of property {@link #getFallbackIcon fallbackIcon}.
+       *
+       * Defines the fallback icon displayed in case of wrong image src and no initials set.
+       *
+       * **Notes:**
+       * 	 - If not set, a default fallback icon is displayed depending on the set `displayShape` property.
+       * 	 - Accepted values are only icons from the SAP icon font.
+       */
+      getFallbackIcon(): string;
+      /**
        * Gets current value of property {@link #getImageFitType imageFitType}.
        *
        * Specifies how an image would fit in the `Avatar`.
@@ -5748,11 +5900,11 @@ declare namespace sap {
       /**
        * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
-      removeAllAriaDescribedBy(): sap.ui.core.ID[];
+      removeAllAriaDescribedBy(): any;
       /**
        * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
        */
-      removeAllAriaLabelledBy(): sap.ui.core.ID[];
+      removeAllAriaLabelledBy(): any;
       /**
        * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
        */
@@ -5845,6 +5997,25 @@ declare namespace sap {
          * New value for property `displaySize`
          */
         sDisplaySize: sap.f.AvatarSize
+      ): sap.f.Avatar;
+      /**
+       * @SINCE 1.65
+       *
+       * Sets a new value for property {@link #getFallbackIcon fallbackIcon}.
+       *
+       * Defines the fallback icon displayed in case of wrong image src and no initials set.
+       *
+       * **Notes:**
+       * 	 - If not set, a default fallback icon is displayed depending on the set `displayShape` property.
+       * 	 - Accepted values are only icons from the SAP icon font.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       */
+      setFallbackIcon(
+        /**
+         * New value for property `fallbackIcon`
+         */
+        sFallbackIcon: string
       ): sap.f.Avatar;
       /**
        * Sets a new value for property {@link #getImageFitType imageFitType}.
@@ -6001,6 +6172,12 @@ declare namespace sap {
        */
       getCardHeader(): sap.f.cards.IHeader;
       /**
+       * @SINCE 1.65
+       *
+       * Implements sap.f.ICard interface.
+       */
+      getCardHeaderPosition(): any;
+      /**
        * Gets content of aggregation {@link #getContent content}.
        *
        * Defines the content of the card.
@@ -6012,6 +6189,16 @@ declare namespace sap {
        * Defines the header of the card.
        */
       getHeader(): sap.f.cards.IHeader;
+      /**
+       * @SINCE 1.65
+       *
+       * Gets current value of property {@link #getHeaderPosition headerPosition}.
+       *
+       * Defines the position of the Card Header.
+       *
+       * Default value is `Top`.
+       */
+      getHeaderPosition(): any;
       /**
        * Gets current value of property {@link #getHeight height}.
        *
@@ -6050,6 +6237,23 @@ declare namespace sap {
          * The header to set
          */
         oHeader: sap.f.cards.IHeader
+      ): sap.f.Card;
+      /**
+       * @SINCE 1.65
+       *
+       * Sets a new value for property {@link #getHeaderPosition headerPosition}.
+       *
+       * Defines the position of the Card Header.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `Top`.
+       */
+      setHeaderPosition(
+        /**
+         * New value for property `headerPosition`
+         */
+        sHeaderPosition: any
       ): sap.f.Card;
       /**
        * Sets a new value for property {@link #getHeight height}.
@@ -6306,6 +6510,13 @@ declare namespace sap {
        */
       getShowFooter(): boolean;
       /**
+       * @SINCE 1.65
+       *
+       * ID of the element which is the current target of the association {@link #getStickySubheaderProvider stickySubheaderProvider},
+       * or `null`.
+       */
+      getStickySubheaderProvider(): sap.ui.core.ID;
+      /**
        * Gets content of aggregation {@link #getTitle title}.
        *
        * `DynamicPage` title.
@@ -6437,6 +6648,20 @@ declare namespace sap {
          * New value for property `showFooter`
          */
         bShowFooter: boolean
+      ): sap.f.DynamicPage;
+      /**
+       * @SINCE 1.65
+       *
+       * Sets the associated {@link #getStickySubheaderProvider stickySubheaderProvider}.
+       */
+      setStickySubheaderProvider(
+        /**
+         * ID of an element which becomes the new target of this stickySubheaderProvider association; alternatively,
+         * an element instance may be given
+         */
+        oStickySubheaderProvider:
+          | sap.ui.core.ID
+          | sap.f.IDynamicPageStickyContent
       ): sap.f.DynamicPage;
       /**
        * Sets the aggregated {@link #getTitle title}.
@@ -6823,7 +7048,7 @@ declare namespace sap {
        *
        * The content of the header.
        */
-      getContent(): sap.ui.core.Control[];
+      getContent(): any;
       /**
        * Returns a metadata object for class sap.f.DynamicPageHeader.
        */
@@ -6867,7 +7092,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): sap.ui.core.Control[];
+      removeAllContent(): any;
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -7148,7 +7373,7 @@ declare namespace sap {
        * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
        * state.
        */
-      getActions(): sap.ui.core.Control[];
+      getActions(): any;
       /**
        * @SINCE 1.54
        *
@@ -7203,13 +7428,13 @@ declare namespace sap {
        * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
        * state.
        */
-      getContent(): sap.ui.core.Control[];
+      getContent(): any;
       /**
        * Gets content of aggregation {@link #getExpandedContent expandedContent}.
        *
        * The content that is displayed in the `DynamicPageTitle` in expanded state.
        */
-      getExpandedContent(): sap.ui.core.Control[];
+      getExpandedContent(): any;
       /**
        * @SINCE 1.52
        *
@@ -7260,7 +7485,7 @@ declare namespace sap {
        * 			control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
        * 			state.
        */
-      getNavigationActions(): sap.m.Button[];
+      getNavigationActions(): any;
       /**
        * @SINCE 1.50
        * @deprecated (since 1.54) - Please use the `areaShrinkRatio` property instead. The value of `areaShrinkRatio`
@@ -7292,7 +7517,7 @@ declare namespace sap {
        * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
        * state.
        */
-      getSnappedContent(): sap.ui.core.Control[];
+      getSnappedContent(): any;
       /**
        * @SINCE 1.52
        *
@@ -7472,7 +7697,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllActions(): sap.ui.core.Control[];
+      removeAllActions(): any;
       /**
        * @SINCE 1.50
        *
@@ -7480,13 +7705,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllContent(): sap.ui.core.Control[];
+      removeAllContent(): any;
       /**
        * Removes all the controls from the aggregation {@link #getExpandedContent expandedContent}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllExpandedContent(): sap.ui.core.Control[];
+      removeAllExpandedContent(): any;
       /**
        * @SINCE 1.52
        *
@@ -7494,13 +7719,13 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllNavigationActions(): sap.m.Button[];
+      removeAllNavigationActions(): any;
       /**
        * Removes all the controls from the aggregation {@link #getSnappedContent snappedContent}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllSnappedContent(): sap.ui.core.Control[];
+      removeAllSnappedContent(): any;
       /**
        * @SINCE 1.50
        *
@@ -8603,7 +8828,7 @@ declare namespace sap {
        * like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface
        * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
        */
-      getBeginColumnPages(): sap.ui.core.Control[];
+      getBeginColumnPages(): any;
       /**
        * Returns the currently displayed Begin column page.
        */
@@ -8655,7 +8880,7 @@ declare namespace sap {
        * like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface
        * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
        */
-      getEndColumnPages(): sap.ui.core.Control[];
+      getEndColumnPages(): any;
       /**
        * ID of the element which is the current target of the association {@link #getInitialBeginColumnPage initialBeginColumnPage},
        * or `null`.
@@ -8699,7 +8924,7 @@ declare namespace sap {
        * like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface
        * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
        */
-      getMidColumnPages(): sap.ui.core.Control[];
+      getMidColumnPages(): any;
       /**
        * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getBeginColumnPages beginColumnPages}.
        * and returns its index if found or -1 otherwise.
@@ -8780,19 +9005,19 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllBeginColumnPages(): sap.ui.core.Control[];
+      removeAllBeginColumnPages(): any;
       /**
        * Removes all the controls from the aggregation {@link #getEndColumnPages endColumnPages}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllEndColumnPages(): sap.ui.core.Control[];
+      removeAllEndColumnPages(): any;
       /**
        * Removes all the controls from the aggregation {@link #getMidColumnPages midColumnPages}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllMidColumnPages(): sap.ui.core.Control[];
+      removeAllMidColumnPages(): any;
       /**
        * Removes a beginColumnPage from the aggregation {@link #getBeginColumnPages beginColumnPages}.
        */
@@ -9463,6 +9688,604 @@ declare namespace sap {
       ): Object;
     }
     /**
+     * @SINCE 1.65
+     * @EXPERIMENTAL (since 1.65)
+     *
+     * A layout container control used for aligning items with various sizes in a simple grid.
+     *
+     * Overview:
+     *
+     * The control is used to align tiles, cards and other controls in configuration, such as a home page or
+     * a dashboard. It represents a grid layout with specific row and column sizes, in which the items can take
+     * any number of rows and columns.
+     *
+     * The number of columns and rows each item takes can be configured with the use of the `{@link sap.f.GridContainerItemLayoutData}`.
+     *
+     * All rows have the same height and all columns have the same width. Their sizes can be configured with
+     * the use of the `layout` aggregation and `{@link sap.f.GridContainerSettings}`.
+     *
+     * Usage:
+     *
+     * When to use
+     * 	 - For aligning home page and dashboard items like Tiles and Cards in a simple grid system with equally
+     * 			sized rows and columns.
+     *
+     * When not to use
+     * 	 - If a more complex layout grid system, where columns and rows may vary in size, is needed.
+     *
+     * Example::
+     * ```javascript
+     *
+     * <f:GridContainer>
+     * 	<f:layout>
+     * 		<f:GridContainerSettings rowSize="5rem" columnSize="5rem" gap="1rem" />
+     * 	</f:layout>
+     * 	<f:layoutS>
+     * 		<f:GridContainerSettings rowSize="4rem" columnSize="4rem" gap="0.5rem" />
+     * 	</f:layoutS>
+     * 	<f:items>
+     * 		<GenericTile header="Sales Fulfillment">
+     * 			<layoutData>
+     * 				<f:GridContainerItemLayoutData rows="2" columns="2" />
+     * 			</layoutData>
+     * 		</GenericTile>
+     * 		<w:Card manifest="url-to-manifest">
+     * 			<w:layoutData>
+     * 				<f:GridContainerItemLayoutData rows="6" columns="3" />
+     * 			</w:layoutData>
+     * 		</w:Card>
+     * 		<Panel>
+     * 			<layoutData>
+     * 				<f:GridContainerItemLayoutData columns="4" />
+     * 			</layoutData>
+     * 			<Text text="Sales information" />
+     * 		</Panel>
+     * 	</f:items>
+     * </f:GridContainer>
+     * ```
+     */
+    class GridContainer extends sap.ui.core.Control {
+      /**
+       * Constructor for a new `sap.f.GridContainer`.
+       *
+       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
+       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
+       * of the syntax of the settings object.
+       * See:
+       * 	{@link topic:cca5ee5d63ca44c89318f8496a58f9f2 Grid Container (Experimental)}
+       * 	{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}
+       * 	{@link topic:5b46b03f024542ba802d99d67bc1a3f4 Cards}
+       */
+      constructor(
+        /**
+         * ID for the new control, generated automatically if no ID is given
+         */
+        sId?: string,
+        /**
+         * Initial settings for the new control
+         */
+        mSettings?: GridContainerOpts
+      );
+
+      /**
+       * Adds some item to the aggregation {@link #getItems items}.
+       */
+      addItem(
+        /**
+         * The item to add; if empty, nothing is inserted
+         */
+        oItem: sap.ui.core.Control
+      ): sap.f.GridContainer;
+      /**
+       * Destroys all the items in the aggregation {@link #getItems items}.
+       */
+      destroyItems(): sap.f.GridContainer;
+      /**
+       * Destroys the layout in the aggregation {@link #getLayout layout}.
+       */
+      destroyLayout(): sap.f.GridContainer;
+      /**
+       * Destroys the layoutL in the aggregation {@link #getLayoutL layoutL}.
+       */
+      destroyLayoutL(): sap.f.GridContainer;
+      /**
+       * Destroys the layoutM in the aggregation {@link #getLayoutM layoutM}.
+       */
+      destroyLayoutM(): sap.f.GridContainer;
+      /**
+       * Destroys the layoutS in the aggregation {@link #getLayoutS layoutS}.
+       */
+      destroyLayoutS(): sap.f.GridContainer;
+      /**
+       * Destroys the layoutXL in the aggregation {@link #getLayoutXL layoutXL}.
+       */
+      destroyLayoutXL(): sap.f.GridContainer;
+      /**
+       * Creates a new subclass of class sap.f.GridContainer with name `sClassName` and enriches it with the information
+       * contained in `oClassInfo`.
+       *
+       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
+       */
+      // @ts-ignore
+      static extend(
+        /**
+         * Name of the class being created
+         */
+        sClassName: string,
+        /**
+         * Object literal with information about the class
+         */
+        oClassInfo?: object,
+        /**
+         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
+         */
+        FNMetaImpl?: Function
+      ): Function;
+      /**
+       * Gets current value of property {@link #getHeight height}.
+       *
+       * Defines the height of the control
+       *
+       * Default value is `empty string`.
+       */
+      getHeight(): sap.ui.core.CSSSize;
+      /**
+       * Gets content of aggregation {@link #getItems items}.
+       *
+       * The items contained by the control.
+       */
+      getItems(): any;
+      /**
+       * Gets content of aggregation {@link #getLayout layout}.
+       *
+       * The sap.f.GridContainerSettings applied if no settings are provided for a specific size If no layout
+       * is given, a default layout will be used. See the default values for `sap.f.GridContainerSettings`.
+       */
+      getLayout(): sap.f.GridContainerSettings;
+      /**
+       * Gets content of aggregation {@link #getLayoutL layoutL}.
+       *
+       * The sap.f.GridContainerSettings applied for size "L"
+       */
+      getLayoutL(): sap.f.GridContainerSettings;
+      /**
+       * Gets content of aggregation {@link #getLayoutM layoutM}.
+       *
+       * The sap.f.GridContainerSettings applied for size "M"
+       */
+      getLayoutM(): sap.f.GridContainerSettings;
+      /**
+       * Gets content of aggregation {@link #getLayoutS layoutS}.
+       *
+       * The sap.f.GridContainerSettings applied for size "S"
+       */
+      getLayoutS(): sap.f.GridContainerSettings;
+      /**
+       * Gets content of aggregation {@link #getLayoutXL layoutXL}.
+       *
+       * The sap.f.GridContainerSettings applied for size "XL"
+       */
+      getLayoutXL(): sap.f.GridContainerSettings;
+      /**
+       * Returns a metadata object for class sap.f.GridContainer.
+       */
+      // @ts-ignore
+      static getMetadata(): sap.ui.base.Metadata;
+      /**
+       * Gets current value of property {@link #getSnapToRow snapToRow}.
+       *
+       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
+       *
+       * Default value is `false`.
+       */
+      getSnapToRow(): boolean;
+      /**
+       * Gets current value of property {@link #getWidth width}.
+       *
+       * Defines the width of the control
+       *
+       * Default value is `empty string`.
+       */
+      getWidth(): sap.ui.core.CSSSize;
+      /**
+       * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getItems items}. and returns
+       * its index if found or -1 otherwise.
+       */
+      indexOfItem(
+        /**
+         * The item whose index is looked for
+         */
+        oItem: sap.ui.core.Control
+      ): number;
+      /**
+       * Inserts a item into the aggregation {@link #getItems items}.
+       */
+      insertItem(
+        /**
+         * The item to insert; if empty, nothing is inserted
+         */
+        oItem: sap.ui.core.Control,
+        /**
+         * The `0`-based index the item should be inserted at; for a negative value of `iIndex`, the item is inserted
+         * at position 0; for a value greater than the current size of the aggregation, the item is inserted at
+         * the last position
+         */
+        iIndex: number
+      ): sap.f.GridContainer;
+      /**
+       * Removes all the controls from the aggregation {@link #getItems items}.
+       *
+       * Additionally, it unregisters them from the hosting UIArea.
+       */
+      removeAllItems(): any;
+      /**
+       * Removes a item from the aggregation {@link #getItems items}.
+       */
+      removeItem(
+        /**
+         * The item to remove or its index or id
+         */
+        vItem: number | string | sap.ui.core.Control
+      ): sap.ui.core.Control;
+      /**
+       * Sets a new value for property {@link #getHeight height}.
+       *
+       * Defines the height of the control
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `empty string`.
+       */
+      setHeight(
+        /**
+         * New value for property `height`
+         */
+        sHeight: sap.ui.core.CSSSize
+      ): sap.f.GridContainer;
+      /**
+       * Sets the aggregated {@link #getLayout layout}.
+       */
+      setLayout(
+        /**
+         * The layout to set
+         */
+        oLayout: sap.f.GridContainerSettings
+      ): sap.f.GridContainer;
+      /**
+       * Sets the aggregated {@link #getLayoutL layoutL}.
+       */
+      setLayoutL(
+        /**
+         * The layoutL to set
+         */
+        oLayoutL: sap.f.GridContainerSettings
+      ): sap.f.GridContainer;
+      /**
+       * Sets the aggregated {@link #getLayoutM layoutM}.
+       */
+      setLayoutM(
+        /**
+         * The layoutM to set
+         */
+        oLayoutM: sap.f.GridContainerSettings
+      ): sap.f.GridContainer;
+      /**
+       * Sets the aggregated {@link #getLayoutS layoutS}.
+       */
+      setLayoutS(
+        /**
+         * The layoutS to set
+         */
+        oLayoutS: sap.f.GridContainerSettings
+      ): sap.f.GridContainer;
+      /**
+       * Sets the aggregated {@link #getLayoutXL layoutXL}.
+       */
+      setLayoutXL(
+        /**
+         * The layoutXL to set
+         */
+        oLayoutXL: sap.f.GridContainerSettings
+      ): sap.f.GridContainer;
+      /**
+       * Sets a new value for property {@link #getSnapToRow snapToRow}.
+       *
+       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `false`.
+       */
+      setSnapToRow(
+        /**
+         * New value for property `snapToRow`
+         */
+        bSnapToRow: boolean
+      ): sap.f.GridContainer;
+      /**
+       * Sets a new value for property {@link #getWidth width}.
+       *
+       * Defines the width of the control
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `empty string`.
+       */
+      setWidth(
+        /**
+         * New value for property `width`
+         */
+        sWidth: sap.ui.core.CSSSize
+      ): sap.f.GridContainer;
+    }
+    /**
+     * @SINCE 1.65
+     * @EXPERIMENTAL (since 1.65)
+     *
+     * Holds layout data for an item inside a `sap.f.GridContainer`.
+     */
+    class GridContainerItemLayoutData extends sap.ui.core.LayoutData {
+      /**
+       * Constructor for a new `sap.f.GridContainerItemLayoutData`.
+       *
+       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
+       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
+       * of the syntax of the settings object.
+       * See:
+       * 	{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}
+       */
+      constructor(
+        /**
+         * ID for the new element, generated automatically if no ID is given
+         */
+        sId?: string,
+        /**
+         * Initial settings for the new element.
+         */
+        mSettings?: GridContainerItemLayoutDataOpts
+      );
+
+      /**
+       * Creates a new subclass of class sap.f.GridContainerItemLayoutData with name `sClassName` and enriches
+       * it with the information contained in `oClassInfo`.
+       *
+       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.LayoutData.extend}.
+       */
+      // @ts-ignore
+      static extend(
+        /**
+         * Name of the class being created
+         */
+        sClassName: string,
+        /**
+         * Object literal with information about the class
+         */
+        oClassInfo?: object,
+        /**
+         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
+         */
+        FNMetaImpl?: Function
+      ): Function;
+      /**
+       * Gets current value of property {@link #getColumns columns}.
+       *
+       * Specifies the number of columns, which the item should take
+       *
+       * Default value is `1`.
+       */
+      getColumns(): number;
+      /**
+       * Returns a metadata object for class sap.f.GridContainerItemLayoutData.
+       */
+      // @ts-ignore
+      static getMetadata(): sap.ui.base.Metadata;
+      /**
+       * Gets current value of property {@link #getMinRows minRows}.
+       *
+       * Specifies the minimum number of rows, which the item should take.
+       */
+      getMinRows(): number;
+      /**
+       * @EXPERIMENTAL (since 1.65)
+       *
+       * Gets current value of property {@link #getRows rows}.
+       *
+       * Specifies the number of rows, which the item should take.
+       */
+      getRows(): number;
+      /**
+       * Sets a new value for property {@link #getColumns columns}.
+       *
+       * Specifies the number of columns, which the item should take
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `1`.
+       */
+      setColumns(
+        /**
+         * New value for property `columns`
+         */
+        iColumns: number
+      ): sap.f.GridContainerItemLayoutData;
+      /**
+       * Sets a new value for property {@link #getMinRows minRows}.
+       *
+       * Specifies the minimum number of rows, which the item should take.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       */
+      setMinRows(
+        /**
+         * New value for property `minRows`
+         */
+        iMinRows: number
+      ): sap.f.GridContainerItemLayoutData;
+      /**
+       * @EXPERIMENTAL (since 1.65)
+       *
+       * Sets a new value for property {@link #getRows rows}.
+       *
+       * Specifies the number of rows, which the item should take.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       */
+      setRows(
+        /**
+         * New value for property `rows`
+         */
+        iRows: number
+      ): sap.f.GridContainerItemLayoutData;
+    }
+    /**
+     * @SINCE 1.65
+     * @EXPERIMENTAL (since 1.65)
+     *
+     * Holds a set of settings that define the dimensions of `sap.f.GridContainer`
+     *
+     * Can be used to define the sizes of columns and rows for different screen sizes, by using the `layout`
+     * aggregations of `sap.f.GridContainer`.
+     */
+    // @ts-ignore - static "getMetadata" inheritance issue
+    class GridContainerSettings extends sap.ui.base.ManagedObject {
+      /**
+       * Constructor for a new `sap.f.GridContainerSettings`.
+       *
+       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
+       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
+       * of the syntax of the settings object.
+       * See:
+       * 	{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}
+       */
+      constructor(
+        /**
+         * ID for the new control, generated automatically if no ID is given
+         */
+        sId?: string,
+        /**
+         * Initial settings for the new control
+         */
+        mSettings?: object
+      );
+
+      /**
+       * Creates a new subclass of class sap.f.GridContainerSettings with name `sClassName` and enriches it with
+       * the information contained in `oClassInfo`.
+       *
+       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}.
+       */
+      // @ts-ignore
+      static extend(
+        /**
+         * Name of the class being created
+         */
+        sClassName: string,
+        /**
+         * Object literal with information about the class
+         */
+        oClassInfo?: object,
+        /**
+         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
+         */
+        FNMetaImpl?: Function
+      ): Function;
+      /**
+       * Gets current value of property {@link #getColumns columns}.
+       *
+       * How many columns to have on a row. If not defined, `sap.f.GridContainer` will position as many columns
+       * as they can fit in the container.
+       */
+      getColumns(): Number;
+      /**
+       * Gets current value of property {@link #getColumnSize columnSize}.
+       *
+       * The width of the columns.
+       *
+       * Default value is `80px`.
+       */
+      getColumnSize(): sap.ui.core.CSSSize;
+      /**
+       * Gets current value of property {@link #getGap gap}.
+       *
+       * The size of the gap between columns and rows.
+       *
+       * Default value is `16px`.
+       */
+      getGap(): sap.ui.core.CSSSize;
+      /**
+       * Returns a metadata object for class sap.f.GridContainerSettings.
+       */
+      // @ts-ignore
+      static getMetadata(): sap.ui.base.Metadata;
+      /**
+       * Gets current value of property {@link #getRowSize rowSize}.
+       *
+       * The height of the rows.
+       *
+       * Default value is `80px`.
+       */
+      getRowSize(): sap.ui.core.CSSSize;
+      /**
+       * Sets a new value for property {@link #getColumns columns}.
+       *
+       * How many columns to have on a row. If not defined, `sap.f.GridContainer` will position as many columns
+       * as they can fit in the container.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       */
+      setColumns(
+        /**
+         * New value for property `columns`
+         */
+        sColumns: Number
+      ): sap.f.GridContainerSettings;
+      /**
+       * Sets a new value for property {@link #getColumnSize columnSize}.
+       *
+       * The width of the columns.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `80px`.
+       */
+      setColumnSize(
+        /**
+         * New value for property `columnSize`
+         */
+        sColumnSize: sap.ui.core.CSSSize
+      ): sap.f.GridContainerSettings;
+      /**
+       * Sets a new value for property {@link #getGap gap}.
+       *
+       * The size of the gap between columns and rows.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `16px`.
+       */
+      setGap(
+        /**
+         * New value for property `gap`
+         */
+        sGap: sap.ui.core.CSSSize
+      ): sap.f.GridContainerSettings;
+      /**
+       * Sets a new value for property {@link #getRowSize rowSize}.
+       *
+       * The height of the rows.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `80px`.
+       */
+      setRowSize(
+        /**
+         * New value for property `rowSize`
+         */
+        sRowSize: sap.ui.core.CSSSize
+      ): sap.f.GridContainerSettings;
+    }
+    /**
      * @SINCE 1.60
      *
      * A list-based control with grid layout capabilities.
@@ -9566,7 +10389,7 @@ declare namespace sap {
       /**
        * Implements IGridConfigurable interface.
        */
-      getGridDomRefs(): HTMLElement[];
+      getGridDomRefs(): any;
       /**
        * Returns a metadata object for class sap.f.GridList.
        */
@@ -9584,7 +10407,6 @@ declare namespace sap {
     }
     /**
      * @SINCE 1.63
-     * @EXPERIMENTAL (since 1.63)
      *
      * A horizontal bar control holding multiple child controls used as application shell header.
      *
@@ -9598,7 +10420,8 @@ declare namespace sap {
      * Content specified in the `ShellBar` properties and aggregations is automatically positioned in dedicated
      * places of the control.
      */
-    class ShellBar extends sap.ui.core.Control implements sap.f.IShellBar {
+    class ShellBar extends sap.ui.core.Control
+      implements sap.f.IShellBar, sap.m.IBar {
       /**
        * Constructor for a new `ShellBar`.
        *
@@ -9616,7 +10439,25 @@ declare namespace sap {
          */
         mSettings?: ShellBarOpts
       );
+      /**
+       * @SINCE 1.65
+       *
+       * Gets the available Bar contexts.
+       */
+      getContext: undefined;
 
+      /**
+       * @SINCE 1.65
+       *
+       * Sets classes according to the context of the page. Possible contexts are header, footer, and subheader.
+       */
+      _applyContextClassFor(): sap.m.IBar;
+      /**
+       * @SINCE 1.65
+       *
+       * Sets the HTML tag according to the context of the page. Possible contexts are header, footer, and subheader.
+       */
+      _applyTag(): sap.m.IBar;
       /**
        * Adds some additionalContent to the aggregation {@link #getAdditionalContent additionalContent}.
        */
@@ -9626,6 +10467,13 @@ declare namespace sap {
          */
         oAdditionalContent: sap.f.IShellBar
       ): sap.f.ShellBar;
+      /**
+       * @SINCE 1.65
+       *
+       * Sets classes and HTML tag according to the context of the page. Possible contexts are header, footer,
+       * and subheader
+       */
+      applyTagAndContextClassFor(): sap.m.IBar;
       /**
        * Attaches event handler `fnFunction` to the {@link #event:avatarPressed avatarPressed} event of this `sap.f.ShellBar`.
        *
@@ -10097,7 +10945,7 @@ declare namespace sap {
        *
        * **Note:** Only controls implementing the `{@link sap.f.IShellBar}` interface are allowed.
        */
-      getAdditionalContent(): sap.f.IShellBar[];
+      getAdditionalContent(): any;
       /**
        * Gets current value of property {@link #getHomeIcon homeIcon}.
        *
@@ -10106,6 +10954,12 @@ declare namespace sap {
        * Default value is `empty string`.
        */
       getHomeIcon(): sap.ui.core.URI;
+      /**
+       * @SINCE 1.65
+       *
+       * Gets the HTML tag of the root DOM Reference.
+       */
+      getHTMLTag(): string;
       /**
        * Gets content of aggregation {@link #getMenu menu}.
        *
@@ -10224,6 +11078,12 @@ declare namespace sap {
         iIndex: number
       ): sap.f.ShellBar;
       /**
+       * @SINCE 1.65
+       *
+       * Returns if the bar is sensitive to the container context. Implementation of the IBar interface
+       */
+      isContextSensitive(): boolean;
+      /**
        * Removes a additionalContent from the aggregation {@link #getAdditionalContent additionalContent}.
        */
       removeAdditionalContent(
@@ -10237,7 +11097,7 @@ declare namespace sap {
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
-      removeAllAdditionalContent(): sap.f.IShellBar[];
+      removeAllAdditionalContent(): any;
       /**
        * Sets a new value for property {@link #getHomeIcon homeIcon}.
        *
@@ -10253,6 +11113,12 @@ declare namespace sap {
          */
         sHomeIcon: sap.ui.core.URI
       ): sap.f.ShellBar;
+      /**
+       * @SINCE 1.65
+       *
+       * Sets the HTML tag of the root DOM Reference.
+       */
+      setHTMLTag(sTag: string): sap.m.IBar;
       /**
        * Sets the aggregated {@link #getMenu menu}.
        */
@@ -10835,11 +11701,19 @@ declare namespace sap {
 
     "sap/f/FlexibleColumnLayoutSemanticHelper": undefined;
 
+    "sap/f/GridContainer": undefined;
+
+    "sap/f/GridContainerItemLayoutData": undefined;
+
+    "sap/f/GridContainerSettings": undefined;
+
     "sap/f/GridList": undefined;
 
     "sap/f/ShellBar": undefined;
 
     "sap/f/ICard": undefined;
+
+    "sap/f/IDynamicPageStickyContent": undefined;
 
     "sap/f/IShellBar": undefined;
   }

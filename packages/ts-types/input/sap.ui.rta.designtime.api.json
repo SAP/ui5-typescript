@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.64.1",
+  "version": "1.65.1",
   "symbols": [
     {
       "kind": "class",
@@ -183,7 +183,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "sap.ui.rta.service.Action.ActionObject[]",
+            "type": "[ 'Array' ].<sap.ui.rta.service.Action.ActionObject>",
             "description": "List of available actions"
           },
           "parameters": [
@@ -194,7 +194,7 @@
               "description": "Control ID or an array of IDs to get actions for"
             }
           ],
-          "description": "Returns a list of available actions for the specified control(s).\n\nExample:\n\n<pre>\n[\n    {\n        \"id\": \"CTX_RENAME\",\n        \"text\": \"Rename\",\n        \"enabled\": false,\n        \"rank\": 10,\n        \"icon\": \"sap-icon://edit\"\n    },\n    {\n        \"id\": \"CTX_ADD_ELEMENTS_AS_SIBLING\",\n        \"text\": \"Add Field\",\n        \"enabled\": false,\n        \"rank\": 20,\n        \"icon\": \"sap-icon://add\",\n        \"group\": \"Add\"\n    },\n    {\n        \"id\": \"CTX_REMOVE\",\n        \"text\": \"Remove\",\n        \"enabled\": true,\n        \"rank\": 60,\n        \"icon\": \"sap-icon://hide\"\n    },\n    {\n        \"id\": \"CTX_CUT\",\n        \"text\": \"Cut\",\n        \"enabled\": false,\n        \"rank\": 70,\n        \"icon\": \"sap-icon://scissors\"\n    },\n    {\n        \"id\": \"CTX_PASTE\",\n        \"text\": \"Paste\",\n        \"enabled\": false,\n        \"rank\": 80,\n        \"icon\": \"sap-icon://paste\"\n    }\n]\n</pre>"
+          "description": "Returns a list of available actions for the specified control(s).\n\nExample:\n\n<pre>\n[\n    {\n        \"id\": \"CTX_RENAME\",\n        \"text\": \"Rename\",\n        \"enabled\": false,\n        \"rank\": 10,\n        \"icon\": \"sap-icon://edit\"\n    },\n    {\n        \"id\": \"CTX_ADD_ELEMENTS_AS_SIBLING\",\n        \"text\": \"Add Field\",\n        \"enabled\": false,\n        \"rank\": 20,\n        \"icon\": \"sap-icon://add\",\n        \"group\": \"Add\"\n    },\n    {\n        \"id\": \"CTX_REMOVE\",\n        \"text\": \"Remove\",\n        \"enabled\": true,\n        \"rank\": 60,\n        \"icon\": \"sap-icon://decline\"\n    },\n    {\n        \"id\": \"CTX_CUT\",\n        \"text\": \"Cut\",\n        \"enabled\": false,\n        \"rank\": 70,\n        \"icon\": \"sap-icon://scissors\"\n    },\n    {\n        \"id\": \"CTX_PASTE\",\n        \"text\": \"Paste\",\n        \"enabled\": false,\n        \"rank\": 80,\n        \"icon\": \"sap-icon://paste\"\n    }\n]\n</pre>"
         }
       ]
     },
@@ -414,7 +414,7 @@
         },
         {
           "name": "elements",
-          "type": "sap.ui.rta.service.Outline.OutlineObject[]",
+          "type": "[ 'Array' ].<sap.ui.rta.service.Outline.OutlineObject>",
           "visibility": "restricted",
           "description": "outline data for child nodes"
         }
@@ -541,7 +541,7 @@
           "visibility": "public",
           "static": true,
           "returnValue": {
-            "type": "string[]",
+            "type": "[ 'Array' ].<string>",
             "description": "Selected control IDs"
           },
           "description": "Gets list of currently selected controls."

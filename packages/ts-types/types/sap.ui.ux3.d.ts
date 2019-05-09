@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.64.1
+// For Library Version: 1.65.1
 
 declare namespace sap {
   namespace ui {
@@ -1912,7 +1912,7 @@ declare namespace sap {
          *
          * Displayed on the actionBar's right hand-side, either as menu item under 'More' or as individual buttons
          */
-        getBusinessActions(): sap.ui.ux3.ThingAction[];
+        getBusinessActions(): any;
         /**
          * Gets current value of property {@link #getDividerWidth dividerWidth}.
          *
@@ -2408,7 +2408,7 @@ declare namespace sap {
          *
          * Items in the collection
          */
-        getItems(): sap.ui.core.Item[];
+        getItems(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.Collection.
          */
@@ -2426,7 +2426,7 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getSelectedItems
          * selectedItems}.
          */
-        getSelectedItems(): sap.ui.core.ID[];
+        getSelectedItems(): any;
         /**
          * Gets current value of property {@link #getTitle title}.
          *
@@ -2463,9 +2463,9 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllItems(): sap.ui.core.Item[];
+        removeAllItems(): any;
         /**/
-        removeAllSelectedItems(): string[];
+        removeAllSelectedItems(): any;
         /**
          * Removes a item from the aggregation {@link #getItems items}.
          */
@@ -2792,13 +2792,13 @@ declare namespace sap {
          *
          * Collections which are displayed in the COllectionInspector
          */
-        getCollections(): sap.ui.ux3.Collection[];
+        getCollections(): any;
         /**
          * Gets content of aggregation {@link #getContent content}.
          *
          * All controls that are currently displayed
          */
-        getContent(): sap.ui.core.Control[];
+        getContent(): any;
         /**
          * Return the edit button
          */
@@ -2887,12 +2887,12 @@ declare namespace sap {
          * Removes all the controls in the aggregation named `collections`.
          *  Additionally unregisters them from the hosting UIArea.
          */
-        removeAllCollections(): sap.ui.ux3.Collection[];
+        removeAllCollections(): any;
         /**
          * Removes all the controls in the aggregation named `content`.
          *  Additionally unregisters them from the hosting UIArea.
          */
-        removeAllContent(): sap.ui.core.Control[];
+        removeAllContent(): any;
         /**
          * Removes a collection from the aggregation named `collections`.
          */
@@ -3254,13 +3254,13 @@ declare namespace sap {
          *
          * Filter control (e.g. a FacetFilter) for the DataSet
          */
-        getFilter(): sap.ui.core.Control[];
+        getFilter(): any;
         /**
          * Gets content of aggregation {@link #getItems items}.
          *
          * Aggregation of DataSetItems
          */
-        getItems(): sap.ui.ux3.DataSetItem[];
+        getItems(): any;
         /**
          * Returns the LeadSelection index
          */
@@ -3329,7 +3329,7 @@ declare namespace sap {
          *
          * views
          */
-        getViews(): sap.ui.ux3.DataSetView[];
+        getViews(): any;
         /**
          * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getFilter filter}. and returns
          * its index if found or -1 otherwise.
@@ -3419,19 +3419,19 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFilter(): sap.ui.core.Control[];
+        removeAllFilter(): any;
         /**
          * Removes all the controls from the aggregation {@link #getItems items}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllItems(): sap.ui.ux3.DataSetItem[];
+        removeAllItems(): any;
         /**
          * Removes all the controls from the aggregation {@link #getViews views}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllViews(): sap.ui.ux3.DataSetView[];
+        removeAllViews(): any;
         /**
          * Removes a filter from the aggregation {@link #getFilter filter}.
          */
@@ -3819,7 +3819,7 @@ declare namespace sap {
         /**
          * View finalization: Called when leaving the view
          */
-        exitView(aItems: sap.ui.ux3.DataSetItem[]): void;
+        exitView(aItems: any): void;
         /**
          * Creates a new subclass of class sap.ui.ux3.DataSetSimpleView with name `sClassName` and enriches it with
          * the information contained in `oClassInfo`.
@@ -4135,7 +4135,7 @@ declare namespace sap {
         ): sap.ui.ux3.DataSetSimpleView;
         /**/
         setScrollArea(
-          aScrollArea: any[],
+          aScrollArea: any,
 
           bSupress: boolean
         ): void;
@@ -4155,7 +4155,7 @@ declare namespace sap {
           /**
            * Array of DataSetItems added to the parent DataSet
            */
-          aDiff: sap.ui.ux3.DataSetItem[]
+          aDiff: any
         ): void;
       }
       /**
@@ -4339,7 +4339,7 @@ declare namespace sap {
          *
          * The attributes which shall be available to refine the search
          */
-        getAttributes(): sap.ui.ux3.ExactAttribute[];
+        getAttributes(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.Exact.
          */
@@ -4395,7 +4395,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllAttributes(): sap.ui.ux3.ExactAttribute[];
+        removeAllAttributes(): any;
         /**
          * Removes a attribute from the aggregation {@link #getAttributes attributes}.
          */
@@ -4542,7 +4542,7 @@ declare namespace sap {
          *
          * Arbitrary child controls of the content area
          */
-        getContent(): sap.ui.core.Control[];
+        getContent(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.ExactArea.
          */
@@ -4553,7 +4553,7 @@ declare namespace sap {
          *
          * Tool bar items which shall be shown in the tool bar.
          */
-        getToolbarItems(): sap.ui.commons.ToolbarItem[];
+        getToolbarItems(): any;
         /**
          * Gets current value of property {@link #getToolbarVisible toolbarVisible}.
          *
@@ -4617,13 +4617,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): sap.ui.core.Control[];
+        removeAllContent(): any;
         /**
          * Removes all the controls from the aggregation {@link #getToolbarItems toolbarItems}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllToolbarItems(): sap.ui.commons.ToolbarItem[];
+        removeAllToolbarItems(): any;
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -4783,7 +4783,7 @@ declare namespace sap {
          *
          * Values (sub attributes) of this attribute
          */
-        getAttributes(): sap.ui.ux3.ExactAttribute[];
+        getAttributes(): any;
         /**
          * Gets current value of property {@link #getAutoActivateSupply autoActivateSupply}.
          *
@@ -4888,7 +4888,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllAttributes(): sap.ui.ux3.ExactAttribute[];
+        removeAllAttributes(): any;
         /**
          * Removes a attribute from the aggregation {@link #getAttributes attributes}.
          */
@@ -5251,7 +5251,7 @@ declare namespace sap {
          *
          * The attributes which shall be available.
          */
-        getAttributes(): sap.ui.ux3.ExactAttribute[];
+        getAttributes(): any;
         /**
          * Gets current value of property {@link #getEnableListClose enableListClose}.
          *
@@ -5384,7 +5384,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllAttributes(): sap.ui.ux3.ExactAttribute[];
+        removeAllAttributes(): any;
         /**
          * Removes a attribute from the aggregation {@link #getAttributes attributes}.
          */
@@ -5674,7 +5674,7 @@ declare namespace sap {
          *
          * Facet Filter list represents the list of the filter values and the title of this list.
          */
-        getLists(): sap.ui.ux3.FacetFilterList[];
+        getLists(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.FacetFilter.
          */
@@ -5719,7 +5719,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllLists(): sap.ui.ux3.FacetFilterList[];
+        removeAllLists(): any;
         /**
          * Removes a list from the aggregation {@link #getLists lists}.
          */
@@ -5857,11 +5857,11 @@ declare namespace sap {
             /**
              * Array of selected Indices.
              */
-            selectedIndices?: number[];
+            selectedIndices?: any;
             /**
              * Array of selected Items.
              */
-            selectedItems?: sap.ui.core.ListItem[];
+            selectedItems?: any;
             /**
              * If it is true, then Item All is selected. That means all items in the list are selected - no filter is
              * set.
@@ -5885,7 +5885,7 @@ declare namespace sap {
          *
          * The filter values that are presented as a list.
          */
-        getItems(): sap.ui.core.ListItem[];
+        getItems(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.FacetFilterList.
          */
@@ -5904,7 +5904,7 @@ declare namespace sap {
          *
          * Array of type string containing the selected keys.
          */
-        getSelectedKeys(): string[];
+        getSelectedKeys(): any;
         /**
          * Gets current value of property {@link #getShowCounter showCounter}.
          *
@@ -5949,7 +5949,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllItems(): sap.ui.core.ListItem[];
+        removeAllItems(): any;
         /**
          * Removes a item from the aggregation {@link #getItems items}.
          */
@@ -6003,7 +6003,7 @@ declare namespace sap {
           /**
            * New value for property `selectedKeys`
            */
-          sSelectedKeys: string[]
+          sSelectedKeys: any
         ): sap.ui.ux3.FacetFilterList;
         /**
          * Sets a new value for property {@link #getShowCounter showCounter}.
@@ -6444,7 +6444,7 @@ declare namespace sap {
          *
          * The chunks
          */
-        getChunks(): sap.ui.ux3.FeedChunk[];
+        getChunks(): any;
         /**
          * Gets current value of property {@link #getFeederSender feederSender}.
          *
@@ -6462,7 +6462,7 @@ declare namespace sap {
          *
          * Items of the filter
          */
-        getFilterItems(): sap.ui.core.ListItem[];
+        getFilterItems(): any;
         /**
          * Gets current value of property {@link #getLive live}.
          *
@@ -6487,7 +6487,7 @@ declare namespace sap {
          *
          * MenuItems to open when the tool button is clicked by the user
          */
-        getToolsMenuItems(): sap.ui.commons.MenuItem[];
+        getToolsMenuItems(): any;
         /**
          * Checks for the provided `sap.ui.ux3.FeedChunk` in the aggregation {@link #getChunks chunks}. and returns
          * its index if found or -1 otherwise.
@@ -6568,19 +6568,19 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllChunks(): sap.ui.ux3.FeedChunk[];
+        removeAllChunks(): any;
         /**
          * Removes all the controls from the aggregation {@link #getFilterItems filterItems}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFilterItems(): sap.ui.core.ListItem[];
+        removeAllFilterItems(): any;
         /**
          * Removes all the controls from the aggregation {@link #getToolsMenuItems toolsMenuItems}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllToolsMenuItems(): sap.ui.commons.MenuItem[];
+        removeAllToolsMenuItems(): any;
         /**
          * Removes a chunk from the aggregation {@link #getChunks chunks}.
          */
@@ -7335,7 +7335,7 @@ declare namespace sap {
          *
          * MenuItems to open when there is a click on the action menu button
          */
-        getActionMenuItems(): sap.ui.commons.MenuItem[];
+        getActionMenuItems(): any;
         /**
          * @deprecated (since 1.4.0) - Not longer used. If a chunk is a comment is determined from hierarchy. If
          * the parent is a chunk it's automatically a comment.
@@ -7353,7 +7353,7 @@ declare namespace sap {
          *
          * Comments on this chunk
          */
-        getComments(): sap.ui.ux3.FeedChunk[];
+        getComments(): any;
         /**
          * Gets current value of property {@link #getDeletionAllowed deletionAllowed}.
          *
@@ -7534,13 +7534,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllActionMenuItems(): sap.ui.commons.MenuItem[];
+        removeAllActionMenuItems(): any;
         /**
          * Removes all the controls from the aggregation {@link #getComments comments}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllComments(): sap.ui.ux3.FeedChunk[];
+        removeAllComments(): any;
         /**
          * Removes a comment from the aggregation {@link #getComments comments}.
          */
@@ -8303,7 +8303,7 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAssociatedItems
          * associatedItems}.
          */
-        getAssociatedItems(): sap.ui.core.ID[];
+        getAssociatedItems(): any;
         /**
          * Gets content of aggregation {@link #getItems items}.
          *
@@ -8311,7 +8311,7 @@ declare namespace sap {
          * association can be used. The NavigationBar follows the approach to use the items aggregation. If this
          * aggregation is empty, associatedItems is used.
          */
-        getItems(): sap.ui.ux3.NavigationItem[];
+        getItems(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.NavigationBar.
          */
@@ -8373,13 +8373,13 @@ declare namespace sap {
         /**
          * Removes all the controls in the association named {@link #getAssociatedItems associatedItems}.
          */
-        removeAllAssociatedItems(): sap.ui.core.ID[];
+        removeAllAssociatedItems(): any;
         /**
          * Removes all the controls from the aggregation {@link #getItems items}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllItems(): sap.ui.ux3.NavigationItem[];
+        removeAllItems(): any;
         /**
          * Removes an associatedItem from the association named {@link #getAssociatedItems associatedItems}.
          */
@@ -8405,7 +8405,7 @@ declare namespace sap {
           /**
            * The items to associate
            */
-          aItems: sap.ui.ux3.NavigationItem[]
+          aItems: any
         ): sap.ui.ux3.NavigationBar;
         /**
          * @SINCE 1.36
@@ -8548,7 +8548,7 @@ declare namespace sap {
          *
          * Any NavigationItems on the next hierarchy level connected to this NavigationItem
          */
-        getSubItems(): sap.ui.ux3.NavigationItem[];
+        getSubItems(): any;
         /**
          * @SINCE 1.9.0
          *
@@ -8591,7 +8591,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllSubItems(): sap.ui.ux3.NavigationItem[];
+        removeAllSubItems(): any;
         /**
          * Removes a subItem from the aggregation {@link #getSubItems subItems}.
          */
@@ -8844,7 +8844,7 @@ declare namespace sap {
          *
          * Notifiers that monitor something within the application and display the corresponding notifications.
          */
-        getNotifiers(): sap.ui.core.Element[];
+        getNotifiers(): any;
         /**
          * Gets current value of property {@link #getResizeEnabled resizeEnabled}.
          *
@@ -8896,7 +8896,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllNotifiers(): sap.ui.core.Element[];
+        removeAllNotifiers(): any;
         /**
          * Removes a notifier from the aggregation {@link #getNotifiers notifiers}.
          */
@@ -9122,7 +9122,7 @@ declare namespace sap {
          *
          * Messages of this notifier.
          */
-        getMessages(): sap.ui.core.Message[];
+        getMessages(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.Notifier.
          */
@@ -9168,7 +9168,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllMessages(): sap.ui.core.Message[];
+        removeAllMessages(): any;
         /**
          * Removes a message from the aggregation {@link #getMessages messages}.
          */
@@ -9688,7 +9688,7 @@ declare namespace sap {
          *
          * Aggregation for content
          */
-        getContent(): sap.ui.core.Control[];
+        getContent(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.OverlayContainer.
          */
@@ -9724,7 +9724,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): sap.ui.core.Control[];
+        removeAllContent(): any;
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -9799,7 +9799,7 @@ declare namespace sap {
          *
          * Content for the OverlayDialog.
          */
-        getContent(): sap.ui.core.Control[];
+        getContent(): any;
         /**
          * Gets current value of property {@link #getHeight height}.
          *
@@ -9853,7 +9853,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): sap.ui.core.Control[];
+        removeAllContent(): any;
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -10136,13 +10136,13 @@ declare namespace sap {
          *
          * Actions of a Thing
          */
-        getActions(): sap.ui.ux3.ThingAction[];
+        getActions(): any;
         /**
          * Gets content of aggregation {@link #getContent content}.
          *
          * Body content of the QuickView
          */
-        getContent(): sap.ui.core.Element[];
+        getContent(): any;
         /**
          * Gets current value of property {@link #getFavoriteActionEnabled favoriteActionEnabled}.
          *
@@ -10322,13 +10322,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllActions(): sap.ui.ux3.ThingAction[];
+        removeAllActions(): any;
         /**
          * Removes all the controls from the aggregation {@link #getContent content}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): sap.ui.core.Element[];
+        removeAllContent(): any;
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -11137,7 +11137,7 @@ declare namespace sap {
          * The content to appear in the main canvas. Each modification of this aggregation leads to a re-rendering
          * of the content area - but not to a re-rendering of the complete Shell.
          */
-        getContent(): sap.ui.core.Control[];
+        getContent(): any;
         /**
          * @SINCE 1.12.0
          *
@@ -11166,7 +11166,7 @@ declare namespace sap {
          * Controls to appear in the header next to the logout button. It is recommended to only use controls of
          * type Button, MenuButton and TextView. The respective UI guidelines need to be enforced on a higher level.
          */
-        getHeaderItems(): sap.ui.core.Control[];
+        getHeaderItems(): any;
         /**
          * Gets current value of property {@link #getHeaderType headerType}.
          *
@@ -11203,13 +11203,13 @@ declare namespace sap {
          *
          * The items to appear in the PaneBar.
          */
-        getPaneBarItems(): sap.ui.core.Item[];
+        getPaneBarItems(): any;
         /**
          * Gets content of aggregation {@link #getPaneContent paneContent}.
          *
          * The content to appear in the pane area.
          */
-        getPaneContent(): sap.ui.core.Control[];
+        getPaneContent(): any;
         /**
          * Gets current value of property {@link #getPaneWidth paneWidth}.
          *
@@ -11285,13 +11285,13 @@ declare namespace sap {
          *
          * The items which appear in the ToolPalette and are opened as popup when clicked.
          */
-        getToolPopups(): sap.ui.ux3.ToolPopup[];
+        getToolPopups(): any;
         /**
          * Gets content of aggregation {@link #getWorksetItems worksetItems}.
          *
          * The workset items.
          */
-        getWorksetItems(): sap.ui.ux3.NavigationItem[];
+        getWorksetItems(): any;
         /**
          * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getContent content}. and returns
          * its index if found or -1 otherwise.
@@ -11484,37 +11484,37 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): sap.ui.core.Control[];
+        removeAllContent(): any;
         /**
          * Removes all the controls from the aggregation {@link #getHeaderItems headerItems}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllHeaderItems(): sap.ui.core.Control[];
+        removeAllHeaderItems(): any;
         /**
          * Removes all the controls from the aggregation {@link #getPaneBarItems paneBarItems}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllPaneBarItems(): sap.ui.core.Item[];
+        removeAllPaneBarItems(): any;
         /**
          * Removes all the controls from the aggregation {@link #getPaneContent paneContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllPaneContent(): sap.ui.core.Control[];
+        removeAllPaneContent(): any;
         /**
          * Removes all the controls from the aggregation {@link #getToolPopups toolPopups}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllToolPopups(): sap.ui.ux3.ToolPopup[];
+        removeAllToolPopups(): any;
         /**
          * Removes all the controls from the aggregation {@link #getWorksetItems worksetItems}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllWorksetItems(): sap.ui.ux3.NavigationItem[];
+        removeAllWorksetItems(): any;
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -11667,7 +11667,7 @@ declare namespace sap {
            * If set, the controls previously contained in the Shell will be destroyed, to avoid memory leaks.
            */
           bDestroyOldContent: boolean
-        ): sap.ui.core.Control[];
+        ): any;
         /**
          * @SINCE 1.12.0
          *
@@ -11782,7 +11782,7 @@ declare namespace sap {
            * If set, the controls previously contained in the pane will be destroyed, to avoid memory leaks.
            */
           bDestroyOldContent: boolean
-        ): sap.ui.core.Control[];
+        ): any;
         /**
          * Sets a new value for property {@link #getPaneWidth paneWidth}.
          *
@@ -12264,7 +12264,7 @@ declare namespace sap {
          *
          * Actions of the groups content
          */
-        getActions(): sap.ui.ux3.ThingGroup[];
+        getActions(): any;
         /**
          * Gets current value of property {@link #getColspan colspan}.
          *
@@ -12278,7 +12278,7 @@ declare namespace sap {
          *
          * Content of Group
          */
-        getContent(): sap.ui.core.Control[];
+        getContent(): any;
         /**
          * Returns a metadata object for class sap.ui.ux3.ThingGroup.
          */
@@ -12354,13 +12354,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllActions(): sap.ui.ux3.ThingGroup[];
+        removeAllActions(): any;
         /**
          * Removes all the controls from the aggregation {@link #getContent content}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): sap.ui.core.Control[];
+        removeAllContent(): any;
         /**
          * Removes a content from the aggregation {@link #getContent content}.
          */
@@ -12686,19 +12686,19 @@ declare namespace sap {
          *
          * Actions of a Thing
          */
-        getActions(): sap.ui.ux3.ThingAction[];
+        getActions(): any;
         /**
          * Gets content of aggregation {@link #getFacetContent facetContent}.
          *
          * ThingGroups for content of the selected facet
          */
-        getFacetContent(): sap.ui.ux3.ThingGroup[];
+        getFacetContent(): any;
         /**
          * Gets content of aggregation {@link #getFacets facets}.
          *
          * Thing Inspector facets
          */
-        getFacets(): sap.ui.ux3.NavigationItem[];
+        getFacets(): any;
         /**
          * Gets current value of property {@link #getFavoriteActionEnabled favoriteActionEnabled}.
          *
@@ -12758,7 +12758,7 @@ declare namespace sap {
          *
          * ThingGroups for the header content
          */
-        getHeaderContent(): sap.ui.ux3.ThingGroup[];
+        getHeaderContent(): any;
         /**
          * @SINCE 1.16.3
          *
@@ -12924,25 +12924,25 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllActions(): sap.ui.ux3.ThingAction[];
+        removeAllActions(): any;
         /**
          * Removes all the controls from the aggregation {@link #getFacetContent facetContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFacetContent(): sap.ui.ux3.ThingGroup[];
+        removeAllFacetContent(): any;
         /**
          * Removes all the controls from the aggregation {@link #getFacets facets}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFacets(): sap.ui.ux3.NavigationItem[];
+        removeAllFacets(): any;
         /**
          * Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllHeaderContent(): sap.ui.ux3.ThingGroup[];
+        removeAllHeaderContent(): any;
         /**
          * Removes a facet from the aggregation {@link #getFacets facets}.
          */
@@ -13387,19 +13387,19 @@ declare namespace sap {
          *
          * ThingGroups for content of the selected facet
          */
-        getFacetContent(): sap.ui.ux3.ThingGroup[];
+        getFacetContent(): any;
         /**
          * Gets content of aggregation {@link #getFacets facets}.
          *
          * Thing Inspector facets
          */
-        getFacets(): sap.ui.ux3.NavigationItem[];
+        getFacets(): any;
         /**
          * Gets content of aggregation {@link #getHeaderContent headerContent}.
          *
          * ThingGroups for the header content
          */
-        getHeaderContent(): sap.ui.ux3.ThingGroup[];
+        getHeaderContent(): any;
         /**
          * @SINCE 1.16.3
          *
@@ -13540,19 +13540,19 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFacetContent(): sap.ui.ux3.ThingGroup[];
+        removeAllFacetContent(): any;
         /**
          * Removes all the controls from the aggregation {@link #getFacets facets}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllFacets(): sap.ui.ux3.NavigationItem[];
+        removeAllFacets(): any;
         /**
          * Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllHeaderContent(): sap.ui.ux3.ThingGroup[];
+        removeAllHeaderContent(): any;
         /**
          * Removes a facet from the aggregation {@link #getFacets facets}.
          */
@@ -14137,7 +14137,7 @@ declare namespace sap {
          *
          * Defines the buttons to appear in the popup
          */
-        getButtons(): sap.ui.core.Control[];
+        getButtons(): any;
         /**
          * @SINCE 1.19.0
          *
@@ -14153,7 +14153,7 @@ declare namespace sap {
          *
          * Defines the content of the popup
          */
-        getContent(): sap.ui.core.Control[];
+        getContent(): any;
         /**
          * @SINCE 1.20.1
          *
@@ -14344,13 +14344,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllButtons(): sap.ui.core.Control[];
+        removeAllButtons(): any;
         /**
          * Removes all the controls from the aggregation {@link #getContent content}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllContent(): sap.ui.core.Control[];
+        removeAllContent(): any;
         /**
          * Removes a button from the aggregation {@link #getButtons buttons}.
          */
@@ -14405,7 +14405,7 @@ declare namespace sap {
          *
          * This is just a forward to the Popup's function (sap.ui.core.Popup.setAutoCloseAreas) with the same functionality.
          */
-        setAutoCloseAreas(aAutoCloseAreas: Element[]): void;
+        setAutoCloseAreas(aAutoCloseAreas: any): void;
         /**
          * @SINCE 1.19.0
          *

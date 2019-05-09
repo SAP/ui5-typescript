@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.64.1",
+  "version": "1.65.1",
   "symbols": [
     {
       "kind": "namespace",
@@ -1587,7 +1587,9 @@
         {
           "name": "getButtons",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.demokit.HexagonButton[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.demokit.HexagonButton>"
+          },
           "description": "Gets content of aggregation {@link #getButtons buttons}.\n\nThe buttons to layout in a grid"
         },
         {
@@ -1653,7 +1655,7 @@
           "name": "removeAllButtons",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.demokit.HexagonButton[]",
+            "type": "[ 'Array' ].<sap.ui.demokit.HexagonButton>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getButtons buttons}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -1840,7 +1842,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content items"
         },
         {
@@ -1924,7 +1926,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -2431,7 +2433,7 @@
         {
           "name": "getTags",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.demokit.Tag[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.demokit.Tag>" },
           "description": "Gets content of aggregation {@link #getTags tags}.\n\nThe tags displayed in this tag cloud"
         },
         {
@@ -2478,7 +2480,7 @@
           "name": "removeAllTags",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.demokit.Tag[]",
+            "type": "[ 'Array' ].<sap.ui.demokit.Tag>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTags tags}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -3051,7 +3053,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nContent Area used for the running sample code"
         },
         {
@@ -3108,7 +3110,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."

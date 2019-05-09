@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.64.1",
+  "version": "1.65.1",
   "symbols": [
     {
       "kind": "namespace",
@@ -677,7 +677,7 @@
           "visibility": "public",
           "ui5-metamodel": true,
           "returnValue": {
-            "type": "int[]",
+            "type": "[ 'Array' ].<int>",
             "description": "an array containing all selected indices (ascending ordered integers)"
           },
           "description": "Retrieves the lead selection index. The lead selection index is, among other things, used to determine the start/end of a selection range, when using Shift-Click to select multiple entries at once."
@@ -687,7 +687,7 @@
           "visibility": "public",
           "ui5-metamodel": true,
           "returnValue": {
-            "type": "int[]",
+            "type": "[ 'Array' ].<int>",
             "description": "an array containing all selected indices"
           },
           "description": "Returns an array containing the row indices of all selected tree nodes (in ascending order).\n\nPlease be aware of the following: Due to performance/network traffic reasons, the getSelectedIndices function returns only all indices of actually selected rows/tree nodes. Unknown rows/nodes (as in \"not yet loaded\" to the client), will not be returned."
@@ -1062,7 +1062,7 @@
             "defaultValue": false,
             "group": "Appearance",
             "visibility": "public",
-            "description": "Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column has to be sorted by calling <code>Column.sort()</code>",
+            "description": "Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.",
             "methods": ["getSorted", "setSorted"]
           },
           {
@@ -1089,7 +1089,7 @@
             "defaultValue": false,
             "group": "Appearance",
             "visibility": "public",
-            "description": "Indicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column has to be filtered by calling <code>Column.sort()</code>",
+            "description": "Indicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column can be filtered using {@link sap.ui.table.Table#filter}.",
             "methods": ["getFiltered", "setFiltered"]
           },
           {
@@ -1246,6 +1246,18 @@
             "methods": ["getTemplate", "destroyTemplate", "setTemplate"]
           },
           {
+            "name": "creationTemplate",
+            "singularName": "creationTemplate",
+            "type": "sap.ui.core.Control",
+            "cardinality": "0..1",
+            "visibility": "hidden",
+            "methods": [
+              "getCreationTemplate",
+              "destroyCreationTemplate",
+              "setCreationTemplate"
+            ]
+          },
+          {
             "name": "menu",
             "singularName": "menu",
             "type": "sap.ui.unified.Menu",
@@ -1379,6 +1391,15 @@
           "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:columnMenuOpen columnMenuOpen} event of this <code>sap.ui.table.Column</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.\n\nFires before the column menu is opened."
         },
         {
+          "name": "destroyCreationTemplate",
+          "visibility": "restricted",
+          "returnValue": {
+            "type": "sap.ui.table.Column",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the creation template."
+        },
+        {
           "name": "destroyLabel",
           "visibility": "public",
           "returnValue": {
@@ -1506,6 +1527,15 @@
           "description": "Gets current value of property {@link #getAutoResizable autoResizable}.\n\nEnables auto-resizing of the column on double clicking the resize bar. The width is determined on the widest currently displayed content. It does not consider rows which are currently not scrolled into view. Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.Checkbox</code>\n\nDefault value is <code>false</code>."
         },
         {
+          "name": "getCreationTemplate",
+          "visibility": "restricted",
+          "returnValue": {
+            "type": "sap.ui.core.Control",
+            "description": "Instance of the creation template control"
+          },
+          "description": "Gets the creation template."
+        },
+        {
           "name": "getDefaultFilterOperator",
           "visibility": "public",
           "returnValue": {
@@ -1521,7 +1551,7 @@
             "type": "boolean",
             "description": "Value of property <code>filtered</code>"
           },
-          "description": "Gets current value of property {@link #getFiltered filtered}.\n\nIndicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column has to be filtered by calling <code>Column.sort()</code>\n\nDefault value is <code>false</code>."
+          "description": "Gets current value of property {@link #getFiltered filtered}.\n\nIndicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column can be filtered using {@link sap.ui.table.Table#filter}.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "getFilterOperator",
@@ -1636,7 +1666,7 @@
           "name": "getMultiLabels",
           "visibility": "public",
           "since": "1.13.1",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getMultiLabels multiLabels}.\n\nLabels of the column which are displayed in the column header. Define a control for each header row in the table. Use this aggregation if you want to use multiple headers per column."
         },
         {
@@ -1685,7 +1715,7 @@
             "type": "boolean",
             "description": "Value of property <code>sorted</code>"
           },
-          "description": "Gets current value of property {@link #getSorted sorted}.\n\nIndicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column has to be sorted by calling <code>Column.sort()</code>\n\nDefault value is <code>false</code>."
+          "description": "Gets current value of property {@link #getSorted sorted}.\n\nIndicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "getSortOrder",
@@ -1716,17 +1746,17 @@
           "visibility": "protected",
           "returnValue": {
             "type": "sap.ui.core.Control|null",
-            "description": "Clone of the column template, or <code>null</code> if no column template is defined"
+            "description": "Clone of the template, or <code>null</code> if no template is defined"
           },
           "parameters": [
             {
               "name": "iIndex",
               "type": "int",
               "optional": false,
-              "description": "Index of the column in the column aggregation of the table"
+              "description": "Index of the column in the columns aggregation of the table"
             }
           ],
-          "description": "Returns a column template clone. It either finds an unused clone or clones a new one from the column template."
+          "description": "Returns a template clone. It either finds an unused clone or clones a new one from the template."
         },
         {
           "name": "getVisible",
@@ -1793,7 +1823,7 @@
           "visibility": "public",
           "since": "1.13.1",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getMultiLabels multiLabels}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -1835,6 +1865,23 @@
           "description": "Sets a new value for property {@link #getAutoResizable autoResizable}.\n\nEnables auto-resizing of the column on double clicking the resize bar. The width is determined on the widest currently displayed content. It does not consider rows which are currently not scrolled into view. Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.Checkbox</code>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
+          "name": "setCreationTemplate",
+          "visibility": "restricted",
+          "returnValue": {
+            "type": "sap.ui.table.Column",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oCreationTemplate",
+              "type": "sap.ui.core.Control",
+              "optional": false,
+              "description": "Instance of the creation template control"
+            }
+          ],
+          "description": "Sets the creation template."
+        },
+        {
           "name": "setDefaultFilterOperator",
           "visibility": "public",
           "returnValue": {
@@ -1866,7 +1913,7 @@
               "description": "New value for property <code>filtered</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getFiltered filtered}.\n\nIndicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column has to be filtered by calling <code>Column.sort()</code>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+          "description": "Sets a new value for property {@link #getFiltered filtered}.\n\nIndicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column can be filtered using {@link sap.ui.table.Table#filter}.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "setFilterOperator",
@@ -2147,7 +2194,7 @@
               "description": "New value for property <code>sorted</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getSorted sorted}.\n\nIndicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column has to be sorted by calling <code>Column.sort()</code>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+          "description": "Sets a new value for property {@link #getSorted sorted}.\n\nIndicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "setSortOrder",
@@ -2352,6 +2399,388 @@
       ]
     },
     {
+      "kind": "class",
+      "name": "sap.ui.table.CreationRow",
+      "basename": "CreationRow",
+      "resource": "sap/ui/table/CreationRow.js",
+      "module": "sap/ui/table/CreationRow",
+      "export": "",
+      "static": true,
+      "visibility": "restricted",
+      "extends": "sap.ui.core.Control",
+      "description": "Allows to enter data in a row shaped form, if placed inside a {@link sap.ui.table.Table}. The form elements (<code>cells</code> aggregation) are aligned with the columns of the table, and are created automatically based on the {@link sap.ui.table.Column#getCreationTemplate creationTemplate} aggregation of the {@link sap.ui.table.Column}.\n\n<b>Note:</b> This control is compatible only with the <code>sap.m</code> library. Do not use it together with the <code>sap.ui.commons</code> library.",
+      "ui5-metamodel": true,
+      "ui5-metadata": {
+        "stereotype": "control",
+        "properties": [
+          {
+            "name": "applyEnabled",
+            "type": "boolean",
+            "defaultValue": true,
+            "group": "Behavior",
+            "visibility": "public",
+            "description": "If set to <code>false</code>, the {@link #event:apply apply} event is not fired. The corresponding keyboard shortcut and the apply button of the default toolbar are disabled.",
+            "methods": ["getApplyEnabled", "setApplyEnabled"]
+          }
+        ],
+        "aggregations": [
+          {
+            "name": "cells",
+            "singularName": "cell",
+            "type": "sap.ui.core.Control",
+            "cardinality": "0..n",
+            "visibility": "public",
+            "description": "The actual cells are a table-internal construct. The controls in this aggregation are the content of the cells. This aggregation is managed by the table and must not be manipulated. Only read access is allowed.",
+            "methods": [
+              "getCells",
+              "destroyCells",
+              "insertCell",
+              "addCell",
+              "removeCell",
+              "indexOfCell",
+              "removeAllCells"
+            ]
+          },
+          {
+            "name": "toolbar",
+            "singularName": "toolbar",
+            "type": "sap.ui.core.Toolbar",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "description": "The toolbar that is placed below the form. If no toolbar is set, a default toolbar is created. Basic buttons and functionality are provided only in the default toolbar.",
+            "methods": ["getToolbar", "destroyToolbar", "setToolbar"]
+          }
+        ],
+        "events": [
+          {
+            "name": "apply",
+            "visibility": "public",
+            "description": "Fired when the corresponding keyboard shortcut or the apply button of the default toolbar are pressed.",
+            "methods": ["attachApply", "detachApply", "fireApply"]
+          }
+        ]
+      },
+      "constructor": {
+        "visibility": "restricted",
+        "parameters": [
+          {
+            "name": "sId",
+            "type": "string",
+            "optional": true,
+            "description": "id for the new control, generated automatically if no id is given"
+          },
+          {
+            "name": "mSettings",
+            "type": "object",
+            "optional": true,
+            "description": "initial settings for the new control"
+          }
+        ],
+        "description": "Constructor for a new CreationRow.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
+      },
+      "events": [
+        {
+          "name": "apply",
+          "visibility": "public",
+          "parameters": [
+            {
+              "name": "oControlEvent",
+              "type": "sap.ui.base.Event",
+              "parameterProperties": {
+                "getSource": {
+                  "name": "getSource",
+                  "type": "sap.ui.base.EventProvider",
+                  "optional": false
+                },
+                "getParameters": {
+                  "name": "getParameters",
+                  "type": "object",
+                  "optional": false
+                }
+              }
+            }
+          ],
+          "description": "Fired when the corresponding keyboard shortcut or the apply button of the default toolbar are pressed."
+        }
+      ],
+      "methods": [
+        {
+          "name": "addCell",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oCell",
+              "type": "sap.ui.core.Control",
+              "optional": false,
+              "description": "The cell to add; if empty, nothing is inserted"
+            }
+          ],
+          "description": "Adds some cell to the aggregation {@link #getCells cells}."
+        },
+        {
+          "name": "attachApply",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oData",
+              "type": "object",
+              "optional": true,
+              "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
+            },
+            {
+              "name": "fnFunction",
+              "type": "function",
+              "optional": false,
+              "description": "The function to be called when the event occurs"
+            },
+            {
+              "name": "oListener",
+              "type": "object",
+              "optional": true,
+              "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.table.CreationRow</code> itself"
+            }
+          ],
+          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:apply apply} event of this <code>sap.ui.table.CreationRow</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.CreationRow</code> itself.\n\nFired when the corresponding keyboard shortcut or the apply button of the default toolbar are pressed."
+        },
+        {
+          "name": "destroyCells",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys all the cells in the aggregation {@link #getCells cells}."
+        },
+        {
+          "name": "destroyToolbar",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the toolbar in the aggregation {@link #getToolbar toolbar}."
+        },
+        {
+          "name": "detachApply",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "fnFunction",
+              "type": "function",
+              "optional": false,
+              "description": "The function to be called, when the event occurs"
+            },
+            {
+              "name": "oListener",
+              "type": "object",
+              "optional": true,
+              "description": "Context object on which the given function had to be called"
+            }
+          ],
+          "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:apply apply} event of this <code>sap.ui.table.CreationRow</code>.\n\nThe passed function and listener object must match the ones used for event registration."
+        },
+        {
+          "name": "extend",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "function",
+            "description": "Created class / constructor function"
+          },
+          "parameters": [
+            {
+              "name": "sClassName",
+              "type": "string",
+              "optional": false,
+              "description": "Name of the class being created"
+            },
+            {
+              "name": "oClassInfo",
+              "type": "object",
+              "optional": true,
+              "description": "Object literal with information about the class"
+            },
+            {
+              "name": "FNMetaImpl",
+              "type": "function",
+              "optional": true,
+              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
+            }
+          ],
+          "description": "Creates a new subclass of class sap.ui.table.CreationRow with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}."
+        },
+        {
+          "name": "fireApply",
+          "visibility": "protected",
+          "returnValue": {
+            "type": "boolean",
+            "description": "Whether or not to prevent the default action"
+          },
+          "parameters": [
+            {
+              "name": "mParameters",
+              "type": "object",
+              "optional": true,
+              "description": "Parameters to pass along with the event"
+            }
+          ],
+          "description": "Fires event {@link #event:apply apply} to attached listeners.\n\nListeners may prevent the default action of this event by using the <code>preventDefault</code>-method on the event object."
+        },
+        {
+          "name": "getApplyEnabled",
+          "visibility": "public",
+          "returnValue": {
+            "type": "boolean",
+            "description": "Value of property <code>applyEnabled</code>"
+          },
+          "description": "Gets current value of property {@link #getApplyEnabled applyEnabled}.\n\nIf set to <code>false</code>, the {@link #event:apply apply} event is not fired. The corresponding keyboard shortcut and the apply button of the default toolbar are disabled.\n\nDefault value is <code>true</code>."
+        },
+        {
+          "name": "getCells",
+          "visibility": "public",
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "description": "Gets content of aggregation {@link #getCells cells}.\n\nThe actual cells are a table-internal construct. The controls in this aggregation are the content of the cells. This aggregation is managed by the table and must not be manipulated. Only read access is allowed."
+        },
+        {
+          "name": "getMetadata",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "sap.ui.base.Metadata",
+            "description": "Metadata object describing this class"
+          },
+          "description": "Returns a metadata object for class sap.ui.table.CreationRow."
+        },
+        {
+          "name": "getToolbar",
+          "visibility": "public",
+          "returnValue": { "type": "sap.ui.core.Toolbar" },
+          "description": "Gets content of aggregation {@link #getToolbar toolbar}.\n\nThe toolbar that is placed below the form. If no toolbar is set, a default toolbar is created. Basic buttons and functionality are provided only in the default toolbar."
+        },
+        {
+          "name": "indexOfCell",
+          "visibility": "public",
+          "returnValue": {
+            "type": "int",
+            "description": "The index of the provided control in the aggregation if found, or -1 otherwise"
+          },
+          "parameters": [
+            {
+              "name": "oCell",
+              "type": "sap.ui.core.Control",
+              "optional": false,
+              "description": "The cell whose index is looked for"
+            }
+          ],
+          "description": "Checks for the provided <code>sap.ui.core.Control</code> in the aggregation {@link #getCells cells}. and returns its index if found or -1 otherwise."
+        },
+        {
+          "name": "insertCell",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oCell",
+              "type": "sap.ui.core.Control",
+              "optional": false,
+              "description": "The cell to insert; if empty, nothing is inserted"
+            },
+            {
+              "name": "iIndex",
+              "type": "int",
+              "optional": false,
+              "description": "The <code>0</code>-based index the cell should be inserted at; for a negative value of <code>iIndex</code>, the cell is inserted at position 0; for a value greater than the current size of the aggregation, the cell is inserted at the last position"
+            }
+          ],
+          "description": "Inserts a cell into the aggregation {@link #getCells cells}."
+        },
+        {
+          "name": "removeAllCells",
+          "visibility": "public",
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "description": "An array of the removed elements (might be empty)"
+          },
+          "description": "Removes all the controls from the aggregation {@link #getCells cells}.\n\nAdditionally, it unregisters them from the hosting UIArea."
+        },
+        {
+          "name": "removeCell",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.Control",
+            "description": "The removed cell or <code>null</code>"
+          },
+          "parameters": [
+            {
+              "name": "vCell",
+              "type": "int|string|sap.ui.core.Control",
+              "optional": false,
+              "description": "The cell to remove or its index or id"
+            }
+          ],
+          "description": "Removes a cell from the aggregation {@link #getCells cells}."
+        },
+        {
+          "name": "resetFocus",
+          "visibility": "public",
+          "returnValue": {
+            "type": "boolean",
+            "description": "Whether the focus was set"
+          },
+          "description": "Sets the focus to the first editable form element."
+        },
+        {
+          "name": "setApplyEnabled",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "bApplyEnabled",
+              "type": "boolean",
+              "optional": false,
+              "description": "New value for property <code>applyEnabled</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getApplyEnabled applyEnabled}.\n\nIf set to <code>false</code>, the {@link #event:apply apply} event is not fired. The corresponding keyboard shortcut and the apply button of the default toolbar are disabled.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>true</code>."
+        },
+        {
+          "name": "setToolbar",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oToolbar",
+              "type": "sap.ui.core.Toolbar",
+              "optional": false,
+              "description": "The toolbar to set"
+            }
+          ],
+          "description": "Sets the aggregated {@link #getToolbar toolbar}."
+        }
+      ]
+    },
+    {
       "kind": "enum",
       "name": "sap.ui.table.GroupEventType",
       "basename": "GroupEventType",
@@ -2521,7 +2950,7 @@
                   "parameterProperties": {
                     "indices": {
                       "name": "indices",
-                      "type": "int[]",
+                      "type": "[ 'Array' ].<int>",
                       "optional": false,
                       "description": "Array of indices whose selection has been changed (either selected or deselected)."
                     },
@@ -2637,7 +3066,7 @@
               "parameterProperties": {
                 "indices": {
                   "name": "indices",
-                  "type": "int[]",
+                  "type": "[ 'Array' ].<int>",
                   "optional": true,
                   "description": "Array of indices whose selection has been changed (either selected or deselected)."
                 },
@@ -2894,7 +3323,7 @@
             "type": "sap.ui.core.Control",
             "cardinality": "0..n",
             "visibility": "public",
-            "description": "The controls for the cells.",
+            "description": "The actual cells are a table-internal construct. The controls in this aggregation are the content of the cells. This aggregation is managed by the table and must not be manipulated. Only read access is allowed.",
             "methods": [
               "getCells",
               "destroyCells",
@@ -3002,8 +3431,8 @@
         {
           "name": "getCells",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
-          "description": "Gets content of aggregation {@link #getCells cells}.\n\nThe controls for the cells."
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "description": "Gets content of aggregation {@link #getCells cells}.\n\nThe actual cells are a table-internal construct. The controls in this aggregation are the content of the cells. This aggregation is managed by the table and must not be manipulated. Only read access is allowed."
         },
         {
           "name": "getIndex",
@@ -3078,7 +3507,7 @@
           "name": "removeAllCells",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getCells cells}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -3251,7 +3680,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.table.RowActionItem[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.table.RowActionItem>" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nThe action items which should be displayed."
         },
         {
@@ -3317,7 +3746,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.table.RowActionItem[]",
+            "type": "[ 'Array' ].<sap.ui.table.RowActionItem>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4080,7 +4509,7 @@
             "defaultValue": "MultiToggle",
             "group": "Behavior",
             "visibility": "public",
-            "description": "Selection mode of the Table. This property controls whether single or multiple rows can be selected and how the selection can be extended. It may also influence the visual appearance. When the selection mode is changed, the current selection is removed. <b>Note:</b> Since the group header visualization relies on the row selectors, the row selectors are always shown if the grouping functionality (depends on table type) is enabled, even if <code>sap.ui.table.SelectionMode.None</code> is set. <b>Note:</b> When the MultiSelectionPlugin is applied to the table, the selection mode is controlled by the plugin and cannot be changed manually.",
+            "description": "Selection mode of the Table. This property controls whether single or multiple rows can be selected and how the selection can be extended. It may also influence the visual appearance. When the selection mode is changed, the current selection is removed. <b>Note:</b> Since the group header visualization relies on the row selectors, the row selectors are always shown if the grouping functionality (depends on table type) is enabled, even if <code>sap.ui.table.SelectionMode.None</code> is set. <b>Note:</b> When a selection plugin is applied to the table, the selection mode is controlled by the plugin and cannot be changed manually.",
             "methods": ["getSelectionMode", "setSelectionMode"]
           },
           {
@@ -4147,7 +4576,7 @@
             "defaultValue": false,
             "group": "Behavior",
             "visibility": "public",
-            "description": "Enables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>",
+            "description": "Enables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must be set for the grouped column.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>",
             "experimental": {
               "since": "1.28",
               "text": "This feature has a limited functionality."
@@ -4398,6 +4827,19 @@
             ]
           },
           {
+            "name": "creationRow",
+            "singularName": "creationRow",
+            "type": "sap.ui.core.Control",
+            "cardinality": "0..1",
+            "visibility": "hidden",
+            "description": "This row can be used for user input to create new data. Like in any other row, the cells of this row are also managed by the table and must not be modified. The cell content is defined via the <code>creationTemplate</code> aggregation of the {@link sap.ui.table.Column}. If the creation row is set, the busy indicator will no longer cover the horizontal scrollbar, even if the creation row is invisible.",
+            "methods": [
+              "getCreationRow",
+              "destroyCreationRow",
+              "setCreationRow"
+            ]
+          },
+          {
             "name": "noData",
             "singularName": "noData",
             "type": "sap.ui.core.Control",
@@ -4475,7 +4917,7 @@
             "type": "sap.ui.table.Column",
             "cardinality": "0..1",
             "visibility": "public",
-            "description": "The column by which the table is grouped. Grouping will only be performed if <code>enableGrouping</code> is set to <code>true</code>.",
+            "description": "The column by which the table is grouped. Grouping will only be performed if <code>enableGrouping</code> is set to <code>true</code>. Setting <code>groupBy</code> in the view does not work and throws an error. It can only be set if the column by which the table is grouped is already part of the <code>columns</code> aggregation of the table.",
             "experimental": {
               "since": "1.28",
               "text": "This feature has a limited functionality."
@@ -4501,7 +4943,7 @@
           {
             "name": "rowSelectionChange",
             "visibility": "public",
-            "description": "fired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)",
+            "description": "fired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)\n\n<b>Note:</b> When a selection plugin is applied to the table, this event won't be fired.",
             "parameters": {
               "rowIndex": {
                 "name": "rowIndex",
@@ -5385,7 +5827,7 @@
                   "parameterProperties": {
                     "data": {
                       "name": "data",
-                      "type": "string[][]",
+                      "type": "[ 'Array' ].<Array.<string>>",
                       "optional": false,
                       "description": "2D array of strings with data from the clipboard. The first dimension represents the rows, and the second dimension represents the cells of the tabular data."
                     }
@@ -5428,7 +5870,7 @@
                     },
                     "rowIndices": {
                       "name": "rowIndices",
-                      "type": "int[]",
+                      "type": "[ 'Array' ].<int>",
                       "optional": false,
                       "description": "array of row indices which selection has been changed (either selected or deselected)"
                     },
@@ -5449,7 +5891,7 @@
               }
             }
           ],
-          "description": "fired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)"
+          "description": "fired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)\n\n<b>Note:</b> When a selection plugin is applied to the table, this event won't be fired."
         },
         {
           "name": "sort",
@@ -6067,7 +6509,7 @@
               "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.table.Table</code> itself"
             }
           ],
-          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:rowSelectionChange rowSelectionChange} event of this <code>sap.ui.table.Table</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.\n\nfired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)"
+          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:rowSelectionChange rowSelectionChange} event of this <code>sap.ui.table.Table</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.\n\nfired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)\n\n<b>Note:</b> When a selection plugin is applied to the table, this event won't be fired."
         },
         {
           "name": "attachSort",
@@ -6176,6 +6618,15 @@
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys the contextMenu in the aggregation {@link #getContextMenu contextMenu}."
+        },
+        {
+          "name": "destroyCreationRow",
+          "visibility": "restricted",
+          "returnValue": {
+            "type": "sap.ui.table.Table",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the creation row."
         },
         {
           "name": "destroyExtension",
@@ -7142,7 +7593,7 @@
               "parameterProperties": {
                 "data": {
                   "name": "data",
-                  "type": "string[][]",
+                  "type": "[ 'Array' ].<Array.<string>>",
                   "optional": true,
                   "description": "2D array of strings with data from the clipboard. The first dimension represents the rows, and the second dimension represents the cells of the tabular data."
                 }
@@ -7179,7 +7630,7 @@
                 },
                 "rowIndices": {
                   "name": "rowIndices",
-                  "type": "int[]",
+                  "type": "[ 'Array' ].<int>",
                   "optional": true,
                   "description": "array of row indices which selection has been changed (either selected or deselected)"
                 },
@@ -7251,7 +7702,7 @@
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -7304,7 +7755,7 @@
         {
           "name": "getColumns",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.table.Column[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.table.Column>" },
           "description": "Gets content of aggregation {@link #getColumns columns}.\n\nColumns of the Table"
         },
         {
@@ -7340,6 +7791,15 @@
           "since": "1.54",
           "returnValue": { "type": "sap.ui.core.IContextMenu" },
           "description": "Gets content of aggregation {@link #getContextMenu contextMenu}.\n\nDefines the context menu for the table.\n\n<b>Note:</b> The context menu will also be available for the row selectors as well as in the row actions cell of the table control.\n\nThe custom context menu will not be shown in the group header rows and the sum row of the <code>AnalyticalTable</code> control.\n\nIf this aggregation is set, then the <code>enableCellFilter</code> property will have no effect."
+        },
+        {
+          "name": "getCreationRow",
+          "visibility": "restricted",
+          "returnValue": {
+            "type": "sap.ui.table.CreationRow",
+            "description": "oCreationRow Instance of the creation row"
+          },
+          "description": "Gets the creation row."
         },
         {
           "name": "getDragDropConfig",
@@ -7413,7 +7873,7 @@
             "type": "boolean",
             "description": "Value of property <code>enableGrouping</code>"
           },
-          "description": "Gets current value of property {@link #getEnableGrouping enableGrouping}.\n\nEnables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>\n\nDefault value is <code>false</code>.",
+          "description": "Gets current value of property {@link #getEnableGrouping enableGrouping}.\n\nEnables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must be set for the grouped column.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>\n\nDefault value is <code>false</code>.",
           "experimental": {
             "since": "1.28",
             "text": "This feature has a limited functionality."
@@ -7432,7 +7892,7 @@
         {
           "name": "getExtension",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getExtension extension}.\n\nExtension section of the Table. If not set, no extension area will be rendered. Note: In case a <code>sap.m.Toolbar</code> is used as header the CSS class sapMTBHeader-CTX should be applied on this toolbar."
         },
         {
@@ -7527,7 +7987,9 @@
           "name": "getPlugins",
           "visibility": "public",
           "since": "1.64",
-          "returnValue": { "type": "sap.ui.table.plugins.SelectionPlugin[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.table.plugins.SelectionPlugin>"
+          },
           "description": "Gets content of aggregation {@link #getPlugins plugins}.\n\nPlugin section of the table. Multiple plugins are possible, but always only <b>one</b> of a certain type.\n\nThe following restrictions apply: <ul> <li>Only one MultiSelectionPlugin can be applied. No other plugins can be applied.</li> </ul>",
           "experimental": { "since": "1.64" }
         },
@@ -7559,7 +8021,7 @@
         {
           "name": "getRows",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.table.Row[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.table.Row>" },
           "description": "Gets content of aggregation {@link #getRows rows}.\n\nRows of the Table"
         },
         {
@@ -7581,7 +8043,10 @@
           "name": "getSelectedIndices",
           "visibility": "public",
           "ui5-metamodel": true,
-          "returnValue": { "type": "int[]", "description": "Selected indices" },
+          "returnValue": {
+            "type": "[ 'Array' ].<int>",
+            "description": "Selected indices"
+          },
           "description": "Zero-based indices of selected items, wrapped in an array. An empty array means \"no selection\"."
         },
         {
@@ -7600,7 +8065,7 @@
             "type": "sap.ui.table.SelectionMode",
             "description": "Value of property <code>selectionMode</code>"
           },
-          "description": "Gets current value of property {@link #getSelectionMode selectionMode}.\n\nSelection mode of the Table. This property controls whether single or multiple rows can be selected and how the selection can be extended. It may also influence the visual appearance. When the selection mode is changed, the current selection is removed. <b>Note:</b> Since the group header visualization relies on the row selectors, the row selectors are always shown if the grouping functionality (depends on table type) is enabled, even if <code>sap.ui.table.SelectionMode.None</code> is set. <b>Note:</b> When the MultiSelectionPlugin is applied to the table, the selection mode is controlled by the plugin and cannot be changed manually.\n\nDefault value is <code>MultiToggle</code>."
+          "description": "Gets current value of property {@link #getSelectionMode selectionMode}.\n\nSelection mode of the Table. This property controls whether single or multiple rows can be selected and how the selection can be extended. It may also influence the visual appearance. When the selection mode is changed, the current selection is removed. <b>Note:</b> Since the group header visualization relies on the row selectors, the row selectors are always shown if the grouping functionality (depends on table type) is enabled, even if <code>sap.ui.table.SelectionMode.None</code> is set. <b>Note:</b> When a selection plugin is applied to the table, the selection mode is controlled by the plugin and cannot be changed manually.\n\nDefault value is <code>MultiToggle</code>."
         },
         {
           "name": "getShowColumnVisibilityMenu",
@@ -7635,7 +8100,7 @@
           "visibility": "public",
           "ui5-metamodel": true,
           "returnValue": {
-            "type": "sap.ui.table.Column[]",
+            "type": "[ 'Array' ].<sap.ui.table.Column>",
             "description": "Array of sorted columns"
           },
           "description": "Gets the sorted columns in the order in which sorting was performed through the {@link sap.ui.table.Table#sort} method and menus. Does not reflect sorting at binding level or the columns sort visualization set with {@link sap.ui.table.Column#setSorted} and {@link sap.ui.table.Column#setSortOrder}.",
@@ -7880,7 +8345,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -7889,7 +8354,7 @@
           "name": "removeAllColumns",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.table.Column[]",
+            "type": "[ 'Array' ].<sap.ui.table.Column>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getColumns columns}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7898,7 +8363,7 @@
           "name": "removeAllExtension",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getExtension extension}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7908,7 +8373,7 @@
           "visibility": "public",
           "since": "1.64",
           "returnValue": {
-            "type": "sap.ui.table.plugins.SelectionPlugin[]",
+            "type": "[ 'Array' ].<sap.ui.table.plugins.SelectionPlugin>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getPlugins plugins}.\n\nAdditionally, it unregisters them from the hosting UIArea.",
@@ -7918,7 +8383,7 @@
           "name": "removeAllRows",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.table.Row[]",
+            "type": "[ 'Array' ].<sap.ui.table.Row>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getRows rows}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -8115,6 +8580,23 @@
           "description": "Sets the aggregated {@link #getContextMenu contextMenu}."
         },
         {
+          "name": "setCreationRow",
+          "visibility": "restricted",
+          "returnValue": {
+            "type": "sap.ui.table.Table",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oCreationRow",
+              "type": "sap.ui.table.CreationRow",
+              "optional": false,
+              "description": "Instance of the creation row"
+            }
+          ],
+          "description": "Sets the creation row."
+        },
+        {
           "name": "setEditable",
           "visibility": "public",
           "returnValue": {
@@ -8235,7 +8717,7 @@
               "description": "New value for property <code>enableGrouping</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getEnableGrouping enableGrouping}.\n\nEnables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>.",
+          "description": "Sets a new value for property {@link #getEnableGrouping enableGrouping}.\n\nEnables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must be set for the grouped column.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>.",
           "experimental": {
             "since": "1.28",
             "text": "This feature has a limited functionality."
@@ -9479,7 +9961,7 @@
           "visibility": "public",
           "ui5-metamodel": true,
           "returnValue": {
-            "type": "int[]",
+            "type": "[ 'Array' ].<int>",
             "description": "an array containing all selected indices"
           },
           "description": "Returns an array containing the row indices of all selected tree nodes (ordered ascending).\n\nPlease be aware of the following: Due to performance/network traffic reasons, the getSelectedIndices function returns only all indices of actually selected rows/tree nodes. Unknown rows/nodes (as in \"not yet loaded\" to the client), will not be returned."

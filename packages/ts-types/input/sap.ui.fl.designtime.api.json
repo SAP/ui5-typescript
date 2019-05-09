@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.64.1",
+  "version": "1.65.1",
   "symbols": [
     {
       "kind": "namespace",
@@ -116,6 +116,44 @@
           "description": "Determines the availability of an encompassing variant management control."
         },
         {
+          "name": "isPersonalized",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "Promise",
+            "description": "Promise resolving with true if personalization changes exists, otherwise false."
+          },
+          "parameters": [
+            {
+              "name": "aControls",
+              "type": "sap.ui.core.Element[]|map[]",
+              "optional": false,
+              "parameterProperties": {
+                "appComponent": {
+                  "name": "appComponent",
+                  "type": "sap.ui.core.Component",
+                  "optional": false,
+                  "description": "Application component of the controls at runtime in case a map has been used"
+                },
+                "id": {
+                  "name": "id",
+                  "type": "string",
+                  "optional": false,
+                  "description": "ID of the control in case a map has been used to specify the control"
+                }
+              },
+              "description": "an array of instances of controls, a map with control IDs including a app component or a mixture for which personalization exists"
+            },
+            {
+              "name": "aChangeTypes",
+              "type": "array",
+              "optional": true,
+              "description": "Types of changes that have existing personalization."
+            }
+          ],
+          "description": "Checks if personalization changes exists for control."
+        },
+        {
           "name": "resetChanges",
           "visibility": "public",
           "static": true,
@@ -146,12 +184,12 @@
             },
             {
               "name": "aChangeTypes",
-              "type": "String[]",
+              "type": "[ 'Array' ].<String>",
               "optional": true,
               "description": "Types of changes that shall be deleted"
             }
           ],
-          "description": "Deletes changes for controls which were passed as an input; Alternative a list of control equivalent entities can be passed; Changes to be deleted can be filtered by specify change types."
+          "description": "Deletes changes recorded for control. Changes to be deleted can be filtered by specification of change type(s)."
         },
         {
           "name": "saveChanges",
@@ -1565,6 +1603,32 @@
             }
           ],
           "description": "Creates an inline change of change type appdescr_ui5_replaceComponentUsage"
+        },
+        {
+          "name": "create_ui5_setMinUI5Version",
+          "visibility": "restricted",
+          "static": true,
+          "returnValue": {
+            "type": "Promise",
+            "description": "resolving when creating the descriptor inline change was successful (without backend access)"
+          },
+          "parameters": [
+            {
+              "name": "mParameters",
+              "type": "object",
+              "optional": false,
+              "parameterProperties": {
+                "minUI5Version": {
+                  "name": "minUI5Version",
+                  "type": "string",
+                  "optional": false,
+                  "description": "the UI5 Version to be updated"
+                }
+              },
+              "description": "parameters of the change type"
+            }
+          ],
+          "description": "Creates an inline change of change type appdescr_ui5_setMinUI5Version"
         },
         {
           "name": "create_ui_generic_app_setMainPage",
@@ -3860,7 +3924,7 @@
         {
           "name": "getFor",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getFor for}."
         },
         {
@@ -3962,7 +4026,7 @@
           "name": "removeAllFor",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getFor for}."
@@ -4150,13 +4214,13 @@
           },
           {
             "name": "oFlexController",
-            "type": "object",
+            "type": "sap.ui.fl.FlexController",
             "optional": false,
             "description": "the FlexController instance for the component which uses the variant model"
           },
           {
             "name": "oAppComponent",
-            "type": "object",
+            "type": "sap.ui.core.Component",
             "optional": false,
             "description": "Application component instance that is currently loading"
           },
@@ -4170,6 +4234,19 @@
         "description": "Constructor for a new sap.ui.fl.variants.VariantModel model."
       },
       "methods": [
+        {
+          "name": "checkDirtyStateForControlModels",
+          "visibility": "public",
+          "parameters": [
+            {
+              "name": "aVariantManagementReferences",
+              "type": "[ 'Array' ].<string>",
+              "optional": false,
+              "description": "Array of variant management references"
+            }
+          ],
+          "description": "Checks if dirty changes exist for the current variant inside the passed variant management reference. If no dirty changes exist, it marks the associated 'modified' model property to false."
+        },
         {
           "name": "extend",
           "visibility": "public",
@@ -4226,6 +4303,119 @@
             "description": "Metadata object describing this class"
           },
           "description": "Returns a metadata object for class sap.ui.fl.variants.VariantModel."
+        },
+        {
+          "name": "manageVariants",
+          "visibility": "public",
+          "returnValue": {
+            "type": "Promise",
+            "description": "Returns a promise which resolves when \"manage\" event is fired from the variant management control"
+          },
+          "parameters": [
+            {
+              "name": "oVariantManagementControl",
+              "type": "sap.ui.fl.variants.VariantManagement",
+              "optional": false,
+              "description": "Variant Management control"
+            },
+            {
+              "name": "sVariantManagementReference",
+              "type": "String",
+              "optional": false,
+              "description": "Variant Management reference"
+            },
+            {
+              "name": "sLayer",
+              "type": "String",
+              "optional": false,
+              "description": "Current layer"
+            }
+          ],
+          "description": "Opens the manage dialog. Returns a promise which resolves to changes made from the manage dialog, based on the parameters passed."
+        },
+        {
+          "name": "setVariantProperties",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.fl.Change|null",
+            "description": "Returns the created change object or null if no change is created"
+          },
+          "parameters": [
+            {
+              "name": "sVariantManagementReference",
+              "type": "sap.ui.fl.variants.VariantManagement",
+              "optional": false,
+              "description": "Variant Management reference"
+            },
+            {
+              "name": "mPropertyBag",
+              "type": "Object",
+              "optional": false,
+              "parameterProperties": {
+                "variantReference": {
+                  "name": "variantReference",
+                  "type": "String",
+                  "optional": false,
+                  "description": "Variant Reference for which properties should be set"
+                },
+                "changeType": {
+                  "name": "changeType",
+                  "type": "String",
+                  "optional": false,
+                  "description": "Change type due to which properties are being set"
+                },
+                "layer": {
+                  "name": "layer",
+                  "type": "String",
+                  "optional": false,
+                  "description": "Current layer"
+                },
+                "appComponent": {
+                  "name": "appComponent",
+                  "type": "String",
+                  "optional": false,
+                  "description": "App Component instance"
+                },
+                "title": {
+                  "name": "title",
+                  "type": "String",
+                  "optional": true,
+                  "description": "App New title value for \"setTitle\" change type"
+                },
+                "visible": {
+                  "name": "visible",
+                  "type": "boolean",
+                  "optional": true,
+                  "description": "New visible value for \"setVisible\" change type"
+                },
+                "favorite": {
+                  "name": "favorite",
+                  "type": "boolean",
+                  "optional": true,
+                  "description": "New favorite value for \"setFavorite\" change type"
+                },
+                "defaultVariant": {
+                  "name": "defaultVariant",
+                  "type": "String",
+                  "optional": true,
+                  "description": "New default variant for \"setDefault\" change type"
+                },
+                "change": {
+                  "name": "change",
+                  "type": "sap.ui.fl.Change",
+                  "optional": true,
+                  "description": "Change to be deleted"
+                }
+              }
+            },
+            {
+              "name": "bAddChange",
+              "type": "boolean",
+              "optional": true,
+              "description": "if change needs to be added"
+            }
+          ],
+          "description": "Sets the passed properties on a variant for the passed variant management reference. Also adds or removes a change depending upon the parameters passed."
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.64.1",
+  "version": "1.65.1",
   "symbols": [
     {
       "kind": "namespace",
@@ -223,7 +223,7 @@
                     },
                     "closeSectionIds": {
                       "name": "closeSectionIds",
-                      "type": "string[]",
+                      "type": "[ 'Array' ].<string>",
                       "optional": false,
                       "description": "IDs of the sections to be closed. Can be initial in the case of no previously opened section."
                     }
@@ -545,7 +545,7 @@
                 },
                 "closeSectionIds": {
                   "name": "closeSectionIds",
-                  "type": "string[]",
+                  "type": "[ 'Array' ].<string>",
                   "optional": true,
                   "description": "IDs of the sections to be closed. Can be initial in the case of no previously opened section."
                 }
@@ -608,7 +608,9 @@
         {
           "name": "getSections",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.AccordionSection[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.commons.AccordionSection>"
+          },
           "description": "Gets content of aggregation {@link #getSections sections}.\n\nEmpty container used to display any library control"
         },
         {
@@ -678,7 +680,7 @@
           "name": "removeAllSections",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.AccordionSection[]",
+            "type": "[ 'Array' ].<sap.ui.commons.AccordionSection>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSections sections}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -1047,7 +1049,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nAggregates the controls that are contained in the panel. The control layout is browser-dependent. For a stable content layout, use a layout control as direct single child. When the panel dimensions are set, the child control may have width and height of 100%; when the panel dimensions are not set, the child defines the panel size."
         },
         {
@@ -1131,7 +1133,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -2449,13 +2451,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -2580,7 +2582,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -2589,7 +2591,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -2993,7 +2995,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nDetermines the content of the Callout"
         },
         {
@@ -3050,7 +3052,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -3874,7 +3876,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nControls which are displayed inside the Carousel"
         },
         {
@@ -4029,7 +4031,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4605,13 +4607,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -4700,7 +4702,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -4709,7 +4711,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -5293,7 +5295,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ListItem[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ListItem>" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\n<code>ListItems</code> (see <code>sap.ui.core.ListBox</code>) that shall be displayed in the list."
         },
         {
@@ -5448,7 +5450,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ListItem[]",
+            "type": "[ 'Array' ].<sap.ui.core.ListItem>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -6292,13 +6294,13 @@
         {
           "name": "getButtons",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getButtons buttons}.\n\nAggregation of the buttons to display at the bottom of the dialog, for example OK and Cancel. Association defaultButton can be used for one of the defined buttons."
         },
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nAggregation of the content of the dialog (one or more controls).\n\nWarning: when content is added with width given as a percentage, the Dialog itself should have a width set."
         },
         {
@@ -6566,7 +6568,7 @@
           "name": "removeAllButtons",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getButtons buttons}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -6575,7 +6577,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -8786,7 +8788,7 @@
         {
           "name": "getControls",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getControls controls}.\n\nArray of controls that should be replaced within htmlText."
         },
         {
@@ -8858,7 +8860,7 @@
           "name": "removeAllControls",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getControls controls}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -9870,7 +9872,7 @@
         {
           "name": "getAreas",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.Area[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.Area>" },
           "description": "Gets content of aggregation {@link #getAreas areas}.\n\nArea representing the reference to the target location"
         },
         {
@@ -9936,7 +9938,7 @@
           "name": "removeAllAreas",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.Area[]",
+            "type": "[ 'Array' ].<sap.ui.commons.Area>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getAreas areas}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11172,7 +11174,7 @@
           "name": "getContent",
           "visibility": "public",
           "ui5-metamodel": true,
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Returns an array of the controls contained in the aggregated position containers (might be empty)."
         },
         {
@@ -11207,7 +11209,7 @@
           "name": "getPositions",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.layout.PositionContainer[]"
+            "type": "[ 'Array' ].<sap.ui.commons.layout.PositionContainer>"
           },
           "description": "Gets content of aggregation {@link #getPositions positions}.\n\nPositioned child controls within the layout"
         },
@@ -11315,7 +11317,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "ui5-metamodel": true,
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Removes all aggregated position containers. Returns an array of the controls contained in the removed position containers (might be empty)."
         },
         {
@@ -11847,7 +11849,7 @@
           "visibility": "public",
           "ui5-metamodel": true,
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "The array with the content"
           },
           "parameters": [
@@ -12358,7 +12360,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nControls within the area"
         },
         {
@@ -12460,7 +12462,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -12979,7 +12981,9 @@
         {
           "name": "getRows",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.layout.MatrixLayoutRow[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.commons.layout.MatrixLayoutRow>"
+          },
           "description": "Gets content of aggregation {@link #getRows rows}.\n\nThe matrix layout's individual rows."
         },
         {
@@ -12995,7 +12999,7 @@
           "name": "getWidths",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.CSSSize[]",
+            "type": "[ 'Array' ].<sap.ui.core.CSSSize>",
             "description": "Value of property <code>widths</code>"
           },
           "description": "Gets current value of property {@link #getWidths widths}.\n\nWidths of the columns. Use an array to define the widths of the columns. If a column shall have an automatical sizing enter \"auto\" for this column width."
@@ -13044,7 +13048,7 @@
           "name": "removeAllRows",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.layout.MatrixLayoutRow[]",
+            "type": "[ 'Array' ].<sap.ui.commons.layout.MatrixLayoutRow>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getRows rows}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13144,7 +13148,7 @@
           "parameters": [
             {
               "name": "sWidths",
-              "type": "sap.ui.core.CSSSize[]",
+              "type": "[ 'Array' ].<sap.ui.core.CSSSize>",
               "optional": false,
               "description": "New value for property <code>widths</code>"
             }
@@ -13368,7 +13372,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe matrix layout cell's content (arbitrary controls).\n\nIf the matrix row has a defined height and the matrix has layoutFixed = true, the controls inside of a cell should all use the same unit for its height property."
         },
         {
@@ -13485,7 +13489,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13786,7 +13790,9 @@
         {
           "name": "getCells",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.layout.MatrixLayoutCell[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.commons.layout.MatrixLayoutCell>"
+          },
           "description": "Gets content of aggregation {@link #getCells cells}.\n\nThe matrix layout row's individual cells."
         },
         {
@@ -13867,7 +13873,7 @@
           "name": "removeAllCells",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.layout.MatrixLayoutCell[]",
+            "type": "[ 'Array' ].<sap.ui.commons.layout.MatrixLayoutCell>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getCells cells}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -14994,13 +15000,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -15072,7 +15078,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -15081,7 +15087,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -15506,7 +15512,7 @@
                     },
                     "selectedIndices": {
                       "name": "selectedIndices",
-                      "type": "int[]",
+                      "type": "[ 'Array' ].<int>",
                       "optional": false,
                       "description": "Array containing the indices which are selected."
                     }
@@ -15597,7 +15603,7 @@
           "parameters": [
             {
               "name": "aSelectedIndices",
-              "type": "int[]",
+              "type": "[ 'Array' ].<int>",
               "optional": false,
               "description": "Indices of the items that shall additionally be selected."
             }
@@ -15737,7 +15743,7 @@
                 },
                 "selectedIndices": {
                   "name": "selectedIndices",
-                  "type": "int[]",
+                  "type": "[ 'Array' ].<int>",
                   "optional": true,
                   "description": "Array containing the indices which are selected."
                 }
@@ -15759,13 +15765,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -15816,7 +15822,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Item[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Item>" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nAggregation of items to be displayed. Must be either of type sap.ui.core.ListItem or sap.ui.core.SeparatorItem."
         },
         {
@@ -15875,7 +15881,7 @@
           "name": "getSelectedIndices",
           "visibility": "public",
           "returnValue": {
-            "type": "int[]",
+            "type": "[ 'Array' ].<int>",
             "description": "Array of selected indices."
           },
           "description": "Zero-based indices of selected items, wrapped in an array. An empty array means \"no selection\"."
@@ -15893,7 +15899,7 @@
           "name": "getSelectedItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Item[]",
+            "type": "[ 'Array' ].<sap.ui.core.Item>",
             "description": "Selected items."
           },
           "description": "Returns an array containing the selected items. In the case of no selection, an empty array is returned."
@@ -15902,7 +15908,7 @@
           "name": "getSelectedKeys",
           "visibility": "public",
           "returnValue": {
-            "type": "string[]",
+            "type": "[ 'Array' ].<string>",
             "description": "Array with selected keys."
           },
           "description": "Returns the keys of the selected items in an array. If a selected item does not have a key, the respective array entry will be undefined."
@@ -15995,7 +16001,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -16004,7 +16010,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -16013,7 +16019,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Item[]",
+            "type": "[ 'Array' ].<sap.ui.core.Item>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -16221,7 +16227,7 @@
           "parameters": [
             {
               "name": "aItems",
-              "type": "sap.ui.core.ListItem[]",
+              "type": "[ 'Array' ].<sap.ui.core.ListItem>",
               "optional": false,
               "description": "The items to set for this ListBox."
             },
@@ -16329,7 +16335,7 @@
           "parameters": [
             {
               "name": "aSelectedIndices",
-              "type": "int[]",
+              "type": "[ 'Array' ].<int>",
               "optional": false,
               "description": "Indices of the items to be selected."
             }
@@ -16346,7 +16352,7 @@
           "parameters": [
             {
               "name": "aSelectedKeys",
-              "type": "string[]",
+              "type": "[ 'Array' ].<string>",
               "optional": false,
               "description": "The keys of the items to be selected."
             }
@@ -16649,7 +16655,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.unified.MenuItem[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.unified.MenuItem>" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nAggregation of menu items."
         },
         {
@@ -16715,7 +16721,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.unified.MenuItem[]",
+            "type": "[ 'Array' ].<sap.ui.unified.MenuItem>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -17793,7 +17799,7 @@
           "parameters": [
             {
               "name": "aAMessages",
-              "type": "sap.ui.commons.Message[]",
+              "type": "[ 'Array' ].<sap.ui.commons.Message>",
               "optional": false,
               "description": "Array of messages."
             }
@@ -17817,7 +17823,7 @@
           "parameters": [
             {
               "name": "aIds",
-              "type": "string[]",
+              "type": "[ 'Array' ].<string>",
               "optional": false,
               "description": "Messages IDs to be deleted."
             }
@@ -18442,7 +18448,7 @@
           "parameters": [
             {
               "name": "aMessages",
-              "type": "sap.ui.commons.Message[]",
+              "type": "[ 'Array' ].<sap.ui.commons.Message>",
               "optional": false,
               "description": "Message list."
             }
@@ -19414,7 +19420,7 @@
         {
           "name": "getButtons",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.Button[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.Button>" },
           "description": "Gets content of aggregation {@link #getButtons buttons}.\n\nThe buttons that shall be displayed in the Panel header"
         },
         {
@@ -19429,7 +19435,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nAggregates the controls that are contained in the Panel. It is recommended to use a layout control as single direct child. When the Panel dimensions are set, the child control may have width and height of 100%. When the dimensions are not set, the child defines the size of the Panel."
         },
         {
@@ -19596,7 +19602,7 @@
           "name": "removeAllButtons",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.Button[]",
+            "type": "[ 'Array' ].<sap.ui.commons.Button>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getButtons buttons}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -19605,7 +19611,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -20569,13 +20575,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -20673,7 +20679,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -20682,7 +20688,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -21269,13 +21275,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -21309,7 +21315,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Item[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Item>" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nThe RadioButtons of this RadioButtonGroup."
         },
         {
@@ -21403,7 +21409,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -21412,7 +21418,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -21421,7 +21427,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Item[]",
+            "type": "[ 'Array' ].<sap.ui.core.Item>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -22080,13 +22086,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -22175,7 +22181,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -22184,7 +22190,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -22717,7 +22723,7 @@
           "name": "getRanges",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.ResponsiveContainerRange[]"
+            "type": "[ 'Array' ].<sap.ui.commons.ResponsiveContainerRange>"
           },
           "description": "Gets content of aggregation {@link #getRanges ranges}.\n\nThe ranges defined for this container"
         },
@@ -22774,7 +22780,7 @@
           "name": "removeAllRanges",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.ResponsiveContainerRange[]",
+            "type": "[ 'Array' ].<sap.ui.commons.ResponsiveContainerRange>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getRanges ranges}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -23772,7 +23778,7 @@
         {
           "name": "getSteps",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.RoadMapStep[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.RoadMapStep>" },
           "description": "Gets content of aggregation {@link #getSteps steps}.\n\nSteps that are composing the RoadMap"
         },
         {
@@ -23828,7 +23834,7 @@
           "name": "removeAllSteps",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.RoadMapStep[]",
+            "type": "[ 'Array' ].<sap.ui.commons.RoadMapStep>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSteps steps}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -24132,7 +24138,7 @@
         {
           "name": "getSubSteps",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.RoadMapStep[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.RoadMapStep>" },
           "description": "Gets content of aggregation {@link #getSubSteps subSteps}.\n\nSub steps for the current step. Will be displayed only in the case that the step is expanded. Otherwise, special arrows show the availability of sub steps. One level of sub steps supported.",
           "deprecated": {
             "since": "1.10.5",
@@ -24200,7 +24206,7 @@
           "name": "removeAllSubSteps",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.RoadMapStep[]",
+            "type": "[ 'Array' ].<sap.ui.commons.RoadMapStep>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSubSteps subSteps}.\n\nAdditionally, it unregisters them from the hosting UIArea.",
@@ -25244,7 +25250,9 @@
         {
           "name": "getFilters",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.RowRepeaterFilter[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.commons.RowRepeaterFilter>"
+          },
           "description": "Gets content of aggregation {@link #getFilters filters}.\n\nFilters to be provided in toolbar."
         },
         {
@@ -25284,7 +25292,7 @@
         {
           "name": "getRows",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getRows rows}.\n\nRows to be repeated."
         },
         {
@@ -25299,7 +25307,9 @@
         {
           "name": "getSorters",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.RowRepeaterSorter[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.commons.RowRepeaterSorter>"
+          },
           "description": "Gets content of aggregation {@link #getSorters sorters}.\n\nSorters to be provided in secondary toolbar."
         },
         {
@@ -25473,7 +25483,7 @@
           "name": "removeAllFilters",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.RowRepeaterFilter[]",
+            "type": "[ 'Array' ].<sap.ui.commons.RowRepeaterFilter>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getFilters filters}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -25482,7 +25492,7 @@
           "name": "removeAllRows",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getRows rows}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -25491,7 +25501,7 @@
           "name": "removeAllSorters",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.RowRepeaterSorter[]",
+            "type": "[ 'Array' ].<sap.ui.commons.RowRepeaterSorter>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSorters sorters}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -26721,13 +26731,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -26915,7 +26925,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -26924,7 +26934,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -27302,7 +27312,7 @@
             },
             {
               "name": "aASuggestions",
-              "type": "string[]",
+              "type": "[ 'Array' ].<string>",
               "optional": false,
               "description": "The list of suggestions belonging to the suggest value"
             }
@@ -27658,7 +27668,7 @@
         {
           "name": "getButtons",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.Button[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.Button>" },
           "description": "Gets content of aggregation {@link #getButtons buttons}.\n\nButtons"
         },
         {
@@ -27730,7 +27740,7 @@
           "name": "removeAllButtons",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.Button[]",
+            "type": "[ 'Array' ].<sap.ui.commons.Button>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getButtons buttons}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -28286,13 +28296,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -28327,7 +28337,7 @@
           "name": "getLabels",
           "visibility": "public",
           "returnValue": {
-            "type": "string[]",
+            "type": "[ 'Array' ].<string>",
             "description": "Value of property <code>labels</code>"
           },
           "description": "Gets current value of property {@link #getLabels labels}.\n\nLabels to be displayed instead of numbers. Attribute totalUnits and label count should be the same\n\n<b>Note:</b> To show the labels <code>stepLabels</code> must be activated."
@@ -28419,7 +28429,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -28428,7 +28438,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -28529,7 +28539,7 @@
           "parameters": [
             {
               "name": "sLabels",
-              "type": "string[]",
+              "type": "[ 'Array' ].<string>",
               "optional": false,
               "description": "New value for property <code>labels</code>"
             }
@@ -28908,7 +28918,7 @@
         {
           "name": "getFirstPaneContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getFirstPaneContent firstPaneContent}.\n\nControls inside the first pane. These are the left ones in case of defining a vertical splitter, and the top ones in case of using the horizontal splitter."
         },
         {
@@ -28951,7 +28961,7 @@
         {
           "name": "getSecondPaneContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getSecondPaneContent secondPaneContent}.\n\nControls inside the second pane. These are the right ones in case of defining a vertical splitter, and the bottom ones in case of using the horizontal splitter."
         },
         {
@@ -29083,7 +29093,7 @@
           "name": "removeAllFirstPaneContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getFirstPaneContent firstPaneContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -29092,7 +29102,7 @@
           "name": "removeAllSecondPaneContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSecondPaneContent secondPaneContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -30024,7 +30034,7 @@
         {
           "name": "getTabs",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.Tab[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.Tab>" },
           "description": "Gets content of aggregation {@link #getTabs tabs}.\n\nThe tabs contained in the TabStrip."
         },
         {
@@ -30085,7 +30095,7 @@
           "name": "removeAllTabs",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.Tab[]",
+            "type": "[ 'Array' ].<sap.ui.commons.Tab>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTabs tabs}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -31106,13 +31116,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -31347,7 +31357,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -31356,7 +31366,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -31919,13 +31929,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -32023,7 +32033,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -32032,7 +32042,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -32825,7 +32835,7 @@
         {
           "name": "getItems",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.ToolbarItem[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.ToolbarItem>" },
           "description": "Gets content of aggregation {@link #getItems items}.\n\nAggregating the tool bar items."
         },
         {
@@ -32841,7 +32851,7 @@
         {
           "name": "getRightItems",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.ToolbarItem[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.ToolbarItem>" },
           "description": "Gets content of aggregation {@link #getRightItems rightItems}.\n\nAggregating the right side tool bar items."
         },
         {
@@ -32946,7 +32956,7 @@
           "name": "removeAllItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.ToolbarItem[]",
+            "type": "[ 'Array' ].<sap.ui.commons.ToolbarItem>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -32955,7 +32965,7 @@
           "name": "removeAllRightItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.ToolbarItem[]",
+            "type": "[ 'Array' ].<sap.ui.commons.ToolbarItem>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getRightItems rightItems}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -33518,13 +33528,13 @@
                   "parameterProperties": {
                     "nodes": {
                       "name": "nodes",
-                      "type": "sap.ui.commons.TreeNode[]",
+                      "type": "[ 'Array' ].<sap.ui.commons.TreeNode>",
                       "optional": false,
                       "description": "The nodes which has been selected."
                     },
                     "nodeContexts": {
                       "name": "nodeContexts",
-                      "type": "object[]",
+                      "type": "[ 'Array' ].<object>",
                       "optional": false,
                       "description": "The binding context of the selected nodes."
                     }
@@ -33772,13 +33782,13 @@
               "parameterProperties": {
                 "nodes": {
                   "name": "nodes",
-                  "type": "sap.ui.commons.TreeNode[]",
+                  "type": "[ 'Array' ].<sap.ui.commons.TreeNode>",
                   "optional": true,
                   "description": "The nodes which has been selected."
                 },
                 "nodeContexts": {
                   "name": "nodeContexts",
-                  "type": "object[]",
+                  "type": "[ 'Array' ].<object>",
                   "optional": true,
                   "description": "The binding context of the selected nodes."
                 }
@@ -33837,7 +33847,7 @@
         {
           "name": "getNodes",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.TreeNode[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.TreeNode>" },
           "description": "Gets content of aggregation {@link #getNodes nodes}.\n\nFirst level nodes"
         },
         {
@@ -33938,7 +33948,7 @@
           "name": "removeAllNodes",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.TreeNode[]",
+            "type": "[ 'Array' ].<sap.ui.commons.TreeNode>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getNodes nodes}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -34625,13 +34635,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -34683,7 +34693,7 @@
         {
           "name": "getNodes",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.commons.TreeNode[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.commons.TreeNode>" },
           "description": "Gets content of aggregation {@link #getNodes nodes}.\n\nSubnodes for the current node"
         },
         {
@@ -34748,7 +34758,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -34757,7 +34767,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -34766,7 +34776,7 @@
           "name": "removeAllNodes",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.commons.TreeNode[]",
+            "type": "[ 'Array' ].<sap.ui.commons.TreeNode>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getNodes nodes}.\n\nAdditionally, it unregisters them from the hosting UIArea."

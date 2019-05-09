@@ -4,7 +4,7 @@
   "version": "1.64.1",
   "license": "Apache-2.0",
   "types": "types/sap.ui.core.d.ts",
-  "openUI5Version": "1.64.1",
+  "openUI5Version": "1.65.1",
   "devDependencies": {
     "@ui5/cli": "1.4.2",
     "@ui5/dts-generator": "^1.64.0",

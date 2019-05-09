@@ -35,8 +35,8 @@ execute(
 // and: https://github.com/SAP/ui5-tooling#whats-the-thing-with-yarn
 execute("yarn", { cwd: resolve(tempDir, "openui5") });
 
-const ui5CLIVersion = pkgJson.devDependencies["@ui5/cli"];
-execute(`npx @ui5/cli@${ui5CLIVersion} build jsdoc --all`, {
+const ui5Bin = resolve(__dirname, "..", "node_modules", ".bin", "ui5");
+execute(`${ui5Bin} build jsdoc --all`, {
   cwd: resolve(tempDir, "openui5", "src", "testsuite")
 });
 

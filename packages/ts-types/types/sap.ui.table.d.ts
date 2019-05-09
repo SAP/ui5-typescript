@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.64.1
+// For Library Version: 1.65.1
 
 declare namespace sap {
   namespace ui {
@@ -133,7 +133,7 @@ declare namespace sap {
               /**
                * Array of indices whose selection has been changed (either selected or deselected).
                */
-              indices?: number[];
+              indices?: any;
               /**
                * Indicates whether the selection limit has been reached.
                */
@@ -479,7 +479,7 @@ declare namespace sap {
 
         /**
          * Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the
-         * column header - it does not trigger the sort function. The column has to be sorted by calling `Column.sort()`
+         * column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.
          */
         sorted?: boolean;
 
@@ -501,8 +501,8 @@ declare namespace sap {
 
         /**
          * Indicates if the column is filtered. This property only controls if a filter indicator is displayed in
-         * the column header - it does not trigger the filter function. The column has to be filtered by calling
-         * `Column.sort()`
+         * the column header - it does not trigger the filter function. The column can be filtered using {@link
+         * sap.ui.table.Table#filter}.
          */
         filtered?: boolean;
 
@@ -661,7 +661,9 @@ declare namespace sap {
 
       interface RowOpts extends sap.ui.core.ElementOpts {
         /**
-         * The controls for the cells.
+         * The actual cells are a table-internal construct. The controls in this aggregation are the content of
+         * the cells. This aggregation is managed by the table and must not be manipulated. Only read access is
+         * allowed.
          */
         cells?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
@@ -787,7 +789,7 @@ declare namespace sap {
          * how the selection can be extended. It may also influence the visual appearance. When the selection mode
          * is changed, the current selection is removed. **Note:** Since the group header visualization relies on
          * the row selectors, the row selectors are always shown if the grouping functionality (depends on table
-         * type) is enabled, even if `sap.ui.table.SelectionMode.None` is set. **Note:** When the MultiSelectionPlugin
+         * type) is enabled, even if `sap.ui.table.SelectionMode.None` is set. **Note:** When a selection plugin
          * is applied to the table, the selection mode is controlled by the plugin and cannot be changed manually.
          */
         selectionMode?: sap.ui.table.SelectionMode;
@@ -847,6 +849,8 @@ declare namespace sap {
          * 			with OData models.
          * 	 - The table can only be grouped by **one** column at a time. Grouping by another column will remove
          * 			the current grouping.
+         * 	 - For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must
+         * 			be set for the grouped column.
          * 	 - If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering
          * 			rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).
          *
@@ -986,6 +990,8 @@ declare namespace sap {
         /**
          * fired when the row selection of the table has been changed (the event parameters can be used to determine
          * selection changes - to find out the selected rows you should better use the table selection API)
+         *
+         * **Note:** When a selection plugin is applied to the table, this event won't be fired.
          */
         rowSelectionChange?: Function;
 
@@ -1171,7 +1177,8 @@ declare namespace sap {
          * @EXPERIMENTAL (since 1.28)
          *
          * The column by which the table is grouped. Grouping will only be performed if `enableGrouping` is set
-         * to `true`.
+         * to `true`. Setting `groupBy` in the view does not work and throws an error. It can only be set if the
+         * column by which the table is grouped is already part of the `columns` aggregation of the table.
          */
         groupBy?: sap.ui.table.Column | string;
 
@@ -1665,7 +1672,7 @@ declare namespace sap {
          * the start/end of a selection range, when using Shift-Click to select multiple entries at once.
          */
         // @ts-ignore
-        getSelectedIndex(): number[];
+        getSelectedIndex(): any;
         /**
          * Returns an array containing the row indices of all selected tree nodes (in ascending order).
          *
@@ -1674,7 +1681,7 @@ declare namespace sap {
          * yet loaded" to the client), will not be returned.
          */
         // @ts-ignore
-        getSelectedIndices(): number[];
+        getSelectedIndices(): any;
         /**
          * @deprecated (since 1.44.0) - please use the corresponding binding parameter `sumOnTop` instead.
          *
@@ -2125,8 +2132,8 @@ declare namespace sap {
          * Gets current value of property {@link #getFiltered filtered}.
          *
          * Indicates if the column is filtered. This property only controls if a filter indicator is displayed in
-         * the column header - it does not trigger the filter function. The column has to be filtered by calling
-         * `Column.sort()`
+         * the column header - it does not trigger the filter function. The column can be filtered using {@link
+         * sap.ui.table.Table#filter}.
          *
          * Default value is `false`.
          */
@@ -2270,7 +2277,7 @@ declare namespace sap {
          * Labels of the column which are displayed in the column header. Define a control for each header row in
          * the table. Use this aggregation if you want to use multiple headers per column.
          */
-        getMultiLabels(): sap.ui.core.Control[];
+        getMultiLabels(): any;
         /**
          * @SINCE 1.11.1
          *
@@ -2313,7 +2320,7 @@ declare namespace sap {
          * Gets current value of property {@link #getSorted sorted}.
          *
          * Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the
-         * column header - it does not trigger the sort function. The column has to be sorted by calling `Column.sort()`
+         * column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.
          *
          * Default value is `false`.
          */
@@ -2353,12 +2360,11 @@ declare namespace sap {
          */
         getTemplate(): sap.ui.core.Control | string;
         /**
-         * Returns a column template clone. It either finds an unused clone or clones a new one from the column
-         * template.
+         * Returns a template clone. It either finds an unused clone or clones a new one from the template.
          */
         getTemplateClone(
           /**
-           * Index of the column in the column aggregation of the table
+           * Index of the column in the columns aggregation of the table
            */
           iIndex: number
         ): sap.ui.core.Control | null;
@@ -2416,7 +2422,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllMultiLabels(): sap.ui.core.Control[];
+        removeAllMultiLabels(): any;
         /**
          * @SINCE 1.13.1
          *
@@ -2467,8 +2473,8 @@ declare namespace sap {
          * Sets a new value for property {@link #getFiltered filtered}.
          *
          * Indicates if the column is filtered. This property only controls if a filter indicator is displayed in
-         * the column header - it does not trigger the filter function. The column has to be filtered by calling
-         * `Column.sort()`
+         * the column header - it does not trigger the filter function. The column can be filtered using {@link
+         * sap.ui.table.Table#filter}.
          *
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
          *
@@ -2740,7 +2746,7 @@ declare namespace sap {
          * Sets a new value for property {@link #getSorted sorted}.
          *
          * Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the
-         * column header - it does not trigger the sort function. The column has to be sorted by calling `Column.sort()`
+         * column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.
          *
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
          *
@@ -2978,9 +2984,11 @@ declare namespace sap {
         /**
          * Gets content of aggregation {@link #getCells cells}.
          *
-         * The controls for the cells.
+         * The actual cells are a table-internal construct. The controls in this aggregation are the content of
+         * the cells. This aggregation is managed by the table and must not be manipulated. Only read access is
+         * allowed.
          */
-        getCells(): sap.ui.core.Control[];
+        getCells(): any;
         /**
          * Returns the index of the row in the table or -1 if not added to a table. This function considers the
          * scroll position of the table and also takes fixed rows and fixed bottom rows into account.
@@ -3028,7 +3036,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllCells(): sap.ui.core.Control[];
+        removeAllCells(): any;
         /**
          * Removes a cell from the aggregation {@link #getCells cells}.
          */
@@ -3104,7 +3112,7 @@ declare namespace sap {
          *
          * The action items which should be displayed.
          */
-        getItems(): sap.ui.table.RowActionItem[];
+        getItems(): any;
         /**
          * Returns a metadata object for class sap.ui.table.RowAction.
          */
@@ -3149,7 +3157,7 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllItems(): sap.ui.table.RowActionItem[];
+        removeAllItems(): any;
         /**
          * Removes a item from the aggregation {@link #getItems items}.
          */
@@ -3964,6 +3972,8 @@ declare namespace sap {
          *
          * fired when the row selection of the table has been changed (the event parameters can be used to determine
          * selection changes - to find out the selected rows you should better use the table selection API)
+         *
+         * **Note:** When a selection plugin is applied to the table, this event won't be fired.
          */
         attachRowSelectionChange(
           /**
@@ -4700,7 +4710,7 @@ declare namespace sap {
              * 2D array of strings with data from the clipboard. The first dimension represents the rows, and the second
              * dimension represents the cells of the tabular data.
              */
-            data?: string[][];
+            data?: any;
           }
         ): boolean;
         /**
@@ -4722,7 +4732,7 @@ declare namespace sap {
             /**
              * array of row indices which selection has been changed (either selected or deselected)
              */
-            rowIndices?: number[];
+            rowIndices?: any;
             /**
              * indicator if "select all" function is used to select rows
              */
@@ -4773,7 +4783,7 @@ declare namespace sap {
          * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
          * ariaLabelledBy}.
          */
-        getAriaLabelledBy(): sap.ui.core.ID[];
+        getAriaLabelledBy(): any;
         /**
          * Returns the control inside the cell with the given row index (in the `rows` aggregation) and column index
          * (in the `columns` aggregation or in the list of visible columns only, depending on parameter `bVisibleColumnIndex`).
@@ -4818,7 +4828,7 @@ declare namespace sap {
          *
          * Columns of the Table
          */
-        getColumns(): sap.ui.table.Column[];
+        getColumns(): any;
         /**
          * In contrast to the function `getFixedColumnCount` which returns the value of the property `fixedColumnCount`,
          * this function returns the actual fixed column count computed based on the table width.
@@ -4952,6 +4962,8 @@ declare namespace sap {
          * 			with OData models.
          * 	 - The table can only be grouped by **one** column at a time. Grouping by another column will remove
          * 			the current grouping.
+         * 	 - For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must
+         * 			be set for the grouped column.
          * 	 - If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering
          * 			rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).
          *
@@ -4978,7 +4990,7 @@ declare namespace sap {
          * Extension section of the Table. If not set, no extension area will be rendered. Note: In case a `sap.m.Toolbar`
          * is used as header the CSS class sapMTBHeader-CTX should be applied on this toolbar.
          */
-        getExtension(): sap.ui.core.Control[];
+        getExtension(): any;
         /**
          * Gets current value of property {@link #getFirstVisibleRow firstVisibleRow}.
          *
@@ -5077,7 +5089,7 @@ declare namespace sap {
          * The following restrictions apply:
          * 	 - Only one MultiSelectionPlugin can be applied. No other plugins can be applied.
          */
-        getPlugins(): sap.ui.table.plugins.SelectionPlugin[];
+        getPlugins(): any;
         /**
          * @SINCE 1.45.0
          *
@@ -5120,7 +5132,7 @@ declare namespace sap {
          *
          * Rows of the Table
          */
-        getRows(): sap.ui.table.Row[];
+        getRows(): any;
         /**
          * Gets content of aggregation {@link #getRowSettingsTemplate rowSettingsTemplate}.
          *
@@ -5143,7 +5155,7 @@ declare namespace sap {
         /**
          * Zero-based indices of selected items, wrapped in an array. An empty array means "no selection".
          */
-        getSelectedIndices(): number[];
+        getSelectedIndices(): any;
         /**
          * Gets current value of property {@link #getSelectionBehavior selectionBehavior}.
          *
@@ -5162,7 +5174,7 @@ declare namespace sap {
          * how the selection can be extended. It may also influence the visual appearance. When the selection mode
          * is changed, the current selection is removed. **Note:** Since the group header visualization relies on
          * the row selectors, the row selectors are always shown if the grouping functionality (depends on table
-         * type) is enabled, even if `sap.ui.table.SelectionMode.None` is set. **Note:** When the MultiSelectionPlugin
+         * type) is enabled, even if `sap.ui.table.SelectionMode.None` is set. **Note:** When a selection plugin
          * is applied to the table, the selection mode is controlled by the plugin and cannot be changed manually.
          *
          * Default value is `MultiToggle`.
@@ -5204,7 +5216,7 @@ declare namespace sap {
          * See:
          * 	sap.ui.table.Table#sort
          */
-        getSortedColumns(): sap.ui.table.Column[];
+        getSortedColumns(): any;
         /**
          * Gets current value of property {@link #getThreshold threshold}.
          *
@@ -5390,19 +5402,19 @@ declare namespace sap {
         /**
          * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
-        removeAllAriaLabelledBy(): sap.ui.core.ID[];
+        removeAllAriaLabelledBy(): any;
         /**
          * Removes all the controls from the aggregation {@link #getColumns columns}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllColumns(): sap.ui.table.Column[];
+        removeAllColumns(): any;
         /**
          * Removes all the controls from the aggregation {@link #getExtension extension}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllExtension(): sap.ui.core.Control[];
+        removeAllExtension(): any;
         /**
          * @SINCE 1.64
          * @EXPERIMENTAL (since 1.64)
@@ -5411,13 +5423,13 @@ declare namespace sap {
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllPlugins(): sap.ui.table.plugins.SelectionPlugin[];
+        removeAllPlugins(): any;
         /**
          * Removes all the controls from the aggregation {@link #getRows rows}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
          */
-        removeAllRows(): sap.ui.table.Row[];
+        removeAllRows(): any;
         /**
          * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
          */
@@ -5665,6 +5677,8 @@ declare namespace sap {
          * 			with OData models.
          * 	 - The table can only be grouped by **one** column at a time. Grouping by another column will remove
          * 			the current grouping.
+         * 	 - For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must
+         * 			be set for the grouped column.
          * 	 - If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering
          * 			rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).
          *
@@ -6420,6 +6434,8 @@ declare namespace sap {
          *
          * fired when the row selection of the table has been changed (the event parameters can be used to determine
          * selection changes - to find out the selected rows you should better use the table selection API)
+         *
+         * **Note:** When a selection plugin is applied to the table, this event won't be fired.
          */
         attachRowSelectionChange(
           /**
@@ -6853,7 +6869,7 @@ declare namespace sap {
          * yet loaded" to the client), will not be returned.
          */
         // @ts-ignore
-        getSelectedIndices(): number[];
+        getSelectedIndices(): any;
         /**
          * Gets current value of property {@link #getUseGroupMode useGroupMode}.
          *
@@ -7268,6 +7284,8 @@ declare namespace sap {
     "sap/ui/table/Column": undefined;
 
     "sap/ui/table/ColumnMenu": undefined;
+
+    "sap/ui/table/CreationRow": undefined;
 
     "sap/ui/table/Row": undefined;
 

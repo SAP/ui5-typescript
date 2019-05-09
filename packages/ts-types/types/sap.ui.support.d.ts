@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.64.1
+// For Library Version: 1.65.1
 
 declare namespace sap {
   namespace ui {
@@ -91,7 +91,7 @@ declare namespace sap {
             /**
              * List of IDs of the components to be analyzed. Use only when the scope type is `components`.
              */
-            components?: string[];
+            components?: any;
           },
           /**
            * This optional parameter allows for selection of subset of rules for the analysis. You can pass:
@@ -154,7 +154,7 @@ declare namespace sap {
           /**
            * The current loaded libraries and their rules
            */
-          aLibraries: Object[]
+          aLibraries: any
         ): void;
         /**
          * Remove rule from RuleSet.
@@ -172,7 +172,7 @@ declare namespace sap {
           /**
            * The data for the libraries and their rules
            */
-          aLibraries: Object[]
+          aLibraries: any
         ): void;
         /**
          * Updates rules from the RuleSet.

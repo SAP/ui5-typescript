@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.64.1",
+  "version": "1.65.1",
   "symbols": [
     {
       "kind": "namespace",
@@ -14,6 +14,35 @@
       "description": "SAPUI5 library with controls specialized for SAP Fiori apps."
     },
     {
+      "kind": "enum",
+      "name": "sap.ui.integration.CardDataMode",
+      "basename": "CardDataMode",
+      "resource": "sap/ui/integration/library.js",
+      "module": "sap/ui/integration/library",
+      "export": "CardDataMode",
+      "static": true,
+      "visibility": "public",
+      "since": "1.65",
+      "description": "Possible data modes for <code>{@link sap.ui.integration.widgets.Card}</code>.",
+      "experimental": { "since": "1.65" },
+      "properties": [
+        {
+          "name": "Active",
+          "visibility": "public",
+          "static": true,
+          "type": "string",
+          "description": "When in this mode, the card can make requests."
+        },
+        {
+          "name": "Inactive",
+          "visibility": "public",
+          "static": true,
+          "type": "string",
+          "description": "When in this mode, the card cannot make requests."
+        }
+      ]
+    },
+    {
       "kind": "class",
       "name": "sap.ui.integration.widgets.Card",
       "basename": "Card",
@@ -25,7 +54,7 @@
       "since": "1.62",
       "extends": "sap.ui.core.Control",
       "implements": ["sap.f.ICard"],
-      "description": "A control that represents a container with a header and content.\n\n<h3>Overview</h3> Cards are small user interface elements which provide the most important information from an application related to a specific role or task in a compact manner allowing for actions to be executed. Cards can be described as small representations of an application which can be integrated in different systems.\n\nThe integration card is defined in a declarative way by using a manifest.json allowing it to: <ul> <li>Be easily integrated in an applications</li> <li>Be easily reused across different applications.</li> <li>Be easily understandable by other technologies.</li> <li>Be self-contained. No need for external configuration.</li> <li>Be easily reconfigured in different application layers (including backend).</li> <li>Separate the roles of the card developer and the application developer.</li> </ul>\n\nCard developer role - Describe the card in a manifest.json defining: <ul> <li>Header</li> <li>Content</li> <li>Data source</li> <li>Possible actions</li> </ul>\n\nApplication developer role - Integrate the card into an application defining: <ul> <li>Dimensions of the card inside a layout of choice, using the width and height properties.</li> <li>Behavior for the described actions in the manifest.json, using the action event.</li> </ul>\n\n<h3>Usage</h3>\n\nThe \"sap.app\" type property of the manifest have to be set to \"card\". The namespace used to define a card is \"sap.card\". Every card have a type. Which can be one of: List, Analytical, Timeline, Object.\n\nExample manifest.json:\n\n<pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\",\n    ...\n  },\n  \"sap.ui5\": {\n    ...\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": { ... },\n    \"content\": { ... }\n  }\n}\n</code>\n</pre>\n\nExamples of header sections:\n\nThe default header type can contain title, subtitle, icon and status. <pre>\n <code>\n{\n  ...\n  \"sap.card\": {\n    \"header\": {\n      \"title\": \"An example title\",\n      \"subTitle\": \"Some subtitle\",\n      \"icon\": {\n        \"src\": \"sap-icon://business-objects-experience\"\n      },\n      \"status\": {\n        \"text\": \"5 of 20\"\n      }\n    },\n    ...\n  }\n}\n </code>\n </pre>\n\nThe numeric header type can contain title, subtitle, unitOfMeasurement, details, main indicator and side indicators. <pre>\n <code>\n{\n  ...\n  \"sap.card\": {\n    \"header\": {\n      \"type\": \"Numeric\",\n      \"title\": \"Project Cloud Transformation\",\n      \"subTitle\": \"Revenue\",\n      \"unitOfMeasurement\": \"EUR\",\n      \"mainIndicator\": {\n        \"number\": \"44\",\n        \"unit\": \"%\",\n        \"trend\": \"Down\",\n        \"state\": \"Critical\"\n      },\n      \"details\": \"Some details\",\n      \"sideIndicators\": [\n        {\n          \"title\": \"Target\",\n          \"number\": \"17\",\n          \"unit\": \"%\"\n        },\n        {\n          \"title\": \"Deviation\",\n          \"number\": \"5\",\n          \"unit\": \"%\"\n        }\n      ]\n    },\n    ...\n  }\n}\n </code>\n </pre>\n\nThe content of the card is created based on the card type. Possible card types: <ul> <li>List</li> <li>Object</li> <li>Timeline</li> <li>Analytical</li> </ul>\n\nList card contains a set of items. \"item\" property defines the template for all the items of the list. \"data\" property provides the data. Example: <pre>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"data\": {\n        \"json\": [{\n            \"Name\": \"Comfort Easy\",\n            \"Description\": \"32 GB Digital Assistant with high-resolution color screen\",\n            \"Highlight\": \"Error\"\n          },\n          {\n            \"Name\": \"ITelO Vault\",\n            \"Description\": \"Digital Organizer with State-of-the-Art Storage Encryption\",\n            \"Highlight\": \"Warning\"\n          },\n          {\n            \"Name\": \"Notebook Professional 15\",\n            \"Description\": \"Notebook Professional 15 description\",\n            \"Highlight\": \"Success\"\n          }\n        ]\n      },\n      \"item\": {\n        \"title\": {\n          \"label\": \"{{title_label}}\",\n          \"value\": \"{Name}\"\n        },\n        \"description\": {\n          \"label\": \"{{description_label}}\",\n          \"value\": \"{Description}\"\n        },\n        \"highlight\": \"{Highlight}\"\n      }\n    }\n  }\n}\n</pre>\n\nAnalytical card contains a chart visualization configuration. Supported chart types are Line, StackedBar, StackedColumn, Donut. Example: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"Analytical\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"chartType\": \"Line\",\n      \"legend\": {\n        \"visible\": true,\n        \"position\": \"Bottom\",\n        \"alignment\": \"Left\"\n      },\n      \"plotArea\": {\n        \"dataLabel\": {\n          \"visible\": true\n        },\n        \"categoryAxisText\": {\n          \"visible\": false\n        },\n        \"valueAxisText\": {\n          \"visible\": false\n        }\n      },\n      \"title\": {\n        \"text\": \"Line chart\",\n        \"visible\": true,\n        \"alignment\": \"Left\"\n      },\n      \"measureAxis\": \"valueAxis\",\n      \"dimensionAxis\": \"categoryAxis\",\n      \"data\": {\n        \"json\": {\n          \"list\": [\n            {\n              \"Week\": \"CW14\",\n              \"Revenue\": 431000.22,\n              \"Cost\": 230000.00,\n              \"Cost1\": 24800.63,\n              \"Cost2\": 205199.37,\n              \"Cost3\": 199999.37,\n              \"Target\": 500000.00,\n              \"Budget\": 210000.00\n            },\n            {\n              \"Week\": \"CW15\",\n              \"Revenue\": 494000.30,\n              \"Cost\": 238000.00,\n              \"Cost1\": 99200.39,\n              \"Cost2\": 138799.61,\n              \"Cost3\": 200199.37,\n              \"Target\": 500000.00,\n              \"Budget\": 224000.00\n            }\n          ]\n        },\n        \"path\": \"/list\"\n      },\n      \"dimensions\": [\n        {\n          \"label\": \"Weeks\",\n          \"value\": \"{Week}\"\n        }\n      ],\n      \"measures\": [\n        {\n          \"label\": \"Revenue\",\n          \"value\": \"{Revenue}\"\n        },\n        {\n          \"label\": \"Cost\",\n          \"value\": \"{Cost}\"\n        }\n      ]\n    }\n  }\n}\n</code>\n</pre>\n\nObject card contains information about an object. It is structured in groups. Every group can have a title and items. The items contain display name (label) and value. Example: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n\t    \"type\": \"Object\",\n     \"header\": {\n       ...\n     },\n     \"content\": {\n       \"groups\": [\n         {\n           \"title\": \"Group title\",\n           \"items\": [\n             {\n               \"label\": \"Name\",\n               \"value\": \"Ivan\"\n             },\n             {\n               \"label\": \"Surname\",\n               \"value\": \"Petrov\"\n             },\n             {\n               \"label\": \"Phone\",\n               \"value\": \"+1 1234 1234555\"\n             }\n           ]\n         },\n         {\n           \"title\": \"Organization\",\n           \"items\": [\n             {\n               \"label\": \"Company Name\",\n               \"value\": \"Sap\",\n               \"icon\": {\n                 \"src\": \"../images/Woman_avatar_02.png\"\n               }\n             }\n           ]\n         }\n       ]\n     }\n  }\n}\n</code>\n</pre>\n\nTimeline card contains a set of timeline items. \"item\" property defines the template for all the items of the timeline. Example: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"Timeline\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"data\": {\n        \"json\": [\n          {\n            \"Title\": \"Weekly sync: Marketplace / Design Stream\",\n            \"Description\": \"MRR WDF18 C3.2(GLASSBOX)\",\n            \"Icon\": \"sap-icon://appointment-2\",\n            \"Time\": \"10:00 - 10:30\"\n          },\n          {\n            \"Title\": \"Video Conference for FLP@SF, S4,Hybris\",\n            \"Icon\": \"sap-icon://my-view\",\n            \"Time\": \"14:00 - 15:30\"\n          },\n          {\n            \"Title\": \"Call 'Project Nimbus'\",\n            \"Icon\": \"sap-icon://outgoing-call\",\n            \"Time\": \"16:00 - 16:30\"\n          }\n        ]\n      },\n      \"item\": {\n        \"dateTime\": {\n          \"value\": \"{Time}\"\n        },\n        \"description\" : {\n          \"value\": \"{Description}\"\n        },\n        \"title\": {\n          \"value\": \"{Title}\"\n        },\n        \"icon\": {\n          \"src\": \"{Icon}\"\n        }\n      }\n    }\n  }\n}\n</code>\n</pre>\n\nItem based cards (Timeline and List) have an additional content property \"maxItems\" which defines the maximum number of items the card can have.\n\n<h3>Data handling</h3> In order to add data to the card you can add a data section to the card, header or content. The card will automatically create an unnamed model which then can be used to resolve binding syntaxes inside the card manifest.\n\nStatic data: <pre>\n<code>\n{\n  ...\n  \"content\": {\n    \"data\": {\n      \"json\": {\n        \"items\": [\n          {\n            \"Title\": \"Weekly sync: Marketplace / Design Stream\",\n            \"Description\": \"MRR WDF18 C3.2(GLASSBOX)\",\n            \"Icon\": \"sap-icon://appointment-2\",\n            \"Time\": \"10:00 - 10:30\"\n          },\n          {\n            \"Title\": \"Video Conference for FLP@SF, S4,Hybris\",\n            \"Icon\": \"sap-icon://my-view\",\n            \"Time\": \"14:00 - 15:30\"\n          }\n        ]\n      },\n      \"path\": \"/items\"\n    },\n    ...\n  }\n}\n</code>\n</pre>\n\nRequesting data: <pre>\n<code>\n{\n  ...\n  \"content\": {\n    \"data\": {\n      \"request\": {\n        \"url\": \"/path/to/data\"\n      },\n      \"path\": \"/items\"\n    },\n    ...\n  }\n}\n</code>\n</pre>\n\n<h3>Actions</h3> Actions adds behavior to the card. To add a navigation action to the header and to the items you can configure it inside the manifest. Actions have: <ul> <li>Type</li> <li>Parameters</li> <li>Enabled flag (true by default)</li> </ul>\n\nIn the example below navigation action is added both to the header and the list items: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": {\n      \"title\": \"Request list content Card\",\n      \"subTitle\": \"Card Subtitle\",\n      \"icon\": {\n        \"src\": \"sap-icon://accept\"\n      },\n      \"status\": \"100 of 200\",\n      \"actions\": [\n        {\n          \"type\": \"Navigation\",\n          \"parameters\": {\n            \"url\": \"/some/relative/path\"\n          }\n        }\n      ]\n    },\n    \"content\": {\n      \"data\": {\n        \"request\": {\n          \"url\": \"./cardcontent/someitems_services2.json\"\n        },\n        \"path\": \"/items\"\n      },\n      \"item\": {\n        \"icon\": {\n          \"src\": \"{icon}\"\n        },\n        \"title\": {\n          \"value\": \"{Name}\"\n        },\n        \"description\": {\n          \"value\": \"{Description}\"\n        },\n        \"actions\": [\n          {\n            \"type\": \"Navigation\",\n            \"enabled\": \"{= ${url}}\",\n            \"parameters\": {\n              \"url\": \"{url}\"\n            }\n          }\n        ]\n      }\n    }\n  }\n}\n</code>\n</pre>\n\n<i>When to use</i> <ul> <li>When the card have to be reused across applications.</li> <li>When easy integration and configuration is needed.</li> </ul>\n\n<i>When not to use</i> <ul> <li>When more header and content flexibility is needed.</li> <li>When you have to achieve simple card visualization. For such cases, use: {@link sap.f.Card Card}.</li> <li>When an application model have to be used. For such cases, use: {@link sap.f.Card Card}.</li> <li>When complex behavior is needed. For such cases, use: {@link sap.f.Card Card}.</li> </ul>",
+      "description": "A control that represents a container with a header and content.\n\n<h3>Overview</h3> Cards are small user interface elements which provide the most important information from an app, related to a specific role or task. The information is represented in a compact manner, allowing for actions to be executed. Cards can be described as small representations of an app which can be integrated in different systems.\n\nThe integration card is defined in a declarative way, using a manifest.json to be: <ul> <li>Easily integrated into apps</li> <li>Easily reused across apps</li> <li>Understandable by other technologies</li> <li>Self-contained (without external configuration)</li> <li>Easily reconfigured in app layers (including backend)</li> <li>Easy to separate the roles of the card and the app developers</li> </ul>\n\nThe role of the card developer is to describe the card in a manifest.json file and define: <ul> <li>Header</li> <li>Content</li> <li>Data source</li> <li>Possible actions</li> </ul>\n\nThe role of the app developer is to integrate the card into the app and define: <ul> <li>The dimensions of the card inside a layout of choice, using the <code>width</code> and <code>height</code> properties</li> <li>The behavior for the actions described in the manifest.json file, using the action event</li> </ul>\n\n<h3>Usage</h3>\n\nThe <code>\"sap.app\"</code> <code>type</code> property in the manifest file must be set to <code>\"card\"</code>. The namespace used to define a card is <code>\"sap.card\"</code>. Every card has a type which can be one of the following: List, Analytical, Timeline, Object, Table, Component (experimental)\n\nAn example of a manifest.json:\n\n<pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\",\n    ...\n  },\n  \"sap.ui5\": {\n    ...\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": { ... },\n    \"content\": { ... }\n  }\n}\n</code>\n</pre>\n\nExamples of header sections:\n\nThe default header type can contain title, subtitle, icon, and status. <pre>\n <code>\n{\n  ...\n  \"sap.card\": {\n    \"header\": {\n      \"title\": \"An example title\",\n      \"subTitle\": \"Some subtitle\",\n      \"icon\": {\n        \"src\": \"sap-icon://business-objects-experience\"\n      },\n      \"status\": {\n        \"text\": \"5 of 20\"\n      }\n    },\n    ...\n  }\n}\n </code>\n </pre>\n\nThe numeric header type can contain title, subtitle, unitOfMeasurement, details, main indicator, and side indicators. <pre>\n <code>\n{\n  ...\n  \"sap.card\": {\n    \"header\": {\n      \"type\": \"Numeric\",\n      \"title\": \"Project Cloud Transformation\",\n      \"subTitle\": \"Revenue\",\n      \"unitOfMeasurement\": \"EUR\",\n      \"mainIndicator\": {\n        \"number\": \"44\",\n        \"unit\": \"%\",\n        \"trend\": \"Down\",\n        \"state\": \"Critical\"\n      },\n      \"details\": \"Some details\",\n      \"sideIndicators\": [\n        {\n          \"title\": \"Target\",\n          \"number\": \"17\",\n          \"unit\": \"%\"\n        },\n        {\n          \"title\": \"Deviation\",\n          \"number\": \"5\",\n          \"unit\": \"%\"\n        }\n      ]\n    },\n    ...\n  }\n}\n </code>\n </pre>\n\nThe content of the card is created based on the card type. Possible card types: <ul> <li>List</li> <li>Object</li> <li>Timeline</li> <li>Analytical</li> <li>Table</li> <li>Component (experimental)</li> </ul>\n\nList card contains a set of items. The <code>\"item\"</code> property defines the template for all the items of the list. The <code>\"data\"</code> property provides the displayed information.\n\nExample: <pre>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"data\": {\n        \"json\": [{\n            \"Name\": \"Comfort Easy\",\n            \"Description\": \"A 32 GB Digital Assistant with a high-resolution color screen\",\n            \"Highlight\": \"Error\"\n          },\n          {\n            \"Name\": \"ITelO Vault\",\n            \"Description\": \"A Digital Organizer with state-of-the-art Storage Encryption\",\n            \"Highlight\": \"Warning\"\n          },\n          {\n            \"Name\": \"Notebook Professional 15\",\n            \"Description\": \"Notebook Professional 15 description\",\n            \"Highlight\": \"Success\"\n          }\n        ]\n      },\n      \"item\": {\n        \"title\": {\n          \"label\": \"{{title_label}}\",\n          \"value\": \"{Name}\"\n        },\n        \"description\": {\n          \"label\": \"{{description_label}}\",\n          \"value\": \"{Description}\"\n        },\n        \"highlight\": \"{Highlight}\"\n      }\n    }\n  }\n}\n</pre>\n\nAnalytical card contains a chart visualization configuration. Supported chart types are Line, StackedBar, StackedColumn, Donut.\n\nExample: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"Analytical\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"chartType\": \"Line\",\n      \"legend\": {\n        \"visible\": true,\n        \"position\": \"Bottom\",\n        \"alignment\": \"Left\"\n      },\n      \"plotArea\": {\n        \"dataLabel\": {\n          \"visible\": true\n        },\n        \"categoryAxisText\": {\n          \"visible\": false\n        },\n        \"valueAxisText\": {\n          \"visible\": false\n        }\n      },\n      \"title\": {\n        \"text\": \"Line chart\",\n        \"visible\": true,\n        \"alignment\": \"Left\"\n      },\n      \"measureAxis\": \"valueAxis\",\n      \"dimensionAxis\": \"categoryAxis\",\n      \"data\": {\n        \"json\": {\n          \"list\": [\n            {\n              \"Week\": \"CW14\",\n              \"Revenue\": 431000.22,\n              \"Cost\": 230000.00,\n              \"Cost1\": 24800.63,\n              \"Cost2\": 205199.37,\n              \"Cost3\": 199999.37,\n              \"Target\": 500000.00,\n              \"Budget\": 210000.00\n            },\n            {\n              \"Week\": \"CW15\",\n              \"Revenue\": 494000.30,\n              \"Cost\": 238000.00,\n              \"Cost1\": 99200.39,\n              \"Cost2\": 138799.61,\n              \"Cost3\": 200199.37,\n              \"Target\": 500000.00,\n              \"Budget\": 224000.00\n            }\n          ]\n        },\n        \"path\": \"/list\"\n      },\n      \"dimensions\": [\n        {\n          \"label\": \"Weeks\",\n          \"value\": \"{Week}\"\n        }\n      ],\n      \"measures\": [\n        {\n          \"label\": \"Revenue\",\n          \"value\": \"{Revenue}\"\n        },\n        {\n          \"label\": \"Cost\",\n          \"value\": \"{Cost}\"\n        }\n      ]\n    }\n  }\n}\n</code>\n</pre>\n\nObject card contains information about an object. It is structured in groups. Every group can have a title and items. The items contain display name (label) and value.\n\nExample: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n\t    \"type\": \"Object\",\n     \"header\": {\n       ...\n     },\n     \"content\": {\n       \"groups\": [\n         {\n           \"title\": \"Group title\",\n           \"items\": [\n             {\n               \"label\": \"Name\",\n               \"value\": \"Ivan\"\n             },\n             {\n               \"label\": \"Surname\",\n               \"value\": \"Petrov\"\n             },\n             {\n               \"label\": \"Phone\",\n               \"value\": \"+1 1234 1234555\"\n             }\n           ]\n         },\n         {\n           \"title\": \"Organization\",\n           \"items\": [\n             {\n               \"label\": \"Company Name\",\n               \"value\": \"Sap\",\n               \"icon\": {\n                 \"src\": \"../images/Woman_avatar_02.png\"\n               }\n             }\n           ]\n         }\n       ]\n     }\n  }\n}\n</code>\n</pre>\n\nTimeline card contains a set of timeline items. The \"item\" property defines the template for all the items of the timeline.\n\nExample: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"Timeline\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"data\": {\n        \"json\": [\n          {\n            \"Title\": \"Weekly sync: Marketplace / Design Stream\",\n            \"Description\": \"MRR WDF18 C3.2(GLASSBOX)\",\n            \"Icon\": \"sap-icon://appointment-2\",\n            \"Time\": \"10:00 - 10:30\"\n          },\n          {\n            \"Title\": \"Video Conference for FLP@SF, S4,Hybris\",\n            \"Icon\": \"sap-icon://my-view\",\n            \"Time\": \"14:00 - 15:30\"\n          },\n          {\n            \"Title\": \"Call 'Project Nimbus'\",\n            \"Icon\": \"sap-icon://outgoing-call\",\n            \"Time\": \"16:00 - 16:30\"\n          }\n        ]\n      },\n      \"item\": {\n        \"dateTime\": {\n          \"value\": \"{Time}\"\n        },\n        \"description\" : {\n          \"value\": \"{Description}\"\n        },\n        \"title\": {\n          \"value\": \"{Title}\"\n        },\n        \"icon\": {\n          \"src\": \"{Icon}\"\n        }\n      }\n    }\n  }\n}\n</code>\n</pre>\n\nTable card displays a set of items in a table format. The <code>\"row\"</code> property defines the template for all rows of the table.\n\nExample: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"Table\",\n    \"header\": {\n      ...\n    },\n    \"content\": {\n      \"data\": {\n        \"json\": [\n          {\n           \"salesOrder\": \"5000010050\",\n           \"customerName\": \"Robert Brown Entertainment\",\n           \"netAmount\": \"2K USD\",\n           \"status\": \"Delivered\",\n           \"statusState\": \"Success\"\n          },\n          {\n           \"salesOrder\": \"5000010051\",\n           \"customerName\": \"Entertainment Argentinia\",\n           \"netAmount\": \"127k USD\",\n           \"status\": \"Canceled\",\n           \"statusState\": \"Error\"\n          },\n          {\n           \"salesOrder\": \"5000010052\",\n           \"customerName\": \"Brazil Technologies\",\n           \"netAmount\": \"8K USD\",\n           \"status\": \"In Progress\",\n           \"statusState\": \"Warning\"\n          }\n        ]\n      },\n      \"row\": {\n        \"columns\": [{\n           \"title\": \"Sales Order\",\n           \"value\": \"{salesOrder}\",\n           \"identifier\": true\n          },\n          {\n            \"title\": \"Customer\",\n            \"value\": \"{customerName}\"\n          },\n          {\n             \"title\": \"Net Amount\",\n             \"value\": \"{netAmount}\"\n          },\n          {\n             \"title\": \"Status\",\n             \"value\": \"{status}\",\n             \"state\": \"{statusState}\"\n          }\n        ]\n      }\n    }\n  }\n}\n</code>\n</pre>\n\nComponent card can be used to display multiple controls (inside one Component). It is used as a custom approach for use cases, which do not fit in other card types and structures. It provides much more flexibility and responsibility to the Card’s authors. Reusability is achieved on Component level and this type of Card is usable in LOB products that are based on the SAPUI5 Framework.\n\nExample: <pre>\n<code>\n{\n\t\"sap.app\": {\n\t\t\"id\": \"sap.ui.integration.sample.ComponentCard.cardContent\",\n\t\t\"type\": \"card\",\n\t\t\"applicationVersion\": {\n\t\t\"version\": \"1.0.0\"\n\t\t}\n\t},\n\t\"sap.ui5\": {\n\t\t\"rootView\": {\n\t\t\t\"viewName\": \"sap.ui.integration.sample.ComponentCard.cardContent.View\",\n\t\t\t\"type\": \"XML\",\n\t\t\t\"async\": true,\n\t\t\t\"id\": \"app\"\n\t\t},\n\t\t\"dependencies\": {\n\t\t\t\"minUI5Version\": \"1.38\",\n\t\t\t\"libs\": {\n\t\t\t\t\"sap.m\": {}\n\t\t\t}\n\t\t}\n\t},\n\t\"sap.card\": {\n\t\t\"type\": \"Component\",\n\t\t\"header\": {\n\t\t\t\"title\": \"Visit our workshop\"\n\t\t}\n\t}\n}\n</code>\n</pre>\n\nItem-based cards (Timeline and List) have an additional <code>\"maxItems\"</code> content property, which defines the maximum number of items the card can have.\n\n<h3>Data Handling</h3> To add data to the card, you can add a data section, header or content. The card automatically creates an unnamed model which can be used to resolve binding syntaxes inside the card manifest.\n\nStatic data: <pre>\n<code>\n{\n  ...\n  \"content\": {\n    \"data\": {\n      \"json\": {\n        \"items\": [\n          {\n            \"Title\": \"Weekly sync: Marketplace / Design Stream\",\n            \"Description\": \"MRR WDF18 C3.2(GLASSBOX)\",\n            \"Icon\": \"sap-icon://appointment-2\",\n            \"Time\": \"10:00 - 10:30\"\n          },\n          {\n            \"Title\": \"Video Conference for FLP@SF, S4,Hybris\",\n            \"Icon\": \"sap-icon://my-view\",\n            \"Time\": \"14:00 - 15:30\"\n          }\n        ]\n      },\n      \"path\": \"/items\"\n    },\n    ...\n  }\n}\n</code>\n</pre>\n\nRequesting data: <pre>\n<code>\n{\n  ...\n  \"content\": {\n    \"data\": {\n      \"request\": {\n        \"url\": \"/path/to/data\"\n      },\n      \"path\": \"/items\"\n    },\n    ...\n  }\n}\n</code>\n</pre>\n\n<h3>Actions</h3> Actions add behavior to the card. To add a navigation action to the header and to the items, you can configure it inside the manifest.\n\nActions have: <ul> <li>Type</li> <li>Parameters</li> <li>Enabled flag (true by default)</li> </ul>\n\nIn the example below, a navigation action is added both to the header and the list items: <pre>\n<code>\n{\n  \"sap.app\": {\n    \"type\": \"card\"\n  },\n  \"sap.card\": {\n    \"type\": \"List\",\n    \"header\": {\n      \"title\": \"Request list content Card\",\n      \"subTitle\": \"Card Subtitle\",\n      \"icon\": {\n        \"src\": \"sap-icon://accept\"\n      },\n      \"status\": \"100 of 200\",\n      \"actions\": [\n        {\n          \"type\": \"Navigation\",\n          \"parameters\": {\n            \"url\": \"/some/relative/path\"\n          }\n        }\n      ]\n    },\n    \"content\": {\n      \"data\": {\n        \"request\": {\n          \"url\": \"./cardcontent/someitems_services2.json\"\n        },\n        \"path\": \"/items\"\n      },\n      \"item\": {\n        \"icon\": {\n          \"src\": \"{icon}\"\n        },\n        \"title\": {\n          \"value\": \"{Name}\"\n        },\n        \"description\": {\n          \"value\": \"{Description}\"\n        },\n        \"actions\": [\n          {\n            \"type\": \"Navigation\",\n            \"enabled\": \"{= ${url}}\",\n            \"parameters\": {\n              \"url\": \"{url}\"\n            }\n          }\n        ]\n      }\n    }\n  }\n}\n</code>\n</pre>\n\n<i>When to use</i> <ul> <li>When you want to reuse the card across apps.</li> <li>When you need easy integration and configuration.</li> </ul>\n\n<i>When not to use</i> <ul> <li>When you need more header and content flexibility.</li> <li>When you have to achieve simple card visualization. For such cases, use: {@link sap.f.Card Card}.</li> <li>When you have to use an application model. For such cases, use: {@link sap.f.Card Card}.</li> <li>When you need complex behavior. For such cases, use: {@link sap.f.Card Card}.</li> </ul>",
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
@@ -38,6 +67,19 @@
             "visibility": "public",
             "description": "The URL of the manifest or an object.",
             "methods": ["getManifest", "setManifest"]
+          },
+          {
+            "name": "parameters",
+            "type": "object",
+            "defaultValue": null,
+            "group": "Misc",
+            "visibility": "public",
+            "description": "The parameters used in the manifest.",
+            "experimental": {
+              "since": "1.65",
+              "text": "This property might be changed in future."
+            },
+            "methods": ["getParameters", "setParameters"]
           },
           {
             "name": "width",
@@ -56,6 +98,17 @@
             "visibility": "public",
             "description": "Defines the height of the card.",
             "methods": ["getHeight", "setHeight"]
+          },
+          {
+            "name": "dataMode",
+            "type": "sap.ui.integration.CardDataMode",
+            "defaultValue": "Active",
+            "group": "Behavior",
+            "visibility": "public",
+            "since": "1.65",
+            "description": "Defines the state of the <code>Card</code>. When set to <code>Inactive</code>, the <code>Card</code> doesn't make requests.",
+            "experimental": { "since": "1.65" },
+            "methods": ["getDataMode", "setDataMode"]
           }
         ],
         "aggregations": [
@@ -135,7 +188,8 @@
             "description": "Initial settings for the new control"
           }
         ],
-        "description": "Constructor for a new <code>Card</code>.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
+        "description": "Constructor for a new <code>Card</code>.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.",
+        "references": ["{@link topic:5b46b03f024542ba802d99d67bc1a3f4 Cards}"]
       },
       "events": [
         {
@@ -337,6 +391,26 @@
           "description": "Implements sap.f.ICard interface."
         },
         {
+          "name": "getCardHeaderPosition",
+          "visibility": "protected",
+          "returnValue": {
+            "type": "sap.f.cards.HeaderPosition",
+            "description": "The position of the header of the card."
+          },
+          "description": "Implements sap.f.ICard interface."
+        },
+        {
+          "name": "getDataMode",
+          "visibility": "public",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.ui.integration.CardDataMode",
+            "description": "Value of property <code>dataMode</code>"
+          },
+          "description": "Gets current value of property {@link #getDataMode dataMode}.\n\nDefines the state of the <code>Card</code>. When set to <code>Inactive</code>, the <code>Card</code> doesn't make requests.\n\nDefault value is <code>Active</code>.",
+          "experimental": { "since": "1.65" }
+        },
+        {
           "name": "getHeight",
           "visibility": "public",
           "returnValue": {
@@ -355,10 +429,10 @@
           "name": "getManifest",
           "visibility": "public",
           "returnValue": {
-            "type": "any",
-            "description": "Value of property <code>manifest</code>"
+            "type": "string|Object",
+            "description": "Cloned of the parameters."
           },
-          "description": "Gets current value of property {@link #getManifest manifest}.\n\nThe URL of the manifest or an object.\n\nDefault value is <code>empty string</code>."
+          "description": "Overwrites getter for card manifest."
         },
         {
           "name": "getMetadata",
@@ -371,6 +445,15 @@
           "description": "Returns a metadata object for class sap.ui.integration.widgets.Card."
         },
         {
+          "name": "getParameters",
+          "visibility": "public",
+          "returnValue": {
+            "type": "Object",
+            "description": "A Clone of the parameters."
+          },
+          "description": "Overwrites getter for card parameters."
+        },
+        {
           "name": "getWidth",
           "visibility": "public",
           "returnValue": {
@@ -378,6 +461,40 @@
             "description": "Value of property <code>width</code>"
           },
           "description": "Gets current value of property {@link #getWidth width}.\n\nDefines the width of the card.\n\nDefault value is <code>100%</code>."
+        },
+        {
+          "name": "isReady",
+          "visibility": "public",
+          "returnValue": {
+            "type": "boolean",
+            "description": "If the card is ready or not."
+          },
+          "experimental": { "since": "1.65", "text": "The API might change." }
+        },
+        {
+          "name": "refresh",
+          "visibility": "public",
+          "description": "Refreshes the card by re-applying the manifest settings and triggering all data requests.",
+          "experimental": { "since": "1.65", "text": "The API might change." }
+        },
+        {
+          "name": "setDataMode",
+          "visibility": "public",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Pointer to the control instance to allow method chaining."
+          },
+          "parameters": [
+            {
+              "name": "sMode",
+              "type": "sap.ui.integration.CardDataMode",
+              "optional": false,
+              "description": "The mode to set to the Card."
+            }
+          ],
+          "description": "Sets a new value for the <code>dataMode</code> property.",
+          "experimental": { "since": "1.65", "text": "API might change." }
         },
         {
           "name": "setHeight",
@@ -428,7 +545,24 @@
               "description": "The manifest object or its URL."
             }
           ],
-          "description": "Setter for card manifest."
+          "description": "Overwrites setter for card manifest."
+        },
+        {
+          "name": "setParameters",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.integration.widgets.Card",
+            "description": "Pointer to the control instance to allow method chaining."
+          },
+          "parameters": [
+            {
+              "name": "vValue",
+              "type": "Object",
+              "optional": false,
+              "description": "oParameters Parameters set in the card trough parameters property."
+            }
+          ],
+          "description": "Overwrites setter for card params."
         },
         {
           "name": "setWidth",

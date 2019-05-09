@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.64.1",
+  "version": "1.65.1",
   "symbols": [
     {
       "kind": "namespace",
@@ -91,8 +91,19 @@
             "visibility": "public",
             "description": "Specifies how an image would fit in the <code>Avatar</code>.",
             "methods": ["getImageFitType", "setImageFitType"]
+          },
+          {
+            "name": "fallbackIcon",
+            "type": "string",
+            "defaultValue": null,
+            "group": "Data",
+            "visibility": "public",
+            "since": "1.65",
+            "description": "Defines the fallback icon displayed in case of wrong image src and no initials set.\n\n<b>Notes:</b> <ul> <li>If not set, a default fallback icon is displayed depending on the set <code>displayShape</code> property.</li> <li>Accepted values are only icons from the SAP icon font.</li> </ul>",
+            "methods": ["getFallbackIcon", "setFallbackIcon"]
           }
         ],
+        "dnd": { "draggable": true, "droppable": false },
         "aggregations": [
           {
             "name": "detailBox",
@@ -363,13 +374,13 @@
         {
           "name": "getAriaDescribedBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
         },
         {
           "name": "getAriaLabelledBy",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.ID>" },
           "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
@@ -416,6 +427,16 @@
           "description": "Gets current value of property {@link #getDisplaySize displaySize}.\n\nSets a predefined display size of the <code>Avatar</code>.\n\nDefault value is <code>S</code>."
         },
         {
+          "name": "getFallbackIcon",
+          "visibility": "public",
+          "since": "1.65",
+          "returnValue": {
+            "type": "string",
+            "description": "Value of property <code>fallbackIcon</code>"
+          },
+          "description": "Gets current value of property {@link #getFallbackIcon fallbackIcon}.\n\nDefines the fallback icon displayed in case of wrong image src and no initials set.\n\n<b>Notes:</b> <ul> <li>If not set, a default fallback icon is displayed depending on the set <code>displayShape</code> property.</li> <li>Accepted values are only icons from the SAP icon font.</li> </ul>"
+        },
+        {
           "name": "getImageFitType",
           "visibility": "public",
           "returnValue": {
@@ -456,7 +477,7 @@
           "name": "removeAllAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
@@ -465,7 +486,7 @@
           "name": "removeAllAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID[]",
+            "type": "[ 'Array' ].<sap.ui.core.ID>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
@@ -589,6 +610,24 @@
             }
           ],
           "description": "Sets a new value for property {@link #getDisplaySize displaySize}.\n\nSets a predefined display size of the <code>Avatar</code>.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>S</code>."
+        },
+        {
+          "name": "setFallbackIcon",
+          "visibility": "public",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.f.Avatar",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sFallbackIcon",
+              "type": "string",
+              "optional": false,
+              "description": "New value for property <code>fallbackIcon</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getFallbackIcon fallbackIcon}.\n\nDefines the fallback icon displayed in case of wrong image src and no initials set.\n\n<b>Notes:</b> <ul> <li>If not set, a default fallback icon is displayed depending on the set <code>displayShape</code> property.</li> <li>Accepted values are only icons from the SAP icon font.</li> </ul>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
         },
         {
           "name": "setImageFitType",
@@ -838,6 +877,16 @@
             "visibility": "public",
             "description": "Defines the height of the card.",
             "methods": ["getHeight", "setHeight"]
+          },
+          {
+            "name": "headerPosition",
+            "type": "sap.f.cards.HeaderPosition",
+            "defaultValue": "Top",
+            "group": "Appearance",
+            "visibility": "public",
+            "since": "1.65",
+            "description": "Defines the position of the Card Header.",
+            "methods": ["getHeaderPosition", "setHeaderPosition"]
           }
         ],
         "aggregations": [
@@ -947,6 +996,16 @@
           "description": "Implements sap.f.ICard interface."
         },
         {
+          "name": "getCardHeaderPosition",
+          "visibility": "protected",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.f.cards.HeaderPosition",
+            "description": "The position of the header of the card."
+          },
+          "description": "Implements sap.f.ICard interface."
+        },
+        {
           "name": "getContent",
           "visibility": "public",
           "returnValue": { "type": "sap.ui.core.Control" },
@@ -957,6 +1016,16 @@
           "visibility": "public",
           "returnValue": { "type": "sap.f.cards.IHeader" },
           "description": "Gets content of aggregation {@link #getHeader header}.\n\nDefines the header of the card."
+        },
+        {
+          "name": "getHeaderPosition",
+          "visibility": "public",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.f.cards.HeaderPosition",
+            "description": "Value of property <code>headerPosition</code>"
+          },
+          "description": "Gets current value of property {@link #getHeaderPosition headerPosition}.\n\nDefines the position of the Card Header.\n\nDefault value is <code>Top</code>."
         },
         {
           "name": "getHeight",
@@ -1019,6 +1088,24 @@
             }
           ],
           "description": "Sets the aggregated {@link #getHeader header}."
+        },
+        {
+          "name": "setHeaderPosition",
+          "visibility": "public",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.f.Card",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sHeaderPosition",
+              "type": "sap.f.cards.HeaderPosition",
+              "optional": false,
+              "description": "New value for property <code>headerPosition</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getHeaderPosition headerPosition}.\n\nDefines the position of the Card Header.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Top</code>."
         },
         {
           "name": "setHeight",
@@ -1374,6 +1461,14 @@
           "description": "Gets current value of property {@link #getTitle title}.\n\nDefines the title.\n\nDefault value is <code>empty string</code>."
         },
         {
+          "name": "isReady",
+          "visibility": "public",
+          "returnValue": {
+            "type": "boolean",
+            "description": "If the header is ready or not."
+          }
+        },
+        {
           "name": "setIconDisplayShape",
           "visibility": "public",
           "returnValue": {
@@ -1474,6 +1569,35 @@
             }
           ],
           "description": "Sets a new value for property {@link #getTitle title}.\n\nDefines the title.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+        }
+      ]
+    },
+    {
+      "kind": "enum",
+      "name": "sap.f.cards.HeaderPosition",
+      "basename": "cards.HeaderPosition",
+      "resource": "sap/f/library.js",
+      "module": "sap/f/library",
+      "export": "cards.HeaderPosition",
+      "static": true,
+      "visibility": "public",
+      "since": "1.65",
+      "description": "Different options for the position of the <code>Card</code> header.",
+      "ui5-metamodel": true,
+      "properties": [
+        {
+          "name": "Bottom",
+          "visibility": "public",
+          "static": true,
+          "type": "string",
+          "description": "The Header is under the content."
+        },
+        {
+          "name": "Top",
+          "visibility": "public",
+          "static": true,
+          "type": "string",
+          "description": "The Header is over the content."
         }
       ]
     },
@@ -1874,7 +1998,9 @@
         {
           "name": "getSideIndicators",
           "visibility": "public",
-          "returnValue": { "type": "sap.f.cards.NumericSideIndicator[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.f.cards.NumericSideIndicator>"
+          },
           "description": "Gets content of aggregation {@link #getSideIndicators sideIndicators}.\n\nAdditional side number indicators. For example \"Deviation\" and \"Target\". Not more than two side indicators should be used."
         },
         {
@@ -1967,10 +2093,18 @@
           "description": "Inserts a sideIndicator into the aggregation {@link #getSideIndicators sideIndicators}."
         },
         {
+          "name": "isReady",
+          "visibility": "public",
+          "returnValue": {
+            "type": "boolean",
+            "description": "If the header is ready or not."
+          }
+        },
+        {
           "name": "removeAllSideIndicators",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.f.cards.NumericSideIndicator[]",
+            "type": "[ 'Array' ].<sap.f.cards.NumericSideIndicator>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSideIndicators sideIndicators}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -2473,6 +2607,21 @@
             "methods": ["get_scrollBar", "destroy_scrollBar", "set_scrollBar"]
           }
         ],
+        "associations": [
+          {
+            "name": "stickySubheaderProvider",
+            "singularName": "stickySubheaderProvider",
+            "type": "sap.f.IDynamicPageStickyContent",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "since": "1.65",
+            "description": "Association of Controls / IDs, that provide sticky subheader content. All controls that provide this content have to implement the <code>sap.f.IDynamicPageStickyContent</code> interface.",
+            "methods": [
+              "getStickySubheaderProvider",
+              "setStickySubheaderProvider"
+            ]
+          }
+        ],
         "designtime": "sap/f/designtime/DynamicPage.designtime"
       },
       "constructor": {
@@ -2645,6 +2794,13 @@
           "description": "Gets current value of property {@link #getShowFooter showFooter}.\n\nDetermines whether the footer is visible.\n\nDefault value is <code>false</code>."
         },
         {
+          "name": "getStickySubheaderProvider",
+          "visibility": "public",
+          "since": "1.65",
+          "returnValue": { "type": "sap.ui.core.ID" },
+          "description": "ID of the element which is the current target of the association {@link #getStickySubheaderProvider stickySubheaderProvider}, or <code>null</code>."
+        },
+        {
           "name": "getTitle",
           "visibility": "public",
           "returnValue": { "type": "sap.f.DynamicPageTitle" },
@@ -2795,6 +2951,24 @@
             }
           ],
           "description": "Sets a new value for property {@link #getShowFooter showFooter}.\n\nDetermines whether the footer is visible.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+        },
+        {
+          "name": "setStickySubheaderProvider",
+          "visibility": "public",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.f.DynamicPage",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oStickySubheaderProvider",
+              "type": "sap.ui.core.ID|sap.f.IDynamicPageStickyContent",
+              "optional": false,
+              "description": "ID of an element which becomes the new target of this stickySubheaderProvider association; alternatively, an element instance may be given"
+            }
+          ],
+          "description": "Sets the associated {@link #getStickySubheaderProvider stickySubheaderProvider}."
         },
         {
           "name": "setTitle",
@@ -3359,7 +3533,7 @@
         {
           "name": "getContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content of the header."
         },
         {
@@ -3425,7 +3599,7 @@
           "name": "removeAllContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4139,7 +4313,7 @@
         {
           "name": "getActions",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getActions actions}.\n\nThe <code>DynamicPageTitle</code> actions. <br><b>Note:</b> The <code>actions</code> aggregation accepts any UI5 control, but it`s recommended to use controls, suitable for {@link sap.m.Toolbar} and {@link sap.m.OverflowToolbar}.\n\n<b>Note:</b> If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped) state."
         },
         {
@@ -4173,13 +4347,13 @@
           "name": "getContent",
           "visibility": "public",
           "since": "1.50",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content is positioned in the <code>DynamicPageTitle</code> middle area and displayed in both expanded and collapsed (snapped) states.\n\n<b>Note:</b> If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped) state."
         },
         {
           "name": "getExpandedContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getExpandedContent expandedContent}.\n\nThe content that is displayed in the <code>DynamicPageTitle</code> in expanded state."
         },
         {
@@ -4209,7 +4383,7 @@
           "name": "getNavigationActions",
           "visibility": "public",
           "since": "1.52",
-          "returnValue": { "type": "sap.m.Button[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.m.Button>" },
           "description": "Gets content of aggregation {@link #getNavigationActions navigationActions}.\n\nThe <code>DynamicPageTitle</code> navigation actions.\n\n<b>Notes:</b> <ul> <li>The <code>navigationActions</code> position depends on the control size. If the control size is 1280px or bigger, they are rendered right next to the <code>actions</code>. Otherwise, they are rendered in the top-right area, above the <code>actions</code>. If a large number of elements(buttons) are used, there could be visual degradations as the space for the <code>navigationActions</code> is limited.</li> <li>If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped) state.</li> </ul>"
         },
         {
@@ -4229,7 +4403,7 @@
         {
           "name": "getSnappedContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getSnappedContent snappedContent}.\n\nThe content that is displayed in the <code>DynamicPageTitle</code> in collapsed (snapped) state.\n\n<b>Note:</b> If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped) state."
         },
         {
@@ -4471,7 +4645,7 @@
           "name": "removeAllActions",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getActions actions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4481,7 +4655,7 @@
           "visibility": "public",
           "since": "1.50",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getContent content}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4490,7 +4664,7 @@
           "name": "removeAllExpandedContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getExpandedContent expandedContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4500,7 +4674,7 @@
           "visibility": "public",
           "since": "1.52",
           "returnValue": {
-            "type": "sap.m.Button[]",
+            "type": "[ 'Array' ].<sap.m.Button>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getNavigationActions navigationActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -4509,7 +4683,7 @@
           "name": "removeAllSnappedContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getSnappedContent snappedContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7117,7 +7291,7 @@
         {
           "name": "getBeginColumnPages",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getBeginColumnPages beginColumnPages}.\n\nThe content entities between which the <code>FlexibleColumnLayout</code> navigates in the <code>Begin</code> column.\n\nThese should be any control with page semantics. These aggregated controls will receive navigation events like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}."
         },
         {
@@ -7180,7 +7354,7 @@
         {
           "name": "getEndColumnPages",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getEndColumnPages endColumnPages}.\n\nThe content entities between which the <code>FlexibleColumnLayout</code> navigates in the <code>End</code> column.\n\nThese should be any control with page semantics. These aggregated controls will receive navigation events like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}."
         },
         {
@@ -7232,7 +7406,7 @@
         {
           "name": "getMidColumnPages",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getMidColumnPages midColumnPages}.\n\nThe content entities between which the <code>FlexibleColumnLayout</code> navigates in the <code>Mid</code> column.\n\nThese should be any control with page semantics. These aggregated controls will receive navigation events like {@link sap.m.NavContainerChild#beforeShow beforeShow}, they are documented in the pseudo interface {@link sap.m.NavContainerChild sap.m.NavContainerChild}."
         },
         {
@@ -7359,7 +7533,7 @@
           "name": "removeAllBeginColumnPages",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getBeginColumnPages beginColumnPages}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7368,7 +7542,7 @@
           "name": "removeAllEndColumnPages",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getEndColumnPages endColumnPages}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7377,7 +7551,7 @@
           "name": "removeAllMidColumnPages",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getMidColumnPages midColumnPages}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -7841,6 +8015,966 @@
     },
     {
       "kind": "class",
+      "name": "sap.f.GridContainer",
+      "basename": "GridContainer",
+      "resource": "sap/f/GridContainer.js",
+      "module": "sap/f/GridContainer",
+      "export": "",
+      "static": true,
+      "visibility": "public",
+      "since": "1.65",
+      "extends": "sap.ui.core.Control",
+      "description": "A layout container control used for aligning items with various sizes in a simple grid.\n\n<h3>Overview</h3>\n\nThe control is used to align tiles, cards and other controls in configuration, such as a home page or a dashboard. It represents a grid layout with specific row and column sizes, in which the items can take any number of rows and columns.\n\nThe number of columns and rows each item takes can be configured with the use of the <code>{@link sap.f.GridContainerItemLayoutData}</code>.\n\nAll rows have the same height and all columns have the same width. Their sizes can be configured with the use of the <code>layout</code> aggregation and <code>{@link sap.f.GridContainerSettings}</code>.\n\n<h3>Usage</h3>\n\n<i>When to use</i> <ul> <li>For aligning home page and dashboard items like Tiles and Cards in a simple grid system with equally sized rows and columns.</li> </ul>\n\n<i>When not to use</i> <ul> <li>If a more complex layout grid system, where columns and rows may vary in size, is needed.</li> </ul>\n\n<h3>Example:</h3> <pre>\n&lt;f:GridContainer&gt;\n\t&lt;f:layout&gt;\n\t\t&lt;f:GridContainerSettings rowSize=&quot;5rem&quot; columnSize=&quot;5rem&quot; gap=&quot;1rem&quot; /&gt;\n\t&lt;/f:layout&gt;\n\t&lt;f:layoutS&gt;\n\t\t&lt;f:GridContainerSettings rowSize=&quot;4rem&quot; columnSize=&quot;4rem&quot; gap=&quot;0.5rem&quot; /&gt;\n\t&lt;/f:layoutS&gt;\n\t&lt;f:items&gt;\n\t\t&lt;GenericTile header=&quot;Sales Fulfillment&quot;&gt;\n\t\t\t&lt;layoutData&gt;\n\t\t\t\t&lt;f:GridContainerItemLayoutData rows=&quot;2&quot; columns=&quot;2&quot; /&gt;\n\t\t\t&lt;/layoutData&gt;\n\t\t&lt;/GenericTile&gt;\n\t\t&lt;w:Card manifest=&quot;url-to-manifest&quot;&gt;\n\t\t\t&lt;w:layoutData&gt;\n\t\t\t\t&lt;f:GridContainerItemLayoutData rows=&quot;6&quot; columns=&quot;3&quot; /&gt;\n\t\t\t&lt;/w:layoutData&gt;\n\t\t&lt;/w:Card&gt;\n\t\t&lt;Panel&gt;\n\t\t\t&lt;layoutData&gt;\n\t\t\t\t&lt;f:GridContainerItemLayoutData columns=&quot;4&quot; /&gt;\n\t\t\t&lt;/layoutData&gt;\n\t\t\t&lt;Text text=&quot;Sales information&quot; /&gt;\n\t\t&lt;/Panel&gt;\n\t&lt;/f:items&gt;\n&lt;/f:GridContainer&gt;\n</pre>",
+      "experimental": {
+        "since": "1.65",
+        "text": "This class is experimental. The API may change."
+      },
+      "ui5-metamodel": true,
+      "ui5-metadata": {
+        "stereotype": "control",
+        "properties": [
+          {
+            "name": "width",
+            "type": "sap.ui.core.CSSSize",
+            "defaultValue": "",
+            "group": "Appearance",
+            "visibility": "public",
+            "description": "Defines the width of the control",
+            "methods": ["getWidth", "setWidth"]
+          },
+          {
+            "name": "height",
+            "type": "sap.ui.core.CSSSize",
+            "defaultValue": "",
+            "group": "Appearance",
+            "visibility": "public",
+            "description": "Defines the height of the control",
+            "methods": ["getHeight", "setHeight"]
+          },
+          {
+            "name": "snapToRow",
+            "type": "boolean",
+            "defaultValue": false,
+            "group": "Appearance",
+            "visibility": "public",
+            "description": "Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.",
+            "methods": ["getSnapToRow", "setSnapToRow"]
+          }
+        ],
+        "dnd": { "draggable": false, "droppable": true },
+        "aggregations": [
+          {
+            "name": "items",
+            "singularName": "item",
+            "type": "sap.ui.core.Control",
+            "cardinality": "0..n",
+            "visibility": "public",
+            "dnd": { "draggable": true, "droppable": true },
+            "description": "The items contained by the control.",
+            "methods": [
+              "getItems",
+              "destroyItems",
+              "insertItem",
+              "addItem",
+              "removeItem",
+              "indexOfItem",
+              "removeAllItems"
+            ]
+          },
+          {
+            "name": "layout",
+            "singularName": "layout",
+            "type": "sap.f.GridContainerSettings",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "description": "The sap.f.GridContainerSettings applied if no settings are provided for a specific size If no layout is given, a default layout will be used. See the default values for <code>sap.f.GridContainerSettings</code>.",
+            "methods": ["getLayout", "destroyLayout", "setLayout"]
+          },
+          {
+            "name": "layoutS",
+            "singularName": "layout",
+            "type": "sap.f.GridContainerSettings",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "description": "The sap.f.GridContainerSettings applied for size \"S\"",
+            "methods": ["getLayoutS", "destroyLayoutS", "setLayoutS"]
+          },
+          {
+            "name": "layoutM",
+            "singularName": "layoutM",
+            "type": "sap.f.GridContainerSettings",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "description": "The sap.f.GridContainerSettings applied for size \"M\"",
+            "methods": ["getLayoutM", "destroyLayoutM", "setLayoutM"]
+          },
+          {
+            "name": "layoutL",
+            "singularName": "layoutL",
+            "type": "sap.f.GridContainerSettings",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "description": "The sap.f.GridContainerSettings applied for size \"L\"",
+            "methods": ["getLayoutL", "destroyLayoutL", "setLayoutL"]
+          },
+          {
+            "name": "layoutXL",
+            "singularName": "layoutXL",
+            "type": "sap.f.GridContainerSettings",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "description": "The sap.f.GridContainerSettings applied for size \"XL\"",
+            "methods": ["getLayoutXL", "destroyLayoutXL", "setLayoutXL"]
+          },
+          {
+            "name": "_defaultLayout",
+            "singularName": "_defaultLayout",
+            "type": "sap.f.GridContainerSettings",
+            "cardinality": "0..1",
+            "visibility": "hidden",
+            "description": "Default sap.f.GridContainerSettings",
+            "methods": [
+              "get_defaultLayout",
+              "destroy_defaultLayout",
+              "set_defaultLayout"
+            ]
+          }
+        ],
+        "defaultAggregation": "items"
+      },
+      "constructor": {
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "sId",
+            "type": "string",
+            "optional": true,
+            "description": "ID for the new control, generated automatically if no ID is given"
+          },
+          {
+            "name": "mSettings",
+            "type": "object",
+            "optional": true,
+            "description": "Initial settings for the new control"
+          }
+        ],
+        "description": "Constructor for a new <code>sap.f.GridContainer</code>.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.",
+        "references": [
+          "{@link topic:cca5ee5d63ca44c89318f8496a58f9f2 Grid Container (Experimental)}",
+          "{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}",
+          "{@link topic:5b46b03f024542ba802d99d67bc1a3f4 Cards}"
+        ]
+      },
+      "methods": [
+        {
+          "name": "addItem",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oItem",
+              "type": "sap.ui.core.Control",
+              "optional": false,
+              "description": "The item to add; if empty, nothing is inserted"
+            }
+          ],
+          "description": "Adds some item to the aggregation {@link #getItems items}."
+        },
+        {
+          "name": "destroyItems",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys all the items in the aggregation {@link #getItems items}."
+        },
+        {
+          "name": "destroyLayout",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the layout in the aggregation {@link #getLayout layout}."
+        },
+        {
+          "name": "destroyLayoutL",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the layoutL in the aggregation {@link #getLayoutL layoutL}."
+        },
+        {
+          "name": "destroyLayoutM",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the layoutM in the aggregation {@link #getLayoutM layoutM}."
+        },
+        {
+          "name": "destroyLayoutS",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the layoutS in the aggregation {@link #getLayoutS layoutS}."
+        },
+        {
+          "name": "destroyLayoutXL",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the layoutXL in the aggregation {@link #getLayoutXL layoutXL}."
+        },
+        {
+          "name": "extend",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "function",
+            "description": "Created class / constructor function"
+          },
+          "parameters": [
+            {
+              "name": "sClassName",
+              "type": "string",
+              "optional": false,
+              "description": "Name of the class being created"
+            },
+            {
+              "name": "oClassInfo",
+              "type": "object",
+              "optional": true,
+              "description": "Object literal with information about the class"
+            },
+            {
+              "name": "FNMetaImpl",
+              "type": "function",
+              "optional": true,
+              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
+            }
+          ],
+          "description": "Creates a new subclass of class sap.f.GridContainer with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}."
+        },
+        {
+          "name": "getHeight",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.CSSSize",
+            "description": "Value of property <code>height</code>"
+          },
+          "description": "Gets current value of property {@link #getHeight height}.\n\nDefines the height of the control\n\nDefault value is <code>empty string</code>."
+        },
+        {
+          "name": "getItems",
+          "visibility": "public",
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
+          "description": "Gets content of aggregation {@link #getItems items}.\n\nThe items contained by the control."
+        },
+        {
+          "name": "getLayout",
+          "visibility": "public",
+          "returnValue": { "type": "sap.f.GridContainerSettings" },
+          "description": "Gets content of aggregation {@link #getLayout layout}.\n\nThe sap.f.GridContainerSettings applied if no settings are provided for a specific size If no layout is given, a default layout will be used. See the default values for <code>sap.f.GridContainerSettings</code>."
+        },
+        {
+          "name": "getLayoutL",
+          "visibility": "public",
+          "returnValue": { "type": "sap.f.GridContainerSettings" },
+          "description": "Gets content of aggregation {@link #getLayoutL layoutL}.\n\nThe sap.f.GridContainerSettings applied for size \"L\""
+        },
+        {
+          "name": "getLayoutM",
+          "visibility": "public",
+          "returnValue": { "type": "sap.f.GridContainerSettings" },
+          "description": "Gets content of aggregation {@link #getLayoutM layoutM}.\n\nThe sap.f.GridContainerSettings applied for size \"M\""
+        },
+        {
+          "name": "getLayoutS",
+          "visibility": "public",
+          "returnValue": { "type": "sap.f.GridContainerSettings" },
+          "description": "Gets content of aggregation {@link #getLayoutS layoutS}.\n\nThe sap.f.GridContainerSettings applied for size \"S\""
+        },
+        {
+          "name": "getLayoutXL",
+          "visibility": "public",
+          "returnValue": { "type": "sap.f.GridContainerSettings" },
+          "description": "Gets content of aggregation {@link #getLayoutXL layoutXL}.\n\nThe sap.f.GridContainerSettings applied for size \"XL\""
+        },
+        {
+          "name": "getMetadata",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "sap.ui.base.Metadata",
+            "description": "Metadata object describing this class"
+          },
+          "description": "Returns a metadata object for class sap.f.GridContainer."
+        },
+        {
+          "name": "getSnapToRow",
+          "visibility": "public",
+          "returnValue": {
+            "type": "boolean",
+            "description": "Value of property <code>snapToRow</code>"
+          },
+          "description": "Gets current value of property {@link #getSnapToRow snapToRow}.\n\nShould the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.\n\nDefault value is <code>false</code>."
+        },
+        {
+          "name": "getWidth",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.CSSSize",
+            "description": "Value of property <code>width</code>"
+          },
+          "description": "Gets current value of property {@link #getWidth width}.\n\nDefines the width of the control\n\nDefault value is <code>empty string</code>."
+        },
+        {
+          "name": "indexOfItem",
+          "visibility": "public",
+          "returnValue": {
+            "type": "int",
+            "description": "The index of the provided control in the aggregation if found, or -1 otherwise"
+          },
+          "parameters": [
+            {
+              "name": "oItem",
+              "type": "sap.ui.core.Control",
+              "optional": false,
+              "description": "The item whose index is looked for"
+            }
+          ],
+          "description": "Checks for the provided <code>sap.ui.core.Control</code> in the aggregation {@link #getItems items}. and returns its index if found or -1 otherwise."
+        },
+        {
+          "name": "insertItem",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oItem",
+              "type": "sap.ui.core.Control",
+              "optional": false,
+              "description": "The item to insert; if empty, nothing is inserted"
+            },
+            {
+              "name": "iIndex",
+              "type": "int",
+              "optional": false,
+              "description": "The <code>0</code>-based index the item should be inserted at; for a negative value of <code>iIndex</code>, the item is inserted at position 0; for a value greater than the current size of the aggregation, the item is inserted at the last position"
+            }
+          ],
+          "description": "Inserts a item into the aggregation {@link #getItems items}."
+        },
+        {
+          "name": "removeAllItems",
+          "visibility": "public",
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
+            "description": "An array of the removed elements (might be empty)"
+          },
+          "description": "Removes all the controls from the aggregation {@link #getItems items}.\n\nAdditionally, it unregisters them from the hosting UIArea."
+        },
+        {
+          "name": "removeItem",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.Control",
+            "description": "The removed item or <code>null</code>"
+          },
+          "parameters": [
+            {
+              "name": "vItem",
+              "type": "int|string|sap.ui.core.Control",
+              "optional": false,
+              "description": "The item to remove or its index or id"
+            }
+          ],
+          "description": "Removes a item from the aggregation {@link #getItems items}."
+        },
+        {
+          "name": "setHeight",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sHeight",
+              "type": "sap.ui.core.CSSSize",
+              "optional": false,
+              "description": "New value for property <code>height</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getHeight height}.\n\nDefines the height of the control\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+        },
+        {
+          "name": "setLayout",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oLayout",
+              "type": "sap.f.GridContainerSettings",
+              "optional": false,
+              "description": "The layout to set"
+            }
+          ],
+          "description": "Sets the aggregated {@link #getLayout layout}."
+        },
+        {
+          "name": "setLayoutL",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oLayoutL",
+              "type": "sap.f.GridContainerSettings",
+              "optional": false,
+              "description": "The layoutL to set"
+            }
+          ],
+          "description": "Sets the aggregated {@link #getLayoutL layoutL}."
+        },
+        {
+          "name": "setLayoutM",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oLayoutM",
+              "type": "sap.f.GridContainerSettings",
+              "optional": false,
+              "description": "The layoutM to set"
+            }
+          ],
+          "description": "Sets the aggregated {@link #getLayoutM layoutM}."
+        },
+        {
+          "name": "setLayoutS",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oLayoutS",
+              "type": "sap.f.GridContainerSettings",
+              "optional": false,
+              "description": "The layoutS to set"
+            }
+          ],
+          "description": "Sets the aggregated {@link #getLayoutS layoutS}."
+        },
+        {
+          "name": "setLayoutXL",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oLayoutXL",
+              "type": "sap.f.GridContainerSettings",
+              "optional": false,
+              "description": "The layoutXL to set"
+            }
+          ],
+          "description": "Sets the aggregated {@link #getLayoutXL layoutXL}."
+        },
+        {
+          "name": "setSnapToRow",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "bSnapToRow",
+              "type": "boolean",
+              "optional": false,
+              "description": "New value for property <code>snapToRow</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getSnapToRow snapToRow}.\n\nShould the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+        },
+        {
+          "name": "setWidth",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainer",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sWidth",
+              "type": "sap.ui.core.CSSSize",
+              "optional": false,
+              "description": "New value for property <code>width</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getWidth width}.\n\nDefines the width of the control\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+        }
+      ]
+    },
+    {
+      "kind": "class",
+      "name": "sap.f.GridContainerItemLayoutData",
+      "basename": "GridContainerItemLayoutData",
+      "resource": "sap/f/GridContainerItemLayoutData.js",
+      "module": "sap/f/GridContainerItemLayoutData",
+      "export": "",
+      "static": true,
+      "visibility": "public",
+      "since": "1.65",
+      "extends": "sap.ui.core.LayoutData",
+      "description": "Holds layout data for an item inside a <code>sap.f.GridContainer</code>.",
+      "experimental": {
+        "since": "1.65",
+        "text": "This class is experimental. The API may change."
+      },
+      "ui5-metamodel": true,
+      "ui5-metadata": {
+        "stereotype": "element",
+        "properties": [
+          {
+            "name": "columns",
+            "type": "int",
+            "defaultValue": 1,
+            "group": "Misc",
+            "visibility": "public",
+            "description": "Specifies the number of columns, which the item should take",
+            "methods": ["getColumns", "setColumns"]
+          },
+          {
+            "name": "minRows",
+            "type": "int",
+            "defaultValue": null,
+            "group": "Misc",
+            "visibility": "public",
+            "description": "Specifies the minimum number of rows, which the item should take.",
+            "methods": ["getMinRows", "setMinRows"]
+          },
+          {
+            "name": "rows",
+            "type": "int",
+            "defaultValue": null,
+            "group": "Misc",
+            "visibility": "public",
+            "description": "Specifies the number of rows, which the item should take.",
+            "experimental": {
+              "since": "1.65",
+              "text": "this property may soon be removed, use minRows instead"
+            },
+            "methods": ["getRows", "setRows"]
+          }
+        ]
+      },
+      "constructor": {
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "sId",
+            "type": "string",
+            "optional": true,
+            "description": "ID for the new element, generated automatically if no ID is given"
+          },
+          {
+            "name": "mSettings",
+            "type": "object",
+            "optional": true,
+            "description": "Initial settings for the new element."
+          }
+        ],
+        "description": "Constructor for a new <code>sap.f.GridContainerItemLayoutData</code>.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.",
+        "references": [
+          "{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}"
+        ]
+      },
+      "methods": [
+        {
+          "name": "extend",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "function",
+            "description": "Created class / constructor function"
+          },
+          "parameters": [
+            {
+              "name": "sClassName",
+              "type": "string",
+              "optional": false,
+              "description": "Name of the class being created"
+            },
+            {
+              "name": "oClassInfo",
+              "type": "object",
+              "optional": true,
+              "description": "Object literal with information about the class"
+            },
+            {
+              "name": "FNMetaImpl",
+              "type": "function",
+              "optional": true,
+              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
+            }
+          ],
+          "description": "Creates a new subclass of class sap.f.GridContainerItemLayoutData with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.LayoutData.extend}."
+        },
+        {
+          "name": "getColumns",
+          "visibility": "public",
+          "returnValue": {
+            "type": "int",
+            "description": "Value of property <code>columns</code>"
+          },
+          "description": "Gets current value of property {@link #getColumns columns}.\n\nSpecifies the number of columns, which the item should take\n\nDefault value is <code>1</code>."
+        },
+        {
+          "name": "getMetadata",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "sap.ui.base.Metadata",
+            "description": "Metadata object describing this class"
+          },
+          "description": "Returns a metadata object for class sap.f.GridContainerItemLayoutData."
+        },
+        {
+          "name": "getMinRows",
+          "visibility": "public",
+          "returnValue": {
+            "type": "int",
+            "description": "Value of property <code>minRows</code>"
+          },
+          "description": "Gets current value of property {@link #getMinRows minRows}.\n\nSpecifies the minimum number of rows, which the item should take."
+        },
+        {
+          "name": "getRows",
+          "visibility": "public",
+          "returnValue": {
+            "type": "int",
+            "description": "Value of property <code>rows</code>"
+          },
+          "description": "Gets current value of property {@link #getRows rows}.\n\nSpecifies the number of rows, which the item should take.",
+          "experimental": {
+            "since": "1.65",
+            "text": "this property may soon be removed, use minRows instead"
+          }
+        },
+        {
+          "name": "setColumns",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainerItemLayoutData",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "iColumns",
+              "type": "int",
+              "optional": false,
+              "description": "New value for property <code>columns</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getColumns columns}.\n\nSpecifies the number of columns, which the item should take\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>1</code>."
+        },
+        {
+          "name": "setMinRows",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainerItemLayoutData",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "iMinRows",
+              "type": "int",
+              "optional": false,
+              "description": "New value for property <code>minRows</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getMinRows minRows}.\n\nSpecifies the minimum number of rows, which the item should take.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+        },
+        {
+          "name": "setRows",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainerItemLayoutData",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "iRows",
+              "type": "int",
+              "optional": false,
+              "description": "New value for property <code>rows</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getRows rows}.\n\nSpecifies the number of rows, which the item should take.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.",
+          "experimental": {
+            "since": "1.65",
+            "text": "this property may soon be removed, use minRows instead"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "class",
+      "name": "sap.f.GridContainerSettings",
+      "basename": "GridContainerSettings",
+      "resource": "sap/f/GridContainerSettings.js",
+      "module": "sap/f/GridContainerSettings",
+      "export": "",
+      "static": true,
+      "visibility": "public",
+      "since": "1.65",
+      "extends": "sap.ui.base.ManagedObject",
+      "description": "Holds a set of settings that define the dimensions of <code>sap.f.GridContainer</code>\n\nCan be used to define the sizes of columns and rows for different screen sizes, by using the <code>layout</code> aggregations of <code>sap.f.GridContainer</code>.",
+      "experimental": {
+        "since": "1.65",
+        "text": "This class is experimental. The API may change."
+      },
+      "ui5-metamodel": true,
+      "ui5-metadata": {
+        "stereotype": "object",
+        "properties": [
+          {
+            "name": "columns",
+            "type": "Number",
+            "defaultValue": null,
+            "group": "Misc",
+            "visibility": "public",
+            "description": "How many columns to have on a row. If not defined, <code>sap.f.GridContainer</code> will position as many columns as they can fit in the container.",
+            "methods": ["getColumns", "setColumns"]
+          },
+          {
+            "name": "columnSize",
+            "type": "sap.ui.core.CSSSize",
+            "defaultValue": "80px",
+            "group": "Misc",
+            "visibility": "public",
+            "description": "The width of the columns.",
+            "methods": ["getColumnSize", "setColumnSize"]
+          },
+          {
+            "name": "rowSize",
+            "type": "sap.ui.core.CSSSize",
+            "defaultValue": "80px",
+            "group": "Misc",
+            "visibility": "public",
+            "description": "The height of the rows.",
+            "methods": ["getRowSize", "setRowSize"]
+          },
+          {
+            "name": "gap",
+            "type": "sap.ui.core.CSSSize",
+            "defaultValue": "16px",
+            "group": "Misc",
+            "visibility": "public",
+            "description": "The size of the gap between columns and rows.",
+            "methods": ["getGap", "setGap"]
+          }
+        ]
+      },
+      "constructor": {
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "sId",
+            "type": "string",
+            "optional": true,
+            "description": "ID for the new control, generated automatically if no ID is given"
+          },
+          {
+            "name": "mSettings",
+            "type": "object",
+            "optional": true,
+            "description": "Initial settings for the new control"
+          }
+        ],
+        "description": "Constructor for a new <code>sap.f.GridContainerSettings</code>.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.",
+        "references": [
+          "{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}"
+        ]
+      },
+      "methods": [
+        {
+          "name": "extend",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "function",
+            "description": "Created class / constructor function"
+          },
+          "parameters": [
+            {
+              "name": "sClassName",
+              "type": "string",
+              "optional": false,
+              "description": "Name of the class being created"
+            },
+            {
+              "name": "oClassInfo",
+              "type": "object",
+              "optional": true,
+              "description": "Object literal with information about the class"
+            },
+            {
+              "name": "FNMetaImpl",
+              "type": "function",
+              "optional": true,
+              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
+            }
+          ],
+          "description": "Creates a new subclass of class sap.f.GridContainerSettings with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}."
+        },
+        {
+          "name": "getColumns",
+          "visibility": "public",
+          "returnValue": {
+            "type": "Number",
+            "description": "Value of property <code>columns</code>"
+          },
+          "description": "Gets current value of property {@link #getColumns columns}.\n\nHow many columns to have on a row. If not defined, <code>sap.f.GridContainer</code> will position as many columns as they can fit in the container."
+        },
+        {
+          "name": "getColumnSize",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.CSSSize",
+            "description": "Value of property <code>columnSize</code>"
+          },
+          "description": "Gets current value of property {@link #getColumnSize columnSize}.\n\nThe width of the columns.\n\nDefault value is <code>80px</code>."
+        },
+        {
+          "name": "getGap",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.CSSSize",
+            "description": "Value of property <code>gap</code>"
+          },
+          "description": "Gets current value of property {@link #getGap gap}.\n\nThe size of the gap between columns and rows.\n\nDefault value is <code>16px</code>."
+        },
+        {
+          "name": "getMetadata",
+          "visibility": "public",
+          "static": true,
+          "returnValue": {
+            "type": "sap.ui.base.Metadata",
+            "description": "Metadata object describing this class"
+          },
+          "description": "Returns a metadata object for class sap.f.GridContainerSettings."
+        },
+        {
+          "name": "getRowSize",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.CSSSize",
+            "description": "Value of property <code>rowSize</code>"
+          },
+          "description": "Gets current value of property {@link #getRowSize rowSize}.\n\nThe height of the rows.\n\nDefault value is <code>80px</code>."
+        },
+        {
+          "name": "setColumns",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainerSettings",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sColumns",
+              "type": "Number",
+              "optional": false,
+              "description": "New value for property <code>columns</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getColumns columns}.\n\nHow many columns to have on a row. If not defined, <code>sap.f.GridContainer</code> will position as many columns as they can fit in the container.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+        },
+        {
+          "name": "setColumnSize",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainerSettings",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sColumnSize",
+              "type": "sap.ui.core.CSSSize",
+              "optional": false,
+              "description": "New value for property <code>columnSize</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getColumnSize columnSize}.\n\nThe width of the columns.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>80px</code>."
+        },
+        {
+          "name": "setGap",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainerSettings",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sGap",
+              "type": "sap.ui.core.CSSSize",
+              "optional": false,
+              "description": "New value for property <code>gap</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getGap gap}.\n\nThe size of the gap between columns and rows.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>16px</code>."
+        },
+        {
+          "name": "setRowSize",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.f.GridContainerSettings",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sRowSize",
+              "type": "sap.ui.core.CSSSize",
+              "optional": false,
+              "description": "New value for property <code>rowSize</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getRowSize rowSize}.\n\nThe height of the rows.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>80px</code>."
+        }
+      ]
+    },
+    {
+      "kind": "class",
       "name": "sap.f.GridList",
       "basename": "GridList",
       "resource": "sap/f/GridList.js",
@@ -7951,7 +9085,7 @@
           "name": "getGridDomRefs",
           "visibility": "protected",
           "returnValue": {
-            "type": "HTMLElement[]",
+            "type": "[ 'Array' ].<HTMLElement>",
             "description": "An array with the DOM elements"
           },
           "description": "Implements IGridConfigurable interface."
@@ -8018,8 +9152,32 @@
             "description": "The header of the card"
           },
           "description": "The function is used to allow for a common header renderer between different card implementations"
+        },
+        {
+          "name": "getCardHeaderPosition",
+          "visibility": "public",
+          "static": true,
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.f.cards.HeaderPosition",
+            "description": "The position of the header of the card"
+          },
+          "description": "Allows for a common header renderer between different card implementations."
         }
       ]
+    },
+    {
+      "kind": "interface",
+      "name": "sap.f.IDynamicPageStickyContent",
+      "basename": "IDynamicPageStickyContent",
+      "resource": "sap/f/library.js",
+      "module": "sap/f/library",
+      "export": "IDynamicPageStickyContent",
+      "static": true,
+      "visibility": "public",
+      "since": "1.65",
+      "description": "Interface for controls suitable for the <code>stickySubheaderProvider</code> association of <code>{@link sap.f.DynamicPage}</code>.\n\nControls that implemenet this interface should have the following methods: <ul> <li><code>_getStickyContent</code> - returns the content (control) used in the subheader</li> <li><code>_returnStickyContent</code> - accepts control as argument and ensures that the control is placed back in its place in the provider</li> <li><code>_getStickySubHeaderSticked</code> - returns boolean value that shows where the sticky content is placed (in its provider or in the <code>DynamicPage</code>)</li> <li><code>_setStickySubHeaderSticked</code> - accepts a boolean argument to notify the provider where its sticky content is placed</li> </ul>",
+      "ui5-metamodel": true
     },
     {
       "kind": "interface",
@@ -10486,7 +11644,7 @@
             "type": "sap.m.Button",
             "cardinality": "0..n",
             "visibility": "public",
-            "description": "The <code>titleCustomTextActions</code> are placed in the <code>TextActions</code> area of the <code>SemanticPage</code> title, right before the semantic text action.\n\n<b>Note:</b> If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state.",
+            "description": "The <code>titleCustomTextActions</code> are placed in the <code>TextActions</code> area of the <code>SemanticPage</code> title, right before the semantic text action.\n\n<b>Notes:</b> <ul> <li>If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state.</li> <li>Buttons that are part of this aggregation will always have their <code>type</code> property set to <code>Transparent</code> by design.</li> </ul>",
             "methods": [
               "getTitleCustomTextActions",
               "destroyTitleCustomTextActions",
@@ -11298,7 +12456,7 @@
         {
           "name": "getCustomShareActions",
           "visibility": "public",
-          "returnValue": { "type": "sap.m.Button[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.m.Button>" },
           "description": "Gets content of aggregation {@link #getCustomShareActions customShareActions}.\n\nThe <code>customShareActions</code> are placed in the <code>ShareMenu</code> area of the <code>SemanticPage</code> title, right after the semantic actions.\n\n<b>Note:</b> If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state."
         },
         {
@@ -11347,7 +12505,7 @@
         {
           "name": "getFooterCustomActions",
           "visibility": "public",
-          "returnValue": { "type": "sap.m.Button[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.m.Button>" },
           "description": "Gets content of aggregation {@link #getFooterCustomActions footerCustomActions}.\n\nThe <code>footerCustomActions</code> are placed in the <code>FooterRight</code> area of the <code>SemanticPage</code> footer, right after the semantic footer actions.\n\n<b>Note:</b> Buttons that are part of this aggregation will always have their <code>type</code> property set to <code>Transparent</code> by design."
         },
         {
@@ -11365,7 +12523,7 @@
         {
           "name": "getHeaderContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getHeaderContent headerContent}.\n\nThe header content."
         },
         {
@@ -11490,25 +12648,27 @@
           "name": "getTitleContent",
           "visibility": "public",
           "since": "1.52",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getTitleContent titleContent}.\n\nThe content, displayed in the title.\n\n<b>Notes:</b> <ul> <li>The controls will be placed in the middle area.</li> <li>If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state.</li> </ul>"
         },
         {
           "name": "getTitleCustomIconActions",
           "visibility": "public",
-          "returnValue": { "type": "sap.m.OverflowToolbarButton[]" },
+          "returnValue": {
+            "type": "[ 'Array' ].<sap.m.OverflowToolbarButton>"
+          },
           "description": "Gets content of aggregation {@link #getTitleCustomIconActions titleCustomIconActions}.\n\nThe <code>titleCustomIconActions</code> are placed in the <code>IconActions</code> area of the <code>SemanticPage</code> title, right before the semantic icon action.\n\n<b>Note:</b> If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state."
         },
         {
           "name": "getTitleCustomTextActions",
           "visibility": "public",
-          "returnValue": { "type": "sap.m.Button[]" },
-          "description": "Gets content of aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.\n\nThe <code>titleCustomTextActions</code> are placed in the <code>TextActions</code> area of the <code>SemanticPage</code> title, right before the semantic text action.\n\n<b>Note:</b> If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state."
+          "returnValue": { "type": "[ 'Array' ].<sap.m.Button>" },
+          "description": "Gets content of aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.\n\nThe <code>titleCustomTextActions</code> are placed in the <code>TextActions</code> area of the <code>SemanticPage</code> title, right before the semantic text action.\n\n<b>Notes:</b> <ul> <li>If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state.</li> <li>Buttons that are part of this aggregation will always have their <code>type</code> property set to <code>Transparent</code> by design.</li> </ul>"
         },
         {
           "name": "getTitleExpandedContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getTitleExpandedContent titleExpandedContent}.\n\nThe content,displayed in the title, when the header is in expanded state.\n\n<b>Note:</b> The controls will be placed in the title`s left area, under the <code>titleHeading</code> aggregation."
         },
         {
@@ -11547,7 +12707,7 @@
         {
           "name": "getTitleSnappedContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.ui.core.Control>" },
           "description": "Gets content of aggregation {@link #getTitleSnappedContent titleSnappedContent}.\n\nThe content, displayed in the title, when the header is in collapsed state.\n\n<b>Notes:</b> <ul> <li>The controls will be placed in the title`s left area, under the <code>titleHeading</code> aggregation.</li> <li>If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped) state.</li> </ul>"
         },
         {
@@ -11899,7 +13059,7 @@
           "name": "removeAllCustomShareActions",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.m.Button[]",
+            "type": "[ 'Array' ].<sap.m.Button>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getCustomShareActions customShareActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11908,7 +13068,7 @@
           "name": "removeAllFooterCustomActions",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.m.Button[]",
+            "type": "[ 'Array' ].<sap.m.Button>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getFooterCustomActions footerCustomActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11917,7 +13077,7 @@
           "name": "removeAllHeaderContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11927,7 +13087,7 @@
           "visibility": "public",
           "since": "1.52",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleContent titleContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11936,7 +13096,7 @@
           "name": "removeAllTitleCustomIconActions",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.m.OverflowToolbarButton[]",
+            "type": "[ 'Array' ].<sap.m.OverflowToolbarButton>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleCustomIconActions titleCustomIconActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11945,7 +13105,7 @@
           "name": "removeAllTitleCustomTextActions",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.m.Button[]",
+            "type": "[ 'Array' ].<sap.m.Button>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleCustomTextActions titleCustomTextActions}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11954,7 +13114,7 @@
           "name": "removeAllTitleExpandedContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleExpandedContent titleExpandedContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -11963,7 +13123,7 @@
           "name": "removeAllTitleSnappedContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control[]",
+            "type": "[ 'Array' ].<sap.ui.core.Control>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getTitleSnappedContent titleSnappedContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -13140,12 +14300,8 @@
       "visibility": "public",
       "since": "1.63",
       "extends": "sap.ui.core.Control",
-      "implements": ["sap.f.IShellBar"],
+      "implements": ["sap.f.IShellBar", "sap.m.IBar"],
       "description": "A horizontal bar control holding multiple child controls used as application shell header.\n\n<h3>Overview</h3>\n\nThe <code>ShellBar</code> is used as the uppermost section (shell) of the app. It is fully responsive and adaptive, and corresponds to the SAP Fiori Design Guidelines.\n\n<h3>Usage</h3>\n\nContent specified in the <code>ShellBar</code> properties and aggregations is automatically positioned in dedicated places of the control.",
-      "experimental": {
-        "since": "1.63",
-        "text": "that provides only limited functionality. Also, the API might be changed in future."
-      },
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
@@ -13449,6 +14605,15 @@
         ],
         "description": "Constructor for a new <code>ShellBar</code>.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
       },
+      "properties": [
+        {
+          "name": "getContext",
+          "visibility": "protected",
+          "since": "1.65",
+          "type": "undefined",
+          "description": "Gets the available Bar contexts."
+        }
+      ],
       "events": [
         {
           "name": "avatarPressed",
@@ -13701,6 +14866,26 @@
       ],
       "methods": [
         {
+          "name": "_applyContextClassFor",
+          "visibility": "protected",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.m.IBar",
+            "description": "<code>this</code> for chaining"
+          },
+          "description": "Sets classes according to the context of the page. Possible contexts are header, footer, and subheader."
+        },
+        {
+          "name": "_applyTag",
+          "visibility": "protected",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.m.IBar",
+            "description": "<code>this</code> for chaining"
+          },
+          "description": "Sets the HTML tag according to the context of the page. Possible contexts are header, footer, and subheader."
+        },
+        {
           "name": "addAdditionalContent",
           "visibility": "public",
           "returnValue": {
@@ -13716,6 +14901,16 @@
             }
           ],
           "description": "Adds some additionalContent to the aggregation {@link #getAdditionalContent additionalContent}."
+        },
+        {
+          "name": "applyTagAndContextClassFor",
+          "visibility": "protected",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.m.IBar",
+            "description": "<code>this</code> for chaining"
+          },
+          "description": "Sets classes and HTML tag according to the context of the page. Possible contexts are header, footer, and subheader"
         },
         {
           "name": "attachAvatarPressed",
@@ -14393,7 +15588,7 @@
         {
           "name": "getAdditionalContent",
           "visibility": "public",
-          "returnValue": { "type": "sap.f.IShellBar[]" },
+          "returnValue": { "type": "[ 'Array' ].<sap.f.IShellBar>" },
           "description": "Gets content of aggregation {@link #getAdditionalContent additionalContent}.\n\nAdditional content to be displayed in the control.\n\n<b>Note:</b> Only controls implementing the <code>{@link sap.f.IShellBar}</code> interface are allowed."
         },
         {
@@ -14404,6 +15599,13 @@
             "description": "Value of property <code>homeIcon</code>"
           },
           "description": "Gets current value of property {@link #getHomeIcon homeIcon}.\n\nDefines the URI to the home icon, such as company or product logo.\n\nDefault value is <code>empty string</code>."
+        },
+        {
+          "name": "getHTMLTag",
+          "visibility": "protected",
+          "since": "1.65",
+          "returnValue": { "type": "string", "description": "the HTML-tag" },
+          "description": "Gets the HTML tag of the root DOM Reference."
         },
         {
           "name": "getMenu",
@@ -14550,6 +15752,16 @@
           "description": "Inserts a additionalContent into the aggregation {@link #getAdditionalContent additionalContent}."
         },
         {
+          "name": "isContextSensitive",
+          "visibility": "protected",
+          "since": "1.65",
+          "returnValue": {
+            "type": "boolean",
+            "description": "isContextSensitive"
+          },
+          "description": "Returns if the bar is sensitive to the container context. Implementation of the IBar interface"
+        },
+        {
           "name": "removeAdditionalContent",
           "visibility": "public",
           "returnValue": {
@@ -14570,7 +15782,7 @@
           "name": "removeAllAdditionalContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.f.IShellBar[]",
+            "type": "[ 'Array' ].<sap.f.IShellBar>",
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getAdditionalContent additionalContent}.\n\nAdditionally, it unregisters them from the hosting UIArea."
@@ -14591,6 +15803,19 @@
             }
           ],
           "description": "Sets a new value for property {@link #getHomeIcon homeIcon}.\n\nDefines the URI to the home icon, such as company or product logo.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+        },
+        {
+          "name": "setHTMLTag",
+          "visibility": "protected",
+          "since": "1.65",
+          "returnValue": {
+            "type": "sap.m.IBar",
+            "description": "this for chaining"
+          },
+          "parameters": [
+            { "name": "sTag", "type": "string", "optional": false }
+          ],
+          "description": "Sets the HTML tag of the root DOM Reference."
         },
         {
           "name": "setMenu",
