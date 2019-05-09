@@ -1,6 +1,6 @@
 ## 1.65.0
 
-Update to OpenUI5
+Update to OpenUI5 1.65.1
 
 ## 1.64.1
 
