@@ -1,0 +1,56 @@
+{
+  "name": "@ui5/eslint-plugin-ui5-define-jsdocs",
+  "version": "0.0.2",
+  "description": "ui5 apps validations",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "nyc mocha tests --recursive"
+  },
+  "dependencies": {
+    "doctrine": "^3.0.0",
+    "eslint": "^5.16.0",
+    "lodash": "^4.17.11",
+    "requireindex": "^1.2.0",
+    "string-format": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-eslint-plugin": "^2.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nyc": "^14.0.0",
+    "object-assign": "^4.1.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "include": [
+      "lib/rules/*.js",
+      "lib/utils/*.js"
+    ],
+    "exclude": [
+      "tests/**"
+    ],
+    "ignore-class-method": "methodToIgnore",
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "cache": true,
+    "all": true,
+    "temp-dir": "./.nyc_output/coverage-tmp",
+    "report-dir": "./.nyc_output/coverage"
+  },
+  "license": "ISC"
+}

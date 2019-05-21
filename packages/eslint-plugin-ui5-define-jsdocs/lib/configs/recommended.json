@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "ui5-define-jsdocs/no-jsdoc": "warn",
+    "ui5-define-jsdocs/no-jsdoc-param": "warn",
+    "ui5-define-jsdocs/no-jsdoc-param-type": "warn",
+    "ui5-define-jsdocs/wrong-jsdoc-param-type": "warn",
+    "ui5-define-jsdocs/duplicate-jsdoc-params": "warn"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "no-jsdoc": "There is no JSDoc provided.",
+  "no-jsdoc-param": "There is no JSDoc param defined.",
+  "no-jsdoc-param-type": "There is no JSDoc param type defined.",
+  "wrong-jsdoc-param-type": "The JSDoc param type is incorrect.",
+  "duplicate-jsdoc-params": "The argument should contain only one JSDoc param."
+}
