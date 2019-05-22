@@ -4,6 +4,11 @@
   "private": true,
   "version": "1.65.0",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SAP/ui5-typescript.git",
+    "directory": "packages/dts-generator"
+  },
   "main": "lib/api.js",
   "dependencies": {
     "lodash": "4.17.11",
