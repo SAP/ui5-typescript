@@ -3,6 +3,11 @@
   "description": "OpenUI5 TypeScript Definitions",
   "version": "1.65.1",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SAP/ui5-typescript.git",
+    "directory": "packages/ts-types"
+  },
   "types": "types/sap.ui.core.d.ts",
   "openUI5Version": "1.65.1",
   "devDependencies": {
