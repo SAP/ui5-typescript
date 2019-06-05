@@ -101,12 +101,27 @@ function buildVariable(property) {
  * @returns {FunctionDesc}
  */
 function buildFunction(ui5Method) {
-  assertKnownProps(["name", "parameters", "returnValue", "throws"], ui5Method);
+  assertKnownProps(
+    ["name", "parameters", "returnValue", "throws", "optional"],
+    ui5Method
+  );
+  // Simple check to avoid having the same parameter defined twice
+  const existingParameters = {};
+  const uniqueParameters = [];
+  if (ui5Method.parameters) {
+    ui5Method.parameters.forEach(parameter => {
+      // We need to prefix the parameter with _ otherwise parameter named constructor gets ignored :)
+      if (!existingParameters["_" + parameter.name]) {
+        existingParameters["_" + parameter.name] = parameter;
+        uniqueParameters.push(parameter);
+      }
+    });
+  }
   const astNode = {
     kind: "FunctionDesc",
     name: ui5Method.name,
     static: ui5Method.static === true,
-    parameters: _.map(ui5Method.parameters, buildParameter),
+    parameters: _.map(uniqueParameters, buildParameter),
     returns: buildReturnDesc(ui5Method.returnValue),
     description: ui5Method.description,
     additionalDocs: ui5Method.references,
@@ -279,7 +294,10 @@ function buildClass(ui5Class) {
  * @returns {Interface}
  */
 function buildInterface(ui5Interface) {
-  assertKnownProps(["basename", "name", "methods", "events"], ui5Interface);
+  assertKnownProps(
+    ["basename", "name", "methods", "events"],
+    ui5Interface
+  );
 
   const astNode = {
     kind: "Interface",

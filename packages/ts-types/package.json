@@ -11,7 +11,7 @@
   "types": "types/sap.ui.core.d.ts",
   "openUI5Version": "1.65.1",
   "devDependencies": {
-    "@ui5/cli": "1.4.2",
+    "@ui5/cli": "github:nlunets/ui5-cli",
     "@ui5/dts-generator": "^1.65.0",
     "fs-extra": "^8.0.0",
     "klaw-sync": "^6.0.0",
