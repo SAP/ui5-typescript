@@ -715,9 +715,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "12.0.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.4.tgz#46832183115c904410c275e34cf9403992999c32"
-  integrity sha512-j8YL2C0fXq7IONwl/Ud5Kt0PeXw22zGERt+HSSnwbKOJVsAGkEz3sFCYwaF9IOuoG1HOtE0vKCj6sXF7Q0+Vaw==
+  version "12.0.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.5.tgz#ac14404c33d1a789973c45379a67f7f7e58a01b9"
+  integrity sha512-CFLSALoE+93+Hcb5pFjp0J1uMrrbLRe+L1+gFwerJ776R3TACSF0kTVRQ7AvRa7aFx70nqYHAc7wQPlt9kY2Mg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -5397,9 +5397,9 @@ posix-character-classes@^0.1.0:
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
 postcss@^7.0.5:
-  version "7.0.16"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.16.tgz#48f64f1b4b558cb8b52c88987724359acb010da2"
-  integrity sha512-MOo8zNSlIqh22Uaa3drkdIAgUGEL+AD1ESiSdmElLUmE2uVDo1QloiT/IfW9qRw8Gw+Y/w69UVMGwbufMSftxA==
+  version "7.0.17"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.17.tgz#4da1bdff5322d4a0acaab4d87f3e782436bad31f"
+  integrity sha512-546ZowA+KZ3OasvQZHsbuEpysvwTZNGJv9EfyCQdsIDltPSWHAeTQ5fQy/Npi2ZDtLI3zs7Ps/p6wThErhm9fQ==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -6532,9 +6532,9 @@ tap-parser@~1.2.2:
     readable-stream "^2"
 
 tap-xunit@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/tap-xunit/-/tap-xunit-2.3.0.tgz#9a259e2f1f87908f1fe42b3f4330bf83cd217640"
-  integrity sha512-YVsURNvn1wfVUWb5wjansxhfbfeo2hOBTUbVgZoaMO8lyZzpiSi9IiZTZ7JG56m6A49LeWjfJIx/SnAre41V/A==
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/tap-xunit/-/tap-xunit-2.4.0.tgz#268a4f54920a604a91dc5a1d0a1a0ce075f8b4f4"
+  integrity sha512-ButAA01aOdHZm1PX6CjcyL+5q3SljFtOnvnatwoh3rv5gcWL9uajBDNF5tk8IZuVnddblI/6Ghc3RauSY/865Q==
   dependencies:
     duplexer "~0.1.1"
     minimist "~1.2.0"
