@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.68.0
+// For Library Version: 1.65.1
 
 declare namespace sap {
   namespace ui {
@@ -97,6 +97,13 @@ declare namespace sap {
        * @deprecated (since 1.38)
        */
       namespace form {
+        /**
+         * @deprecated (since 1.16.0) - Moved to sap.ui.layout library. Please use this one.
+         *
+         * Available FormLayouts used for the SimpleForm.
+         */
+        export const SimpleFormLayout: undefined;
+
         interface FormOpts extends sap.ui.layout.form.FormOpts {}
 
         interface FormContainerOpts
@@ -629,7 +636,7 @@ declare namespace sap {
            * Default value is `ResponsiveLayout`
            */
           // @ts-ignore
-          getLayout(): sap.ui.commons.form.SimpleFormLayout;
+          getLayout(): any;
           /**
            * Returns a metadata object for class sap.ui.commons.form.SimpleForm.
            */
@@ -647,15 +654,9 @@ declare namespace sap {
             /**
              * new value for property `layout`
              */
-            oLayout: sap.ui.commons.form.SimpleFormLayout
+            oLayout: any
           ): sap.ui.commons.form.SimpleForm;
         }
-        /**
-         * @deprecated (since 1.16.0) - Moved to sap.ui.layout library. Please use this one.
-         *
-         * Available FormLayouts used for the SimpleForm.
-         */
-        enum SimpleFormLayout {}
       }
       /**
        * @deprecated (since 1.38)
@@ -21863,7 +21864,7 @@ declare namespace sap {
          * Default value is `Auto`
          */
         // @ts-ignore
-        getLevel(): sap.ui.core.TitleLevel;
+        getLevel(): any;
         /**
          * Returns a metadata object for class sap.ui.commons.Title.
          */
@@ -21881,7 +21882,7 @@ declare namespace sap {
           /**
            * new value for property `level`
            */
-          oLevel: sap.ui.core.TitleLevel
+          oLevel: any
         ): sap.ui.commons.Title;
       }
       /**

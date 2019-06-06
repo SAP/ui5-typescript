@@ -78,10 +78,6 @@ interface Enum extends UI5JSDocs {
   visibility: UI5Visibility;
 }
 
-interface Stakeholder {
-  name: string;
-}
-
 interface Interface extends UI5JSDocs {
   kind: "Interface";
   name: string;
@@ -89,7 +85,6 @@ interface Interface extends UI5JSDocs {
   methods: FunctionDesc[];
   props: Property[];
   visibility: UI5Visibility;
-  stakeholders: Stakeholder[];
 }
 
 interface DeprecatedDesc {

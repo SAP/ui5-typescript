@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.68.0
+// For Library Version: 1.65.1
 
 declare namespace sap {
   namespace ui {
@@ -32,18 +32,19 @@ declare namespace sap {
       namespace plugins {
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Implements a plugin to enable a special multi-selection behavior:
-         * 	 - No Select All checkbox, select all can only be done via range selection
-         * 	 - Dedicated Deselect All button to clear the selection
+         * 	 - No Select All button, select all can only be done via range selection
+         * 	 - Dedicated button to clear the selection
          * 	 - The number of items which can be selected in a range is defined with the limit property by the application.
          * 			If the user tries to select more items, the selection is automatically limited, and the table scrolls
          * 			back to the last selected item
          * 	 - If not already loaded, the table loads the selected items up to the given limit
          * 	 - Multiple consecutive selections are possible
          *
-         * When this plugin is applied to the table, the table's selection mode is automatically set to MultiToggle
-         * and cannot be changed.
+         * When this plugin is applied to the table, the selection mode is automatically set to MultiToggle and
+         * cannot be changed.
          */
         class MultiSelectionPlugin extends sap.ui.table.plugins
           .SelectionPlugin {
@@ -56,19 +57,6 @@ declare namespace sap {
            */
           constructor();
 
-          /**
-           * Loads the context of the selected range and adds the given selection interval to the selection.
-           */
-          addSelectionInterval(
-            /**
-             * Index from which the selection starts
-             */
-            iIndexFrom: number,
-            /**
-             * Index up to which to select
-             */
-            iIndexTo: number
-          ): void;
           /**
            * Attaches event handler `fnFunction` to the {@link #event:selectionChange selectionChange} event of this
            * `sap.ui.table.plugins.MultiSelectionPlugin`.
@@ -95,10 +83,6 @@ declare namespace sap {
              */
             oListener?: object
           ): sap.ui.table.plugins.MultiSelectionPlugin;
-          /**
-           * Removes the complete selection.
-           */
-          clearSelection(): void;
           /**
            * Detaches event handler `fnFunction` from the {@link #event:selectionChange selectionChange} event of
            * this `sap.ui.table.plugins.MultiSelectionPlugin`.
@@ -159,13 +143,7 @@ declare namespace sap {
           /**
            * Gets current value of property {@link #getLimit limit}.
            *
-           * Number of items which can be selected in a range. Accepts positive integer values. If set to 0, the limit
-           * is disabled, and the Select All checkbox appears instead of the Deselect All button. The plugin loads
-           * all selected items. **Note:** To avoid severe performance problems, the limit should only be set to 0
-           * in the following cases:
-           * 	 - With client-side models
-           * 	 - With server-side models if they are used in client mode
-           * 	 - If the entity set is small
+           * Number of items which can be selected in a range.
            *
            * Default value is `200`.
            */
@@ -176,54 +154,9 @@ declare namespace sap {
           // @ts-ignore
           static getMetadata(): sap.ui.base.Metadata;
           /**
-           * Zero-based indices of selected items, wrapped in an array. An empty array means nothing has been selected.
-           */
-          getSelectedIndices(): number[];
-          /**
-           * Gets current value of property {@link #getShowHeaderSelector showHeaderSelector}.
-           *
-           * Show header selector
-           *
-           * Default value is `true`.
-           */
-          getShowHeaderSelector(): boolean;
-          /**
-           * Returns the information whether the given index is selected.
-           */
-          isIndexSelected(
-            /**
-             * The index for which the selection state is retrieved
-             */
-            iIndex: number
-          ): boolean;
-          /**
-           * Removes the given selection interval from the selection. In case of single selection, only `iIndexTo`
-           * is removed from the selection.
-           */
-          removeSelectionInterval(
-            /**
-             * Index from which the deselection starts
-             */
-            iIndexFrom: number,
-            /**
-             * Index up to which to deselect
-             */
-            iIndexTo: number
-          ): void;
-          /**
-           * Loads all contexts and adds all indices to the selection if the limit is disabled.
-           */
-          selectAll(): void;
-          /**
            * Sets a new value for property {@link #getLimit limit}.
            *
-           * Number of items which can be selected in a range. Accepts positive integer values. If set to 0, the limit
-           * is disabled, and the Select All checkbox appears instead of the Deselect All button. The plugin loads
-           * all selected items. **Note:** To avoid severe performance problems, the limit should only be set to 0
-           * in the following cases:
-           * 	 - With client-side models
-           * 	 - With server-side models if they are used in client mode
-           * 	 - If the entity set is small
+           * Number of items which can be selected in a range.
            *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
@@ -234,34 +167,6 @@ declare namespace sap {
              * New value for property `limit`
              */
             iLimit: number
-          ): sap.ui.table.plugins.MultiSelectionPlugin;
-          /**
-           * Loads the contexts of the selected range and sets the given selection interval as the selection.
-           */
-          setSelectionInterval(
-            /**
-             * Index from which the selection starts
-             */
-            iIndexFrom: number,
-            /**
-             * Index up to which to select
-             */
-            iIndexTo: number
-          ): void;
-          /**
-           * Sets a new value for property {@link #getShowHeaderSelector showHeaderSelector}.
-           *
-           * Show header selector
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `true`.
-           */
-          setShowHeaderSelector(
-            /**
-             * New value for property `showHeaderSelector`
-             */
-            bShowHeaderSelector: boolean
           ): sap.ui.table.plugins.MultiSelectionPlugin;
           /**
            * Attaches event handler `fnFunction` to the {@link #event:selectionChange selectionChange} event of this
@@ -292,7 +197,7 @@ declare namespace sap {
          * Implements the selection methods for a table.
          */
         // @ts-ignore - static "getMetadata" inheritance issue
-        class SelectionPlugin extends sap.ui.core.Element {
+        class SelectionPlugin extends sap.ui.base.ManagedObject {
           /**
            * Constructs an instance of sap.ui.table.plugins.SelectionPlugin
            *
@@ -350,7 +255,7 @@ declare namespace sap {
            * Creates a new subclass of class sap.ui.table.plugins.SelectionPlugin with name `sClassName` and enriches
            * it with the information contained in `oClassInfo`.
            *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
+           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}.
            */
           // @ts-ignore
           static extend(
@@ -1257,12 +1162,11 @@ declare namespace sap {
 
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Plugin section of the table. Multiple plugins are possible, but always only **one** of a certain type.
          *
          * The following restrictions apply:
-         * 	 - If a selection plugin is applied to the table, the table's selection API must not be used. Instead,
-         * 			use the API of the plugin.
          * 	 - Only one MultiSelectionPlugin can be applied. No other plugins can be applied.
          */
         plugins?:
@@ -3679,6 +3583,7 @@ declare namespace sap {
         ): sap.ui.table.Table;
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Adds some plugin to the aggregation {@link #getPlugins plugins}.
          */
@@ -4171,6 +4076,7 @@ declare namespace sap {
         destroyNoData(): sap.ui.table.Table;
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Destroys all the plugins in the aggregation {@link #getPlugins plugins}.
          */
@@ -4879,6 +4785,25 @@ declare namespace sap {
          */
         getAriaLabelledBy(): sap.ui.core.ID[];
         /**
+         * Returns the control inside the cell with the given row index (in the `rows` aggregation) and column index
+         * (in the `columns` aggregation or in the list of visible columns only, depending on parameter `bVisibleColumnIndex`).
+         */
+        getCellControl(
+          /**
+           * Index of row in the table's `rows` aggregation
+           */
+          iRowIndex: number,
+          /**
+           * Index of column in the list of visible columns or in the `columns` aggregation, as indicated with `bVisibleColumnIndex`
+           */
+          iColumnIndex: number,
+          /**
+           * If set to `true`, the given column index is interpreted as index in the list of visible columns, otherwise
+           * as index in the `columns` aggregation
+           */
+          bVisibleColumnIndex: boolean
+        ): sap.ui.core.Control;
+        /**
          * Gets current value of property {@link #getColumnHeaderHeight columnHeaderHeight}.
          *
          * Header row height in pixel. If a value greater than 0 is set, it overrides the height defined in the
@@ -5155,14 +5080,13 @@ declare namespace sap {
         getNoData(): sap.ui.core.Control | string;
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Gets content of aggregation {@link #getPlugins plugins}.
          *
          * Plugin section of the table. Multiple plugins are possible, but always only **one** of a certain type.
          *
          * The following restrictions apply:
-         * 	 - If a selection plugin is applied to the table, the table's selection API must not be used. Instead,
-         * 			use the API of the plugin.
          * 	 - Only one MultiSelectionPlugin can be applied. No other plugins can be applied.
          */
         getPlugins(): sap.ui.table.plugins.SelectionPlugin[];
@@ -5382,6 +5306,7 @@ declare namespace sap {
         ): number;
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Checks for the provided `sap.ui.table.plugins.SelectionPlugin` in the aggregation {@link #getPlugins
          * plugins}. and returns its index if found or -1 otherwise.
@@ -5434,6 +5359,7 @@ declare namespace sap {
         ): sap.ui.table.Table;
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Inserts a plugin into the aggregation {@link #getPlugins plugins}.
          */
@@ -5491,6 +5417,7 @@ declare namespace sap {
         removeAllExtension(): sap.ui.core.Control[];
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Removes all the controls from the aggregation {@link #getPlugins plugins}.
          *
@@ -5532,6 +5459,7 @@ declare namespace sap {
         ): sap.ui.core.Control;
         /**
          * @SINCE 1.64
+         * @EXPERIMENTAL (since 1.64)
          *
          * Removes a plugin from the aggregation {@link #getPlugins plugins}.
          */

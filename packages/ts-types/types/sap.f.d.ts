@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.68.0
+// For Library Version: 1.65.1
 
 declare namespace sap {
   /**
@@ -32,8 +32,7 @@ declare namespace sap {
       /**
        * @SINCE 1.62
        *
-       * Marker interface for controls suitable as a header in controls that implement the {@link sap.f.ICard}
-       * interface.
+       * Marker interface for card headers
        */
       interface IHeader {}
 
@@ -84,11 +83,6 @@ declare namespace sap {
          * The subtitle of the card
          */
         subtitle?: string;
-
-        /**
-         * Defines the status text.
-         */
-        statusText?: string;
 
         /**
          * General unit of measurement for the header. Displayed as side information to the subtitle.
@@ -158,13 +152,13 @@ declare namespace sap {
       /**
        * @SINCE 1.64
        *
-       * Displays general information in the header of the {@link sap.f.Card}.
+       * A control used to group a set of card attributes in a header.
        *
-       * You can configure the title, subtitle, status text and icon, using the provided properties.
+       * Overview: The `Header` displays general information about the card. You can configure the title, subtitle,
+       * status text and icon, using properties.
        *
-       * **Notes:**
-       * 	 - You should always set a title.
-       * 	 - To show a KPI or any numeric information, use {@link sap.f.cards.NumericHeader} instead.
+       * Usage: You should always set a title. To show a KPI or any numeric information, use {@link sap.f.cards.NumericHeader
+       * NumericHeader} instead.
        */
       class Header extends sap.ui.core.Control implements sap.f.cards.IHeader {
         /**
@@ -420,16 +414,14 @@ declare namespace sap {
       /**
        * @SINCE 1.64
        *
-       * Displays general information in the header of the {@link sap.f.Card} and allows the configuration of
-       * a numeric value visualization..
+       * A control used to group a set of card attributes in a header.
        *
-       * You can configure the title, subtitle, status text and icon, using the provided properties. To add more
-       * side number indicators, use the `sideIndicators` aggregation.
+       * Overview: The `NumericHeader` shows general information about the card and allows the configuration of
+       * a numeric value visualization. You can configure the title, subtitle, status text and icon, using properties.
        *
-       * **Notes:**
-       * 	 - You should always set a title.
-       * 	 - You should always have a maximum of two side indicators.
-       * 	 - To show only basic information, use {@link sap.f.cards.Header Header} instead.
+       * Usage: To show only basic information, use {@link sap.f.cards.Header Header} instead. It is possible
+       * to add more side number indicators, using the `sideIndicators` aggregation. You should always set a title.
+       * You should always have a maximum of two side indicators.
        */
       class NumericHeader extends sap.ui.core.Control
         implements sap.f.cards.IHeader {
@@ -576,14 +568,6 @@ declare namespace sap {
          */
         getState(): sap.m.ValueColor;
         /**
-         * Gets current value of property {@link #getStatusText statusText}.
-         *
-         * Defines the status text.
-         *
-         * Default value is `empty string`.
-         */
-        getStatusText(): string;
-        /**
          * Gets current value of property {@link #getSubtitle subtitle}.
          *
          * The subtitle of the card
@@ -688,21 +672,6 @@ declare namespace sap {
           sValue: sap.m.ValueColor
         ): sap.f.cards.NumericHeader;
         /**
-         * Sets a new value for property {@link #getStatusText statusText}.
-         *
-         * Defines the status text.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `empty string`.
-         */
-        setStatusText(
-          /**
-           * New value for property `statusText`
-           */
-          sStatusText: string
-        ): sap.f.cards.NumericHeader;
-        /**
          * Sets the subtitle.
          */
         setSubtitle(
@@ -760,7 +729,7 @@ declare namespace sap {
       /**
        * @SINCE 1.64
        *
-       * Holds a set of side indicator attributes used in the {@link sap.f.cards.NumericHeader} control.
+       * A control used by `sap.f.cards.NumericHeader` to hold a set of side indicator attributes.
        */
       class NumericSideIndicator extends sap.ui.core.Control {
         /**
@@ -856,7 +825,7 @@ declare namespace sap {
       /**
        * @SINCE 1.65
        *
-       * Different options for the position of the header in controls that implement the {@link sap.f.ICard} interface.
+       * Different options for the position of the `Card` header.
        */
       enum HeaderPosition {
         /**
@@ -874,20 +843,19 @@ declare namespace sap {
       /**
        * @SINCE 1.46
        *
-       * The `sap.f.routing.Router` class is intended to be used with `{@link sap.f.FlexibleColumnLayout}` as
-       * a root control.
+       * See {@link sap.ui.core.routing.Router} for the constructor arguments.
        *
-       * The difference to the `{@link sap.ui.core.routing.Router}` are the `viewLevel`, `transition`, and `transitionParameters`
-       * properties that you can specify in every Route or Target created by this router.
+       * The `sap.f.routing.Router` is intended to be used with {@link sap.f.FlexibleColumnLayout} as a root control.
        *
-       * Additionally, the `layout` property can be specified in every Route, in which case it is applied to the
-       * root control.
+       * The difference to the {@link sap.ui.core.routing.Router} are the properties viewLevel, transition and
+       * transitionParameters you can specify in every Route or Target created by this router.
        *
-       * See `{@link sap.ui.core.routing.Router}` for the constructor arguments.
+       * Additionally, the `layout` property can be specified in every Route, in which case it will be applied
+       * to the root control.
        */
       class Router extends sap.ui.core.routing.Router {
         /**
-         * Constructor for a new `sap.f.routing.Router`.
+         * Instantiates a `sap.f.routing.Router`.
          */
         constructor(
           /**
@@ -933,29 +901,27 @@ declare namespace sap {
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
         /**
-         * Returns the `TargetHandler` instance.
+         * Returns the TargetHandler instance.
          */
         getTargetHandler(): sap.f.routing.TargetHandler;
       }
       /**
        * @SINCE 1.46
-       *
-       * Used for closing dialogs and showing transitions in `NavContainers` when targets are displayed.
-       *
-       * **Note:** You should not create an own instance of this class. It is created when using `{@link sap.f.routing.Router}`
-       * or `{@link sap.f.routing.Targets}`. You may use the `{@link #setCloseDialogs}` function to specify if
-       * dialogs should be closed on displaying other views.
        */
       class TargetHandler extends sap.ui.base.Object {
         /**
-         * Constructor for a new `TargetHandler`.
+         * Instantiates a TargetHandler, a class used for closing dialogs and showing transitions in NavContainers
+         * when targets are displayed.
+         *  **You should not create an own instance of this class.** It will be created when using {@link sap.f.routing.Router}
+         * or {@link sap.f.routing.Targets}. You may use the {@link #setCloseDialogs} function to specify if dialogs
+         * should be closed on displaying other views.
          */
         constructor(
           /**
-           * Closes all open dialogs before navigating, if set to `true` (default). If set to `false`, it just navigates
-           * without closing dialogs.
+           * the default is true - will close all open dialogs before navigating, if set to true. If set to false
+           * it will just navigate without closing dialogs.
            */
-          bCloseDialogs: boolean
+          closeDialogs: boolean
         );
 
         /**
@@ -980,7 +946,7 @@ declare namespace sap {
           FNMetaImpl?: Function
         ): Function;
         /**
-         * Gets if a navigation should close dialogs.
+         * Gets if a navigation should close dialogs
          */
         getCloseDialogs(): boolean;
         /**
@@ -989,45 +955,39 @@ declare namespace sap {
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
         /**
-         * Sets if a navigation should close dialogs.
+         * Sets if a navigation should close dialogs
          */
         setCloseDialogs(
           /**
-           * Close dialogs if `true`
+           * close dialogs if true
            */
           bCloseDialogs: boolean
         ): sap.f.routing.TargetHandler;
       }
       /**
        * @SINCE 1.46
-       *
-       * Provides a convenient way for placing views into the correct containers of your app.
-       *
-       * The `sap.f` extension of `Targets` also handles the triggering of page navigation when the target control
-       * is an `{@link sap.f.FlexibleColumnLayout}`. Other controls are also allowed, but the extra parameters
-       * `viewLevel`, `transition`, and `transitionParameters` are ignored and it behaves as `{@link sap.ui.core.routing.Targets}`.
-       *
-       * When a target is displayed, dialogs are being closed. To change this, use `{@link #getTargetHandler}`
-       * and {@link sap.f.routing.TargetHandler#setCloseDialogs}.
        */
       class Targets extends sap.ui.core.routing.Targets {
         /**
-         * Constructor for a new `Targets` class.
+         * Provides a convenient way for placing views into the correct containers of your application. The sap.f
+         * extension of Targets also handles the triggering of page navigation when the target control is a {@link
+         * sap.f.FlexibleColumnLayout}. Other controls are also allowed, but the extra parameters viewLevel, transition
+         * and transitionParameters are ignored and it will behave like {@link sap.ui.core.routing.Targets}. When
+         * a target is displayed, dialogs will be closed. To change this use {@link #getTargetHandler} and {@link
+         * sap.f.routing.TargetHandler#setCloseDialogs}.
          */
         constructor(oOptions: {
           /**
-           * The views instance will create the views of all the targets defined, so if 2 targets have the same viewName,
+           * the views instance will create the views of all the targets defined, so if 2 targets have the same viewName,
            * the same instance of the view will be displayed.
            */
           views: sap.ui.core.routing.Views;
           /**
-           * This config allows all the values oOptions.targets.anyName allows, these will be the default values for
+           * this config allows all the values oOptions.targets.anyName allows, these will be the default values for
            * properties used in the target.
-           *
-           * For example, if you are only using xmlViews in your app you can specify viewType="XML" so you don't have
+           *  For example if you are only using xmlViews in your app you can specify viewType="XML" so you don't have
            * to repeat this in every target.
-           *
-           * If a target specifies viewType="JS", the JS will be stronger than the XML here is an example.
+           *  If a target specifies viewType="JS", the JS will be stronger than the XML here is an example.
            *
            *
            * ```javascript
@@ -1070,22 +1030,18 @@ declare namespace sap {
            */
           config?: {
             /**
-             * The ID of the `rootView`.
-             *
-             * This should be the ID of the view that contains the control with the `controlId` since the control will
-             * be retrieved by calling the {@link sap.ui.core.mvc.View#byId} function of the rootView.
-             *
-             * If you are using a component and add the routing.targets, **do not set this parameter**, since the component
-             * will set the rootView to the view created by the {@link sap.ui.core.UIComponent#createContent} function.
-             *
-             * If you specify the "parent" property of a target, the control will not be searched in the root view but
-             * in the view created by the parent (see parent documentation).
+             * The id of the rootView - This should be the id of the view that contains the control with the controlId
+             * since the control will be retrieved by calling the {@link sap.ui.core.mvc.View#byId} function of the
+             * rootView. If you are using a component and add the routing.targets **do not set this parameter**, since
+             * the component will set the rootView to the view created by the {@link sap.ui.core.UIComponent#createContent}
+             * function. If you specify the "parent" property of a target, the control will not be searched in the root
+             * view but in the view Created by the parent (see parent documentation).
              */
             rootView?: string;
             /**
-             * Whether the views which are created through this `Targets` are loaded asynchronously. This option can
-             * be set only when the `Targets` is used standalone without the involvement of a Router. Otherwise, the
-             * async option is inherited from the Router.
+             * Whether the views which are created through this Targets are loaded asyncly. This option can be set only
+             * when the Targets is used standalone without the involvement of a Router. Otherwise the async option is
+             * inherited from the Router.
              */
             async?: boolean;
           };
@@ -1095,9 +1051,7 @@ declare namespace sap {
            */
           targets: {
             /**
-             * A new target, the key severs as a name.
-             *
-             * Example:
+             * a new target, the key severs as a name. An example:
              * ```javascript
              *
              *
@@ -1121,13 +1075,13 @@ declare namespace sap {
              * ```
              *
              *
-             * This creates two targets named 'welcome' and 'goodbye'. You can display both of them or one of them using
-             * the `{@link #display}` function.
+             * This will create two targets named 'welcome' and 'goodbye' you can display both of them or one of them
+             * using the {@link #display} function.
              */
             anyName: {
               /**
-               * The name of a view that will be created. To place the view into a Control use the `controlAggregation`
-               * and `controlId`. Views are only created once per `viewName`.
+               * The name of a view that will be created. To place the view into a Control use the controlAggregation
+               * and controlId. Views will only be created once per viewName.
                * ```javascript
                *
                *
@@ -1158,7 +1112,7 @@ declare namespace sap {
                * ```javascript
                *
                *
-               * // Some code you execute before you display the target named 'detailWelcome':
+               * // Some code you execute before you display the taget named 'detailWelcome':
                * var oView = sap.ui.view(({ viewName : "Welcome", type : sap.ui.core.mvc.ViewType.XML});
                * oTargets.getViews().setView("WelcomeWithAlias", oView)
                *
@@ -1184,44 +1138,40 @@ declare namespace sap {
                */
               viewName: string;
               /**
-               * The type of the view that is going to be created. These are the supported types: `{@link sap.ui.core.mvc.ViewType}`.
-               *
-               * You always have to provide a `viewType` except if you are using `{@link sap.ui.core.routing.Views#setView}`.
+               * The type of the view that is going to be created. These are the supported types: {@link sap.ui.core.mvc.ViewType}.
+               * You always have to provide a viewType except if you are using {@link sap.ui.core.routing.Views#setView}.
                */
               viewType?: string;
               /**
-               * A prefix that is prepended in front of the `viewName`.
-               *
-               * **Example:** `viewName` is set to "myView" and `viewPath` is set to "myApp" - the created viewName will
+               * A prefix that will be prepended in front of the viewName.
+               *  **Example:** viewName is set to "myView" and viewPath is set to "myApp" - the created viewName will
                * be "myApp.myView".
                */
               viewPath?: string;
               /**
-               * The ID of the created view. This is is prefixed with the ID of the component set to the views instance
-               * provided in `oOptions.views`. For details, see `{@link sap.ui.core.routing.Views#getView}`.
+               * The id of the created view. This is will be prefixed with the id of the component set to the views instance
+               * provided in oOptions.views. For details see {@link sap.ui.core.routing.Views#getView}.
                */
               viewId?: string;
               /**
-               * The ID of the parent of the `controlId`.
-               *
-               * This should be the ID of the view that contains your `controlId` since the target control is retrieved
-               * by calling the `{@link sap.ui.core.mvc.View#byId}` function of the `targetParent`. By default, this is
-               * the view created by a component, so you do not have to provide this parameter. If you are using children,
-               * the view created by the parent of the child is taken. You only need to specify this, if you are not using
-               * a `Targets` instance created by a component and you should give the ID of root view of your app to this
-               * property.
+               * The id of the parent of the controlId - This should be the id of the view that contains your controlId,
+               * since the target control will be retrieved by calling the {@link sap.ui.core.mvc.View#byId} function
+               * of the targetParent. By default, this will be the view created by a component, so you do not have to
+               * provide this parameter. If you are using children, the view created by the parent of the child is taken.
+               * You only need to specify this, if you are not using a Targets instance created by a component and you
+               * should give the id of root view of your application to this property.
                */
               targetParent?: string;
               /**
-               * The ID of the control where you want to place the view created by this target. The view of the target
+               * The id of the control where you want to place the view created by this target. The view of the target
                * will be put into this container Control, using the controlAggregation property. You have to specify both
                * properties or the target will not be able to place itself. An example for containers are {@link sap.ui.ux3.Shell}
                * with the aggregation 'content' or a {@link sap.m.NavContainer} with the aggregation 'pages'.
                */
               controlId?: string;
               /**
-               * The name of an aggregation of the `controlId`, that contains views. For example, an `{@link sap.m.NavContainer}`
-               * has a `pages` aggregation and an `{@link sap.ui.ux3.Shell}` it has a `content` aggregation.
+               * The name of an aggregation of the controlId, that contains views. Eg: a {@link sap.m.NavContainer} has
+               * an aggregation 'pages', another Example is the {@link sap.ui.ux3.Shell} it has 'content'.
                */
               controlAggregation?: string;
               /**
@@ -1236,19 +1186,15 @@ declare namespace sap {
                * the parent will also be displayed. Also the control you specify with the controlId parameter, will be
                * searched inside of the view of the parent not in the rootView, provided in the config. The control will
                * be searched using the byId function of a view. When it is not found, the global id is checked.
-               *
-               * The main usecase for the parent property is placing a view inside a smaller container of a view, which
+               *  The main usecase for the parent property is placing a view inside a smaller container of a view, which
                * is also created by targets. This is useful for lazy loading views, only if the user really navigates
                * to this part of your application.
-               *
-               * **Example:** Our aim is to lazy load a tab of an IconTabBar (a control that displays a view initially
+               *  **Example:** Our aim is to lazy load a tab of an IconTabBar (a control that displays a view initially
                * and when a user clicks on it the view changes). It's a perfect candidate to lazy load something inside
                * of it.
-               *
-               * **Example app structure:**
-               *
-               * We have a `rootView` that is returned by the `createContent` function of our `UIComponent`. This view
-               * contains an `sap.m.App` control with the ID 'myApp'
+               *  **Example app structure:**
+               *  We have a rootView that is returned by the createContent function of our UIComponent. This view contains
+               * an sap.m.App control with the id 'myApp'
                * ```javascript
                *
                *
@@ -1276,7 +1222,7 @@ declare namespace sap {
                *
                * ```
                *  and a view called 'SecondTabContent', this one contains our content we want to have lazy loaded. Now
-               * we need to create our `Targets` instance with a config matching our app:
+               * we need to create our Targets instance with a config matching our app:
                * ```javascript
                *
                *
@@ -1311,7 +1257,7 @@ declare namespace sap {
                * ```
                *
                *
-               * Now, if we call ` oTargets.display("secondTabContent") `, 2 views will be created: Detail and SecondTabContent.
+               * Now if we call ` oTargets.display("secondTabContent") `, 2 views will be created: Detail and SecondTabContent.
                * The 'Detail' view will be put into the pages aggregation of the App. And afterwards the 'SecondTabContent'
                * view will be put into the content Aggregation of the second IconTabFilter. So a parent will always be
                * created before the target referencing it.
@@ -1325,9 +1271,7 @@ declare namespace sap {
                * These levels should represent the user process of your application and they do not have to match the
                * container structure of your Targets. If the user navigates between views with the same viewLevel, a forward
                * transition is taken. If you pass a direction into the display function, the viewLevel will be ignored.
-               *
-               * **Example:**
-               *
+               *  **Example:**
                *
                * ```javascript
                *
@@ -1365,12 +1309,12 @@ declare namespace sap {
                */
               viewLevel?: number;
               /**
-               * Defines which transition of the {@link sap.m.NavContainer} is applied when navigating. If it is not defined,
-               * the `NavContainer` take its default transition.
+               * define which transition of the {@link sap.m.NavContainer} will be applied when navigating. If it is not
+               * defined, the nav container will take its default transition.
                */
               transition?: string;
               /**
-               * Defines the `transitionParameters` of the `{@link sap.m.NavContainer}`
+               * define the transitionParameters of the {@link sap.m.NavContainer}
                */
               transitionParameters?: string;
             };
@@ -1404,7 +1348,7 @@ declare namespace sap {
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
         /**
-         * Returns the `TargetHandler` instance.
+         * Returns the TargetHandler instance.
          */
         getTargetHandler(): sap.f.routing.TargetHandler;
       }
@@ -4856,27 +4800,25 @@ declare namespace sap {
     /**
      * @SINCE 1.62
      *
-     * Interface that should be implemented by all card controls.
+     * Interface for card controls
      */
     interface ICard {
       /**
        * @SINCE 1.62
        *
-       * The function is used to allow for a common content renderer between different implementations of the
-       * {@link sap.f.ICard} interface.
+       * The function is used to allow for a common content renderer between different card implementations
        */
       getCardContent(): sap.ui.core.Control;
       /**
        * @SINCE 1.62
        *
-       * The function is used to allow for a common header renderer between different implementations of the {@link
-       * sap.f.ICard} interface.
+       * The function is used to allow for a common header renderer between different card implementations
        */
       getCardHeader(): sap.f.cards.IHeader;
       /**
        * @SINCE 1.65
        *
-       * Allows for a common header renderer between different implementations of the {@link sap.f.ICard} interface.
+       * Allows for a common header renderer between different card implementations.
        */
       getCardHeaderPosition(): any;
     }
@@ -5524,50 +5466,19 @@ declare namespace sap {
 
     interface GridContainerOpts extends sap.ui.core.ControlOpts {
       /**
-       * Defines the width of the control.
+       * Defines the width of the control
        */
       width?: sap.ui.core.CSSSize;
 
       /**
-       * If set to `true` the current range (large, medium or small) is defined by the size of the container surrounding
-       * the `GridContainer`, instead of the device screen size (media Query).
+       * Defines the height of the control
        */
-      containerQuery?: boolean;
+      height?: sap.ui.core.CSSSize;
 
       /**
-       * Should the items stretch to fill the rows that they occupy, or not.
-       *
-       * If set to `true` the items will stretch.
+       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
        */
       snapToRow?: boolean;
-
-      /**
-       * @EXPERIMENTAL (since 1.66)
-       *
-       * Increases the density when arranging the items. Smaller items will take up all of the available space,
-       * ignoring their order.
-       *
-       * **Note:** The order of the items is ignored. An item which is normally at the bottom, can appear on top.
-       */
-      allowDenseFill?: boolean;
-
-      /**
-       * @EXPERIMENTAL (since 1.66)
-       *
-       * Makes the grid items act like an inline-block elements. They will be arranged in rows with height equal
-       * to the highest item in the row.
-       *
-       * **Note:** If set to `true` the properties `rowSize` for grid layout, and `minRows` and `rows` per item
-       * will be ignored.
-       *
-       * **Note:** Not supported in IE11, Edge 15.
-       */
-      inlineBlockLayout?: boolean;
-
-      /**
-       * Fired when the currently active GridSettings change.
-       */
-      layoutChange?: Function;
 
       /**
        * The items contained by the control.
@@ -5575,9 +5486,8 @@ declare namespace sap {
       items?: sap.ui.core.Control[] | sap.ui.core.Control;
 
       /**
-       * The sap.f.GridContainerSettings applied if no settings are provided for a specific size.
-       *
-       * If no layout is given, a default layout will be used. See the default values for `sap.f.GridContainerSettings`.
+       * The sap.f.GridContainerSettings applied if no settings are provided for a specific size If no layout
+       * is given, a default layout will be used. See the default values for `sap.f.GridContainerSettings`.
        */
       layout?: sap.f.GridContainerSettings;
 
@@ -5606,11 +5516,6 @@ declare namespace sap {
       extends sap.ui.core.LayoutDataOpts {
       /**
        * Specifies the number of columns, which the item should take
-       *
-       * **Note:** Make sure that the item does not have more columns than the total columns in the grid. Use
-       * {@link sap.f.GridContainer#attachLayoutChange} or a resize listener to handle when columns count is changed
-       * for the grid. If item has more columns at some point, they will be automatically reduced to the total
-       * grid columns. This is done to prevent broken layout (grid blowout) that affects all items.
        */
       columns?: number;
 
@@ -5634,64 +5539,6 @@ declare namespace sap {
       customLayout?: sap.ui.layout.cssgrid.GridLayoutBase;
     }
 
-    interface SearchManagerOpts extends sap.ui.core.ElementOpts {
-      /**
-       * Defines the input value.
-       */
-      value?: string;
-
-      /**
-       * Defines the text that is displayed when no value is available. The default placeholder text is the word
-       * "Search" in the current local language (if supported) or in English.
-       */
-      placeholder?: string;
-
-      /**
-       * Determines the maximum number of characters. Value '0' means the feature is switched off.
-       */
-      maxLength?: number;
-
-      /**
-       * Determines whether the control is enabled.
-       */
-      enabled?: boolean;
-
-      /**
-       * If true, a `suggest` event is fired when user types in the input and when the input is focused. On a
-       * phone device, a full screen dialog with suggestions is always shown even if the suggestions list is empty.
-       */
-      enableSuggestions?: boolean;
-
-      /**
-       * Fired when the user triggers a search.
-       */
-      search?: Function;
-
-      /**
-       * Fired when the value of the search field is changed by the user, for example at each key press.
-       *
-       * **Note:** Do not invalidate or re-render a focused search field, especially during the `liveChange` event.
-       */
-      liveChange?: Function;
-
-      /**
-       * Fired when the search field is initially focused or its value is changed by the user. This event means
-       * that suggestion data should be updated, in case if suggestions are used. Use the value parameter to create
-       * new suggestions for it.
-       */
-      suggest?: Function;
-
-      /**
-       * `SuggestionItems` are the items which are displayed in the suggestions list. The following properties
-       * can be used:
-       * 	 - `key` - it is not displayed and may be used as internal technical field
-       * 	 - `text` - it is displayed as normal suggestion text
-       * 	 - `icon`
-       * 	 - `description` - additional text that may be used to visually display search item type or category
-       */
-      suggestionItems?: sap.m.SuggestionItem[] | sap.m.SuggestionItem;
-    }
-
     interface ShellBarOpts extends sap.ui.core.ControlOpts {
       /**
        * Defines the main title of the control.
@@ -5707,13 +5554,6 @@ declare namespace sap {
        * Defines the URI to the home icon, such as company or product logo.
        */
       homeIcon?: sap.ui.core.URI;
-
-      /**
-       * @SINCE 1.67
-       *
-       * Defines a custom tooltip for the home icon. If not set, a default tooltip is used.
-       */
-      homeIconTooltip?: string;
 
       /**
        * Determines whether a hamburger menu button is displayed (as an alternative if the `menu` aggregation
@@ -5797,15 +5637,6 @@ declare namespace sap {
        * The menu attached to the main title.
        */
       menu?: sap.m.Menu;
-
-      /**
-       * @SINCE 1.67
-       *
-       * Configurable search.
-       *
-       * **Note:** If `showSearch` is set to `true`, two search buttons appear.
-       */
-      searchManager?: sap.f.SearchManager;
 
       /**
        * The profile avatar.
@@ -6867,10 +6698,8 @@ declare namespace sap {
      * @SINCE 1.61
      *
      * Settings for accessible landmarks which can be applied to the container elements of a `sap.f.DynamicPage`
-     * control.
-     *
-     * These landmarks are used by assistive technologies (such as screen readers) to provide a meaningful page
-     * overview.
+     * control. These landmarks are used by assistive technologies (such as screenreaders) to provide a meaningful
+     * page overview.
      */
     class DynamicPageAccessibleLandmarkInfo extends sap.ui.core.Element {
       /**
@@ -9939,88 +9768,6 @@ declare namespace sap {
       );
 
       /**
-       * Calculates absolute positions for items, so it mimics a css grid.
-       */
-      _applyIEPolyfillLayout(): void;
-      /**
-       * Increase rows span for item if it needs more space, based on it's height.
-       */
-      _applyItemAutoRows(
-        /**
-         * The item for which to calculate
-         */
-        oItem: sap.ui.core.Control
-      ): void;
-      /**
-       * Applies the current layout to the grid DOM element.
-       */
-      _applyLayout(
-        /**
-         * Are the grid settings changed after passing a breakpoint.
-         */
-        bSettingsAreChanged: boolean
-      ): void;
-      /**
-       * Removes any resize listeners. Both for the grid and for all items.
-       */
-      _deregisterResizeListeners(): void;
-      /**
-       * Detects what is the current layout breakpoint.
-       */
-      _detectActiveLayout(): boolean;
-      /**
-       * If one item has more columns than the total columns in the grid, it brakes the whole layout. Prevent
-       * this by reducing this item's column span.
-       */
-      _enforceMaxColumns(): void;
-      /**
-       * Gets a map of the CSS styles that should be applied to the grid, based on the current layout.
-       */
-      _getActiveGridStyles(): object;
-      /**
-       * Handler for onAfterRendering for each item.
-       */
-      _onAfterItemRendering(): void;
-      /**
-       * Handler for onBeforeRendering for each item.
-       */
-      _onBeforeItemRendering(): void;
-      /**
-       * Handler for any change in the items aggregation.
-       */
-      _onItemChange(
-        /**
-         * What was changed
-         */
-        changes: object
-      ): void;
-      /**
-       * Handler for resize of the grid.
-       */
-      _resize(): void;
-      /**
-       * Handler for resize of a grid's item.
-       */
-      _resizeItem(
-        /**
-         * ResizeHandler resize event
-         */
-        oEvent: Object
-      ): void;
-      /**
-       * Schedules the application of the IE polyfill for the next tick.
-       */
-      _scheduleIEPolyfill(
-        /**
-         * If set to true - apply the polyfill immediately.
-         */
-        bImmediately: boolean
-      ): void;
-      /**
-       * Sets the DOM references for the items navigation.
-       */
-      _setItemNavigationItems(): void;
-      /**
        * Adds some item to the aggregation {@link #getItems items}.
        */
       addItem(
@@ -10028,29 +9775,6 @@ declare namespace sap {
          * The item to add; if empty, nothing is inserted
          */
         oItem: sap.ui.core.Control
-      ): sap.f.GridContainer;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:layoutChange layoutChange} event of this `sap.f.GridContainer`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.GridContainer` itself.
-       *
-       * Fired when the currently active GridSettings change.
-       */
-      attachLayoutChange(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.GridContainer` itself
-         */
-        oListener?: object
       ): sap.f.GridContainer;
       /**
        * Destroys all the items in the aggregation {@link #getItems items}.
@@ -10077,26 +9801,6 @@ declare namespace sap {
        */
       destroyLayoutXL(): sap.f.GridContainer;
       /**
-       * Detaches event handler `fnFunction` from the {@link #event:layoutChange layoutChange} event of this `sap.f.GridContainer`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachLayoutChange(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.GridContainer;
-      /**
-       * Destroy hook.
-       */
-      // @ts-ignore
-      exit(): void;
-      /**
        * Creates a new subclass of class sap.f.GridContainer with name `sClassName` and enriches it with the information
        * contained in `oClassInfo`.
        *
@@ -10118,61 +9822,13 @@ declare namespace sap {
         FNMetaImpl?: Function
       ): Function;
       /**
-       * Fires event {@link #event:layoutChange layoutChange} to attached listeners.
+       * Gets current value of property {@link #getHeight height}.
+       *
+       * Defines the height of the control
+       *
+       * Default value is `empty string`.
        */
-      fireLayoutChange(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * The name of the newly active layout.
-           */
-          layout?: string;
-        }
-      ): sap.f.GridContainer;
-      /**
-       * Gets the `GridContainerSettings` for the current layout breakpoint.
-       */
-      getActiveLayoutSettings(): sap.f.GridContainerSettings;
-      /**
-       * @EXPERIMENTAL (since 1.66)
-       *
-       * Gets current value of property {@link #getAllowDenseFill allowDenseFill}.
-       *
-       * Increases the density when arranging the items. Smaller items will take up all of the available space,
-       * ignoring their order.
-       *
-       * **Note:** The order of the items is ignored. An item which is normally at the bottom, can appear on top.
-       *
-       * Default value is `false`.
-       */
-      getAllowDenseFill(): boolean;
-      /**
-       * Gets current value of property {@link #getContainerQuery containerQuery}.
-       *
-       * If set to `true` the current range (large, medium or small) is defined by the size of the container surrounding
-       * the `GridContainer`, instead of the device screen size (media Query).
-       *
-       * Default value is `false`.
-       */
-      getContainerQuery(): boolean;
-      /**
-       * @EXPERIMENTAL (since 1.66)
-       *
-       * Gets current value of property {@link #getInlineBlockLayout inlineBlockLayout}.
-       *
-       * Makes the grid items act like an inline-block elements. They will be arranged in rows with height equal
-       * to the highest item in the row.
-       *
-       * **Note:** If set to `true` the properties `rowSize` for grid layout, and `minRows` and `rows` per item
-       * will be ignored.
-       *
-       * **Note:** Not supported in IE11, Edge 15.
-       *
-       * Default value is `false`.
-       */
-      getInlineBlockLayout(): boolean;
+      getHeight(): sap.ui.core.CSSSize;
       /**
        * Gets content of aggregation {@link #getItems items}.
        *
@@ -10182,9 +9838,8 @@ declare namespace sap {
       /**
        * Gets content of aggregation {@link #getLayout layout}.
        *
-       * The sap.f.GridContainerSettings applied if no settings are provided for a specific size.
-       *
-       * If no layout is given, a default layout will be used. See the default values for `sap.f.GridContainerSettings`.
+       * The sap.f.GridContainerSettings applied if no settings are provided for a specific size If no layout
+       * is given, a default layout will be used. See the default values for `sap.f.GridContainerSettings`.
        */
       getLayout(): sap.f.GridContainerSettings;
       /**
@@ -10219,9 +9874,7 @@ declare namespace sap {
       /**
        * Gets current value of property {@link #getSnapToRow snapToRow}.
        *
-       * Should the items stretch to fill the rows that they occupy, or not.
-       *
-       * If set to `true` the items will stretch.
+       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
        *
        * Default value is `false`.
        */
@@ -10229,7 +9882,7 @@ declare namespace sap {
       /**
        * Gets current value of property {@link #getWidth width}.
        *
-       * Defines the width of the control.
+       * Defines the width of the control
        *
        * Default value is `empty string`.
        */
@@ -10244,11 +9897,6 @@ declare namespace sap {
          */
         oItem: sap.ui.core.Control
       ): number;
-      /**
-       * Initialization hook.
-       */
-      // @ts-ignore
-      init(): void;
       /**
        * Inserts a item into the aggregation {@link #getItems items}.
        */
@@ -10265,16 +9913,6 @@ declare namespace sap {
         iIndex: number
       ): sap.f.GridContainer;
       /**
-       * After rendering hook.
-       */
-      // @ts-ignore
-      onAfterRendering(): void;
-      /**
-       * Before rendering hook.
-       */
-      // @ts-ignore
-      onBeforeRendering(): void;
-      /**
        * Removes all the controls from the aggregation {@link #getItems items}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
@@ -10290,63 +9928,19 @@ declare namespace sap {
         vItem: number | string | sap.ui.core.Control
       ): sap.ui.core.Control;
       /**
-       * @EXPERIMENTAL (since 1.66)
+       * Sets a new value for property {@link #getHeight height}.
        *
-       * Sets a new value for property {@link #getAllowDenseFill allowDenseFill}.
-       *
-       * Increases the density when arranging the items. Smaller items will take up all of the available space,
-       * ignoring their order.
-       *
-       * **Note:** The order of the items is ignored. An item which is normally at the bottom, can appear on top.
+       * Defines the height of the control
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
-       * Default value is `false`.
+       * Default value is `empty string`.
        */
-      setAllowDenseFill(
+      setHeight(
         /**
-         * New value for property `allowDenseFill`
+         * New value for property `height`
          */
-        bAllowDenseFill: boolean
-      ): sap.f.GridContainer;
-      /**
-       * Sets a new value for property {@link #getContainerQuery containerQuery}.
-       *
-       * If set to `true` the current range (large, medium or small) is defined by the size of the container surrounding
-       * the `GridContainer`, instead of the device screen size (media Query).
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setContainerQuery(
-        /**
-         * New value for property `containerQuery`
-         */
-        bContainerQuery: boolean
-      ): sap.f.GridContainer;
-      /**
-       * @EXPERIMENTAL (since 1.66)
-       *
-       * Sets a new value for property {@link #getInlineBlockLayout inlineBlockLayout}.
-       *
-       * Makes the grid items act like an inline-block elements. They will be arranged in rows with height equal
-       * to the highest item in the row.
-       *
-       * **Note:** If set to `true` the properties `rowSize` for grid layout, and `minRows` and `rows` per item
-       * will be ignored.
-       *
-       * **Note:** Not supported in IE11, Edge 15.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setInlineBlockLayout(
-        /**
-         * New value for property `inlineBlockLayout`
-         */
-        bInlineBlockLayout: boolean
+        sHeight: sap.ui.core.CSSSize
       ): sap.f.GridContainer;
       /**
        * Sets the aggregated {@link #getLayout layout}.
@@ -10396,9 +9990,7 @@ declare namespace sap {
       /**
        * Sets a new value for property {@link #getSnapToRow snapToRow}.
        *
-       * Should the items stretch to fill the rows that they occupy, or not.
-       *
-       * If set to `true` the items will stretch.
+       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -10413,7 +10005,7 @@ declare namespace sap {
       /**
        * Sets a new value for property {@link #getWidth width}.
        *
-       * Defines the width of the control.
+       * Defines the width of the control
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -10424,24 +10016,6 @@ declare namespace sap {
          * New value for property `width`
          */
         sWidth: sap.ui.core.CSSSize
-      ): sap.f.GridContainer;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:layoutChange layoutChange} event of this `sap.f.GridContainer`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.GridContainer` itself.
-       *
-       * Fired when the currently active GridSettings change.
-       */
-      attachLayoutChange(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.GridContainer` itself
-         */
-        oListener?: object
       ): sap.f.GridContainer;
     }
     /**
@@ -10497,11 +10071,6 @@ declare namespace sap {
        *
        * Specifies the number of columns, which the item should take
        *
-       * **Note:** Make sure that the item does not have more columns than the total columns in the grid. Use
-       * {@link sap.f.GridContainer#attachLayoutChange} or a resize listener to handle when columns count is changed
-       * for the grid. If item has more columns at some point, they will be automatically reduced to the total
-       * grid columns. This is done to prevent broken layout (grid blowout) that affects all items.
-       *
        * Default value is `1`.
        */
       getColumns(): number;
@@ -10528,11 +10097,6 @@ declare namespace sap {
        * Sets a new value for property {@link #getColumns columns}.
        *
        * Specifies the number of columns, which the item should take
-       *
-       * **Note:** Make sure that the item does not have more columns than the total columns in the grid. Use
-       * {@link sap.f.GridContainer#attachLayoutChange} or a resize listener to handle when columns count is changed
-       * for the grid. If item has more columns at some point, they will be automatically reduced to the total
-       * grid columns. This is done to prevent broken layout (grid blowout) that affects all items.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -10577,7 +10141,7 @@ declare namespace sap {
      * @SINCE 1.65
      * @EXPERIMENTAL (since 1.65)
      *
-     * Holds a set of settings that define the dimensions of `sap.f.GridContainer`.
+     * Holds a set of settings that define the dimensions of `sap.f.GridContainer`
      *
      * Can be used to define the sizes of columns and rows for different screen sizes, by using the `layout`
      * aggregations of `sap.f.GridContainer`.
@@ -10628,17 +10192,14 @@ declare namespace sap {
       /**
        * Gets current value of property {@link #getColumns columns}.
        *
-       * How many columns to have on a row.
-       *
-       * If not defined, `sap.f.GridContainer` will position as many columns as they can fit in the container.
+       * How many columns to have on a row. If not defined, `sap.f.GridContainer` will position as many columns
+       * as they can fit in the container.
        */
-      getColumns(): number;
+      getColumns(): Number;
       /**
        * Gets current value of property {@link #getColumnSize columnSize}.
        *
        * The width of the columns.
-       *
-       * **Note:** Use only 'px' or 'rem'. Some features may not work as expected otherwise.
        *
        * Default value is `80px`.
        */
@@ -10647,8 +10208,6 @@ declare namespace sap {
        * Gets current value of property {@link #getGap gap}.
        *
        * The size of the gap between columns and rows.
-       *
-       * **Note:** Use only 'px' or 'rem'. Some features may not work as expected otherwise.
        *
        * Default value is `16px`.
        */
@@ -10663,17 +10222,14 @@ declare namespace sap {
        *
        * The height of the rows.
        *
-       * **Note:** Use only 'px' or 'rem'. Some features may not work as expected otherwise.
-       *
        * Default value is `80px`.
        */
       getRowSize(): sap.ui.core.CSSSize;
       /**
        * Sets a new value for property {@link #getColumns columns}.
        *
-       * How many columns to have on a row.
-       *
-       * If not defined, `sap.f.GridContainer` will position as many columns as they can fit in the container.
+       * How many columns to have on a row. If not defined, `sap.f.GridContainer` will position as many columns
+       * as they can fit in the container.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        */
@@ -10681,14 +10237,12 @@ declare namespace sap {
         /**
          * New value for property `columns`
          */
-        iColumns: number
+        sColumns: Number
       ): sap.f.GridContainerSettings;
       /**
        * Sets a new value for property {@link #getColumnSize columnSize}.
        *
        * The width of the columns.
-       *
-       * **Note:** Use only 'px' or 'rem'. Some features may not work as expected otherwise.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -10705,8 +10259,6 @@ declare namespace sap {
        *
        * The size of the gap between columns and rows.
        *
-       * **Note:** Use only 'px' or 'rem'. Some features may not work as expected otherwise.
-       *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
        * Default value is `16px`.
@@ -10721,8 +10273,6 @@ declare namespace sap {
        * Sets a new value for property {@link #getRowSize rowSize}.
        *
        * The height of the rows.
-       *
-       * **Note:** Use only 'px' or 'rem'. Some features may not work as expected otherwise.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -10854,470 +10404,6 @@ declare namespace sap {
          */
         oCustomLayout: sap.ui.layout.cssgrid.GridLayoutBase
       ): sap.f.GridList;
-    }
-    /**
-     * @SINCE 1.67
-     *
-     * Defines specific properties of the search that are applied to `sap.f.ShellBar`.
-     */
-    class SearchManager extends sap.ui.core.Element {
-      /**
-       * Constructor for a new `SearchManager`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: SearchManagerOpts
-      );
-
-      /**
-       * Adds some suggestionItem to the aggregation {@link #getSuggestionItems suggestionItems}.
-       */
-      addSuggestionItem(
-        /**
-         * The suggestionItem to add; if empty, nothing is inserted
-         */
-        oSuggestionItem: sap.m.SuggestionItem
-      ): sap.f.SearchManager;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:liveChange liveChange} event of this `sap.f.SearchManager`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.SearchManager` itself.
-       *
-       * Fired when the value of the search field is changed by the user, for example at each key press.
-       *
-       * **Note:** Do not invalidate or re-render a focused search field, especially during the `liveChange` event.
-       */
-      attachLiveChange(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.SearchManager` itself
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:search search} event of this `sap.f.SearchManager`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.SearchManager` itself.
-       *
-       * Fired when the user triggers a search.
-       */
-      attachSearch(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.SearchManager` itself
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:suggest suggest} event of this `sap.f.SearchManager`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.SearchManager` itself.
-       *
-       * Fired when the search field is initially focused or its value is changed by the user. This event means
-       * that suggestion data should be updated, in case if suggestions are used. Use the value parameter to create
-       * new suggestions for it.
-       */
-      attachSuggest(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.SearchManager` itself
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
-      /**
-       * Binds property {@link #getValue value} to model data.
-       *
-       * See {@link sap.ui.base.ManagedObject#bindProperty ManagedObject.bindProperty} for a detailed description
-       * of the possible properties of `oBindingInfo`
-       */
-      bindValue(
-        /**
-         * The binding information
-         */
-        oBindingInfo: object
-      ): sap.f.SearchManager;
-      /**
-       * Destroys all the suggestionItems in the aggregation {@link #getSuggestionItems suggestionItems}.
-       */
-      destroySuggestionItems(): sap.f.SearchManager;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:liveChange liveChange} event of this `sap.f.SearchManager`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachLiveChange(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:search search} event of this `sap.f.SearchManager`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachSearch(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:suggest suggest} event of this `sap.f.SearchManager`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachSuggest(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
-      /**
-       * Creates a new subclass of class sap.f.SearchManager with name `sClassName` and enriches it with the information
-       * contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Fires event {@link #event:liveChange liveChange} to attached listeners.
-       */
-      fireLiveChange(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Current search string.
-           */
-          newValue?: string;
-        }
-      ): sap.f.SearchManager;
-      /**
-       * Fires event {@link #event:search search} to attached listeners.
-       */
-      fireSearch(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * The search query string.
-           */
-          query?: string;
-          /**
-           * Indicates if the user pressed the clear icon.
-           */
-          clearButtonPressed?: boolean;
-        }
-      ): sap.f.SearchManager;
-      /**
-       * Fires event {@link #event:suggest suggest} to attached listeners.
-       */
-      fireSuggest(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Current search string of the search field.
-           */
-          suggestValue?: string;
-        }
-      ): sap.f.SearchManager;
-      /**
-       * Gets current value of property {@link #getEnabled enabled}.
-       *
-       * Determines whether the control is enabled.
-       *
-       * Default value is `true`.
-       */
-      getEnabled(): boolean;
-      /**
-       * Gets current value of property {@link #getEnableSuggestions enableSuggestions}.
-       *
-       * If true, a `suggest` event is fired when user types in the input and when the input is focused. On a
-       * phone device, a full screen dialog with suggestions is always shown even if the suggestions list is empty.
-       *
-       * Default value is `false`.
-       */
-      getEnableSuggestions(): boolean;
-      /**
-       * Gets current value of property {@link #getMaxLength maxLength}.
-       *
-       * Determines the maximum number of characters. Value '0' means the feature is switched off.
-       *
-       * Default value is `0`.
-       */
-      getMaxLength(): number;
-      /**
-       * Returns a metadata object for class sap.f.SearchManager.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Gets current value of property {@link #getPlaceholder placeholder}.
-       *
-       * Defines the text that is displayed when no value is available. The default placeholder text is the word
-       * "Search" in the current local language (if supported) or in English.
-       */
-      getPlaceholder(): string;
-      /**
-       * Gets content of aggregation {@link #getSuggestionItems suggestionItems}.
-       *
-       * `SuggestionItems` are the items which are displayed in the suggestions list. The following properties
-       * can be used:
-       * 	 - `key` - it is not displayed and may be used as internal technical field
-       * 	 - `text` - it is displayed as normal suggestion text
-       * 	 - `icon`
-       * 	 - `description` - additional text that may be used to visually display search item type or category
-       */
-      getSuggestionItems(): sap.m.SuggestionItem[];
-      /**
-       * Gets current value of property {@link #getValue value}.
-       *
-       * Defines the input value.
-       */
-      getValue(): string;
-      /**
-       * Checks for the provided `sap.m.SuggestionItem` in the aggregation {@link #getSuggestionItems suggestionItems}.
-       * and returns its index if found or -1 otherwise.
-       */
-      indexOfSuggestionItem(
-        /**
-         * The suggestionItem whose index is looked for
-         */
-        oSuggestionItem: sap.m.SuggestionItem
-      ): number;
-      /**
-       * Inserts a suggestionItem into the aggregation {@link #getSuggestionItems suggestionItems}.
-       */
-      insertSuggestionItem(
-        /**
-         * The suggestionItem to insert; if empty, nothing is inserted
-         */
-        oSuggestionItem: sap.m.SuggestionItem,
-        /**
-         * The `0`-based index the suggestionItem should be inserted at; for a negative value of `iIndex`, the suggestionItem
-         * is inserted at position 0; for a value greater than the current size of the aggregation, the suggestionItem
-         * is inserted at the last position
-         */
-        iIndex: number
-      ): sap.f.SearchManager;
-      /**
-       * Removes all the controls from the aggregation {@link #getSuggestionItems suggestionItems}.
-       *
-       * Additionally, it unregisters them from the hosting UIArea.
-       */
-      removeAllSuggestionItems(): sap.m.SuggestionItem[];
-      /**
-       * Removes a suggestionItem from the aggregation {@link #getSuggestionItems suggestionItems}.
-       */
-      removeSuggestionItem(
-        /**
-         * The suggestionItem to remove or its index or id
-         */
-        vSuggestionItem: number | string | sap.m.SuggestionItem
-      ): sap.m.SuggestionItem;
-      /**
-       * Sets a new value for property {@link #getEnabled enabled}.
-       *
-       * Determines whether the control is enabled.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `true`.
-       */
-      setEnabled(
-        /**
-         * New value for property `enabled`
-         */
-        bEnabled: boolean
-      ): sap.f.SearchManager;
-      /**
-       * Sets a new value for property {@link #getEnableSuggestions enableSuggestions}.
-       *
-       * If true, a `suggest` event is fired when user types in the input and when the input is focused. On a
-       * phone device, a full screen dialog with suggestions is always shown even if the suggestions list is empty.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setEnableSuggestions(
-        /**
-         * New value for property `enableSuggestions`
-         */
-        bEnableSuggestions: boolean
-      ): sap.f.SearchManager;
-      /**
-       * Sets a new value for property {@link #getMaxLength maxLength}.
-       *
-       * Determines the maximum number of characters. Value '0' means the feature is switched off.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `0`.
-       */
-      setMaxLength(
-        /**
-         * New value for property `maxLength`
-         */
-        iMaxLength: number
-      ): sap.f.SearchManager;
-      /**
-       * Sets a new value for property {@link #getPlaceholder placeholder}.
-       *
-       * Defines the text that is displayed when no value is available. The default placeholder text is the word
-       * "Search" in the current local language (if supported) or in English.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setPlaceholder(
-        /**
-         * New value for property `placeholder`
-         */
-        sPlaceholder: string
-      ): sap.f.SearchManager;
-      /**
-       * Sets a new value for property {@link #getValue value}.
-       *
-       * Defines the input value.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setValue(
-        /**
-         * New value for property `value`
-         */
-        sValue: string
-      ): sap.f.SearchManager;
-      /**
-       * Unbinds property {@link #getValue value} from model data.
-       */
-      unbindValue(): sap.f.SearchManager;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:liveChange liveChange} event of this `sap.f.SearchManager`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.SearchManager` itself.
-       *
-       * Fired when the value of the search field is changed by the user, for example at each key press.
-       *
-       * **Note:** Do not invalidate or re-render a focused search field, especially during the `liveChange` event.
-       */
-      attachLiveChange(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.SearchManager` itself
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:search search} event of this `sap.f.SearchManager`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.SearchManager` itself.
-       *
-       * Fired when the user triggers a search.
-       */
-      attachSearch(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.SearchManager` itself
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:suggest suggest} event of this `sap.f.SearchManager`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.SearchManager` itself.
-       *
-       * Fired when the search field is initially focused or its value is changed by the user. This event means
-       * that suggestion data should be updated, in case if suggestions are used. Use the value parameter to create
-       * new suggestions for it.
-       */
-      attachSuggest(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.SearchManager` itself
-         */
-        oListener?: object
-      ): sap.f.SearchManager;
     }
     /**
      * @SINCE 1.63
@@ -11591,12 +10677,6 @@ declare namespace sap {
        * Destroys the profile in the aggregation {@link #getProfile profile}.
        */
       destroyProfile(): sap.f.ShellBar;
-      /**
-       * @SINCE 1.67
-       *
-       * Destroys the searchManager in the aggregation {@link #getSearchManager searchManager}.
-       */
-      destroySearchManager(): sap.f.ShellBar;
       /**
        * Detaches event handler `fnFunction` from the {@link #event:avatarPressed avatarPressed} event of this
        * `sap.f.ShellBar`.
@@ -11875,16 +10955,6 @@ declare namespace sap {
        */
       getHomeIcon(): sap.ui.core.URI;
       /**
-       * @SINCE 1.67
-       *
-       * Gets current value of property {@link #getHomeIconTooltip homeIconTooltip}.
-       *
-       * Defines a custom tooltip for the home icon. If not set, a default tooltip is used.
-       *
-       * Default value is `empty string`.
-       */
-      getHomeIconTooltip(): string;
-      /**
        * @SINCE 1.65
        *
        * Gets the HTML tag of the root DOM Reference.
@@ -11917,16 +10987,6 @@ declare namespace sap {
        * The profile avatar.
        */
       getProfile(): sap.f.Avatar;
-      /**
-       * @SINCE 1.67
-       *
-       * Gets content of aggregation {@link #getSearchManager searchManager}.
-       *
-       * Configurable search.
-       *
-       * **Note:** If `showSearch` is set to `true`, two search buttons appear.
-       */
-      getSearchManager(): sap.f.SearchManager;
       /**
        * Gets current value of property {@link #getSecondTitle secondTitle}.
        *
@@ -12054,23 +11114,6 @@ declare namespace sap {
         sHomeIcon: sap.ui.core.URI
       ): sap.f.ShellBar;
       /**
-       * @SINCE 1.67
-       *
-       * Sets a new value for property {@link #getHomeIconTooltip homeIconTooltip}.
-       *
-       * Defines a custom tooltip for the home icon. If not set, a default tooltip is used.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setHomeIconTooltip(
-        /**
-         * New value for property `homeIconTooltip`
-         */
-        sHomeIconTooltip: string
-      ): sap.f.ShellBar;
-      /**
        * @SINCE 1.65
        *
        * Sets the HTML tag of the root DOM Reference.
@@ -12093,17 +11136,6 @@ declare namespace sap {
          * The profile to set
          */
         oProfile: sap.f.Avatar
-      ): sap.f.ShellBar;
-      /**
-       * @SINCE 1.67
-       *
-       * Sets the aggregated {@link #getSearchManager searchManager}.
-       */
-      setSearchManager(
-        /**
-         * The searchManager to set
-         */
-        oSearchManager: sap.f.SearchManager
       ): sap.f.ShellBar;
       /**
        * Sets a new value for property {@link #getSecondTitle secondTitle}.
@@ -12463,7 +11495,7 @@ declare namespace sap {
      * @SINCE 1.50
      * @deprecated (since 1.54)
      *
-     * Defines the areas within the `sap.f.DynamicPageTitle` control.
+     * Defines the areas within the `sap.f.DynamicPageTitle`.
      */
     enum DynamicPageTitleArea {
       /**
@@ -12676,8 +11708,6 @@ declare namespace sap {
     "sap/f/GridContainerSettings": undefined;
 
     "sap/f/GridList": undefined;
-
-    "sap/f/SearchManager": undefined;
 
     "sap/f/ShellBar": undefined;
 

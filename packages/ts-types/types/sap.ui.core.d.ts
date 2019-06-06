@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.68.0
+// For Library Version: 1.65.1
 /**
  * Root namespace for JavaScript functionality provided by SAP SE.
  *
@@ -2427,7 +2427,7 @@ declare namespace sap {
      */
     namespace base {
       /**
-       * Contract for objects that can be pooled by `ObjectPool`.
+       * Contract for objects that can be pooled by ObjectPool
        */
       interface Poolable {
         /**
@@ -2989,8 +2989,8 @@ declare namespace sap {
       /**
        * A class whose instances act as a facade for other objects.
        *
-       * **Note:** If a class returns a facade in its constructor, only the defined functions will be visible,
-       * no internals of the class can be accessed.
+       * Note: If a class returns a facade in its constructor, only the defined functions will be visible, no
+       * internals of the class can be accessed.
        */
       class Interface {
         /**
@@ -3018,7 +3018,7 @@ declare namespace sap {
         );
       }
       /**
-       * Base Class that introduces some basic concepts, such as, state management and data binding.
+       * Base Class that introduces some basic concepts like state management or databinding.
        *
        * New subclasses of ManagedObject are created with a call to {@link #.extend ManagedObject.extend} and
        * can make use of the following managed features:
@@ -3755,10 +3755,7 @@ declare namespace sap {
          *
          * The `oOptions` configuration object can have the following properties:
          * 	 - The boolean value `cloneChildren` specifies whether associations/aggregations will be cloned
-         * 	 - The boolean value `cloneBindings` specifies if bindings will be cloned  Note: In case the configuration
-         * 			`oOptions` is specified, the default values `true` no longer apply, which means in case `cloneChildren`
-         * 			or `cloneBindings` is not specified, then this ia assumed to be `false` and associations/aggregations
-         * 			or bindings are not cloned.
+         * 	 - The boolean value `cloneBindings` specifies if bindings will be cloned
          *
          * For each cloned object the following settings are cloned based on the metadata of the object and the
          * defined options:
@@ -3800,19 +3797,17 @@ declare namespace sap {
            */
           aLocalIds?: string[],
           /**
-           * Configuration object; when omitted, both properties default to `true`; when specified, undefined properties
-           * default to `false`
+           * configuration object
            */
-          oOptions?: {
-            /**
-             * Whether associations and aggregations will be cloned
-             */
-            cloneChildren?: boolean;
-            /**
-             * Whether bindings will be cloned
-             */
-            cloneBindings?: boolean;
-          }
+          oOptions?: Object,
+          /**
+           * Whether associations and aggregations will be cloned
+           */
+          cloneChildren?: boolean,
+          /**
+           * Whether bindings will be cloned
+           */
+          cloneBindings?: boolean
         ): sap.ui.base.ManagedObject;
         /**
          * Creates a new ManagedObject from the given data.
@@ -4030,10 +4025,6 @@ declare namespace sap {
          * 	 - `type: string` type of the new property. Must either be one of the built-in types 'string',
          * 			'boolean', 'int', 'float', 'object', 'array', 'function' or 'any', or a type created and registered with
          * 			{@link sap.ui.base.DataType.createType} or an array type based on one of the previous types.
-         * 	 - `visibility: string` either 'hidden' or 'public', defaults to 'public'. Properties that belong
-         * 			to the API of a class must be 'public' whereas 'hidden' properties can only be used internally. Only
-         * 			public properties are accepted by the constructor or by `applySettings` or in declarative representations
-         * 			like an `XMLView`. Equally, only public properties are cloned.
          * 	 - `byValue: boolean` (either can be omitted or set to the boolean value `true`) If set to `true`,
          * 			the property value will be {@link module:sap/base/util/deepClone deep cloned} on write and read operations
          * 			to ensure that the internal value can't be modified by the outside. The property `byValue` is currently
@@ -4084,7 +4075,7 @@ declare namespace sap {
          * 	 - bindFoo(c) - (only if property was defined to be 'bindable'): convenience function that wraps {@link
          * 			#bindProperty}
          * 	 - unbindFoo() - (only if property was defined to be 'bindable'): convenience function that wraps {@link
-         * 			#unbindProperty}  For hidden properties, no methods are generated.
+         * 			#unbindProperty}
          *
          * **'defaultProperty'** : string
          *  When specified, the default property must match the name of one of the properties defined for the new
@@ -4107,9 +4098,7 @@ declare namespace sap {
          * 			be specified with this property.
          * 	 - `[visibility]: string` either 'hidden' or 'public', defaults to 'public'. Aggregations that
          * 			belong to the API of a class must be 'public' whereas 'hidden' aggregations typically are used for the
-         * 			implementation of composite classes (e.g. composite controls). Only public aggregations are accepted
-         * 			by the constructor or by `applySettings` or in declarative representations like an `XMLView`. Equally,
-         * 			only public aggregations are cloned.
+         * 			implementation of composite classes (e.g. composite controls)
          * 	 - `bindable: boolean|string` (either can be omitted or set to the boolean value `true` or the
          * 			magic string 'bindable') If set to `true` or 'bindable', additional named methods `bindName` and
          * 			`unbindName` are generated as convenience. Despite its name, setting this flag is not mandatory
@@ -4210,7 +4199,7 @@ declare namespace sap {
          * 	 - bindItems(c) - (only if aggregation was defined to be 'bindable'): convenience function that wraps
          * 			{@link #bindAggregation}
          * 	 - unbindItems() - (only if aggregation was defined to be 'bindable'): convenience function that wraps
-         * 			{@link #unbindAggregation}  For hidden aggregations, no methods are generated.
+         * 			{@link #unbindAggregation}  For private or hidden aggregations, no methods are generated.
          *
          * **'defaultAggregation'** : string
          *  When specified, the default aggregation must match the name of one of the aggregations defined for the
@@ -4239,14 +4228,10 @@ declare namespace sap {
          * 			the plural name (e.g. getItems(), whereas methods that deal with a single object will use the singular
          * 			name (e.g. addItem). The framework knows a set of common rules for building plural form of English nouns
          * 			and uses these rules to determine a singular name on its own. if that name is wrong, a singluarName can
-         * 			be specified with this property.
-         * 	 - `visibility: string` either 'hidden' or 'public', defaults to 'public'. Associations that
-         * 			belong to the API of a class must be 'public' whereas 'hidden' associations can only be used internally.
-         * 			Only public associations are accepted by the constructor or by `applySettings` or in declarative representations
-         * 			like an `XMLView`. Equally, only public associations are cloned.  Association names should use camelCase
-         * 			notation, start with a lowercase letter and only use characters from the set [a-zA-Z0-9_$]. If an association
-         * 			in the literal is preceded by a JSDoc comment (doclet) and if the UI5 plugin and template are used for
-         * 			JSDoc3 generation, the doclet will be used as generic documentation of the association.
+         * 			be specified with this property.  Association names should use camelCase notation, start with a
+         * 			lowercase letter and only use characters from the set [a-zA-Z0-9_$]. If an association in the literal
+         * 			is preceded by a JSDoc comment (doclet) and if the UI5 plugin and template are used for JSDoc3 generation,
+         * 			the doclet will be used as generic documentation of the association.
          *
          * For each association 'ref' of cardinality 0..1, the following methods will be created by the "extend"
          * method and will be added to the prototype of the subclass:
@@ -4262,7 +4247,7 @@ declare namespace sap {
          * 	 - removeRef(v) - removes an object from the association 'items'. Internally calls {@link #removeAssociation}
          *
          * 	 - removeAllRefs() - removes all objects from the association 'items'. Internally calls {@link #removeAllAssociation}
-         * 			 For hidden associations, no methods are generated.
+         *
          *
          * **'events'** : object
          *  An object literal whose properties each define a new event of the ManagedObject subclass. The value
@@ -4837,11 +4822,7 @@ declare namespace sap {
           /**
            * name of the aggregation to refresh
            */
-          sName: string,
-          /**
-           * the change reason
-           */
-          sChangeReason: sap.ui.model.ChangeReason
+          sName: string
         ): void;
         /**
          * Removes an object from the aggregation named `sAggregationName` with cardinality 0..n.
@@ -5042,7 +5023,7 @@ declare namespace sap {
          * 	 - string literals `"null"` or `"undefined"`  Omitting the model name (or using the value `undefined`)
          * 			is explicitly allowed and refers to the default model.
          *
-         * A value of `null` for `oContext` hides the parent context. The parent context will no longer be propagated
+         * A value of`null` for `oContext` hides the parent context. The parent context will no longer be propagated
          * to aggregated child controls. A value of `undefined` removes a currently active context or a `null` context
          * and the parent context gets visible and propagated again.
          *
@@ -5461,7 +5442,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAggregations(): any;
+        getAggregations(): Object;
         /**
          * Returns a map of info objects for all public aggregations of the described class, including public aggregations
          * form the ancestor classes.
@@ -5473,7 +5454,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAllAggregations(): any;
+        getAllAggregations(): Object;
         /**
          * Returns a map of info objects for all public associations of the described class, including public associations
          * form the ancestor classes.
@@ -5485,7 +5466,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAllAssociations(): any;
+        getAllAssociations(): Object;
         /**
          * Returns a map of info objects for all public events of the described class, including public events form
          * the ancestor classes.
@@ -5496,7 +5477,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAllEvents(): any;
+        getAllEvents(): Object;
         /**
          * Returns a map of info objects for all private (hidden) aggregations of the described class, including
          * private aggregations from the ancestor classes.
@@ -5508,7 +5489,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAllPrivateAggregations(): any;
+        getAllPrivateAggregations(): Object;
         /**
          * Returns a map of info objects for all private (hidden) associations of the described class, including
          * private associations from the ancestor classes.
@@ -5520,7 +5501,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAllPrivateAssociations(): any;
+        getAllPrivateAssociations(): Object;
         /**
          * Returns a map of info objects for all private (hidden) properties of the described class, including private
          * properties from the ancestor classes.
@@ -5531,7 +5512,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAllPrivateProperties(): any;
+        getAllPrivateProperties(): Object;
         /**
          * Returns a map of info objects for all public properties of the described class, including public properties
          * from the ancestor classes.
@@ -5542,7 +5523,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAllProperties(): any;
+        getAllProperties(): Object;
         /**
          * @SINCE 1.27.0
          *
@@ -5573,7 +5554,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getAssociations(): any;
+        getAssociations(): Object;
         /**
          * @SINCE 1.27.0
          *
@@ -5603,7 +5584,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getEvents(): any;
+        getEvents(): Object;
         /**
          * Returns the name of the library that contains the described UIElement.
          */
@@ -5666,7 +5647,7 @@ declare namespace sap {
          * not part of the API. See the {@link #constructor Notes about Info objects} in the constructor documentation
          * of this class.
          */
-        getProperties(): any;
+        getProperties(): Object;
         /**
          * @SINCE 1.27.0
          *
@@ -5690,7 +5671,7 @@ declare namespace sap {
          * Returns a map of default values for all properties declared by the described class and its ancestors,
          * keyed by the property name.
          */
-        getPropertyDefaults(): any;
+        getPropertyDefaults(): Object;
         /**
          * @SINCE 1.27.0
          *
@@ -5802,16 +5783,16 @@ declare namespace sap {
         /**
          * Creates a new metadata object from the given static infos.
          *
-         * **Note:** Throughout this class documentation, the described subclass of Object is referenced as the
-         * described class.
+         * Note: throughout this class documentation, the described subclass of Object is referenced as the described
+         * class.
          */
         constructor(
           /**
-           * Fully qualified name of the described class
+           * fully qualified name of the described class
            */
           sClassName: string,
           /**
-           * Info to construct the class and its metadata from
+           * info to construct the class and its metadata from
            */
           oClassInfo: object
         );
@@ -6489,7 +6470,7 @@ declare namespace sap {
           ): sap.ui.core.delegate.ItemNavigation;
         }
         /**
-         * Delegate for touch scrolling on mobile devices.
+         * Delegate for touch scrolling on mobile devices
          *
          * This delegate uses native scrolling of mobile and desktop browsers. Third party scrolling libraries are
          * not supported.
@@ -7014,10 +6995,8 @@ declare namespace sap {
         /**
          * @SINCE 1.52
          *
-         * Provides the configuration for drag-and-drop operations.
-         *
-         * **Note:** This configuration might be ignored due to control {@link sap.ui.core.Element.extend metadata}
-         * restrictions.
+         * Provides the configuration for drag-and-drop operations. **Note:** This configuration might be ignored
+         * due to control {@link sap.ui.core.Element.extend metadata} restrictions.
          */
         class DragDropInfo extends sap.ui.core.dnd.DropInfo
           implements sap.ui.core.dnd.IDragInfo, sap.ui.core.dnd.IDropInfo {
@@ -7246,10 +7225,8 @@ declare namespace sap {
         /**
          * @SINCE 1.56
          *
-         * Provides the configuration for drag operations.
-         *
-         * **Note:** This configuration might be ignored due to control {@link sap.ui.core.Element.extend metadata}
-         * restrictions.
+         * Provides the configuration for drag operations. **Note:** This configuration might be ignored due to
+         * control {@link sap.ui.core.Element.extend metadata} restrictions.
          */
         class DragInfo extends sap.ui.core.dnd.DragDropBase
           implements sap.ui.core.dnd.IDragInfo {
@@ -8519,8 +8496,8 @@ declare namespace sap {
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
                * values are "" (empty string), NaN, null or 0. The 'format' and 'parse' are done in a symmetric way. For
-               * example when this parameter is set to NaN, empty string is parsed as [NaN, undefined] and NaN is formatted
-               * as empty string.
+               * example when this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty
+               * string.
                */
               emptyString?: number;
               /**
@@ -9056,8 +9033,8 @@ declare namespace sap {
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
                * values are "" (empty string), NaN, null or 0. The 'format' and 'parse' are done in a symmetric way. For
-               * example when this parameter is set to NaN, empty string is parsed as [NaN, undefined] and NaN is formatted
-               * as empty string.
+               * example when this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty
+               * string.
                */
               emptyString?: number;
             },
@@ -9277,23 +9254,6 @@ declare namespace sap {
         ): void;
       }
       /**
-       * @SINCE 1.66
-       *
-       * Helper functionality for indication color support.
-       */
-      namespace IndicationColorSupport {
-        /**
-         * Returns a generic indication color message if the given Element has a property `IndicationColor` with
-         * one of the states or the given `indicationColor` string represents one of five states.
-         */
-        function getAdditionalText(
-          /**
-           * the Element of which the indicationColor needs to be checked, or the IndicationColor explicitly
-           */
-          vValue: sap.ui.core.Element | sap.ui.core.IndicationColor
-        ): string;
-      }
-      /**
        * @SINCE 1.28.0
        *
        * Helper functionality for enhancement of a `Label` with common label functionality.
@@ -9461,10 +9421,6 @@ declare namespace sap {
                * If the message is set as technical message
                */
               technical?: boolean;
-              /**
-               * An object containg technical details for a message
-               */
-              technicalDetails?: object;
 
               processor?: sap.ui.core.message.MessageProcessor;
               /**
@@ -9579,10 +9535,6 @@ declare namespace sap {
            */
           getTechnical(): boolean;
           /**
-           * Returns the technical details of the message
-           */
-          getTechnicalDetails(): object;
-          /**
            * Returns the message type
            */
           getType(): sap.ui.core.MessageType;
@@ -9677,15 +9629,6 @@ declare namespace sap {
              * Set Message as technical message lifecycle controlled by Application
              */
             bTechnical: boolean
-          ): void;
-          /**
-           * Set the technical details for the message
-           */
-          setTechnicalDetails(
-            /**
-             * The technical details of the message
-             */
-            oTechnicalDetails: object
           ): void;
           /**
            * Set message type
@@ -10273,94 +10216,6 @@ declare namespace sap {
           ): void;
         }
         /**
-         * Base class for controller extensions.
-         *
-         * All controller extensions must {@link #.extend extend} from this base class. It provides access to the
-         * {@link #getView view} of the extended controller as well as to the view's {@link #byId controls}.
-         *
-         * For a more detailed description how to develop controller extensions, see section {@link topic:21515f09c0324218bb705b27407f5d61
-         * Using Controller Extension} in the documentation.
-         */
-        class ControllerExtension extends sap.ui.base.Object {
-          /**/
-          constructor();
-
-          /**
-           * Returns an Element of the connected view with the given local ID.
-           *
-           * Views automatically prepend their own ID as a prefix to created Elements to make the IDs unique even
-           * in the case of multiple view instances. For a controller extension, the namespace of the control ID gets
-           * also prefixed with the namespace of the extension. This method helps to find an element by its local
-           * ID only.
-           *
-           * If no view is connected or if the view doesn't contain an element with the given local ID, `undefined`
-           * is returned.
-           */
-          byId(
-            /**
-             * View-local ID
-             */
-            sId: string
-          ): sap.ui.core.Element;
-          /**
-           * Creates a new subclass of class sap.ui.core.mvc.ControllerExtension with name `sClassName` and enriches
-           * it with the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.Object.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * Returns a metadata object for class sap.ui.core.mvc.ControllerExtension.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Returns the View from the corresponding controller.
-           */
-          getView(): sap.ui.core.mvc.View;
-          /**
-           * Override the ControllerExtension class with the given custom extension definition.
-           *
-           * Only public methods that are not final could be overridden. The lifecycle methods `onInit`, `onExit`,
-           * `onBeforeRendering` and `onAfterRendering` are added before or after the lifecycle functions of the original
-           * extension.
-           *
-           * Example for `oExtension`:
-           * ```javascript
-           *
-           * {
-           *     onInit: function() {
-           *         ...
-           *     },
-           *     ...
-           * }
-           * ```
-           *
-           *
-           * **Note:** This static method is automatically propagated to subclasses of `ControllerExtension`.
-           */
-          static override(
-            /**
-             * The custom extension definition
-             */
-            oExtension: object
-          ): Function;
-        }
-        /**
          * @SINCE 1.9.2
          *
          * A view defined/constructed by declarative HTML.
@@ -10394,11 +10249,11 @@ declare namespace sap {
           // @ts-ignore
           static create(
             /**
-             * An object containing the view configuration options.
+             * A map containing the view configuration options.
              */
-            oOptions: {
+            mOptions: {
               /**
-               * Specifies an ID for the view instance. If no ID is given, an ID will be generated.
+               * Specifies an ID for the View instance. If no ID is given, an ID will be generated.
                */
               id?: string;
               /**
@@ -10415,7 +10270,7 @@ declare namespace sap {
                */
               controller?: sap.ui.core.mvc.Controller;
             }
-          ): any;
+          ): Promise<any>;
           /**
            * Creates a new subclass of class sap.ui.core.mvc.HTMLView with name `sClassName` and enriches it with
            * the information contained in `oClassInfo`.
@@ -10473,16 +10328,16 @@ declare namespace sap {
           // @ts-ignore
           static create(
             /**
-             * An object containing the view configuration options.
+             * A map containing the view configuration options.
              */
-            oOptions: {
+            mOptions: {
               /**
-               * Specifies an ID for the view instance. If no ID is given, an ID will be generated.
+               * Specifies an ID for the View instance. If no ID is given, an ID will be generated.
                */
               id?: string;
               /**
-               * The view name (in dot-notation) that corresponds to a JSON resource that can be loaded via the module
-               * system (viewName + suffix ".view.json").
+               * The view name that corresponds to a JSON module that can be loaded via the module system (viewName +
+               * suffix ".view.json").
                */
               viewName?: string;
               /**
@@ -10495,7 +10350,7 @@ declare namespace sap {
                */
               controller?: sap.ui.core.mvc.Controller;
             }
-          ): any;
+          ): Promise<any>;
           /**
            * Creates a new subclass of class sap.ui.core.mvc.JSONView with name `sClassName` and enriches it with
            * the information contained in `oClassInfo`.
@@ -10555,11 +10410,11 @@ declare namespace sap {
           // @ts-ignore
           static create(
             /**
-             * An object containing the view configuration options.
+             * A map containing the view configuration options.
              */
-            oOptions: {
+            mOptions: {
               /**
-               * Specifies an ID for the view instance. If no ID is given, an ID will be generated.
+               * Specifies an ID for the View instance. If no ID is given, an ID will be generated.
                */
               id?: string;
               /**
@@ -10572,7 +10427,7 @@ declare namespace sap {
                */
               controller?: sap.ui.core.mvc.Controller;
             }
-          ): any;
+          ): Promise<any>;
           /**
            * A method to be implemented by JSViews, returning the View UI. While for declarative View types like XMLView
            * or JSONView the user interface definition is declared in a separate file, JSViews programmatically construct
@@ -10845,9 +10700,9 @@ declare namespace sap {
           // @ts-ignore
           static create(
             /**
-             * A parameter object for the view instantiation. Specialized view types could bring in additional parameters.
+             * A parameter map for the view instantiation. Specialized view types could bring in additional parameter.
              */
-            oOptions: {
+            mOptions: {
               /**
                * Specifies an ID for the View instance. If no ID is given, an ID will be generated.
                */
@@ -10889,7 +10744,7 @@ declare namespace sap {
                */
               controller?: sap.ui.core.mvc.Controller;
             }
-          ): any;
+          ): Promise<any>;
           /**
            * Convert the given view local element ID to a globally unique ID by prefixing it with the view ID.
            */
@@ -11137,7 +10992,6 @@ declare namespace sap {
           ): sap.ui.core.mvc.View;
           /**
            * @SINCE 1.30
-           * @deprecated (since 1.66) - Use {@link sap.ui.core.mvc.View.create View.create} instead
            *
            * Returns a Promise representing the state of the view initialization.
            *
@@ -11426,13 +11280,13 @@ declare namespace sap {
             /**
              * An object containing the view configuration options.
              */
-            oOptions: {
+            mOptions: {
               /**
                * Specifies an ID for the View instance. If no ID is given, an ID will be generated.
                */
               id?: string;
               /**
-               * Corresponds to an XML module that can be loaded via the module system (oOptions.viewName + suffix ".view.xml")
+               * Corresponds to an XML module that can be loaded via the module system (mOptions.viewName + suffix ".view.xml")
                */
               viewName?: string;
               /**
@@ -11532,7 +11386,7 @@ declare namespace sap {
           ): void;
         }
         /**
-         * Execution option for overrides defined by a `ControllerExtension`.
+         * Execution option for overrides defined by a ControllerExtension
          * See:
          * 	sap.ui.core.mvc.ControllerExtension
          */
@@ -11553,7 +11407,7 @@ declare namespace sap {
           Instead
         }
         /**
-         * Specifies possible view types.
+         * Specifies possible view types
          */
         enum ViewType {
           /**
@@ -11583,18 +11437,17 @@ declare namespace sap {
        */
       namespace Renderer {
         /**
-         * Creates a new renderer that extends a given renderer.
+         * Creates a new static renderer class that extends a given renderer.
          *
          * This method can be used with two signatures that are explained below. In both variants, the returned
-         * renderer inherits all properties (methods, fields) from the given parent renderer. Both variants also
-         * add an 'extend' method to the created renderer that behaves like the modern signature variant of this
-         * `Renderer.extend` method, but allows to extend the new renderer instead of `sap.ui.core.Renderer`.
+         * renderer class inherits all properties (methods, fields) from the given parent renderer class. Both variants
+         * also add an 'extend' method to the created renderer class that behaves like the new signature of this
+         * `Renderer.extend` method, but creates subclasses of the new class, not of `sap.ui.core.Renderer`.
          *
-         * Modern Signature:
-         *
-         * In the modern signature variant, two parameters must be given: a qualified name for the new renderer
-         * (its global name, in dot-notation), and an optional object literal that contains methods or fields to
-         * be added to the new renderer class.
+         * **New Signature**
+         *  In the new signature variant, two parameters must be given: a qualified name for the new renderer (its
+         * class name), and an optional object literal that contains methods or fields to be added to the new renderer
+         * class.
          *
          * This signature has been designed to resemble the class extension mechanism as provided by {@link sap.ui.base.Object.extend
          * Object.extend}.
@@ -11632,8 +11485,7 @@ declare namespace sap {
          * ```
          *
          *
-         * The extension of renderers works across multiple levels. A `FancyLabelRenderer` can extend the above
-         * `LabelRenderer`:
+         * The extension of Renderers works across multiple levels. A FancyLabelRenderer can extend the above LabelRenderer:
          *
          *
          * ```javascript
@@ -11660,15 +11512,14 @@ declare namespace sap {
          * ```
          *
          *
-         * **Note:** The modern signature no longer requires the `bExport` flag to be set for the enclosing {@link
+         * **Note:** the new signature no longer requires the `bExport` flag to be set for the enclosing {@link
          * sap.ui.define} call. The Renderer base class takes care of the necessary global export of the renderer.
-         * This allows non-SAP developers to write a renderer that complies with the documented restriction for
+         * This allows Non-SAP developers to write a renderer that complies with the documented restriction for
          * `sap.ui.define` (no use of bExport = true outside sap.ui.core projects).
          *
-         * Deprecated Signature:
-         *
-         * The deprecated old signature expects just one parameter: a renderer that should be extended. With that
-         * signature, the renderer can't be exported globally as the name of the renderer class is not known.
+         * **Deprecated Signature**
+         *  The deprecated old signature expects just one parameter: a renderer that should be extended. With that
+         * signature the renderer can't be exported globally as the name of the renderer class is not known.
          *
          * For compatibility reasons, the class created by the deprecated signature contains a property `_super`
          * that references the parent class. It shouldn't be used by applications / control developers as it doesn't
@@ -11677,45 +11528,15 @@ declare namespace sap {
          * always point to the implementation of the base renderer of the last call to extend. Instead of using
          * `this._super`, renderer implementations should use the new signature variant and access the base implementation
          * of a method via the AMD reference to the base renderer (as shown in the FancyLabelRenderer example above).
-         *
-         * Use as a Generic Method:
-         *
-         * Only renderers that have been created with a call to `extend` will get their own `extend` method to create
-         * new subclasses. To allow extending from older renderers that have been written from scratch as a plain
-         * object, the `Renderer.extend` method can be called as a generic method, providing the base renderer
-         * as `this`.
-         *
-         * Example: Derive from `HBoxRenderer` (which is assumed to be a plain object)
-         * ```javascript
-         *
-         * sap.ui.define(['sap/ui/core/Renderer', 'sap/m/HBoxRenderer'],
-         *     function(Renderer, HBoxRenderer) {
-         *     "use strict";
-         *
-         *     // Call 'extend' as a generic method, providing the HBoxRenderer as 'this'
-         *     var MyRenderer = Renderer.extend.call(HBoxRenderer, 'sap.m.LabelRenderer', {
-         *
-         *         someOverriddenHook: function(oRM, oControl) {
-         *         ...
-         *         },
-         *
-         *     });
-         *
-         *     return LabelRenderer;
-         * });
-         * ```
-         *
-         *
-         * **Note:** The deprecated signature cannot be used generically, it is only supported when called on `sap.ui.core.Renderer`.
          */
         function extend(
           /**
-           * Either the name of the new renderer class (modern signature) or the base renderer to extend (deprecated
+           * either the name of the new renderer class (new signature) or the base renderer to extend (deprecated
            * signature)
            */
           vName: string | object,
           /**
-           * Methods and/or properties that should be added to the new renderer class
+           * methods and/or properties that should be added to the new renderer class
            */
           oRendererInfo?: object
         ): object;
@@ -11794,7 +11615,7 @@ declare namespace sap {
           /**
            * The control or the DOM reference for which the given event handler should be registered (beside the window)
            */
-          oRef: Element | sap.ui.core.Control,
+          oRef: any | sap.ui.core.Control,
           /**
            * The event handler which should be called whenever the size of the given reference is changed. The event
            * object is passed as first argument to the event handler. See the description of this function for more
@@ -12107,9 +11928,8 @@ declare namespace sap {
 
       namespace routing {
         /**
-         * Class for manipulating and receiving changes of the browserhash with the hasher framework.
-         *
-         * Fires a `hashChanged` event if the browser hash changes.
+         * Class for manipulating and receiving changes of the browserhash with the hasher framework. Fires a "hashChanged"
+         * event if the browser hash changes.
          */
         class HashChanger extends sap.ui.base.EventProvider {
           /**/
@@ -12213,7 +12033,7 @@ declare namespace sap {
         /**
          * Base Class for manipulating and receiving changes of hash segment.
          *
-         * Fires a `hashChanged` event if the relevant hash changes.
+         * Fires a "hashChanged" event if the relevant hash changes.
          */
         class HashChangerBase extends sap.ui.base.EventProvider {
           /**/
@@ -12266,15 +12086,15 @@ declare namespace sap {
             sHash: string
           ): void;
         }
-        /**
-         * Used to determine the {@link sap.ui.core.routing.HistoryDirection} of the current or a future navigation,
-         * done with a {@link sap.ui.core.routing.Router} or {@link sap.ui.core.routing.HashChanger}.
-         *
-         * **ATTENTION:** this class will not be accurate if someone does hash-replacement without the named classes
-         * above. If you are manipulating the hash directly, this class is not supported anymore.
-         */
+
         class History {
-          /**/
+          /**
+           * Used to determine the {@link sap.ui.core.routing.HistoryDirection} of the current or a future navigation,
+           * done with a {@link sap.ui.core.routing.Router} or {@link sap.ui.core.routing.HashChanger}.
+           *
+           * **ATTENTION:** this class will not be accurate if someone does hash-replacement without the named classes
+           * above If you are manipulating the hash directly this class is not supported anymore.
+           */
           constructor(
             /**
              * required, without a HashChanger this class cannot work. The class needs to be aware of the hash-changes.
@@ -12401,7 +12221,7 @@ declare namespace sap {
               clearTarget?: boolean;
               /**
                * @deprecated since 1.28 - use targets.parent. one or multiple routeconfigs taking all of these parameters
-               * again. If a subroute is hit, it will fire the routeMatched event for all its parents. The routePatternMatched
+               * again. If a subroute is hit, it will fire tge routeMatched event for all its parents. The routePatternMatched
                * event will only be fired for the subroute not the parents. The routing will also display all the targets
                * of the subroutes and its parents.
                */
@@ -12663,13 +12483,12 @@ declare namespace sap {
              *         name: "firstRoute"
              *         pattern : "usefulPattern"
              *     },
-             *     //Will create a route called 'anotherRoute' for displaying the target 'targetView' which is defined in 'oTargets'
+             *     //Will create a route called 'anotherRoute'
              *     {
              *         name: "anotherRoute"
-             *         pattern : "anotherPattern",
-             *         target: "targetView"
+             *         pattern : "anotherPattern"
              *     },
-             *     //Will create a route for displaying a nested component which is defined in 'oTargets' with the prefix 'componentPrefix'
+             *     //Will create a route for a nested component with the prefix 'componentPrefix'
              *     {
              *         pattern: "componentPattern",
              *         name: "componentRoute",
@@ -12693,12 +12512,11 @@ declare namespace sap {
              *     firstRoute : {
              *         pattern : "usefulPattern"
              *     },
-             *     //Will create a route called 'anotherRoute' for displaying the target 'targetView' which is defined in 'oTargets'
+             *     //Will create a route called 'anotherRoute'
              *     anotherRoute : {
-             *         pattern : "anotherPattern",
-             *         target: "targetView"
+             *         pattern : "anotherPattern"
              *     },
-             *     //Will create a route for displaying a nested component which is defined in 'oTargets' with the prefix 'componentPrefix'
+             *     //Will create a route for a nested component with the prefix 'componentPrefix'
              *     componentRoute{
              *         pattern: "componentPattern",
              *         target: [
@@ -12716,14 +12534,7 @@ declare namespace sap {
             /**
              * Default values for route configuration - also takes the same parameters as {@link sap.ui.core.routing.Target#constructor}.
              *  This config will be used for routes and for targets, used in the router
-             *  Eg: if the config object specifies:
-             * ```javascript
-             *
-             * {
-             *     viewType: "XML"
-             * }
-             * ```
-             *  The targets look like this:
+             *  Eg: if the config object specifies :
              * ```javascript
              *
              * {
@@ -12733,6 +12544,26 @@ declare namespace sap {
              *     jsTarget : {
              *         viewType : "JS"
              *         ...
+             *     },
+             *     componentTarget: {
+             *         type: "Component",
+             *         name: "subComponent",
+             *         id: "mySubComponent",
+             *         options: {
+             *             // the Component configuration:
+             *             manifest: true
+             *             ...
+             *         },
+             *         containerOptions: {
+             *             // the ComponentContainer configuration defaults
+             *             //(other settings need to be provided):
+             *             height: "100%",
+             *             width: "100%",
+             *             lifecycle: sap.ui.core.ComponentLifecycle.Application
+             *             ...
+             *         }
+             *         controlId: "myRootView",
+             *         controlAggregation: "content"
              *     }
              * }
              * ```
@@ -12747,6 +12578,26 @@ declare namespace sap {
              *     jsTarget : {
              *         viewType : "JS"
              *         ...
+             *     },
+             * 	   componentTarget: {
+             *         type: "Component",
+             *         name: "subComponent",
+             *         id: "mySubComponent",
+             *         options: {
+             *             // the Component configuration:
+             *             manifest: true
+             *             ...
+             *         },
+             *         containerOptions: {
+             *             // the ComponentContainer configuration defaults
+             *             //(other settings need to be provided):
+             *             height: "100%",
+             *             width: "100%",
+             *             lifecycle: sap.ui.core.ComponentLifecycle.Application
+             *             ...
+             *         }
+             *         controlId: "myRootView",
+             *         controlAggregation: "content"
              *     }
              * }
              * ```
@@ -12756,46 +12607,6 @@ declare namespace sap {
              * is specifying it, so the viewType will be JS.
              */
             oConfig?: {
-              /**
-               * @since 1.28. Settings which are used when no route of the router is matched after a hash change.
-               */
-              bypassed?: {
-                /**
-                 * @since 1.28. One or multiple names of targets that will be displayed, if no route of the router is matched.
-                 *  A typical use case is a not found page.
-                 *  The current hash will be passed to the display event of the target.
-                 *  **Example:**
-                 * ```javascript
-                 *
-                 *
-                 *     new Router(
-                 *     // Routes
-                 *     [
-                 *         // Any route here
-                 *     ],
-                 *     {
-                 *         bypassed: {
-                 *             // you will find this name in the target config
-                 *             target: "notFound"
-                 *         }
-                 *     },
-                 *     // You should only use this constructor when you are not using a router with a component. Please use the metadata of a component to define your routes and targets. The documentation can be found here: {@link sap.ui.core.UIComponent.extend}.
-                 *     null,
-                 *     // Target config
-                 *     {
-                 *          //same name as in the config.bypassed.target
-                 *          notFound: {
-                 *              viewName: "notFound",
-                 *              ...
-                 *              // more properties to place the view in the correct container
-                 *          }
-                 *     });
-                 *
-                 * ```
-                 */
-                target?: string | string[];
-              };
-
               /**
                * @since 1.34. Whether the views which are loaded within this router instance asyncly. The default value
                * is set to false.
@@ -12831,7 +12642,7 @@ declare namespace sap {
              *     ],
              *     // Default values shared by routes and Targets
              *     {
-             *         path: "my.application.namespace",
+             *         viewNamespace: "my.application.namespace",
              *         viewType: "XML"
              *     },
              *     // You should only use this constructor when you are not using a router with a component.
@@ -12843,8 +12654,7 @@ declare namespace sap {
              *          //same name as in the route called 'startRoute'
              *          welcome: {
              *              // All properties for creating and placing a view go here or in the config
-             *              type: "View",
-             *              name: "Welcome",
+             *              viewName: "Welcome",
              *              controlId: "app",
              *              controlAggregation: "pages"
              *          }
@@ -13514,15 +13324,13 @@ declare namespace sap {
         }
         /**
          * @SINCE 1.28.1
-         *
-         * Provides a convenient way for placing views into the correct containers of your application.
-         *
-         * The main benefit of Targets is lazy loading: you do not have to create the views until you really need
-         * them.
          */
         class Target extends sap.ui.base.EventProvider {
           /**
-           * **Don't call this constructor directly**, use {@link sap.ui.core.routing.Targets} instead, it will create
+           * Provides a convenient way for placing views into the correct containers of your application.
+           *  The main benefit of Targets is lazy loading: you do not have to create the views until you really need
+           * them.
+           *  **Don't call this constructor directly**, use {@link sap.ui.core.routing.Targets} instead, it will create
            * instances of a Target.
            *  If you are using the mobile library, please use the {@link sap.m.routing.Targets} constructor, please
            * read the documentation there.
@@ -13667,15 +13475,12 @@ declare namespace sap {
         }
         /**
          * @SINCE 1.28.1
-         *
-         * Provides a convenient way for placing views into the correct containers of your application.
-         *
-         * The main benefit of `Targets` is lazy loading: you do not have to create the views until you really need
-         * them. If you are using the mobile library, please use {@link sap.m.routing.Targets} instead of this class.
          */
         class Targets extends sap.ui.base.EventProvider {
           /**
-           * Constructor for a new Targets class.
+           * Provides a convenient way for placing views into the correct containers of your application. The main
+           * benefit of Targets is lazy loading: you do not have to create the views until you really need them. If
+           * you are using the mobile library, please use {@link sap.m.routing.Targets} instead of this class.
            */
           constructor(oOptions: {
             /**
@@ -13759,18 +13564,14 @@ declare namespace sap {
                * {
                *     targets: {
                *         welcome: {
-               *             type: "View",
-               *             name: "Welcome",
+               *             viewName: "Welcome",
                *             viewType: "XML",
                *             ....
                *             // Other target parameters
                *         },
                *         goodbye: {
-               *             type: "Component",
-               *             usage: "myreuse",
-               *             containerSettings: {
-               *                 // settings for the component container
-               *             }
+               *             viewName: "Bye",
+               *             viewType: "JS",
                *             ....
                *             // Other target parameters
                *         }
@@ -13782,45 +13583,11 @@ declare namespace sap {
                *
                * This will create two targets named 'welcome' and 'goodbye' you can display both of them or one of them
                * using the {@link #display} function.
-               *
-               * The 'welcome' target creates a View instance when it's displayed. The 'goodbye' target creates a Component
-               * instance.
-               *
-               *
-               * The settings for the Component are defined in the manifest of the owner component of the router under
-               * path '/sap.ui5/componentUsages' and it can be used in the target by setting the 'usage' option with the
-               * name in the 'componentUsages'.
-               *  See the following manifest.json example of the owner component. There's a component settings object
-               * defined with name "myreuse" which can be used to set the "usage" option in a target's configuration.
-               *
-               * ```javascript
-               *
-               *
-               * {
-               *     "sap.ui5": {
-               *         "componentUsages": {
-               *             "myreuse": {
-               *                 "name": "reuse.component",
-               *                 "settings": {},
-               *                 "componentData": {},
-               *                 "lazy": false,
-               *             }
-               *         }
-               *     }
-               * }
-               *
-               * ```
                */
               anyName: {
                 /**
-                 * Defines whether the target creates an instance of 'View' or 'Component'.
-                 */
-                type: string;
-                /**
-                 * Defines the name of the View or Component that will be created. For type 'Component', use option 'usage'
-                 * instead if an owner component exists. To place the view or component into a Control, use the options
-                 * 'controlAggregation' and 'controlId'. Instance of View or Component will only be created once per 'name'
-                 * or 'usage' combined with 'id'.
+                 * The name of a view that will be created. To place the view into a Control use the controlAggregation
+                 * and controlId. Views will only be created once per viewName.
                  * ```javascript
                  *
                  *
@@ -13828,16 +13595,14 @@ declare namespace sap {
                  *     targets: {
                  *         // If display("masterWelcome") is called, the master view will be placed in the 'MasterPages' of a control with the id splitContainter
                  *         masterWelcome: {
-                 *             type: "View",
-                 *             name: "Welcome",
+                 *             viewName: "Welcome",
                  *             controlId: "splitContainer",
                  *             controlAggregation: "masterPages"
                  *         },
                  *         // If display("detailWelcome") is called after the masterWelcome, the view will be removed from the master pages and added to the detail pages, since the same instance is used. Also the controls inside of the view will have the same state.
                  *         detailWelcome: {
                  *             // same view here, that's why the same instance is used
-                 *             type: "View",
-                 *             name: "Welcome",
+                 *             viewName: "Welcome",
                  *             controlId: "splitContainer",
                  *             controlAggregation: "detailPages"
                  *         }
@@ -13847,56 +13612,54 @@ declare namespace sap {
                  * ```
                  *
                  *
-                 * If you want to have a second instance of the 'welcome' view you can set different 'id' to the targets:
+                 * If you want to have a second instance of the welcome view you can use the following:
                  *
                  *
                  * ```javascript
                  *
                  *
+                 * // Some code you execute before you display the taget named 'detailWelcome':
+                 * View.create({ viewName : "Welcome", type : sap.ui.core.mvc.ViewType.XML}).then(function(oView) {
+                 *     oTargets.getViews().setView("WelcomeWithAlias", oView);
+                 * });
+                 *
                  * {
                  *     targets: {
                  *         // If display("masterWelcome") is called, the master viewName will be placed in the 'MasterPages' of a control with the id splitContainter
                  *         masterWelcome: {
-                 *             type: "View",
-                 *             name: "Welcome",
+                 *             viewName: "Welcome",
                  *             controlId: "splitContainer",
-                 *             controlAggregation: "masterPages",
-                 *             id: "masterWelcome",
+                 *             controlAggregation: "masterPages"
                  *         },
                  *         // If display("detailWelcome") is called after the masterWelcome, a second instance with an own controller instance will be added in the detail pages.
                  *         detailWelcome: {
-                 *             type: "View",
-                 *             name: "WelcomeWithAlias",
+                 *             // same viewName here, that's why the same instance is used
+                 *             viewName: "WelcomeWithAlias",
                  *             controlId: "splitContainer",
-                 *             controlAggregation: "detailPages",
-                 *             id: "detailWelcome"
+                 *             controlAggregation: "detailPages"
                  *         }
                  *     }
                  * }
                  *
                  * ```
                  */
-                name?: string;
-                /**
-                 * Defines the 'usage' name for 'Component' target which refers to the '/sap.ui5/componentUsages' entry
-                 * in the owner component's manifest.
-                 */
-                usage?: string;
+                viewName: string;
                 /**
                  * The type of the view that is going to be created. These are the supported types: {@link sap.ui.core.mvc.ViewType}.
                  * You always have to provide a viewType except if you are using {@link sap.ui.core.routing.Views#setView}.
                  */
                 viewType?: string;
                 /**
-                 * A prefix that will be prepended in front of the name.
-                 *  **Example:** name is set to "myView" and path is set to "myApp" - the created view name will be "myApp.myView".
+                 * A prefix that will be prepended in front of the viewName.
+                 *  **Example:** viewName is set to "myView" and viewPath is set to "myApp" - the created viewName will
+                 * be "myApp.myView".
                  */
-                path?: string;
+                viewPath?: string;
                 /**
-                 * The ID of the created instance. This is will be prefixed with the id of the component set to the views
-                 * instance provided in oOptions.views. For details see {@link sap.ui.core.routing.Views#getView}.
+                 * The id of the created view. This is will be prefixed with the id of the component set to the views instance
+                 * provided in oOptions.views. For details see {@link sap.ui.core.routing.Views#getView}.
                  */
-                id?: string;
+                viewId?: string;
                 /**
                  * The id of the parent of the controlId - This should be the id of the view that contains your controlId,
                  * since the target control will be retrieved by calling the {@link sap.ui.core.mvc.View#byId} function
@@ -13907,16 +13670,15 @@ declare namespace sap {
                  */
                 targetParent?: string;
                 /**
-                 * The ID of the control where you want to place the instance created by this target. You also need to set
-                 * "controlAggregation" property to specify to which aggregation of the control should the created instance
-                 * be added. An example for containers are {@link sap.ui.ux3.Shell} with the aggregation 'content' or a
-                 * {@link sap.m.NavContainer} with the aggregation 'pages'.
+                 * The id of the control where you want to place the view created by this target. The view of the target
+                 * will be put into this container Control, using the controlAggregation property. You have to specify both
+                 * properties or the target will not be able to place itself. An example for containers are {@link sap.ui.ux3.Shell}
+                 * with the aggregation 'content' or a {@link sap.m.NavContainer} with the aggregation 'pages'.
                  */
                 controlId?: string;
                 /**
-                 * The name of an aggregation of the controlId, where the created instance from the target will be added.
-                 * Eg: a {@link sap.m.NavContainer} has an aggregation 'pages', another Example is the {@link sap.ui.ux3.Shell}
-                 * it has 'content'.
+                 * The name of an aggregation of the controlId, that contains views. Eg: a {@link sap.m.NavContainer} has
+                 * an aggregation 'pages', another Example is the {@link sap.ui.ux3.Shell} it has 'content'.
                  */
                 controlAggregation?: string;
                 /**
@@ -13929,12 +13691,11 @@ declare namespace sap {
                 /**
                  * A reference to another target, using the name of the target. If you display a target that has a parent,
                  * the parent will also be displayed. Also the control you specify with the controlId parameter, will be
-                 * searched inside of the created instance of the parent not in the rootView, provided in the config. The
-                 * control will be searched using the byId function of a view. When it is not found, the global id is checked.
-                 *
-                 *  The main usecase for the parent property is placing a view or component inside a smaller container of
-                 * an instance, which is also created by targets. This is useful for lazy loading views or components, only
-                 * if the user really navigates to this part of your application.
+                 * searched inside of the view of the parent not in the rootView, provided in the config. The control will
+                 * be searched using the byId function of a view. When it is not found, the global id is checked.
+                 *  The main usecase for the parent property is placing a view inside a smaller container of a view, which
+                 * is also created by targets. This is useful for lazy loading views, only if the user really navigates
+                 * to this part of your application.
                  *  **Example:** Our aim is to lazy load a tab of an IconTabBar (a control that displays a view initially
                  * and when a user clicks on it the view changes). It's a perfect candidate to lazy load something inside
                  * of it.
@@ -13985,8 +13746,7 @@ declare namespace sap {
                  *         },
                  *         targets: {
                  *             detail: {
-                 *                 type: "View",
-                 *                 name: 'Detail'
+                 *                 viewName: 'Detail'
                  *             },
                  *             secondTabContent: {
                  *                 // A reference to the detail target defined above
@@ -13996,8 +13756,7 @@ declare namespace sap {
                  *                 // An IconTabFilter has an aggregation called content so we need to overwrite the pages set in the config as default.
                  *                 controlAggregation: 'content',
                  *                 // A view containing the content
-                 *                 type: "View",
-                 *                 name: 'SecondTabContent'
+                 *                 viewName: 'SecondTabContent'
                  *             }
                  *         }
                  *     });
@@ -14304,7 +14063,7 @@ declare namespace sap {
           ): sap.ui.core.routing.Views;
         }
         /**
-         * Enumaration for different HistoryDirections.
+         * Enumaration for different HistoryDirections
          */
         enum HistoryDirection {
           /**
@@ -14633,12 +14392,11 @@ declare namespace sap {
         /**
          * @SINCE 1.48
          *
-         * This class represents an extension for OPA tests which allows running Support Assistant checks.
-         *
-         * It enriches the OPA assertions with the methods described in {@link sap.ui.core.support.RuleEngineOpaAssertions}.
+         * This class represents an extension for OPA tests which allows running Support Assistant checks. It enriches
+         * the OPA assertions with the methods described in {@link sap.ui.core.support.RuleEngineOpaAssertions}
          *
          * For more information, see {@link topic:cfabbd4dfc054936997d9d00916e1668 Integrating the Support Assistant
-         * in OPA Tests}.
+         * in OPA Tests}
          */
         class RuleEngineOpaExtension extends sap.ui.base.Object {
           /**/
@@ -15232,7 +14990,7 @@ declare namespace sap {
             /**
              * the id or the DOM reference where to render the template
              */
-            oRef: string | Element | sap.ui.core.Control,
+            oRef: string | any,
             /**
              * The context to use to evaluate the Template. It will be applied as value for the context property of
              * the created control.
@@ -15276,7 +15034,7 @@ declare namespace sap {
             /**
              * the id or the DOM reference where to render the template
              */
-            oRef: string | Element | sap.ui.core.Control,
+            oRef: string | any,
             /**
              * The context to use to evaluate the Template. It will be applied as value for the context property of
              * the created control.
@@ -15292,7 +15050,7 @@ declare namespace sap {
             /**
              * the id or the DOM reference where to render the template
              */
-            oRef: string | Element | sap.ui.core.Control,
+            oRef: string | any,
             /**
              * Describes the position where the control should be put into the container
              */
@@ -15307,7 +15065,7 @@ declare namespace sap {
             /**
              * the id or the DOM reference where to render the template
              */
-            oRef: string | Element | sap.ui.core.Control,
+            oRef: string | any,
 
             bInline: boolean
           ): sap.ui.core.tmpl.TemplateControl;
@@ -16632,7 +16390,7 @@ declare namespace sap {
           ): sap.ui.core.util.ExportTypeCSV;
         }
         /**
-         * Class to mock http requests made to a remote server.
+         * Class to mock http requests made to a remote server
          */
         // @ts-ignore - static "getMetadata" inheritance issue
         class MockServer extends sap.ui.base.ManagedObject {
@@ -16971,7 +16729,7 @@ declare namespace sap {
 
       namespace ws {
         /**
-         * WebSocket class implementing the pcp-protocol.
+         * WebSocket class implementing the pcp-protocol
          */
         class SapPcpWebSocket extends sap.ui.core.ws.WebSocket {
           /**
@@ -17052,7 +16810,7 @@ declare namespace sap {
           ): sap.ui.core.ws.SapPcpWebSocket;
         }
         /**
-         * Basic WebSocket class.
+         * Basic WebSocket class
          */
         class WebSocket extends sap.ui.base.EventProvider {
           /**
@@ -17404,25 +17162,11 @@ declare namespace sap {
         }
       }
       /**
-       * Marker interface for controls that can serve as a context menu.
-       *
-       * Implementation of this interface should implement the `openAsContextMenu` method.
+       * Marker interface for controls that can serve as a context menu. Implementation of this interface should
+       * implement
+       * 	 - `openAsContextMenu` method.
        */
-      interface IContextMenu {
-        /**
-         * Opens the control by given opener ref.
-         */
-        openAsContextMenu(
-          /**
-           * oncontextmenu event
-           */
-          oEvent: string,
-          /**
-           * The element which will get the focus back again after the menu was closed.
-           */
-          oOpenerRef: sap.ui.core.Element | Element
-        ): void;
-      }
+      interface IContextMenu {}
       /**
        * @SINCE 1.48.0
        *
@@ -17435,15 +17179,11 @@ declare namespace sap {
         /**
          * @SINCE 1.48.0
          *
-         * Whether a control wants to keep its original width even when used in a `Form`.
-         *
-         * In the `Form` control, all content controls are positioned on a grid cell base. By default, the controls
+         * In the `Form` control all content controls are positioned on a grid cell base. By default the controls
          * use the full width of the used grid cell. But for some controls (like image controls), this is not the
          * desired behavior. In this case the control must keep its original width.
-         *
-         * This is an optional method. When not defined, the width of the control might be adjusted.
          */
-        getFormDoNotAdjustWidth?(): boolean;
+        getFormDoNotAdjustWidth(): boolean;
       }
       /**
        * @SINCE 1.26
@@ -17622,8 +17362,7 @@ declare namespace sap {
          * For backward compatibility with older releases, field group IDs are syntactically not limited, but it
          * is suggested to use only valid {@link sap.ui.core.ID}s.
          *
-         * See {@link #attachValidateFieldGroup} or consult the {@link topic:5b0775397e394b1fb973fa207554003e Field
-         * Group} documentation.
+         * See {@link #attachValidateFieldGroup}.
          */
         fieldGroupIds?: string[];
 
@@ -17639,16 +17378,16 @@ declare namespace sap {
       interface CustomDataOpts extends sap.ui.core.ElementOpts {
         /**
          * The key of the data in this CustomData object. When the data is just stored, it can be any string, but
-         * when it is to be written to HTML (`writeToDom == true`) then it must also be a valid HTML attribute name.
-         * It must conform to the {@link sap.ui.core.ID} type and may contain no colon. To avoid collisions, it
-         * also may not start with "sap-ui". When written to HTML, the key is prefixed with "data-". If any restriction
-         * is violated, a warning will be logged and nothing will be written to the DOM.
+         * when it is to be written to HTML (writeToDom == true) then it must also be a valid HTML attribute name
+         * (it must conform to the sap.ui.core.ID type and may contain no colon) to avoid collisions, it also may
+         * not start with "sap-ui". When written to HTML, the key is prefixed with "data-". If any restriction is
+         * violated, a warning will be logged and nothing will be written to the DOM.
          */
         key?: string;
 
         /**
          * The data stored in this CustomData object. When the data is just stored, it can be any JS type, but when
-         * it is to be written to HTML (`writeToDom == true`) then it must be a string. If this restriction is violated,
+         * it is to be written to HTML (writeToDom == true) then it must be a string. If this restriction is violated,
          * a warning will be logged and nothing will be written to the DOM.
          */
         value?: any;
@@ -17658,14 +17397,9 @@ declare namespace sap {
          *
          * If set to "true" and the value is of type "string" and the key conforms to the documented restrictions,
          * this custom data is written to the HTML root element of the control as a "data-*" attribute. If the key
-         * is "abc" and the value is "cde", the HTML will look as follows:
-         *
-         * <SomeTag ... data-abc="cde" ... >
-         *
+         * is "abc" and the value is "cde", the HTML will look as follows: <SomeTag ... data-abc="cde" ... >
          * Thus the application can provide stable attributes by data binding which can be used for styling or identification
-         * purposes.
-         *
-         * **ATTENTION:** use carefully to not create huge attributes or a large number of them.
+         * purposes. ATTENTION: use carefully to not create huge attributes or a large number of them.
          */
         writeToDom?: boolean;
       }
@@ -19861,8 +19595,7 @@ declare namespace sap {
        * 	 - **field groups**: by assigning the same group ID to a set of editable controls, they form a group
        * 			which can be validated together. See property {@link #getFieldGroupIds fieldGroupIds} and event {@link
        * 			#event:validateFieldGroup validateFieldGroup}. The term field was chosen as most often this feature
-       * 			will be used to group editable fields in a form. See the documentation for {@link topic:5b0775397e394b1fb973fa207554003e
-       * 			Field Groups} for more details.
+       * 			will be used to group editable fields in a form.
        * 	 - **custom style classes**: all controls allow to add custom CSS classes to their rendered DOM without
        * 			modifying their renderer code. See methods {@link #addStyleClass addStyleClass}, {@link #removeStyleClass
        * 			removeStyleClass}, {@link #toggleStyleClass toggleStyleClass} and {@link #hasStyleClass hasStyleClass}.
@@ -20379,8 +20112,7 @@ declare namespace sap {
          * For backward compatibility with older releases, field group IDs are syntactically not limited, but it
          * is suggested to use only valid {@link sap.ui.core.ID}s.
          *
-         * See {@link #attachValidateFieldGroup} or consult the {@link topic:5b0775397e394b1fb973fa207554003e Field
-         * Group} documentation.
+         * See {@link #attachValidateFieldGroup}.
          *
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
          *
@@ -20954,106 +20686,55 @@ declare namespace sap {
           FNMetaImpl?: Function
         ): Function;
         /**
-         * Fire event `formatError` to attached listeners.
+         * Fire event formatError to attached listeners.
+         *
+         * Expects following event parameters:
+         * 	 - 'element' of type `sap.ui.core.Element`
+         * 	 - 'property' of type `string`
+         * 	 - 'type' of type `string`
+         * 	 - 'newValue' of type `object`
+         * 	 - 'oldValue' of type `object`
+         * 	 - 'exception' of type `object`
          */
         fireFormatError(
           /**
-           * Parameters to pass along with the event.
+           * the arguments to pass along with the event.
            */
-          oParameters?: {
-            /**
-             * The Element where the format error occurred
-             */
-            element: sap.ui.core.Element;
-            /**
-             * The property name of the element where the format error occurred
-             */
-            property: string;
-            /**
-             * The type of the property
-             */
-            type: sap.ui.model.Type;
-            /**
-             * The value of the property which was entered when the format error occurred
-             */
-            newValue: any;
-            /**
-             * The value of the property which was present before a new value was entered (before the format error)
-             */
-            oldValue: any;
-            /**
-             * The exception object which occurred and has more information about the format error
-             */
-            exception: object;
-          }
+          mArguments?: object
         ): sap.ui.core.Core;
         /**
-         * Fire event `parseError` to attached listeners.
+         * Fire event parseError to attached listeners.
+         *
+         * Expects following event parameters:
+         * 	 - 'element' of type `sap.ui.core.Element`
+         * 	 - 'property' of type `string`
+         * 	 - 'type' of type `string`
+         * 	 - 'newValue' of type `object`
+         * 	 - 'oldValue' of type `object`
+         * 	 - 'exception' of type `object`
          */
         fireParseError(
           /**
            * the arguments to pass along with the event.
            */
-          oParameters?: {
-            /**
-             * The Element where the parse error occurred
-             */
-            element: sap.ui.core.Element;
-            /**
-             * The property name of the element where the parse error occurred
-             */
-            property: string;
-            /**
-             * The type of the property
-             */
-            type: sap.ui.model.Type;
-            /**
-             * The value of the property which was entered when the parse error occurred
-             */
-            newValue: object;
-            /**
-             * The value of the property which was present before a new value was entered (before the parse error)
-             */
-            oldValue: object;
-            /**
-             * The exception object which occurred and has more information about the parse error
-             */
-            exception: object;
-          }
+          mArguments?: object
         ): sap.ui.core.Core;
         /**
-         * Fire event `validationError` to attached listeners.
+         * Fire event validationError to attached listeners.
+         *
+         * Expects following event parameters:
+         * 	 - 'element' of type `sap.ui.core.Element`
+         * 	 - 'property' of type `string`
+         * 	 - 'type' of type `string`
+         * 	 - 'newValue' of type `object`
+         * 	 - 'oldValue' of type `object`
+         * 	 - 'exception' of type `object`
          */
         fireValidationError(
           /**
            * the arguments to pass along with the event.
            */
-          oParameters?: {
-            /**
-             * The Element where the validation error occurred
-             */
-            element: sap.ui.core.Element;
-            /**
-             * The property name of the element where the validation error occurred
-             */
-            property: string;
-            /**
-             * The type of the property
-             */
-            type: sap.ui.model.Type;
-            /**
-             * The value of the property which was entered when the validation error occurred
-             */
-            newValue: object;
-            /**
-             * The value of the property which was present before a new value was entered (before the validation error)
-             */
-            oldValue: object;
-            /**
-             * The exception object which occurred and has more information about the validation error
-             */
-            exception: object;
-          }
+          mArguments?: object
         ): sap.ui.core.Core;
         /**
          * Fire event validationSuccess to attached listeners.
@@ -21162,7 +20843,7 @@ declare namespace sap {
          * **Note:** The returned info objects must not be modified. They might be a living copy of the internal
          * data (for efficiency reasons) and the framework is not prepared to handle modifications to these objects.
          */
-        getLoadedLibraries(): any;
+        getLoadedLibraries(): Object;
         /**
          * @SINCE 1.33.0
          *
@@ -21693,22 +21374,23 @@ declare namespace sap {
         ): sap.ui.core.Core;
       }
       /**
-       * Contains a single key/value pair of custom data attached to an `Element`.
-       *
-       * See method {@link sap.ui.core.Element#data Element.prototype.data} and the chapter {@link topic:91f0c3ee6f4d1014b6dd926db0e91070
-       * Custom Data - Attaching Data Objects to Controls} in the documentation.
+       * Contains a single key/value pair of custom data attached to an Element. See method data().
        */
       class CustomData extends sap.ui.core.Element {
         /**
-         * Constructor for a new `CustomData` element.
+         * Constructor for a new CustomData.
+         *
+         * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
+         * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
+         * of the syntax of the settings object.
          */
         constructor(
           /**
-           * ID for the new element, generated automatically if no ID is given
+           * id for the new control, generated automatically if no id is given
            */
           sId?: string,
           /**
-           * initial settings for the new element
+           * initial settings for the new control
            */
           mSettings?: CustomDataOpts
         );
@@ -21738,10 +21420,10 @@ declare namespace sap {
          * Gets current value of property {@link #getKey key}.
          *
          * The key of the data in this CustomData object. When the data is just stored, it can be any string, but
-         * when it is to be written to HTML (`writeToDom == true`) then it must also be a valid HTML attribute name.
-         * It must conform to the {@link sap.ui.core.ID} type and may contain no colon. To avoid collisions, it
-         * also may not start with "sap-ui". When written to HTML, the key is prefixed with "data-". If any restriction
-         * is violated, a warning will be logged and nothing will be written to the DOM.
+         * when it is to be written to HTML (writeToDom == true) then it must also be a valid HTML attribute name
+         * (it must conform to the sap.ui.core.ID type and may contain no colon) to avoid collisions, it also may
+         * not start with "sap-ui". When written to HTML, the key is prefixed with "data-". If any restriction is
+         * violated, a warning will be logged and nothing will be written to the DOM.
          */
         getKey(): string;
         /**
@@ -21753,7 +21435,7 @@ declare namespace sap {
          * Gets current value of property {@link #getValue value}.
          *
          * The data stored in this CustomData object. When the data is just stored, it can be any JS type, but when
-         * it is to be written to HTML (`writeToDom == true`) then it must be a string. If this restriction is violated,
+         * it is to be written to HTML (writeToDom == true) then it must be a string. If this restriction is violated,
          * a warning will be logged and nothing will be written to the DOM.
          */
         getValue(): any;
@@ -21764,14 +21446,9 @@ declare namespace sap {
          *
          * If set to "true" and the value is of type "string" and the key conforms to the documented restrictions,
          * this custom data is written to the HTML root element of the control as a "data-*" attribute. If the key
-         * is "abc" and the value is "cde", the HTML will look as follows:
-         *
-         * <SomeTag ... data-abc="cde" ... >
-         *
+         * is "abc" and the value is "cde", the HTML will look as follows: <SomeTag ... data-abc="cde" ... >
          * Thus the application can provide stable attributes by data binding which can be used for styling or identification
-         * purposes.
-         *
-         * **ATTENTION:** use carefully to not create huge attributes or a large number of them.
+         * purposes. ATTENTION: use carefully to not create huge attributes or a large number of them.
          *
          * Default value is `false`.
          */
@@ -21780,10 +21457,10 @@ declare namespace sap {
          * Sets a new value for property {@link #getKey key}.
          *
          * The key of the data in this CustomData object. When the data is just stored, it can be any string, but
-         * when it is to be written to HTML (`writeToDom == true`) then it must also be a valid HTML attribute name.
-         * It must conform to the {@link sap.ui.core.ID} type and may contain no colon. To avoid collisions, it
-         * also may not start with "sap-ui". When written to HTML, the key is prefixed with "data-". If any restriction
-         * is violated, a warning will be logged and nothing will be written to the DOM.
+         * when it is to be written to HTML (writeToDom == true) then it must also be a valid HTML attribute name
+         * (it must conform to the sap.ui.core.ID type and may contain no colon) to avoid collisions, it also may
+         * not start with "sap-ui". When written to HTML, the key is prefixed with "data-". If any restriction is
+         * violated, a warning will be logged and nothing will be written to the DOM.
          *
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
          */
@@ -21797,7 +21474,7 @@ declare namespace sap {
          * Sets a new value for property {@link #getValue value}.
          *
          * The data stored in this CustomData object. When the data is just stored, it can be any JS type, but when
-         * it is to be written to HTML (`writeToDom == true`) then it must be a string. If this restriction is violated,
+         * it is to be written to HTML (writeToDom == true) then it must be a string. If this restriction is violated,
          * a warning will be logged and nothing will be written to the DOM.
          *
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
@@ -21815,14 +21492,9 @@ declare namespace sap {
          *
          * If set to "true" and the value is of type "string" and the key conforms to the documented restrictions,
          * this custom data is written to the HTML root element of the control as a "data-*" attribute. If the key
-         * is "abc" and the value is "cde", the HTML will look as follows:
-         *
-         * <SomeTag ... data-abc="cde" ... >
-         *
+         * is "abc" and the value is "cde", the HTML will look as follows: <SomeTag ... data-abc="cde" ... >
          * Thus the application can provide stable attributes by data binding which can be used for styling or identification
-         * purposes.
-         *
-         * **ATTENTION:** use carefully to not create huge attributes or a large number of them.
+         * purposes. ATTENTION: use carefully to not create huge attributes or a large number of them.
          *
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
          *
@@ -22098,7 +21770,7 @@ declare namespace sap {
           }
         ): void;
         /**
-         * Retrieves, modifies or removes custom data attached to an `Element`.
+         * Attaches custom data to an `Element` or retrieves attached data.
          *
          * Usage:
          * ```javascript
@@ -22146,31 +21818,8 @@ declare namespace sap {
          *    data()
          * ```
          *  Returns all data, as a map
-         *
-         *
-         * ```javascript
-         *
-         *    data({"myKey1": myData, "myKey2": null})
-         * ```
-         *  Attaches `myData` (using the key "myKey1" and removes any data that had been attached for key "myKey2"
-         * See:
-         * 	See chapter {@link topic:91f0c3ee6f4d1014b6dd926db0e91070 Custom Data - Attaching Data Objects to Controls}
-         *    in the documentation.
          */
-        data(
-          /**
-           * Single key to set or remove, or an object with key/value pairs or `null` to remove all custom data
-           */
-          vKeyOrData?: any,
-          /**
-           * Value to set or `null` to remove the corresponding custom data
-           */
-          vValue?: string | any,
-          /**
-           * Whether this custom data entry should be written to the DOM during rendering
-           */
-          bWriteToDom?: boolean
-        ): any;
+        data(): void;
         /**
          * @deprecated (since 1.3.1) - Use the static `extend` method of the desired base class (e.g. {@link sap.ui.core.Element.extend})
          *
@@ -22666,14 +22315,14 @@ declare namespace sap {
       }
       /**
        * Helper Class for enhancement of a Control with propagation of enabled property.
+       *
+       * **This constructor should be applied to the prototype of a control**
+       *
+       * Example: ` sap.ui.core.EnabledPropagator.call(Some-Control.prototype, Default-value, ...);
+       * ` e.g. ` sap.ui.core.EnabledPropagator.call(sap.ui.commons.Button.prototype); `
        */
       class EnabledPropagator {
-        /**
-         * **This constructor should be applied to the prototype of a control.**
-         *
-         * Example: ` sap.ui.core.EnabledPropagator.call(Some-Control.prototype, Default-value, ...);
-         * ` e.g. ` sap.ui.core.EnabledPropagator.call(sap.ui.commons.Button.prototype); `
-         */
+        /**/
         constructor(
           /**
            * the value that should be used as default value for the enhancement of the control.
@@ -24106,8 +23755,8 @@ declare namespace sap {
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
         /**
-         * Returns the ID of a shared `InvisibleText` instance whose `text` property is retrieved from the given
-         * library resource bundle and text key.
+         * Returns the ID of a shared `InvisibleText instance whose text` property is retrieved from
+         * the given library resource bundle and text key.
          *
          * Calls with the same library and text key will return the same instance. The instance will be rendered
          * statically.
@@ -24370,9 +24019,8 @@ declare namespace sap {
         static getMetadata(): sap.ui.base.Metadata;
       }
       /**
-       * An item that is used in list controls, such as `DropdownBox`.
-       *
-       * The element foresees the usage of additional texts displayed in a second column.
+       * An item that is used in lists or list-similar controls such as DropdownBox, for example. The element
+       * foresees the usage of additional texts displayed in a second column.
        */
       class ListItem extends sap.ui.core.Item {
         /**
@@ -24687,7 +24335,7 @@ declare namespace sap {
         getVariantSubtags(): string[];
       }
       /**
-       * Provides access to locale-specific data, such as, date formats, number formats, and currencies.
+       * Provides access to locale-specific data, like date formats, number formats, currencies, etc.
        */
       class LocaleData extends sap.ui.base.Object {
         /**
@@ -25618,9 +25266,10 @@ declare namespace sap {
         ): string;
       }
       /**
-       * This element is used to provide messages.
+       * This element used to provide messages. Rendering must be done within the control that uses this kind
+       * of element.
        *
-       * Rendering must be done within the control that uses this kind of element. Its default level is none.
+       * Its default level is none.
        */
       class Message extends sap.ui.core.Element {
         /**
@@ -26060,7 +25709,7 @@ declare namespace sap {
         /**
          * Returns this Popup's content.
          */
-        getContent(): sap.ui.core.Control | Element;
+        getContent(): sap.ui.core.Control | any;
         /**
          * @SINCE 1.13.0
          *
@@ -26129,7 +25778,7 @@ declare namespace sap {
           /**
            * specifies the reference element to which the given content should dock to
            */
-          of?: string | sap.ui.core.Element | Element | any | any,
+          of?: string | sap.ui.core.Element | any | any | any,
           /**
            * the offset relative to the docking point, specified as a string with space-separated pixel values (e.g.
            * "10 0" to move the popup 10 pixels to the right). If the docking of both "my" and "at" are both RTL-sensitive
@@ -26177,13 +25826,13 @@ declare namespace sap {
            * an array containing DOM elements, sap.ui.core.Element or an ID which are considered part of the Popup;
            * a value of null removes all previous areas
            */
-          aAutoCloseAreas: Element[] | sap.ui.core.Element[] | string[]
+          aAutoCloseAreas: any | sap.ui.core.Element[] | string[]
         ): sap.ui.core.Popup;
         /**
          * Sets the content this instance of the Popup should render. Content must be capable of being positioned
          * via position:absolute;
          */
-        setContent(oContent: sap.ui.core.Control | Element): sap.ui.core.Popup;
+        setContent(oContent: sap.ui.core.Control | any): sap.ui.core.Popup;
         /**
          * Sets the durations for opening and closing animations. Null values and values < 0 are ignored. A duration
          * of 0 means no animation. Default value is "fast" which is the jQuery constant for "200 ms".
@@ -26268,7 +25917,7 @@ declare namespace sap {
            * specifies the reference element to which the given content should be aligned as specified in the other
            * parameters
            */
-          of?: string | sap.ui.core.Element | Element | any | any,
+          of?: string | sap.ui.core.Element | any | any | any,
           /**
            * the offset relative to the docking point, specified as a string with space-separated pixel values (e.g.
            * "0 10" to move the popup 10 pixels to the right). If the docking of both "my" and "at" are both RTL-sensitive
@@ -26341,7 +25990,7 @@ declare namespace sap {
         ): sap.ui.core.Popup;
       }
       /**
-       * A class that handles the rendering of controls.
+       * RenderManager that will take care for rendering Controls.
        *
        * For the default rendering task of UI5, a shared RenderManager is created and owned by `sap.ui.core.Core`.
        * Controls or other code that want to render controls outside the default rendering task can create a private
@@ -26358,90 +26007,6 @@ declare namespace sap {
        * default renderer for that control. By convention, the default renderer is implemented in its own namespace
        * (static class) which matches the name of the control's class with the additional suffix 'Renderer'. So
        * for a control `sap.m.Input` the default renderer will be searched for under the global name `sap.m.InputRenderer`.
-       *
-       * In-place DOM patching: As of 1.67, `RenderManager` provides a set of new APIs to describe the structure
-       * of the DOM that can be used by the control renderers.
-       *
-       *
-       * ```javascript
-       *
-       *
-       *   myButtonRenderer.render = function(rm, oButton) {
-       *
-       *       rm.openStart("button", oButton);
-       *       rm.attr("tabindex", 1);
-       *       rm.class("myButton");
-       *       rm.style("width", oButton.getWidth());
-       *       rm.openEnd();
-       *           rm.text(oButton.getText());
-       *       rm.close("button");
-       *
-       *   };
-       *
-       * ```
-       *
-       *
-       * By default, when the control is invalidated (e.g. a property is changed, an aggregation is removed, or
-       * an association is added), it will be registered for re-rendering. During the (re)rendering, the `render`
-       * method of the control renderer is executed via a specified `RenderManager` interface and the control
-       * instance. Traditional string-based rendering creates a new HTML structure of the control in every rendering
-       * cycle and removes the existing control DOM structure from the DOM tree. The set of new semantic `RenderManager`
-       * APIs lets us understand the structure of the DOM, walk along the live DOM tree, and figure out changes
-       * as new APIs are called. If there is a change, then `RenderManager` patches only the required parts of
-       * the live DOM tree. This allows control developers to remove their DOM-related custom setters.
-       *
-       * **Note:** To enable the new in-place rendering technology, the `apiVersion` property of the control renderer
-       * must be set to `2`.
-       *
-       *
-       * ```javascript
-       *
-       *
-       *   var myButtonRenderer = {
-       *       apiVersion: 2    // enable in-place DOM patching
-       *   };
-       *
-       *   myButtonRenderer.render = function(rm, oButton) {
-       *
-       *       rm.openStart("button", oButton);
-       *       ...
-       *       ...
-       *       rm.close("button");
-       *
-       *   };
-       *
-       * ```
-       *
-       *
-       * Renderer.apiVersion contract: To allow a more efficient in-place DOM patching and to ensure the compatibility
-       * of the control, the following prerequisites must be fulfilled for the controls using the new rendering
-       * technology:
-       *
-       *
-       * 	 - Legacy control renderers must be migrated to the new semantic renderer API: {@link sap.ui.core.RenderManager#openStart
-       * 			openStart}, {@link sap.ui.core.RenderManager#voidStart voidStart}, {@link sap.ui.core.RenderManager#style
-       * 			style}, {@link sap.ui.core.RenderManager#class class}, {@link sap.ui.core.RenderManager#attr attr}, {@link
-       * 			sap.ui.core.RenderManager#openEnd openEnd}, {@link sap.ui.core.RenderManager#voidEnd voidEnd}, {@link
-       * 			sap.ui.core.RenderManager#text text}, {@link sap.ui.core.RenderManager#unsafeHtml unsafeHtml}, {@link
-       * 			sap.ui.core.RenderManager#icon icon}, {@link sap.ui.core.RenderManager#accessibilityState accessibilityState},
-       * 			{@link sap.ui.core.RenderManager#renderControl renderControl}, {@link sap.ui.core.RenderManager#cleanupControlWithoutRendering
-       * 			cleanupControlWithoutRendering}
-       * 	 - During the migration, restrictions that are defined in the API documentation must be taken into account,
-       * 			e.g. tag and attribute names must be set in their canonical form.
-       * 	 - Fault tolerance of HTML5 markups is not applicable for the new semantic rendering API, e.g. except
-       * 			void tags, all tags must be closed; duplicate attributes within one HTML element must not exist.
-       * 	 - Existing control DOM structure will not be removed from the DOM tree; therefore all custom events,
-       * 			including the ones that are registered with jQuery, must be deregistered correctly at the `onBeforeRendering`
-       * 			and `exit` hooks.
-       * 	 - Classes and attribute names must not be escaped. Styles should be validated via types but this might
-       * 			not be sufficient in all cases, e.g. validated URL values can contain harmful content; in this case {@link
-       * 			module:sap/base/security/encodeCSS encodeCSS} can be used.
-       * 	 - To allow a more efficient DOM update, second parameter of the {@link sap.ui.core.RenderManager#openStart
-       * 			openStart} or {@link sap.ui.core.RenderManager#voidStart voidStart} methods must be used to identify
-       * 			elements, e.g. use `rm.openStart("div", oControl.getId() + "-suffix");` instead of `rm.openStart("div").attr("id",
-       * 			oControl.getId() + "-suffix");`
-       * 	 - Controls that listen to the `focusin` event must double check their focus handling. Since DOM nodes
-       * 			are not removed and only reused, the `focusin` event might not be fired because of re-rendering.
        */
       class RenderManager extends Object {
         /**
@@ -26456,57 +26021,6 @@ declare namespace sap {
          */
         constructor();
 
-        /**
-         * Writes the accessibility state (see WAI-ARIA specification) of the provided element into the HTML based
-         * on the element's properties and associations.
-         *
-         * The ARIA properties are only written when the accessibility feature is activated in the UI5 configuration.
-         *
-         * The following properties/values to ARIA attribute mappings are done (if the element does have such properties):
-         *
-         * 	 - `editable===false` => `aria-readonly="true"`
-         * 	 - `enabled===false` => `aria-disabled="true"`
-         * 	 - `visible===false` => `aria-hidden="true"`
-         * 	 - `required===true` => `aria-required="true"`
-         * 	 - `selected===true` => `aria-selected="true"`
-         * 	 - `checked===true` => `aria-checked="true"`
-         *
-         * In case of the required attribute also the Label controls which referencing the given element in their
-         * 'for' relation are taken into account to compute the `aria-required` attribute.
-         *
-         * Additionally, the association `ariaDescribedBy` and `ariaLabelledBy` are used to write the ID lists of
-         * the ARIA attributes `aria-describedby` and `aria-labelledby`.
-         *
-         * Label controls that reference the given element in their 'for' relation are automatically added to the
-         * `aria-labelledby` attributes.
-         *
-         * Note: This function is only a heuristic of a control property to ARIA attribute mapping. Control developers
-         * have to check whether it fulfills their requirements. In case of problems (for example the RadioButton
-         * has a `selected` property but must provide an `aria-checked` attribute) the auto-generated result of
-         * this function can be influenced via the parameter `mProps` as described below.
-         *
-         * The parameter `mProps` can be used to either provide additional attributes which should be added and/or
-         * to avoid the automatic generation of single ARIA attributes. The 'aria-' prefix will be prepended automatically
-         * to the keys (Exception: Attribute 'role' does not get the prefix 'aria-').
-         *
-         * Examples: `{hidden : true}` results in `aria-hidden="true"` independent of the presence or absence of
-         * the visibility property. `{hidden : null}` ensures that no `aria-hidden` attribute is written independent
-         * of the presence or absence of the visibility property. The function behaves in the same way for the associations
-         * `ariaDescribedBy` and `ariaLabelledBy`. To append additional values to the auto-generated `aria-describedby`
-         * and `aria-labelledby` attributes the following format can be used: `{describedby : {value: "id1 id2",
-         * append: true}}` => `aria-describedby="ida idb id1 id2"` (assuming that "ida idb" is the auto-generated
-         * part based on the association `ariaDescribedBy`).
-         */
-        accessibilityState(
-          /**
-           * the element whose accessibility state should be rendered
-           */
-          oElement?: sap.ui.core.Element,
-          /**
-           * a map of properties that should be added additionally or changed.
-           */
-          mProps?: Object
-        ): sap.ui.core.RenderManager;
         /**
          * Adds a class to the class collection if the name is not empty or null. The class collection is flushed
          * if it is written to the buffer using {@link #writeClasses}
@@ -26529,43 +26043,7 @@ declare namespace sap {
           /**
            * Value to write
            */
-          vValue: string | number | number
-        ): sap.ui.core.RenderManager;
-        /**
-         * @SINCE 1.67
-         *
-         * Adds an attribute name-value pair to the last open HTML element.
-         *
-         * This is only valid when called between `openStart/voidStart` and `openEnd/voidEnd`. The attribute name
-         * must not be equal to `style` or `class`. Styles and classes must be set via dedicated `class` or `style`
-         * methods. To update the DOM correctly, all attribute names have to be used in their canonical form. For
-         * HTML elements, {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes attribute names} must
-         * all be set in lowercase. For foreign elements, such as SVG, {@link https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
-         * attribute names} can be set in upper camel case (e.g. viewBox).
-         */
-        attr(
-          /**
-           * Name of the attribute
-           */
-          sName: string,
-          /**
-           * Value of the attribute
-           */
-          vValue: any
-        ): sap.ui.core.RenderManager;
-        /**
-         * @SINCE 1.67
-         *
-         * Adds a class name to the class collection of the last open HTML element.
-         *
-         * This is only valid when called between `openStart/voidStart` and `openEnd/voidEnd`. Class name must not
-         * contain any whitespace.
-         */
-        class(
-          /**
-           * Class name to be written
-           */
-          sClass: string
+          value: string | number | number
         ): sap.ui.core.RenderManager;
         /**
          * @SINCE 1.22.9
@@ -26628,19 +26106,6 @@ declare namespace sap {
            */
           oControl: sap.ui.core.Control
         ): void;
-        /**
-         * @SINCE 1.67
-         *
-         * Closes an open tag started with `openStart` and ended with `openEnd`.
-         *
-         * This indicates that there are no more children to append to the open tag.
-         */
-        close(
-          /**
-           * Tag name of the HTML element
-           */
-          sTagName: string
-        ): sap.ui.core.RenderManager;
         /**
          * Creates the ID to be used for the invisible Placeholder DOM element. This method can be used to get direct
          * access to the placeholder DOM element. Also statically available as RenderManager.createInvisiblePlaceholderId()
@@ -26747,59 +26212,6 @@ declare namespace sap {
           oControl: sap.ui.core.Control
         ): Function;
         /**
-         * Writes either an <img> tag for normal URI or a <span> tag with needed properties for an icon
-         * URI.
-         *
-         * Additional classes and attributes can be added to the tag with the second and third parameter. All of
-         * the given attributes are escaped for security consideration.
-         *
-         * When an <img> tag is rendered, the following two attributes are added by default and can be overwritten
-         * with corresponding values in the `mAttributes` parameter:
-         * 	 - `role: "presentation"` `alt: ""`
-         */
-        icon(
-          /**
-           * URI of an image or of an icon registered in {@link sap.ui.core.IconPool}
-           */
-          sURI: sap.ui.core.URI,
-          /**
-           * Additional classes that are added to the rendered tag
-           */
-          aClasses?: any[] | string,
-          /**
-           * Additional attributes that will be added to the rendered tag
-           */
-          mAttributes?: object
-        ): sap.ui.core.RenderManager;
-        /**
-         * @SINCE 1.67
-         *
-         * Ends an open tag started with `openStart`.
-         *
-         * This indicates that there are no more attributes to set to the open tag.
-         */
-        openEnd(): sap.ui.core.RenderManager;
-        /**
-         * @SINCE 1.67
-         *
-         * Opens the start tag of an HTML element.
-         *
-         * This must be followed by `openEnd` and concluded with `close`. To allow a more efficient DOM update,
-         * all tag names have to be used in their canonical form. For HTML elements, {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-         * tag names} must all be set in lowercase. For foreign elements, such as SVG, {@link https://developer.mozilla.org/en-US/docs/Web/SVG/Element
-         * tag names} can be set in upper camel case (e.g. linearGradient).
-         */
-        openStart(
-          /**
-           * Tag name of the HTML element
-           */
-          sTagName: string,
-          /**
-           * Control instance or ID to identify the element
-           */
-          vControlOrId?: sap.ui.core.Element | sap.ui.core.ID
-        ): sap.ui.core.RenderManager;
-        /**
          * Collects descendants of the given root node that need to be preserved before the root node is wiped out.
          * The "to-be-preserved" nodes are moved to a special, hidden 'preserve' area.
          *
@@ -26856,34 +26268,6 @@ declare namespace sap {
           oControl: sap.ui.core.Control
         ): sap.ui.core.RenderManager;
         /**
-         * @SINCE 1.67
-         *
-         * Adds a style name-value pair to the style collection of the last open HTML element.
-         *
-         * This is only valid when called between `openStart/voidStart` and `openEnd/voidEnd`.
-         */
-        style(
-          /**
-           * Name of the style property
-           */
-          sName: string,
-          /**
-           * Value of the style property
-           */
-          sValue: string
-        ): sap.ui.core.RenderManager;
-        /**
-         * @SINCE 1.67
-         *
-         * Sets the text content with the given text.
-         */
-        text(
-          /**
-           * The text to be written
-           */
-          sText: string
-        ): sap.ui.core.RenderManager;
-        /**
          * @deprecated (since 1.1) - never has been implemented - DO NOT USE
          */
         translate(
@@ -26892,45 +26276,6 @@ declare namespace sap {
            */
           sKey: string
         ): void;
-        /**
-         * @SINCE 1.67
-         *
-         * Sets the given HTML markup without any encoding or sanitizing.
-         */
-        unsafeHtml(
-          /**
-           * HTML markup
-           */
-          sHtml: string
-        ): sap.ui.core.RenderManager;
-        /**
-         * @SINCE 1.67
-         *
-         * Ends an open self-closing tag started with `voidStart`.
-         *
-         * This indicates that there are no more attributes to set to the open tag. For self-closing tags `close`
-         * must not be called.
-         */
-        voidEnd(): sap.ui.core.RenderManager;
-        /**
-         * @SINCE 1.67
-         *
-         * Starts a self-closing tag, such as `img` or `input`.
-         *
-         * This must be followed by `voidEnd`. For self-closing tags, the `close` method must not be called. To
-         * allow a more efficient DOM update, void tag names have to be set in lowercase. This API is specific for
-         * void elements and must not be used for foreign elements. For more information, see {@link https://www.w3.org/TR/html5/syntax.html#void-elements}.
-         */
-        voidStart(
-          /**
-           * Tag name of the HTML element
-           */
-          sTagName: string,
-          /**
-           * Control instance or ID to identify the element
-           */
-          vControlOrId?: sap.ui.core.Element | sap.ui.core.ID
-        ): sap.ui.core.RenderManager;
         /**
          * Write the given texts to the buffer
          */
@@ -27095,6 +26440,35 @@ declare namespace sap {
            * Additional attributes that will be added to the rendered tag
            */
           mAttributes?: object
+        ): sap.ui.core.RenderManager;
+        /**
+         * Writes necessary invisible control/element placeholder data into the HTML.
+         *
+         * Controls should use this method only if the standard implementation of the RenderManager doesn't fit
+         * their needs. That standard implementation renders an invisible <span> element for controls with
+         * `visible:false` to improve re-rendering performance. Due to the fault tolerance of the HTML5 standard,
+         * such <span> elements are accepted in many scenarios and won't appear in the render tree of the
+         * browser, However, in some cases, controls may need to write a different element when the <span>
+         * is not an allowed element (e.g. within the <tr> or <li> group).
+         *
+         * The caller needs to start an opening HTML tag, then call this method, then complete the opening and closing
+         * tag.
+         *
+         *
+         * ```javascript
+         *
+         *
+         *   oRenderManager.write("<tr");
+         *   oRenderManager.writeInvisiblePlaceholderData(oControl);
+         *   oRenderManager.write("></tr");
+         *
+         * ```
+         */
+        writeInvisiblePlaceholderData(
+          /**
+           * An instance of sap.ui.core.Element
+           */
+          oElement: sap.ui.core.Element
         ): sap.ui.core.RenderManager;
         /**
          * Writes and flushes the style collection
@@ -27411,7 +26785,7 @@ declare namespace sap {
       /**
        * @SINCE 1.16.0
        *
-       * Represents a title element that can be used for aggregation with other controls.
+       * Represents a title element that can be used for aggregation with other controls
        */
       class Title extends sap.ui.core.Element {
         /**
@@ -29080,7 +28454,7 @@ declare namespace sap {
         TreeItem
       }
       /**
-       * Configuration options for the colors of a progress bar.
+       * Configuration options for the colors of a progress bar
        */
       enum BarColor {
         /**
@@ -29101,7 +28475,7 @@ declare namespace sap {
         POSITIVE
       }
       /**
-       * Configuration options for the `BusyIndicator` size.
+       * Configuration options for the BusyIndicator size
        */
       enum BusyIndicatorSize {
         /**
@@ -29122,7 +28496,7 @@ declare namespace sap {
         Small
       }
       /**
-       * The types of `Calendar`.
+       * The types of Calendar
        */
       enum CalendarType {
         /**
@@ -29168,7 +28542,7 @@ declare namespace sap {
         Legacy
       }
       /**
-       * Font design for texts.
+       * Font design for texts
        */
       enum Design {
         /**
@@ -29181,7 +28555,7 @@ declare namespace sap {
         Standard
       }
       /**
-       * Configuration options for horizontal alignments of controls.
+       * Configuration options for horizontal alignments of controls
        */
       enum HorizontalAlign {
         /**
@@ -29260,9 +28634,8 @@ declare namespace sap {
       /**
        * @SINCE 1.62.0
        *
-       * Colors to highlight certain UI elements.
-       *
-       * In contrast to the `ValueState`, the semantic meaning must be defined by the application.
+       * Colors to highlight certain UI elements. In contrast to the `ValueState` the semantic meaning must be
+       * defined by the application.
        */
       enum IndicationColor {
         /**
@@ -29287,7 +28660,7 @@ declare namespace sap {
         Indication05
       }
       /**
-       * Defines the different message types.
+       * Defines the different message types of a message
        */
       enum MessageType {
         /**
@@ -29336,7 +28709,7 @@ declare namespace sap {
       /**
        * @SINCE 1.22
        *
-       * Orientation of a UI element.
+       * Orientation of a UI element
        */
       enum Orientation {
         /**
@@ -29370,7 +28743,7 @@ declare namespace sap {
         None
       }
       /**
-       * Actions are: Click on track, button, drag of thumb, or mouse wheel click.
+       * Actions are: Click on track, button, drag of thumb, or mouse wheel click
        */
       enum ScrollBarAction {
         /**
@@ -29414,7 +28787,7 @@ declare namespace sap {
       /**
        * @SINCE 1.61.0
        *
-       * Sort order of a column.
+       * Sort order of a column
        */
       enum SortOrder {
         /**
@@ -33585,8 +32958,7 @@ declare namespace sap {
             constructor(
               /**
                * See parameter `oFormatOptions` of {@link sap.ui.model.type.Currency#constructor}. Format options are
-               * immutable, that is, they can only be set once on construction. Format options that are not supported
-               * or have a different default are listed below.
+               * immutable, that is, they can only be set once on construction.
                */
               oFormatOptions?: {
                 /**
@@ -33598,15 +32970,6 @@ declare namespace sap {
                  * as a `number`, for example {@link sap.ui.model.odata.type.Int32}
                  */
                 parseAsString?: boolean;
-                /**
-                 * Whether the amount is parsed if no currency is entered.
-                 */
-                unitOptional?: boolean;
-                /**
-                 * Defines how an empty string is parsed into the amount. With the default value `0` the amount becomes
-                 * `0` when an empty string is parsed.
-                 */
-                emptyString?: any;
               },
               /**
                * Not supported
@@ -35613,8 +34976,7 @@ declare namespace sap {
             constructor(
               /**
                * See parameter `oFormatOptions` of {@link sap.ui.model.type.Unit#constructor}. Format options are immutable,
-               * that is, they can only be set once on construction. Format options that are not supported or have a different
-               * default are listed below.
+               * that is, they can only be set once on construction.
                */
               oFormatOptions?: {
                 /**
@@ -35626,15 +34988,6 @@ declare namespace sap {
                  * as a `number`, for example {@link sap.ui.model.odata.type.Int32}
                  */
                 parseAsString?: boolean;
-                /**
-                 * Whether the quantity is parsed if no unit is entered.
-                 */
-                unitOptional?: boolean;
-                /**
-                 * Defines how an empty string is parsed into the measure. With the default value `0` the measure becomes
-                 * `0` when an empty string is parsed.
-                 */
-                emptyString?: any;
               },
               /**
                * Not supported
@@ -36256,7 +35609,7 @@ declare namespace sap {
             ): void;
           }
           /**
-           * List binding implementation for OData format.
+           * List binding implementation for oData format.
            */
           class ODataListBinding extends sap.ui.model.ListBinding {
             /**/
@@ -36497,7 +35850,7 @@ declare namespace sap {
                  */
                 tokenHandling?: boolean;
                 /**
-                 * Experimental - `true` when user credentials are to be included in a cross-origin request; please note
+                 * Experimental - `true` when user credentials are to be included in a cross-origin reques; please note
                  * that this only works if all requests are asynchronous
                  */
                 withCredentials?: boolean;
@@ -36590,7 +35943,7 @@ declare namespace sap {
                  */
                 canonicalRequests?: boolean;
                 /**
-                 * Send CSRF token for GET requests in case read access logging is activated for the OData Service in the
+                 * Send CSRF token for GET requests in case read access logging is activated for the oData Service in the
                  * backend.
                  */
                 tokenHandlingForGet?: boolean;
@@ -37704,11 +37057,6 @@ declare namespace sap {
              *  `{select: "Products/ProductName, Products", expand:"Products"}` will return no properties of the entity
              * itself, but only the ProductName property of the Products navigation property. If Products/ProductName
              * has not been loaded before, so is not available on the client, it will return `undefined`.
-             *
-             * Note:
-             *  If `mParameters.select is not specified, the returned object could contain model-internal attributes.
-             * This may lead to problems when submitting this data to the service for an update/create operation. To
-             * get a copy of the entity without containing such internal attributes, use {select: "*"}` instead.
              */
             // @ts-ignore
             getObject(
@@ -37884,9 +37232,6 @@ declare namespace sap {
              * is loaded successfully. If `refreshMetadata` function is called after this promise is already resolved
              * you should rely on the promise returned by `refreshMetadata` to get information about the refreshed metadata
              * loaded state.
-             *
-             * The Metadata needs to be loaded prior to performing OData calls. Chaining to the returned promise ensures
-             * that all required parameters have been loaded, e.g. authentication token.
              */
             metadataLoaded(): Promise<any>;
             /**
@@ -39347,9 +38692,8 @@ declare namespace sap {
             /**
              * @SINCE 1.39.0
              *
-             * Returns the context's index within the binding's collection. The return value changes when a new entity
-             * is added via {@link sap.ui.model.odata.v4.ODataListBinding#create} without `bAtEnd`, and when a context
-             * representing a created entity is deleted again.
+             * Returns the context's index within the binding's collection. The return value changes if a new entity
+             * is added via {@link sap.ui.model.odata.v4.ODataListBinding#create} or deleted again.
              */
             getIndex(): number;
             /**
@@ -39493,12 +38837,9 @@ declare namespace sap {
              * Loads side effects for this context using the given "14.5.11 Expression edm:NavigationPropertyPath" or
              * "14.5.13 Expression edm:PropertyPath" objects. Use this method to explicitly load side effects in case
              * implicit loading is switched off via the binding-specific parameter `$$patchWithoutSideEffects`. The
-             * method can be called on
-             * 	 the bound context of a context binding,  the return value context of an operation binding,
-             * a context of a list binding representing a single entity,  the header context of a list binding;
-             * side effects are loaded for the whole binding in this case.  Key predicates must be available in
-             * this context's path. Avoid navigation properties as part of a binding's $select system query option as
-             * they may trigger pointless requests.
+             * method must only be called on the bound context of a context binding or on the return value context of
+             * an operation binding. Key predicates must be available in this context's path. Avoid navigation properties
+             * as part of a binding's $select system query option as they may trigger pointless requests.
              *
              * The request always uses the update group ID for this context's binding, see "$$updateGroupId" at {@link
              * sap.ui.model.odata.v4.ODataModel#bindContext}; this way, it can easily be part of the same batch request
@@ -39513,7 +38854,6 @@ declare namespace sap {
              * See:
              * 	sap.ui.model.odata.v4.ODataContextBinding#execute
              * 	sap.ui.model.odata.v4.ODataContextBinding#getBoundContext
-             * 	sap.ui.model.odata.v4.ODataListBinding#getHeaderContext
              * 	sap.ui.model.odata.v4.ODataModel#bindContext
              */
             requestSideEffects(
@@ -39524,29 +38864,6 @@ declare namespace sap {
                * {$PropertyPath : "EMPLOYEE_2_TEAM/Team_Id"}]`
                */
               aPathExpressions: object[]
-            ): Promise<any>;
-            /**
-             * @SINCE 1.67.0
-             *
-             * Sets a new value for the property identified by the given path. The path is relative to this context
-             * and is expected to point to a structural property with primitive type.
-             * See:
-             * 	#getProperty
-             */
-            setProperty(
-              /**
-               * A relative path within the JSON structure
-               */
-              sPath: string,
-              /**
-               * The new value which must be primitive
-               */
-              vValue: any,
-              /**
-               * The group ID to be used for the PATCH request; if not specified, the update group ID for the context's
-               * binding is used, see {@link sap.ui.model.odata.v4.ODataModel#bindList} and {@link sap.ui.model.odata.v4.ODataModel#bindContext}.
-               */
-              sGroupId?: string
             ): Promise<any>;
             /**
              * @SINCE 1.39.0
@@ -39749,8 +39066,8 @@ declare namespace sap {
             /**
              * @SINCE 1.37.0
              *
-             * Initializes the OData context binding: Fires a 'change' event in case the binding has a resolved path
-             * and its root binding is not suspended.
+             * Initializes the OData list binding: Fires a 'change' event in case the binding has a resolved path and
+             * its root binding is not suspended.
              * See:
              * 	sap.ui.model.Binding#initialize
              * 	#getRootBinding
@@ -39860,36 +39177,6 @@ declare namespace sap {
             constructor();
 
             /**
-             * @SINCE 1.66.0
-             *
-             * Attach event handler `fnFunction` to the 'createCompleted' event of this binding.
-             */
-            attachCreateCompleted(
-              /**
-               * The function to call when the event occurs
-               */
-              fnFunction: Function,
-              /**
-               * Object on which to call the given function
-               */
-              oListener?: object
-            ): void;
-            /**
-             * @SINCE 1.66.0
-             *
-             * Attach event handler `fnFunction` to the 'createSent' event of this binding.
-             */
-            attachCreateSent(
-              /**
-               * The function to call when the event occurs
-               */
-              fnFunction: Function,
-              /**
-               * Object on which to call the given function
-               */
-              oListener?: object
-            ): void;
-            /**
              * @SINCE 1.59.0
              *
              * Attach event handler `fnFunction` to the 'patchCompleted' event of this binding.
@@ -39941,7 +39228,7 @@ declare namespace sap {
             /**
              * @SINCE 1.43.0
              *
-             * Creates a new entity and inserts it at the start or the end of the list.
+             * Creates a new entity and inserts it at the beginning of the list.
              *
              * For creating the new entity, the binding's update group ID is used, see binding parameter $$updateGroupId
              * of {@link sap.ui.model.odata.v4.ODataModel#bindList}.
@@ -39954,13 +39241,7 @@ declare namespace sap {
              * If the creation of the entity on the server failed, the creation is repeated automatically. If the binding's
              * update group ID has {@link sap.ui.model.odata.v4.SubmitMode.API}, it is repeated with the next call of
              * {@link sap.ui.model.odata.v4.ODataModel#submitBatch}. Otherwise it is repeated with the next update for
-             * the entity. Since 1.67.0, {@link sap.ui.model.odata.v4.ODataModel#submitBatch} can also be used for group
-             * IDs with {@link sap.ui.model.odata.v4.SubmitMode.Auto} in order to repeat the creation even if there
-             * is no update for the entity.
-             *
-             * Each time the data for the created entity is sent to the server, a {@link #event:createSent} event is
-             * fired and each time the client receives a response for the creation, a {@link #event:createCompleted}
-             * event is fired, independent of whether the creation was successful or not.
+             * the entity.
              *
              * The initial data for the created entity can be supplied via the parameter `oInitialData` and modified
              * via property bindings. Properties that are not part of the initial data show the default value from the
@@ -39973,9 +39254,6 @@ declare namespace sap {
              *
              * Note: After creation, the created entity is refreshed to ensure that the data specified in this list
              * binding's $expand is available; to skip this refresh, set `bSkipRefresh` to `true`.
-             *
-             * Note: The binding must have the parameter `$count : true` when creating an entity at the end. Otherwise
-             * the collection length may be unknown and there is no clear position to place this entity at.
              */
             create(
               /**
@@ -39985,12 +39263,7 @@ declare namespace sap {
               /**
                * Whether an automatic refresh of the created entity will be skipped
                */
-              bSkipRefresh?: boolean,
-              /**
-               * Whether the entity is inserted at the end of the list. When creating multiple entities, this parameter
-               * must have the same value for each entity. Supported since 1.66.0
-               */
-              bAtEnd?: boolean
+              bSkipRefresh?: boolean
             ): sap.ui.model.odata.v4.Context;
             /**
              * @SINCE 1.40.1
@@ -39999,36 +39272,6 @@ declare namespace sap {
              */
             // @ts-ignore
             destroy(): void;
-            /**
-             * @SINCE 1.66.0
-             *
-             * Detach event handler `fnFunction` from the 'createCompleted' event of this binding.
-             */
-            detachCreateCompleted(
-              /**
-               * The function to call when the event occurs
-               */
-              fnFunction: Function,
-              /**
-               * Object on which to call the given function
-               */
-              oListener?: object
-            ): void;
-            /**
-             * @SINCE 1.66.0
-             *
-             * Detach event handler `fnFunction` from the 'createSent' event of this binding.
-             */
-            detachCreateSent(
-              /**
-               * The function to call when the event occurs
-               */
-              fnFunction: Function,
-              /**
-               * Object on which to call the given function
-               */
-              oListener?: object
-            ): void;
             /**
              * @SINCE 1.59.0
              *
@@ -40189,17 +39432,6 @@ declare namespace sap {
             // @ts-ignore
             static getMetadata(): sap.ui.base.Metadata;
             /**
-             * @SINCE 1.66.0
-             *
-             * Returns the query options of the binding.
-             */
-            getQueryOptions(
-              /**
-               * Whether system query options should be returned as well. The parameter value `true` is not supported.
-               */
-              bWithSystemQueryOptions?: boolean
-            ): object;
-            /**
              * @SINCE 1.53.0
              *
              * Returns the root binding of this binding's hierarchy, see binding {@link topic:54e0ddf695af4a6c978472cecb01c64d
@@ -40219,9 +39451,8 @@ declare namespace sap {
             /**
              * @SINCE 1.37.0
              *
-             * Initializes the OData list binding: Fires an event in case the binding has a resolved path and its root
-             * binding is not suspended. If the model's parameter `autoExpandSelect` is used (see {@link sap.ui.model.odata.v4.ODataModel#constructor}),
-             * it fires a 'change' event, else it fires a 'refresh' event (since 1.67.0).
+             * Initializes the OData list binding: Fires a 'change' event in case the binding has a resolved path and
+             * its root binding is not suspended.
              * See:
              * 	sap.ui.model.Binding#initialize
              * 	#getRootBinding
@@ -40458,7 +39689,6 @@ declare namespace sap {
              * no trailing slash is added implicitly; technical properties and OData names are filtered out.
              * See:
              * 	#requestObject
-             * 	sap.ui.model.FilterOperator
              * 	sap.ui.model.Model#bindList
              */
             // @ts-ignore
@@ -40476,8 +39706,7 @@ declare namespace sap {
                */
               aSorters?: sap.ui.model.Sorter | sap.ui.model.Sorter[],
               /**
-               * Initial application filter(s), see {@link sap.ui.model.ListBinding#filter}; filters with filter operators
-               * "All" or "Any" are not supported
+               * Initial application filter(s), see {@link sap.ui.model.ListBinding#filter}
                */
               aFilters?: sap.ui.model.Filter | sap.ui.model.Filter[]
             ): sap.ui.model.ListBinding;
@@ -40832,10 +40061,10 @@ declare namespace sap {
              * other words, the entity container is used as the initial schema child. This way, "/EMPLOYEES" addresses
              * the same object as "/$EntityContainer/EMPLOYEES", namely the "EMPLOYEES" child of the entity container.
              *  Afterwards, if the current object is an array, it represents overloads for an action or function.
-             * Annotations of a parameter can be immediately addressed, no matter if they apply across all overloads
-             * or to a specific overload only, for example "/TEAMS/acme.NewAction/Team_ID@". Action overloads are then
-             * filtered by binding parameter; multiple overloads after filtering are invalid except if addressing all
-             * overloads via the segment "@$ui5.overload", for example "/acme.NewAction/@$ui5.overload".
+             * Annotations of a parameter can be immediately addressed because they apply across all overloads, for
+             * example "/TEAMS/acme.NewAction/Team_ID@". Action overloads are then filtered by binding parameter; multiple
+             * overloads after filtering are invalid except if addressing all overloads via the segment "@$ui5.overload",
+             * for example "/acme.NewAction/@$ui5.overload".
              *
              * Once a single overload has been determined, its parameters can be immediately addressed, for example
              * "/TEAMS/acme.NewAction/Team_ID". For all other names, the overload's "$ReturnType/$Type" is used for
@@ -40997,7 +40226,8 @@ declare namespace sap {
            * 			basic Latin alphabet, including the underscore. By default, an application group has the submit mode
            * 			{@link sap.ui.model.odata.v4.SubmitMode#API}. It is possible to use a different submit mode; for details
            * 			see `mParameters.groupProperties`.
-           */
+           *
+           * **Note: The model does not support any public events; attaching an event handler leads to an error.**/
           class ODataModel extends sap.ui.model.Model {
             /**
              * Constructor for a new ODataModel.
@@ -41077,21 +40307,6 @@ declare namespace sap {
               }
             );
 
-            /**
-             * @SINCE 1.66.0
-             *
-             * Attach event handler `fnFunction` to the 'sessionTimeout' event of this model.
-             */
-            attachSessionTimeout(
-              /**
-               * The function to call when the event occurs
-               */
-              fnFunction: Function,
-              /**
-               * Object on which to call the given function
-               */
-              oListener?: object
-            ): sap.ui.model.odata.v4.ODataModel;
             /**
              * @SINCE 1.37.0
              *
@@ -41366,21 +40581,6 @@ declare namespace sap {
             // @ts-ignore
             destroyBindingContext(): void;
             /**
-             * @SINCE 1.66.0
-             *
-             * Detach event handler `fnFunction` from the 'sessionTimeout' event of this model.
-             */
-            detachSessionTimeout(
-              /**
-               * The function to call when the event occurs
-               */
-              fnFunction: Function,
-              /**
-               * Object on which to call the given function
-               */
-              oListener?: object
-            ): sap.ui.model.odata.v4.ODataModel;
-            /**
              * Creates a new subclass of class sap.ui.model.odata.v4.ODataModel with name `sClassName` and enriches
              * it with the information contained in `oClassInfo`.
              *
@@ -41525,9 +40725,9 @@ declare namespace sap {
              */
             resetChanges(
               /**
-               * A valid group ID as specified in {@link sap.ui.model.odata.v4.ODataModel}. If it is `undefined`, the
-               * model's `updateGroupId` is used. Note that the default `updateGroupId` is '$auto', which is valid here
-               * since 1.67.0.
+               * The application group ID as specified in {@link sap.ui.model.odata.v4.ODataModel}. If it is `undefined`,
+               * the model's `updateGroupId` is used. Note that the default `updateGroupId` is '$auto', which is invalid
+               * here.
                */
               sGroupId?: string
             ): void;
@@ -41543,14 +40743,13 @@ declare namespace sap {
             /**
              * @SINCE 1.37.0
              *
-             * Submits the requests associated with the given group ID in one batch request. Requests from subsequent
-             * calls to this method for the same group ID may be combined in one batch request using separate change
-             * sets. For group IDs with {@link sap.ui.model.odata.v4.SubmitMode.Auto}, only a single change set is used;
-             * this method is useful to repeat failed updates or creates (see {@link sap.ui.model.odata.v4.ODataListBinding#create}).
+             * Submits the requests associated with the given application group ID in one batch request. Requests from
+             * subsequent calls to this method for the same group ID may be combined in one batch request using separate
+             * change sets.
              */
             submitBatch(
               /**
-               * A valid group ID as specified in {@link sap.ui.model.odata.v4.ODataModel}.
+               * The application group ID as specified in {@link sap.ui.model.odata.v4.ODataModel}.
                */
               sGroupId: string
             ): Promise<any>;
@@ -41864,8 +41063,6 @@ declare namespace sap {
           static getMetadata(): sap.ui.base.Metadata;
         }
         /**
-         * @deprecated (since 1.66) - please use {@link sap.ui.model.odata.v2.ODataAnnotations} instead.
-         *
          * Implementation to access oData Annotations
          */
         class ODataAnnotations extends sap.ui.base.EventProvider {
@@ -42107,8 +41304,6 @@ declare namespace sap {
           ): sap.ui.model.odata.ODataAnnotations;
         }
         /**
-         * @deprecated (since 1.66) - please use {@link sap.ui.model.odata.v2.ODataContextBinding} instead.
-         *
          * The ContextBinding is a specific binding for a setting context for the model
          */
         class ODataContextBinding extends sap.ui.model.ContextBinding {
@@ -42153,9 +41348,7 @@ declare namespace sap {
           static getMetadata(): sap.ui.base.Metadata;
         }
         /**
-         * @deprecated (since 1.66) - please use {@link sap.ui.model.odata.v2.ODataListBinding} instead.
-         *
-         * List binding implementation for OData format.
+         * List binding implementation for oData format.
          */
         class ODataListBinding extends sap.ui.model.ListBinding {
           /**/
@@ -42380,7 +41573,7 @@ declare namespace sap {
           ): sap.ui.model.odata.ODataMessageParser;
         }
         /**
-         * Implementation to access OData metadata
+         * Implementation to access oData metadata
          */
         class ODataMetadata extends sap.ui.base.EventProvider {
           /**
@@ -42957,7 +42150,7 @@ declare namespace sap {
         /**
          * @deprecated (since 1.48) - please use {@link sap.ui.model.odata.v2.ODataModel} instead.
          *
-         * Model implementation for OData format
+         * Model implementation for oData format
          */
         class ODataModel extends sap.ui.model.Model {
           /**
@@ -44112,7 +43305,7 @@ declare namespace sap {
           ): sap.ui.model.odata.ODataModel;
         }
         /**
-         * Property binding implementation for OData format
+         * Property binding implementation for oData format
          */
         class ODataPropertyBinding extends sap.ui.model.PropertyBinding {
           /**/
@@ -44249,10 +43442,10 @@ declare namespace sap {
            *
            *
            *
-           * 	 - Count Modes `Inline` or `InlineRepeat`
-           *  The initial request tries to fetch as many entries as configured with the `threshold` parameter, without
-           * specifying any filters/sorters. In addition, the query parameter `$inlinecount` is added. The binding
-           * assumes, that the threshold given by the application can be met, but it adapts its behavior depending
+           * 	 - Count Modes `Inline` or InlineRepeat`
+           *  The initial request tries to fetch as many entries as configured with the threshold` parameter,
+           * without specifying any filters/sorters. In addition, the query parameter `$inlinecount` is added. The
+           * binding assumes, that the threshold given by the application can be met, but it adapts its behavior depending
            * on the response:  If the response returns fewer (or just as many) entries as the threshold,
            * the binding will behave exactly like when using the operation mode `Client`. Initially configured filters/sorters
            * will be applied afterwards on the client.
@@ -47515,21 +46708,6 @@ declare namespace sap {
           oListener?: object
         ): void;
         /**
-         * Calculates delta of specified old data array and new data array.
-         *
-         * For more information, see {@link module:sap/base/util/array/diff}.
-         */
-        diffData(
-          /**
-           * Old data array
-           */
-          aOld: any[],
-          /**
-           * New data array
-           */
-          aNew: any[]
-        ): any;
-        /**
          * Enable extended change detection. When extended change detection is enabled, the list binding provides
          * detailed information about changes, for example which entries have been removed or inserted. This can
          * be utilized by a control for fine-grained update of its elements. Please see {@link sap.ui.model.ListBinding.prototype.getContexts}
@@ -49779,12 +48957,12 @@ declare namespace sap {
         /**
          * @SINCE 1.34
          *
-         * The `EnterText` action is used to simulate a user entering texts to inputs. `EnterText` will be executed
+         * The EnterText action is used to simulate a user entering texts to inputs. EnterText will be executed
          * on a control's focus dom ref. Supported controls are (for other controls this action still might work):
          *
-         * 	 - `sap.m.Input`
-         * 	 - `sap.m.SearchField`
-         * 	 - `sap.m.TextArea`
+         * 	 - sap.m.Input
+         * 	 - sap.m.SearchField
+         * 	 - sap.m.TextArea
          */
         class EnterText extends sap.ui.test.actions.Action {
           /**
@@ -49831,20 +49009,9 @@ declare namespace sap {
            *
            * Gets current value of property {@link #getClearTextFirst clearTextFirst}.
            *
-           * If it is set to `false`, the current text of the control will be preserved. By default, the current text
-           * of the control will be cleared. When the text is going to be cleared, a delete character event will be
-           * fired and then the value of the input is emptied. This will trigger a `liveChange` event on the input
-           * with an empty value.
-           *
            * Default value is `true`.
            */
           getClearTextFirst(): boolean;
-          /**
-           * Gets current value of property {@link #getKeepFocus keepFocus}.
-           *
-           * Default value is `false`.
-           */
-          getKeepFocus(): boolean;
           /**
            * Returns a metadata object for class sap.ui.test.actions.EnterText.
            */
@@ -49862,11 +49029,6 @@ declare namespace sap {
            *
            * Sets a new value for property {@link #getClearTextFirst clearTextFirst}.
            *
-           * If it is set to `false`, the current text of the control will be preserved. By default, the current text
-           * of the control will be cleared. When the text is going to be cleared, a delete character event will be
-           * fired and then the value of the input is emptied. This will trigger a `liveChange` event on the input
-           * with an empty value.
-           *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
            * Default value is `true`.
@@ -49876,19 +49038,6 @@ declare namespace sap {
              * New value for property `clearTextFirst`
              */
             bClearTextFirst: boolean
-          ): sap.ui.test.actions.EnterText;
-          /**
-           * Sets a new value for property {@link #getKeepFocus keepFocus}.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `false`.
-           */
-          setKeepFocus(
-            /**
-             * New value for property `keepFocus`
-             */
-            bKeepFocus: boolean
           ): sap.ui.test.actions.EnterText;
           /**
            * Sets a new value for property {@link #getText text}.
@@ -50181,14 +49330,13 @@ declare namespace sap {
 
         /**
          * @SINCE 1.40
-         *
-         * Provides the interface between human and machine since a Gherkin feature file is human-readable and the
-         * computer does not know how to execute its steps.
-         *
-         * It defines what each step in the Gherkin feature file will actually do when it is executed.
          */
         class StepDefinitions extends sap.ui.base.Object {
           /**
+           * A Gherkin feature file is human-readable, and the computer does not know how to execute its steps. This
+           * StepDefinitions class provides the interface between human and machine. It defines what each step in
+           * the Gherkin feature file will actually do when it is executed.
+           *
            * Meant to be implemented/overridden by a child object. Specifically, the functions "init" and "closeApplication"
            * need to be overridden.
            */
@@ -50258,11 +49406,15 @@ declare namespace sap {
         /**
          * @SINCE 1.23
          *
-         * Checks if an aggregation contains at least one item that has a property set to a certain value.
+         * AggregationContainsPropertyEqual - checks if an aggregation contains at least one item that has a Property
+         * set to a certain value
          */
         class AggregationContainsPropertyEqual extends sap.ui.test.matchers
           .Matcher {
           /**
+           * AggregationContainsPropertyEqual - checks if an aggregation contains at least one item that has a Property
+           * set to a certain value.
+           *
            * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
            * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
            * of the syntax of the settings object.
@@ -50370,10 +49522,12 @@ declare namespace sap {
           ): sap.ui.test.matchers.AggregationContainsPropertyEqual;
         }
         /**
-         * Checks if an aggregation is empty.
+         * AggregationEmpty - checks if an aggregation is empty
          */
         class AggregationEmpty extends sap.ui.test.matchers.Matcher {
           /**
+           * AggregationEmpty - checks if an aggregation is empty.
+           *
            * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
            * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
            * of the syntax of the settings object.
@@ -50444,10 +49598,12 @@ declare namespace sap {
         /**
          * @SINCE 1.23
          *
-         * Checks if an aggregation contains at least one entry.
+         * AggregationFilled - checks if an aggregation contains at least one entry
          */
         class AggregationFilled extends sap.ui.test.matchers.Matcher {
           /**
+           * AggregationFilled - checks if an aggregation contains at least one entry.
+           *
            * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
            * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
            * of the syntax of the settings object.
@@ -50518,10 +49674,12 @@ declare namespace sap {
         /**
          * @SINCE 1.23
          *
-         * Checks if an aggregation contains a specified number of entries.
+         * AggregationLengthEquals - checks if an aggregation contains a specified number of entries.
          */
         class AggregationLengthEquals extends sap.ui.test.matchers.Matcher {
           /**
+           * AggregationLengthEquals - checks if an aggregation contains a specified number of entries.
+           *
            * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
            * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
            * of the syntax of the settings object.
@@ -50611,7 +49769,7 @@ declare namespace sap {
         /**
          * @SINCE 1.27
          *
-         * Checks if a control has a defined ancestor.
+         * Ancestor - checks if a control has a defined ancestor
          */
         class Ancestor {
           /**/
@@ -50620,7 +49778,7 @@ declare namespace sap {
              * the ancestor control to check, if undefined, validates every control to true. Can be a control or a control
              * ID
              */
-            vAncestor: object | string,
+            oAncestorControl: object | string,
             /**
              * specifies if the ancestor should be a direct ancestor (parent)
              */
@@ -50630,19 +49788,12 @@ declare namespace sap {
         /**
          * @SINCE 1.32
          *
-         * Checks if a control has a binding context with the exact same binding path.
-         *
-         * As of version 1.60, comparison is strict and can include one or more binding criteria:
-         * 	 - context path (matches children of bound controls, eg: items in a table)
-         * 	 - property path (matches controls with no context and a single bound property, eg: Text with binding
-         * 			for property text)
-         * 	 - context path + property path (matches children of bound controls, where the child has a binding for
-         * 			a certain property within the context)
-         *
-         * **Note:** Before version 1.60, the only available criteria is binding context path.
+         * BindingPath - checks if a control has a binding context with the exact same binding path
          */
         class BindingPath extends sap.ui.test.matchers.Matcher {
           /**
+           * BindingPath - checks if a control has a specific binding
+           *
            * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
            * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
            * of the syntax of the settings object.
@@ -50751,33 +49902,13 @@ declare namespace sap {
           ): sap.ui.test.matchers.BindingPath;
         }
         /**
-         * @SINCE 1.66
-         *
-         * Checks if a control has a given descendant.
-         */
-        class Descendant {
-          /**/
-          constructor(
-            /**
-             * The descendant control to check. If undefined, it validates every control to true. Can be a control or
-             * a control ID
-             */
-            vDescendantControl: object | string,
-            /**
-             * specifies if the descendant should be a direct child
-             */
-            bDirect?: boolean
-          );
-        }
-        /**
          * @SINCE 1.42
          *
-         * The I18NText matcher checks if a control property has the same value as a text from an I18N file.
-         *
-         * The matcher automatically:
-         * 	 -  retrieves the text from the assigned 'i18n' model (name can be changed)
-         * 	 -  checks that the I18N key does actually exist in the file
-         * 	 -  checks if asynchronously loaded I18N have actually been loaded
+         * The I18NText matcher checks if a control property has the same value as a text from an I18N file. The
+         * matcher does automatically
+         * 	 -  retrieve the text from the assigned 'i18n' model (name can be changed)
+         * 	 -  check that the I18N key does actually exist in the file
+         * 	 -  check if asynchronously loaded I18N have actually been loaded
          */
         class I18NText extends sap.ui.test.matchers.Matcher {
           /**
@@ -50912,14 +50043,14 @@ declare namespace sap {
         /**
          * @SINCE 1.34
          *
-         * Checks if a control is currently able to take user interactions. OPA5 will automatically apply this matcher
-         * if you specify actions in {@link sap.ui.test.Opa5#waitFor}. A control will be filtered out by this matcher
-         * when:
+         * Interactable - check if a control is currently able to take user interactions. OPA5 will automatically
+         * apply this matcher if you specify actions in {@link sap.ui.test.Opa5#waitFor}. A control will be filtered
+         * out by this matcher when:
          * 	 -  The control is invisible (using the visible matcher)
          * 	 -  The control or its parents are busy
          * 	 -  The control or its parents are not enabled
          * 	 -  The control is hidden behind a dialog
-         * 	 -  The UIArea of the control needs new rendering   Since 1.53, Interactable no longer uses internal
+         * 	 -  The UIArea of the control needs new rendering   Since 1.53 Interactable no longer uses internal
          * 			autoWait functionality. Interactable matcher might be made private in the near future. It is recommended
          * 			to enable autoWait OPA option instead of using the Interactable matcher directly.
          */
@@ -51182,7 +50313,8 @@ declare namespace sap {
         /**
          * @SINCE 1.27
          *
-         * Checks if a control's properties have the provided values - all properties have to match their values.
+         * Properties - checks if a control's properties have the provided values - all properties have to match
+         * their values.
          */
         class Properties {
           /**/
@@ -51207,10 +50339,12 @@ declare namespace sap {
         /**
          * @SINCE 1.23
          *
-         * Checks if a property has the exact same value.
+         * PropertyStrictEquals - checks if a property has the exact same value
          */
         class PropertyStrictEquals extends sap.ui.test.matchers.Matcher {
           /**
+           * PropertyStrictEquals - checks if a property has the exact same value.
+           *
            * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
            * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
            * of the syntax of the settings object.
@@ -51567,8 +50701,8 @@ declare namespace sap {
           FNMetaImpl?: Function
         ): Function;
         /**
-         * Gets all the controls or elements of a certain type that are currently instantiated. If the type is omitted,
-         * all controls and elements are returned.
+         * Gets all the controls of a certain type that are currently instantiated. If the control type is omitted,
+         * all controls are returned.
          */
         getAllControls(
           /**
@@ -51661,10 +50795,6 @@ declare namespace sap {
              */
             interactable?: boolean;
             /**
-             * @since 1.66 should the control be enabled.
-             */
-            enabled?: boolean;
-            /**
              * Only controls in the static UI area of UI5 are searched.
              */
             searchOpenDialogs?: boolean;
@@ -51715,7 +50845,7 @@ declare namespace sap {
       /**
        * @SINCE 1.26
        *
-       * Page Object Factory.
+       * Page Object Factory
        */
       class PageObjectFactory extends sap.ui.base.Object {
         /**/
@@ -51742,7 +50872,7 @@ declare namespace sap {
       /**
        * @SINCE 1.60
        *
-       * Record-and-replay implementation for OPA5.
+       * record-and-replay implementation for OPA5
        */
       class RecordReplay extends sap.ui.base.Object {
         /**/
@@ -51916,8 +51046,6 @@ declare namespace sap {
 
     "sap/ui/core/mvc/Controller": undefined;
 
-    "sap/ui/core/mvc/ControllerExtension": undefined;
-
     "sap/ui/core/mvc/HTMLView": undefined;
 
     "sap/ui/core/mvc/JSONView": undefined;
@@ -52087,8 +51215,6 @@ declare namespace sap {
     "sap/ui/core/XMLComposite": undefined;
 
     "sap/ui/core/IContextMenu": undefined;
-
-    "sap/ui/core/IDScope": undefined;
 
     "sap/ui/core/IFormContent": undefined;
 
@@ -52345,8 +51471,6 @@ declare namespace sap {
     "sap/ui/test/matchers/Ancestor": undefined;
 
     "sap/ui/test/matchers/BindingPath": undefined;
-
-    "sap/ui/test/matchers/Descendant": undefined;
 
     "sap/ui/test/matchers/I18NText": undefined;
 

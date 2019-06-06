@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.68.0
+// For Library Version: 1.65.1
 
 declare namespace sap {
   namespace ui {
@@ -12921,7 +12921,7 @@ declare namespace sap {
           /**
            * The element which will get the focus back again after the menu was closed
            */
-          oOpenerRef: sap.ui.core.Element | Element,
+          oOpenerRef: sap.ui.core.Element | any,
           /**
            * The reference docking location of the menu for positioning the menu on the screen
            */
@@ -12933,7 +12933,7 @@ declare namespace sap {
           /**
            * The menu is positioned relatively to this element based on the given dock locations
            */
-          of: sap.ui.core.Element | Element,
+          of: sap.ui.core.Element | any,
           /**
            * The offset relative to the docking point, specified as a string with space-separated pixel values (e.g.
            * "10 0" to move the popup 10 pixels to the right)
@@ -12944,20 +12944,6 @@ declare namespace sap {
            * in some direction
            */
           collision?: sap.ui.core.Collision
-        ): void;
-        /**
-         * Opens the menu as a context menu.
-         */
-        openAsContextMenu(
-          /**
-           * The event object or an object containing offsetX, offsetY values and left, top values of the element's
-           * position
-           */
-          oEvent: any | object,
-          /**
-           * Might be UI5 Element or DOM Element
-           */
-          oOpenerRef: sap.ui.core.Element | HTMLElement
         ): void;
         /**
          * @SINCE 1.26.3

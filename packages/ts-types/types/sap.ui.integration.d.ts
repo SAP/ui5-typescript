@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.68.0
+// For Library Version: 1.65.1
 
 declare namespace sap {
   namespace ui {
@@ -630,27 +630,13 @@ declare namespace sap {
          * ```
          *
          *
-         * Actions:
+         * Actions: Actions add behavior to the card. To add a navigation action to the header and to the items,
+         * you can configure it inside the manifest.
          *
-         * Actions add behavior to the card. Actions have:
+         * Actions have:
          * 	 - Type
          * 	 - Parameters
          * 	 - Enabled flag (true by default)
-         *
-         * The available action types are:
-         *
-         *
-         * 	 - Navigation
-         *
-         * To add a navigation action, you need to configure it inside the manifest and the action itself can be
-         * set on:
-         *
-         *
-         * 	 - Header
-         * 	 - Items of the list card
-         * 	 - Rows of the table card
-         * 	 - Analytical content
-         * 	 - Object content
          *
          * In the example below, a navigation action is added both to the header and the list items:
          * ```javascript
@@ -705,44 +691,6 @@ declare namespace sap {
          *           }
          *         ]
          *       }
-         *     }
-         *   }
-         * }
-         *
-         * ```
-         *
-         *
-         * In the example below, a navigation action is added on the Object content(same as Analytical content):
-         *
-         * ```javascript
-         *
-         *
-         * {
-         *   "sap.app": {
-         *     "type": "card"
-         *   },
-         *   "sap.card": {
-         *     "type": "Object",
-         *     ...
-         *     "content": {
-         *       "data": {
-         *         "request": {
-         *           "url": "./objectitems_services2.json"
-         *         },
-         *         "path": "/items"
-         *       },
-         *        "groups": {
-         *          ...
-         *        },
-         *        "actions": [
-         *          {
-         *            "type": "Navigation",
-         *            "enabled": "{= ${url}}",
-         *            "parameters": {
-         *             	"url": "{url}"
-         *            }
-         *         }
-         *       ]
          *     }
          *   }
          * }
