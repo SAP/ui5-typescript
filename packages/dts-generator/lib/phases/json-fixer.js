@@ -3,6 +3,7 @@ const _ = require("lodash");
 function fixApiJson(json) {
   addImplicitNamespaces(json);
   removeBadData(json);
+  removeRestrictedInterface(json);
   return json;
 }
 
@@ -42,9 +43,27 @@ function addImplicitNamespaces(json) {
 const badData = {
   "sap.ui.test.Opa5": true
 };
+
 function removeBadData(json) {
   json.symbols = _.reject(json.symbols, sym => {
     return badData[sym.name];
+  });
+}
+
+/**
+ * In case a interface is tagged as restricted, we should remove it from the classes that uses it
+ * @param json
+ */
+function removeRestrictedInterface(json) {
+
+  const restrictedInterfaces = _(json.symbols)
+      .filter(symbol => symbol.kind === "interface" && symbol.visibility === "restricted")
+      .map((symbol) => symbol.name)
+      .value();
+  _.forEach(json.symbols, symbol => {
+    if (symbol.kind === "class" && !_.isEmpty(symbol.implements)) {
+      _.remove(symbol.implements, implementName => restrictedInterfaces.indexOf(implementName) != -1);
+    }
   });
 }
 

@@ -59,7 +59,7 @@ function buildNestedNamespaces(symbols, nsFQN) {
   );
 }
 
-function buildNestedItems(symbols, nsFQN, ui5kind, builder) {
+function  buildNestedItems(symbols, nsFQN, ui5kind, builder) {
   const nestedItems = getDirectDescendants(symbols, ui5kind, nsFQN);
   return _.map(nestedItems, builder);
 }
@@ -101,12 +101,17 @@ function buildVariable(property) {
  * @returns {FunctionDesc}
  */
 function buildFunction(ui5Method) {
-  assertKnownProps(["name", "parameters", "returnValue", "throws"], ui5Method);
+  assertKnownProps(
+    ["name", "parameters", "returnValue", "throws", "optional"],
+    ui5Method
+  );
+  // Simple check to avoid having the same parameter defined twice
+  const uniqueParameters = _.uniqBy(ui5Method.parameters, 'name');
   const astNode = {
     kind: "FunctionDesc",
     name: ui5Method.name,
     static: ui5Method.static === true,
-    parameters: _.map(ui5Method.parameters, buildParameter),
+    parameters: _.map(uniqueParameters, buildParameter),
     returns: buildReturnDesc(ui5Method.returnValue),
     description: ui5Method.description,
     additionalDocs: ui5Method.references,
