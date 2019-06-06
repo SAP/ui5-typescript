@@ -294,10 +294,7 @@ function buildClass(ui5Class) {
  * @returns {Interface}
  */
 function buildInterface(ui5Interface) {
-  assertKnownProps(
-    ["basename", "name", "methods", "events"],
-    ui5Interface
-  );
+  assertKnownProps(["basename", "name", "methods", "events"], ui5Interface);
 
   const astNode = {
     kind: "Interface",
