@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.68.0
 
 declare namespace sap {
   interface IUI5DefineDependencyNames {}

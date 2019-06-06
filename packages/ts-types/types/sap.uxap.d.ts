@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.68.0
 
 declare namespace sap {
   /**
@@ -263,6 +263,12 @@ declare namespace sap {
        */
       footerLabel?: string;
     }
+
+    interface ObjectPageDynamicHeaderContentOpts
+      extends sap.f.DynamicPageHeaderOpts {}
+
+    interface ObjectPageDynamicHeaderTitleOpts
+      extends sap.f.DynamicPageTitleOpts {}
 
     interface ObjectPageHeaderOpts extends sap.ui.core.ControlOpts {
       /**
@@ -857,7 +863,14 @@ declare namespace sap {
       moreBlocks?: sap.ui.core.Control[] | sap.ui.core.Control;
 
       /**
-       * Actions available for this Subsection
+       * Actions available for this subsection.
+       *
+       * Although this aggregation accepts type `sap.ui.core.Control`, it is strongly recommended to use only
+       * simple controls, such as buttons, so that the layout of the app is preserved.
+       *
+       * **Note:** Keep in mind that the controls set in the `actions` aggregation of `ObjectPageSubSection` do
+       * NOT have overflow behavior. If the available space is not enough, the controls will be displayed on more
+       * lines.
        */
       actions?: sap.ui.core.Control[] | sap.ui.core.Control;
     }
@@ -1056,9 +1069,9 @@ declare namespace sap {
      * 	 - Can use all view types for storing its internal control tree (XML, JS, JSON, HTML)
      *
      * As any UI5 view, the XML view can have a controller which automatically comes with a `this.oParentBlock`
-     * attribute (so that the controller can interact with the block). If the controller implements the `onParentBlockModeChange`
-     * method, this method will be called with the `sMode` parameter when the view is used or reused by the
-     * block.
+     * attribute (so that the controller can interact with the block). The `oParentBlock` is firstly available
+     * in `onParentBlockModeChange` method. If the controller implements the `onParentBlockModeChange` method,
+     * this method will be called with the `sMode` parameter when the view is used or reused by the block.
      */
     class BlockBase extends sap.ui.core.Control {
       /**
@@ -1994,7 +2007,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: object
+        mSettings?: ObjectPageDynamicHeaderContentOpts
       );
 
       /**
@@ -2054,7 +2067,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: object
+        mSettings?: ObjectPageDynamicHeaderTitleOpts
       );
 
       /**
@@ -5292,7 +5305,14 @@ declare namespace sap {
       /**
        * Gets content of aggregation {@link #getActions actions}.
        *
-       * Actions available for this Subsection
+       * Actions available for this subsection.
+       *
+       * Although this aggregation accepts type `sap.ui.core.Control`, it is strongly recommended to use only
+       * simple controls, such as buttons, so that the layout of the app is preserved.
+       *
+       * **Note:** Keep in mind that the controls set in the `actions` aggregation of `ObjectPageSubSection` do
+       * NOT have overflow behavior. If the available space is not enough, the controls will be displayed on more
+       * lines.
        */
       getActions(): sap.ui.core.Control[];
       /**

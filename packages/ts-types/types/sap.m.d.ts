@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.68.0
 
 declare namespace sap {
   /**
@@ -152,7 +152,7 @@ declare namespace sap {
         /**
          * A configured custom background color for the control, if any
          */
-        sBgColor?: string,
+        sBgColor?: sap.ui.core.CSSColor,
         /**
          * The configured custom background image for the control, if any
          */
@@ -1204,12 +1204,15 @@ declare namespace sap {
       }
       /**
        * @SINCE 1.28.1
+       *
+       * SAPUI5 mobile `Router`. The difference to the {@link sap.ui.core.routing.Router} are the `viewLevel`,
+       * `transition`, and `transitionParameters` properties that you can specify in every Route or Target created
+       * by this router.
        */
       class Router extends sap.ui.core.routing.Router {
         /**
-         * Instantiates a SAPUI5 mobile Router see {@link sap.ui.core.routing.Router} for the constructor arguments
-         * The difference to the {@link sap.ui.core.routing.Router} are the properties viewLevel, transition and
-         * transitionParameters you can specify in every Route or Target created by this router.
+         * Constructor for a new `sap.m.routing.Router`. See `{@link sap.ui.core.routing.Router}` for the constructor
+         * arguments.
          */
         constructor(
           /**
@@ -1430,19 +1433,21 @@ declare namespace sap {
       }
       /**
        * @SINCE 1.28.1
+       *
+       * Used for closing dialogs and showing transitions in `NavContainers` when targets are displayed.
+       *
+       * **Note:** You should not create an own instance of this class. It is created when using `{@link sap.m.routing.Router}`
+       * or `{@link sap.m.routing.Targets}`. You may use the `{@link #setCloseDialogs}` function to specify if
+       * dialogs should be closed on displaying other views.
        */
       class TargetHandler extends sap.ui.base.Object {
         /**
-         * Instantiates a TargetHandler, a class used for closing dialogs and showing transitions in NavContainers
-         * when targets are displayed.
-         *  **You should not create an own instance of this class.** It will be created when using {@link sap.m.routing.Router}
-         * or {@link sap.m.routing.Targets}. You may use the {@link #setCloseDialogs} function to specify if dialogs
-         * should be closed on displaying other views.
+         * Constructor for a new `TargetHandler`.
          */
         constructor(
           /**
-           * the default is true - will close all open dialogs before navigating, if set to true. If set to false
-           * it will just navigate without closing dialogs.
+           * Closes all open dialogs before navigating, if set to `true` (default). If set to `false`, it will just
+           * navigate without closing dialogs.
            */
           closeDialogs: boolean
         );
@@ -1469,7 +1474,7 @@ declare namespace sap {
           FNMetaImpl?: Function
         ): Function;
         /**
-         * Gets if a navigation should close dialogs
+         * Gets if a navigation should close dialogs.
          */
         getCloseDialogs(): boolean;
         /**
@@ -1478,26 +1483,31 @@ declare namespace sap {
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
         /**
-         * Sets if a navigation should close dialogs
+         * Sets if a navigation should close dialogs.
          */
         setCloseDialogs(
           /**
-           * close dialogs if true
+           * Close dialogs if `true`
            */
           bCloseDialogs: boolean
         ): sap.m.routing.TargetHandler;
       }
       /**
        * @SINCE 1.28.1
+       *
+       * Provides a convenient way for placing views into the correct containers of your app.
+       *
+       * The mobile extension of `Targets` also handles the triggering of page navigation when the target control
+       * is an `{@link sap.m.SplitContainer}`, an `{@link sap.m.NavContainer}` or a control which extends one
+       * of these. Other controls are also allowed, but the extra parameters `viewLevel`, `transition` and `transitionParameters`
+       * are ignored and it behaves as `{@link sap.ui.core.routing.Targets}`.
+       *
+       * When a target is displayed, dialogs will be closed. To change this use `{@link #getTargetHandler}` and
+       * `{@link sap.m.routing.TargetHandler#setCloseDialogs}`.
        */
       class Targets extends sap.ui.core.routing.Targets {
         /**
-         * Provides a convenient way for placing views into the correct containers of your application. The mobile
-         * extension of Targets also handles the triggering of page navigation when the target control is a {@link
-         * sap.m.SplitContainer}, a {@link sap.m.NavContainer} or a control which extends one of these. Other controls
-         * are also allowed, but the extra parameters viewLevel, transition and transitionParameters are ignored
-         * and it will behave like {@link sap.ui.core.routing.Targets}. When a target is displayed, dialogs will
-         * be closed. To change this use {@link #getTargetHandler} and {@link sap.m.routing.TargetHandler#setCloseDialogs}.
+         * Constructor for a new `Targets` class.
          */
         constructor(oOptions: {
           /**
@@ -4939,7 +4949,7 @@ declare namespace sap {
          * Implementation of a commonly used function that adapts `sap.ui.core.Element` to provide DOM reference
          * for opening popovers.
          */
-        getPopupAnchorDomRef(): void;
+        getPopupAnchorDomRef(): Element;
         /**
          * Gets current value of property {@link #getVisible visible}.
          *
@@ -6686,6 +6696,23 @@ declare namespace sap {
           oListener?: object
         ): sap.m.upload.Uploader;
         /**
+         * Starts the process of downloading a file.
+         */
+        downloadItem(
+          /**
+           * Item representing the file to be downloaded.
+           */
+          oItem: sap.m.upload.UploadSetItem,
+          /**
+           * List of header fields to be added to the GET request.
+           */
+          aHeaderFields: sap.ui.core.Item[],
+          /**
+           * True if the location to where download the file should be first queried by a browser dialog.
+           */
+          bAskForLocation: boolean
+        ): boolean;
+        /**
          * Creates a new subclass of class sap.m.upload.Uploader with name `sClassName` and enriches it with the
          * information contained in `oClassInfo`.
          *
@@ -6822,7 +6849,7 @@ declare namespace sap {
           /**
            * Item representing the file whose ongoing upload process is to be terminated.
            */
-          oItem: UploadSetItem
+          oItem: sap.m.upload.UploadSetItem
         ): void;
         /**
          * Starts the process of uploading the specified file.
@@ -6831,11 +6858,11 @@ declare namespace sap {
           /**
            * Item representing the file to be uploaded.
            */
-          oItem: UploadSetItem,
+          oItem: sap.m.upload.UploadSetItem,
           /**
            * Collection of request header fields to be send along.
            */
-          aHeaderFields: any[]
+          aHeaderFields: sap.ui.core.Item[]
         ): void;
         /**
          * Attaches event handler `fnFunction` to the {@link #event:uploadAborted uploadAborted} event of this `sap.m.upload.Uploader`.
@@ -7782,7 +7809,7 @@ declare namespace sap {
         /**
          * Provides access to the instance of the inner {@link sap.m.List} control, so that it can be customized.
          */
-        getList(): List;
+        getList(): sap.m.List;
         /**
          * Gets current value of property {@link #getMaxFileNameLength maxFileNameLength}.
          *
@@ -7946,7 +7973,7 @@ declare namespace sap {
           /**
            * Instance of `sap.m.upload.Uploader` to which the default request handlers are attached.
            */
-          oUploader: Uploader
+          oUploader: sap.m.upload.Uploader
         ): void;
         /**
          * Removes all the controls from the aggregation {@link #getHeaderFields headerFields}.
@@ -9075,7 +9102,7 @@ declare namespace sap {
      *
      * `getCustomImportance()` - A function that, if provided, will be called to determine the priority
      * of the control. This function must return a value of type `sap.m.OverflowToolbarPriority`. The string
-     * "Medium" is also accepted and interpreted as priority between `Low` and High.
+     * "Medium" is also accepted and interpreted as priority between `Low` and `High`.
      *
      * **Note:** Normally priority in `sap.m.OverflowToolbar` is managed with the `priority` property of `sap.m.OverflowToolbarLayoutData`.
      * However, some controls may have other means of defining priority, such as dedicated properties or other
@@ -9108,7 +9135,7 @@ declare namespace sap {
      */
     interface IScale {
       /**
-       * Returns How many tickmarks would be drawn on the screen.
+       * Returns how many tickmarks would be drawn on the screen.
        *
        * **Note:** There would always be a tickmark in the beginning and in the end of the slider, regardless
        * of the value this method returns. The start and the end tickmark are taken into account for the later
@@ -9121,11 +9148,22 @@ declare namespace sap {
         mOptions: object
       ): number;
       /**
-       * Provides a custom tickmark label. This method is optional. If it is not provided, the slider values will
-       * be placed as labels. If provided, the value of the tickmark labels and accessibility attributes (aria-valuenow
-       * and aria-valuetext) of the slider are changed accordingly.
+       * Provides a custom tickmark label.
+       *
+       * This method is optional. If it is not provided, the slider values will be placed as labels. If provided,
+       * the value of the tickmark labels and accessibility attributes (aria-valuenow and aria-valuetext) of the
+       * slider are changed accordingly.
        */
-      getLabel(): string | number;
+      getLabel?(
+        /**
+         * Value represented by the tickmark
+         */
+        fValue: number,
+        /**
+         * Slider control that asks for a label
+         */
+        oSlider: sap.m.Slider | sap.m.RangeSlider
+      ): string | number;
       /**
        * Returns the number of tickmarks, which should be placed between labels.
        *
@@ -9139,10 +9177,13 @@ declare namespace sap {
         mOptions: object
       ): number;
       /**
-       * Called, when the slider is getting resized. The Slider/RangeSlider control, could be accessed via the
-       * oEvent.control parameter.
+       * Called, when the slider is getting resized.
+       *
+       * The Slider/RangeSlider control could be accessed via the oEvent.control parameter.
+       *
+       * Implementing this method is optional.
        */
-      handleResize(
+      handleResize?(
         /**
          * The event object passed.
          */
@@ -10577,10 +10618,10 @@ declare namespace sap {
        * @SINCE 1.15.1
        *
        * The button which is rendered to the right side (left side in RTL mode) of the `beginButton` in the footer
-       * area inside the Dialog. As of version 1.21.1, there's a new aggregation `buttons created with which
-       * more than 2 buttons can be added to the footer area of Dialog. If the new buttons` aggregation
-       * is set, any change made to this aggregation has no effect anymore. When running on a phone, this `button`
-       * (and the `beginButton` together when set) is (are) rendered at the center of the footer area. When running
+       * area inside the Dialog. As of version 1.21.1, there's a new aggregation `buttons` created with which
+       * more than 2 buttons can be added to the footer area of Dialog. If the new `buttons` aggregation is set,
+       * any change made to this aggregation has no effect anymore. When running on a phone, this `button` (and
+       * the `beginButton` together when set) is (are) rendered at the center of the footer area. When running
        * on other platforms, this `button` (and the `beginButton` together when set) is (are) rendered at the
        * right side (left side in RTL mode) of the footer area.
        */
@@ -12230,11 +12271,16 @@ declare namespace sap {
       /**
        * @SINCE 1.16.1
        *
-       * SuggestItems are the items which will be shown in the suggestion popup. Changing this aggregation (by
-       * calling addSuggestionItem, insertSuggestionItem, removeSuggestionItem, removeAllSuggestionItems, destroySuggestionItems)
-       * after input is rendered will open/close the suggestion popup. o display suggestions with two text values,
-       * it is also possible to add sap.ui.core/ListItems as SuggestionItems (since 1.21.1). For the selected
-       * ListItem, only the first value is returned to the input field.
+       * Defines the items displayed in the suggestion popup. Changing this aggregation (by calling `addSuggestionItem`,
+       * `insertSuggestionItem`, `removeSuggestionItem`, `removeAllSuggestionItems`, or `destroySuggestionItems`)
+       * after `Input` is rendered opens/closes the suggestion popup.
+       *
+       * To display suggestions with two text values, add `sap.ui.core.ListItem` as `SuggestionItems` (since 1.21.1).
+       * For the selected `ListItem`, only the first value is returned to the input field.
+       *
+       * **Note:** Only `text` and `additionalText` property values of the item are displayed. For example, if
+       * an `icon` is set, it is ignored. To display more information per item (including icons), you can use
+       * the `suggestionRows` aggregation.
        */
       suggestionItems?: sap.ui.core.Item[] | sap.ui.core.Item;
 
@@ -12278,6 +12324,9 @@ declare namespace sap {
 
       /**
        * Defines the width of the control.
+       *
+       * **Note:** If the provided width is too small, the control gets stretched to its min width, which is needed
+       * in order for the control to be usable and well aligned.
        */
       width?: sap.ui.core.CSSSize;
 
@@ -13623,17 +13672,18 @@ declare namespace sap {
       /**
        * @SINCE 1.7.1
        *
-       * The event is fired when navigation between two pages has been triggered. The transition (if any) to the
-       * new page has not started yet. This event can be aborted by the application with preventDefault(), which
-       * means that there will be no navigation.
+       * The event is fired when navigation between two pages has been triggered (before any events to the child
+       * controls are fired). The transition (if any) to the new page has not started yet. This event can be aborted
+       * by the application with preventDefault(), which means that there will be no navigation.
        */
       navigate?: Function;
 
       /**
        * @SINCE 1.7.1
        *
-       * The event is fired when navigation between two pages has completed. In case of animated transitions this
-       * event is fired with some delay after the "navigate" event.
+       * The event is fired when navigation between two pages has completed (once all events to the child controls
+       * have been fired). In case of animated transitions this event is fired with some delay after the "navigate"
+       * event.
        */
       afterNavigate?: Function;
 
@@ -14571,7 +14621,14 @@ declare namespace sap {
       /**
        * Defines the text value state.
        */
-      state?: sap.ui.core.ValueState;
+      state?: string;
+
+      /**
+       * @SINCE 1.66
+       *
+       * Determines whether the background color reflects the set `state` instead of the control's text.
+       */
+      inverted?: boolean;
 
       /**
        * Icon URI. This may be either an icon font or image path.
@@ -14606,7 +14663,17 @@ declare namespace sap {
       ariaDescribedBy?: sap.ui.core.Control[] | string[];
     }
 
-    interface OverflowToolbarOpts extends sap.m.ToolbarOpts {}
+    interface OverflowToolbarOpts extends sap.m.ToolbarOpts {
+      /**
+       * @SINCE 1.67
+       *
+       * Defines whether the `OverflowToolbar` works in async mode.
+       *
+       * **Note:** When this property is set to `true`, the `OverflowToolbar` makes its layout recalculations
+       * asynchronously. This way it is not blocking the thread immediately after re-rendering or resizing.
+       */
+      asyncMode?: boolean;
+    }
 
     interface OverflowToolbarButtonOpts extends sap.m.ButtonOpts {}
 
@@ -16193,6 +16260,17 @@ declare namespace sap {
       specialDates?:
         | sap.ui.unified.DateTypeRange[]
         | sap.ui.unified.DateTypeRange;
+
+      /**
+       * @SINCE 1.67
+       * @EXPERIMENTAL (since 1.67)
+       *
+       * Holds the header content of the row.
+       *
+       * **Note:** If the `headerContent` aggregation is added, then the set icon, description, title and tooltip
+       * are ignored.
+       */
+      headerContent?: sap.ui.core.Control[] | sap.ui.core.Control;
     }
 
     interface PlanningCalendarViewOpts extends sap.ui.core.ElementOpts {
@@ -17430,9 +17508,24 @@ declare namespace sap {
       name?: string;
 
       /**
-       * Indicates whether the user can change the selection.
+       * Determines whether the user can modify the selected item. When the property is set to `false`, the control
+       * appears as disabled and CANNOT be focused.
+       *
+       * **Note:** When both `enabled` and `editable` properties are set to `false, enabled` has priority
+       * over `editable`.
        */
       enabled?: boolean;
+
+      /**
+       * @SINCE 1.66.0
+       *
+       * Determines whether the user can modify the selected item. When the property is set to `false`, the control
+       * appears as disabled but CAN still be focused.
+       *
+       * **Note:** When both `enabled` and `editable` properties are set to `false, enabled` has priority
+       * over `editable`.
+       */
+      editable?: boolean;
 
       /**
        * Sets the width of the field. By default, the field width is automatically adjusted to the size of its
@@ -18007,7 +18100,7 @@ declare namespace sap {
       enableAppointmentsCreate?: boolean;
 
       /**
-       * Fired if an appointment is selected.
+       * Fired when the selected state of an appointment is changed.
        */
       appointmentSelect?: Function;
 
@@ -18073,6 +18166,17 @@ declare namespace sap {
         | sap.m.SinglePlanningCalendarView;
 
       /**
+       * @SINCE 1.66
+       *
+       * Special days in the header visualized as a date range with type.
+       *
+       * **Note:** If one day is assigned to more than one type, only the first type is used.
+       */
+      specialDates?:
+        | sap.ui.unified.DateTypeRange[]
+        | sap.ui.unified.DateTypeRange;
+
+      /**
        * Corresponds to the currently selected view.
        */
       selectedView?: sap.m.SinglePlanningCalendarView | string;
@@ -18082,7 +18186,7 @@ declare namespace sap {
        *
        * Association to the `PlanningCalendarLegend` explaining the colors of the `Appointments`.
        *
-       * **Note:** The legend does not have to be rendered but must exist, and all required types must be assigned.
+       * **Note:** The legend does not have to be rendered but must exist and all required types must be assigned.
        */
       legend?: sap.m.PlanningCalendarLegend | string;
     }
@@ -18524,6 +18628,18 @@ declare namespace sap {
        * from the DOM.
        */
       infoTextDirection?: sap.ui.core.TextDirection;
+
+      /**
+       * @SINCE 1.67
+       *
+       * Defines the wrapping behavior of title and description texts.
+       *
+       * **Note:**
+       *
+       * In the desktop mode, initial rendering of the control contains 300 characters along with a button to
+       * expand and collapse the text whereas in the phone mode, the character limit is set to 100 characters.
+       */
+      wrapping?: boolean;
     }
 
     interface StandardTileOpts extends sap.m.TileOpts {
@@ -18620,7 +18736,7 @@ declare namespace sap {
       /**
        * @SINCE 1.54
        *
-       * Defines the calculation mode for the provided `step and largerStep`.
+       * Defines the calculation mode for the provided `step` and `largerStep`.
        *
        * If the user increases/decreases the value by `largerStep`, this calculation will consider it as well.
        * For example, if the current `value` is 3, `step` is 5, `largerStep` is 5 and the user chooses PageUp,
@@ -20439,7 +20555,7 @@ declare namespace sap {
          * Dialog to be added to instance manager. Dialog which doesn't inherit from sap.m.Dialog can also be added
          * as long as it has a close method.
          */
-        oLightBox: any
+        oLightBox: sap.m.LightBox
       ): sap.m.InstanceManager;
       /**
        * Adds a control to predefined popover category in instance manager.
@@ -21095,12 +21211,7 @@ declare namespace sap {
       /**
        * Calling this method will make the ActionSheet disappear from the screen.
        */
-      close(
-        /**
-         * The control to close
-         */
-        oControl: object
-      ): void;
+      close(): void;
       /**
        * Destroys all the buttons in the aggregation {@link #getButtons buttons}.
        */
@@ -21357,12 +21468,7 @@ declare namespace sap {
        * The method checks if the ActionSheet is open. It returns true when the ActionSheet is currently open
        * (this includes opening and closing animations), otherwise it returns false.
        */
-      isOpen(
-        /**
-         * The control in question
-         */
-        oControl: object
-      ): boolean;
+      isOpen(): boolean;
       /**
        * Calling this method will make the ActionSheet visible on the screen. The control parameter is the object
        * to which the ActionSheet will be placed. It can be not only a UI5 control, but also an existing DOM reference.
@@ -23436,7 +23542,7 @@ declare namespace sap {
       /**
        * Defines to which DOM reference the Popup should be docked
        */
-      getPopupAnchorDomRef(): any;
+      getPopupAnchorDomRef(): Element;
       /**
        * Gets current value of property {@link #getText text}.
        *
@@ -25064,7 +25170,7 @@ declare namespace sap {
      * The palette is intended for users, who don't want to check and remember the different values of the colors
      * and spend large amount of time to configure the right color through the color picker.
      *
-     * The control can be embedded in a form or can be opened as popover (by use of thin wrapper control sap.m.ColorPalettePopover).
+     * The control can be embedded in a form or can be opened as popover (by use of thin wrapper control `sap.m.ColorPalettePopover`).
      */
     class ColorPalette extends sap.ui.core.Control {
       /**
@@ -26562,6 +26668,10 @@ declare namespace sap {
        */
       synchronizeSelection(): void;
       /**
+       * Creates picker if doesn't exist yet and sync with Control items
+       */
+      syncPickerContent(): sap.m.Dialog | sap.m.Popover;
+      /**
        * Attaches event handler `fnFunction` to the {@link #event:change change} event of this `sap.m.ComboBox`.
        *
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -26728,16 +26838,6 @@ declare namespace sap {
         sPickerType: string
       ): sap.m.Popover | sap.m.Dialog;
       /**
-       * @SINCE 1.42
-       *
-       * Creates an instance of `sap.m.Bar`.
-       */
-      createPickerHeader(): sap.m.Bar;
-      /**
-       * Base method for picker text field creation
-       */
-      createPickerTextField(): void;
-      /**
        * Destroys all the items in the aggregation {@link #getItems items}.
        */
       destroyItems(): sap.m.ComboBoxBase;
@@ -26803,6 +26903,13 @@ declare namespace sap {
        * Gets the first item from the aggregation named `items`.
        */
       getFirstItem(): sap.ui.core.Item;
+      /**
+       * @SINCE 1.66
+       *
+       * Gets the input properties, which should be forwarded from the combobox text field to the picker text
+       * field
+       */
+      getInputForwardableProperties(): any[];
       /**
        * Gets the item from the aggregation named `items` at the given 0-based index.
        */
@@ -27030,14 +27137,44 @@ declare namespace sap {
         bShowSecondaryValues: boolean
       ): sap.m.ComboBoxBase;
       /**
+       * Sets whether the value state message should be shown or not
+       */
+      // @ts-ignore
+      setShowValueStateMessage(
+        /**
+         * The new value state text
+         */
+        bShow?: boolean
+      ): sap.m.InputBase;
+      /**
        * Sets the TextField handler
        */
       setTextFieldHandler(
         /**
          * Text field instance
          */
-        oTextField: any
+        oTextField: sap.m.ComboBoxTextField | sap.m.Input
       ): void;
+      /**
+       * Sets the visualization of the validation state of the control, e.g. `Error`, `Warning`, `Success`.
+       */
+      // @ts-ignore
+      setValueState(
+        /**
+         * The new value state
+         */
+        sValueState?: sap.ui.core.ValueState
+      ): sap.m.InputBase;
+      /**
+       * Sets the value state text
+       */
+      // @ts-ignore
+      setValueStateText(
+        /**
+         * The new value state text
+         */
+        sValueStateText?: string
+      ): sap.m.InputBase;
       /**
        * @SINCE 1.64
        * @EXPERIMENTAL (since 1.64)
@@ -29276,7 +29413,7 @@ declare namespace sap {
 
       /**
        * Returns the custom header instance when the `customHeader` aggregation is set. Otherwise, it returns
-       * the internal managed header instance. This method can be called within composite controls which use sap.m.Dialog
+       * the internal managed header instance. This method can be called within composite controls which use `sap.m.Dialog`
        * inside.
        */
       _getAnyHeader(): void;
@@ -29671,10 +29808,10 @@ declare namespace sap {
        * Gets content of aggregation {@link #getEndButton endButton}.
        *
        * The button which is rendered to the right side (left side in RTL mode) of the `beginButton` in the footer
-       * area inside the Dialog. As of version 1.21.1, there's a new aggregation `buttons created with which
-       * more than 2 buttons can be added to the footer area of Dialog. If the new buttons` aggregation
-       * is set, any change made to this aggregation has no effect anymore. When running on a phone, this `button`
-       * (and the `beginButton` together when set) is (are) rendered at the center of the footer area. When running
+       * area inside the Dialog. As of version 1.21.1, there's a new aggregation `buttons` created with which
+       * more than 2 buttons can be added to the footer area of Dialog. If the new `buttons` aggregation is set,
+       * any change made to this aggregation has no effect anymore. When running on a phone, this `button` (and
+       * the `beginButton` together when set) is (are) rendered at the center of the footer area. When running
        * on other platforms, this `button` (and the `beginButton` together when set) is (are) rendered at the
        * right side (left side in RTL mode) of the footer area.
        */
@@ -38803,11 +38940,16 @@ declare namespace sap {
        *
        * Gets content of aggregation {@link #getSuggestionItems suggestionItems}.
        *
-       * SuggestItems are the items which will be shown in the suggestion popup. Changing this aggregation (by
-       * calling addSuggestionItem, insertSuggestionItem, removeSuggestionItem, removeAllSuggestionItems, destroySuggestionItems)
-       * after input is rendered will open/close the suggestion popup. o display suggestions with two text values,
-       * it is also possible to add sap.ui.core/ListItems as SuggestionItems (since 1.21.1). For the selected
-       * ListItem, only the first value is returned to the input field.
+       * Defines the items displayed in the suggestion popup. Changing this aggregation (by calling `addSuggestionItem`,
+       * `insertSuggestionItem`, `removeSuggestionItem`, `removeAllSuggestionItems`, or `destroySuggestionItems`)
+       * after `Input` is rendered opens/closes the suggestion popup.
+       *
+       * To display suggestions with two text values, add `sap.ui.core.ListItem` as `SuggestionItems` (since 1.21.1).
+       * For the selected `ListItem`, only the first value is returned to the input field.
+       *
+       * **Note:** Only `text` and `additionalText` property values of the item are displayed. For example, if
+       * an `icon` is set, it is ignored. To display more information per item (including icons), you can use
+       * the `suggestionRows` aggregation.
        */
       getSuggestionItems(): sap.ui.core.Item[];
       /**
@@ -39370,18 +39512,14 @@ declare namespace sap {
         bShowValueHelp: boolean
       ): sap.m.Input;
       /**
-       * @SINCE 1.16
-       *
-       * Setter for property `showValueStateMessage`.
-       *
-       * Default value is `true`
+       * Sets whether the value state message should be shown or not
        */
       // @ts-ignore
       setShowValueStateMessage(
         /**
-         * new value for property `showValueStateMessage`
+         * The new value state text
          */
-        bShowValueStateMessage: boolean
+        bShow?: boolean
       ): sap.m.InputBase;
       /**
        * @SINCE 1.21.2
@@ -39525,18 +39663,24 @@ declare namespace sap {
         bValueLiveUpdate: boolean
       ): sap.m.Input;
       /**
-       * @SINCE 1.16
-       *
-       * Setter for property `valueStateText`.
-       *
-       * Default value is empty/`undefined`
+       * Sets the visualization of the validation state of the control, e.g. `Error`, `Warning`, `Success`.
+       */
+      // @ts-ignore
+      setValueState(
+        /**
+         * The new value state
+         */
+        sValueState?: sap.ui.core.ValueState
+      ): sap.m.InputBase;
+      /**
+       * Sets the value state text
        */
       // @ts-ignore
       setValueStateText(
         /**
-         * new value for property `valueStateText`
+         * The new value state text
          */
-        sValueStateText: string
+        sValueStateText?: string
       ): sap.m.InputBase;
       /**
        * Defines the width of the input. Default value is 100%.
@@ -39900,7 +40044,7 @@ declare namespace sap {
        *
        * Gets the DOM element reference where the message popup is attached.
        */
-      getDomRefForValueStateMessage(): object;
+      getDomRefForValueStateMessage(): Element;
       /**
        * @SINCE 1.12.0
        *
@@ -40024,6 +40168,9 @@ declare namespace sap {
        * Gets current value of property {@link #getWidth width}.
        *
        * Defines the width of the control.
+       *
+       * **Note:** If the provided width is too small, the control gets stretched to its min width, which is needed
+       * in order for the control to be usable and well aligned.
        */
       getWidth(): sap.ui.core.CSSSize;
       /**
@@ -40048,7 +40195,7 @@ declare namespace sap {
          * Passed value on change
          */
         sNewValue: string
-      ): true | undefined;
+      ): boolean | undefined;
       /**
        * @SINCE 1.26
        *
@@ -40281,6 +40428,9 @@ declare namespace sap {
        *
        * Defines the width of the control.
        *
+       * **Note:** If the provided width is too small, the control gets stretched to its min width, which is needed
+       * in order for the control to be usable and well aligned.
+       *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        */
       setWidth(
@@ -40332,7 +40482,7 @@ declare namespace sap {
          * Passed value on change
          */
         sNewValue: string
-      ): true | undefined;
+      ): boolean | undefined;
     }
     /**
      * List item should be used for a label and an input field.
@@ -40790,16 +40940,6 @@ declare namespace sap {
          * New value for property `textDirection`
          */
         sTextDirection: sap.ui.core.TextDirection
-      ): sap.m.Label;
-      /**
-       * Sets the tooltip of the `sap.m.Label`.
-       */
-      // @ts-ignore
-      setTooltip(
-        /**
-         * Tooltip's value represented in string format.
-         */
-        sTooltip: string
       ): sap.m.Label;
       /**
        * @SINCE 1.54
@@ -44662,6 +44802,20 @@ declare namespace sap {
          */
         iIndex: number
       ): sap.m.Menu;
+      /**
+       * Opens the menu as a context menu.
+       */
+      openAsContextMenu(
+        /**
+         * The event object or an object containing offsetX, offsetY values and left, top values of the element's
+         * position
+         */
+        oEvent: any | object,
+        /**
+         * The reference of the opener
+         */
+        oOpenerRef: object
+      ): void;
       /**
        * Opens the `Menu` next to the given control.
        */
@@ -48565,6 +48719,16 @@ declare namespace sap {
       // @ts-ignore
       clearSelection(): void;
       /**
+       * Clones the `sap.m.MultiComboBox` control.
+       */
+      // @ts-ignore
+      clone(
+        /**
+         * Suffix to be added to the ids of the new control and its internal objects.
+         */
+        sIdSuffix: string
+      ): sap.m.ComboBox;
+      /**
        * `MultiComboBox` picker configuration
        */
       // @ts-ignore
@@ -48771,6 +48935,15 @@ declare namespace sap {
          */
         aItems: string[] | sap.ui.core.Item[] | null
       ): sap.m.MultiComboBox;
+      /**
+       * Creates picker if doesn't exist yet and sync with Control items
+       */
+      syncPickerContent(
+        /**
+         * Force MultiComboBox to SuggestionPopover sync
+         */
+        bForceListSync: boolean
+      ): sap.m.Dialog | sap.m.Popover;
       /**
        * Attaches event handler `fnFunction` to the {@link #event:selectionChange selectionChange} event of this
        * `sap.m.MultiComboBox`.
@@ -49081,7 +49254,7 @@ declare namespace sap {
        * Get the reference element which the message popup should dock to
        */
       // @ts-ignore
-      getDomRefForValueStateMessage(): any;
+      getDomRefForValueStateMessage(): Element;
       /**
        * @SINCE 1.28
        * @deprecated (since 1.58) - Replaced with N-more/N-items labels, which work in all cases.
@@ -49112,7 +49285,7 @@ declare namespace sap {
       /**
        * Function returns domref which acts as reference point for the opening suggestion menu
        */
-      getPopupAnchorDomRef(): any;
+      getPopupAnchorDomRef(): Element;
       /**
        * Gets content of aggregation {@link #getTokens tokens}.
        *
@@ -49395,8 +49568,9 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.NavContainer` itself.
        *
-       * The event is fired when navigation between two pages has completed. In case of animated transitions this
-       * event is fired with some delay after the "navigate" event.
+       * The event is fired when navigation between two pages has completed (once all events to the child controls
+       * have been fired). In case of animated transitions this event is fired with some delay after the "navigate"
+       * event.
        */
       attachAfterNavigate(
         /**
@@ -49421,9 +49595,9 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.NavContainer` itself.
        *
-       * The event is fired when navigation between two pages has been triggered. The transition (if any) to the
-       * new page has not started yet. This event can be aborted by the application with preventDefault(), which
-       * means that there will be no navigation.
+       * The event is fired when navigation between two pages has been triggered (before any events to the child
+       * controls are fired). The transition (if any) to the new page has not started yet. This event can be aborted
+       * by the application with preventDefault(), which means that there will be no navigation.
        */
       attachNavigate(
         /**
@@ -50074,8 +50248,9 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.NavContainer` itself.
        *
-       * The event is fired when navigation between two pages has completed. In case of animated transitions this
-       * event is fired with some delay after the "navigate" event.
+       * The event is fired when navigation between two pages has completed (once all events to the child controls
+       * have been fired). In case of animated transitions this event is fired with some delay after the "navigate"
+       * event.
        */
       attachAfterNavigate(
         /**
@@ -50095,9 +50270,9 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.NavContainer` itself.
        *
-       * The event is fired when navigation between two pages has been triggered. The transition (if any) to the
-       * new page has not started yet. This event can be aborted by the application with preventDefault(), which
-       * means that there will be no navigation.
+       * The event is fired when navigation between two pages has been triggered (before any events to the child
+       * controls are fired). The transition (if any) to the new page has not started yet. This event can be aborted
+       * by the application with preventDefault(), which means that there will be no navigation.
        */
       attachNavigate(
         /**
@@ -51716,7 +51891,7 @@ declare namespace sap {
       /**
        * Defines to which DOM reference the Popup should be docked.
        */
-      getPopupAnchorDomRef(): any;
+      getPopupAnchorDomRef(): Element;
       /**
        * Gets current value of property {@link #getText text}.
        *
@@ -54888,6 +55063,16 @@ declare namespace sap {
        */
       getIconDensityAware(): boolean;
       /**
+       * @SINCE 1.66
+       *
+       * Gets current value of property {@link #getInverted inverted}.
+       *
+       * Determines whether the background color reflects the set `state` instead of the control's text.
+       *
+       * Default value is `false`.
+       */
+      getInverted(): boolean;
+      /**
        * Returns a metadata object for class sap.m.ObjectStatus.
        */
       // @ts-ignore
@@ -54897,9 +55082,9 @@ declare namespace sap {
        *
        * Defines the text value state.
        *
-       * Default value is `None`.
+       * Default value is `sap.ui.core.ValueState.None`.
        */
-      getState(): sap.ui.core.ValueState;
+      getState(): string;
       /**
        * Gets current value of property {@link #getText text}.
        *
@@ -54986,19 +55171,30 @@ declare namespace sap {
         bIconDensityAware: boolean
       ): sap.m.ObjectStatus;
       /**
-       * Sets a new value for property {@link #getState state}.
+       * @SINCE 1.66
        *
-       * Defines the text value state.
+       * Sets a new value for property {@link #getInverted inverted}.
+       *
+       * Determines whether the background color reflects the set `state` instead of the control's text.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
-       * Default value is `None`.
+       * Default value is `false`.
+       */
+      setInverted(
+        /**
+         * New value for property `inverted`
+         */
+        bInverted: boolean
+      ): sap.m.ObjectStatus;
+      /**
+       * Sets value for the `state` property. The default value is `ValueState.None`.
        */
       setState(
         /**
-         * New value for property `state`
+         * New value for property state. It should be valid value of enumeration `sap.ui.core.ValueState` or `sap.ui.core.IndicationColor`
          */
-        sState: sap.ui.core.ValueState
+        sValue: string
       ): sap.m.ObjectStatus;
       /**
        * Sets the text. The default value is empty/undefined.
@@ -55179,10 +55375,29 @@ declare namespace sap {
         FNMetaImpl?: Function
       ): Function;
       /**
+       * @SINCE 1.67
+       *
+       * Gets current value of property {@link #getAsyncMode asyncMode}.
+       *
+       * Defines whether the `OverflowToolbar` works in async mode.
+       *
+       * **Note:** When this property is set to `true`, the `OverflowToolbar` makes its layout recalculations
+       * asynchronously. This way it is not blocking the thread immediately after re-rendering or resizing.
+       *
+       * Default value is `false`.
+       */
+      getAsyncMode(): boolean;
+      /**
        * Returns a metadata object for class sap.m.OverflowToolbar.
        */
       // @ts-ignore
       static getMetadata(): sap.ui.base.Metadata;
+      /**
+       * @SINCE 1.67
+       *
+       * Sets the `asyncMode` property.
+       */
+      setAsyncMode(bValue: boolean): sap.m.OverflowToolbar;
     }
     /**
      * @SINCE 1.28
@@ -63111,7 +63326,7 @@ declare namespace sap {
        *
        * Getter for custom appointments sorter (if any).
        */
-      getCustomAppointmentsSorterCallback(): Function;
+      getCustomAppointmentsSorterCallback(): any;
       /**
        * @SINCE 1.48.0
        *
@@ -63584,7 +63799,7 @@ declare namespace sap {
        * their duration vertically. For example, the start time and order to the X axis won't change.
        */
       setCustomAppointmentsSorterCallback(
-        fnSorter: Function
+        fnSorter: any
       ): sap.m.PlanningCalendar;
       /**
        * @SINCE 1.48.0
@@ -63801,7 +64016,7 @@ declare namespace sap {
          * the date to set as `sap.m.PlanningCalendar` `startDate`. May be changed(adjusted) if property `startDate`
          * is adjusted. See remark about week view above.
          */
-        oStartDate: Date
+        oDate: Date
       ): sap.m.PlanningCalendar;
       /**
        * Sets the stickyHeader property.
@@ -64158,6 +64373,18 @@ declare namespace sap {
         oAppointment: sap.ui.unified.CalendarAppointment
       ): sap.m.PlanningCalendarRow;
       /**
+       * @SINCE 1.67
+       * @EXPERIMENTAL (since 1.67)
+       *
+       * Adds some headerContent to the aggregation {@link #getHeaderContent headerContent}.
+       */
+      addHeaderContent(
+        /**
+         * The headerContent to add; if empty, nothing is inserted
+         */
+        oHeaderContent: sap.ui.core.Control
+      ): sap.m.PlanningCalendarRow;
+      /**
        * Adds some intervalHeader to the aggregation {@link #getIntervalHeaders intervalHeaders}.
        */
       addIntervalHeader(
@@ -64292,6 +64519,13 @@ declare namespace sap {
        * Destroys all the appointments in the aggregation {@link #getAppointments appointments}.
        */
       destroyAppointments(): sap.m.PlanningCalendarRow;
+      /**
+       * @SINCE 1.67
+       * @EXPERIMENTAL (since 1.67)
+       *
+       * Destroys all the headerContent in the aggregation {@link #getHeaderContent headerContent}.
+       */
+      destroyHeaderContent(): sap.m.PlanningCalendarRow;
       /**
        * Destroys all the intervalHeaders in the aggregation {@link #getIntervalHeaders intervalHeaders}.
        */
@@ -64603,6 +64837,18 @@ declare namespace sap {
        */
       getEnableAppointmentsResize(): boolean;
       /**
+       * @SINCE 1.67
+       * @EXPERIMENTAL (since 1.67)
+       *
+       * Gets content of aggregation {@link #getHeaderContent headerContent}.
+       *
+       * Holds the header content of the row.
+       *
+       * **Note:** If the `headerContent` aggregation is added, then the set icon, description, title and tooltip
+       * are ignored.
+       */
+      getHeaderContent(): sap.ui.core.Control[];
+      /**
        * Gets current value of property {@link #getIcon icon}.
        *
        * Specifies the URI of an image or an icon registered in `sap.ui.core.IconPool`.
@@ -64698,6 +64944,19 @@ declare namespace sap {
         oAppointment: sap.ui.unified.CalendarAppointment
       ): number;
       /**
+       * @SINCE 1.67
+       * @EXPERIMENTAL (since 1.67)
+       *
+       * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getHeaderContent headerContent}.
+       * and returns its index if found or -1 otherwise.
+       */
+      indexOfHeaderContent(
+        /**
+         * The headerContent whose index is looked for
+         */
+        oHeaderContent: sap.ui.core.Control
+      ): number;
+      /**
        * Checks for the provided `sap.ui.unified.CalendarAppointment` in the aggregation {@link #getIntervalHeaders
        * intervalHeaders}. and returns its index if found or -1 otherwise.
        */
@@ -64730,6 +64989,24 @@ declare namespace sap {
         /**
          * The `0`-based index the appointment should be inserted at; for a negative value of `iIndex`, the appointment
          * is inserted at position 0; for a value greater than the current size of the aggregation, the appointment
+         * is inserted at the last position
+         */
+        iIndex: number
+      ): sap.m.PlanningCalendarRow;
+      /**
+       * @SINCE 1.67
+       * @EXPERIMENTAL (since 1.67)
+       *
+       * Inserts a headerContent into the aggregation {@link #getHeaderContent headerContent}.
+       */
+      insertHeaderContent(
+        /**
+         * The headerContent to insert; if empty, nothing is inserted
+         */
+        oHeaderContent: sap.ui.core.Control,
+        /**
+         * The `0`-based index the headerContent should be inserted at; for a negative value of `iIndex`, the headerContent
+         * is inserted at position 0; for a value greater than the current size of the aggregation, the headerContent
          * is inserted at the last position
          */
         iIndex: number
@@ -64773,6 +65050,15 @@ declare namespace sap {
        */
       removeAllAppointments(): sap.ui.unified.CalendarAppointment[];
       /**
+       * @SINCE 1.67
+       * @EXPERIMENTAL (since 1.67)
+       *
+       * Removes all the controls from the aggregation {@link #getHeaderContent headerContent}.
+       *
+       * Additionally, it unregisters them from the hosting UIArea.
+       */
+      removeAllHeaderContent(): sap.ui.core.Control[];
+      /**
        * Removes all the controls from the aggregation {@link #getIntervalHeaders intervalHeaders}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
@@ -64795,6 +65081,18 @@ declare namespace sap {
          */
         vAppointment: number | string | sap.ui.unified.CalendarAppointment
       ): sap.ui.unified.CalendarAppointment;
+      /**
+       * @SINCE 1.67
+       * @EXPERIMENTAL (since 1.67)
+       *
+       * Removes a headerContent from the aggregation {@link #getHeaderContent headerContent}.
+       */
+      removeHeaderContent(
+        /**
+         * The headerContent to remove or its index or id
+         */
+        vHeaderContent: number | string | sap.ui.core.Control
+      ): sap.ui.core.Control;
       /**
        * Removes a intervalHeader from the aggregation {@link #getIntervalHeaders intervalHeaders}.
        */
@@ -70254,7 +70552,7 @@ declare namespace sap {
       /**
        * Closes the ResponsivePopover.
        */
-      close(): sap.ui.core.Control;
+      close(): sap.m.ResponsivePopover;
       /**
        * Destroys the beginButton in the aggregation {@link #getBeginButton beginButton}.
        */
@@ -70611,7 +70909,7 @@ declare namespace sap {
       /**
        * Checks whether the ResponsivePopover is currently open.
        */
-      isOpen(): sap.ui.core.Control;
+      isOpen(): boolean;
       /**
        * Opens the ResponsivePopover. The ResponsivePopover is positioned relatively to the control parameter
        * on tablet or desktop and is full screen on phone. Therefore the control parameter is only used on tablet
@@ -71701,7 +71999,7 @@ declare namespace sap {
        *
        * Function returns DOM element which acts as reference point for the opening suggestion menu
        */
-      getPopupAnchorDomRef(): any;
+      getPopupAnchorDomRef(): Element;
       /**
        * @SINCE 1.16
        *
@@ -72454,6 +72752,11 @@ declare namespace sap {
        */
       getEnabled(): boolean;
       /**
+       * `SegmentedButton` must not be stretched in Form because ResizeHandler is used internally in order to
+       * manage the width of the SegmentedButton depending on the container size
+       */
+      getFormDoNotAdjustWidth(): boolean;
+      /**
        * @SINCE 1.28
        *
        * Gets content of aggregation {@link #getItems items}.
@@ -73097,9 +73400,27 @@ declare namespace sap {
        */
       getAutoAdjustWidth(): boolean;
       /**
+       * @SINCE 1.66.0
+       *
+       * Gets current value of property {@link #getEditable editable}.
+       *
+       * Determines whether the user can modify the selected item. When the property is set to `false`, the control
+       * appears as disabled but CAN still be focused.
+       *
+       * **Note:** When both `enabled` and `editable` properties are set to `false, enabled` has priority
+       * over `editable`.
+       *
+       * Default value is `true`.
+       */
+      getEditable(): boolean;
+      /**
        * Gets current value of property {@link #getEnabled enabled}.
        *
-       * Indicates whether the user can change the selection.
+       * Determines whether the user can modify the selected item. When the property is set to `false`, the control
+       * appears as disabled and CANNOT be focused.
+       *
+       * **Note:** When both `enabled` and `editable` properties are set to `false, enabled` has priority
+       * over `editable`.
        *
        * Default value is `true`.
        */
@@ -73408,9 +73729,34 @@ declare namespace sap {
         bAutoAdjustWidth: boolean
       ): sap.m.Select;
       /**
+       * @SINCE 1.66.0
+       *
+       * Sets a new value for property {@link #getEditable editable}.
+       *
+       * Determines whether the user can modify the selected item. When the property is set to `false`, the control
+       * appears as disabled but CAN still be focused.
+       *
+       * **Note:** When both `enabled` and `editable` properties are set to `false, enabled` has priority
+       * over `editable`.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `true`.
+       */
+      setEditable(
+        /**
+         * New value for property `editable`
+         */
+        bEditable: boolean
+      ): sap.m.Select;
+      /**
        * Sets a new value for property {@link #getEnabled enabled}.
        *
-       * Indicates whether the user can change the selection.
+       * Determines whether the user can modify the selected item. When the property is set to `false`, the control
+       * appears as disabled and CANNOT be focused.
+       *
+       * **Note:** When both `enabled` and `editable` properties are set to `false, enabled` has priority
+       * over `editable`.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -76731,12 +77077,23 @@ declare namespace sap {
      * The `SinglePlanningCalendar` has the following structure:
      *
      *
-     * 	 - A `PlanningCalendarHeader` at the top. It contains the `title` set from the corresponding property,
-     * 			the `SegmentedButton`, which facilitates navigation through the views, controls, passed to the `actions`
-     * 			aggregation and the navigation, assisting the user in choosing the desired time period. The views can
-     * 			be configured and passed through the `views` aggregation. A `SinglePlanningCalendarGrid`, which displays
-     * 			the appointments, set to the visual time range. An all-day appointment is an appointment which starts
-     * 			at 00:00 and ends in 00:00 on any day in the future.
+     * 	A `PlanningCalendarHeader` at the top. It contains the `title` set from the corresponding property,
+     * the `SegmentedButton`, which facilitates navigation through the views, controls, passed to the `actions`
+     * aggregation and the navigation, assisting the user in choosing the desired time period. The views, either
+     * custom or not, can be configured and passed through the `views` aggregation.
+     *
+     * To create custom views, extend the `SinglePlanningCalendarView` basic view class. It defines three methods
+     * that should be overwritten: `getEntityCount`, `getScrollEntityCount` and `calculateStartDate`
+     * 	 - `getEntityCount` - returns number of columns to be displayed
+     * 	 - `getScrollEntityCount` - used when next and previous arrows in the calendar are used. For example,
+     * 			in work week view, the `getEntityCount` returns 5 (5 columns from Monday to Friday), but when next arrow
+     * 			is selected, the control navigates 7 days ahead and `getScrollEntityCount` returns 7.
+     * 	 - `calculateStartDate` - calculates the first day displayed in the calendar based on the `startDate`
+     * 			property of the `SinglePlanningCalendar`. For example, it returns the first date of a month or a week
+     * 			to display the first 10 days of the month.
+     *
+     * A `SinglePlanningCalendarGrid`, which displays the appointments, set to the visual time range. An
+     * all-day appointment is an appointment which starts at 00:00 and ends in 00:00 on any day in the future.
      */
     class SinglePlanningCalendar extends sap.ui.core.Control {
       /**
@@ -76774,6 +77131,17 @@ declare namespace sap {
          * The appointment to add; if empty, nothing is inserted
          */
         oAppointment: sap.ui.unified.CalendarAppointment
+      ): sap.m.SinglePlanningCalendar;
+      /**
+       * @SINCE 1.66
+       *
+       * Adds some specialDate to the aggregation {@link #getSpecialDates specialDates}.
+       */
+      addSpecialDate(
+        /**
+         * The specialDate to add; if empty, nothing is inserted
+         */
+        oSpecialDate: sap.ui.unified.DateTypeRange
       ): sap.m.SinglePlanningCalendar;
       /**
        * Adds some view to the aggregation {@link #getViews views}.
@@ -76869,7 +77237,7 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
        *
-       * Fired if an appointment is selected.
+       * Fired when the selected state of an appointment is changed.
        */
       attachAppointmentSelect(
         /**
@@ -76967,6 +77335,12 @@ declare namespace sap {
        * Destroys all the appointments in the aggregation {@link #getAppointments appointments}.
        */
       destroyAppointments(): sap.m.SinglePlanningCalendar;
+      /**
+       * @SINCE 1.66
+       *
+       * Destroys all the specialDates in the aggregation {@link #getSpecialDates specialDates}.
+       */
+      destroySpecialDates(): sap.m.SinglePlanningCalendar;
       /**
        * Destroys all the views in the aggregation {@link #getViews views}.
        */
@@ -77192,9 +77566,13 @@ declare namespace sap {
          */
         mParameters?: {
           /**
-           * The selected appointment.
+           * The appointment on which the event was triggered.
            */
           appointment?: sap.ui.unified.CalendarAppointment;
+          /**
+           * All appointments with changed selected state.
+           */
+          appointments?: sap.ui.unified.CalendarAppointment[];
         }
       ): sap.m.SinglePlanningCalendar;
       /**
@@ -77323,6 +77701,16 @@ declare namespace sap {
        */
       getSelectedView(): sap.ui.core.ID;
       /**
+       * @SINCE 1.66
+       *
+       * Gets content of aggregation {@link #getSpecialDates specialDates}.
+       *
+       * Special days in the header visualized as a date range with type.
+       *
+       * **Note:** If one day is assigned to more than one type, only the first type is used.
+       */
+      getSpecialDates(): sap.ui.unified.DateTypeRange[];
+      /**
        * Gets current value of property {@link #getStartDate startDate}.
        *
        * Determines the start date of the grid, as a JavaScript date object. It is considered as a local date.
@@ -77382,6 +77770,18 @@ declare namespace sap {
         oAppointment: sap.ui.unified.CalendarAppointment
       ): number;
       /**
+       * @SINCE 1.66
+       *
+       * Checks for the provided `sap.ui.unified.DateTypeRange` in the aggregation {@link #getSpecialDates specialDates}.
+       * and returns its index if found or -1 otherwise.
+       */
+      indexOfSpecialDate(
+        /**
+         * The specialDate whose index is looked for
+         */
+        oSpecialDate: sap.ui.unified.DateTypeRange
+      ): number;
+      /**
        * Checks for the provided `sap.m.SinglePlanningCalendarView` in the aggregation {@link #getViews views}.
        * and returns its index if found or -1 otherwise.
        */
@@ -77417,6 +77817,23 @@ declare namespace sap {
         /**
          * The `0`-based index the appointment should be inserted at; for a negative value of `iIndex`, the appointment
          * is inserted at position 0; for a value greater than the current size of the aggregation, the appointment
+         * is inserted at the last position
+         */
+        iIndex: number
+      ): sap.m.SinglePlanningCalendar;
+      /**
+       * @SINCE 1.66
+       *
+       * Inserts a specialDate into the aggregation {@link #getSpecialDates specialDates}.
+       */
+      insertSpecialDate(
+        /**
+         * The specialDate to insert; if empty, nothing is inserted
+         */
+        oSpecialDate: sap.ui.unified.DateTypeRange,
+        /**
+         * The `0`-based index the specialDate should be inserted at; for a negative value of `iIndex`, the specialDate
+         * is inserted at position 0; for a value greater than the current size of the aggregation, the specialDate
          * is inserted at the last position
          */
         iIndex: number
@@ -77458,6 +77875,14 @@ declare namespace sap {
        */
       removeAllAppointments(): sap.ui.unified.CalendarAppointment[];
       /**
+       * @SINCE 1.66
+       *
+       * Removes all the controls from the aggregation {@link #getSpecialDates specialDates}.
+       *
+       * Additionally, it unregisters them from the hosting UIArea.
+       */
+      removeAllSpecialDates(): sap.ui.unified.DateTypeRange[];
+      /**
        * Removes all the controls from the aggregation {@link #getViews views}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
@@ -77472,6 +77897,17 @@ declare namespace sap {
          */
         vAppointment: number | string | sap.ui.unified.CalendarAppointment
       ): sap.ui.unified.CalendarAppointment;
+      /**
+       * @SINCE 1.66
+       *
+       * Removes a specialDate from the aggregation {@link #getSpecialDates specialDates}.
+       */
+      removeSpecialDate(
+        /**
+         * The specialDate to remove or its index or id
+         */
+        vSpecialDate: number | string | sap.ui.unified.DateTypeRange
+      ): sap.ui.unified.DateTypeRange;
       /**
        * Removes a view from the aggregation {@link #getViews views}.
        */
@@ -77687,7 +78123,7 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
        *
-       * Fired if an appointment is selected.
+       * Fired when the selected state of an appointment is changed.
        */
       attachAppointmentSelect(
         /**
@@ -81237,6 +81673,21 @@ declare namespace sap {
        */
       getTitleTextDirection(): sap.ui.core.TextDirection;
       /**
+       * @SINCE 1.67
+       *
+       * Gets current value of property {@link #getWrapping wrapping}.
+       *
+       * Defines the wrapping behavior of title and description texts.
+       *
+       * **Note:**
+       *
+       * In the desktop mode, initial rendering of the control contains 300 characters along with a button to
+       * expand and collapse the text whereas in the phone mode, the character limit is set to 100 characters.
+       *
+       * Default value is `false`.
+       */
+      getWrapping(): boolean;
+      /**
        * Sets a new value for property {@link #getActiveIcon activeIcon}.
        *
        * Defines the icon that is shown while the list item is pressed.
@@ -81404,6 +81855,28 @@ declare namespace sap {
          * New value for property `titleTextDirection`
          */
         sTitleTextDirection: sap.ui.core.TextDirection
+      ): sap.m.StandardListItem;
+      /**
+       * @SINCE 1.67
+       *
+       * Sets a new value for property {@link #getWrapping wrapping}.
+       *
+       * Defines the wrapping behavior of title and description texts.
+       *
+       * **Note:**
+       *
+       * In the desktop mode, initial rendering of the control contains 300 characters along with a button to
+       * expand and collapse the text whereas in the phone mode, the character limit is set to 100 characters.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `false`.
+       */
+      setWrapping(
+        /**
+         * New value for property `wrapping`
+         */
+        bWrapping: boolean
       ): sap.m.StandardListItem;
     }
     /**
@@ -82077,7 +82550,7 @@ declare namespace sap {
        *
        * Gets current value of property {@link #getStepMode stepMode}.
        *
-       * Defines the calculation mode for the provided `step and largerStep`.
+       * Defines the calculation mode for the provided `step` and `largerStep`.
        *
        * If the user increases/decreases the value by `largerStep`, this calculation will consider it as well.
        * For example, if the current `value` is 3, `step` is 5, `largerStep` is 5 and the user chooses PageUp,
@@ -82368,7 +82841,7 @@ declare namespace sap {
        *
        * Sets a new value for property {@link #getStepMode stepMode}.
        *
-       * Defines the calculation mode for the provided `step and largerStep`.
+       * Defines the calculation mode for the provided `step` and `largerStep`.
        *
        * If the user increases/decreases the value by `largerStep`, this calculation will consider it as well.
        * For example, if the current `value` is 3, `step` is 5, `largerStep` is 5 and the user chooses PageUp,
@@ -86106,11 +86579,17 @@ declare namespace sap {
         bRenderWhitespace: boolean
       ): sap.m.Text;
       /**
-       * Sets the text.
+       * Sets a new value for property {@link #getText text}.
+       *
+       * Determines the text to be displayed.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `empty string`.
        */
       setText(
         /**
-         * Text value.
+         * New value for property `text`
          */
         sText: string
       ): sap.m.Text;
@@ -88348,15 +88827,6 @@ declare namespace sap {
         sText: string
       ): sap.m.Title;
       /**
-       * Sets text within the title.
-       */
-      static setText(
-        /**
-         * Text that will be set for the title.
-         */
-        sText: string
-      ): sap.m.Title;
-      /**
        * Sets a new value for property {@link #getTextAlign textAlign}.
        *
        * Defines the alignment of the text within the title. **Note:** This property only has an effect if the
@@ -89480,7 +89950,7 @@ declare namespace sap {
         /**
          * The new maximal width
          */
-        nWidth: number
+        sWidth: string
       ): void;
       /**
        * Function sets the tokenizer's width in pixels
@@ -95254,11 +95724,11 @@ declare namespace sap {
         /**
          * The step to go to.
          */
-        step: sap.m.WizardStep,
+        oStep: sap.m.WizardStep,
         /**
          * Defines whether the focus should be changed to the first element.
          */
-        focusFirstStepElement: boolean
+        bFocusFirstStepElement: boolean
       ): sap.m.Wizard;
       /**
        * Checks for the provided `sap.m.WizardStep` in the aggregation {@link #getSteps steps}. and returns its
@@ -95972,7 +96442,16 @@ declare namespace sap {
      *
      * Enum for the ARIA role of {@link sap.m.Dialog} control.
      */
-    enum DialogRoleType {}
+    enum DialogRoleType {
+      /**
+       * Represents the ARIA role `alertdialog`.
+       */
+      AlertDialog,
+      /**
+       * Represents the ARIA role `dialog`.
+       */
+      Dialog
+    }
     /**
      * Enum for the type of {@link sap.m.Dialog} control.
      */
@@ -98184,7 +98663,11 @@ declare namespace sap {
 
     "sap/m/IconTab": undefined;
 
+    "sap/m/IHyphenation": undefined;
+
     "sap/m/IOverflowToolbarContent": undefined;
+
+    "sap/m/IOverflowToolbarFlexibleContent": undefined;
 
     "sap/m/IScale": undefined;
 

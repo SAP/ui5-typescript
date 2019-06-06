@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.68.0
 
 declare namespace sap {
   namespace ui {
@@ -136,32 +136,38 @@ declare namespace sap {
 
         interface GridItemLayoutDataOpts extends sap.ui.core.LayoutDataOpts {
           /**
-           * Sets the value for the CSS display:grid item property grid-column-start
+           * Sets the value for the CSS display:grid item property grid-column-start {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start
+           * MDN web docs: grid-column-start}
            */
           gridColumnStart?: sap.ui.layout.cssgrid.CSSGridLine;
 
           /**
-           * Sets the value for the CSS display:grid item property grid-column-end
+           * Sets the value for the CSS display:grid item property grid-column-end {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end
+           * MDN web docs: grid-column-end}
            */
           gridColumnEnd?: sap.ui.layout.cssgrid.CSSGridLine;
 
           /**
-           * Sets the value for the CSS display:grid item property grid-row-start
+           * Sets the value for the CSS display:grid item property grid-row-start {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start
+           * MDN web docs: grid-row-start}
            */
           gridRowStart?: sap.ui.layout.cssgrid.CSSGridLine;
 
           /**
-           * Sets the value for the CSS display:grid item property grid-row-end
+           * Sets the value for the CSS display:grid item property grid-row-end {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
+           * MDN web docs: grid-row-end}
            */
           gridRowEnd?: sap.ui.layout.cssgrid.CSSGridLine;
 
           /**
-           * Sets the value for the CSS display:grid item property grid-column
+           * Sets the value for the CSS display:grid item property grid-column {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
+           * MDN web docs: grid-column}
            */
           gridColumn?: sap.ui.layout.cssgrid.CSSGridLine;
 
           /**
-           * Sets the value for the CSS display:grid item property grid-row
+           * Sets the value for the CSS display:grid item property grid-row {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row
+           * MDN web docs: grid-row}
            */
           gridRow?: sap.ui.layout.cssgrid.CSSGridLine;
         }
@@ -1098,7 +1104,8 @@ declare namespace sap {
           /**
            * Gets current value of property {@link #getGridColumn gridColumn}.
            *
-           * Sets the value for the CSS display:grid item property grid-column
+           * Sets the value for the CSS display:grid item property grid-column {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
+           * MDN web docs: grid-column}
            *
            * Default value is `empty string`.
            */
@@ -1106,7 +1113,8 @@ declare namespace sap {
           /**
            * Gets current value of property {@link #getGridColumnEnd gridColumnEnd}.
            *
-           * Sets the value for the CSS display:grid item property grid-column-end
+           * Sets the value for the CSS display:grid item property grid-column-end {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end
+           * MDN web docs: grid-column-end}
            *
            * Default value is `empty string`.
            */
@@ -1114,7 +1122,8 @@ declare namespace sap {
           /**
            * Gets current value of property {@link #getGridColumnStart gridColumnStart}.
            *
-           * Sets the value for the CSS display:grid item property grid-column-start
+           * Sets the value for the CSS display:grid item property grid-column-start {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start
+           * MDN web docs: grid-column-start}
            *
            * Default value is `empty string`.
            */
@@ -1122,7 +1131,8 @@ declare namespace sap {
           /**
            * Gets current value of property {@link #getGridRow gridRow}.
            *
-           * Sets the value for the CSS display:grid item property grid-row
+           * Sets the value for the CSS display:grid item property grid-row {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row
+           * MDN web docs: grid-row}
            *
            * Default value is `empty string`.
            */
@@ -1130,7 +1140,8 @@ declare namespace sap {
           /**
            * Gets current value of property {@link #getGridRowEnd gridRowEnd}.
            *
-           * Sets the value for the CSS display:grid item property grid-row-end
+           * Sets the value for the CSS display:grid item property grid-row-end {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
+           * MDN web docs: grid-row-end}
            *
            * Default value is `empty string`.
            */
@@ -1138,7 +1149,8 @@ declare namespace sap {
           /**
            * Gets current value of property {@link #getGridRowStart gridRowStart}.
            *
-           * Sets the value for the CSS display:grid item property grid-row-start
+           * Sets the value for the CSS display:grid item property grid-row-start {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start
+           * MDN web docs: grid-row-start}
            *
            * Default value is `empty string`.
            */
@@ -1151,7 +1163,8 @@ declare namespace sap {
           /**
            * Sets a new value for property {@link #getGridColumn gridColumn}.
            *
-           * Sets the value for the CSS display:grid item property grid-column
+           * Sets the value for the CSS display:grid item property grid-column {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
+           * MDN web docs: grid-column}
            *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
@@ -1166,7 +1179,8 @@ declare namespace sap {
           /**
            * Sets a new value for property {@link #getGridColumnEnd gridColumnEnd}.
            *
-           * Sets the value for the CSS display:grid item property grid-column-end
+           * Sets the value for the CSS display:grid item property grid-column-end {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end
+           * MDN web docs: grid-column-end}
            *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
@@ -1181,7 +1195,8 @@ declare namespace sap {
           /**
            * Sets a new value for property {@link #getGridColumnStart gridColumnStart}.
            *
-           * Sets the value for the CSS display:grid item property grid-column-start
+           * Sets the value for the CSS display:grid item property grid-column-start {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start
+           * MDN web docs: grid-column-start}
            *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
@@ -1196,7 +1211,8 @@ declare namespace sap {
           /**
            * Sets a new value for property {@link #getGridRow gridRow}.
            *
-           * Sets the value for the CSS display:grid item property grid-row
+           * Sets the value for the CSS display:grid item property grid-row {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row
+           * MDN web docs: grid-row}
            *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
@@ -1211,7 +1227,8 @@ declare namespace sap {
           /**
            * Sets a new value for property {@link #getGridRowEnd gridRowEnd}.
            *
-           * Sets the value for the CSS display:grid item property grid-row-end
+           * Sets the value for the CSS display:grid item property grid-row-end {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
+           * MDN web docs: grid-row-end}
            *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
@@ -1226,7 +1243,8 @@ declare namespace sap {
           /**
            * Sets a new value for property {@link #getGridRowStart gridRowStart}.
            *
-           * Sets the value for the CSS display:grid item property grid-row-start
+           * Sets the value for the CSS display:grid item property grid-row-start {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start
+           * MDN web docs: grid-row-start}
            *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
@@ -2567,7 +2585,7 @@ declare namespace sap {
 
           /**
            * The content of the form is structured in the following way:
-           * 	 - Add a `Title` or `Toolbar` control to start a new group (`{@link sap.ui.layout.form.FormContainer
+           * 	 - Add a `sap.ui.core.Title` element or `Toolbar` control to start a new group (`{@link sap.ui.layout.form.FormContainer
            * 			FormContainer}`).
            * 	 - Add a `Label` control to start a new row (`{@link sap.ui.layout.form.FormElement FormElement}`).
            *
@@ -4134,6 +4152,8 @@ declare namespace sap {
         }
         /**
          * @SINCE 1.16.0
+         * @deprecated (since 1.67.0) - as `sap.ui.commons` library is deprecated and the `GridLayout` must not
+         * be used in responsive applications. Please use `ResponsiveGridLayout` or `ColumnLayout` instead.
          *
          * This `FormLayout` renders a `Form` using an HTML-table based grid. This can be a 16 column grid or an
          * 8 column grid. The grid is stable, so the alignment of the fields is the same for all screen sizes or
@@ -4846,14 +4866,14 @@ declare namespace sap {
         /**
          * @SINCE 1.16.0
          *
-         * The `SimpleForm` provides an easy-to-use API to create simple forms. Inside a `SimpleForm`, a `{@link
-         * sap.ui.layout.form.Form Form}` control is created along with its `{@link sap.ui.layout.form.FormContainer
-         * FormContainers}` and `{@link sap.ui.layout.form.FormElement FormElements}`, but the complexity in the
-         * API is not exposed to the user.
-         * 	 - A new `Title` or `Toolbar` starts a new group (`{@link sap.ui.layout.form.FormContainer FormContainer}`)
-         * 			in the form.
-         * 	 - A new `Label` starts a new row (`{@link sap.ui.layout.form.FormElement FormElement}`) in the form.
-         *
+         * The `SimpleForm` control provides an easy-to-use API to create simple forms. Inside a `SimpleForm` control,
+         * a `{@link sap.ui.layout.form.Form Form}` control is created along with its `{@link sap.ui.layout.form.FormContainer
+         * FormContainer}` elements and `{@link sap.ui.layout.form.FormElement FormElement}` elements, but the complexity
+         * in the API is not exposed to the user.
+         * 	 - A new `sap.ui.core.Title` element or `Toolbar` control starts a new group (`{@link sap.ui.layout.form.FormContainer
+         * 			FormContainer}`) in the form.
+         * 	 - A new `Label` control starts a new row (`{@link sap.ui.layout.form.FormElement FormElement}`) in
+         * 			the form.
          * 	 - All other controls will be assigned to the row (`{@link sap.ui.layout.form.FormElement FormElement}`)
          * 			that started with the last label.  Use `LayoutData` to influence the layout for special cases in
          * 			the Input/Display controls.
@@ -5054,7 +5074,7 @@ declare namespace sap {
            * Gets content of aggregation {@link #getContent content}.
            *
            * The content of the form is structured in the following way:
-           * 	 - Add a `Title` or `Toolbar` control to start a new group (`{@link sap.ui.layout.form.FormContainer
+           * 	 - Add a `sap.ui.core.Title` element or `Toolbar` control to start a new group (`{@link sap.ui.layout.form.FormContainer
            * 			FormContainer}`).
            * 	 - Add a `Label` control to start a new row (`{@link sap.ui.layout.form.FormElement FormElement}`).
            *
@@ -8140,8 +8160,12 @@ declare namespace sap {
        * The `Grid` control's width can be percentage- or pixel-based and the spacing between its columns can
        * be set to various predefined values.
        *
-       * **Note:** The visibility of the child control does not affect the horizontal space it occupies. This
-       * means that even if the control is not visible, its horizontal space will still exist, even if it is empty.
+       * **Notes:**
+       * 	 - The visibility of the child control does not affect the horizontal space it occupies, meaning that
+       * 			even if the control is not visible, its horizontal space still exists, even if it is empty.
+       * 	 -  If it gets wider, the content of the columns is designed to overflow outside of its dimensions.
+       * 			An additional `sapUiRespGridOverflowHidden` CSS class should be added to the control in order to hide
+       * 			the overflowing part of it.
        */
       class Grid extends sap.ui.core.Control {
         /**

@@ -21,7 +21,7 @@
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.68.0
 
 declare namespace sap {
   /**
@@ -41,9 +41,10 @@ declare namespace sap {
       renderMode?: sap.tnt.RenderMode;
 
       /**
-       * Specifies the fill and text color of the control. Accepts a digit as a value. You can choose from 9 predefined
-       * background and text color combinations. The color schemes are non-semantic, you can select them according
-       * to your own preferences. The default `colorScheme` is 7.
+       * Specifies the fill and text color of the control. Accepts a digit as a value. You can choose from 10
+       * predefined background and text color combinations. The color schemes are non-semantic, you can select
+       * them according to your own preferences. ColorScheme 10 is available only in Fiori 3 theme. The default
+       * `colorScheme` is 7.
        */
       colorScheme?: number;
 
@@ -292,9 +293,10 @@ declare namespace sap {
       /**
        * Gets current value of property {@link #getColorScheme colorScheme}.
        *
-       * Specifies the fill and text color of the control. Accepts a digit as a value. You can choose from 9 predefined
-       * background and text color combinations. The color schemes are non-semantic, you can select them according
-       * to your own preferences. The default `colorScheme` is 7.
+       * Specifies the fill and text color of the control. Accepts a digit as a value. You can choose from 10
+       * predefined background and text color combinations. The color schemes are non-semantic, you can select
+       * them according to your own preferences. ColorScheme 10 is available only in Fiori 3 theme. The default
+       * `colorScheme` is 7.
        *
        * Default value is `7`.
        */
@@ -349,9 +351,10 @@ declare namespace sap {
       /**
        * Sets a new value for property {@link #getColorScheme colorScheme}.
        *
-       * Specifies the fill and text color of the control. Accepts a digit as a value. You can choose from 9 predefined
-       * background and text color combinations. The color schemes are non-semantic, you can select them according
-       * to your own preferences. The default `colorScheme` is 7.
+       * Specifies the fill and text color of the control. Accepts a digit as a value. You can choose from 10
+       * predefined background and text color combinations. The color schemes are non-semantic, you can select
+       * them according to your own preferences. ColorScheme 10 is available only in Fiori 3 theme. The default
+       * `colorScheme` is 7.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
