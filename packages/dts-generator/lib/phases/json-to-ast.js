@@ -59,7 +59,7 @@ function buildNestedNamespaces(symbols, nsFQN) {
   );
 }
 
-function buildNestedItems(symbols, nsFQN, ui5kind, builder) {
+function  buildNestedItems(symbols, nsFQN, ui5kind, builder) {
   const nestedItems = getDirectDescendants(symbols, ui5kind, nsFQN);
   return _.map(nestedItems, builder);
 }
@@ -106,17 +106,7 @@ function buildFunction(ui5Method) {
     ui5Method
   );
   // Simple check to avoid having the same parameter defined twice
-  const existingParameters = {};
-  const uniqueParameters = [];
-  if (ui5Method.parameters) {
-    ui5Method.parameters.forEach(parameter => {
-      // We need to prefix the parameter with _ otherwise parameter named constructor gets ignored :)
-      if (!existingParameters["_" + parameter.name]) {
-        existingParameters["_" + parameter.name] = parameter;
-        uniqueParameters.push(parameter);
-      }
-    });
-  }
+  const uniqueParameters = _.uniqBy(ui5Method.parameters, 'name');
   const astNode = {
     kind: "FunctionDesc",
     name: ui5Method.name,

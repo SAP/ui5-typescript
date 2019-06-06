@@ -55,22 +55,14 @@ function removeBadData(json) {
  * @param json
  */
 function removeRestrictedInterface(json) {
-  const restrictedInterfaces = [];
-  json.symbols.forEach(symbol => {
-    if (symbol.kind === "interface" && symbol.visibility === "restricted") {
-      restrictedInterfaces.push(symbol.name);
-    }
-  });
-  json.symbols.forEach(symbol => {
-    if (
-      symbol.kind === "class" &&
-      symbol.implements &&
-      symbol.implements.length > 0
-    ) {
-      _.remove(
-        symbol.implements,
-        implementName => restrictedInterfaces.indexOf(implementName) != -1
-      );
+
+  const restrictedInterfaces = _(json.symbols)
+      .filter(symbol => symbol.kind === "interface" && symbol.visibility === "restricted")
+      .map((symbol) => symbol.name)
+      .value();
+  _.forEach(json.symbols, symbol => {
+    if (symbol.kind === "class" && !_.isEmpty(symbol.implements)) {
+      _.remove(symbol.implements, implementName => restrictedInterfaces.indexOf(implementName) != -1);
     }
   });
 }
