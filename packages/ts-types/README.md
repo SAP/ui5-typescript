@@ -83,6 +83,30 @@ The important things to note are:
 - `"types": ["@openui5/ts-types"]` to help the TypeScript based language service resolve the global
   type definitions from the @openui5/ts-types package.
 
+### Known Issue - IDE reload may be needed.
+
+There seems to be an [issue](https://github.com/microsoft/TypeScript/issues/32285) in the TypeScript language server
+which **may** cause the signatures from `@openui5/ts-types` to **not** get picked after the initial `npm install`
+without a **restart** of the TS-Server (Often accomplished by restarting the IDE).
+
+The simplest "workaround" is often to restart the relevant IDE.
+A more robust workaround can be achieved by adding a triple slash type directive to a file
+in the project, e.g:
+
+```javascript
+/**
+ * Strange hack to ensure ts-server will watch changes in the
+ * `node_modules/@openui5/ts-types` dir when running in VSCode.
+ * - See: https://github.com/microsoft/TypeScript/issues/32285.
+ */
+/// <reference types="@openui5/ts-types" /> #
+```
+
+Note:
+
+- This directive is only needed a **single** file, **not every** file in the project.
+- The file in which it is added must be tracked by ts-server (e.g be in the lib directory).
+
 ### UI5 Source Code
 
 There are two kinds of UI5 source code.
