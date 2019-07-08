@@ -86,10 +86,10 @@ The important things to note are:
 ### Known Issue - IDE reload may be needed.
 
 There seems to be an [issue](https://github.com/microsoft/TypeScript/issues/32285) in the TypeScript language server
-which **may** cause the signatures from `@openui5/ts-types` to **not** get picked after the initial `npm install`
-without a **restart** of the TS-Server (Often accomplished by restarting the IDE).
+which **may** cause the signatures from `@openui5/ts-types` to **not** get automatically "picked up" after the initial `npm install`
+without a **restart** of the TS-Server (accomplished by restarting the IDE).
 
-The simplest "workaround" is often to restart the relevant IDE.
+The simplest "workaround" is to just restart the relevant IDE.
 A more robust workaround can be achieved by adding a triple slash type directive to a file
 in the project, e.g:
 
