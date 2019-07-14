@@ -40,8 +40,9 @@ function addImplicitNamespaces(json) {
   });
 }
 
+// TODO: extract this to directives.
 const badData = {
-  "sap.ui.test.Opa5": true
+  // "sap.ui.test.Opa5": true
 };
 
 function removeBadData(json) {

@@ -27,6 +27,9 @@ const typeTyposMap = {
   map: "Object",
   // TODO: need to parse JSDocs types fully
   "Promise>": "Promise<any>",
+  oPromise: "Promise<any>",
+  "function[]": "Function[]",
+  "function()[]": "Function[]",
 
   // UI5 Related Stuff
   iScroll: "any",

@@ -14,6 +14,12 @@ const badInterfaces = [
   "sap.ui.core.IDScope"
 ];
 
+/**
+ * This is currently a none gentle filtering out using name rather than FullyQualifiedNames.
+ */
+const badMethods = ["createPageObjects"];
+
 module.exports = {
-  badInterfaces
+  badInterfaces,
+  badMethods
 };
