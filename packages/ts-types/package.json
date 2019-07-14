@@ -11,12 +11,12 @@
   "types": "types/sap.ui.core.d.ts",
   "openUI5Version": "1.65.1",
   "devDependencies": {
-    "@ui5/cli": "1.5.1",
+    "@ui5/cli": "1.6.0",
     "@ui5/dts-generator": "^1.65.0",
-    "fs-extra": "^8.0.0",
+    "fs-extra": "^8.1.0",
     "klaw-sync": "^6.0.0",
-    "lodash": "4.17.12",
-    "typescript": "^3.4.3"
+    "lodash": "4.17.14",
+    "typescript": "^3.5.3"
   },
   "scripts": {
     "test": "tsc && mocha \"./test/**/*spec.js\"",
