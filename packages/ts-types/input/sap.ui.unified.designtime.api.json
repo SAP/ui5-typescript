@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.65.1",
+  "version": "1.60.14",
   "symbols": [
     {
       "kind": "namespace",
@@ -6550,7 +6550,7 @@
       "visibility": "public",
       "since": "1.28.0",
       "extends": "sap.ui.core.Control",
-      "description": "renders a YearPicker with ItemNavigation This is used inside the calendar. Not for stand alone usage. As in all date-time controls, all pubic JS Date objects that are given (e.g. <code>setDate()</code>) or read (e.g. <code>getFirstRenderedDate</code>) with values which are considered as date objects in browser(local) timezone.",
+      "description": "renders a YearPicker with ItemNavigation This is used inside the calendar. Not for stand alone usage",
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
@@ -7424,7 +7424,7 @@
       "visibility": "public",
       "since": "1.30.0",
       "extends": "sap.ui.unified.Calendar",
-      "description": "<code>CalendarDateInterval</code> only visualizes the dates in a one-line interval and allows the selection of a single day.",
+      "description": "Calendar with dates displayed in one line.",
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
@@ -12286,150 +12286,6 @@
               "indexOf_invisibleText",
               "removeAll_invisibleTexts"
             ]
-          },
-          {
-            "name": "_oCPBox",
-            "singularName": "_oCPBox",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oCPBox", "destroy_oCPBox", "set_oCPBox"]
-          },
-          {
-            "name": "_oSlider",
-            "singularName": "_oSlider",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oSlider", "destroy_oSlider", "set_oSlider"]
-          },
-          {
-            "name": "_oAlphaSlider",
-            "singularName": "_oAlphaSlider",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": [
-              "get_oAlphaSlider",
-              "destroy_oAlphaSlider",
-              "set_oAlphaSlider"
-            ]
-          },
-          {
-            "name": "_oHexField",
-            "singularName": "_oHexField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oHexField", "destroy_oHexField", "set_oHexField"]
-          },
-          {
-            "name": "_oRedField",
-            "singularName": "_oRedField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oRedField", "destroy_oRedField", "set_oRedField"]
-          },
-          {
-            "name": "_oGreenField",
-            "singularName": "_oGreenField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": [
-              "get_oGreenField",
-              "destroy_oGreenField",
-              "set_oGreenField"
-            ]
-          },
-          {
-            "name": "_oBlueField",
-            "singularName": "_oBlueField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": [
-              "get_oBlueField",
-              "destroy_oBlueField",
-              "set_oBlueField"
-            ]
-          },
-          {
-            "name": "_oHueField",
-            "singularName": "_oHueField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oHueField", "destroy_oHueField", "set_oHueField"]
-          },
-          {
-            "name": "_oSatField",
-            "singularName": "_oSatField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oSatField", "destroy_oSatField", "set_oSatField"]
-          },
-          {
-            "name": "_oLitField",
-            "singularName": "_oLitField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oLitField", "destroy_oLitField", "set_oLitField"]
-          },
-          {
-            "name": "_oValField",
-            "singularName": "_oValField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oValField", "destroy_oValField", "set_oValField"]
-          },
-          {
-            "name": "_oAlphaField",
-            "singularName": "_oAlphaField",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": [
-              "get_oAlphaField",
-              "destroy_oAlphaField",
-              "set_oAlphaField"
-            ]
-          },
-          {
-            "name": "_oAlphaField2",
-            "singularName": "_oAlphaField2",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": [
-              "get_oAlphaField2",
-              "destroy_oAlphaField2",
-              "set_oAlphaField2"
-            ]
-          },
-          {
-            "name": "_oRGBorHSLRBUnifiedGroup",
-            "singularName": "_oRGBorHSLRBUnifiedGroup",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": [
-              "get_oRGBorHSLRBUnifiedGroup",
-              "destroy_oRGBorHSLRBUnifiedGroup",
-              "set_oRGBorHSLRBUnifiedGroup"
-            ]
-          },
-          {
-            "name": "_oButton",
-            "singularName": "_oButton",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": ["get_oButton", "destroy_oButton", "set_oButton"]
           }
         ],
         "events": [
@@ -14205,7 +14061,6 @@
             "methods": ["getUseSymbol", "setUseSymbol"]
           }
         ],
-        "dnd": { "draggable": true, "droppable": false },
         "designtime": "sap/ui/unified/designtime/Currency.designtime"
       },
       "constructor": {
@@ -14828,7 +14683,7 @@
             "defaultValue": null,
             "group": "Data",
             "visibility": "public",
-            "description": "The chosen files will be checked against an array of mime types. If at least one file does not fit the mime type restriction the upload is prevented. <b>Note:</b> This property is not supported by Internet Explorer & Edge. Example: mimeType [\"image/png\", \"image/jpeg\"].",
+            "description": "The chosen files will be checked against an array of mime types. If at least one file does not fit the mime type restriction the upload is prevented. This property is not supported by Internet Explorer 9. Example: mimeType [\"image/png\", \"image/jpeg\"].",
             "methods": ["getMimeType", "setMimeType"]
           },
           {
@@ -15005,36 +14860,6 @@
               "getXhrSettings",
               "destroyXhrSettings",
               "setXhrSettings"
-            ]
-          }
-        ],
-        "associations": [
-          {
-            "name": "ariaDescribedBy",
-            "singularName": "ariaDescribedBy",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..n",
-            "visibility": "public",
-            "description": "Association to controls / IDs which describe this control (see WAI-ARIA attribute aria-describedby).",
-            "methods": [
-              "getAriaDescribedBy",
-              "addAriaDescribedBy",
-              "removeAriaDescribedBy",
-              "removeAllAriaDescribedBy"
-            ]
-          },
-          {
-            "name": "ariaLabelledBy",
-            "singularName": "ariaLabelledBy",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..n",
-            "visibility": "public",
-            "description": "Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).",
-            "methods": [
-              "getAriaLabelledBy",
-              "addAriaLabelledBy",
-              "removeAriaLabelledBy",
-              "removeAllAriaLabelledBy"
             ]
           }
         ],
@@ -15683,40 +15508,6 @@
             }
           ],
           "description": "Aborts the currently running upload."
-        },
-        {
-          "name": "addAriaDescribedBy",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.unified.FileUploader",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "vAriaDescribedBy",
-              "type": "sap.ui.core.ID|sap.ui.core.Control",
-              "optional": false,
-              "description": "The ariaDescribedBy to add; if empty, nothing is inserted"
-            }
-          ],
-          "description": "Adds some ariaDescribedBy into the association {@link #getAriaDescribedBy ariaDescribedBy}."
-        },
-        {
-          "name": "addAriaLabelledBy",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.unified.FileUploader",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "vAriaLabelledBy",
-              "type": "sap.ui.core.ID|sap.ui.core.Control",
-              "optional": false,
-              "description": "The ariaLabelledBy to add; if empty, nothing is inserted"
-            }
-          ],
-          "description": "Adds some ariaLabelledBy into the association {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
           "name": "addHeaderParameter",
@@ -16626,18 +16417,6 @@
           "description": "Gets current value of property {@link #getAdditionalData additionalData}.\n\nAdditional data that is sent to the back end service. Data will be transmitted as value of a hidden input where the name is derived from the name property with suffix -data."
         },
         {
-          "name": "getAriaDescribedBy",
-          "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
-          "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy ariaDescribedBy}."
-        },
-        {
-          "name": "getAriaLabelledBy",
-          "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.ID[]" },
-          "description": "Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}."
-        },
-        {
           "name": "getButtonOnly",
           "visibility": "public",
           "returnValue": {
@@ -16765,7 +16544,7 @@
             "type": "string[]",
             "description": "Value of property <code>mimeType</code>"
           },
-          "description": "Gets current value of property {@link #getMimeType mimeType}.\n\nThe chosen files will be checked against an array of mime types. If at least one file does not fit the mime type restriction the upload is prevented. <b>Note:</b> This property is not supported by Internet Explorer & Edge. Example: mimeType [\"image/png\", \"image/jpeg\"]."
+          "description": "Gets current value of property {@link #getMimeType mimeType}.\n\nThe chosen files will be checked against an array of mime types. If at least one file does not fit the mime type restriction the upload is prevented. This property is not supported by Internet Explorer 9. Example: mimeType [\"image/png\", \"image/jpeg\"]."
         },
         {
           "name": "getMultiple",
@@ -17001,24 +16780,6 @@
           "description": "Inserts a parameter into the aggregation {@link #getParameters parameters}."
         },
         {
-          "name": "removeAllAriaDescribedBy",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.ID[]",
-            "description": "An array of the removed elements (might be empty)"
-          },
-          "description": "Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}."
-        },
-        {
-          "name": "removeAllAriaLabelledBy",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.ID[]",
-            "description": "An array of the removed elements (might be empty)"
-          },
-          "description": "Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}."
-        },
-        {
           "name": "removeAllHeaderParameters",
           "visibility": "public",
           "returnValue": {
@@ -17036,40 +16797,6 @@
             "description": "An array of the removed elements (might be empty)"
           },
           "description": "Removes all the controls from the aggregation {@link #getParameters parameters}.\n\nAdditionally, it unregisters them from the hosting UIArea."
-        },
-        {
-          "name": "removeAriaDescribedBy",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.ID",
-            "description": "The removed ariaDescribedBy or <code>null</code>"
-          },
-          "parameters": [
-            {
-              "name": "vAriaDescribedBy",
-              "type": "int|sap.ui.core.ID|sap.ui.core.Control",
-              "optional": false,
-              "description": "The ariaDescribedBy to be removed or its index or ID"
-            }
-          ],
-          "description": "Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}."
-        },
-        {
-          "name": "removeAriaLabelledBy",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.ID",
-            "description": "The removed ariaLabelledBy or <code>null</code>"
-          },
-          "parameters": [
-            {
-              "name": "vAriaLabelledBy",
-              "type": "int|sap.ui.core.ID|sap.ui.core.Control",
-              "optional": false,
-              "description": "The ariaLabelledBy to be removed or its index or ID"
-            }
-          ],
-          "description": "Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}."
         },
         {
           "name": "removeHeaderParameter",
@@ -17331,7 +17058,7 @@
               "description": "New value for property <code>mimeType</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getMimeType mimeType}.\n\nThe chosen files will be checked against an array of mime types. If at least one file does not fit the mime type restriction the upload is prevented. <b>Note:</b> This property is not supported by Internet Explorer & Edge. Example: mimeType [\"image/png\", \"image/jpeg\"].\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+          "description": "Sets a new value for property {@link #getMimeType mimeType}.\n\nThe chosen files will be checked against an array of mime types. If at least one file does not fit the mime type restriction the upload is prevented. This property is not supported by Internet Explorer 9. Example: mimeType [\"image/png\", \"image/jpeg\"].\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
         },
         {
           "name": "setMultiple",

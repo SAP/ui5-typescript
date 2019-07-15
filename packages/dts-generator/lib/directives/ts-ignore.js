@@ -49,6 +49,9 @@ const fqnToIgnore = {
   "sap.ui.layout.cssgrid.CSSGrid":
     "error TS2420: Class 'CSSGrid' incorrectly implements interface 'IGridConfigurable'." +
     "Type 'CSSGrid' is missing the following properties from type 'IGridConfigurable': getGridDomRefs, getGridLayoutConfiguration",
+  "sap.f.GridList":
+    "error TS2420: Class 'GridList' incorrectly implements interface 'IGridConfigurable'." +
+    "Type 'GridList' is missing the following properties from type 'IGridConfigurable': getGridDomRefs, getGridLayoutConfiguration",
   "sap.ui.base.Event":
     "error TS2420: Class 'Event' incorrectly implements interface 'Poolable'.",
   "sap.m.ResponsiveScale":

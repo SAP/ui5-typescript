@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.65.1",
+  "version": "1.60.14",
   "symbols": [
     {
       "kind": "namespace",
@@ -363,16 +363,6 @@
             "visibility": "public",
             "description": "Specifies if the control is in expanded or collapsed mode.",
             "methods": ["getExpanded", "setExpanded"]
-          },
-          {
-            "name": "selectedKey",
-            "type": "string",
-            "defaultValue": null,
-            "group": "Data",
-            "visibility": "public",
-            "since": "1.62.0",
-            "description": "Specifies the currently selected key.",
-            "methods": ["getSelectedKey", "setSelectedKey"]
           }
         ],
         "aggregations": [
@@ -721,16 +711,6 @@
           "description": "Gets the currently selected <code>NavigationListItem</code>."
         },
         {
-          "name": "getSelectedKey",
-          "visibility": "public",
-          "since": "1.62.0",
-          "returnValue": {
-            "type": "string",
-            "description": "Value of property <code>selectedKey</code>"
-          },
-          "description": "Gets current value of property {@link #getSelectedKey selectedKey}.\n\nSpecifies the currently selected key."
-        },
-        {
           "name": "getWidth",
           "visibility": "public",
           "returnValue": {
@@ -887,26 +867,15 @@
               "type": "string|sap.tnt.NavigationListItem",
               "optional": false,
               "description": "The control to be set as selected"
+            },
+            {
+              "name": "suppressInvalidate",
+              "type": "boolean",
+              "optional": false,
+              "description": "If true, the managed object's invalidate method is not called"
             }
           ],
           "description": "Sets the association for selectedItem. Set <code>null</code> to deselect."
-        },
-        {
-          "name": "setSelectedKey",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.tnt.NavigationList",
-            "description": "this pointer for chaining"
-          },
-          "parameters": [
-            {
-              "name": "selectedKey",
-              "type": "string",
-              "optional": false,
-              "description": "The key of the item to be selected"
-            }
-          ],
-          "description": "Sets the selected item based on a key."
         },
         {
           "name": "setWidth",
@@ -1456,16 +1425,6 @@
             "visibility": "public",
             "description": "Specifies if the control is expanded.",
             "methods": ["getExpanded", "setExpanded"]
-          },
-          {
-            "name": "selectedKey",
-            "type": "string",
-            "defaultValue": null,
-            "group": "Data",
-            "visibility": "public",
-            "since": "1.62.0",
-            "description": "Specifies the currently selected key.",
-            "methods": ["getSelectedKey", "setSelectedKey"]
           }
         ],
         "aggregations": [
@@ -1814,16 +1773,6 @@
           "description": "ID of the element which is the current target of the association {@link #getSelectedItem selectedItem}, or <code>null</code>."
         },
         {
-          "name": "getSelectedKey",
-          "visibility": "public",
-          "since": "1.62.0",
-          "returnValue": {
-            "type": "string",
-            "description": "Value of property <code>selectedKey</code>"
-          },
-          "description": "Gets current value of property {@link #getSelectedKey selectedKey}.\n\nSpecifies the currently selected key."
-        },
-        {
           "name": "setExpanded",
           "visibility": "public",
           "returnValue": {
@@ -1904,26 +1853,15 @@
               "type": "string|sap.tnt.NavigationListItem",
               "optional": false,
               "description": "The control to be set as selected"
+            },
+            {
+              "name": "suppressInvalidate",
+              "type": "boolean",
+              "optional": false,
+              "description": "If true, the managed object's invalidate method is not called"
             }
           ],
           "description": "Sets the association for selectedItem"
-        },
-        {
-          "name": "setSelectedKey",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.tnt.SideNavigation",
-            "description": "this pointer for chaining"
-          },
-          "parameters": [
-            {
-              "name": "selectedKey",
-              "type": "string",
-              "optional": false,
-              "description": "The key of the item to be selected"
-            }
-          ],
-          "description": "Sets the selected item based on a key."
         },
         {
           "name": "unbindItem",
@@ -1947,7 +1885,7 @@
       "visibility": "public",
       "since": "1.34",
       "extends": "sap.m.OverflowToolbar",
-      "description": "The ToolHeader control is a horizontal container that is most commonly used to display buttons, labels, and other various input controls. <h3>Overview</h3> The ToolHeader control is based on {@link sap.m.OverflowToolbar}. It contains clearly structured menus of commands that are available across the various apps within the same tool layout. <h3>Usage</h3> <ul> <li>If an app implements side navigation in addition to the tool header menu, the menu icon must be the first item on the left-hand side of the tool header.</li> <li>The app menu and the side navigation must not have any dependencies and must work independently.</li> </ul> <h4>Fiori 3 theme specifics</h4> In Fiori 3 Default theme the ToolHeader is with dark design unlike most of the other controls. This defines the usage of limited controls inside it, which will result in good design combination.<br/> The ToolHeader stylizes the contained controls with the Shell color parameters, to match the dark design requirement. However, that's not a dark theme.<br/><br/> Only the following controls are supported: <ul> <li>sap.m.Text</li> <li>sap.m.Title</li> <li>sap.m.ObjectStatus</li> <li>sap.ui.core.Icon</li> <li>sap.m.Button</li> <li>sap.m.MenuButton</li> <li>sap.m.Select</li> <li>sap.m.SearchField</li> <li>sap.m.IconTabHeader</li> </ul>",
+      "description": "The ToolHeader control is a horizontal container that is most commonly used to display buttons, labels, and other various input controls. <h4>Overview</h4> The ToolHeader control is based on {@link sap.m.OverflowToolbar}. It contains clearly structured menus of commands that are available across the various apps within the same tool layout. <h4>Usage</h4> <ul> <li>If an app implements side navigation in addition to the tool header menu, the menu icon must be the first item on the left-hand side of the tool header.</li> <li>The app menu and the side navigation must not have any dependencies and must work independently.</li> </ul>",
       "ui5-metamodel": true,
       "ui5-metadata": { "stereotype": "control" },
       "constructor": {

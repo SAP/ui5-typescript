@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.65.1",
+  "version": "1.60.14",
   "symbols": [
     {
       "kind": "namespace",
@@ -110,7 +110,7 @@
       "visibility": "public",
       "since": "1.34",
       "extends": "sap.ui.core.Control",
-      "description": "The BlockLayout is used to display several objects in a section-based manner. <h3>Overview</h3> The BlockLayout uses horizontal and vertical subdivisions, and full-width banners to display a set of elements. By placing pictorial and textual elements side-by-side in different blocks, you can establish a visual connection between blocks and between similar elements. <h3>Structure</h3> The BlockLayout contains BlockLayout cells. Every cell consists of a title and content. The title can be text or a link.\n\nSpecial full-width sections of the BlockLayout allow horizontal scrolling through a set of blocks.\n\nThe BlockLayout comes in five predefined types for background colors: <ul> <li>Layout only (default) - a layout scheme and no background colors</li> <li>Light - a layout scheme with light colors</li> <li>Accent - a layout scheme with 11 pre-defined color sets</li> <li>Dashboard - a layout scheme with additional borders and no background colors</li> </ul> Background colors are attached directly to the blocks of the layout.\n\n<b>Note:</b> With version 1.48 colors can be set for each individual {@link sap.ui.layout.BlockLayoutCell cell}. There are 11 pre-defined color sets, each with 4 different shades for the Belize theme and 6 different shades for the Fiori 3 theme. The main colors of the sets can be changed in Theme Designer. To change the background of a particular cell, set <code>backgroundColorSet</code> (main color) and <code>backgroundColorShade</code> (shade).\n\n<b>Note:</b> Usage of disabled, emphasized or subtle links as titles is not recommended. Dark background designs, for example Accent, are not fully supported with regards to Аccessibility when used with links as titles.\n\n<h3>Usage</h3> <h4>When to use</h4> <ul> <li>You want to create a catalogue-like page with sections of blocks.</li> <li>The BlockLayout is intended for developing administrative tools and applications.</li> </ul> <h4>When not to use</h4> <ul> <li>You want to display properties or features of one content item. Use a {@link sap.uxap.ObjectPageLayout object page} or {@link sap.f.DynamicPage dynamic page} instead.</li> </ul> <h3>Responsive Behavior</h3> <ul> <li>The breakpoints of the block layout react to the width of the control itself and not to the actual screen size.</li> <li> On small screens all blocks will wrap to a single scrollable column</li> </ul>",
+      "description": "The BlockLayout is used to display several objects in a section-based manner. <h3>Overview</h3> The BlockLayout uses horizontal and vertical subdivisions, and full-width banners to display a set of elements. By placing pictorial and textual elements side-by-side in different blocks, you can establish a visual connection between blocks and between similar elements. <h3>Structure</h3> The BlockLayout contains BlockLayout cells. Every cell consists of a title and content. The title can be text or a link.\n\nThe BlockLayout comes in five predefined types for background colors: <ul> <li>Layout only (default) - a layout scheme and no background colors</li> <li>Bright - a layout scheme with bright colors</li> <li>Accent - a layout scheme with four pre-defined color sets</li> <li>Dashboard - a layout scheme with additional borders and no background colors</li> <li>Mixed - a layout scheme with a mix of light and dark colors</li> </ul> Background colors are attached directly to the blocks of the layout.\n\nSpecial full-width sections of the BlockLayout allow horizontal scrolling through a set of blocks.\n\n<b>Note:</b> With version 1.48 colors can be set for each individual {@link sap.ui.layout.BlockLayoutCell cell}. There are 10 pre-defined color sets, each with 4 different shades. The main colors of the sets can be changed in Theme Designer. To change the background of a particular cell, set <code>backgroundColorSet</code> (main color) and <code>backgroundColorShade</code> (shade).\n\n<b>Note:</b> Usage of disabled, emphasized or subtle links as titles is not recommended. Dark background designs, for example Accent, are not fully supported with regards to Аccessibility when used with links as titles.\n\n<h3>Usage</h3> <h4>When to use</h4> <ul> <li>You want to create a catalogue-like page with sections of blocks.</li> <li>The BlockLayout is intended for developing administrative tools and applications.</li> </ul> <h4>When not to use</h4> <ul> <li>You want to display properties or features of one content item. Use a {@link sap.uxap.ObjectPageLayout object page} or {@link sap.f.DynamicPage dynamic page} instead.</li> </ul> <h3>Responsive Behavior</h3> <ul> <li>The breakpoints of the block layout react to the width of the control itself and not to the actual screen size.</li> <li> On small screens all blocks will wrap to a single scrollable column</li> </ul>",
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
@@ -820,17 +820,17 @@
           "visibility": "public",
           "returnValue": {
             "type": "sap.ui.layout.BlockLayoutCell",
-            "description": "this BlockLayoutCell reference for chaining."
+            "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "iWidth",
-              "type": "number",
+              "type": "int",
               "optional": false,
-              "description": "value."
+              "description": "New value for property <code>width</code>"
             }
           ],
-          "description": "Sets the Width."
+          "description": "Sets a new value for property {@link #getWidth width}.\n\nDefines the width of the cell. Depending on the context of the cell - whether it's in scrollable, or non scrollable row, this property is interpreted in two different ways. If the cell is placed inside a scrollable row - this property defines the width of the cell in percentages. If no value is provided - the default is 40%. If the cell is placed inside a non scrollable row - this property defines the grow factor of the cell compared to the whole row. <b>For example:</b> If you have 2 cells, each with width of 1, this means that they should be of equal size, and they need to fill the whole row. This results in 50% width for each cell. If you have 2 cells, one with width of 1, the other with width of 3, this means that the whole row width is 4, so the first cell will have a width of 25%, the second - 75%. According to the visual guidelines, it is suggested that you only use 25%, 50%, 75% or 100% cells in you applications. For example, 12,5% width is not desirable (1 cell with width 1, and another with width 7)\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>0</code>."
         }
       ]
     },
@@ -966,20 +966,6 @@
           "static": true,
           "type": "string",
           "description": "Shade D"
-        },
-        {
-          "name": "ShadeE",
-          "visibility": "public",
-          "static": true,
-          "type": "string",
-          "description": "Shade E - available only for Fiori 3 theme"
-        },
-        {
-          "name": "ShadeF",
-          "visibility": "public",
-          "static": true,
-          "type": "string",
-          "description": "Shade F - available only for Fiori 3 theme"
         }
       ]
     },
@@ -1591,29 +1577,6 @@
       ]
     },
     {
-      "kind": "namespace",
-      "name": "sap.ui.layout.BoxesPerRowConfig",
-      "basename": "BoxesPerRowConfig",
-      "resource": "sap/ui/layout/library.js",
-      "module": "sap/ui/layout/library",
-      "export": "BoxesPerRowConfig",
-      "final": true,
-      "static": true,
-      "visibility": "public",
-      "since": "1.61.0",
-      "description": "A string type that represents how many boxes per row should be displayed for each screen size. The breakpoints are for extra large (XL), large (L), medium (M) and small (S) screen sizes.\n\n<b>Note:</b> The parameters must be provided in the order <XL L M S>.",
-      "examples": [
-        { "text": "<code>XL7 L6 M4 S2</code>" },
-        { "text": "<code>XL12 L12 M12 S1</code>" }
-      ],
-      "ui5-metamodel": true,
-      "ui5-metadata": {
-        "stereotype": "datatype",
-        "basetype": "string",
-        "pattern": "^(([Xx][Ll](?:[1-9]|1[0-2]))? ?([Ll](?:[1-9]|1[0-2]))? ?([Mm](?:[1-9]|1[0-2]))? ?([Ss](?:[1-9]|1[0-2]))?)$"
-      }
-    },
-    {
       "kind": "class",
       "name": "sap.ui.layout.cssgrid.CSSGrid",
       "basename": "CSSGrid",
@@ -1624,7 +1587,10 @@
       "visibility": "public",
       "since": "1.60",
       "extends": "sap.ui.core.Control",
-      "implements": ["sap.ui.layout.cssgrid.IGridConfigurable"],
+      "implements": [
+        "{sap.ui.layout.cssgrid.IGridConfigurable}",
+        "sap.ui.layout.cssgrid.IGridConfigurable"
+      ],
       "description": "A layout control, used to create full page layouts or user interface elements.\n\n<h3>Overview</h3>\n\nA two-dimensional layout control based on the native-browser CSS display grid which can handle both columns and rows. The control can be used along with {@link sap.m.FlexBox} which is the one-dimensional alternative for layouting.\n\nWith properties it is possible to define: <ul> <li>columns, rows and their sizes in the grid</li> <li>vertical and horizontal gaps between the grid items</li> <li>the flow algorithm when new items are added in the grid</li> </ul>\n\nThe dimensions of the grid items are defined on a <code>CSSGrid</code> level. Every item can override its size by specifying how many columns and/or rows it will take in the <code>CSSGrid</code>. Every item can override its position by specifying from which column and/or row it will start. The configuration of a single item is done with {@link sap.ui.layout.cssgrid.GridItemLayoutData GridItemLayoutData}.\n\n<h3>Terminology</h3> <ul> <li>Grid - The container which has all grid settings</li> <li>Gutters - The gap between the rows and columns</li> <li>Grid areas - Items that take more than one row and/or column</li> <li>Grid cells - The items of the Grid</li> <li>Grid lines - The lines around and between the rows and columns</li> <li>Grid tracks - The space between any two lines in the grid</li> <li>\"fr\" Unit - A special grid unit (short from \"fraction\") which represents a fraction of the available space in the grid</li> <li>Implicit and Explicit grid - Explicit grid consists of rows and columns defined with <code>gridTemplateColumns</code> and <code>gridTemplateRows</code>. The grid also creates rows and columns on its own when needed. Their dimensions are defined with <code>gridAutoColumns</code> and <code>gridAutoRows</code>.</li> </ul>\n\n<h3>Structure</h3> The <code>CSSGrid</code> has the following elements: <ul> <li><code>items</code> - The items of the <code>CSSGrid</code></li> <li><code>customLayout</code> - An aggregation used to pass the <code>CSSGrid</code> configuration. Used for templating.</li> </ul>\n\n<h3>Usage</h3>\n\nFor general cases, use the <code>CSSGrid</code> properties to configure how the layout should look. For Box case (equal sized items), use <code>customLayout</code> aggregation with {@link sap.ui.layout.cssgrid.GridBoxLayout GridBoxLayout} For Grids which need different configurations based on available width, use <code>customLayout</code> aggregation with {@link sap.ui.layout.cssgrid.GridResponsiveLayout GridResponsiveLayout} To set a specific position to an item or define its dimensions in the grid, pass <code>layoutData</code> of type {@link sap.ui.layout.cssgrid.GridItemLayoutData GridItemLayoutData}\n\n<i>When to use</i> <ul> <li>If a two-dimensional layout configuration is needed (both columns and rows are defined)</li> </ul>\n\n<i>When not to use</i> <ul> <li>If the layout needs to be defined only by one dimension (either column or row, not both). Use {@link sap.m.FlexBox FlexBox} instead.</li> </ul>\n\n<h3>Responsive behavior</h3> <ul> <li>Fully configurable by the developer. It is possible to create a \"breathing\" columns layout which means columns width will grow/shrink depending on grid size.</li> <li>It is possible to pass a {@link sap.ui.layout.cssgrid.GridResponsiveLayout GridResponsiveLayout} to the <code>customLayout</code> aggregation of the <code>CSSGrid</code> and configure how it will look in different breakpoints (S, M, L, XL).</li> </ul>\n\n<h3>Current Limitations</h3> <ul> <li>No support for IE11.</li> <li>No support for Edge version 15.</li> <li>No alignment and ordering</li> <li>No Named grid areas and lines</li> </ul>",
       "ui5-metamodel": true,
       "ui5-metadata": {
@@ -1681,7 +1647,7 @@
             "defaultValue": "",
             "group": "Misc",
             "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap} It is a shorthand for gridRowGap and gridColumnGap. If some of them is set, the gridGap value will have less priority and will be overwritten.\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
+            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
             "methods": ["getGridGap", "setGridGap"]
           },
           {
@@ -1712,7 +1678,6 @@
             "methods": ["getGridAutoFlow", "setGridAutoFlow"]
           }
         ],
-        "dnd": { "draggable": false, "droppable": true },
         "aggregations": [
           {
             "name": "customLayout",
@@ -1733,7 +1698,6 @@
             "type": "sap.ui.core.Control",
             "cardinality": "0..n",
             "visibility": "public",
-            "dnd": { "draggable": true, "droppable": true },
             "description": "The items contained by the control.",
             "methods": [
               "getItems",
@@ -1879,13 +1843,31 @@
           "description": "Gets current value of property {@link #getGridColumnGap gridColumnGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap MDN web docs: grid-column-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
         },
         {
+          "name": "getGridDomRefs",
+          "visibility": "protected",
+          "returnValue": {
+            "type": "HTMLElement[]",
+            "description": "An array with the DOM elements"
+          },
+          "description": "Implements IGridConfigurable interface"
+        },
+        {
           "name": "getGridGap",
           "visibility": "public",
           "returnValue": {
             "type": "sap.ui.layout.cssgrid.CSSGridGapShortHand",
             "description": "Value of property <code>gridGap</code>"
           },
-          "description": "Gets current value of property {@link #getGridGap gridGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap} It is a shorthand for gridRowGap and gridColumnGap. If some of them is set, the gridGap value will have less priority and will be overwritten.\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
+          "description": "Gets current value of property {@link #getGridGap gridGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
+        },
+        {
+          "name": "getGridLayoutConfiguration",
+          "visibility": "protected",
+          "returnValue": {
+            "type": "sap.ui.layout.cssgrid.GridLayoutBase",
+            "description": "The grid layout"
+          },
+          "description": "Implements IGridConfigurable interface"
         },
         {
           "name": "getGridRowGap",
@@ -2105,7 +2087,7 @@
               "description": "New value for property <code>gridGap</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getGridGap gridGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap} It is a shorthand for gridRowGap and gridColumnGap. If some of them is set, the gridGap value will have less priority and will be overwritten.\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+          "description": "Sets a new value for property {@link #getGridGap gridGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
         },
         {
           "name": "setGridRowGap",
@@ -2220,653 +2202,6 @@
           "static": true,
           "type": "string",
           "description": "Insert auto-placed items by filling each row, and fill any holes in the grid."
-        }
-      ]
-    },
-    {
-      "kind": "namespace",
-      "name": "sap.ui.layout.cssgrid.CSSGridGapShortHand",
-      "basename": "CSSGridGapShortHand",
-      "resource": "sap/ui/layout/library.js",
-      "module": "sap/ui/layout/library",
-      "export": "cssgrid.CSSGridGapShortHand",
-      "final": true,
-      "static": true,
-      "visibility": "public",
-      "since": "1.60.0",
-      "description": "A string type that represents a short hand CSS grid gap.",
-      "ui5-metamodel": true,
-      "ui5-metadata": { "stereotype": "datatype", "basetype": "string" }
-    },
-    {
-      "kind": "namespace",
-      "name": "sap.ui.layout.cssgrid.CSSGridLine",
-      "basename": "CSSGridLine",
-      "resource": "sap/ui/layout/library.js",
-      "module": "sap/ui/layout/library",
-      "export": "cssgrid.CSSGridLine",
-      "final": true,
-      "static": true,
-      "visibility": "public",
-      "since": "1.60.0",
-      "description": "A string type that represents one or two grid lines. Used to define the position and size of a single grid item.\n\nValid values: auto inherit 1 span 2 span 2 / 5 span 2 / -5 5 / 7 7 / span 5 span 7 / span 5",
-      "references": [
-        "{@link https://developer.mozilla.org/en-US/docs/Glossary/Grid_lines}"
-      ],
-      "ui5-metamodel": true,
-      "ui5-metadata": {
-        "stereotype": "datatype",
-        "basetype": "string",
-        "pattern": "^(auto|inherit|((span)?(\\s)?-?[0-9]+(\\s\\/\\s(span)?(\\s)?-?[0-9]*)?)?)$"
-      }
-    },
-    {
-      "kind": "namespace",
-      "name": "sap.ui.layout.cssgrid.CSSGridTrack",
-      "basename": "CSSGridTrack",
-      "resource": "sap/ui/layout/library.js",
-      "module": "sap/ui/layout/library",
-      "export": "cssgrid.CSSGridTrack",
-      "final": true,
-      "static": true,
-      "visibility": "public",
-      "since": "1.60.0",
-      "description": "A string type that represents a grid track (the space between two grid lines)",
-      "references": [
-        "{@link https://developer.mozilla.org/en-US/docs/Glossary/Grid_tracks}"
-      ],
-      "ui5-metamodel": true,
-      "ui5-metadata": { "stereotype": "datatype", "basetype": "string" }
-    },
-    {
-      "kind": "class",
-      "name": "sap.ui.layout.cssgrid.GridBasicLayout",
-      "basename": "GridBasicLayout",
-      "resource": "sap/ui/layout/cssgrid/GridBasicLayout.js",
-      "module": "sap/ui/layout/cssgrid/GridBasicLayout",
-      "export": "",
-      "static": true,
-      "visibility": "public",
-      "since": "1.60",
-      "extends": "sap.ui.layout.cssgrid.GridLayoutBase",
-      "description": "Applies a sap.ui.layout.cssgrid.GridSettings to a provided DOM element or Control.",
-      "ui5-metamodel": true,
-      "ui5-metadata": {
-        "stereotype": "object",
-        "properties": [
-          {
-            "name": "gridTemplateColumns",
-            "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns MDN web docs: grid-template-columns}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
-            "methods": ["getGridTemplateColumns", "setGridTemplateColumns"]
-          },
-          {
-            "name": "gridTemplateRows",
-            "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows MDN web docs: grid-template-rows}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
-            "methods": ["getGridTemplateRows", "setGridTemplateRows"]
-          },
-          {
-            "name": "gridRowGap",
-            "type": "sap.ui.core.CSSSize",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap MDN web docs: grid-row-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
-            "methods": ["getGridRowGap", "setGridRowGap"]
-          },
-          {
-            "name": "gridColumnGap",
-            "type": "sap.ui.core.CSSSize",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap MDN web docs: grid-column-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
-            "methods": ["getGridColumnGap", "setGridColumnGap"]
-          },
-          {
-            "name": "gridGap",
-            "type": "sap.ui.layout.cssgrid.CSSGridGapShortHand",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
-            "methods": ["getGridGap", "setGridGap"]
-          },
-          {
-            "name": "gridAutoRows",
-            "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows MDN web docs: grid-auto-rows}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
-            "methods": ["getGridAutoRows", "setGridAutoRows"]
-          },
-          {
-            "name": "gridAutoColumns",
-            "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns MDN web docs: grid-auto-columns}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
-            "methods": ["getGridAutoColumns", "setGridAutoColumns"]
-          },
-          {
-            "name": "gridAutoFlow",
-            "type": "sap.ui.layout.cssgrid.CSSGridAutoFlow",
-            "defaultValue": "Row",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow MDN web docs: grid-auto-flow}\n\n<b>Note:</b> Not supported in IE11, Edge 15.",
-            "methods": ["getGridAutoFlow", "setGridAutoFlow"]
-          }
-        ]
-      },
-      "constructor": {
-        "visibility": "public",
-        "parameters": [
-          {
-            "name": "sId",
-            "type": "string",
-            "optional": true,
-            "description": "ID for the new control, generated automatically if no ID is given"
-          },
-          {
-            "name": "mSettings",
-            "type": "object",
-            "optional": true,
-            "description": "Initial settings for the new control"
-          }
-        ],
-        "description": "Constructor for a new GridBasicLayout.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
-      },
-      "methods": [
-        {
-          "name": "extend",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "function",
-            "description": "Created class / constructor function"
-          },
-          "parameters": [
-            {
-              "name": "sClassName",
-              "type": "string",
-              "optional": false,
-              "description": "Name of the class being created"
-            },
-            {
-              "name": "oClassInfo",
-              "type": "object",
-              "optional": true,
-              "description": "Object literal with information about the class"
-            },
-            {
-              "name": "FNMetaImpl",
-              "type": "function",
-              "optional": true,
-              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
-            }
-          ],
-          "description": "Creates a new subclass of class sap.ui.layout.cssgrid.GridBasicLayout with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.layout.cssgrid.GridLayoutBase.extend}."
-        },
-        {
-          "name": "getGridAutoColumns",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-            "description": "Value of property <code>gridAutoColumns</code>"
-          },
-          "description": "Gets current value of property {@link #getGridAutoColumns gridAutoColumns}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns MDN web docs: grid-auto-columns}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getGridAutoFlow",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.CSSGridAutoFlow",
-            "description": "Value of property <code>gridAutoFlow</code>"
-          },
-          "description": "Gets current value of property {@link #getGridAutoFlow gridAutoFlow}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow MDN web docs: grid-auto-flow}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>Row</code>."
-        },
-        {
-          "name": "getGridAutoRows",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-            "description": "Value of property <code>gridAutoRows</code>"
-          },
-          "description": "Gets current value of property {@link #getGridAutoRows gridAutoRows}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows MDN web docs: grid-auto-rows}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getGridColumnGap",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.CSSSize",
-            "description": "Value of property <code>gridColumnGap</code>"
-          },
-          "description": "Gets current value of property {@link #getGridColumnGap gridColumnGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap MDN web docs: grid-column-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getGridGap",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.CSSGridGapShortHand",
-            "description": "Value of property <code>gridGap</code>"
-          },
-          "description": "Gets current value of property {@link #getGridGap gridGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getGridRowGap",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.CSSSize",
-            "description": "Value of property <code>gridRowGap</code>"
-          },
-          "description": "Gets current value of property {@link #getGridRowGap gridRowGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap MDN web docs: grid-row-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getGridTemplateColumns",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-            "description": "Value of property <code>gridTemplateColumns</code>"
-          },
-          "description": "Gets current value of property {@link #getGridTemplateColumns gridTemplateColumns}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns MDN web docs: grid-template-columns}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getGridTemplateRows",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-            "description": "Value of property <code>gridTemplateRows</code>"
-          },
-          "description": "Gets current value of property {@link #getGridTemplateRows gridTemplateRows}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows MDN web docs: grid-template-rows}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getMetadata",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "sap.ui.base.Metadata",
-            "description": "Metadata object describing this class"
-          },
-          "description": "Returns a metadata object for class sap.ui.layout.cssgrid.GridBasicLayout."
-        },
-        {
-          "name": "setGridAutoColumns",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBasicLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sGridAutoColumns",
-              "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-              "optional": false,
-              "description": "New value for property <code>gridAutoColumns</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getGridAutoColumns gridAutoColumns}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns MDN web docs: grid-auto-columns}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "setGridAutoFlow",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBasicLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sGridAutoFlow",
-              "type": "sap.ui.layout.cssgrid.CSSGridAutoFlow",
-              "optional": false,
-              "description": "New value for property <code>gridAutoFlow</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getGridAutoFlow gridAutoFlow}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow MDN web docs: grid-auto-flow}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Row</code>."
-        },
-        {
-          "name": "setGridAutoRows",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBasicLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sGridAutoRows",
-              "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-              "optional": false,
-              "description": "New value for property <code>gridAutoRows</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getGridAutoRows gridAutoRows}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows MDN web docs: grid-auto-rows}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "setGridColumnGap",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBasicLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sGridColumnGap",
-              "type": "sap.ui.core.CSSSize",
-              "optional": false,
-              "description": "New value for property <code>gridColumnGap</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getGridColumnGap gridColumnGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap MDN web docs: grid-column-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "setGridGap",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBasicLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sGridGap",
-              "type": "sap.ui.layout.cssgrid.CSSGridGapShortHand",
-              "optional": false,
-              "description": "New value for property <code>gridGap</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getGridGap gridGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap MDN web docs: grid-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "setGridRowGap",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBasicLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sGridRowGap",
-              "type": "sap.ui.core.CSSSize",
-              "optional": false,
-              "description": "New value for property <code>gridRowGap</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getGridRowGap gridRowGap}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap MDN web docs: grid-row-gap}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "setGridTemplateColumns",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBasicLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sGridTemplateColumns",
-              "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-              "optional": false,
-              "description": "New value for property <code>gridTemplateColumns</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getGridTemplateColumns gridTemplateColumns}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns MDN web docs: grid-template-columns}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "setGridTemplateRows",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBasicLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sGridTemplateRows",
-              "type": "sap.ui.layout.cssgrid.CSSGridTrack",
-              "optional": false,
-              "description": "New value for property <code>gridTemplateRows</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getGridTemplateRows gridTemplateRows}.\n\nSets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows MDN web docs: grid-template-rows}\n\n<b>Note:</b> Not supported in IE11, Edge 15.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
-        }
-      ]
-    },
-    {
-      "kind": "class",
-      "name": "sap.ui.layout.cssgrid.GridBoxLayout",
-      "basename": "GridBoxLayout",
-      "resource": "sap/ui/layout/cssgrid/GridBoxLayout.js",
-      "module": "sap/ui/layout/cssgrid/GridBoxLayout",
-      "export": "",
-      "static": true,
-      "visibility": "public",
-      "since": "1.60",
-      "extends": "sap.ui.layout.cssgrid.GridLayoutBase",
-      "description": "Applies a sap.ui.layout.cssgrid.GridSettings to a provided DOM element or Control.",
-      "ui5-metamodel": true,
-      "ui5-metadata": {
-        "stereotype": "object",
-        "properties": [
-          {
-            "name": "boxMinWidth",
-            "type": "sap.ui.core.CSSSize",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Defines the minimum width of the Boxes",
-            "methods": ["getBoxMinWidth", "setBoxMinWidth"]
-          },
-          {
-            "name": "boxWidth",
-            "type": "sap.ui.core.CSSSize",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Defines the width of the Boxes",
-            "methods": ["getBoxWidth", "setBoxWidth"]
-          },
-          {
-            "name": "boxesPerRowConfig",
-            "type": "sap.ui.layout.BoxesPerRowConfig",
-            "defaultValue": "XL7 L6 M4 S2",
-            "group": "Behavior",
-            "visibility": "public",
-            "description": "A string type that defines number of Boxes per row for extra large, large, medium and small screens",
-            "methods": ["getBoxesPerRowConfig", "setBoxesPerRowConfig"]
-          }
-        ]
-      },
-      "constructor": {
-        "visibility": "public",
-        "parameters": [
-          {
-            "name": "sId",
-            "type": "string",
-            "optional": true,
-            "description": "ID for the new control, generated automatically if no ID is given"
-          },
-          {
-            "name": "mSettings",
-            "type": "object",
-            "optional": true,
-            "description": "Initial settings for the new control"
-          }
-        ],
-        "description": "Constructor for a new GridBoxLayout.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
-      },
-      "methods": [
-        {
-          "name": "_applySingleGridLayout",
-          "visibility": "protected",
-          "parameters": [
-            {
-              "name": "oElement",
-              "type": "sap.ui.core.Control|HTMLElement",
-              "optional": false,
-              "description": "The element or control on which to apply the display:grid styles"
-            }
-          ],
-          "description": "Apply display:grid styles to the provided HTML element or control based on the currently active GridSettings"
-        },
-        {
-          "name": "_getTemplateColumns",
-          "visibility": "protected",
-          "returnValue": {
-            "type": "string",
-            "description": "A value for gridTemplateColumns property"
-          },
-          "description": "Returns a gridTemplateColumns value based on boxWidth and boxMinWidth properties"
-        },
-        {
-          "name": "_setGridLayout",
-          "visibility": "protected",
-          "parameters": [
-            {
-              "name": "oElement",
-              "type": "HTMLElement",
-              "optional": false,
-              "description": "The element to which to apply the grid styles"
-            },
-            {
-              "name": "oGridSettings",
-              "type": "sap.ui.layout.cssgrid.GridSettings",
-              "optional": false,
-              "description": "The grid settings to apply"
-            }
-          ],
-          "description": "Sets all display:grid styles to the provided HTML element"
-        },
-        {
-          "name": "extend",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "function",
-            "description": "Created class / constructor function"
-          },
-          "parameters": [
-            {
-              "name": "sClassName",
-              "type": "string",
-              "optional": false,
-              "description": "Name of the class being created"
-            },
-            {
-              "name": "oClassInfo",
-              "type": "object",
-              "optional": true,
-              "description": "Object literal with information about the class"
-            },
-            {
-              "name": "FNMetaImpl",
-              "type": "function",
-              "optional": true,
-              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
-            }
-          ],
-          "description": "Creates a new subclass of class sap.ui.layout.cssgrid.GridBoxLayout with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.layout.cssgrid.GridLayoutBase.extend}."
-        },
-        {
-          "name": "getBoxesPerRowConfig",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.BoxesPerRowConfig",
-            "description": "Value of property <code>boxesPerRowConfig</code>"
-          },
-          "description": "Gets current value of property {@link #getBoxesPerRowConfig boxesPerRowConfig}.\n\nA string type that defines number of Boxes per row for extra large, large, medium and small screens\n\nDefault value is <code>XL7 L6 M4 S2</code>."
-        },
-        {
-          "name": "getBoxMinWidth",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.CSSSize",
-            "description": "Value of property <code>boxMinWidth</code>"
-          },
-          "description": "Gets current value of property {@link #getBoxMinWidth boxMinWidth}.\n\nDefines the minimum width of the Boxes\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getBoxWidth",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.CSSSize",
-            "description": "Value of property <code>boxWidth</code>"
-          },
-          "description": "Gets current value of property {@link #getBoxWidth boxWidth}.\n\nDefines the width of the Boxes\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "getMetadata",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "sap.ui.base.Metadata",
-            "description": "Metadata object describing this class"
-          },
-          "description": "Returns a metadata object for class sap.ui.layout.cssgrid.GridBoxLayout."
-        },
-        {
-          "name": "isResponsive",
-          "visibility": "public",
-          "returnValue": {
-            "type": "boolean",
-            "description": "If the Grid Layout is responsive."
-          }
-        },
-        {
-          "name": "setBoxesPerRowConfig",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBoxLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sBoxesPerRowConfig",
-              "type": "sap.ui.layout.BoxesPerRowConfig",
-              "optional": false,
-              "description": "New value for property <code>boxesPerRowConfig</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getBoxesPerRowConfig boxesPerRowConfig}.\n\nA string type that defines number of Boxes per row for extra large, large, medium and small screens\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>XL7 L6 M4 S2</code>."
-        },
-        {
-          "name": "setBoxMinWidth",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBoxLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sBoxMinWidth",
-              "type": "sap.ui.core.CSSSize",
-              "optional": false,
-              "description": "New value for property <code>boxMinWidth</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getBoxMinWidth boxMinWidth}.\n\nDefines the minimum width of the Boxes\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
-        },
-        {
-          "name": "setBoxWidth",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridBoxLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sBoxWidth",
-              "type": "sap.ui.core.CSSSize",
-              "optional": false,
-              "description": "New value for property <code>boxWidth</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getBoxWidth boxWidth}.\n\nDefines the width of the Boxes\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
         }
       ]
     },
@@ -3211,31 +2546,12 @@
           "parameters": [
             {
               "name": "oElement",
-              "type": "HTMLElement",
+              "type": "sap.ui.core.Control|HTMLElement",
               "optional": false,
-              "description": "The element from which to remove the grid styles"
+              "description": "The element or control from which to remove the grid styles"
             }
           ],
-          "description": "Removes all display:grid styles from the provided HTML element"
-        },
-        {
-          "name": "_setGridLayout",
-          "visibility": "protected",
-          "parameters": [
-            {
-              "name": "oElement",
-              "type": "HTMLElement",
-              "optional": false,
-              "description": "The element to which to apply the grid styles"
-            },
-            {
-              "name": "oGridSettings",
-              "type": "sap.ui.layout.cssgrid.GridSettings",
-              "optional": false,
-              "description": "The grid settings to apply"
-            }
-          ],
-          "description": "Sets all display:grid styles to the provided HTML element"
+          "description": "Removes all display:grid styles from the provided HTML element or control"
         },
         {
           "name": "applyGridLayout",
@@ -3296,14 +2612,6 @@
           "description": "Returns a metadata object for class sap.ui.layout.cssgrid.GridLayoutBase."
         },
         {
-          "name": "isGridSupportedByBrowser",
-          "visibility": "public",
-          "returnValue": {
-            "type": "boolean",
-            "description": "If native grid is supported by the browser"
-          }
-        },
-        {
           "name": "isResponsive",
           "visibility": "public",
           "returnValue": {
@@ -3342,17 +2650,6 @@
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "object",
-        "properties": [
-          {
-            "name": "containerQuery",
-            "type": "boolean",
-            "defaultValue": false,
-            "group": "Behavior",
-            "visibility": "public",
-            "description": "If set to <code>true</code>, the current range (large, medium or small) is defined by the size of the container surrounding the <code>CSSGrid</code> instead of the device screen size (media Query).",
-            "methods": ["getContainerQuery", "setContainerQuery"]
-          }
-        ],
         "aggregations": [
           {
             "name": "layout",
@@ -3625,15 +2922,6 @@
           "description": "Fires event {@link #event:layoutChange layoutChange} to attached listeners."
         },
         {
-          "name": "getContainerQuery",
-          "visibility": "public",
-          "returnValue": {
-            "type": "boolean",
-            "description": "Value of property <code>containerQuery</code>"
-          },
-          "description": "Gets current value of property {@link #getContainerQuery containerQuery}.\n\nIf set to <code>true</code>, the current range (large, medium or small) is defined by the size of the container surrounding the <code>CSSGrid</code> instead of the device screen size (media Query).\n\nDefault value is <code>false</code>."
-        },
-        {
           "name": "getLayout",
           "visibility": "public",
           "returnValue": { "type": "sap.ui.layout.cssgrid.GridSettings" },
@@ -3672,23 +2960,6 @@
             "description": "Metadata object describing this class"
           },
           "description": "Returns a metadata object for class sap.ui.layout.cssgrid.GridResponsiveLayout."
-        },
-        {
-          "name": "setContainerQuery",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.layout.cssgrid.GridResponsiveLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "bContainerQuery",
-              "type": "boolean",
-              "optional": false,
-              "description": "New value for property <code>containerQuery</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getContainerQuery containerQuery}.\n\nIf set to <code>true</code>, the current range (large, medium or small) is defined by the size of the container surrounding the <code>CSSGrid</code> instead of the device screen size (media Query).\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "setLayout",
@@ -4252,7 +3523,6 @@
             "methods": ["getSideContentPosition", "setSideContentPosition"]
           }
         ],
-        "dnd": { "draggable": false, "droppable": true },
         "aggregations": [
           {
             "name": "mainContent",
@@ -4575,18 +3845,18 @@
           "visibility": "public",
           "returnValue": {
             "type": "boolean",
-            "description": "Value of property <code>showMainContent</code>"
+            "description": "Side content visibility state"
           },
-          "description": "Gets current value of property {@link #getShowMainContent showMainContent}.\n\nDetermines whether the main content is visible or hidden.\n\nDefault value is <code>true</code>."
+          "description": "Gets the value of showMainContent property."
         },
         {
           "name": "getShowSideContent",
           "visibility": "public",
           "returnValue": {
             "type": "boolean",
-            "description": "Value of property <code>showSideContent</code>"
+            "description": "Side content visibility state"
           },
-          "description": "Gets current value of property {@link #getShowSideContent showSideContent}.\n\nDetermines whether the side content is visible or hidden.\n\nDefault value is <code>true</code>."
+          "description": "Gets the value of showSideContent property."
         },
         {
           "name": "getSideContent",
@@ -4701,24 +3971,6 @@
             }
           ],
           "description": "Inserts a sideContent into the aggregation {@link #getSideContent sideContent}."
-        },
-        {
-          "name": "isMainContentVisible",
-          "visibility": "public",
-          "returnValue": {
-            "type": "boolean",
-            "description": "Main content visibility state"
-          },
-          "description": "Checks if the main content is visible."
-        },
-        {
-          "name": "isSideContentVisible",
-          "visibility": "public",
-          "returnValue": {
-            "type": "boolean",
-            "description": "Side content visibility state"
-          },
-          "description": "Checks if the side content is visible."
         },
         {
           "name": "removeAllMainContent",
@@ -4975,7 +4227,6 @@
             "methods": ["getMinFlexSize", "setMinFlexSize"]
           }
         ],
-        "dnd": { "draggable": false, "droppable": true },
         "aggregations": [
           {
             "name": "fixContent",
@@ -8528,7 +7779,7 @@
       "visibility": "public",
       "since": "1.16.0",
       "extends": "sap.ui.core.Control",
-      "description": "The <code>SimpleForm</code> provides an easy-to-use API to create simple forms. Inside a <code>SimpleForm</code>, a <code>{@link sap.ui.layout.form.Form Form}</code> control is created along with its <code>{@link sap.ui.layout.form.FormContainer FormContainers}</code> and <code>{@link sap.ui.layout.form.FormElement FormElements}</code>, but the complexity in the API is not exposed to the user. <ul> <li>A new <code>Title</code> or <code>Toolbar</code> starts a new group (<code>{@link sap.ui.layout.form.FormContainer FormContainer}</code>) in the form.</li> <li>A new <code>Label</code> starts a new row (<code>{@link sap.ui.layout.form.FormElement FormElement}</code>) in the form.</li> <li>All other controls will be assigned to the row (<code>{@link sap.ui.layout.form.FormElement FormElement}</code>) that started with the last label.</li> </ul> Use <code>LayoutData</code> to influence the layout for special cases in the Input/Display controls.\n\n<b>Note:</b> If a more complex form is needed, use the <code>{@link sap.ui.layout.form.Form Form}</code> control instead.",
+      "description": "The <code>SimpleForm</code> provides an easy-to-use API to create simple forms. Inside a <code>SimpleForm</code>, a <code>Form</code> control is created along with its <code>FormContainers</code> and <code>FormElements</code>, but the complexity in the API is removed. <ul> <li>A new <code>Title</code> or <code>Toolbar</code> starts a new group (<code>FormContainer</code>) in the form.</li> <li>A new <code>Label</code> starts a new row (<code>FormElement</code>) in the form.</li> <li>All other controls will be assigned to the row (<code>FormElement</code>) that started with the last label.</li> </ul> Use <code>LayoutData</code> to influence the layout for special cases in the Input/Display controls.\n\n<b>Note:</b> If a more complex form is needed, use <code>Form</code> instead.",
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
@@ -8539,7 +7790,7 @@
             "defaultValue": 2,
             "group": "Appearance",
             "visibility": "public",
-            "description": "The maximum amount of groups (<code>{@link sap.ui.layout.form.FormContainer FormContainers}</code>) per row that is used before a new row is started.\n\n<b>Note:</b> If <code>{@link sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout}</code> is used as <code>layout</code>, this property is not used. Please use the properties <code>ColumnsL</code> and <code>ColumnsM</code> in this case.",
+            "description": "The maximum amount of groups (<code>FormContainers</code>) per row that is used before a new row is started.\n\n<b>Note:</b> If a <code>ResponsiveGridLayout</code> is used as a <code>layout</code>, this property is not used. Please use the properties <code>ColumnsL</code> and <code>ColumnsM</code> in this case.",
             "methods": ["getMaxContainerCols", "setMaxContainerCols"]
           },
           {
@@ -8548,7 +7799,7 @@
             "defaultValue": -1,
             "group": "Appearance",
             "visibility": "public",
-            "description": "The overall minimum width in pixels that is used for the <code>SimpleForm</code>.\n\nIf the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next group (<code>{@link sap.ui.layout.form.FormContainer FormContainer}</code>). The default value is -1, meaning that inner groups (<code>{@link sap.ui.layout.form.FormContainer FormContainers}</code>) will be stacked until <code>maxContainerCols</code> is reached, irrespective of whether a <code>width</code> is reached or the available parents width is reached.\n\n<b>Note:</b> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.",
+            "description": "The overall minimum width in pixels that is used for the <code>SimpleForm</code>.\n\nIf the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next group (<code>FormContainer</code>). The default value is -1, meaning that inner groups (<code>FormContainers</code>) will be stacked until <code>maxContainerCols</code> is reached, irrespective of whether a <code>width</code> is reached or the available parents width is reached.\n\n<b>Note:</b> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.",
             "methods": ["getMinWidth", "setMinWidth"]
           },
           {
@@ -8769,7 +8020,7 @@
             "type": "sap.ui.core.Element",
             "cardinality": "0..n",
             "visibility": "public",
-            "description": "The content of the form is structured in the following way: <ul> <li>Add a <code>Title</code> or <code>Toolbar</code> control to start a new group (<code>{@link sap.ui.layout.form.FormContainer FormContainer}</code>).</li> <li>Add a <code>Label</code> control to start a new row (<code>{@link sap.ui.layout.form.FormElement FormElement}</code>).</li> <li>Add controls as input fields, text fields or other as needed.</li> <li>Use <code>LayoutData</code> to influence the layout for special cases in the single controls. For example, if a <code>ResponsiveLayout</code> is used as a layout, the form content is weighted using weight 3 for the labels and weight 5 for the fields part. By default the label column is 192 pixels wide. If your input controls should influence their width, you can add <code>sap.ui.layout.ResponsiveFlowLayoutData</code> to them via <code>setLayoutData</code> method. Ensure that the sum of the weights in the <code>ResponsiveFlowLayoutData</code> is not more than 5, as this is the total width of the input control part of each form row.</li> </ul> Example for a row where the <code>Input</code> weight 4 and the second <code>Input</code> weight 1 (using <code>ResponsiveLayout</code>): <pre>\nnew sap.m.Label({text:\"Label\"});\nnew sap.m.Input({value:\"Weight 4\", layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:4})}),\nnew sap.m.Input({value:\"Weight 1\", layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:1})}),\n</pre>\n\nFor example, if a <code>ResponsiveGridLayout</code> is used as a layout, there are 12 cells in one row. Depending on the screen size the labels use the defined <code>labelSpan</code>. The remaining cells are used for the fields (and <code>emptySpan</code> if defined). The available cells are distributed to all fields in the row. If one field should use a fixed number of cells you can add <code>sap.ui.layout.GridData</code> to them via <code>setLayoutData</code> method. If there are additional fields in the row they will get the remaining cells. </ul> Example for a row with two <code>Input</code> controls where one uses four cells on small screens, one cell on medium screens and 2 cells on larger screens (using <code>ResponsiveGridLayout</code>): <pre>\nnew sap.m.Label({text:\"Label\"});\nnew sap.m.Input({value:\"auto size\"}),\nnew sap.m.Input({value:\"fix size\", layoutData: new sap.ui.layout.GridData({span: \"XL1 L1 M2 S4\"})}),\n</pre>\n\n<b>Warning:</b> Do not put any layout or other container controls in here. This could damage the visual layout, keyboard support and screen-reader support. Only labels, titles, toolbars and form controls are allowed. Views are also not supported. Allowed form controls implement the interface <code>sap.ui.core.IFormContent</code>.\n\nIf editable controls are used as content, the <code>editable</code> property must be set to <code>true</code>, otherwise to <code>false</code>. If the <code>editable</code> property is set incorrectly, there will be visual issues like wrong label alignment or wrong spacing between the controls.",
+            "description": "The content of the form is structured in the following way: <ul> <li>Add a <code>Title</code> or <code>Toolbar</code> control to start a new group (<code>FormContainer</code>).</li> <li>Add a <code>Label</code> control to start a new row (<code>FormElement</code>).</li> <li>Add controls as input fields, text fields or other as needed.</li> <li>Use <code>LayoutData</code> to influence the layout for special cases in the single controls. For example, if a <code>ResponsiveLayout</code> is used as a layout, the form content is weighted using weight 3 for the labels and weight 5 for the fields part. By default the label column is 192 pixels wide. If your input controls should influence their width, you can add <code>sap.ui.layout.ResponsiveFlowLayoutData</code> to them via <code>setLayoutData</code> method. Ensure that the sum of the weights in the <code>ResponsiveFlowLayoutData</code> is not more than 5, as this is the total width of the input control part of each form row.</li> </ul> Example for a row where the <code>Input</code> weight 4 and the second <code>Input</code> weight 1 (using <code>ResponsiveLayout</code>): <pre>\nnew sap.m.Label({text:\"Label\"});\nnew sap.m.Input({value:\"Weight 4\", layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:4})}),\nnew sap.m.Input({value:\"Weight 1\", layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:1})}),\n</pre>\n\nFor example, if a <code>ResponsiveGridLayout</code> is used as a layout, there are 12 cells in one row. Depending on the screen size the labels use the defined <code>labelSpan</code>. The remaining cells are used for the fields (and <code>emptySpan</code> if defined). The available cells are distributed to all fields in the row. If one field should use a fixed number of cells you can add <code>sap.ui.layout.GridData</code> to them via <code>setLayoutData</code> method. If there are additional fields in the row they will get the remaining cells. </ul> Example for a row with two <code>Input</code> controls where one uses four cells on small screens, one cell on medium screens and 2 cells on larger screens (using <code>ResponsiveGridLayout</code>): <pre>\nnew sap.m.Label({text:\"Label\"});\nnew sap.m.Input({value:\"auto size\"}),\nnew sap.m.Input({value:\"fix size\", layoutData: new sap.ui.layout.GridData({span: \"XL1 L1 M2 S4\"})}),\n</pre>\n\n<b>Warning:</b> Do not put any layout or other container controls in here. This could damage the visual layout, keyboard support and screen-reader support. Only labels, titles, toolbars and form controls are allowed. Views are also not supported. Allowed form controls implement the interface <code>sap.ui.core.IFormContent</code>.\n\nIf editable controls are used as content, the <code>editable</code> property must be set to <code>true</code>, otherwise to <code>false</code>. If the <code>editable</code> property is set incorrectly, there will be visual issues like wrong label alignment or wrong spacing between the controls.",
             "methods": [
               "getContent",
               "destroyContent",
@@ -9035,7 +8286,7 @@
           "name": "getContent",
           "visibility": "public",
           "returnValue": { "type": "sap.ui.core.Element[]" },
-          "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content of the form is structured in the following way: <ul> <li>Add a <code>Title</code> or <code>Toolbar</code> control to start a new group (<code>{@link sap.ui.layout.form.FormContainer FormContainer}</code>).</li> <li>Add a <code>Label</code> control to start a new row (<code>{@link sap.ui.layout.form.FormElement FormElement}</code>).</li> <li>Add controls as input fields, text fields or other as needed.</li> <li>Use <code>LayoutData</code> to influence the layout for special cases in the single controls. For example, if a <code>ResponsiveLayout</code> is used as a layout, the form content is weighted using weight 3 for the labels and weight 5 for the fields part. By default the label column is 192 pixels wide. If your input controls should influence their width, you can add <code>sap.ui.layout.ResponsiveFlowLayoutData</code> to them via <code>setLayoutData</code> method. Ensure that the sum of the weights in the <code>ResponsiveFlowLayoutData</code> is not more than 5, as this is the total width of the input control part of each form row.</li> </ul> Example for a row where the <code>Input</code> weight 4 and the second <code>Input</code> weight 1 (using <code>ResponsiveLayout</code>): <pre>\nnew sap.m.Label({text:\"Label\"});\nnew sap.m.Input({value:\"Weight 4\", layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:4})}),\nnew sap.m.Input({value:\"Weight 1\", layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:1})}),\n</pre>\n\nFor example, if a <code>ResponsiveGridLayout</code> is used as a layout, there are 12 cells in one row. Depending on the screen size the labels use the defined <code>labelSpan</code>. The remaining cells are used for the fields (and <code>emptySpan</code> if defined). The available cells are distributed to all fields in the row. If one field should use a fixed number of cells you can add <code>sap.ui.layout.GridData</code> to them via <code>setLayoutData</code> method. If there are additional fields in the row they will get the remaining cells. </ul> Example for a row with two <code>Input</code> controls where one uses four cells on small screens, one cell on medium screens and 2 cells on larger screens (using <code>ResponsiveGridLayout</code>): <pre>\nnew sap.m.Label({text:\"Label\"});\nnew sap.m.Input({value:\"auto size\"}),\nnew sap.m.Input({value:\"fix size\", layoutData: new sap.ui.layout.GridData({span: \"XL1 L1 M2 S4\"})}),\n</pre>\n\n<b>Warning:</b> Do not put any layout or other container controls in here. This could damage the visual layout, keyboard support and screen-reader support. Only labels, titles, toolbars and form controls are allowed. Views are also not supported. Allowed form controls implement the interface <code>sap.ui.core.IFormContent</code>.\n\nIf editable controls are used as content, the <code>editable</code> property must be set to <code>true</code>, otherwise to <code>false</code>. If the <code>editable</code> property is set incorrectly, there will be visual issues like wrong label alignment or wrong spacing between the controls."
+          "description": "Gets content of aggregation {@link #getContent content}.\n\nThe content of the form is structured in the following way: <ul> <li>Add a <code>Title</code> or <code>Toolbar</code> control to start a new group (<code>FormContainer</code>).</li> <li>Add a <code>Label</code> control to start a new row (<code>FormElement</code>).</li> <li>Add controls as input fields, text fields or other as needed.</li> <li>Use <code>LayoutData</code> to influence the layout for special cases in the single controls. For example, if a <code>ResponsiveLayout</code> is used as a layout, the form content is weighted using weight 3 for the labels and weight 5 for the fields part. By default the label column is 192 pixels wide. If your input controls should influence their width, you can add <code>sap.ui.layout.ResponsiveFlowLayoutData</code> to them via <code>setLayoutData</code> method. Ensure that the sum of the weights in the <code>ResponsiveFlowLayoutData</code> is not more than 5, as this is the total width of the input control part of each form row.</li> </ul> Example for a row where the <code>Input</code> weight 4 and the second <code>Input</code> weight 1 (using <code>ResponsiveLayout</code>): <pre>\nnew sap.m.Label({text:\"Label\"});\nnew sap.m.Input({value:\"Weight 4\", layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:4})}),\nnew sap.m.Input({value:\"Weight 1\", layoutData: new sap.ui.layout.ResponsiveFlowLayoutData({weight:1})}),\n</pre>\n\nFor example, if a <code>ResponsiveGridLayout</code> is used as a layout, there are 12 cells in one row. Depending on the screen size the labels use the defined <code>labelSpan</code>. The remaining cells are used for the fields (and <code>emptySpan</code> if defined). The available cells are distributed to all fields in the row. If one field should use a fixed number of cells you can add <code>sap.ui.layout.GridData</code> to them via <code>setLayoutData</code> method. If there are additional fields in the row they will get the remaining cells. </ul> Example for a row with two <code>Input</code> controls where one uses four cells on small screens, one cell on medium screens and 2 cells on larger screens (using <code>ResponsiveGridLayout</code>): <pre>\nnew sap.m.Label({text:\"Label\"});\nnew sap.m.Input({value:\"auto size\"}),\nnew sap.m.Input({value:\"fix size\", layoutData: new sap.ui.layout.GridData({span: \"XL1 L1 M2 S4\"})}),\n</pre>\n\n<b>Warning:</b> Do not put any layout or other container controls in here. This could damage the visual layout, keyboard support and screen-reader support. Only labels, titles, toolbars and form controls are allowed. Views are also not supported. Allowed form controls implement the interface <code>sap.ui.core.IFormContent</code>.\n\nIf editable controls are used as content, the <code>editable</code> property must be set to <code>true</code>, otherwise to <code>false</code>. If the <code>editable</code> property is set incorrectly, there will be visual issues like wrong label alignment or wrong spacing between the controls."
         },
         {
           "name": "getEditable",
@@ -9151,7 +8402,7 @@
             "type": "int",
             "description": "Value of property <code>maxContainerCols</code>"
           },
-          "description": "Gets current value of property {@link #getMaxContainerCols maxContainerCols}.\n\nThe maximum amount of groups (<code>{@link sap.ui.layout.form.FormContainer FormContainers}</code>) per row that is used before a new row is started.\n\n<b>Note:</b> If <code>{@link sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout}</code> is used as <code>layout</code>, this property is not used. Please use the properties <code>ColumnsL</code> and <code>ColumnsM</code> in this case.\n\nDefault value is <code>2</code>."
+          "description": "Gets current value of property {@link #getMaxContainerCols maxContainerCols}.\n\nThe maximum amount of groups (<code>FormContainers</code>) per row that is used before a new row is started.\n\n<b>Note:</b> If a <code>ResponsiveGridLayout</code> is used as a <code>layout</code>, this property is not used. Please use the properties <code>ColumnsL</code> and <code>ColumnsM</code> in this case.\n\nDefault value is <code>2</code>."
         },
         {
           "name": "getMetadata",
@@ -9170,7 +8421,7 @@
             "type": "int",
             "description": "Value of property <code>minWidth</code>"
           },
-          "description": "Gets current value of property {@link #getMinWidth minWidth}.\n\nThe overall minimum width in pixels that is used for the <code>SimpleForm</code>.\n\nIf the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next group (<code>{@link sap.ui.layout.form.FormContainer FormContainer}</code>). The default value is -1, meaning that inner groups (<code>{@link sap.ui.layout.form.FormContainer FormContainers}</code>) will be stacked until <code>maxContainerCols</code> is reached, irrespective of whether a <code>width</code> is reached or the available parents width is reached.\n\n<b>Note:</b> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.\n\nDefault value is <code>-1</code>."
+          "description": "Gets current value of property {@link #getMinWidth minWidth}.\n\nThe overall minimum width in pixels that is used for the <code>SimpleForm</code>.\n\nIf the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next group (<code>FormContainer</code>). The default value is -1, meaning that inner groups (<code>FormContainers</code>) will be stacked until <code>maxContainerCols</code> is reached, irrespective of whether a <code>width</code> is reached or the available parents width is reached.\n\n<b>Note:</b> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.\n\nDefault value is <code>-1</code>."
         },
         {
           "name": "getSingleContainerFullSize",
@@ -9654,7 +8905,7 @@
               "description": "New value for property <code>maxContainerCols</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getMaxContainerCols maxContainerCols}.\n\nThe maximum amount of groups (<code>{@link sap.ui.layout.form.FormContainer FormContainers}</code>) per row that is used before a new row is started.\n\n<b>Note:</b> If <code>{@link sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout}</code> is used as <code>layout</code>, this property is not used. Please use the properties <code>ColumnsL</code> and <code>ColumnsM</code> in this case.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>2</code>."
+          "description": "Sets a new value for property {@link #getMaxContainerCols maxContainerCols}.\n\nThe maximum amount of groups (<code>FormContainers</code>) per row that is used before a new row is started.\n\n<b>Note:</b> If a <code>ResponsiveGridLayout</code> is used as a <code>layout</code>, this property is not used. Please use the properties <code>ColumnsL</code> and <code>ColumnsM</code> in this case.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>2</code>."
         },
         {
           "name": "setMinWidth",
@@ -9671,7 +8922,7 @@
               "description": "New value for property <code>minWidth</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getMinWidth minWidth}.\n\nThe overall minimum width in pixels that is used for the <code>SimpleForm</code>.\n\nIf the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next group (<code>{@link sap.ui.layout.form.FormContainer FormContainer}</code>). The default value is -1, meaning that inner groups (<code>{@link sap.ui.layout.form.FormContainer FormContainers}</code>) will be stacked until <code>maxContainerCols</code> is reached, irrespective of whether a <code>width</code> is reached or the available parents width is reached.\n\n<b>Note:</b> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>-1</code>."
+          "description": "Sets a new value for property {@link #getMinWidth minWidth}.\n\nThe overall minimum width in pixels that is used for the <code>SimpleForm</code>.\n\nIf the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next group (<code>FormContainer</code>). The default value is -1, meaning that inner groups (<code>FormContainers</code>) will be stacked until <code>maxContainerCols</code> is reached, irrespective of whether a <code>width</code> is reached or the available parents width is reached.\n\n<b>Note:</b> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>-1</code>."
         },
         {
           "name": "setSingleContainerFullSize",
@@ -11658,7 +10909,6 @@
             "methods": ["getAllowWrapping", "setAllowWrapping"]
           }
         ],
-        "dnd": { "draggable": false, "droppable": true },
         "aggregations": [
           {
             "name": "content",
@@ -13985,7 +13235,6 @@
             "methods": ["getEnabled", "setEnabled"]
           }
         ],
-        "dnd": { "draggable": false, "droppable": true },
         "aggregations": [
           {
             "name": "content",

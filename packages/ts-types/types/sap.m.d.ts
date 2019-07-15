@@ -8,20 +8,18 @@
 /// <reference path="./sap.ui.codeeditor.d.ts" />
 /// <reference path="./sap.ui.commons.d.ts" />
 /// <reference path="./sap.ui.core.d.ts" />
-/// <reference path="./sap.ui.demokit.d.ts" />
-/// <reference path="./sap.ui.documentation.d.ts" />
+/// <reference path="./sap.ui.demokit.demoapps.d.ts" />
+/// <reference path="./sap.ui.documentation.sdk.d.ts" />
 /// <reference path="./sap.ui.dt.d.ts" />
 /// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.integration.d.ts" />
 /// <reference path="./sap.ui.layout.d.ts" />
-/// <reference path="./sap.ui.rta.d.ts" />
 /// <reference path="./sap.ui.suite.d.ts" />
 /// <reference path="./sap.ui.support.d.ts" />
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.60.14
 
 declare namespace sap {
   /**
@@ -301,8 +299,8 @@ declare namespace sap {
        * sap.m.MessageBox.alert("This message should appear in the alert", {
        *     title: "Alert",                                      // default
        *     onClose: null,                                       // default
-       *     styleClass: "",                                      // default
-       *     initialFocus: null,                                  // default
+       *     styleClass: ""                                       // default
+       *     initialFocus: null                                   // default
        *     textDirection: sap.ui.core.TextDirection.Inherit     // default
        * });
        * ```
@@ -384,11 +382,11 @@ declare namespace sap {
        *
        * sap.m.MessageBox.confirm("This message should appear in the confirmation", {
        *     title: "Confirm",                                    // default
-       *     onClose: null,                                       // default
-       *     styleClass: "",                                      // default
-       *     initialFocus: null,                                  // default
+       *     onClose: null                                        // default
+       *     styleClass: ""                                       // default
+       *     initialFocus: null                                   // default
        *     textDirection: sap.ui.core.TextDirection.Inherit     // default
-       * });
+       *     });
        * ```
        *
        *
@@ -470,11 +468,11 @@ declare namespace sap {
        *
        * sap.m.MessageBox.error("This message should appear in the error message box", {
        *     title: "Error",                                      // default
-       *     onClose: null,                                       // default
-       *     styleClass: "",                                      // default
-       *     initialFocus: null,                                  // default
+       *     onClose: null                                        // default
+       *     styleClass: ""                                       // default
+       *     initialFocus: null                                   // default
        *     textDirection: sap.ui.core.TextDirection.Inherit     // default
-       * });
+       *     });
        * ```
        *
        *
@@ -551,11 +549,11 @@ declare namespace sap {
        *
        * sap.m.MessageBox.information("This message should appear in the information message box", {
        *     title: "Information",                                // default
-       *     onClose: null,                                       // default
-       *     styleClass: "",                                      // default
-       *     initialFocus: null,                                  // default
+       *     onClose: null                                        // default
+       *     styleClass: ""                                       // default
+       *     initialFocus: null                                   // default
        *     textDirection: sap.ui.core.TextDirection.Inherit     // default
-       * });
+       *     });
        * ```
        *
        *
@@ -633,10 +631,10 @@ declare namespace sap {
        * sap.m.MessageBox.show("This message should appear in the message box", {
        *     icon: sap.m.MessageBox.Icon.NONE,                    // default
        *     title: "",                                           // default
-       *     actions: sap.m.MessageBox.Action.OK,                 // default
-       *     onClose: null,                                       // default
-       *     styleClass: "",                                      // default
-       *     initialFocus: null,                                  // default
+       *     actions: sap.m.MessageBox.Action.OK                  // default
+       *     onClose: null                                        // default
+       *     styleClass: ""                                       // default
+       *     initialFocus: null                                   // default
        *     textDirection: sap.ui.core.TextDirection.Inherit     // default
        * });
        * ```
@@ -721,8 +719,8 @@ declare namespace sap {
           horizontalScrolling?: boolean;
           /**
            * Added since version 1.28.0. If 'details' is set in the MessageBox, a 'Show detail' link is added. When
-           * you click the link, the text area containing 'details' information is then displayed. The initial visibility
-           * is not configurable and the details are hidden by default.
+           * you click the link, it is set to visible = false and the text area containing 'details' information is
+           * then displayed.
            */
           details?: string;
           /**
@@ -742,11 +740,11 @@ declare namespace sap {
        *
        * sap.m.MessageBox.success("This message should appear in the success message box", {
        *     title: "Success",                                    // default
-       *     onClose: null,                                       // default
-       *     styleClass: "",                                      // default
-       *     initialFocus: null,                                  // default
+       *     onClose: null                                        // default
+       *     styleClass: ""                                       // default
+       *     initialFocus: null                                   // default
        *     textDirection: sap.ui.core.TextDirection.Inherit     // default
-       * });
+       *     });
        * ```
        *
        *
@@ -823,11 +821,11 @@ declare namespace sap {
        *
        * sap.m.MessageBox.warning("This message should appear in the warning message box", {
        *     title: "Warning",                                    // default
-       *     onClose: null,                                       // default
-       *     styleClass: "",                                      // default
-       *     initialFocus: null,                                  // default
+       *     onClose: null                                        // default
+       *     styleClass: ""                                       // default
+       *     initialFocus: null                                   // default
        *     textDirection: sap.ui.core.TextDirection.Inherit     // default
-       * });
+       *     });
        * ```
        *
        *
@@ -1230,17 +1228,6 @@ declare namespace sap {
            *     {
            *         name: "anotherRoute"
            *         pattern : "anotherPattern"
-           *     },
-           *     //Will create a route for a nested component with the prefix 'componentPrefix'
-           *     {
-           *         pattern: "componentPattern",
-           *         name: "componentRoute",
-           *         target: [
-           *              {
-           *                  name: "subComponent",
-           *                  prefix: "componentPrefix"
-           *              }
-           *         ]
            *     }
            * ]
            * ```
@@ -1258,16 +1245,6 @@ declare namespace sap {
            *     //Will create a route called 'anotherRoute'
            *     anotherRoute : {
            *         pattern : "anotherPattern"
-           *     },
-           *     //Will create a route for a nested component with the prefix 'componentPrefix'
-           *     componentRoute{
-           *         pattern: "componentPattern",
-           *         target: [
-           *              {
-           *                  name: "subComponent",
-           *                  prefix: "componentPrefix"
-           *              }
-           *         ]
            *     }
            * }
            * ```
@@ -1294,18 +1271,6 @@ declare namespace sap {
            *     jsTarget : {
            *         viewType : "JS"
            *         ...
-           *     },
-           *     componentTarget: {
-           *         type: "Component",
-           *         name: "subComponent",
-           *         id: "mySubComponent",
-           *         options: {
-           *             // the Component configuration:
-           *             manifest: true
-           *             ...
-           *         },
-           *         controlId: "myRootView",
-           *         controlAggregation: "content"
            *     }
            * }
            * ```
@@ -1320,18 +1285,6 @@ declare namespace sap {
            *     jsTarget : {
            *         viewType : "JS"
            *         ...
-           *     },
-           * 	   componentTarget: {
-           *         type: "Component",
-           *         name: "subComponent",
-           *         id: "mySubComponent",
-           *         options: {
-           *             // the Component configuration:
-           *             manifest: true
-           *             ...
-           *         },
-           *         controlId: "myRootView",
-           *         controlAggregation: "content"
            *     }
            * }
            * ```
@@ -6268,2751 +6221,6 @@ declare namespace sap {
         Optimized
       }
     }
-
-    namespace upload {
-      interface UploadSetOpts extends sap.ui.core.ControlOpts {
-        /**
-         * Allowed file types for files to be uploaded.
-         * If this property is not set, any file can be uploaded.
-         */
-        fileTypes?: string[];
-
-        /**
-         * Maximum length of names of files to be uploaded.
-         * If set to `null` or `0`, any files can be uploaded, regardless of their names length.
-         */
-        maxFileNameLength?: number;
-
-        /**
-         * Size limit in megabytes for files to be uploaded.
-         * If set to `null` or `0`, files of any size can be uploaded.
-         */
-        maxFileSize?: number;
-
-        /**
-         * Allowed media types for files to be uploaded.
-         * If this property is not set, any file can be uploaded.
-         */
-        mediaTypes?: string[];
-
-        /**
-         * Defines custom text for the 'No data' text label.
-         */
-        noDataText?: string;
-
-        /**
-         * Defines custom text for the 'No data' description label.
-         */
-        noDataDescription?: string;
-
-        /**
-         * Defines whether the upload process should be triggered as soon as the file is added.
-         *  If set to `false`, no upload is triggered when a file is added.
-         */
-        instantUpload?: boolean;
-
-        /**
-         * Defines whether file icons should be displayed.
-         */
-        showIcons?: boolean;
-
-        /**
-         * Defines whether it is allowed to terminate the upload process.
-         */
-        terminationEnabled?: boolean;
-
-        /**
-         * Defines whether the upload action is allowed.
-         */
-        uploadEnabled?: boolean;
-
-        /**
-         * URL where the uploaded files will be stored.
-         */
-        uploadUrl?: string;
-
-        /**
-         * This event is fired when a new file is added to the set of items to be uploaded.
-         */
-        afterItemAdded?: Function;
-
-        /**
-         * This event is fired just before a new file is added to the set of items to be uploaded.
-         */
-        beforeItemAdded?: Function;
-
-        /**
-         * This event is fired just before the confirmation dialog for 'Remove' action is displayed.
-         */
-        beforeItemRemoved?: Function;
-
-        /**
-         * This event is fired when the edit button is clicked for an item and no other item is being edited at
-         * the same time.
-         * If there is another item that has unsaved changes, the editing of the clicked item cannot be started.
-         */
-        beforeItemEdited?: Function;
-
-        /**
-         * This event is fired right before the upload process begins.
-         */
-        beforeUploadStarts?: Function;
-
-        /**
-         * This event is fired right after the upload process is finished.
-         */
-        uploadCompleted?: Function;
-
-        /**
-         * This event is fired right before the upload is terminated.
-         */
-        beforeUploadTermination?: Function;
-
-        /**
-         * This event is fired right after the upload is terminated.
-         */
-        uploadTerminated?: Function;
-
-        /**
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file type restriction (`fileType` property).
-         *
-         * 	 - When the file type restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        fileTypeMismatch?: Function;
-
-        /**
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file name length restriction specified
-         * 			in the `maxFileNameLength` property.
-         * 	 - When the file name length restriction changes, and the file to be uploaded fails to meet the new
-         * 			restriction.
-         */
-        fileNameLengthExceeded?: Function;
-
-        /**
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file size restriction specified in
-         * 			the `maxFileSize` property.
-         * 	 - When the file size restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        fileSizeExceeded?: Function;
-
-        /**
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the media type restriction specified in
-         * 			the `mediaTypes` property.
-         * 	 - When the media type restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        mediaTypeMismatch?: Function;
-
-        /**
-         * This event is fired simultaneously with the respective event in the inner {@link sap.m.List} control.
-         */
-        selectionChanged?: Function;
-
-        /**
-         * Items representing files that have already been uploaded.
-         */
-        items?: sap.m.upload.UploadSetItem[] | sap.m.upload.UploadSetItem;
-
-        /**
-         * Items representing files yet to be uploaded.
-         */
-        incompleteItems?:
-          | sap.m.upload.UploadSetItem[]
-          | sap.m.upload.UploadSetItem;
-
-        /**
-         * Header fields to be included in the header section of an XHR request.
-         */
-        headerFields?: sap.ui.core.Item[] | sap.ui.core.Item;
-
-        /**
-         * Main toolbar of the `UploadSet` control.
-         */
-        toolbar?: sap.m.OverflowToolbar;
-
-        /**
-         * Defines the uploader to be used. If not specified, the default implementation is used.
-         */
-        uploader?: sap.m.upload.Uploader;
-      }
-
-      interface UploadSetItemOpts extends sap.ui.core.ElementOpts {
-        /**
-         * Enables or disables the remove button.
-         */
-        enabledRemove?: boolean;
-
-        /**
-         * Enables or disables the edit button.
-         */
-        enabledEdit?: boolean;
-
-        /**
-         * Specifies the name of the uploaded file.
-         */
-        fileName?: string;
-
-        /**
-         * Specifies the MIME type of the file.
-         */
-        mediaType?: string;
-
-        /**
-         * Specifies the URL where the thumbnail of the file is located. Can also be set to an SAPUI5 icon URL.
-         */
-        thumbnailUrl?: string;
-
-        /**
-         * State of the item relevant to its upload process.
-         */
-        uploadState?: sap.m.UploadState;
-
-        /**
-         * Specifies the URL where the file is located.
-         * If the application doesn't provide a value for this property, the icon and the file name are not clickable
-         * in {@link sap.m.upload.UploadSet}.
-         */
-        url?: string;
-
-        /**
-         * Shows or hides the remove button.
-         */
-        visibleRemove?: boolean;
-
-        /**
-         * Shows or hides the edit button.
-         */
-        visibleEdit?: boolean;
-
-        /**
-         * This event is fired when an open action is invoked on an item.
-         */
-        openPressed?: Function;
-
-        /**
-         * This event is fired when a remove action is invoked on an item.
-         */
-        removePressed?: Function;
-
-        /**
-         * Attributes of the item.
-         */
-        attributes?: sap.m.ObjectAttribute[] | sap.m.ObjectAttribute;
-
-        /**
-         * Markers of the item.
-         */
-        markers?: sap.m.ObjectMarker[] | sap.m.ObjectMarker;
-
-        /**
-         * Statuses of the item.
-         */
-        statuses?: sap.m.ObjectStatus[] | sap.m.ObjectStatus;
-      }
-      /**
-       * @SINCE 1.62
-       *
-       * A basic implementation for uploading and downloading one or multiple files.
-       */
-      class Uploader extends sap.ui.core.Element {
-        /**
-         * Constructor for a new Uploader.
-         *
-         * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-         * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-         * of the syntax of the settings object.
-         */
-        constructor();
-
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadAborted uploadAborted} event of this `sap.m.upload.Uploader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.Uploader` itself.
-         *
-         * The event is fired when an XHR request reports its abortion.
-         */
-        attachUploadAborted(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.Uploader` itself
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadCompleted uploadCompleted} event of this
-         * `sap.m.upload.Uploader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.Uploader` itself.
-         *
-         * The event is fired when an XHR request reports successful completion of upload process.
-         */
-        attachUploadCompleted(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.Uploader` itself
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadProgressed uploadProgressed} event of
-         * this `sap.m.upload.Uploader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.Uploader` itself.
-         *
-         * The event is fired every time an XHR request reports progress in uploading.
-         */
-        attachUploadProgressed(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.Uploader` itself
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadStarted uploadStarted} event of this `sap.m.upload.Uploader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.Uploader` itself.
-         *
-         * The event is fired just after the POST request was sent.
-         */
-        attachUploadStarted(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.Uploader` itself
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:uploadAborted uploadAborted} event of this
-         * `sap.m.upload.Uploader`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachUploadAborted(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:uploadCompleted uploadCompleted} event of
-         * this `sap.m.upload.Uploader`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachUploadCompleted(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:uploadProgressed uploadProgressed} event of
-         * this `sap.m.upload.Uploader`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachUploadProgressed(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:uploadStarted uploadStarted} event of this
-         * `sap.m.upload.Uploader`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachUploadStarted(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Creates a new subclass of class sap.m.upload.Uploader with name `sClassName` and enriches it with the
-         * information contained in `oClassInfo`.
-         *
-         * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
-         */
-        // @ts-ignore
-        static extend(
-          /**
-           * Name of the class being created
-           */
-          sClassName: string,
-          /**
-           * Object literal with information about the class
-           */
-          oClassInfo?: object,
-          /**
-           * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-           */
-          FNMetaImpl?: Function
-        ): Function;
-        /**
-         * Fires event {@link #event:uploadAborted uploadAborted} to attached listeners.
-         */
-        fireUploadAborted(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The item that is going to be deleted.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.Uploader;
-        /**
-         * Fires event {@link #event:uploadCompleted uploadCompleted} to attached listeners.
-         */
-        fireUploadCompleted(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The item that is going to be deleted.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.Uploader;
-        /**
-         * Fires event {@link #event:uploadProgressed uploadProgressed} to attached listeners.
-         */
-        fireUploadProgressed(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The item that is going to be deleted.
-             */
-            item?: sap.m.upload.UploadSetItem;
-            /**
-             * The number of bytes transferred since the beginning of the operation. This doesn't include headers and
-             * other overhead, but only the content itself
-             */
-            loaded?: number;
-            /**
-             * The total number of bytes of content that will be transferred during the operation. If the total size
-             * is unknown, this value is zero.
-             */
-            total?: number;
-          }
-        ): sap.m.upload.Uploader;
-        /**
-         * Fires event {@link #event:uploadStarted uploadStarted} to attached listeners.
-         */
-        fireUploadStarted(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The item that is going to be deleted.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.Uploader;
-        /**
-         * Gets current value of property {@link #getDownloadUrl downloadUrl}.
-         *
-         * URL where the next file is going to be download from.
-         */
-        getDownloadUrl(): string;
-        /**
-         * Returns a metadata object for class sap.m.upload.Uploader.
-         */
-        // @ts-ignore
-        static getMetadata(): sap.ui.base.Metadata;
-        /**
-         * Gets current value of property {@link #getUploadUrl uploadUrl}.
-         *
-         * URL where the next file is going to be uploaded to.
-         */
-        getUploadUrl(): string;
-        /**
-         * Sets a new value for property {@link #getDownloadUrl downloadUrl}.
-         *
-         * URL where the next file is going to be download from.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setDownloadUrl(
-          /**
-           * New value for property `downloadUrl`
-           */
-          sDownloadUrl: string
-        ): sap.m.upload.Uploader;
-        /**
-         * Sets a new value for property {@link #getUploadUrl uploadUrl}.
-         *
-         * URL where the next file is going to be uploaded to.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setUploadUrl(
-          /**
-           * New value for property `uploadUrl`
-           */
-          sUploadUrl: string
-        ): sap.m.upload.Uploader;
-        /**
-         * Attempts to terminate the process of uploading the specified file.
-         */
-        terminateItem(
-          /**
-           * Item representing the file whose ongoing upload process is to be terminated.
-           */
-          oItem: UploadSetItem
-        ): void;
-        /**
-         * Starts the process of uploading the specified file.
-         */
-        uploadItem(
-          /**
-           * Item representing the file to be uploaded.
-           */
-          oItem: UploadSetItem,
-          /**
-           * Collection of request header fields to be send along.
-           */
-          aHeaderFields: any[]
-        ): void;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadAborted uploadAborted} event of this `sap.m.upload.Uploader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.Uploader` itself.
-         *
-         * The event is fired when an XHR request reports its abortion.
-         */
-        attachUploadAborted(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.Uploader` itself
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadCompleted uploadCompleted} event of this
-         * `sap.m.upload.Uploader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.Uploader` itself.
-         *
-         * The event is fired when an XHR request reports successful completion of upload process.
-         */
-        attachUploadCompleted(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.Uploader` itself
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadProgressed uploadProgressed} event of
-         * this `sap.m.upload.Uploader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.Uploader` itself.
-         *
-         * The event is fired every time an XHR request reports progress in uploading.
-         */
-        attachUploadProgressed(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.Uploader` itself
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadStarted uploadStarted} event of this `sap.m.upload.Uploader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.Uploader` itself.
-         *
-         * The event is fired just after the POST request was sent.
-         */
-        attachUploadStarted(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.Uploader` itself
-           */
-          oListener?: object
-        ): sap.m.upload.Uploader;
-      }
-      /**
-       * @SINCE 1.62
-       *
-       * This control allows you to upload one or more files from your devices (desktop, tablet, or phone) and
-       * attach them to your application.
-       *  This control builds on the {@link sap.m.UploadCollection} control, providing better handling of headers
-       * and requests, unified behavior of instant and deferred uploads, as well as improved progress indication.
-       */
-      class UploadSet extends sap.ui.core.Control {
-        /**
-         * Constructor for a new UploadSet.
-         *
-         * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-         * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-         * of the syntax of the settings object.
-         */
-        constructor(
-          /**
-           * id for the new control, generated automatically if no id is given.
-           */
-          sId?: string,
-          /**
-           * Initial settings for the new control.
-           */
-          mSettings?: UploadSetOpts
-        );
-
-        /**
-         * Adds some headerField to the aggregation {@link #getHeaderFields headerFields}.
-         */
-        addHeaderField(
-          /**
-           * The headerField to add; if empty, nothing is inserted
-           */
-          oHeaderField: sap.ui.core.Item
-        ): sap.m.upload.UploadSet;
-        /**
-         * Adds some incompleteItem to the aggregation {@link #getIncompleteItems incompleteItems}.
-         */
-        addIncompleteItem(
-          /**
-           * The incompleteItem to add; if empty, nothing is inserted
-           */
-          oIncompleteItem: sap.m.upload.UploadSetItem
-        ): sap.m.upload.UploadSet;
-        /**
-         * Adds some item to the aggregation {@link #getItems items}.
-         */
-        addItem(
-          /**
-           * The item to add; if empty, nothing is inserted
-           */
-          oItem: sap.m.upload.UploadSetItem
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:afterItemAdded afterItemAdded} event of this
-         * `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired when a new file is added to the set of items to be uploaded.
-         */
-        attachAfterItemAdded(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeItemAdded beforeItemAdded} event of this
-         * `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired just before a new file is added to the set of items to be uploaded.
-         */
-        attachBeforeItemAdded(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeItemEdited beforeItemEdited} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired when the edit button is clicked for an item and no other item is being edited at
-         * the same time.
-         * If there is another item that has unsaved changes, the editing of the clicked item cannot be started.
-         */
-        attachBeforeItemEdited(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeItemRemoved beforeItemRemoved} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired just before the confirmation dialog for 'Remove' action is displayed.
-         */
-        attachBeforeItemRemoved(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeUploadStarts beforeUploadStarts} event
-         * of this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired right before the upload process begins.
-         */
-        attachBeforeUploadStarts(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeUploadTermination beforeUploadTermination}
-         * event of this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired right before the upload is terminated.
-         */
-        attachBeforeUploadTermination(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:fileNameLengthExceeded fileNameLengthExceeded}
-         * event of this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file name length restriction specified
-         * 			in the `maxFileNameLength` property.
-         * 	 - When the file name length restriction changes, and the file to be uploaded fails to meet the new
-         * 			restriction.
-         */
-        attachFileNameLengthExceeded(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:fileSizeExceeded fileSizeExceeded} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file size restriction specified in
-         * 			the `maxFileSize` property.
-         * 	 - When the file size restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        attachFileSizeExceeded(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:fileTypeMismatch fileTypeMismatch} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file type restriction (`fileType` property).
-         *
-         * 	 - When the file type restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        attachFileTypeMismatch(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:mediaTypeMismatch mediaTypeMismatch} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the media type restriction specified in
-         * 			the `mediaTypes` property.
-         * 	 - When the media type restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        attachMediaTypeMismatch(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:selectionChanged selectionChanged} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired simultaneously with the respective event in the inner {@link sap.m.List} control.
-         */
-        attachSelectionChanged(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadCompleted uploadCompleted} event of this
-         * `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired right after the upload process is finished.
-         */
-        attachUploadCompleted(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadTerminated uploadTerminated} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired right after the upload is terminated.
-         */
-        attachUploadTerminated(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Destroys all the headerFields in the aggregation {@link #getHeaderFields headerFields}.
-         */
-        destroyHeaderFields(): sap.m.upload.UploadSet;
-        /**
-         * Destroys all the incompleteItems in the aggregation {@link #getIncompleteItems incompleteItems}.
-         */
-        destroyIncompleteItems(): sap.m.upload.UploadSet;
-        /**
-         * Destroys all the items in the aggregation {@link #getItems items}.
-         */
-        destroyItems(): sap.m.upload.UploadSet;
-        /**
-         * Destroys the toolbar in the aggregation {@link #getToolbar toolbar}.
-         */
-        destroyToolbar(): sap.m.upload.UploadSet;
-        /**
-         * Destroys the uploader in the aggregation {@link #getUploader uploader}.
-         */
-        destroyUploader(): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:afterItemAdded afterItemAdded} event of this
-         * `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachAfterItemAdded(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:beforeItemAdded beforeItemAdded} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachBeforeItemAdded(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:beforeItemEdited beforeItemEdited} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachBeforeItemEdited(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:beforeItemRemoved beforeItemRemoved} event
-         * of this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachBeforeItemRemoved(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:beforeUploadStarts beforeUploadStarts} event
-         * of this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachBeforeUploadStarts(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:beforeUploadTermination beforeUploadTermination}
-         * event of this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachBeforeUploadTermination(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:fileNameLengthExceeded fileNameLengthExceeded}
-         * event of this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachFileNameLengthExceeded(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:fileSizeExceeded fileSizeExceeded} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachFileSizeExceeded(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:fileTypeMismatch fileTypeMismatch} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachFileTypeMismatch(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:mediaTypeMismatch mediaTypeMismatch} event
-         * of this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachMediaTypeMismatch(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:selectionChanged selectionChanged} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachSelectionChanged(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:uploadCompleted uploadCompleted} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachUploadCompleted(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:uploadTerminated uploadTerminated} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachUploadTerminated(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Creates a new subclass of class sap.m.upload.UploadSet with name `sClassName` and enriches it with the
-         * information contained in `oClassInfo`.
-         *
-         * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-         */
-        // @ts-ignore
-        static extend(
-          /**
-           * Name of the class being created
-           */
-          sClassName: string,
-          /**
-           * Object literal with information about the class
-           */
-          oClassInfo?: object,
-          /**
-           * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-           */
-          FNMetaImpl?: Function
-        ): Function;
-        /**
-         * Fires event {@link #event:afterItemAdded afterItemAdded} to attached listeners.
-         */
-        fireAfterItemAdded(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file that has just been added.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.UploadSet;
-        /**
-         * Fires event {@link #event:beforeItemAdded beforeItemAdded} to attached listeners.
-         *
-         * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-         * object.
-         */
-        fireBeforeItemAdded(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file to be added to the set of items to be uploaded.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): boolean;
-        /**
-         * Fires event {@link #event:beforeItemEdited beforeItemEdited} to attached listeners.
-         *
-         * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-         * object.
-         */
-        fireBeforeItemEdited(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The item to be edited.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): boolean;
-        /**
-         * Fires event {@link #event:beforeItemRemoved beforeItemRemoved} to attached listeners.
-         *
-         * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-         * object.
-         */
-        fireBeforeItemRemoved(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The item to be removed from the set of items to be uploaded.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): boolean;
-        /**
-         * Fires event {@link #event:beforeUploadStarts beforeUploadStarts} to attached listeners.
-         *
-         * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-         * object.
-         */
-        fireBeforeUploadStarts(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file whose upload is just about to start.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): boolean;
-        /**
-         * Fires event {@link #event:beforeUploadTermination beforeUploadTermination} to attached listeners.
-         *
-         * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-         * object.
-         */
-        fireBeforeUploadTermination(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file whose upload is about to be terminated.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): boolean;
-        /**
-         * Fires event {@link #event:fileNameLengthExceeded fileNameLengthExceeded} to attached listeners.
-         */
-        fireFileNameLengthExceeded(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file that fails to meet the file name length restriction specified in the `maxFileNameLength` property.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.UploadSet;
-        /**
-         * Fires event {@link #event:fileSizeExceeded fileSizeExceeded} to attached listeners.
-         */
-        fireFileSizeExceeded(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file that fails to meet the file size restriction specified in the `maxFileSize` property.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.UploadSet;
-        /**
-         * Fires event {@link #event:fileTypeMismatch fileTypeMismatch} to attached listeners.
-         */
-        fireFileTypeMismatch(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file that fails to meet the file type restriction specified in the `fileType` property.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.UploadSet;
-        /**
-         * Fires event {@link #event:mediaTypeMismatch mediaTypeMismatch} to attached listeners.
-         */
-        fireMediaTypeMismatch(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file that fails to meet the media type restriction specified in the `mediaTypes` property.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.UploadSet;
-        /**
-         * Fires event {@link #event:selectionChanged selectionChanged} to attached listeners.
-         */
-        fireSelectionChanged(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * Items whose selection status has just been changed.
-             */
-            items?: sap.m.upload.UploadSetItem[];
-          }
-        ): sap.m.upload.UploadSet;
-        /**
-         * Fires event {@link #event:uploadCompleted uploadCompleted} to attached listeners.
-         */
-        fireUploadCompleted(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file whose upload has just been completed.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.UploadSet;
-        /**
-         * Fires event {@link #event:uploadTerminated uploadTerminated} to attached listeners.
-         */
-        fireUploadTerminated(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: {
-            /**
-             * The file whose upload has just been terminated.
-             */
-            item?: sap.m.upload.UploadSetItem;
-          }
-        ): sap.m.upload.UploadSet;
-        /**
-         * Returns an instance of the default `sap.ui.unified.FileUploader` used for adding files using the operating
-         * system's open file dialog, so that it can be customized, for example made invisible or assigned a different
-         * icon.
-         */
-        getDefaultFileUploader(): sap.ui.unified.FileUploader;
-        /**
-         * Gets current value of property {@link #getFileTypes fileTypes}.
-         *
-         * Allowed file types for files to be uploaded.
-         * If this property is not set, any file can be uploaded.
-         */
-        getFileTypes(): string[];
-        /**
-         * Gets content of aggregation {@link #getHeaderFields headerFields}.
-         *
-         * Header fields to be included in the header section of an XHR request.
-         */
-        getHeaderFields(): sap.ui.core.Item[];
-        /**
-         * Gets content of aggregation {@link #getIncompleteItems incompleteItems}.
-         *
-         * Items representing files yet to be uploaded.
-         */
-        getIncompleteItems(): sap.m.upload.UploadSetItem[];
-        /**
-         * Gets current value of property {@link #getInstantUpload instantUpload}.
-         *
-         * Defines whether the upload process should be triggered as soon as the file is added.
-         *  If set to `false`, no upload is triggered when a file is added.
-         *
-         * Default value is `true`.
-         */
-        getInstantUpload(): boolean;
-        /**
-         * Gets content of aggregation {@link #getItems items}.
-         *
-         * Items representing files that have already been uploaded.
-         */
-        getItems(): sap.m.upload.UploadSetItem[];
-        /**
-         * Provides access to the instance of the inner {@link sap.m.List} control, so that it can be customized.
-         */
-        getList(): List;
-        /**
-         * Gets current value of property {@link #getMaxFileNameLength maxFileNameLength}.
-         *
-         * Maximum length of names of files to be uploaded.
-         * If set to `null` or `0`, any files can be uploaded, regardless of their names length.
-         */
-        getMaxFileNameLength(): number;
-        /**
-         * Gets current value of property {@link #getMaxFileSize maxFileSize}.
-         *
-         * Size limit in megabytes for files to be uploaded.
-         * If set to `null` or `0`, files of any size can be uploaded.
-         */
-        getMaxFileSize(): number;
-        /**
-         * Gets current value of property {@link #getMediaTypes mediaTypes}.
-         *
-         * Allowed media types for files to be uploaded.
-         * If this property is not set, any file can be uploaded.
-         */
-        getMediaTypes(): string[];
-        /**
-         * Returns a metadata object for class sap.m.upload.UploadSet.
-         */
-        // @ts-ignore
-        static getMetadata(): sap.ui.base.Metadata;
-        /**
-         * Gets current value of property {@link #getNoDataDescription noDataDescription}.
-         *
-         * Defines custom text for the 'No data' description label.
-         */
-        getNoDataDescription(): string;
-        /**
-         * Gets current value of property {@link #getNoDataText noDataText}.
-         *
-         * Defines custom text for the 'No data' text label.
-         */
-        getNoDataText(): string;
-        /**
-         * Gets current value of property {@link #getShowIcons showIcons}.
-         *
-         * Defines whether file icons should be displayed.
-         *
-         * Default value is `true`.
-         */
-        getShowIcons(): boolean;
-        /**
-         * Gets current value of property {@link #getTerminationEnabled terminationEnabled}.
-         *
-         * Defines whether it is allowed to terminate the upload process.
-         *
-         * Default value is `true`.
-         */
-        getTerminationEnabled(): boolean;
-        /**
-         * Gets content of aggregation {@link #getToolbar toolbar}.
-         *
-         * Main toolbar of the `UploadSet` control.
-         */
-        getToolbar(): sap.m.OverflowToolbar;
-        /**
-         * Gets current value of property {@link #getUploadEnabled uploadEnabled}.
-         *
-         * Defines whether the upload action is allowed.
-         *
-         * Default value is `true`.
-         */
-        getUploadEnabled(): boolean;
-        /**
-         * Gets content of aggregation {@link #getUploader uploader}.
-         *
-         * Defines the uploader to be used. If not specified, the default implementation is used.
-         */
-        getUploader(): sap.m.upload.Uploader;
-        /**
-         * Gets current value of property {@link #getUploadUrl uploadUrl}.
-         *
-         * URL where the uploaded files will be stored.
-         */
-        getUploadUrl(): string;
-        /**
-         * Checks for the provided `sap.ui.core.Item` in the aggregation {@link #getHeaderFields headerFields}.
-         * and returns its index if found or -1 otherwise.
-         */
-        indexOfHeaderField(
-          /**
-           * The headerField whose index is looked for
-           */
-          oHeaderField: sap.ui.core.Item
-        ): number;
-        /**
-         * Checks for the provided `sap.m.upload.UploadSetItem` in the aggregation {@link #getIncompleteItems incompleteItems}.
-         * and returns its index if found or -1 otherwise.
-         */
-        indexOfIncompleteItem(
-          /**
-           * The incompleteItem whose index is looked for
-           */
-          oIncompleteItem: sap.m.upload.UploadSetItem
-        ): number;
-        /**
-         * Checks for the provided `sap.m.upload.UploadSetItem` in the aggregation {@link #getItems items}. and
-         * returns its index if found or -1 otherwise.
-         */
-        indexOfItem(
-          /**
-           * The item whose index is looked for
-           */
-          oItem: sap.m.upload.UploadSetItem
-        ): number;
-        /**
-         * Inserts a headerField into the aggregation {@link #getHeaderFields headerFields}.
-         */
-        insertHeaderField(
-          /**
-           * The headerField to insert; if empty, nothing is inserted
-           */
-          oHeaderField: sap.ui.core.Item,
-          /**
-           * The `0`-based index the headerField should be inserted at; for a negative value of `iIndex`, the headerField
-           * is inserted at position 0; for a value greater than the current size of the aggregation, the headerField
-           * is inserted at the last position
-           */
-          iIndex: number
-        ): sap.m.upload.UploadSet;
-        /**
-         * Inserts a incompleteItem into the aggregation {@link #getIncompleteItems incompleteItems}.
-         */
-        insertIncompleteItem(
-          /**
-           * The incompleteItem to insert; if empty, nothing is inserted
-           */
-          oIncompleteItem: sap.m.upload.UploadSetItem,
-          /**
-           * The `0`-based index the incompleteItem should be inserted at; for a negative value of `iIndex`, the incompleteItem
-           * is inserted at position 0; for a value greater than the current size of the aggregation, the incompleteItem
-           * is inserted at the last position
-           */
-          iIndex: number
-        ): sap.m.upload.UploadSet;
-        /**
-         * Inserts a item into the aggregation {@link #getItems items}.
-         */
-        insertItem(
-          /**
-           * The item to insert; if empty, nothing is inserted
-           */
-          oItem: sap.m.upload.UploadSetItem,
-          /**
-           * The `0`-based index the item should be inserted at; for a negative value of `iIndex`, the item is inserted
-           * at position 0; for a value greater than the current size of the aggregation, the item is inserted at
-           * the last position
-           */
-          iIndex: number
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches all necessary handlers to the given uploader instance, so that the progress and status of the
-         * upload can be displayed and monitored.
-         */
-        registerUploaderEvents(
-          /**
-           * Instance of `sap.m.upload.Uploader` to which the default request handlers are attached.
-           */
-          oUploader: Uploader
-        ): void;
-        /**
-         * Removes all the controls from the aggregation {@link #getHeaderFields headerFields}.
-         *
-         * Additionally, it unregisters them from the hosting UIArea.
-         */
-        removeAllHeaderFields(): sap.ui.core.Item[];
-        /**
-         * Removes all the controls from the aggregation {@link #getIncompleteItems incompleteItems}.
-         *
-         * Additionally, it unregisters them from the hosting UIArea.
-         */
-        removeAllIncompleteItems(): sap.m.upload.UploadSetItem[];
-        /**
-         * Removes all the controls from the aggregation {@link #getItems items}.
-         *
-         * Additionally, it unregisters them from the hosting UIArea.
-         */
-        removeAllItems(): sap.m.upload.UploadSetItem[];
-        /**
-         * Removes a headerField from the aggregation {@link #getHeaderFields headerFields}.
-         */
-        removeHeaderField(
-          /**
-           * The headerField to remove or its index or id
-           */
-          vHeaderField: number | string | sap.ui.core.Item
-        ): sap.ui.core.Item;
-        /**
-         * Removes a incompleteItem from the aggregation {@link #getIncompleteItems incompleteItems}.
-         */
-        removeIncompleteItem(
-          /**
-           * The incompleteItem to remove or its index or id
-           */
-          vIncompleteItem: number | string | sap.m.upload.UploadSetItem
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Removes a item from the aggregation {@link #getItems items}.
-         */
-        removeItem(
-          /**
-           * The item to remove or its index or id
-           */
-          vItem: number | string | sap.m.upload.UploadSetItem
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getFileTypes fileTypes}.
-         *
-         * Allowed file types for files to be uploaded.
-         * If this property is not set, any file can be uploaded.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setFileTypes(
-          /**
-           * New value for property `fileTypes`
-           */
-          sFileTypes: string[]
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getInstantUpload instantUpload}.
-         *
-         * Defines whether the upload process should be triggered as soon as the file is added.
-         *  If set to `false`, no upload is triggered when a file is added.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `true`.
-         */
-        setInstantUpload(
-          /**
-           * New value for property `instantUpload`
-           */
-          bInstantUpload: boolean
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getMaxFileNameLength maxFileNameLength}.
-         *
-         * Maximum length of names of files to be uploaded.
-         * If set to `null` or `0`, any files can be uploaded, regardless of their names length.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setMaxFileNameLength(
-          /**
-           * New value for property `maxFileNameLength`
-           */
-          iMaxFileNameLength: number
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getMaxFileSize maxFileSize}.
-         *
-         * Size limit in megabytes for files to be uploaded.
-         * If set to `null` or `0`, files of any size can be uploaded.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setMaxFileSize(
-          /**
-           * New value for property `maxFileSize`
-           */
-          fMaxFileSize: number
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getMediaTypes mediaTypes}.
-         *
-         * Allowed media types for files to be uploaded.
-         * If this property is not set, any file can be uploaded.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setMediaTypes(
-          /**
-           * New value for property `mediaTypes`
-           */
-          sMediaTypes: string[]
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getNoDataDescription noDataDescription}.
-         *
-         * Defines custom text for the 'No data' description label.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setNoDataDescription(
-          /**
-           * New value for property `noDataDescription`
-           */
-          sNoDataDescription: string
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getNoDataText noDataText}.
-         *
-         * Defines custom text for the 'No data' text label.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setNoDataText(
-          /**
-           * New value for property `noDataText`
-           */
-          sNoDataText: string
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getShowIcons showIcons}.
-         *
-         * Defines whether file icons should be displayed.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `true`.
-         */
-        setShowIcons(
-          /**
-           * New value for property `showIcons`
-           */
-          bShowIcons: boolean
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getTerminationEnabled terminationEnabled}.
-         *
-         * Defines whether it is allowed to terminate the upload process.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `true`.
-         */
-        setTerminationEnabled(
-          /**
-           * New value for property `terminationEnabled`
-           */
-          bTerminationEnabled: boolean
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets the aggregated {@link #getToolbar toolbar}.
-         */
-        setToolbar(
-          /**
-           * The toolbar to set
-           */
-          oToolbar: sap.m.OverflowToolbar
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getUploadEnabled uploadEnabled}.
-         *
-         * Defines whether the upload action is allowed.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `true`.
-         */
-        setUploadEnabled(
-          /**
-           * New value for property `uploadEnabled`
-           */
-          bUploadEnabled: boolean
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets the aggregated {@link #getUploader uploader}.
-         */
-        setUploader(
-          /**
-           * The uploader to set
-           */
-          oUploader: sap.m.upload.Uploader
-        ): sap.m.upload.UploadSet;
-        /**
-         * Sets a new value for property {@link #getUploadUrl uploadUrl}.
-         *
-         * URL where the uploaded files will be stored.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setUploadUrl(
-          /**
-           * New value for property `uploadUrl`
-           */
-          sUploadUrl: string
-        ): sap.m.upload.UploadSet;
-        /**
-         * Starts uploading all files that comply with the restrictions defined in the `fileTypes`, `maxFileNameLength`,
-         * `maxFileSize`, and `mediaTypes` properties.
-         * This method works only when the `uploadEnabled` property is set to `true`.
-         */
-        upload(): void;
-        /**
-         * Starts uploading the file if it complies with the restrictions defined in the `fileTypes`, `maxFileNameLength`,
-         * `maxFileSize`, and `mediaTypes` properties.
-         * This method works only when the `uploadEnabled` property is set to `true`.
-         */
-        uploadItem(
-          /**
-           * File to upload.
-           */
-          oItem: object
-        ): void;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:afterItemAdded afterItemAdded} event of this
-         * `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired when a new file is added to the set of items to be uploaded.
-         */
-        attachAfterItemAdded(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeItemAdded beforeItemAdded} event of this
-         * `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired just before a new file is added to the set of items to be uploaded.
-         */
-        attachBeforeItemAdded(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeItemEdited beforeItemEdited} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired when the edit button is clicked for an item and no other item is being edited at
-         * the same time.
-         * If there is another item that has unsaved changes, the editing of the clicked item cannot be started.
-         */
-        attachBeforeItemEdited(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeItemRemoved beforeItemRemoved} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired just before the confirmation dialog for 'Remove' action is displayed.
-         */
-        attachBeforeItemRemoved(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeUploadStarts beforeUploadStarts} event
-         * of this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired right before the upload process begins.
-         */
-        attachBeforeUploadStarts(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:beforeUploadTermination beforeUploadTermination}
-         * event of this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired right before the upload is terminated.
-         */
-        attachBeforeUploadTermination(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:fileNameLengthExceeded fileNameLengthExceeded}
-         * event of this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file name length restriction specified
-         * 			in the `maxFileNameLength` property.
-         * 	 - When the file name length restriction changes, and the file to be uploaded fails to meet the new
-         * 			restriction.
-         */
-        attachFileNameLengthExceeded(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:fileSizeExceeded fileSizeExceeded} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file size restriction specified in
-         * 			the `maxFileSize` property.
-         * 	 - When the file size restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        attachFileSizeExceeded(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:fileTypeMismatch fileTypeMismatch} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the file type restriction (`fileType` property).
-         *
-         * 	 - When the file type restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        attachFileTypeMismatch(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:mediaTypeMismatch mediaTypeMismatch} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired in either of the following cases:
-         * 	 - When a file that is selected to be uploaded fails to meet the media type restriction specified in
-         * 			the `mediaTypes` property.
-         * 	 - When the media type restriction changes, and the file to be uploaded fails to meet the new restriction.
-         */
-        attachMediaTypeMismatch(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:selectionChanged selectionChanged} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired simultaneously with the respective event in the inner {@link sap.m.List} control.
-         */
-        attachSelectionChanged(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadCompleted uploadCompleted} event of this
-         * `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired right after the upload process is finished.
-         */
-        attachUploadCompleted(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:uploadTerminated uploadTerminated} event of
-         * this `sap.m.upload.UploadSet`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSet` itself.
-         *
-         * This event is fired right after the upload is terminated.
-         */
-        attachUploadTerminated(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSet` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSet;
-      }
-      /**
-       * @SINCE 1.62
-       *
-       * Item that represents one file to be uploaded using the {@link sap.m.upload.UploadSet} control.
-       */
-      class UploadSetItem extends sap.ui.core.Element {
-        /**
-         * Constructor for a new UploadSetItem.
-         *
-         * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-         * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-         * of the syntax of the settings object.
-         */
-        constructor(
-          /**
-           * ID for the new control, will be generated automatically if no ID is provided.
-           */
-          sId?: string,
-          /**
-           * Initial settings for the new control.
-           */
-          mSettings?: UploadSetItemOpts
-        );
-
-        /**
-         * Adds some attribute to the aggregation {@link #getAttributes attributes}.
-         */
-        addAttribute(
-          /**
-           * The attribute to add; if empty, nothing is inserted
-           */
-          oAttribute: sap.m.ObjectAttribute
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Adds some marker to the aggregation {@link #getMarkers markers}.
-         */
-        addMarker(
-          /**
-           * The marker to add; if empty, nothing is inserted
-           */
-          oMarker: sap.m.ObjectMarker
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Adds some status to the aggregation {@link #getStatuses statuses}.
-         */
-        addStatus(
-          /**
-           * The status to add; if empty, nothing is inserted
-           */
-          oStatus: sap.m.ObjectStatus
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:openPressed openPressed} event of this `sap.m.upload.UploadSetItem`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSetItem` itself.
-         *
-         * This event is fired when an open action is invoked on an item.
-         */
-        attachOpenPressed(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSetItem` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:removePressed removePressed} event of this `sap.m.upload.UploadSetItem`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSetItem` itself.
-         *
-         * This event is fired when a remove action is invoked on an item.
-         */
-        attachRemovePressed(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSetItem` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Destroys all the attributes in the aggregation {@link #getAttributes attributes}.
-         */
-        destroyAttributes(): sap.m.upload.UploadSetItem;
-        /**
-         * Destroys all the markers in the aggregation {@link #getMarkers markers}.
-         */
-        destroyMarkers(): sap.m.upload.UploadSetItem;
-        /**
-         * Destroys all the statuses in the aggregation {@link #getStatuses statuses}.
-         */
-        destroyStatuses(): sap.m.upload.UploadSetItem;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:openPressed openPressed} event of this `sap.m.upload.UploadSetItem`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachOpenPressed(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:removePressed removePressed} event of this
-         * `sap.m.upload.UploadSetItem`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachRemovePressed(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Downloads the item. Only possible when the item has a valid URL specified in the `url` property.
-         */
-        download(
-          /**
-           * Whether to ask for a location where to download the file or not.
-           */
-          bAskForLocation: boolean
-        ): boolean;
-        /**
-         * Creates a new subclass of class sap.m.upload.UploadSetItem with name `sClassName` and enriches it with
-         * the information contained in `oClassInfo`.
-         *
-         * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
-         */
-        // @ts-ignore
-        static extend(
-          /**
-           * Name of the class being created
-           */
-          sClassName: string,
-          /**
-           * Object literal with information about the class
-           */
-          oClassInfo?: object,
-          /**
-           * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-           */
-          FNMetaImpl?: Function
-        ): Function;
-        /**
-         * Fires event {@link #event:openPressed openPressed} to attached listeners.
-         *
-         * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-         * object.
-         */
-        fireOpenPressed(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: object
-        ): boolean;
-        /**
-         * Fires event {@link #event:removePressed removePressed} to attached listeners.
-         *
-         * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-         * object.
-         */
-        fireRemovePressed(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: object
-        ): boolean;
-        /**
-         * Gets content of aggregation {@link #getAttributes attributes}.
-         *
-         * Attributes of the item.
-         */
-        getAttributes(): sap.m.ObjectAttribute[];
-        /**
-         * Gets current value of property {@link #getEnabledEdit enabledEdit}.
-         *
-         * Enables or disables the edit button.
-         *
-         * Default value is `true`.
-         */
-        getEnabledEdit(): boolean;
-        /**
-         * Gets current value of property {@link #getEnabledRemove enabledRemove}.
-         *
-         * Enables or disables the remove button.
-         *
-         * Default value is `true`.
-         */
-        getEnabledRemove(): boolean;
-        /**
-         * Gets current value of property {@link #getFileName fileName}.
-         *
-         * Specifies the name of the uploaded file.
-         */
-        getFileName(): string;
-        /**
-         * Gets content of aggregation {@link #getMarkers markers}.
-         *
-         * Markers of the item.
-         */
-        getMarkers(): sap.m.ObjectMarker[];
-        /**
-         * Gets current value of property {@link #getMediaType mediaType}.
-         *
-         * Specifies the MIME type of the file.
-         */
-        getMediaType(): string;
-        /**
-         * Returns a metadata object for class sap.m.upload.UploadSetItem.
-         */
-        // @ts-ignore
-        static getMetadata(): sap.ui.base.Metadata;
-        /**
-         * Gets content of aggregation {@link #getStatuses statuses}.
-         *
-         * Statuses of the item.
-         */
-        getStatuses(): sap.m.ObjectStatus[];
-        /**
-         * Gets current value of property {@link #getThumbnailUrl thumbnailUrl}.
-         *
-         * Specifies the URL where the thumbnail of the file is located. Can also be set to an SAPUI5 icon URL.
-         */
-        getThumbnailUrl(): string;
-        /**
-         * Gets current value of property {@link #getUploadState uploadState}.
-         *
-         * State of the item relevant to its upload process.
-         */
-        getUploadState(): sap.m.UploadState;
-        /**
-         * Gets current value of property {@link #getUrl url}.
-         *
-         * Specifies the URL where the file is located.
-         * If the application doesn't provide a value for this property, the icon and the file name are not clickable
-         * in {@link sap.m.upload.UploadSet}.
-         */
-        getUrl(): string;
-        /**
-         * Gets current value of property {@link #getVisibleEdit visibleEdit}.
-         *
-         * Shows or hides the edit button.
-         *
-         * Default value is `true`.
-         */
-        getVisibleEdit(): boolean;
-        /**
-         * Gets current value of property {@link #getVisibleRemove visibleRemove}.
-         *
-         * Shows or hides the remove button.
-         *
-         * Default value is `true`.
-         */
-        getVisibleRemove(): boolean;
-        /**
-         * Checks for the provided `sap.m.ObjectAttribute` in the aggregation {@link #getAttributes attributes}.
-         * and returns its index if found or -1 otherwise.
-         */
-        indexOfAttribute(
-          /**
-           * The attribute whose index is looked for
-           */
-          oAttribute: sap.m.ObjectAttribute
-        ): number;
-        /**
-         * Checks for the provided `sap.m.ObjectMarker` in the aggregation {@link #getMarkers markers}. and returns
-         * its index if found or -1 otherwise.
-         */
-        indexOfMarker(
-          /**
-           * The marker whose index is looked for
-           */
-          oMarker: sap.m.ObjectMarker
-        ): number;
-        /**
-         * Checks for the provided `sap.m.ObjectStatus` in the aggregation {@link #getStatuses statuses}. and returns
-         * its index if found or -1 otherwise.
-         */
-        indexOfStatus(
-          /**
-           * The status whose index is looked for
-           */
-          oStatus: sap.m.ObjectStatus
-        ): number;
-        /**
-         * Inserts a attribute into the aggregation {@link #getAttributes attributes}.
-         */
-        insertAttribute(
-          /**
-           * The attribute to insert; if empty, nothing is inserted
-           */
-          oAttribute: sap.m.ObjectAttribute,
-          /**
-           * The `0`-based index the attribute should be inserted at; for a negative value of `iIndex`, the attribute
-           * is inserted at position 0; for a value greater than the current size of the aggregation, the attribute
-           * is inserted at the last position
-           */
-          iIndex: number
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Inserts a marker into the aggregation {@link #getMarkers markers}.
-         */
-        insertMarker(
-          /**
-           * The marker to insert; if empty, nothing is inserted
-           */
-          oMarker: sap.m.ObjectMarker,
-          /**
-           * The `0`-based index the marker should be inserted at; for a negative value of `iIndex`, the marker is
-           * inserted at position 0; for a value greater than the current size of the aggregation, the marker is inserted
-           * at the last position
-           */
-          iIndex: number
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Inserts a status into the aggregation {@link #getStatuses statuses}.
-         */
-        insertStatus(
-          /**
-           * The status to insert; if empty, nothing is inserted
-           */
-          oStatus: sap.m.ObjectStatus,
-          /**
-           * The `0`-based index the status should be inserted at; for a negative value of `iIndex`, the status is
-           * inserted at position 0; for a value greater than the current size of the aggregation, the status is inserted
-           * at the last position
-           */
-          iIndex: number
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Removes all the controls from the aggregation {@link #getAttributes attributes}.
-         *
-         * Additionally, it unregisters them from the hosting UIArea.
-         */
-        removeAllAttributes(): sap.m.ObjectAttribute[];
-        /**
-         * Removes all the controls from the aggregation {@link #getMarkers markers}.
-         *
-         * Additionally, it unregisters them from the hosting UIArea.
-         */
-        removeAllMarkers(): sap.m.ObjectMarker[];
-        /**
-         * Removes all the controls from the aggregation {@link #getStatuses statuses}.
-         *
-         * Additionally, it unregisters them from the hosting UIArea.
-         */
-        removeAllStatuses(): sap.m.ObjectStatus[];
-        /**
-         * Removes a attribute from the aggregation {@link #getAttributes attributes}.
-         */
-        removeAttribute(
-          /**
-           * The attribute to remove or its index or id
-           */
-          vAttribute: number | string | sap.m.ObjectAttribute
-        ): sap.m.ObjectAttribute;
-        /**
-         * Removes a marker from the aggregation {@link #getMarkers markers}.
-         */
-        removeMarker(
-          /**
-           * The marker to remove or its index or id
-           */
-          vMarker: number | string | sap.m.ObjectMarker
-        ): sap.m.ObjectMarker;
-        /**
-         * Removes a status from the aggregation {@link #getStatuses statuses}.
-         */
-        removeStatus(
-          /**
-           * The status to remove or its index or id
-           */
-          vStatus: number | string | sap.m.ObjectStatus
-        ): sap.m.ObjectStatus;
-        /**
-         * Sets a new value for property {@link #getEnabledEdit enabledEdit}.
-         *
-         * Enables or disables the edit button.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `true`.
-         */
-        setEnabledEdit(
-          /**
-           * New value for property `enabledEdit`
-           */
-          bEnabledEdit: boolean
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getEnabledRemove enabledRemove}.
-         *
-         * Enables or disables the remove button.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `true`.
-         */
-        setEnabledRemove(
-          /**
-           * New value for property `enabledRemove`
-           */
-          bEnabledRemove: boolean
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getFileName fileName}.
-         *
-         * Specifies the name of the uploaded file.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setFileName(
-          /**
-           * New value for property `fileName`
-           */
-          sFileName: string
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getMediaType mediaType}.
-         *
-         * Specifies the MIME type of the file.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setMediaType(
-          /**
-           * New value for property `mediaType`
-           */
-          sMediaType: string
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getThumbnailUrl thumbnailUrl}.
-         *
-         * Specifies the URL where the thumbnail of the file is located. Can also be set to an SAPUI5 icon URL.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setThumbnailUrl(
-          /**
-           * New value for property `thumbnailUrl`
-           */
-          sThumbnailUrl: string
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getUploadState uploadState}.
-         *
-         * State of the item relevant to its upload process.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setUploadState(
-          /**
-           * New value for property `uploadState`
-           */
-          sUploadState: sap.m.UploadState
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getUrl url}.
-         *
-         * Specifies the URL where the file is located.
-         * If the application doesn't provide a value for this property, the icon and the file name are not clickable
-         * in {@link sap.m.upload.UploadSet}.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         */
-        setUrl(
-          /**
-           * New value for property `url`
-           */
-          sUrl: string
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getVisibleEdit visibleEdit}.
-         *
-         * Shows or hides the edit button.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `true`.
-         */
-        setVisibleEdit(
-          /**
-           * New value for property `visibleEdit`
-           */
-          bVisibleEdit: boolean
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Sets a new value for property {@link #getVisibleRemove visibleRemove}.
-         *
-         * Shows or hides the remove button.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `true`.
-         */
-        setVisibleRemove(
-          /**
-           * New value for property `visibleRemove`
-           */
-          bVisibleRemove: boolean
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:openPressed openPressed} event of this `sap.m.upload.UploadSetItem`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSetItem` itself.
-         *
-         * This event is fired when an open action is invoked on an item.
-         */
-        attachOpenPressed(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSetItem` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSetItem;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:removePressed removePressed} event of this `sap.m.upload.UploadSetItem`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.m.upload.UploadSetItem` itself.
-         *
-         * This event is fired when a remove action is invoked on an item.
-         */
-        attachRemovePressed(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.m.upload.UploadSetItem` itself
-           */
-          oListener?: object
-        ): sap.m.upload.UploadSetItem;
-      }
-    }
     /**
      * @SINCE 1.22
      *
@@ -9474,8 +6682,7 @@ declare namespace sap {
       showCancelButton?: boolean;
 
       /**
-       * Fires when the busy dialog is closed. Note: the BusyDialog will not be closed by the InstanceManager.closeAllDialogs
-       * method
+       * Fires when the busy dialog is closed.
        */
       close?: Function;
 
@@ -9699,25 +6906,9 @@ declare namespace sap {
       pageChanged?: Function;
 
       /**
-       * This event is fired before a carousel swipe has been completed. It is triggered both by physical swipe
-       * events and through API carousel manipulations such as calling 'next', 'previous' or 'setActivePageId'
-       * functions.
-       */
-      beforePageChanged?: Function;
-
-      /**
        * The content which the carousel displays.
        */
       pages?: sap.ui.core.Control[] | sap.ui.core.Control;
-
-      /**
-       * @SINCE 1.62
-       *
-       * Defines how many pages are displayed in the visible area of the `Carousel` control.
-       *
-       * **Note:** When this property is used, the `loop` property is ignored.
-       */
-      customLayout?: sap.m.CarouselLayout;
 
       /**
        * Provides getter and setter for the currently displayed page. For the setter, argument may be the control
@@ -9972,22 +7163,13 @@ declare namespace sap {
       /**
        * @SINCE 1.16
        *
-       * Defines the control serialization function if `mergeDuplicates` property is set to `true`. The control
-       * itself uses this function to compare values of two repeating cells. Default value "getText" is suitable
-       * for `sap.m.Label` and `sap.m.Text` controls but for the `sap.ui.core.Icon` control "getSrc" function
-       * should be used to merge icons. **Note:** You can pass one string parameter to given function after "#"
-       * sign. e.g. "data#myparameter"
+       * Defines the control serialization function if `mergeDuplicates property is set to true`.
+       * The control itself uses this function to compare values of two repeating cells. Default value "getText"
+       * is suitable for `sap.m.Label` and `sap.m.Text` controls but for the `sap.ui.core.Icon` control "getSrc"
+       * function should be used to merge icons. **Note:** You can pass one string parameter to given function
+       * after "#" sign. e.g. "data#myparameter"
        */
       mergeFunctionName?: string;
-
-      /**
-       * @SINCE 1.61
-       *
-       * Defines if a column is sorted by setting the sort indicator for this column.
-       *
-       * **Note:** Defining this property does not trigger the sorting.
-       */
-      sortIndicator?: sap.ui.core.SortOrder;
 
       /**
        * Control to be displayed in the column header.
@@ -11266,8 +8448,7 @@ declare namespace sap {
        * 	 - `ul`
        * 	 - `ol`
        * 	 - `li`  `class, style,` and `target` attributes are allowed. If `target` is not set, links
-       * 			open in a new window by default. Only safe `href` attributes can be used. See {@link module:sap/base/security/URLWhitelist
-       * 			URLWhitelist}.
+       * 			open in a new window by default. Only safe `href` attributes can be used. See {@link sap.base.security.URLWhiteList}.
        *
        * **Note:** Keep in mind that not supported HTML tags and the content nested inside them are both not rendered
        * by the control.
@@ -11302,42 +8483,6 @@ declare namespace sap {
        * Optional height of the control in CSS units.
        */
       height?: sap.ui.core.CSSSize;
-    }
-
-    interface GenericTagOpts extends sap.ui.core.ControlOpts {
-      /**
-       * Defines the text rendered by the control. It's a value-descriptive text rendered on one line.
-       */
-      text?: string;
-
-      /**
-       * Determines the control status that is represented in different colors, including the the color bar and
-       * the color and type of the displayed icon.
-       */
-      status?: sap.ui.core.ValueState;
-
-      /**
-       * Determines the visual mode of the control.
-       */
-      design?: sap.m.GenericTagDesign;
-
-      /**
-       * Determines the state of the control.
-       *
-       * **Note:** When the error state is set, a warning type of icon is displayed that overrides the control
-       * set through the `value` aggregation.
-       */
-      valueState?: sap.m.GenericTagValueState;
-
-      /**
-       * Fired when the user clicks/taps on the control.
-       */
-      press?: Function;
-
-      /**
-       * Numeric value rendered by the control.
-       */
-      value?: sap.m.ObjectNumber;
     }
 
     interface GenericTileOpts extends sap.ui.core.ControlOpts {
@@ -11559,17 +8704,6 @@ declare namespace sap {
        * Content to add to HeaderContainer.
        */
       content?: sap.ui.core.Control[] | sap.ui.core.Control;
-
-      /**
-       * @SINCE 1.62.0
-       *
-       * Controls or IDs that label controls in the `content` aggregation. Each ariaLabelledBy item is assigned
-       * to its appropriate counterpart in the `content` aggregation.
-       * If you want to annotate all the controls in the `content` aggregation, add the same number of items to
-       * the `ariaLabelledBy` annotation.
-       * Can be used by screen reader software.
-       */
-      ariaLabelledBy?: sap.ui.core.Control[] | string[];
     }
 
     interface IconTabBarOpts extends sap.ui.core.ControlOpts {
@@ -12180,13 +9314,6 @@ declare namespace sap {
       enableSuggestionsHighlighting?: boolean;
 
       /**
-       * @SINCE 1.61
-       *
-       * Specifies whether autocomplete is enabled. Works only if "showSuggestion" property is set to true.
-       */
-      autocomplete?: boolean;
-
-      /**
        * This event is fired when the value of the input is changed - e.g. at each keypress
        */
       liveChange?: Function;
@@ -12219,11 +9346,10 @@ declare namespace sap {
        *
        * This event is fired when user presses the `Enter` key on the input.
        *
-       * **Notes:**
-       * 	 - The event is fired independent of whether there was a change before or not. If a change was performed,
-       * 			the event is fired after the change event.
-       * 	 - The event is also fired when an item of the select list is selected via `Enter`.
-       * 	 - The event is only fired on an input which allows text input (`editable`, `enabled` and not `valueHelpOnly`).
+       * **Note:** The event is fired independent of whether there was a change before or not. If a change was
+       * performed the event is fired after the change event. The event is also fired when an item of the select
+       * list is selected via `Enter`. The event is only fired on an input which allows text input (`editable`,
+       * `enabled` and not `valueHelpOnly`).
        */
       submit?: Function;
 
@@ -12278,6 +9404,9 @@ declare namespace sap {
 
       /**
        * Defines the width of the control.
+       *
+       * **Note:** If the provided width is too small, the control gets stretched to its min width, which is needed
+       * in order for the control to be usable and well aligned.
        */
       width?: sap.ui.core.CSSSize;
 
@@ -12525,8 +9654,7 @@ declare namespace sap {
        * If validation fails, the value of the `href` property will still be set, but will not be applied to the
        * DOM.
        *
-       * **Note:** Additional whitelisting of URLs is allowed through {@link module:sap/base/security/URLWhitelist
-       * URLWhitelist}.
+       * **Note:** Additional whitelisting of URLs is allowed through {@link sap.base.security.URLWhiteList}.
        */
       validateUrl?: boolean;
 
@@ -12752,9 +9880,9 @@ declare namespace sap {
        *
        * There are also some known limitations with respect to the scrolling behavior. A few are given below:
        *
-       * 	 - If the control is placed in layout containers that have the `overflow: hidden` or `overflow: auto`
-       * 			style definition, this can prevent the sticky elements of the control from becoming fixed at the top
-       * 			of the viewport.
+       * 	 - If the control is placed in certain layout containers, for example, the `sap.ui.layout.Grid` control,
+       * 			the sticky elements of the control are not fixed at the top of the viewport. The control behaves in a
+       * 			similar way when placed within the `sap.m.ObjectPage` control.
        * 	 - If sticky column headers are enabled in the `sap.m.Table` control, setting focus on the column headers
        * 			will let the table scroll to the top.
        */
@@ -12781,7 +9909,7 @@ declare namespace sap {
       delete?: Function;
 
       /**
-       * Fires after user's swipe action and before the `swipeContent` is shown. On the `swipe` event handler,
+       * Fires after us"r's swipe action and before the `swipeContent` is shown. On the `swipe` event handler,
        * `swipeContent` can be changed according to the swiped item. Calling the `preventDefault` method of the
        * event cancels the swipe action.
        */
@@ -12908,24 +10036,8 @@ declare namespace sap {
        * @SINCE 1.44.0
        *
        * Defines the highlight state of the list items.
-       *
-       * Valid values for the `highlight` property are values of the enumerations {@link sap.ui.core.MessageType}
-       * or {@link sap.ui.core.IndicationColor}.
-       *
-       * Accessibility support is provided through the associated {@link sap.m.ListItemBase#setHighlightText highlightText}
-       * property. If the `highlight` property is set to a value of {@link sap.ui.core.MessageType}, the `highlightText`
-       * property does not need to be set because a default text is used. However, the default text can be overridden
-       * by setting the `highlightText` property. In all other cases the `highlightText` property must be set.
        */
-      highlight?: string;
-
-      /**
-       * @SINCE 1.62
-       *
-       * Defines the semantics of the {@link sap.m.ListItemBase#setHighlight highlight} property for accessibility
-       * purposes.
-       */
-      highlightText?: string;
+      highlight?: sap.ui.core.MessageType;
 
       /**
        * @deprecated (since 1.20.0) - Instead, use `press` event.
@@ -13563,8 +10675,6 @@ declare namespace sap {
       tokenChange?: Function;
 
       /**
-       * @SINCE 1.46
-       *
        * Fired when the tokens aggregation changed due to a user interaction (add / remove token)
        */
       tokenUpdate?: Function;
@@ -13581,8 +10691,7 @@ declare namespace sap {
        *
        * Determines whether the initial focus is set automatically on first rendering and after navigating to
        * a new page. This is useful when on touch devices the keyboard pops out due to the focus being automatically
-       * set on an input field. If necessary, the `afterShow` event can be used to focus another element, only
-       * if `autoFocus` is set to `false`.
+       * set on an input field. If necessary the "afterShow" event can be used to focus another element.
        *
        * **Note:** The following scenarios are possible, depending on where the focus was before navigation to
        * a new page:
@@ -13980,16 +11089,6 @@ declare namespace sap {
       iconDensityAware?: boolean;
 
       /**
-       * @SINCE 1.61
-       *
-       * Determines whether the picture should be displayed in a square or with a circle-shaped mask just like
-       * in {@link sap.uxap.ObjectPageHeader}.
-       *
-       * **Note:** This property takes effect only on Images and it is ignored for Icons.
-       */
-      imageShape?: sap.m.ObjectHeaderPictureShape;
-
-      /**
        * @SINCE 1.16.0
        * @deprecated (since 1.42.0) - replaced by `markers` aggregation. Add {@link sap.m.ObjectMarker} with type
        * `sap.m.ObjectMarkerType.Favorite`. You should use either this property or the `markers` aggregation,
@@ -14058,12 +11157,8 @@ declare namespace sap {
        * Determines whether the `ObjectHeader` is rendered with a different design that reacts responsively to
        * the screen sizes.
        *
-       * When the `responsive` property is set to `true`, the following behavior specifics for the control exist:
-       *
-       * 	 - If an image (or an icon font) is set to the `icon` property, it is hidden in portrait mode on phone.
-       *
-       * 	 - The title is truncated to 80 characters if longer. For portrait mode on phone, the title is truncated
-       * 			to 50 characters.
+       * **Note:** Be aware that the design and behavior of the responsive `ObjectHeader` could change without
+       * further notification.
        */
       responsive?: boolean;
 
@@ -15691,7 +12786,7 @@ declare namespace sap {
        * Defines how the PDF viewer should be displayed.
        * 	 - If set to `Link`, the PDF viewer appears as a toolbar with a download button that can be used to
        * 			download the PDF file.
-       *  When the {@link #open} method is called, the user can either open the PDF file in a new tab or download
+       *  When the {@link open} method is called, the user can either open the PDF file in a new tab or download
        * it.
        * 	 - If set to `Embedded`, the PDF viewer appears embedded in the parent container and displays either
        * 			the PDF document or the message defined by the `errorPlaceholderMessage` property.
@@ -16789,7 +13884,7 @@ declare namespace sap {
       /**
        * @SINCE 1.25
        *
-       * Enumeration sap.ui.core.ValueState provides state values Error, Success, Warning, Information, None
+       * Enumeration sap.ui.core.ValueState provides state values Error, Success, Warning, None
        */
       valueState?: sap.ui.core.ValueState;
 
@@ -17552,16 +14647,6 @@ declare namespace sap {
 
       /**
        * Defines the items contained within this control.
-       *
-       * **Note:** For items with icons you can use {@link sap.ui.core.ListItem}.
-       *
-       * Example:
-       *
-       *
-       * ```javascript
-       *
-       * ` <ListItem text="Paper plane" icon="sap-icon://paper-plane"></ListItem> `
-       * ```
        */
       items?: sap.ui.core.Item[] | sap.ui.core.Item;
 
@@ -17641,10 +14726,9 @@ declare namespace sap {
        * selection mode in Select Dialog. We recommended enabling of the Clear button in the following cases,
        * where a mechanism to clear the value is needed: In case of single selection mode(default mode) for Select
        * Dialog and `rememberSelections` is set to `true`. Clear button needs to be enabled in order to allow
-       * users to clear the selection. In case of using `sap.m.Input` with `valueHelpOnly` set to `true`, the
-       * Clear button could be used for clearing selection. In case the application stores a value and uses only
-       * Select Dialog to edit/maintain it. **Note:**When used with oData, only the loaded selections will be
-       * cleared.
+       * users to clear the selection. In case of using `sap.m.Input` with `valueHepOnly` set to `true`, Clear
+       * button could be used for clearing selection. In case the application stores a value and uses only Select
+       * Dialog to edit/maintain it. **Note:**When used with oData, only the loaded selections will be cleared.
        */
       showClearButton?: boolean;
 
@@ -17949,165 +15033,6 @@ declare namespace sap {
       app?: sap.ui.core.Control;
     }
 
-    interface SinglePlanningCalendarOpts extends sap.ui.core.ControlOpts {
-      /**
-       * Determines the title of the `SinglePlanningCalendar`.
-       */
-      title?: string;
-
-      /**
-       * Determines the start date of the grid, as a JavaScript date object. It is considered as a local date.
-       * The time part will be ignored. The current date is used as default.
-       */
-      startDate?: object;
-
-      /**
-       * @SINCE 1.62
-       *
-       * Determines which part of the control will remain fixed at the top of the page during vertical scrolling
-       * as long as the control is in the viewport.
-       *
-       * **Note:** Limited browser support. Browsers which do not support this feature:
-       * 	 - Microsoft Internet Explorer
-       * 	 - Microsoft Edge lower than version 41 (EdgeHTML 16)
-       * 	 - Mozilla Firefox lower than version 59
-       */
-      stickyMode?: sap.m.PlanningCalendarStickyMode;
-
-      /**
-       * @SINCE 1.64
-       *
-       * Determines whether the appointments in the grid are draggable.
-       *
-       * The drag and drop interaction is visualized by a placeholder highlighting the area where the appointment
-       * can be dropped by the user.
-       */
-      enableAppointmentsDragAndDrop?: boolean;
-
-      /**
-       * @SINCE 1.65
-       *
-       * Determines whether the appointments are resizable.
-       *
-       * The resize interaction is visualized by making the appointment transparent.
-       *
-       * The appointment snaps on every interval of 30 minutes. After the resize is finished, the {@link #event:appointmentResize
-       * appointmentResize} event is fired, containing the new start and end JavaScript date objects.
-       */
-      enableAppointmentsResize?: boolean;
-
-      /**
-       * @SINCE 1.65
-       *
-       * Determines whether the appointments can be created by dragging on empty cells.
-       *
-       * See {@link #property:enableAppointmentsResize enableAppointmentsResize} for the specific points for events
-       * snapping
-       */
-      enableAppointmentsCreate?: boolean;
-
-      /**
-       * Fired if an appointment is selected.
-       */
-      appointmentSelect?: Function;
-
-      /**
-       * @SINCE 1.64
-       *
-       * Fired if an appointment is dropped.
-       */
-      appointmentDrop?: Function;
-
-      /**
-       * @SINCE 1.65
-       *
-       * Fired when an appointment is resized.
-       */
-      appointmentResize?: Function;
-
-      /**
-       * @SINCE 1.65
-       *
-       * Fired if an appointment is created.
-       */
-      appointmentCreate?: Function;
-
-      /**
-       * Fired if a date is selected in the calendar header.
-       */
-      headerDateSelect?: Function;
-
-      /**
-       * `startDate` is changed while navigating in the `SinglePlanningCalendar`.
-       */
-      startDateChange?: Function;
-
-      /**
-       * @SINCE 1.65
-       *
-       * Fired when a grid cell is focused.
-       */
-      cellPress?: Function;
-
-      /**
-       * The controls to be passed to the toolbar.
-       */
-      actions?: sap.ui.core.Control[] | sap.ui.core.Control;
-
-      /**
-       * The appointments to be displayed in the grid. Appointments outside the visible time frame are not rendered.
-       * Appointments, longer than a day, will be displayed in all of the affected days. To display an all-day
-       * appointment, the appointment must start at 00:00 and end on any day in the future in 00:00h.
-       */
-      appointments?:
-        | sap.ui.unified.CalendarAppointment[]
-        | sap.ui.unified.CalendarAppointment;
-
-      /**
-       * Views of the `SinglePlanningCalendar`.
-       *
-       * **Note:** If not set, the Week view is available.
-       */
-      views?:
-        | sap.m.SinglePlanningCalendarView[]
-        | sap.m.SinglePlanningCalendarView;
-
-      /**
-       * Corresponds to the currently selected view.
-       */
-      selectedView?: sap.m.SinglePlanningCalendarView | string;
-
-      /**
-       * @SINCE 1.65.0
-       *
-       * Association to the `PlanningCalendarLegend` explaining the colors of the `Appointments`.
-       *
-       * **Note:** The legend does not have to be rendered but must exist, and all required types must be assigned.
-       */
-      legend?: sap.m.PlanningCalendarLegend | string;
-    }
-
-    interface SinglePlanningCalendarDayViewOpts
-      extends sap.m.SinglePlanningCalendarViewOpts {}
-
-    interface SinglePlanningCalendarViewOpts extends sap.ui.core.ElementOpts {
-      /**
-       * Indicates a unique key for the view
-       */
-      key?: string;
-
-      /**
-       * Adds a title for the view
-       */
-      title?: string;
-    }
-
-    interface SinglePlanningCalendarWeekViewOpts
-      extends sap.m.SinglePlanningCalendarViewOpts {}
-
-    interface SinglePlanningCalendarWorkWeekViewOpts
-      extends sap.m.SinglePlanningCalendarViewOpts {}
-
     interface SliderOpts extends sap.ui.core.ControlOpts {
       /**
        * Defines the width of the control.
@@ -18171,7 +15096,7 @@ declare namespace sap {
        * @SINCE 1.42
        *
        * Indicate whether the handle's advanced tooltip is shown. **Note:** Setting this option to `true` will
-       * ignore the value set in `showHandleTooltip`. This will cause only the advanced tooltip to be shown.
+       * ignore the value set in `showHandleTooltips`. This will cause only the advanced tooltip to be shown.
        */
       showAdvancedTooltip?: boolean;
 
@@ -18179,7 +15104,7 @@ declare namespace sap {
        * @SINCE 1.42
        *
        * Indicates whether input fields should be used as tooltips for the handles. **Note:** Setting this option
-       * to `true` will only work if `showAdvancedTooltip` is set to `true`.
+       * to `true` will only work if `showAdvancedTooltips` is set to `true`.
        */
       inputsAsTooltips?: boolean;
 
@@ -18854,28 +15779,6 @@ declare namespace sap {
       name?: string;
 
       /**
-       * @EXPERIMENTAL (since 1.63)
-       *
-       * Determines additional text to be displayed for the item.
-       */
-      additionalText?: string;
-
-      /**
-       * @EXPERIMENTAL (since 1.63)
-       *
-       * Defines the icon to be displayed as graphical element within the `TabContainerItem`. It can be an image
-       * or an icon from the icon font.
-       */
-      icon?: sap.ui.core.URI;
-
-      /**
-       * @EXPERIMENTAL (since 1.63)
-       *
-       * Determines the tooltip text of the `TabContainerItem`'s icon.
-       */
-      iconTooltip?: string;
-
-      /**
        * Determines the name of the item. Can be used as input for subsequent actions.
        */
       key?: string;
@@ -18976,8 +15879,8 @@ declare namespace sap {
       /**
        * @SINCE 1.60
        *
-       * This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
-       * via the context menu or the standard paste keyboard shortcut, if the focus is inside the table.
+       * This event gets fired when the user performs paste from clipboard on the table. Paste action can be performed
+       * from the context menu or with CTRL-V keyboard key combination.
        */
       paste?: Function;
 
@@ -19615,8 +16518,6 @@ declare namespace sap {
       tokenChange?: Function;
 
       /**
-       * @SINCE 1.46
-       *
        * Fired when the tokens aggregation changed due to a user interaction (add / remove token)
        */
       tokenUpdate?: Function;
@@ -20753,8 +17654,6 @@ declare namespace sap {
        * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
        * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
        * of the syntax of the settings object.
-       * See:
-       * 	{@link fiori:/action-list-item/ Action List Item}
        */
       constructor(
         /**
@@ -22558,8 +19457,7 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.BusyDialog` itself.
        *
-       * Fires when the busy dialog is closed. Note: the BusyDialog will not be closed by the InstanceManager.closeAllDialogs
-       * method
+       * Fires when the busy dialog is closed.
        */
       attachClose(
         /**
@@ -22850,8 +19748,7 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.BusyDialog` itself.
        *
-       * Fires when the busy dialog is closed. Note: the BusyDialog will not be closed by the InstanceManager.closeAllDialogs
-       * method
+       * Fires when the busy dialog is closed.
        */
       attachClose(
         /**
@@ -23716,32 +20613,6 @@ declare namespace sap {
         oPage: sap.ui.core.Control
       ): sap.m.Carousel;
       /**
-       * Attaches event handler `fnFunction` to the {@link #event:beforePageChanged beforePageChanged} event of
-       * this `sap.m.Carousel`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.Carousel` itself.
-       *
-       * This event is fired before a carousel swipe has been completed. It is triggered both by physical swipe
-       * events and through API carousel manipulations such as calling 'next', 'previous' or 'setActivePageId'
-       * functions.
-       */
-      attachBeforePageChanged(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.Carousel` itself
-         */
-        oListener?: object
-      ): sap.m.Carousel;
-      /**
        * @deprecated (since 1.18.7) - Since 1.18.7 pages are no longer loaded or unloaded
        *
        * Attaches event handler `fnFunction` to the {@link #event:loadPage loadPage} event of this `sap.m.Carousel`.
@@ -23818,31 +20689,9 @@ declare namespace sap {
         oListener?: object
       ): sap.m.Carousel;
       /**
-       * @SINCE 1.62
-       *
-       * Destroys the customLayout in the aggregation {@link #getCustomLayout customLayout}.
-       */
-      destroyCustomLayout(): sap.m.Carousel;
-      /**
        * Destroys all the pages in the aggregation {@link #getPages pages}.
        */
       destroyPages(): sap.m.Carousel;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:beforePageChanged beforePageChanged} event
-       * of this `sap.m.Carousel`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachBeforePageChanged(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.Carousel;
       /**
        * @deprecated (since 1.18.7) - Since 1.18.7 pages are no longer loaded or unloaded
        *
@@ -23914,20 +20763,6 @@ declare namespace sap {
         FNMetaImpl?: Function
       ): Function;
       /**
-       * Fires event {@link #event:beforePageChanged beforePageChanged} to attached listeners.
-       */
-      fireBeforePageChanged(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Indexes of all active pages after the page change.
-           */
-          activePages?: any[];
-        }
-      ): sap.m.Carousel;
-      /**
        * @deprecated (since 1.18.7) - Since 1.18.7 pages are no longer loaded or unloaded
        *
        * Fires event {@link #event:loadPage loadPage} to attached listeners.
@@ -23952,17 +20787,13 @@ declare namespace sap {
          */
         mParameters?: {
           /**
-           * ID of the page which was active before the page change.
+           * Id of the page which was active before the page change.
            */
           oldActivePageId?: string;
           /**
-           * ID of the page which will be active after the page change.
+           * Id of the page which is active after the page change.
            */
           newActivePageId?: string;
-          /**
-           * Indexes of all active pages after the page change.
-           */
-          activePages?: any[];
         }
       ): sap.m.Carousel;
       /**
@@ -23996,16 +20827,6 @@ declare namespace sap {
        * Default value is `Content`.
        */
       getArrowsPlacement(): sap.m.CarouselArrowsPlacement;
-      /**
-       * @SINCE 1.62
-       *
-       * Gets content of aggregation {@link #getCustomLayout customLayout}.
-       *
-       * Defines how many pages are displayed in the visible area of the `Carousel` control.
-       *
-       * **Note:** When this property is used, the `loop` property is ignored.
-       */
-      getCustomLayout(): sap.m.CarouselLayout;
       /**
        * Gets current value of property {@link #getHeight height}.
        *
@@ -24150,17 +20971,6 @@ declare namespace sap {
         sArrowsPlacement: sap.m.CarouselArrowsPlacement
       ): sap.m.Carousel;
       /**
-       * @SINCE 1.62
-       *
-       * Sets the aggregated {@link #getCustomLayout customLayout}.
-       */
-      setCustomLayout(
-        /**
-         * The customLayout to set
-         */
-        oCustomLayout: sap.m.CarouselLayout
-      ): sap.m.Carousel;
-      /**
        * Sets a new value for property {@link #getHeight height}.
        *
        * The height of the carousel. Note that when a percentage value is used, the height of the surrounding
@@ -24259,27 +21069,6 @@ declare namespace sap {
         sWidth: sap.ui.core.CSSSize
       ): sap.m.Carousel;
       /**
-       * Attaches event handler `fnFunction` to the {@link #event:beforePageChanged beforePageChanged} event of
-       * this `sap.m.Carousel`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.Carousel` itself.
-       *
-       * This event is fired before a carousel swipe has been completed. It is triggered both by physical swipe
-       * events and through API carousel manipulations such as calling 'next', 'previous' or 'setActivePageId'
-       * functions.
-       */
-      attachBeforePageChanged(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.Carousel` itself
-         */
-        oListener?: object
-      ): sap.m.Carousel;
-      /**
        * @deprecated (since 1.18.7) - Since 1.18.7 pages are no longer loaded or unloaded
        *
        * Attaches event handler `fnFunction` to the {@link #event:loadPage loadPage} event of this `sap.m.Carousel`.
@@ -24340,87 +21129,6 @@ declare namespace sap {
          */
         oListener?: object
       ): sap.m.Carousel;
-    }
-    /**
-     * @SINCE 1.62
-     *
-     * Applies a `sap.m.CarouselLayout` to a provided DOM element or Control.
-     */
-    // @ts-ignore - static "getMetadata" inheritance issue
-    class CarouselLayout extends sap.ui.base.ManagedObject {
-      /**
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: object
-      );
-
-      /**
-       * Creates a new subclass of class sap.m.CarouselLayout with name `sClassName` and enriches it with the
-       * information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Returns a metadata object for class sap.m.CarouselLayout.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Gets current value of property {@link #getVisiblePagesCount visiblePagesCount}.
-       *
-       * Defines how many pages are displayed in the visible area of the `Carousel` control. Value should be a
-       * positive number.
-       *
-       * **Note:** When this property is set to something different than the default value, the `loop` property
-       * of `Carousel` is ignored.
-       *
-       * Default value is `1`.
-       */
-      getVisiblePagesCount(): number;
-      /**
-       * Sets a new value for property {@link #getVisiblePagesCount visiblePagesCount}.
-       *
-       * Defines how many pages are displayed in the visible area of the `Carousel` control. Value should be a
-       * positive number.
-       *
-       * **Note:** When this property is set to something different than the default value, the `loop` property
-       * of `Carousel` is ignored.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `1`.
-       */
-      setVisiblePagesCount(
-        /**
-         * New value for property `visiblePagesCount`
-         */
-        iVisiblePagesCount: number
-      ): sap.m.CarouselLayout;
     }
     /**
      * Allows the user to set a binary value, such as true/false or yes/no for an item.
@@ -25582,11 +22290,11 @@ declare namespace sap {
        *
        * Gets current value of property {@link #getMergeFunctionName mergeFunctionName}.
        *
-       * Defines the control serialization function if `mergeDuplicates` property is set to `true`. The control
-       * itself uses this function to compare values of two repeating cells. Default value "getText" is suitable
-       * for `sap.m.Label` and `sap.m.Text` controls but for the `sap.ui.core.Icon` control "getSrc" function
-       * should be used to merge icons. **Note:** You can pass one string parameter to given function after "#"
-       * sign. e.g. "data#myparameter"
+       * Defines the control serialization function if `mergeDuplicates property is set to true`.
+       * The control itself uses this function to compare values of two repeating cells. Default value "getText"
+       * is suitable for `sap.m.Label` and `sap.m.Text` controls but for the `sap.ui.core.Icon` control "getSrc"
+       * function should be used to merge icons. **Note:** You can pass one string parameter to given function
+       * after "#" sign. e.g. "data#myparameter"
        *
        * Default value is `getText`.
        */
@@ -25634,18 +22342,6 @@ declare namespace sap {
        * Default value is `Begin`.
        */
       getPopinHAlign(): sap.ui.core.TextAlign;
-      /**
-       * @SINCE 1.61
-       *
-       * Gets current value of property {@link #getSortIndicator sortIndicator}.
-       *
-       * Defines if a column is sorted by setting the sort indicator for this column.
-       *
-       * **Note:** Defining this property does not trigger the sorting.
-       *
-       * Default value is `None`.
-       */
-      getSortIndicator(): sap.ui.core.SortOrder;
       /**
        * Gets current value of property {@link #getStyleClass styleClass}.
        *
@@ -25819,11 +22515,11 @@ declare namespace sap {
        *
        * Sets a new value for property {@link #getMergeFunctionName mergeFunctionName}.
        *
-       * Defines the control serialization function if `mergeDuplicates` property is set to `true`. The control
-       * itself uses this function to compare values of two repeating cells. Default value "getText" is suitable
-       * for `sap.m.Label` and `sap.m.Text` controls but for the `sap.ui.core.Icon` control "getSrc" function
-       * should be used to merge icons. **Note:** You can pass one string parameter to given function after "#"
-       * sign. e.g. "data#myparameter"
+       * Defines the control serialization function if `mergeDuplicates property is set to true`.
+       * The control itself uses this function to compare values of two repeating cells. Default value "getText"
+       * is suitable for `sap.m.Label` and `sap.m.Text` controls but for the `sap.ui.core.Icon` control "getSrc"
+       * function should be used to merge icons. **Note:** You can pass one string parameter to given function
+       * after "#" sign. e.g. "data#myparameter"
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -25898,25 +22594,6 @@ declare namespace sap {
          * New value for property `popinHAlign`
          */
         sPopinHAlign: sap.ui.core.TextAlign
-      ): sap.m.Column;
-      /**
-       * @SINCE 1.61
-       *
-       * Sets a new value for property {@link #getSortIndicator sortIndicator}.
-       *
-       * Defines if a column is sorted by setting the sort indicator for this column.
-       *
-       * **Note:** Defining this property does not trigger the sorting.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `None`.
-       */
-      setSortIndicator(
-        /**
-         * New value for property `sortIndicator`
-         */
-        sSortIndicator: sap.ui.core.SortOrder
       ): sap.m.Column;
       /**
        * Sets a new value for property {@link #getStyleClass styleClass}.
@@ -26214,15 +22891,6 @@ declare namespace sap {
       );
 
       /**
-       * Configures the SuggestionsPopover's list.
-       */
-      _configureList(
-        /**
-         * The list instance to be configured
-         */
-        oList: sap.m.List
-      ): void;
-      /**
        * Attaches event handler `fnFunction` to the {@link #event:change change} event of this `sap.m.ComboBox`.
        *
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -26289,20 +22957,17 @@ declare namespace sap {
       // @ts-ignore
       close(): sap.m.ComboBox;
       /**
-       * `ComboBox` picker configuration
+       * Creates a picker popup container where the selection should take place.
+       *
+       * To be overwritten by subclasses.
        */
       // @ts-ignore
-      configPicker(
+      createPicker(
         /**
-         * Picker instance
+         * The type of the picker
          */
-        oPicker: sap.m.Popover | sap.m.Dialog
-      ): void;
-      /**
-       * Destroys all the items in the aggregation named `items`.
-       */
-      // @ts-ignore
-      destroyItems(): sap.m.ComboBox;
+        sPickerType: string
+      ): sap.m.Popover | sap.m.Dialog;
       /**
        * Detaches event handler `fnFunction` from the {@link #event:change change} event of this `sap.m.ComboBox`.
        *
@@ -26335,11 +23000,6 @@ declare namespace sap {
          */
         oListener?: object
       ): sap.m.ComboBox;
-      /**
-       * This method will be called when the ComboBox is being destroyed.
-       */
-      // @ts-ignore
-      exit(): void;
       /**
        * Creates a new subclass of class sap.m.ComboBox with name `sClassName` and enriches it with the information
        * contained in `oClassInfo`.
@@ -26410,6 +23070,13 @@ declare namespace sap {
        */
       getFilterSecondaryValues(): boolean;
       /**
+       * Gets aggregation `items`.
+       *
+       * **Note**: This is the default aggregation.
+       */
+      // @ts-ignore
+      getItems(): sap.ui.core.Item[];
+      /**
        * Returns a metadata object for class sap.m.ComboBox.
        */
       // @ts-ignore
@@ -26437,44 +23104,14 @@ declare namespace sap {
        */
       getSelectedKey(): string;
       /**
-       * This method will be called when the ComboBox is initially created.
-       */
-      // @ts-ignore
-      init(): void;
-      /**
-       * This event handler will be called after the ComboBox Picker's List is rendered.
-       */
-      onAfterRenderingList(): void;
-      /**
-       * This event handler will be called after the ComboBox's Picker is rendered.
-       */
-      onAfterRenderingPicker(): void;
-      /**
        * This event handler is called before the picker popup is opened.
        */
       onBeforeOpen(): void;
       /**
-       * This event handler will be called before the ComboBox is rendered.
-       */
-      // @ts-ignore
-      onBeforeRendering(): void;
-      /**
-       * This event handler will be called before the ComboBox' Picker of type `sap.m.Popover` is rendered.
-       */
-      onBeforeRenderingDropdown(): void;
-      /**
-       * This event handler will be called before the ComboBox Picker's List is rendered.
-       */
-      onBeforeRenderingList(): void;
-      /**
-       * This event handler will be called before the ComboBox's Picker is rendered.
-       */
-      onBeforeRenderingPicker(): void;
-      /**
        * Opens the control's picker popup.
        */
       // @ts-ignore
-      open(): sap.m.ComboBox;
+      open(): sap.m.ComboBoxBase;
       /**
        * Removes an item from the aggregation named `items`.
        */
@@ -26633,19 +23270,6 @@ declare namespace sap {
       );
 
       /**
-       * Gets the ID of the hidden label for the group header items
-       */
-      _getGroupHeaderInvisibleText(): string;
-      /**
-       * Handles highlighting of items after filtering.
-       */
-      _highlightList(
-        /**
-         * The value of the item
-         */
-        sValue: string
-      ): void;
-      /**
        * Adds an item to the aggregation named `items`.
        */
       addItem(
@@ -26710,15 +23334,6 @@ declare namespace sap {
        */
       close(): sap.m.ComboBoxBase;
       /**
-       * Base method for picker configuration
-       */
-      configPicker(
-        /**
-         * Picker instance
-         */
-        oPicker: sap.m.Popover | sap.m.Dialog
-      ): void;
-      /**
        * Creates a picker popup container where the selection should take place. To be overwritten by subclasses.
        */
       createPicker(
@@ -26726,17 +23341,13 @@ declare namespace sap {
          * The picker type
          */
         sPickerType: string
-      ): sap.m.Popover | sap.m.Dialog;
+      ): void;
       /**
        * @SINCE 1.42
        *
        * Creates an instance of `sap.m.Bar`.
        */
       createPickerHeader(): sap.m.Bar;
-      /**
-       * Base method for picker text field creation
-       */
-      createPickerTextField(): void;
       /**
        * Destroys all the items in the aggregation {@link #getItems items}.
        */
@@ -26814,7 +23425,8 @@ declare namespace sap {
       ): sap.ui.core.Item;
       /**
        * Gets the item with the given key from the aggregation named `items`.
-       *  **Note:** If duplicate keys exist, the first item matching the key is returned.
+       *
+       * **Note:** If duplicate keys exist, the first item matching the key is returned.
        */
       getItemByKey(
         /**
@@ -26833,11 +23445,9 @@ declare namespace sap {
        */
       getLastItem(): sap.ui.core.Item;
       /**
-       * @deprecated - Deprecated as of version 1.62. The list structure should not be used as per SAP note: 2746748.
-       *
        * Gets the `list`.
        */
-      getList(): sap.m.List;
+      getList(): sap.m.SelectList;
       /**
        * Returns a metadata object for class sap.m.ComboBoxBase.
        */
@@ -26861,10 +23471,6 @@ declare namespace sap {
        * Gets the property `_sPickerType`
        */
       getPickerType(): string;
-      /**
-       * Gets the dom reference of the html node, needed for attaching aria attributes
-       */
-      getRoleComboNodeDomRef(): void;
       /**
        * @SINCE 1.60
        *
@@ -26999,19 +23605,6 @@ declare namespace sap {
         sPickerType: string
       ): void;
       /**
-       * Sets the selectable property of `sap.ui.core.Item`
-       */
-      setSelectable(
-        /**
-         * The item to set the property
-         */
-        oItem: sap.ui.core.Item,
-        /**
-         * The selectable value
-         */
-        bSelectable: boolean
-      ): void;
-      /**
        * @SINCE 1.60
        *
        * Sets a new value for property {@link #getShowSecondaryValues showSecondaryValues}.
@@ -27029,27 +23622,6 @@ declare namespace sap {
          */
         bShowSecondaryValues: boolean
       ): sap.m.ComboBoxBase;
-      /**
-       * Sets the TextField handler
-       */
-      setTextFieldHandler(
-        /**
-         * Text field instance
-         */
-        oTextField: any
-      ): void;
-      /**
-       * @SINCE 1.64
-       * @EXPERIMENTAL (since 1.64)
-       *
-       * Opens the `SuggestionsPopover` with the available items.
-       */
-      showItems(
-        /**
-         * Function to filter the items shown in the SuggestionsPopover
-         */
-        fnFilter: Function
-      ): void;
       /**
        * Unbinds aggregation {@link #getItems items} from model data.
        */
@@ -27528,7 +24100,7 @@ declare namespace sap {
     /**
      * @SINCE 1.22.0
      *
-     * Enables the users to select a localized date between 0001-01-01 and 9999-12-31.
+     * Enables the users to select a localized date.
      *
      * Overview:
      *
@@ -27714,10 +24286,6 @@ declare namespace sap {
            * Date range containing the start and end date displayed in the `Calendar` popup.
            */
           dateRange?: sap.ui.unified.DateRange;
-          /**
-           * Indicates if the event is fired, due to popup being opened.
-           */
-          afterPopupOpened?: boolean;
         }
       ): sap.m.DatePicker;
       /**
@@ -27871,12 +24439,6 @@ declare namespace sap {
        * Checks if the picker is open
        */
       isOpen(): boolean;
-      /**
-       * @SINCE 1.64
-       *
-       * Returns if the last entered value is valid.
-       */
-      isValidValue(): boolean;
       /**
        * @SINCE 1.38.5
        *
@@ -28034,8 +24596,7 @@ declare namespace sap {
     /**
      * @SINCE 1.22.0
      *
-     * A single-field input control that enables the users to enter a localized date range (between 0001-01-01
-     * and 9999-12-31).
+     * A single-field input control that enables the users to enter a localized date range.
      *
      * Overview:
      *
@@ -28490,8 +25051,7 @@ declare namespace sap {
      * @deprecated (since 1.32.8) - replaced by {@link sap.m.DatePicker}, {@link sap.m.TimePicker} or {@link
      * sap.m.DateTimePicker}
      *
-     * Allows end users to interact with date (between 0001-01-01 and 9999-12-31) and/or time and select from
-     * a date and/or time pad.
+     * Allows end users to interact with date and/or time and select from a date and/or time pad.
      *
      * **Note:** This control should not be used any longer, instead please use the dedicated `sap.m.DatePicker`,
      * `sap.m.TimePicker` or `sap.m.DateTimePicker` control.
@@ -29041,7 +25601,7 @@ declare namespace sap {
     /**
      * @SINCE 1.38.0
      *
-     * Enables the users to select date (between 0001-01-01 and 9999-12-31) and time values in a combined input.
+     * Enables the users to select date and time values in a combined input.
      *
      * Overview:
      *
@@ -30381,8 +26941,6 @@ declare namespace sap {
        * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
        * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
        * of the syntax of the settings object.
-       * See:
-       * 	{@link fiori:/display-list-item/ Display List Item}
        */
       constructor(
         /**
@@ -32990,6 +29548,16 @@ declare namespace sap {
         type: sap.m.ListType
       ): sap.m.FeedListItem;
       /**
+       * Redefinition of sap.m.ListItemBase.setUnread: Unread is not supported for FeedListItem
+       */
+      // @ts-ignore
+      setUnread(
+        /**
+         * new value for property unread is ignored
+         */
+        value: boolean
+      ): sap.m.FeedListItem;
+      /**
        * Attaches event handler `fnFunction` to the {@link #event:iconPress iconPress} event of this `sap.m.FeedListItem`.
        *
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -33892,8 +30460,7 @@ declare namespace sap {
        * 	 - `ul`
        * 	 - `ol`
        * 	 - `li`  `class, style,` and `target` attributes are allowed. If `target` is not set, links
-       * 			open in a new window by default. Only safe `href` attributes can be used. See {@link module:sap/base/security/URLWhitelist
-       * 			URLWhitelist}.
+       * 			open in a new window by default. Only safe `href` attributes can be used. See {@link sap.base.security.URLWhiteList}.
        *
        * **Note:** Keep in mind that not supported HTML tags and the content nested inside them are both not rendered
        * by the control.
@@ -33986,247 +30553,6 @@ declare namespace sap {
          */
         sWidth: sap.ui.core.CSSSize
       ): sap.m.FormattedText;
-    }
-    /**
-     * @SINCE 1.62.0
-     *
-     * The `sap.m.GenericTag` control displays app-specific, essential information. Structure: The control consists
-     * of four different parts:
-     * 	 - Status indicator with semantic colors (required)
-     * 	 - Icon that is displayed in the same color as the status indicator (optional)
-     * 	 - Text that is truncated automatically (required)
-     * 	 - Content area that can display either a control of type {@link sap.m.ObjectNumber} or a warning icon
-     * 			(optional)
-     */
-    class GenericTag extends sap.ui.core.Control
-      implements sap.m.IOverflowToolbarContent {
-      /**
-       * Constructor for a new `sap.m.GenericTag`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: GenericTagOpts
-      );
-
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:press press} event of this `sap.m.GenericTag`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.GenericTag` itself.
-       *
-       * Fired when the user clicks/taps on the control.
-       */
-      attachPress(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.GenericTag` itself
-         */
-        oListener?: object
-      ): sap.m.GenericTag;
-      /**
-       * Destroys the value in the aggregation {@link #getValue value}.
-       */
-      destroyValue(): sap.m.GenericTag;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:press press} event of this `sap.m.GenericTag`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachPress(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.GenericTag;
-      /**
-       * Creates a new subclass of class sap.m.GenericTag with name `sClassName` and enriches it with the information
-       * contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Fires event {@link #event:press press} to attached listeners.
-       */
-      firePress(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: object
-      ): sap.m.GenericTag;
-      /**
-       * Gets current value of property {@link #getDesign design}.
-       *
-       * Determines the visual mode of the control.
-       *
-       * Default value is `Full`.
-       */
-      getDesign(): sap.m.GenericTagDesign;
-      /**
-       * Returns a metadata object for class sap.m.GenericTag.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Sets the behavior of the `GenericTag` inside an `OverflowToolbar` configuration.
-       */
-      getOverflowToolbarConfig(): object;
-      /**
-       * Gets current value of property {@link #getStatus status}.
-       *
-       * Determines the control status that is represented in different colors, including the the color bar and
-       * the color and type of the displayed icon.
-       *
-       * Default value is `None`.
-       */
-      getStatus(): sap.ui.core.ValueState;
-      /**
-       * Gets current value of property {@link #getText text}.
-       *
-       * Defines the text rendered by the control. It's a value-descriptive text rendered on one line.
-       *
-       * Default value is `empty string`.
-       */
-      getText(): string;
-      /**
-       * Gets content of aggregation {@link #getValue value}.
-       *
-       * Numeric value rendered by the control.
-       */
-      getValue(): sap.m.ObjectNumber;
-      /**
-       * Gets current value of property {@link #getValueState valueState}.
-       *
-       * Determines the state of the control.
-       *
-       * **Note:** When the error state is set, a warning type of icon is displayed that overrides the control
-       * set through the `value` aggregation.
-       *
-       * Default value is `None`.
-       */
-      getValueState(): sap.m.GenericTagValueState;
-      /**
-       * Sets a new value for property {@link #getDesign design}.
-       *
-       * Determines the visual mode of the control.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `Full`.
-       */
-      setDesign(
-        /**
-         * New value for property `design`
-         */
-        sDesign: sap.m.GenericTagDesign
-      ): sap.m.GenericTag;
-      /**
-       * Sets the `status` property.
-       *
-       * Default value is `None`.
-       */
-      setStatus(
-        /**
-         * New value for property `status`.
-         */
-        sStatus: sap.ui.core.ValueState
-      ): sap.m.GenericTag;
-      /**
-       * Sets a new value for property {@link #getText text}.
-       *
-       * Defines the text rendered by the control. It's a value-descriptive text rendered on one line.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setText(
-        /**
-         * New value for property `text`
-         */
-        sText: string
-      ): sap.m.GenericTag;
-      /**
-       * Sets the aggregated {@link #getValue value}.
-       */
-      setValue(
-        /**
-         * The value to set
-         */
-        oValue: sap.m.ObjectNumber
-      ): sap.m.GenericTag;
-      /**
-       * Sets a new value for property {@link #getValueState valueState}.
-       *
-       * Determines the state of the control.
-       *
-       * **Note:** When the error state is set, a warning type of icon is displayed that overrides the control
-       * set through the `value` aggregation.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `None`.
-       */
-      setValueState(
-        /**
-         * New value for property `valueState`
-         */
-        sValueState: sap.m.GenericTagValueState
-      ): sap.m.GenericTag;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:press press} event of this `sap.m.GenericTag`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.GenericTag` itself.
-       *
-       * Fired when the user clicks/taps on the control.
-       */
-      attachPress(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.GenericTag` itself
-         */
-        oListener?: object
-      ): sap.m.GenericTag;
     }
     /**
      * @SINCE 1.34.0
@@ -35224,17 +31550,6 @@ declare namespace sap {
       );
 
       /**
-       * @SINCE 1.62.0
-       *
-       * Adds some ariaLabelledBy into the association {@link #getAriaLabelledBy ariaLabelledBy}.
-       */
-      addAriaLabelledBy(
-        /**
-         * The ariaLabelledBy to add; if empty, nothing is inserted
-         */
-        vAriaLabelledBy: sap.ui.core.ID | sap.ui.core.Control
-      ): sap.m.HeaderContainer;
-      /**
        * Adds some content to the aggregation {@link #getContent content}.
        */
       addContent(
@@ -35268,13 +31583,6 @@ declare namespace sap {
          */
         FNMetaImpl?: Function
       ): Function;
-      /**
-       * @SINCE 1.62.0
-       *
-       * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
-       * ariaLabelledBy}.
-       */
-      getAriaLabelledBy(): sap.ui.core.ID[];
       /**
        * Gets current value of property {@link #getBackgroundDesign backgroundDesign}.
        *
@@ -35386,28 +31694,11 @@ declare namespace sap {
         iIndex: number
       ): sap.m.HeaderContainer;
       /**
-       * @SINCE 1.62.0
-       *
-       * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
-       */
-      removeAllAriaLabelledBy(): sap.ui.core.ID[];
-      /**
        * Removes all the controls from the aggregation {@link #getContent content}.
        *
        * Additionally, it unregisters them from the hosting UIArea.
        */
       removeAllContent(): sap.ui.core.Control[];
-      /**
-       * @SINCE 1.62.0
-       *
-       * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
-       */
-      removeAriaLabelledBy(
-        /**
-         * The ariaLabelledBy to be removed or its index or ID
-         */
-        vAriaLabelledBy: number | sap.ui.core.ID | sap.ui.core.Control
-      ): sap.ui.core.ID;
       /**
        * Removes a content from the aggregation {@link #getContent content}.
        */
@@ -35622,7 +31913,7 @@ declare namespace sap {
      * 			tabs are available in an overflow button (property `showOverflowSelectList`).
      */
     class IconTabBar extends sap.ui.core.Control
-      implements sap.m.ObjectHeaderContainer, sap.f.IDynamicPageStickyContent {
+      implements sap.m.ObjectHeaderContainer {
       /**
        * Constructor for a new IconTabBar.
        *
@@ -37194,24 +33485,6 @@ declare namespace sap {
       );
 
       /**
-       * Checks if the given value is valid for the `background-position` CSS property
-       */
-      _isValidBackgroundPositionValue(
-        /**
-         * the value to check
-         */
-        sValue: string
-      ): boolean;
-      /**
-       * Checks if the given value is valid for the `background-size` CSS property
-       */
-      _isValidBackgroundSizeValue(
-        /**
-         * the value to check
-         */
-        sValue: string
-      ): boolean;
-      /**
        * Adds some ariaDescribedBy into the association {@link #getAriaDescribedBy ariaDescribedBy}.
        */
       addAriaDescribedBy(
@@ -38232,11 +34505,10 @@ declare namespace sap {
        *
        * This event is fired when user presses the `Enter` key on the input.
        *
-       * **Notes:**
-       * 	 - The event is fired independent of whether there was a change before or not. If a change was performed,
-       * 			the event is fired after the change event.
-       * 	 - The event is also fired when an item of the select list is selected via `Enter`.
-       * 	 - The event is only fired on an input which allows text input (`editable`, `enabled` and not `valueHelpOnly`).
+       * **Note:** The event is fired independent of whether there was a change before or not. If a change was
+       * performed the event is fired after the change event. The event is also fired when an item of the select
+       * list is selected via `Enter`. The event is only fired on an input which allows text input (`editable`,
+       * `enabled` and not `valueHelpOnly`).
        */
       attachSubmit(
         /**
@@ -38606,16 +34878,6 @@ declare namespace sap {
       // @ts-ignore
       getAccessibilityInfo(): object;
       /**
-       * @SINCE 1.61
-       *
-       * Gets current value of property {@link #getAutocomplete autocomplete}.
-       *
-       * Specifies whether autocomplete is enabled. Works only if "showSuggestion" property is set to true.
-       *
-       * Default value is `true`.
-       */
-      getAutocomplete(): boolean;
-      /**
        * @deprecated (since 1.9.1) - `sap.m.DatePicker`, `sap.m.TimePicker` or `sap.m.DateTimePicker` should be
        * used for date/time inputs and formating.
        *
@@ -38819,7 +35081,7 @@ declare namespace sap {
        * binding the table cells. The items of this aggregation are to be bound directly or to set in the suggest
        * event method. Note: If this aggregation is filled, the aggregation suggestionItems will be ignored.
        */
-      getSuggestionRows(): any;
+      getSuggestionRows(): sap.m.ColumnListItem[];
       /**
        * @SINCE 1.44
        *
@@ -38942,7 +35204,7 @@ declare namespace sap {
         /**
          * The suggestionRow whose index is looked for
          */
-        vSuggestionRow: sap.m.ColumnListItem | sap.m.GroupHeaderListItem
+        oSuggestionRow: sap.m.ColumnListItem
       ): number;
       /**
        * @SINCE 1.21.1
@@ -39122,23 +35384,6 @@ declare namespace sap {
          */
         oItem: sap.ui.core.Item
       ): boolean;
-      /**
-       * @SINCE 1.61
-       *
-       * Sets a new value for property {@link #getAutocomplete autocomplete}.
-       *
-       * Specifies whether autocomplete is enabled. Works only if "showSuggestion" property is set to true.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `true`.
-       */
-      setAutocomplete(
-        /**
-         * New value for property `autocomplete`
-         */
-        bAutocomplete: boolean
-      ): sap.m.Input;
       /**
        * @deprecated (since 1.9.1) - `sap.m.DatePicker`, `sap.m.TimePicker` or `sap.m.DateTimePicker` should be
        * used for date/time inputs and formating.
@@ -39549,18 +35794,6 @@ declare namespace sap {
         sWidth: string
       ): void;
       /**
-       * @SINCE 1.64
-       * @EXPERIMENTAL (since 1.64)
-       *
-       * Opens the `SuggestionsPopover` with the available items.
-       */
-      showItems(
-        /**
-         * Function to filter the items shown in the SuggestionsPopover
-         */
-        fnFilter: Function
-      ): void;
-      /**
        * @SINCE 1.21.1
        *
        * Unbinds aggregation {@link #getSuggestionColumns suggestionColumns} from model data.
@@ -39608,11 +35841,10 @@ declare namespace sap {
        *
        * This event is fired when user presses the `Enter` key on the input.
        *
-       * **Notes:**
-       * 	 - The event is fired independent of whether there was a change before or not. If a change was performed,
-       * 			the event is fired after the change event.
-       * 	 - The event is also fired when an item of the select list is selected via `Enter`.
-       * 	 - The event is only fired on an input which allows text input (`editable`, `enabled` and not `valueHelpOnly`).
+       * **Note:** The event is fired independent of whether there was a change before or not. If a change was
+       * performed the event is fired after the change event. The event is also fired when an item of the select
+       * list is selected via `Enter`. The event is only fired on an input which allows text input (`editable`,
+       * `enabled` and not `valueHelpOnly`).
        */
       attachSubmit(
         /**
@@ -40024,6 +36256,9 @@ declare namespace sap {
        * Gets current value of property {@link #getWidth width}.
        *
        * Defines the width of the control.
+       *
+       * **Note:** If the provided width is too small, the control gets stretched to its min width, which is needed
+       * in order for the control to be usable and well aligned.
        */
       getWidth(): sap.ui.core.CSSSize;
       /**
@@ -40281,6 +36516,9 @@ declare namespace sap {
        *
        * Defines the width of the control.
        *
+       * **Note:** If the provided width is too small, the control gets stretched to its min width, which is needed
+       * in order for the control to be usable and well aligned.
+       *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        */
       setWidth(
@@ -40344,8 +36582,6 @@ declare namespace sap {
        * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
        * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
        * of the syntax of the settings object.
-       * See:
-       * 	{@link fiori:/input-list-item/ Input List Item}
        */
       constructor(
         /**
@@ -41444,8 +37680,7 @@ declare namespace sap {
        * If validation fails, the value of the `href` property will still be set, but will not be applied to the
        * DOM.
        *
-       * **Note:** Additional whitelisting of URLs is allowed through {@link module:sap/base/security/URLWhitelist
-       * URLWhitelist}.
+       * **Note:** Additional whitelisting of URLs is allowed through {@link sap.base.security.URLWhiteList}.
        *
        * Default value is `false`.
        */
@@ -41633,8 +37868,7 @@ declare namespace sap {
        * If validation fails, the value of the `href` property will still be set, but will not be applied to the
        * DOM.
        *
-       * **Note:** Additional whitelisting of URLs is allowed through {@link module:sap/base/security/URLWhitelist
-       * URLWhitelist}.
+       * **Note:** Additional whitelisting of URLs is allowed through {@link sap.base.security.URLWhiteList}.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -41709,8 +37943,6 @@ declare namespace sap {
        * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
        * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
        * of the syntax of the settings object.
-       * See:
-       * 	{@link fiori:/list-overview/ List}
        */
       constructor(
         /**
@@ -42019,7 +38251,7 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.ListBase` itself.
        *
-       * Fires after user's swipe action and before the `swipeContent` is shown. On the `swipe` event handler,
+       * Fires after us"r's swipe action and before the `swipeContent` is shown. On the `swipe` event handler,
        * `swipeContent` can be changed according to the swiped item. Calling the `preventDefault` method of the
        * event cancels the swipe action.
        */
@@ -42819,9 +39051,9 @@ declare namespace sap {
        *
        * There are also some known limitations with respect to the scrolling behavior. A few are given below:
        *
-       * 	 - If the control is placed in layout containers that have the `overflow: hidden` or `overflow: auto`
-       * 			style definition, this can prevent the sticky elements of the control from becoming fixed at the top
-       * 			of the viewport.
+       * 	 - If the control is placed in certain layout containers, for example, the `sap.ui.layout.Grid` control,
+       * 			the sticky elements of the control are not fixed at the top of the viewport. The control behaves in a
+       * 			similar way when placed within the `sap.m.ObjectPage` control.
        * 	 - If sticky column headers are enabled in the `sap.m.Table` control, setting focus on the column headers
        * 			will let the table scroll to the top.
        */
@@ -43318,9 +39550,9 @@ declare namespace sap {
        *
        * There are also some known limitations with respect to the scrolling behavior. A few are given below:
        *
-       * 	 - If the control is placed in layout containers that have the `overflow: hidden` or `overflow: auto`
-       * 			style definition, this can prevent the sticky elements of the control from becoming fixed at the top
-       * 			of the viewport.
+       * 	 - If the control is placed in certain layout containers, for example, the `sap.ui.layout.Grid` control,
+       * 			the sticky elements of the control are not fixed at the top of the viewport. The control behaves in a
+       * 			similar way when placed within the `sap.m.ObjectPage` control.
        * 	 - If sticky column headers are enabled in the `sap.m.Table` control, setting focus on the column headers
        * 			will let the table scroll to the top.
        *
@@ -43540,7 +39772,7 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.ListBase` itself.
        *
-       * Fires after user's swipe action and before the `swipeContent` is shown. On the `swipe` event handler,
+       * Fires after us"r's swipe action and before the `swipeContent` is shown. On the `swipe` event handler,
        * `swipeContent` can be changed according to the swiped item. Calling the `preventDefault` method of the
        * event cancels the swipe action.
        */
@@ -43889,28 +40121,9 @@ declare namespace sap {
        *
        * Defines the highlight state of the list items.
        *
-       * Valid values for the `highlight` property are values of the enumerations {@link sap.ui.core.MessageType}
-       * or {@link sap.ui.core.IndicationColor}.
-       *
-       * Accessibility support is provided through the associated {@link sap.m.ListItemBase#setHighlightText highlightText}
-       * property. If the `highlight` property is set to a value of {@link sap.ui.core.MessageType}, the `highlightText`
-       * property does not need to be set because a default text is used. However, the default text can be overridden
-       * by setting the `highlightText` property. In all other cases the `highlightText` property must be set.
-       *
        * Default value is `None`.
        */
-      getHighlight(): string;
-      /**
-       * @SINCE 1.62
-       *
-       * Gets current value of property {@link #getHighlightText highlightText}.
-       *
-       * Defines the semantics of the {@link sap.m.ListItemBase#setHighlight highlight} property for accessibility
-       * purposes.
-       *
-       * Default value is `empty string`.
-       */
-      getHighlightText(): string;
+      getHighlight(): sap.ui.core.MessageType;
       /**
        * Returns a metadata object for class sap.m.ListItemBase.
        */
@@ -43995,14 +40208,6 @@ declare namespace sap {
        *
        * Defines the highlight state of the list items.
        *
-       * Valid values for the `highlight` property are values of the enumerations {@link sap.ui.core.MessageType}
-       * or {@link sap.ui.core.IndicationColor}.
-       *
-       * Accessibility support is provided through the associated {@link sap.m.ListItemBase#setHighlightText highlightText}
-       * property. If the `highlight` property is set to a value of {@link sap.ui.core.MessageType}, the `highlightText`
-       * property does not need to be set because a default text is used. However, the default text can be overridden
-       * by setting the `highlightText` property. In all other cases the `highlightText` property must be set.
-       *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
        * Default value is `None`.
@@ -44011,25 +40216,7 @@ declare namespace sap {
         /**
          * New value for property `highlight`
          */
-        sHighlight: string
-      ): sap.m.ListItemBase;
-      /**
-       * @SINCE 1.62
-       *
-       * Sets a new value for property {@link #getHighlightText highlightText}.
-       *
-       * Defines the semantics of the {@link sap.m.ListItemBase#setHighlight highlight} property for accessibility
-       * purposes.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setHighlightText(
-        /**
-         * New value for property `highlightText`
-         */
-        sHighlightText: string
+        sHighlight: sap.ui.core.MessageType
       ): sap.m.ListItemBase;
       /**
        * Sets a new value for property {@link #getSelected selected}.
@@ -48565,15 +44752,19 @@ declare namespace sap {
       // @ts-ignore
       clearSelection(): void;
       /**
-       * `MultiComboBox` picker configuration
+       * Create an instance type of `sap.m.List`.
+       */
+      createList(): void;
+      /**
+       * Creates a picker. To be overwritten by subclasses.
        */
       // @ts-ignore
-      configPicker(
+      createPicker(
         /**
-         * Picker instance
+         * The picker type
          */
-        oPicker: sap.m.Popover | sap.m.Dialog
-      ): void;
+        sPickerType: string
+      ): sap.m.Popover | sap.m.Dialog;
       /**
        * Destroys all the items in the aggregation named `items`.
        */
@@ -48665,12 +44856,32 @@ declare namespace sap {
         }
       ): sap.m.MultiComboBox;
       /**
-       * Gets the accessibility info for the control
        * See:
        * 	sap.ui.core.Control#getAccessibilityInfo
        */
       // @ts-ignore
-      getAccessibilityInfo(): string;
+      getAccessibilityInfo(): void;
+      /**
+       * Gets the enabled items from the aggregation named `items`.
+       */
+      // @ts-ignore
+      getEnabledItems(
+        /**
+         * Items to filter.
+         */
+        aItems?: sap.ui.core.Item[]
+      ): sap.ui.core.Item[];
+      /**
+       * Gets the item with the given key from the aggregation named `items`.
+       *  **Note:** If duplicate keys exist, the first item matching the key is returned.
+       */
+      // @ts-ignore
+      getItemByKey(
+        /**
+         * An item key that specifies the item to retrieve.
+         */
+        sKey: string
+      ): sap.ui.core.Item;
       /**
        * Returns a metadata object for class sap.m.MultiComboBox.
        */
@@ -48680,6 +44891,15 @@ declare namespace sap {
        * Retrieves the selected item objects from the association named `selectedItems`.
        */
       getSelectedItems(): sap.ui.core.Item[];
+      /**
+       * Gets current value of property {@link #getSelectedKeys selectedKeys}.
+       *
+       * Keys of the selected items. If the key has no corresponding item, no changes will apply. If duplicate
+       * keys exists the first item matching the key is used.
+       *
+       * Default value is `[]`.
+       */
+      getSelectedKeys(): string[];
       /**
        * Inserts an item into the aggregation named `items`.
        */
@@ -48697,39 +44917,20 @@ declare namespace sap {
         iIndex: number
       ): sap.m.MultiComboBox;
       /**
-       * Checks whether an item is selected.
-       */
-      isItemSelected(
-        /**
-         * The item to check.
-         */
-        oItem: sap.ui.core.Item
-      ): boolean;
-      /**
        * This hook method is called after the MultiComboBox's Pop-up is rendered.
        */
       onAfterRenderingPicker(): void;
       /**
-       * This hook method is called before the MultiComboBox is rendered.
-       */
-      // @ts-ignore
-      onBeforeRendering(): void;
-      /**
        * This hook method is called before the MultiComboBox's Pop-up is rendered.
        */
       onBeforeRenderingPicker(): void;
-      /**
-       * Opens the control's picker popup.
-       */
-      // @ts-ignore
-      open(): sap.m.MultiComboBox;
       /**
        * Removes all the items in the aggregation named `items`.
        */
       // @ts-ignore
       removeAllItems(): sap.ui.core.Item[];
       /**
-       * Removes all the controls in the association named selectedItems.
+       * Removes all the controls in the association named {@link #getSelectedItems selectedItems}.
        */
       removeAllSelectedItems(): sap.ui.core.ID[];
       /**
@@ -48743,14 +44944,14 @@ declare namespace sap {
         oItem: number | string | sap.ui.core.Item
       ): sap.ui.core.Item;
       /**
-       * Removes an selectedItem from the association named `selectedItems`.
+       * Removes an selectedItem from the association named {@link #getSelectedItems selectedItems}.
        */
       removeSelectedItem(
         /**
-         * The item to be removed
+         * The selectedItem to be removed or its index or ID
          */
-        oItem: sap.ui.core.Item | sap.ui.core.ID | string
-      ): sap.ui.core.ID | null;
+        vSelectedItem: number | sap.ui.core.ID | sap.ui.core.Item
+      ): sap.ui.core.ID;
       /**
        * Removes selected items. Only items with valid keys are removed.
        */
@@ -48770,6 +44971,22 @@ declare namespace sap {
          * or null.
          */
         aItems: string[] | sap.ui.core.Item[] | null
+      ): sap.m.MultiComboBox;
+      /**
+       * Sets a new value for property {@link #getSelectedKeys selectedKeys}.
+       *
+       * Keys of the selected items. If the key has no corresponding item, no changes will apply. If duplicate
+       * keys exists the first item matching the key is used.
+       *
+       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+       *
+       * Default value is `[]`.
+       */
+      setSelectedKeys(
+        /**
+         * New value for property `selectedKeys`
+         */
+        sSelectedKeys: string[]
       ): sap.m.MultiComboBox;
       /**
        * Attaches event handler `fnFunction` to the {@link #event:selectionChange selectionChange} event of this
@@ -48909,8 +45126,6 @@ declare namespace sap {
         oListener?: object
       ): sap.m.MultiInput;
       /**
-       * @SINCE 1.46
-       *
        * Attaches event handler `fnFunction` to the {@link #event:tokenUpdate tokenUpdate} event of this `sap.m.MultiInput`.
        *
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -48967,8 +45182,6 @@ declare namespace sap {
         oListener?: object
       ): sap.m.MultiInput;
       /**
-       * @SINCE 1.46
-       *
        * Detaches event handler `fnFunction` from the {@link #event:tokenUpdate tokenUpdate} event of this `sap.m.MultiInput`.
        *
        * The passed function and listener object must match the ones used for event registration.
@@ -49016,9 +45229,8 @@ declare namespace sap {
         mParameters?: {
           /**
            * Type of tokenChange event. There are four TokenChange types: "added", "removed", "removedAll", "tokensChanged".
-           * Use sap.m.Tokenizer.TokenChangeType.Added for "added", sap.m.Tokenizer.TokenChangeType.Removed for "removed",
-           * sap.m.Tokenizer.TokenChangeType.RemovedAll for "removedAll" and sap.m.Tokenizer.TokenChangeType.TokensChanged
-           * for "tokensChanged".
+           * Use Tokenizer.TokenChangeType.Added for "added", Tokenizer.TokenChangeType.Removed for "removed", Tokenizer.TokenChangeType.RemovedAll
+           * for "removedAll" and Tokenizer.TokenChangeType.TokensChanged for "tokensChanged".
            */
           type?: string;
           /**
@@ -49040,8 +45252,6 @@ declare namespace sap {
         }
       ): sap.m.MultiInput;
       /**
-       * @SINCE 1.46
-       *
        * Fires event {@link #event:tokenUpdate tokenUpdate} to attached listeners.
        *
        * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
@@ -49053,8 +45263,8 @@ declare namespace sap {
          */
         mParameters?: {
           /**
-           * Type of tokenChange event. There are two TokenUpdate types: "added", "removed" Use sap.m.Tokenizer.TokenUpdateType.Added
-           * for "added" and sap.m.Tokenizer.TokenUpdateType.Removed for "removed".
+           * Type of tokenChange event. There are two TokenUpdate types: "added", "removed" Use Tokenizer.TokenUpdateType.Added
+           * for "added" and Tokenizer.TokenUpdateType.Removed for "removed".
            */
           type?: string;
           /**
@@ -49271,8 +45481,6 @@ declare namespace sap {
         oListener?: object
       ): sap.m.MultiInput;
       /**
-       * @SINCE 1.46
-       *
        * Attaches event handler `fnFunction` to the {@link #event:tokenUpdate tokenUpdate} event of this `sap.m.MultiInput`.
        *
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -49740,8 +45948,7 @@ declare namespace sap {
        *
        * Determines whether the initial focus is set automatically on first rendering and after navigating to
        * a new page. This is useful when on touch devices the keyboard pops out due to the focus being automatically
-       * set on an input field. If necessary, the `afterShow` event can be used to focus another element, only
-       * if `autoFocus` is set to `false`.
+       * set on an input field. If necessary the "afterShow" event can be used to focus another element.
        *
        * **Note:** The following scenarios are possible, depending on where the focus was before navigation to
        * a new page:
@@ -49914,8 +46121,7 @@ declare namespace sap {
        *
        * Determines whether the initial focus is set automatically on first rendering and after navigating to
        * a new page. This is useful when on touch devices the keyboard pops out due to the focus being automatically
-       * set on an input field. If necessary, the `afterShow` event can be used to focus another element, only
-       * if `autoFocus` is set to `false`.
+       * set on an input field. If necessary the "afterShow" event can be used to focus another element.
        *
        * **Note:** The following scenarios are possible, depending on where the focus was before navigation to
        * a new page:
@@ -52323,19 +48529,6 @@ declare namespace sap {
        */
       getIconTooltip(): string;
       /**
-       * @SINCE 1.61
-       *
-       * Gets current value of property {@link #getImageShape imageShape}.
-       *
-       * Determines whether the picture should be displayed in a square or with a circle-shaped mask just like
-       * in {@link sap.uxap.ObjectPageHeader}.
-       *
-       * **Note:** This property takes effect only on Images and it is ignored for Icons.
-       *
-       * Default value is `Square`.
-       */
-      getImageShape(): sap.m.ObjectHeaderPictureShape;
-      /**
        * Gets current value of property {@link #getIntro intro}.
        *
        * Determines the introductory text for the `ObjectHeader`.
@@ -52462,12 +48655,8 @@ declare namespace sap {
        * Determines whether the `ObjectHeader` is rendered with a different design that reacts responsively to
        * the screen sizes.
        *
-       * When the `responsive` property is set to `true`, the following behavior specifics for the control exist:
-       *
-       * 	 - If an image (or an icon font) is set to the `icon` property, it is hidden in portrait mode on phone.
-       *
-       * 	 - The title is truncated to 80 characters if longer. For portrait mode on phone, the title is truncated
-       * 			to 50 characters.
+       * **Note:** Be aware that the design and behavior of the responsive `ObjectHeader` could change without
+       * further notification.
        *
        * Default value is `false`.
        */
@@ -52941,26 +49130,6 @@ declare namespace sap {
         sIconTooltip: string
       ): sap.m.ObjectHeader;
       /**
-       * @SINCE 1.61
-       *
-       * Sets a new value for property {@link #getImageShape imageShape}.
-       *
-       * Determines whether the picture should be displayed in a square or with a circle-shaped mask just like
-       * in {@link sap.uxap.ObjectPageHeader}.
-       *
-       * **Note:** This property takes effect only on Images and it is ignored for Icons.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `Square`.
-       */
-      setImageShape(
-        /**
-         * New value for property `imageShape`
-         */
-        sImageShape: sap.m.ObjectHeaderPictureShape
-      ): sap.m.ObjectHeader;
-      /**
        * Sets a new value for property {@link #getIntro intro}.
        *
        * Determines the introductory text for the `ObjectHeader`.
@@ -53107,12 +49276,8 @@ declare namespace sap {
        * Determines whether the `ObjectHeader` is rendered with a different design that reacts responsively to
        * the screen sizes.
        *
-       * When the `responsive` property is set to `true`, the following behavior specifics for the control exist:
-       *
-       * 	 - If an image (or an icon font) is set to the `icon` property, it is hidden in portrait mode on phone.
-       *
-       * 	 - The title is truncated to 80 characters if longer. For portrait mode on phone, the title is truncated
-       * 			to 50 characters.
+       * **Note:** Be aware that the design and behavior of the responsive `ObjectHeader` could change without
+       * further notification.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -53348,8 +49513,6 @@ declare namespace sap {
      * The ObjectIdentifier is a display control that enables the user to easily identify a specific object.
      * The ObjectIdentifier title is the key identifier of the object and additional text and icons can be used
      * to further distinguish it from other objects.
-     *
-     * **Note:** This control should not be used with {@link sap.m.Label} or in Forms along with {@link sap.m.Label}.
      */
     class ObjectIdentifier extends sap.ui.core.Control {
       /**
@@ -54505,12 +50668,6 @@ declare namespace sap {
      *
      * The ObjectNumber control displays number and number unit properties for an object. The number can be
      * displayed using semantic colors to provide additional meaning about the object to the user.
-     *
-     * With 1.63, large design of the control is supported by setting `sapMObjectNumberLarge` CSS class to the
-     * `ObjectNumber`.
-     *
-     * **Note:** To fulfill the design guidelines when you are using `sapMObjectNumberLarge` CSS class set the
-     * `emphasized` property to `false`.
      */
     class ObjectNumber extends sap.ui.core.Control {
       /**
@@ -54738,9 +50895,6 @@ declare namespace sap {
     }
     /**
      * Status information that can be either text with a value state, or an icon.
-     *
-     * With 1.63, large design of the control is supported by setting `sapMObjectStatusLarge` CSS class to the
-     * `ObjectStatus`.
      */
     class ObjectStatus extends sap.ui.core.Control {
       /**
@@ -55086,7 +51240,6 @@ declare namespace sap {
      * 	 - {@link sap.m.DatePicker}
      * 	 - {@link sap.m.DateTimeInput}
      * 	 - {@link sap.m.DateTimePicker}
-     * 	 - {@link sap.m.GenericTag}
      * 	 - {@link sap.m.Input}
      * 	 - {@link sap.m.Label}
      * 	 - {@link sap.m.MenuButton}
@@ -55097,7 +51250,6 @@ declare namespace sap {
      * 	 - {@link sap.m.Select}
      * 	 - {@link sap.m.TimePicker}
      * 	 - {@link sap.m.ToggleButton}
-     * 	 - {@link sap.m.ToolbarSeparator}
      * 	 - {@link sap.ui.comp.smartfield.SmartField}
      * 	 - {@link sap.ui.comp.smartfield.SmartLabel}
      *
@@ -55138,18 +51290,6 @@ declare namespace sap {
         mSettings?: OverflowToolbarOpts
       );
 
-      /**
-       * Moves each control in the suitable collection - Popover only, movable controls and toolbar only
-       */
-      _moveControlInSuitableCollection(
-        oControl: undefined,
-
-        sPriority: undefined
-      ): void;
-      /**
-       * Removes Control from collections
-       */
-      _removeContentFromControlsCollections(oControl: undefined): void;
       /**
        * @SINCE 1.40
        *
@@ -55193,8 +51333,7 @@ declare namespace sap {
      * it is required to have buttons that show only an icon in the toolbar, but icon and text in the overflow
      * menu.
      */
-    class OverflowToolbarButton extends sap.m.Button
-      implements sap.f.IShellBar {
+    class OverflowToolbarButton extends sap.m.Button {
       /**
        * Constructor for a new `OverflowToolbarButton`.
        */
@@ -60646,7 +56785,7 @@ declare namespace sap {
       /**
        * @SINCE 1.30
        *
-       * Scrolls to an element (DOM or sap.ui.core.Element) within the page if the element is rendered.
+       * Scrolls to an element(DOM or sap.ui.core.Element) within the page if the element is rendered.
        */
       scrollToElement(
         /**
@@ -60654,15 +56793,14 @@ declare namespace sap {
          */
         oElement: HTMLElement | sap.ui.core.Element,
         /**
-         * The duration of animated scrolling in milliseconds. To scroll immediately without animation, give 0 as
-         * value.
+         * The duration of animated scrolling. To scroll immediately without animation, give 0 as value or leave
+         * it default.
          */
-        iTime?: number,
+        iTime: number,
         /**
-         * Specifies an additional left and top offset of the target scroll position, relative to the upper left
-         * corner of the DOM element
+         * the offset left and top for the DOM Element.
          */
-        aOffset?: number[]
+        Specifies: any[]
       ): sap.m.Page;
       /**
        * Sets a new value for property {@link #getBackgroundDesign backgroundDesign}.
@@ -60980,6 +57118,21 @@ declare namespace sap {
          * Context object to call the event handler with. Defaults to this `sap.m.Page` itself
          */
         oListener?: object
+      ): sap.m.Page;
+      /**
+       * @SINCE 1.30
+       *
+       * Scrolls to an element(DOM or sap.ui.core.Element) within the page if the element is rendered.
+       */
+      scrollToElement(
+        /**
+         * The element to which should be scrolled.
+         */
+        oElement: HTMLElement | sap.ui.core.Element,
+        /**
+         * the offset left and top for the DOM Element.
+         */
+        Specifies: any[]
       ): sap.m.Page;
     }
     /**
@@ -62205,7 +58358,7 @@ declare namespace sap {
        * Defines how the PDF viewer should be displayed.
        * 	 - If set to `Link`, the PDF viewer appears as a toolbar with a download button that can be used to
        * 			download the PDF file.
-       *  When the {@link #open} method is called, the user can either open the PDF file in a new tab or download
+       *  When the {@link open} method is called, the user can either open the PDF file in a new tab or download
        * it.
        * 	 - If set to `Embedded`, the PDF viewer appears embedded in the parent container and displays either
        * 			the PDF document or the message defined by the `errorPlaceholderMessage` property.
@@ -62360,7 +58513,7 @@ declare namespace sap {
        * Defines how the PDF viewer should be displayed.
        * 	 - If set to `Link`, the PDF viewer appears as a toolbar with a download button that can be used to
        * 			download the PDF file.
-       *  When the {@link #open} method is called, the user can either open the PDF file in a new tab or download
+       *  When the {@link open} method is called, the user can either open the PDF file in a new tab or download
        * it.
        * 	 - If set to `Embedded`, the PDF viewer appears embedded in the parent container and displays either
        * 			the PDF document or the message defined by the `errorPlaceholderMessage` property.
@@ -68779,7 +64932,7 @@ declare namespace sap {
        *
        * Gets current value of property {@link #getValueState valueState}.
        *
-       * Enumeration sap.ui.core.ValueState provides state values Error, Success, Warning, Information, None
+       * Enumeration sap.ui.core.ValueState provides state values Error, Success, Warning, None
        *
        * Default value is `None`.
        */
@@ -68962,7 +65115,7 @@ declare namespace sap {
        *
        * Sets a new value for property {@link #getValueState valueState}.
        *
-       * Enumeration sap.ui.core.ValueState provides state values Error, Success, Warning, Information, None
+       * Enumeration sap.ui.core.ValueState provides state values Error, Success, Warning, None
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -71375,7 +67528,7 @@ declare namespace sap {
      * 			the search field. "Pull Down to Refresh" is used instead. The "Pull Down to Refresh" arrow icon is animated
      * 			and spins to signal that the user should release it.
      */
-    class SearchField extends sap.ui.core.Control implements sap.f.IShellBar {
+    class SearchField extends sap.ui.core.Control {
       /**
        * Constructor for a new SearchField.
        *
@@ -72469,6 +68622,11 @@ declare namespace sap {
       // @ts-ignore
       static getMetadata(): sap.ui.base.Metadata;
       /**
+       * Required by the {@link sap.m.IOverflowToolbarContent} interface. Registers invalidations event which
+       * is fired when width of the control is changed.
+       */
+      getOverflowToolbarConfig(): object;
+      /**
        * @deprecated (since 1.52) - replaced by `selectedItem` association
        *
        * ID of the element which is the current target of the association {@link #getSelectedButton selectedButton},
@@ -72923,7 +69081,7 @@ declare namespace sap {
      * The `sap.m.Select` control provides a list of items that allows users to select an item.
      */
     class Select extends sap.ui.core.Control
-      implements sap.m.IOverflowToolbarContent, sap.f.IShellBar {
+      implements sap.m.IOverflowToolbarContent {
       /**
        * Constructor for a new `sap.m.Select`.
        *
@@ -73716,7 +69874,7 @@ declare namespace sap {
      * 	 -  You need to pick one item from a predefined set of options. Use {@link sap.m.Select select} or {@link
      * 			sap.m.ComboBox combobox} instead.
      * 	 -  You need to select a range of item. Use {@link sap.ui.comp.valuehelpdialog.ValueHelpDialog value
-     * 			help dialog} instead.
+     * 			help dialog instead.
      * 	 -  You need to be able to add your own values to an existing list. Use a {@link sap.m.Dialog dialog}
      * 			instead.   Note:: The property `growing` determines the progressive loading. If it's set to true
      * 			(the default value), the `selected count` in info bar and search will work only for the currently loaded
@@ -73979,15 +70137,14 @@ declare namespace sap {
            */
           selectedItems?: sap.m.StandardListItem[];
           /**
-           * Returns the binding contexts of the selected items including the non-visible items. See {@link sap.m.ListBase#getSelectedContexts
-           * getSelectedContexts} of `sap.m.ListBase`. NOTE: In contrast to the parameter "selectedItems", this parameter
-           * will also include the selected but NOT visible items (e.g. due to list filtering). An empty array will
-           * be set for this parameter if no data binding is used. NOTE: When the list binding is pre-filtered and
-           * there are items in the selection that are not visible upon opening the dialog, these contexts are not
-           * loaded. Therefore, these items will not be included in the selectedContexts array unless they are displayed
-           * at least once.
+           * Returns the binding contexts of the selected items including the non-visible items. NOTE: In contrast
+           * to the parameter "selectedItems", this parameter will also include the selected but NOT visible items
+           * (e.g. due to list filtering). An empty array will be set for this parameter if no data binding is used.
+           * NOTE: When the list binding is pre-filtered and there are items in the selection that are not visible
+           * upon opening the dialog, these contexts are not loaded. Therefore, these items will not be included in
+           * the selectedContexts array unless they are displayed at least once.
            */
-          selectedContexts?: object[];
+          selectedContexts?: string;
         }
       ): sap.m.SelectDialog;
       /**
@@ -74109,10 +70266,9 @@ declare namespace sap {
        * selection mode in Select Dialog. We recommended enabling of the Clear button in the following cases,
        * where a mechanism to clear the value is needed: In case of single selection mode(default mode) for Select
        * Dialog and `rememberSelections` is set to `true`. Clear button needs to be enabled in order to allow
-       * users to clear the selection. In case of using `sap.m.Input` with `valueHelpOnly` set to `true`, the
-       * Clear button could be used for clearing selection. In case the application stores a value and uses only
-       * Select Dialog to edit/maintain it. **Note:**When used with oData, only the loaded selections will be
-       * cleared.
+       * users to clear the selection. In case of using `sap.m.Input` with `valueHepOnly` set to `true`, Clear
+       * button could be used for clearing selection. In case the application stores a value and uses only Select
+       * Dialog to edit/maintain it. **Note:**When used with oData, only the loaded selections will be cleared.
        *
        * Default value is `false`.
        */
@@ -76712,1332 +72868,7 @@ declare namespace sap {
       ): sap.m.Shell;
     }
     /**
-     * @SINCE 1.61
-     *
-     * Overview:
-     *
-     * Displays a calendar of a single entity (such as person, resource) for the selected time interval.
-     *
-     * **Note:** The `SinglePlanningCalendar` uses parts of the `sap.ui.unified` library. This library will
-     * be loaded after the `SinglePlanningCalendar`, if it wasn't previously loaded. This could lead to a waiting
-     * time when a `SinglePlanningCalendar` is used for the first time. To prevent this, apps using the `SinglePlanningCalendar`
-     * must also load the `sap.ui.unified` library.
-     *
-     * **Disclaimer**: This control is in a beta state - incompatible API changes may be done before its official
-     * public release. Use at your own discretion.
-     *
-     * Usage:
-     *
-     * The `SinglePlanningCalendar` has the following structure:
-     *
-     *
-     * 	 - A `PlanningCalendarHeader` at the top. It contains the `title` set from the corresponding property,
-     * 			the `SegmentedButton`, which facilitates navigation through the views, controls, passed to the `actions`
-     * 			aggregation and the navigation, assisting the user in choosing the desired time period. The views can
-     * 			be configured and passed through the `views` aggregation. A `SinglePlanningCalendarGrid`, which displays
-     * 			the appointments, set to the visual time range. An all-day appointment is an appointment which starts
-     * 			at 00:00 and ends in 00:00 on any day in the future.
-     */
-    class SinglePlanningCalendar extends sap.ui.core.Control {
-      /**
-       * Constructor for a new `SinglePlanningCalendar`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       */
-      constructor(
-        /**
-         * id for the new control, generated automatically if no id is given
-         */
-        sId?: string,
-        /**
-         * initial settings for the new control
-         */
-        mSettings?: SinglePlanningCalendarOpts
-      );
-
-      /**
-       * Adds some action to the aggregation {@link #getActions actions}.
-       */
-      addAction(
-        /**
-         * The action to add; if empty, nothing is inserted
-         */
-        oAction: sap.ui.core.Control
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Adds some appointment to the aggregation {@link #getAppointments appointments}.
-       */
-      addAppointment(
-        /**
-         * The appointment to add; if empty, nothing is inserted
-         */
-        oAppointment: sap.ui.unified.CalendarAppointment
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Adds some view to the aggregation {@link #getViews views}.
-       */
-      addView(
-        /**
-         * The view to add; if empty, nothing is inserted
-         */
-        oView: sap.m.SinglePlanningCalendarView
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Attaches event handler `fnFunction` to the {@link #event:appointmentCreate appointmentCreate} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired if an appointment is created.
-       */
-      attachAppointmentCreate(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.64
-       *
-       * Attaches event handler `fnFunction` to the {@link #event:appointmentDrop appointmentDrop} event of this
-       * `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired if an appointment is dropped.
-       */
-      attachAppointmentDrop(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Attaches event handler `fnFunction` to the {@link #event:appointmentResize appointmentResize} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired when an appointment is resized.
-       */
-      attachAppointmentResize(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:appointmentSelect appointmentSelect} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired if an appointment is selected.
-       */
-      attachAppointmentSelect(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Attaches event handler `fnFunction` to the {@link #event:cellPress cellPress} event of this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired when a grid cell is focused.
-       */
-      attachCellPress(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:headerDateSelect headerDateSelect} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired if a date is selected in the calendar header.
-       */
-      attachHeaderDateSelect(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:startDateChange startDateChange} event of this
-       * `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * `startDate` is changed while navigating in the `SinglePlanningCalendar`.
-       */
-      attachStartDateChange(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Destroys all the actions in the aggregation {@link #getActions actions}.
-       */
-      destroyActions(): sap.m.SinglePlanningCalendar;
-      /**
-       * Destroys all the appointments in the aggregation {@link #getAppointments appointments}.
-       */
-      destroyAppointments(): sap.m.SinglePlanningCalendar;
-      /**
-       * Destroys all the views in the aggregation {@link #getViews views}.
-       */
-      destroyViews(): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Detaches event handler `fnFunction` from the {@link #event:appointmentCreate appointmentCreate} event
-       * of this `sap.m.SinglePlanningCalendar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachAppointmentCreate(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.64
-       *
-       * Detaches event handler `fnFunction` from the {@link #event:appointmentDrop appointmentDrop} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachAppointmentDrop(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Detaches event handler `fnFunction` from the {@link #event:appointmentResize appointmentResize} event
-       * of this `sap.m.SinglePlanningCalendar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachAppointmentResize(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:appointmentSelect appointmentSelect} event
-       * of this `sap.m.SinglePlanningCalendar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachAppointmentSelect(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Detaches event handler `fnFunction` from the {@link #event:cellPress cellPress} event of this `sap.m.SinglePlanningCalendar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachCellPress(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:headerDateSelect headerDateSelect} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachHeaderDateSelect(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:startDateChange startDateChange} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachStartDateChange(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Creates a new subclass of class sap.m.SinglePlanningCalendar with name `sClassName` and enriches it with
-       * the information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * @SINCE 1.65
-       *
-       * Fires event {@link #event:appointmentCreate appointmentCreate} to attached listeners.
-       */
-      fireAppointmentCreate(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Start date of the created appointment, as a JavaScript date object.
-           */
-          startDate?: object;
-          /**
-           * End date of the created appointment, as a JavaScript date object.
-           */
-          endDate?: object;
-        }
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.64
-       *
-       * Fires event {@link #event:appointmentDrop appointmentDrop} to attached listeners.
-       */
-      fireAppointmentDrop(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * The dropped appointment.
-           */
-          appointment?: sap.ui.unified.CalendarAppointment;
-          /**
-           * Start date of the dropped appointment, as a JavaScript date object.
-           */
-          startDate?: object;
-          /**
-           * Dropped appointment end date as a JavaScript date object.
-           */
-          endDate?: object;
-          /**
-           * The drop type. If true - it's "Copy", if false - it's "Move".
-           */
-          copy?: boolean;
-        }
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Fires event {@link #event:appointmentResize appointmentResize} to attached listeners.
-       */
-      fireAppointmentResize(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * The resized appointment.
-           */
-          appointment?: sap.ui.unified.CalendarAppointment;
-          /**
-           * Start date of the resized appointment, as a JavaScript date object.
-           */
-          startDate?: object;
-          /**
-           * End date of the resized appointment, as a JavaScript date object.
-           */
-          endDate?: object;
-        }
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Fires event {@link #event:appointmentSelect appointmentSelect} to attached listeners.
-       */
-      fireAppointmentSelect(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * The selected appointment.
-           */
-          appointment?: sap.ui.unified.CalendarAppointment;
-        }
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Fires event {@link #event:cellPress cellPress} to attached listeners.
-       */
-      fireCellPress(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * The start date as a JavaScript date object of the focused grid cell.
-           */
-          startDate?: object;
-          /**
-           * The end date as a JavaScript date object of the focused grid cell.
-           */
-          endDate?: object;
-        }
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Fires event {@link #event:headerDateSelect headerDateSelect} to attached listeners.
-       */
-      fireHeaderDateSelect(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Date of the selected header, as a JavaScript date object. It is considered as a local date.
-           */
-          date?: object;
-        }
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Fires event {@link #event:startDateChange startDateChange} to attached listeners.
-       */
-      fireStartDateChange(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * The new start date, as a JavaScript date object. It is considered as a local date.
-           */
-          date?: object;
-        }
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Gets content of aggregation {@link #getActions actions}.
-       *
-       * The controls to be passed to the toolbar.
-       */
-      getActions(): sap.ui.core.Control[];
-      /**
-       * Gets content of aggregation {@link #getAppointments appointments}.
-       *
-       * The appointments to be displayed in the grid. Appointments outside the visible time frame are not rendered.
-       * Appointments, longer than a day, will be displayed in all of the affected days. To display an all-day
-       * appointment, the appointment must start at 00:00 and end on any day in the future in 00:00h.
-       */
-      getAppointments(): sap.ui.unified.CalendarAppointment[];
-      /**
-       * @SINCE 1.65
-       *
-       * Gets current value of property {@link #getEnableAppointmentsCreate enableAppointmentsCreate}.
-       *
-       * Determines whether the appointments can be created by dragging on empty cells.
-       *
-       * See {@link #property:enableAppointmentsResize enableAppointmentsResize} for the specific points for events
-       * snapping
-       *
-       * Default value is `false`.
-       */
-      getEnableAppointmentsCreate(): boolean;
-      /**
-       * @SINCE 1.64
-       *
-       * Gets current value of property {@link #getEnableAppointmentsDragAndDrop enableAppointmentsDragAndDrop}.
-       *
-       * Determines whether the appointments in the grid are draggable.
-       *
-       * The drag and drop interaction is visualized by a placeholder highlighting the area where the appointment
-       * can be dropped by the user.
-       *
-       * Default value is `false`.
-       */
-      getEnableAppointmentsDragAndDrop(): boolean;
-      /**
-       * @SINCE 1.65
-       *
-       * Gets current value of property {@link #getEnableAppointmentsResize enableAppointmentsResize}.
-       *
-       * Determines whether the appointments are resizable.
-       *
-       * The resize interaction is visualized by making the appointment transparent.
-       *
-       * The appointment snaps on every interval of 30 minutes. After the resize is finished, the {@link #event:appointmentResize
-       * appointmentResize} event is fired, containing the new start and end JavaScript date objects.
-       *
-       * Default value is `false`.
-       */
-      getEnableAppointmentsResize(): boolean;
-      /**
-       * @SINCE 1.65.0
-       *
-       * ID of the element which is the current target of the association {@link #getLegend legend}, or `null`.
-       */
-      getLegend(): sap.ui.core.ID;
-      /**
-       * Returns a metadata object for class sap.m.SinglePlanningCalendar.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * @SINCE 1.62
-       *
-       * Holds the selected appointments. If no appointments are selected, an empty array is returned.
-       */
-      getSelectedAppointments(): sap.ui.unified.CalendarAppointment[];
-      /**
-       * ID of the element which is the current target of the association {@link #getSelectedView selectedView},
-       * or `null`.
-       */
-      getSelectedView(): sap.ui.core.ID;
-      /**
-       * Gets current value of property {@link #getStartDate startDate}.
-       *
-       * Determines the start date of the grid, as a JavaScript date object. It is considered as a local date.
-       * The time part will be ignored. The current date is used as default.
-       */
-      getStartDate(): object;
-      /**
-       * @SINCE 1.62
-       *
-       * Gets current value of property {@link #getStickyMode stickyMode}.
-       *
-       * Determines which part of the control will remain fixed at the top of the page during vertical scrolling
-       * as long as the control is in the viewport.
-       *
-       * **Note:** Limited browser support. Browsers which do not support this feature:
-       * 	 - Microsoft Internet Explorer
-       * 	 - Microsoft Edge lower than version 41 (EdgeHTML 16)
-       * 	 - Mozilla Firefox lower than version 59
-       *
-       * Default value is `None`.
-       */
-      getStickyMode(): sap.m.PlanningCalendarStickyMode;
-      /**
-       * Gets current value of property {@link #getTitle title}.
-       *
-       * Determines the title of the `SinglePlanningCalendar`.
-       *
-       * Default value is `empty string`.
-       */
-      getTitle(): string;
-      /**
-       * Gets content of aggregation {@link #getViews views}.
-       *
-       * Views of the `SinglePlanningCalendar`.
-       *
-       * **Note:** If not set, the Week view is available.
-       */
-      getViews(): sap.m.SinglePlanningCalendarView[];
-      /**
-       * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getActions actions}. and returns
-       * its index if found or -1 otherwise.
-       */
-      indexOfAction(
-        /**
-         * The action whose index is looked for
-         */
-        oAction: sap.ui.core.Control
-      ): number;
-      /**
-       * Checks for the provided `sap.ui.unified.CalendarAppointment` in the aggregation {@link #getAppointments
-       * appointments}. and returns its index if found or -1 otherwise.
-       */
-      indexOfAppointment(
-        /**
-         * The appointment whose index is looked for
-         */
-        oAppointment: sap.ui.unified.CalendarAppointment
-      ): number;
-      /**
-       * Checks for the provided `sap.m.SinglePlanningCalendarView` in the aggregation {@link #getViews views}.
-       * and returns its index if found or -1 otherwise.
-       */
-      indexOfView(
-        /**
-         * The view whose index is looked for
-         */
-        oView: sap.m.SinglePlanningCalendarView
-      ): number;
-      /**
-       * Inserts a action into the aggregation {@link #getActions actions}.
-       */
-      insertAction(
-        /**
-         * The action to insert; if empty, nothing is inserted
-         */
-        oAction: sap.ui.core.Control,
-        /**
-         * The `0`-based index the action should be inserted at; for a negative value of `iIndex`, the action is
-         * inserted at position 0; for a value greater than the current size of the aggregation, the action is inserted
-         * at the last position
-         */
-        iIndex: number
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Inserts a appointment into the aggregation {@link #getAppointments appointments}.
-       */
-      insertAppointment(
-        /**
-         * The appointment to insert; if empty, nothing is inserted
-         */
-        oAppointment: sap.ui.unified.CalendarAppointment,
-        /**
-         * The `0`-based index the appointment should be inserted at; for a negative value of `iIndex`, the appointment
-         * is inserted at position 0; for a value greater than the current size of the aggregation, the appointment
-         * is inserted at the last position
-         */
-        iIndex: number
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Inserts a view into the aggregation {@link #getViews views}.
-       */
-      insertView(
-        /**
-         * The view to insert; if empty, nothing is inserted
-         */
-        oView: sap.m.SinglePlanningCalendarView,
-        /**
-         * The `0`-based index the view should be inserted at; for a negative value of `iIndex`, the view is inserted
-         * at position 0; for a value greater than the current size of the aggregation, the view is inserted at
-         * the last position
-         */
-        iIndex: number
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Removes a action from the aggregation {@link #getActions actions}.
-       */
-      removeAction(
-        /**
-         * The action to remove or its index or id
-         */
-        vAction: number | string | sap.ui.core.Control
-      ): sap.ui.core.Control;
-      /**
-       * Removes all the controls from the aggregation {@link #getActions actions}.
-       *
-       * Additionally, it unregisters them from the hosting UIArea.
-       */
-      removeAllActions(): sap.ui.core.Control[];
-      /**
-       * Removes all the controls from the aggregation {@link #getAppointments appointments}.
-       *
-       * Additionally, it unregisters them from the hosting UIArea.
-       */
-      removeAllAppointments(): sap.ui.unified.CalendarAppointment[];
-      /**
-       * Removes all the controls from the aggregation {@link #getViews views}.
-       *
-       * Additionally, it unregisters them from the hosting UIArea.
-       */
-      removeAllViews(): sap.m.SinglePlanningCalendarView[];
-      /**
-       * Removes a appointment from the aggregation {@link #getAppointments appointments}.
-       */
-      removeAppointment(
-        /**
-         * The appointment to remove or its index or id
-         */
-        vAppointment: number | string | sap.ui.unified.CalendarAppointment
-      ): sap.ui.unified.CalendarAppointment;
-      /**
-       * Removes a view from the aggregation {@link #getViews views}.
-       */
-      removeView(
-        /**
-         * The view to remove or its index or id
-         */
-        vView: number | string | sap.m.SinglePlanningCalendarView
-      ): sap.m.SinglePlanningCalendarView;
-      /**
-       * @SINCE 1.65
-       *
-       * Sets a new value for property {@link #getEnableAppointmentsCreate enableAppointmentsCreate}.
-       *
-       * Determines whether the appointments can be created by dragging on empty cells.
-       *
-       * See {@link #property:enableAppointmentsResize enableAppointmentsResize} for the specific points for events
-       * snapping
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setEnableAppointmentsCreate(
-        /**
-         * New value for property `enableAppointmentsCreate`
-         */
-        bEnableAppointmentsCreate: boolean
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.64
-       *
-       * Sets a new value for property {@link #getEnableAppointmentsDragAndDrop enableAppointmentsDragAndDrop}.
-       *
-       * Determines whether the appointments in the grid are draggable.
-       *
-       * The drag and drop interaction is visualized by a placeholder highlighting the area where the appointment
-       * can be dropped by the user.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setEnableAppointmentsDragAndDrop(
-        /**
-         * New value for property `enableAppointmentsDragAndDrop`
-         */
-        bEnableAppointmentsDragAndDrop: boolean
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Sets a new value for property {@link #getEnableAppointmentsResize enableAppointmentsResize}.
-       *
-       * Determines whether the appointments are resizable.
-       *
-       * The resize interaction is visualized by making the appointment transparent.
-       *
-       * The appointment snaps on every interval of 30 minutes. After the resize is finished, the {@link #event:appointmentResize
-       * appointmentResize} event is fired, containing the new start and end JavaScript date objects.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setEnableAppointmentsResize(
-        /**
-         * New value for property `enableAppointmentsResize`
-         */
-        bEnableAppointmentsResize: boolean
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65.0
-       *
-       * Sets the associated {@link #getLegend legend}.
-       */
-      setLegend(
-        /**
-         * ID of an element which becomes the new target of this legend association; alternatively, an element instance
-         * may be given
-         */
-        oLegend: sap.ui.core.ID | sap.m.PlanningCalendarLegend
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Sets the associated {@link #getSelectedView selectedView}.
-       */
-      setSelectedView(
-        /**
-         * ID of an element which becomes the new target of this selectedView association; alternatively, an element
-         * instance may be given
-         */
-        oSelectedView: sap.ui.core.ID | sap.m.SinglePlanningCalendarView
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Sets a new value for property {@link #getStartDate startDate}.
-       *
-       * Determines the start date of the grid, as a JavaScript date object. It is considered as a local date.
-       * The time part will be ignored. The current date is used as default.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setStartDate(
-        /**
-         * New value for property `startDate`
-         */
-        oStartDate: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.62
-       *
-       * Sets a new value for property {@link #getStickyMode stickyMode}.
-       *
-       * Determines which part of the control will remain fixed at the top of the page during vertical scrolling
-       * as long as the control is in the viewport.
-       *
-       * **Note:** Limited browser support. Browsers which do not support this feature:
-       * 	 - Microsoft Internet Explorer
-       * 	 - Microsoft Edge lower than version 41 (EdgeHTML 16)
-       * 	 - Mozilla Firefox lower than version 59
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `None`.
-       */
-      setStickyMode(
-        /**
-         * New value for property `stickyMode`
-         */
-        sStickyMode: sap.m.PlanningCalendarStickyMode
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Sets a new value for property {@link #getTitle title}.
-       *
-       * Determines the title of the `SinglePlanningCalendar`.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setTitle(
-        /**
-         * New value for property `title`
-         */
-        sTitle: string
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Attaches event handler `fnFunction` to the {@link #event:appointmentCreate appointmentCreate} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired if an appointment is created.
-       */
-      attachAppointmentCreate(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.64
-       *
-       * Attaches event handler `fnFunction` to the {@link #event:appointmentDrop appointmentDrop} event of this
-       * `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired if an appointment is dropped.
-       */
-      attachAppointmentDrop(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Attaches event handler `fnFunction` to the {@link #event:appointmentResize appointmentResize} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired when an appointment is resized.
-       */
-      attachAppointmentResize(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:appointmentSelect appointmentSelect} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired if an appointment is selected.
-       */
-      attachAppointmentSelect(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * @SINCE 1.65
-       *
-       * Attaches event handler `fnFunction` to the {@link #event:cellPress cellPress} event of this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired when a grid cell is focused.
-       */
-      attachCellPress(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:headerDateSelect headerDateSelect} event of
-       * this `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * Fired if a date is selected in the calendar header.
-       */
-      attachHeaderDateSelect(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:startDateChange startDateChange} event of this
-       * `sap.m.SinglePlanningCalendar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.m.SinglePlanningCalendar` itself.
-       *
-       * `startDate` is changed while navigating in the `SinglePlanningCalendar`.
-       */
-      attachStartDateChange(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.m.SinglePlanningCalendar` itself
-         */
-        oListener?: object
-      ): sap.m.SinglePlanningCalendar;
-    }
-    /**
-     * @SINCE 1.61
-     *
-     * Overview:
-     *
-     * A {@link sap.m.SinglePlanningCalendarDayView} element represents a day view of the SinglePlanningCalendar.
-     * The purpose of the element is to decouple the view logic from parent control SinglePlanningCalendar
-     *
-     * **Disclaimer**: This control is in a beta state - incompatible API changes may be done before its official
-     * public release. Use at your own discretion.
-     */
-    class SinglePlanningCalendarDayView extends sap.m
-      .SinglePlanningCalendarView {
-      /**
-       * Constructor for a new `SinglePlanningCalendarDayView`.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: SinglePlanningCalendarDayViewOpts
-      );
-
-      /**
-       * Creates a new subclass of class sap.m.SinglePlanningCalendarDayView with name `sClassName` and enriches
-       * it with the information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.m.SinglePlanningCalendarView.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Returns a metadata object for class sap.m.SinglePlanningCalendarDayView.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-    }
-    /**
-     * @SINCE 1.61
-     *
-     * Overview:
-     *
-     * A {@link sap.m.SinglePlanningCalendarView} element represents a day view of the SinglePlanningCalendar.
-     * The purpose of the element is to decouple the view logic from parent control `SinglePlanningCalendar`.
-     *
-     * **Disclaimer**: This control is in a beta state - incompatible API changes may be done before its official
-     * public release. Use at your own discretion.
-     */
-    class SinglePlanningCalendarView extends sap.ui.core.Element {
-      /**
-       * Constructor for a new `SinglePlanningCalendarView`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: SinglePlanningCalendarViewOpts
-      );
-
-      /**
-       * Should calculate the startDate which will be displayed in the `sap.m.SinglePlanningCalendar` based on
-       * a given date.
-       */
-      calculateStartDate(
-        /**
-         * the given date
-         */
-        oDate: object
-      ): void;
-      /**
-       * Creates a new subclass of class sap.m.SinglePlanningCalendarView with name `sClassName` and enriches
-       * it with the information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Should return the number of columns to be displayed in the grid of the `sap.m.SinglePlanningCalendar`.
-       */
-      getEntityCount(): void;
-      /**
-       * Gets current value of property {@link #getKey key}.
-       *
-       * Indicates a unique key for the view
-       */
-      getKey(): string;
-      /**
-       * Returns a metadata object for class sap.m.SinglePlanningCalendarView.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Should return a number of entities until the next/previous startDate of the `sap.m.SinglePlanningCalendar`
-       * after navigating forward/backward with the arrows. For example, by pressing the forward button inside
-       * the work week view, the next startDate of a work week will be 7 entities (days) away from the current
-       * one.
-       */
-      getScrollEntityCount(): void;
-      /**
-       * Gets current value of property {@link #getTitle title}.
-       *
-       * Adds a title for the view
-       */
-      getTitle(): string;
-      /**
-       * Sets a new value for property {@link #getKey key}.
-       *
-       * Indicates a unique key for the view
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setKey(
-        /**
-         * New value for property `key`
-         */
-        sKey: string
-      ): sap.m.SinglePlanningCalendarView;
-      /**
-       * Sets a new value for property {@link #getTitle title}.
-       *
-       * Adds a title for the view
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setTitle(
-        /**
-         * New value for property `title`
-         */
-        sTitle: string
-      ): sap.m.SinglePlanningCalendarView;
-    }
-    /**
-     * @SINCE 1.61
-     *
-     * Overview:
-     *
-     * A {@link sap.m.SinglePlanningCalendarWeekView} element represents a week view of the SinglePlanningCalendar.
-     * The purpose of the element is to decouple the view logic from parent control `SinglePlanningCalendar`.
-     *
-     * **Disclaimer**: This control is in a beta state - incompatible API changes may be done before its official
-     * public release. Use at your own discretion.
-     */
-    class SinglePlanningCalendarWeekView extends sap.m
-      .SinglePlanningCalendarView {
-      /**
-       * Constructor for a new `SinglePlanningCalendarWeekView`.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: SinglePlanningCalendarWeekViewOpts
-      );
-
-      /**
-       * Creates a new subclass of class sap.m.SinglePlanningCalendarWeekView with name `sClassName` and enriches
-       * it with the information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.m.SinglePlanningCalendarView.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Returns a metadata object for class sap.m.SinglePlanningCalendarWeekView.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-    }
-    /**
-     * @SINCE 1.61
-     *
-     * Overview:
-     *
-     * A {@link sap.m.SinglePlanningCalendarWorkWeekView} element represents a week view of the SinglePlanningCalendar.
-     * The purpose of the element is to decouple the view logic from parent control `SinglePlanningCalendar`.
-     *
-     * **Disclaimer**: This control is in a beta state - incompatible API changes may be done before its official
-     * public release. Use at your own discretion.
-     */
-    class SinglePlanningCalendarWorkWeekView extends sap.m
-      .SinglePlanningCalendarView {
-      /**
-       * Constructor for a new `SinglePlanningCalendarWorkWeekView`.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: SinglePlanningCalendarWorkWeekViewOpts
-      );
-
-      /**
-       * Creates a new subclass of class sap.m.SinglePlanningCalendarWorkWeekView with name `sClassName` and enriches
-       * it with the information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.m.SinglePlanningCalendarView.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Returns a metadata object for class sap.m.SinglePlanningCalendarWorkWeekView.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-    }
-    /**
-     * Overview:
+     * **Overview**
      *
      * A {@link sap.m.Slider} control represents a numerical range and a handle. The purpose of the control
      * is to enable visual selection of a value in a continuous numerical range by moving an adjustable handle.
@@ -78045,11 +72876,9 @@ declare namespace sap {
      * **Notes:**
      * 	 - Only horizontal sliders are possible.
      * 	 - The handle can be moved in steps of predefined size. This is done with the `step` property.
-     * 	 - Setting the property `showAdvancedTooltip` shows an input field above the handle
+     * 	 - Setting the property `showAdvancedTooltips` shows an input field above the handle
      * 	 - Setting the property `inputsAsTooltips` enables the user to enter a specific value in the handle's
-     * 			tooltip.
-     *
-     * Structure:
+     * 			tooltip.   **Structure**
      *
      * The most important properties of the Slider are:
      * 	 -  min - The minimum value of the slider range
@@ -78058,16 +72887,14 @@ declare namespace sap {
      * 	 -  progress - Determines if a progress bar will be shown on the slider range
      * 	 -  step - Determines the increments in which the slider will move  These properties determine
      * 			the visualization of the tooltips:
-     * 	 -  `showAdvancedTooltip` - Determines if a tooltip should be displayed above the handle
-     * 	 -  `inputsAsTooltips` - Determines if the tooltip displayed above the slider's handle should include
-     * 			an input field
-     *
-     * Usage:
+     * 	 -  showAdvancedTooltips - Determines if a tooltip should be displayed above the handle
+     * 	 -  inputsAsTooltips - Determines if the tooltip displayed above the slider's handle should include
+     * 			an input field  **Usage**
      *
      * The most common usecase is to select values on a continuous numerical scale (e.g. temperature, volume,
      * etc. ).
      *
-     * Responsive Behavior:
+     * **Responsive Behavior**
      *
      * The `sap.m.Slider` control adjusts to the size of its parent container by recalculating and resizing
      * the width of the control. You can move the slider handle in several different ways:
@@ -78337,7 +73164,7 @@ declare namespace sap {
        * Gets current value of property {@link #getInputsAsTooltips inputsAsTooltips}.
        *
        * Indicates whether input fields should be used as tooltips for the handles. **Note:** Setting this option
-       * to `true` will only work if `showAdvancedTooltip` is set to `true`.
+       * to `true` will only work if `showAdvancedTooltips` is set to `true`.
        *
        * Default value is `false`.
        */
@@ -78394,7 +73221,7 @@ declare namespace sap {
        * Gets current value of property {@link #getShowAdvancedTooltip showAdvancedTooltip}.
        *
        * Indicate whether the handle's advanced tooltip is shown. **Note:** Setting this option to `true` will
-       * ignore the value set in `showHandleTooltip`. This will cause only the advanced tooltip to be shown.
+       * ignore the value set in `showHandleTooltips`. This will cause only the advanced tooltip to be shown.
        *
        * Default value is `false`.
        */
@@ -78576,7 +73403,7 @@ declare namespace sap {
        * Sets a new value for property {@link #getInputsAsTooltips inputsAsTooltips}.
        *
        * Indicates whether input fields should be used as tooltips for the handles. **Note:** Setting this option
-       * to `true` will only work if `showAdvancedTooltip` is set to `true`.
+       * to `true` will only work if `showAdvancedTooltips` is set to `true`.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -78666,7 +73493,7 @@ declare namespace sap {
        * Sets a new value for property {@link #getShowAdvancedTooltip showAdvancedTooltip}.
        *
        * Indicate whether the handle's advanced tooltip is shown. **Note:** Setting this option to `true` will
-       * ignore the value set in `showHandleTooltip`. This will cause only the advanced tooltip to be shown.
+       * ignore the value set in `showHandleTooltips`. This will cause only the advanced tooltip to be shown.
        *
        * When called with a value of `null` or `undefined`, the default value of the property will be restored.
        *
@@ -81104,8 +75931,6 @@ declare namespace sap {
        * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
        * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
        * of the syntax of the settings object.
-       * See:
-       * 	{@link fiori:/standard-list-item/ Standard List Item}
        */
       constructor(
         /**
@@ -81803,19 +76628,6 @@ declare namespace sap {
      * 			this case, use the regular {@link sap.m.Input} instead.
      * 	 - To enter dates and times. In this case, use the {@link sap.m.DatePicker}, {@link sap.m.DateRangeSelection},
      * 			{@link sap.m.TimePicker}, or {@link sap.m.DateTimePicker} instead.
-     *
-     * **Note:** The control uses a JavaScript number to keep its value, which has a certain precision limitation.
-     *
-     * In general, exponential notation is used:
-     * 	 - if there are more than 21 digits before the decimal point.
-     * 	 - if number starts with "0." followed by more than five zeros.
-     *
-     * Exponential notation is not supported by the control and using it may lead to unpredictable behavior.
-     *
-     * Also, the JavaScript number persists its precision up to 16 digits. If the user enters a number with
-     * a greater precision, the value will be rounded.
-     *
-     * This limitation comes from JavaScript itself and it cannot be worked around in a feasible way.
      */
     class StepInput extends sap.ui.core.Control {
       /**
@@ -83453,38 +78265,11 @@ declare namespace sap {
         }
       ): sap.m.TabContainerItem;
       /**
-       * @EXPERIMENTAL (since 1.63)
-       *
-       * Gets current value of property {@link #getAdditionalText additionalText}.
-       *
-       * Determines additional text to be displayed for the item.
-       *
-       * Default value is `empty string`.
-       */
-      getAdditionalText(): string;
-      /**
        * Gets content of aggregation {@link #getContent content}.
        *
        * The content displayed for this item.
        */
       getContent(): sap.ui.core.Control[];
-      /**
-       * @EXPERIMENTAL (since 1.63)
-       *
-       * Gets current value of property {@link #getIcon icon}.
-       *
-       * Defines the icon to be displayed as graphical element within the `TabContainerItem`. It can be an image
-       * or an icon from the icon font.
-       */
-      getIcon(): sap.ui.core.URI;
-      /**
-       * @EXPERIMENTAL (since 1.63)
-       *
-       * Gets current value of property {@link #getIconTooltip iconTooltip}.
-       *
-       * Determines the tooltip text of the `TabContainerItem`'s icon.
-       */
-      getIconTooltip(): string;
       /**
        * Gets current value of property {@link #getKey key}.
        *
@@ -83553,47 +78338,6 @@ declare namespace sap {
          */
         vContent: number | string | sap.ui.core.Control
       ): sap.ui.core.Control;
-      /**
-       * @EXPERIMENTAL (since 1.63)
-       *
-       * Sets a new value for property {@link #getAdditionalText additionalText}.
-       *
-       * Determines additional text to be displayed for the item.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setAdditionalText(
-        /**
-         * New value for property `additionalText`
-         */
-        sAdditionalText: string
-      ): sap.m.TabContainerItem;
-      /**
-       * Property setter for the icon
-       */
-      setIcon(
-        /**
-         * new value of the Icon property
-         */
-        sIcon: sap.ui.core.URI
-      ): sap.m.TabContainerItem;
-      /**
-       * @EXPERIMENTAL (since 1.63)
-       *
-       * Sets a new value for property {@link #getIconTooltip iconTooltip}.
-       *
-       * Determines the tooltip text of the `TabContainerItem`'s icon.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setIconTooltip(
-        /**
-         * New value for property `iconTooltip`
-         */
-        sIconTooltip: string
-      ): sap.m.TabContainerItem;
       /**
        * Sets a new value for property {@link #getKey key}.
        *
@@ -83697,8 +78441,6 @@ declare namespace sap {
        * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
        * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
        * of the syntax of the settings object.
-       * See:
-       * 	{@link fiori:/responsive-table/ Responsive Table}
        */
       constructor(
         /**
@@ -83756,8 +78498,8 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.Table` itself.
        *
-       * This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
-       * via the context menu or the standard paste keyboard shortcut, if the focus is inside the table.
+       * This event gets fired when the user performs paste from clipboard on the table. Paste action can be performed
+       * from the context menu or with CTRL-V keyboard key combination.
        */
       attachPaste(
         /**
@@ -83889,7 +78631,7 @@ declare namespace sap {
          */
         mParameters?: {
           /**
-           * 2D array of strings with data from the clipboard. The first dimension represents the rows, and the second
+           * 2D-Array of strings with data from the clipboard. The first dimension represents the rows and the second
            * dimension represents the cells of the tabular data.
            */
           data?: string[][];
@@ -84192,8 +78934,8 @@ declare namespace sap {
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
        * otherwise it will be bound to this `sap.m.Table` itself.
        *
-       * This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
-       * via the context menu or the standard paste keyboard shortcut, if the focus is inside the table.
+       * This event gets fired when the user performs paste from clipboard on the table. Paste action can be performed
+       * from the context menu or with CTRL-V keyboard key combination.
        */
       attachPaste(
         /**
@@ -89023,8 +83765,6 @@ declare namespace sap {
       ): sap.m.Token;
     }
     /**
-     * @SINCE 1.22
-     *
      * Overview: A tokenizer is a container for {@link sap.m.Token Tokens}. It also handles all actions associated
      * with the tokens like adding, deleting, selecting and editing. Structure: The tokens are stored in the
      * `tokens` aggregation. The tokenizer can determine, by setting the `editable` property, whether the tokens
@@ -89152,8 +83892,6 @@ declare namespace sap {
         oListener?: object
       ): sap.m.Tokenizer;
       /**
-       * @SINCE 1.46
-       *
        * Attaches event handler `fnFunction` to the {@link #event:tokenUpdate tokenUpdate} event of this `sap.m.Tokenizer`.
        *
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -89196,8 +83934,6 @@ declare namespace sap {
         oListener?: object
       ): sap.m.Tokenizer;
       /**
-       * @SINCE 1.46
-       *
        * Detaches event handler `fnFunction` from the {@link #event:tokenUpdate tokenUpdate} event of this `sap.m.Tokenizer`.
        *
        * The passed function and listener object must match the ones used for event registration.
@@ -89243,9 +83979,8 @@ declare namespace sap {
         mParameters?: {
           /**
            * type of tokenChange event. There are four TokenChange types: "added", "removed", "removedAll", "tokensChanged".
-           * Use sap.m.Tokenizer.TokenChangeType.Added for "added", sap.m.Tokenizer.TokenChangeType.Removed for "removed",
-           * sap.m.Tokenizer.TokenChangeType.RemovedAll for "removedAll" and sap.m.Tokenizer.TokenChangeType.TokensChanged
-           * for "tokensChanged".
+           * Use Tokenizer.TokenChangeType.Added for "added", Tokenizer.TokenChangeType.Removed for "removed", Tokenizer.TokenChangeType.RemovedAll
+           * for "removedAll" and Tokenizer.TokenChangeType.TokensChanged for "tokensChanged".
            */
           type?: string;
           /**
@@ -89267,8 +84002,6 @@ declare namespace sap {
         }
       ): sap.m.Tokenizer;
       /**
-       * @SINCE 1.46
-       *
        * Fires event {@link #event:tokenUpdate tokenUpdate} to attached listeners.
        *
        * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
@@ -89280,8 +84013,8 @@ declare namespace sap {
          */
         mParameters?: {
           /**
-           * Type of tokenChange event. There are two TokenUpdate types: "added", "removed" Use sap.m.Tokenizer.TokenUpdateType.Added
-           * for "added" and sap.m.Tokenizer.TokenUpdateType.Removed for "removed".
+           * Type of tokenChange event. There are two TokenUpdate types: "added", "removed" Use Tokenizer.TokenUpdateType.Added
+           * for "added" and Tokenizer.TokenUpdateType.Removed for "removed".
            */
           type?: string;
           /**
@@ -89480,7 +84213,7 @@ declare namespace sap {
         /**
          * The new maximal width
          */
-        nWidth: number
+        sWidth: string
       ): void;
       /**
        * Function sets the tokenizer's width in pixels
@@ -89523,8 +84256,6 @@ declare namespace sap {
         oListener?: object
       ): sap.m.Tokenizer;
       /**
-       * @SINCE 1.46
-       *
        * Attaches event handler `fnFunction` to the {@link #event:tokenUpdate tokenUpdate} event of this `sap.m.Tokenizer`.
        *
        * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -90102,8 +84833,7 @@ declare namespace sap {
      * Creates a visual separator (theme dependent: padding, margin, line) between the preceding and succeeding
      * {@link sap.m.Toolbar} item.
      */
-    class ToolbarSeparator extends sap.ui.core.Control
-      implements sap.m.IOverflowToolbarContent {
+    class ToolbarSeparator extends sap.ui.core.Control {
       /**
        * Constructor for a new `ToolbarSeparator`.
        *
@@ -90151,12 +84881,6 @@ declare namespace sap {
        */
       // @ts-ignore
       static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * @SINCE 1.65
-       *
-       * Sets the behavior of the `ToolbarSeparator` inside an `OverflowToolbar` configuration.
-       */
-      getOverflowToolbarConfig(): object;
     }
     /**
      * @SINCE 1.16
@@ -90251,8 +84975,6 @@ declare namespace sap {
        * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
        * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
        * of the syntax of the settings object.
-       * See:
-       * 	{@link fiori:/tree/ Tree}
        */
       constructor(
         /**
@@ -90565,10 +85287,6 @@ declare namespace sap {
      *
      * The consuming application needs to take into account that the consistency checks of the model during
      * the upload of the file need to be performed, for example, if the user is editing or deleting a file.
-     *
-     *  As of version 1.62, there is an {@link sap.m.upload.UploadSet} control available that is based on this
-     * control. {@link sap.m.upload.UploadSet} provides enhanced handling of headers and requests, unified behavior
-     * of instant and deferred uploads, as well as improved progress indication.
      */
     class UploadCollection extends sap.ui.core.Control {
       /**
@@ -96282,37 +91000,6 @@ declare namespace sap {
       TwoThirds
     }
     /**
-     * @SINCE 1.62.0
-     *
-     * Design modes for the `GenericTag` control.
-     */
-    enum GenericTagDesign {
-      /**
-       * Everything from the control is rendered.
-       */
-      Full,
-      /**
-       * Everything from the control is rendered except the status icon.
-       */
-      StatusIconHidden
-    }
-    /**
-     * @SINCE 1.62.0
-     *
-     * Value states for the `GenericTag` control.
-     */
-    enum GenericTagValueState {
-      /**
-       * Warning icon is rendered that overrides the control set in the `value` aggregation of the `GenericTag`
-       * control.
-       */
-      Error,
-      /**
-       * The value is rendered in its normal state.
-       */
-      None
-    }
-    /**
      * @SINCE 1.38.0
      *
      * Defines the mode of GenericTile.
@@ -96405,22 +91092,7 @@ declare namespace sap {
     /**
      * Specifies `IconTabBar` tab density mode.
      */
-    enum IconTabDensityMode {
-      /**
-       * Compact. In this mode the tabs will be set explicitly to compact mode independent of what mode is applied
-       * globally.
-       */
-      Compact,
-      /**
-       * Cozy. In this mode the tabs will be set explicitly to compact mode independent of what mode is applied
-       * globally.
-       */
-      Cozy,
-      /**
-       * Inherit. In this mode the global configuration of the density mode will be applied.
-       */
-      Inherit
-    }
+    enum IconTabDensityMode {}
     /**
      * Available Filter Item Design.
      */
@@ -96781,21 +91453,6 @@ declare namespace sap {
       Split
     }
     /**
-     * @SINCE 1.61
-     *
-     * Used by the `ObjectHeader` control to define which shape to use for the image.
-     */
-    enum ObjectHeaderPictureShape {
-      /**
-       * Circle shape for the images in the `ObjectHeader`.
-       */
-      Circle,
-      /**
-       * Square shape for the images in the `ObjectHeader`.
-       */
-      Square
-    }
-    /**
      * Predefined types for ObjectMarker.
      */
     enum ObjectMarkerType {
@@ -96858,30 +91515,31 @@ declare namespace sap {
        */
       Always,
       /**
-       * Forces `OverflowToolbar` items to remain always in the overflow area.
+       * AlwaysOverflow priority forces OverflowToolbar items to remain always in the overflow area
        */
       AlwaysOverflow,
       /**
-       * Items with priority `Disappear` overflow before the items with higher priority, such as `Low` and `High`,
-       * and remain hidden in the overflow area.
+       * Disappear priority OverflowToolbar items overflow before the items with higher priority such as Low and
+       * High priority items and remain hidden in the overflow area.
        */
       Disappear,
       /**
-       * Items with priority `High` overflow after the items with lower priority.
+       * High priority OverflowToolbar items overflow after the items with lower priority
        */
       High,
       /**
-       * Items with priority `Low` overflow before the items with higher priority, such as `High` priority items.
+       * Low priority OverflowToolbar items overflow before the items with higher priority such as High priority
+       * items
        */
       Low,
       /**
        * @deprecated (since 1.48)
        *
-       * Deprecated - Use `sap.m.OverflowToolbarPriority.NeverOverflow` instead.
+       * Deprecated - Use `sap.m.OverflowToolbarPriority.NeverOverflow` instead
        */
       Never,
       /**
-       * Forces `OverflowToolbar` items to remain always in the toolbar.
+       * NeverOverflow priority forces OverflowToolbar items to remain always in the toolbar
        */
       NeverOverflow
     }
@@ -97117,25 +91775,6 @@ declare namespace sap {
       Week
     }
     /**
-     * @SINCE 1.62
-     *
-     * Available sticky modes for the {@link sap.m.SinglePlanningCalendar}
-     */
-    enum PlanningCalendarStickyMode {
-      /**
-       * Actions toolbar, navigation toolbar and the column headers will be sticky.
-       */
-      All,
-      /**
-       * Only the navigation toolbar and column headers will be sticky.
-       */
-      NavBarAndColHeaders,
-      /**
-       * Nothing will stick at the top.
-       */
-      None
-    }
-    /**
      * @SINCE 1.13.2
      *
      * Defines the display of table pop-ins.
@@ -97286,20 +91925,7 @@ declare namespace sap {
      *
      * Enumeration for different action levels in sap.m.SelectionDetails control.
      */
-    enum SelectionDetailsActionLevel {
-      /**
-       * ActionGroup on SelectionDetails list level.
-       */
-      Group,
-      /**
-       * Action on SelectionDetailsItem level.
-       */
-      Item,
-      /**
-       * Action on SelectionDetails list level.
-       */
-      List
-    }
+    enum SelectionDetailsActionLevel {}
     /**
      * @SINCE 1.38
      *
@@ -97614,27 +92240,6 @@ declare namespace sap {
       Standard
     }
     /**
-     * States of the upload process for {@link sap.m.UploadCollectionItem}.
-     */
-    enum UploadState {
-      /**
-       * The file has been uploaded successfuly.
-       */
-      Complete,
-      /**
-       * The file cannot be uploaded due to an error.
-       */
-      Error,
-      /**
-       * The file is awaiting an explicit command to start being uploaded.
-       */
-      Ready,
-      /**
-       * The file is currently being uploaded.
-       */
-      Uploading
-    }
-    /**
      * Enumeration of possible value color settings.
      */
     enum ValueColor {
@@ -97776,12 +92381,6 @@ declare namespace sap {
 
     "sap/m/semantic/ISort": undefined;
 
-    "sap/m/upload/Uploader": undefined;
-
-    "sap/m/upload/UploadSet": undefined;
-
-    "sap/m/upload/UploadSetItem": undefined;
-
     "sap/m/ActionListItem": undefined;
 
     "sap/m/ActionSelect": undefined;
@@ -97801,8 +92400,6 @@ declare namespace sap {
     "sap/m/Button": undefined;
 
     "sap/m/Carousel": undefined;
-
-    "sap/m/CarouselLayout": undefined;
 
     "sap/m/CheckBox": undefined;
 
@@ -97861,8 +92458,6 @@ declare namespace sap {
     "sap/m/FlexItemData": undefined;
 
     "sap/m/FormattedText": undefined;
-
-    "sap/m/GenericTag": undefined;
 
     "sap/m/GenericTile": undefined;
 
@@ -98073,16 +92668,6 @@ declare namespace sap {
     "sap/m/SelectList": undefined;
 
     "sap/m/Shell": undefined;
-
-    "sap/m/SinglePlanningCalendar": undefined;
-
-    "sap/m/SinglePlanningCalendarDayView": undefined;
-
-    "sap/m/SinglePlanningCalendarView": undefined;
-
-    "sap/m/SinglePlanningCalendarWeekView": undefined;
-
-    "sap/m/SinglePlanningCalendarWorkWeekView": undefined;
 
     "sap/m/Slider": undefined;
 

@@ -9,19 +9,17 @@
 /// <reference path="./sap.ui.codeeditor.d.ts" />
 /// <reference path="./sap.ui.commons.d.ts" />
 /// <reference path="./sap.ui.core.d.ts" />
-/// <reference path="./sap.ui.demokit.d.ts" />
-/// <reference path="./sap.ui.documentation.d.ts" />
+/// <reference path="./sap.ui.demokit.demoapps.d.ts" />
+/// <reference path="./sap.ui.documentation.sdk.d.ts" />
 /// <reference path="./sap.ui.dt.d.ts" />
 /// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.integration.d.ts" />
 /// <reference path="./sap.ui.layout.d.ts" />
-/// <reference path="./sap.ui.rta.d.ts" />
 /// <reference path="./sap.ui.suite.d.ts" />
 /// <reference path="./sap.ui.support.d.ts" />
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.60.14
 
 declare namespace sap {
   namespace ui {
@@ -3651,9 +3649,7 @@ declare namespace sap {
         /**
          * @SINCE 1.28.0
          *
-         * renders a YearPicker with ItemNavigation This is used inside the calendar. Not for stand alone usage.
-         * As in all date-time controls, all pubic JS Date objects that are given (e.g. `setDate()`) or read (e.g.
-         * `getFirstRenderedDate`) with values which are considered as date objects in browser(local) timezone.
+         * renders a YearPicker with ItemNavigation This is used inside the calendar. Not for stand alone usage
          */
         class YearPicker extends sap.ui.core.Control {
           /**
@@ -4959,8 +4955,8 @@ declare namespace sap {
 
         /**
          * The chosen files will be checked against an array of mime types. If at least one file does not fit the
-         * mime type restriction the upload is prevented. **Note:** This property is not supported by Internet Explorer
-         * & Edge. Example: mimeType ["image/png", "image/jpeg"].
+         * mime type restriction the upload is prevented. This property is not supported by Internet Explorer 9.
+         * Example: mimeType ["image/png", "image/jpeg"].
          */
         mimeType?: string[];
 
@@ -5142,16 +5138,6 @@ declare namespace sap {
          * property is set to `true`.
          */
         xhrSettings?: sap.ui.unified.FileUploaderXHRSettings;
-
-        /**
-         * Association to controls / IDs which describe this control (see WAI-ARIA attribute aria-describedby).
-         */
-        ariaDescribedBy?: sap.ui.core.Control[] | string[];
-
-        /**
-         * Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).
-         */
-        ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
       interface FileUploaderParameterOpts extends sap.ui.core.ElementOpts {
@@ -6728,8 +6714,7 @@ declare namespace sap {
       /**
        * @SINCE 1.30.0
        *
-       * `CalendarDateInterval` only visualizes the dates in a one-line interval and allows the selection of a
-       * single day.
+       * Calendar with dates displayed in one line.
        */
       class CalendarDateInterval extends sap.ui.unified.Calendar {
         /**
@@ -10835,24 +10820,6 @@ declare namespace sap {
           sHeaderParameterValue: string
         ): void;
         /**
-         * Adds some ariaDescribedBy into the association {@link #getAriaDescribedBy ariaDescribedBy}.
-         */
-        addAriaDescribedBy(
-          /**
-           * The ariaDescribedBy to add; if empty, nothing is inserted
-           */
-          vAriaDescribedBy: sap.ui.core.ID | sap.ui.core.Control
-        ): sap.ui.unified.FileUploader;
-        /**
-         * Adds some ariaLabelledBy into the association {@link #getAriaLabelledBy ariaLabelledBy}.
-         */
-        addAriaLabelledBy(
-          /**
-           * The ariaLabelledBy to add; if empty, nothing is inserted
-           */
-          vAriaLabelledBy: sap.ui.core.ID | sap.ui.core.Control
-        ): sap.ui.unified.FileUploader;
-        /**
          * Adds some headerParameter to the aggregation {@link #getHeaderParameters headerParameters}.
          */
         addHeaderParameter(
@@ -11507,16 +11474,6 @@ declare namespace sap {
          */
         getAdditionalData(): string;
         /**
-         * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaDescribedBy
-         * ariaDescribedBy}.
-         */
-        getAriaDescribedBy(): sap.ui.core.ID[];
-        /**
-         * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy
-         * ariaLabelledBy}.
-         */
-        getAriaLabelledBy(): sap.ui.core.ID[];
-        /**
          * Gets current value of property {@link #getButtonOnly buttonOnly}.
          *
          * If set to "true", the FileUploader will be rendered as Button only, without showing the InputField.
@@ -11632,8 +11589,8 @@ declare namespace sap {
          * Gets current value of property {@link #getMimeType mimeType}.
          *
          * The chosen files will be checked against an array of mime types. If at least one file does not fit the
-         * mime type restriction the upload is prevented. **Note:** This property is not supported by Internet Explorer
-         * & Edge. Example: mimeType ["image/png", "image/jpeg"].
+         * mime type restriction the upload is prevented. This property is not supported by Internet Explorer 9.
+         * Example: mimeType ["image/png", "image/jpeg"].
          */
         getMimeType(): string[];
         /**
@@ -11839,14 +11796,6 @@ declare namespace sap {
           iIndex: number
         ): sap.ui.unified.FileUploader;
         /**
-         * Removes all the controls in the association named {@link #getAriaDescribedBy ariaDescribedBy}.
-         */
-        removeAllAriaDescribedBy(): sap.ui.core.ID[];
-        /**
-         * Removes all the controls in the association named {@link #getAriaLabelledBy ariaLabelledBy}.
-         */
-        removeAllAriaLabelledBy(): sap.ui.core.ID[];
-        /**
          * Removes all the controls from the aggregation {@link #getHeaderParameters headerParameters}.
          *
          * Additionally, it unregisters them from the hosting UIArea.
@@ -11860,24 +11809,6 @@ declare namespace sap {
          * Additionally, it unregisters them from the hosting UIArea.
          */
         removeAllParameters(): sap.ui.unified.FileUploaderParameter[];
-        /**
-         * Removes an ariaDescribedBy from the association named {@link #getAriaDescribedBy ariaDescribedBy}.
-         */
-        removeAriaDescribedBy(
-          /**
-           * The ariaDescribedBy to be removed or its index or ID
-           */
-          vAriaDescribedBy: number | sap.ui.core.ID | sap.ui.core.Control
-        ): sap.ui.core.ID;
-        /**
-         * Removes an ariaLabelledBy from the association named {@link #getAriaLabelledBy ariaLabelledBy}.
-         */
-        removeAriaLabelledBy(
-          /**
-           * The ariaLabelledBy to be removed or its index or ID
-           */
-          vAriaLabelledBy: number | sap.ui.core.ID | sap.ui.core.Control
-        ): sap.ui.core.ID;
         /**
          * Removes a headerParameter from the aggregation {@link #getHeaderParameters headerParameters}.
          */
@@ -12096,8 +12027,8 @@ declare namespace sap {
          * Sets a new value for property {@link #getMimeType mimeType}.
          *
          * The chosen files will be checked against an array of mime types. If at least one file does not fit the
-         * mime type restriction the upload is prevented. **Note:** This property is not supported by Internet Explorer
-         * & Edge. Example: mimeType ["image/png", "image/jpeg"].
+         * mime type restriction the upload is prevented. This property is not supported by Internet Explorer 9.
+         * Example: mimeType ["image/png", "image/jpeg"].
          *
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
          */

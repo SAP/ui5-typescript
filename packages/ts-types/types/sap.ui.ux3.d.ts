@@ -9,19 +9,17 @@
 /// <reference path="./sap.ui.codeeditor.d.ts" />
 /// <reference path="./sap.ui.commons.d.ts" />
 /// <reference path="./sap.ui.core.d.ts" />
-/// <reference path="./sap.ui.demokit.d.ts" />
-/// <reference path="./sap.ui.documentation.d.ts" />
+/// <reference path="./sap.ui.demokit.demoapps.d.ts" />
+/// <reference path="./sap.ui.documentation.sdk.d.ts" />
 /// <reference path="./sap.ui.dt.d.ts" />
 /// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.integration.d.ts" />
 /// <reference path="./sap.ui.layout.d.ts" />
-/// <reference path="./sap.ui.rta.d.ts" />
 /// <reference path="./sap.ui.suite.d.ts" />
 /// <reference path="./sap.ui.support.d.ts" />
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.60.14
 
 declare namespace sap {
   namespace ui {
@@ -13719,7 +13717,7 @@ declare namespace sap {
         ): sap.ui.ux3.ThingViewer;
       }
       /**
-       * @deprecated (since 1.38) - Instead, use the `sap.m.Popover` control.
+       * @deprecated (since 1.38) - Instead, use the `sap.m.Popup` control.
        *
        * A popup which the user can open from the Shell's tool pane. Generally, the starting point would be an
        * icon. For this pop up, buttons can be defined with any text; therefore, it has the same purpose and similar

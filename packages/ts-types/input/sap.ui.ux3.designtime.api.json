@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.65.1",
+  "version": "1.60.14",
   "symbols": [
     {
       "kind": "namespace",
@@ -21245,7 +21245,7 @@
       "description": "A popup which the user can open from the Shell's tool pane. Generally, the starting point would be an icon. For this pop up, buttons can be defined with any text; therefore, it has the same purpose and similar look like any common dialog box. A ToolPopup can have any content. Depending on the application type and design, the structure of the texts and input fields can be for example form-like.",
       "deprecated": {
         "since": "1.38",
-        "text": "Instead, use the <code>sap.m.Popover</code> control."
+        "text": "Instead, use the <code>sap.m.Popup</code> control."
       },
       "ui5-metamodel": true,
       "ui5-metadata": {

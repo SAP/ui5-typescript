@@ -9,19 +9,17 @@
 /// <reference path="./sap.ui.codeeditor.d.ts" />
 /// <reference path="./sap.ui.commons.d.ts" />
 /// <reference path="./sap.ui.core.d.ts" />
-/// <reference path="./sap.ui.demokit.d.ts" />
-/// <reference path="./sap.ui.documentation.d.ts" />
+/// <reference path="./sap.ui.demokit.demoapps.d.ts" />
+/// <reference path="./sap.ui.documentation.sdk.d.ts" />
 /// <reference path="./sap.ui.dt.d.ts" />
 /// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.integration.d.ts" />
-/// <reference path="./sap.ui.rta.d.ts" />
 /// <reference path="./sap.ui.suite.d.ts" />
 /// <reference path="./sap.ui.support.d.ts" />
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.60.14
 
 declare namespace sap {
   namespace ui {
@@ -64,7 +62,7 @@ declare namespace sap {
            *
            * **Note:** Not supported in IE11, Edge 15.
            */
-          gridTemplateColumns?: sap.ui.layout.cssgrid.CSSGridTrack;
+          gridTemplateColumns?: any;
 
           /**
            * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows
@@ -72,7 +70,7 @@ declare namespace sap {
            *
            * **Note:** Not supported in IE11, Edge 15.
            */
-          gridTemplateRows?: sap.ui.layout.cssgrid.CSSGridTrack;
+          gridTemplateRows?: any;
 
           /**
            * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap
@@ -92,12 +90,11 @@ declare namespace sap {
 
           /**
            * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap
-           * MDN web docs: grid-gap} It is a shorthand for gridRowGap and gridColumnGap. If some of them is set, the
-           * gridGap value will have less priority and will be overwritten.
+           * MDN web docs: grid-gap}
            *
            * **Note:** Not supported in IE11, Edge 15.
            */
-          gridGap?: sap.ui.layout.cssgrid.CSSGridGapShortHand;
+          gridGap?: any;
 
           /**
            * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows
@@ -105,7 +102,7 @@ declare namespace sap {
            *
            * **Note:** Not supported in IE11, Edge 15.
            */
-          gridAutoRows?: sap.ui.layout.cssgrid.CSSGridTrack;
+          gridAutoRows?: any;
 
           /**
            * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
@@ -113,7 +110,7 @@ declare namespace sap {
            *
            * **Note:** Not supported in IE11, Edge 15.
            */
-          gridAutoColumns?: sap.ui.layout.cssgrid.CSSGridTrack;
+          gridAutoColumns?: any;
 
           /**
            * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow
@@ -138,39 +135,33 @@ declare namespace sap {
           /**
            * Sets the value for the CSS display:grid item property grid-column-start
            */
-          gridColumnStart?: sap.ui.layout.cssgrid.CSSGridLine;
+          gridColumnStart?: any;
 
           /**
            * Sets the value for the CSS display:grid item property grid-column-end
            */
-          gridColumnEnd?: sap.ui.layout.cssgrid.CSSGridLine;
+          gridColumnEnd?: any;
 
           /**
            * Sets the value for the CSS display:grid item property grid-row-start
            */
-          gridRowStart?: sap.ui.layout.cssgrid.CSSGridLine;
+          gridRowStart?: any;
 
           /**
            * Sets the value for the CSS display:grid item property grid-row-end
            */
-          gridRowEnd?: sap.ui.layout.cssgrid.CSSGridLine;
+          gridRowEnd?: any;
 
           /**
            * Sets the value for the CSS display:grid item property grid-column
            */
-          gridColumn?: sap.ui.layout.cssgrid.CSSGridLine;
+          gridColumn?: any;
 
           /**
            * Sets the value for the CSS display:grid item property grid-row
            */
-          gridRow?: sap.ui.layout.cssgrid.CSSGridLine;
+          gridRow?: any;
         }
-
-        interface CSSGridGapShortHand {}
-
-        interface CSSGridLine {}
-
-        interface CSSGridTrack {}
         /**
          * @SINCE 1.60
          *
@@ -316,7 +307,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridAutoColumns(): sap.ui.layout.cssgrid.CSSGridTrack;
+          getGridAutoColumns(): any;
           /**
            * Gets current value of property {@link #getGridAutoFlow gridAutoFlow}.
            *
@@ -338,7 +329,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridAutoRows(): sap.ui.layout.cssgrid.CSSGridTrack;
+          getGridAutoRows(): any;
           /**
            * Gets current value of property {@link #getGridColumnGap gridColumnGap}.
            *
@@ -351,17 +342,24 @@ declare namespace sap {
            */
           getGridColumnGap(): sap.ui.core.CSSSize;
           /**
+           * Implements IGridConfigurable interface
+           */
+          getGridDomRefs(): HTMLElement[];
+          /**
            * Gets current value of property {@link #getGridGap gridGap}.
            *
            * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap
-           * MDN web docs: grid-gap} It is a shorthand for gridRowGap and gridColumnGap. If some of them is set, the
-           * gridGap value will have less priority and will be overwritten.
+           * MDN web docs: grid-gap}
            *
            * **Note:** Not supported in IE11, Edge 15.
            *
            * Default value is `empty string`.
            */
-          getGridGap(): sap.ui.layout.cssgrid.CSSGridGapShortHand;
+          getGridGap(): any;
+          /**
+           * Implements IGridConfigurable interface
+           */
+          getGridLayoutConfiguration(): sap.ui.layout.cssgrid.GridLayoutBase;
           /**
            * Gets current value of property {@link #getGridRowGap gridRowGap}.
            *
@@ -383,7 +381,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridTemplateColumns(): sap.ui.layout.cssgrid.CSSGridTrack;
+          getGridTemplateColumns(): any;
           /**
            * Gets current value of property {@link #getGridTemplateRows gridTemplateRows}.
            *
@@ -394,7 +392,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridTemplateRows(): sap.ui.layout.cssgrid.CSSGridTrack;
+          getGridTemplateRows(): any;
           /**
            * Gets content of aggregation {@link #getItems items}.
            *
@@ -479,7 +477,7 @@ declare namespace sap {
             /**
              * New value for property `gridAutoColumns`
              */
-            sGridAutoColumns: sap.ui.layout.cssgrid.CSSGridTrack
+            sGridAutoColumns: any
           ): sap.ui.layout.cssgrid.CSSGrid;
           /**
            * Sets a new value for property {@link #getGridAutoFlow gridAutoFlow}.
@@ -515,7 +513,7 @@ declare namespace sap {
             /**
              * New value for property `gridAutoRows`
              */
-            sGridAutoRows: sap.ui.layout.cssgrid.CSSGridTrack
+            sGridAutoRows: any
           ): sap.ui.layout.cssgrid.CSSGrid;
           /**
            * Sets a new value for property {@link #getGridColumnGap gridColumnGap}.
@@ -539,8 +537,7 @@ declare namespace sap {
            * Sets a new value for property {@link #getGridGap gridGap}.
            *
            * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap
-           * MDN web docs: grid-gap} It is a shorthand for gridRowGap and gridColumnGap. If some of them is set, the
-           * gridGap value will have less priority and will be overwritten.
+           * MDN web docs: grid-gap}
            *
            * **Note:** Not supported in IE11, Edge 15.
            *
@@ -552,7 +549,7 @@ declare namespace sap {
             /**
              * New value for property `gridGap`
              */
-            sGridGap: sap.ui.layout.cssgrid.CSSGridGapShortHand
+            sGridGap: any
           ): sap.ui.layout.cssgrid.CSSGrid;
           /**
            * Sets a new value for property {@link #getGridRowGap gridRowGap}.
@@ -588,7 +585,7 @@ declare namespace sap {
             /**
              * New value for property `gridTemplateColumns`
              */
-            sGridTemplateColumns: sap.ui.layout.cssgrid.CSSGridTrack
+            sGridTemplateColumns: any
           ): sap.ui.layout.cssgrid.CSSGrid;
           /**
            * Sets a new value for property {@link #getGridTemplateRows gridTemplateRows}.
@@ -606,7 +603,7 @@ declare namespace sap {
             /**
              * New value for property `gridTemplateRows`
              */
-            sGridTemplateRows: sap.ui.layout.cssgrid.CSSGridTrack
+            sGridTemplateRows: any
           ): sap.ui.layout.cssgrid.CSSGrid;
           /**
            * Sets the width of the grid.
@@ -617,440 +614,6 @@ declare namespace sap {
              */
             sWidth: sap.ui.core.CSSSize
           ): sap.ui.layout.cssgrid.CSSGrid;
-        }
-        /**
-         * @SINCE 1.60
-         *
-         * Applies a sap.ui.layout.cssgrid.GridSettings to a provided DOM element or Control.
-         */
-        class GridBasicLayout extends sap.ui.layout.cssgrid.GridLayoutBase {
-          /**
-           * Constructor for a new GridBasicLayout.
-           *
-           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-           * of the syntax of the settings object.
-           */
-          constructor(
-            /**
-             * ID for the new control, generated automatically if no ID is given
-             */
-            sId?: string,
-            /**
-             * Initial settings for the new control
-             */
-            mSettings?: object
-          );
-
-          /**
-           * Creates a new subclass of class sap.ui.layout.cssgrid.GridBasicLayout with name `sClassName` and enriches
-           * it with the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.layout.cssgrid.GridLayoutBase.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * Gets current value of property {@link #getGridAutoColumns gridAutoColumns}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
-           * MDN web docs: grid-auto-columns}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * Default value is `empty string`.
-           */
-          getGridAutoColumns(): sap.ui.layout.cssgrid.CSSGridTrack;
-          /**
-           * Gets current value of property {@link #getGridAutoFlow gridAutoFlow}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow
-           * MDN web docs: grid-auto-flow}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * Default value is `Row`.
-           */
-          getGridAutoFlow(): sap.ui.layout.cssgrid.CSSGridAutoFlow;
-          /**
-           * Gets current value of property {@link #getGridAutoRows gridAutoRows}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows
-           * MDN web docs: grid-auto-rows}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * Default value is `empty string`.
-           */
-          getGridAutoRows(): sap.ui.layout.cssgrid.CSSGridTrack;
-          /**
-           * Gets current value of property {@link #getGridColumnGap gridColumnGap}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap
-           * MDN web docs: grid-column-gap}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * Default value is `empty string`.
-           */
-          getGridColumnGap(): sap.ui.core.CSSSize;
-          /**
-           * Gets current value of property {@link #getGridGap gridGap}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap
-           * MDN web docs: grid-gap}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * Default value is `empty string`.
-           */
-          getGridGap(): sap.ui.layout.cssgrid.CSSGridGapShortHand;
-          /**
-           * Gets current value of property {@link #getGridRowGap gridRowGap}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap
-           * MDN web docs: grid-row-gap}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * Default value is `empty string`.
-           */
-          getGridRowGap(): sap.ui.core.CSSSize;
-          /**
-           * Gets current value of property {@link #getGridTemplateColumns gridTemplateColumns}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
-           * MDN web docs: grid-template-columns}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * Default value is `empty string`.
-           */
-          getGridTemplateColumns(): sap.ui.layout.cssgrid.CSSGridTrack;
-          /**
-           * Gets current value of property {@link #getGridTemplateRows gridTemplateRows}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows
-           * MDN web docs: grid-template-rows}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * Default value is `empty string`.
-           */
-          getGridTemplateRows(): sap.ui.layout.cssgrid.CSSGridTrack;
-          /**
-           * Returns a metadata object for class sap.ui.layout.cssgrid.GridBasicLayout.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Sets a new value for property {@link #getGridAutoColumns gridAutoColumns}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
-           * MDN web docs: grid-auto-columns}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setGridAutoColumns(
-            /**
-             * New value for property `gridAutoColumns`
-             */
-            sGridAutoColumns: sap.ui.layout.cssgrid.CSSGridTrack
-          ): sap.ui.layout.cssgrid.GridBasicLayout;
-          /**
-           * Sets a new value for property {@link #getGridAutoFlow gridAutoFlow}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow
-           * MDN web docs: grid-auto-flow}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `Row`.
-           */
-          setGridAutoFlow(
-            /**
-             * New value for property `gridAutoFlow`
-             */
-            sGridAutoFlow: sap.ui.layout.cssgrid.CSSGridAutoFlow
-          ): sap.ui.layout.cssgrid.GridBasicLayout;
-          /**
-           * Sets a new value for property {@link #getGridAutoRows gridAutoRows}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows
-           * MDN web docs: grid-auto-rows}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setGridAutoRows(
-            /**
-             * New value for property `gridAutoRows`
-             */
-            sGridAutoRows: sap.ui.layout.cssgrid.CSSGridTrack
-          ): sap.ui.layout.cssgrid.GridBasicLayout;
-          /**
-           * Sets a new value for property {@link #getGridColumnGap gridColumnGap}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap
-           * MDN web docs: grid-column-gap}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setGridColumnGap(
-            /**
-             * New value for property `gridColumnGap`
-             */
-            sGridColumnGap: sap.ui.core.CSSSize
-          ): sap.ui.layout.cssgrid.GridBasicLayout;
-          /**
-           * Sets a new value for property {@link #getGridGap gridGap}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap
-           * MDN web docs: grid-gap}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setGridGap(
-            /**
-             * New value for property `gridGap`
-             */
-            sGridGap: sap.ui.layout.cssgrid.CSSGridGapShortHand
-          ): sap.ui.layout.cssgrid.GridBasicLayout;
-          /**
-           * Sets a new value for property {@link #getGridRowGap gridRowGap}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap
-           * MDN web docs: grid-row-gap}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setGridRowGap(
-            /**
-             * New value for property `gridRowGap`
-             */
-            sGridRowGap: sap.ui.core.CSSSize
-          ): sap.ui.layout.cssgrid.GridBasicLayout;
-          /**
-           * Sets a new value for property {@link #getGridTemplateColumns gridTemplateColumns}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
-           * MDN web docs: grid-template-columns}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setGridTemplateColumns(
-            /**
-             * New value for property `gridTemplateColumns`
-             */
-            sGridTemplateColumns: sap.ui.layout.cssgrid.CSSGridTrack
-          ): sap.ui.layout.cssgrid.GridBasicLayout;
-          /**
-           * Sets a new value for property {@link #getGridTemplateRows gridTemplateRows}.
-           *
-           * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows
-           * MDN web docs: grid-template-rows}
-           *
-           * **Note:** Not supported in IE11, Edge 15.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setGridTemplateRows(
-            /**
-             * New value for property `gridTemplateRows`
-             */
-            sGridTemplateRows: sap.ui.layout.cssgrid.CSSGridTrack
-          ): sap.ui.layout.cssgrid.GridBasicLayout;
-        }
-        /**
-         * @SINCE 1.60
-         *
-         * Applies a sap.ui.layout.cssgrid.GridSettings to a provided DOM element or Control.
-         */
-        class GridBoxLayout extends sap.ui.layout.cssgrid.GridLayoutBase {
-          /**
-           * Constructor for a new GridBoxLayout.
-           *
-           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-           * of the syntax of the settings object.
-           */
-          constructor(
-            /**
-             * ID for the new control, generated automatically if no ID is given
-             */
-            sId?: string,
-            /**
-             * Initial settings for the new control
-             */
-            mSettings?: object
-          );
-
-          /**
-           * Apply display:grid styles to the provided HTML element or control based on the currently active GridSettings
-           */
-          // @ts-ignore
-          _applySingleGridLayout(
-            /**
-             * The element or control on which to apply the display:grid styles
-             */
-            oElement: sap.ui.core.Control | HTMLElement
-          ): void;
-          /**
-           * Returns a gridTemplateColumns value based on boxWidth and boxMinWidth properties
-           */
-          _getTemplateColumns(): string;
-          /**
-           * Sets all display:grid styles to the provided HTML element
-           */
-          // @ts-ignore
-          _setGridLayout(
-            /**
-             * The element to which to apply the grid styles
-             */
-            oElement: HTMLElement,
-            /**
-             * The grid settings to apply
-             */
-            oGridSettings: sap.ui.layout.cssgrid.GridSettings
-          ): void;
-          /**
-           * Creates a new subclass of class sap.ui.layout.cssgrid.GridBoxLayout with name `sClassName` and enriches
-           * it with the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.layout.cssgrid.GridLayoutBase.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * Gets current value of property {@link #getBoxesPerRowConfig boxesPerRowConfig}.
-           *
-           * A string type that defines number of Boxes per row for extra large, large, medium and small screens
-           *
-           * Default value is `XL7 L6 M4 S2`.
-           */
-          getBoxesPerRowConfig(): sap.ui.layout.BoxesPerRowConfig;
-          /**
-           * Gets current value of property {@link #getBoxMinWidth boxMinWidth}.
-           *
-           * Defines the minimum width of the Boxes
-           *
-           * Default value is `empty string`.
-           */
-          getBoxMinWidth(): sap.ui.core.CSSSize;
-          /**
-           * Gets current value of property {@link #getBoxWidth boxWidth}.
-           *
-           * Defines the width of the Boxes
-           *
-           * Default value is `empty string`.
-           */
-          getBoxWidth(): sap.ui.core.CSSSize;
-          /**
-           * Returns a metadata object for class sap.ui.layout.cssgrid.GridBoxLayout.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**/
-          // @ts-ignore
-          isResponsive(): boolean;
-          /**
-           * Sets a new value for property {@link #getBoxesPerRowConfig boxesPerRowConfig}.
-           *
-           * A string type that defines number of Boxes per row for extra large, large, medium and small screens
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `XL7 L6 M4 S2`.
-           */
-          setBoxesPerRowConfig(
-            /**
-             * New value for property `boxesPerRowConfig`
-             */
-            sBoxesPerRowConfig: sap.ui.layout.BoxesPerRowConfig
-          ): sap.ui.layout.cssgrid.GridBoxLayout;
-          /**
-           * Sets a new value for property {@link #getBoxMinWidth boxMinWidth}.
-           *
-           * Defines the minimum width of the Boxes
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setBoxMinWidth(
-            /**
-             * New value for property `boxMinWidth`
-             */
-            sBoxMinWidth: sap.ui.core.CSSSize
-          ): sap.ui.layout.cssgrid.GridBoxLayout;
-          /**
-           * Sets a new value for property {@link #getBoxWidth boxWidth}.
-           *
-           * Defines the width of the Boxes
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `empty string`.
-           */
-          setBoxWidth(
-            /**
-             * New value for property `boxWidth`
-             */
-            sBoxWidth: sap.ui.core.CSSSize
-          ): sap.ui.layout.cssgrid.GridBoxLayout;
         }
         /**
          * Holds layout data for a grid item.
@@ -1102,7 +665,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridColumn(): sap.ui.layout.cssgrid.CSSGridLine;
+          getGridColumn(): any;
           /**
            * Gets current value of property {@link #getGridColumnEnd gridColumnEnd}.
            *
@@ -1110,7 +673,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridColumnEnd(): sap.ui.layout.cssgrid.CSSGridLine;
+          getGridColumnEnd(): any;
           /**
            * Gets current value of property {@link #getGridColumnStart gridColumnStart}.
            *
@@ -1118,7 +681,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridColumnStart(): sap.ui.layout.cssgrid.CSSGridLine;
+          getGridColumnStart(): any;
           /**
            * Gets current value of property {@link #getGridRow gridRow}.
            *
@@ -1126,7 +689,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridRow(): sap.ui.layout.cssgrid.CSSGridLine;
+          getGridRow(): any;
           /**
            * Gets current value of property {@link #getGridRowEnd gridRowEnd}.
            *
@@ -1134,7 +697,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridRowEnd(): sap.ui.layout.cssgrid.CSSGridLine;
+          getGridRowEnd(): any;
           /**
            * Gets current value of property {@link #getGridRowStart gridRowStart}.
            *
@@ -1142,7 +705,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridRowStart(): sap.ui.layout.cssgrid.CSSGridLine;
+          getGridRowStart(): any;
           /**
            * Returns a metadata object for class sap.ui.layout.cssgrid.GridItemLayoutData.
            */
@@ -1161,7 +724,7 @@ declare namespace sap {
             /**
              * New value for property `gridColumn`
              */
-            sGridColumn: sap.ui.layout.cssgrid.CSSGridLine
+            sGridColumn: any
           ): sap.ui.layout.cssgrid.GridItemLayoutData;
           /**
            * Sets a new value for property {@link #getGridColumnEnd gridColumnEnd}.
@@ -1176,7 +739,7 @@ declare namespace sap {
             /**
              * New value for property `gridColumnEnd`
              */
-            sGridColumnEnd: sap.ui.layout.cssgrid.CSSGridLine
+            sGridColumnEnd: any
           ): sap.ui.layout.cssgrid.GridItemLayoutData;
           /**
            * Sets a new value for property {@link #getGridColumnStart gridColumnStart}.
@@ -1191,7 +754,7 @@ declare namespace sap {
             /**
              * New value for property `gridColumnStart`
              */
-            sGridColumnStart: sap.ui.layout.cssgrid.CSSGridLine
+            sGridColumnStart: any
           ): sap.ui.layout.cssgrid.GridItemLayoutData;
           /**
            * Sets a new value for property {@link #getGridRow gridRow}.
@@ -1206,7 +769,7 @@ declare namespace sap {
             /**
              * New value for property `gridRow`
              */
-            sGridRow: sap.ui.layout.cssgrid.CSSGridLine
+            sGridRow: any
           ): sap.ui.layout.cssgrid.GridItemLayoutData;
           /**
            * Sets a new value for property {@link #getGridRowEnd gridRowEnd}.
@@ -1221,7 +784,7 @@ declare namespace sap {
             /**
              * New value for property `gridRowEnd`
              */
-            sGridRowEnd: sap.ui.layout.cssgrid.CSSGridLine
+            sGridRowEnd: any
           ): sap.ui.layout.cssgrid.GridItemLayoutData;
           /**
            * Sets a new value for property {@link #getGridRowStart gridRowStart}.
@@ -1236,7 +799,7 @@ declare namespace sap {
             /**
              * New value for property `gridRowStart`
              */
-            sGridRowStart: sap.ui.layout.cssgrid.CSSGridLine
+            sGridRowStart: any
           ): sap.ui.layout.cssgrid.GridItemLayoutData;
         }
         /**
@@ -1275,26 +838,13 @@ declare namespace sap {
             oElement: sap.ui.core.Control | HTMLElement
           ): void;
           /**
-           * Removes all display:grid styles from the provided HTML element
+           * Removes all display:grid styles from the provided HTML element or control
            */
           _removeGridLayout(
             /**
-             * The element from which to remove the grid styles
+             * The element or control from which to remove the grid styles
              */
-            oElement: HTMLElement
-          ): void;
-          /**
-           * Sets all display:grid styles to the provided HTML element
-           */
-          _setGridLayout(
-            /**
-             * The element to which to apply the grid styles
-             */
-            oElement: HTMLElement,
-            /**
-             * The grid settings to apply
-             */
-            oGridSettings: sap.ui.layout.cssgrid.GridSettings
+            oElement: sap.ui.core.Control | HTMLElement
           ): void;
           /**
            * Apply display:grid styles to the provided array of HTML elements or controls based on the currently active
@@ -1337,8 +887,6 @@ declare namespace sap {
            */
           // @ts-ignore
           static getMetadata(): sap.ui.base.Metadata;
-          /**/
-          isGridSupportedByBrowser(): boolean;
           /**/
           isResponsive(): boolean;
         }
@@ -1471,15 +1019,6 @@ declare namespace sap {
             }
           ): sap.ui.layout.cssgrid.GridResponsiveLayout;
           /**
-           * Gets current value of property {@link #getContainerQuery containerQuery}.
-           *
-           * If set to `true`, the current range (large, medium or small) is defined by the size of the container
-           * surrounding the `CSSGrid` instead of the device screen size (media Query).
-           *
-           * Default value is `false`.
-           */
-          getContainerQuery(): boolean;
-          /**
            * Gets content of aggregation {@link #getLayout layout}.
            *
            * The sap.ui.layout.cssgrid.GridSettings applied if no settings are provided for a specific size
@@ -1514,22 +1053,6 @@ declare namespace sap {
            */
           // @ts-ignore
           static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Sets a new value for property {@link #getContainerQuery containerQuery}.
-           *
-           * If set to `true`, the current range (large, medium or small) is defined by the size of the container
-           * surrounding the `CSSGrid` instead of the device screen size (media Query).
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `false`.
-           */
-          setContainerQuery(
-            /**
-             * New value for property `containerQuery`
-             */
-            bContainerQuery: boolean
-          ): sap.ui.layout.cssgrid.GridResponsiveLayout;
           /**
            * Sets the aggregated {@link #getLayout layout}.
            */
@@ -1651,7 +1174,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridAutoColumns(): sap.ui.layout.cssgrid.CSSGridTrack;
+          getGridAutoColumns(): any;
           /**
            * Gets current value of property {@link #getGridAutoFlow gridAutoFlow}.
            *
@@ -1673,7 +1196,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridAutoRows(): sap.ui.layout.cssgrid.CSSGridTrack;
+          getGridAutoRows(): any;
           /**
            * Gets current value of property {@link #getGridColumnGap gridColumnGap}.
            *
@@ -1695,7 +1218,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridGap(): sap.ui.layout.cssgrid.CSSGridGapShortHand;
+          getGridGap(): any;
           /**
            * Gets current value of property {@link #getGridRowGap gridRowGap}.
            *
@@ -1717,7 +1240,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridTemplateColumns(): sap.ui.layout.cssgrid.CSSGridTrack;
+          getGridTemplateColumns(): any;
           /**
            * Gets current value of property {@link #getGridTemplateRows gridTemplateRows}.
            *
@@ -1728,7 +1251,7 @@ declare namespace sap {
            *
            * Default value is `empty string`.
            */
-          getGridTemplateRows(): sap.ui.layout.cssgrid.CSSGridTrack;
+          getGridTemplateRows(): any;
           /**
            * Returns a metadata object for class sap.ui.layout.cssgrid.GridSettings.
            */
@@ -1750,7 +1273,7 @@ declare namespace sap {
             /**
              * New value for property `gridAutoColumns`
              */
-            sGridAutoColumns: sap.ui.layout.cssgrid.CSSGridTrack
+            sGridAutoColumns: any
           ): sap.ui.layout.cssgrid.GridSettings;
           /**
            * Sets a new value for property {@link #getGridAutoFlow gridAutoFlow}.
@@ -1786,7 +1309,7 @@ declare namespace sap {
             /**
              * New value for property `gridAutoRows`
              */
-            sGridAutoRows: sap.ui.layout.cssgrid.CSSGridTrack
+            sGridAutoRows: any
           ): sap.ui.layout.cssgrid.GridSettings;
           /**
            * Sets a new value for property {@link #getGridColumnGap gridColumnGap}.
@@ -1822,7 +1345,7 @@ declare namespace sap {
             /**
              * New value for property `gridGap`
              */
-            sGridGap: sap.ui.layout.cssgrid.CSSGridGapShortHand
+            sGridGap: any
           ): sap.ui.layout.cssgrid.GridSettings;
           /**
            * Sets a new value for property {@link #getGridRowGap gridRowGap}.
@@ -1858,7 +1381,7 @@ declare namespace sap {
             /**
              * New value for property `gridTemplateColumns`
              */
-            sGridTemplateColumns: sap.ui.layout.cssgrid.CSSGridTrack
+            sGridTemplateColumns: any
           ): sap.ui.layout.cssgrid.GridSettings;
           /**
            * Sets a new value for property {@link #getGridTemplateRows gridTemplateRows}.
@@ -1876,7 +1399,7 @@ declare namespace sap {
             /**
              * New value for property `gridTemplateRows`
              */
-            sGridTemplateRows: sap.ui.layout.cssgrid.CSSGridTrack
+            sGridTemplateRows: any
           ): sap.ui.layout.cssgrid.GridSettings;
         }
         /**
@@ -2324,11 +1847,10 @@ declare namespace sap {
 
         interface SimpleFormOpts extends sap.ui.core.ControlOpts {
           /**
-           * The maximum amount of groups (`{@link sap.ui.layout.form.FormContainer FormContainers}`) per row that
-           * is used before a new row is started.
+           * The maximum amount of groups (`FormContainers`) per row that is used before a new row is started.
            *
-           * **Note:** If `{@link sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout}` is used as `layout`,
-           * this property is not used. Please use the properties `ColumnsL` and `ColumnsM` in this case.
+           * **Note:** If a `ResponsiveGridLayout` is used as a `layout`, this property is not used. Please use the
+           * properties `ColumnsL` and `ColumnsM` in this case.
            */
           maxContainerCols?: number;
 
@@ -2336,9 +1858,9 @@ declare namespace sap {
            * The overall minimum width in pixels that is used for the `SimpleForm`.
            *
            * If the available width is below the given `minWidth` the `SimpleForm` will create a new row for the next
-           * group (`{@link sap.ui.layout.form.FormContainer FormContainer}`). The default value is -1, meaning that
-           * inner groups (`{@link sap.ui.layout.form.FormContainer FormContainers}`) will be stacked until `maxContainerCols`
-           * is reached, irrespective of whether a `width` is reached or the available parents width is reached.
+           * group (`FormContainer`). The default value is -1, meaning that inner groups (`FormContainers`) will be
+           * stacked until `maxContainerCols` is reached, irrespective of whether a `width` is reached or the available
+           * parents width is reached.
            *
            * **Note:** This property is only used if a `ResponsiveLayout` is used as a layout.
            */
@@ -2567,10 +2089,8 @@ declare namespace sap {
 
           /**
            * The content of the form is structured in the following way:
-           * 	 - Add a `Title` or `Toolbar` control to start a new group (`{@link sap.ui.layout.form.FormContainer
-           * 			FormContainer}`).
-           * 	 - Add a `Label` control to start a new row (`{@link sap.ui.layout.form.FormElement FormElement}`).
-           *
+           * 	 - Add a `Title` or `Toolbar` control to start a new group (`FormContainer`).
+           * 	 - Add a `Label` control to start a new row (`FormElement`).
            * 	 - Add controls as input fields, text fields or other as needed.
            * 	 - Use `LayoutData` to influence the layout for special cases in the single controls. For example, if
            * 			a `ResponsiveLayout` is used as a layout, the form content is weighted using weight 3 for the labels
@@ -4846,19 +4366,15 @@ declare namespace sap {
         /**
          * @SINCE 1.16.0
          *
-         * The `SimpleForm` provides an easy-to-use API to create simple forms. Inside a `SimpleForm`, a `{@link
-         * sap.ui.layout.form.Form Form}` control is created along with its `{@link sap.ui.layout.form.FormContainer
-         * FormContainers}` and `{@link sap.ui.layout.form.FormElement FormElements}`, but the complexity in the
-         * API is not exposed to the user.
-         * 	 - A new `Title` or `Toolbar` starts a new group (`{@link sap.ui.layout.form.FormContainer FormContainer}`)
-         * 			in the form.
-         * 	 - A new `Label` starts a new row (`{@link sap.ui.layout.form.FormElement FormElement}`) in the form.
+         * The `SimpleForm` provides an easy-to-use API to create simple forms. Inside a `SimpleForm`, a `Form`
+         * control is created along with its `FormContainers` and `FormElements`, but the complexity in the API
+         * is removed.
+         * 	 - A new `Title` or `Toolbar` starts a new group (`FormContainer`) in the form.
+         * 	 - A new `Label` starts a new row (`FormElement`) in the form.
+         * 	 - All other controls will be assigned to the row (`FormElement`) that started with the last label.
+         * 			 Use `LayoutData` to influence the layout for special cases in the Input/Display controls.
          *
-         * 	 - All other controls will be assigned to the row (`{@link sap.ui.layout.form.FormElement FormElement}`)
-         * 			that started with the last label.  Use `LayoutData` to influence the layout for special cases in
-         * 			the Input/Display controls.
-         *
-         * **Note:** If a more complex form is needed, use the `{@link sap.ui.layout.form.Form Form}` control instead.
+         * **Note:** If a more complex form is needed, use `Form` instead.
          */
         class SimpleForm extends sap.ui.core.Control {
           /**
@@ -5054,10 +4570,8 @@ declare namespace sap {
            * Gets content of aggregation {@link #getContent content}.
            *
            * The content of the form is structured in the following way:
-           * 	 - Add a `Title` or `Toolbar` control to start a new group (`{@link sap.ui.layout.form.FormContainer
-           * 			FormContainer}`).
-           * 	 - Add a `Label` control to start a new row (`{@link sap.ui.layout.form.FormElement FormElement}`).
-           *
+           * 	 - Add a `Title` or `Toolbar` control to start a new group (`FormContainer`).
+           * 	 - Add a `Label` control to start a new row (`FormElement`).
            * 	 - Add controls as input fields, text fields or other as needed.
            * 	 - Use `LayoutData` to influence the layout for special cases in the single controls. For example, if
            * 			a `ResponsiveLayout` is used as a layout, the form content is weighted using weight 3 for the labels
@@ -5250,11 +4764,10 @@ declare namespace sap {
           /**
            * Gets current value of property {@link #getMaxContainerCols maxContainerCols}.
            *
-           * The maximum amount of groups (`{@link sap.ui.layout.form.FormContainer FormContainers}`) per row that
-           * is used before a new row is started.
+           * The maximum amount of groups (`FormContainers`) per row that is used before a new row is started.
            *
-           * **Note:** If `{@link sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout}` is used as `layout`,
-           * this property is not used. Please use the properties `ColumnsL` and `ColumnsM` in this case.
+           * **Note:** If a `ResponsiveGridLayout` is used as a `layout`, this property is not used. Please use the
+           * properties `ColumnsL` and `ColumnsM` in this case.
            *
            * Default value is `2`.
            */
@@ -5270,9 +4783,9 @@ declare namespace sap {
            * The overall minimum width in pixels that is used for the `SimpleForm`.
            *
            * If the available width is below the given `minWidth` the `SimpleForm` will create a new row for the next
-           * group (`{@link sap.ui.layout.form.FormContainer FormContainer}`). The default value is -1, meaning that
-           * inner groups (`{@link sap.ui.layout.form.FormContainer FormContainers}`) will be stacked until `maxContainerCols`
-           * is reached, irrespective of whether a `width` is reached or the available parents width is reached.
+           * group (`FormContainer`). The default value is -1, meaning that inner groups (`FormContainers`) will be
+           * stacked until `maxContainerCols` is reached, irrespective of whether a `width` is reached or the available
+           * parents width is reached.
            *
            * **Note:** This property is only used if a `ResponsiveLayout` is used as a layout.
            *
@@ -5771,11 +5284,10 @@ declare namespace sap {
           /**
            * Sets a new value for property {@link #getMaxContainerCols maxContainerCols}.
            *
-           * The maximum amount of groups (`{@link sap.ui.layout.form.FormContainer FormContainers}`) per row that
-           * is used before a new row is started.
+           * The maximum amount of groups (`FormContainers`) per row that is used before a new row is started.
            *
-           * **Note:** If `{@link sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout}` is used as `layout`,
-           * this property is not used. Please use the properties `ColumnsL` and `ColumnsM` in this case.
+           * **Note:** If a `ResponsiveGridLayout` is used as a `layout`, this property is not used. Please use the
+           * properties `ColumnsL` and `ColumnsM` in this case.
            *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            *
@@ -5793,9 +5305,9 @@ declare namespace sap {
            * The overall minimum width in pixels that is used for the `SimpleForm`.
            *
            * If the available width is below the given `minWidth` the `SimpleForm` will create a new row for the next
-           * group (`{@link sap.ui.layout.form.FormContainer FormContainer}`). The default value is -1, meaning that
-           * inner groups (`{@link sap.ui.layout.form.FormContainer FormContainers}`) will be stacked until `maxContainerCols`
-           * is reached, irrespective of whether a `width` is reached or the available parents width is reached.
+           * group (`FormContainer`). The default value is -1, meaning that inner groups (`FormContainers`) will be
+           * stacked until `maxContainerCols` is reached, irrespective of whether a `width` is reached or the available
+           * parents width is reached.
            *
            * **Note:** This property is only used if a `ResponsiveLayout` is used as a layout.
            *
@@ -6582,8 +6094,6 @@ declare namespace sap {
         content?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface BoxesPerRowConfig {}
-
       interface GridIndent {}
 
       interface GridSpan {}
@@ -6596,20 +6106,20 @@ declare namespace sap {
        * between blocks and between similar elements. Structure: The BlockLayout contains BlockLayout cells. Every
        * cell consists of a title and content. The title can be text or a link.
        *
-       * Special full-width sections of the BlockLayout allow horizontal scrolling through a set of blocks.
-       *
        * The BlockLayout comes in five predefined types for background colors:
        * 	 - Layout only (default) - a layout scheme and no background colors
-       * 	 - Light - a layout scheme with light colors
-       * 	 - Accent - a layout scheme with 11 pre-defined color sets
-       * 	 - Dashboard - a layout scheme with additional borders and no background colors  Background colors
-       * 			are attached directly to the blocks of the layout.
+       * 	 - Bright - a layout scheme with bright colors
+       * 	 - Accent - a layout scheme with four pre-defined color sets
+       * 	 - Dashboard - a layout scheme with additional borders and no background colors
+       * 	 - Mixed - a layout scheme with a mix of light and dark colors  Background colors are attached
+       * 			directly to the blocks of the layout.
+       *
+       * Special full-width sections of the BlockLayout allow horizontal scrolling through a set of blocks.
        *
        * **Note:** With version 1.48 colors can be set for each individual {@link sap.ui.layout.BlockLayoutCell
-       * cell}. There are 11 pre-defined color sets, each with 4 different shades for the Belize theme and 6 different
-       * shades for the Fiori 3 theme. The main colors of the sets can be changed in Theme Designer. To change
-       * the background of a particular cell, set `backgroundColorSet` (main color) and `backgroundColorShade`
-       * (shade).
+       * cell}. There are 10 pre-defined color sets, each with 4 different shades. The main colors of the sets
+       * can be changed in Theme Designer. To change the background of a particular cell, set `backgroundColorSet`
+       * (main color) and `backgroundColorShade` (shade).
        *
        * **Note:** Usage of disabled, emphasized or subtle links as titles is not recommended. Dark background
        * designs, for example Accent, are not fully supported with regards to Аccessibility when used with links
@@ -7055,11 +6565,26 @@ declare namespace sap {
           oTitleLink: sap.ui.core.Control
         ): sap.ui.layout.BlockLayoutCell;
         /**
-         * Sets the Width.
+         * Sets a new value for property {@link #getWidth width}.
+         *
+         * Defines the width of the cell. Depending on the context of the cell - whether it's in scrollable, or
+         * non scrollable row, this property is interpreted in two different ways. If the cell is placed inside
+         * a scrollable row - this property defines the width of the cell in percentages. If no value is provided
+         * - the default is 40%. If the cell is placed inside a non scrollable row - this property defines the grow
+         * factor of the cell compared to the whole row. **For example:** If you have 2 cells, each with width of
+         * 1, this means that they should be of equal size, and they need to fill the whole row. This results in
+         * 50% width for each cell. If you have 2 cells, one with width of 1, the other with width of 3, this means
+         * that the whole row width is 4, so the first cell will have a width of 25%, the second - 75%. According
+         * to the visual guidelines, it is suggested that you only use 25%, 50%, 75% or 100% cells in you applications.
+         * For example, 12,5% width is not desirable (1 cell with width 1, and another with width 7)
+         *
+         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+         *
+         * Default value is `0`.
          */
         setWidth(
           /**
-           * value.
+           * New value for property `width`
            */
           iWidth: number
         ): sap.ui.layout.BlockLayoutCell;
@@ -7612,19 +7137,11 @@ declare namespace sap {
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
         /**
-         * Gets current value of property {@link #getShowMainContent showMainContent}.
-         *
-         * Determines whether the main content is visible or hidden.
-         *
-         * Default value is `true`.
+         * Gets the value of showMainContent property.
          */
         getShowMainContent(): boolean;
         /**
-         * Gets current value of property {@link #getShowSideContent showSideContent}.
-         *
-         * Determines whether the side content is visible or hidden.
-         *
-         * Default value is `true`.
+         * Gets the value of showSideContent property.
          */
         getShowSideContent(): boolean;
         /**
@@ -7709,14 +7226,6 @@ declare namespace sap {
            */
           iIndex: number
         ): sap.ui.layout.DynamicSideContent;
-        /**
-         * Checks if the main content is visible.
-         */
-        isMainContentVisible(): boolean;
-        /**
-         * Checks if the side content is visible.
-         */
-        isSideContentVisible(): boolean;
         /**
          * Removes all the controls from the aggregation {@link #getMainContent mainContent}.
          *
@@ -10901,15 +10410,7 @@ declare namespace sap {
         /**
          * Shade D
          */
-        ShadeD,
-        /**
-         * Shade E - available only for Fiori 3 theme
-         */
-        ShadeE,
-        /**
-         * Shade F - available only for Fiori 3 theme
-         */
-        ShadeF
+        ShadeD
       }
       /**
        * A string type that is used inside the BlockLayoutRow to set predefined set of colors the cells inside
@@ -11028,10 +10529,6 @@ declare namespace sap {
 
   interface IUI5DefineDependencyNames {
     "sap/ui/layout/cssgrid/CSSGrid": undefined;
-
-    "sap/ui/layout/cssgrid/GridBasicLayout": undefined;
-
-    "sap/ui/layout/cssgrid/GridBoxLayout": undefined;
 
     "sap/ui/layout/cssgrid/GridItemLayoutData": undefined;
 

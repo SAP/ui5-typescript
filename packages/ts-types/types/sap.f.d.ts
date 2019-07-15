@@ -8,837 +8,24 @@
 /// <reference path="./sap.ui.codeeditor.d.ts" />
 /// <reference path="./sap.ui.commons.d.ts" />
 /// <reference path="./sap.ui.core.d.ts" />
-/// <reference path="./sap.ui.demokit.d.ts" />
-/// <reference path="./sap.ui.documentation.d.ts" />
+/// <reference path="./sap.ui.demokit.demoapps.d.ts" />
+/// <reference path="./sap.ui.documentation.sdk.d.ts" />
 /// <reference path="./sap.ui.dt.d.ts" />
 /// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.integration.d.ts" />
 /// <reference path="./sap.ui.layout.d.ts" />
-/// <reference path="./sap.ui.rta.d.ts" />
 /// <reference path="./sap.ui.suite.d.ts" />
 /// <reference path="./sap.ui.support.d.ts" />
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.60.14
 
 declare namespace sap {
   /**
    * SAPUI5 library with controls specialized for SAP Fiori apps.
    */
   namespace f {
-    namespace cards {
-      /**
-       * @SINCE 1.62
-       *
-       * Marker interface for card headers
-       */
-      interface IHeader {}
-
-      interface HeaderOpts extends sap.ui.core.ControlOpts {
-        /**
-         * Defines the title.
-         */
-        title?: string;
-
-        /**
-         * Defines the subtitle.
-         */
-        subtitle?: string;
-
-        /**
-         * Defines the status text.
-         */
-        statusText?: string;
-
-        /**
-         * Defines the shape of the icon.
-         */
-        iconDisplayShape?: sap.f.AvatarShape;
-
-        /**
-         * Defines the icon source.
-         */
-        iconSrc?: sap.ui.core.URI;
-
-        /**
-         * Defines the initials of the icon.
-         */
-        iconInitials?: string;
-
-        /**
-         * Fires when the user presses the control.
-         */
-        press?: Function;
-      }
-
-      interface NumericHeaderOpts extends sap.ui.core.ControlOpts {
-        /**
-         * The title of the card
-         */
-        title?: string;
-
-        /**
-         * The subtitle of the card
-         */
-        subtitle?: string;
-
-        /**
-         * General unit of measurement for the header. Displayed as side information to the subtitle.
-         */
-        unitOfMeasurement?: string;
-
-        /**
-         * The numeric value of the main number indicator. If the value contains more than five characters, only
-         * the first five are displayed. Without rounding the number.
-         */
-        number?: string;
-
-        /**
-         * Defines the unit of measurement (scaling prefix) for the main indicator. Financial characters can be
-         * used for currencies and counters. The International System of Units (SI) prefixes can be used. If the
-         * unit contains more than three characters, only the first three characters are displayed.
-         */
-        scale?: string;
-
-        /**
-         * The direction of the trend arrow. Shows deviation for the value of the main number indicator.
-         */
-        trend?: sap.m.DeviationIndicator;
-
-        /**
-         * @EXPERIMENTAL (since 1.64)
-         *
-         * The semantic color which represents the state of the main number indicator.
-         */
-        state?: sap.m.ValueColor;
-
-        /**
-         * Additional text which adds more details to what is shown in the numeric header.
-         */
-        details?: string;
-
-        /**
-         * Fires when the user presses the control.
-         */
-        press?: Function;
-
-        /**
-         * Additional side number indicators. For example "Deviation" and "Target". Not more than two side indicators
-         * should be used.
-         */
-        sideIndicators?:
-          | sap.f.cards.NumericSideIndicator[]
-          | sap.f.cards.NumericSideIndicator;
-      }
-
-      interface NumericSideIndicatorOpts extends sap.ui.core.ControlOpts {
-        /**
-         * The title of the indicator
-         */
-        title?: string;
-
-        /**
-         * The numeric value
-         */
-        number?: string;
-
-        /**
-         * Defines the unit of measurement (scaling prefix) for the numeric value
-         */
-        unit?: string;
-      }
-      /**
-       * @SINCE 1.64
-       *
-       * A control used to group a set of card attributes in a header.
-       *
-       * Overview: The `Header` displays general information about the card. You can configure the title, subtitle,
-       * status text and icon, using properties.
-       *
-       * Usage: You should always set a title. To show a KPI or any numeric information, use {@link sap.f.cards.NumericHeader
-       * NumericHeader} instead.
-       */
-      class Header extends sap.ui.core.Control implements sap.f.cards.IHeader {
-        /**
-         * Constructor for a new `Header`.
-         *
-         * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-         * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-         * of the syntax of the settings object.
-         */
-        constructor(
-          /**
-           * ID for the new control, generated automatically if no ID is given
-           */
-          sId?: string,
-          /**
-           * Initial settings for the new control
-           */
-          mSettings?: HeaderOpts
-        );
-
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:press press} event of this `sap.f.cards.Header`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.f.cards.Header` itself.
-         *
-         * Fires when the user presses the control.
-         */
-        attachPress(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.f.cards.Header` itself
-           */
-          oListener?: object
-        ): sap.f.cards.Header;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:press press} event of this `sap.f.cards.Header`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachPress(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.f.cards.Header;
-        /**
-         * Creates a new subclass of class sap.f.cards.Header with name `sClassName` and enriches it with the information
-         * contained in `oClassInfo`.
-         *
-         * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-         */
-        // @ts-ignore
-        static extend(
-          /**
-           * Name of the class being created
-           */
-          sClassName: string,
-          /**
-           * Object literal with information about the class
-           */
-          oClassInfo?: object,
-          /**
-           * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-           */
-          FNMetaImpl?: Function
-        ): Function;
-        /**
-         * Fires event {@link #event:press press} to attached listeners.
-         */
-        firePress(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: object
-        ): sap.f.cards.Header;
-        /**
-         * Gets current value of property {@link #getIconDisplayShape iconDisplayShape}.
-         *
-         * Defines the shape of the icon.
-         *
-         * Default value is `Circle`.
-         */
-        getIconDisplayShape(): sap.f.AvatarShape;
-        /**
-         * Gets current value of property {@link #getIconInitials iconInitials}.
-         *
-         * Defines the initials of the icon.
-         *
-         * Default value is `empty string`.
-         */
-        getIconInitials(): string;
-        /**
-         * Gets current value of property {@link #getIconSrc iconSrc}.
-         *
-         * Defines the icon source.
-         *
-         * Default value is `empty string`.
-         */
-        getIconSrc(): sap.ui.core.URI;
-        /**
-         * Returns a metadata object for class sap.f.cards.Header.
-         */
-        // @ts-ignore
-        static getMetadata(): sap.ui.base.Metadata;
-        /**
-         * Gets current value of property {@link #getStatusText statusText}.
-         *
-         * Defines the status text.
-         *
-         * Default value is `empty string`.
-         */
-        getStatusText(): string;
-        /**
-         * Gets current value of property {@link #getSubtitle subtitle}.
-         *
-         * Defines the subtitle.
-         *
-         * Default value is `empty string`.
-         */
-        getSubtitle(): string;
-        /**
-         * Gets current value of property {@link #getTitle title}.
-         *
-         * Defines the title.
-         *
-         * Default value is `empty string`.
-         */
-        getTitle(): string;
-        /**/
-        isReady(): boolean;
-        /**
-         * Sets a new value for property {@link #getIconDisplayShape iconDisplayShape}.
-         *
-         * Defines the shape of the icon.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `Circle`.
-         */
-        setIconDisplayShape(
-          /**
-           * New value for property `iconDisplayShape`
-           */
-          sIconDisplayShape: sap.f.AvatarShape
-        ): sap.f.cards.Header;
-        /**
-         * Sets a new value for property {@link #getIconInitials iconInitials}.
-         *
-         * Defines the initials of the icon.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `empty string`.
-         */
-        setIconInitials(
-          /**
-           * New value for property `iconInitials`
-           */
-          sIconInitials: string
-        ): sap.f.cards.Header;
-        /**
-         * Sets a new value for property {@link #getIconSrc iconSrc}.
-         *
-         * Defines the icon source.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `empty string`.
-         */
-        setIconSrc(
-          /**
-           * New value for property `iconSrc`
-           */
-          sIconSrc: sap.ui.core.URI
-        ): sap.f.cards.Header;
-        /**
-         * Sets a new value for property {@link #getStatusText statusText}.
-         *
-         * Defines the status text.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `empty string`.
-         */
-        setStatusText(
-          /**
-           * New value for property `statusText`
-           */
-          sStatusText: string
-        ): sap.f.cards.Header;
-        /**
-         * Sets a new value for property {@link #getSubtitle subtitle}.
-         *
-         * Defines the subtitle.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `empty string`.
-         */
-        setSubtitle(
-          /**
-           * New value for property `subtitle`
-           */
-          sSubtitle: string
-        ): sap.f.cards.Header;
-        /**
-         * Sets a new value for property {@link #getTitle title}.
-         *
-         * Defines the title.
-         *
-         * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-         *
-         * Default value is `empty string`.
-         */
-        setTitle(
-          /**
-           * New value for property `title`
-           */
-          sTitle: string
-        ): sap.f.cards.Header;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:press press} event of this `sap.f.cards.Header`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.f.cards.Header` itself.
-         *
-         * Fires when the user presses the control.
-         */
-        attachPress(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.f.cards.Header` itself
-           */
-          oListener?: object
-        ): sap.f.cards.Header;
-      }
-      /**
-       * @SINCE 1.64
-       *
-       * A control used to group a set of card attributes in a header.
-       *
-       * Overview: The `NumericHeader` shows general information about the card and allows the configuration of
-       * a numeric value visualization. You can configure the title, subtitle, status text and icon, using properties.
-       *
-       * Usage: To show only basic information, use {@link sap.f.cards.Header Header} instead. It is possible
-       * to add more side number indicators, using the `sideIndicators` aggregation. You should always set a title.
-       * You should always have a maximum of two side indicators.
-       */
-      class NumericHeader extends sap.ui.core.Control
-        implements sap.f.cards.IHeader {
-        /**
-         * Constructor for a new `NumericHeader`.
-         *
-         * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-         * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-         * of the syntax of the settings object.
-         */
-        constructor(
-          /**
-           * ID for the new control, generated automatically if no ID is given
-           */
-          sId?: string,
-          /**
-           * Initial settings for the new control
-           */
-          mSettings?: NumericHeaderOpts
-        );
-
-        /**
-         * Adds some sideIndicator to the aggregation {@link #getSideIndicators sideIndicators}.
-         */
-        addSideIndicator(
-          /**
-           * The sideIndicator to add; if empty, nothing is inserted
-           */
-          oSideIndicator: sap.f.cards.NumericSideIndicator
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:press press} event of this `sap.f.cards.NumericHeader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.f.cards.NumericHeader` itself.
-         *
-         * Fires when the user presses the control.
-         */
-        attachPress(
-          /**
-           * An application-specific payload object that will be passed to the event handler along with the event
-           * object when firing the event
-           */
-          oData: object,
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.f.cards.NumericHeader` itself
-           */
-          oListener?: object
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Destroys all the sideIndicators in the aggregation {@link #getSideIndicators sideIndicators}.
-         */
-        destroySideIndicators(): sap.f.cards.NumericHeader;
-        /**
-         * Detaches event handler `fnFunction` from the {@link #event:press press} event of this `sap.f.cards.NumericHeader`.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         */
-        detachPress(
-          /**
-           * The function to be called, when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object on which the given function had to be called
-           */
-          oListener?: object
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Creates a new subclass of class sap.f.cards.NumericHeader with name `sClassName` and enriches it with
-         * the information contained in `oClassInfo`.
-         *
-         * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-         */
-        // @ts-ignore
-        static extend(
-          /**
-           * Name of the class being created
-           */
-          sClassName: string,
-          /**
-           * Object literal with information about the class
-           */
-          oClassInfo?: object,
-          /**
-           * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-           */
-          FNMetaImpl?: Function
-        ): Function;
-        /**
-         * Fires event {@link #event:press press} to attached listeners.
-         */
-        firePress(
-          /**
-           * Parameters to pass along with the event
-           */
-          mParameters?: object
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Gets current value of property {@link #getDetails details}.
-         *
-         * Additional text which adds more details to what is shown in the numeric header.
-         */
-        getDetails(): string;
-        /**
-         * Returns a metadata object for class sap.f.cards.NumericHeader.
-         */
-        // @ts-ignore
-        static getMetadata(): sap.ui.base.Metadata;
-        /**
-         * Gets current value of property {@link #getNumber number}.
-         *
-         * The numeric value of the main number indicator. If the value contains more than five characters, only
-         * the first five are displayed. Without rounding the number.
-         */
-        getNumber(): string;
-        /**
-         * Gets current value of property {@link #getScale scale}.
-         *
-         * Defines the unit of measurement (scaling prefix) for the main indicator. Financial characters can be
-         * used for currencies and counters. The International System of Units (SI) prefixes can be used. If the
-         * unit contains more than three characters, only the first three characters are displayed.
-         */
-        getScale(): string;
-        /**
-         * Gets content of aggregation {@link #getSideIndicators sideIndicators}.
-         *
-         * Additional side number indicators. For example "Deviation" and "Target". Not more than two side indicators
-         * should be used.
-         */
-        getSideIndicators(): sap.f.cards.NumericSideIndicator[];
-        /**
-         * @EXPERIMENTAL (since 1.64)
-         *
-         * Gets current value of property {@link #getState state}.
-         *
-         * The semantic color which represents the state of the main number indicator.
-         *
-         * Default value is `Neutral`.
-         */
-        getState(): sap.m.ValueColor;
-        /**
-         * Gets current value of property {@link #getSubtitle subtitle}.
-         *
-         * The subtitle of the card
-         */
-        getSubtitle(): string;
-        /**
-         * Gets current value of property {@link #getTitle title}.
-         *
-         * The title of the card
-         */
-        getTitle(): string;
-        /**
-         * Gets current value of property {@link #getTrend trend}.
-         *
-         * The direction of the trend arrow. Shows deviation for the value of the main number indicator.
-         *
-         * Default value is `None`.
-         */
-        getTrend(): sap.m.DeviationIndicator;
-        /**
-         * Gets current value of property {@link #getUnitOfMeasurement unitOfMeasurement}.
-         *
-         * General unit of measurement for the header. Displayed as side information to the subtitle.
-         */
-        getUnitOfMeasurement(): string;
-        /**
-         * Checks for the provided `sap.f.cards.NumericSideIndicator` in the aggregation {@link #getSideIndicators
-         * sideIndicators}. and returns its index if found or -1 otherwise.
-         */
-        indexOfSideIndicator(
-          /**
-           * The sideIndicator whose index is looked for
-           */
-          oSideIndicator: sap.f.cards.NumericSideIndicator
-        ): number;
-        /**
-         * Inserts a sideIndicator into the aggregation {@link #getSideIndicators sideIndicators}.
-         */
-        insertSideIndicator(
-          /**
-           * The sideIndicator to insert; if empty, nothing is inserted
-           */
-          oSideIndicator: sap.f.cards.NumericSideIndicator,
-          /**
-           * The `0`-based index the sideIndicator should be inserted at; for a negative value of `iIndex`, the sideIndicator
-           * is inserted at position 0; for a value greater than the current size of the aggregation, the sideIndicator
-           * is inserted at the last position
-           */
-          iIndex: number
-        ): sap.f.cards.NumericHeader;
-        /**/
-        isReady(): boolean;
-        /**
-         * Removes all the controls from the aggregation {@link #getSideIndicators sideIndicators}.
-         *
-         * Additionally, it unregisters them from the hosting UIArea.
-         */
-        removeAllSideIndicators(): sap.f.cards.NumericSideIndicator[];
-        /**
-         * Removes a sideIndicator from the aggregation {@link #getSideIndicators sideIndicators}.
-         */
-        removeSideIndicator(
-          /**
-           * The sideIndicator to remove or its index or id
-           */
-          vSideIndicator: number | string | sap.f.cards.NumericSideIndicator
-        ): sap.f.cards.NumericSideIndicator;
-        /**
-         * Sets additional text which adds more details to what is shown in the numeric header.
-         */
-        setDetails(
-          /**
-           * The text of the details
-           */
-          sValue: string
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Sets the value of the main number indicator.
-         */
-        setNumber(
-          /**
-           * A string representation of the number
-           */
-          sValue: string
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Sets the unit of measurement (scaling prefix) for the main indicator.
-         */
-        setScale(
-          /**
-           * The text of the title
-           */
-          sValue: string
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Sets the semantic color which represents the state of the main number indicator.
-         */
-        setState(
-          /**
-           * The semantic color which represents the state
-           */
-          sValue: sap.m.ValueColor
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Sets the subtitle.
-         */
-        setSubtitle(
-          /**
-           * The text of the subtitle
-           */
-          sValue: string
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Sets the title.
-         */
-        setTitle(
-          /**
-           * The text of the title
-           */
-          sValue: string
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Sets the direction of the trend arrow.
-         */
-        setTrend(
-          /**
-           * The direction of the trend arrow
-           */
-          sValue: sap.m.DeviationIndicator
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Sets the general unit of measurement for the header. Displayed as side information to the subtitle.
-         */
-        setUnitOfMeasurement(
-          /**
-           * The value of the unit of measurement
-           */
-          sValue: string
-        ): sap.f.cards.NumericHeader;
-        /**
-         * Attaches event handler `fnFunction` to the {@link #event:press press} event of this `sap.f.cards.NumericHeader`.
-         *
-         * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-         * otherwise it will be bound to this `sap.f.cards.NumericHeader` itself.
-         *
-         * Fires when the user presses the control.
-         */
-        attachPress(
-          /**
-           * The function to be called when the event occurs
-           */
-          fnFunction: Function,
-          /**
-           * Context object to call the event handler with. Defaults to this `sap.f.cards.NumericHeader` itself
-           */
-          oListener?: object
-        ): sap.f.cards.NumericHeader;
-      }
-      /**
-       * @SINCE 1.64
-       *
-       * A control used by `sap.f.cards.NumericHeader` to hold a set of side indicator attributes.
-       */
-      class NumericSideIndicator extends sap.ui.core.Control {
-        /**
-         * Constructor for a new `NumericSideIndicator`.
-         *
-         * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-         * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-         * of the syntax of the settings object.
-         */
-        constructor(
-          /**
-           * ID for the new control, generated automatically if no ID is given
-           */
-          sId?: string,
-          /**
-           * Initial settings for the new control
-           */
-          mSettings?: NumericSideIndicatorOpts
-        );
-
-        /**
-         * Creates a new subclass of class sap.f.cards.NumericSideIndicator with name `sClassName` and enriches
-         * it with the information contained in `oClassInfo`.
-         *
-         * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-         */
-        // @ts-ignore
-        static extend(
-          /**
-           * Name of the class being created
-           */
-          sClassName: string,
-          /**
-           * Object literal with information about the class
-           */
-          oClassInfo?: object,
-          /**
-           * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-           */
-          FNMetaImpl?: Function
-        ): Function;
-        /**
-         * Returns a metadata object for class sap.f.cards.NumericSideIndicator.
-         */
-        // @ts-ignore
-        static getMetadata(): sap.ui.base.Metadata;
-        /**
-         * Gets current value of property {@link #getNumber number}.
-         *
-         * The numeric value
-         */
-        getNumber(): string;
-        /**
-         * Gets current value of property {@link #getTitle title}.
-         *
-         * The title of the indicator
-         */
-        getTitle(): string;
-        /**
-         * Gets current value of property {@link #getUnit unit}.
-         *
-         * Defines the unit of measurement (scaling prefix) for the numeric value
-         */
-        getUnit(): string;
-        /**
-         * Sets the numeric value.
-         */
-        setNumber(
-          /**
-           * The text of the title
-           */
-          sValue: string
-        ): sap.f.cards.NumericSideIndicator;
-        /**
-         * Sets the title.
-         */
-        setTitle(
-          /**
-           * The text of the title
-           */
-          sValue: string
-        ): sap.f.cards.NumericSideIndicator;
-        /**
-         * Sets the unit of measurement.
-         */
-        setUnit(
-          /**
-           * The text of the title
-           */
-          sValue: string
-        ): sap.f.cards.NumericSideIndicator;
-      }
-      /**
-       * @SINCE 1.65
-       *
-       * Different options for the position of the `Card` header.
-       */
-      enum HeaderPosition {
-        /**
-         * The Header is under the content.
-         */
-        Bottom,
-        /**
-         * The Header is over the content.
-         */
-        Top
-      }
-    }
-
     namespace routing {
       /**
        * @SINCE 1.46
@@ -1514,15 +701,7 @@ declare namespace sap {
          *
          * A typical usage is the `sap.m.Title` or any other UI5 control, that serves as a heading for an object.
          *
-         * **Notes:**
-         * 	 - The control will be placed in the title`s leftmost area.
-         * 	 - `titleHeading` is mutually exclusive with `titleSnappedHeading` and `titleExpandedHeading`. If `titleHeading`
-         * 			is provided, both `titleSnappedHeading` and `titleExpandedHeading` are ignored. `titleHeading` is useful
-         * 			when the content of `titleSnappedHeading` and `titleExpandedHeading` needs to be the same as it replaces
-         * 			them both.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** The control will be placed in the title`s leftmost area.
          */
         titleHeading?: sap.ui.core.Control;
 
@@ -1546,12 +725,9 @@ declare namespace sap {
          * header is in collapsed (snapped) state only. Use this aggregation to display a title (or any other UI5
          * control that serves as a heading) that has to be present in collapsed state only.
          *
-         * **Notes:**
-         * 	 - In order for `titleSnappedHeading` to be taken into account, `titleHeading` has to be empty. Combine
-         * 			`titleSnappedHeading` with `titleExpandedHeading` to switch content when the header switches state.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** In order for `titleSnappedHeading` to be taken into account, `titleHeading` has to be empty.
+         * Combine `titleSnappedHeading` with `titleExpandedHeading` to switch content when the header switches
+         * state.
          */
         titleSnappedHeading?: sap.ui.core.Control;
 
@@ -1563,37 +739,14 @@ declare namespace sap {
          * A typical usage is the `sap.m.Breadcrumbs` control or any other UI5 control, that implements the `sap.m.IBreadcrumbs`
          * interface.
          *
-         * **Notes:**
-         * 	 - The control will be placed in the title`s top-left area.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** The control will be placed in the title`s top-left area.
          */
         titleBreadcrumbs?: sap.m.IBreadcrumbs;
 
         /**
-         * @SINCE 1.63
-         *
-         * The only content that is displayed in the `SemanticPage` title when it is viewed on a phone mobile device
-         * and the `SemanticPage` header is in collapsed (snapped) state.
-         *
-         * Using this aggregation enables you to provide a simple, single-line title that takes less space on the
-         * smaller phone screens when the `SemanticPage` header is in its collapsed (snapped) state.
-         *
-         * **Note:** The content set in this aggregation overrides all the other `SemanticPage` aggregations displayed
-         * in the title and is only visible on phone mobile devices in collapsed (snapped) state of the `SemanticPage`
-         * header.
-         */
-        titleSnappedOnMobile?: sap.m.Title;
-
-        /**
          * The content, displayed in the title, when the header is in collapsed state.
          *
-         * **Notes:**
-         * 	 - The controls will be placed in the title`s left area, under the `titleHeading` aggregation.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** The controls will be placed in the title`s left area, under the `titleHeading` aggregation.
          */
         titleSnappedContent?: sap.ui.core.Control[] | sap.ui.core.Control;
 
@@ -1609,20 +762,12 @@ declare namespace sap {
          *
          * The content, displayed in the title.
          *
-         * **Notes:**
-         * 	 - The controls will be placed in the middle area.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** The controls will be placed in the middle area.
          */
         titleContent?: sap.ui.core.Control[] | sap.ui.core.Control;
 
         /**
          * A semantic-specific button which is placed in the `SemanticPage` title as first action.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         titleMainAction?: sap.f.semantic.TitleMainAction;
 
@@ -1630,105 +775,58 @@ declare namespace sap {
          * @SINCE 1.50
          *
          * A semantic-specific button which is placed in the `TextActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         editAction?: sap.f.semantic.EditAction;
 
         /**
          * A semantic-specific button which is placed in the `TextActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         deleteAction?: sap.f.semantic.DeleteAction;
 
         /**
          * A semantic-specific button which is placed in the `TextActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         copyAction?: sap.f.semantic.CopyAction;
 
         /**
          * A semantic-specific button which is placed in the `TextActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         addAction?: sap.f.semantic.AddAction;
 
         /**
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         flagAction?: sap.f.semantic.FlagAction;
 
         /**
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         favoriteAction?: sap.f.semantic.FavoriteAction;
 
         /**
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         fullScreenAction?: sap.f.semantic.FullScreenAction;
 
         /**
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         exitFullScreenAction?: sap.f.semantic.ExitFullScreenAction;
 
         /**
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         closeAction?: sap.f.semantic.CloseAction;
 
         /**
          * The `titleCustomTextActions` are placed in the `TextActions` area of the `SemanticPage` title, right
          * before the semantic text action.
-         *
-         * **Notes:**
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
-         * 	 - Buttons that are part of this aggregation will always have their `type` property set to `Transparent`
-         * 			by design.
          */
         titleCustomTextActions?: sap.m.Button[] | sap.m.Button;
 
         /**
          * The `titleCustomIconActions` are placed in the `IconActions` area of the `SemanticPage` title, right
          * before the semantic icon action.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         titleCustomIconActions?:
           | sap.m.OverflowToolbarButton[]
@@ -1804,76 +902,39 @@ declare namespace sap {
 
         /**
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         discussInJamAction?: sap.f.semantic.DiscussInJamAction;
 
         /**
          * A button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         saveAsTileAction?: sap.m.Button;
 
         /**
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         shareInJamAction?: sap.f.semantic.ShareInJamAction;
 
         /**
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         sendMessageAction?: sap.f.semantic.SendMessageAction;
 
         /**
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         sendEmailAction?: sap.f.semantic.SendEmailAction;
 
         /**
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         printAction?: sap.f.semantic.PrintAction;
 
         /**
          * The `customShareActions` are placed in the `ShareMenu` area of the `SemanticPage` title, right after
          * the semantic actions.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         customShareActions?: sap.m.Button[] | sap.m.Button;
-
-        /**
-         * @SINCE 1.61
-         *
-         * Accessible landmark settings to be applied to the containers of the `sap.f.SemanticPage` control.
-         *
-         * If not set, no landmarks will be written.
-         */
-        landmarkInfo?: sap.f.DynamicPageAccessibleLandmarkInfo;
       }
 
       interface SemanticToggleButtonOpts
@@ -3163,12 +2224,6 @@ declare namespace sap {
          */
         destroyHeaderContent(): sap.f.semantic.SemanticPage;
         /**
-         * @SINCE 1.61
-         *
-         * Destroys the landmarkInfo in the aggregation {@link #getLandmarkInfo landmarkInfo}.
-         */
-        destroyLandmarkInfo(): sap.f.semantic.SemanticPage;
-        /**
          * Destroys the messagesIndicator in the aggregation {@link #getMessagesIndicator messagesIndicator}.
          */
         destroyMessagesIndicator(): sap.f.semantic.SemanticPage;
@@ -3249,12 +2304,6 @@ declare namespace sap {
          */
         destroyTitleSnappedHeading(): sap.f.semantic.SemanticPage;
         /**
-         * @SINCE 1.63
-         *
-         * Destroys the titleSnappedOnMobile in the aggregation {@link #getTitleSnappedOnMobile titleSnappedOnMobile}.
-         */
-        destroyTitleSnappedOnMobile(): sap.f.semantic.SemanticPage;
-        /**
          * Creates a new subclass of class sap.f.semantic.SemanticPage with name `sClassName` and enriches it with
          * the information contained in `oClassInfo`.
          *
@@ -3279,20 +2328,12 @@ declare namespace sap {
          * Gets content of aggregation {@link #getAddAction addAction}.
          *
          * A semantic-specific button which is placed in the `TextActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getAddAction(): sap.f.semantic.AddAction;
         /**
          * Gets content of aggregation {@link #getCloseAction closeAction}.
          *
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getCloseAction(): sap.f.semantic.CloseAction;
         /**
@@ -3324,10 +2365,6 @@ declare namespace sap {
          * Gets content of aggregation {@link #getCopyAction copyAction}.
          *
          * A semantic-specific button which is placed in the `TextActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getCopyAction(): sap.f.semantic.CopyAction;
         /**
@@ -3335,30 +2372,18 @@ declare namespace sap {
          *
          * The `customShareActions` are placed in the `ShareMenu` area of the `SemanticPage` title, right after
          * the semantic actions.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getCustomShareActions(): sap.m.Button[];
         /**
          * Gets content of aggregation {@link #getDeleteAction deleteAction}.
          *
          * A semantic-specific button which is placed in the `TextActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getDeleteAction(): sap.f.semantic.DeleteAction;
         /**
          * Gets content of aggregation {@link #getDiscussInJamAction discussInJamAction}.
          *
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getDiscussInJamAction(): sap.f.semantic.DiscussInJamAction;
         /**
@@ -3374,40 +2399,24 @@ declare namespace sap {
          * Gets content of aggregation {@link #getEditAction editAction}.
          *
          * A semantic-specific button which is placed in the `TextActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getEditAction(): sap.f.semantic.EditAction;
         /**
          * Gets content of aggregation {@link #getExitFullScreenAction exitFullScreenAction}.
          *
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getExitFullScreenAction(): sap.f.semantic.ExitFullScreenAction;
         /**
          * Gets content of aggregation {@link #getFavoriteAction favoriteAction}.
          *
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getFavoriteAction(): sap.f.semantic.FavoriteAction;
         /**
          * Gets content of aggregation {@link #getFlagAction flagAction}.
          *
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getFlagAction(): sap.f.semantic.FlagAction;
         /**
@@ -3431,10 +2440,6 @@ declare namespace sap {
          * Gets content of aggregation {@link #getFullScreenAction fullScreenAction}.
          *
          * A semantic-specific button which is placed in the `IconActions` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getFullScreenAction(): sap.f.semantic.FullScreenAction;
         /**
@@ -3465,16 +2470,6 @@ declare namespace sap {
          * Default value is `true`.
          */
         getHeaderPinnable(): boolean;
-        /**
-         * @SINCE 1.61
-         *
-         * Gets content of aggregation {@link #getLandmarkInfo landmarkInfo}.
-         *
-         * Accessible landmark settings to be applied to the containers of the `sap.f.SemanticPage` control.
-         *
-         * If not set, no landmarks will be written.
-         */
-        getLandmarkInfo(): sap.f.DynamicPageAccessibleLandmarkInfo;
         /**
          * Gets content of aggregation {@link #getMessagesIndicator messagesIndicator}.
          *
@@ -3520,50 +2515,30 @@ declare namespace sap {
          * Gets content of aggregation {@link #getPrintAction printAction}.
          *
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getPrintAction(): sap.f.semantic.PrintAction;
         /**
          * Gets content of aggregation {@link #getSaveAsTileAction saveAsTileAction}.
          *
          * A button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getSaveAsTileAction(): sap.m.Button;
         /**
          * Gets content of aggregation {@link #getSendEmailAction sendEmailAction}.
          *
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getSendEmailAction(): sap.f.semantic.SendEmailAction;
         /**
          * Gets content of aggregation {@link #getSendMessageAction sendMessageAction}.
          *
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getSendMessageAction(): sap.f.semantic.SendMessageAction;
         /**
          * Gets content of aggregation {@link #getShareInJamAction shareInJamAction}.
          *
          * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getShareInJamAction(): sap.f.semantic.ShareInJamAction;
         /**
@@ -3607,11 +2582,7 @@ declare namespace sap {
          * A typical usage is the `sap.m.Breadcrumbs` control or any other UI5 control, that implements the `sap.m.IBreadcrumbs`
          * interface.
          *
-         * **Notes:**
-         * 	 - The control will be placed in the title`s top-left area.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** The control will be placed in the title`s top-left area.
          */
         getTitleBreadcrumbs(): sap.m.IBreadcrumbs;
         /**
@@ -3621,11 +2592,7 @@ declare namespace sap {
          *
          * The content, displayed in the title.
          *
-         * **Notes:**
-         * 	 - The controls will be placed in the middle area.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** The controls will be placed in the middle area.
          */
         getTitleContent(): sap.ui.core.Control[];
         /**
@@ -3633,10 +2600,6 @@ declare namespace sap {
          *
          * The `titleCustomIconActions` are placed in the `IconActions` area of the `SemanticPage` title, right
          * before the semantic icon action.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getTitleCustomIconActions(): sap.m.OverflowToolbarButton[];
         /**
@@ -3644,13 +2607,6 @@ declare namespace sap {
          *
          * The `titleCustomTextActions` are placed in the `TextActions` area of the `SemanticPage` title, right
          * before the semantic text action.
-         *
-         * **Notes:**
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
-         * 	 - Buttons that are part of this aggregation will always have their `type` property set to `Transparent`
-         * 			by design.
          */
         getTitleCustomTextActions(): sap.m.Button[];
         /**
@@ -3682,25 +2638,13 @@ declare namespace sap {
          *
          * A typical usage is the `sap.m.Title` or any other UI5 control, that serves as a heading for an object.
          *
-         * **Notes:**
-         * 	 - The control will be placed in the title`s leftmost area.
-         * 	 - `titleHeading` is mutually exclusive with `titleSnappedHeading` and `titleExpandedHeading`. If `titleHeading`
-         * 			is provided, both `titleSnappedHeading` and `titleExpandedHeading` are ignored. `titleHeading` is useful
-         * 			when the content of `titleSnappedHeading` and `titleExpandedHeading` needs to be the same as it replaces
-         * 			them both.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** The control will be placed in the title`s leftmost area.
          */
         getTitleHeading(): sap.ui.core.Control;
         /**
          * Gets content of aggregation {@link #getTitleMainAction titleMainAction}.
          *
          * A semantic-specific button which is placed in the `SemanticPage` title as first action.
-         *
-         * **Note:** If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when
-         * the control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * state.
          */
         getTitleMainAction(): sap.f.semantic.TitleMainAction;
         /**
@@ -3730,11 +2674,7 @@ declare namespace sap {
          *
          * The content, displayed in the title, when the header is in collapsed state.
          *
-         * **Notes:**
-         * 	 - The controls will be placed in the title`s left area, under the `titleHeading` aggregation.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** The controls will be placed in the title`s left area, under the `titleHeading` aggregation.
          */
         getTitleSnappedContent(): sap.ui.core.Control[];
         /**
@@ -3746,30 +2686,11 @@ declare namespace sap {
          * header is in collapsed (snapped) state only. Use this aggregation to display a title (or any other UI5
          * control that serves as a heading) that has to be present in collapsed state only.
          *
-         * **Notes:**
-         * 	 - In order for `titleSnappedHeading` to be taken into account, `titleHeading` has to be empty. Combine
-         * 			`titleSnappedHeading` with `titleExpandedHeading` to switch content when the header switches state.
-         * 	 - If the `titleSnappedOnMobile` aggregation is set, its content overrides this aggregation when the
-         * 			control is viewed on a phone mobile device and the `SemanticPage` header is in its collapsed (snapped)
-         * 			state.
+         * **Note:** In order for `titleSnappedHeading` to be taken into account, `titleHeading` has to be empty.
+         * Combine `titleSnappedHeading` with `titleExpandedHeading` to switch content when the header switches
+         * state.
          */
         getTitleSnappedHeading(): sap.ui.core.Control;
-        /**
-         * @SINCE 1.63
-         *
-         * Gets content of aggregation {@link #getTitleSnappedOnMobile titleSnappedOnMobile}.
-         *
-         * The only content that is displayed in the `SemanticPage` title when it is viewed on a phone mobile device
-         * and the `SemanticPage` header is in collapsed (snapped) state.
-         *
-         * Using this aggregation enables you to provide a simple, single-line title that takes less space on the
-         * smaller phone screens when the `SemanticPage` header is in its collapsed (snapped) state.
-         *
-         * **Note:** The content set in this aggregation overrides all the other `SemanticPage` aggregations displayed
-         * in the title and is only visible on phone mobile devices in collapsed (snapped) state of the `SemanticPage`
-         * header.
-         */
-        getTitleSnappedOnMobile(): sap.m.Title;
         /**
          * Gets current value of property {@link #getToggleHeaderOnTitleClick toggleHeaderOnTitleClick}.
          *
@@ -4266,17 +3187,6 @@ declare namespace sap {
           bHeaderPinnable: boolean
         ): sap.f.semantic.SemanticPage;
         /**
-         * @SINCE 1.61
-         *
-         * Sets the aggregated {@link #getLandmarkInfo landmarkInfo}.
-         */
-        setLandmarkInfo(
-          /**
-           * The landmarkInfo to set
-           */
-          oLandmarkInfo: sap.f.DynamicPageAccessibleLandmarkInfo
-        ): sap.f.semantic.SemanticPage;
-        /**
          * Sets the aggregated {@link #getMessagesIndicator messagesIndicator}.
          */
         setMessagesIndicator(
@@ -4494,17 +3404,6 @@ declare namespace sap {
            * The titleSnappedHeading to set
            */
           oTitleSnappedHeading: sap.ui.core.Control
-        ): sap.f.semantic.SemanticPage;
-        /**
-         * @SINCE 1.63
-         *
-         * Sets the aggregated {@link #getTitleSnappedOnMobile titleSnappedOnMobile}.
-         */
-        setTitleSnappedOnMobile(
-          /**
-           * The titleSnappedOnMobile to set
-           */
-          oTitleSnappedOnMobile: sap.m.Title
         ): sap.f.semantic.SemanticPage;
         /**
          * Sets a new value for property {@link #getToggleHeaderOnTitleClick toggleHeaderOnTitleClick}.
@@ -4797,53 +3696,6 @@ declare namespace sap {
         static getMetadata(): sap.ui.base.Metadata;
       }
     }
-    /**
-     * @SINCE 1.62
-     *
-     * Interface for card controls
-     */
-    interface ICard {
-      /**
-       * @SINCE 1.62
-       *
-       * The function is used to allow for a common content renderer between different card implementations
-       */
-      getCardContent(): sap.ui.core.Control;
-      /**
-       * @SINCE 1.62
-       *
-       * The function is used to allow for a common header renderer between different card implementations
-       */
-      getCardHeader(): sap.f.cards.IHeader;
-      /**
-       * @SINCE 1.65
-       *
-       * Allows for a common header renderer between different card implementations.
-       */
-      getCardHeaderPosition(): any;
-    }
-    /**
-     * @SINCE 1.65
-     *
-     * Interface for controls suitable for the `stickySubheaderProvider` association of `{@link sap.f.DynamicPage}`.
-     *
-     * Controls that implemenet this interface should have the following methods:
-     * 	 - `_getStickyContent` - returns the content (control) used in the subheader
-     * 	 - `_returnStickyContent` - accepts control as argument and ensures that the control is placed back
-     * 			in its place in the provider
-     * 	 - `_getStickySubHeaderSticked` - returns boolean value that shows where the sticky content is placed
-     * 			(in its provider or in the `DynamicPage`)
-     * 	 - `_setStickySubHeaderSticked` - accepts a boolean argument to notify the provider where its sticky
-     * 			content is placed
-     */
-    interface IDynamicPageStickyContent {}
-    /**
-     * @SINCE 1.63
-     * @EXPERIMENTAL (since 1.63)
-     *
-     * Interface for controls suitable for the `additionalContent` aggregation of `{@link sap.f.ShellBar}`.
-     */
-    interface IShellBar {}
 
     interface AvatarOpts extends sap.ui.core.ControlOpts {
       /**
@@ -4886,17 +3738,6 @@ declare namespace sap {
       imageFitType?: sap.f.AvatarImageFitType;
 
       /**
-       * @SINCE 1.65
-       *
-       * Defines the fallback icon displayed in case of wrong image src and no initials set.
-       *
-       * **Notes:**
-       * 	 - If not set, a default fallback icon is displayed depending on the set `displayShape` property.
-       * 	 - Accepted values are only icons from the SAP icon font.
-       */
-      fallbackIcon?: string;
-
-      /**
        * Fired when the user selects the control.
        */
       press?: Function;
@@ -4920,35 +3761,6 @@ declare namespace sap {
        * Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledBy).
        */
       ariaLabelledBy?: sap.ui.core.Control[] | string[];
-    }
-
-    interface CardOpts extends sap.ui.core.ControlOpts {
-      /**
-       * Defines the width of the card.
-       */
-      width?: sap.ui.core.CSSSize;
-
-      /**
-       * Defines the height of the card.
-       */
-      height?: sap.ui.core.CSSSize;
-
-      /**
-       * @SINCE 1.65
-       *
-       * Defines the position of the Card Header.
-       */
-      headerPosition?: any;
-
-      /**
-       * Defines the header of the card.
-       */
-      header?: sap.f.cards.IHeader;
-
-      /**
-       * Defines the content of the card.
-       */
-      content?: sap.ui.core.Control;
     }
 
     interface DynamicPageOpts extends sap.ui.core.ControlOpts {
@@ -5045,86 +3857,6 @@ declare namespace sap {
        * `DynamicPage` floating footer.
        */
       footer?: sap.m.IBar;
-
-      /**
-       * @SINCE 1.61
-       *
-       * Accessible landmark settings to be applied on the containers of the `sap.f.DynamicPage` control.
-       *
-       * If not set, no landmarks will be written.
-       */
-      landmarkInfo?: sap.f.DynamicPageAccessibleLandmarkInfo;
-
-      /**
-       * @SINCE 1.65
-       *
-       * Association of Controls / IDs, that provide sticky subheader content. All controls that provide this
-       * content have to implement the `sap.f.IDynamicPageStickyContent` interface.
-       */
-      stickySubheaderProvider?: sap.f.IDynamicPageStickyContent | string;
-    }
-
-    interface DynamicPageAccessibleLandmarkInfoOpts
-      extends sap.ui.core.ElementOpts {
-      /**
-       * Landmark role of the root container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       */
-      rootRole?: sap.ui.core.AccessibleLandmarkRole;
-
-      /**
-       * Texts which describe the landmark of the root container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       */
-      rootLabel?: string;
-
-      /**
-       * Landmark role of the content container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       */
-      contentRole?: sap.ui.core.AccessibleLandmarkRole;
-
-      /**
-       * Texts which describe the landmark of the content container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       */
-      contentLabel?: string;
-
-      /**
-       * Landmark role of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       */
-      headerRole?: sap.ui.core.AccessibleLandmarkRole;
-
-      /**
-       * Texts which describe the landmark of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       */
-      headerLabel?: string;
-
-      /**
-       * Landmark role of the footer container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       */
-      footerRole?: sap.ui.core.AccessibleLandmarkRole;
-
-      /**
-       * Texts which describe the landmark of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       */
-      footerLabel?: string;
     }
 
     interface DynamicPageHeaderOpts extends sap.ui.core.ControlOpts {
@@ -5215,13 +3947,9 @@ declare namespace sap {
        * collapsed (snapped) states of the header. Use this aggregation to display a title (or any other UI5 control
        * that serves as a heading) that has to be present in both expanded and collapsed states of the header.
        *
-       * **Notes:**
-       * 	 - `heading` is mutually exclusive with `snappedHeading` and `expandedHeading`. If `heading` is provided,
-       * 			both `snappedHeading` and `expandedHeading` are ignored. `heading` is useful when the content of `snappedHeading`
-       * 			and `expandedHeading` needs to be the same as it replaces them both.
-       * 	 - If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when the
-       * 			control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * 			state.
+       * **Note:** `heading` is mutually exclusive with `snappedHeading` and `expandedHeading`. If `heading` is
+       * provided, both `snappedHeading` and `expandedHeading` are ignored. `heading` is useful when the content
+       * of `snappedHeading` and `expandedHeading` needs to be the same as it replaces them both.
        */
       heading?: sap.ui.core.Control;
 
@@ -5232,12 +3960,8 @@ declare namespace sap {
        * is in collapsed (snapped) state only. Use this aggregation to display a title (or any other UI5 control
        * that serves as a heading) that has to be present in collapsed state only.
        *
-       * **Notes:**
-       * 	 - In order for `snappedHeading` to be taken into account, `heading` has to be empty. Combine `snappedHeading`
-       * 			with `expandedHeading` to switch content when the header switches state.
-       * 	 - If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when the
-       * 			control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * 			state.
+       * **Note:** In order for `snappedHeading` to be taken into account, `heading` has to be empty. Combine
+       * `snappedHeading` with `expandedHeading` to switch content when the header switches state.
        */
       snappedHeading?: sap.ui.core.Control;
 
@@ -5257,10 +3981,6 @@ declare namespace sap {
        * The `DynamicPageTitle` actions.
        * **Note:** The `actions` aggregation accepts any UI5 control, but it`s recommended to use controls, suitable
        * for {@link sap.m.Toolbar} and {@link sap.m.OverflowToolbar}.
-       *
-       * **Note:** If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when
-       * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * state.
        */
       actions?: sap.ui.core.Control[] | sap.ui.core.Control;
 
@@ -5269,14 +3989,10 @@ declare namespace sap {
        *
        * The `DynamicPageTitle` navigation actions.
        *
-       * **Notes:**
-       * 	 - The `navigationActions` position depends on the control size. If the control size is 1280px or bigger,
-       * 			they are rendered right next to the `actions`. Otherwise, they are rendered in the top-right area, above
-       * 			the `actions`. If a large number of elements(buttons) are used, there could be visual degradations as
-       * 			the space for the `navigationActions` is limited.
-       * 	 - If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when the
-       * 			control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * 			state.
+       * **Note:** The `navigationActions` position depends on the control size. If the control size is 1280px
+       * or bigger, they are rendered right next to the `actions`. Otherwise, they are rendered in the top-right
+       * area, above the `actions`. If a large number of elements(buttons) are used, there could be visual degradations
+       * as the space for the `navigationActions` is limited.
        */
       navigationActions?: sap.m.Button[] | sap.m.Button;
 
@@ -5285,19 +4001,11 @@ declare namespace sap {
        *
        * The content is positioned in the `DynamicPageTitle` middle area and displayed in both expanded and collapsed
        * (snapped) states.
-       *
-       * **Note:** If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when
-       * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * state.
        */
       content?: sap.ui.core.Control[] | sap.ui.core.Control;
 
       /**
        * The content that is displayed in the `DynamicPageTitle` in collapsed (snapped) state.
-       *
-       * **Note:** If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when
-       * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * state.
        */
       snappedContent?: sap.ui.core.Control[] | sap.ui.core.Control;
 
@@ -5305,20 +4013,6 @@ declare namespace sap {
        * The content that is displayed in the `DynamicPageTitle` in expanded state.
        */
       expandedContent?: sap.ui.core.Control[] | sap.ui.core.Control;
-
-      /**
-       * @SINCE 1.63
-       *
-       * The only content that is displayed in the `DynamicPageTitle` when it is viewed on a phone mobile device
-       * and the `DynamicPageHeader` is in collapsed (snapped) state.
-       *
-       * Using this aggregation enables you to provide a simple, single-line title that takes less space on the
-       * smaller phone screens when the `DynamicPageHeader` is in its collapsed (snapped) state.
-       *
-       * **Note:** The content set in this aggregation overrides all the other `DynamicPageTitle` aggregations
-       * and is only visible on phone mobile devices in collapsed (snapped) state of the `DynamicPageHeader`.
-       */
-      snappedTitleOnMobile?: sap.m.Title;
 
       /**
        * @SINCE 1.52
@@ -5464,191 +4158,11 @@ declare namespace sap {
       initialEndColumnPage?: sap.ui.core.Control | string;
     }
 
-    interface GridContainerOpts extends sap.ui.core.ControlOpts {
-      /**
-       * Defines the width of the control
-       */
-      width?: sap.ui.core.CSSSize;
-
-      /**
-       * Defines the height of the control
-       */
-      height?: sap.ui.core.CSSSize;
-
-      /**
-       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
-       */
-      snapToRow?: boolean;
-
-      /**
-       * The items contained by the control.
-       */
-      items?: sap.ui.core.Control[] | sap.ui.core.Control;
-
-      /**
-       * The sap.f.GridContainerSettings applied if no settings are provided for a specific size If no layout
-       * is given, a default layout will be used. See the default values for `sap.f.GridContainerSettings`.
-       */
-      layout?: sap.f.GridContainerSettings;
-
-      /**
-       * The sap.f.GridContainerSettings applied for size "S"
-       */
-      layoutS?: sap.f.GridContainerSettings;
-
-      /**
-       * The sap.f.GridContainerSettings applied for size "M"
-       */
-      layoutM?: sap.f.GridContainerSettings;
-
-      /**
-       * The sap.f.GridContainerSettings applied for size "L"
-       */
-      layoutL?: sap.f.GridContainerSettings;
-
-      /**
-       * The sap.f.GridContainerSettings applied for size "XL"
-       */
-      layoutXL?: sap.f.GridContainerSettings;
-    }
-
-    interface GridContainerItemLayoutDataOpts
-      extends sap.ui.core.LayoutDataOpts {
-      /**
-       * Specifies the number of columns, which the item should take
-       */
-      columns?: number;
-
-      /**
-       * Specifies the minimum number of rows, which the item should take.
-       */
-      minRows?: number;
-
-      /**
-       * @EXPERIMENTAL (since 1.65)
-       *
-       * Specifies the number of rows, which the item should take.
-       */
-      rows?: number;
-    }
-
     interface GridListOpts extends sap.m.ListBaseOpts {
       /**
        * Defines a custom grid layout
        */
       customLayout?: sap.ui.layout.cssgrid.GridLayoutBase;
-    }
-
-    interface ShellBarOpts extends sap.ui.core.ControlOpts {
-      /**
-       * Defines the main title of the control.
-       */
-      title?: string;
-
-      /**
-       * Defines the secondary title of the control.
-       */
-      secondTitle?: string;
-
-      /**
-       * Defines the URI to the home icon, such as company or product logo.
-       */
-      homeIcon?: sap.ui.core.URI;
-
-      /**
-       * Determines whether a hamburger menu button is displayed (as an alternative if the `menu` aggregation
-       * is not used).
-       */
-      showMenuButton?: boolean;
-
-      /**
-       * Determines whether a back navigation button is displayed.
-       */
-      showNavButton?: boolean;
-
-      /**
-       * Determines whether the SAP CoPilot icon is displayed.
-       */
-      showCopilot?: boolean;
-
-      /**
-       * Determines whether the search button is displayed.
-       */
-      showSearch?: boolean;
-
-      /**
-       * Determines whether the notifications button is displayed.
-       */
-      showNotifications?: boolean;
-
-      /**
-       * Determines whether the product switcher button is displayed.
-       */
-      showProductSwitcher?: boolean;
-
-      /**
-       * @SINCE 1.64
-       *
-       * Defines the displayed number of upcoming notifications.
-       */
-      notificationsNumber?: string;
-
-      /**
-       * Fired when the `homeIcon` is pressed.
-       */
-      homeIconPressed?: Function;
-
-      /**
-       * Fired when the alternative menu button is pressed.
-       */
-      menuButtonPressed?: Function;
-
-      /**
-       * Fired when the navigation/back button is pressed.
-       */
-      navButtonPressed?: Function;
-
-      /**
-       * Fired when the SAP CoPilot icon is pressed.
-       */
-      copilotPressed?: Function;
-
-      /**
-       * Fired when the search button is pressed.
-       */
-      searchButtonPressed?: Function;
-
-      /**
-       * Fired when the notifications button is pressed.
-       */
-      notificationsPressed?: Function;
-
-      /**
-       * Fired when the product switcher button is pressed.
-       */
-      productSwitcherPressed?: Function;
-
-      /**
-       * Fired when the profile avatar is pressed.
-       */
-      avatarPressed?: Function;
-
-      /**
-       * The menu attached to the main title.
-       */
-      menu?: sap.m.Menu;
-
-      /**
-       * The profile avatar.
-       */
-      profile?: sap.f.Avatar;
-
-      /**
-       * Additional content to be displayed in the control.
-       *
-       * **Note:** Only controls implementing the `{@link sap.f.IShellBar}` interface are allowed.
-       */
-      additionalContent?: sap.f.IShellBar[] | sap.f.IShellBar;
     }
 
     interface DynamicPageTitleShrinkRatio {}
@@ -5861,18 +4375,6 @@ declare namespace sap {
        */
       getDisplaySize(): sap.f.AvatarSize;
       /**
-       * @SINCE 1.65
-       *
-       * Gets current value of property {@link #getFallbackIcon fallbackIcon}.
-       *
-       * Defines the fallback icon displayed in case of wrong image src and no initials set.
-       *
-       * **Notes:**
-       * 	 - If not set, a default fallback icon is displayed depending on the set `displayShape` property.
-       * 	 - Accepted values are only icons from the SAP icon font.
-       */
-      getFallbackIcon(): string;
-      /**
        * Gets current value of property {@link #getImageFitType imageFitType}.
        *
        * Specifies how an image would fit in the `Avatar`.
@@ -5999,25 +4501,6 @@ declare namespace sap {
         sDisplaySize: sap.f.AvatarSize
       ): sap.f.Avatar;
       /**
-       * @SINCE 1.65
-       *
-       * Sets a new value for property {@link #getFallbackIcon fallbackIcon}.
-       *
-       * Defines the fallback icon displayed in case of wrong image src and no initials set.
-       *
-       * **Notes:**
-       * 	 - If not set, a default fallback icon is displayed depending on the set `displayShape` property.
-       * 	 - Accepted values are only icons from the SAP icon font.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setFallbackIcon(
-        /**
-         * New value for property `fallbackIcon`
-         */
-        sFallbackIcon: string
-      ): sap.f.Avatar;
-      /**
        * Sets a new value for property {@link #getImageFitType imageFitType}.
        *
        * Specifies how an image would fit in the `Avatar`.
@@ -6082,209 +4565,6 @@ declare namespace sap {
          */
         oListener?: object
       ): sap.f.Avatar;
-    }
-    /**
-     * @SINCE 1.64
-     *
-     * A control that represents a container with a predefined header and content.
-     *
-     * Overview: The card is a container for grouping and displaying information.
-     *
-     * Structure: You can control the width and height of the card, using properties. The `Card` has the following
-     * aggregations:
-     * 	 - `header` - can be either a {@link sap.f.cards.Header Header} or a {@link sap.f.cards.NumericHeader
-     * 			NumericHeader} `content` - can be any {@link sap.ui.core.Control Control}.
-     *
-     * Guidelines::
-     * 	 - A card should represent a task or visualize a specific set of information.
-     * 	 - It is recommended to use cards on home page layouts.
-     * 	 - The card shouldn't be large with a lot of content.
-     *
-     * Usage: To show a KPI value or any numeric information, use {@link sap.f.cards.NumericHeader NumericHeader}
-     * as a card header. For any other use cases, use the regular {@link sap.f.cards.Header Header}. Recommended
-     * content: - List - Table - Object information - Charts - Timelines - Images
-     *
-     * When to use
-     * 	 - When you need multiple cards on a home page layout.
-     * 	 - When you have to achieve simple card visualization.
-     *
-     * When not to use
-     * 	 - When you have to reuse the card between applications. For such cases, use: {@link sap.ui.integration.widgets.Card
-     * 			Integration Card}.
-     * 	 - When you need nesting. For such cases, use: {@link sap.m.Panel Panel}.
-     * 	 - When the card is not part of a card layout. For such cases, use: {@link sap.m.Panel Panel}.
-     * 	 - When you need more header configuration flexibility.
-     */
-    class Card extends sap.ui.core.Control implements sap.f.ICard {
-      /**
-       * Constructor for a new `Card`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: CardOpts
-      );
-
-      /**
-       * Destroys the content in the aggregation {@link #getContent content}.
-       */
-      destroyContent(): sap.f.Card;
-      /**
-       * Destroys the header in the aggregation {@link #getHeader header}.
-       */
-      destroyHeader(): sap.f.Card;
-      /**
-       * Creates a new subclass of class sap.f.Card with name `sClassName` and enriches it with the information
-       * contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Implements sap.f.ICard interface.
-       */
-      getCardContent(): sap.ui.core.Control;
-      /**
-       * Implements sap.f.ICard interface.
-       */
-      getCardHeader(): sap.f.cards.IHeader;
-      /**
-       * @SINCE 1.65
-       *
-       * Implements sap.f.ICard interface.
-       */
-      getCardHeaderPosition(): any;
-      /**
-       * Gets content of aggregation {@link #getContent content}.
-       *
-       * Defines the content of the card.
-       */
-      getContent(): sap.ui.core.Control;
-      /**
-       * Gets content of aggregation {@link #getHeader header}.
-       *
-       * Defines the header of the card.
-       */
-      getHeader(): sap.f.cards.IHeader;
-      /**
-       * @SINCE 1.65
-       *
-       * Gets current value of property {@link #getHeaderPosition headerPosition}.
-       *
-       * Defines the position of the Card Header.
-       *
-       * Default value is `Top`.
-       */
-      getHeaderPosition(): any;
-      /**
-       * Gets current value of property {@link #getHeight height}.
-       *
-       * Defines the height of the card.
-       *
-       * Default value is `auto`.
-       */
-      getHeight(): sap.ui.core.CSSSize;
-      /**
-       * Returns a metadata object for class sap.f.Card.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Gets current value of property {@link #getWidth width}.
-       *
-       * Defines the width of the card.
-       *
-       * Default value is `100%`.
-       */
-      getWidth(): sap.ui.core.CSSSize;
-      /**
-       * Sets the aggregated {@link #getContent content}.
-       */
-      setContent(
-        /**
-         * The content to set
-         */
-        oContent: sap.ui.core.Control
-      ): sap.f.Card;
-      /**
-       * Sets the aggregated {@link #getHeader header}.
-       */
-      setHeader(
-        /**
-         * The header to set
-         */
-        oHeader: sap.f.cards.IHeader
-      ): sap.f.Card;
-      /**
-       * @SINCE 1.65
-       *
-       * Sets a new value for property {@link #getHeaderPosition headerPosition}.
-       *
-       * Defines the position of the Card Header.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `Top`.
-       */
-      setHeaderPosition(
-        /**
-         * New value for property `headerPosition`
-         */
-        sHeaderPosition: any
-      ): sap.f.Card;
-      /**
-       * Sets a new value for property {@link #getHeight height}.
-       *
-       * Defines the height of the card.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `auto`.
-       */
-      setHeight(
-        /**
-         * New value for property `height`
-         */
-        sHeight: sap.ui.core.CSSSize
-      ): sap.f.Card;
-      /**
-       * Sets a new value for property {@link #getWidth width}.
-       *
-       * Defines the width of the card.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `100%`.
-       */
-      setWidth(
-        /**
-         * New value for property `width`
-         */
-        sWidth: sap.ui.core.CSSSize
-      ): sap.f.Card;
     }
     /**
      * @SINCE 1.42
@@ -6370,12 +4650,6 @@ declare namespace sap {
        * Destroys the header in the aggregation {@link #getHeader header}.
        */
       destroyHeader(): sap.f.DynamicPage;
-      /**
-       * @SINCE 1.61
-       *
-       * Destroys the landmarkInfo in the aggregation {@link #getLandmarkInfo landmarkInfo}.
-       */
-      destroyLandmarkInfo(): sap.f.DynamicPage;
       /**
        * Destroys the title in the aggregation {@link #getTitle title}.
        */
@@ -6474,16 +4748,6 @@ declare namespace sap {
        */
       getHeaderExpanded(): boolean;
       /**
-       * @SINCE 1.61
-       *
-       * Gets content of aggregation {@link #getLandmarkInfo landmarkInfo}.
-       *
-       * Accessible landmark settings to be applied on the containers of the `sap.f.DynamicPage` control.
-       *
-       * If not set, no landmarks will be written.
-       */
-      getLandmarkInfo(): sap.f.DynamicPageAccessibleLandmarkInfo;
-      /**
        * Returns a metadata object for class sap.f.DynamicPage.
        */
       // @ts-ignore
@@ -6509,13 +4773,6 @@ declare namespace sap {
        * Default value is `false`.
        */
       getShowFooter(): boolean;
-      /**
-       * @SINCE 1.65
-       *
-       * ID of the element which is the current target of the association {@link #getStickySubheaderProvider stickySubheaderProvider},
-       * or `null`.
-       */
-      getStickySubheaderProvider(): sap.ui.core.ID;
       /**
        * Gets content of aggregation {@link #getTitle title}.
        *
@@ -6604,17 +4861,6 @@ declare namespace sap {
         bHeaderExpanded: boolean
       ): sap.f.DynamicPage;
       /**
-       * @SINCE 1.61
-       *
-       * Sets the aggregated {@link #getLandmarkInfo landmarkInfo}.
-       */
-      setLandmarkInfo(
-        /**
-         * The landmarkInfo to set
-         */
-        oLandmarkInfo: sap.f.DynamicPageAccessibleLandmarkInfo
-      ): sap.f.DynamicPage;
-      /**
        * Sets a new value for property {@link #getPreserveHeaderStateOnScroll preserveHeaderStateOnScroll}.
        *
        * Preserves the current header state when scrolling. For example, if the user expands the header by clicking
@@ -6650,20 +4896,6 @@ declare namespace sap {
         bShowFooter: boolean
       ): sap.f.DynamicPage;
       /**
-       * @SINCE 1.65
-       *
-       * Sets the associated {@link #getStickySubheaderProvider stickySubheaderProvider}.
-       */
-      setStickySubheaderProvider(
-        /**
-         * ID of an element which becomes the new target of this stickySubheaderProvider association; alternatively,
-         * an element instance may be given
-         */
-        oStickySubheaderProvider:
-          | sap.ui.core.ID
-          | sap.f.IDynamicPageStickyContent
-      ): sap.f.DynamicPage;
-      /**
        * Sets the aggregated {@link #getTitle title}.
        */
       setTitle(
@@ -6693,267 +4925,6 @@ declare namespace sap {
          */
         bToggleHeaderOnTitleClick: boolean
       ): sap.f.DynamicPage;
-    }
-    /**
-     * @SINCE 1.61
-     *
-     * Settings for accessible landmarks which can be applied to the container elements of a `sap.f.DynamicPage`
-     * control. These landmarks are used by assistive technologies (such as screenreaders) to provide a meaningful
-     * page overview.
-     */
-    class DynamicPageAccessibleLandmarkInfo extends sap.ui.core.Element {
-      /**
-       * Constructor for a new `sap.f.DynamicPageAccessibleLandmarkInfo` element.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       */
-      constructor(
-        /**
-         * ID for the new element, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new element
-         */
-        mSettings?: DynamicPageAccessibleLandmarkInfoOpts
-      );
-
-      /**
-       * Creates a new subclass of class sap.f.DynamicPageAccessibleLandmarkInfo with name `sClassName` and enriches
-       * it with the information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Gets current value of property {@link #getContentLabel contentLabel}.
-       *
-       * Texts which describe the landmark of the content container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       */
-      getContentLabel(): string;
-      /**
-       * Gets current value of property {@link #getContentRole contentRole}.
-       *
-       * Landmark role of the content container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       *
-       * Default value is `None`.
-       */
-      getContentRole(): sap.ui.core.AccessibleLandmarkRole;
-      /**
-       * Gets current value of property {@link #getFooterLabel footerLabel}.
-       *
-       * Texts which describe the landmark of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       */
-      getFooterLabel(): string;
-      /**
-       * Gets current value of property {@link #getFooterRole footerRole}.
-       *
-       * Landmark role of the footer container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       *
-       * Default value is `None`.
-       */
-      getFooterRole(): sap.ui.core.AccessibleLandmarkRole;
-      /**
-       * Gets current value of property {@link #getHeaderLabel headerLabel}.
-       *
-       * Texts which describe the landmark of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       */
-      getHeaderLabel(): string;
-      /**
-       * Gets current value of property {@link #getHeaderRole headerRole}.
-       *
-       * Landmark role of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       *
-       * Default value is `None`.
-       */
-      getHeaderRole(): sap.ui.core.AccessibleLandmarkRole;
-      /**
-       * Returns a metadata object for class sap.f.DynamicPageAccessibleLandmarkInfo.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Gets current value of property {@link #getRootLabel rootLabel}.
-       *
-       * Texts which describe the landmark of the root container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       */
-      getRootLabel(): string;
-      /**
-       * Gets current value of property {@link #getRootRole rootRole}.
-       *
-       * Landmark role of the root container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       *
-       * Default value is `None`.
-       */
-      getRootRole(): sap.ui.core.AccessibleLandmarkRole;
-      /**
-       * Sets a new value for property {@link #getContentLabel contentLabel}.
-       *
-       * Texts which describe the landmark of the content container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setContentLabel(
-        /**
-         * New value for property `contentLabel`
-         */
-        sContentLabel: string
-      ): sap.f.DynamicPageAccessibleLandmarkInfo;
-      /**
-       * Sets a new value for property {@link #getContentRole contentRole}.
-       *
-       * Landmark role of the content container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `None`.
-       */
-      setContentRole(
-        /**
-         * New value for property `contentRole`
-         */
-        sContentRole: sap.ui.core.AccessibleLandmarkRole
-      ): sap.f.DynamicPageAccessibleLandmarkInfo;
-      /**
-       * Sets a new value for property {@link #getFooterLabel footerLabel}.
-       *
-       * Texts which describe the landmark of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setFooterLabel(
-        /**
-         * New value for property `footerLabel`
-         */
-        sFooterLabel: string
-      ): sap.f.DynamicPageAccessibleLandmarkInfo;
-      /**
-       * Sets a new value for property {@link #getFooterRole footerRole}.
-       *
-       * Landmark role of the footer container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `None`.
-       */
-      setFooterRole(
-        /**
-         * New value for property `footerRole`
-         */
-        sFooterRole: sap.ui.core.AccessibleLandmarkRole
-      ): sap.f.DynamicPageAccessibleLandmarkInfo;
-      /**
-       * Sets a new value for property {@link #getHeaderLabel headerLabel}.
-       *
-       * Texts which describe the landmark of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setHeaderLabel(
-        /**
-         * New value for property `headerLabel`
-         */
-        sHeaderLabel: string
-      ): sap.f.DynamicPageAccessibleLandmarkInfo;
-      /**
-       * Sets a new value for property {@link #getHeaderRole headerRole}.
-       *
-       * Landmark role of the header container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `None`.
-       */
-      setHeaderRole(
-        /**
-         * New value for property `headerRole`
-         */
-        sHeaderRole: sap.ui.core.AccessibleLandmarkRole
-      ): sap.f.DynamicPageAccessibleLandmarkInfo;
-      /**
-       * Sets a new value for property {@link #getRootLabel rootLabel}.
-       *
-       * Texts which describe the landmark of the root container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If not set (and a landmark different than `sap.ui.core.AccessibleLandmarkRole.None` is defined), no label
-       * is set.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setRootLabel(
-        /**
-         * New value for property `rootLabel`
-         */
-        sRootLabel: string
-      ): sap.f.DynamicPageAccessibleLandmarkInfo;
-      /**
-       * Sets a new value for property {@link #getRootRole rootRole}.
-       *
-       * Landmark role of the root container of the corresponding `sap.f.DynamicPage` control.
-       *
-       * If set to `sap.ui.core.AccessibleLandmarkRole.None`, no landmark will be added to the container.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `None`.
-       */
-      setRootRole(
-        /**
-         * New value for property `rootRole`
-         */
-        sRootRole: sap.ui.core.AccessibleLandmarkRole
-      ): sap.f.DynamicPageAccessibleLandmarkInfo;
     }
     /**
      * @SINCE 1.42
@@ -7303,12 +5274,6 @@ declare namespace sap {
        */
       destroySnappedHeading(): sap.f.DynamicPageTitle;
       /**
-       * @SINCE 1.63
-       *
-       * Destroys the snappedTitleOnMobile in the aggregation {@link #getSnappedTitleOnMobile snappedTitleOnMobile}.
-       */
-      destroySnappedTitleOnMobile(): sap.f.DynamicPageTitle;
-      /**
        * @SINCE 1.54
        *
        * Detaches event handler `fnFunction` from the {@link #event:stateChange stateChange} event of this `sap.f.DynamicPageTitle`.
@@ -7368,10 +5333,6 @@ declare namespace sap {
        * The `DynamicPageTitle` actions.
        * **Note:** The `actions` aggregation accepts any UI5 control, but it`s recommended to use controls, suitable
        * for {@link sap.m.Toolbar} and {@link sap.m.OverflowToolbar}.
-       *
-       * **Note:** If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when
-       * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * state.
        */
       getActions(): sap.ui.core.Control[];
       /**
@@ -7423,10 +5384,6 @@ declare namespace sap {
        *
        * The content is positioned in the `DynamicPageTitle` middle area and displayed in both expanded and collapsed
        * (snapped) states.
-       *
-       * **Note:** If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when
-       * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * state.
        */
       getContent(): sap.ui.core.Control[];
       /**
@@ -7455,13 +5412,9 @@ declare namespace sap {
        * collapsed (snapped) states of the header. Use this aggregation to display a title (or any other UI5 control
        * that serves as a heading) that has to be present in both expanded and collapsed states of the header.
        *
-       * **Notes:**
-       * 	 - `heading` is mutually exclusive with `snappedHeading` and `expandedHeading`. If `heading` is provided,
-       * 			both `snappedHeading` and `expandedHeading` are ignored. `heading` is useful when the content of `snappedHeading`
-       * 			and `expandedHeading` needs to be the same as it replaces them both.
-       * 	 - If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when the
-       * 			control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * 			state.
+       * **Note:** `heading` is mutually exclusive with `snappedHeading` and `expandedHeading`. If `heading` is
+       * provided, both `snappedHeading` and `expandedHeading` are ignored. `heading` is useful when the content
+       * of `snappedHeading` and `expandedHeading` needs to be the same as it replaces them both.
        */
       getHeading(): sap.ui.core.Control;
       /**
@@ -7476,14 +5429,10 @@ declare namespace sap {
        *
        * The `DynamicPageTitle` navigation actions.
        *
-       * **Notes:**
-       * 	 - The `navigationActions` position depends on the control size. If the control size is 1280px or bigger,
-       * 			they are rendered right next to the `actions`. Otherwise, they are rendered in the top-right area, above
-       * 			the `actions`. If a large number of elements(buttons) are used, there could be visual degradations as
-       * 			the space for the `navigationActions` is limited.
-       * 	 - If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when the
-       * 			control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * 			state.
+       * **Note:** The `navigationActions` position depends on the control size. If the control size is 1280px
+       * or bigger, they are rendered right next to the `actions`. Otherwise, they are rendered in the top-right
+       * area, above the `actions`. If a large number of elements(buttons) are used, there could be visual degradations
+       * as the space for the `navigationActions` is limited.
        */
       getNavigationActions(): sap.m.Button[];
       /**
@@ -7512,10 +5461,6 @@ declare namespace sap {
        * Gets content of aggregation {@link #getSnappedContent snappedContent}.
        *
        * The content that is displayed in the `DynamicPageTitle` in collapsed (snapped) state.
-       *
-       * **Note:** If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when
-       * the control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * state.
        */
       getSnappedContent(): sap.ui.core.Control[];
       /**
@@ -7527,29 +5472,10 @@ declare namespace sap {
        * is in collapsed (snapped) state only. Use this aggregation to display a title (or any other UI5 control
        * that serves as a heading) that has to be present in collapsed state only.
        *
-       * **Notes:**
-       * 	 - In order for `snappedHeading` to be taken into account, `heading` has to be empty. Combine `snappedHeading`
-       * 			with `expandedHeading` to switch content when the header switches state.
-       * 	 - If the `snappedTitleOnMobile` aggregation is set, its content overrides this aggregation when the
-       * 			control is viewed on a phone mobile device and the `DynamicPageHeader` is in its collapsed (snapped)
-       * 			state.
+       * **Note:** In order for `snappedHeading` to be taken into account, `heading` has to be empty. Combine
+       * `snappedHeading` with `expandedHeading` to switch content when the header switches state.
        */
       getSnappedHeading(): sap.ui.core.Control;
-      /**
-       * @SINCE 1.63
-       *
-       * Gets content of aggregation {@link #getSnappedTitleOnMobile snappedTitleOnMobile}.
-       *
-       * The only content that is displayed in the `DynamicPageTitle` when it is viewed on a phone mobile device
-       * and the `DynamicPageHeader` is in collapsed (snapped) state.
-       *
-       * Using this aggregation enables you to provide a simple, single-line title that takes less space on the
-       * smaller phone screens when the `DynamicPageHeader` is in its collapsed (snapped) state.
-       *
-       * **Note:** The content set in this aggregation overrides all the other `DynamicPageTitle` aggregations
-       * and is only visible on phone mobile devices in collapsed (snapped) state of the `DynamicPageHeader`.
-       */
-      getSnappedTitleOnMobile(): sap.m.Title;
       /**
        * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getActions actions}. and returns
        * its index if found or -1 otherwise.
@@ -7858,17 +5784,6 @@ declare namespace sap {
          * The snappedHeading to set
          */
         oSnappedHeading: sap.ui.core.Control
-      ): sap.f.DynamicPageTitle;
-      /**
-       * @SINCE 1.63
-       *
-       * Sets the aggregated {@link #getSnappedTitleOnMobile snappedTitleOnMobile}.
-       */
-      setSnappedTitleOnMobile(
-        /**
-         * The snappedTitleOnMobile to set
-         */
-        oSnappedTitleOnMobile: sap.m.Title
       ): sap.f.DynamicPageTitle;
       /**
        * @SINCE 1.54
@@ -9688,604 +7603,6 @@ declare namespace sap {
       ): Object;
     }
     /**
-     * @SINCE 1.65
-     * @EXPERIMENTAL (since 1.65)
-     *
-     * A layout container control used for aligning items with various sizes in a simple grid.
-     *
-     * Overview:
-     *
-     * The control is used to align tiles, cards and other controls in configuration, such as a home page or
-     * a dashboard. It represents a grid layout with specific row and column sizes, in which the items can take
-     * any number of rows and columns.
-     *
-     * The number of columns and rows each item takes can be configured with the use of the `{@link sap.f.GridContainerItemLayoutData}`.
-     *
-     * All rows have the same height and all columns have the same width. Their sizes can be configured with
-     * the use of the `layout` aggregation and `{@link sap.f.GridContainerSettings}`.
-     *
-     * Usage:
-     *
-     * When to use
-     * 	 - For aligning home page and dashboard items like Tiles and Cards in a simple grid system with equally
-     * 			sized rows and columns.
-     *
-     * When not to use
-     * 	 - If a more complex layout grid system, where columns and rows may vary in size, is needed.
-     *
-     * Example::
-     * ```javascript
-     *
-     * <f:GridContainer>
-     * 	<f:layout>
-     * 		<f:GridContainerSettings rowSize="5rem" columnSize="5rem" gap="1rem" />
-     * 	</f:layout>
-     * 	<f:layoutS>
-     * 		<f:GridContainerSettings rowSize="4rem" columnSize="4rem" gap="0.5rem" />
-     * 	</f:layoutS>
-     * 	<f:items>
-     * 		<GenericTile header="Sales Fulfillment">
-     * 			<layoutData>
-     * 				<f:GridContainerItemLayoutData rows="2" columns="2" />
-     * 			</layoutData>
-     * 		</GenericTile>
-     * 		<w:Card manifest="url-to-manifest">
-     * 			<w:layoutData>
-     * 				<f:GridContainerItemLayoutData rows="6" columns="3" />
-     * 			</w:layoutData>
-     * 		</w:Card>
-     * 		<Panel>
-     * 			<layoutData>
-     * 				<f:GridContainerItemLayoutData columns="4" />
-     * 			</layoutData>
-     * 			<Text text="Sales information" />
-     * 		</Panel>
-     * 	</f:items>
-     * </f:GridContainer>
-     * ```
-     */
-    class GridContainer extends sap.ui.core.Control {
-      /**
-       * Constructor for a new `sap.f.GridContainer`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       * See:
-       * 	{@link topic:cca5ee5d63ca44c89318f8496a58f9f2 Grid Container (Experimental)}
-       * 	{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}
-       * 	{@link topic:5b46b03f024542ba802d99d67bc1a3f4 Cards}
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: GridContainerOpts
-      );
-
-      /**
-       * Adds some item to the aggregation {@link #getItems items}.
-       */
-      addItem(
-        /**
-         * The item to add; if empty, nothing is inserted
-         */
-        oItem: sap.ui.core.Control
-      ): sap.f.GridContainer;
-      /**
-       * Destroys all the items in the aggregation {@link #getItems items}.
-       */
-      destroyItems(): sap.f.GridContainer;
-      /**
-       * Destroys the layout in the aggregation {@link #getLayout layout}.
-       */
-      destroyLayout(): sap.f.GridContainer;
-      /**
-       * Destroys the layoutL in the aggregation {@link #getLayoutL layoutL}.
-       */
-      destroyLayoutL(): sap.f.GridContainer;
-      /**
-       * Destroys the layoutM in the aggregation {@link #getLayoutM layoutM}.
-       */
-      destroyLayoutM(): sap.f.GridContainer;
-      /**
-       * Destroys the layoutS in the aggregation {@link #getLayoutS layoutS}.
-       */
-      destroyLayoutS(): sap.f.GridContainer;
-      /**
-       * Destroys the layoutXL in the aggregation {@link #getLayoutXL layoutXL}.
-       */
-      destroyLayoutXL(): sap.f.GridContainer;
-      /**
-       * Creates a new subclass of class sap.f.GridContainer with name `sClassName` and enriches it with the information
-       * contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Gets current value of property {@link #getHeight height}.
-       *
-       * Defines the height of the control
-       *
-       * Default value is `empty string`.
-       */
-      getHeight(): sap.ui.core.CSSSize;
-      /**
-       * Gets content of aggregation {@link #getItems items}.
-       *
-       * The items contained by the control.
-       */
-      getItems(): sap.ui.core.Control[];
-      /**
-       * Gets content of aggregation {@link #getLayout layout}.
-       *
-       * The sap.f.GridContainerSettings applied if no settings are provided for a specific size If no layout
-       * is given, a default layout will be used. See the default values for `sap.f.GridContainerSettings`.
-       */
-      getLayout(): sap.f.GridContainerSettings;
-      /**
-       * Gets content of aggregation {@link #getLayoutL layoutL}.
-       *
-       * The sap.f.GridContainerSettings applied for size "L"
-       */
-      getLayoutL(): sap.f.GridContainerSettings;
-      /**
-       * Gets content of aggregation {@link #getLayoutM layoutM}.
-       *
-       * The sap.f.GridContainerSettings applied for size "M"
-       */
-      getLayoutM(): sap.f.GridContainerSettings;
-      /**
-       * Gets content of aggregation {@link #getLayoutS layoutS}.
-       *
-       * The sap.f.GridContainerSettings applied for size "S"
-       */
-      getLayoutS(): sap.f.GridContainerSettings;
-      /**
-       * Gets content of aggregation {@link #getLayoutXL layoutXL}.
-       *
-       * The sap.f.GridContainerSettings applied for size "XL"
-       */
-      getLayoutXL(): sap.f.GridContainerSettings;
-      /**
-       * Returns a metadata object for class sap.f.GridContainer.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Gets current value of property {@link #getSnapToRow snapToRow}.
-       *
-       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
-       *
-       * Default value is `false`.
-       */
-      getSnapToRow(): boolean;
-      /**
-       * Gets current value of property {@link #getWidth width}.
-       *
-       * Defines the width of the control
-       *
-       * Default value is `empty string`.
-       */
-      getWidth(): sap.ui.core.CSSSize;
-      /**
-       * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getItems items}. and returns
-       * its index if found or -1 otherwise.
-       */
-      indexOfItem(
-        /**
-         * The item whose index is looked for
-         */
-        oItem: sap.ui.core.Control
-      ): number;
-      /**
-       * Inserts a item into the aggregation {@link #getItems items}.
-       */
-      insertItem(
-        /**
-         * The item to insert; if empty, nothing is inserted
-         */
-        oItem: sap.ui.core.Control,
-        /**
-         * The `0`-based index the item should be inserted at; for a negative value of `iIndex`, the item is inserted
-         * at position 0; for a value greater than the current size of the aggregation, the item is inserted at
-         * the last position
-         */
-        iIndex: number
-      ): sap.f.GridContainer;
-      /**
-       * Removes all the controls from the aggregation {@link #getItems items}.
-       *
-       * Additionally, it unregisters them from the hosting UIArea.
-       */
-      removeAllItems(): sap.ui.core.Control[];
-      /**
-       * Removes a item from the aggregation {@link #getItems items}.
-       */
-      removeItem(
-        /**
-         * The item to remove or its index or id
-         */
-        vItem: number | string | sap.ui.core.Control
-      ): sap.ui.core.Control;
-      /**
-       * Sets a new value for property {@link #getHeight height}.
-       *
-       * Defines the height of the control
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setHeight(
-        /**
-         * New value for property `height`
-         */
-        sHeight: sap.ui.core.CSSSize
-      ): sap.f.GridContainer;
-      /**
-       * Sets the aggregated {@link #getLayout layout}.
-       */
-      setLayout(
-        /**
-         * The layout to set
-         */
-        oLayout: sap.f.GridContainerSettings
-      ): sap.f.GridContainer;
-      /**
-       * Sets the aggregated {@link #getLayoutL layoutL}.
-       */
-      setLayoutL(
-        /**
-         * The layoutL to set
-         */
-        oLayoutL: sap.f.GridContainerSettings
-      ): sap.f.GridContainer;
-      /**
-       * Sets the aggregated {@link #getLayoutM layoutM}.
-       */
-      setLayoutM(
-        /**
-         * The layoutM to set
-         */
-        oLayoutM: sap.f.GridContainerSettings
-      ): sap.f.GridContainer;
-      /**
-       * Sets the aggregated {@link #getLayoutS layoutS}.
-       */
-      setLayoutS(
-        /**
-         * The layoutS to set
-         */
-        oLayoutS: sap.f.GridContainerSettings
-      ): sap.f.GridContainer;
-      /**
-       * Sets the aggregated {@link #getLayoutXL layoutXL}.
-       */
-      setLayoutXL(
-        /**
-         * The layoutXL to set
-         */
-        oLayoutXL: sap.f.GridContainerSettings
-      ): sap.f.GridContainer;
-      /**
-       * Sets a new value for property {@link #getSnapToRow snapToRow}.
-       *
-       * Should the items stretch to fill the rows which they occupy, or not. If set to true the items will stretch.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setSnapToRow(
-        /**
-         * New value for property `snapToRow`
-         */
-        bSnapToRow: boolean
-      ): sap.f.GridContainer;
-      /**
-       * Sets a new value for property {@link #getWidth width}.
-       *
-       * Defines the width of the control
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setWidth(
-        /**
-         * New value for property `width`
-         */
-        sWidth: sap.ui.core.CSSSize
-      ): sap.f.GridContainer;
-    }
-    /**
-     * @SINCE 1.65
-     * @EXPERIMENTAL (since 1.65)
-     *
-     * Holds layout data for an item inside a `sap.f.GridContainer`.
-     */
-    class GridContainerItemLayoutData extends sap.ui.core.LayoutData {
-      /**
-       * Constructor for a new `sap.f.GridContainerItemLayoutData`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       * See:
-       * 	{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}
-       */
-      constructor(
-        /**
-         * ID for the new element, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new element.
-         */
-        mSettings?: GridContainerItemLayoutDataOpts
-      );
-
-      /**
-       * Creates a new subclass of class sap.f.GridContainerItemLayoutData with name `sClassName` and enriches
-       * it with the information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.LayoutData.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Gets current value of property {@link #getColumns columns}.
-       *
-       * Specifies the number of columns, which the item should take
-       *
-       * Default value is `1`.
-       */
-      getColumns(): number;
-      /**
-       * Returns a metadata object for class sap.f.GridContainerItemLayoutData.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Gets current value of property {@link #getMinRows minRows}.
-       *
-       * Specifies the minimum number of rows, which the item should take.
-       */
-      getMinRows(): number;
-      /**
-       * @EXPERIMENTAL (since 1.65)
-       *
-       * Gets current value of property {@link #getRows rows}.
-       *
-       * Specifies the number of rows, which the item should take.
-       */
-      getRows(): number;
-      /**
-       * Sets a new value for property {@link #getColumns columns}.
-       *
-       * Specifies the number of columns, which the item should take
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `1`.
-       */
-      setColumns(
-        /**
-         * New value for property `columns`
-         */
-        iColumns: number
-      ): sap.f.GridContainerItemLayoutData;
-      /**
-       * Sets a new value for property {@link #getMinRows minRows}.
-       *
-       * Specifies the minimum number of rows, which the item should take.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setMinRows(
-        /**
-         * New value for property `minRows`
-         */
-        iMinRows: number
-      ): sap.f.GridContainerItemLayoutData;
-      /**
-       * @EXPERIMENTAL (since 1.65)
-       *
-       * Sets a new value for property {@link #getRows rows}.
-       *
-       * Specifies the number of rows, which the item should take.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setRows(
-        /**
-         * New value for property `rows`
-         */
-        iRows: number
-      ): sap.f.GridContainerItemLayoutData;
-    }
-    /**
-     * @SINCE 1.65
-     * @EXPERIMENTAL (since 1.65)
-     *
-     * Holds a set of settings that define the dimensions of `sap.f.GridContainer`
-     *
-     * Can be used to define the sizes of columns and rows for different screen sizes, by using the `layout`
-     * aggregations of `sap.f.GridContainer`.
-     */
-    // @ts-ignore - static "getMetadata" inheritance issue
-    class GridContainerSettings extends sap.ui.base.ManagedObject {
-      /**
-       * Constructor for a new `sap.f.GridContainerSettings`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       * See:
-       * 	{@link topic:32d4b9c2b981425dbc374d3e9d5d0c2e Grid Controls}
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: object
-      );
-
-      /**
-       * Creates a new subclass of class sap.f.GridContainerSettings with name `sClassName` and enriches it with
-       * the information contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Gets current value of property {@link #getColumns columns}.
-       *
-       * How many columns to have on a row. If not defined, `sap.f.GridContainer` will position as many columns
-       * as they can fit in the container.
-       */
-      getColumns(): Number;
-      /**
-       * Gets current value of property {@link #getColumnSize columnSize}.
-       *
-       * The width of the columns.
-       *
-       * Default value is `80px`.
-       */
-      getColumnSize(): sap.ui.core.CSSSize;
-      /**
-       * Gets current value of property {@link #getGap gap}.
-       *
-       * The size of the gap between columns and rows.
-       *
-       * Default value is `16px`.
-       */
-      getGap(): sap.ui.core.CSSSize;
-      /**
-       * Returns a metadata object for class sap.f.GridContainerSettings.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * Gets current value of property {@link #getRowSize rowSize}.
-       *
-       * The height of the rows.
-       *
-       * Default value is `80px`.
-       */
-      getRowSize(): sap.ui.core.CSSSize;
-      /**
-       * Sets a new value for property {@link #getColumns columns}.
-       *
-       * How many columns to have on a row. If not defined, `sap.f.GridContainer` will position as many columns
-       * as they can fit in the container.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       */
-      setColumns(
-        /**
-         * New value for property `columns`
-         */
-        sColumns: Number
-      ): sap.f.GridContainerSettings;
-      /**
-       * Sets a new value for property {@link #getColumnSize columnSize}.
-       *
-       * The width of the columns.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `80px`.
-       */
-      setColumnSize(
-        /**
-         * New value for property `columnSize`
-         */
-        sColumnSize: sap.ui.core.CSSSize
-      ): sap.f.GridContainerSettings;
-      /**
-       * Sets a new value for property {@link #getGap gap}.
-       *
-       * The size of the gap between columns and rows.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `16px`.
-       */
-      setGap(
-        /**
-         * New value for property `gap`
-         */
-        sGap: sap.ui.core.CSSSize
-      ): sap.f.GridContainerSettings;
-      /**
-       * Sets a new value for property {@link #getRowSize rowSize}.
-       *
-       * The height of the rows.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `80px`.
-       */
-      setRowSize(
-        /**
-         * New value for property `rowSize`
-         */
-        sRowSize: sap.ui.core.CSSSize
-      ): sap.f.GridContainerSettings;
-    }
-    /**
      * @SINCE 1.60
      *
      * A list-based control with grid layout capabilities.
@@ -10324,9 +7641,10 @@ declare namespace sap {
      * {@link sap.ui.layout.cssgrid.CSSGrid} instead.
      *
      * Current Limitations:
-     * 	 - For Microsoft Internet Explorer some layouts are not supported, due to browser specifics.
-     * 	 - For Microsoft Edge 15 and older versions some layouts are not supported, due to browser specifics.
+     * 	 - No support for IE11.
+     * 	 - No support for Edge version 15.
      */
+    // @ts-ignore - error TS2420: Class 'GridList' incorrectly implements interface 'IGridConfigurable'.Type 'GridList' is missing the following properties from type 'IGridConfigurable': getGridDomRefs, getGridLayoutConfiguration
     class GridList extends sap.m.ListBase
       implements sap.ui.layout.cssgrid.IGridConfigurable {
       /**
@@ -10349,11 +7667,6 @@ declare namespace sap {
          */
         mSettings?: GridListOpts
       );
-      /**
-       * Implements IGridConfigurable interface.
-       */
-      // @ts-ignore - error TS2416: Property 'getGridLayoutConfiguration' in type 'GridList' is not assignable to the same property in base type 'IGridConfigurable'.   Type 'undefined' is not assignable to type '() => GridLayoutBase'
-      getGridLayoutConfiguration: undefined;
 
       /**
        * Destroys the customLayout in the aggregation {@link #getCustomLayout customLayout}.
@@ -10387,10 +7700,6 @@ declare namespace sap {
        */
       getCustomLayout(): sap.ui.layout.cssgrid.GridLayoutBase;
       /**
-       * Implements IGridConfigurable interface.
-       */
-      getGridDomRefs(): HTMLElement[];
-      /**
        * Returns a metadata object for class sap.f.GridList.
        */
       // @ts-ignore
@@ -10404,1011 +7713,6 @@ declare namespace sap {
          */
         oCustomLayout: sap.ui.layout.cssgrid.GridLayoutBase
       ): sap.f.GridList;
-    }
-    /**
-     * @SINCE 1.63
-     *
-     * A horizontal bar control holding multiple child controls used as application shell header.
-     *
-     * Overview:
-     *
-     * The `ShellBar` is used as the uppermost section (shell) of the app. It is fully responsive and adaptive,
-     * and corresponds to the SAP Fiori Design Guidelines.
-     *
-     * Usage:
-     *
-     * Content specified in the `ShellBar` properties and aggregations is automatically positioned in dedicated
-     * places of the control.
-     */
-    class ShellBar extends sap.ui.core.Control
-      implements sap.f.IShellBar, sap.m.IBar {
-      /**
-       * Constructor for a new `ShellBar`.
-       *
-       * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-       * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-       * of the syntax of the settings object.
-       */
-      constructor(
-        /**
-         * ID for the new control, generated automatically if no ID is given
-         */
-        sId?: string,
-        /**
-         * Initial settings for the new control
-         */
-        mSettings?: ShellBarOpts
-      );
-      /**
-       * @SINCE 1.65
-       *
-       * Gets the available Bar contexts.
-       */
-      getContext: undefined;
-
-      /**
-       * @SINCE 1.65
-       *
-       * Sets classes according to the context of the page. Possible contexts are header, footer, and subheader.
-       */
-      _applyContextClassFor(): sap.m.IBar;
-      /**
-       * @SINCE 1.65
-       *
-       * Sets the HTML tag according to the context of the page. Possible contexts are header, footer, and subheader.
-       */
-      _applyTag(): sap.m.IBar;
-      /**
-       * Adds some additionalContent to the aggregation {@link #getAdditionalContent additionalContent}.
-       */
-      addAdditionalContent(
-        /**
-         * The additionalContent to add; if empty, nothing is inserted
-         */
-        oAdditionalContent: sap.f.IShellBar
-      ): sap.f.ShellBar;
-      /**
-       * @SINCE 1.65
-       *
-       * Sets classes and HTML tag according to the context of the page. Possible contexts are header, footer,
-       * and subheader
-       */
-      applyTagAndContextClassFor(): sap.m.IBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:avatarPressed avatarPressed} event of this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the profile avatar is pressed.
-       */
-      attachAvatarPressed(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:copilotPressed copilotPressed} event of this
-       * `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the SAP CoPilot icon is pressed.
-       */
-      attachCopilotPressed(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:homeIconPressed homeIconPressed} event of this
-       * `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the `homeIcon` is pressed.
-       */
-      attachHomeIconPressed(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:menuButtonPressed menuButtonPressed} event of
-       * this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the alternative menu button is pressed.
-       */
-      attachMenuButtonPressed(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:navButtonPressed navButtonPressed} event of
-       * this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the navigation/back button is pressed.
-       */
-      attachNavButtonPressed(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:notificationsPressed notificationsPressed} event
-       * of this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the notifications button is pressed.
-       */
-      attachNotificationsPressed(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:productSwitcherPressed productSwitcherPressed}
-       * event of this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the product switcher button is pressed.
-       */
-      attachProductSwitcherPressed(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:searchButtonPressed searchButtonPressed} event
-       * of this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the search button is pressed.
-       */
-      attachSearchButtonPressed(
-        /**
-         * An application-specific payload object that will be passed to the event handler along with the event
-         * object when firing the event
-         */
-        oData: object,
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Destroys all the additionalContent in the aggregation {@link #getAdditionalContent additionalContent}.
-       */
-      destroyAdditionalContent(): sap.f.ShellBar;
-      /**
-       * Destroys the menu in the aggregation {@link #getMenu menu}.
-       */
-      destroyMenu(): sap.f.ShellBar;
-      /**
-       * Destroys the profile in the aggregation {@link #getProfile profile}.
-       */
-      destroyProfile(): sap.f.ShellBar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:avatarPressed avatarPressed} event of this
-       * `sap.f.ShellBar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachAvatarPressed(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:copilotPressed copilotPressed} event of this
-       * `sap.f.ShellBar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachCopilotPressed(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:homeIconPressed homeIconPressed} event of
-       * this `sap.f.ShellBar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachHomeIconPressed(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:menuButtonPressed menuButtonPressed} event
-       * of this `sap.f.ShellBar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachMenuButtonPressed(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:navButtonPressed navButtonPressed} event of
-       * this `sap.f.ShellBar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachNavButtonPressed(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:notificationsPressed notificationsPressed}
-       * event of this `sap.f.ShellBar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachNotificationsPressed(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:productSwitcherPressed productSwitcherPressed}
-       * event of this `sap.f.ShellBar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachProductSwitcherPressed(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Detaches event handler `fnFunction` from the {@link #event:searchButtonPressed searchButtonPressed} event
-       * of this `sap.f.ShellBar`.
-       *
-       * The passed function and listener object must match the ones used for event registration.
-       */
-      detachSearchButtonPressed(
-        /**
-         * The function to be called, when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object on which the given function had to be called
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Creates a new subclass of class sap.f.ShellBar with name `sClassName` and enriches it with the information
-       * contained in `oClassInfo`.
-       *
-       * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-       */
-      // @ts-ignore
-      static extend(
-        /**
-         * Name of the class being created
-         */
-        sClassName: string,
-        /**
-         * Object literal with information about the class
-         */
-        oClassInfo?: object,
-        /**
-         * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-         */
-        FNMetaImpl?: Function
-      ): Function;
-      /**
-       * Fires event {@link #event:avatarPressed avatarPressed} to attached listeners.
-       */
-      fireAvatarPressed(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Reference to the button that has been pressed
-           */
-          avatar?: sap.f.Avatar;
-        }
-      ): sap.f.ShellBar;
-      /**
-       * Fires event {@link #event:copilotPressed copilotPressed} to attached listeners.
-       */
-      fireCopilotPressed(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Reference to the button that has been pressed
-           */
-          image?: sap.m.Image;
-        }
-      ): sap.f.ShellBar;
-      /**
-       * Fires event {@link #event:homeIconPressed homeIconPressed} to attached listeners.
-       */
-      fireHomeIconPressed(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Reference to the image that has been pressed
-           */
-          icon?: sap.m.Image;
-        }
-      ): sap.f.ShellBar;
-      /**
-       * Fires event {@link #event:menuButtonPressed menuButtonPressed} to attached listeners.
-       */
-      fireMenuButtonPressed(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Reference to the button that has been pressed
-           */
-          button?: sap.m.Button;
-        }
-      ): sap.f.ShellBar;
-      /**
-       * Fires event {@link #event:navButtonPressed navButtonPressed} to attached listeners.
-       */
-      fireNavButtonPressed(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Reference to the button that has been pressed
-           */
-          button?: sap.m.Button;
-        }
-      ): sap.f.ShellBar;
-      /**
-       * Fires event {@link #event:notificationsPressed notificationsPressed} to attached listeners.
-       */
-      fireNotificationsPressed(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Reference to the button that has been pressed
-           */
-          button?: sap.m.Button;
-        }
-      ): sap.f.ShellBar;
-      /**
-       * Fires event {@link #event:productSwitcherPressed productSwitcherPressed} to attached listeners.
-       */
-      fireProductSwitcherPressed(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Reference to the button that has been pressed
-           */
-          button?: sap.m.Button;
-        }
-      ): sap.f.ShellBar;
-      /**
-       * Fires event {@link #event:searchButtonPressed searchButtonPressed} to attached listeners.
-       */
-      fireSearchButtonPressed(
-        /**
-         * Parameters to pass along with the event
-         */
-        mParameters?: {
-          /**
-           * Reference to the button that has been pressed
-           */
-          button?: sap.m.Button;
-        }
-      ): sap.f.ShellBar;
-      /**
-       * Gets content of aggregation {@link #getAdditionalContent additionalContent}.
-       *
-       * Additional content to be displayed in the control.
-       *
-       * **Note:** Only controls implementing the `{@link sap.f.IShellBar}` interface are allowed.
-       */
-      getAdditionalContent(): sap.f.IShellBar[];
-      /**
-       * Gets current value of property {@link #getHomeIcon homeIcon}.
-       *
-       * Defines the URI to the home icon, such as company or product logo.
-       *
-       * Default value is `empty string`.
-       */
-      getHomeIcon(): sap.ui.core.URI;
-      /**
-       * @SINCE 1.65
-       *
-       * Gets the HTML tag of the root DOM Reference.
-       */
-      getHTMLTag(): string;
-      /**
-       * Gets content of aggregation {@link #getMenu menu}.
-       *
-       * The menu attached to the main title.
-       */
-      getMenu(): sap.m.Menu;
-      /**
-       * Returns a metadata object for class sap.f.ShellBar.
-       */
-      // @ts-ignore
-      static getMetadata(): sap.ui.base.Metadata;
-      /**
-       * @SINCE 1.64
-       *
-       * Gets current value of property {@link #getNotificationsNumber notificationsNumber}.
-       *
-       * Defines the displayed number of upcoming notifications.
-       *
-       * Default value is `empty string`.
-       */
-      getNotificationsNumber(): string;
-      /**
-       * Gets content of aggregation {@link #getProfile profile}.
-       *
-       * The profile avatar.
-       */
-      getProfile(): sap.f.Avatar;
-      /**
-       * Gets current value of property {@link #getSecondTitle secondTitle}.
-       *
-       * Defines the secondary title of the control.
-       *
-       * Default value is `empty string`.
-       */
-      getSecondTitle(): string;
-      /**
-       * Gets current value of property {@link #getShowCopilot showCopilot}.
-       *
-       * Determines whether the SAP CoPilot icon is displayed.
-       *
-       * Default value is `false`.
-       */
-      getShowCopilot(): boolean;
-      /**
-       * Gets current value of property {@link #getShowMenuButton showMenuButton}.
-       *
-       * Determines whether a hamburger menu button is displayed (as an alternative if the `menu` aggregation
-       * is not used).
-       *
-       * Default value is `false`.
-       */
-      getShowMenuButton(): boolean;
-      /**
-       * Gets current value of property {@link #getShowNavButton showNavButton}.
-       *
-       * Determines whether a back navigation button is displayed.
-       *
-       * Default value is `false`.
-       */
-      getShowNavButton(): boolean;
-      /**
-       * Gets current value of property {@link #getShowNotifications showNotifications}.
-       *
-       * Determines whether the notifications button is displayed.
-       *
-       * Default value is `false`.
-       */
-      getShowNotifications(): boolean;
-      /**
-       * Gets current value of property {@link #getShowProductSwitcher showProductSwitcher}.
-       *
-       * Determines whether the product switcher button is displayed.
-       *
-       * Default value is `false`.
-       */
-      getShowProductSwitcher(): boolean;
-      /**
-       * Gets current value of property {@link #getShowSearch showSearch}.
-       *
-       * Determines whether the search button is displayed.
-       *
-       * Default value is `false`.
-       */
-      getShowSearch(): boolean;
-      /**
-       * Gets current value of property {@link #getTitle title}.
-       *
-       * Defines the main title of the control.
-       *
-       * Default value is `empty string`.
-       */
-      getTitle(): string;
-      /**
-       * Checks for the provided `sap.f.IShellBar` in the aggregation {@link #getAdditionalContent additionalContent}.
-       * and returns its index if found or -1 otherwise.
-       */
-      indexOfAdditionalContent(
-        /**
-         * The additionalContent whose index is looked for
-         */
-        oAdditionalContent: sap.f.IShellBar
-      ): number;
-      /**
-       * Inserts a additionalContent into the aggregation {@link #getAdditionalContent additionalContent}.
-       */
-      insertAdditionalContent(
-        /**
-         * The additionalContent to insert; if empty, nothing is inserted
-         */
-        oAdditionalContent: sap.f.IShellBar,
-        /**
-         * The `0`-based index the additionalContent should be inserted at; for a negative value of `iIndex`, the
-         * additionalContent is inserted at position 0; for a value greater than the current size of the aggregation,
-         * the additionalContent is inserted at the last position
-         */
-        iIndex: number
-      ): sap.f.ShellBar;
-      /**
-       * @SINCE 1.65
-       *
-       * Returns if the bar is sensitive to the container context. Implementation of the IBar interface
-       */
-      isContextSensitive(): boolean;
-      /**
-       * Removes a additionalContent from the aggregation {@link #getAdditionalContent additionalContent}.
-       */
-      removeAdditionalContent(
-        /**
-         * The additionalContent to remove or its index or id
-         */
-        vAdditionalContent: number | string | sap.f.IShellBar
-      ): sap.f.IShellBar;
-      /**
-       * Removes all the controls from the aggregation {@link #getAdditionalContent additionalContent}.
-       *
-       * Additionally, it unregisters them from the hosting UIArea.
-       */
-      removeAllAdditionalContent(): sap.f.IShellBar[];
-      /**
-       * Sets a new value for property {@link #getHomeIcon homeIcon}.
-       *
-       * Defines the URI to the home icon, such as company or product logo.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setHomeIcon(
-        /**
-         * New value for property `homeIcon`
-         */
-        sHomeIcon: sap.ui.core.URI
-      ): sap.f.ShellBar;
-      /**
-       * @SINCE 1.65
-       *
-       * Sets the HTML tag of the root DOM Reference.
-       */
-      setHTMLTag(sTag: string): sap.m.IBar;
-      /**
-       * Sets the aggregated {@link #getMenu menu}.
-       */
-      setMenu(
-        /**
-         * The menu to set
-         */
-        oMenu: sap.m.Menu
-      ): sap.f.ShellBar;
-      /**
-       * Sets the aggregated {@link #getProfile profile}.
-       */
-      setProfile(
-        /**
-         * The profile to set
-         */
-        oProfile: sap.f.Avatar
-      ): sap.f.ShellBar;
-      /**
-       * Sets a new value for property {@link #getSecondTitle secondTitle}.
-       *
-       * Defines the secondary title of the control.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setSecondTitle(
-        /**
-         * New value for property `secondTitle`
-         */
-        sSecondTitle: string
-      ): sap.f.ShellBar;
-      /**
-       * Sets a new value for property {@link #getShowCopilot showCopilot}.
-       *
-       * Determines whether the SAP CoPilot icon is displayed.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setShowCopilot(
-        /**
-         * New value for property `showCopilot`
-         */
-        bShowCopilot: boolean
-      ): sap.f.ShellBar;
-      /**
-       * Sets a new value for property {@link #getShowMenuButton showMenuButton}.
-       *
-       * Determines whether a hamburger menu button is displayed (as an alternative if the `menu` aggregation
-       * is not used).
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setShowMenuButton(
-        /**
-         * New value for property `showMenuButton`
-         */
-        bShowMenuButton: boolean
-      ): sap.f.ShellBar;
-      /**
-       * Sets a new value for property {@link #getShowNavButton showNavButton}.
-       *
-       * Determines whether a back navigation button is displayed.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setShowNavButton(
-        /**
-         * New value for property `showNavButton`
-         */
-        bShowNavButton: boolean
-      ): sap.f.ShellBar;
-      /**
-       * Sets a new value for property {@link #getShowNotifications showNotifications}.
-       *
-       * Determines whether the notifications button is displayed.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setShowNotifications(
-        /**
-         * New value for property `showNotifications`
-         */
-        bShowNotifications: boolean
-      ): sap.f.ShellBar;
-      /**
-       * Sets a new value for property {@link #getShowProductSwitcher showProductSwitcher}.
-       *
-       * Determines whether the product switcher button is displayed.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setShowProductSwitcher(
-        /**
-         * New value for property `showProductSwitcher`
-         */
-        bShowProductSwitcher: boolean
-      ): sap.f.ShellBar;
-      /**
-       * Sets a new value for property {@link #getShowSearch showSearch}.
-       *
-       * Determines whether the search button is displayed.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `false`.
-       */
-      setShowSearch(
-        /**
-         * New value for property `showSearch`
-         */
-        bShowSearch: boolean
-      ): sap.f.ShellBar;
-      /**
-       * Sets a new value for property {@link #getTitle title}.
-       *
-       * Defines the main title of the control.
-       *
-       * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-       *
-       * Default value is `empty string`.
-       */
-      setTitle(
-        /**
-         * New value for property `title`
-         */
-        sTitle: string
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:avatarPressed avatarPressed} event of this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the profile avatar is pressed.
-       */
-      attachAvatarPressed(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:copilotPressed copilotPressed} event of this
-       * `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the SAP CoPilot icon is pressed.
-       */
-      attachCopilotPressed(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:homeIconPressed homeIconPressed} event of this
-       * `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the `homeIcon` is pressed.
-       */
-      attachHomeIconPressed(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:menuButtonPressed menuButtonPressed} event of
-       * this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the alternative menu button is pressed.
-       */
-      attachMenuButtonPressed(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:navButtonPressed navButtonPressed} event of
-       * this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the navigation/back button is pressed.
-       */
-      attachNavButtonPressed(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:notificationsPressed notificationsPressed} event
-       * of this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the notifications button is pressed.
-       */
-      attachNotificationsPressed(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:productSwitcherPressed productSwitcherPressed}
-       * event of this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the product switcher button is pressed.
-       */
-      attachProductSwitcherPressed(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
-      /**
-       * Attaches event handler `fnFunction` to the {@link #event:searchButtonPressed searchButtonPressed} event
-       * of this `sap.f.ShellBar`.
-       *
-       * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-       * otherwise it will be bound to this `sap.f.ShellBar` itself.
-       *
-       * Fired when the search button is pressed.
-       */
-      attachSearchButtonPressed(
-        /**
-         * The function to be called when the event occurs
-         */
-        fnFunction: Function,
-        /**
-         * Context object to call the event handler with. Defaults to this `sap.f.ShellBar` itself
-         */
-        oListener?: object
-      ): sap.f.ShellBar;
     }
     /**
      * @SINCE 1.46
@@ -11623,14 +7927,6 @@ declare namespace sap {
   }
 
   interface IUI5DefineDependencyNames {
-    "sap/f/cards/Header": undefined;
-
-    "sap/f/cards/NumericHeader": undefined;
-
-    "sap/f/cards/NumericSideIndicator": undefined;
-
-    "sap/f/cards/IHeader": undefined;
-
     "sap/f/routing/Router": undefined;
 
     "sap/f/routing/TargetHandler": undefined;
@@ -11687,11 +7983,7 @@ declare namespace sap {
 
     "sap/f/Avatar": undefined;
 
-    "sap/f/Card": undefined;
-
     "sap/f/DynamicPage": undefined;
-
-    "sap/f/DynamicPageAccessibleLandmarkInfo": undefined;
 
     "sap/f/DynamicPageHeader": undefined;
 
@@ -11701,20 +7993,6 @@ declare namespace sap {
 
     "sap/f/FlexibleColumnLayoutSemanticHelper": undefined;
 
-    "sap/f/GridContainer": undefined;
-
-    "sap/f/GridContainerItemLayoutData": undefined;
-
-    "sap/f/GridContainerSettings": undefined;
-
     "sap/f/GridList": undefined;
-
-    "sap/f/ShellBar": undefined;
-
-    "sap/f/ICard": undefined;
-
-    "sap/f/IDynamicPageStickyContent": undefined;
-
-    "sap/f/IShellBar": undefined;
   }
 }

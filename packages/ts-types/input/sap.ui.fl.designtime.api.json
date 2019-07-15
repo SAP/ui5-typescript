@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.65.1",
+  "version": "1.60.14",
   "symbols": [
     {
       "kind": "namespace",
@@ -108,88 +108,12 @@
           "parameters": [
             {
               "name": "oControl",
-              "type": "sap.ui.core.Element",
+              "type": "sap.ui.base.ManagedObject",
               "optional": false,
               "description": "The control which should be tested for an encompassing variant management control"
             }
           ],
           "description": "Determines the availability of an encompassing variant management control."
-        },
-        {
-          "name": "isPersonalized",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "Promise",
-            "description": "Promise resolving with true if personalization changes exists, otherwise false."
-          },
-          "parameters": [
-            {
-              "name": "aControls",
-              "type": "sap.ui.core.Element[]|map[]",
-              "optional": false,
-              "parameterProperties": {
-                "appComponent": {
-                  "name": "appComponent",
-                  "type": "sap.ui.core.Component",
-                  "optional": false,
-                  "description": "Application component of the controls at runtime in case a map has been used"
-                },
-                "id": {
-                  "name": "id",
-                  "type": "string",
-                  "optional": false,
-                  "description": "ID of the control in case a map has been used to specify the control"
-                }
-              },
-              "description": "an array of instances of controls, a map with control IDs including a app component or a mixture for which personalization exists"
-            },
-            {
-              "name": "aChangeTypes",
-              "type": "array",
-              "optional": true,
-              "description": "Types of changes that have existing personalization."
-            }
-          ],
-          "description": "Checks if personalization changes exists for control."
-        },
-        {
-          "name": "resetChanges",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "Promise",
-            "description": "Promise that resolves after the deletion took place and changes are reverted"
-          },
-          "parameters": [
-            {
-              "name": "aControls",
-              "type": "sap.ui.core.Element[]|map[]",
-              "optional": false,
-              "parameterProperties": {
-                "appComponent": {
-                  "name": "appComponent",
-                  "type": "sap.ui.core.Component",
-                  "optional": false,
-                  "description": "Application component of the controls at runtime in case a map has been used"
-                },
-                "id": {
-                  "name": "id",
-                  "type": "string",
-                  "optional": false,
-                  "description": "ID of the control in case a map has been used to specify the control"
-                }
-              },
-              "description": "an array of instances of controls, a map with control IDs including a app component or a mixture for which the reset shall take place"
-            },
-            {
-              "name": "aChangeTypes",
-              "type": "String[]",
-              "optional": true,
-              "description": "Types of changes that shall be deleted"
-            }
-          ],
-          "description": "Deletes changes recorded for control. Changes to be deleted can be filtered by specification of change type(s)."
         },
         {
           "name": "saveChanges",
@@ -824,12 +748,6 @@
                   "type": "string",
                   "optional": false,
                   "description": "the id of the data source to be removed"
-                },
-                "removeUnusedODataAnnotation": {
-                  "name": "removeUnusedODataAnnotation",
-                  "type": "boolean",
-                  "optional": true,
-                  "description": "option to remove also no longer referenced dataSources of type ODataAnnotion"
                 }
               },
               "description": "parameters of the change type"
@@ -1225,32 +1143,6 @@
           "description": "Creates an inline change of change type appdescr_app_setTitle"
         },
         {
-          "name": "create_fiori_setRegistrationIds",
-          "visibility": "restricted",
-          "static": true,
-          "returnValue": {
-            "type": "Promise",
-            "description": "resolving when creating the descriptor inline change was successful (without backend access)"
-          },
-          "parameters": [
-            {
-              "name": "mParameters",
-              "type": "object",
-              "optional": false,
-              "parameterProperties": {
-                "registrationIds": {
-                  "name": "registrationIds",
-                  "type": "object",
-                  "optional": false,
-                  "description": "the array of registrationId strings"
-                }
-              },
-              "description": "parameters of the change type"
-            }
-          ],
-          "description": "Creates an inline change of change type appdescr_fiori_setRegistrationIds"
-        },
-        {
           "name": "create_flp_setConfig",
           "visibility": "restricted",
           "static": true,
@@ -1605,32 +1497,6 @@
           "description": "Creates an inline change of change type appdescr_ui5_replaceComponentUsage"
         },
         {
-          "name": "create_ui5_setMinUI5Version",
-          "visibility": "restricted",
-          "static": true,
-          "returnValue": {
-            "type": "Promise",
-            "description": "resolving when creating the descriptor inline change was successful (without backend access)"
-          },
-          "parameters": [
-            {
-              "name": "mParameters",
-              "type": "object",
-              "optional": false,
-              "parameterProperties": {
-                "minUI5Version": {
-                  "name": "minUI5Version",
-                  "type": "string",
-                  "optional": false,
-                  "description": "the UI5 Version to be updated"
-                }
-              },
-              "description": "parameters of the change type"
-            }
-          ],
-          "description": "Creates an inline change of change type appdescr_ui5_setMinUI5Version"
-        },
-        {
           "name": "create_ui_generic_app_setMainPage",
           "visibility": "restricted",
           "static": true,
@@ -1799,12 +1665,6 @@
                 "type": "string",
                 "optional": false,
                 "description": "the proposed referenced descriptor or app variant/CDM app config id (might be overwritten by the backend) to be provided when creating a new app variant/CDM app config"
-              },
-              "version": {
-                "name": "version",
-                "type": "string",
-                "optional": true,
-                "description": "version of the app variant (optional)"
               },
               "layer": {
                 "name": "layer",
@@ -2021,12 +1881,6 @@
                   "optional": false,
                   "description": "the id for the app variant/CDM app config id"
                 },
-                "version": {
-                  "name": "version",
-                  "type": "string",
-                  "optional": false,
-                  "description": "optional version of the app variant"
-                },
                 "layer": {
                   "name": "layer",
                   "type": "string",
@@ -2165,7 +2019,7 @@
                   "name": "sChangelist",
                   "type": "String",
                   "optional": false,
-                  "description": "The transport ID"
+                  "description": "The transport ID."
                 }
               },
               "description": "property bag"
@@ -2399,12 +2253,6 @@
                   "type": "string",
                   "optional": true,
                   "description": "address to which the request for modules should be sent in case modules are present"
-                },
-                "isTrial": {
-                  "name": "isTrial",
-                  "type": "boolean",
-                  "optional": true,
-                  "description": "true if the system is a trial system"
                 }
               },
               "description": "Contains additional data needed for reading changes"
@@ -2421,64 +2269,6 @@
             "description": "Returns a Promise with the flexibility settings content"
           },
           "description": "Loads flexibility settings."
-        },
-        {
-          "name": "resetChanges",
-          "visibility": "public",
-          "parameters": [
-            {
-              "name": "mParameters",
-              "type": "String",
-              "optional": false,
-              "parameterProperties": {
-                "sReference": {
-                  "name": "sReference",
-                  "type": "String",
-                  "optional": false,
-                  "description": "flex reference"
-                },
-                "sAppVersion": {
-                  "name": "sAppVersion",
-                  "type": "String",
-                  "optional": false,
-                  "description": "version of the application for which the reset takes place"
-                },
-                "sLayer": {
-                  "name": "sLayer",
-                  "type": "String",
-                  "optional": true,
-                  "defaultValue": "\"USER\"",
-                  "description": "other possible layers: VENDOR,PARTNER,CUSTOMER_BASE,CUSTOMER"
-                },
-                "sChangelist": {
-                  "name": "sChangelist",
-                  "type": "String",
-                  "optional": false,
-                  "description": "The transport ID"
-                },
-                "sGenerator": {
-                  "name": "sGenerator",
-                  "type": "String",
-                  "optional": false,
-                  "description": "generator with which the changes were created"
-                },
-                "aSelectorIds": {
-                  "name": "aSelectorIds",
-                  "type": "String",
-                  "optional": false,
-                  "description": "selector IDs of controls for which the reset should filter"
-                },
-                "aChangeTypes": {
-                  "name": "aChangeTypes",
-                  "type": "String",
-                  "optional": false,
-                  "description": "change types of the changes which should be reset"
-                }
-              },
-              "description": "property bag"
-            }
-          ],
-          "description": "Resets changes via REST call; Filters by provided parameters like the application reference, its version, the generator of the changes, the change type or changes on specific controls by their selector IDs."
         },
         {
           "name": "send",
@@ -3093,12 +2883,6 @@
               "type": "Array",
               "optional": false,
               "description": "array that includes all local changes"
-            },
-            {
-              "name": "aAppVariantDescriptors",
-              "type": "Array",
-              "optional": true,
-              "description": "array that includes all app variant descriptors"
             }
           ],
           "description": "Prepare all changes and assign them to an existing transport."
@@ -3211,16 +2995,22 @@
       "description": "Returns the map with all changes to be reverted and applied when switching variants",
       "properties": [
         {
-          "name": "changesToBeReverted",
+          "name": "aRevert",
           "type": "array",
           "visibility": "public",
           "description": "an array of changes to be reverted"
         },
         {
-          "name": "changesToBeApplied",
+          "name": "aNew",
           "type": "array",
           "visibility": "public",
           "description": "an array of changes to be applied"
+        },
+        {
+          "name": "component",
+          "type": "sap.ui.core.Component",
+          "visibility": "public",
+          "description": "the component responsible"
         }
       ]
     },
@@ -3235,7 +3025,7 @@
       "visibility": "public",
       "since": "1.56",
       "extends": "sap.ui.core.Control",
-      "description": "The <code>VariantManagement</code> control can be used to manage variants. <h3>Usage</h3> You can use this control in most controls that are enabled for <i>UI adaptation at runtime</i>.",
+      "description": "The <code>VariantManagement</code> control can be used to manage variants.\n\n<h3>Usage</h3>\n\nYou can use this control in most controls that are enabled for <i>UI adaptation at runtime</i>.",
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
@@ -4214,15 +4004,15 @@
           },
           {
             "name": "oFlexController",
-            "type": "sap.ui.fl.FlexController",
+            "type": "object",
             "optional": false,
             "description": "the FlexController instance for the component which uses the variant model"
           },
           {
-            "name": "oAppComponent",
-            "type": "sap.ui.core.Component",
+            "name": "oComponent",
+            "type": "object",
             "optional": false,
-            "description": "Application component instance that is currently loading"
+            "description": "Component instance that is currently loading"
           },
           {
             "name": "bObserve",
@@ -4234,19 +4024,6 @@
         "description": "Constructor for a new sap.ui.fl.variants.VariantModel model."
       },
       "methods": [
-        {
-          "name": "checkDirtyStateForControlModels",
-          "visibility": "public",
-          "parameters": [
-            {
-              "name": "aVariantManagementReferences",
-              "type": "string[]",
-              "optional": false,
-              "description": "Array of variant management references"
-            }
-          ],
-          "description": "Checks if dirty changes exist for the current variant inside the passed variant management reference. If no dirty changes exist, it marks the associated 'modified' model property to false."
-        },
         {
           "name": "extend",
           "visibility": "public",

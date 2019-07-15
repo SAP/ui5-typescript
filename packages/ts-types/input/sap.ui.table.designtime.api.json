@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.65.1",
+  "version": "1.60.14",
   "symbols": [
     {
       "kind": "namespace",
@@ -498,6 +498,16 @@
             }
           ],
           "description": "Marks a range of tree nodes as selected, starting with iFromIndex going to iToIndex. The nodes are referenced via their absolute row index. Please be aware that the absolute row index only applies to the tree which is visualized by the <code>AnalyticalTable</code> control. Invisible nodes (collapsed child nodes) will not be taken into account.\n\nPlease also take notice of the fact, that \"addSelectionInterval\" does not change any other selection. To override the current selection, please use \"setSelctionInterval\" or for a single entry use \"setSelectedIndex\"."
+        },
+        {
+          "name": "clearSelection",
+          "visibility": "public",
+          "ui5-metamodel": true,
+          "returnValue": {
+            "type": "sap.ui.table.AnalyticalTable",
+            "description": "a reference to the <code>AnalyticalTable</code> control, can be used for chaining"
+          },
+          "description": "Clears the complete selection (all analytical table rows/nodes will be deselected)."
         },
         {
           "name": "collapse",
@@ -1062,7 +1072,7 @@
             "defaultValue": false,
             "group": "Appearance",
             "visibility": "public",
-            "description": "Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.",
+            "description": "Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column has to be sorted by calling <code>Column.sort()</code>",
             "methods": ["getSorted", "setSorted"]
           },
           {
@@ -1089,7 +1099,7 @@
             "defaultValue": false,
             "group": "Appearance",
             "visibility": "public",
-            "description": "Indicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column can be filtered using {@link sap.ui.table.Table#filter}.",
+            "description": "Indicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column has to be filtered by calling <code>Column.sort()</code>",
             "methods": ["getFiltered", "setFiltered"]
           },
           {
@@ -1246,18 +1256,6 @@
             "methods": ["getTemplate", "destroyTemplate", "setTemplate"]
           },
           {
-            "name": "creationTemplate",
-            "singularName": "creationTemplate",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "methods": [
-              "getCreationTemplate",
-              "destroyCreationTemplate",
-              "setCreationTemplate"
-            ]
-          },
-          {
             "name": "menu",
             "singularName": "menu",
             "type": "sap.ui.unified.Menu",
@@ -1391,15 +1389,6 @@
           "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:columnMenuOpen columnMenuOpen} event of this <code>sap.ui.table.Column</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.\n\nFires before the column menu is opened."
         },
         {
-          "name": "destroyCreationTemplate",
-          "visibility": "restricted",
-          "returnValue": {
-            "type": "sap.ui.table.Column",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "description": "Destroys the creation template."
-        },
-        {
           "name": "destroyLabel",
           "visibility": "public",
           "returnValue": {
@@ -1527,15 +1516,6 @@
           "description": "Gets current value of property {@link #getAutoResizable autoResizable}.\n\nEnables auto-resizing of the column on double clicking the resize bar. The width is determined on the widest currently displayed content. It does not consider rows which are currently not scrolled into view. Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.Checkbox</code>\n\nDefault value is <code>false</code>."
         },
         {
-          "name": "getCreationTemplate",
-          "visibility": "restricted",
-          "returnValue": {
-            "type": "sap.ui.core.Control",
-            "description": "Instance of the creation template control"
-          },
-          "description": "Gets the creation template."
-        },
-        {
           "name": "getDefaultFilterOperator",
           "visibility": "public",
           "returnValue": {
@@ -1551,7 +1531,7 @@
             "type": "boolean",
             "description": "Value of property <code>filtered</code>"
           },
-          "description": "Gets current value of property {@link #getFiltered filtered}.\n\nIndicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column can be filtered using {@link sap.ui.table.Table#filter}.\n\nDefault value is <code>false</code>."
+          "description": "Gets current value of property {@link #getFiltered filtered}.\n\nIndicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column has to be filtered by calling <code>Column.sort()</code>\n\nDefault value is <code>false</code>."
         },
         {
           "name": "getFilterOperator",
@@ -1715,7 +1695,7 @@
             "type": "boolean",
             "description": "Value of property <code>sorted</code>"
           },
-          "description": "Gets current value of property {@link #getSorted sorted}.\n\nIndicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.\n\nDefault value is <code>false</code>."
+          "description": "Gets current value of property {@link #getSorted sorted}.\n\nIndicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column has to be sorted by calling <code>Column.sort()</code>\n\nDefault value is <code>false</code>."
         },
         {
           "name": "getSortOrder",
@@ -1746,17 +1726,17 @@
           "visibility": "protected",
           "returnValue": {
             "type": "sap.ui.core.Control|null",
-            "description": "Clone of the template, or <code>null</code> if no template is defined"
+            "description": "Clone of the column template, or <code>null</code> if no column template is defined"
           },
           "parameters": [
             {
               "name": "iIndex",
               "type": "int",
               "optional": false,
-              "description": "Index of the column in the columns aggregation of the table"
+              "description": "Index of the column in the column aggregation of the table"
             }
           ],
-          "description": "Returns a template clone. It either finds an unused clone or clones a new one from the template."
+          "description": "Returns a column template clone. It either finds an unused clone or clones a new one from the column template."
         },
         {
           "name": "getVisible",
@@ -1865,23 +1845,6 @@
           "description": "Sets a new value for property {@link #getAutoResizable autoResizable}.\n\nEnables auto-resizing of the column on double clicking the resize bar. The width is determined on the widest currently displayed content. It does not consider rows which are currently not scrolled into view. Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.Checkbox</code>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
-          "name": "setCreationTemplate",
-          "visibility": "restricted",
-          "returnValue": {
-            "type": "sap.ui.table.Column",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oCreationTemplate",
-              "type": "sap.ui.core.Control",
-              "optional": false,
-              "description": "Instance of the creation template control"
-            }
-          ],
-          "description": "Sets the creation template."
-        },
-        {
           "name": "setDefaultFilterOperator",
           "visibility": "public",
           "returnValue": {
@@ -1913,7 +1876,7 @@
               "description": "New value for property <code>filtered</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getFiltered filtered}.\n\nIndicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column can be filtered using {@link sap.ui.table.Table#filter}.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+          "description": "Sets a new value for property {@link #getFiltered filtered}.\n\nIndicates if the column is filtered. This property only controls if a filter indicator is displayed in the column header - it does not trigger the filter function. The column has to be filtered by calling <code>Column.sort()</code>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "setFilterOperator",
@@ -2194,7 +2157,7 @@
               "description": "New value for property <code>sorted</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getSorted sorted}.\n\nIndicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column can be sorted using {@link sap.ui.table.Table#sort}.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+          "description": "Sets a new value for property {@link #getSorted sorted}.\n\nIndicates if the column is sorted. This property only controls if a sort indicator is displayed in the column header - it does not trigger the sort function. The column has to be sorted by calling <code>Column.sort()</code>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "setSortOrder",
@@ -2399,388 +2362,6 @@
       ]
     },
     {
-      "kind": "class",
-      "name": "sap.ui.table.CreationRow",
-      "basename": "CreationRow",
-      "resource": "sap/ui/table/CreationRow.js",
-      "module": "sap/ui/table/CreationRow",
-      "export": "",
-      "static": true,
-      "visibility": "restricted",
-      "extends": "sap.ui.core.Control",
-      "description": "Allows to enter data in a row shaped form, if placed inside a {@link sap.ui.table.Table}. The form elements (<code>cells</code> aggregation) are aligned with the columns of the table, and are created automatically based on the {@link sap.ui.table.Column#getCreationTemplate creationTemplate} aggregation of the {@link sap.ui.table.Column}.\n\n<b>Note:</b> This control is compatible only with the <code>sap.m</code> library. Do not use it together with the <code>sap.ui.commons</code> library.",
-      "ui5-metamodel": true,
-      "ui5-metadata": {
-        "stereotype": "control",
-        "properties": [
-          {
-            "name": "applyEnabled",
-            "type": "boolean",
-            "defaultValue": true,
-            "group": "Behavior",
-            "visibility": "public",
-            "description": "If set to <code>false</code>, the {@link #event:apply apply} event is not fired. The corresponding keyboard shortcut and the apply button of the default toolbar are disabled.",
-            "methods": ["getApplyEnabled", "setApplyEnabled"]
-          }
-        ],
-        "aggregations": [
-          {
-            "name": "cells",
-            "singularName": "cell",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..n",
-            "visibility": "public",
-            "description": "The actual cells are a table-internal construct. The controls in this aggregation are the content of the cells. This aggregation is managed by the table and must not be manipulated. Only read access is allowed.",
-            "methods": [
-              "getCells",
-              "destroyCells",
-              "insertCell",
-              "addCell",
-              "removeCell",
-              "indexOfCell",
-              "removeAllCells"
-            ]
-          },
-          {
-            "name": "toolbar",
-            "singularName": "toolbar",
-            "type": "sap.ui.core.Toolbar",
-            "cardinality": "0..1",
-            "visibility": "public",
-            "description": "The toolbar that is placed below the form. If no toolbar is set, a default toolbar is created. Basic buttons and functionality are provided only in the default toolbar.",
-            "methods": ["getToolbar", "destroyToolbar", "setToolbar"]
-          }
-        ],
-        "events": [
-          {
-            "name": "apply",
-            "visibility": "public",
-            "description": "Fired when the corresponding keyboard shortcut or the apply button of the default toolbar are pressed.",
-            "methods": ["attachApply", "detachApply", "fireApply"]
-          }
-        ]
-      },
-      "constructor": {
-        "visibility": "restricted",
-        "parameters": [
-          {
-            "name": "sId",
-            "type": "string",
-            "optional": true,
-            "description": "id for the new control, generated automatically if no id is given"
-          },
-          {
-            "name": "mSettings",
-            "type": "object",
-            "optional": true,
-            "description": "initial settings for the new control"
-          }
-        ],
-        "description": "Constructor for a new CreationRow.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
-      },
-      "events": [
-        {
-          "name": "apply",
-          "visibility": "public",
-          "parameters": [
-            {
-              "name": "oControlEvent",
-              "type": "sap.ui.base.Event",
-              "parameterProperties": {
-                "getSource": {
-                  "name": "getSource",
-                  "type": "sap.ui.base.EventProvider",
-                  "optional": false
-                },
-                "getParameters": {
-                  "name": "getParameters",
-                  "type": "object",
-                  "optional": false
-                }
-              }
-            }
-          ],
-          "description": "Fired when the corresponding keyboard shortcut or the apply button of the default toolbar are pressed."
-        }
-      ],
-      "methods": [
-        {
-          "name": "addCell",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oCell",
-              "type": "sap.ui.core.Control",
-              "optional": false,
-              "description": "The cell to add; if empty, nothing is inserted"
-            }
-          ],
-          "description": "Adds some cell to the aggregation {@link #getCells cells}."
-        },
-        {
-          "name": "attachApply",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oData",
-              "type": "object",
-              "optional": true,
-              "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
-            },
-            {
-              "name": "fnFunction",
-              "type": "function",
-              "optional": false,
-              "description": "The function to be called when the event occurs"
-            },
-            {
-              "name": "oListener",
-              "type": "object",
-              "optional": true,
-              "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.table.CreationRow</code> itself"
-            }
-          ],
-          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:apply apply} event of this <code>sap.ui.table.CreationRow</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.CreationRow</code> itself.\n\nFired when the corresponding keyboard shortcut or the apply button of the default toolbar are pressed."
-        },
-        {
-          "name": "destroyCells",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "description": "Destroys all the cells in the aggregation {@link #getCells cells}."
-        },
-        {
-          "name": "destroyToolbar",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "description": "Destroys the toolbar in the aggregation {@link #getToolbar toolbar}."
-        },
-        {
-          "name": "detachApply",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "fnFunction",
-              "type": "function",
-              "optional": false,
-              "description": "The function to be called, when the event occurs"
-            },
-            {
-              "name": "oListener",
-              "type": "object",
-              "optional": true,
-              "description": "Context object on which the given function had to be called"
-            }
-          ],
-          "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:apply apply} event of this <code>sap.ui.table.CreationRow</code>.\n\nThe passed function and listener object must match the ones used for event registration."
-        },
-        {
-          "name": "extend",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "function",
-            "description": "Created class / constructor function"
-          },
-          "parameters": [
-            {
-              "name": "sClassName",
-              "type": "string",
-              "optional": false,
-              "description": "Name of the class being created"
-            },
-            {
-              "name": "oClassInfo",
-              "type": "object",
-              "optional": true,
-              "description": "Object literal with information about the class"
-            },
-            {
-              "name": "FNMetaImpl",
-              "type": "function",
-              "optional": true,
-              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
-            }
-          ],
-          "description": "Creates a new subclass of class sap.ui.table.CreationRow with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}."
-        },
-        {
-          "name": "fireApply",
-          "visibility": "protected",
-          "returnValue": {
-            "type": "boolean",
-            "description": "Whether or not to prevent the default action"
-          },
-          "parameters": [
-            {
-              "name": "mParameters",
-              "type": "object",
-              "optional": true,
-              "description": "Parameters to pass along with the event"
-            }
-          ],
-          "description": "Fires event {@link #event:apply apply} to attached listeners.\n\nListeners may prevent the default action of this event by using the <code>preventDefault</code>-method on the event object."
-        },
-        {
-          "name": "getApplyEnabled",
-          "visibility": "public",
-          "returnValue": {
-            "type": "boolean",
-            "description": "Value of property <code>applyEnabled</code>"
-          },
-          "description": "Gets current value of property {@link #getApplyEnabled applyEnabled}.\n\nIf set to <code>false</code>, the {@link #event:apply apply} event is not fired. The corresponding keyboard shortcut and the apply button of the default toolbar are disabled.\n\nDefault value is <code>true</code>."
-        },
-        {
-          "name": "getCells",
-          "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Control[]" },
-          "description": "Gets content of aggregation {@link #getCells cells}.\n\nThe actual cells are a table-internal construct. The controls in this aggregation are the content of the cells. This aggregation is managed by the table and must not be manipulated. Only read access is allowed."
-        },
-        {
-          "name": "getMetadata",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "sap.ui.base.Metadata",
-            "description": "Metadata object describing this class"
-          },
-          "description": "Returns a metadata object for class sap.ui.table.CreationRow."
-        },
-        {
-          "name": "getToolbar",
-          "visibility": "public",
-          "returnValue": { "type": "sap.ui.core.Toolbar" },
-          "description": "Gets content of aggregation {@link #getToolbar toolbar}.\n\nThe toolbar that is placed below the form. If no toolbar is set, a default toolbar is created. Basic buttons and functionality are provided only in the default toolbar."
-        },
-        {
-          "name": "indexOfCell",
-          "visibility": "public",
-          "returnValue": {
-            "type": "int",
-            "description": "The index of the provided control in the aggregation if found, or -1 otherwise"
-          },
-          "parameters": [
-            {
-              "name": "oCell",
-              "type": "sap.ui.core.Control",
-              "optional": false,
-              "description": "The cell whose index is looked for"
-            }
-          ],
-          "description": "Checks for the provided <code>sap.ui.core.Control</code> in the aggregation {@link #getCells cells}. and returns its index if found or -1 otherwise."
-        },
-        {
-          "name": "insertCell",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oCell",
-              "type": "sap.ui.core.Control",
-              "optional": false,
-              "description": "The cell to insert; if empty, nothing is inserted"
-            },
-            {
-              "name": "iIndex",
-              "type": "int",
-              "optional": false,
-              "description": "The <code>0</code>-based index the cell should be inserted at; for a negative value of <code>iIndex</code>, the cell is inserted at position 0; for a value greater than the current size of the aggregation, the cell is inserted at the last position"
-            }
-          ],
-          "description": "Inserts a cell into the aggregation {@link #getCells cells}."
-        },
-        {
-          "name": "removeAllCells",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.Control[]",
-            "description": "An array of the removed elements (might be empty)"
-          },
-          "description": "Removes all the controls from the aggregation {@link #getCells cells}.\n\nAdditionally, it unregisters them from the hosting UIArea."
-        },
-        {
-          "name": "removeCell",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.Control",
-            "description": "The removed cell or <code>null</code>"
-          },
-          "parameters": [
-            {
-              "name": "vCell",
-              "type": "int|string|sap.ui.core.Control",
-              "optional": false,
-              "description": "The cell to remove or its index or id"
-            }
-          ],
-          "description": "Removes a cell from the aggregation {@link #getCells cells}."
-        },
-        {
-          "name": "resetFocus",
-          "visibility": "public",
-          "returnValue": {
-            "type": "boolean",
-            "description": "Whether the focus was set"
-          },
-          "description": "Sets the focus to the first editable form element."
-        },
-        {
-          "name": "setApplyEnabled",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "bApplyEnabled",
-              "type": "boolean",
-              "optional": false,
-              "description": "New value for property <code>applyEnabled</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getApplyEnabled applyEnabled}.\n\nIf set to <code>false</code>, the {@link #event:apply apply} event is not fired. The corresponding keyboard shortcut and the apply button of the default toolbar are disabled.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>true</code>."
-        },
-        {
-          "name": "setToolbar",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oToolbar",
-              "type": "sap.ui.core.Toolbar",
-              "optional": false,
-              "description": "The toolbar to set"
-            }
-          ],
-          "description": "Sets the aggregated {@link #getToolbar toolbar}."
-        }
-      ]
-    },
-    {
       "kind": "enum",
       "name": "sap.ui.table.GroupEventType",
       "basename": "GroupEventType",
@@ -2876,434 +2457,6 @@
     },
     {
       "kind": "class",
-      "name": "sap.ui.table.plugins.MultiSelectionPlugin",
-      "basename": "MultiSelectionPlugin",
-      "resource": "sap/ui/table/plugins/MultiSelectionPlugin.js",
-      "module": "sap/ui/table/plugins/MultiSelectionPlugin",
-      "export": "",
-      "static": true,
-      "visibility": "public",
-      "since": "1.64",
-      "extends": "sap.ui.table.plugins.SelectionPlugin",
-      "description": "Implements a plugin to enable a special multi-selection behavior: <ul> <li>No Select All button, select all can only be done via range selection</li> <li>Dedicated button to clear the selection</li> <li>The number of items which can be selected in a range is defined with the limit property by the application. If the user tries to select more items, the selection is automatically limited, and the table scrolls back to the last selected item</li> <li>If not already loaded, the table loads the selected items up to the given limit</li> <li>Multiple consecutive selections are possible</li> </ul>\n\nWhen this plugin is applied to the table, the selection mode is automatically set to MultiToggle and cannot be changed.",
-      "experimental": { "since": "1.64" },
-      "ui5-metadata": {
-        "stereotype": "object",
-        "properties": [
-          {
-            "name": "limit",
-            "type": "int",
-            "defaultValue": 200,
-            "group": "Behavior",
-            "visibility": "public",
-            "description": "Number of items which can be selected in a range.",
-            "methods": ["getLimit", "setLimit"]
-          }
-        ],
-        "events": [
-          {
-            "name": "selectionChange",
-            "visibility": "public",
-            "description": "This event is fired when the selection is changed.",
-            "parameters": {
-              "indices": {
-                "name": "indices",
-                "type": "int[]",
-                "description": "Array of indices whose selection has been changed (either selected or deselected)."
-              },
-              "limitReached": {
-                "name": "limitReached",
-                "type": "boolean",
-                "description": "Indicates whether the selection limit has been reached."
-              }
-            },
-            "methods": [
-              "attachSelectionChange",
-              "detachSelectionChange",
-              "fireSelectionChange"
-            ]
-          }
-        ]
-      },
-      "constructor": {
-        "visibility": "public",
-        "description": "Constructs an instance of sap.ui.table.plugins.MultiSelectionPlugin\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
-      },
-      "events": [
-        {
-          "name": "selectionChange",
-          "visibility": "public",
-          "parameters": [
-            {
-              "name": "oControlEvent",
-              "type": "sap.ui.base.Event",
-              "parameterProperties": {
-                "getSource": {
-                  "name": "getSource",
-                  "type": "sap.ui.base.EventProvider",
-                  "optional": false
-                },
-                "getParameters": {
-                  "name": "getParameters",
-                  "type": "object",
-                  "optional": false,
-                  "parameterProperties": {
-                    "indices": {
-                      "name": "indices",
-                      "type": "int[]",
-                      "optional": false,
-                      "description": "Array of indices whose selection has been changed (either selected or deselected)."
-                    },
-                    "limitReached": {
-                      "name": "limitReached",
-                      "type": "boolean",
-                      "optional": false,
-                      "description": "Indicates whether the selection limit has been reached."
-                    }
-                  }
-                }
-              }
-            }
-          ],
-          "description": "This event is fired when the selection is changed."
-        }
-      ],
-      "methods": [
-        {
-          "name": "attachSelectionChange",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.MultiSelectionPlugin",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oData",
-              "type": "object",
-              "optional": true,
-              "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
-            },
-            {
-              "name": "fnFunction",
-              "type": "function",
-              "optional": false,
-              "description": "The function to be called when the event occurs"
-            },
-            {
-              "name": "oListener",
-              "type": "object",
-              "optional": true,
-              "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.table.plugins.MultiSelectionPlugin</code> itself"
-            }
-          ],
-          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:selectionChange selectionChange} event of this <code>sap.ui.table.plugins.MultiSelectionPlugin</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.plugins.MultiSelectionPlugin</code> itself.\n\nThis event is fired when the selection is changed."
-        },
-        {
-          "name": "detachSelectionChange",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.MultiSelectionPlugin",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "fnFunction",
-              "type": "function",
-              "optional": false,
-              "description": "The function to be called, when the event occurs"
-            },
-            {
-              "name": "oListener",
-              "type": "object",
-              "optional": true,
-              "description": "Context object on which the given function had to be called"
-            }
-          ],
-          "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:selectionChange selectionChange} event of this <code>sap.ui.table.plugins.MultiSelectionPlugin</code>.\n\nThe passed function and listener object must match the ones used for event registration."
-        },
-        {
-          "name": "extend",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "function",
-            "description": "Created class / constructor function"
-          },
-          "parameters": [
-            {
-              "name": "sClassName",
-              "type": "string",
-              "optional": false,
-              "description": "Name of the class being created"
-            },
-            {
-              "name": "oClassInfo",
-              "type": "object",
-              "optional": true,
-              "description": "Object literal with information about the class"
-            },
-            {
-              "name": "FNMetaImpl",
-              "type": "function",
-              "optional": true,
-              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
-            }
-          ],
-          "description": "Creates a new subclass of class sap.ui.table.plugins.MultiSelectionPlugin with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.table.plugins.SelectionPlugin.extend}."
-        },
-        {
-          "name": "fireSelectionChange",
-          "visibility": "protected",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.MultiSelectionPlugin",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "mParameters",
-              "type": "object",
-              "optional": true,
-              "parameterProperties": {
-                "indices": {
-                  "name": "indices",
-                  "type": "int[]",
-                  "optional": true,
-                  "description": "Array of indices whose selection has been changed (either selected or deselected)."
-                },
-                "limitReached": {
-                  "name": "limitReached",
-                  "type": "boolean",
-                  "optional": true,
-                  "description": "Indicates whether the selection limit has been reached."
-                }
-              },
-              "description": "Parameters to pass along with the event"
-            }
-          ],
-          "description": "Fires event {@link #event:selectionChange selectionChange} to attached listeners."
-        },
-        {
-          "name": "getLimit",
-          "visibility": "public",
-          "returnValue": {
-            "type": "int",
-            "description": "Value of property <code>limit</code>"
-          },
-          "description": "Gets current value of property {@link #getLimit limit}.\n\nNumber of items which can be selected in a range.\n\nDefault value is <code>200</code>."
-        },
-        {
-          "name": "getMetadata",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "sap.ui.base.Metadata",
-            "description": "Metadata object describing this class"
-          },
-          "description": "Returns a metadata object for class sap.ui.table.plugins.MultiSelectionPlugin."
-        },
-        {
-          "name": "setLimit",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.MultiSelectionPlugin",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "iLimit",
-              "type": "int",
-              "optional": false,
-              "description": "New value for property <code>limit</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getLimit limit}.\n\nNumber of items which can be selected in a range.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>200</code>."
-        }
-      ]
-    },
-    {
-      "kind": "class",
-      "name": "sap.ui.table.plugins.SelectionPlugin",
-      "basename": "SelectionPlugin",
-      "resource": "sap/ui/table/plugins/SelectionPlugin.js",
-      "module": "sap/ui/table/plugins/SelectionPlugin",
-      "export": "",
-      "abstract": true,
-      "static": true,
-      "visibility": "public",
-      "since": "1.64",
-      "extends": "sap.ui.base.ManagedObject",
-      "description": "Implements the selection methods for a table.",
-      "experimental": { "since": "1.64" },
-      "ui5-metamodel": true,
-      "ui5-metadata": {
-        "stereotype": "object",
-        "properties": [
-          {
-            "name": "selectionMode",
-            "type": "sap.ui.table.SelectionMode",
-            "defaultValue": "MultiToggle",
-            "group": "Misc",
-            "visibility": "hidden",
-            "description": "Defines whether single or multiple items can be selected.",
-            "methods": ["getSelectionMode", "setSelectionMode"]
-          }
-        ],
-        "events": [
-          {
-            "name": "selectionChange",
-            "visibility": "public",
-            "description": "This event is fired when the selection is changed.",
-            "methods": [
-              "attachSelectionChange",
-              "detachSelectionChange",
-              "fireSelectionChange"
-            ]
-          }
-        ]
-      },
-      "constructor": {
-        "visibility": "public",
-        "description": "Constructs an instance of sap.ui.table.plugins.SelectionPlugin\n\nThe following restrictions apply: <ul> <li>Do not create subclasses of the SelectionPlugin. The API is subject to change.</li> </ul>\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
-      },
-      "events": [
-        {
-          "name": "selectionChange",
-          "visibility": "public",
-          "parameters": [
-            {
-              "name": "oControlEvent",
-              "type": "sap.ui.base.Event",
-              "parameterProperties": {
-                "getSource": {
-                  "name": "getSource",
-                  "type": "sap.ui.base.EventProvider",
-                  "optional": false
-                },
-                "getParameters": {
-                  "name": "getParameters",
-                  "type": "object",
-                  "optional": false
-                }
-              }
-            }
-          ],
-          "description": "This event is fired when the selection is changed."
-        }
-      ],
-      "methods": [
-        {
-          "name": "attachSelectionChange",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.SelectionPlugin",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oData",
-              "type": "object",
-              "optional": true,
-              "description": "An application-specific payload object that will be passed to the event handler along with the event object when firing the event"
-            },
-            {
-              "name": "fnFunction",
-              "type": "function",
-              "optional": false,
-              "description": "The function to be called when the event occurs"
-            },
-            {
-              "name": "oListener",
-              "type": "object",
-              "optional": true,
-              "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.table.plugins.SelectionPlugin</code> itself"
-            }
-          ],
-          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:selectionChange selectionChange} event of this <code>sap.ui.table.plugins.SelectionPlugin</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.plugins.SelectionPlugin</code> itself.\n\nThis event is fired when the selection is changed."
-        },
-        {
-          "name": "detachSelectionChange",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.SelectionPlugin",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "fnFunction",
-              "type": "function",
-              "optional": false,
-              "description": "The function to be called, when the event occurs"
-            },
-            {
-              "name": "oListener",
-              "type": "object",
-              "optional": true,
-              "description": "Context object on which the given function had to be called"
-            }
-          ],
-          "description": "Detaches event handler <code>fnFunction</code> from the {@link #event:selectionChange selectionChange} event of this <code>sap.ui.table.plugins.SelectionPlugin</code>.\n\nThe passed function and listener object must match the ones used for event registration."
-        },
-        {
-          "name": "extend",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "function",
-            "description": "Created class / constructor function"
-          },
-          "parameters": [
-            {
-              "name": "sClassName",
-              "type": "string",
-              "optional": false,
-              "description": "Name of the class being created"
-            },
-            {
-              "name": "oClassInfo",
-              "type": "object",
-              "optional": true,
-              "description": "Object literal with information about the class"
-            },
-            {
-              "name": "FNMetaImpl",
-              "type": "function",
-              "optional": true,
-              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
-            }
-          ],
-          "description": "Creates a new subclass of class sap.ui.table.plugins.SelectionPlugin with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}."
-        },
-        {
-          "name": "fireSelectionChange",
-          "visibility": "protected",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.SelectionPlugin",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "mParameters",
-              "type": "object",
-              "optional": true,
-              "description": "Parameters to pass along with the event"
-            }
-          ],
-          "description": "Fires event {@link #event:selectionChange selectionChange} to attached listeners."
-        },
-        {
-          "name": "getMetadata",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "sap.ui.base.Metadata",
-            "description": "Metadata object describing this class"
-          },
-          "description": "Returns a metadata object for class sap.ui.table.plugins.SelectionPlugin."
-        }
-      ]
-    },
-    {
-      "kind": "class",
       "name": "sap.ui.table.Row",
       "basename": "Row",
       "resource": "sap/ui/table/Row.js",
@@ -3323,7 +2476,7 @@
             "type": "sap.ui.core.Control",
             "cardinality": "0..n",
             "visibility": "public",
-            "description": "The actual cells are a table-internal construct. The controls in this aggregation are the content of the cells. This aggregation is managed by the table and must not be manipulated. Only read access is allowed.",
+            "description": "The controls for the cells.",
             "methods": [
               "getCells",
               "destroyCells",
@@ -3432,7 +2585,7 @@
           "name": "getCells",
           "visibility": "public",
           "returnValue": { "type": "sap.ui.core.Control[]" },
-          "description": "Gets content of aggregation {@link #getCells cells}.\n\nThe actual cells are a table-internal construct. The controls in this aggregation are the content of the cells. This aggregation is managed by the table and must not be manipulated. Only read access is allowed."
+          "description": "Gets content of aggregation {@link #getCells cells}.\n\nThe controls for the cells."
         },
         {
           "name": "getIndex",
@@ -3453,15 +2606,6 @@
             "description": "Metadata object describing this class"
           },
           "description": "Returns a metadata object for class sap.ui.table.Row."
-        },
-        {
-          "name": "getRowAction",
-          "visibility": "protected",
-          "returnValue": {
-            "type": "sap.ui.table.RowAction",
-            "description": "The related <code>RowAction</code> of the row."
-          },
-          "description": "Returns the related <code>RowAction</code> of the row.\n\nThis function must only be used for application testing purposes. The <code>RowAction</code> is generated based on a template. Manipulations of the object or its items are not supported."
         },
         {
           "name": "indexOfCell",
@@ -4161,23 +3305,13 @@
         "properties": [
           {
             "name": "highlight",
-            "type": "string",
+            "type": "sap.ui.core.MessageType",
             "defaultValue": "None",
             "group": "Appearance",
             "visibility": "public",
             "since": "1.48.0",
-            "description": "The highlight state of the rows.\n\nIf the highlight is set to {@link sap.ui.core.MessageType sap.ui.core.MessageType.None} (default), no highlights are visible. Valid values for the <code>highlight</code> property are values of the enumerations {@link sap.ui.core.MessageType} or {@link sap.ui.core.IndicationColor}.\n\nAccessibility support is provided through the associated {@link sap.ui.table.RowSettings#setHighlightText highlightText} property. If the <code>highlight</code> property is set to a value of {@link sap.ui.core.MessageType}, the <code>highlightText</code> property does not need to be set because a default text is used. However, the default text can be overridden by setting the <code>highlightText</code> property. In all other cases the <code>highlightText</code> property must be set.",
+            "description": "The highlight state of the rows. If the highlight is set to {@link sap.ui.core.MessageType.None} (default), no highlights are visible.",
             "methods": ["getHighlight", "setHighlight"]
-          },
-          {
-            "name": "highlightText",
-            "type": "string",
-            "defaultValue": "",
-            "group": "Misc",
-            "visibility": "public",
-            "since": "1.62",
-            "description": "Defines the semantics of the {@link sap.ui.table.RowSettings#setHighlight highlight} property for accessibility purposes.",
-            "methods": ["getHighlightText", "setHighlightText"]
           }
         ]
       },
@@ -4235,20 +3369,10 @@
           "visibility": "public",
           "since": "1.48.0",
           "returnValue": {
-            "type": "string",
+            "type": "sap.ui.core.MessageType",
             "description": "Value of property <code>highlight</code>"
           },
-          "description": "Gets current value of property {@link #getHighlight highlight}.\n\nThe highlight state of the rows.\n\nIf the highlight is set to {@link sap.ui.core.MessageType sap.ui.core.MessageType.None} (default), no highlights are visible. Valid values for the <code>highlight</code> property are values of the enumerations {@link sap.ui.core.MessageType} or {@link sap.ui.core.IndicationColor}.\n\nAccessibility support is provided through the associated {@link sap.ui.table.RowSettings#setHighlightText highlightText} property. If the <code>highlight</code> property is set to a value of {@link sap.ui.core.MessageType}, the <code>highlightText</code> property does not need to be set because a default text is used. However, the default text can be overridden by setting the <code>highlightText</code> property. In all other cases the <code>highlightText</code> property must be set.\n\nDefault value is <code>None</code>."
-        },
-        {
-          "name": "getHighlightText",
-          "visibility": "public",
-          "since": "1.62",
-          "returnValue": {
-            "type": "string",
-            "description": "Value of property <code>highlightText</code>"
-          },
-          "description": "Gets current value of property {@link #getHighlightText highlightText}.\n\nDefines the semantics of the {@link sap.ui.table.RowSettings#setHighlight highlight} property for accessibility purposes.\n\nDefault value is <code>empty string</code>."
+          "description": "Gets current value of property {@link #getHighlight highlight}.\n\nThe highlight state of the rows. If the highlight is set to {@link sap.ui.core.MessageType.None} (default), no highlights are visible.\n\nDefault value is <code>None</code>."
         },
         {
           "name": "getMetadata",
@@ -4271,30 +3395,12 @@
           "parameters": [
             {
               "name": "sHighlight",
-              "type": "string",
+              "type": "sap.ui.core.MessageType",
               "optional": false,
               "description": "New value for property <code>highlight</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getHighlight highlight}.\n\nThe highlight state of the rows.\n\nIf the highlight is set to {@link sap.ui.core.MessageType sap.ui.core.MessageType.None} (default), no highlights are visible. Valid values for the <code>highlight</code> property are values of the enumerations {@link sap.ui.core.MessageType} or {@link sap.ui.core.IndicationColor}.\n\nAccessibility support is provided through the associated {@link sap.ui.table.RowSettings#setHighlightText highlightText} property. If the <code>highlight</code> property is set to a value of {@link sap.ui.core.MessageType}, the <code>highlightText</code> property does not need to be set because a default text is used. However, the default text can be overridden by setting the <code>highlightText</code> property. In all other cases the <code>highlightText</code> property must be set.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>None</code>."
-        },
-        {
-          "name": "setHighlightText",
-          "visibility": "public",
-          "since": "1.62",
-          "returnValue": {
-            "type": "sap.ui.table.RowSettings",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sHighlightText",
-              "type": "string",
-              "optional": false,
-              "description": "New value for property <code>highlightText</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getHighlightText highlightText}.\n\nDefines the semantics of the {@link sap.ui.table.RowSettings#setHighlight highlight} property for accessibility purposes.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
+          "description": "Sets a new value for property {@link #getHighlight highlight}.\n\nThe highlight state of the rows. If the highlight is set to {@link sap.ui.core.MessageType.None} (default), no highlights are visible.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>None</code>."
         }
       ]
     },
@@ -4464,7 +3570,7 @@
             "defaultValue": null,
             "group": "Appearance",
             "visibility": "public",
-            "description": "Row height in pixel.\n\nIn the table's header, it defines the minimum height of the row, but it cannot be less than the default height based on the content density configuration. The actual height can increase based on the content.\n\nIn the table's body, it defines the height of the row content. The actual row height is also influenced by other factors, such as the border width. If the <code>visibleRowCountMode</code> property is set to {@link sap.ui.table.VisibleRowCountMode Fixed} or {@link sap.ui.table.VisibleRowCountMode Interactive}, the value defines the minimum height, and the actual height can increase based on the content. If the mode is {@link sap.ui.table.VisibleRowCountMode Auto}, the value defines the actual height, and any content that doesn't fit is cut off.\n\nIf no value is set (includes 0), a default height is applied based on the content density configuration. In any <code>visibleRowCountMode</code>, the actual height can increase based on the content.",
+            "description": "Row height in pixel.\n\nIn the table's header, it defines the minimum height of the row, but it cannot be less than the default height based on the content density configuration. The actual height can increase based on the content.\n\nIn the table's body, it defines the height of the row content. The actual row height is also influenced by other factors, such as the border width. If the <code>visibleRowCountMode</code> property is set to {@link sap.ui.table.VisibleRowCountMode.Fixed Fixed} or {@link sap.ui.table.VisibleRowCountMode.Interactive Interactive}, the value defines the minimum height, and the actual height can increase based on the content. If the mode is {@link sap.ui.table.VisibleRowCountMode.Auto Auto}, the value defines the actual height, and any content that doesn't fit is cut off.\n\nIf no value is set (includes 0), a default height is applied based on the content density configuration. In any <code>visibleRowCountMode</code>, the actual height can increase based on the content.",
             "methods": ["getRowHeight", "setRowHeight"]
           },
           {
@@ -4509,7 +3615,7 @@
             "defaultValue": "MultiToggle",
             "group": "Behavior",
             "visibility": "public",
-            "description": "Selection mode of the Table. This property controls whether single or multiple rows can be selected and how the selection can be extended. It may also influence the visual appearance. When the selection mode is changed, the current selection is removed. <b>Note:</b> Since the group header visualization relies on the row selectors, the row selectors are always shown if the grouping functionality (depends on table type) is enabled, even if <code>sap.ui.table.SelectionMode.None</code> is set. <b>Note:</b> When a selection plugin is applied to the table, the selection mode is controlled by the plugin and cannot be changed manually.",
+            "description": "Selection mode of the Table. This property controls whether single or multiple rows can be selected and how the selection can be extended. It may also influence the visual appearance. When the selection mode is changed, the current selection is removed. <b>Note:</b> Since the group header visualization relies on the row selectors, the row selectors are always shown if the grouping functionality (depends on table type) is enabled, even if <code>sap.ui.table.SelectionMode.None</code> is set.",
             "methods": ["getSelectionMode", "setSelectionMode"]
           },
           {
@@ -4576,7 +3682,7 @@
             "defaultValue": false,
             "group": "Behavior",
             "visibility": "public",
-            "description": "Enables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must be set for the grouped column.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>",
+            "description": "Enables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>",
             "experimental": {
               "since": "1.28",
               "text": "This feature has a limited functionality."
@@ -4791,7 +3897,6 @@
             "cardinality": "0..n",
             "visibility": "public",
             "bindable": true,
-            "dnd": { "draggable": false, "droppable": false },
             "description": "Columns of the Table",
             "methods": [
               "getColumns",
@@ -4824,19 +3929,6 @@
               "removeAllRows",
               "bindRows",
               "unbindRows"
-            ]
-          },
-          {
-            "name": "creationRow",
-            "singularName": "creationRow",
-            "type": "sap.ui.core.Control",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "description": "This row can be used for user input to create new data. Like in any other row, the cells of this row are also managed by the table and must not be modified. The cell content is defined via the <code>creationTemplate</code> aggregation of the {@link sap.ui.table.Column}. If the creation row is set, the busy indicator will no longer cover the horizontal scrollbar, even if the creation row is invisible.",
-            "methods": [
-              "getCreationRow",
-              "destroyCreationRow",
-              "setCreationRow"
             ]
           },
           {
@@ -4888,25 +3980,6 @@
               "destroyContextMenu",
               "setContextMenu"
             ]
-          },
-          {
-            "name": "plugins",
-            "singularName": "plugin",
-            "type": "sap.ui.table.plugins.SelectionPlugin",
-            "cardinality": "0..n",
-            "visibility": "public",
-            "since": "1.64",
-            "description": "Plugin section of the table. Multiple plugins are possible, but always only <b>one</b> of a certain type.\n\nThe following restrictions apply: <ul> <li>Only one MultiSelectionPlugin can be applied. No other plugins can be applied.</li> </ul>",
-            "experimental": { "since": "1.64" },
-            "methods": [
-              "getPlugins",
-              "destroyPlugins",
-              "insertPlugin",
-              "addPlugin",
-              "removePlugin",
-              "indexOfPlugin",
-              "removeAllPlugins"
-            ]
           }
         ],
         "defaultAggregation": "columns",
@@ -4917,7 +3990,7 @@
             "type": "sap.ui.table.Column",
             "cardinality": "0..1",
             "visibility": "public",
-            "description": "The column by which the table is grouped. Grouping will only be performed if <code>enableGrouping</code> is set to <code>true</code>. Setting <code>groupBy</code> in the view does not work and throws an error. It can only be set if the column by which the table is grouped is already part of the <code>columns</code> aggregation of the table.",
+            "description": "The column by which the table is grouped. Grouping will only be performed if <code>enableGrouping</code> is set to <code>true</code>.",
             "experimental": {
               "since": "1.28",
               "text": "This feature has a limited functionality."
@@ -4943,7 +4016,7 @@
           {
             "name": "rowSelectionChange",
             "visibility": "public",
-            "description": "fired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)\n\n<b>Note:</b> When a selection plugin is applied to the table, this event won't be fired.",
+            "description": "fired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)",
             "parameters": {
               "rowIndex": {
                 "name": "rowIndex",
@@ -5102,8 +4175,8 @@
                 "type": "sap.ui.table.Column",
                 "description": "affected column."
               },
-              "newVisible": {
-                "name": "newVisible",
+              "visible": {
+                "name": "visible",
                 "type": "boolean",
                 "description": "new value of the visible property."
               }
@@ -5283,12 +4356,12 @@
             "name": "paste",
             "visibility": "public",
             "since": "1.60",
-            "description": "This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done via the context menu or the standard paste keyboard shortcut, if the focus is inside the table.",
+            "description": "This event gets fired when the user performs paste from clipboard on the table. Paste action can be performed from the context menu or with CTRL-V keyboard key combination.",
             "parameters": {
               "data": {
                 "name": "data",
                 "type": "string[][]",
-                "description": "2D array of strings with data from the clipboard. The first dimension represents the rows, and the second dimension represents the cells of the tabular data."
+                "description": "2D-Array of strings with data from the clipboard. The first dimension represents the rows and the second dimension represents the cells of the tabular data."
               }
             },
             "methods": ["attachPaste", "detachPaste", "firePaste"]
@@ -5677,8 +4750,8 @@
                       "optional": false,
                       "description": "affected column."
                     },
-                    "newVisible": {
-                      "name": "newVisible",
+                    "visible": {
+                      "name": "visible",
                       "type": "boolean",
                       "optional": false,
                       "description": "new value of the visible property."
@@ -5829,14 +4902,14 @@
                       "name": "data",
                       "type": "string[][]",
                       "optional": false,
-                      "description": "2D array of strings with data from the clipboard. The first dimension represents the rows, and the second dimension represents the cells of the tabular data."
+                      "description": "2D-Array of strings with data from the clipboard. The first dimension represents the rows and the second dimension represents the cells of the tabular data."
                     }
                   }
                 }
               }
             }
           ],
-          "description": "This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done via the context menu or the standard paste keyboard shortcut, if the focus is inside the table."
+          "description": "This event gets fired when the user performs paste from clipboard on the table. Paste action can be performed from the context menu or with CTRL-V keyboard key combination."
         },
         {
           "name": "rowSelectionChange",
@@ -5891,7 +4964,7 @@
               }
             }
           ],
-          "description": "fired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)\n\n<b>Note:</b> When a selection plugin is applied to the table, this event won't be fired."
+          "description": "fired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)"
         },
         {
           "name": "sort",
@@ -5938,11 +5011,6 @@
         }
       ],
       "methods": [
-        {
-          "name": "_enableLegacyMultiSelection",
-          "visibility": "restricted",
-          "description": "Enables the legacy multi selection behavior for mouse interaction."
-        },
         {
           "name": "_enableSynchronization",
           "visibility": "restricted",
@@ -6005,25 +5073,6 @@
           "description": "Adds some extension to the aggregation {@link #getExtension extension}."
         },
         {
-          "name": "addPlugin",
-          "visibility": "public",
-          "since": "1.64",
-          "returnValue": {
-            "type": "sap.ui.table.Table",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oPlugin",
-              "type": "sap.ui.table.plugins.SelectionPlugin",
-              "optional": false,
-              "description": "The plugin to add; if empty, nothing is inserted"
-            }
-          ],
-          "description": "Adds some plugin to the aggregation {@link #getPlugins plugins}.",
-          "experimental": { "since": "1.64" }
-        },
-        {
           "name": "addRow",
           "visibility": "public",
           "returnValue": {
@@ -6053,7 +5102,7 @@
               "name": "iIndexFrom",
               "type": "int",
               "optional": false,
-              "description": "Index from which the selection starts"
+              "description": "Index from which the selection should start"
             },
             {
               "name": "iIndexTo",
@@ -6062,7 +5111,7 @@
               "description": "Index up to which to select"
             }
           ],
-          "description": "Adds the given selection interval to the selection. In case of a single selection, only <code>iIndexTo</code> is added to the selection."
+          "description": "Adds the given selection interval to the selection. In case of single selection, only <code>iIndexTo</code> is added to the selection."
         },
         {
           "name": "attachBeforeOpenContextMenu",
@@ -6480,7 +5529,7 @@
               "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.table.Table</code> itself"
             }
           ],
-          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:paste paste} event of this <code>sap.ui.table.Table</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.\n\nThis event gets fired when the user pastes content from the clipboard to the table. Pasting can be done via the context menu or the standard paste keyboard shortcut, if the focus is inside the table."
+          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:paste paste} event of this <code>sap.ui.table.Table</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.\n\nThis event gets fired when the user performs paste from clipboard on the table. Paste action can be performed from the context menu or with CTRL-V keyboard key combination."
         },
         {
           "name": "attachRowSelectionChange",
@@ -6509,7 +5558,7 @@
               "description": "Context object to call the event handler with. Defaults to this <code>sap.ui.table.Table</code> itself"
             }
           ],
-          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:rowSelectionChange rowSelectionChange} event of this <code>sap.ui.table.Table</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.\n\nfired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)\n\n<b>Note:</b> When a selection plugin is applied to the table, this event won't be fired."
+          "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:rowSelectionChange rowSelectionChange} event of this <code>sap.ui.table.Table</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.\n\nfired when the row selection of the table has been changed (the event parameters can be used to determine selection changes - to find out the selected rows you should better use the table selection API)"
         },
         {
           "name": "attachSort",
@@ -6620,15 +5669,6 @@
           "description": "Destroys the contextMenu in the aggregation {@link #getContextMenu contextMenu}."
         },
         {
-          "name": "destroyCreationRow",
-          "visibility": "restricted",
-          "returnValue": {
-            "type": "sap.ui.table.Table",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "description": "Destroys the creation row."
-        },
-        {
           "name": "destroyExtension",
           "visibility": "public",
           "returnValue": {
@@ -6654,17 +5694,6 @@
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys the noData in the aggregation {@link #getNoData noData}."
-        },
-        {
-          "name": "destroyPlugins",
-          "visibility": "public",
-          "since": "1.64",
-          "returnValue": {
-            "type": "sap.ui.table.Table",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "description": "Destroys all the plugins in the aggregation {@link #getPlugins plugins}.",
-          "experimental": { "since": "1.64" }
         },
         {
           "name": "destroyRowActionTemplate",
@@ -7473,8 +6502,8 @@
                   "optional": true,
                   "description": "affected column."
                 },
-                "newVisible": {
-                  "name": "newVisible",
+                "visible": {
+                  "name": "visible",
                   "type": "boolean",
                   "optional": true,
                   "description": "new value of the visible property."
@@ -7595,7 +6624,7 @@
                   "name": "data",
                   "type": "string[][]",
                   "optional": true,
-                  "description": "2D array of strings with data from the clipboard. The first dimension represents the rows, and the second dimension represents the cells of the tabular data."
+                  "description": "2D-Array of strings with data from the clipboard. The first dimension represents the rows and the second dimension represents the cells of the tabular data."
                 }
               },
               "description": "Parameters to pass along with the event"
@@ -7793,15 +6822,6 @@
           "description": "Gets content of aggregation {@link #getContextMenu contextMenu}.\n\nDefines the context menu for the table.\n\n<b>Note:</b> The context menu will also be available for the row selectors as well as in the row actions cell of the table control.\n\nThe custom context menu will not be shown in the group header rows and the sum row of the <code>AnalyticalTable</code> control.\n\nIf this aggregation is set, then the <code>enableCellFilter</code> property will have no effect."
         },
         {
-          "name": "getCreationRow",
-          "visibility": "restricted",
-          "returnValue": {
-            "type": "sap.ui.table.CreationRow",
-            "description": "oCreationRow Instance of the creation row"
-          },
-          "description": "Gets the creation row."
-        },
-        {
           "name": "getDragDropConfig",
           "visibility": "public",
           "since": "1.52",
@@ -7873,7 +6893,7 @@
             "type": "boolean",
             "description": "Value of property <code>enableGrouping</code>"
           },
-          "description": "Gets current value of property {@link #getEnableGrouping enableGrouping}.\n\nEnables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must be set for the grouped column.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>\n\nDefault value is <code>false</code>.",
+          "description": "Gets current value of property {@link #getEnableGrouping enableGrouping}.\n\nEnables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>\n\nDefault value is <code>false</code>.",
           "experimental": {
             "since": "1.28",
             "text": "This feature has a limited functionality."
@@ -7984,14 +7004,6 @@
           "description": "Gets content of aggregation {@link #getNoData noData}.\n\nThe value for the noData aggregation can be either a string value or a control instance. The control is shown, in case there is no data for the Table available. In case of a string value this will simply replace the no data text."
         },
         {
-          "name": "getPlugins",
-          "visibility": "public",
-          "since": "1.64",
-          "returnValue": { "type": "sap.ui.table.plugins.SelectionPlugin[]" },
-          "description": "Gets content of aggregation {@link #getPlugins plugins}.\n\nPlugin section of the table. Multiple plugins are possible, but always only <b>one</b> of a certain type.\n\nThe following restrictions apply: <ul> <li>Only one MultiSelectionPlugin can be applied. No other plugins can be applied.</li> </ul>",
-          "experimental": { "since": "1.64" }
-        },
-        {
           "name": "getRowActionCount",
           "visibility": "public",
           "since": "1.45.0",
@@ -8014,7 +7026,7 @@
             "type": "int",
             "description": "Value of property <code>rowHeight</code>"
           },
-          "description": "Gets current value of property {@link #getRowHeight rowHeight}.\n\nRow height in pixel.\n\nIn the table's header, it defines the minimum height of the row, but it cannot be less than the default height based on the content density configuration. The actual height can increase based on the content.\n\nIn the table's body, it defines the height of the row content. The actual row height is also influenced by other factors, such as the border width. If the <code>visibleRowCountMode</code> property is set to {@link sap.ui.table.VisibleRowCountMode Fixed} or {@link sap.ui.table.VisibleRowCountMode Interactive}, the value defines the minimum height, and the actual height can increase based on the content. If the mode is {@link sap.ui.table.VisibleRowCountMode Auto}, the value defines the actual height, and any content that doesn't fit is cut off.\n\nIf no value is set (includes 0), a default height is applied based on the content density configuration. In any <code>visibleRowCountMode</code>, the actual height can increase based on the content."
+          "description": "Gets current value of property {@link #getRowHeight rowHeight}.\n\nRow height in pixel.\n\nIn the table's header, it defines the minimum height of the row, but it cannot be less than the default height based on the content density configuration. The actual height can increase based on the content.\n\nIn the table's body, it defines the height of the row content. The actual row height is also influenced by other factors, such as the border width. If the <code>visibleRowCountMode</code> property is set to {@link sap.ui.table.VisibleRowCountMode.Fixed Fixed} or {@link sap.ui.table.VisibleRowCountMode.Interactive Interactive}, the value defines the minimum height, and the actual height can increase based on the content. If the mode is {@link sap.ui.table.VisibleRowCountMode.Auto Auto}, the value defines the actual height, and any content that doesn't fit is cut off.\n\nIf no value is set (includes 0), a default height is applied based on the content density configuration. In any <code>visibleRowCountMode</code>, the actual height can increase based on the content."
         },
         {
           "name": "getRows",
@@ -8060,7 +7072,7 @@
             "type": "sap.ui.table.SelectionMode",
             "description": "Value of property <code>selectionMode</code>"
           },
-          "description": "Gets current value of property {@link #getSelectionMode selectionMode}.\n\nSelection mode of the Table. This property controls whether single or multiple rows can be selected and how the selection can be extended. It may also influence the visual appearance. When the selection mode is changed, the current selection is removed. <b>Note:</b> Since the group header visualization relies on the row selectors, the row selectors are always shown if the grouping functionality (depends on table type) is enabled, even if <code>sap.ui.table.SelectionMode.None</code> is set. <b>Note:</b> When a selection plugin is applied to the table, the selection mode is controlled by the plugin and cannot be changed manually.\n\nDefault value is <code>MultiToggle</code>."
+          "description": "Gets current value of property {@link #getSelectionMode selectionMode}.\n\nSelection mode of the Table. This property controls whether single or multiple rows can be selected and how the selection can be extended. It may also influence the visual appearance. When the selection mode is changed, the current selection is removed. <b>Note:</b> Since the group header visualization relies on the row selectors, the row selectors are always shown if the grouping functionality (depends on table type) is enabled, even if <code>sap.ui.table.SelectionMode.None</code> is set.\n\nDefault value is <code>MultiToggle</code>."
         },
         {
           "name": "getShowColumnVisibilityMenu",
@@ -8098,8 +7110,8 @@
             "type": "sap.ui.table.Column[]",
             "description": "Array of sorted columns"
           },
-          "description": "Gets the sorted columns in the order in which sorting was performed through the {@link sap.ui.table.Table#sort} method and menus. Does not reflect sorting at binding level or the columns sort visualization set with {@link sap.ui.table.Column#setSorted} and {@link sap.ui.table.Column#setSortOrder}.",
-          "references": ["sap.ui.table.Table#sort"]
+          "description": "Gets sorted columns in the order of which the sort API at the table or column was called. Sorting on binding level is not reflected here.",
+          "references": ["sap.ui.table.Table#sort", "sap.ui.table.Column#sort"]
         },
         {
           "name": "getThreshold",
@@ -8189,25 +7201,6 @@
           "description": "Checks for the provided <code>sap.ui.core.Control</code> in the aggregation {@link #getExtension extension}. and returns its index if found or -1 otherwise."
         },
         {
-          "name": "indexOfPlugin",
-          "visibility": "public",
-          "since": "1.64",
-          "returnValue": {
-            "type": "int",
-            "description": "The index of the provided control in the aggregation if found, or -1 otherwise"
-          },
-          "parameters": [
-            {
-              "name": "oPlugin",
-              "type": "sap.ui.table.plugins.SelectionPlugin",
-              "optional": false,
-              "description": "The plugin whose index is looked for"
-            }
-          ],
-          "description": "Checks for the provided <code>sap.ui.table.plugins.SelectionPlugin</code> in the aggregation {@link #getPlugins plugins}. and returns its index if found or -1 otherwise.",
-          "experimental": { "since": "1.64" }
-        },
-        {
           "name": "indexOfRow",
           "visibility": "public",
           "returnValue": {
@@ -8269,31 +7262,6 @@
             }
           ],
           "description": "Inserts a extension into the aggregation {@link #getExtension extension}."
-        },
-        {
-          "name": "insertPlugin",
-          "visibility": "public",
-          "since": "1.64",
-          "returnValue": {
-            "type": "sap.ui.table.Table",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oPlugin",
-              "type": "sap.ui.table.plugins.SelectionPlugin",
-              "optional": false,
-              "description": "The plugin to insert; if empty, nothing is inserted"
-            },
-            {
-              "name": "iIndex",
-              "type": "int",
-              "optional": false,
-              "description": "The <code>0</code>-based index the plugin should be inserted at; for a negative value of <code>iIndex</code>, the plugin is inserted at position 0; for a value greater than the current size of the aggregation, the plugin is inserted at the last position"
-            }
-          ],
-          "description": "Inserts a plugin into the aggregation {@link #getPlugins plugins}.",
-          "experimental": { "since": "1.64" }
         },
         {
           "name": "insertRow",
@@ -8364,17 +7332,6 @@
           "description": "Removes all the controls from the aggregation {@link #getExtension extension}.\n\nAdditionally, it unregisters them from the hosting UIArea."
         },
         {
-          "name": "removeAllPlugins",
-          "visibility": "public",
-          "since": "1.64",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.SelectionPlugin[]",
-            "description": "An array of the removed elements (might be empty)"
-          },
-          "description": "Removes all the controls from the aggregation {@link #getPlugins plugins}.\n\nAdditionally, it unregisters them from the hosting UIArea.",
-          "experimental": { "since": "1.64" }
-        },
-        {
           "name": "removeAllRows",
           "visibility": "public",
           "returnValue": {
@@ -8435,25 +7392,6 @@
           "description": "Removes a extension from the aggregation {@link #getExtension extension}."
         },
         {
-          "name": "removePlugin",
-          "visibility": "public",
-          "since": "1.64",
-          "returnValue": {
-            "type": "sap.ui.table.plugins.SelectionPlugin",
-            "description": "The removed plugin or <code>null</code>"
-          },
-          "parameters": [
-            {
-              "name": "vPlugin",
-              "type": "int|string|sap.ui.table.plugins.SelectionPlugin",
-              "optional": false,
-              "description": "The plugin to remove or its index or id"
-            }
-          ],
-          "description": "Removes a plugin from the aggregation {@link #getPlugins plugins}.",
-          "experimental": { "since": "1.64" }
-        },
-        {
           "name": "removeRow",
           "visibility": "public",
           "returnValue": {
@@ -8502,7 +7440,7 @@
             "type": "sap.ui.table.Table",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
-          "description": "Adds all rows to the selection. Please note that for server based models like OData the indices which are considered to be selected might not be available at the client yet. Calling getContextByIndex might not return a result but trigger a roundtrip to request this single entity."
+          "description": "Add all rows to the selection. Please note that for server based models like OData the indices which are considered to be selected might not be available at the client yet. Calling getContextByIndex might not return a result but trigger a roundtrip to request this single entity."
         },
         {
           "name": "setAlternateRowColors",
@@ -8573,23 +7511,6 @@
             }
           ],
           "description": "Sets the aggregated {@link #getContextMenu contextMenu}."
-        },
-        {
-          "name": "setCreationRow",
-          "visibility": "restricted",
-          "returnValue": {
-            "type": "sap.ui.table.Table",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oCreationRow",
-              "type": "sap.ui.table.CreationRow",
-              "optional": false,
-              "description": "Instance of the creation row"
-            }
-          ],
-          "description": "Sets the creation row."
         },
         {
           "name": "setEditable",
@@ -8712,7 +7633,7 @@
               "description": "New value for property <code>enableGrouping</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getEnableGrouping enableGrouping}.\n\nEnables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>For the grouping to work correctly, {@link sap.ui.table.Column#getSortProperty sortProperty} must be set for the grouped column.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>.",
+          "description": "Sets a new value for property {@link #getEnableGrouping enableGrouping}.\n\nEnables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined in the <code>groupBy</code> association.\n\nThe following restrictions apply: <ul> <li>Only client models are supported (e.g. {@link sap.ui.model.json.JSONModel}). Grouping does not work with OData models.</li> <li>The table can only be grouped by <b>one</b> column at a time. Grouping by another column will remove the current grouping.</li> <li>If grouping has been done, sorting and filtering is not possible. Any existing sorting and filtering rules do no longer apply. The UI is not updated accordingly (e.g. menu items, sort and filter icons).</li> <li>The column, by which the table is grouped, is not visible. It will become visible again only if the table is grouped by another column or grouping is disabled.</li> </ul>\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>.",
           "experimental": {
             "since": "1.28",
             "text": "This feature has a limited functionality."
@@ -8945,7 +7866,7 @@
               "description": "New value for property <code>rowHeight</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getRowHeight rowHeight}.\n\nRow height in pixel.\n\nIn the table's header, it defines the minimum height of the row, but it cannot be less than the default height based on the content density configuration. The actual height can increase based on the content.\n\nIn the table's body, it defines the height of the row content. The actual row height is also influenced by other factors, such as the border width. If the <code>visibleRowCountMode</code> property is set to {@link sap.ui.table.VisibleRowCountMode Fixed} or {@link sap.ui.table.VisibleRowCountMode Interactive}, the value defines the minimum height, and the actual height can increase based on the content. If the mode is {@link sap.ui.table.VisibleRowCountMode Auto}, the value defines the actual height, and any content that doesn't fit is cut off.\n\nIf no value is set (includes 0), a default height is applied based on the content density configuration. In any <code>visibleRowCountMode</code>, the actual height can increase based on the content.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+          "description": "Sets a new value for property {@link #getRowHeight rowHeight}.\n\nRow height in pixel.\n\nIn the table's header, it defines the minimum height of the row, but it cannot be less than the default height based on the content density configuration. The actual height can increase based on the content.\n\nIn the table's body, it defines the height of the row content. The actual row height is also influenced by other factors, such as the border width. If the <code>visibleRowCountMode</code> property is set to {@link sap.ui.table.VisibleRowCountMode.Fixed Fixed} or {@link sap.ui.table.VisibleRowCountMode.Interactive Interactive}, the value defines the minimum height, and the actual height can increase based on the content. If the mode is {@link sap.ui.table.VisibleRowCountMode.Auto Auto}, the value defines the actual height, and any content that doesn't fit is cut off.\n\nIf no value is set (includes 0), a default height is applied based on the content density configuration. In any <code>visibleRowCountMode</code>, the actual height can increase based on the content.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
         },
         {
           "name": "setRowSettingsTemplate",
@@ -9011,7 +7932,7 @@
               "name": "iIndexFrom",
               "type": "int",
               "optional": false,
-              "description": "Index from which the selection starts"
+              "description": "Index from which the selection should start"
             },
             {
               "name": "iIndexTo",
@@ -9020,7 +7941,7 @@
               "description": "Index up to which to select"
             }
           ],
-          "description": "Sets the given selection interval as selection. In case of a single selection, only <code>iIndexTo</code> is selected."
+          "description": "Sets the given selection interval as selection. In case of single selection, only <code>iIndexTo</code> is selected."
         },
         {
           "name": "setSelectionMode",
@@ -9517,7 +8438,7 @@
       "export": "TreeAutoExpandMode",
       "static": true,
       "visibility": "public",
-      "description": "Different modes for setting the auto expand mode on tree or analytical bindings.\n\nThis is an alias for {@link sap.ui.model.TreeAutoExpandMode} and kept for compatibility reasons."
+      "description": "Different modes for setting the auto expand mode on tree or analytical bindings."
     },
     {
       "kind": "class",
@@ -9686,25 +8607,26 @@
         {
           "name": "addSelectionInterval",
           "visibility": "public",
+          "ui5-metamodel": true,
           "returnValue": {
-            "type": "sap.ui.table.Table",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
+            "type": "sap.ui.table.TreeTable",
+            "description": "a reference on the TreeTable control, can be used for chaining"
           },
           "parameters": [
             {
-              "name": "iIndexFrom",
+              "name": "iFromIndex",
               "type": "int",
               "optional": false,
-              "description": "Index from which the selection should start"
+              "description": "The starting index of the range which will be selected."
             },
             {
-              "name": "iIndexTo",
+              "name": "iToIndex",
               "type": "int",
               "optional": false,
-              "description": "Index up to which to select"
+              "description": "The starting index of the range which will be selected."
             }
           ],
-          "description": "Adds the given selection interval to the selection. In case of single selection, only <code>iIndexTo</code> is added to the selection. Invisible nodes (collapsed child nodes) will not be regarded.\n\nPlease also take notice of the fact, that \"addSelectionInterval\" does not change any other selection. To override the current selection, please use \"setSelctionInterval\" or for a single entry use \"setSelectedIndex\"."
+          "description": "Marks a range of tree nodes as selected, starting with iFromIndex going to iToIndex. The TreeNodes are referenced via their absolute row index. Please be aware, that the absolute row index only applies to the tree which is visualized by the TreeTable. Invisible nodes (collapsed child nodes) will not be regarded.\n\nPlease also take notice of the fact, that \"addSelectionInterval\" does not change any other selection. To override the current selection, please use \"setSelctionInterval\" or for a single entry use \"setSelectedIndex\"."
         },
         {
           "name": "attachToggleOpenState",
@@ -9734,6 +8656,16 @@
             }
           ],
           "description": "Attaches event handler <code>fnFunction</code> to the {@link #event:toggleOpenState toggleOpenState} event of this <code>sap.ui.table.TreeTable</code>.\n\nWhen called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified, otherwise it will be bound to this <code>sap.ui.table.TreeTable</code> itself.\n\nFired when a row has been expanded or collapsed by user interaction. Only available in hierarchical mode."
+        },
+        {
+          "name": "clearSelection",
+          "visibility": "public",
+          "ui5-metamodel": true,
+          "returnValue": {
+            "type": "sap.ui.table.TreeTable",
+            "description": "a reference on the TreeTable control, can be used for chaining"
+          },
+          "description": "Clears the complete selection (all tree table rows/nodes will lose their selection)"
         },
         {
           "name": "collapse",
@@ -9952,6 +8884,16 @@
           "description": "Gets current value of property {@link #getRootLevel rootLevel}.\n\nThe root level is the level of the topmost tree nodes, which will be used as an entry point for OData services. This property is only supported when the TreeTable uses an underlying odata services with hierarchy annotations. This property is only supported with sap.ui.model.odata.v2.ODataModel The hierarchy annotations may also be provided locally as a parameter for the ODataTreeBinding.\n\nDefault value is <code>0</code>."
         },
         {
+          "name": "getSelectedIndex",
+          "visibility": "public",
+          "ui5-metamodel": true,
+          "returnValue": {
+            "type": "int",
+            "description": "index of lead selected row"
+          },
+          "description": "Retrieves the lead selection index. The lead selection index is, among other things, used to determine the start/end of a selection range, when using Shift-Click to select multiple entries at once."
+        },
+        {
           "name": "getSelectedIndices",
           "visibility": "public",
           "ui5-metamodel": true,
@@ -9989,31 +8931,51 @@
           "description": "Checks whether the row is expanded or collapsed."
         },
         {
-          "name": "removeSelectionInterval",
+          "name": "isIndexSelected",
           "visibility": "public",
+          "ui5-metamodel": true,
           "returnValue": {
-            "type": "sap.ui.table.Table",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
+            "type": "boolean",
+            "description": "true if the index is selected, false otherwise"
           },
           "parameters": [
             {
-              "name": "iIndexFrom",
+              "name": "iRowIndex",
               "type": "int",
               "optional": false,
-              "description": "Index from which the deselection should start"
-            },
-            {
-              "name": "iIndexTo",
-              "type": "int",
-              "optional": false,
-              "description": "Index up to which to deselect"
+              "description": "The row index for which the selection state should be retrieved"
             }
           ],
-          "description": "Removes the given selection interval from the selection. In case of single selection, only <code>iIndexTo</code> is removed from the selection. Invisible nodes (collapsed child nodes) will not be regarded."
+          "description": "Checks if the row at the given index is selected."
+        },
+        {
+          "name": "removeSelectionInterval",
+          "visibility": "public",
+          "ui5-metamodel": true,
+          "returnValue": {
+            "type": "sap.ui.table.TreeTable",
+            "description": "a reference on the TreeTable control, can be used for chaining"
+          },
+          "parameters": [
+            {
+              "name": "iFromIndex",
+              "type": "int",
+              "optional": false,
+              "description": "The starting index of the range which will be deselected."
+            },
+            {
+              "name": "iToIndex",
+              "type": "int",
+              "optional": false,
+              "description": "The starting index of the range which will be deselected."
+            }
+          ],
+          "description": "All rows/tree nodes inside the range (including boundaries) will be deselected. Tree nodes are referenced with theit absolute row index inside the tree- Please be aware, that the absolute row index only applies to the tree which is visualized by the TreeTable. Invisible nodes (collapsed child nodes) will not be regarded."
         },
         {
           "name": "selectAll",
           "visibility": "public",
+          "ui5-metamodel": true,
           "returnValue": {
             "type": "sap.ui.table.TreeTable",
             "description": "a reference on the TreeTable control, can be used for chaining"
@@ -10136,6 +9098,7 @@
         {
           "name": "setSelectedIndex",
           "visibility": "public",
+          "ui5-metamodel": true,
           "returnValue": {
             "type": "sap.ui.table.TreeTable",
             "description": "a reference on the TreeTable control, can be used for chaining"
@@ -10148,7 +9111,7 @@
               "description": "The row index which will be selected (if existing)"
             }
           ],
-          "description": "Sets the selected index In a TreeTable you can only select indices, which correspond to the currently visualized tree. Invisible tree nodes (e.g. collapsed child nodes) can not be selected via Index, because they do not correspond to a TreeTable row."
+          "description": "Overridden from Table.js base class. In a TreeTable you can only select indices, which correspond to the currently visualized tree. Invisible tree nodes (e.g. collapsed child nodes) can not be selected via Index, because they do not correspond to a TreeTable row."
         },
         {
           "name": "setSelectionInterval",
@@ -10172,7 +9135,7 @@
               "description": "the end index of the selection range"
             }
           ],
-          "description": "Sets the selection of the TreeTable to the given range (including boundaries). Beware: The previous selection will be lost/overridden. If this is not wanted, please use \"addSelectionInterval\" and \"removeSelectionInterval\". Please be aware, that the absolute row index only applies to the tree which is visualized by the TreeTable."
+          "description": "Sets the selection of the TreeTable to the given range (including boundaries). Beware: The previous selection will be lost/overridden. If this is not wanted, please use \"addSelectionInterval\" and \"removeSelectionInterval\"."
         },
         {
           "name": "setUseFlatMode",

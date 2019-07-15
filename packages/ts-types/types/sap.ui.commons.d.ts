@@ -8,20 +8,18 @@
 /// <reference path="./sap.tnt.d.ts" />
 /// <reference path="./sap.ui.codeeditor.d.ts" />
 /// <reference path="./sap.ui.core.d.ts" />
-/// <reference path="./sap.ui.demokit.d.ts" />
-/// <reference path="./sap.ui.documentation.d.ts" />
+/// <reference path="./sap.ui.demokit.demoapps.d.ts" />
+/// <reference path="./sap.ui.documentation.sdk.d.ts" />
 /// <reference path="./sap.ui.dt.d.ts" />
 /// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.integration.d.ts" />
 /// <reference path="./sap.ui.layout.d.ts" />
-/// <reference path="./sap.ui.rta.d.ts" />
 /// <reference path="./sap.ui.suite.d.ts" />
 /// <reference path="./sap.ui.support.d.ts" />
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.60.14
 
 declare namespace sap {
   namespace ui {
@@ -23741,12 +23739,9 @@ declare namespace sap {
         Reject
       }
       /**
-       * @deprecated (since 1.48.0) - Moved to sap.ui.unified library. Please use that one.
+       * @deprecated (since 1.48.0) - Moved to sap.ui.unified library. Please use this one.
        *
-       * Different styles for a ColorPicker.
-       *
-       * This enum is an alias for {@link sap.ui.unified.ColorPickerMode} and was only kept for compatibility
-       * reasons. Please switch to the {@link sap.ui.unified.ColorPicker} API.
+       * different styles for a ColorPicker.
        */
       enum ColorPickerMode {}
       /**

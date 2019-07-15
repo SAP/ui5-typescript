@@ -50,10 +50,16 @@ const typeTyposMap = {
   DOMRef: "any",
   DomRef: "any",
   domRef: "any",
+  DOMElement: "any",
   "DomRef[]": "any",
 
   // This is not an ES2015 Generator!
-  Generator: "any"
+  Generator: "any",
+
+  "sap.ui.test.qunit": "typeof sap.ui.test.qunit",
+
+  // Sad Sad Panda
+  "{string{": "percentSign"
 };
 
 module.exports = {

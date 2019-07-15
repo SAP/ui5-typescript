@@ -11,7 +11,10 @@ const badInterfaces = [
 
   // These interfaces do not even exist in the API.json :(
   "sap.m.IHyphenation",
-  "sap.ui.core.IDScope"
+  "sap.ui.core.IDScope",
+
+  // Typo - why are curly parenthesis part of the name?
+  "{sap.ui.layout.cssgrid.IGridConfigurable}"
 ];
 
 /**

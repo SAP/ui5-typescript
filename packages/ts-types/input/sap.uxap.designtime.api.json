@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.65.1",
+  "version": "1.60.14",
   "symbols": [
     {
       "kind": "namespace",
@@ -738,7 +738,7 @@
       "export": "BlockBaseColumnLayout",
       "static": true,
       "visibility": "public",
-      "description": "Used by the <code>BlockBase</code> control to define how many columns should it be assigned by the <code>objectPageSubSection</code>. The allowed values can be auto (subsection assigned a number of columns based on the parent objectPageLayout subsectionLayout property), 1, 2, 3 or 4 (This may not be a valid value for some <code>subSectionLayout</code>, for example, asking for 3 columns in a 2 column layout would raise warnings).",
+      "description": "Used by the <code>BlockBase</code> control to define how many columns should it be assigned by the <code>objectPageSubSection</code>. The allowed values can be auto (subsection assigned a number of columns based on the parent objectPageLayout subsectionLayout property), 1, 2 or 3 (This may not be a valid value for some <code>subSectionLayout</code>, for example, asking for 3 columns in a 2 column layout would raise warnings).",
       "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "datatype",
@@ -1447,435 +1447,6 @@
       ]
     },
     {
-      "kind": "class",
-      "name": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-      "basename": "ObjectPageAccessibleLandmarkInfo",
-      "resource": "sap/uxap/ObjectPageAccessibleLandmarkInfo.js",
-      "module": "sap/uxap/ObjectPageAccessibleLandmarkInfo",
-      "export": "",
-      "static": true,
-      "visibility": "public",
-      "since": "1.61",
-      "extends": "sap.ui.core.Element",
-      "description": "Settings for accessible landmarks which can be applied to the container elements of a <code>sap.uxap.ObjectPageLayout</code> control. These landmarks are used by assistive technologies (such as screenreaders) to provide a meaningful page overview.",
-      "ui5-metamodel": true,
-      "ui5-metadata": {
-        "stereotype": "element",
-        "properties": [
-          {
-            "name": "rootRole",
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "defaultValue": "Main",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Landmark role of the root container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.",
-            "methods": ["getRootRole", "setRootRole"]
-          },
-          {
-            "name": "rootLabel",
-            "type": "string",
-            "defaultValue": null,
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Texts which describe the landmark of the root container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.",
-            "methods": ["getRootLabel", "setRootLabel"]
-          },
-          {
-            "name": "contentRole",
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "defaultValue": "None",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Landmark role of the content container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.",
-            "methods": ["getContentRole", "setContentRole"]
-          },
-          {
-            "name": "contentLabel",
-            "type": "string",
-            "defaultValue": null,
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Texts which describe the landmark of the content container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.",
-            "methods": ["getContentLabel", "setContentLabel"]
-          },
-          {
-            "name": "navigationRole",
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "defaultValue": "Navigation",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Landmark role of the navigation container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.",
-            "methods": ["getNavigationRole", "setNavigationRole"]
-          },
-          {
-            "name": "navigationLabel",
-            "type": "string",
-            "defaultValue": null,
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Texts which describe the landmark of the navigation container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.",
-            "methods": ["getNavigationLabel", "setNavigationLabel"]
-          },
-          {
-            "name": "headerRole",
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "defaultValue": "Banner",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Landmark role of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.",
-            "methods": ["getHeaderRole", "setHeaderRole"]
-          },
-          {
-            "name": "headerLabel",
-            "type": "string",
-            "defaultValue": null,
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Texts which describe the landmark of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.",
-            "methods": ["getHeaderLabel", "setHeaderLabel"]
-          },
-          {
-            "name": "footerRole",
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "defaultValue": "Region",
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Landmark role of the footer container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.",
-            "methods": ["getFooterRole", "setFooterRole"]
-          },
-          {
-            "name": "footerLabel",
-            "type": "string",
-            "defaultValue": null,
-            "group": "Misc",
-            "visibility": "public",
-            "description": "Texts which describe the landmark of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.",
-            "methods": ["getFooterLabel", "setFooterLabel"]
-          }
-        ]
-      },
-      "constructor": {
-        "visibility": "public",
-        "parameters": [
-          {
-            "name": "sId",
-            "type": "string",
-            "optional": true,
-            "description": "ID for the new element, generated automatically if no ID is given"
-          },
-          {
-            "name": "mSettings",
-            "type": "object",
-            "optional": true,
-            "description": "Initial settings for the new element"
-          }
-        ],
-        "description": "Constructor for a new <code>sap.uxap.ObjectPageAccessibleLandmarkInfo</code> element.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
-      },
-      "methods": [
-        {
-          "name": "extend",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "function",
-            "description": "Created class / constructor function"
-          },
-          "parameters": [
-            {
-              "name": "sClassName",
-              "type": "string",
-              "optional": false,
-              "description": "Name of the class being created"
-            },
-            {
-              "name": "oClassInfo",
-              "type": "object",
-              "optional": true,
-              "description": "Object literal with information about the class"
-            },
-            {
-              "name": "FNMetaImpl",
-              "type": "function",
-              "optional": true,
-              "description": "Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>"
-            }
-          ],
-          "description": "Creates a new subclass of class sap.uxap.ObjectPageAccessibleLandmarkInfo with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Element.extend}."
-        },
-        {
-          "name": "getContentLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "string",
-            "description": "Value of property <code>contentLabel</code>"
-          },
-          "description": "Gets current value of property {@link #getContentLabel contentLabel}.\n\nTexts which describe the landmark of the content container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set."
-        },
-        {
-          "name": "getContentRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "description": "Value of property <code>contentRole</code>"
-          },
-          "description": "Gets current value of property {@link #getContentRole contentRole}.\n\nLandmark role of the content container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nDefault value is <code>None</code>."
-        },
-        {
-          "name": "getFooterLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "string",
-            "description": "Value of property <code>footerLabel</code>"
-          },
-          "description": "Gets current value of property {@link #getFooterLabel footerLabel}.\n\nTexts which describe the landmark of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set."
-        },
-        {
-          "name": "getFooterRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "description": "Value of property <code>footerRole</code>"
-          },
-          "description": "Gets current value of property {@link #getFooterRole footerRole}.\n\nLandmark role of the footer container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nDefault value is <code>Region</code>."
-        },
-        {
-          "name": "getHeaderLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "string",
-            "description": "Value of property <code>headerLabel</code>"
-          },
-          "description": "Gets current value of property {@link #getHeaderLabel headerLabel}.\n\nTexts which describe the landmark of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set."
-        },
-        {
-          "name": "getHeaderRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "description": "Value of property <code>headerRole</code>"
-          },
-          "description": "Gets current value of property {@link #getHeaderRole headerRole}.\n\nLandmark role of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nDefault value is <code>Banner</code>."
-        },
-        {
-          "name": "getMetadata",
-          "visibility": "public",
-          "static": true,
-          "returnValue": {
-            "type": "sap.ui.base.Metadata",
-            "description": "Metadata object describing this class"
-          },
-          "description": "Returns a metadata object for class sap.uxap.ObjectPageAccessibleLandmarkInfo."
-        },
-        {
-          "name": "getNavigationLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "string",
-            "description": "Value of property <code>navigationLabel</code>"
-          },
-          "description": "Gets current value of property {@link #getNavigationLabel navigationLabel}.\n\nTexts which describe the landmark of the navigation container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set."
-        },
-        {
-          "name": "getNavigationRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "description": "Value of property <code>navigationRole</code>"
-          },
-          "description": "Gets current value of property {@link #getNavigationRole navigationRole}.\n\nLandmark role of the navigation container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nDefault value is <code>Navigation</code>."
-        },
-        {
-          "name": "getRootLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "string",
-            "description": "Value of property <code>rootLabel</code>"
-          },
-          "description": "Gets current value of property {@link #getRootLabel rootLabel}.\n\nTexts which describe the landmark of the root container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set."
-        },
-        {
-          "name": "getRootRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.ui.core.AccessibleLandmarkRole",
-            "description": "Value of property <code>rootRole</code>"
-          },
-          "description": "Gets current value of property {@link #getRootRole rootRole}.\n\nLandmark role of the root container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nDefault value is <code>Main</code>."
-        },
-        {
-          "name": "setContentLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sContentLabel",
-              "type": "string",
-              "optional": false,
-              "description": "New value for property <code>contentLabel</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getContentLabel contentLabel}.\n\nTexts which describe the landmark of the content container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
-        },
-        {
-          "name": "setContentRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sContentRole",
-              "type": "sap.ui.core.AccessibleLandmarkRole",
-              "optional": false,
-              "description": "New value for property <code>contentRole</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getContentRole contentRole}.\n\nLandmark role of the content container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>None</code>."
-        },
-        {
-          "name": "setFooterLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sFooterLabel",
-              "type": "string",
-              "optional": false,
-              "description": "New value for property <code>footerLabel</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getFooterLabel footerLabel}.\n\nTexts which describe the landmark of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
-        },
-        {
-          "name": "setFooterRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sFooterRole",
-              "type": "sap.ui.core.AccessibleLandmarkRole",
-              "optional": false,
-              "description": "New value for property <code>footerRole</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getFooterRole footerRole}.\n\nLandmark role of the footer container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Region</code>."
-        },
-        {
-          "name": "setHeaderLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sHeaderLabel",
-              "type": "string",
-              "optional": false,
-              "description": "New value for property <code>headerLabel</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getHeaderLabel headerLabel}.\n\nTexts which describe the landmark of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
-        },
-        {
-          "name": "setHeaderRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sHeaderRole",
-              "type": "sap.ui.core.AccessibleLandmarkRole",
-              "optional": false,
-              "description": "New value for property <code>headerRole</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getHeaderRole headerRole}.\n\nLandmark role of the header container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Banner</code>."
-        },
-        {
-          "name": "setNavigationLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sNavigationLabel",
-              "type": "string",
-              "optional": false,
-              "description": "New value for property <code>navigationLabel</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getNavigationLabel navigationLabel}.\n\nTexts which describe the landmark of the navigation container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
-        },
-        {
-          "name": "setNavigationRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sNavigationRole",
-              "type": "sap.ui.core.AccessibleLandmarkRole",
-              "optional": false,
-              "description": "New value for property <code>navigationRole</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getNavigationRole navigationRole}.\n\nLandmark role of the navigation container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Navigation</code>."
-        },
-        {
-          "name": "setRootLabel",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sRootLabel",
-              "type": "string",
-              "optional": false,
-              "description": "New value for property <code>rootLabel</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getRootLabel rootLabel}.\n\nTexts which describe the landmark of the root container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set (and a landmark different than <code>sap.ui.core.AccessibleLandmarkRole.None</code> is defined), no label is set.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
-        },
-        {
-          "name": "setRootRole",
-          "visibility": "public",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "sRootRole",
-              "type": "sap.ui.core.AccessibleLandmarkRole",
-              "optional": false,
-              "description": "New value for property <code>rootRole</code>"
-            }
-          ],
-          "description": "Sets a new value for property {@link #getRootRole rootRole}.\n\nLandmark role of the root container of the corresponding <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf set to <code>sap.ui.core.AccessibleLandmarkRole.None</code>, no landmark will be added to the container.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Main</code>."
-        }
-      ]
-    },
-    {
       "kind": "enum",
       "name": "sap.uxap.ObjectPageConfigurationMode",
       "basename": "ObjectPageConfigurationMode",
@@ -2482,7 +2053,7 @@
             "type": "sap.ui.core.Control",
             "cardinality": "0..n",
             "visibility": "public",
-            "description": "List of actions that will be displayed in the header. You can use ObjectPageHeaderActionButton controls to achieve a different visual representation of the action buttons in the action bar and the action sheet (overflow menu). You can use ObjectPageHeaderLayoutData to display a visual separator.\n\n<b>Note:</b> If an action is placed inside the overflow area, an additional <code>bInOverflow</code> parameter is passed along with the <code>press</code> event to indicate that a popup shouldn't be opened from that action and a dialog should be used instead.",
+            "description": "List of actions that will be displayed in the header. You can use ObjectPageHeaderActionButton controls to achieve a different visual representation of the action buttons in the action bar and the action sheet (overflow menu). You can use ObjectPageHeaderLayoutData to display a visual separator.",
             "methods": [
               "getActions",
               "destroyActions",
@@ -3065,7 +2636,7 @@
           "name": "getActions",
           "visibility": "public",
           "returnValue": { "type": "sap.ui.core.Control[]" },
-          "description": "Gets content of aggregation {@link #getActions actions}.\n\nList of actions that will be displayed in the header. You can use ObjectPageHeaderActionButton controls to achieve a different visual representation of the action buttons in the action bar and the action sheet (overflow menu). You can use ObjectPageHeaderLayoutData to display a visual separator.\n\n<b>Note:</b> If an action is placed inside the overflow area, an additional <code>bInOverflow</code> parameter is passed along with the <code>press</code> event to indicate that a popup shouldn't be opened from that action and a dialog should be used instead."
+          "description": "Gets content of aggregation {@link #getActions actions}.\n\nList of actions that will be displayed in the header. You can use ObjectPageHeaderActionButton controls to achieve a different visual representation of the action buttons in the action bar and the action sheet (overflow menu). You can use ObjectPageHeaderLayoutData to display a visual separator."
         },
         {
           "name": "getBreadcrumbs",
@@ -4715,7 +4286,7 @@
             "defaultValue": false,
             "group": "Misc",
             "visibility": "public",
-            "description": "Determines whether the navigation mode is tab-based instead of the default anchor bar. If enabled, the sections are displayed separately on each tab rather than having all of them visible at the same time.\n\n<b>Note:</b> Keep in mind that the <code>sap.m.IconTabBar</code> control is no longer used for the tab navigation mode.",
+            "description": "Use tab navigation mode instead of the default Anchor bar mode. <br><b>Note: </b>Keep in mind that the <code>sap.m.IconTabBar</code> control is no longer used for the tab navigation mode.",
             "methods": ["getUseIconTabBar", "setUseIconTabBar"]
           },
           {
@@ -4854,7 +4425,6 @@
             "methods": ["getShowFooter", "setShowFooter"]
           }
         ],
-        "dnd": { "draggable": false, "droppable": true },
         "aggregations": [
           {
             "name": "sections",
@@ -4912,20 +4482,6 @@
             "since": "1.40",
             "description": "Object page floating footer.",
             "methods": ["getFooter", "destroyFooter", "setFooter"]
-          },
-          {
-            "name": "landmarkInfo",
-            "singularName": "landmarkInfo",
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-            "cardinality": "0..1",
-            "visibility": "public",
-            "since": "1.61",
-            "description": "Accessible landmark settings to be applied on the containers of the <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set, no landmarks will be written.",
-            "methods": [
-              "getLandmarkInfo",
-              "destroyLandmarkInfo",
-              "setLandmarkInfo"
-            ]
           },
           {
             "name": "_anchorBar",
@@ -5317,16 +4873,6 @@
           "description": "Destroys the headerTitle in the aggregation {@link #getHeaderTitle headerTitle}."
         },
         {
-          "name": "destroyLandmarkInfo",
-          "visibility": "public",
-          "since": "1.61",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "description": "Destroys the landmarkInfo in the aggregation {@link #getLandmarkInfo landmarkInfo}."
-        },
-        {
           "name": "destroySections",
           "visibility": "public",
           "returnValue": {
@@ -5597,15 +5143,6 @@
           "description": "Gets current value of property {@link #getIsChildPage isChildPage}.\n\nDetermines whether the page is a child page and renders it with a different design. Child pages have an additional (darker/lighter) stripe on the left side of their header content area.\n\n<b>Note</b>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used for the <code>headerTitle</code> aggregation.\n\nDefault value is <code>false</code>."
         },
         {
-          "name": "getLandmarkInfo",
-          "visibility": "public",
-          "since": "1.61",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo"
-          },
-          "description": "Gets content of aggregation {@link #getLandmarkInfo landmarkInfo}.\n\nAccessible landmark settings to be applied on the containers of the <code>sap.uxap.ObjectPageLayout</code> control.\n\nIf not set, no landmarks will be written."
-        },
-        {
           "name": "getMetadata",
           "visibility": "public",
           "static": true,
@@ -5763,7 +5300,7 @@
             "type": "boolean",
             "description": "Value of property <code>useIconTabBar</code>"
           },
-          "description": "Gets current value of property {@link #getUseIconTabBar useIconTabBar}.\n\nDetermines whether the navigation mode is tab-based instead of the default anchor bar. If enabled, the sections are displayed separately on each tab rather than having all of them visible at the same time.\n\n<b>Note:</b> Keep in mind that the <code>sap.m.IconTabBar</code> control is no longer used for the tab navigation mode.\n\nDefault value is <code>false</code>."
+          "description": "Gets current value of property {@link #getUseIconTabBar useIconTabBar}.\n\nUse tab navigation mode instead of the default Anchor bar mode. <br><b>Note: </b>Keep in mind that the <code>sap.m.IconTabBar</code> control is no longer used for the tab navigation mode.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "getUseTwoColumnsForLargeScreen",
@@ -6105,24 +5642,6 @@
           "description": "Sets a new value for property {@link #getIsChildPage isChildPage}.\n\nDetermines whether the page is a child page and renders it with a different design. Child pages have an additional (darker/lighter) stripe on the left side of their header content area.\n\n<b>Note</b>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used for the <code>headerTitle</code> aggregation.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
-          "name": "setLandmarkInfo",
-          "visibility": "public",
-          "since": "1.61",
-          "returnValue": {
-            "type": "sap.uxap.ObjectPageLayout",
-            "description": "Reference to <code>this</code> in order to allow method chaining"
-          },
-          "parameters": [
-            {
-              "name": "oLandmarkInfo",
-              "type": "sap.uxap.ObjectPageAccessibleLandmarkInfo",
-              "optional": false,
-              "description": "The landmarkInfo to set"
-            }
-          ],
-          "description": "Sets the aggregated {@link #getLandmarkInfo landmarkInfo}."
-        },
-        {
           "name": "setPreserveHeaderStateOnScroll",
           "visibility": "public",
           "since": "1.52",
@@ -6364,7 +5883,7 @@
               "description": "New value for property <code>useIconTabBar</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getUseIconTabBar useIconTabBar}.\n\nDetermines whether the navigation mode is tab-based instead of the default anchor bar. If enabled, the sections are displayed separately on each tab rather than having all of them visible at the same time.\n\n<b>Note:</b> Keep in mind that the <code>sap.m.IconTabBar</code> control is no longer used for the tab navigation mode.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
+          "description": "Sets a new value for property {@link #getUseIconTabBar useIconTabBar}.\n\nUse tab navigation mode instead of the default Anchor bar mode. <br><b>Note: </b>Keep in mind that the <code>sap.m.IconTabBar</code> control is no longer used for the tab navigation mode.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>false</code>."
         },
         {
           "name": "setUseTwoColumnsForLargeScreen",

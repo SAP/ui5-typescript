@@ -8,20 +8,18 @@
 /// <reference path="./sap.ui.codeeditor.d.ts" />
 /// <reference path="./sap.ui.commons.d.ts" />
 /// <reference path="./sap.ui.core.d.ts" />
-/// <reference path="./sap.ui.demokit.d.ts" />
-/// <reference path="./sap.ui.documentation.d.ts" />
+/// <reference path="./sap.ui.demokit.demoapps.d.ts" />
+/// <reference path="./sap.ui.documentation.sdk.d.ts" />
 /// <reference path="./sap.ui.dt.d.ts" />
 /// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.integration.d.ts" />
 /// <reference path="./sap.ui.layout.d.ts" />
-/// <reference path="./sap.ui.rta.d.ts" />
 /// <reference path="./sap.ui.suite.d.ts" />
 /// <reference path="./sap.ui.support.d.ts" />
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.60.14
 
 declare namespace sap {
   /**
@@ -76,13 +74,6 @@ declare namespace sap {
        * Specifies if the control is in expanded or collapsed mode.
        */
       expanded?: boolean;
-
-      /**
-       * @SINCE 1.62.0
-       *
-       * Specifies the currently selected key.
-       */
-      selectedKey?: string;
 
       /**
        * Fired when an item is selected.
@@ -151,13 +142,6 @@ declare namespace sap {
        * Specifies if the control is expanded.
        */
       expanded?: boolean;
-
-      /**
-       * @SINCE 1.62.0
-       *
-       * Specifies the currently selected key.
-       */
-      selectedKey?: string;
 
       /**
        * Fired when an item is selected.
@@ -608,14 +592,6 @@ declare namespace sap {
        */
       getSelectedItem(): sap.tnt.NavigationListItem | null;
       /**
-       * @SINCE 1.62.0
-       *
-       * Gets current value of property {@link #getSelectedKey selectedKey}.
-       *
-       * Specifies the currently selected key.
-       */
-      getSelectedKey(): string;
-      /**
        * Gets current value of property {@link #getWidth width}.
        *
        * Specifies the width of the control.
@@ -709,17 +685,12 @@ declare namespace sap {
         /**
          * The control to be set as selected
          */
-        selectedItem: string | sap.tnt.NavigationListItem
-      ): sap.tnt.NavigationList | null;
-      /**
-       * Sets the selected item based on a key.
-       */
-      setSelectedKey(
+        selectedItem: string | sap.tnt.NavigationListItem,
         /**
-         * The key of the item to be selected
+         * If true, the managed object's invalidate method is not called
          */
-        selectedKey: string
-      ): sap.tnt.NavigationList;
+        suppressInvalidate: boolean
+      ): sap.tnt.NavigationList | null;
       /**
        * Sets a new value for property {@link #getWidth width}.
        *
@@ -1195,14 +1166,6 @@ declare namespace sap {
        */
       getSelectedItem(): sap.ui.core.ID;
       /**
-       * @SINCE 1.62.0
-       *
-       * Gets current value of property {@link #getSelectedKey selectedKey}.
-       *
-       * Specifies the currently selected key.
-       */
-      getSelectedKey(): string;
-      /**
        * Sets if the control is in expanded or collapsed mode.
        */
       setExpanded(
@@ -1245,17 +1208,12 @@ declare namespace sap {
         /**
          * The control to be set as selected
          */
-        selectedItem: string | sap.tnt.NavigationListItem
-      ): sap.tnt.SideNavigation | null;
-      /**
-       * Sets the selected item based on a key.
-       */
-      setSelectedKey(
+        selectedItem: string | sap.tnt.NavigationListItem,
         /**
-         * The key of the item to be selected
+         * If true, the managed object's invalidate method is not called
          */
-        selectedKey: string
-      ): sap.tnt.SideNavigation;
+        suppressInvalidate: boolean
+      ): sap.tnt.SideNavigation | null;
       /**
        * Unbinds aggregation {@link #getItem item} from model data.
        */
@@ -1289,22 +1247,6 @@ declare namespace sap {
      * 	 - If an app implements side navigation in addition to the tool header menu, the menu icon must be the
      * 			first item on the left-hand side of the tool header.
      * 	 - The app menu and the side navigation must not have any dependencies and must work independently.
-     * 			 Fiori 3 theme specifics: In Fiori 3 Default theme the ToolHeader is with dark design unlike most
-     * 			of the other controls. This defines the usage of limited controls inside it, which will result in good
-     * 			design combination.
-     *  The ToolHeader stylizes the contained controls with the Shell color parameters, to match the dark design
-     * requirement. However, that's not a dark theme.
-     *
-     *  Only the following controls are supported:
-     * 	 - sap.m.Text
-     * 	 - sap.m.Title
-     * 	 - sap.m.ObjectStatus
-     * 	 - sap.ui.core.Icon
-     * 	 - sap.m.Button
-     * 	 - sap.m.MenuButton
-     * 	 - sap.m.Select
-     * 	 - sap.m.SearchField
-     * 	 - sap.m.IconTabHeader
      */
     class ToolHeader extends sap.m.OverflowToolbar {
       /**

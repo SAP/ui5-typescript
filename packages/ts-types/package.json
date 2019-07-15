@@ -9,9 +9,9 @@
     "directory": "packages/ts-types"
   },
   "types": "types/sap.ui.core.d.ts",
-  "openUI5Version": "1.65.1",
+  "openUI5Version": "1.60.14",
   "devDependencies": {
-    "@ui5/cli": "1.6.0",
+    "@ui5/cli": "1.5.3",
     "@ui5/dts-generator": "^1.65.0",
     "fs-extra": "^8.1.0",
     "klaw-sync": "^6.0.0",

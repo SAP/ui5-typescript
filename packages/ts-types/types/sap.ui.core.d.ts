@@ -8,20 +8,18 @@
 /// <reference path="./sap.tnt.d.ts" />
 /// <reference path="./sap.ui.codeeditor.d.ts" />
 /// <reference path="./sap.ui.commons.d.ts" />
-/// <reference path="./sap.ui.demokit.d.ts" />
-/// <reference path="./sap.ui.documentation.d.ts" />
+/// <reference path="./sap.ui.demokit.demoapps.d.ts" />
+/// <reference path="./sap.ui.documentation.sdk.d.ts" />
 /// <reference path="./sap.ui.dt.d.ts" />
 /// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.integration.d.ts" />
 /// <reference path="./sap.ui.layout.d.ts" />
-/// <reference path="./sap.ui.rta.d.ts" />
 /// <reference path="./sap.ui.suite.d.ts" />
 /// <reference path="./sap.ui.support.d.ts" />
 /// <reference path="./sap.ui.table.d.ts" />
 /// <reference path="./sap.ui.unified.d.ts" />
 /// <reference path="./sap.ui.ux3.d.ts" />
 /// <reference path="./sap.uxap.d.ts" />
-// For Library Version: 1.65.1
+// For Library Version: 1.60.14
 /**
  * Root namespace for JavaScript functionality provided by SAP SE.
  *
@@ -166,11 +164,11 @@ declare namespace sap {
       /**
        * An object literal defining the methods and properties of the controller
        */
-      oControllerImpl?: object,
+      oControllerImpl: object,
       /**
        * Decides whether the controller gets loaded asynchronously or not
        */
-      bAsync?: boolean
+      bAsync: boolean
     ): void | sap.ui.core.mvc.Controller | Promise<any>;
     /**
      * @SINCE 1.27.0
@@ -467,7 +465,7 @@ declare namespace sap {
      * The Fragment object itself is not an entity which has further significance beyond this constructor.
      *
      * To instantiate an existing Fragment, call this method as: sap.ui.fragment(sName, sType, [oController]);
-     * The sName must correspond to a Fragment module which can be loaded via the module system (fragmentName
+     * The sName must correspond to an XML Fragment which can be loaded via the module system (fragmentName
      * + suffix ".fragment.[typeextension]") and which defines the Fragment content. If oController is given,
      * the (event handler) methods referenced in the Fragment will be called on this controller. Note that Fragments
      * may require a Controller to be given and certain methods to be available.
@@ -498,11 +496,10 @@ declare namespace sap {
        */
       sType: string,
       /**
-       * the Controller or Object which should be used by the controls in the Fragment. Note that some Fragments
-       * may not need a Controller and other may need one - and even rely on certain methods implemented in the
-       * Controller.
+       * the Controller which should be used by the controls in the Fragment. Note that some Fragments may not
+       * need a Controller and other may need one - and even rely on certain methods implemented in the Controller.
        */
-      oController?: sap.ui.core.mvc.Controller | Object
+      oController?: sap.ui.core.mvc.Controller
     ): sap.ui.core.Control | sap.ui.core.Control[];
     /**
      * Retrieve the {@link sap.ui.core.Core SAPUI5 Core} instance for the current window.
@@ -540,59 +537,34 @@ declare namespace sap {
      *
      * Instantiates an HTML-based Fragment.
      *
-     * To instantiate a fragment, call:
-     * ```javascript
+     * To instantiate a Fragment, call this method as: sap.ui.htmlfragment([sId], sFragmentName, [oController]);
+     * The Fragment instance ID is optional and will be used as prefix for the ID of all contained controls.
+     * If no ID is passed, controls will not be prefixed. The sFragmentName must correspond to an HTML Fragment
+     * which can be loaded via the module system (fragmentName + ".fragment.html") and which defines the Fragment.
+     * If oController is given, the methods referenced in the Fragment will be called on this controller. Note
+     * that Fragments may require a Controller to be given and certain methods to be available.
      *
-     *    sap.ui.htmlfragment([sId], sFragmentName, [oController]);
-     * ```
-     *  The fragment instance ID is optional and will be used as prefix for the ID of all contained controls.
-     * If no ID is passed, controls will not be prefixed. The `sFragmentName` must correspond to an HTML fragment
-     * which can be loaded via the module system (fragmentName + ".fragment.html") and which defines the fragment.
-     * If `oController` is given, the methods referenced in the fragment will be called on this controller.
-     * Note that fragments may require a controller to be given and certain methods to be available.
-     *
-     * Advanced usage:: To instantiate a fragment and optionally directly give the HTML definition instead of
-     * loading it from a file, call:
-     * ```javascript
-     *
-     *     sap.ui.htmlfragment(oFragmentConfig, [oController]);
-     * ```
-     *  The `oFragmentConfig` object can either have a `fragmentName` or a `fragmentContent` property, but not
-     * both of them. `fragmentContent` can hold the fragment definition as XML string; if not given, `fragmentName`
-     * must be given and the fragment content definition is loaded by the module system. Again, if `oController`
-     * is given, any methods referenced in the fragment will be called on this controller.
+     * Advanced usage: To instantiate a Fragment and optionally directly give the HTML definition instead of
+     * loading it from a file, call this method as: sap.ui.htmlfragment(oFragmentConfig, [oController]); The
+     * oFragmentConfig object can either have a "fragmentName" or a "fragmentContent" property. fragmentContent
+     * is optional and can hold the Fragment definition as XML string; if not given, fragmentName must be given
+     * and the Fragment content definition is loaded by the module system. Again, if oController is given, the
+     * methods referenced in the Fragment will be called on this controller.
      */
     function htmlfragment(
       /**
-       * ID of the newly created fragment
+       * id of the newly created Fragment
        */
       sId: string,
       /**
-       * Resource name of the fragment, a module name in dot notation without the '.fragment.html' suffix. Alternatively,
-       * a configuration object can be given with the properties described below. In this case, no `sId` may be
-       * given as first parameter, but as property `id` in the configuration object.
+       * name of the Fragment (or Fragment configuration as described above, in this case no sId may be given.
+       * Instead give the id inside the config object, if desired.)
        */
-      vFragment: {
-        /**
-         * ID of the newly created fragment; will be used as a prefix to all contained control IDs
-         */
-        id?: string;
-        /**
-         * Resource name of the Fragment; a module name in dot notation without the '.fragment.html' suffix
-         */
-        fragmentName?: string;
-        /**
-         * Definition of the fragment as an HTML string
-         */
-        fragmentContent?: string;
-      },
+      vFragment: string | object,
       /**
-       * A controller to be used for event handlers in the fragment; can either be the controller of an enclosing
-       * view, a new controller instance, or a simple object with the necessary methods attached. Note that a
-       * fragment has no runtime representation besides its contained controls. There's therefore no API to retrieve
-       * the controller after creating a fragment
+       * a Controller to be used for event handlers in the Fragment
        */
-      oController?: sap.ui.core.mvc.Controller | object
+      oController?: sap.ui.core.mvc.Controller
     ): sap.ui.core.Control | sap.ui.core.Control[];
     /**
      * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.HTMLView.create HTMLView.create} instead
@@ -629,67 +601,39 @@ declare namespace sap {
     /**
      * @deprecated (since 1.58) - use {@link sap.ui.core.Fragment.load} instead
      *
-     * Defines OR instantiates an HTML-based fragment.
+     * Defines OR instantiates an HTML-based Fragment.
      *
-     * To define a JS fragment, call:
-     * ```javascript
+     * To define a JS Fragment, call this method as: sap.ui.jsfragment(sName, oFragmentDefinition) Where: -
+     * "sName" is the name by which this fragment can be found and instantiated. If defined in its own file,
+     * in order to be found by the module loading system, the file location and name must correspond to sName
+     * (path + file name must be: fragmentName + ".fragment.js"). - "oFragmentDefinition" is an object at least
+     * holding the "createContent(oController)" method which defines the Fragment content. If given during instantiation,
+     * the createContent method receives a Controller instance (otherwise oController is undefined) and the
+     * return value must be one sap.ui.core.Control (which could have any number of children).
      *
-     *    sap.ui.jsfragment(sName, oFragmentDefinition)
-     * ```
-     *  where:
-     * 	 - `sName` is the name by which this fragment later can be found and instantiated. If defined in its
-     * 			own file, in order to be found by the module loading system, the file location and name must correspond
-     * 			to `sName` (path + file name must be: fragmentName + ".fragment.js").
-     * 	 - `oFragmentDefinition` is an object at least holding the `createContent(oController) method
-     * 			which defines the fragment content. If given during instantiation, the createContent` method receives
-     * 			a controller instance (otherwise, parameter `oController` will be undefined) and the return value must
-     * 			be one `sap.ui.core.Control` (which could have any number of children).
-     *
-     * To instantiate a JS fragment, call:
-     * ```javascript
-     *
-     *    sap.ui.jsfragment([sId], sFragmentName, [oController]);
-     * ```
-     *  The fragment ID is optional (generated if not given) and the fragment implementation can use
-     * it to make contained controls unique (this depends on the implementation: some JS fragments may choose
-     * not to support multiple instances within one application and not use the ID prefixing). The `sFragmentName`
-     * must correspond to a JS fragment which can be loaded via the module system (`sFragmentName` converted
-     * to a path + ".fragment.js" suffix) and which defines the fragment. Or it can be a name that has been
-     * used earlier to define a fragment of that name. If `oController` is given, the methods referenced in
-     * the fragment will be called on this controller. Note that fragments may require a controller to be given
-     * and certain methods to be available.
+     * To instantiate a JS Fragment, call this method as: sap.ui.jsfragment([sId], sFragmentName, [oController]);
+     * The Fragment ID is optional (generated if not given) and the Fragment implementation CAN use it to make
+     * contained controls unique (this depends on the implementation: some JS Fragments may choose not to support
+     * multiple instances within one application and not use the ID prefixing). The sFragmentName must correspond
+     * to a JS Fragment which can be loaded via the module system (fragmentName + ".fragment.js") and which
+     * defines the Fragment. If oController is given, the methods referenced in the Fragment will be called
+     * on this controller. Note that Fragments may require a Controller to be given and certain methods to be
+     * available.
      */
     function jsfragment(
       /**
-       * Name of the fragment when defining a fragment; ID or name or configuration object when instantiating
-       * a fragment
+       * id of the newly created Fragment
        */
-      vName: {
-        /**
-         * ID of the newly created fragment; will be used as a prefix to all contained control IDs
-         */
-        id?: string;
-        /**
-         * Name of the fragment. When no fragment has been defined with that name, the name will be converted to
-         * a path by replacing dots with slashes and appending '.fragment.js'. The corresponding resource will be
-         * loaded and is expected to define a fragment with the `fragmentName`
-         */
-        fragmentName?: string;
-      },
+      sId: string,
       /**
-       * When defining a fragment, this parameter must be a factory object that will be used to create new instances
-       * of the fragment; it must at least contain a `createContent` method. When creating an instance of a fragment
-       * and when `vName` was an ID, this parameter must be the name of the fragment. When the first parameter
-       * was a name, this parameter must be omitted.
+       * name of the Fragment (or Fragment configuration as described above, in this case no sId may be given.
+       * Instead give the id inside the config object, if desired)
        */
-      vFragmentDefinition?: object | string,
+      sFragmentName: string | object,
       /**
-       * A controller to be used for event handlers in the fragment; can either be the controller of an enclosing
-       * view, a new controller instance, or a simple object with the necessary methods attached. Note that a
-       * fragment has no runtime representation besides its contained controls. There's therefore no API to retrieve
-       * the controller after creating a fragment
+       * a Controller to be used for event handlers in the Fragment
        */
-      oController?: sap.ui.core.mvc.Controller | object
+      oController?: sap.ui.core.mvc.Controller
     ): sap.ui.core.Control | sap.ui.core.Control[];
     /**
      * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.JSONView.create JSONView.create} instead.
@@ -708,9 +652,10 @@ declare namespace sap {
      *
      * When property `async` is set to true, the view definition and the controller class (and its dependencies)
      * will be loaded asynchronously. Any controls used in the view might be loaded sync or async, depending
-     * on the view configuration. Even when the view definition is provided as string or object tree, controller
-     * or controls might be loaded asynchronously. In any case, a view instance will be returned synchronously
-     * by this factory API, but its content (control tree) might appear only later. Also see {@link sap.ui.core.mvc.View#loaded}.
+     * on the experimental runtime configuration option "xx-xml-processing". Even when the view definition is
+     * provided as string or object tree, controller or controls might be loaded asynchronously. In any case,
+     * a view instance will be returned synchronously by this factory API, but its content (control tree) might
+     * appear only later. Also see {@link sap.ui.core.mvc.View#loaded}.
      *
      * Like with any other control, an id is optional and will be created when missing.
      */
@@ -797,9 +742,7 @@ declare namespace sap {
       bAsync?: boolean
     ): sap.ui.core.mvc.JSView | undefined;
     /**
-     * @deprecated (since 1.56) - Lazy loading enforces synchronous requests and therefore has been deprecated
-     * without a replacement. Instead of loading classes via lazy stubs, they should be required as dependencies
-     * of an AMD module (using {@link sap.ui.define}) or on demand with a call to {@link sap.ui.require}.
+     * @deprecated (since 1.56)
      *
      * Creates a lazy loading stub for a given class `sClassName`.
      *
@@ -812,8 +755,9 @@ declare namespace sap {
      * Otherwise, a plain object is created.
      *
      * **Note**: Accessing any stub as a plain object without executing it (no matter whether it is a function
-     * or an object) won't load the module and therefore most likely won't work as expected. This is a fundamental
-     * restriction of the lazy loader approach.
+     * or an object) won't load the module and therefore most like won't work as expected. This is a fundamental
+     * restriction of the lazy loader approach. It could only be fixed with JavaScript 1.5 features that are
+     * not available in all UI5 target browsers (e.g. not in IE8).
      *
      * **Note**: As a side effect of this method, the namespace containing the given class is created **immediately**.
      */
@@ -823,11 +767,11 @@ declare namespace sap {
        */
       sClassName: string,
       /**
-       * Space separated list of additional (static) methods that should be created as stubs
+       * space separated list of additional (static) methods that should be created as stubs
        */
       sMethods?: string,
       /**
-       * Name of the module to load, defaults to the class name
+       * name of the module to load, defaults to the class name
        */
       sModuleName?: string
     ): void;
@@ -1185,60 +1129,34 @@ declare namespace sap {
      *
      * Instantiates an XML-based Fragment.
      *
-     * To instantiate a fragment, call:
-     * ```javascript
+     * To instantiate a Fragment, call this method as: sap.ui.xmlfragment([sId], sFragmentName, [oController]);
+     * The Fragment instance ID is optional and will be used as prefix for the ID of all contained controls.
+     * If no ID is passed, controls will not be prefixed. The sFragmentName must correspond to an XML Fragment
+     * which can be loaded via the module system (fragmentName + ".fragment.xml") and which defines the Fragment.
+     * If oController is given, the methods referenced in the Fragment will be called on this controller. Note
+     * that Fragments may require a Controller to be given and certain methods to be available.
      *
-     *    sap.ui.xmlfragment([sId], sFragmentName, [oController]);
-     * ```
-     *  The fragment instance ID is optional and will be used as prefix for the ID of all contained controls.
-     * If no ID is passed, controls will not be prefixed. The `sFragmentName` must correspond to an XML fragment
-     * which can be loaded via the module system (fragmentName + ".fragment.xml") and which defines the fragment.
-     * If `oController` is given, the methods referenced in the fragment will be called on this controller.
-     *
-     * Note that fragments may require a controller to be given and certain methods to be available.
-     *
-     * Advanced usage:: To instantiate a fragment and optionally directly give the XML definition instead of
-     * loading it from a file, call:
-     * ```javascript
-     *
-     *     sap.ui.xmlfragment(oFragmentConfig, [oController]);
-     * ```
-     *  The `oFragmentConfig` object can either have a `fragmentName` or a `fragmentContent` property, but not
-     * both. `fragmentContent` can hold the fragment definition as XML string; if not given, `fragmentName`
-     * must be given and the fragment content definition is loaded via the module system. Again, if `oController`
-     * is given, the methods referenced in the fragment will be called on this controller.
+     * Advanced usage: To instantiate a Fragment and optionally directly give the XML definition instead of
+     * loading it from a file, call this method as: sap.ui.xmlfragment(oFragmentConfig, [oController]); The
+     * oFragmentConfig object can either have a "fragmentName" or a "fragmentContent" property. fragmentContent
+     * is optional and can hold the Fragment definition as XML string; if not given, fragmentName must be given
+     * and the Fragment content definition is loaded by the module system. Again, if oController is given, the
+     * methods referenced in the Fragment will be called on this controller.
      */
     function xmlfragment(
       /**
-       * ID of the newly created fragment
+       * id of the newly created Fragment
        */
       sId: string,
       /**
-       * Resource name of the fragment; a module name in dot notation without the '.fragment.xml' suffix. Alternatively,
-       * a configuration object can be given with the properties described below. In this case, no `sId` may be
-       * given as first parameter, but as property `id` in the configuration object.
+       * name of the Fragment (or Fragment configuration as described above, in this case no sId may be given.
+       * Instead give the id inside the config object, if desired)
        */
-      vFragment: {
-        /**
-         * ID of the newly created fragment; will be used as a prefix to all contained control IDs
-         */
-        id?: string;
-        /**
-         * Resource name of the fragment; a module name in dot notation without the '.fragment.html' suffix
-         */
-        fragmentName?: string;
-        /**
-         * Definition of the fragment as an XML string
-         */
-        fragmentContent?: string;
-      },
+      vFragment: string | object,
       /**
-       * A controller to be used for event handlers in the fragment; can either be the controller of an enclosing
-       * view, a new controller instance, or a simple object with the necessary methods attached. Note that a
-       * fragment has no runtime representation besides its contained controls. There's therefore no API to retrieve
-       * the controller after creating a fragment
+       * a Controller to be used for event handlers in the Fragment
        */
-      oController?: sap.ui.core.mvc.Controller | object
+      oController?: sap.ui.core.mvc.Controller
     ): sap.ui.core.Control | sap.ui.core.Control[];
     /**
      * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.XMLView.create XMLView.create} instead
@@ -1257,10 +1175,11 @@ declare namespace sap {
      * definition.
      *
      * When property `async` is set to true, the view definition and the controller class (and its dependencies)
-     * will be loaded asynchronously. Any controls used in the view might be loaded sync or async, depending
-     * on the processingMode. Even when the view definition is provided as string or XML Document, controller
-     * or controls might be loaded asynchronously. In any case a view instance will be returned synchronously
-     * by this factory API, but its content (control tree) might appear only later. Also see {@link sap.ui.core.mvc.View#loaded}.
+     * will be loaded asynchronously. Any controls used in the view might be loaded sync or async, this depends
+     * on the experimental runtime configuration option "xx-xml-processing". Even when the view definition is
+     * provided as string or XML Document, controller or controls might be loaded asynchronously. In any case
+     * a view instance will be returned synchronously by this factory API, but its content (control tree) might
+     * appear only later. Also see {@link sap.ui.core.mvc.View#loaded}.
      *
      * **Note**: If an XML document is given, it might be modified during view construction.
      *
@@ -1317,6 +1236,29 @@ declare namespace sap {
         controller?: sap.ui.core.mvc.Controller;
       }
     ): sap.ui.core.mvc.XMLView;
+    /**
+     * @deprecated (since 1.56) - use {@link sap.ui.core.mvc.Controller.create Controller.create} or {@link
+     * sap.ui.core.mvc.Controller.extend Controller.extend} instead.
+     *
+     * Defines a controller class or creates an instance of an already defined controller class.
+     *
+     * When a name and a controller implementation object is given, a new controller class of the given name
+     * is created. The members of the implementation object will be copied into each new instance of that controller
+     * class (shallow copy). **Note**: as the members are shallow copied, controller instances will share all
+     * object values. This might or might not be what applications expect.
+     *
+     * If only a name is given, a new instance of the named controller class is returned.
+     */
+    function controller(
+      /**
+       * The controller name
+       */
+      sName: string,
+      /**
+       * Decides whether the controller gets loaded asynchronously or not
+       */
+      bAsync: boolean
+    ): void | sap.ui.core.mvc.Controller | Promise<any>;
     /**
      * @SINCE 1.27.0
      *
@@ -2047,55 +1989,30 @@ declare namespace sap {
      *
      * Instantiates an HTML-based Fragment.
      *
-     * To instantiate a fragment, call:
-     * ```javascript
+     * To instantiate a Fragment, call this method as: sap.ui.htmlfragment([sId], sFragmentName, [oController]);
+     * The Fragment instance ID is optional and will be used as prefix for the ID of all contained controls.
+     * If no ID is passed, controls will not be prefixed. The sFragmentName must correspond to an HTML Fragment
+     * which can be loaded via the module system (fragmentName + ".fragment.html") and which defines the Fragment.
+     * If oController is given, the methods referenced in the Fragment will be called on this controller. Note
+     * that Fragments may require a Controller to be given and certain methods to be available.
      *
-     *    sap.ui.htmlfragment([sId], sFragmentName, [oController]);
-     * ```
-     *  The fragment instance ID is optional and will be used as prefix for the ID of all contained controls.
-     * If no ID is passed, controls will not be prefixed. The `sFragmentName` must correspond to an HTML fragment
-     * which can be loaded via the module system (fragmentName + ".fragment.html") and which defines the fragment.
-     * If `oController` is given, the methods referenced in the fragment will be called on this controller.
-     * Note that fragments may require a controller to be given and certain methods to be available.
-     *
-     * Advanced usage:: To instantiate a fragment and optionally directly give the HTML definition instead of
-     * loading it from a file, call:
-     * ```javascript
-     *
-     *     sap.ui.htmlfragment(oFragmentConfig, [oController]);
-     * ```
-     *  The `oFragmentConfig` object can either have a `fragmentName` or a `fragmentContent` property, but not
-     * both of them. `fragmentContent` can hold the fragment definition as XML string; if not given, `fragmentName`
-     * must be given and the fragment content definition is loaded by the module system. Again, if `oController`
-     * is given, any methods referenced in the fragment will be called on this controller.
+     * Advanced usage: To instantiate a Fragment and optionally directly give the HTML definition instead of
+     * loading it from a file, call this method as: sap.ui.htmlfragment(oFragmentConfig, [oController]); The
+     * oFragmentConfig object can either have a "fragmentName" or a "fragmentContent" property. fragmentContent
+     * is optional and can hold the Fragment definition as XML string; if not given, fragmentName must be given
+     * and the Fragment content definition is loaded by the module system. Again, if oController is given, the
+     * methods referenced in the Fragment will be called on this controller.
      */
     function htmlfragment(
       /**
-       * Resource name of the fragment, a module name in dot notation without the '.fragment.html' suffix. Alternatively,
-       * a configuration object can be given with the properties described below. In this case, no `sId` may be
-       * given as first parameter, but as property `id` in the configuration object.
+       * name of the Fragment (or Fragment configuration as described above, in this case no sId may be given.
+       * Instead give the id inside the config object, if desired.)
        */
-      vFragment: {
-        /**
-         * ID of the newly created fragment; will be used as a prefix to all contained control IDs
-         */
-        id?: string;
-        /**
-         * Resource name of the Fragment; a module name in dot notation without the '.fragment.html' suffix
-         */
-        fragmentName?: string;
-        /**
-         * Definition of the fragment as an HTML string
-         */
-        fragmentContent?: string;
-      },
+      vFragment: string | object,
       /**
-       * A controller to be used for event handlers in the fragment; can either be the controller of an enclosing
-       * view, a new controller instance, or a simple object with the necessary methods attached. Note that a
-       * fragment has no runtime representation besides its contained controls. There's therefore no API to retrieve
-       * the controller after creating a fragment
+       * a Controller to be used for event handlers in the Fragment
        */
-      oController?: sap.ui.core.mvc.Controller | object
+      oController?: sap.ui.core.mvc.Controller
     ): sap.ui.core.Control | sap.ui.core.Control[];
     /**
      * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.HTMLView.create HTMLView.create} instead
@@ -2126,6 +2043,39 @@ declare namespace sap {
       }
     ): sap.ui.core.mvc.HTMLView | undefined;
     /**
+     * @deprecated (since 1.58) - use {@link sap.ui.core.Fragment.load} instead
+     *
+     * Defines OR instantiates an HTML-based Fragment.
+     *
+     * To define a JS Fragment, call this method as: sap.ui.jsfragment(sName, oFragmentDefinition) Where: -
+     * "sName" is the name by which this fragment can be found and instantiated. If defined in its own file,
+     * in order to be found by the module loading system, the file location and name must correspond to sName
+     * (path + file name must be: fragmentName + ".fragment.js"). - "oFragmentDefinition" is an object at least
+     * holding the "createContent(oController)" method which defines the Fragment content. If given during instantiation,
+     * the createContent method receives a Controller instance (otherwise oController is undefined) and the
+     * return value must be one sap.ui.core.Control (which could have any number of children).
+     *
+     * To instantiate a JS Fragment, call this method as: sap.ui.jsfragment([sId], sFragmentName, [oController]);
+     * The Fragment ID is optional (generated if not given) and the Fragment implementation CAN use it to make
+     * contained controls unique (this depends on the implementation: some JS Fragments may choose not to support
+     * multiple instances within one application and not use the ID prefixing). The sFragmentName must correspond
+     * to a JS Fragment which can be loaded via the module system (fragmentName + ".fragment.js") and which
+     * defines the Fragment. If oController is given, the methods referenced in the Fragment will be called
+     * on this controller. Note that Fragments may require a Controller to be given and certain methods to be
+     * available.
+     */
+    function jsfragment(
+      /**
+       * name of the Fragment (or Fragment configuration as described above, in this case no sId may be given.
+       * Instead give the id inside the config object, if desired)
+       */
+      sFragmentName: string | object,
+      /**
+       * a Controller to be used for event handlers in the Fragment
+       */
+      oController?: sap.ui.core.mvc.Controller
+    ): sap.ui.core.Control | sap.ui.core.Control[];
+    /**
      * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.JSONView.create JSONView.create} instead.
      *
      * Creates a JSON view of the given name and id.
@@ -2142,9 +2092,10 @@ declare namespace sap {
      *
      * When property `async` is set to true, the view definition and the controller class (and its dependencies)
      * will be loaded asynchronously. Any controls used in the view might be loaded sync or async, depending
-     * on the view configuration. Even when the view definition is provided as string or object tree, controller
-     * or controls might be loaded asynchronously. In any case, a view instance will be returned synchronously
-     * by this factory API, but its content (control tree) might appear only later. Also see {@link sap.ui.core.mvc.View#loaded}.
+     * on the experimental runtime configuration option "xx-xml-processing". Even when the view definition is
+     * provided as string or object tree, controller or controls might be loaded asynchronously. In any case,
+     * a view instance will be returned synchronously by this factory API, but its content (control tree) might
+     * appear only later. Also see {@link sap.ui.core.mvc.View#loaded}.
      *
      * Like with any other control, an id is optional and will be created when missing.
      */
@@ -2298,56 +2249,30 @@ declare namespace sap {
      *
      * Instantiates an XML-based Fragment.
      *
-     * To instantiate a fragment, call:
-     * ```javascript
+     * To instantiate a Fragment, call this method as: sap.ui.xmlfragment([sId], sFragmentName, [oController]);
+     * The Fragment instance ID is optional and will be used as prefix for the ID of all contained controls.
+     * If no ID is passed, controls will not be prefixed. The sFragmentName must correspond to an XML Fragment
+     * which can be loaded via the module system (fragmentName + ".fragment.xml") and which defines the Fragment.
+     * If oController is given, the methods referenced in the Fragment will be called on this controller. Note
+     * that Fragments may require a Controller to be given and certain methods to be available.
      *
-     *    sap.ui.xmlfragment([sId], sFragmentName, [oController]);
-     * ```
-     *  The fragment instance ID is optional and will be used as prefix for the ID of all contained controls.
-     * If no ID is passed, controls will not be prefixed. The `sFragmentName` must correspond to an XML fragment
-     * which can be loaded via the module system (fragmentName + ".fragment.xml") and which defines the fragment.
-     * If `oController` is given, the methods referenced in the fragment will be called on this controller.
-     *
-     * Note that fragments may require a controller to be given and certain methods to be available.
-     *
-     * Advanced usage:: To instantiate a fragment and optionally directly give the XML definition instead of
-     * loading it from a file, call:
-     * ```javascript
-     *
-     *     sap.ui.xmlfragment(oFragmentConfig, [oController]);
-     * ```
-     *  The `oFragmentConfig` object can either have a `fragmentName` or a `fragmentContent` property, but not
-     * both. `fragmentContent` can hold the fragment definition as XML string; if not given, `fragmentName`
-     * must be given and the fragment content definition is loaded via the module system. Again, if `oController`
-     * is given, the methods referenced in the fragment will be called on this controller.
+     * Advanced usage: To instantiate a Fragment and optionally directly give the XML definition instead of
+     * loading it from a file, call this method as: sap.ui.xmlfragment(oFragmentConfig, [oController]); The
+     * oFragmentConfig object can either have a "fragmentName" or a "fragmentContent" property. fragmentContent
+     * is optional and can hold the Fragment definition as XML string; if not given, fragmentName must be given
+     * and the Fragment content definition is loaded by the module system. Again, if oController is given, the
+     * methods referenced in the Fragment will be called on this controller.
      */
     function xmlfragment(
       /**
-       * Resource name of the fragment; a module name in dot notation without the '.fragment.xml' suffix. Alternatively,
-       * a configuration object can be given with the properties described below. In this case, no `sId` may be
-       * given as first parameter, but as property `id` in the configuration object.
+       * name of the Fragment (or Fragment configuration as described above, in this case no sId may be given.
+       * Instead give the id inside the config object, if desired)
        */
-      vFragment: {
-        /**
-         * ID of the newly created fragment; will be used as a prefix to all contained control IDs
-         */
-        id?: string;
-        /**
-         * Resource name of the fragment; a module name in dot notation without the '.fragment.html' suffix
-         */
-        fragmentName?: string;
-        /**
-         * Definition of the fragment as an XML string
-         */
-        fragmentContent?: string;
-      },
+      vFragment: string | object,
       /**
-       * A controller to be used for event handlers in the fragment; can either be the controller of an enclosing
-       * view, a new controller instance, or a simple object with the necessary methods attached. Note that a
-       * fragment has no runtime representation besides its contained controls. There's therefore no API to retrieve
-       * the controller after creating a fragment
+       * a Controller to be used for event handlers in the Fragment
        */
-      oController?: sap.ui.core.mvc.Controller | object
+      oController?: sap.ui.core.mvc.Controller
     ): sap.ui.core.Control | sap.ui.core.Control[];
     /**
      * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.XMLView.create XMLView.create} instead
@@ -2366,10 +2291,11 @@ declare namespace sap {
      * definition.
      *
      * When property `async` is set to true, the view definition and the controller class (and its dependencies)
-     * will be loaded asynchronously. Any controls used in the view might be loaded sync or async, depending
-     * on the processingMode. Even when the view definition is provided as string or XML Document, controller
-     * or controls might be loaded asynchronously. In any case a view instance will be returned synchronously
-     * by this factory API, but its content (control tree) might appear only later. Also see {@link sap.ui.core.mvc.View#loaded}.
+     * will be loaded asynchronously. Any controls used in the view might be loaded sync or async, this depends
+     * on the experimental runtime configuration option "xx-xml-processing". Even when the view definition is
+     * provided as string or XML Document, controller or controls might be loaded asynchronously. In any case
+     * a view instance will be returned synchronously by this factory API, but its content (control tree) might
+     * appear only later. Also see {@link sap.ui.core.mvc.View#loaded}.
      *
      * **Note**: If an XML document is given, it might be modified during view construction.
      *
@@ -2987,32 +2913,20 @@ declare namespace sap {
         ): sap.ui.base.EventProvider;
       }
       /**
-       * A class whose instances act as a facade for other objects.
-       *
-       * Note: If a class returns a facade in its constructor, only the defined functions will be visible, no
-       * internals of the class can be accessed.
+       * A class that creates an Interface for an existing class. If a class returns the interface in its constructor,
+       * only the defined functions will be visible, no internals of the class can be accessed.
        */
       class Interface {
         /**
-         * Constructs a facade for the given object, containing only the named methods.
-         *
-         * For each method named in `aMethods`, a wrapper function will be added to the facade. When called, the
-         * wrapper function calls the method with the same name in the original `oObject`, passing all its call
-         * parameters to it without modification. A return value of the original method will be returned to the
-         * caller. Before returning it, values of type `sap.ui.base.Object` will be replaced by their facades, calling
-         * {@link sap.ui.base.Object#getInterface getInterface} on them.
-         *
-         * It is possible to create different facades exposing different sets of methods for the same object, but
-         * as `getInterface` can only return one of those interfaces, the special handling of the return values
-         * doesn't support multiple facades per object.
+         * Constructs an instance of sap.ui.base.Interface which restricts access to methods marked as public.
          */
         constructor(
           /**
-           * Object for which a facade should be created
+           * the instance that needs an interface created
            */
           oObject: sap.ui.base.Object,
           /**
-           * Names of the methods, that should be available in the new facade
+           * the names of the methods, that should be available on this interface
            */
           aMethods: string[]
         );
@@ -3025,12 +2939,12 @@ declare namespace sap {
        *
        * Properties: Managed properties represent the state of a ManagedObject. They can store a single value
        * of a simple data type (like 'string' or 'int'). They have a name (e.g. 'size') and methods to
-       * get the current value (`getSize`), or to set a new value (`setSize`). When a property is modified by
-       * calling the setter, the ManagedObject is marked as invalidated. A managed property can be bound against
-       * a property in a {@link sap.ui.model.Model} by using the {@link #bindProperty} method. Updates to the
-       * model property will be automatically reflected in the managed property and - if TwoWay databinding is
-       * active, changes to the managed property will be reflected in the model. An existing binding can be removed
-       * by calling {@link #unbindProperty}.
+       * get the current value (`getSize`), or to set a new value (`setSize`). When a property is modified, the
+       * ManagedObject is marked as invalidated. A managed property can be bound against a property in a {@link
+       * sap.ui.model.Model} by using the {@link #bindProperty} method. Updates to the model property will be
+       * automatically reflected in the managed property and - if TwoWay databinding is active, changes to the
+       * managed property will be reflected in the model. An existing binding can be removed by calling {@link
+       * #unbindProperty}.
        *
        * If a ManagedObject is cloned, the clone will have the same values for its managed properties as the source
        * of the clone - if the property wasn't bound. If it is bound, the property in the clone will be bound
@@ -3147,11 +3061,8 @@ declare namespace sap {
          * 			instance
          * 	 - for 0..1 associations, an instance of the associated type or an id (string) is accepted
          * 	 - for 0..n associations, an array of instances of the associated type or of IDs is accepted
-         * 	 - for events, either a function (event handler) is accepted or an array of length 2 where the first
-         * 			element is a function and the 2nd element is an object to invoke the method on; or an array of length
-         * 			3, where the first element is an arbitrary payload object, the second one is a function and the 3rd one
-         * 			is an object to invoke the method on; or an array of arrays where each nested array has the 2 or 3 element
-         * 			structure described before (multiple listeners).
+         * 	 - for events either a function (event handler) is accepted or an array of length 2 where the first
+         * 			element is a function and the 2nd element is an object to invoke the method on.
          *
          * Each subclass should document the name and type of its supported settings in its constructor documentation.
          *
@@ -3447,103 +3358,71 @@ declare namespace sap {
         /**
          * Bind an aggregation to the model.
          *
-         * Whenever the corresponding model becomes available or changes (either via a call to {@link #setModel
-         * setModel} or propagated from a {@link #getParent parent}), its {@link sap.ui.model.Model#bindList bindList}
-         * method will be called to create a new {@link sap.ui.model.ListBinding ListBinding} with the configured
-         * binding options.
-         *
          * The bound aggregation will use the given template, clone it for each item which exists in the bound list
-         * and set the appropriate binding context.
-         *
-         * This is a generic method which can be used to bind any aggregation to the model. A class may flag aggregations
-         * in its metadata with `bindable: "bindable"` to get typed `bindSomething` and `unbindSomething`
-         * methods for those aggregations.
-         *
-         * Also see {@link topic:91f057786f4d1014b6dd926db0e91070 List Binding (Aggregation Binding)} in the documentation.
-         *
-         * For more information on the `oBindingInfo.key` property and its usage, see {@link topic:7cdff73f308b4b10bdf7d83b7aba72e7
-         * Extended Change Detection}.
+         * and set the appropriate binding context. This is a generic method which can be used to bind any aggregation
+         * to the model. A managed object may flag aggregations in the metamodel with bindable="bindable" to get
+         * typed bindSomething methods for those aggregations. For more information on the `oBindingInfo.key`
+         * property and its usage, see {@link topic:7cdff73f308b4b10bdf7d83b7aba72e7 Extended Change Detection}
          */
         bindAggregation(
           /**
-           * Name of a public aggregation to bind
+           * the aggregation to bind
            */
           sName: string,
           /**
-           * Binding info
+           * the binding info
            */
           oBindingInfo: {
             /**
-             * Path in the model to bind to, either an absolute path or relative to the binding context for the corresponding
-             * model; when the path contains a '>' sign, the string preceding it will override the `model` property
-             * and the remainder after the '>' will be used as binding path
+             * the binding path
              */
             path: string;
             /**
-             * Name of the model to bind against; when `undefined` or omitted, the default model is used
+             * the template to clone for each item in the aggregation
              */
-            model?: string;
+            template: sap.ui.base.ManagedObject;
             /**
-             * The template to clone for each item in the aggregation; either a template or a factory must be given
-             */
-            template?: sap.ui.base.ManagedObject;
-            /**
-             * Whether the framework should assume that the application takes care of the lifecycle of the given template;
-             * when set to `true`, the template can be used in multiple bindings, either in parallel or over time, and
-             * the framework won't clone it when this `ManagedObject` is cloned; when set to `false`, the lifecycle
-             * of the template is bound to the lifecycle of the binding, when the aggregation is unbound or when this
-             * `ManagedObject` is destroyed, the template also will be destroyed, and when this `ManagedObject` is cloned,
-             * the template will be cloned as well; the third option (`undefined`) only exists for compatibility reasons,
-             * its behavior is not fully reliable and it may leak the template
-             */
-            templateShareable?: boolean | undefined;
-            /**
-             * A factory function that will be called to create an object for each item in the aggregation; this is
-             * an alternative to providing a template object and can be used when the objects should differ depending
-             * on the binding context; the factory function will be called with two parameters: an ID that should be
-             * used for the created object and the binding context for which the object has to be created; the function
-             * must return an object appropriate for the bound aggregation
-             */
-            factory?: Function;
-            /**
-             * Whether the binding should be suspended initially
+             * Whether the binding should be suspended
              */
             suspended?: boolean;
             /**
+             * option to enable that the template will be shared which means that it won't be destroyed or cloned automatically
+             */
+            templateShareable?: boolean;
+            /**
+             * the factory function
+             */
+            factory: Function;
+            /**
              * the first entry of the list to be created
              */
-            startIndex?: number;
+            startIndex: number;
             /**
-             * The amount of entries to be created (may exceed the size limit of the model)
+             * the amount of entries to be created (may exceed the size limit of the model)
              */
-            length?: number;
+            length: number;
             /**
-             * The initial sort order (optional)
+             * the initial sort order (optional)
              */
             sorter?: sap.ui.model.Sorter | sap.ui.model.Sorter[];
             /**
-             * The predefined filters for this aggregation (optional)
+             * the predefined filters for this aggregation (optional)
              */
             filters?: sap.ui.model.Filter[];
             /**
-             * Name of the key property or a function getting the context as only parameter to calculate a key for entries.
-             * This can be used to improve update behaviour in models, where a key is not already available.
+             * the name of the key property or a function getting the context as only parameter to calculate a key for
+             * entries. This can be used to improve update behaviour in models, where a key is not already available.
              */
-            key?: string | Function;
+            key: string | Function;
             /**
-             * Map of additional parameters for this binding; the names and value ranges of the supported parameters
-             * depend on the model implementation, they should be documented with the `bindList` method of the corresponding
-             * model class or with the model specific subclass of `sap.ui.model.ListBinding`
+             * a map of parameters which is passed to the binding. The supported parameters are listed in the corresponding
+             * model-specific implementation of `sap.ui.model.ListBinding` or `sap.ui.model.TreeBinding`.
              */
             parameters?: object;
             /**
-             * A factory function to generate custom group visualization (optional)
+             * a factory function to generate custom group visualization (optional)
              */
             groupHeaderFactory?: Function;
-            /**
-             * Map of event handler functions keyed by the name of the binding events that they should be attached to
-             */
-            events?: object;
           }
         ): sap.ui.base.ManagedObject;
         /**
@@ -3560,50 +3439,35 @@ declare namespace sap {
           sPath: string
         ): sap.ui.base.ManagedObject;
         /**
-         * Bind the object to the referenced entity in the model.
-         *
-         * The entity is used as the binding context to resolve bound properties or aggregations of the object itself
-         * and all of its children relatively to the given path. If a relative binding path is used, it will be
-         * evaluated anew whenever the parent context changes.
-         *
-         * Whenever the corresponding model becomes available or changes (either via a call to {@link #setModel
-         * setModel} or propagated from a {@link #getParent parent}), its {@link sap.ui.model.Model#bindContext
-         * bindContext} method will be called to create a new {@link sap.ui.model.ContextBinding ContextBinding}
-         * with the configured binding options.
-         *
-         * There is no difference between `bindObject` and {@link sap.ui.core.Element#bindElement bindElement}.
-         * Method `bindElement` was deprecated and renamed to `bindObject` when this kind of binding was no longer
-         * limited to `sap.ui.core.Element`s.
-         *
-         * Also see {@link topic:91f05e8b6f4d1014b6dd926db0e91070 Context Binding} in the documentation.
+         * Bind the object to the referenced entity in the model, which is used as the binding context to resolve
+         * bound properties or aggregations of the object itself and all of its children relatively to the given
+         * path. If a relative binding path is used, this will be applied whenever the parent context changes. There
+         * is no difference between {@link sap.ui.core.Element#bindElement} and {@link sap.ui.base.ManagedObject#bindObject}.
          */
         bindObject(
           /**
-           * An object describing the binding
+           * the binding info object
            */
           oBindingInfo: {
             /**
-             * Path in the model to bind to, either an absolute path or relative to the binding context for the corresponding
-             * model; when the path contains a '>' sign, the string preceding it will override the `model` property
-             * and the remainder after the '>' will be used as binding path
+             * the binding path
              */
             path: string;
             /**
-             * Name of the model to bind against; when `undefined` or omitted, the default model is used
-             */
-            model?: string;
-            /**
-             * Map of additional parameters for this binding; the names and value ranges of the supported parameters
-             * depend on the model implementation, they should be documented with the `bindContext` method of the corresponding
-             * model class or with the model specific subclass of `sap.ui.model.ContextBinding`
+             * map of additional parameters for this binding The supported parameters are listed in the corresponding
+             * model-specific implementation of `sap.ui.model.ContextBinding`.
              */
             parameters?: object;
             /**
-             * Whether the binding should be suspended initially
+             * name of the model
+             */
+            model?: string;
+            /**
+             * Whether the binding should be suspended
              */
             suspended?: boolean;
             /**
-             * Map of event handler functions keyed by the name of the binding events that they should be attached to
+             * map of event listeners for the binding events
              */
             events?: object;
           }
@@ -3611,19 +3475,14 @@ declare namespace sap {
         /**
          * Binds a property to the model.
          *
-         * Whenever the corresponding model becomes available or changes (either via a call to {@link #setModel
-         * setModel} or propagated from a {@link #getParent parent}), its {@link sap.ui.model.Model#bindProperty
-         * bindProperty} method will be called to create a new {@link sap.ui.model.PropertyBinding PropertyBinding}
-         * with the configured binding options.
-         *
-         * The Setter for the given property will be called by the binding with the value retrieved from the data
-         * model. When the binding mode is `OneTime`, the property will be set only once. When it is `OneWay`, the
-         * property will be updated whenever the corresponding data in the model changes. In mode `TwoWay`, changes
-         * to the property (not originating in the model) will be reported back to the model (typical use case:
-         * user interaction changes the value of a control).
+         * The Setter for the given property will be called with the value retrieved from the data model. When the
+         * binding mode is `OneTime`, the property will be set only once. When it is `OneWay`, the property will
+         * be updated whenever the corresponding data in the model changes. In mode `TwoWay`, changes to the property
+         * (not originating in the model) will be reported back to the model (typical use case: user interaction
+         * changes the value of a control).
          *
          * This is a generic method which can be used to bind any property to the model. A managed object may flag
-         * any property in its metadata with `bindable: "bindable"` to additionally provide named methods to bind
+         * any property in its metadata with `bindable="bindable"` to additionally provide named methods to bind
          * and unbind the corresponding property.
          *
          * **Composite Binding**
@@ -3657,13 +3516,10 @@ declare namespace sap {
          *
          * When the formatter for a property binding (simple or composite) is called, the managed object will be
          * given as `this` context. For formatters of binding parts in a composite binding, this is not the case.
-         *
-         * Also see {@link topic:91f0652b6f4d1014b6dd926db0e91070 Property Binding} in the documentation.
          */
         bindProperty(
           /**
-           * Name of a public property to bind; public aggregations of cardinality 0..1 that have an alternative,
-           * simple type (e.g. "string" or "int") can also be bound with this method
+           * Name of the property to bind
            */
           sName: string,
           /**
@@ -3672,16 +3528,15 @@ declare namespace sap {
           oBindingInfo: {
             /**
              * Path in the model to bind to, either an absolute path or relative to the binding context for the corresponding
-             * model; when the path contains a '>' sign, the string preceding it will override the `model` property
-             * and the remainder after the '>' will be used as binding path
+             * model
              */
             path: string;
             /**
-             * Name of the model to bind against; when `undefined` or omitted, the default model is used
+             * Name of the model to bind against or `undefined` for the default model
              */
             model?: string;
             /**
-             * Whether the binding should be suspended initially
+             * Whether the binding should be suspended
              */
             suspended?: boolean;
             /**
@@ -3729,15 +3584,10 @@ declare namespace sap {
              */
             mode?: sap.ui.model.BindingMode;
             /**
-             * Map of additional parameters for this binding; the names and value ranges of the supported parameters
-             * depend on the model implementation, they should be documented with the `bindProperty` method of the corresponding
-             * model class or with the model specific subclass of `sap.ui.model.PropertyBinding`
+             * Map of parameters which is passed to the binding; the supported parameters are listed in the corresponding
+             * model-specific implementation of `sap.ui.model.PropertyBinding`.
              */
             parameters?: object;
-            /**
-             * Map of event handler functions keyed by the name of the binding events that they should be attached to
-             */
-            events?: object;
             /**
              * Array of binding info objects for the parts of a composite binding; the structure of each binding info
              * is the same as described for the `oBindingInfo` as a whole.
@@ -3833,7 +3683,7 @@ declare namespace sap {
         /**
          * Cleans up the resources associated with this object and all its aggregated children.
          *
-         * After an object has been destroyed, it can no longer be used!
+         * After an object has been destroyed, it can no longer be used in!
          *
          * Applications should call this method if they don't need the object any longer.
          */
@@ -4023,20 +3873,11 @@ declare namespace sap {
          * The value can either be a simple string which then will be assumed to be the type of the new property
          * or it can be an object literal with the following properties
          * 	 - `type: string` type of the new property. Must either be one of the built-in types 'string',
-         * 			'boolean', 'int', 'float', 'object', 'array', 'function' or 'any', or a type created and registered with
-         * 			{@link sap.ui.base.DataType.createType} or an array type based on one of the previous types.
-         * 	 - `byValue: boolean` (either can be omitted or set to the boolean value `true`) If set to `true`,
-         * 			the property value will be {@link module:sap/base/util/deepClone deep cloned} on write and read operations
-         * 			to ensure that the internal value can't be modified by the outside. The property `byValue` is currently
-         * 			limited to a `boolean` value. Other types are reserved for future use. Class definitions must only use
-         * 			boolean values for the flag (or omit it), but readers of ManagedObject metadata should handle any truthy
-         * 			value as `true` to be future safe. Note that using `byValue:true` has a performance impact on property
-         * 			access and therefore should be used carefully. It also doesn't make sense to set this option for properties
-         * 			with a primitive type (they have value semantic anyhow) or for properties with arrays of primitive types
-         * 			(they have been cloned already in the past with a cheaper implementation). Future versions of UI5 might
-         * 			encourage this as a limitation during class definition. `group:string` a semantic grouping
-         * 			of the properties, intended to be used in design time tools. Allowed values are (case sensitive): Accessibility,
-         * 			Appearance, Behavior, Data, Designtime, Dimension, Identification, Misc
+         * 			'boolean', 'int', 'float', 'object' or 'any', or a type created and registered with {@link sap.ui.base.DataType.createType}
+         * 			or an array type based on one of the previous types.
+         * 	 - `group:string` a semantic grouping of the properties, intended to be used in design time tools.
+         * 			Allowed values are (case sensitive): Accessibility, Appearance, Behavior, Data, Designtime, Dimension,
+         * 			Identification, Misc
          * 	 - `defaultValue: any` the default value for the property or null if there is no defaultValue.
          *
          * 	 - `bindable: boolean|string` (either can be omitted or set to the boolean value `true` or the
@@ -4532,15 +4373,13 @@ declare namespace sap {
           sModelName?: string
         ): sap.ui.model.Context;
         /**
-         * Returns the binding info for the given property or aggregation.
-         *
-         * The binding info contains information about path, binding object, format options, sorter, filter etc.
-         * for the property or aggregation. As the binding object is only created when the model becomes available,
-         * the `binding` property may be undefined.
+         * Returns the binding info for the given property or aggregation. The binding info contains information
+         * about path, binding object, format options, sorter, filter etc. for the property or aggregation. As the
+         * binding object is only created when the model becomes available, the binding property may be undefined.
          */
         getBindingInfo(
           /**
-           * Name of the property or aggregation
+           * the name of the property or aggregation
            */
           sName: string
         ): object;
@@ -5147,7 +4986,7 @@ declare namespace sap {
          */
         unbindObject(
           /**
-           * Name of the model to remove the context for.
+           * name of the model to remove the context for.
            */
           sModelName?: string
         ): sap.ui.base.ManagedObject;
@@ -5220,11 +5059,11 @@ declare namespace sap {
          */
         validateProperty(
           /**
-           * Name of the property
+           * the name of the property
            */
           sPropertyName: string,
           /**
-           * Value to be set
+           * the value
            */
           oValue: any
         ): any;
@@ -5353,7 +5192,7 @@ declare namespace sap {
        * 	 - the period of validity of info objects is not defined. They should be referenced only for a short
        * 			time and not be kept as members of long living objects or closures.
        */
-      class ManagedObjectMetadata extends sap.ui.base.Metadata {
+      class ManagedObjectMetadata {
         /**
          * Creates a new metadata object that describes a subclass of ManagedObject.
          *
@@ -5882,13 +5721,11 @@ declare namespace sap {
         ): boolean;
       }
       /**
-       * Base class for all SAPUI5 Objects.
+       * Base class for all SAPUI5 Objects
        */
       class Object {
         /**
-         * Constructor for an `sap.ui.base.Object`.
-         *
-         * Subclasses of this class should always call the constructor of their base class.
+         * Constructor for an sap.ui.base.Object.
          */
         constructor();
 
@@ -5928,7 +5765,7 @@ declare namespace sap {
           FNMetaImpl?: Function
         ): sap.ui.base.Metadata;
         /**
-         * Destructor method for objects.
+         * Destructor method for objects
          */
         destroy(): void;
         /**
@@ -5956,16 +5793,11 @@ declare namespace sap {
          * 			function is given, the framework creates a default implementation that delegates all its arguments to
          * 			the constructor function of the base class.
          *
-         * any-other-name: any other property in the `oClassInfo` is copied into the prototype object
-         * of the newly created class. Callers can thereby add methods or properties to all instances of the class.
-         * But be aware that the given values are shared between all instances of the class. Usually, it doesn't
-         * make sense to use primitive values here other than to declare public constants.
          *
-         * If such a property has a function as its value, and if the property name does not start with an underscore
-         * or with the prefix "on", the property name will be automatically added to the list of public methods
-         * of the class (see property `publicMethods` in the `metadata` section). If a method's name matches that
-         * pattern, but is not meant to be public, it shouldn't be included in the class info object, but be assigned
-         * to the prototype instead.
+         * 	 - any-other-name: any other property in the `oClassInfo` is copied into the prototype object
+         * 			of the newly created class. Callers can thereby add methods or properties to all instances of the class.
+         * 			But be aware that the given values are shared between all instances of the class. Usually, it doesn't
+         * 			make sense to use primitive values here other than to declare public constants.
          *
          *
          *
@@ -5996,16 +5828,9 @@ declare namespace sap {
           FNMetaImpl?: Function
         ): Function;
         /**
-         * Returns the public facade of this object.
-         *
-         * By default, the public facade is implemented as an instance of {@link sap.ui.base.Interface}, exposing
-         * the `publicMethods` as defined in the metadata of the class of this object.
-         *
-         * See the documentation of the {@link #.extend extend} method for an explanation of `publicMethods`.
-         *
-         * The facade is created on the first call of `getInterface` and reused for all later calls.
+         * Returns the public interface of the object.
          */
-        getInterface(): void;
+        getInterface(): sap.ui.base.Interface;
         /**
          * Returns the metadata for the class that this object belongs to.
          *
@@ -6142,6 +5967,13 @@ declare namespace sap {
      */
     namespace core {
       /**
+       * @SINCE 1.58.0
+       *
+       * The class `sap.ui.core.ComponentSupport` provides functionality which is used to find declared Components
+       * in the HTML page and to create the Component instances which will be put into a ComponentContainer.
+       */
+      function ComponentSupport(): void;
+      /**
        * Applies the support for custom style classes on the prototype of a `sap.ui.core.Element`.
        *
        * All controls (subclasses of `sap.ui.core.Control`) provide the support custom style classes. The control
@@ -6229,9 +6061,9 @@ declare namespace sap {
          */
         function register(
           /**
-           * base URL of an application providing a cachebuster index file
+           * URL of an application providing a cachebuster index file
            */
-          sBaseUrl: string
+          base: string
         ): void;
       }
 
@@ -6597,12 +6429,11 @@ declare namespace sap {
              * The duration of animated scrolling in milliseconds. To scroll immediately without animation, give 0 as
              * value.
              */
-            iTime?: number,
+            iTime: number,
             /**
-             * Specifies an additional left and top offset of the target scroll position, relative to the upper left
-             * corner of the DOM element
+             * the offset left and top for the DOM Element.
              */
-            aOffset?: number[]
+            Specifies: any[]
           ): sap.ui.core.delegate.ScrollEnablement;
           /**
            * @SINCE 1.17
@@ -6679,1177 +6510,19 @@ declare namespace sap {
              */
             bVertical: boolean
           ): void;
-        }
-      }
-      /**
-       * @SINCE 1.52
-       *
-       * Contains classes and helpers related to drag & drop functionality.
-       */
-      namespace dnd {
-        /**
-         * When a user requests to drag some controls that can be dragged, a drag session is started. The drag session
-         * can be used to transfer data between applications or between dragged and dropped controls. Please see
-         * provided APIs for more details.
-         *
-         * **Note:** This object only exists during a drag-and-drop operation.
-         */
-        namespace DragSession {
           /**
-           * Returns the data that has been set via `setComplexData` method.
+           * Scrolls to an element within a container.
            */
-          function getComplexData(
+          scrollToElement(
             /**
-             * The key of the data
+             * A DOM element.
              */
-            sKey: string
-          ): any;
-          /**
-           * Returns the data that has been set via `setData` method.
-           */
-          function getData(
-            /**
-             * The key of the data
-             */
-            sKey: string
-          ): string;
-          /**
-           * Returns the dragged control, if available within the same UI5 application frame.
-           */
-          function getDragControl(): sap.ui.core.Element | null;
-          /**
-           * The valid drop target underneath the dragged control.
-           */
-          function getDropControl(): sap.ui.core.Element | null;
-          /**
-           * Returns the drop configuration corresponding to the drop control.
-           */
-          function getDropInfo(): sap.ui.core.dnd.DropInfo | null;
-          /**
-           * Returns the calculated position of the drop action relative to the valid dropped control.
-           */
-          function getDropPosition(): String;
-          /**
-           * Returns the drop indicator.
-           */
-          function getIndicator(): HTMLElement | null;
-          /**
-           * Returns the visual configuration of the drop indicator.
-           */
-          function getIndicatorConfig(): object;
-          /**
-           * Returns the data that has been set via `setTextData` method.
-           */
-          function getTextData(): string;
-          /**
-           * Sets string data with any MIME type. **Note:** This works in all browsers, apart from Internet Explorer
-           * and Microsoft Edge. It also works if you navigate between different windows.
-           */
-          function setData(
-            /**
-             * The key of the data
-             */
-            sKey: string,
-            /**
-             * Data
-             */
-            sData: string
-          ): void;
-          /**
-           * Set the valid drop control.
-           */
-          function setDropControl(): void;
-          /**
-           * Defines the visual configuration of the drop indicator for the current `DropInfo`.
-           */
-          function setIndicatorConfig(
-            /**
-             * Custom styles of the drop indicator.
-             */
-            mConfig: object
-          ): void;
-          /**
-           * Sets string data with plain text MIME type. **Note:** This works in all browsers, including Internet
-           * Explorer and Microsoft Edge. It also works if you navigate between different windows.
-           */
-          function setTextData(
-            /**
-             * Data
-             */
-            sData: string
-          ): void;
-        }
-        /**
-         * @SINCE 1.52.0
-         *
-         * Marker interface for drag configuration providing information about the source of the drag operation.
-         */
-        interface IDragInfo {}
-        /**
-         * @SINCE 1.52.0
-         *
-         * Marker interface for drop configuration providing information about the target of the drop operation.
-         */
-        interface IDropInfo {}
-
-        interface DragDropBaseOpts extends sap.ui.core.ElementOpts {
-          /**
-           * Defines the name of the group to which this object belongs. If `groupName` is specified, then this object
-           * will only interacts with other drag-and-drop objects within the same group.
-           */
-          groupName?: string;
-
-          /**
-           * @SINCE 1.56
-           *
-           * Indicates whether this configuration is active or not.
-           */
-          enabled?: boolean;
-        }
-
-        interface DragDropInfoOpts extends sap.ui.core.dnd.DropInfoOpts {
-          /**
-           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
-           * can be dragged.
-           */
-          sourceAggregation?: string;
-
-          /**
-           * This event is fired when the user starts dragging an element.
-           */
-          dragStart?: Function;
-
-          /**
-           * @SINCE 1.56
-           *
-           * This event is fired when a drag operation is being ended.
-           */
-          dragEnd?: Function;
-
-          /**
-           * The target element for this drag and drop action. If undefined, the control with this drag and drop configuration
-           * itself is the target. Leaving this empty, but defining source and target aggregation, allows you to reorder
-           * the children within a control, for example.
-           */
-          targetElement?: sap.ui.core.Element | string;
-        }
-
-        interface DragInfoOpts extends sap.ui.core.dnd.DragDropBaseOpts {
-          /**
-           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
-           * can be dragged.
-           */
-          sourceAggregation?: string;
-
-          /**
-           * This event is fired when the user starts dragging an element.
-           */
-          dragStart?: Function;
-
-          /**
-           * @SINCE 1.56
-           *
-           * This event is fired when a drag operation is being ended.
-           */
-          dragEnd?: Function;
-        }
-
-        interface DropInfoOpts extends sap.ui.core.dnd.DragDropBaseOpts {
-          /**
-           * The aggregation name in the drop target control which is the target of this drag-and-drop action. If
-           * undefined, the entire control is the target. This can be handy if the target control does not have any
-           * aggregations or if the drop position within the target does not matter.
-           */
-          targetAggregation?: string;
-
-          /**
-           * Defines the visual drop effect.
-           */
-          dropEffect?: any;
-
-          /**
-           * Defines the position for the drop action, visualized by a rectangle.
-           */
-          dropPosition?: any;
-
-          /**
-           * Defines the layout of the droppable controls if `dropPosition` is set to `Between` or `OnOrBetween`.
-           */
-          dropLayout?: any;
-
-          /**
-           * This event is fired when a dragged element enters a drop target.
-           */
-          dragEnter?: Function;
-
-          /**
-           * @SINCE 1.56
-           *
-           * This event is fired when an element is being dragged over a valid drop target.
-           */
-          dragOver?: Function;
-
-          /**
-           * This event is fired when an element is dropped on a valid drop target, as specified by the drag-and-drop
-           * info.
-           */
-          drop?: Function;
-        }
-        /**
-         * @SINCE 1.52
-         *
-         * Provides the base class for all drag-and-drop configurations. This feature enables a native HTML5 drag-and-drop
-         * API for the controls, therefore it is limited to browser support. Limitations:
-         * 	 - There is no mobile device that supports drag and drop.
-         * 	 - There is no accessible alternative for drag and drop. Applications which use the drag-and-drop functionality
-         * 			must provide an accessible alternative UI (for example, action buttons or menus) to perform the same
-         * 			operations.
-         * 	 - A custom dragging ghost element is not possible in Internet Explorer.
-         * 	 - Transparency of the drag ghost element and the cursor during drag-and-drop operations depends on
-         * 			the browser implementation.
-         * 	 - Internet Explorer does only support plain text MIME type for the DataTransfer Object.
-         * 	 - Constraining a drag position is not possible, therefore there is no snap-to-grid or snap-to-element
-         * 			feature possible.
-         * 	 - Texts in draggable controls cannot be selected.
-         * 	 - The text of input fields in draggable controls can be selected, but not dragged.
-         */
-        class DragDropBase extends sap.ui.core.Element {
-          /**
-           * Constructor for a new DragDropBase.
-           *
-           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-           * of the syntax of the settings object.
-           * See:
-           * 	{@link topic:3ddb6cde6a8d416598ac8ced3f5d82d5 Drag and Drop}
-           */
-          constructor(
-            /**
-             * ID for the new control, generated automatically if no ID is given
-             */
-            sId?: string,
-            /**
-             * Initial settings for the new control
-             */
-            mSettings?: DragDropBaseOpts
-          );
-
-          /**
-           * Creates a new subclass of class sap.ui.core.dnd.DragDropBase with name `sClassName` and enriches it with
-           * the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * @SINCE 1.56
-           *
-           * Gets current value of property {@link #getEnabled enabled}.
-           *
-           * Indicates whether this configuration is active or not.
-           *
-           * Default value is `true`.
-           */
-          getEnabled(): boolean;
-          /**
-           * Gets current value of property {@link #getGroupName groupName}.
-           *
-           * Defines the name of the group to which this object belongs. If `groupName` is specified, then this object
-           * will only interacts with other drag-and-drop objects within the same group.
-           */
-          getGroupName(): string;
-          /**
-           * Returns a metadata object for class sap.ui.core.dnd.DragDropBase.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Sets a new value for property {@link #getGroupName groupName}.
-           *
-           * Defines the name of the group to which this object belongs. If `groupName` is specified, then this object
-           * will only interacts with other drag-and-drop objects within the same group.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           */
-          setGroupName(
-            /**
-             * New value for property `groupName`
-             */
-            sGroupName: string
-          ): sap.ui.core.dnd.DragDropBase;
-        }
-        /**
-         * @SINCE 1.52
-         *
-         * Provides the configuration for drag-and-drop operations. **Note:** This configuration might be ignored
-         * due to control {@link sap.ui.core.Element.extend metadata} restrictions.
-         */
-        class DragDropInfo extends sap.ui.core.dnd.DropInfo
-          implements sap.ui.core.dnd.IDragInfo, sap.ui.core.dnd.IDropInfo {
-          /**
-           * Constructor for a new DragDropInfo.
-           *
-           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-           * of the syntax of the settings object.
-           */
-          constructor(
-            /**
-             * ID for the new DragDropInfo, generated automatically if no ID is given
-             */
-            sId?: string,
-            /**
-             * Initial settings for the DragDropInfo
-             */
-            mSettings?: DragDropInfoOpts
-          );
-
-          /**
-           * @SINCE 1.56
-           *
-           * Attaches event handler `fnFunction` to the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragDropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DragDropInfo` itself.
-           *
-           * This event is fired when a drag operation is being ended.
-           */
-          attachDragEnd(
-            /**
-             * An application-specific payload object that will be passed to the event handler along with the event
-             * object when firing the event
-             */
-            oData: object,
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragDropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragDropInfo;
-          /**
-           * Attaches event handler `fnFunction` to the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragDropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DragDropInfo` itself.
-           *
-           * This event is fired when the user starts dragging an element.
-           */
-          attachDragStart(
-            /**
-             * An application-specific payload object that will be passed to the event handler along with the event
-             * object when firing the event
-             */
-            oData: object,
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragDropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragDropInfo;
-          /**
-           * @SINCE 1.56
-           *
-           * Detaches event handler `fnFunction` from the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragDropInfo`.
-           *
-           * The passed function and listener object must match the ones used for event registration.
-           */
-          detachDragEnd(
-            /**
-             * The function to be called, when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object on which the given function had to be called
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragDropInfo;
-          /**
-           * Detaches event handler `fnFunction` from the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragDropInfo`.
-           *
-           * The passed function and listener object must match the ones used for event registration.
-           */
-          detachDragStart(
-            /**
-             * The function to be called, when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object on which the given function had to be called
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragDropInfo;
-          /**
-           * Creates a new subclass of class sap.ui.core.dnd.DragDropInfo with name `sClassName` and enriches it with
-           * the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.dnd.DropInfo.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * @SINCE 1.56
-           *
-           * Fires event {@link #event:dragEnd dragEnd} to attached listeners.
-           */
-          fireDragEnd(
-            /**
-             * Parameters to pass along with the event
-             */
-            mParameters?: object
-          ): sap.ui.core.dnd.DragDropInfo;
-          /**
-           * Fires event {@link #event:dragStart dragStart} to attached listeners.
-           *
-           * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-           * object.
-           */
-          fireDragStart(
-            /**
-             * Parameters to pass along with the event
-             */
-            mParameters?: object
-          ): boolean;
-          /**
-           * Returns a metadata object for class sap.ui.core.dnd.DragDropInfo.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Gets current value of property {@link #getSourceAggregation sourceAggregation}.
-           *
-           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
-           * can be dragged.
-           */
-          getSourceAggregation(): string;
-          /**
-           * ID of the element which is the current target of the association {@link #getTargetElement targetElement},
-           * or `null`.
-           */
-          getTargetElement(): sap.ui.core.ID;
-          /**
-           * Sets a new value for property {@link #getSourceAggregation sourceAggregation}.
-           *
-           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
-           * can be dragged.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           */
-          setSourceAggregation(
-            /**
-             * New value for property `sourceAggregation`
-             */
-            sSourceAggregation: string
-          ): sap.ui.core.dnd.DragDropInfo;
-          /**
-           * Sets the associated {@link #getTargetElement targetElement}.
-           */
-          setTargetElement(
-            /**
-             * ID of an element which becomes the new target of this targetElement association; alternatively, an element
-             * instance may be given
-             */
-            oTargetElement: sap.ui.core.ID | sap.ui.core.Element
-          ): sap.ui.core.dnd.DragDropInfo;
-          /**
-           * @SINCE 1.56
-           *
-           * Attaches event handler `fnFunction` to the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragDropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DragDropInfo` itself.
-           *
-           * This event is fired when a drag operation is being ended.
-           */
-          attachDragEnd(
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragDropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragDropInfo;
-          /**
-           * Attaches event handler `fnFunction` to the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragDropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DragDropInfo` itself.
-           *
-           * This event is fired when the user starts dragging an element.
-           */
-          attachDragStart(
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragDropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragDropInfo;
-        }
-        /**
-         * @SINCE 1.56
-         *
-         * Provides the configuration for drag operations. **Note:** This configuration might be ignored due to
-         * control {@link sap.ui.core.Element.extend metadata} restrictions.
-         */
-        class DragInfo extends sap.ui.core.dnd.DragDropBase
-          implements sap.ui.core.dnd.IDragInfo {
-          /**
-           * Constructor for a new DragInfo.
-           *
-           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-           * of the syntax of the settings object.
-           */
-          constructor(
-            /**
-             * ID for the new DragInfo, generated automatically if no ID is given
-             */
-            sId?: string,
-            /**
-             * Initial settings for the DragInfo
-             */
-            mSettings?: DragInfoOpts
-          );
-
-          /**
-           * @SINCE 1.56
-           *
-           * Attaches event handler `fnFunction` to the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DragInfo` itself.
-           *
-           * This event is fired when a drag operation is being ended.
-           */
-          attachDragEnd(
-            /**
-             * An application-specific payload object that will be passed to the event handler along with the event
-             * object when firing the event
-             */
-            oData: object,
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragInfo;
-          /**
-           * Attaches event handler `fnFunction` to the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DragInfo` itself.
-           *
-           * This event is fired when the user starts dragging an element.
-           */
-          attachDragStart(
-            /**
-             * An application-specific payload object that will be passed to the event handler along with the event
-             * object when firing the event
-             */
-            oData: object,
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragInfo;
-          /**
-           * @SINCE 1.56
-           *
-           * Detaches event handler `fnFunction` from the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragInfo`.
-           *
-           * The passed function and listener object must match the ones used for event registration.
-           */
-          detachDragEnd(
-            /**
-             * The function to be called, when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object on which the given function had to be called
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragInfo;
-          /**
-           * Detaches event handler `fnFunction` from the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragInfo`.
-           *
-           * The passed function and listener object must match the ones used for event registration.
-           */
-          detachDragStart(
-            /**
-             * The function to be called, when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object on which the given function had to be called
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragInfo;
-          /**
-           * Creates a new subclass of class sap.ui.core.dnd.DragInfo with name `sClassName` and enriches it with
-           * the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.dnd.DragDropBase.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * @SINCE 1.56
-           *
-           * Fires event {@link #event:dragEnd dragEnd} to attached listeners.
-           */
-          fireDragEnd(
-            /**
-             * Parameters to pass along with the event
-             */
-            mParameters?: object
-          ): sap.ui.core.dnd.DragInfo;
-          /**
-           * Fires event {@link #event:dragStart dragStart} to attached listeners.
-           *
-           * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-           * object.
-           */
-          fireDragStart(
-            /**
-             * Parameters to pass along with the event
-             */
-            mParameters?: object
-          ): boolean;
-          /**
-           * Returns a metadata object for class sap.ui.core.dnd.DragInfo.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Gets current value of property {@link #getSourceAggregation sourceAggregation}.
-           *
-           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
-           * can be dragged.
-           */
-          getSourceAggregation(): string;
-          /**
-           * Sets a new value for property {@link #getSourceAggregation sourceAggregation}.
-           *
-           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
-           * can be dragged.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           */
-          setSourceAggregation(
-            /**
-             * New value for property `sourceAggregation`
-             */
-            sSourceAggregation: string
-          ): sap.ui.core.dnd.DragInfo;
-          /**
-           * @SINCE 1.56
-           *
-           * Attaches event handler `fnFunction` to the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DragInfo` itself.
-           *
-           * This event is fired when a drag operation is being ended.
-           */
-          attachDragEnd(
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragInfo;
-          /**
-           * Attaches event handler `fnFunction` to the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DragInfo` itself.
-           *
-           * This event is fired when the user starts dragging an element.
-           */
-          attachDragStart(
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DragInfo;
-        }
-        /**
-         * @SINCE 1.56
-         *
-         * Provides the configuration for drop operations. **Note:** This configuration might be ignored due to
-         * control {@link sap.ui.core.Element.extend metadata} restrictions.
-         */
-        class DropInfo extends sap.ui.core.dnd.DragDropBase
-          implements sap.ui.core.dnd.IDropInfo {
-          /**
-           * Constructor for a new DropInfo.
-           *
-           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
-           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
-           * of the syntax of the settings object.
-           */
-          constructor(
-            /**
-             * ID for the new DropInfo, generated automatically if no ID is given
-             */
-            sId?: string,
-            /**
-             * Initial settings for the DropInfo
-             */
-            mSettings?: DropInfoOpts
-          );
-
-          /**
-           * Attaches event handler `fnFunction` to the {@link #event:dragEnter dragEnter} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
-           *
-           * This event is fired when a dragged element enters a drop target.
-           */
-          attachDragEnter(
-            /**
-             * An application-specific payload object that will be passed to the event handler along with the event
-             * object when firing the event
-             */
-            oData: object,
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * @SINCE 1.56
-           *
-           * Attaches event handler `fnFunction` to the {@link #event:dragOver dragOver} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
-           *
-           * This event is fired when an element is being dragged over a valid drop target.
-           */
-          attachDragOver(
-            /**
-             * An application-specific payload object that will be passed to the event handler along with the event
-             * object when firing the event
-             */
-            oData: object,
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Attaches event handler `fnFunction` to the {@link #event:drop drop} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
-           *
-           * This event is fired when an element is dropped on a valid drop target, as specified by the drag-and-drop
-           * info.
-           */
-          attachDrop(
-            /**
-             * An application-specific payload object that will be passed to the event handler along with the event
-             * object when firing the event
-             */
-            oData: object,
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Detaches event handler `fnFunction` from the {@link #event:dragEnter dragEnter} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * The passed function and listener object must match the ones used for event registration.
-           */
-          detachDragEnter(
-            /**
-             * The function to be called, when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object on which the given function had to be called
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * @SINCE 1.56
-           *
-           * Detaches event handler `fnFunction` from the {@link #event:dragOver dragOver} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * The passed function and listener object must match the ones used for event registration.
-           */
-          detachDragOver(
+            oElement: HTMLElement,
             /**
-             * The function to be called, when the event occurs
+             * the offset left and top for the DOM Element.
              */
-            fnFunction: Function,
-            /**
-             * Context object on which the given function had to be called
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Detaches event handler `fnFunction` from the {@link #event:drop drop} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * The passed function and listener object must match the ones used for event registration.
-           */
-          detachDrop(
-            /**
-             * The function to be called, when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object on which the given function had to be called
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Creates a new subclass of class sap.ui.core.dnd.DropInfo with name `sClassName` and enriches it with
-           * the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.dnd.DragDropBase.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * Fires event {@link #event:dragEnter dragEnter} to attached listeners.
-           *
-           * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
-           * object.
-           */
-          fireDragEnter(
-            /**
-             * Parameters to pass along with the event
-             */
-            mParameters?: object
-          ): boolean;
-          /**
-           * @SINCE 1.56
-           *
-           * Fires event {@link #event:dragOver dragOver} to attached listeners.
-           */
-          fireDragOver(
-            /**
-             * Parameters to pass along with the event
-             */
-            mParameters?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Fires event {@link #event:drop drop} to attached listeners.
-           */
-          fireDrop(
-            /**
-             * Parameters to pass along with the event
-             */
-            mParameters?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Gets current value of property {@link #getDropEffect dropEffect}.
-           *
-           * Defines the visual drop effect.
-           *
-           * Default value is `Move`.
-           */
-          getDropEffect(): any;
-          /**
-           * Gets current value of property {@link #getDropLayout dropLayout}.
-           *
-           * Defines the layout of the droppable controls if `dropPosition` is set to `Between` or `OnOrBetween`.
-           *
-           * Default value is `Default`.
-           */
-          getDropLayout(): any;
-          /**
-           * Gets current value of property {@link #getDropPosition dropPosition}.
-           *
-           * Defines the position for the drop action, visualized by a rectangle.
-           *
-           * Default value is `On`.
-           */
-          getDropPosition(): any;
-          /**
-           * Returns a metadata object for class sap.ui.core.dnd.DropInfo.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Gets current value of property {@link #getTargetAggregation targetAggregation}.
-           *
-           * The aggregation name in the drop target control which is the target of this drag-and-drop action. If
-           * undefined, the entire control is the target. This can be handy if the target control does not have any
-           * aggregations or if the drop position within the target does not matter.
-           */
-          getTargetAggregation(): string;
-          /**
-           * Sets a new value for property {@link #getDropEffect dropEffect}.
-           *
-           * Defines the visual drop effect.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `Move`.
-           */
-          setDropEffect(
-            /**
-             * New value for property `dropEffect`
-             */
-            sDropEffect: any
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Sets a new value for property {@link #getDropLayout dropLayout}.
-           *
-           * Defines the layout of the droppable controls if `dropPosition` is set to `Between` or `OnOrBetween`.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `Default`.
-           */
-          setDropLayout(
-            /**
-             * New value for property `dropLayout`
-             */
-            sDropLayout: any
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Sets a new value for property {@link #getDropPosition dropPosition}.
-           *
-           * Defines the position for the drop action, visualized by a rectangle.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           *
-           * Default value is `On`.
-           */
-          setDropPosition(
-            /**
-             * New value for property `dropPosition`
-             */
-            sDropPosition: any
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Sets a new value for property {@link #getTargetAggregation targetAggregation}.
-           *
-           * The aggregation name in the drop target control which is the target of this drag-and-drop action. If
-           * undefined, the entire control is the target. This can be handy if the target control does not have any
-           * aggregations or if the drop position within the target does not matter.
-           *
-           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
-           */
-          setTargetAggregation(
-            /**
-             * New value for property `targetAggregation`
-             */
-            sTargetAggregation: string
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Attaches event handler `fnFunction` to the {@link #event:dragEnter dragEnter} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
-           *
-           * This event is fired when a dragged element enters a drop target.
-           */
-          attachDragEnter(
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * @SINCE 1.56
-           *
-           * Attaches event handler `fnFunction` to the {@link #event:dragOver dragOver} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
-           *
-           * This event is fired when an element is being dragged over a valid drop target.
-           */
-          attachDragOver(
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-          /**
-           * Attaches event handler `fnFunction` to the {@link #event:drop drop} event of this `sap.ui.core.dnd.DropInfo`.
-           *
-           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
-           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
-           *
-           * This event is fired when an element is dropped on a valid drop target, as specified by the drag-and-drop
-           * info.
-           */
-          attachDrop(
-            /**
-             * The function to be called when the event occurs
-             */
-            fnFunction: Function,
-            /**
-             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
-             */
-            oListener?: object
-          ): sap.ui.core.dnd.DropInfo;
-        }
-        /**
-         * @SINCE 1.52.0
-         *
-         * Configuration options for visual drop effects that are given during a drag and drop operation.
-         */
-        enum DropEffect {
-          /**
-           * A copy of the source item is made at the new location.
-           */
-          Copy,
-          /**
-           * A link is established to the source at the new location.
-           */
-          Link,
-          /**
-           * An item is moved to a new location.
-           */
-          Move,
-          /**
-           * The item cannot be dropped.
-           */
-          None
-        }
-        /**
-         * @SINCE 1.52.0
-         *
-         * Configuration options for the layout of the droppable controls.
-         */
-        enum DropLayout {
-          /**
-           * Default {@link sap.ui.core.Element.extend layout} definition of the aggregations.
-           */
-          Default,
-          /**
-           * Droppable controls are arranged horizontally.
-           */
-          Horizontal,
-          /**
-           * Droppable controls are arranged vertically.
-           */
-          Vertical
-        }
-        /**
-         * @SINCE 1.52.0
-         *
-         * Configuration options for drop positions.
-         */
-        enum DropPosition {
-          /**
-           * Drop between the controls.
-           */
-          Between,
-          /**
-           * Drop on the control.
-           */
-          On,
-          /**
-           * Drop on the control or between the controls.
-           */
-          OnOrBetween
+            Specifies: any[]
+          ): sap.ui.core.delegate.ScrollEnablement;
         }
       }
 
@@ -7970,11 +6643,6 @@ declare namespace sap {
                */
               interval?: boolean;
               /**
-               * Only relevant if oFormatOptions.interval is set to 'true'. This allows to pass an array with only one
-               * date object to the [format]{@link sap.ui.core.format.DateFormat#format} method.
-               */
-              singleIntervalValue?: boolean;
-              /**
                * if true, the date is formatted and parsed as UTC instead of the local timezone
                */
               UTC?: boolean;
@@ -8049,11 +6717,6 @@ declare namespace sap {
                */
               interval?: boolean;
               /**
-               * Only relevant if oFormatOptions.interval is set to 'true'. This allows to pass an array with only one
-               * date object to the [format]{@link sap.ui.core.format.DateFormat#format} method.
-               */
-              singleIntervalValue?: boolean;
-              /**
                * if true, the date is formatted and parsed as UTC instead of the local timezone
                */
               UTC?: boolean;
@@ -8124,11 +6787,6 @@ declare namespace sap {
                * Otherwise the two given dates are formatted separately and concatenated with local dependent pattern.
                */
               interval?: boolean;
-              /**
-               * Only relevant if oFormatOptions.interval is set to 'true'. This allows to pass an array with only one
-               * date object to the [format]{@link sap.ui.core.format.DateFormat#format} method.
-               */
-              singleIntervalValue?: boolean;
               /**
                * if true, the time is formatted and parsed as UTC instead of the local timezone
                */
@@ -8329,54 +6987,6 @@ declare namespace sap {
            *
            *  This instance has HALF_AWAY_FROM_ZERO set as default rounding mode. Please set the roundingMode property
            * in oFormatOptions to change the default value.
-           *
-           * The currency instance supports locally defined custom currency exclusive to the created instance. The
-           * following example shows how to use custom currencies (e.g. for Bitcoins):
-           * ```javascript
-           *
-           * var oFormat = NumberFormat.getCurrencyInstance({
-           *     "currencyCode": false,
-           *     "customCurrencies": {
-           *         "BTC": {
-           *             "symbol": "Ƀ",
-           *             "decimals": 3
-           *         }
-           *     }
-           * });
-           *
-           * oFormat.format(123.4567, "BTC"); // "Ƀ 123.457"
-           * ```
-           *
-           *
-           * As an alternative to using a fixed `symbol` for your custom currencies, you can also provide an ISO-Code.
-           * The provided ISO-Code will be used to look up the currency symbol in the global configuration, either
-           * defined in the CLDR or custom defined on the Format Settings (see {@link sap.ui.core.Configuration.FormatSettings#setCustomCurrencies},
-           * {@link sap.ui.core.Configuration.FormatSettings#addCustomCurrencies}).
-           *
-           * If no symbol is given at all, the custom currency key is used for formatting.
-           *
-           *
-           * ```javascript
-           *
-           * var oFormat = NumberFormat.getCurrencyInstance({
-           *     "currencyCode": false,
-           *     "customCurrencies": {
-           *         "MyDollar": {
-           *             "isoCode": "USD",
-           *             "decimals": 3
-           *         },
-           *         "Bitcoin": {
-           *             "decimals": 2
-           *         }
-           *     }
-           * });
-           *
-           * // symbol looked up from global configuration
-           * oFormat.format(123.4567, "MyDollar"); // "$123.457"
-           *
-           * // no symbol available, custom currency key is rendered
-           * oFormat.format(777.888, "Bitcoin"); // "Bitcoin 777.89"
-           * ```
            */
           static getCurrencyInstance(
             /**
@@ -8405,7 +7015,7 @@ declare namespace sap {
                */
               decimals?: number;
               /**
-               * defines the number of decimal in the shortened format string. If this isn't specified, the 'decimals'
+               * defines the number of decimal in the shortified format string. If this isn't specified, the 'decimals'
                * options is used
                */
               shortDecimals?: number;
@@ -8485,7 +7095,7 @@ declare namespace sap {
               showMeasure?: boolean;
               /**
                * defines whether the currency is shown as code in currency format. The currency symbol is displayed when
-               * this is set to false and there is a symbol defined for the given currency code.
+               * this is set to false and there's symbol defined for the given currency code.
                */
               currencyCode?: boolean;
               /**
@@ -8495,18 +7105,10 @@ declare namespace sap {
               currencyContext?: string;
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
-               * values are "" (empty string), NaN, null or 0. The 'format' and 'parse' are done in a symmetric way. For
-               * example when this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty
-               * string.
+               * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way which means when
+               * this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty string.
                */
               emptyString?: number;
-              /**
-               * defines a set of custom currencies exclusive to this NumberFormat instance. If custom currencies are
-               * defined on the instance, no other currencies can be formatted and parsed by this instance. Globally available
-               * custom currencies can be added via the global configuration. See the above examples. See also {@link
-               * sap.ui.core.Configuration.FormatSettings#setCustomCurrencies} and {@link sap.ui.core.Configuration.FormatSettings#addCustomCurrencies}.
-               */
-              customCurrencies?: Object;
             },
             /**
              * Locale to get the formatter for
@@ -8549,7 +7151,7 @@ declare namespace sap {
                */
               decimals?: number;
               /**
-               * defines the number of decimal in the shortened format string. If this isn't specified, the 'decimals'
+               * defines the number of decimal in the shortified format string. If this isn't specified, the 'decimals'
                * options is used
                */
               shortDecimals?: number;
@@ -8629,9 +7231,8 @@ declare namespace sap {
               roundingMode?: any;
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
-               * values are "" (empty string), NaN, null or 0. The 'format' and 'parse' are done in a symmetric way. For
-               * example when this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty
-               * string.
+               * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way which means when
+               * this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty string.
                */
               emptyString?: number;
             },
@@ -8676,7 +7277,7 @@ declare namespace sap {
                */
               decimals?: number;
               /**
-               * defines the number of decimal in the shortened format string. If this isn't specified, the 'decimals'
+               * defines the number of decimal in the shortified format string. If this isn't specified, the 'decimals'
                * options is used
                */
               shortDecimals?: number;
@@ -8756,7 +7357,7 @@ declare namespace sap {
               roundingMode?: any;
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
-               * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way. For example when
+               * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way which means when
                * this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty string.
                */
               emptyString?: number;
@@ -8785,7 +7386,7 @@ declare namespace sap {
              * The option object which support the following parameters. If no options is given, default values according
              * to the type and locale settings are used.
              */
-            oFormatOptions?: {
+            oFormatOptions: {
               /**
                * defines minimal number of non-decimal digits
                */
@@ -8807,7 +7408,7 @@ declare namespace sap {
                */
               decimals?: number;
               /**
-               * defines the number of decimal in the shortened format string. If this isn't specified, the 'decimals'
+               * defines the number of decimal in the shortified format string. If this isn't specified, the 'decimals'
                * options is used
                */
               shortDecimals?: number;
@@ -8865,10 +7466,6 @@ declare namespace sap {
                */
               minusSign?: string;
               /**
-               * defines the used percent symbol
-               */
-              percentSign?: string;
-              /**
                * @since 1.28.2 defines whether to output string from parse function in order to keep the precision for
                * big numbers. Numbers in scientific notation are parsed back to the standard notation. For example ".5e-3"
                * is parsed to "0.0005".
@@ -8891,12 +7488,15 @@ declare namespace sap {
               roundingMode?: any;
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
-               * values are "" (empty string), NaN, null or 0. The 'format' and 'parse' are done in a symmetric way. For
-               * example when this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty
-               * string.
+               * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way which means when
+               * this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty string.
                */
               emptyString?: number;
             },
+            /**
+             * [oFormatOptions.percentSign] defines the used percent symbol
+             */
+            percentSign: undefined,
             /**
              * Locale to get the formatter for
              */
@@ -8938,7 +7538,7 @@ declare namespace sap {
                */
               decimals?: number;
               /**
-               * defines the number of decimal in the shortened format string. If this isn't specified, the 'decimals'
+               * defines the number of decimal in the shortified format string. If this isn't specified, the 'decimals'
                * options is used
                */
               shortDecimals?: number;
@@ -8992,7 +7592,7 @@ declare namespace sap {
                * "{0} H", "unitPattern-count-other": "{0} H", "perUnitPattern": "{0}/H", "decimals": 2, "precision": 4
                * }}
                */
-              customUnits?: Object;
+              customUnits?: string;
               /**
                * defines the allowed units for formatting and parsing, e.g. ["size-meter", "volume-liter", ...]
                */
@@ -9032,9 +7632,8 @@ declare namespace sap {
               showMeasure?: boolean;
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
-               * values are "" (empty string), NaN, null or 0. The 'format' and 'parse' are done in a symmetric way. For
-               * example when this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty
-               * string.
+               * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way which means when
+               * this parameter is set to NaN, empty string is parsed as NaN and NaN is formatted as empty string.
                */
               emptyString?: number;
             },
@@ -9052,6 +7651,25 @@ declare namespace sap {
              */
             sValue: string
           ): number | any[];
+          /**
+           * Get a percent instance of the NumberFormat, which can be used for formatting.
+           *
+           * If no locale is given, the currently configured {@link sap.ui.core.Configuration.FormatSettings#getFormatLocale
+           * formatLocale} will be used.
+           *
+           *  This instance has HALF_AWAY_FROM_ZERO set as default rounding mode. Please set the roundingMode property
+           * in oFormatOptions to change the default value.
+           */
+          static getPercentInstance(
+            /**
+             * [oFormatOptions.percentSign] defines the used percent symbol
+             */
+            percentSign: undefined,
+            /**
+             * Locale to get the formatter for
+             */
+            oLocale?: sap.ui.core.Locale
+          ): sap.ui.core.format.NumberFormat;
         }
       }
       /**
@@ -9437,11 +8055,6 @@ declare namespace sap {
                * 1970 00:00:00 UTC
                */
               date?: number;
-              /**
-               * Defines more detailed information about the message target. This property is currently only used by the
-               * ODataMessageParser.
-               */
-              fullTarget?: string;
             }
           );
 
@@ -10005,8 +8618,7 @@ declare namespace sap {
            */
           constructor(
             /**
-             * The name of the controller to instantiate. If a controller is defined as real sub-class, the "arguments"
-             * of the sub-class constructor should be given instead.
+             * The name of the controller to instantiate. If a controller is defined as real sub-class,
              */
             sName: string | object[]
           );
@@ -10688,14 +9300,6 @@ declare namespace sap {
            * @SINCE 1.56.0
            *
            * Creates a view of the given type, name and with the given id.
-           *
-           * If the option `viewName` is given, the corresponding view module is loaded if needed.
-           *
-           * See also the API references for the specific view factories:
-           * 	 - {@link sap.ui.core.mvc.XMLView.create}
-           * 	 - {@link sap.ui.core.mvc.JSView.create}
-           * 	 - {@link sap.ui.core.mvc.JSONView.create}
-           * 	 - {@link sap.ui.core.mvc.HTMLView.create}
            */
           // @ts-ignore
           static create(
@@ -10721,11 +9325,6 @@ declare namespace sap {
                * and the controller
                */
               viewData?: any;
-              /**
-               * The view definition. Only supported for XML and HTML views. See also {@link sap.ui.core.mvc.XMLView.create}
-               * and {@link sap.ui.core.mvc.HTMLView.create} for more information.
-               */
-              definition?: any;
               /**
                * Can hold a map from the specified preprocessor type (e.g. "xml") to an array of preprocessor configurations;
                * each configuration consists of a `preprocessor` property (optional when registered as on-demand preprocessor)
@@ -11700,6 +10299,1171 @@ declare namespace sap {
         ): string;
       }
 
+      namespace dnd {
+        /**
+         * When a user requests to drag some controls that can be dragged, a drag session is started. The drag session
+         * can be used to transfer data between applications or between dragged and dropped controls. Please see
+         * provided APIs for more details.
+         *
+         * **Note:** This object only exists during a drag-and-drop operation.
+         */
+        namespace DragSession {
+          /**
+           * Returns the data that has been set via `setComplexData` method.
+           */
+          function getComplexData(
+            /**
+             * The key of the data
+             */
+            sKey: string
+          ): any;
+          /**
+           * Returns the data that has been set via `setData` method.
+           */
+          function getData(
+            /**
+             * The key of the data
+             */
+            sKey: string
+          ): string;
+          /**
+           * Returns the dragged control, if available within the same UI5 application frame.
+           */
+          function getDragControl(): sap.ui.core.Element | null;
+          /**
+           * The valid drop target underneath the dragged control.
+           */
+          function getDropControl(): sap.ui.core.Element | null;
+          /**
+           * Returns the drop configuration corresponding to the drop control.
+           */
+          function getDropInfo(): sap.ui.core.dnd.DropInfo | null;
+          /**
+           * Returns the calculated position of the drop action relative to the valid dropped control.
+           */
+          function getDropPosition(): String;
+          /**
+           * Returns the drop indicator.
+           */
+          function getIndicator(): HTMLElement | null;
+          /**
+           * Returns the visual configuration of the drop indicator.
+           */
+          function getIndicatorConfig(): object;
+          /**
+           * Returns the data that has been set via `setTextData` method.
+           */
+          function getTextData(): string;
+          /**
+           * Sets string data with any MIME type. **Note:** This works in all browsers, apart from Internet Explorer
+           * and Microsoft Edge. It also works if you navigate between different windows.
+           */
+          function setData(
+            /**
+             * The key of the data
+             */
+            sKey: string,
+            /**
+             * Data
+             */
+            sData: string
+          ): void;
+          /**
+           * Set the valid drop control.
+           */
+          function setDropControl(): void;
+          /**
+           * Defines the visual configuration of the drop indicator for the current `DropInfo`.
+           */
+          function setIndicatorConfig(
+            /**
+             * Custom styles of the drop indicator.
+             */
+            mConfig: object
+          ): void;
+          /**
+           * Sets string data with plain text MIME type. **Note:** This works in all browsers, including Internet
+           * Explorer and Microsoft Edge. It also works if you navigate between different windows.
+           */
+          function setTextData(
+            /**
+             * Data
+             */
+            sData: string
+          ): void;
+        }
+        /**
+         * @SINCE 1.52.0
+         *
+         * Marker interface for drag configuration providing information about the source of the drag operation.
+         */
+        interface IDragInfo {}
+        /**
+         * @SINCE 1.52.0
+         *
+         * Marker interface for drop configuration providing information about the target of the drop operation.
+         */
+        interface IDropInfo {}
+
+        interface DragDropBaseOpts extends sap.ui.core.ElementOpts {
+          /**
+           * Defines the name of the group to which this object belongs. If `groupName` is specified, then this object
+           * will only interacts with other drag-and-drop objects within the same group.
+           */
+          groupName?: string;
+
+          /**
+           * @SINCE 1.56
+           *
+           * Indicates whether this configuration is active or not.
+           */
+          enabled?: boolean;
+        }
+
+        interface DragDropInfoOpts extends sap.ui.core.dnd.DropInfoOpts {
+          /**
+           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
+           * can be dragged.
+           */
+          sourceAggregation?: string;
+
+          /**
+           * This event is fired when the user starts dragging an element.
+           */
+          dragStart?: Function;
+
+          /**
+           * @SINCE 1.56
+           *
+           * This event is fired when a drag operation is being ended.
+           */
+          dragEnd?: Function;
+
+          /**
+           * The target element for this drag and drop action. If undefined, the control with this drag and drop configuration
+           * itself is the target. Leaving this empty, but defining source and target aggregation, allows you to reorder
+           * the children within a control, for example.
+           */
+          targetElement?: sap.ui.core.Element | string;
+        }
+
+        interface DragInfoOpts extends sap.ui.core.dnd.DragDropBaseOpts {
+          /**
+           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
+           * can be dragged.
+           */
+          sourceAggregation?: string;
+
+          /**
+           * This event is fired when the user starts dragging an element.
+           */
+          dragStart?: Function;
+
+          /**
+           * @SINCE 1.56
+           *
+           * This event is fired when a drag operation is being ended.
+           */
+          dragEnd?: Function;
+        }
+
+        interface DropInfoOpts extends sap.ui.core.dnd.DragDropBaseOpts {
+          /**
+           * The aggregation name in the drop target control which is the target of this drag-and-drop action. If
+           * undefined, the entire control is the target. This can be handy if the target control does not have any
+           * aggregations or if the drop position within the target does not matter.
+           */
+          targetAggregation?: string;
+
+          /**
+           * Defines the visual drop effect.
+           */
+          dropEffect?: any;
+
+          /**
+           * Defines the position for the drop action, visualized by a rectangle.
+           */
+          dropPosition?: any;
+
+          /**
+           * Defines the layout of the droppable controls if `dropPosition` is set to `Between` or `OnOrBetween`.
+           */
+          dropLayout?: any;
+
+          /**
+           * This event is fired when a dragged element enters a drop target.
+           */
+          dragEnter?: Function;
+
+          /**
+           * @SINCE 1.56
+           *
+           * This event is fired when an element is being dragged over a valid drop target.
+           */
+          dragOver?: Function;
+
+          /**
+           * This event is fired when an element is dropped on a valid drop target, as specified by the drag-and-drop
+           * info.
+           */
+          drop?: Function;
+        }
+        /**
+         * @SINCE 1.52
+         *
+         * Provides the base class for all drag-and-drop configurations. This feature enables a native HTML5 drag-and-drop
+         * API for the controls, therefore it is limited to browser support. Limitations:
+         * 	 - There is no mobile device that supports drag and drop.
+         * 	 - There is no accessible alternative for drag and drop. Applications which use the drag-and-drop functionality
+         * 			must provide an accessible alternative UI (for example, action buttons or menus) to perform the same
+         * 			operations.
+         * 	 - A custom dragging ghost element is not possible in Internet Explorer.
+         * 	 - Transparency of the drag ghost element and the cursor during drag-and-drop operations depends on
+         * 			the browser implementation.
+         * 	 - Internet Explorer does only support plain text MIME type for the DataTransfer Object.
+         * 	 - Constraining a drag position is not possible, therefore there is no snap-to-grid or snap-to-element
+         * 			feature possible.
+         * 	 - Texts in draggable controls cannot be selected.
+         * 	 - The text of input fields in draggable controls can be selected, but not dragged.
+         */
+        class DragDropBase extends sap.ui.core.Element {
+          /**
+           * Constructor for a new DragDropBase.
+           *
+           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
+           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
+           * of the syntax of the settings object.
+           */
+          constructor(
+            /**
+             * ID for the new control, generated automatically if no ID is given
+             */
+            sId?: string,
+            /**
+             * Initial settings for the new control
+             */
+            mSettings?: DragDropBaseOpts
+          );
+
+          /**
+           * Creates a new subclass of class sap.ui.core.dnd.DragDropBase with name `sClassName` and enriches it with
+           * the information contained in `oClassInfo`.
+           *
+           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
+           */
+          // @ts-ignore
+          static extend(
+            /**
+             * Name of the class being created
+             */
+            sClassName: string,
+            /**
+             * Object literal with information about the class
+             */
+            oClassInfo?: object,
+            /**
+             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
+             */
+            FNMetaImpl?: Function
+          ): Function;
+          /**
+           * @SINCE 1.56
+           *
+           * Gets current value of property {@link #getEnabled enabled}.
+           *
+           * Indicates whether this configuration is active or not.
+           *
+           * Default value is `true`.
+           */
+          getEnabled(): boolean;
+          /**
+           * Gets current value of property {@link #getGroupName groupName}.
+           *
+           * Defines the name of the group to which this object belongs. If `groupName` is specified, then this object
+           * will only interacts with other drag-and-drop objects within the same group.
+           */
+          getGroupName(): string;
+          /**
+           * Returns a metadata object for class sap.ui.core.dnd.DragDropBase.
+           */
+          // @ts-ignore
+          static getMetadata(): sap.ui.base.Metadata;
+          /**
+           * Sets a new value for property {@link #getGroupName groupName}.
+           *
+           * Defines the name of the group to which this object belongs. If `groupName` is specified, then this object
+           * will only interacts with other drag-and-drop objects within the same group.
+           *
+           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+           */
+          setGroupName(
+            /**
+             * New value for property `groupName`
+             */
+            sGroupName: string
+          ): sap.ui.core.dnd.DragDropBase;
+        }
+        /**
+         * @SINCE 1.52
+         *
+         * Provides the configuration for drag-and-drop operations. **Note:** This configuration might be ignored
+         * due to control {@link sap.ui.core.Element.extend metadata} restrictions.
+         */
+        class DragDropInfo extends sap.ui.core.dnd.DropInfo
+          implements sap.ui.core.dnd.IDragInfo, sap.ui.core.dnd.IDropInfo {
+          /**
+           * Constructor for a new DragDropInfo.
+           *
+           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
+           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
+           * of the syntax of the settings object.
+           */
+          constructor(
+            /**
+             * ID for the new DragDropInfo, generated automatically if no ID is given
+             */
+            sId?: string,
+            /**
+             * Initial settings for the DragDropInfo
+             */
+            mSettings?: DragDropInfoOpts
+          );
+
+          /**
+           * @SINCE 1.56
+           *
+           * Attaches event handler `fnFunction` to the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragDropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DragDropInfo` itself.
+           *
+           * This event is fired when a drag operation is being ended.
+           */
+          attachDragEnd(
+            /**
+             * An application-specific payload object that will be passed to the event handler along with the event
+             * object when firing the event
+             */
+            oData: object,
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragDropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragDropInfo;
+          /**
+           * Attaches event handler `fnFunction` to the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragDropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DragDropInfo` itself.
+           *
+           * This event is fired when the user starts dragging an element.
+           */
+          attachDragStart(
+            /**
+             * An application-specific payload object that will be passed to the event handler along with the event
+             * object when firing the event
+             */
+            oData: object,
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragDropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragDropInfo;
+          /**
+           * @SINCE 1.56
+           *
+           * Detaches event handler `fnFunction` from the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragDropInfo`.
+           *
+           * The passed function and listener object must match the ones used for event registration.
+           */
+          detachDragEnd(
+            /**
+             * The function to be called, when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object on which the given function had to be called
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragDropInfo;
+          /**
+           * Detaches event handler `fnFunction` from the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragDropInfo`.
+           *
+           * The passed function and listener object must match the ones used for event registration.
+           */
+          detachDragStart(
+            /**
+             * The function to be called, when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object on which the given function had to be called
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragDropInfo;
+          /**
+           * Creates a new subclass of class sap.ui.core.dnd.DragDropInfo with name `sClassName` and enriches it with
+           * the information contained in `oClassInfo`.
+           *
+           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.dnd.DropInfo.extend}.
+           */
+          // @ts-ignore
+          static extend(
+            /**
+             * Name of the class being created
+             */
+            sClassName: string,
+            /**
+             * Object literal with information about the class
+             */
+            oClassInfo?: object,
+            /**
+             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
+             */
+            FNMetaImpl?: Function
+          ): Function;
+          /**
+           * @SINCE 1.56
+           *
+           * Fires event {@link #event:dragEnd dragEnd} to attached listeners.
+           */
+          fireDragEnd(
+            /**
+             * Parameters to pass along with the event
+             */
+            mParameters?: object
+          ): sap.ui.core.dnd.DragDropInfo;
+          /**
+           * Fires event {@link #event:dragStart dragStart} to attached listeners.
+           *
+           * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
+           * object.
+           */
+          fireDragStart(
+            /**
+             * Parameters to pass along with the event
+             */
+            mParameters?: object
+          ): boolean;
+          /**
+           * Returns a metadata object for class sap.ui.core.dnd.DragDropInfo.
+           */
+          // @ts-ignore
+          static getMetadata(): sap.ui.base.Metadata;
+          /**
+           * Gets current value of property {@link #getSourceAggregation sourceAggregation}.
+           *
+           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
+           * can be dragged.
+           */
+          getSourceAggregation(): string;
+          /**
+           * ID of the element which is the current target of the association {@link #getTargetElement targetElement},
+           * or `null`.
+           */
+          getTargetElement(): sap.ui.core.ID;
+          /**
+           * Sets a new value for property {@link #getSourceAggregation sourceAggregation}.
+           *
+           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
+           * can be dragged.
+           *
+           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+           */
+          setSourceAggregation(
+            /**
+             * New value for property `sourceAggregation`
+             */
+            sSourceAggregation: string
+          ): sap.ui.core.dnd.DragDropInfo;
+          /**
+           * Sets the associated {@link #getTargetElement targetElement}.
+           */
+          setTargetElement(
+            /**
+             * ID of an element which becomes the new target of this targetElement association; alternatively, an element
+             * instance may be given
+             */
+            oTargetElement: sap.ui.core.ID | sap.ui.core.Element
+          ): sap.ui.core.dnd.DragDropInfo;
+          /**
+           * @SINCE 1.56
+           *
+           * Attaches event handler `fnFunction` to the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragDropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DragDropInfo` itself.
+           *
+           * This event is fired when a drag operation is being ended.
+           */
+          attachDragEnd(
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragDropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragDropInfo;
+          /**
+           * Attaches event handler `fnFunction` to the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragDropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DragDropInfo` itself.
+           *
+           * This event is fired when the user starts dragging an element.
+           */
+          attachDragStart(
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragDropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragDropInfo;
+        }
+        /**
+         * @SINCE 1.56
+         *
+         * Provides the configuration for drag operations. **Note:** This configuration might be ignored due to
+         * control {@link sap.ui.core.Element.extend metadata} restrictions.
+         */
+        class DragInfo extends sap.ui.core.dnd.DragDropBase
+          implements sap.ui.core.dnd.IDragInfo {
+          /**
+           * Constructor for a new DragInfo.
+           *
+           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
+           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
+           * of the syntax of the settings object.
+           */
+          constructor(
+            /**
+             * ID for the new DragInfo, generated automatically if no ID is given
+             */
+            sId?: string,
+            /**
+             * Initial settings for the DragInfo
+             */
+            mSettings?: DragInfoOpts
+          );
+
+          /**
+           * @SINCE 1.56
+           *
+           * Attaches event handler `fnFunction` to the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DragInfo` itself.
+           *
+           * This event is fired when a drag operation is being ended.
+           */
+          attachDragEnd(
+            /**
+             * An application-specific payload object that will be passed to the event handler along with the event
+             * object when firing the event
+             */
+            oData: object,
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragInfo;
+          /**
+           * Attaches event handler `fnFunction` to the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DragInfo` itself.
+           *
+           * This event is fired when the user starts dragging an element.
+           */
+          attachDragStart(
+            /**
+             * An application-specific payload object that will be passed to the event handler along with the event
+             * object when firing the event
+             */
+            oData: object,
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragInfo;
+          /**
+           * @SINCE 1.56
+           *
+           * Detaches event handler `fnFunction` from the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragInfo`.
+           *
+           * The passed function and listener object must match the ones used for event registration.
+           */
+          detachDragEnd(
+            /**
+             * The function to be called, when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object on which the given function had to be called
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragInfo;
+          /**
+           * Detaches event handler `fnFunction` from the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragInfo`.
+           *
+           * The passed function and listener object must match the ones used for event registration.
+           */
+          detachDragStart(
+            /**
+             * The function to be called, when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object on which the given function had to be called
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragInfo;
+          /**
+           * Creates a new subclass of class sap.ui.core.dnd.DragInfo with name `sClassName` and enriches it with
+           * the information contained in `oClassInfo`.
+           *
+           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.dnd.DragDropBase.extend}.
+           */
+          // @ts-ignore
+          static extend(
+            /**
+             * Name of the class being created
+             */
+            sClassName: string,
+            /**
+             * Object literal with information about the class
+             */
+            oClassInfo?: object,
+            /**
+             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
+             */
+            FNMetaImpl?: Function
+          ): Function;
+          /**
+           * @SINCE 1.56
+           *
+           * Fires event {@link #event:dragEnd dragEnd} to attached listeners.
+           */
+          fireDragEnd(
+            /**
+             * Parameters to pass along with the event
+             */
+            mParameters?: object
+          ): sap.ui.core.dnd.DragInfo;
+          /**
+           * Fires event {@link #event:dragStart dragStart} to attached listeners.
+           *
+           * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
+           * object.
+           */
+          fireDragStart(
+            /**
+             * Parameters to pass along with the event
+             */
+            mParameters?: object
+          ): boolean;
+          /**
+           * Returns a metadata object for class sap.ui.core.dnd.DragInfo.
+           */
+          // @ts-ignore
+          static getMetadata(): sap.ui.base.Metadata;
+          /**
+           * Gets current value of property {@link #getSourceAggregation sourceAggregation}.
+           *
+           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
+           * can be dragged.
+           */
+          getSourceAggregation(): string;
+          /**
+           * Sets a new value for property {@link #getSourceAggregation sourceAggregation}.
+           *
+           * The name of the aggregation from which all children can be dragged. If undefined, the control itself
+           * can be dragged.
+           *
+           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+           */
+          setSourceAggregation(
+            /**
+             * New value for property `sourceAggregation`
+             */
+            sSourceAggregation: string
+          ): sap.ui.core.dnd.DragInfo;
+          /**
+           * @SINCE 1.56
+           *
+           * Attaches event handler `fnFunction` to the {@link #event:dragEnd dragEnd} event of this `sap.ui.core.dnd.DragInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DragInfo` itself.
+           *
+           * This event is fired when a drag operation is being ended.
+           */
+          attachDragEnd(
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragInfo;
+          /**
+           * Attaches event handler `fnFunction` to the {@link #event:dragStart dragStart} event of this `sap.ui.core.dnd.DragInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DragInfo` itself.
+           *
+           * This event is fired when the user starts dragging an element.
+           */
+          attachDragStart(
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DragInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DragInfo;
+        }
+        /**
+         * @SINCE 1.56
+         *
+         * Provides the configuration for drop operations. **Note:** This configuration might be ignored due to
+         * control {@link sap.ui.core.Element.extend metadata} restrictions.
+         */
+        class DropInfo extends sap.ui.core.dnd.DragDropBase
+          implements sap.ui.core.dnd.IDropInfo {
+          /**
+           * Constructor for a new DropInfo.
+           *
+           * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
+           * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
+           * of the syntax of the settings object.
+           */
+          constructor(
+            /**
+             * ID for the new DropInfo, generated automatically if no ID is given
+             */
+            sId?: string,
+            /**
+             * Initial settings for the DropInfo
+             */
+            mSettings?: DropInfoOpts
+          );
+
+          /**
+           * Attaches event handler `fnFunction` to the {@link #event:dragEnter dragEnter} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
+           *
+           * This event is fired when a dragged element enters a drop target.
+           */
+          attachDragEnter(
+            /**
+             * An application-specific payload object that will be passed to the event handler along with the event
+             * object when firing the event
+             */
+            oData: object,
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * @SINCE 1.56
+           *
+           * Attaches event handler `fnFunction` to the {@link #event:dragOver dragOver} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
+           *
+           * This event is fired when an element is being dragged over a valid drop target.
+           */
+          attachDragOver(
+            /**
+             * An application-specific payload object that will be passed to the event handler along with the event
+             * object when firing the event
+             */
+            oData: object,
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Attaches event handler `fnFunction` to the {@link #event:drop drop} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
+           *
+           * This event is fired when an element is dropped on a valid drop target, as specified by the drag-and-drop
+           * info.
+           */
+          attachDrop(
+            /**
+             * An application-specific payload object that will be passed to the event handler along with the event
+             * object when firing the event
+             */
+            oData: object,
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Detaches event handler `fnFunction` from the {@link #event:dragEnter dragEnter} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * The passed function and listener object must match the ones used for event registration.
+           */
+          detachDragEnter(
+            /**
+             * The function to be called, when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object on which the given function had to be called
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * @SINCE 1.56
+           *
+           * Detaches event handler `fnFunction` from the {@link #event:dragOver dragOver} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * The passed function and listener object must match the ones used for event registration.
+           */
+          detachDragOver(
+            /**
+             * The function to be called, when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object on which the given function had to be called
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Detaches event handler `fnFunction` from the {@link #event:drop drop} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * The passed function and listener object must match the ones used for event registration.
+           */
+          detachDrop(
+            /**
+             * The function to be called, when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object on which the given function had to be called
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Creates a new subclass of class sap.ui.core.dnd.DropInfo with name `sClassName` and enriches it with
+           * the information contained in `oClassInfo`.
+           *
+           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.dnd.DragDropBase.extend}.
+           */
+          // @ts-ignore
+          static extend(
+            /**
+             * Name of the class being created
+             */
+            sClassName: string,
+            /**
+             * Object literal with information about the class
+             */
+            oClassInfo?: object,
+            /**
+             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
+             */
+            FNMetaImpl?: Function
+          ): Function;
+          /**
+           * Fires event {@link #event:dragEnter dragEnter} to attached listeners.
+           *
+           * Listeners may prevent the default action of this event by using the `preventDefault`-method on the event
+           * object.
+           */
+          fireDragEnter(
+            /**
+             * Parameters to pass along with the event
+             */
+            mParameters?: object
+          ): boolean;
+          /**
+           * @SINCE 1.56
+           *
+           * Fires event {@link #event:dragOver dragOver} to attached listeners.
+           */
+          fireDragOver(
+            /**
+             * Parameters to pass along with the event
+             */
+            mParameters?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Fires event {@link #event:drop drop} to attached listeners.
+           */
+          fireDrop(
+            /**
+             * Parameters to pass along with the event
+             */
+            mParameters?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Gets current value of property {@link #getDropEffect dropEffect}.
+           *
+           * Defines the visual drop effect.
+           *
+           * Default value is `Move`.
+           */
+          getDropEffect(): any;
+          /**
+           * Gets current value of property {@link #getDropLayout dropLayout}.
+           *
+           * Defines the layout of the droppable controls if `dropPosition` is set to `Between` or `OnOrBetween`.
+           *
+           * Default value is `Default`.
+           */
+          getDropLayout(): any;
+          /**
+           * Gets current value of property {@link #getDropPosition dropPosition}.
+           *
+           * Defines the position for the drop action, visualized by a rectangle.
+           *
+           * Default value is `On`.
+           */
+          getDropPosition(): any;
+          /**
+           * Returns a metadata object for class sap.ui.core.dnd.DropInfo.
+           */
+          // @ts-ignore
+          static getMetadata(): sap.ui.base.Metadata;
+          /**
+           * Gets current value of property {@link #getTargetAggregation targetAggregation}.
+           *
+           * The aggregation name in the drop target control which is the target of this drag-and-drop action. If
+           * undefined, the entire control is the target. This can be handy if the target control does not have any
+           * aggregations or if the drop position within the target does not matter.
+           */
+          getTargetAggregation(): string;
+          /**
+           * Sets a new value for property {@link #getDropEffect dropEffect}.
+           *
+           * Defines the visual drop effect.
+           *
+           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+           *
+           * Default value is `Move`.
+           */
+          setDropEffect(
+            /**
+             * New value for property `dropEffect`
+             */
+            sDropEffect: any
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Sets a new value for property {@link #getDropLayout dropLayout}.
+           *
+           * Defines the layout of the droppable controls if `dropPosition` is set to `Between` or `OnOrBetween`.
+           *
+           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+           *
+           * Default value is `Default`.
+           */
+          setDropLayout(
+            /**
+             * New value for property `dropLayout`
+             */
+            sDropLayout: any
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Sets a new value for property {@link #getDropPosition dropPosition}.
+           *
+           * Defines the position for the drop action, visualized by a rectangle.
+           *
+           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+           *
+           * Default value is `On`.
+           */
+          setDropPosition(
+            /**
+             * New value for property `dropPosition`
+             */
+            sDropPosition: any
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Sets a new value for property {@link #getTargetAggregation targetAggregation}.
+           *
+           * The aggregation name in the drop target control which is the target of this drag-and-drop action. If
+           * undefined, the entire control is the target. This can be handy if the target control does not have any
+           * aggregations or if the drop position within the target does not matter.
+           *
+           * When called with a value of `null` or `undefined`, the default value of the property will be restored.
+           */
+          setTargetAggregation(
+            /**
+             * New value for property `targetAggregation`
+             */
+            sTargetAggregation: string
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Attaches event handler `fnFunction` to the {@link #event:dragEnter dragEnter} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
+           *
+           * This event is fired when a dragged element enters a drop target.
+           */
+          attachDragEnter(
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * @SINCE 1.56
+           *
+           * Attaches event handler `fnFunction` to the {@link #event:dragOver dragOver} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
+           *
+           * This event is fired when an element is being dragged over a valid drop target.
+           */
+          attachDragOver(
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+          /**
+           * Attaches event handler `fnFunction` to the {@link #event:drop drop} event of this `sap.ui.core.dnd.DropInfo`.
+           *
+           * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
+           * otherwise it will be bound to this `sap.ui.core.dnd.DropInfo` itself.
+           *
+           * This event is fired when an element is dropped on a valid drop target, as specified by the drag-and-drop
+           * info.
+           */
+          attachDrop(
+            /**
+             * The function to be called when the event occurs
+             */
+            fnFunction: Function,
+            /**
+             * Context object to call the event handler with. Defaults to this `sap.ui.core.dnd.DropInfo` itself
+             */
+            oListener?: object
+          ): sap.ui.core.dnd.DropInfo;
+        }
+        /**
+         * @SINCE 1.52.0
+         *
+         * Configuration options for visual drop effects that are given during a drag and drop operation.
+         */
+        enum DropEffect {
+          /**
+           * A copy of the source item is made at the new location.
+           */
+          Copy,
+          /**
+           * A link is established to the source at the new location.
+           */
+          Link,
+          /**
+           * An item is moved to a new location.
+           */
+          Move,
+          /**
+           * The item cannot be dropped.
+           */
+          None
+        }
+        /**
+         * @SINCE 1.52.0
+         *
+         * Configuration options for the layout of the droppable controls.
+         */
+        enum DropLayout {
+          /**
+           * Default {@link sap.ui.core.Element.extend layout} definition of the aggregations.
+           */
+          Default,
+          /**
+           * Droppable controls are arranged horizontally.
+           */
+          Horizontal,
+          /**
+           * Droppable controls are arranged vertically.
+           */
+          Vertical
+        }
+        /**
+         * @SINCE 1.52.0
+         *
+         * Configuration options for drop positions.
+         */
+        enum DropPosition {
+          /**
+           * Drop between the controls.
+           */
+          Between,
+          /**
+           * Drop on the control.
+           */
+          On,
+          /**
+           * Drop on the control or between the controls.
+           */
+          OnOrBetween
+        }
+      }
+
       namespace hyphenation {
         /**
          * @SINCE 1.60
@@ -11716,8 +11480,8 @@ declare namespace sap {
          * It is used internally by controls that support the `wrappingType:{@link sap.m.WrappingType WrappingType.Hyphenated}`
          * property.
          *
-         * As the class is singleton, an instance should be acquired from {@link sap.ui.core.hyphenation.Hyphenation.getInstance
-         * Hyphenation.getInstance}.
+         * As the class is singleton, an instance should be acquired from {@link sap.ui.core.hyphenation.Hyphenation#sap.ui.core.hyphenation.Hyphenation.getInstance
+         * Hyphenation#getInstance}.
          *
          * Usage: When to use::
          * 	 - To check if browser-native hyphenation is available for particular language.
@@ -11970,11 +11734,11 @@ declare namespace sap {
             /**
              * the new hash of the browser
              */
-            sNewHash: string,
+            newHash: string,
             /**
              * the previous hash
              */
-            sOldHash: string
+            oldHash: string
           ): void;
           /**
            * Gets the current hash
@@ -11990,10 +11754,6 @@ declare namespace sap {
            */
           // @ts-ignore
           static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Defines the events and its parameters which should be used for tracking the hash changes
-           */
-          getRelevantEventsInfo(): Object[];
           /**
            * Will start listening to hashChanges with the parseHash function. This will also fire a hashchanged event
            * with the initial hash.
@@ -12018,62 +11778,6 @@ declare namespace sap {
              * the new instance for the global singleton
              */
             oHashChanger: sap.ui.core.routing.HashChanger
-          ): void;
-          /**
-           * Sets the hash to a certain value. When using this function, a browser history entry is written. If you
-           * do not want to have an entry in the browser history, please use the {@link #replaceHash} function.
-           */
-          setHash(
-            /**
-             * New hash
-             */
-            sHash: string
-          ): void;
-        }
-        /**
-         * Base Class for manipulating and receiving changes of hash segment.
-         *
-         * Fires a "hashChanged" event if the relevant hash changes.
-         */
-        class HashChangerBase extends sap.ui.base.EventProvider {
-          /**/
-          constructor();
-
-          /**
-           * Creates a new subclass of class sap.ui.core.routing.HashChangerBase with name `sClassName` and enriches
-           * it with the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.EventProvider.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * Returns a metadata object for class sap.ui.core.routing.HashChangerBase.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Replaces the hash with a certain value. When using the replace function, no browser history entry is
-           * written. If you want to have an entry in the browser history, please use the {@link #setHash} function.
-           */
-          replaceHash(
-            /**
-             * New hash
-             */
-            sHash: string
           ): void;
           /**
            * Sets the hash to a certain value. When using this function, a browser history entry is written. If you
@@ -12129,9 +11833,9 @@ declare namespace sap {
            */
           constructor(
             /**
-             * The router instance to which the route will be added
+             * router instance, the route will be added to.
              */
-            oRouter: sap.ui.core.routing.Router,
+            The: sap.ui.core.routing.Router,
             /**
              * configuration object for the route
              */
@@ -12487,24 +12191,13 @@ declare namespace sap {
              *     {
              *         name: "anotherRoute"
              *         pattern : "anotherPattern"
-             *     },
-             *     //Will create a route for a nested component with the prefix 'componentPrefix'
-             *     {
-             *         pattern: "componentPattern",
-             *         name: "componentRoute",
-             *         target: [
-             *              {
-             *                  name: "subComponent",
-             *                  prefix: "componentPrefix"
-             *              }
-             *         ]
              *     }
              * ]
              * ```
              *
              *
-             * The alternative way of defining routes is an Object.
-             *  If you choose this way, the name attribute is the name of the property.
+             * The alternative way of defining routes is an Object. If you choose this way, the name attribute is the
+             * name of the property.
              * ```javascript
              *
              * {
@@ -12515,16 +12208,6 @@ declare namespace sap {
              *     //Will create a route called 'anotherRoute'
              *     anotherRoute : {
              *         pattern : "anotherPattern"
-             *     },
-             *     //Will create a route for a nested component with the prefix 'componentPrefix'
-             *     componentRoute{
-             *         pattern: "componentPattern",
-             *         target: [
-             *              {
-             *                  name: "subComponent",
-             *                  prefix: "componentPrefix"
-             *              }
-             *         ]
              *     }
              * }
              * ```
@@ -12537,6 +12220,15 @@ declare namespace sap {
              *  Eg: if the config object specifies :
              * ```javascript
              *
+             *
+             * {
+             *     viewType : "XML"
+             * }
+             *
+             * ```
+             *  The targets look like this:
+             * ```javascript
+             *
              * {
              *     xmlTarget : {
              *         ...
@@ -12544,26 +12236,6 @@ declare namespace sap {
              *     jsTarget : {
              *         viewType : "JS"
              *         ...
-             *     },
-             *     componentTarget: {
-             *         type: "Component",
-             *         name: "subComponent",
-             *         id: "mySubComponent",
-             *         options: {
-             *             // the Component configuration:
-             *             manifest: true
-             *             ...
-             *         },
-             *         containerOptions: {
-             *             // the ComponentContainer configuration defaults
-             *             //(other settings need to be provided):
-             *             height: "100%",
-             *             width: "100%",
-             *             lifecycle: sap.ui.core.ComponentLifecycle.Application
-             *             ...
-             *         }
-             *         controlId: "myRootView",
-             *         controlAggregation: "content"
              *     }
              * }
              * ```
@@ -12578,26 +12250,6 @@ declare namespace sap {
              *     jsTarget : {
              *         viewType : "JS"
              *         ...
-             *     },
-             * 	   componentTarget: {
-             *         type: "Component",
-             *         name: "subComponent",
-             *         id: "mySubComponent",
-             *         options: {
-             *             // the Component configuration:
-             *             manifest: true
-             *             ...
-             *         },
-             *         containerOptions: {
-             *             // the ComponentContainer configuration defaults
-             *             //(other settings need to be provided):
-             *             height: "100%",
-             *             width: "100%",
-             *             lifecycle: sap.ui.core.ComponentLifecycle.Application
-             *             ...
-             *         }
-             *         controlId: "myRootView",
-             *         controlAggregation: "content"
              *     }
              * }
              * ```
@@ -13065,18 +12717,6 @@ declare namespace sap {
             bIgnoreInitialHash?: boolean
           ): sap.ui.core.routing.Router;
           /**
-           * @SINCE 1.62
-           *
-           * Returns whether the router is initialized by calling {@link sap.ui.core.routing.Router#initialize} function
-           */
-          isInitialized(): boolean;
-          /**
-           * @SINCE 1.62
-           *
-           * Returns whether the router is stopped by calling {@link sap.ui.core.routing.Router#stop} function
-           */
-          isStopped(): boolean;
-          /**
            * @SINCE 1.58.0
            *
            * Returns whether the given hash can be matched by any one of the Route in the Router.
@@ -13133,8 +12773,7 @@ declare namespace sap {
            * @SINCE 1.22
            * @deprecated (since 1.28) - use {@link #getViews} instead.
            *
-           * Adds or overwrites a view in the viewcache of the router which will be cached under the given sViewName
-           * and the "undefined" key
+           * Adds or overwrites a view in the viewcache of the router, the viewname serves as a key
            */
           setView(
             /**
@@ -13240,87 +12879,6 @@ declare namespace sap {
              */
             oListener?: object
           ): sap.ui.core.routing.Router;
-        }
-        /**
-         * Class for manipulating and receiving changes of the relevant hash segment which belongs to a router.
-         * This Class doesn't change the browser hash directly, but informs its parent RouterHashChanger and finally
-         * changes the browser hash through the {@link sap.ui.core.routing.HashChanger}
-         */
-        class RouterHashChanger extends sap.ui.core.routing.HashChangerBase {
-          /**/
-          constructor();
-
-          /**
-           * Creates a new subclass of class sap.ui.core.routing.RouterHashChanger with name `sClassName` and enriches
-           * it with the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.routing.HashChangerBase.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**
-           * Save the given hash and potentially fires a "hashChanged" event; may be extended to modify the hash before
-           * firing the event.
-           */
-          fireHashChanged(
-            /**
-             * the new hash of the browser
-             */
-            sHash: string,
-            /**
-             * the prefixes and hashes for the child RouterHashChangers
-             */
-            oSubHashMap: object,
-            /**
-             * if this parameter is set to true, the given sHash is saved in the instance but no "hashChanged" event
-             * is fired.
-             */
-            bUpdateHashOnly: boolean
-          ): void;
-          /**
-           * Gets the current hash
-           */
-          getHash(): string;
-          /**
-           * Returns a metadata object for class sap.ui.core.routing.RouterHashChanger.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-          /**
-           * Replaces the hash with a certain value. When using the replace function, no browser history entry is
-           * written. If you want to have an entry in the browser history, please use the {@link #setHash} function.
-           */
-          // @ts-ignore
-          replaceHash(
-            /**
-             * New hash
-             */
-            sHash: string
-          ): void;
-          /**
-           * Sets the hash to a certain value. When using this function, a browser history entry is written. If you
-           * do not want to have an entry in the browser history, please use the {@link #replaceHash} function.
-           */
-          // @ts-ignore
-          setHash(
-            /**
-             * New hash
-             */
-            sHash: string
-          ): void;
         }
         /**
          * @SINCE 1.28.1
@@ -14304,133 +13862,6 @@ declare namespace sap {
 
       namespace support {
         interface usage {}
-        /**
-         * RuleEngineOpaAssertions represents a set of methods with which OPA test assertions can be enhanced. To
-         * use this functionality, {@link sap.ui.core.support.RuleEngineOpaExtension RuleEngineOpaExtension} should
-         * be provided in the OPA extensions list.
-         */
-        class RuleEngineOpaAssertions {
-          /**/
-          constructor();
-
-          /**
-           * If there are issues found the assertion result will be false and a report with all the issues will be
-           * generated in the message of the test. If no issues were found the assertion result will be true and no
-           * report will be generated.
-           *
-           * If "sap-skip-rules-issues=true" is set as an URI parameter, assertion result will be always positive.
-           */
-          getFinalReport(): Promise<any>;
-          /**
-           * This stores the passed history format in window._$files array. Accessing this array give an opportunity
-           * to store this history in file
-           */
-          getReportAsFileInFormat(
-            /**
-             * The options used for configuration
-             */
-            options?: {
-              /**
-               * The format into which the history object will be converted.
-               */
-              historyFormat?: sap.ui.support.HistoryFormats;
-              /**
-               * The name of the file. The file name must be in following format:
-               *
-               * "name of the file" + . + "file extension"
-               *
-               * Example: file.json
-               */
-              fileName?: String;
-            }
-          ): Promise<any>;
-          /**
-           * Run the Support Assistant and analyze against a specific state of the application. Depending on the options
-           * passed the assertion might either fail or not if any issues were found.
-           *
-           * If "sap-skip-rules-issues=true" is set as an URI parameter, assertion result will be always positive.
-           */
-          noRuleFailures(
-            /**
-             * The options used to configure an analysis.
-             */
-            options?: {
-              /**
-               * Should the test fail or not if there are issues of any severity.
-               */
-              failOnAnyIssues?: boolean;
-              /**
-               * Should the test fail or not if there are issues of high severity. This parameter will override failOnAnyIssues
-               * if set.
-               */
-              failOnHighIssues?: boolean;
-              /**
-               * The rules to check.
-               */
-              rules?: any;
-              /**
-               * The execution scope of the analysis.
-               */
-              executionScope?: {
-                /**
-                 * The type of the execution scope, one of 'global', 'subtree' or 'components'.
-                 */
-                type?: string;
-                /**
-                 * The IDs of the components or the subtree.
-                 */
-                selectors?: string | string[];
-              };
-
-              /**
-               * The metadata that will be passed to the analyse method.
-               */
-              metadata?: Object;
-            }
-          ): Promise<any>;
-        }
-        /**
-         * @SINCE 1.48
-         *
-         * This class represents an extension for OPA tests which allows running Support Assistant checks. It enriches
-         * the OPA assertions with the methods described in {@link sap.ui.core.support.RuleEngineOpaAssertions}
-         *
-         * For more information, see {@link topic:cfabbd4dfc054936997d9d00916e1668 Integrating the Support Assistant
-         * in OPA Tests}
-         */
-        class RuleEngineOpaExtension extends sap.ui.base.Object {
-          /**/
-          constructor();
-
-          /**
-           * Creates a new subclass of class sap.ui.core.support.RuleEngineOpaExtension with name `sClassName` and
-           * enriches it with the information contained in `oClassInfo`.
-           *
-           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.Object.extend}.
-           */
-          // @ts-ignore
-          static extend(
-            /**
-             * Name of the class being created
-             */
-            sClassName: string,
-            /**
-             * Object literal with information about the class
-             */
-            oClassInfo?: object,
-            /**
-             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-             */
-            FNMetaImpl?: Function
-          ): Function;
-          /**/
-          getAssertions(): sap.ui.core.support.RuleEngineOpaAssertions;
-          /**
-           * Returns a metadata object for class sap.ui.core.support.RuleEngineOpaExtension.
-           */
-          // @ts-ignore
-          static getMetadata(): sap.ui.base.Metadata;
-        }
       }
 
       namespace tmpl {
@@ -16490,7 +15921,7 @@ declare namespace sap {
           /**
            * Cleans up the resources associated with this object and all its aggregated children.
            *
-           * After an object has been destroyed, it can no longer be used!
+           * After an object has been destroyed, it can no longer be used in!
            *
            * Applications should call this method if they don't need the object any longer.
            * See:
@@ -17359,10 +16790,7 @@ declare namespace sap {
          * All fields in a logical field group should share the same `fieldGroupId`. Once a logical field group
          * is left, the `validateFieldGroup` event is raised.
          *
-         * For backward compatibility with older releases, field group IDs are syntactically not limited, but it
-         * is suggested to use only valid {@link sap.ui.core.ID}s.
-         *
-         * See {@link #attachValidateFieldGroup}.
+         * See {@link sap.ui.core.Control#attachValidateFieldGroup}.
          */
         fieldGroupIds?: string[];
 
@@ -17370,7 +16798,7 @@ declare namespace sap {
          * Event is fired if a logical field group defined by `fieldGroupIds` of a control was left or the user
          * explicitly pressed a key combination that triggers validation.
          *
-         * Listen to this event to validate data of the controls belonging to a field group. See {@link #setFieldGroupIds}.
+         * Listen to this event to validate data of the controls belonging to a field group. See {@link sap.ui.core.Control#setFieldGroupIds}.
          */
         validateFieldGroup?: Function;
       }
@@ -18014,11 +17442,6 @@ declare namespace sap {
              */
             manifest?: boolean | string | object;
             /**
-             * @since 1.61.0 Alternative URL for the manifest.json. If `mOptions.manifest` is set to an object value,
-             * this URL specifies the location to which the manifest object should resolve the relative URLs to.
-             */
-            altManifestUrl?: string;
-            /**
              * If set to `true` validation of the component is handled by the `MessageManager`
              */
             handleValidation?: string;
@@ -18408,11 +17831,6 @@ declare namespace sap {
              * from. A non-null object value will be interpreted as manifest content.
              */
             manifest?: boolean | string | object;
-            /**
-             * @since 1.61.0 Alternative URL for the manifest.json. If `mOptions.manifest` is set to an object value,
-             * this URL specifies the location to which the manifest object should resolve the relative URLs to.
-             */
-            altManifestUrl?: string;
             /**
              * Hints for asynchronous loading
              */
@@ -19026,7 +18444,7 @@ declare namespace sap {
       /**
        * @SINCE 1.9.2
        */
-      class ComponentMetadata extends sap.ui.base.ManagedObjectMetadata {
+      class ComponentMetadata {
         /**
          * Creates a new metadata object for a Component subclass.
          */
@@ -19453,6 +18871,13 @@ declare namespace sap {
          */
         getWhitelistService(): string;
         /**
+         * @SINCE 1.52.1
+         * @EXPERIMENTAL
+         *
+         * The mode for async XMLView processing. Potential values are: `sequential` Turned OFF by default
+         */
+        getXMLProcessingMode(): string;
+        /**
          * @SINCE 1.50.0
          *
          * Sets the current animation mode.
@@ -19696,8 +19121,8 @@ declare namespace sap {
          * In the event handler, `this` refers to the Control - not to the root DOM element like in jQuery. While
          * the DOM element can be used and modified, the general caveats for working with SAPUI5 control DOM elements
          * apply. In particular the DOM element may be destroyed and replaced by a new one at any time, so modifications
-         * that are required to have permanent effect may not be done. E.g. use {@link #addStyleClass} instead if
-         * the modification is of visual nature.
+         * that are required to have permanent effect may not be done. E.g. use {@link sap.ui.core.Control.prototype.addStyleClass}
+         * instead if the modification is of visual nature.
          *
          * Use {@link #detachBrowserEvent} to remove the event handler(s) again.
          */
@@ -19725,7 +19150,7 @@ declare namespace sap {
          * Event is fired if a logical field group defined by `fieldGroupIds` of a control was left or the user
          * explicitly pressed a key combination that triggers validation.
          *
-         * Listen to this event to validate data of the controls belonging to a field group. See {@link #setFieldGroupIds}.
+         * Listen to this event to validate data of the controls belonging to a field group. See {@link sap.ui.core.Control#setFieldGroupIds}.
          */
         attachValidateFieldGroup(
           /**
@@ -19743,24 +19168,16 @@ declare namespace sap {
           oListener?: object
         ): sap.ui.core.Control;
         /**
-         * Returns whether this control belongs to a given combination of field groups.
-         *
-         * If the `vFieldGroupIds` parameter is not specified, the method checks whether this control belongs to
-         * **any** field group, that is, whether any field group ID is defined for it.
-         *
-         * If a list of field group IDs is specified, either as an array of strings or as a single string (interpreted
-         * as a comma separated list of IDs), then the method will check whether this control belongs to **all**
-         * given field groups. Accordingly, an empty list of IDs (empty array or empty string) will always return
-         * true.
-         *
-         * Note that a string value for `vFieldGroupIds` (comma separated list) will not be trimmed. All whitespace
-         * characters are significant, but in general not recommended in field group IDs.
-         * See:
-         * 	{@link #setFieldGroupIds}
+         * Returns whether the control has a given field group. If `vFieldGroupIds` is not given it checks whether
+         * at least one field group ID is given for this control. If `vFieldGroupIds` is an empty array or empty
+         * string, true is returned if there is no field group ID set for this control. If `vFieldGroupIds` is a
+         * string array or a string all expected field group IDs are checked and true is returned if all are contained
+         * for given for this control. The comma delimiter can be used to separate multiple field group IDs in one
+         * string.
          */
         checkFieldGroupIds(
           /**
-           * An array of field group IDs or a single string with a comma separated list of IDs to match
+           * ID of the field group or an array of field group IDs to match
            */
           vFieldGroupIds?: string | string[]
         ): boolean;
@@ -20109,10 +19526,7 @@ declare namespace sap {
          * All fields in a logical field group should share the same `fieldGroupId`. Once a logical field group
          * is left, the `validateFieldGroup` event is raised.
          *
-         * For backward compatibility with older releases, field group IDs are syntactically not limited, but it
-         * is suggested to use only valid {@link sap.ui.core.ID}s.
-         *
-         * See {@link #attachValidateFieldGroup}.
+         * See {@link sap.ui.core.Control#attachValidateFieldGroup}.
          *
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
          *
@@ -20184,7 +19598,7 @@ declare namespace sap {
          * Event is fired if a logical field group defined by `fieldGroupIds` of a control was left or the user
          * explicitly pressed a key combination that triggers validation.
          *
-         * Listen to this event to validate data of the controls belonging to a field group. See {@link #setFieldGroupIds}.
+         * Listen to this event to validate data of the controls belonging to a field group. See {@link sap.ui.core.Control#setFieldGroupIds}.
          */
         attachValidateFieldGroup(
           /**
@@ -20337,7 +19751,6 @@ declare namespace sap {
         ): void;
         /**
          * @SINCE 1.16.0
-         * @deprecated (since 1.61) - Use `IntervalTrigger.addListener()` from "sap/ui/core/IntervalTrigger" module.
          *
          * Registers a listener to the central interval timer.
          */
@@ -20570,8 +19983,6 @@ declare namespace sap {
         ): sap.ui.core.Core;
         /**
          * @SINCE 1.16.0
-         * @deprecated (since 1.61) - Use `IntervalTrigger.removeListener()` from "sap/ui/core/IntervalTrigger"
-         * module.
          *
          * Unregisters a listener for the central interval timer.
          *
@@ -21850,7 +21261,7 @@ declare namespace sap {
         // @ts-ignore
         destroy(
           /**
-           * if true, the UI element is removed from DOM synchronously and parent will not be invalidated.
+           * if true, the UI element is not marked for redraw
            */
           bSuppressInvalidate?: boolean
         ): void;
@@ -22682,7 +22093,7 @@ declare namespace sap {
             type?: string;
             /**
              * definition of the Fragment content. When this property is supplied, the "name" parameter must not be
-             * used. Please see the above example on how to use the 'definition' parameter.
+             * used. The type of this property depends on the Fragment type, e.g. it could be a string for XML Fragments.
              */
             definition?: string;
             /**
@@ -22690,10 +22101,10 @@ declare namespace sap {
              */
             id?: string;
             /**
-             * the Controller or Object which should be used by the controls in the Fragment. Note that some Fragments
-             * may not need a Controller while others may need one and certain methods to be implemented by it.
+             * the Controller which should be used by the controls in the Fragment. Note that some Fragments may not
+             * need a Controller while others may need one and certain methods to be implemented by it.
              */
-            controller?: sap.ui.core.mvc.Controller | Object;
+            controller?: sap.ui.core.mvc.Controller;
           }
         ): Promise<any>;
         /**
@@ -23616,21 +23027,6 @@ declare namespace sap {
           oListener?: object
         ): void;
         /**
-         * @SINCE 1.61
-         *
-         * Adds a listener to the list that should be triggered.
-         */
-        static addListener(
-          /**
-           * is the called function that should be called when the trigger want to trigger the listener.
-           */
-          fnFunction: Function,
-          /**
-           * that should be triggered.
-           */
-          oListener?: object
-        ): void;
-        /**
          * Destructor method for objects.
          */
         // @ts-ignore
@@ -23657,6 +23053,12 @@ declare namespace sap {
           FNMetaImpl?: Function
         ): Function;
         /**
+         * See:
+         * 	sap.ui.base.Object#getInterface
+         */
+        // @ts-ignore
+        getInterface(): void;
+        /**
          * Returns a metadata object for class sap.ui.core.IntervalTrigger.
          */
         // @ts-ignore
@@ -23665,21 +23067,6 @@ declare namespace sap {
          * Removes corresponding listener from list.
          */
         removeListener(
-          /**
-           * is the previously registered function
-           */
-          fnFunction: Function,
-          /**
-           * that should be removed
-           */
-          oListener?: object
-        ): void;
-        /**
-         * @SINCE 1.61
-         *
-         * Removes corresponding listener from list.
-         */
-        static removeListener(
           /**
            * is the previously registered function
            */
@@ -24486,8 +23873,7 @@ declare namespace sap {
         /**
          * @SINCE 1.60
          *
-         * Returns the currency symbols available for this locale. Currency symbols get accumulated by custom currency
-         * symbols.
+         * Returns the currency symbols available for this locale
          */
         getCurrencySymbols(): object;
         /**
@@ -24742,15 +24128,6 @@ declare namespace sap {
          * information of the CLDR is taken into account to guess the "most likely" territory for the locale.
          */
         getMinimalDaysInFirstWeek(): number;
-        /**
-         * Get miscellaneous pattern.
-         */
-        getMiscPattern(
-          /**
-           * the name of the misc pattern, can be "approximately", "atLeast", "atMost" or "range"
-           */
-          sName: string
-        ): string;
         /**
          * Get month names in width "narrow", "abbreviated" or "wide".
          */
@@ -25529,26 +24906,6 @@ declare namespace sap {
         );
 
         /**
-         * Attaches an event-handler `fnFunction` to the static 'blockLayerStateChange' event.
-         *
-         * The event gets triggered in case of modal popups when the first of multiple popups opens and closes.
-         */
-        static attachBlockLayerStateChange(
-          /**
-           * The object, that should be passed along with the event-object when firing the event.
-           */
-          oData: object,
-          /**
-           * The function to call, when the event occurs. This function will be called on the oListener-instance (if
-           * present) or in a 'static way'.
-           */
-          fnFunction: Function,
-          /**
-           * Object on which to call the given function.
-           */
-          oListener?: object
-        ): void;
-        /**
          * Attaches event handler `fnFunction` to the {@link #event:closed closed} event of this `sap.ui.core.Popup`.
          *
          * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -25611,21 +24968,6 @@ declare namespace sap {
          */
         // @ts-ignore
         destroy(): void;
-        /**
-         * Removes a previously attached event handler `fnFunction` from the static 'blockLayerStateChange' event.
-         *
-         * The event gets triggered in case of modal popups when the first of multiple popups opens and closes.
-         */
-        static detachBlockLayerStateChange(
-          /**
-           * The function to call, when the event occurs.
-           */
-          fnFunction: Function,
-          /**
-           * Object on which the given function had to be called.
-           */
-          oListener?: object
-        ): void;
         /**
          * Detaches event handler `fnFunction` from the {@link #event:closed closed} event of this `sap.ui.core.Popup`.
          *
@@ -25941,22 +25283,6 @@ declare namespace sap {
           bShowShadow: boolean
         ): sap.ui.core.Popup;
         /**
-         * Attaches an event-handler `fnFunction` to the static 'blockLayerStateChange' event.
-         *
-         * The event gets triggered in case of modal popups when the first of multiple popups opens and closes.
-         */
-        static attachBlockLayerStateChange(
-          /**
-           * The function to call, when the event occurs. This function will be called on the oListener-instance (if
-           * present) or in a 'static way'.
-           */
-          fnFunction: Function,
-          /**
-           * Object on which to call the given function.
-           */
-          oListener?: object
-        ): void;
-        /**
          * Attaches event handler `fnFunction` to the {@link #event:closed closed} event of this `sap.ui.core.Popup`.
          *
          * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
@@ -26201,7 +25527,7 @@ declare namespace sap {
            * the control that should be rendered
            */
           oControl: sap.ui.core.Control
-        ): object;
+        ): void;
         /**
          * Returns the renderer class for a given control instance
          */
@@ -26270,12 +25596,7 @@ declare namespace sap {
         /**
          * @deprecated (since 1.1) - never has been implemented - DO NOT USE
          */
-        translate(
-          /**
-           * the key
-           */
-          sKey: string
-        ): void;
+        translate(sKey: string): void;
         /**
          * Write the given texts to the buffer
          */
@@ -26406,9 +25727,6 @@ declare namespace sap {
          * For details about the escaping refer to {@link jQuery.sap.encodeHTML}
          */
         writeEscaped(
-          /**
-           * the text to escape
-           */
           sText: any,
           /**
            * Whether to convert line breaks into
@@ -27306,25 +26624,6 @@ declare namespace sap {
            */
           oDependent: sap.ui.core.Control
         ): sap.ui.core.UIArea;
-        /**
-         * @SINCE 1.62
-         *
-         * Enabled or disables logging of certain event types.
-         *
-         * The event handling code of class UIArea logs all processed browser events with log level DEBUG. Only
-         * some events that occur too frequently are suppressed by default: `mousemove`, `mouseover`, `mouseout`,
-         * `scroll`, `dragover`, `dragenter` and `dragleave`.
-         *
-         * With this method, logging can be disabled for further event types or it can be enabled for some or all
-         * of the event types listed above. The parameter `mEventTypes` is a map of boolean values keyed by event
-         * type names. When the value for an event type coerces to true, events of that type won't be logged.
-         */
-        static configureEventLogging(
-          /**
-           * Map of logging flags keyed by event types
-           */
-          mEventTypes?: object
-        ): object;
         /**
          * Destroys all the content in the aggregation {@link #getContent content}.
          */
@@ -28632,34 +27931,6 @@ declare namespace sap {
         Inactive
       }
       /**
-       * @SINCE 1.62.0
-       *
-       * Colors to highlight certain UI elements. In contrast to the `ValueState` the semantic meaning must be
-       * defined by the application.
-       */
-      enum IndicationColor {
-        /**
-         * Indication Color 1
-         */
-        Indication01,
-        /**
-         * Indication Color 2
-         */
-        Indication02,
-        /**
-         * Indication Color 3
-         */
-        Indication03,
-        /**
-         * Indication Color 4
-         */
-        Indication04,
-        /**
-         * Indication Color 5
-         */
-        Indication05
-      }
-      /**
        * Defines the different message types of a message
        */
       enum MessageType {
@@ -28783,25 +28054,6 @@ declare namespace sap {
          * A scroll bar is always shown even if the space is large enough for the current content.
          */
         Scroll
-      }
-      /**
-       * @SINCE 1.61.0
-       *
-       * Sort order of a column
-       */
-      enum SortOrder {
-        /**
-         * Sorting is done in ascending order.
-         */
-        Ascending,
-        /**
-         * Sorting is done in descending order.
-         */
-        Descending,
-        /**
-         * Sorting is not applied.
-         */
-        None
       }
       /**
        * Configuration options for text alignments.
@@ -29193,12 +28445,12 @@ declare namespace sap {
            * The object that wants to be notified when the event occurs (`this` context within the handler function).
            * If it is not specified, the handler function is called in the context of the `window`.
            */
-          oListener?: object,
+          oListener: object,
           /**
            * The name of the range set to listen to. The range set must be initialized beforehand ({@link sap.ui.Device.media.initRangeSet}).
            * If no name is provided, the {@link sap.ui.Device.media.RANGESETS.SAP_STANDARD default range set} is used.
            */
-          sName?: string
+          sName: string
         ): void;
         /**
          * Removes a previously attached event handler from the change events of the screen width.
@@ -29213,12 +28465,12 @@ declare namespace sap {
           /**
            * The object that wanted to be notified when the event occurred
            */
-          oListener?: object,
+          oListener: object,
           /**
            * The name of the range set to listen to. If no name is provided, the {@link sap.ui.Device.media.RANGESETS.SAP_STANDARD
            * default range set} is used.
            */
-          sName?: string
+          sName: string
         ): void;
         /**
          * Returns information about the current active range of the range set with the given name.
@@ -29310,6 +28562,50 @@ declare namespace sap {
         function removeRangeSet(
           /**
            * The name of the range set which should be removed.
+           */
+          sName: string
+        ): void;
+        /**
+         * Registers the given event handler to change events of the screen width based on the range set with the
+         * specified name.
+         *
+         * The event is fired whenever the screen width changes and the current screen width is in a different interval
+         * of the given range set than before the width change.
+         *
+         * The event handler is called with a single argument: a map `mParams` which provides the following information
+         * about the entered interval:
+         * 	 - `mParams.from`: The start value (inclusive) of the entered interval as a number
+         * 	 - `mParams.to`: The end value (exclusive) range of the entered interval as a number or undefined for
+         * 			the last interval (infinity)
+         * 	 - `mParams.unit`: The unit used for the values above, e.g. `"px"`
+         * 	 - `mParams.name`: The name of the entered interval, if available
+         */
+        function attachHandler(
+          /**
+           * The handler function to call when the event occurs. This function will be called in the context of the
+           * `oListener` instance (if present) or on the `window` instance. A map with information about the entered
+           * range set is provided as a single argument to the handler (see details above).
+           */
+          fnFunction: Function,
+          /**
+           * The name of the range set to listen to. The range set must be initialized beforehand ({@link sap.ui.Device.media.initRangeSet}).
+           * If no name is provided, the {@link sap.ui.Device.media.RANGESETS.SAP_STANDARD default range set} is used.
+           */
+          sName: string
+        ): void;
+        /**
+         * Removes a previously attached event handler from the change events of the screen width.
+         *
+         * The passed parameters must match those used for registration with {@link #.attachHandler} beforehand.
+         */
+        function detachHandler(
+          /**
+           * The handler function to detach from the event
+           */
+          fnFunction: Function,
+          /**
+           * The name of the range set to listen to. If no name is provided, the {@link sap.ui.Device.media.RANGESETS.SAP_STANDARD
+           * default range set} is used.
            */
           sName: string
         ): void;
@@ -29859,8 +29155,7 @@ declare namespace sap {
           shim?: any;
           /**
            * When set to true, `sap.ui.require` loads modules asynchronously via script tags and `sap.ui.define` executes
-           * asynchronously. To enable this feature, it is recommended to set the attribute `data-sap-ui-async="true"`
-           * on the application bootstrap tag.
+           * asynchronously.
            *
            * **Note:** Switching back from async to sync is not supported and trying to do so will throw an `Error`
            */
@@ -31966,14 +31261,6 @@ declare namespace sap {
           );
 
           /**
-           * Returns a Promise of the current data-loading state. Every currently running {@link sap.ui.model.json.JSONModel#loadData}
-           * call is respected by the returned Promise. This also includes a potential loadData call from the JSONModel's
-           * constructor in case a URL was given. The data-loaded Promise will resolve once all running requests have
-           * finished. Only request, which have been queued up to the point of calling this function will be respected
-           * by the returned Promise.
-           */
-          dataLoaded(): Promise<any>;
-          /**
            * Creates a new subclass of class sap.ui.model.json.JSONModel with name `sClassName` and enriches it with
            * the information contained in `oClassInfo`.
            *
@@ -32047,18 +31334,18 @@ declare namespace sap {
              */
             sType?: string,
             /**
-             * Whether the data should be merged instead of replaced
+             * whether the data should be merged instead of replaced
              */
             bMerge?: boolean,
             /**
-             * Disables caching if set to false. Default is true.
+             * force no caching if false. Default is false
              */
-            bCache?: boolean,
+            bCache?: string,
             /**
              * An object of additional header key/value pairs to send along with the request
              */
             mHeaders?: object
-          ): Promise<any> | undefined;
+          ): void;
           /**
            * Sets the data, passed as a JS object tree, to the model.
            */
@@ -32359,7 +31646,7 @@ declare namespace sap {
             /**
              * array of parts
              */
-            aParts: any[],
+            vParts: any[],
             /**
              * root formatter function; default: `Array.prototype.join(., " ")` in case of multiple parts, just like
              * {@link sap.ui.model.CompositeBinding#getExternalValue getExternalValue}
@@ -32941,139 +32228,6 @@ declare namespace sap {
              * Returns the type's supported range as object with properties `minimum` and `maximum`.
              */
             getRange(): object;
-          }
-          /**
-           * @SINCE 1.63.0
-           *
-           * This class represents the `Currency` composite type with the parts amount, currency, and currency customizing.
-           * The amount part is formatted according to the customizing for the currency. Use the result of the promise
-           * returned by {@link sap.ui.model.odata.v4.ODataMetaModel#requestCurrencyCodes} as currency customizing
-           * part. If no currency customizing is available, UI5's default formatting applies. The type may only be
-           * used for amount and currency parts from a {@link sap.ui.model.odata.v4.ODataModel}.
-           */
-          class Currency extends sap.ui.model.type.Currency {
-            /**
-             * Constructor for a `Currency` composite type.
-             */
-            constructor(
-              /**
-               * See parameter `oFormatOptions` of {@link sap.ui.model.type.Currency#constructor}. Format options are
-               * immutable, that is, they can only be set once on construction.
-               */
-              oFormatOptions?: {
-                /**
-                 * Not supported; the type derives this from its currency customizing part.
-                 */
-                customCurrencies?: object;
-                /**
-                 * Whether the amount is parsed to a string; set to `false` if the amount's underlying type is represented
-                 * as a `number`, for example {@link sap.ui.model.odata.type.Int32}
-                 */
-                parseAsString?: boolean;
-              },
-              /**
-               * Not supported
-               */
-              oConstraints?: object
-            );
-
-            /**
-             * Creates a new subclass of class sap.ui.model.odata.type.Currency with name `sClassName` and enriches
-             * it with the information contained in `oClassInfo`.
-             *
-             * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.model.type.Currency.extend}.
-             */
-            // @ts-ignore
-            static extend(
-              /**
-               * Name of the class being created
-               */
-              sClassName: string,
-              /**
-               * Object literal with information about the class
-               */
-              oClassInfo?: object,
-              /**
-               * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-               */
-              FNMetaImpl?: Function
-            ): Function;
-            /**
-             * @SINCE 1.63.0
-             *
-             * Formats the given values of the parts of the `Currency` composite type to the given target type.
-             */
-            // @ts-ignore
-            formatValue(
-              /**
-               * Array of part values to be formatted; contains in the following order: amount, currency, currency customizing.
-               * The first call to this method where all parts are set determines the currency customizing; subsequent
-               * calls use this customizing, so that the corresponding part may be omitted. Changes to the currency customizing
-               * part after this first method call are not considered: The currency customizing for this `Currency` instance
-               * remains unchanged.
-               */
-              aValues: any[],
-              /**
-               * The target type; must be "string" or a type with "string" as its {@link sap.ui.base.DataType#getPrimitiveType
-               * primitive type}. See {@link sap.ui.model.odata.type} for more information.
-               */
-              sTargetType: string
-            ): string;
-            /**
-             * @SINCE 1.63.0
-             *
-             * See:
-             * 	sap.ui.base.Object#getInterface
-             */
-            // @ts-ignore
-            getInterface(): object;
-            /**
-             * Returns a metadata object for class sap.ui.model.odata.type.Currency.
-             */
-            // @ts-ignore
-            static getMetadata(): sap.ui.base.Metadata;
-            /**
-             * @SINCE 1.63.0
-             *
-             * Returns the type's name.
-             */
-            // @ts-ignore
-            getName(): string;
-            /**
-             * @SINCE 1.63.0
-             *
-             * Parses the given string value to an array containing amount and currency.
-             * See:
-             * 	sap.ui.model.type.Currency#parseValue
-             */
-            // @ts-ignore
-            parseValue(
-              /**
-               * The value to be parsed
-               */
-              vValue: string,
-              /**
-               * The source type (the expected type of `vValue`); must be "string", or a type with "string" as its {@link
-               * sap.ui.base.DataType#getPrimitiveType primitive type}. See {@link sap.ui.model.odata.type} for more information.
-               */
-              sSourceType: string,
-              /**
-               * The current values of all binding parts
-               */
-              aCurrentValues: any[]
-            ): any[];
-            /**
-             * @SINCE 1.63.0
-             *
-             * Does nothing as the type does not support constraints.
-             */
-            // @ts-ignore
-            validateValue(
-              /**
-               * The value to be validated
-               */
-              vValue: string
-            ): void;
           }
           /**
            * @SINCE 1.37.0
@@ -34960,143 +34114,6 @@ declare namespace sap {
               sValue: string
             ): void;
           }
-          /**
-           * @SINCE 1.63.0
-           *
-           * This class represents the `Unit` composite type with the parts measure, unit, and unit customizing. The
-           * measure part is formatted according to the customizing for the unit. Use the result of the promise returned
-           * by {@link sap.ui.model.odata.v4.ODataMetaModel#requestUnitsOfMeasure} as unit customizing part. If no
-           * unit customizing is available, UI5's default formatting applies. The type may only be used for measure
-           * and unit parts from a {@link sap.ui.model.odata.v4.ODataModel}.
-           */
-          class Unit extends sap.ui.model.type.Unit {
-            /**
-             * Constructor for a `Unit` composite type.
-             */
-            constructor(
-              /**
-               * See parameter `oFormatOptions` of {@link sap.ui.model.type.Unit#constructor}. Format options are immutable,
-               * that is, they can only be set once on construction.
-               */
-              oFormatOptions?: {
-                /**
-                 * Not supported; the type derives this from its unit customizing part.
-                 */
-                customUnits?: object;
-                /**
-                 * Whether the measure is parsed to a string; set to `false` if the measure's underlying type is represented
-                 * as a `number`, for example {@link sap.ui.model.odata.type.Int32}
-                 */
-                parseAsString?: boolean;
-              },
-              /**
-               * Not supported
-               */
-              oConstraints?: object,
-              /**
-               * Not supported
-               */
-              aDynamicFormatOptionNames?: string[]
-            );
-
-            /**
-             * Creates a new subclass of class sap.ui.model.odata.type.Unit with name `sClassName` and enriches it with
-             * the information contained in `oClassInfo`.
-             *
-             * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.model.type.Unit.extend}.
-             */
-            // @ts-ignore
-            static extend(
-              /**
-               * Name of the class being created
-               */
-              sClassName: string,
-              /**
-               * Object literal with information about the class
-               */
-              oClassInfo?: object,
-              /**
-               * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-               */
-              FNMetaImpl?: Function
-            ): Function;
-            /**
-             * @SINCE 1.63.0
-             *
-             * Formats the given values of the parts of the `Unit` composite type to the given target type.
-             */
-            // @ts-ignore
-            formatValue(
-              /**
-               * Array of part values to be formatted; contains in the following order: measure, unit, unit customizing.
-               * The first call to this method where all parts are set determines the unit customizing; subsequent calls
-               * use this customizing, so that the corresponding part may be omitted. Changes to the unit customizing
-               * part after this first method call are not considered: The unit customizing for this `Unit` instance remains
-               * unchanged.
-               */
-              aValues: any[],
-              /**
-               * The target type; must be "string" or a type with "string" as its {@link sap.ui.base.DataType#getPrimitiveType
-               * primitive type}. See {@link sap.ui.model.odata.type} for more information.
-               */
-              sTargetType: string
-            ): string;
-            /**
-             * @SINCE 1.63.0
-             *
-             * See:
-             * 	sap.ui.base.Object#getInterface
-             */
-            // @ts-ignore
-            getInterface(): object;
-            /**
-             * Returns a metadata object for class sap.ui.model.odata.type.Unit.
-             */
-            // @ts-ignore
-            static getMetadata(): sap.ui.base.Metadata;
-            /**
-             * @SINCE 1.63.0
-             *
-             * Returns the type's name.
-             */
-            // @ts-ignore
-            getName(): string;
-            /**
-             * @SINCE 1.63.0
-             *
-             * Parses the given string value to an array containing measure and unit.
-             * See:
-             * 	sap.ui.model.type.Unit#parseValue
-             */
-            // @ts-ignore
-            parseValue(
-              /**
-               * The value to be parsed
-               */
-              vValue: string,
-              /**
-               * The source type (the expected type of `vValue`); must be "string", or a type with "string" as its {@link
-               * sap.ui.base.DataType#getPrimitiveType primitive type}. See {@link sap.ui.model.odata.type} for more information.
-               */
-              sSourceType: string,
-              /**
-               * The current values of all binding parts
-               */
-              aCurrentValues: any[]
-            ): any[];
-            /**
-             * @SINCE 1.63.0
-             *
-             * Does nothing as the type does not support constraints.
-             */
-            // @ts-ignore
-            validateValue(
-              /**
-               * The value to be validated
-               */
-              vValue: string
-            ): void;
-          }
         }
         /**
          * OData-based DataBinding
@@ -35858,7 +34875,7 @@ declare namespace sap {
                  * Please use the following string format e.g. '2.0' or '3.0'. OData version supported by the ODataModel:
                  * '2.0'
                  */
-                maxDataServiceVersion?: string;
+                maxDataServiceVersion?: undefined;
                 /**
                  * Whether all requests should be sent in batch requests
                  */
@@ -35876,8 +34893,7 @@ declare namespace sap {
                  */
                 loadAnnotationsJoined?: boolean;
                 /**
-                 * Map of URL parameters (name/value pairs) - these parameters will be attached to all requests, except
-                 * for the `$metadata` request
+                 * Map of URL parameters (name/value pairs) - these parameters will be attached to all requests
                  */
                 serviceUrlParams?: Object;
                 /**
@@ -35938,15 +34954,6 @@ declare namespace sap {
                  * Set this array to make custom response headers bindable via the entity's "__metadata/headers" property
                  */
                 bindableResponseHeaders?: string[];
-                /**
-                 * When setting this flag to `true` the model tries to calculate a canonical url to the data.
-                 */
-                canonicalRequests?: boolean;
-                /**
-                 * Send CSRF token for GET requests in case read access logging is activated for the oData Service in the
-                 * backend.
-                 */
-                tokenHandlingForGet?: boolean;
               }
             );
 
@@ -36387,14 +35394,9 @@ declare namespace sap {
                  * #setRefreshAfterChange} If given, this overrules the model-wide `refreshAfterChange` flag for this operation
                  * only.
                  */
-                refreshAfterChange?: boolean;
+                refreshAfterChange?: string;
               }
             ): object;
-            /**
-             * Check whether the canonical requests calculation is switched on. See 'canonicalRequests' parameter of
-             * the model constructor.
-             */
-            canonicalRequestsEnabled(): boolean;
             /**
              * Trigger a `POST` request to the OData service that was specified in the model constructor.
              *
@@ -36455,7 +35457,7 @@ declare namespace sap {
                  * #setRefreshAfterChange} If given, this overrules the model-wide `refreshAfterChange` flag for this operation
                  * only.
                  */
-                refreshAfterChange?: boolean;
+                refreshAfterChange?: string;
               }
             ): object;
             /**
@@ -36579,7 +35581,7 @@ declare namespace sap {
                  * #setRefreshAfterChange} If given, this overrules the model-wide `refreshAfterChange` flag for this operation
                  * only.
                  */
-                refreshAfterChange?: boolean;
+                refreshAfterChange?: string;
               }
             ): sap.ui.model.Context;
             /**
@@ -37100,9 +36102,6 @@ declare namespace sap {
             /**
              * Returns the changed properties of all changed entities in a map which are still pending. The key is the
              * string name of the entity and the value is an object which contains the changed properties.
-             *
-             * In contrast to the two related functions {@link #hasPendingChanges} and {@link #resetChanges}, only client
-             * data changes are supported.
              */
             getPendingChanges(): Object;
             /**
@@ -37156,20 +36155,9 @@ declare namespace sap {
              */
             getServiceMetadata(): Object;
             /**
-             * Checks if there exist pending changes in the model.
-             *
-             * By default, only client data changes triggered through: {@link #createEntry} {@link #setProperty} are
-             * taken into account.
-             *
-             * If `bAll` is set to `true`, also deferred requests triggered through: {@link #create} {@link #update}
-             * {@link #remove} are taken into account.
+             * Checks if there exist pending changes in the model created by {@link #setProperty} or {@link #createEntry}.
              */
-            hasPendingChanges(
-              /**
-               * If set to true, deferred requests are also taken into account.
-               */
-              bAll?: boolean
-            ): boolean;
+            hasPendingChanges(): boolean;
             /**
              * Checks if there are pending requests, either ongoing or sequential.
              */
@@ -37392,28 +36380,18 @@ declare namespace sap {
                  * #setRefreshAfterChange} If given, this overrules the model-wide `refreshAfterChange` flag for this operation
                  * only.
                  */
-                refreshAfterChange?: boolean;
+                refreshAfterChange?: string;
               }
             ): object;
             /**
-             * Resets changes that have been collected.
-             *
-             * By default, only client data changes triggered through: {@link #createEntry} {@link #setProperty} are
-             * taken into account.
-             *
-             * If `bAll` is set to `true`, also deferred requests triggered through: {@link #create} {@link #update}
-             * {@link #remove} are taken into account.
+             * Resets the changes that have been collected by the {@link #setProperty} method.
              */
             resetChanges(
               /**
                * Array of paths that should be reset. If no array is passed, all changes will be reset.
                */
-              aPath?: any[],
-              /**
-               * If set to true, also deferred requests are taken into account.
-               */
-              bAll?: boolean
-            ): Promise<any>;
+              aPath?: any[]
+            ): void;
             /**
              * Returns a promise, which will resolve with the security token as soon as it is available.
              */
@@ -37701,7 +36679,7 @@ declare namespace sap {
                  * #setRefreshAfterChange} If given, this overrules the model-wide `refreshAfterChange` flag for this operation
                  * only.
                  */
-                refreshAfterChange?: boolean;
+                refreshAfterChange?: string;
               }
             ): object;
             /**
@@ -37986,8 +36964,6 @@ declare namespace sap {
             );
 
             /**
-             * @SINCE 1.58
-             *
              * Expand a nodes subtree to a given level.
              *
              * This API is only supported in `OperationMode.Server` and if the OData service implements the full specification
@@ -38203,121 +37179,9 @@ declare namespace sap {
            */
           namespace AnnotationHelper {
             /**
-             * @SINCE 1.63.0
-             *
-             * A function that helps to interpret OData V4 annotations. It knows about the following expressions:
-             * 	"14.4 Constant Expressions" for "edm:Bool", "edm:Date", "edm:DateTimeOffset", "edm:Decimal", "edm:Float",
-             * "edm:Guid", "edm:Int", "edm:TimeOfDay". constant "14.4.11 Expression edm:String": This is turned
-             * into a fixed text (e.g. `"Width"`). String constants that contain a simple binding `"{@i18n>...}"` to
-             * the hard-coded model name "@i18n" with arbitrary path are not turned into a fixed text, but kept as a
-             * data binding expression; this allows local annotation files to refer to a resource bundle for internationalization.
-             * dynamic "14.5.1 Comparison and Logical Operators": These are turned into expression bindings to perform
-             * the operations at runtime. dynamic "14.5.3 Expression edm:Apply":
-             * 	"14.5.3.1.1 Function odata.concat": This is turned into a data binding expression relative to an entity.
-             * "14.5.3.1.2 Function odata.fillUriTemplate": This is turned into an expression binding to fill the
-             * template at runtime. "14.5.3.1.3 Function odata.uriEncode": This is turned into an expression binding
-             * to encode the parameter at runtime. Apply functions may be nested arbitrarily.  dynamic
-             * "14.5.6 Expression edm:If": This is turned into an expression binding to be evaluated at runtime. The
-             * expression is a conditional expression like `"{=condition ? expression1 : expression2}"`. dynamic
-             * "14.5.10 Expression edm:Null": This is turned into a `null` value. It is ignored in `odata.concat`. dynamic
-             * "14.5.12 Expression edm:Path" and "14.5.13 Expression edm:PropertyPath": This is turned into a data binding
-             * relative to an entity, including type information and constraints as available from metadata, e.g. `"{path
-             * : 'Name', type : 'sap.ui.model.odata.type.String', constraints : {'maxLength':'255'}}"`. Depending on
-             * the used type, some additional constraints of this type are set:
-             * 	Edm.DateTime: The "displayFormat" constraint is set to the value of the "sap:display-format" annotation
-             * of the referenced property. Edm.Decimal: The "precision" and "scale" constraints are set to the values
-             * of the corresponding attributes of the referenced property. The "minimum", "maximum", "minimumExclusive"
-             * and "maximumExlusive" constraints are set to the values of the corresponding "Org.OData.Validation.V1"
-             * annotation of the referenced property; note that in this case only constant expressions are supported
-             * to determine the annotation value. Edm.String: The "maxLength" constraint is set to the value of
-             * the corresponding attribute of the referenced property, and the "isDigitSequence" constraint is set to
-             * the value of the "com.sap.vocabularies.Common.v1.IsDigitSequence" annotation of the referenced property;
-             * note that in this case only constant expressions are supported to determine the annotation value.
-             *
-             *
-             * If `oDetails.context.getPath()` contains a single "$AnnotationPath" or "$Path" segment, the value corresponding
-             * to that segment is considered as a data binding path prefix whenever a dynamic "14.5.12 Expression edm:Path"
-             * or "14.5.13 Expression edm:PropertyPath" is turned into a data binding. Use {@link sap.ui.model.odata.v4.AnnotationHelper.resolve$Path}
-             * to avoid these prefixes in cases where they are not applicable.
-             *
-             * Unsupported or incorrect values are turned into a string nevertheless, but indicated as such. Proper
-             * escaping is used to make sure that data binding syntax is not corrupted. In such a case, an error describing
-             * the problem is logged to the console.
-             *
-             * Example:
-             * ```javascript
-             *
-             * <Text text="{meta>Value/@@sap.ui.model.odata.v4.AnnotationHelper.format}" />
-             * ```
-             *
-             *
-             * Example for "$Path" in the context's path:
-             * ```javascript
-             *
-             * <Annotations Target="com.sap.gateway.default.iwbep.tea_busi.v0001.EQUIPMENT">
-             * 	<Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
-             * 		<Collection>
-             * 			<Record Type="com.sap.vocabularies.UI.v1.DataField">
-             * 				<PropertyValue Property="Value" Path="EQUIPMENT_2_PRODUCT/Name" />
-             * 			</Record>
-             * 		</Collection>
-             * 	</Annotation>
-             * </Annotations>
-             * <Annotations Target="com.sap.gateway.default.iwbep.tea_busi_product.v0001.Product/Name">
-             * 	<Annotation Term="com.sap.vocabularies.Common.v1.QuickInfo" Path="PRODUCT_2_SUPPLIER/Supplier_Name" />
-             * </Annotations>
-             * ```
-             *
-             * ```javascript
-             *
-             * <Text text="{meta>/Equipments/@com.sap.vocabularies.UI.v1.LineItem/0/Value/$Path@com.sap.vocabularies.Common.v1.QuickInfo@@sap.ui.model.odata.v4.AnnotationHelper.format}" />
-             * ```
-             *  `format` returns a binding with path "EQUIPMENT_2_PRODUCT/PRODUCT_2_SUPPLIER/Supplier_Name".
-             *
-             * Example for "$AnnotationPath" in the context's path:
-             * ```javascript
-             *
-             * <Annotations Target="com.sap.gateway.default.iwbep.tea_busi.v0001.EQUIPMENT">
-             * 	<Annotation Term="com.sap.vocabularies.UI.v1.Facets">
-             * 		<Collection>
-             * 			<Record Type="com.sap.vocabularies.UI.v1.ReferenceFacet">
-             * 				<PropertyValue Property="Target" AnnotationPath="EQUIPMENT_2_PRODUCT/@com.sap.vocabularies.Common.v1.QuickInfo" />
-             * 			</Record>
-             * 		</Collection>
-             * 	</Annotation>
-             * </Annotations>
-             * <Annotations Target="com.sap.gateway.default.iwbep.tea_busi_product.v0001.Product">
-             * 	<Annotation Term="com.sap.vocabularies.Common.v1.QuickInfo" Path="Name" />
-             * </Annotations>
-             * ```
-             *
-             * ```javascript
-             *
-             * <Text text="{meta>/Equipments/@com.sap.vocabularies.UI.v1.Facets/0/Target/$AnnotationPath/@@sap.ui.model.odata.v4.AnnotationHelper.format}" />
-             * ```
-             *  `format` returns a binding with path "EQUIPMENT_2_PRODUCT/Name".
-             * See:
-             * 	sap.ui.model.odata.v4.AnnotationHelper.resolve$Path
-             */
-            function format(
-              /**
-               * The raw value from the meta model
-               */
-              vRawValue: any,
-              /**
-               * The details object
-               */
-              oDetails: {
-                /**
-                 * Points to the given raw value, that is `oDetails.context.getProperty("") === vRawValue`
-                 */
-                context: sap.ui.model.Context;
-              }
-            ): string | Promise<any>;
-            /**
              * @SINCE 1.43.0
              *
-             * Returns a data binding according to the result of {@link sap.ui.model.odata.v4.AnnotationHelper.getNavigationPath}.
+             * Returns a data binding according to the result of {@link #getNavigationPath}.
              */
             function getNavigationBinding(
               /**
@@ -38386,7 +37250,7 @@ declare namespace sap {
              * 			with "$count" or with a multi-valued structural or navigation property. Term casts and annotations of
              * 			navigation properties are ignored.
              *
-             * Example:
+             * Examples:
              * ```javascript
              *
              * <template:if test="{facet>Target/$AnnotationPath@@sap.ui.model.odata.v4.AnnotationHelper.isMultiple}">
@@ -38450,40 +37314,26 @@ declare namespace sap {
               }
             ): string | Promise<any>;
             /**
-             * @SINCE 1.63.0
-             *
-             * Helper function for a `template:with` instruction that returns an equivalent to the given context's path,
-             * without "$AnnotationPath", "$NavigationPropertyPath", "$Path", and "$PropertyPath" segments.
-             * See:
-             * 	sap.ui.model.odata.v4.AnnotationHelper.format
-             */
-            function resolve$Path(
-              /**
-               * A context which belongs to an {@link sap.ui.model.odata.v4.ODataMetaModel}
-               */
-              oContext: sap.ui.model.Context
-            ): string;
-            /**
              * @SINCE 1.43.0
              *
-             * A function that helps to interpret OData V4 annotations. It knows about the following expressions:
-             * 	"14.4 Constant Expressions" for "edm:Bool", "edm:Date", "edm:DateTimeOffset", "edm:Decimal", "edm:Float",
-             * "edm:Guid", "edm:Int", "edm:TimeOfDay". constant "14.4.11 Expression edm:String": This is turned
+             * A function that helps to interpret OData V4 annotations. It knows about
+             * 	 the "14.4 Constant Expressions" for "edm:Bool", "edm:Date", "edm:DateTimeOffset", "edm:Decimal", "edm:Float",
+             * "edm:Guid", "edm:Int", "edm:TimeOfDay".  the constant "14.4.11 Expression edm:String": This is turned
              * into a fixed text (e.g. `"Width"`). String constants that contain a simple binding `"{@i18n>...}"` to
              * the hard-coded model name "@i18n" with arbitrary path are not turned into a fixed text, but kept as a
              * data binding expression; this allows local annotation files to refer to a resource bundle for internationalization.
-             * dynamic "14.5.1 Comparison and Logical Operators": These are turned into expression bindings to perform
-             * the operations at runtime. dynamic "14.5.3 Expression edm:Apply":
-             * 	"14.5.3.1.1 Function odata.concat": This is turned into a data binding expression. "14.5.3.1.2 Function
-             * odata.fillUriTemplate": This is turned into an expression binding to fill the template at runtime. "14.5.3.1.3
-             * Function odata.uriEncode": This is turned into an expression binding to encode the parameter at runtime.
-             * Apply functions may be nested arbitrarily.  dynamic "14.5.6 Expression edm:If": This is
-             * turned into an expression binding to be evaluated at runtime. The expression is a conditional expression
-             * like `"{=condition ? expression1 : expression2}"`. dynamic "14.5.10 Expression edm:Null": This is
-             * turned into a `null` value. It is ignored in `odata.concat`. dynamic "14.5.12 Expression edm:Path"
-             * and "14.5.13 Expression edm:PropertyPath": This is turned into a simple data binding, e.g. `"{Name}"`.
-             *  Unsupported or incorrect values are turned into a string nevertheless, but indicated as such. In
-             * such a case, an error describing the problem is logged to the console.
+             *  the dynamic "14.5.1 Comparison and Logical Operators": These are turned into expression bindings
+             * to perform the operations at run-time.  the dynamic "14.5.3 Expression edm:Apply":
+             * 	 "14.5.3.1.1 Function odata.concat": This is turned into a data binding expression.  "14.5.3.1.2
+             * Function odata.fillUriTemplate": This is turned into an expression binding to fill the template at run-time.
+             *  "14.5.3.1.3 Function odata.uriEncode": This is turned into an expression binding to encode the parameter
+             * at run-time.  Apply functions may be nested arbitrarily.   the dynamic "14.5.6 Expression
+             * edm:If": This is turned into an expression binding to be evaluated at run-time. The expression is a conditional
+             * expression like `"{=condition ? expression1 : expression2}"`.  the dynamic "14.5.10 Expression edm:Null":
+             * This is turned into a `null` value. In `odata.concat` it is ignored.  the dynamic "14.5.12 Expression
+             * edm:Path" and "14.5.13 Expression edm:PropertyPath": This is turned into a simple data binding, e.g.
+             * `"{Name}"`.  Unsupported or incorrect values are turned into a string nevertheless, but indicated
+             * as such. An error describing the problem is logged to the console in such a case.
              *
              * Example:
              * ```javascript
@@ -38536,21 +37386,6 @@ declare namespace sap {
                */
               vEdmType?: boolean | string
             ): number;
-            /**
-             * @SINCE 1.64.0
-             *
-             * Formats the given OData value into a literal suitable for usage in data binding paths and URLs.
-             */
-            function formatLiteral(
-              /**
-               * The value according to "OData JSON Format Version 4.0" section "7.1 Primitive Value"
-               */
-              vValue: any,
-              /**
-               * The OData primitive type, e.g. "Edm.String"
-               */
-              sType: string
-            ): string;
             /**
              * @SINCE 1.43.0
              *
@@ -38614,13 +37449,14 @@ declare namespace sap {
              *
              * Returns a promise that is resolved without data when the entity represented by this context has been
              * created in the backend and all selected properties of this entity are available. Expanded navigation
-             * properties are only available if the context's binding is refreshable. {@link sap.ui.model.odata.v4.ODataBinding#refresh}
-             * describes which bindings are refreshable.
+             * properties are only available if the context's binding is refreshable.
              *
              * As long as the promise is not yet resolved or rejected, the entity represented by this context is transient.
              *
              * Once the promise is resolved, {@link #getPath} returns a path including the key predicate of the new
              * entity. This requires that all key properties are available.
+             * See:
+             * 	sap.ui.model.odata.v4.ODataListBinding#isRefreshable
              */
             created(): Promise<any>;
             /**
@@ -38747,36 +37583,32 @@ declare namespace sap {
             /**
              * @SINCE 1.53.0
              *
-             * Returns whether there are pending changes for bindings dependent on this context, or for unresolved bindings
-             * which were dependent on this context at the time the pending change was created. This includes the context
-             * itself being transient (see {@link #isTransient}).
+             * Returns `true` if there are pending changes for the single entity in a {@link sap.ui.model.odata.v4.ODataListBinding}
+             * represented by this context or there are pending changes in dependent bindings relative to this context.
              */
             hasPendingChanges(): boolean;
             /**
              * @SINCE 1.43.0
              *
-             * For a context created using {@link sap.ui.model.odata.v4.ODataListBinding#create}, the method returns
-             * `true` if the context is transient, meaning that the promise returned by {@link #created} is not yet
-             * resolved or rejected, and returns `false` if the context is not transient. The result of this function
-             * can also be accessed via instance annotation "@$ui5.context.isTransient" at the entity.
+             * Returns `true` if this context is transient, which means that the promise returned by {@link #created}
+             * is not yet resolved or rejected.
              */
             isTransient(): boolean;
             /**
              * @SINCE 1.53.0
              *
-             * Refreshes the single entity represented by this context.
+             * Refreshes the single entity in a {@link sap.ui.model.odata.v4.ODataListBinding} represented by this context.
              */
             refresh(
               /**
                * The group ID to be used for the refresh; if not specified, the group ID for the context's binding is
-               * used, see {@link sap.ui.model.odata.v4.ODataModel#bindList} and {@link sap.ui.model.odata.v4.ODataModel#bindContext}.
+               * used, see {@link sap.ui.model.odata.v4.ODataModel#bindList}.
                */
               sGroupId?: string,
               /**
-               * If the context belongs to a list binding, the parameter allows the list binding to remove the context
-               * from the list binding's collection because the entity does not match the binding's filter anymore, see
-               * {@link sap.ui.model.odata.v4.ODataListBinding#filter}; a removed context is destroyed, see {@link #destroy}.
-               * If the context belongs to a context binding, the parameter must not be used. Supported since 1.55.0
+               * Allows the list binding to remove this context from its collection because the entity does not match
+               * the binding's filter anymore, see {@link sap.ui.model.odata.v4.ODataListBinding#filter}; a removed context
+               * is destroyed, see {@link #destroy}. Supported since 1.55.0
                */
               bAllowRemoval?: boolean
             ): void;
@@ -38830,40 +37662,6 @@ declare namespace sap {
                * formats corresponding to the property's EDM type and constraints.
                */
               bExternalFormat?: boolean
-            ): Promise<any>;
-            /**
-             * @SINCE 1.61.0
-             *
-             * Loads side effects for this context using the given "14.5.11 Expression edm:NavigationPropertyPath" or
-             * "14.5.13 Expression edm:PropertyPath" objects. Use this method to explicitly load side effects in case
-             * implicit loading is switched off via the binding-specific parameter `$$patchWithoutSideEffects`. The
-             * method must only be called on the bound context of a context binding or on the return value context of
-             * an operation binding. Key predicates must be available in this context's path. Avoid navigation properties
-             * as part of a binding's $select system query option as they may trigger pointless requests.
-             *
-             * The request always uses the update group ID for this context's binding, see "$$updateGroupId" at {@link
-             * sap.ui.model.odata.v4.ODataModel#bindContext}; this way, it can easily be part of the same batch request
-             * as the corresponding update. **Caution:** If a dependent binding uses a different update group ID, it
-             * may lose its pending changes.
-             *
-             * The events 'dataRequested' and 'dataReceived' are not fired. Whatever should happen in the event handler
-             * attached to...
-             * 	 - 'dataRequested', can instead be done before calling {@link #requestSideEffects}.
-             * 	 - 'dataReceived', can instead be done once the `oPromise` returned by {@link #requestSideEffects} fulfills
-             * 			or rejects (using `oPromise.then(function () {...}, function () {...})`).
-             * See:
-             * 	sap.ui.model.odata.v4.ODataContextBinding#execute
-             * 	sap.ui.model.odata.v4.ODataContextBinding#getBoundContext
-             * 	sap.ui.model.odata.v4.ODataModel#bindContext
-             */
-            requestSideEffects(
-              /**
-               * The "14.5.11 Expression edm:NavigationPropertyPath" or "14.5.13 Expression edm:PropertyPath" objects
-               * describing which properties need to be loaded because they may have changed due to side effects of a
-               * previous update, for example `[{$PropertyPath : "TEAM_ID"}, {$NavigationPropertyPath : "EMPLOYEE_2_MANAGER"},
-               * {$PropertyPath : "EMPLOYEE_2_TEAM/Team_Id"}]`
-               */
-              aPathExpressions: object[]
             ): Promise<any>;
             /**
              * @SINCE 1.39.0
@@ -39089,7 +37887,8 @@ declare namespace sap {
              * Refreshes the binding. Prompts the model to retrieve data from the server using the given group ID and
              * notifies the control that new data is available.
              *
-             * Refresh is supported for bindings which are not relative to a {@link sap.ui.model.odata.v4.Context}.
+             * Refresh is supported for bindings which are not relative to a {@link sap.ui.model.odata.v4.Context} and
+             * whose root binding is not suspended.
              *
              * Note: When calling {@link #refresh} multiple times, the result of the request triggered by the last call
              * determines the binding's data; it is **independent** of the order of calls to {@link sap.ui.model.odata.v4.ODataModel#submitBatch}
@@ -39109,8 +37908,7 @@ declare namespace sap {
             // @ts-ignore
             refresh(
               /**
-               * The group ID to be used for refresh; if not specified, the binding's group ID is used. For suspended
-               * bindings, only the binding's group ID is supported because {@link #resume} uses the binding's group ID.
+               * The group ID to be used for refresh; if not specified, the group ID for this binding is used.
                *
                * Valid values are `undefined`, '$auto', '$auto.*', '$direct' or application group IDs as specified in
                * {@link sap.ui.model.odata.v4.ODataModel}.
@@ -39228,7 +38026,11 @@ declare namespace sap {
             /**
              * @SINCE 1.43.0
              *
-             * Creates a new entity and inserts it at the beginning of the list.
+             * Creates a new entity and inserts it at the beginning of the list. As long as the binding contains an
+             * entity created via this function, you cannot create another entity. This is only possible after the creation
+             * of the entity has been successfully sent to the server and you have called {@link #refresh} at the (parent)
+             * binding, which is absolute or not relative to a {@link sap.ui.model.odata.v4.Context}, or the new entity
+             * is deleted in between.
              *
              * For creating the new entity, the binding's update group ID is used, see binding parameter $$updateGroupId
              * of {@link sap.ui.model.odata.v4.ODataModel#bindList}.
@@ -39404,13 +38206,13 @@ declare namespace sap {
              * @SINCE 1.45.0
              *
              * Returns the header context which allows binding to `$count`. If known, the value of such a binding is
-             * the sum of the element count of the collection on the server and the number of transient entities created
-             * on the client. Otherwise it is `undefined`. The value is a number and its type is `Edm.Int64`.
+             * the element count of the collection on the server. Otherwise it is `undefined`. The value is a number
+             * and its type is `Edm.Int64`.
              *
              * The count is known to the binding in the following situations:
-             * 	The server-side count has been requested via the system query option `$count`. A "short read" in
-             * a paged collection (the server delivered less elements than requested) indicated that the server has
-             * no more unread elements. It has been read completely in one request, for example an embedded collection
+             * 	It has been requested from the server via the system query option `$count`. A "short read" in a
+             * paged collection (the server delivered less elements than requested) indicated that the server has no
+             * more unread elements. It has been read completely in one request, for example an embedded collection
              * via `$expand`.
              *
              * The `$count` is unknown, if the binding is relative, but has no context.
@@ -39419,7 +38221,7 @@ declare namespace sap {
             /**
              * @SINCE 1.37.0
              *
-             * Returns the number of entries in the list. As long as the client does not know the size on the server,
+             * Returns the number of entries in the list. As long as the client does not know the size on the server
              * an estimated length is returned.
              * See:
              * 	sap.ui.model.ListBinding#getLength
@@ -39484,7 +38286,8 @@ declare namespace sap {
              * Refreshes the binding. Prompts the model to retrieve data from the server using the given group ID and
              * notifies the control that new data is available.
              *
-             * Refresh is supported for bindings which are not relative to a {@link sap.ui.model.odata.v4.Context}.
+             * Refresh is supported for bindings which are not relative to a {@link sap.ui.model.odata.v4.Context} and
+             * whose root binding is not suspended.
              *
              * Note: When calling {@link #refresh} multiple times, the result of the request triggered by the last call
              * determines the binding's data; it is **independent** of the order of calls to {@link sap.ui.model.odata.v4.ODataModel#submitBatch}
@@ -39504,8 +38307,7 @@ declare namespace sap {
             // @ts-ignore
             refresh(
               /**
-               * The group ID to be used for refresh; if not specified, the binding's group ID is used. For suspended
-               * bindings, only the binding's group ID is supported because {@link #resume} uses the binding's group ID.
+               * The group ID to be used for refresh; if not specified, the group ID for this binding is used.
                *
                * Valid values are `undefined`, '$auto', '$auto.*', '$direct' or application group IDs as specified in
                * {@link sap.ui.model.odata.v4.ODataModel}.
@@ -39643,13 +38445,11 @@ declare namespace sap {
                 total?: boolean;
                 /**
                  * Measures only: Whether the maximum value (ignoring currencies or units of measure) for this measure is
-                 * needed (since 1.55.0); filtering and sorting is supported in this case (since 1.58.0)
-                 */
+                 * needed (since 1.55.0); **filtering and sorting is not supported in this case**/
                 max?: boolean;
                 /**
                  * Measures only: Whether the minimum value (ignoring currencies or units of measure) for this measure is
-                 * needed (since 1.55.0); filtering and sorting is supported in this case (since 1.58.0)
-                 */
+                 * needed (since 1.55.0); **filtering and sorting is not supported in this case**/
                 min?: boolean;
                 /**
                  * Measures only: The name of the method (for example "sum") used for aggregation of this measure; see "3.1.2
@@ -39898,30 +38698,6 @@ declare namespace sap {
             // @ts-ignore
             refresh(): void;
             /**
-             * @SINCE 1.63.0
-             *
-             * Request currency customizing based on the code list reference given in the entity container's `com.sap.vocabularies.CodeList.v1.CurrencyCodes`
-             * annotation.
-             * See:
-             * 	#requestUnitsOfMeasure
-             */
-            requestCurrencyCodes(
-              /**
-               * If present, it must be this meta model's root entity container
-               */
-              vRawValue?: any,
-              /**
-               * The details object
-               */
-              oDetails?: {
-                /**
-                 * If present, it must point to this meta model's root entity container, that is, `oDetails.context.getModel()
-                 * === this` and `oDetails.context.getPath() === "/"`
-                 */
-                context?: sap.ui.model.Context;
-              }
-            ): Promise<any>;
-            /**
              * @SINCE 1.59.0
              *
              * Requests a snapshot of each $metadata or annotation file loaded so far, combined into a single "JSON"
@@ -39976,10 +38752,9 @@ declare namespace sap {
              * known qualified OData names. There are two technical properties there: "$Version" (typically "4.0") and
              * "$EntityContainer" with the name of the single entity container for this metadata model's service.
              *
-             * An empty segment in between is invalid, except to force return type lookup for operation overloads (see
-             * below). An empty segment at the end caused by a trailing slash differentiates between a name and the
-             * object it refers to. This way, "/$EntityContainer" refers to the name of the single entity container
-             * and "/$EntityContainer/" refers to the single entity container as an object.
+             * An empty segment in between is invalid. An empty segment at the end caused by a trailing slash differentiates
+             * between a name and the object it refers to. This way, "/$EntityContainer" refers to the name of the single
+             * entity container and "/$EntityContainer/" refers to the single entity container as an object.
              *
              * The segment "@sapui.name" refers back to the last OData name (simple identifier or qualified name) or
              * annotation name encountered during path traversal immediately before "@sapui.name":
@@ -39995,7 +38770,7 @@ declare namespace sap {
              * step-by-step before the next segment is processed. Except for this, a path must not continue if it comes
              * across a non-object value. Such a string value can be a qualified name (example path "/$EntityContainer/..."),
              * a simple identifier (example path "/TEAMS/$NavigationPropertyBinding/TEAM_2_EMPLOYEES/...") or even a
-             * path according to "14.5.12 Expression edm:Path" etc. (example path "/TEAMS/@com.sap.vocabularies.UI.v1.LineItem/0/Value/$Path/...").
+             * path according to "14.5.12 Expression edm:Path" etc. (example path "/TEAMS/$Type/@com.sap.vocabularies.UI.v1.LineItem/0/Value/$Path/...").
              *
              * Segments starting with an "@" character, for example "@com.sap.vocabularies.Common.v1.Label", address
              * annotations at the current object. As the first segment, they refer to the single entity container. For
@@ -40031,11 +38806,10 @@ declare namespace sap {
              * "@@.AH.isMultiple" or "@@.isMultiple", represent computed annotations. Their name without the "@@" prefix
              * must refer to a function in `mParameters.scope` in case of a relative name starting with a dot, which
              * is stripped before lookup; see the `<template:alias>` instruction for XML Templating. In case of an
-             * absolute name, it is searched in `mParameters.scope` first and then in the global namespace. The names
-             * "requestCurrencyCodes" and "requestUnitsOfMeasure" default to {@link #requestCurrencyCodes} and {@link
-             * #requestUnitsOfMeasure} resp. if not present in `mParameters.scope`. This function is called with the
-             * current object (or primitive value) and additional details and returns the result of this {@link #requestObject}
-             * call. The additional details are given as an object with the following properties:
+             * absolute name, it is searched in `mParameters.scope` first and then in the global namespace. This function
+             * is called with the current object (or primitive value) and additional details and returns the result
+             * of this {@link #requestObject} call. The additional details are given as an object with the following
+             * properties:
              * 	`{boolean} $$valueAsPromise` Whether the computed annotation may return a `Promise` resolving with its
              * value (since 1.57.0) `{@link sap.ui.model.Context} context` Points to the current object `{string}
              * schemaChildName` The qualified name of the schema child where the computed annotation has been found
@@ -40061,23 +38835,12 @@ declare namespace sap {
              * other words, the entity container is used as the initial schema child. This way, "/EMPLOYEES" addresses
              * the same object as "/$EntityContainer/EMPLOYEES", namely the "EMPLOYEES" child of the entity container.
              *  Afterwards, if the current object is an array, it represents overloads for an action or function.
-             * Annotations of a parameter can be immediately addressed because they apply across all overloads, for
-             * example "/TEAMS/acme.NewAction/Team_ID@". Action overloads are then filtered by binding parameter; multiple
-             * overloads after filtering are invalid except if addressing all overloads via the segment "@$ui5.overload",
-             * for example "/acme.NewAction/@$ui5.overload".
-             *
-             * Once a single overload has been determined, its parameters can be immediately addressed, for example
-             * "/TEAMS/acme.NewAction/Team_ID". For all other names, the overload's "$ReturnType/$Type" is used for
-             * scope lookup. This way, "/GetOldestWorker/AGE" addresses the same object as "/GetOldestWorker/$Function/0/$ReturnType/$Type/AGE",
-             * and "/TEAMS/acme.NewAction/MemberCount" (assuming "MemberCount" is not a parameter in this example) addresses
-             * the same object as "/TEAMS/acme.NewAction/@$ui5.overload/0/$ReturnType/$Type/MemberCount". In case a
-             * name can refer both to a parameter and to a property of the return type, an empty segment can be used
-             * instead of "@$ui5.overload/0/$ReturnType/$Type" to force return type lookup, for example "/TEAMS/acme.NewAction//Team_ID".
-             *
-             * For primitive return types, the special segment "value" can be used to refer to the return type itself
-             * (see {@link sap.ui.model.odata.v4.ODataContextBinding#execute}). This way, "/GetOldestAge/value" addresses
-             * the same object as "/GetOldestAge/$Function/0/$ReturnType" or as "/GetOldestAge/@$ui5.overload/0/$ReturnType"
-             * (which is needed for automatic type determination, see {@link #requestUI5Type}).
+             * Multiple overloads are invalid. The overload's "$ReturnType/$Type" is used for scope lookup. This way,
+             * "/GetOldestWorker/AGE" addresses the same object as "/GetOldestWorker/0/$ReturnType/$Type/AGE". For primitive
+             * return types, the special segment "value" can be used to refer to the return type itself (see {@link
+             * sap.ui.model.odata.v4.ODataContextBinding#execute}). This way, "/GetOldestAge/value" addresses the same
+             * object as "/GetOldestAge/0/$ReturnType" (which is needed for automatic type determination, see {@link
+             * #requestUI5Type}).
              *
              * A trailing slash can be used to continue a path and thus force scope lookup or OData simple identifier
              * preparations, but then stay at the current object. This way, "/EMPLOYEES/$Type/" addresses the entity
@@ -40086,13 +38849,6 @@ declare namespace sap {
              * addresses the same entity type as "/EMPLOYEES/$Type/". That entity type in turn is a map of all its OData
              * children (that is, structural and navigation properties) and determines the set of possible child names
              * that might be used after the trailing slash.
-             *
-             * "$" can be used as the last segment to continue a path and thus force scope lookup, but no OData simple
-             * identifier preparations. In this way, it serves as a placeholder for a technical property. The path must
-             * not continue after "$", except for a computed annotation. Example: "/TEAMS/@com.sap.vocabularies.UI.v1.LineItem/0/Value/$Path/$"
-             * addresses the referenced property itself, not the corresponding type like "/TEAMS/@com.sap.vocabularies.UI.v1.LineItem/0/Value/$Path/"
-             * does. "/TEAMS/@com.sap.vocabularies.UI.v1.LineItem/0/Target/$NavigationPropertyPath/$@@.isMultiple" calls
-             * a computed annotation on the navigation property itself, not on the corresponding type.
              *
              * Any other segment, including an OData simple identifier, is looked up as a property of the current object.
              * See:
@@ -40133,38 +38889,13 @@ declare namespace sap {
               sPath: string
             ): Promise<any>;
             /**
-             * @SINCE 1.63.0
-             *
-             * Request unit customizing based on the code list reference given in the entity container's `com.sap.vocabularies.CodeList.v1.UnitOfMeasure`
-             * annotation.
-             * See:
-             * 	#requestCurrencyCodes
-             */
-            requestUnitsOfMeasure(
-              /**
-               * If present, it must be this meta model's root entity container
-               */
-              vRawValue?: any,
-              /**
-               * The details object
-               */
-              oDetails?: {
-                /**
-                 * If present, it must point to this meta model's root entity container, that is, `oDetails.context.getModel()
-                 * === this` and `oDetails.context.getPath() === "/"`
-                 */
-                context?: sap.ui.model.Context;
-              }
-            ): Promise<any>;
-            /**
              * @SINCE 1.45.0
              *
              * Requests information to retrieve a value list for the property given by `sPropertyPath`.
              */
             requestValueListInfo(
               /**
-               * An absolute path to an OData property within the OData data model or a (meta) path to an operation parameter,
-               * for example "/TEAMS(1)/acme.NewAction/Team_ID"
+               * An absolute path to an OData property within the OData data model
                */
               sPropertyPath: string
             ): Promise<any>;
@@ -40206,9 +38937,8 @@ declare namespace sap {
            * Every resource path (relative to the service root URL, no query options) according to "4 Resource Path"
            * in specification "OData Version 4.0 Part 2: URL Conventions" is a valid data binding path within this
            * model if a leading slash is added; for example "/" + "SalesOrderList('A%2FB%26C')" to access an entity
-           * instance with key "A/B&C". Note that appropriate URI encoding is necessary, see the example of {@link
-           * sap.ui.model.odata.v4.ODataUtils.formatLiteral}. "4.5.1 Addressing Actions" needs an operation binding,
-           * see {@link sap.ui.model.odata.v4.ODataContextBinding}.
+           * instance with key "A/B&C". Note that appropriate URI encoding is necessary. "4.5.1 Addressing Actions"
+           * needs an operation binding, see {@link sap.ui.model.odata.v4.ODataContextBinding}.
            *
            * Note that the OData V4 model has its own {@link sap.ui.model.odata.v4.Context} class. Bindings which
            * are relative to such a V4 context depend on their corresponding parent binding and do not access data
@@ -40341,11 +39071,6 @@ declare namespace sap {
                */
               mParameters?: {
                 /**
-                 * Whether a binding relative to a {@link sap.ui.model.odata.v4.Context} uses the canonical path computed
-                 * from its context's path for data service requests; only the value `true` is allowed.
-                 */
-                $$canonicalPath?: boolean;
-                /**
                  * The group ID to be used for **read** requests triggered by this binding; if not specified, either the
                  * parent binding's group ID (if the binding is relative) or the model's group ID is used, see {@link sap.ui.model.odata.v4.ODataModel#constructor}.
                  * Valid values are `undefined`, '$auto', '$auto.*', '$direct' or application group IDs as specified in
@@ -40355,8 +39080,8 @@ declare namespace sap {
                 /**
                  * For operation bindings only: Whether $expand and $select from the parent binding are used in the request
                  * sent on {@link #execute}. If set to `true`, the binding must not set the $expand or $select parameter
-                 * itself, the operation must be bound, and the return value and the binding parameter must belong to the
-                 * same entity set.
+                 * itself and its {@link sap.ui.model.odata.v4.ODataContextBinding#execute} must resolve with a return value
+                 * context.
                  */
                 $$inheritExpandSelect?: boolean;
                 /**
@@ -40366,8 +39091,7 @@ declare namespace sap {
                 /**
                  * Whether implicit loading of side effects via PATCH requests is switched off; only the value `true` is
                  * allowed. This requires the service to return an ETag header even for "204 No Content" responses (for
-                 * example, if the "return=minimal" preference is used). If not specified, the value of the parent binding
-                 * is used.
+                 * example, if the "return=minimal" preference is used).
                  */
                 $$patchWithoutSideEffects?: boolean;
                 /**
@@ -40431,24 +39155,12 @@ declare namespace sap {
                  */
                 $$aggregation?: object;
                 /**
-                 * Whether a binding relative to a {@link sap.ui.model.odata.v4.Context} uses the canonical path computed
-                 * from its context's path for data service requests; only the value `true` is allowed.
-                 */
-                $$canonicalPath?: boolean;
-                /**
                  * The group ID to be used for **read** requests triggered by this binding; if not specified, either the
                  * parent binding's group ID (if the binding is relative) or the model's group ID is used, see {@link sap.ui.model.odata.v4.ODataModel#constructor}.
                  * Valid values are `undefined`, '$auto', '$auto.*', '$direct' or application group IDs as specified in
                  * {@link sap.ui.model.odata.v4.ODataModel}.
                  */
                 $$groupId?: string;
-                /**
-                 * Whether implicit loading of side effects via PATCH requests is switched off; only the value `true` is
-                 * allowed. This requires the service to return an ETag header even for "204 No Content" responses (for
-                 * example, if the "return=minimal" preference is used). If not specified, the value of the parent binding
-                 * is used.
-                 */
-                $$patchWithoutSideEffects?: boolean;
                 /**
                  * Whether the binding always uses an own service request to read its data; only the value `true` is allowed.
                  */
@@ -40467,27 +39179,13 @@ declare namespace sap {
              * Creates a new property binding for the given path. This binding is inactive and will not know the property
              * value initially. You have to call {@link sap.ui.model.Binding#initialize} to get it updated asynchronously
              * and register a change listener at the binding to be informed when the value is available.
-             *
-             * It is possible to create a property binding pointing to metadata. A '##' in the binding's path is recognized
-             * as a separator and splits it into two parts. The part before the separator is resolved with the binding's
-             * context and the result is transformed into a metadata context (see {@link sap.ui.model.odata.v4.ODataMetaModel#getMetaContext}).
-             * The part following the separator is then interpreted relative to this metadata context, even if it starts
-             * with a '/'; a trailing '/' is allowed here, see {@link sap.ui.model.odata.v4.ODataMetaModel#requestObject}
-             * for the effect it has.
-             *
-             * If the target type specified in the corresponding control property's binding info is "any" and the binding
-             * is relative or points to metadata, the binding may have an object value; in this case and unless the
-             * binding refers to an action advertisement the binding's mode must be {@link sap.ui.model.BindingMode.OneTime}.
              * See:
-             * 	sap.ui.base.ManagedObject#bindProperty
              * 	sap.ui.model.Model#bindProperty
-             * 	sap.ui.model.PropertyBinding#setType
              */
             // @ts-ignore
             bindProperty(
               /**
-               * The binding path in the model; must not be empty. Must not end with a '/' unless the binding points to
-               * metadata.
+               * The binding path in the model; must not be empty or end with a slash
                */
               sPath: string,
               /**
@@ -40496,12 +39194,11 @@ declare namespace sap {
               oContext?: sap.ui.model.Context,
               /**
                * Map of binding parameters which can be OData query options as specified in "OData Version 4.0 Part 2:
-               * URL Conventions" or the binding-specific parameter "$$groupId". All "5.2 Custom Query Options" are allowed
-               * except for those with a name starting with "sap-". All other query options lead to an error. Query options
-               * specified for the binding overwrite model query options. Note: The binding only creates its own data
-               * service request if it is absolute or if it is relative to a context created via {@link #createBindingContext}.
-               * The binding parameters are ignored in case the binding creates no own data service request or in case
-               * the binding points to metadata.
+               * URL Conventions" or the binding-specific parameter "$$groupId". Note: The binding creates its own data
+               * service request if it is absolute or if it has any parameters or if it is relative and has a context
+               * created via {@link #createBindingContext}. All "5.2 Custom Query Options" are allowed except for those
+               * with a name starting with "sap-". All other query options lead to an error. Query options specified for
+               * the binding overwrite model query options.
                */
               mParameters?: {
                 /**
@@ -40565,7 +39262,7 @@ declare namespace sap {
             /**
              * @SINCE 1.38.0
              *
-             * Destroys this model, its requestor and its meta model.
+             * Destroys this model and its meta model.
              * See:
              * 	sap.ui.model.Model#destroy
              */
@@ -40693,8 +39390,7 @@ declare namespace sap {
             refresh(
               /**
                * The group ID to be used for refresh; valid values are `undefined`, '$auto', '$auto.*', '$direct' or application
-               * group IDs as specified in {@link sap.ui.model.odata.v4.ODataModel}. It is ignored for suspended bindings,
-               * because resume uses the binding's group ID
+               * group IDs as specified in {@link sap.ui.model.odata.v4.ODataModel}
                */
               sGroupId?: string
             ): void;
@@ -40852,7 +39548,8 @@ declare namespace sap {
              * Refreshes the binding. Prompts the model to retrieve data from the server using the given group ID and
              * notifies the control that new data is available.
              *
-             * Refresh is supported for bindings which are not relative to a {@link sap.ui.model.odata.v4.Context}.
+             * Refresh is supported for bindings which are not relative to a {@link sap.ui.model.odata.v4.Context} and
+             * whose root binding is not suspended.
              *
              * Note: When calling {@link #refresh} multiple times, the result of the request triggered by the last call
              * determines the binding's data; it is **independent** of the order of calls to {@link sap.ui.model.odata.v4.ODataModel#submitBatch}
@@ -40872,8 +39569,7 @@ declare namespace sap {
             // @ts-ignore
             refresh(
               /**
-               * The group ID to be used for refresh; if not specified, the binding's group ID is used. For suspended
-               * bindings, only the binding's group ID is supported because {@link #resume} uses the binding's group ID.
+               * The group ID to be used for refresh; if not specified, the group ID for this binding is used.
                *
                * Valid values are `undefined`, '$auto', '$auto.*', '$direct' or application group IDs as specified in
                * {@link sap.ui.model.odata.v4.ODataModel}.
@@ -41854,21 +40550,7 @@ declare namespace sap {
          * 			}
          * 		}
          * ```
-         *  **Note:** Annotation terms are not merged, but replaced as a whole ("PUT" semantics). That means, if
-         * you have, for example, an OData V2 annotation `sap:sortable=false` at a property `PropA`, the corresponding
-         * OData V4 annotation is added to each entity set to which this property belongs:
-         * ```javascript
          *
-         * 		"Org.OData.Capabilities.V1.SortRestrictions": {
-         * 			"NonSortableProperties" : [
-         * 				{"PropertyPath" : "BusinessPartnerID"}
-         * 			]
-         * 		}
-         * ```
-         *  If the same term `"Org.OData.Capabilities.V1.SortRestrictions"` targeting one of these entity sets is
-         * also contained in an annotation file, the complete OData V4 annotation converted from the OData V2 annotation
-         * is replaced by the one contained in the annotation file for the specified target. Converted annotations
-         * never use a qualifier and are only overwritten by the same annotation term without a qualifier.
          *
          * This model is read-only and thus only supports {@link sap.ui.model.BindingMode.OneTime OneTime} binding
          * mode. No events ({@link sap.ui.model.Model#event:parseError parseError}, {@link sap.ui.model.Model#event:requestCompleted
@@ -43132,31 +41814,28 @@ declare namespace sap {
           ): void;
           /**
            * Submits the collected changes in the batch which were collected via `addBatchReadOperations` or `addBatchChangeOperations`.
-           * The batch will be cleared afterwards. If the batch is empty, no request will be sent and false will be
-           * returned.
-           *
-           * **Note:** No data will be stored in the model as long as `bImportData` is not set.
+           * The batch will be cleared afterwards. If the batch is empty no request will be performed and false will
+           * be returned. Note: No data will be stored in the model.
            */
           submitBatch(
             /**
-             * A callback function which is called when the batch request has been successfully sent. Note: Errors that
-             * may have come up in the single batch operations can be accessed in the `aErrorResponses` parameter in
-             * the callback handler. The handler can have the following parameters: `oData`, `oResponse` and `aErrorResponses`.
+             * a callback function which is called when the batch request has been successfully sent. Note: There might
+             * have errors occured in the single batch operations. These errors can be accessed in the aErrorResponses
+             * parameter in the callback handler. The handler can have the following parameters: oData, oResponse and
+             * aErrorResponses.
              */
-            fnSuccess?: Function,
+            fnSuccess: Function,
             /**
-             * A callback function which is called when the batch request failed. The handler can have the parameter
-             * `oError` which contains additional error information.
+             * a callback function which is called when the batch request failed. The handler can have the parameter:
+             * oError which contains additional error information.
              */
-            fnError?: Function,
+            fnError: Function,
             /**
-             * true for asynchronous request
+             * true for asynchronous request. Default is true.
              */
-            bAsync?: boolean,
-            /**
-             * Whether response data should be imported into the model
-             */
-            bImportData?: boolean
+            bAsync: boolean,
+
+            bImportData: boolean
           ): object;
           /**
            * Submits the collected changes which were collected by the setProperty method. A MERGE request will be
@@ -43303,6 +41982,114 @@ declare namespace sap {
              */
             oListener?: object
           ): sap.ui.model.odata.ODataModel;
+          /**
+           * Submits the collected changes in the batch which were collected via `addBatchReadOperations` or `addBatchChangeOperations`.
+           * The batch will be cleared afterwards. If the batch is empty no request will be performed and false will
+           * be returned. Note: No data will be stored in the model.
+           */
+          submitBatch(
+            /**
+             * a callback function which is called when the batch request has been successfully sent. Note: There might
+             * have errors occured in the single batch operations. These errors can be accessed in the aErrorResponses
+             * parameter in the callback handler. The handler can have the following parameters: oData, oResponse and
+             * aErrorResponses.
+             */
+            fnSuccess: Function,
+            /**
+             * a callback function which is called when the batch request failed. The handler can have the parameter:
+             * oError which contains additional error information.
+             */
+            fnError: Function,
+
+            bImportData: boolean
+          ): object;
+          /**
+           * Submits the collected changes in the batch which were collected via `addBatchReadOperations` or `addBatchChangeOperations`.
+           * The batch will be cleared afterwards. If the batch is empty no request will be performed and false will
+           * be returned. Note: No data will be stored in the model.
+           */
+          submitBatch(
+            /**
+             * a callback function which is called when the batch request has been successfully sent. Note: There might
+             * have errors occured in the single batch operations. These errors can be accessed in the aErrorResponses
+             * parameter in the callback handler. The handler can have the following parameters: oData, oResponse and
+             * aErrorResponses.
+             */
+            fnSuccess: Function,
+            /**
+             * true for asynchronous request. Default is true.
+             */
+            bAsync: boolean,
+
+            bImportData: boolean
+          ): object;
+          /**
+           * Submits the collected changes in the batch which were collected via `addBatchReadOperations` or `addBatchChangeOperations`.
+           * The batch will be cleared afterwards. If the batch is empty no request will be performed and false will
+           * be returned. Note: No data will be stored in the model.
+           */
+          submitBatch(
+            /**
+             * a callback function which is called when the batch request failed. The handler can have the parameter:
+             * oError which contains additional error information.
+             */
+            fnError: Function,
+            /**
+             * true for asynchronous request. Default is true.
+             */
+            bAsync: boolean,
+
+            bImportData: boolean
+          ): object;
+          /**
+           * Submits the collected changes in the batch which were collected via `addBatchReadOperations` or `addBatchChangeOperations`.
+           * The batch will be cleared afterwards. If the batch is empty no request will be performed and false will
+           * be returned. Note: No data will be stored in the model.
+           */
+          submitBatch(
+            /**
+             * a callback function which is called when the batch request has been successfully sent. Note: There might
+             * have errors occured in the single batch operations. These errors can be accessed in the aErrorResponses
+             * parameter in the callback handler. The handler can have the following parameters: oData, oResponse and
+             * aErrorResponses.
+             */
+            fnSuccess: Function,
+
+            bImportData: boolean
+          ): object;
+          /**
+           * Submits the collected changes in the batch which were collected via `addBatchReadOperations` or `addBatchChangeOperations`.
+           * The batch will be cleared afterwards. If the batch is empty no request will be performed and false will
+           * be returned. Note: No data will be stored in the model.
+           */
+          submitBatch(
+            /**
+             * a callback function which is called when the batch request failed. The handler can have the parameter:
+             * oError which contains additional error information.
+             */
+            fnError: Function,
+
+            bImportData: boolean
+          ): object;
+          /**
+           * Submits the collected changes in the batch which were collected via `addBatchReadOperations` or `addBatchChangeOperations`.
+           * The batch will be cleared afterwards. If the batch is empty no request will be performed and false will
+           * be returned. Note: No data will be stored in the model.
+           */
+          submitBatch(
+            /**
+             * true for asynchronous request. Default is true.
+             */
+            bAsync: boolean,
+
+            bImportData: boolean
+          ): object;
+          /**
+           * Submits the collected changes in the batch which were collected via `addBatchReadOperations` or `addBatchChangeOperations`.
+           * The batch will be cleared afterwards. If the batch is empty no request will be performed and false will
+           * be returned. Note: No data will be stored in the model.
+           */
+          submitBatch(bImportData: boolean): object;
         }
         /**
          * Property binding implementation for oData format
@@ -43409,22 +42196,6 @@ declare namespace sap {
            * are synchronized.
            */
           Request
-        }
-        /**
-         * Different scopes for retrieving messages from a service.
-         * See:
-         * 	sap.ui.model.ODataModel#constructor
-         */
-        enum MessageScope {
-          /**
-           * Retrieve messages for the whole business object. If the service does not support this option it fallbacks
-           * to requested.
-           */
-          BusinessObject,
-          /**
-           * Retrieve messages only for the requested/changed entities.
-           */
-          RequestedObjects
         }
         /**
          * Different modes for executing service operations (filtering, sorting)
@@ -43740,29 +42511,29 @@ declare namespace sap {
            */
           loadData(
             /**
-             * A string containing the URL to which the request is sent
+             * A string containing the URL to which the request is sent.
              */
             sURL: string,
             /**
-             * A map of parameters or a single parameter string that is sent to the server with the request
+             * A map or string that is sent to the server with the request.
              */
-            oParameters?: object | string,
+            oParameters: object | string,
             /**
-             * Whether the request should be asynchronous or not
+             * if the request should be asynchron or not. Default is true.
              */
-            bAsync?: boolean,
+            bAsync: boolean,
             /**
-             * HTTP method of request
+             * of request. Default is 'GET'
              */
-            sType?: string,
+            sType: string,
             /**
-             * Force no caching if false
+             * force no caching if false. Default is false
              */
-            bCache?: string,
+            bCache: string,
             /**
              * An object of additional header key/value pairs to send along with the request
              */
-            mHeaders?: object
+            mHeaders: object
           ): void;
           /**
            * Sets the provided XML encoded data object to the model
@@ -43816,6 +42587,343 @@ declare namespace sap {
              * the XML data as string
              */
             sXMLText: string
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * A map or string that is sent to the server with the request.
+             */
+            oParameters: object | string,
+            /**
+             * if the request should be asynchron or not. Default is true.
+             */
+            bAsync: boolean,
+            /**
+             * of request. Default is 'GET'
+             */
+            sType: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * A map or string that is sent to the server with the request.
+             */
+            oParameters: object | string,
+            /**
+             * if the request should be asynchron or not. Default is true.
+             */
+            bAsync: boolean,
+            /**
+             * force no caching if false. Default is false
+             */
+            bCache: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * A map or string that is sent to the server with the request.
+             */
+            oParameters: object | string,
+            /**
+             * of request. Default is 'GET'
+             */
+            sType: string,
+            /**
+             * force no caching if false. Default is false
+             */
+            bCache: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * if the request should be asynchron or not. Default is true.
+             */
+            bAsync: boolean,
+            /**
+             * of request. Default is 'GET'
+             */
+            sType: string,
+            /**
+             * force no caching if false. Default is false
+             */
+            bCache: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * A map or string that is sent to the server with the request.
+             */
+            oParameters: object | string,
+            /**
+             * if the request should be asynchron or not. Default is true.
+             */
+            bAsync: boolean,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * A map or string that is sent to the server with the request.
+             */
+            oParameters: object | string,
+            /**
+             * of request. Default is 'GET'
+             */
+            sType: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * if the request should be asynchron or not. Default is true.
+             */
+            bAsync: boolean,
+            /**
+             * of request. Default is 'GET'
+             */
+            sType: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * A map or string that is sent to the server with the request.
+             */
+            oParameters: object | string,
+            /**
+             * force no caching if false. Default is false
+             */
+            bCache: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * if the request should be asynchron or not. Default is true.
+             */
+            bAsync: boolean,
+            /**
+             * force no caching if false. Default is false
+             */
+            bCache: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * of request. Default is 'GET'
+             */
+            sType: string,
+            /**
+             * force no caching if false. Default is false
+             */
+            bCache: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * A map or string that is sent to the server with the request.
+             */
+            oParameters: object | string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * if the request should be asynchron or not. Default is true.
+             */
+            bAsync: boolean,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * of request. Default is 'GET'
+             */
+            sType: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * force no caching if false. Default is false
+             */
+            bCache: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
+          ): void;
+          /**
+           * Load XML-encoded data from the server using a GET HTTP request and store the resulting XML data in the
+           * model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
+           * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+           */
+          loadData(
+            /**
+             * A string containing the URL to which the request is sent.
+             */
+            sURL: string,
+            /**
+             * An object of additional header key/value pairs to send along with the request
+             */
+            mHeaders: object
           ): void;
         }
         /**
@@ -44817,7 +43925,7 @@ declare namespace sap {
            */
           constructor(
             /**
-             * Formatting options. For a list of all available options, see {@link sap.ui.core.format.NumberFormat.getUnitInstance
+             * Formatting options. For a list of all available options, see {@link sap.ui.core.format.NumberFormat#getUnitInstance
              * NumberFormat}.
              */
             oFormatOptions?: {
@@ -45495,13 +44603,6 @@ declare namespace sap {
       }
       /**
        * Tree binding implementation for client models.
-       *
-       * Please Note that a hierarchy's "state" (i.e. the information about expanded, collapsed, selected, and
-       * deselected nodes) may become inconsistent when the structure of the model data is changed at runtime.
-       * This is because each node is identified internally by its index position relative to its parent, plus
-       * its parent's ID. Therefore, inserting or removing a node in the model data will likely lead to a shift
-       * in the index positions of other nodes, causing them to lose their state and/or to gain the state of another
-       * node.
        */
       class ClientTreeBinding extends sap.ui.model.TreeBinding {
         /**
@@ -45774,22 +44875,10 @@ declare namespace sap {
         // @ts-ignore
         getExternalValue(): object;
         /**
-         * Returns the current internal value of the bound target which is an array of the internal (JS native)
-         * values of nested bindings
-         */
-        // @ts-ignore
-        getInternalValue(): any[];
-        /**
          * Returns a metadata object for class sap.ui.model.CompositeBinding.
          */
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
-        /**
-         * Returns the current raw value of the bound target which is an array of the raw (model) values of nested
-         * bindings
-         */
-        // @ts-ignore
-        getRawValue(): any[];
         /**
          * Returns the raw values of the property bindings in an array.
          */
@@ -45822,28 +44911,6 @@ declare namespace sap {
            * the value to set for this binding
            */
           oValue: object
-        ): void;
-        /**
-         * Sets the internal value of the bound target. Parameter must be an array of values matching the internal
-         * (JS native) types of nested bindings.
-         */
-        // @ts-ignore
-        setInternalValue(
-          /**
-           * the new values of the nested bindings
-           */
-          aValues: any[]
-        ): void;
-        /**
-         * Sets the raw value of the bound target. Parameter must be an array of values matching the raw (model)
-         * types of nested bindings.
-         */
-        // @ts-ignore
-        setRawValue(
-          /**
-           * the new values of the nested bindings
-           */
-          aValues: any[]
         ): void;
         /**
          * Sets the optional type and internal type for the binding. The type and internal type are used to do the
@@ -46474,8 +45541,7 @@ declare namespace sap {
          * 			the filters with an AND (`true`) or an OR (`false`) operator.  An error will be logged to the console
          * 			if an invalid combination of parameters is provided. Please note that a model implementation may not
          * 			support a custom filter function, e.g. if the model does not perform client side filtering. It also depends
-         * 			on the model implementation if the filtering is case sensitive or not. Client models filter case insensitive
-         * 			compared to the OData models which filter case sensitive by default. See particular model documentation
+         * 			on the model implementation if the filtering is case sensitive or not. See particular model documentation
          * 			for details The filter operators `Any` and `All` are only supported in V4 OData models. When creating
          * 			a filter instance with these filter operators, the argument `variable` only accepts a string identifier
          * 			and `condition` needs to be another filter instance.
@@ -46524,14 +45590,14 @@ declare namespace sap {
              */
             filters: sap.ui.model.Filter[];
             /**
-             * Indicates whether an "AND" logical conjunction is applied on the filters. If it's not set or set to `false`,
-             * an "OR" conjunction is applied
+             * Indicates whether an "AND" logical conjunction is applied on the filters. If it's set to `false`, an
+             * "OR" conjunction is applied
              */
-            and?: boolean;
+            and: boolean;
             /**
              * Indicates whether a string value should be compared case sensitive or not.
              */
-            caseSensitive?: boolean;
+            caseSensitive: boolean;
           },
           /**
            * Either a filter operator or a custom filter function or a Boolean flag that defines how to combine multiple
@@ -47659,7 +46725,7 @@ declare namespace sap {
         /**
          * Returns the current external value of the bound target which is formatted via a type or formatter function.
          */
-        getExternalValue(): any;
+        getExternalValue(): object;
         /**
          * Returns the formatter function
          */
@@ -47669,24 +46735,15 @@ declare namespace sap {
          * model format} of this binding's type. If this binding doesn't have a type, the original value which is
          * stored in the model is returned.
          *
-         * This method will be used when targetType if set to "internal" or it's included in a {@link sap.ui.model.CompositeBinding
-         * CompositeBinding} and the CompositeBinding needs to have the related JavaScript primitive values for
-         * its type or formatter.
+         * This method will be used when it's included in a {@link sap.ui.model.CompositeBinding CompositeBinding}
+         * and the CompositeBinding needs to have the related JavaScript primitive values for its type or formatter.
          */
-        getInternalValue(): any;
+        getInternalValue(): object;
         /**
          * Returns a metadata object for class sap.ui.model.PropertyBinding.
          */
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
-        /**
-         * Returns the raw model value, as it exists in the model dataset
-         *
-         * This method will be used when targetType of a binding is set to "raw" or it's included in a {@link sap.ui.model.CompositeBinding
-         * CompositeBinding} and the CompositeBinding needs to have the related JavaScript primitive values for
-         * its type or formatter.
-         */
-        getRawValue(): any;
         /**
          * Returns the type if any for the binding.
          */
@@ -47694,7 +46751,7 @@ declare namespace sap {
         /**
          * Returns the current value of the bound target
          */
-        getValue(): any;
+        getValue(): object;
         /**
          * Resumes the binding update. Change events will be fired again.
          *
@@ -47721,8 +46778,8 @@ declare namespace sap {
           /**
            * the value to set for this binding
            */
-          vValue: any
-        ): undefined | Promise<any>;
+          oValue: object
+        ): void;
         /**
          * Sets the optional formatter function for the binding.
          */
@@ -47741,17 +46798,7 @@ declare namespace sap {
           /**
            * the value to set for this binding
            */
-          vValue: any
-        ): void;
-        /**
-         * Sets the value for this binding with the raw model value. This setter will perform type validation, in
-         * case a type is defined on the binding.
-         */
-        setRawValue(
-          /**
-           * the value to set for this binding
-           */
-          vValue: any
+          oValue: object
         ): void;
         /**
          * Sets the optional type and internal type for the binding. The type and internal type are used to do the
@@ -47776,7 +46823,7 @@ declare namespace sap {
           /**
            * the value to set for this binding
            */
-          vValue: any
+          oValue: object
         ): void;
       }
 
@@ -48093,7 +47140,7 @@ declare namespace sap {
            * the target type
            */
           sInternalType: string
-        ): any | Promise<any>;
+        ): any;
         /**
          * Returns a metadata object for class sap.ui.model.SimpleType.
          */
@@ -48129,7 +47176,7 @@ declare namespace sap {
            * the source type
            */
           sInternalType: string
-        ): any | Promise<any>;
+        ): any;
         /**
          * Validate whether a given value in model representation is valid and meets the defined constraints (if
          * any).
@@ -48139,7 +47186,7 @@ declare namespace sap {
            * the value to be validated
            */
           oValue: any
-        ): undefined | Promise<any>;
+        ): void;
       }
       /**
        * Sorter for list bindings.
@@ -48238,43 +47285,6 @@ declare namespace sap {
         getGroupFunction(): Function;
         /**
          * Returns a metadata object for class sap.ui.model.Sorter.
-         */
-        // @ts-ignore
-        static getMetadata(): sap.ui.base.Metadata;
-      }
-      /**
-       * The StaticBinding allows to define static values within a CompositeBinding. It behaves like a property
-       * binding but always returns the value, which is stored in the binding itself.
-       */
-      class StaticBinding extends sap.ui.model.PropertyBinding {
-        /**
-         * Constructor for StaticBinding
-         */
-        constructor();
-
-        /**
-         * Creates a new subclass of class sap.ui.model.StaticBinding with name `sClassName` and enriches it with
-         * the information contained in `oClassInfo`.
-         *
-         * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.model.PropertyBinding.extend}.
-         */
-        // @ts-ignore
-        static extend(
-          /**
-           * Name of the class being created
-           */
-          sClassName: string,
-          /**
-           * Object literal with information about the class
-           */
-          oClassInfo?: object,
-          /**
-           * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
-           */
-          FNMetaImpl?: Function
-        ): Function;
-        /**
-         * Returns a metadata object for class sap.ui.model.StaticBinding.
          */
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
@@ -48844,32 +47854,301 @@ declare namespace sap {
         Sequential
       }
     }
-
-    namespace VersionInfo {
-      /**
-       * @SINCE 1.56.0
-       *
-       * Loads the version info file (resources/sap-ui-version.json) asynchronously and returns a Promise. The
-       * returned Promise resolves with the version info files content.
-       *
-       * If a library name is specified then the version info of the individual library will be retrieved.
-       *
-       * In case of the version info file is not available an error will occur when calling this function.
-       */
-      function load(
-        /**
-         * an object map (see below)
-         */
-        mOptions: {
-          /**
-           * name of the library (e.g. "sap.ui.core")
-           */
-          library: string;
-        }
-      ): Promise<any>;
-    }
-
+    /**
+     * SAPUI5 test utilities
+     */
     namespace test {
+      /**
+       * QUnit test adapter for opa.js has the same signature as a test of QUnit. Suggested usage:
+       * ```javascript
+       *
+       * sap.ui.require(["sap/ui/test/Opa5", "sap/ui/test/opaQunit"], function (Opa5, opaTest) {
+       *
+       *    Opa5.extendConfig({
+       *        assertions: new Opa5({
+       *            checkIfSomethingIsOk : function () {
+       *                this.waitFor({
+       *                    success: function () {
+       *                        Opa5.assert.ok(true, "Everything is fine");
+       *                    }
+       *                });
+       *            }
+       *        })
+       *    });
+       *
+       *    opaTest("Should test something", function (Given, When, Then) {
+       *       // Implementation of the test
+       *       Then.checkIfSomethingIsOk();
+       *    });
+       *
+       * });
+       * ```
+       *
+       *
+       * When you require this file, it will also introduce a global variable: opaTest. It will also alter some
+       * settings of QUnit.config - testTimout will be increased to 90 if you do not specify your own. QUnit.reorder
+       * will be set to false, because OPA tests are often depending on each other.
+       */
+      function opaQunit(
+        /**
+         * The name of the created QUnit test.
+         */
+        testName: string,
+        /**
+         * Integer showing how many QUnit assertions are expected by the test. If a function is passed, it is interpreted
+         * as callback and the expected is skipped.
+         */
+        expected: number | Function,
+        /**
+         * The test function. It will get 3 arguments passed to it.
+         * 	 -  Will be {@link sap.ui.test.Opa.config} .arrangements.
+         * 	 -  Will be {@link sap.ui.test.Opa.config} .actions.
+         * 	 -  Will be {@link sap.ui.test.Opa.config} .assertions.
+         */
+        callback: Function
+      ): any;
+      /**
+       * Contains helper functionality for QUnit tests.
+       */
+      namespace qunit {
+        /**
+         * Delays the start of the test until everything is rendered or - if given - for the specified milliseconds.
+         * This function must be called before the first test function.
+         */
+        function delayTestStart(
+          /**
+           * optional delay in milliseconds
+           */
+          iDelay?: number
+        ): void;
+        /**
+         * Programmatically triggers a 'keypress' event on a specified input field target and appends the character
+         * to the value of this input field.
+         * See:
+         * 	sap.ui.test.qunit.triggerKeypress
+         */
+        function triggerCharacterInput(
+          /**
+           * The ID of a DOM input field or a DOM input field which serves as target
+           */
+          oInput: string | any,
+          /**
+           * Only the first char of the string will be passed via keypress event
+           */
+          sChar: string,
+          /**
+           * If passed, this will be set as the new value of the input and the method will not rely on the old value
+           * of the input
+           */
+          sValue?: string
+        ): void;
+        /**
+         * Programmatically triggers an event specified by its name on a specified target with some optional parameters.
+         * See:
+         * 	http://api.jquery.com/trigger/
+         */
+        function triggerEvent(
+          /**
+           * The name of the browser event (like "click")
+           */
+          sEventName: string,
+          /**
+           * The ID of a DOM element or a DOM element which serves as target of the event
+           */
+          oTarget: string | any,
+          /**
+           * The parameters which should be attached to the event in JSON notation (depending on the event type).
+           */
+          oParams?: object
+        ): void;
+        /**
+         * @deprecated - Use `sap.ui.test.qunit.triggerKeydown` instead.
+         *
+         * See:
+         * 	sap.ui.test.qunit.triggerKeydown
+         */
+        function triggerKeyboardEvent(
+          oTarget: object,
+
+          sKey: string,
+
+          bShiftKey: boolean,
+
+          bAltKey: boolean,
+
+          bCtrlKey: boolean
+        ): void;
+        /**
+         * Programmatically triggers a 'keydown' event on a specified target.
+         * See:
+         * 	sap.ui.test.qunit.triggerKeyEvent
+         */
+        function triggerKeydown(
+          /**
+           * The ID of a DOM element or a DOM element which serves as target of the event
+           */
+          oTarget: string | any,
+          /**
+           * The keys name as defined in {@link sap.ui.events.KeyCodes} or its key code
+           */
+          sKey: string | number,
+          /**
+           * Indicates whether the shift key is down in addition
+           */
+          bShiftKey: boolean,
+          /**
+           * Indicates whether the alt key is down in addition
+           */
+          bAltKey: boolean,
+          /**
+           * Indicates whether the ctrl key is down in addition
+           */
+          bCtrlKey: boolean
+        ): void;
+        /**
+         * Programmatically triggers a keyboard event specified by its name on a specified target.
+         * See:
+         * 	sap.ui.test.qunit.triggerEvent
+         */
+        function triggerKeyEvent(
+          /**
+           * The name of the browser keyboard event (like "keydown")
+           */
+          sEventType: string,
+          /**
+           * The ID of a DOM element or a DOM element which serves as target of the event
+           */
+          oTarget: string | any,
+          /**
+           * The keys name as defined in {@link sap.ui.events.KeyCodes} or its key code
+           */
+          sKey: string | number,
+          /**
+           * Indicates whether the shift key is down in addition
+           */
+          bShiftKey: boolean,
+          /**
+           * Indicates whether the alt key is down in addition
+           */
+          bAltKey: boolean,
+          /**
+           * Indicates whether the ctrl key is down in addition
+           */
+          bCtrlKey: boolean
+        ): void;
+        /**
+         * Programmatically triggers a 'keypress' event on a specified target.
+         * See:
+         * 	sap.ui.test.qunit.triggerEvent
+         */
+        function triggerKeypress(
+          /**
+           * The ID of a DOM element or a DOM element which serves as target of the event
+           */
+          oTarget: string | any,
+          /**
+           * Only the first char of the string will be passed via keypress event
+           */
+          sChar: string,
+          /**
+           * Indicates whether the shift key is down in addition
+           */
+          bShiftKey: boolean,
+          /**
+           * Indicates whether the alt key is down in addition
+           */
+          bAltKey: boolean,
+          /**
+           * Indicates whether the ctrl key is down in addition
+           */
+          bCtrlKey: boolean
+        ): void;
+        /**
+         * Programmatically triggers a 'keyup' event on a specified target.
+         * See:
+         * 	sap.ui.test.qunit.triggerKeyEvent
+         */
+        function triggerKeyup(
+          /**
+           * The ID of a DOM element or a DOM element which serves as target of the event
+           */
+          oTarget: string | any,
+          /**
+           * The keys name as defined in {@link sap.ui.events.KeyCodes} or its key code
+           */
+          sKey: string | number,
+          /**
+           * Indicates whether the shift key is down in addition
+           */
+          bShiftKey: boolean,
+          /**
+           * Indicates whether the alt key is down in addition
+           */
+          bAltKey: boolean,
+          /**
+           * Indicates whether the ctrl key is down in addition
+           */
+          bCtrlKey: boolean
+        ): void;
+        /**
+         * Programmatically triggers a mouse event specified by its name on a specified target.
+         * See:
+         * 	sap.ui.test.qunit.triggerEvent
+         */
+        function triggerMouseEvent(
+          /**
+           * The ID of a DOM element or a DOM element which serves as target of the event
+           */
+          oTarget: string | any,
+          /**
+           * The name of the browser mouse event (like "click")
+           */
+          sEventType: string,
+          /**
+           * The offset X position of the mouse pointer during the event
+           */
+          iOffsetX: number,
+          /**
+           * The offset Y position of the mouse pointer during the event
+           */
+          iOffsetY: number,
+          /**
+           * The page X position of the mouse pointer during the event
+           */
+          iPageX: number,
+          /**
+           * The page Y position of the mouse pointer during the event
+           */
+          iPageY: number,
+          /**
+           * The button of the mouse during the event (e.g. 0: LEFT, 1: MIDDLE, 2: RIGHT)
+           */
+          iButton: number
+        ): void;
+        /**
+         * Programmatically triggers a touch event specified by its name. The onEVENTNAME functions are called directly
+         * on the "nearest" control / element of the given target.
+         */
+        function triggerTouchEvent(
+          /**
+           * The name of the touch event (touchstart, touchmove, touchend)
+           */
+          sEventName: string,
+          /**
+           * The ID of a DOM element or a DOM element which serves as target of the event
+           */
+          oTarget: string | any,
+          /**
+           * The parameters which should be attached to the event in JSON notation (depending on the event type).
+           */
+          oParams?: object,
+          /**
+           * prefix to use for the event handler name, defaults to 'on'
+           */
+          sEventHandlerPrefix?: string
+        ): void;
+      }
+
       namespace actions {
         /**
          * @SINCE 1.34
@@ -48921,12 +48200,6 @@ declare namespace sap {
            * @SINCE 1.38
            *
            * Gets current value of property {@link #getIdSuffix idSuffix}.
-           *
-           * Use this only if the target property or the default of the action does not work for your control. The
-           * id suffix of the DOM Element the press action will be executed on. For most of the controls you do not
-           * have to specify this, since the Control Adapters will find the correct DOM Element. But some controls
-           * have multiple DOM elements that could be target of your Action. Then you should set this property. For
-           * a detailed documentation of the suffix see {@link sap.ui.core.Element#$}
            */
           getIdSuffix(): string;
           /**
@@ -48939,12 +48212,6 @@ declare namespace sap {
            *
            * Sets a new value for property {@link #getIdSuffix idSuffix}.
            *
-           * Use this only if the target property or the default of the action does not work for your control. The
-           * id suffix of the DOM Element the press action will be executed on. For most of the controls you do not
-           * have to specify this, since the Control Adapters will find the correct DOM Element. But some controls
-           * have multiple DOM elements that could be target of your Action. Then you should set this property. For
-           * a detailed documentation of the suffix see {@link sap.ui.core.Element#$}
-           *
            * When called with a value of `null` or `undefined`, the default value of the property will be restored.
            */
           setIdSuffix(
@@ -48956,16 +48223,16 @@ declare namespace sap {
         }
         /**
          * @SINCE 1.34
-         *
-         * The EnterText action is used to simulate a user entering texts to inputs. EnterText will be executed
-         * on a control's focus dom ref. Supported controls are (for other controls this action still might work):
-         *
-         * 	 - sap.m.Input
-         * 	 - sap.m.SearchField
-         * 	 - sap.m.TextArea
          */
         class EnterText extends sap.ui.test.actions.Action {
           /**
+           * The EnterText action is used to simulate a user entering texts to inputs. EnterText will be executed
+           * on a control's focus dom ref. Supported controls are (for other controls this action still might work):
+           *
+           * 	 - sap.m.Input
+           * 	 - sap.m.SearchField
+           * 	 - sap.m.TextArea
+           *
            * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated
            * objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description
            * of the syntax of the settings object.
@@ -49056,21 +48323,31 @@ declare namespace sap {
         }
         /**
          * @SINCE 1.34
-         *
-         * The `Press` action is used to simulate a press interaction with a control. Most controls are supported,
-         * for example buttons, links, list items, tables, filters, and form controls.
-         *
-         * The `Press` action targets a special DOM element representing the control. This DOM element can be customized.
-         *
-         * For most most controls (even custom ones), the DOM focus reference is an appropriate choice. You can
-         * choose a different DOM element by specifying its ID suffix. You can do this by directly passing the ID
-         * suffix to the Press constructor, or by defining a control adapter.
-         *
-         * There are some basic controls for which OPA5 has defined `Press` control adapters. For more information,
-         * see {@link sap.ui.test.actions.Press.controlAdapters}.
          */
         class Press extends sap.ui.test.actions.Action {
-          /**/
+          /**
+           * The Press action is used to simulate a press interaction on a Control's dom ref. This will work out of
+           * the box for most of the controls (even custom controls).
+           *
+           * Here is a List of supported controls (some controls will trigger the press on a specific region):
+           *
+           *
+           * 	 - sap.m.Button
+           * 	 - sap.m.Link
+           * 	 - sap.m.StandardListItem
+           * 	 - sap.m.IconTabFilter
+           * 	 - sap.m.Input - Value help
+           * 	 - sap.m.SearchField - Search Button
+           * 	 - sap.m.Page - Back Button
+           * 	 - sap.m.semantic.FullscreenPage - Back Button
+           * 	 - sap.m.semantic.DetailPage - Back Button
+           * 	 - sap.m.List - More Button
+           * 	 - sap.m.Table - More Button
+           * 	 - sap.m.StandardTile
+           * 	 - sap.m.ComboBox
+           * 	 - sap.m.ObjectIdentifier
+           * 	 - sap.ui.comp.smartfilterbar.SmartFilterBar - Go Button
+           */
           constructor();
 
           /**
@@ -50088,18 +49365,12 @@ declare namespace sap {
         /**
          * @SINCE 1.46
          *
-         * The LabelFor matcher checks if a given control has a label associated with it. For every Label on the
-         * page, the matcher checks if:
-         * 	 -  its labelFor association is to the given control
-         * 	 -  its properties match a condition   Labels can be matched by:
-         * 	 -  text
-         * 	 -  i18n key, modelName, parameters or propertyName. See {@link sap.ui.test.matchers.I18NText}
-         * 	 -  combination of text and key is not possible   Some control types cannot be in a labelFor association:
+         * The LabelFor matcher searches for given control associated with labelFor property. The matcher does automatically
          *
-         * 	 -  sap.ui.comp.navpopover.SmartLink
-         * 	 -  sap.m.Link
-         * 	 -  sap.m.Label
-         * 	 -  sap.m.Text
+         * 	 -  retrieve control associated by label by given text
+         * 	 -  retrieve control associated by label by given i18n key, modelName, parameters or propertyName. See
+         * 			{@link sap.ui.test.matchers.I18NText}
+         * 	 -  combination of text and key is not possible
          */
         class LabelFor extends sap.ui.test.matchers.Matcher {
           /**
@@ -50451,15 +49722,6 @@ declare namespace sap {
           extensionObject?: object
         );
         /**
-         * A map of QUnit-style assertions to be used in an opaTest. Contains all methods available on QUnit.assert
-         * for the running QUnit version. Available assertions are: ok, equal, propEqual, deepEqual, strictEqual
-         * and their negative counterparts.
-         *
-         * For more information, see {@link sap.ui.test.opaQunit}.
-         */
-        static assert: Object;
-
-        /**
          * The global configuration of Opa. All of the global values can be overwritten in an individual `waitFor`
          * call. The default values are:
          * 	 - arrangements: A new Opa instance
@@ -50635,29 +49897,15 @@ declare namespace sap {
       /**
        * @SINCE 1.22
        *
-       * UI5 extension of the OPA framework.
-       *
-       * Helps you when writing tests for UI5 apps. Provides convenience to wait and retrieve for UI5 controls
-       * without relying on global IDs. Makes it easy to wait until your UI is in the state you need for testing,
-       * for example waiting for back-end data.
+       * UI5 extension of the OPA framework
        */
       class Opa5 extends sap.ui.base.Object {
         /**
-         * See:
-         * 	{@link topic:2696ab50faad458f9b4027ec2f9b884d Opa5}
+         * Helps you when writing tests for UI5 applications. Provides convenience to wait and retrieve for UI5
+         * controls without relying on global IDs. Makes it easy to wait until your UI is in the state you need
+         * for testing, e.g.: waiting for backend data.
          */
         constructor();
-        /**
-         * A map of QUnit-style assertions to be used in an opaTest. Contains all methods available on QUnit.assert
-         * for the running QUnit version. Available assertions are: ok, equal, propEqual, deepEqual, strictEqual
-         * and their negative counterparts. You can define custom OPA5 assertions in the extensions section of {@link
-         * sap.ui.test.Opa5.extendConfig}
-         *
-         * Example usage: oOpa5.waitFor({ success: function () { Opa5.assert.ok(true, "Should be true"); } });
-         *
-         * For more information, see {@link sap.ui.test.opaQunit}.
-         */
-        static assert: Object;
 
         /**
          * Waits until all waitFor calls are done See {@link sap.ui.test.Opa.emptyQueue} for the description
@@ -50734,17 +49982,17 @@ declare namespace sap {
          */
         static getContext(): object;
         /**
-         * Returns the HashChanger object in the current context. If an iframe is launched, it will return the iframe's
+         * Returns the HashChanger object in the current context. If an IFrame is launched, it will return the IFrame's
          * HashChanger.
          */
         static getHashChanger(): sap.ui.core.routing.HashChanger;
         /**
-         * Returns the jQuery object in the current context. If an iframe is launched, it will return the iframe's
+         * Returns the jQuery object in the current context. If an IFrame is launched, it will return the IFrame's
          * jQuery object.
          */
         static getJQuery(): any;
         /**
-         * Returns the Opa plugin used for retrieving controls. If an iframe is launched, it will return the iframe's
+         * Returns the Opa plugin used for retrieving controls. If an IFrame is launched, it will return the IFrame's
          * plugin.
          */
         static getPlugin(): sap.ui.test.OpaPlugin;
@@ -50761,12 +50009,12 @@ declare namespace sap {
           sTestLibName: string
         ): object;
         /**
-         * Returns the QUnit utils object in the current context. If an iframe is launched, it will return the iframe's
+         * Returns the QUnit utils object in the current context. If an IFrame is launched, it will return the IFrame's
          * QUnit utils.
          */
         static getUtils(): any;
         /**
-         * Returns the window object in the current context. If an iframe is launched, it will return the iframe's
+         * Returns the window object in the current context. If an IFrame is launched, it will return the IFrame's
          * window.
          */
         static getWindow(): Window;
@@ -50786,116 +50034,74 @@ declare namespace sap {
         /**
          * @SINCE 1.48
          *
-         * Starts an app in an iframe. Only works reliably if running on the same server.
+         * Starts an app in an IFrame. Only works reliably if running on the same server.
          */
         iStartMyAppInAFrame(
           /**
-           * The source URL of the iframe or, since 1.53, you can provide a startup configuration object as the only
-           * parameter.
+           * The source of the IFrame
            */
-          vSourceOrOptions: {
-            /**
-             * The source of the iframe
-             */
-            source: string;
-            /**
-             * The timeout for loading the iframe in seconds - default is 80
-             */
-            timeout?: number;
-            /**
-             * Since 1.53, activates autoWait while the application is starting up. This allows more time for application
-             * startup and stabilizes tests for slow-loading applications. This parameter is false by default, regardless
-             * of the global autoWait value, to prevent issues in existing tests.
-             */
-            autoWait?: boolean;
-            /**
-             * Since 1.57, sets a fixed width for the iframe.
-             */
-            width?: string | number;
-            /**
-             * Since 1.57, sets a fixed height for the iframe. Setting width and/or height is useful when testing responsive
-             * applications on screens of varying sizes. By default, the iframe dimensions are 60% of the outer window
-             * dimensions.
-             */
-            height?: string | number;
-          },
+          sSource: string,
           /**
-           * The timeout for loading the iframe in seconds - default is 80
+           * The timeout for loading the IFrame in seconds - default is 80
            */
-          iTimeout?: number,
+          iTimeout: number,
           /**
            * Since 1.53, activates autoWait while the application is starting up. This allows more time for application
            * startup and stabilizes tests for slow-loading applications. This parameter is false by default, regardless
            * of the global autoWait value, to prevent issues in existing tests.
            */
-          autoWait?: boolean,
+          autoWait: boolean,
           /**
-           * Since 1.57, sets a fixed width for the iframe.
+           * Since 1.57, sets a fixed width for the iFrame.
            */
-          width?: string | number,
+          width: string | number,
           /**
-           * Since 1.57, sets a fixed height for the iframe. Setting width and/or height is useful when testing responsive
-           * applications on screens of varying sizes. By default, the iframe dimensions are 60% of the outer window
+           * Since 1.57, sets a fixed height for the iFrame. Setting width and/or height is useful when testing responsive
+           * applications on screens of varying sizes. By default, the iFrame dimensions are 60% of the outer window
            * dimensions.
            */
-          height?: string | number
+          height: string | number,
+          /**
+           * Since 1.53, you can provide a startup configuration object as an only parameter. oOptions is expected
+           * to have keys among: source, timeout, autoWait, width, height.
+           */
+          oOptions?: object
         ): any;
         /**
          * @SINCE 1.48
          *
-         * Starts an app in an iframe. Only works reliably if running on the same server.
+         * Starts an app in an IFrame. Only works reliably if running on the same server.
          */
         static iStartMyAppInAFrame(
           /**
-           * The source URL of the iframe or, since 1.53, you can provide a startup configuration object as the only
-           * parameter.
+           * The source of the IFrame.
            */
-          vSourceOrOptions: {
-            /**
-             * The source of the iframe
-             */
-            source: string;
-            /**
-             * The timeout for loading the iframe in seconds - default is 80
-             */
-            timeout?: number;
-            /**
-             * Since 1.53, activates autoWait while the application is starting up. This allows more time for application
-             * startup and stabilizes tests for slow-loading applications. This parameter is false by default, regardless
-             * of the global autoWait value, to prevent issues in existing tests.
-             */
-            autoWait?: boolean;
-            /**
-             * Since 1.57, sets a fixed width for the iframe.
-             */
-            width?: string | number;
-            /**
-             * Since 1.57, sets a fixed height for the iframe. Setting width and/or height is useful when testing responsive
-             * applications on screens of varying sizes. Since 1.65, by default, the iframe dimensions are 60% of the
-             * default screen size, considered to be 1280x1024.
-             */
-            height?: string | number;
-          },
+          sSource: string,
           /**
-           * The timeout for loading the iframe in seconds - default is 80.
+           * The timeout for loading the IFrame in seconds - default is 80.
            */
-          iTimeout?: number,
+          iTimeout: number,
           /**
            * Since 1.53, activates autoWait while the application is starting up. This allows more time for application
            * startup and stabilizes tests for slow-loading applications. This parameter is false by default, regardless
            * of the global autoWait value, to prevent issues in existing tests.
            */
-          autoWait?: boolean,
+          autoWait: boolean,
           /**
-           * Since 1.57, sets a fixed width for the iframe.
+           * Since 1.57, sets a fixed width for the iFrame.
            */
-          width?: string | number,
+          width: string | number,
           /**
-           * Since 1.57, sets a fixed height for the iframe. Setting width and/or height is useful when testing responsive
-           * applications on screens of varying sizes. By default, the iframe dimensions are 60% of the outer window
+           * Since 1.57, sets a fixed height for the iFrame. Setting width and/or height is useful when testing responsive
+           * applications on screens of varying sizes. By default, the iFrame dimensions are 60% of the outer window
            * dimensions.
            */
-          height?: string | number
+          height: string | number,
+          /**
+           * Since 1.53, you can provide a startup configuration object as an only parameter. oOptions is expected
+           * to have keys among: source, timeout, autoWait, width, height.
+           */
+          oOptions?: object
         ): any;
         /**
          * @SINCE 1.48
@@ -50908,7 +50114,7 @@ declare namespace sap {
            */
           oOptions: {
             /**
-             * Will be passed to {@link sap.ui.core.UIComponent UIComponent}, please read the respective documentation.
+             * Will be passed to {@link sap.ui.component component}, please read the respective documentation.
              */
             componentConfig: object;
             /**
@@ -50929,20 +50135,20 @@ declare namespace sap {
           }
         ): any;
         /**
-         * Tears down the started application regardless of how it was started. Removes the iframe launched by {@link
+         * Tears down the started application regardless of how it was started. Removes the IFrame launched by {@link
          * sap.ui.test.Opa5#iStartMyAppInAFrame} or destroys the UIComponent launched by {@link sap.ui.test.Opa5#iStartMyUIComponent}.
          * This function is designed to make the test's teardown independent of the startup. Use {@link sap.ui.test.Opa5#hasAppStarted}
          * to ensure that the application has been started and teardown can be safely performed.
          */
         iTeardownMyApp(): any;
         /**
-         * Removes the iframe from the DOM and removes all the references to its objects Use {@link sap.ui.test.Opa5#hasAppStartedInAFrame}
-         * to ensure that an iframe has been started and teardown can be safely performed.
+         * Removes the IFrame from the DOM and removes all the references to its objects Use {@link sap.ui.test.Opa5#hasAppStartedInAFrame}
+         * to ensure that an IFrame has been started and teardown can be safely performed.
          */
         iTeardownMyAppFrame(): any;
         /**
-         * Removes the iframe from the DOM and removes all the references to its objects. Use {@link sap.ui.test.Opa5#hasAppStartedInAFrame}
-         * to ensure that an iframe has been started and teardown can be safely performed.
+         * Removes the IFrame from the DOM and removes all the references to its objects. Use {@link sap.ui.test.Opa5#hasAppStartedInAFrame}
+         * to ensure that an IFrame has been started and teardown can be safely performed.
          */
         static iTeardownMyAppFrame(): any;
         /**
@@ -51033,24 +50239,14 @@ declare namespace sap {
              */
             id?: string | RegExp;
             /**
-             * The name of a view. If viewName is set, controls will be searched only inside this view. If control ID
-             * is given, it will be considered to be relative to the view.
+             * The name of a view. If this is set the id of the control is searched inside of the view. If an id is
+             * not be set, all controls of the view will be found.
              */
             viewName?: string;
             /**
-             * viewName prefix. Recommended to be set in {@link sap.ui.test.Opa5.extendConfig} instead.
+             * This string gets appended before the viewName - should probably be set to the {@link sap.ui.test.Opa5.extendConfig}.
              */
             viewNamespace?: string;
-            /**
-             * @since 1.62 The ID of a view. Can be used alone or in combination with viewName and viewNamespace. Always
-             * set view ID if there are multiple views with the same name
-             */
-            viewId?: string;
-            /**
-             * @since 1.63 The ID of a fragment. If set, controls will match only if their IDs contain the fragment
-             * ID prefix
-             */
-            fragmentId?: string;
             /**
              * A single matcher or an array of matchers {@link sap.ui.test.matchers}. Matchers will be applied to an
              * every control found by the waitFor function. The matchers are a pipeline: the first matcher gets a control
@@ -51205,7 +50401,7 @@ declare namespace sap {
              *         autoWait: true
              *     });
              *     ```
-             *   Why it is recommended: When writing a huge set of tests and executing them frequently you might
+             *   Why is it recommended: When writing a huge set of tests and executing them frequently you might
              * face tests that are sometimes successful but sometimes they are not. Setting the autoWait to true should
              * stabilize most of those tests. The default "false" could not be changed since it causes existing tests
              * to fail. There are cases where you do not want to wait for controls to be "Interactable": For example
@@ -51226,6 +50422,182 @@ declare namespace sap {
              */
             autoWait?: boolean;
           }
+        ): any;
+        /**
+         * @SINCE 1.48
+         *
+         * Starts an app in an IFrame. Only works reliably if running on the same server.
+         */
+        iStartMyAppInAFrame(
+          /**
+           * The source of the IFrame
+           */
+          sSource: string,
+          /**
+           * The timeout for loading the IFrame in seconds - default is 80
+           */
+          iTimeout: number,
+          /**
+           * Since 1.57, sets a fixed width for the iFrame.
+           */
+          width: string | number,
+          /**
+           * Since 1.57, sets a fixed height for the iFrame. Setting width and/or height is useful when testing responsive
+           * applications on screens of varying sizes. By default, the iFrame dimensions are 60% of the outer window
+           * dimensions.
+           */
+          height: string | number,
+          /**
+           * Since 1.53, you can provide a startup configuration object as an only parameter. oOptions is expected
+           * to have keys among: source, timeout, autoWait, width, height.
+           */
+          oOptions?: object
+        ): any;
+        /**
+         * @SINCE 1.48
+         *
+         * Starts an app in an IFrame. Only works reliably if running on the same server.
+         */
+        iStartMyAppInAFrame(
+          /**
+           * The source of the IFrame
+           */
+          sSource: string,
+          /**
+           * Since 1.53, activates autoWait while the application is starting up. This allows more time for application
+           * startup and stabilizes tests for slow-loading applications. This parameter is false by default, regardless
+           * of the global autoWait value, to prevent issues in existing tests.
+           */
+          autoWait: boolean,
+          /**
+           * Since 1.57, sets a fixed width for the iFrame.
+           */
+          width: string | number,
+          /**
+           * Since 1.57, sets a fixed height for the iFrame. Setting width and/or height is useful when testing responsive
+           * applications on screens of varying sizes. By default, the iFrame dimensions are 60% of the outer window
+           * dimensions.
+           */
+          height: string | number,
+          /**
+           * Since 1.53, you can provide a startup configuration object as an only parameter. oOptions is expected
+           * to have keys among: source, timeout, autoWait, width, height.
+           */
+          oOptions?: object
+        ): any;
+        /**
+         * @SINCE 1.48
+         *
+         * Starts an app in an IFrame. Only works reliably if running on the same server.
+         */
+        iStartMyAppInAFrame(
+          /**
+           * The source of the IFrame
+           */
+          sSource: string,
+          /**
+           * Since 1.57, sets a fixed width for the iFrame.
+           */
+          width: string | number,
+          /**
+           * Since 1.57, sets a fixed height for the iFrame. Setting width and/or height is useful when testing responsive
+           * applications on screens of varying sizes. By default, the iFrame dimensions are 60% of the outer window
+           * dimensions.
+           */
+          height: string | number,
+          /**
+           * Since 1.53, you can provide a startup configuration object as an only parameter. oOptions is expected
+           * to have keys among: source, timeout, autoWait, width, height.
+           */
+          oOptions?: object
+        ): any;
+        /**
+         * @SINCE 1.48
+         *
+         * Starts an app in an IFrame. Only works reliably if running on the same server.
+         */
+        static iStartMyAppInAFrame(
+          /**
+           * The source of the IFrame.
+           */
+          sSource: string,
+          /**
+           * The timeout for loading the IFrame in seconds - default is 80.
+           */
+          iTimeout: number,
+          /**
+           * Since 1.57, sets a fixed width for the iFrame.
+           */
+          width: string | number,
+          /**
+           * Since 1.57, sets a fixed height for the iFrame. Setting width and/or height is useful when testing responsive
+           * applications on screens of varying sizes. By default, the iFrame dimensions are 60% of the outer window
+           * dimensions.
+           */
+          height: string | number,
+          /**
+           * Since 1.53, you can provide a startup configuration object as an only parameter. oOptions is expected
+           * to have keys among: source, timeout, autoWait, width, height.
+           */
+          oOptions?: object
+        ): any;
+        /**
+         * @SINCE 1.48
+         *
+         * Starts an app in an IFrame. Only works reliably if running on the same server.
+         */
+        static iStartMyAppInAFrame(
+          /**
+           * The source of the IFrame.
+           */
+          sSource: string,
+          /**
+           * Since 1.53, activates autoWait while the application is starting up. This allows more time for application
+           * startup and stabilizes tests for slow-loading applications. This parameter is false by default, regardless
+           * of the global autoWait value, to prevent issues in existing tests.
+           */
+          autoWait: boolean,
+          /**
+           * Since 1.57, sets a fixed width for the iFrame.
+           */
+          width: string | number,
+          /**
+           * Since 1.57, sets a fixed height for the iFrame. Setting width and/or height is useful when testing responsive
+           * applications on screens of varying sizes. By default, the iFrame dimensions are 60% of the outer window
+           * dimensions.
+           */
+          height: string | number,
+          /**
+           * Since 1.53, you can provide a startup configuration object as an only parameter. oOptions is expected
+           * to have keys among: source, timeout, autoWait, width, height.
+           */
+          oOptions?: object
+        ): any;
+        /**
+         * @SINCE 1.48
+         *
+         * Starts an app in an IFrame. Only works reliably if running on the same server.
+         */
+        static iStartMyAppInAFrame(
+          /**
+           * The source of the IFrame.
+           */
+          sSource: string,
+          /**
+           * Since 1.57, sets a fixed width for the iFrame.
+           */
+          width: string | number,
+          /**
+           * Since 1.57, sets a fixed height for the iFrame. Setting width and/or height is useful when testing responsive
+           * applications on screens of varying sizes. By default, the iFrame dimensions are 60% of the outer window
+           * dimensions.
+           */
+          height: string | number,
+          /**
+           * Since 1.53, you can provide a startup configuration object as an only parameter. oOptions is expected
+           * to have keys among: source, timeout, autoWait, width, height.
+           */
+          oOptions?: object
         ): any;
       }
       /**
@@ -51298,7 +50670,7 @@ declare namespace sap {
         ): Function;
         /**
          * Gets all the controls of a certain type that are currently instantiated. If the control type is omitted,
-         * all controls are returned.
+         * nothing is returned.
          */
         getAllControls(
           /**
@@ -51311,23 +50683,20 @@ declare namespace sap {
           sControlType?: string
         ): any[];
         /**
-         * Find a control by its global ID
+         * Returns a control by its ID. Accepts an object with properties id and controlType. The id property can
+         * be string, regex or array of strings and is recommended to exist. The controlType property is optional
+         * and will ensure the returned control is of a certain type.
+         * 	 - a single string - function will return the control instance or null
+         * 	 - an array of strings - function will return an array of found controls or an empty array
+         * 	 - a regexp - function will return an array of found controls or an empty array
          */
         getControlByGlobalId(
           /**
-           * a map of match conditions. Must contain an id property
+           * should contain an ID property which can be of the type string, regex or array of strings. Can contain
+           * optional controlType property.
            */
-          oOptions: {
-            /**
-             * required - ID to match. Can be string, regex or array
-             */
-            id?: string | string[];
-            /**
-             * optional - control type to match
-             */
-            controlType?: string | Function;
-          }
-        ): sap.ui.core.Element | sap.ui.core.Element[];
+          oOptions: undefined
+        ): sap.ui.core.Element[];
         /**
          * Gets the constructor function of a certain controlType
          */
@@ -51338,10 +50707,9 @@ declare namespace sap {
           sControlType: string
         ): null | Function;
         /**
-         * Gets a control inside the view (same as calling oView.byId) Returns all matching controls inside a view
-         * (also nested views and their children).
-         *  The view can be specified by viewName, viewNamespace, viewId, and any combination of three. eg : { id
-         * : "foo" } will search globally for a control with the ID foo
+         * Gets a control inside of the view (same as calling oView.byId) If no ID is provided, it will return all
+         * the controls inside of a view (also nested views and their children).
+         *  eg : { id : "foo" } will search globally for a control with the ID foo
          *  eg : { id : "foo" , viewName : "bar" } will search for a control with the ID foo inside the view with
          * the name bar
          *  eg : { viewName : "bar" } will return all the controls inside the view with the name bar
@@ -51349,17 +50717,15 @@ declare namespace sap {
          * the name bar
          *  eg : { viewName : "bar", viewNamespace : "baz." } will return all the Controls in the view with the
          * name baz.bar
-         *  eg : { viewId : "viewBar" } will return all the controls inside the view with the ID viewBar
          */
         getControlInView(
           /**
-           * can contain a viewName, viewNamespace, viewId, fragmentId, id and controlType properties. oOptions.id
-           * can be string, array or regular expression
+           * that may contain a viewName, id, viewNamespace and controlType properties.
            */
           oOptions: object
         ): sap.ui.core.Element | sap.ui.core.Element[] | null;
         /**
-         * Find a control matching the provided options autowait and Interactable matcher will be enforced if neccessary
+         * Tries to find a control depending on the options provided.
          */
         getMatchingControls(
           /**
@@ -51367,27 +50733,23 @@ declare namespace sap {
            */
           oOptions?: {
             /**
-             * Controls will only be searched inside this view (ie: the view (as a control) has to be an ancestor of
-             * the control) If a control ID is given, the control will be found using the byId function of the view.
+             * Controls will only be searched inside of the view. Inside means, if you are giving an ID - the control
+             * will be found by using the byId function of the view. If you are specifying other options than the id,
+             * the view has to be an ancestor of the control - when you call myControl.getParent, you have to reach
+             * the view at some point.
              */
             viewName?: string;
             /**
-             * @since 1.62 Controls will only be searched inside this view (ie: the view (as a control) has to be an
-             * ancestor of the control) If a control ID is given, the control will be found using the byId function
-             * of the view.
-             */
-            viewId?: string;
-            /**
-             * The ID of one or multiple controls. This can be a global ID or an ID used together with viewName. See
+             * The ID if one or multiple controls. This can be a global ID or an ID used together with viewName. See
              * the documentation of this parameter.
              */
             id?: string | string[];
             /**
-             * should the control have a visible DOM reference
+             * States if a control need to have a visible domref (jQUery's :visible will be used to determine this).
              */
             visible?: boolean;
             /**
-             * @since 1.34 should the control match the interactable matcher {@link sap.ui.test.matchers.Interactable}.
+             * @since 1.34 States if a control has to match the interactable matcher {@link sap.ui.test.matchers.Interactable}.
              */
             interactable?: boolean;
             /**
@@ -51395,8 +50757,8 @@ declare namespace sap {
              */
             searchOpenDialogs?: boolean;
             /**
-             * @since 1.40 match all controls of a certain type It is usually combined with viewName or searchOpenDialogs.
-             * If no control matches the type, an empty array will be returned. Examples:
+             * @since 1.40 Selects all control by their type. It is usually combined with viewName or searchOpenDialogs.
+             * If no control is matching the type, an empty array will be returned. Here are some samples:
              * ```javascript
              *
              *         // will return an array of all visible buttons
@@ -51428,8 +50790,8 @@ declare namespace sap {
         // @ts-ignore
         static getMetadata(): sap.ui.base.Metadata;
         /**
-         * Returns the view with a specific name. The result should be a unique view. If there are multiple visible
-         * views with that name, none will be returned.
+         * Returns the view with a specific name - if there are multiple views with that name only the first one
+         * is returned.
          */
         getView(
           /**
@@ -51448,22 +50810,13 @@ declare namespace sap {
         constructor();
 
         /**
-         * Create page objects and add them to OPA configuration A page object consists of arrangements, actions
-         * and assertions Use page objects to separate your arrangements, actions and assertions based on parts
-         * of the screen to avoid name clashes and help structuring your tests.
+         * Create a page object configured as arrangement, action and assertion to the Opa.config. Use it to structure
+         * your arrangement, action and assertion based on parts of the screen to avoid name clashes and help structuring
+         * your tests.
          * See:
          * 	sap.ui.test.Opa5.createPageObjects
          */
-        static create(
-          /**
-           * definitions of 1 or more page objects
-           */
-          mPageDefinitions: object,
-          /**
-           * Opa5 prototype - avoid circular dependency
-           */
-          Opa5: sap.ui.test.Opa5
-        ): object;
+        static create(): void;
       }
       /**
        * @SINCE 1.60
@@ -51542,10 +50895,10 @@ declare namespace sap {
            */
           oOptions: {
             /**
-             * control selector for the control to interact with The returned promise will be rejected if the control
-             * is not specified or does not have a DOM reference
+             * Control to interact with; The returned promise will be rejected if the control is not specified or does
+             * not have a DOM reference
              */
-            selector: Object;
+            control: Object;
             /**
              * Interaction type; Currently supported interaction types are {@link sap.ui.test.RecordReplay.InteractionType}
              * To see the interaction details and options, see {@link sap.ui.test.actions}
@@ -51581,6 +50934,211 @@ declare namespace sap {
         ): any;
       }
     }
+
+    namespace VersionInfo {
+      /**
+       * @SINCE 1.56.0
+       *
+       * Loads the version info file (resources/sap-ui-version.json) asynchronously and returns a Promise. The
+       * returned Promise resolves with the version info files content.
+       *
+       * If a library name is specified then the version info of the individual library will be retrieved.
+       *
+       * In case of the version info file is not available an error will occur when calling this function.
+       */
+      function load(
+        /**
+         * an object map (see below)
+         */
+        mOptions: {
+          /**
+           * name of the library (e.g. "sap.ui.core")
+           */
+          library: string;
+        }
+      ): Promise<any>;
+    }
+
+    namespace debug {
+      /**
+       * @SINCE 0.8.7
+       *
+       * Helper class to display a colored rectangle around and above a given DOM node
+       */
+      class Highlighter {
+        /**
+         * Creates a new highlighter object without displaying it.
+         *
+         * The DOM node is not created until the first call to method {@link #highlight}.
+         */
+        constructor(
+          /**
+           * id that is used by the new highlighter
+           */
+          sId?: string,
+          /**
+           * whether the box of the highlighter is partially opaque (20%), defaults to false
+           */
+          bFilled?: boolean,
+          /**
+           * the CSS color of the border and the box (defaults to blue)
+           */
+          sColor?: string,
+          /**
+           * the width of the border
+           */
+          iBorderWidth?: number
+        );
+      }
+    }
+
+    namespace qunit {
+      namespace utils {
+        /**
+         * @SINCE 1.48.0
+         *
+         * `sap.ui.qunit.utils.ControlIterator` is a utility for collecting all available controls across libraries
+         * in order to e.g. run tests on each of them.
+         *
+         * It is used by calling the static `run` function with a callback function as parameter. This function
+         * will be called for each control (and provide control name and class and more information about the control
+         * as arguments), so a test could be executed for this control.
+         *
+         * The second parameter of the `run` function can be used to configure several options, e.g. to define a
+         * hard-coded list of control libraries to test (otherwise all available libraries are discovered), to exclude
+         * certain controls or libraries, to state whether sap.ui.core.Elements should also be tested, etc. Check
+         * the documentation of the `run` function parameters to understand which Controls/Elements are used by
+         * default and which ones are excluded.
+         *
+         * The `run` function does NOT execute synchronously! In case a QUnit test function is written that embeds
+         * a call to `run` (as opposed to creating a test function inside each callback), this test function needs
+         * to be asynchronous and needs to use the `done` callback option (called when all control tests have been
+         * executed) to call `done()` (the function returned by `assert.async()`).
+         *
+         * Usage example:  QUnit.config.autostart = false;
+         *
+         * sap.ui.require(["sap/ui/qunit/utils/ControlIterator"], function(ControlIterator) {
+         *
+         * ControlIterator.run(function(sControlName, oControlClass, oInfo) { // loop over all controls
+         *
+         * QUnit.test("Testing control " + sControlName, function(assert) { // create one test per control assert.ok(true,
+         * sControlName + " would be tested now"); // e.g. create a control instance: oControl = new oControlClass()
+         * });
+         *
+         * },{ librariesToTest: ["sap.ui.someLibrary"], // optionally limit the test scope or do other settings
+         * done: function(oResult) { // do something when the above function has been executed for all controls
+         * (here: all control tests have been created)
+         *
+         * QUnit.start(); // tell QUnit that all tests have now been created (due to autostart=false) } });
+         *
+         * });
+         *
+         * This module is independent from QUnit, so it could be used for other purposes than unit tests.
+         */
+        namespace ControlIterator {
+          /**
+           * @SINCE 1.48.0
+           *
+           * Triggers the ControlIterator to collect all Controls (considering the given options) and then call the
+           * `fnCallback` function for each one. This function executes asynchronously.
+           */
+          function run(
+            /**
+             * function(sControlName, oControlClass, oInfo) called for every single control. Arguments passed into the
+             * callback function are: the control name, the control class and an object with further information about
+             * the control. This object has the following boolean flags: canRender, canInstantiate, which describe if
+             * the control can be instantiated/rendered (some cannot).
+             */
+            fnCallback: Function,
+            /**
+             * optional settings for the test run
+             */
+            mOptions?: {
+              /**
+               * which control libraries to test, e.g. `["sap.ui.core"]`. When set, exactly these libraries will be tested
+               * and the options excludedLibraries and includeDistLayer will be ignored. Otherwise, the module will try
+               * to discover all available libraries.
+               */
+              librariesToTest?: any;
+              /**
+               * which control libraries to exclude from testing, e.g. `["sap.ui.core"]`. Only used when librariesToTest
+               * is not set.
+               */
+              excludedLibraries?: any;
+              /**
+               * which controls to exclude from testing, e.g. `["sap.m.Button"]`.
+               */
+              excludedControls?: any;
+              /**
+               * whether to include dist-layer libraries in the test. Only used when librariesToTest is not set.
+               */
+              includeDistLayer?: any;
+              /**
+               * whether to include all entities inheriting from sap.ui.core.Element in the test. Otherwise only those
+               * inheriting from sap.ui.core.Controls are tested.
+               */
+              includeElements?: any;
+              /**
+               * whether to include entities that cannot be generically rendered (some controls fail when they are not
+               * configured in a specific way).
+               */
+              includeNonRenderable?: any;
+              /**
+               * whether to include entities that cannot be generically instantiated.
+               */
+              includeNonInstantiable?: any;
+              /**
+               * optionally, the QUnit object can be given here, so this module can do some internal sanity checks.
+               */
+              qunit?: any;
+              /**
+               * the callback function to call once all tests have been executed. This function receives an object as
+               * sole argument with the following properties: testedControlCount, testedLibraryCount
+               */
+              done?: any;
+            }
+          ): void;
+        }
+        /**
+         * @SINCE 1.48.0
+         *
+         * `sap.ui.qunit.utils.MemoryLeakCheck` is a utility for finding controls that leak references to other
+         * controls. See the `checkControl` method for usage instructions.
+         */
+        namespace MemoryLeakCheck {
+          /**
+           * This function creates a new QUnit module, runs some tests for memory leaks and then destroys all existing
+           * controls. Use it to test the control created in the factory function fnControlFactory (first parameter)
+           * for any other control instances it might leak. The test needs to be run within a normal QUnit test page
+           * (including e.g. a "qunit-fixture" element for rendering).
+           *
+           * Usage example: ` sap.ui.qunit.utils.MemoryLeakCheck.checkControl( function() { return new my.Square();
+           * }, function(oControl) { oControl.onclick(); } ); `
+           */
+          function checkControl(
+            /**
+             * the name of the control to test, or whatever should be displayed as test name
+             */
+            sControlName: string,
+            /**
+             * a function that returns a control instance which should be checked for leaking controls; this function
+             * will be called at least twice and needs to return a new control instance every time
+             */
+            fnControlFactory: Function,
+            /**
+             * a function that should be called after the control has been rendered; any memory leaks caused within
+             * this function will be also detected
+             */
+            fnSomeAdditionalFunction?: Function,
+            /**
+             * should only be set if for some reason the tested control cannot be rendered and this fact is accepted.
+             * The test will then only instantiate the control.
+             */
+            bControlCannotRender?: boolean
+          ): void;
+        }
+      }
+    }
   }
 
   interface IUI5DefineDependencyNames {
@@ -51609,18 +51167,6 @@ declare namespace sap {
     "sap/ui/core/delegate/ItemNavigation": undefined;
 
     "sap/ui/core/delegate/ScrollEnablement": undefined;
-
-    "sap/ui/core/dnd/DragDropBase": undefined;
-
-    "sap/ui/core/dnd/DragDropInfo": undefined;
-
-    "sap/ui/core/dnd/DragInfo": undefined;
-
-    "sap/ui/core/dnd/DropInfo": undefined;
-
-    "sap/ui/core/dnd/IDragInfo": undefined;
-
-    "sap/ui/core/dnd/IDropInfo": undefined;
 
     "sap/ui/core/format/DateFormat": undefined;
 
@@ -51656,21 +51202,29 @@ declare namespace sap {
 
     "sap/ui/core/mvc/IControllerExtension": undefined;
 
+    "sap/ui/core/dnd/DragDropBase": undefined;
+
+    "sap/ui/core/dnd/DragDropInfo": undefined;
+
+    "sap/ui/core/dnd/DragInfo": undefined;
+
+    "sap/ui/core/dnd/DropInfo": undefined;
+
+    "sap/ui/core/dnd/IDragInfo": undefined;
+
+    "sap/ui/core/dnd/IDropInfo": undefined;
+
     "sap/ui/core/hyphenation/Hyphenation": undefined;
 
     "sap/ui/core/postmessage/Bus": undefined;
 
     "sap/ui/core/routing/HashChanger": undefined;
 
-    "sap/ui/core/routing/HashChangerBase": undefined;
-
     "sap/ui/core/routing/History": undefined;
 
     "sap/ui/core/routing/Route": undefined;
 
     "sap/ui/core/routing/Router": undefined;
-
-    "sap/ui/core/routing/RouterHashChanger": undefined;
 
     "sap/ui/core/routing/Target": undefined;
 
@@ -51686,13 +51240,9 @@ declare namespace sap {
 
     "sap/ui/core/service/ServiceFactory": undefined;
 
-    "sap/ui/core/support/usage/EventBroadcaster": undefined;
-
     "sap/ui/core/support/Plugin": undefined;
 
-    "sap/ui/core/support/RuleEngineOpaAssertions": undefined;
-
-    "sap/ui/core/support/RuleEngineOpaExtension": undefined;
+    "sap/ui/core/support/UsageAnalytics": undefined;
 
     "sap/ui/core/tmpl/DOMAttribute": undefined;
 
@@ -51874,8 +51424,6 @@ declare namespace sap {
 
     "sap/ui/model/odata/type/Byte": undefined;
 
-    "sap/ui/model/odata/type/Currency": undefined;
-
     "sap/ui/model/odata/type/Date": undefined;
 
     "sap/ui/model/odata/type/DateTime": undefined;
@@ -51913,8 +51461,6 @@ declare namespace sap {
     "sap/ui/model/odata/type/Time": undefined;
 
     "sap/ui/model/odata/type/TimeOfDay": undefined;
-
-    "sap/ui/model/odata/type/Unit": undefined;
 
     "sap/ui/model/odata/v2/ODataAnnotations": undefined;
 
@@ -52036,8 +51582,6 @@ declare namespace sap {
 
     "sap/ui/model/Sorter": undefined;
 
-    "sap/ui/model/StaticBinding": undefined;
-
     "sap/ui/model/TreeBinding": undefined;
 
     "sap/ui/model/TreeBindingAdapter": undefined;
@@ -52091,5 +51635,7 @@ declare namespace sap {
     "sap/ui/test/PageObjectFactory": undefined;
 
     "sap/ui/test/RecordReplay": undefined;
+
+    "sap/ui/debug/Highlighter": undefined;
   }
 }

@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.65.1",
+  "version": "1.60.14",
   "symbols": [
     {
       "kind": "namespace",
@@ -4989,10 +4989,10 @@
       "export": "ColorPickerMode",
       "static": true,
       "visibility": "public",
-      "description": "Different styles for a ColorPicker.\n\nThis enum is an alias for {@link sap.ui.unified.ColorPickerMode} and was only kept for compatibility reasons. Please switch to the {@link sap.ui.unified.ColorPicker} API.",
+      "description": "different styles for a ColorPicker.",
       "deprecated": {
         "since": "1.48.0",
-        "text": "Moved to sap.ui.unified library. Please use that one."
+        "text": "Moved to sap.ui.unified library. Please use this one."
       },
       "ui5-metamodel": true
     },
