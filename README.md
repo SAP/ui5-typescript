@@ -44,6 +44,8 @@ In the future this repo **_may_** contain additional npm packages, for example:
 This project is in an experimental **_Beta State_**. Significant changes are likely to occur,
 including potential **breaking changes**.
 
+This project's main focus is currently limited in scope to OpenUI5 1.60.x versions.
+
 ## Support
 
 Please open [issues](https://github.com/SAP/ui5-typescript/issues) on github.
