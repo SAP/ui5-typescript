@@ -209,9 +209,7 @@ function fixEnums(groupedAst, symbolTable) {
   _.forEach(groupedAst.Enum, currEnum => {
     if (currEnum.name.indexOf(".") !== -1) {
       console.warn(
-        `AUTOFIXING - Enum named <${
-          currEnum.name
-        }> contains a dot, that is an invalid enum name!`
+        `AUTOFIXING - Enum named <${currEnum.name}> contains a dot, that is an invalid enum name!`
       );
       const noDotsName = /\.(\w+)$/.exec(currEnum.name)[1];
       currEnum.name = noDotsName;
@@ -411,9 +409,7 @@ function markOverwrittenMethods(groupedAst, symbolTable) {
         ownMethod.overwrite = true;
         const clazzFqn = getFqn(clazz);
         console.log(
-          `AUTOFIXING - Marking method <${
-            ownMethod.name
-          }> in class <${clazzFqn}> as overwritten.`
+          `AUTOFIXING - Marking method <${ownMethod.name}> in class <${clazzFqn}> as overwritten.`
         );
       }
     });
