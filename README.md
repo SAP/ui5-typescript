@@ -22,9 +22,15 @@ Learn more about the general benefits of TypeScript here:
 It currently contains two packages:
 
 - [@openui5/ts-types](./packages/ts-types) TypeScript signatures for the [SAP OpenUI5][openui5] project.
+
+  [![npm-openui5-ts-types][npm-openui5-ts-types-image]][npm-openui5-ts-types-url]
+
 - [@ui5/dts-generator](./packages/dts-generator) A low level compiler which transforms SAP UI5 api.json format to TypeScript definition(dts) file format.
   - This package is used by @openui5/ts-types to generate the SAP OpenUI5 TypeScript signatures.
   - This is currently a "repo internal" package, not published on npmjs.com.
+
+[npm-openui5-ts-types-image]: https://img.shields.io/npm/v/@openui5/ts-types.svg
+[npm-openui5-ts-types-url]: https://www.npmjs.com/package/@openui5/ts-types
 
 ## TODO
 
