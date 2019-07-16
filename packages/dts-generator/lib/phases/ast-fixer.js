@@ -1,8 +1,5 @@
 require("lodash.combinations");
 const _ = require("lodash");
-const {
-  namespacesToInterfaces
-} = require("../directives/namespaces-to-interfaces");
 const { getFqn } = require("../utils/ast-utils");
 
 /**
@@ -27,7 +24,11 @@ function fixAsts(asts, symbolTable, directives) {
   fixFunctions(groupedAst, symbolTable);
   fixTypes(groupedAst, symbolTable, directives.typeTyposMap);
   fixEnums(groupedAst, symbolTable);
-  fixNamespacesAsInterfaces(groupedAst, symbolTable);
+  fixNamespacesAsInterfaces(
+    groupedAst,
+    symbolTable,
+    directives.namespacesToInterfaces
+  );
   fixOptionalParams(groupedAst, symbolTable);
   markOverwrittenMethods(groupedAst, symbolTable);
 
@@ -224,7 +225,11 @@ function fixEnums(groupedAst, symbolTable) {
  * @param groupedAst
  * @param symbolTable
  */
-function fixNamespacesAsInterfaces(groupedAst, symbolTable) {
+function fixNamespacesAsInterfaces(
+  groupedAst,
+  symbolTable,
+  namespacesToInterfaces
+) {
   _.forEach(groupedAst.Namespace, currNS => {
     const namespacesToConvert = _.filter(currNS.namespaces, nestedNs => {
       return (

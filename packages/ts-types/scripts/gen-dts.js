@@ -8,6 +8,9 @@ const disclaimer = require("./disclaimer");
 // Directives
 const { badInterfaces, badMethods } = require("./directives/excluded-elements");
 const { typeTyposMap } = require("./directives/typos");
+const {
+  namespacesToInterfaces
+} = require("./directives/namespaces-to-interfaces");
 
 const outputDir = resolve(__dirname, "../types");
 emptyDirSync(outputDir);
@@ -31,7 +34,8 @@ const inputJsons = _.map(inputPaths, path => {
 const directives = {
   badMethods: badMethods,
   badInterfaces: badInterfaces,
-  typeTyposMap: typeTyposMap
+  typeTyposMap: typeTyposMap,
+  namespacesToInterfaces: namespacesToInterfaces
 };
 const dtsResults = jsonToDTS(inputJsons, {
   directives
