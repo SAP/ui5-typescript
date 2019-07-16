@@ -8,6 +8,12 @@ export interface IDirectives {
    * Fully Qualified interface names to be removed from class "implements" clauses
    */
   badInterfaces: string[];
+  /**
+   * A map of type names fixes.
+   *   - The key is the original name
+   *   - And the value is the "corrected form"
+   */
+  typeTyposMap: { [orgText: string]: string };
 }
 
 export function jsonToDTS(

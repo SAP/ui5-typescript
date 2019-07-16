@@ -4,7 +4,10 @@ const { resolve, basename } = require("path");
 const klawSync = require("klaw-sync");
 const _ = require("lodash");
 const disclaimer = require("./disclaimer");
+
+// Directives
 const { badInterfaces, badMethods } = require("./directives/excluded-elements");
+const { typeTyposMap } = require("./directives/typos");
 
 const outputDir = resolve(__dirname, "../types");
 emptyDirSync(outputDir);
@@ -27,7 +30,8 @@ const inputJsons = _.map(inputPaths, path => {
 // Compile
 const directives = {
   badMethods: badMethods,
-  badInterfaces: badInterfaces
+  badInterfaces: badInterfaces,
+  typeTyposMap: typeTyposMap
 };
 const dtsResults = jsonToDTS(inputJsons, {
   directives

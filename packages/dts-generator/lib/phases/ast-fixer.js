@@ -1,6 +1,5 @@
 require("lodash.combinations");
 const _ = require("lodash");
-const { typeTyposMap } = require("../directives/typos");
 const {
   namespacesToInterfaces
 } = require("../directives/namespaces-to-interfaces");
@@ -26,7 +25,7 @@ function fixAsts(asts, symbolTable, directives) {
   removeBadMethods(groupedAst, directives.badMethods);
   fixConstructors(groupedAst, symbolTable);
   fixFunctions(groupedAst, symbolTable);
-  fixTypes(groupedAst, symbolTable);
+  fixTypes(groupedAst, symbolTable, directives.typeTyposMap);
   fixEnums(groupedAst, symbolTable);
   fixNamespacesAsInterfaces(groupedAst, symbolTable);
   fixOptionalParams(groupedAst, symbolTable);
@@ -112,10 +111,10 @@ function fixFunctions(groupedAst) {
   removeIncorrectlyNamedFunctions(namespaces);
 }
 
-function fixTypes(groupedAst, symbolTable) {
+function fixTypes(groupedAst, symbolTable, typeTyposMap) {
   const allTypes = groupedAst.SimpleType.concat(groupedAst.UnionType);
 
-  fixTyposAndConversions(allTypes);
+  fixTyposAndConversions(allTypes, typeTyposMap);
   fixUnknownTypes(allTypes, symbolTable);
 }
 
@@ -152,7 +151,7 @@ function removeIncorrectlyNamedFunctions(namespaces) {
  *
  * @param {Array<AstNode>>} withTypes - AstNode that have a "type" property.
  */
-function fixTyposAndConversions(withTypes) {
+function fixTyposAndConversions(withTypes, typeTyposMap) {
   _.forEach(withTypes, astElem => {
     if (_.has(astElem, "type")) {
       const currentType = astElem.type;

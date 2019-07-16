@@ -1,11 +1,3 @@
-/**
- * This directive is used to "fix" names of types.
- * For example:
- *   - int -> number
- *   - appointmentsSorterCallback -> Function
- *
- * Do not abuse this to resolve more than the simple Typos.
- */
 const typeTyposMap = {
   // General Type Syntax issues
   long: "number",
