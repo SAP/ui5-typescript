@@ -1,14 +1,18 @@
 const _ = require("lodash");
 const { format } = require("prettier");
-const { fqnToIgnore } = require("../directives/ts-ignore");
 const { getFqn } = require("../utils/ast-utils");
 const sanitizeHtml = require("sanitize-html");
 
+// Too much hassle to pass this down the stack
+let fqnToIgnore = {};
 /**
  * @param ast {Ui5AstRoot}
  * @return {string}
  */
-function genDts(ast) {
+function genDts(ast, fqnToIgnoreArg) {
+  // Hacky manner to inject module scoped variable.
+  fqnToIgnore = fqnToIgnoreArg;
+
   let text = "";
   text += `// For Library Version: ${ast.version}` + NL;
   text += `${genNamespace(ast.topLevelNamespace, { declare: true })}` + NL;

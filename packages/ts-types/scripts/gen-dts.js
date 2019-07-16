@@ -11,6 +11,7 @@ const { typeTyposMap } = require("./directives/typos");
 const {
   namespacesToInterfaces
 } = require("./directives/namespaces-to-interfaces");
+const { fqnToIgnore } = require("./directives/ts-ignore");
 
 const outputDir = resolve(__dirname, "../types");
 emptyDirSync(outputDir);
@@ -35,8 +36,10 @@ const directives = {
   badMethods: badMethods,
   badInterfaces: badInterfaces,
   typeTyposMap: typeTyposMap,
-  namespacesToInterfaces: namespacesToInterfaces
+  namespacesToInterfaces: namespacesToInterfaces,
+  fqnToIgnore
 };
+
 const dtsResults = jsonToDTS(inputJsons, {
   directives
 });

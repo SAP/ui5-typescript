@@ -39,7 +39,7 @@ function jsonToDTS(jsons, options) {
 
   // d.ts text generation, do not add any other kind of logic here!
   const dtsTexts = timer(function genDtsStage() {
-    return _.map(fixedAsts, genDts);
+    return _.map(fixedAsts, ast => genDts(ast, options.directives.fqnToIgnore));
   });
 
   // https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html

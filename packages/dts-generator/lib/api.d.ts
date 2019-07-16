@@ -23,6 +23,18 @@ export interface IDirectives {
    * So only none empty names need be specified here.
    */
   namespacesToInterfaces: { [orgNamespace: string]: true };
+
+  /**
+   * For these Fully Qualified (currently only **classes**) Names a
+   * "// @ts-ignore" comment would be generated.
+   *
+   * The corresponding value for each key(fqn) of this map is the the reason
+   * why the ignore is applied in each case.
+   *
+   * This directive is used to brute force "solve" hard problems.
+   * Only use this as a last resort...
+   */
+  fqnToIgnore: { [fqn: string]: string };
 }
 
 export function jsonToDTS(
