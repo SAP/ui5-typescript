@@ -4,10 +4,6 @@ const { typeTyposMap } = require("../directives/typos");
 const {
   namespacesToInterfaces
 } = require("../directives/namespaces-to-interfaces");
-const {
-  badInterfaces,
-  badMethods
-} = require("../directives/excluded-elements");
 const { getFqn } = require("../utils/ast-utils");
 
 /**
@@ -19,13 +15,15 @@ const { getFqn } = require("../utils/ast-utils");
  *
  * @param {Ui5AstRoot[]} asts
  * @param symbolTable
+ * @param directives
+ *
  * @returns {Ui5AstRoot[]}
  */
-function fixAsts(asts, symbolTable) {
+function fixAsts(asts, symbolTable, directives) {
   const flatAst = _.flatMap(asts, flattenAst);
   const groupedAst = _.groupBy(flatAst, "kind");
-  removeBadInterfacesInheritance(groupedAst, symbolTable);
-  removeBadMethods(groupedAst, symbolTable);
+  removeBadInterfacesInheritance(groupedAst, directives.badInterfaces);
+  removeBadMethods(groupedAst, directives.badMethods);
   fixConstructors(groupedAst, symbolTable);
   fixFunctions(groupedAst, symbolTable);
   fixTypes(groupedAst, symbolTable);
@@ -41,7 +39,7 @@ function fixAsts(asts, symbolTable) {
  * Some interfaces cause so many TypeScript errors, we might as well
  * remove their usage completely until they are fixed...
  */
-function removeBadInterfacesInheritance(groupedAst) {
+function removeBadInterfacesInheritance(groupedAst, badInterfaces) {
   _.forEach(groupedAst.Class, clazz => {
     clazz.implements = _.difference(clazz.implements, badInterfaces);
   });
@@ -51,7 +49,7 @@ function removeBadInterfacesInheritance(groupedAst) {
  * Some methods cause so many TypeScript errors, we might as well
  * remove their usage completely until they are fixed in the original UI5 JSDocs
  */
-function removeBadMethods(groupedAst) {
+function removeBadMethods(groupedAst, badMethods) {
   _.forEach(groupedAst.Class, clazz => {
     clazz.methods = _.reject(clazz.methods, currMethod =>
       _.includes(currMethod.name, badMethods)

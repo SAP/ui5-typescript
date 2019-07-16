@@ -7,7 +7,7 @@ const genDts = require("./phases/dts-code-gen").genDts;
 const { buildSymbolTable, mergeSymbolTables } = require("./phases/symbols.js");
 const { addTsRefs } = require("./phases/add-ts-references");
 
-function jsonToDTS(jsons) {
+function jsonToDTS(jsons, options) {
   const fixedJsons = timer(function fixJson() {
     return _.map(jsons, fixApiJson);
   });
@@ -34,7 +34,7 @@ function jsonToDTS(jsons) {
 
   // Heavy lifting for fixing UI5 -> DTS issues is done here.
   const fixedAsts = timer(function fixAstsStage() {
-    return fixAsts(asts, symbolTable);
+    return fixAsts(asts, symbolTable, options.directives);
   });
 
   // d.ts text generation, do not add any other kind of logic here!
@@ -51,8 +51,6 @@ function jsonToDTS(jsons) {
       return addTsRefs(currText, otherLibs);
     });
   });
-
-  // TODO: add disclaimer on generated code and alpha version
 
   return _.zipWith(jsons, dtsTextsWithRef, (apiJson, dtsText) => {
     return { library: apiJson.library, dtsText };

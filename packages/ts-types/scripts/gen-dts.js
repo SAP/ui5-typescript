@@ -4,6 +4,7 @@ const { resolve, basename } = require("path");
 const klawSync = require("klaw-sync");
 const _ = require("lodash");
 const disclaimer = require("./disclaimer");
+const { badInterfaces, badMethods } = require("./directives/excluded-elements");
 
 const outputDir = resolve(__dirname, "../types");
 emptyDirSync(outputDir);
@@ -24,7 +25,13 @@ const inputJsons = _.map(inputPaths, path => {
 });
 
 // Compile
-const dtsResults = jsonToDTS(inputJsons);
+const directives = {
+  badMethods: badMethods,
+  badInterfaces: badInterfaces
+};
+const dtsResults = jsonToDTS(inputJsons, {
+  directives
+});
 
 _.forEach(dtsResults, dtsResult => {
   writeFileSync(

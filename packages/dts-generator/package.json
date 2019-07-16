@@ -10,6 +10,7 @@
     "directory": "packages/dts-generator"
   },
   "main": "lib/api.js",
+  "types": "lib/api.d.ts",
   "dependencies": {
     "lodash": "4.17.14",
     "lodash.combinations": "^18.9.19",
