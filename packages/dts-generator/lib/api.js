@@ -5,7 +5,6 @@ const jsonToAst = require("./phases/json-to-ast").jsonToAst;
 const fixAsts = require("./phases/ast-fixer").fixAsts;
 const genDts = require("./phases/dts-code-gen").genDts;
 const { buildSymbolTable, mergeSymbolTables } = require("./phases/symbols.js");
-const { addTsRefs } = require("./phases/add-ts-references");
 
 function jsonToDTS(targetLibJson, options) {
   const targetLibFixedJson = fixApiJson(targetLibJson);
