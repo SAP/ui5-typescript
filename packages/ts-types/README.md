@@ -39,7 +39,7 @@ For the latest version:
 
 - `npm install @openui5/ts-types --save-dev`
 
-It is recommended to align with the specific OpenUI5 version you may be using, e.g for OpenUI5 1.64:
+It is recommended to align with the specific OpenUI5 version you may be using, e.g for OpenUI5 1.60:
 
 - `npm install @openui5/ts-types@1.60 --save-dev`
 
