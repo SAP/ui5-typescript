@@ -1,9 +1,9 @@
 const _ = require("lodash");
 
-function addTsRefs(orgDtsText, otherLibraries) {
+function addTsRefs(orgDtsText, depLibsNames) {
   const references = _.map(
-    otherLibraries,
-    ({ library }) => `/// <reference path="./${library}.d.ts" />`
+    depLibsNames,
+    depLibName => `/// <reference path="./${depLibName}.d.ts" />`
   );
   let dtsTextWithRef = references.join("\n") + "\n";
   dtsTextWithRef += orgDtsText;

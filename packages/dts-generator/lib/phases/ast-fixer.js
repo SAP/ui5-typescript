@@ -113,7 +113,9 @@ function fixFunctions(groupedAst) {
 }
 
 function fixTypes(groupedAst, symbolTable, typeTyposMap) {
-  const allTypes = groupedAst.SimpleType.concat(groupedAst.UnionType);
+  const allTypes = _.compact(
+    [].concat(groupedAst.SimpleType).concat(groupedAst.UnionType)
+  );
 
   fixTyposAndConversions(allTypes, typeTyposMap);
   fixUnknownTypes(allTypes, symbolTable);
@@ -289,9 +291,9 @@ function fixNamespacesAsInterfaces(
  * @param symbolTable
  */
 function fixOptionalParams(groupedAst, symbolTable) {
-  const namespaces = groupedAst.Namespace;
-  const classes = groupedAst.Class;
-  const interfaces = groupedAst.Interface;
+  const namespaces = groupedAst.Namespace ? groupedAst.Namespace : [];
+  const classes = groupedAst.Class ? groupedAst.Class : [];
+  const interfaces = groupedAst.Interface ? groupedAst.Interface : [];
 
   fixFunctionOptionalParams(namespaces, "functions");
   fixFunctionOptionalParams(classes.concat(interfaces), "methods");

@@ -7,54 +7,51 @@ const genDts = require("./phases/dts-code-gen").genDts;
 const { buildSymbolTable, mergeSymbolTables } = require("./phases/symbols.js");
 const { addTsRefs } = require("./phases/add-ts-references");
 
-function jsonToDTS(jsons, options) {
-  const fixedJsons = timer(function fixJson() {
-    return _.map(jsons, fixApiJson);
+function jsonToDTS(targetLibJson, options) {
+  const targetLibFixedJson = fixApiJson(targetLibJson);
+  const depsFixedJsons = timer(function fixJson() {
+    return _.map(options.dependencies, fixApiJson);
   });
 
-  // Transform The api.json files to an hierarchical well defined (see ast.d.ts)
-  //  Data structure
-  let asts = timer(function buildAst() {
-    return _.map(fixedJsons, jsonToAst);
+  // Transform The api.json files to an hierarchical well defined  Data structure (see ast.d.ts)
+  const targetLibAst = jsonToAst(targetLibFixedJson);
+  const depsAsts = timer(function buildAst() {
+    return _.map(depsFixedJsons, jsonToAst);
   });
 
   // Create a Symbol Table
   const allSymbolsTables = timer(function buildSymbolsTableStage() {
-    return _.map(asts, buildSymbolTable);
+    const allAsts = [targetLibAst].concat(depsAsts);
+    return _.map(allAsts, buildSymbolTable);
   });
 
   const symbolTable = mergeSymbolTables.apply(null, allSymbolsTables);
-
-  // AST transformations that are a pre-requisite for future steps.
-  asts = timer(function transformAstStage() {
-    return _.map(asts, (ast, i) =>
-      transformAst(ast, allSymbolsTables[i], jsons[i].library)
-    );
-  });
-
-  // Heavy lifting for fixing UI5 -> DTS issues is done here.
-  const fixedAsts = timer(function fixAstsStage() {
-    return fixAsts(asts, symbolTable, options.directives);
-  });
+  const targetLibTransformedAst = transformAst(
+    targetLibAst,
+    allSymbolsTables[0],
+    targetLibFixedJson.library
+  );
+  const targetLibFixAst = fixAsts(
+    targetLibTransformedAst,
+    symbolTable,
+    options.directives
+  );
 
   // d.ts text generation, do not add any other kind of logic here!
-  const dtsTexts = timer(function genDtsStage() {
-    return _.map(fixedAsts, ast => genDts(ast, options.directives.fqnToIgnore));
-  });
+  const targetLibDtsText = genDts(
+    targetLibFixAst,
+    options.directives.fqnToIgnore
+  );
 
+  // TODO: ref  building needs to be extracted
   // https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html
-  const dtsTextsWithRef = timer(function addRefsDirectives() {
-    return _.map(dtsTexts, (currText, idx) => {
-      const otherLibs = _.clone(jsons);
-      // mutation
-      _.pullAt(otherLibs, [idx]);
-      return addTsRefs(currText, otherLibs);
-    });
-  });
+  const depLibNames = _.map(options.dependencies, dep => dep.library);
+  const targetLibDtsTextWithImports = addTsRefs(targetLibDtsText, depLibNames);
 
-  return _.zipWith(jsons, dtsTextsWithRef, (apiJson, dtsText) => {
-    return { library: apiJson.library, dtsText };
-  });
+  return {
+    library: targetLibJson.library,
+    dtsText: targetLibDtsTextWithImports
+  };
 }
 
 function timer(func) {

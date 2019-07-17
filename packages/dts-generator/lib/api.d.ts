@@ -41,5 +41,9 @@ export function jsonToDTS(
   json: Object[],
   options: {
     directives: IDirectives;
+    /**
+     * All api.json dependencies (including **transitive**)
+     */
+    dependencies: Object[];
   }
 ): { library: string; dtsText: string }[];
