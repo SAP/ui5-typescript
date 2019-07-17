@@ -38,19 +38,19 @@ function jsonToDTS(targetLibJson, options) {
   );
 
   // d.ts text generation, do not add any other kind of logic here!
-  const targetLibDtsText = genDts(
+  let targetLibDtsText = genDts(
     targetLibFixAst,
     options.directives.fqnToIgnore
   );
 
-  // TODO: ref  building needs to be extracted
-  // https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html
-  const depLibNames = _.map(options.dependencies, dep => dep.library);
-  const targetLibDtsTextWithImports = addTsRefs(targetLibDtsText, depLibNames);
+  if (options.importsGen) {
+    const depLibNames = _.map(options.dependencies, dep => dep.library);
+    targetLibDtsText = options.importsGen(targetLibDtsText, depLibNames);
+  }
 
   return {
     library: targetLibJson.library,
-    dtsText: targetLibDtsTextWithImports
+    dtsText: targetLibDtsText
   };
 }
 

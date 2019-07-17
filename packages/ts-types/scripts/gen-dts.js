@@ -83,3 +83,15 @@ function readJsonApi(libName) {
   libJsonData.library = libName;
   return libJsonData;
 }
+
+const index = disclaimer.message;
+const imports = _.map(
+  _.keys(librariesDirectDeps),
+  depLibName => `/// <reference path="./${depLibName}.d.ts" />`
+);
+
+writeFileSync(
+  resolve(outputDir, "index.d.ts"),
+  disclaimer.message + imports.join("\n") + "\n",
+  "UTF8"
+);

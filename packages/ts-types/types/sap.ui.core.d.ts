@@ -3,7 +3,6 @@
  * Significant changes may occur in future versions,
  * including potential breaking changes.
  */
-
 // For Library Version: 1.60.14
 /**
  * Root namespace for JavaScript functionality provided by SAP SE.

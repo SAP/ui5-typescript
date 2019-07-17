@@ -4,7 +4,7 @@
   "version": "1.60.0",
   "license": "Apache-2.0",
   "repository": "https://github.com/SAP/ui5-typescript/tree/master/packages/ts-types",
-  "types": "types/sap.ui.core.d.ts",
+  "types": "types/index.d.ts",
   "openUI5Version": "1.60.14",
   "devDependencies": {
     "@ui5/cli": "1.5.3",

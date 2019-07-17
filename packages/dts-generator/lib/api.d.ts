@@ -45,5 +45,10 @@ export function jsonToDTS(
      * All api.json dependencies (including **transitive**)
      */
     dependencies: Object[];
+    /**
+     * @param dtsText - The generated TypeScript definition file text.
+     * @param depLibsNames - The names of the libraries this generated file depends on.
+     */
+    importsGen?: (dtsText: string, depLibsNames: string[]) => string;
   }
 ): { library: string; dtsText: string }[];

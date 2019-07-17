@@ -3,12 +3,6 @@
  * Significant changes may occur in future versions,
  * including potential breaking changes.
  */
-/// <reference path="./sap.m.d.ts" />
-/// <reference path="./sap.ui.core.d.ts" />
-/// <reference path="./sap.ui.unified.d.ts" />
-/// <reference path="./sap.ui.codeeditor.d.ts" />
-/// <reference path="./sap.ui.fl.d.ts" />
-/// <reference path="./sap.ui.layout.d.ts" />
 // For Library Version: 1.60.14
 
 declare namespace sap {
