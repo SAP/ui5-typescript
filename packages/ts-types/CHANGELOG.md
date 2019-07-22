@@ -1,3 +1,7 @@
+## 1.60.2
+
+- Built with the newly published on npmjs.com [@ui5/dts-generator](https://www.npmjs.com/package/@ui5/dts-generator).
+
 ## 1.60.1
 
 - Each library is being built individually instead of as a monolith.
