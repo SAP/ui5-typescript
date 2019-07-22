@@ -8,7 +8,7 @@
   "openUI5Version": "1.60.14",
   "devDependencies": {
     "@ui5/cli": "1.5.3",
-    "@ui5/dts-generator": "^1.60.1",
+    "@ui5/dts-generator": "0.1.0",
     "fs-extra": "^8.1.0",
     "klaw-sync": "^6.0.0",
     "lodash": "4.17.14",

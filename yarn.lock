@@ -4344,7 +4344,7 @@ lodash.clonedeep@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
   integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
-lodash.combinations@^18.9.19:
+lodash.combinations@18.9.19:
   version "18.9.19"
   resolved "https://registry.yarnpkg.com/lodash.combinations/-/lodash.combinations-18.9.19.tgz#36860c0f8861cc813bfbf3d3997749c9cde5bc62"
   integrity sha512-dAiFhyz6Hl0QwI1GrwOAoDKcwWv2OOflTSD7n1RT6x5sId9+8wj875+aJgDzv2ga7gswXxrYH9bgsgnpcqlJ9g==
