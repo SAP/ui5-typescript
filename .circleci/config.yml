@@ -39,7 +39,7 @@ workflows:
           filters:
             tags:
               # Trigger tag publish builds only for packages that actually get published (are public).
-              only: /.*(dts-generator|ts-types).*/
+              only: /^(@ui5\/dts-generator|@openui5\/ts-types)@[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
 # Nightly build currently disabled as we are no longer tracking OpenUI5 master branch
