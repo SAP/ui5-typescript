@@ -26,11 +26,12 @@ It currently contains two packages:
   [![npm-openui5-ts-types][npm-openui5-ts-types-image]][npm-openui5-ts-types-url]
 
 - [@ui5/dts-generator](./packages/dts-generator) A low level compiler which transforms SAP UI5 api.json format to TypeScript definition(dts) file format.
-  - This package is used by @openui5/ts-types to generate the SAP OpenUI5 TypeScript signatures.
-  - This is currently a "repo internal" package, not published on npmjs.com.
+  [![npm-ui5-dts-generator][npm-ui5-dts-generator-image]][npm-ui5-dts-generator-url]
 
 [npm-openui5-ts-types-image]: https://img.shields.io/npm/v/@openui5/ts-types.svg
 [npm-openui5-ts-types-url]: https://www.npmjs.com/package/@openui5/ts-types
+[npm-ui5-ts-types-image]: https://img.shields.io/npm/v/@openui5/ts-types.svg
+[npm-ui5-dts-generator-url]: https://www.npmjs.com/package/@ui5/dts-generator
 
 ## TODO
 
