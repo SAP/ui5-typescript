@@ -31,7 +31,7 @@ It currently contains two packages:
 
 [npm-openui5-ts-types-image]: https://img.shields.io/npm/v/@openui5/ts-types.svg
 [npm-openui5-ts-types-url]: https://www.npmjs.com/package/@openui5/ts-types
-[npm-ui5-ts-types-image]: https://img.shields.io/npm/v/@openui5/ts-types.svg
+[npm-ui5-dts-generator-image]: https://img.shields.io/npm/v/@openui5/ts-types.svg
 [npm-ui5-dts-generator-url]: https://www.npmjs.com/package/@ui5/dts-generator
 
 ## TODO
