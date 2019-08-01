@@ -11,7 +11,7 @@
     "@ui5/dts-generator": "^1.60.2",
     "fs-extra": "^8.1.0",
     "klaw-sync": "^6.0.0",
-    "lodash": "4.17.14",
+    "lodash": "4.17.15",
     "typescript": "^3.5.3"
   },
   "scripts": {
