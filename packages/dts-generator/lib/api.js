@@ -6,10 +6,23 @@ const fixAsts = require("./phases/ast-fixer").fixAsts;
 const genDts = require("./phases/dts-code-gen").genDts;
 const { buildSymbolTable, mergeSymbolTables } = require("./phases/symbols.js");
 
+const defaultOptions = {
+  dependencies: [],
+  directives: {
+    badMethods: [],
+    badInterfaces: [],
+    typeTyposMap: [],
+    namespacesToInterfaces: {},
+    fqnToIgnore: {}
+  }
+};
+
 function jsonToDTS(targetLibJson, options) {
+  const actualOptions = _.defaultsDeep(options, defaultOptions);
+
   const targetLibFixedJson = fixApiJson(targetLibJson);
   const depsFixedJsons = timer(function fixJson() {
-    return _.map(options.dependencies, fixApiJson);
+    return _.map(actualOptions.dependencies, fixApiJson);
   });
 
   // Transform The api.json files to an hierarchical well defined  Data structure (see ast.d.ts)
@@ -33,18 +46,18 @@ function jsonToDTS(targetLibJson, options) {
   const targetLibFixAst = fixAsts(
     targetLibTransformedAst,
     symbolTable,
-    options.directives
+    actualOptions.directives
   );
 
   // d.ts text generation, do not add any other kind of logic here!
   let targetLibDtsText = genDts(
     targetLibFixAst,
-    options.directives.fqnToIgnore
+    actualOptions.directives.fqnToIgnore
   );
 
-  if (options.importsGen) {
-    const depLibNames = _.map(options.dependencies, dep => dep.library);
-    targetLibDtsText = options.importsGen(targetLibDtsText, depLibNames);
+  if (actualOptions.importsGen) {
+    const depLibNames = _.map(actualOptions.dependencies, dep => dep.library);
+    targetLibDtsText = actualOptions.importsGen(targetLibDtsText, depLibNames);
   }
 
   return {
