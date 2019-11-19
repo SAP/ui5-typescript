@@ -52,7 +52,7 @@ function removeBadInterfacesInheritance(groupedAst, badInterfaces) {
 function removeBadMethods(groupedAst, badMethods) {
   _.forEach(groupedAst.Class, clazz => {
     clazz.methods = _.reject(clazz.methods, currMethod =>
-      _.includes(currMethod.name, badMethods)
+      _.includes(badMethods, currMethod.name)
     );
   });
 }
