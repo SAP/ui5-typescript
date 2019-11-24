@@ -17,7 +17,7 @@ function jsonToAst(jsonObj) {
 function buildNamespace(symbols, nsFQN, isClass) {
   const nsSymbol = _.find(symbols, currSymbol => currSymbol.name === nsFQN);
 
-  if ( !isClass ) {
+  if (!isClass) {
     assertKnownProps(
       [
         // TODO: What is an "abstract" namespace? :)
@@ -42,9 +42,13 @@ function buildNamespace(symbols, nsFQN, isClass) {
     kind: "Namespace",
     namespaces: buildNestedNamespaces(symbols, nsFQN),
     variables:
-      nsSymbol !== undefined && !isClass ? _.map(nsSymbol.properties, buildVariable) : [],
+      nsSymbol !== undefined && !isClass
+        ? _.map(nsSymbol.properties, buildVariable)
+        : [],
     functions:
-      nsSymbol !== undefined && !isClass ? _.map(nsSymbol.methods, buildFunction) : [],
+      nsSymbol !== undefined && !isClass
+        ? _.map(nsSymbol.methods, buildFunction)
+        : [],
     classes: buildNestedClasses(symbols, nsFQN),
     interfaces: buildNestedInterfaces(symbols, nsFQN),
     enums: buildNestedEnums(symbols, nsFQN),
@@ -52,11 +56,13 @@ function buildNamespace(symbols, nsFQN, isClass) {
   };
 
   // filter out classes that have no namespace-relevant content
-  if ( isClass && 
-       astNode.namespaces.length === 0 
-       && astNode.classes.length === 0 
-       && astNode.interfaces.length === 0 
-       && astNode.enums.length === 0 ) {
+  if (
+    isClass &&
+    astNode.namespaces.length === 0 &&
+    astNode.classes.length === 0 &&
+    astNode.interfaces.length === 0 &&
+    astNode.enums.length === 0
+  ) {
     return undefined;
   }
 
@@ -65,12 +71,16 @@ function buildNamespace(symbols, nsFQN, isClass) {
 }
 
 function buildNestedNamespaces(symbols, nsFQN) {
-  const nestedNamespaces = 
-    getDirectDescendants(symbols, "namespace", nsFQN)
-    .concat(getDirectDescendants(symbols, "class", nsFQN));
-  return _.compact(_.map(nestedNamespaces, currNestedNS =>
-    buildNamespace(symbols, currNestedNS.name, currNestedNS.kind === 'class')
-  ));
+  const nestedNamespaces = getDirectDescendants(
+    symbols,
+    "namespace",
+    nsFQN
+  ).concat(getDirectDescendants(symbols, "class", nsFQN));
+  return _.compact(
+    _.map(nestedNamespaces, currNestedNS =>
+      buildNamespace(symbols, currNestedNS.name, currNestedNS.kind === "class")
+    )
+  );
 }
 
 function buildNestedItems(symbols, nsFQN, ui5kind, builder) {
