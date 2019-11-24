@@ -118,7 +118,8 @@ function buildFunction(ui5Method) {
     since: ui5Method.since,
     throws: ui5Method.throws ? ui5Method.throws : [],
     deprecated: buildDeprecated(ui5Method.deprecated),
-    visibility: ui5Method.visibility
+    visibility: ui5Method.visibility,
+    optional: ui5Method.optional
   };
 
   addJsDocProps(astNode, ui5Method);

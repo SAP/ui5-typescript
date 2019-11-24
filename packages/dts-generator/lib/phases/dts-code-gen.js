@@ -230,7 +230,8 @@ function genMethodOrFunction(ast, staticPossible, isFunc) {
   text += JSDOC(ast) + NL;
   text += ast.overwrite ? "// @ts-ignore" + NL : "";
   text += ast.static && staticPossible ? "static " : "";
-  text += `${isFunc ? "function " : ""}${ast.name} (` + NL;
+  text +=
+    `${isFunc ? "function " : ""}${ast.name}${ast.optional ? "?" : ""} (` + NL;
   text += APPEND_ITEMS(ast.parameters, genParameter, { sep: COMMA });
 
   text += ")";

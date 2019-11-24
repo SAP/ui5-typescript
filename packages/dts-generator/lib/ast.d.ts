@@ -35,6 +35,7 @@ interface FunctionDesc extends UI5JSDocs {
   // descriptions of potential errors being throws
   throws?: { type?: string; description: string }[];
   visibility: UI5Visibility;
+  optional: boolean;
 }
 
 interface Property extends UI5JSDocs {
