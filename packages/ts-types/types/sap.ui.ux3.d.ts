@@ -14315,11 +14315,11 @@ declare namespace sap {
           /**
            * The ToolPopup's content reference position for docking
            */
-          my?: any,
+          my?: sap.ui.core.Popup.Dock,
           /**
            * The "of" element's reference point for docking to
            */
-          at?: any
+          at?: sap.ui.core.Popup.Dock
         ): sap.ui.ux3.ToolPopup;
         /**
          * Removes all the controls from the aggregation {@link #getButtons buttons}.

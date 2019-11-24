@@ -11,53 +11,71 @@ function jsonToAst(jsonObj) {
 /**
  * @param symbols
  * @param {string} nsFQN
- * @param {boolean} [isClass=false]
  * @returns {Namespace}
  */
-function buildNamespace(symbols, nsFQN, isClass) {
+function buildNamespace(symbols, nsFQN) {
   const nsSymbol = _.find(symbols, currSymbol => currSymbol.name === nsFQN);
 
-  if (!isClass) {
-    assertKnownProps(
-      [
-        // TODO: What is an "abstract" namespace? :)
-        "abstract",
-        "basename",
-        "events",
-        // TODO: should we add these to the documentation somehow?
-        "examples",
-        // TODO: why does a namespace have an "extends" property? :)
-        "extends",
-        "final",
-        "methods",
-        "name",
-        "properties"
-      ],
-      nsSymbol
-    );
-  } // else: do not check properties for classes, buildClass will check them later anyhow
+  assertKnownProps(
+    [
+      // TODO: What is an "abstract" namespace? :)
+      "abstract",
+      "basename",
+      "events",
+      // TODO: should we add these to the documentation somehow?
+      "examples",
+      // TODO: why does a namespace have an "extends" property? :)
+      "extends",
+      "final",
+      "methods",
+      "name",
+      "properties"
+    ],
+    nsSymbol
+  );
 
   const astNode = {
     name: /\w+$/.exec(nsFQN)[0],
     kind: "Namespace",
     namespaces: buildNestedNamespaces(symbols, nsFQN),
     variables:
-      nsSymbol !== undefined && !isClass
-        ? _.map(nsSymbol.properties, buildVariable)
-        : [],
+      nsSymbol !== undefined ? _.map(nsSymbol.properties, buildVariable) : [],
     functions:
-      nsSymbol !== undefined && !isClass
-        ? _.map(nsSymbol.methods, buildFunction)
-        : [],
+      nsSymbol !== undefined ? _.map(nsSymbol.methods, buildFunction) : [],
     classes: buildNestedClasses(symbols, nsFQN),
     interfaces: buildNestedInterfaces(symbols, nsFQN),
     enums: buildNestedEnums(symbols, nsFQN),
     visibility: nsSymbol !== undefined ? nsSymbol.visibility : "public"
   };
 
+  addJsDocProps(astNode, nsSymbol);
+  return astNode;
+}
+
+/**
+ * @param symbols
+ * @param {string} nsFQN
+ * @returns {Namespace}
+ */
+function buildNamespaceFromClass(symbols, nsFQN) {
+  const classSymbol = _.find(symbols, currSymbol => currSymbol.name === nsFQN);
+
+  // do not check properties for the class, buildClass will check them later anyhow
+
+  const astNode = {
+    name: /\w+$/.exec(nsFQN)[0],
+    kind: "Namespace",
+    namespaces: buildNestedNamespaces(symbols, nsFQN),
+    variables: [],
+    functions: [],
+    classes: buildNestedClasses(symbols, nsFQN),
+    interfaces: buildNestedInterfaces(symbols, nsFQN),
+    enums: buildNestedEnums(symbols, nsFQN),
+    visibility: classSymbol !== undefined ? classSymbol.visibility : "public"
+  };
+
   // filter out classes that have no namespace-relevant content
   if (
-    isClass &&
     astNode.namespaces.length === 0 &&
     astNode.classes.length === 0 &&
     astNode.interfaces.length === 0 &&
@@ -66,21 +84,20 @@ function buildNamespace(symbols, nsFQN, isClass) {
     return undefined;
   }
 
-  addJsDocProps(astNode, nsSymbol);
+  addJsDocProps(astNode, classSymbol);
   return astNode;
 }
 
 function buildNestedNamespaces(symbols, nsFQN) {
-  const nestedNamespaces = getDirectDescendants(
-    symbols,
-    "namespace",
-    nsFQN
-  ).concat(getDirectDescendants(symbols, "class", nsFQN));
-  return _.compact(
-    _.map(nestedNamespaces, currNestedNS =>
-      buildNamespace(symbols, currNestedNS.name, currNestedNS.kind === "class")
-    )
+  const nestedNamespaces = _.map(
+    getDirectDescendants(symbols, "namespace", nsFQN),
+    currNestedNS => buildNamespace(symbols, currNestedNS.name)
   );
+  const nestedNamespacesFromClasses = _.map(
+    getDirectDescendants(symbols, "class", nsFQN),
+    currNestedNS => buildNamespaceFromClass(symbols, currNestedNS.name)
+  );
+  return nestedNamespaces.concat(_.compact(nestedNamespacesFromClasses));
 }
 
 function buildNestedItems(symbols, nsFQN, ui5kind, builder) {

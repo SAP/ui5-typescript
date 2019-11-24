@@ -1017,11 +1017,11 @@ declare namespace sap {
           /**
            * Specifies which point of the message toast should be aligned.
            */
-          my?: any;
+          my?: sap.ui.core.Popup.Dock;
           /**
            * Specifies the point of the reference element to which the message toast should be aligned.
            */
-          at?: any;
+          at?: sap.ui.core.Popup.Dock;
           /**
            * Specifies the reference element to which the message toast should be aligned, by default it is aligned
            * to the browser visual viewport.
@@ -10182,7 +10182,7 @@ declare namespace sap {
        * **Note:** In the case that the menu has no space to show itself in the view port of the current window
        * it tries to open itself to the inverted direction.
        */
-      menuPosition?: any;
+      menuPosition?: sap.ui.core.Popup.Dock;
 
       /**
        * Controls whether the default action handler is invoked always or it is invoked only until a menu item
@@ -41120,7 +41120,7 @@ declare namespace sap {
        *
        * Default value is `BeginBottom`.
        */
-      getMenuPosition(): any;
+      getMenuPosition(): sap.ui.core.Popup.Dock;
       /**
        * Returns a metadata object for class sap.m.MenuButton.
        */
@@ -41298,7 +41298,7 @@ declare namespace sap {
         /**
          * New value for property `menuPosition`
          */
-        sMenuPosition: any
+        sMenuPosition: sap.ui.core.Popup.Dock
       ): sap.m.MenuButton;
       /**
        * Sets a new value for property {@link #getText text}.

@@ -6546,6 +6546,55 @@ declare namespace sap {
        */
       namespace format {
         /**
+         * The NumberFormat is a static class for formatting and parsing numeric values according to a set of format
+         * options.
+         */
+        namespace NumberFormat {
+          /**
+           * Specifies a rounding behavior for numerical operations capable of discarding precision. Each rounding
+           * mode in this object indicates how the least significant returned digits of rounded result is to be calculated.
+           */
+          enum RoundingMode {
+            /**
+             * Rounding mode to round away from zero
+             */
+            AWAY_FROM_ZERO,
+            /**
+             * Rounding mode to round towards positive infinity
+             */
+            CEILING,
+            /**
+             * Rounding mode to round towards negative infinity
+             */
+            FLOOR,
+            /**
+             * Rounding mode to round towards the nearest neighbor unless both neighbors are equidistant, in which case
+             * round away from zero.
+             */
+            HALF_AWAY_FROM_ZERO,
+            /**
+             * Rounding mode to round towards the nearest neighbor unless both neighbors are equidistant, in which case
+             * round towards positive infinity.
+             */
+            HALF_CEILING,
+            /**
+             * Rounding mode to round towards the nearest neighbor unless both neighbors are equidistant, in which case
+             * round towards negative infinity.
+             */
+            HALF_FLOOR,
+            /**
+             * Rounding mode to round towards the nearest neighbor unless both neighbors are equidistant, in which case
+             * round towards zero.
+             */
+            HALF_TOWARDS_ZERO,
+            /**
+             * Rounding mode to round towards zero
+             */
+            TOWARDS_ZERO
+          }
+        }
+
+        /**
          * The DateFormat is a static class for formatting and parsing single date and time values or date and time
          * intervals according to a set of format options.
          *
@@ -7072,7 +7121,7 @@ declare namespace sap {
                * which will be used for rounding the number. The function is called with two parameters: the number and
                * how many decimal digits should be reserved.
                */
-              roundingMode?: any;
+              roundingMode?: sap.ui.core.format.NumberFormat.RoundingMode;
               /**
                * defines whether the measure according to the format is shown in the formatted string
                */
@@ -7212,7 +7261,7 @@ declare namespace sap {
                * which will be used for rounding the number. The function is called with two parameters: the number and
                * how many decimal digits should be reserved.
                */
-              roundingMode?: any;
+              roundingMode?: sap.ui.core.format.NumberFormat.RoundingMode;
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
                * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way which means when
@@ -7338,7 +7387,7 @@ declare namespace sap {
                * which will be used for rounding the number. The function is called with two parameters: the number and
                * how many decimal digits should be reserved.
                */
-              roundingMode?: any;
+              roundingMode?: sap.ui.core.format.NumberFormat.RoundingMode;
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
                * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way which means when
@@ -7469,7 +7518,7 @@ declare namespace sap {
                * which will be used for rounding the number. The function is called with two parameters: the number and
                * how many decimal digits should be reserved.
                */
-              roundingMode?: any;
+              roundingMode?: sap.ui.core.format.NumberFormat.RoundingMode;
               /**
                * @since 1.30.0 defines what empty string is parsed as and what is formatted as empty string. The allowed
                * values are only NaN, null or 0. The 'format' and 'parse' are done in a symmetric way which means when
@@ -7609,7 +7658,7 @@ declare namespace sap {
                * which will be used for rounding the number. The function is called with two parameters: the number and
                * how many decimal digits should be reserved.
                */
-              roundingMode?: any;
+              roundingMode?: sap.ui.core.format.NumberFormat.RoundingMode;
               /**
                * defines whether the measure according to the format is shown in the formatted string
                */
@@ -8523,6 +8572,108 @@ declare namespace sap {
       }
 
       namespace mvc {
+        /**
+         * A base class for Views.
+         *
+         * Introduces the relationship to a Controller, some basic visual appearance settings like width and height,
+         * and provides lifecycle events.
+         *
+         * Views form an ID scope for the elements and controls in their content. They can prefix the IDs of elements
+         * either automatically (e.g. XMLView) or programmatically (using {@link #createId}). With method {@link
+         * #byId}, elements or controls can be found with their view-local ID. Also see {@link topic:91f28be26f4d1014b6dd926db0e91070
+         * "Support for Unique IDs"} in the documentation.
+         */
+        namespace View {
+          /**
+           * @SINCE 1.30
+           *
+           * Interface for Preprocessor implementations that can be hooked in the view life cycle.
+           *
+           * There are two possibilities to use the preprocessor. It can be either passed to the view via the mSettings.preprocessors
+           * object where it is the executed only for this instance, or by the registerPreprocessor method of the
+           * view type. Currently this is available only for XMLViews (as of version 1.30).
+           * See:
+           * 	sap.ui.view
+           * 	sap.ui.core.mvc.View.registerPreprocessor (the method is available specialized for view types, so use
+           * the following)
+           * 	sap.ui.core.mvc.XMLView.registerPreprocessor
+           */
+          interface Preprocessor {
+            /**
+             * Processing method that must be implemented by a Preprocessor.
+             */
+            process(
+              /**
+               * the source to be processed
+               */
+              vSource: object,
+              /**
+               * identification information about the calling instance
+               */
+              oViewInfo: {
+                /**
+                 * the id
+                 */
+                id: string;
+                /**
+                 * the name
+                 */
+                name: string;
+                /**
+                 * the id of the owning Component
+                 */
+                componentId: string;
+                /**
+                 * identifies the caller of this preprocessor; basis for log or exception messages
+                 */
+                caller: string;
+              },
+              /**
+               * settings object containing the settings provided with the preprocessor
+               */
+              mSettings?: object
+            ): object | Promise<any>;
+          }
+        }
+        /**
+         * A View defined using (P)XML and HTML markup.
+         *
+         * **Note:**
+         *  Be aware that modifications of the content aggregation of this control are not supported due to technical
+         * reasons. This includes calls to all content modifying methods like `addContent>` etc., but also the implicit
+         * removal of controls contained by the content aggregation. For example the destruction of a Control via
+         * the ` destroy` method. All functions can be called but may not work properly or lead to unexpected side
+         * effects.
+         *
+         * **Note:**
+         *  On root level, you can only define content for the default aggregation, e.g. without adding the `<content>`
+         * tag. If you want to specify content for another aggregation of a view like `dependents`, place it in
+         * a child control's dependents aggregation or add it by using {@link sap.ui.core.mvc.XMLView#addDependent}.
+         */
+        namespace XMLView {
+          /**
+           * Specifies the available preprocessor types for XMLViews
+           * See:
+           * 	sap.ui.core.mvc.XMLView
+           * 	sap.ui.core.mvc.View.Preprocessor
+           */
+          enum PreprocessorType {
+            /**
+             * This preprocessor receives the control tree produced through the view source
+             */
+            CONTROLS,
+            /**
+             * This preprocessor receives a valid xml source for View creation without any template tags but with control
+             * declarations. These include their full IDs by which they can also be queried during runtime.
+             */
+            VIEWXML,
+            /**
+             * This preprocessor receives the plain xml source of the view and should also return a valid xml ready
+             * for view creation
+             */
+            XML
+          }
+        }
         /**
          * @SINCE 1.56.0
          *
@@ -9946,7 +10097,7 @@ declare namespace sap {
             /**
              * the type of content to be processed
              */
-            sType: string | any,
+            sType: string | sap.ui.core.mvc.XMLView.PreprocessorType,
             /**
              * module path of the preprocessor implementation or a preprocessor function
              */
@@ -16146,6 +16297,21 @@ declare namespace sap {
         /**
          * WebSocket class implementing the pcp-protocol
          */
+        namespace SapPcpWebSocket {
+          /**
+           * Protocol versions.
+           *
+           * One (or more) of these have to be selected to create an SapPcpWebSocket connection (or no protocol at
+           * all).
+           */
+          enum SUPPORTED_PROTOCOLS {
+            v10
+          }
+        }
+
+        /**
+         * WebSocket class implementing the pcp-protocol
+         */
         class SapPcpWebSocket extends sap.ui.core.ws.WebSocket {
           /**
            * Creates a new WebSocket connection and uses the pcp-protocol for communication.
@@ -16574,6 +16740,380 @@ declare namespace sap {
            * The WebSocket connection is established and communication is possible.
            */
           OPEN
+        }
+      }
+      /**
+       * Collects and stores the configuration of the current environment.
+       *
+       * The Configuration is initialized once when the {@link sap.ui.core.Core} is created. There are different
+       * ways to set the environment configuration (in ascending priority):
+       * 	 - System defined defaults
+       * 	 - Server wide defaults, read from /sap-ui-config.json
+       * 	 - Properties of the global configuration object window["sap-ui-config"]
+       * 	 - A configuration string in the data-sap-ui-config attribute of the bootstrap tag.
+       * 	 - Individual data-sap-ui-xyz attributes of the bootstrap tag
+       * 	 - Using URL parameters
+       * 	 - Setters in this Configuration object (only for some parameters)
+       *
+       * That is, attributes of the DOM reference override the system defaults, URL parameters override the DOM
+       * attributes (where empty URL parameters set the parameter back to its system default). Calling setters
+       * at runtime will override any previous settings calculated during object creation.
+       *
+       * The naming convention for parameters is:
+       * 	 - in the URL : sap-ui-PARAMETER-NAME="value"
+       * 	 - in the DOM : data-sap-ui-PARAMETER-NAME="value"  where PARAMETER-NAME is the name
+       * 			of the parameter in lower case.
+       *
+       * Values of boolean parameters are case insensitive where "true" and "x" are interpreted as true.
+       */
+      namespace Configuration {
+        /**
+         * Encapsulates configuration settings that are related to data formatting/parsing.
+         *
+         * **Note:** When format configuration settings are modified through this class, UI5 only ensures that formatter
+         * objects created after that point in time will honor the modifications. To be on the safe side, applications
+         * should do any modifications early in their lifecycle or recreate any model/UI that is locale dependent.
+         */
+        class FormatSettings extends sap.ui.base.Object {
+          /**/
+          constructor();
+
+          /**
+           * Adds custom currencies to the existing entries. E.g. ` { "KWD": {"digits": 3}, "TND" : {"digits": 3}
+           * } `
+           * See:
+           * 	sap.ui.core.Configuration.FormatSettings#setCustomCurrencies
+           */
+          addCustomCurrencies(
+            /**
+             * adds to the currency map
+             */
+            mCurrencies: object
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Creates a new subclass of class sap.ui.core.Configuration.FormatSettings with name `sClassName` and enriches
+           * it with the information contained in `oClassInfo`.
+           *
+           * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.Object.extend}.
+           */
+          // @ts-ignore
+          static extend(
+            /**
+             * Name of the class being created
+             */
+            sClassName: string,
+            /**
+             * Object literal with information about the class
+             */
+            oClassInfo?: object,
+            /**
+             * Constructor function for the metadata object; if not given, it defaults to `sap.ui.core.ElementMetadata`
+             */
+            FNMetaImpl?: Function
+          ): Function;
+          /**
+           * Retrieves the custom currencies. E.g. ` { "KWD": {"digits": 3}, "TND" : {"digits": 3} } `
+           */
+          getCustomCurrencies(): object;
+          /**
+           * Returns the currently set date pattern or undefined if no pattern has been defined.
+           */
+          getDatePattern(): void;
+          /**
+           * Returns the locale to be used for formatting.
+           *
+           * If no such locale has been defined, this method falls back to the language, see {@link sap.ui.core.Configuration#getLanguage
+           * Configuration.getLanguage()}.
+           *
+           * If any user preferences for date, time or number formatting have been set, and if no format locale has
+           * been specified, then a special private use subtag is added to the locale, indicating to the framework
+           * that these user preferences should be applied.
+           */
+          getFormatLocale(): sap.ui.core.Locale;
+          /**
+           * Returns the currently set customizing data for Islamic calendar support
+           */
+          getLegacyDateCalendarCustomizing(): object[];
+          /**
+           * Returns the currently set legacy ABAP date format (its id) or undefined if none has been set.
+           */
+          getLegacyDateFormat(): void;
+          /**
+           * Returns the currently set legacy ABAP number format (its id) or undefined if none has been set.
+           */
+          getLegacyNumberFormat(): void;
+          /**
+           * Returns the currently set legacy ABAP time format (its id) or undefined if none has been set.
+           */
+          getLegacyTimeFormat(): void;
+          /**
+           * Returns a metadata object for class sap.ui.core.Configuration.FormatSettings.
+           */
+          // @ts-ignore
+          static getMetadata(): sap.ui.base.Metadata;
+          /**
+           * Returns the currently set number symbol of the given type or undefined if no symbol has been defined.
+           */
+          getNumberSymbol(): void;
+          /**
+           * Returns the currently set time pattern or undefined if no pattern has been defined.
+           */
+          getTimePattern(): void;
+          /**
+           * Sets custom currencies and replaces existing entries. E.g. ` { "KWD": {"digits": 3}, "TND" : {"digits":
+           * 3} } ` Note: To unset the custom currencies: call with `undefined`
+           */
+          setCustomCurrencies(
+            /**
+             * currency map which is set
+             */
+            mCurrencies: object
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Defines the preferred format pattern for the given date format style.
+           *
+           * Calling this method with a null or undefined pattern removes a previously set pattern.
+           *
+           * If a pattern is defined, it will be preferred over patterns derived from the current locale.
+           *
+           * See class {@link sap.ui.core.format.DateFormat} for details about the pattern syntax.
+           *
+           * After changing the date pattern, the framework tries to update localization specific parts of the UI.
+           * See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
+           */
+          setDatePattern(
+            /**
+             * must be one of short, medium, long or full.
+             */
+            sStyle: string,
+            /**
+             * the format pattern to be used in LDML syntax.
+             */
+            sPattern: string
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Defines the day used as the first day of the week.
+           *
+           * The day is set as an integer value between 0 (Sunday) and 6 (Saturday). Calling this method with a null
+           * or undefined symbol removes a previously set value.
+           *
+           * If a value is defined, it will be preferred over values derived from the current locale.
+           *
+           * Usually in the US the week starts on Sunday while in most European countries on Monday. There are special
+           * cases where you want to have the first day of week set independent of the user locale.
+           *
+           * After changing the first day of week, the framework tries to update localization specific parts of the
+           * UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
+           */
+          setFirstDayOfWeek(
+            /**
+             * must be an integer value between 0 and 6
+             */
+            iValue: number
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Allows to specify the customizing data for Islamic calendar support
+           */
+          setLegacyDateCalendarCustomizing(
+            /**
+             * contains the customizing data for the support of Islamic calendar.
+             */
+            aMappings: {
+              /**
+               * The date format
+               */
+              dateFormat: string;
+              /**
+               * The Islamic date
+               */
+              islamicMonthStart: string;
+              /**
+               * The corresponding Gregorian date
+               */
+              gregDate: string;
+            }
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Allows to specify one of the legacy ABAP date formats.
+           *
+           * This method modifies the date patterns for 'short' and 'medium' style with the corresponding ABAP format.
+           * When called with a null or undefined format id, any previously applied format will be removed.
+           *
+           * After changing the legacy date format, the framework tries to update localization specific parts of the
+           * UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
+           */
+          setLegacyDateFormat(
+            /**
+             * id of the ABAP data format (one of '1','2','3','4','5','6','7','8','9','A','B','C')
+             */
+            sFormatId: string
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Allows to specify one of the legacy ABAP number format.
+           *
+           * This method will modify the 'group' and 'decimal' symbols. When called with a null or undefined format
+           * id, any previously applied format will be removed.
+           *
+           * After changing the legacy number format, the framework tries to update localization specific parts of
+           * the UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
+           */
+          setLegacyNumberFormat(
+            /**
+             * id of the ABAP number format set (one of ' ','X','Y')
+             */
+            sFormatId: string
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Allows to specify one of the legacy ABAP time formats.
+           *
+           * This method sets the time patterns for 'short' and 'medium' style to the corresponding ABAP formats and
+           * sets the day period texts to "AM"/"PM" or "am"/"pm" respectively. When called with a null or undefined
+           * format id, any previously applied format will be removed.
+           *
+           * After changing the legacy time format, the framework tries to update localization specific parts of the
+           * UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
+           */
+          setLegacyTimeFormat(
+            /**
+             * id of the ABAP time format (one of '0','1','2','3','4')
+             */
+            sFormatId: string
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Defines the string to be used for the given number symbol.
+           *
+           * Calling this method with a null or undefined symbol removes a previously set symbol string. Note that
+           * an empty string is explicitly allowed.
+           *
+           * If a symbol is defined, it will be preferred over symbols derived from the current locale.
+           *
+           * See class {@link sap.ui.core.format.NumberFormat} for details about the symbols.
+           *
+           * After changing the number symbol, the framework tries to update localization specific parts of the UI.
+           * See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
+           */
+          setNumberSymbol(
+            /**
+             * must be one of decimal, group, plusSign, minusSign.
+             */
+            sStyle: string,
+            /**
+             * will be used to represent the given symbol type
+             */
+            sSymbol: string
+          ): sap.ui.core.Configuration.FormatSettings;
+          /**
+           * Defines the preferred format pattern for the given time format style.
+           *
+           * Calling this method with a null or undefined pattern removes a previously set pattern.
+           *
+           * If a pattern is defined, it will be preferred over patterns derived from the current locale.
+           *
+           * See class {@link sap.ui.core.format.DateFormat} for details about the pattern syntax.
+           *
+           * After changing the time pattern, the framework tries to update localization specific parts of the UI.
+           * See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
+           */
+          setTimePattern(
+            /**
+             * must be one of short, medium, long or full.
+             */
+            sStyle: string,
+            /**
+             * the format pattern to be used in LDML syntax.
+             */
+            sPattern: string
+          ): sap.ui.core.Configuration.FormatSettings;
+        }
+        /**
+         * @SINCE 1.50.0
+         *
+         * Enumerable list with available animation modes.
+         *
+         * This enumerable is used to validate the animation mode. Animation modes allow to specify different animation
+         * scenarios or levels. The implementation of the Control (JavaScript or CSS) has to be done differently
+         * for each animation mode.
+         */
+        enum AnimationMode {
+          /**
+           * `basic` can be used for a reduced, more light-weight set of animations.
+           */
+          basic,
+          /**
+           * `full` represents a mode with unrestricted animation capabilities.
+           */
+          full,
+          /**
+           * `minimal` includes animations of fundamental functionality.
+           */
+          minimal,
+          /**
+           * `none` deactivates the animation completely.
+           */
+          none
+        }
+      }
+      /**
+       * Popup Class is a helper class for controls that want themselves or parts of themselves or even other
+       * aggregated or composed controls or plain HTML content to popup on the screen like menues, dialogs, drop
+       * down boxes.
+       *
+       * It allows the controls to be aligned to other dom elements using the {@link sap.ui.core.Popup.Dock} method.
+       * With it you can define where the popup should be docked. One can dock the popup to the top bottom left
+       * or right side of a dom ref.
+       *
+       * In the case that the popup has no space to show itself in the view port of the current window it tries
+       * to open itself to the inverted direction.
+       *
+       * **Since 1.12.3** it is possible to add further DOM-element-ids that can get the focus when 'autoclose'
+       * is enabled. E.g. the RichTextEditor with running TinyMCE uses this method to be able to focus the Popups
+       * of the TinyMCE if the RichTextEditor runs within a Popup/Dialog etc.
+       *
+       * To provide an additional DOM-element that can get the focus the following should be done: // create an
+       * object with the corresponding DOM-id var oObject = { id : "this_is_the_most_valuable_id_of_the_DOM_element"
+       * };
+       *
+       * // add the event prefix for adding an element to the ID of the corresponding Popup var sEventId = "sap.ui.core.Popup.addFocusableContent-"
+       * + oPopup.getId();
+       *
+       * // fire the event with the created event-id and the object with the DOM-id sap.ui.getCore().getEventBus().publish("sap.ui",
+       * sEventId, oObject);
+       */
+      namespace Popup {
+        /**
+         * Enumeration providing options for docking of some element to another. "Right" and "Left" will stay the
+         * same in RTL mode, but "Begin" and "End" will flip to the other side ("Begin" is "Right" in RTL).
+         */
+        namespace Dock {
+          export const BeginBottom: undefined;
+
+          export const BeginCenter: undefined;
+
+          export const BeginTop: undefined;
+
+          export const CenterBottom: undefined;
+
+          export const CenterCenter: undefined;
+
+          export const CenterTop: undefined;
+
+          export const EndBottom: undefined;
+
+          export const EndCenter: undefined;
+
+          export const EndTop: undefined;
+
+          export const LeftBottom: undefined;
+
+          export const LeftCenter: undefined;
+
+          export const LeftTop: undefined;
+
+          export const RightBottom: undefined;
+
+          export const RightCenter: undefined;
+
+          export const RightTop: undefined;
         }
       }
       /**
@@ -18695,7 +19235,7 @@ declare namespace sap {
          *
          * Returns the current animation mode.
          */
-        getAnimationMode(): any;
+        getAnimationMode(): sap.ui.core.Configuration.AnimationMode;
         /**
          * Base URLs to AppCacheBuster ETag-Index files.
          */
@@ -18749,7 +19289,7 @@ declare namespace sap {
         /**
          * Returns a configuration object that bundles the format settings of UI5.
          */
-        getFormatSettings(): any;
+        getFormatSettings(): sap.ui.core.Configuration.FormatSettings;
         /**
          * frameOptions mode (allow/deny/trusted).
          */
@@ -18875,7 +19415,7 @@ declare namespace sap {
           /**
            * A valid animation mode
            */
-          sAnimationMode: any
+          sAnimationMode: sap.ui.core.Configuration.AnimationMode
         ): void;
         /**
          * @SINCE 1.28.6
@@ -25096,11 +25636,11 @@ declare namespace sap {
           /**
            * the popup content's reference position for docking
            */
-          my?: any,
+          my?: sap.ui.core.Popup.Dock,
           /**
            * the "of" element's reference point for docking to
            */
-          at?: any,
+          at?: sap.ui.core.Popup.Dock,
           /**
            * specifies the reference element to which the given content should dock to
            */
@@ -25234,11 +25774,11 @@ declare namespace sap {
           /**
            * specifies which point of the given Content should be aligned
            */
-          my: any,
+          my: sap.ui.core.Popup.Dock,
           /**
            * specifies the point of the reference element to which the given Content should be aligned
            */
-          at: any | Object,
+          at: sap.ui.core.Popup.Dock | Object,
           /**
            * specifies the reference element to which the given content should be aligned as specified in the other
            * parameters
@@ -29205,6 +29745,69 @@ declare namespace sap {
              */
             bIncludeAttributes: boolean
           ): void;
+          /**
+           * Representation of an OData model with analytical annotations defined by OData4SAP.
+           */
+          namespace Model {
+            /**
+             * Handle to an already instantiated SAPUI5 OData model.
+             */
+            class ReferenceByModel {
+              /**
+               * Create a reference to an OData model already loaded elsewhere with the help of SAPUI5.
+               */
+              constructor(
+                /**
+                 * holding the OData model.
+                 */
+                oModel: object
+              );
+            }
+            /**
+             * Handle to an OData model by the URI pointing to it.
+             */
+            class ReferenceByURI {
+              /**
+               * Create a reference to an OData model by the URI of the related OData service.
+               */
+              constructor(
+                /**
+                 * holding the URI.
+                 */
+                sURI: string
+              );
+            }
+            /**
+             * Handle to an already instantiated SAPUI5 OData model.
+             */
+            class ReferenceWithWorkaround {
+              /**
+               * Create a reference to an OData model having certain workarounds activated. A workaround is an implementation
+               * that changes the standard behavior of the API to overcome some gap or limitation in the OData provider.
+               * The workaround implementation can be conditionally activated by passing the identifier in the constructor.
+               *
+               * Known workaround identifiers are:
+               *
+               *
+               * 	 - "CreateLabelsFromTechnicalNames" - If a property has no label text, it gets generated from the property
+               * 			name.
+               *
+               *
+               * 	 - "IdentifyTextPropertiesByName" -If a dimension property has no text and another property with the
+               * 			same name and an appended "Name", "Text" etc. exists, they are linked via annotation.
+               */
+              constructor(
+                /**
+                 * holding a reference to the OData model, obtained by odata4analytics.Model.ReferenceByModel or by sap.odata4analytics.Model.ReferenceByURI.
+                 */
+                oModel: object,
+                /**
+                 * listing all workarounds to be applied.
+                 */
+                aWorkaroundID: string[]
+              );
+            }
+          }
 
           /**
            * Representation of a property annotated with sap:aggregation-role="dimension".
@@ -49687,6 +50290,23 @@ declare namespace sap {
           ): sap.ui.test.matchers.PropertyStrictEquals;
         }
       }
+      /**
+       * @SINCE 1.60
+       *
+       * record-and-replay implementation for OPA5
+       */
+      namespace RecordReplay {
+        /**
+         * Interaction types.
+         *
+         * Values correspond to OPA5 built-in actions {@link sap.ui.test.actions}.
+         */
+        enum InteractionType {
+          EnterText,
+
+          Press
+        }
+      }
 
       /**
        * @SINCE 1.22
@@ -50887,7 +51507,7 @@ declare namespace sap {
              * Interaction type; Currently supported interaction types are {@link sap.ui.test.RecordReplay.InteractionType}
              * To see the interaction details and options, see {@link sap.ui.test.actions}
              */
-            interactionType: any;
+            interactionType: sap.ui.test.RecordReplay.InteractionType;
             /**
              * Text for the EnterText interaction
              */
@@ -51152,13 +51772,13 @@ declare namespace sap {
 
     "sap/ui/core/delegate/ScrollEnablement": undefined;
 
+    "sap/ui/core/format/NumberFormat": undefined;
+
     "sap/ui/core/format/DateFormat": undefined;
 
     "sap/ui/core/format/FileSizeFormat": undefined;
 
     "sap/ui/core/format/ListFormat": undefined;
-
-    "sap/ui/core/format/NumberFormat": undefined;
 
     "sap/ui/core/message/ControlMessageProcessor": undefined;
 
@@ -51170,6 +51790,12 @@ declare namespace sap {
 
     "sap/ui/core/message/MessageProcessor": undefined;
 
+    "sap/ui/core/mvc/View": undefined;
+
+    "sap/ui/core/mvc/View/Preprocessor": undefined;
+
+    "sap/ui/core/mvc/XMLView": undefined;
+
     "sap/ui/core/mvc/Controller": undefined;
 
     "sap/ui/core/mvc/HTMLView": undefined;
@@ -51179,10 +51805,6 @@ declare namespace sap {
     "sap/ui/core/mvc/JSView": undefined;
 
     "sap/ui/core/mvc/TemplateView": undefined;
-
-    "sap/ui/core/mvc/View": undefined;
-
-    "sap/ui/core/mvc/XMLView": undefined;
 
     "sap/ui/core/mvc/IControllerExtension": undefined;
 
@@ -51274,13 +51896,17 @@ declare namespace sap {
 
     "sap/ui/core/ws/WebSocket": undefined;
 
+    "sap/ui/core/Configuration": undefined;
+
+    "sap/ui/core/Configuration/FormatSettings": undefined;
+
+    "sap/ui/core/Popup": undefined;
+
     "sap/ui/core/Component": undefined;
 
     "sap/ui/core/ComponentContainer": undefined;
 
     "sap/ui/core/ComponentMetadata": undefined;
-
-    "sap/ui/core/Configuration": undefined;
 
     "sap/ui/core/Control": undefined;
 
@@ -51324,8 +51950,6 @@ declare namespace sap {
 
     "sap/ui/core/Message": undefined;
 
-    "sap/ui/core/Popup": undefined;
-
     "sap/ui/core/RenderManager": undefined;
 
     "sap/ui/core/ScrollBar": undefined;
@@ -51356,6 +51980,14 @@ declare namespace sap {
 
     "sap/ui/core/Toolbar": undefined;
 
+    "sap/ui/model/analytics/odata4analytics/Model": undefined;
+
+    "sap/ui/model/analytics/odata4analytics/Model/ReferenceByModel": undefined;
+
+    "sap/ui/model/analytics/odata4analytics/Model/ReferenceByURI": undefined;
+
+    "sap/ui/model/analytics/odata4analytics/Model/ReferenceWithWorkaround": undefined;
+
     "sap/ui/model/analytics/odata4analytics/Dimension": undefined;
 
     "sap/ui/model/analytics/odata4analytics/DimensionAttribute": undefined;
@@ -51369,8 +52001,6 @@ declare namespace sap {
     "sap/ui/model/analytics/odata4analytics/FilterExpression": undefined;
 
     "sap/ui/model/analytics/odata4analytics/Measure": undefined;
-
-    "sap/ui/model/analytics/odata4analytics/Model": undefined;
 
     "sap/ui/model/analytics/odata4analytics/Parameter": undefined;
 
@@ -51608,6 +52238,8 @@ declare namespace sap {
 
     "sap/ui/test/matchers/PropertyStrictEquals": undefined;
 
+    "sap/ui/test/RecordReplay": undefined;
+
     "sap/ui/test/Opa": undefined;
 
     "sap/ui/test/Opa5": undefined;
@@ -51617,8 +52249,6 @@ declare namespace sap {
     "sap/ui/test/OpaPlugin": undefined;
 
     "sap/ui/test/PageObjectFactory": undefined;
-
-    "sap/ui/test/RecordReplay": undefined;
 
     "sap/ui/debug/Highlighter": undefined;
   }
