@@ -11,52 +11,66 @@ function jsonToAst(jsonObj) {
 /**
  * @param symbols
  * @param {string} nsFQN
+ * @param {boolean} [isClass=false]
  * @returns {Namespace}
  */
-function buildNamespace(symbols, nsFQN) {
+function buildNamespace(symbols, nsFQN, isClass) {
   const nsSymbol = _.find(symbols, currSymbol => currSymbol.name === nsFQN);
 
-  assertKnownProps(
-    [
-      // TODO: What is an "abstract" namespace? :)
-      "abstract",
-      "basename",
-      "events",
-      // TODO: should we add these to the documentation somehow?
-      "examples",
-      // TODO: why does a namespace have an "extends" property? :)
-      "extends",
-      "final",
-      "methods",
-      "name",
-      "properties"
-    ],
-    nsSymbol
-  );
+  if ( !isClass ) {
+    assertKnownProps(
+      [
+        // TODO: What is an "abstract" namespace? :)
+        "abstract",
+        "basename",
+        "events",
+        // TODO: should we add these to the documentation somehow?
+        "examples",
+        // TODO: why does a namespace have an "extends" property? :)
+        "extends",
+        "final",
+        "methods",
+        "name",
+        "properties"
+      ],
+      nsSymbol
+    );
+  } // else: do not check properties for classes, buildClass will check them later anyhow
 
   const astNode = {
     name: /\w+$/.exec(nsFQN)[0],
     kind: "Namespace",
     namespaces: buildNestedNamespaces(symbols, nsFQN),
     variables:
-      nsSymbol !== undefined ? _.map(nsSymbol.properties, buildVariable) : [],
+      nsSymbol !== undefined && !isClass ? _.map(nsSymbol.properties, buildVariable) : [],
     functions:
-      nsSymbol !== undefined ? _.map(nsSymbol.methods, buildFunction) : [],
+      nsSymbol !== undefined && !isClass ? _.map(nsSymbol.methods, buildFunction) : [],
     classes: buildNestedClasses(symbols, nsFQN),
     interfaces: buildNestedInterfaces(symbols, nsFQN),
     enums: buildNestedEnums(symbols, nsFQN),
     visibility: nsSymbol !== undefined ? nsSymbol.visibility : "public"
   };
 
+  // filter out classes that have no namespace-relevant content
+  if ( isClass && 
+       astNode.namespaces.length === 0 
+       && astNode.classes.length === 0 
+       && astNode.interfaces.length === 0 
+       && astNode.enums.length === 0 ) {
+    return undefined;
+  }
+
   addJsDocProps(astNode, nsSymbol);
   return astNode;
 }
 
 function buildNestedNamespaces(symbols, nsFQN) {
-  const nestedNamespaces = getDirectDescendants(symbols, "namespace", nsFQN);
-  return _.map(nestedNamespaces, currNestedNS =>
-    buildNamespace(symbols, currNestedNS.name)
-  );
+  const nestedNamespaces = 
+    getDirectDescendants(symbols, "namespace", nsFQN)
+    .concat(getDirectDescendants(symbols, "class", nsFQN));
+  return _.compact(_.map(nestedNamespaces, currNestedNS =>
+    buildNamespace(symbols, currNestedNS.name, currNestedNS.kind === 'class')
+  ));
 }
 
 function buildNestedItems(symbols, nsFQN, ui5kind, builder) {
