@@ -7,7 +7,7 @@
   "types": "types/index.d.ts",
   "openUI5Version": "1.60.14",
   "devDependencies": {
-    "@ui5/cli": "1.5.3",
+    "@ui5/cli": "1.13.0",
     "@ui5/dts-generator": "^1.60.5",
     "fs-extra": "^8.1.0",
     "klaw-sync": "^6.0.0",
