@@ -9,7 +9,7 @@
   "devDependencies": {
     "@ui5/cli": "1.5.3",
     "@ui5/dts-generator": "^1.60.5",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "klaw-sync": "^6.0.0",
     "lodash": "4.17.15",
     "typescript": "^3.5.3"
