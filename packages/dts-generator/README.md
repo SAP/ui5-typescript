@@ -5,8 +5,8 @@
 This npm package contains the logic for generating
 TypeScript signatures from SAP UI5 api.json files.
 
-It is used by the [@openui5/ts-types](../types) package to generate the TypeScript signatures
-For OpenUI5.
+It is used by the [@sapui5/ts-types](https://www.npmjs.com/package/@sapui5/ts-types) package to generate the TypeScript signatures
+For UI5.
 
 ## Status
 

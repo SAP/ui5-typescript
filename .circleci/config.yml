@@ -41,17 +41,3 @@ workflows:
               only: /.*/
             branches:
               ignore: /.*/
-# Nightly build currently disabled as we are no longer tracking OpenUI5 master branch
-# But rather 1.60.x versions only.
-#  nightly:
-#    triggers:
-#      - schedule:
-#          # This is UTC time
-#          # https://crontab.guru/#30_9_*_*_*
-#          cron: "30 9 * * *"
-#          filters:
-#            branches:
-#              only:
-#                - master
-#    jobs:
-#      - master-check
