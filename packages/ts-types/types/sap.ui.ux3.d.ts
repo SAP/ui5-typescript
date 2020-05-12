@@ -34,7 +34,7 @@ declare namespace sap {
        */
       interface DataSetView {}
 
-      interface ActionBarOpts extends sap.ui.core.ControlOpts {
+      interface $ActionBarSettings extends sap.ui.core.$ControlSettings {
         /**
          * Keeps track of the actionBars Follow/Unfollow button’s state. Its value is one of - FollowActionState.Default
          * - FollowActionState.Follow - FollowActionState.Hold
@@ -120,7 +120,7 @@ declare namespace sap {
         businessActions?: sap.ui.ux3.ThingAction[] | sap.ui.ux3.ThingAction;
       }
 
-      interface CollectionOpts extends sap.ui.core.ElementOpts {
+      interface $CollectionSettings extends sap.ui.core.$ElementSettings {
         /**
          * Name for the collection
          */
@@ -157,7 +157,8 @@ declare namespace sap {
         selectedItems?: sap.ui.core.Item[] | string[];
       }
 
-      interface CollectionInspectorOpts extends sap.ui.core.ControlOpts {
+      interface $CollectionInspectorSettings
+        extends sap.ui.core.$ControlSettings {
         /**
          * Defines if the list of collection items is visible on the left
          */
@@ -199,7 +200,7 @@ declare namespace sap {
         selectedCollection?: sap.ui.ux3.Collection | string;
       }
 
-      interface DataSetOpts extends sap.ui.core.ControlOpts {
+      interface $DataSetSettings extends sap.ui.core.$ControlSettings {
         /**
          * show Toolbar
          */
@@ -251,7 +252,7 @@ declare namespace sap {
         selectedView?: sap.ui.ux3.DataSetView | string;
       }
 
-      interface DataSetItemOpts extends sap.ui.core.ElementOpts {
+      interface $DataSetItemSettings extends sap.ui.core.$ElementSettings {
         /**
          * image
          */
@@ -278,7 +279,8 @@ declare namespace sap {
         selected?: Function;
       }
 
-      interface DataSetSimpleViewOpts extends sap.ui.core.ControlOpts {
+      interface $DataSetSimpleViewSettings
+        extends sap.ui.core.$ControlSettings {
         /**
          * When true the DatSet items are floating containers. When set to false The Items are rendered in a 1 column
          * Layout.
@@ -358,7 +360,7 @@ declare namespace sap {
         template?: sap.ui.core.Control;
       }
 
-      interface ExactOpts extends sap.ui.core.ControlOpts {
+      interface $ExactSettings extends sap.ui.core.$ControlSettings {
         /**
          * A title text which is displayed above the result section
          */
@@ -385,7 +387,7 @@ declare namespace sap {
         attributes?: sap.ui.ux3.ExactAttribute[] | sap.ui.ux3.ExactAttribute;
       }
 
-      interface ExactAreaOpts extends sap.ui.core.ControlOpts {
+      interface $ExactAreaSettings extends sap.ui.core.$ControlSettings {
         /**
          * Specifies whether the tool bar shall be visible
          */
@@ -404,7 +406,7 @@ declare namespace sap {
           | sap.ui.commons.ToolbarItem;
       }
 
-      interface ExactAttributeOpts extends sap.ui.core.ElementOpts {
+      interface $ExactAttributeSettings extends sap.ui.core.$ElementSettings {
         /**
          * The attribute name
          */
@@ -471,7 +473,7 @@ declare namespace sap {
         attributes?: sap.ui.ux3.ExactAttribute[] | sap.ui.ux3.ExactAttribute;
       }
 
-      interface ExactBrowserOpts extends sap.ui.core.ControlOpts {
+      interface $ExactBrowserSettings extends sap.ui.core.$ControlSettings {
         /**
          * Title text in the list area of the Exact Browser. The title is not shown when the property showTopList
          * is set to false.
@@ -559,7 +561,7 @@ declare namespace sap {
         followUpControl?: sap.ui.core.Control | string;
       }
 
-      interface FacetFilterOpts extends sap.ui.core.ControlOpts {
+      interface $FacetFilterSettings extends sap.ui.core.$ControlSettings {
         /**
          * If the value is "Auto" - the Facet Filter takes the whole available height. If "Fixed" , then the default
          * number of Facet Filter Items (5) is visible.
@@ -572,7 +574,7 @@ declare namespace sap {
         lists?: sap.ui.ux3.FacetFilterList[] | sap.ui.ux3.FacetFilterList;
       }
 
-      interface FacetFilterListOpts extends sap.ui.core.ControlOpts {
+      interface $FacetFilterListSettings extends sap.ui.core.$ControlSettings {
         /**
          * The title of this list.
          */
@@ -612,7 +614,7 @@ declare namespace sap {
         items?: sap.ui.core.ListItem[] | sap.ui.core.ListItem;
       }
 
-      interface FeedOpts extends sap.ui.core.ControlOpts {
+      interface $FeedSettings extends sap.ui.core.$ControlSettings {
         /**
          * The path to the thumbnail image used for the feeder
          */
@@ -674,7 +676,7 @@ declare namespace sap {
         toolsMenuItems?: sap.ui.commons.MenuItem[] | sap.ui.commons.MenuItem;
       }
 
-      interface FeedChunkOpts extends sap.ui.core.ControlOpts {
+      interface $FeedChunkSettings extends sap.ui.core.$ControlSettings {
         /**
          * URL to the thumbnail image.
          */
@@ -821,7 +823,7 @@ declare namespace sap {
         actionMenuItems?: sap.ui.commons.MenuItem[] | sap.ui.commons.MenuItem;
       }
 
-      interface FeederOpts extends sap.ui.core.ControlOpts {
+      interface $FeederSettings extends sap.ui.core.$ControlSettings {
         /**
          * URL to the thumb nail image This property is optional if the feeder is a sub-control of a feed or a feedChunk
          * control. In this case the value of the feed or feddChunk control is used if it's not set. So it must
@@ -850,7 +852,7 @@ declare namespace sap {
         submit?: Function;
       }
 
-      interface NavigationBarOpts extends sap.ui.core.ControlOpts {
+      interface $NavigationBarSettings extends sap.ui.core.$ControlSettings {
         /**
          * Defines whether the navigation bar shall have top-level appearance
          */
@@ -887,7 +889,7 @@ declare namespace sap {
         associatedItems?: sap.ui.ux3.NavigationItem[] | string[];
       }
 
-      interface NavigationItemOpts extends sap.ui.core.ItemOpts {
+      interface $NavigationItemSettings extends sap.ui.core.$ItemSettings {
         /**
          * @SINCE 1.9.0
          *
@@ -913,7 +915,7 @@ declare namespace sap {
         subItems?: sap.ui.ux3.NavigationItem[] | sap.ui.ux3.NavigationItem;
       }
 
-      interface NotificationBarOpts extends sap.ui.core.ControlOpts {
+      interface $NotificationBarSettings extends sap.ui.core.$ControlSettings {
         /**
          * This property displays the bar corresponding to given status
          */
@@ -955,7 +957,7 @@ declare namespace sap {
         notifiers?: sap.ui.core.Element[] | sap.ui.core.Element;
       }
 
-      interface NotifierOpts extends sap.ui.core.ElementOpts {
+      interface $NotifierSettings extends sap.ui.core.$ElementSettings {
         /**
          * Icon of the control that should be displayed within the corresponding bar
          */
@@ -977,7 +979,7 @@ declare namespace sap {
         messages?: sap.ui.core.Message[] | sap.ui.core.Message;
       }
 
-      interface OverlayOpts extends sap.ui.core.ControlOpts {
+      interface $OverlaySettings extends sap.ui.core.$ControlSettings {
         /**
          * Defines whether the 'Open' button shall be visible.
          */
@@ -1009,14 +1011,14 @@ declare namespace sap {
         open?: Function;
       }
 
-      interface OverlayContainerOpts extends sap.ui.ux3.OverlayOpts {
+      interface $OverlayContainerSettings extends sap.ui.ux3.$OverlaySettings {
         /**
          * Aggregation for content
          */
         content?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface OverlayDialogOpts extends sap.ui.ux3.OverlayOpts {
+      interface $OverlayDialogSettings extends sap.ui.ux3.$OverlaySettings {
         /**
          * Determines the width of the Overlay Dialog. If the width is set to "auto" it is always 50% of the overlay
          * width.
@@ -1035,7 +1037,7 @@ declare namespace sap {
         content?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface QuickViewOpts extends sap.ui.commons.CalloutBaseOpts {
+      interface $QuickViewSettings extends sap.ui.commons.$CalloutBaseSettings {
         /**
          * Thing type (mandatory) like Account, Material, Employee etc. is displayed in a header at the top part
          * of the QuickView.
@@ -1146,7 +1148,7 @@ declare namespace sap {
         actionBar?: sap.ui.ux3.ActionBar;
       }
 
-      interface ShellOpts extends sap.ui.core.ControlOpts {
+      interface $ShellSettings extends sap.ui.core.$ControlSettings {
         /**
          * The application title to appear in the left part of the header, usually a company and/or product name.
          * appIcon and appTitle are both optional and can both be set; in this case the icon appears first.
@@ -1337,7 +1339,7 @@ declare namespace sap {
         selectedWorksetItem?: sap.ui.ux3.NavigationItem | string;
       }
 
-      interface ThingActionOpts extends sap.ui.core.ElementOpts {
+      interface $ThingActionSettings extends sap.ui.core.$ElementSettings {
         /**
          * text of action
          */
@@ -1354,7 +1356,7 @@ declare namespace sap {
         select?: Function;
       }
 
-      interface ThingGroupOpts extends sap.ui.core.ElementOpts {
+      interface $ThingGroupSettings extends sap.ui.core.$ElementSettings {
         /**
          * Title of Group
          */
@@ -1376,7 +1378,7 @@ declare namespace sap {
         actions?: sap.ui.ux3.ThingGroup[] | sap.ui.ux3.ThingGroup;
       }
 
-      interface ThingInspectorOpts extends sap.ui.ux3.OverlayOpts {
+      interface $ThingInspectorSettings extends sap.ui.ux3.$OverlaySettings {
         /**
          * First Line of the Thing Inspector Title
          */
@@ -1486,7 +1488,7 @@ declare namespace sap {
         selectedFacet?: sap.ui.ux3.NavigationItem | string;
       }
 
-      interface ThingViewerOpts extends sap.ui.core.ControlOpts {
+      interface $ThingViewerSettings extends sap.ui.core.$ControlSettings {
         /**
          * Title of the Thing Inspector
          */
@@ -1556,7 +1558,7 @@ declare namespace sap {
         selectedFacet?: sap.ui.ux3.NavigationItem | string;
       }
 
-      interface ToolPopupOpts extends sap.ui.core.ControlOpts {
+      interface $ToolPopupSettings extends sap.ui.core.$ControlSettings {
         /**
          * Determines the title displayed in the pop up window
          */
@@ -1730,7 +1732,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ActionBarOpts
+          mSettings?: $ActionBarSettings
         );
 
         /**
@@ -2234,7 +2236,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: CollectionOpts
+          mSettings?: $CollectionSettings
         );
 
         /**
@@ -2568,7 +2570,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: CollectionInspectorOpts
+          mSettings?: $CollectionInspectorSettings
         );
 
         /**
@@ -3012,7 +3014,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: DataSetOpts
+          mSettings?: $DataSetSettings
         );
 
         /**
@@ -3581,7 +3583,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: DataSetItemOpts
+          mSettings?: $DataSetItemSettings
         );
 
         /**
@@ -3791,7 +3793,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: DataSetSimpleViewOpts
+          mSettings?: $DataSetSimpleViewSettings
         );
 
         /**
@@ -4163,7 +4165,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ExactOpts
+          mSettings?: $ExactSettings
         );
 
         /**
@@ -4469,7 +4471,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ExactAreaOpts
+          mSettings?: $ExactAreaSettings
         );
 
         /**
@@ -4661,7 +4663,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ExactAttributeOpts
+          mSettings?: $ExactAttributeSettings
         );
 
         /**
@@ -5082,7 +5084,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ExactBrowserOpts
+          mSettings?: $ExactBrowserSettings
         );
 
         /**
@@ -5614,7 +5616,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: FacetFilterOpts
+          mSettings?: $FacetFilterSettings
         );
 
         /**
@@ -5749,7 +5751,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: FacetFilterListOpts
+          mSettings?: $FacetFilterListSettings
         );
 
         /**
@@ -6056,7 +6058,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: FeedOpts
+          mSettings?: $FeedSettings
         );
 
         /**
@@ -6772,7 +6774,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: FeedChunkOpts
+          mSettings?: $FeedChunkSettings
         );
 
         /**
@@ -7966,7 +7968,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: FeederOpts
+          mSettings?: $FeederSettings
         );
 
         /**
@@ -8176,7 +8178,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: NavigationBarOpts
+          mSettings?: $NavigationBarSettings
         );
 
         /**
@@ -8472,7 +8474,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: NavigationItemOpts
+          mSettings?: $NavigationItemSettings
         );
 
         /**
@@ -8647,7 +8649,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: NotificationBarOpts
+          mSettings?: $NotificationBarSettings
         );
 
         /**
@@ -8998,7 +9000,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: NotifierOpts
+          mSettings?: $NotifierSettings
         );
 
         /**
@@ -9228,7 +9230,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: OverlayOpts
+          mSettings?: $OverlaySettings
         );
 
         /**
@@ -9628,7 +9630,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: OverlayContainerOpts
+          mSettings?: $OverlayContainerSettings
         );
 
         /**
@@ -9739,7 +9741,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control.
            */
-          mSettings?: OverlayDialogOpts
+          mSettings?: $OverlayDialogSettings
         );
 
         /**
@@ -9881,7 +9883,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: QuickViewOpts
+          mSettings?: $QuickViewSettings
         );
 
         /**
@@ -10624,7 +10626,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ShellOpts
+          mSettings?: $ShellSettings
         );
 
         /**
@@ -12024,7 +12026,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ThingActionOpts
+          mSettings?: $ThingActionSettings
         );
 
         /**
@@ -12191,7 +12193,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ThingGroupOpts
+          mSettings?: $ThingGroupSettings
         );
 
         /**
@@ -12402,7 +12404,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ThingInspectorOpts
+          mSettings?: $ThingInspectorSettings
         );
 
         /**
@@ -13226,7 +13228,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: ThingViewerOpts
+          mSettings?: $ThingViewerSettings
         );
 
         /**
@@ -13725,7 +13727,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: ToolPopupOpts
+          mSettings?: $ToolPopupSettings
         );
 
         /**

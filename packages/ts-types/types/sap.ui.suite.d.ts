@@ -11,7 +11,7 @@ declare namespace sap {
      * Suite controls library.
      */
     namespace suite {
-      interface TaskCircleOpts extends sap.ui.core.ControlOpts {
+      interface $TaskCircleSettings extends sap.ui.core.$ControlSettings {
         /**
          * Current value of the task circle to be displayed. In dependency of the parameters maxValue and minValue
          * it controls the size of the circle.
@@ -49,7 +49,8 @@ declare namespace sap {
         ariaDescribedBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface VerticalProgressIndicatorOpts extends sap.ui.core.ControlOpts {
+      interface $VerticalProgressIndicatorSettings
+        extends sap.ui.core.$ControlSettings {
         /**
          * The numerical value between 0 and 100 which determines the height of the vertical bar. Values higher
          * than 100 will be displayed as 100%, values lower than zero will be displayed as 0%.
@@ -92,7 +93,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: TaskCircleOpts
+          mSettings?: $TaskCircleSettings
         );
 
         /**
@@ -362,7 +363,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: VerticalProgressIndicatorOpts
+          mSettings?: $VerticalProgressIndicatorSettings
         );
 
         /**

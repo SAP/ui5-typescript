@@ -892,6 +892,11 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@sapui5/ts-types@^1.71.15":
+  version "1.77.2"
+  resolved "https://registry.yarnpkg.com/@sapui5/ts-types/-/ts-types-1.77.2.tgz#154904430f50ff07ae5bdb36b2c7cdcbc42f3db4"
+  integrity sha512-b00MZaW84rIw/hxgwPn4T/J7NNXSmO6Dey3bQOr1A7BTOCO6kXTPkluh6rHjeBIR/N/GFqpLZrlb8uMlIuolLA==
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"

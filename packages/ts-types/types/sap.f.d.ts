@@ -526,60 +526,71 @@ declare namespace sap {
     }
 
     namespace semantic {
-      interface AddActionOpts extends sap.f.semantic.SemanticButtonOpts {}
+      interface $AddActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface CloseActionOpts extends sap.f.semantic.SemanticButtonOpts {}
+      interface $CloseActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface CopyActionOpts extends sap.f.semantic.SemanticButtonOpts {}
+      interface $CopyActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface DeleteActionOpts extends sap.f.semantic.SemanticButtonOpts {}
+      interface $DeleteActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface DiscussInJamActionOpts
-        extends sap.f.semantic.SemanticButtonOpts {}
+      interface $DiscussInJamActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface EditActionOpts extends sap.f.semantic.SemanticButtonOpts {}
+      interface $EditActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface ExitFullScreenActionOpts
-        extends sap.f.semantic.SemanticButtonOpts {}
+      interface $ExitFullScreenActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface FavoriteActionOpts
-        extends sap.f.semantic.SemanticToggleButtonOpts {}
+      interface $FavoriteActionSettings
+        extends sap.f.semantic.$SemanticToggleButtonSettings {}
 
-      interface FlagActionOpts
-        extends sap.f.semantic.SemanticToggleButtonOpts {}
+      interface $FlagActionSettings
+        extends sap.f.semantic.$SemanticToggleButtonSettings {}
 
-      interface FooterMainActionOpts extends sap.f.semantic.MainActionOpts {}
+      interface $FooterMainActionSettings
+        extends sap.f.semantic.$MainActionSettings {}
 
-      interface FullScreenActionOpts
-        extends sap.f.semantic.SemanticButtonOpts {}
+      interface $FullScreenActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface MainActionOpts extends sap.f.semantic.SemanticButtonOpts {
+      interface $MainActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {
         /**
          * Defines `MainAction` text
          */
         text?: string;
       }
 
-      interface MessagesIndicatorOpts
-        extends sap.f.semantic.SemanticButtonOpts {}
+      interface $MessagesIndicatorSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface NegativeActionOpts extends sap.f.semantic.SemanticButtonOpts {
+      interface $NegativeActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {
         /**
          * Defines `NegativeAction` text. **Note:** the default text is "Reject"
          */
         text?: string;
       }
 
-      interface PositiveActionOpts extends sap.f.semantic.SemanticButtonOpts {
+      interface $PositiveActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {
         /**
          * Defines `PositiveAction` text. **Note:** the default text is "Accept"
          */
         text?: string;
       }
 
-      interface PrintActionOpts extends sap.f.semantic.SemanticButtonOpts {}
+      interface $PrintActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface SemanticButtonOpts extends sap.f.semantic.SemanticControlOpts {
+      interface $SemanticButtonSettings
+        extends sap.f.semantic.$SemanticControlSettings {
         /**
          * Determines whether the `SemanticButton` is enabled.
          */
@@ -591,14 +602,14 @@ declare namespace sap {
         press?: Function;
       }
 
-      interface SemanticControlOpts extends sap.ui.core.ElementOpts {
+      interface $SemanticControlSettings extends sap.ui.core.$ElementSettings {
         /**
          * Determines whether the `SemanticControl` is visible.
          */
         visible?: boolean;
       }
 
-      interface SemanticPageOpts extends sap.ui.core.ControlOpts {
+      interface $SemanticPageSettings extends sap.ui.core.$ControlSettings {
         /**
          * Determines whether the header is expanded.
          *
@@ -921,8 +932,8 @@ declare namespace sap {
         customShareActions?: sap.m.Button[] | sap.m.Button;
       }
 
-      interface SemanticToggleButtonOpts
-        extends sap.f.semantic.SemanticButtonOpts {
+      interface $SemanticToggleButtonSettings
+        extends sap.f.semantic.$SemanticButtonSettings {
         /**
          * Defines the `SemanticToggleButton` pressed state.
          *
@@ -931,15 +942,17 @@ declare namespace sap {
         pressed?: boolean;
       }
 
-      interface SendEmailActionOpts extends sap.f.semantic.SemanticButtonOpts {}
+      interface $SendEmailActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface SendMessageActionOpts
-        extends sap.f.semantic.SemanticButtonOpts {}
+      interface $SendMessageActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface ShareInJamActionOpts
-        extends sap.f.semantic.SemanticButtonOpts {}
+      interface $ShareInJamActionSettings
+        extends sap.f.semantic.$SemanticButtonSettings {}
 
-      interface TitleMainActionOpts extends sap.f.semantic.MainActionOpts {}
+      interface $TitleMainActionSettings
+        extends sap.f.semantic.$MainActionSettings {}
       /**
        * @SINCE 1.46.0
        *
@@ -958,7 +971,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: AddActionOpts
+          mSettings?: $AddActionSettings
         );
 
         /**
@@ -1006,7 +1019,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: CloseActionOpts
+          mSettings?: $CloseActionSettings
         );
 
         /**
@@ -1054,7 +1067,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: CopyActionOpts
+          mSettings?: $CopyActionSettings
         );
 
         /**
@@ -1102,7 +1115,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: DeleteActionOpts
+          mSettings?: $DeleteActionSettings
         );
 
         /**
@@ -1150,7 +1163,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: DiscussInJamActionOpts
+          mSettings?: $DiscussInJamActionSettings
         );
 
         /**
@@ -1198,7 +1211,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: EditActionOpts
+          mSettings?: $EditActionSettings
         );
 
         /**
@@ -1246,7 +1259,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: ExitFullScreenActionOpts
+          mSettings?: $ExitFullScreenActionSettings
         );
 
         /**
@@ -1294,7 +1307,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: FavoriteActionOpts
+          mSettings?: $FavoriteActionSettings
         );
 
         /**
@@ -1342,7 +1355,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: FlagActionOpts
+          mSettings?: $FlagActionSettings
         );
 
         /**
@@ -1390,7 +1403,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: FooterMainActionOpts
+          mSettings?: $FooterMainActionSettings
         );
 
         /**
@@ -1438,7 +1451,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: FullScreenActionOpts
+          mSettings?: $FullScreenActionSettings
         );
 
         /**
@@ -1490,7 +1503,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: MainActionOpts
+          mSettings?: $MainActionSettings
         );
 
         /**
@@ -1557,7 +1570,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: MessagesIndicatorOpts
+          mSettings?: $MessagesIndicatorSettings
         );
 
         /**
@@ -1609,7 +1622,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: NegativeActionOpts
+          mSettings?: $NegativeActionSettings
         );
 
         /**
@@ -1680,7 +1693,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: PositiveActionOpts
+          mSettings?: $PositiveActionSettings
         );
 
         /**
@@ -1747,7 +1760,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: PrintActionOpts
+          mSettings?: $PrintActionSettings
         );
 
         /**
@@ -1799,7 +1812,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: SemanticButtonOpts
+          mSettings?: $SemanticButtonSettings
         );
 
         /**
@@ -1938,7 +1951,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: SemanticControlOpts
+          mSettings?: $SemanticControlSettings
         );
 
         /**
@@ -2064,7 +2077,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: SemanticPageOpts
+          mSettings?: $SemanticPageSettings
         );
 
         /**
@@ -3430,7 +3443,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: SemanticToggleButtonOpts
+          mSettings?: $SemanticToggleButtonSettings
         );
 
         /**
@@ -3505,7 +3518,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: SendEmailActionOpts
+          mSettings?: $SendEmailActionSettings
         );
 
         /**
@@ -3553,7 +3566,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: SendMessageActionOpts
+          mSettings?: $SendMessageActionSettings
         );
 
         /**
@@ -3601,7 +3614,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: ShareInJamActionOpts
+          mSettings?: $ShareInJamActionSettings
         );
 
         /**
@@ -3649,7 +3662,7 @@ declare namespace sap {
           /**
            * Custom initial settings for the new control
            */
-          mSettings?: TitleMainActionOpts
+          mSettings?: $TitleMainActionSettings
         );
 
         /**
@@ -3681,7 +3694,7 @@ declare namespace sap {
       }
     }
 
-    interface AvatarOpts extends sap.ui.core.ControlOpts {
+    interface $AvatarSettings extends sap.ui.core.$ControlSettings {
       /**
        * Determines the path to the desired image or icon.
        */
@@ -3747,7 +3760,7 @@ declare namespace sap {
       ariaLabelledBy?: sap.ui.core.Control[] | string[];
     }
 
-    interface DynamicPageOpts extends sap.ui.core.ControlOpts {
+    interface $DynamicPageSettings extends sap.ui.core.$ControlSettings {
       /**
        * Preserves the current header state when scrolling. For example, if the user expands the header by clicking
        * on the title and then scrolls down the page, the header will remain expanded.
@@ -3843,7 +3856,7 @@ declare namespace sap {
       footer?: sap.m.IBar;
     }
 
-    interface DynamicPageHeaderOpts extends sap.ui.core.ControlOpts {
+    interface $DynamicPageHeaderSettings extends sap.ui.core.$ControlSettings {
       /**
        * Determines whether the header is pinnable.
        */
@@ -3865,7 +3878,7 @@ declare namespace sap {
       content?: sap.ui.core.Control[] | sap.ui.core.Control;
     }
 
-    interface DynamicPageTitleOpts extends sap.ui.core.ControlOpts {
+    interface $DynamicPageTitleSettings extends sap.ui.core.$ControlSettings {
       /**
        * @SINCE 1.50
        * @deprecated (since 1.54) - Please use the `areaShrinkRatio` property instead. The value of `areaShrinkRatio`
@@ -4006,7 +4019,8 @@ declare namespace sap {
       breadcrumbs?: sap.m.IBreadcrumbs;
     }
 
-    interface FlexibleColumnLayoutOpts extends sap.ui.core.ControlOpts {
+    interface $FlexibleColumnLayoutSettings
+      extends sap.ui.core.$ControlSettings {
       /**
        * Determines the layout of the control - number of visible columns and their relative sizes.
        *
@@ -4142,7 +4156,7 @@ declare namespace sap {
       initialEndColumnPage?: sap.ui.core.Control | string;
     }
 
-    interface GridListOpts extends sap.m.ListBaseOpts {
+    interface $GridListSettings extends sap.m.$ListBaseSettings {
       /**
        * Defines a custom grid layout
        */
@@ -4192,7 +4206,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: AvatarOpts
+        mSettings?: $AvatarSettings
       );
 
       /**
@@ -4619,7 +4633,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: DynamicPageOpts
+        mSettings?: $DynamicPageSettings
       );
 
       /**
@@ -4950,7 +4964,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: DynamicPageHeaderOpts
+        mSettings?: $DynamicPageHeaderSettings
       );
 
       /**
@@ -5130,7 +5144,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: DynamicPageTitleOpts
+        mSettings?: $DynamicPageTitleSettings
       );
 
       /**
@@ -5856,7 +5870,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: FlexibleColumnLayoutOpts
+        mSettings?: $FlexibleColumnLayoutSettings
       );
 
       /**
@@ -7649,7 +7663,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: GridListOpts
+        mSettings?: $GridListSettings
       );
 
       /**

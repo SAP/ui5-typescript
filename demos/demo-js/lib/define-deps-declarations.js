@@ -1,14 +1,15 @@
 sap.ui.define(
   // try autocomplete here
-  [
-    "sap/ui/core/TooltipBase",
-    // searching the suffix works very well
-    "sap/m/ComboBoxTextField",
-    // Filtering while Typing works well, but only if no "/" is used.
-    // Once a "/" is used the filtering resets itself and the auto completed text may be invalid!
-    // - This is an Editor Level issue
-    "sap/ui/",
-    ""
-  ],
-  function(TooltipBase) {}
+  ["sap/gantt/GanttChart", "sap/ui/layout/cssgrid/GridItemLayoutData"],
+  /**
+   * @param {typeof sap.gantt.GanttChartContainer} GanttChart
+   * @param {typeof sap.ui.layout.cssgrid.GridItemLayoutData} GridItemLayoutData
+   */
+  function(GanttChart, GridItemLayoutData) {
+    var x = new GanttChart("bamba", {});
+    x.attachHo;
+
+    var y = new GridItemLayoutData("bisli", { gridColumn: 6 });
+    y.getGridColumn;
+  }
 );

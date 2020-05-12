@@ -10,7 +10,7 @@ declare namespace sap {
    * SAPUI5 library with controls specialized for administrative applications.
    */
   namespace tnt {
-    interface InfoLabelOpts extends sap.ui.core.ControlOpts {
+    interface $InfoLabelSettings extends sap.ui.core.$ControlSettings {
       /**
        * Specifies the text inside the `InfoLabel` control.
        */
@@ -48,7 +48,7 @@ declare namespace sap {
       textDirection?: sap.ui.core.TextDirection;
     }
 
-    interface NavigationListOpts extends sap.ui.core.ControlOpts {
+    interface $NavigationListSettings extends sap.ui.core.$ControlSettings {
       /**
        * Specifies the width of the control.
        */
@@ -87,7 +87,7 @@ declare namespace sap {
       selectedItem?: sap.tnt.NavigationListItem | string;
     }
 
-    interface NavigationListItemOpts extends sap.ui.core.ItemOpts {
+    interface $NavigationListItemSettings extends sap.ui.core.$ItemSettings {
       /**
        * Specifies the icon for the item.
        */
@@ -121,7 +121,7 @@ declare namespace sap {
       items?: sap.tnt.NavigationListItem[] | sap.tnt.NavigationListItem;
     }
 
-    interface SideNavigationOpts extends sap.ui.core.ControlOpts {
+    interface $SideNavigationSettings extends sap.ui.core.$ControlSettings {
       /**
        * Specifies if the control is expanded.
        */
@@ -155,11 +155,12 @@ declare namespace sap {
       selectedItem?: sap.tnt.NavigationListItem | string;
     }
 
-    interface ToolHeaderOpts extends sap.m.OverflowToolbarOpts {}
+    interface $ToolHeaderSettings extends sap.m.$OverflowToolbarSettings {}
 
-    interface ToolHeaderUtilitySeparatorOpts extends sap.ui.core.ControlOpts {}
+    interface $ToolHeaderUtilitySeparatorSettings
+      extends sap.ui.core.$ControlSettings {}
 
-    interface ToolPageOpts extends sap.ui.core.ControlOpts {
+    interface $ToolPageSettings extends sap.ui.core.$ControlSettings {
       /**
        * Indicates if the side area is expanded. Overrides the expanded property of the sideContent aggregation.
        */
@@ -221,7 +222,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: InfoLabelOpts
+        mSettings?: $InfoLabelSettings
       );
 
       /**
@@ -435,7 +436,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: NavigationListOpts
+        mSettings?: $NavigationListSettings
       );
 
       /**
@@ -729,7 +730,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: NavigationListItemOpts
+        mSettings?: $NavigationListItemSettings
       );
 
       /**
@@ -1011,7 +1012,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: SideNavigationOpts
+        mSettings?: $SideNavigationSettings
       );
 
       /**
@@ -1246,7 +1247,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: ToolHeaderOpts
+        mSettings?: $ToolHeaderSettings
       );
 
       /**
@@ -1301,7 +1302,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: ToolHeaderUtilitySeparatorOpts
+        mSettings?: $ToolHeaderUtilitySeparatorSettings
       );
 
       /**
@@ -1356,7 +1357,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: ToolPageOpts
+        mSettings?: $ToolPageSettings
       );
 
       /**

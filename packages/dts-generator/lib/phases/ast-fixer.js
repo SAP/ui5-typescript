@@ -412,9 +412,9 @@ function markOverwrittenMethods(groupedAst, symbolTable) {
       if (combinedAncestorsMethodsMap[ownMethod.name]) {
         ownMethod.overwrite = true;
         const clazzFqn = getFqn(clazz);
-        console.log(
-          `AUTOFIXING - Marking method <${ownMethod.name}> in class <${clazzFqn}> as overwritten.`
-        );
+        // console.log(
+        //   `AUTOFIXING - Marking method <${ownMethod.name}> in class <${clazzFqn}> as overwritten.`
+        // );
       }
     });
 

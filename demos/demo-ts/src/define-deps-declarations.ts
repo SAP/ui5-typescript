@@ -7,8 +7,7 @@ sap.ui.define(
     // Filtering while Typing works well, but only if no "/" is used.
     // Once a "/" is used the filtering resets itself and the auto completed text may be invalid!
     // - This is an Editor Level issue
-    "sap/ui/",
-    ""
+    "sap/ui/"
   ],
   function(TooltipBase: typeof sap.ui.core.TooltipBase) {}
 );
