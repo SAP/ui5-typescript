@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "module": "none",
-    "noEmit": true
-  },
-  "include": ["types/*.d.ts"]
-}

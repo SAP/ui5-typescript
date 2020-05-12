@@ -60,4 +60,6 @@ typings/
 # next.js build output
 .next
 
+# npm lock file
+package-lock.json
 .idea

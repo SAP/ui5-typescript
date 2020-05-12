@@ -1,11 +1,11 @@
 {
-  "name": "demo-openui5-typescript-signatures-js",
+  "name": "demo-sapui5-typescript-signatures-js",
   "private": true,
   "version": "1.60.5",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@openui5/ts-types": "^1.60.5",
-    "typescript": "^3.4.3"
+    "@sapui5/ts-types": "1.77.2",
+    "typescript": "3.8.3"
   },
   "scripts": {
     "test": "npm run type-check",

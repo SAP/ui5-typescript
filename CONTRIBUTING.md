@@ -8,15 +8,10 @@ See each individual package's CONTRIBUTING.md for package specific details.
 ### pre-requisites
 
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/) >= 1.4.2
-- nodejs >= 8
+- nodejs >= 10
 
-Yarn rather than npm is needed as this mono-repo uses [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
+**Yarn** rather than npm is needed as this mono-repo uses [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
 and the [nohoist](https://yarnpkg.com/blog/2018/02/15/nohoist/) feature.
-
-Nodejs versions older than 8, would no longer be supported after 04/2019.
-Currently (04/2019) nodejs 10.0 is the "current" node version and thus the recommended one to use.
-
-- https://nodejs.org/en/about/releases/
 
 ### Initial Setup
 
@@ -37,26 +32,10 @@ may result in voter failures.
 Mocha is used for unit-testing.
 Please refrain from integrating multiple testing libraries to keep things consistent.
 
-### Release Life-Cycle.
-
-For the initial release all (both) the packages will use the **same version**.
-This version would match the major and minor versions of the OpenUI5 project, but **not the patch version**.
-
-The coupling between @openui5/ts-types and the openui5 runtime versions is self explanatory.
-The coupling between @ui5/dts-generator and the openui5 runtime versions is less obvious.
-This is a temporary measure due to the dts-generator containing "directives" needed
-to successfully compile ui5 api.json files to TypeScript d.ts files for **specific** OpenUI5 versions.
-In the future this coupling would hopefully be severed and the dts-generator would have its own versions life-cycle.
-
-The de-coupling of the patch versions is done to allow releasing TypeScript definitions "fixes" separately from
-OpenUI5 versions, This is not a concern because according to [semantic Versioning][semver] patch versions should not include API changes
-
 ### Release Process
 
 - Update the CHANGELOG.md files for all packages.
   - Include a version number and date.
-- Update the api.json files if relevant.
-  - See [api.json files guide](./packages/ts-types/CONTRIBUTING.md#updating-openui5-version).
 - Commit pre release changes to master.
 - `yarn run lerna:version`
 - Follow the lerna CLI instruction and choose a new version mode matching the version number
