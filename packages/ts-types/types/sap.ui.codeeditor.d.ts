@@ -11,7 +11,7 @@ declare namespace sap {
      * UI5 library: sap.ui.codeeditor.
      */
     namespace codeeditor {
-      interface CodeEditorOpts extends sap.ui.core.ControlOpts {
+      interface $CodeEditorSettings extends sap.ui.core.$ControlSettings {
         /**
          * The value displayed in the code editor
          */
@@ -111,7 +111,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: CodeEditorOpts
+          mSettings?: $CodeEditorSettings
         );
 
         /**
