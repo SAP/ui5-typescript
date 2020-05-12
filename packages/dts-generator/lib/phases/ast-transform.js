@@ -27,7 +27,7 @@ function transformAst(ast, symbolTable, libraryName) {
  */
 function updateConstructorMSettingsParam(ast) {
   function genMsettingInterfaceName(className) {
-    return `$${className}Settings`;
+    return `${className}Opts`;
   }
 
   function buildExtendedInterfaceName(extendedClassName) {

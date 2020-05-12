@@ -15,8 +15,7 @@ declare namespace sap {
        * Controls and helper classes around the calendar control.
        */
       namespace calendar {
-        interface $DatesRowSettings
-          extends sap.ui.unified.calendar.$MonthSettings {
+        interface DatesRowOpts extends sap.ui.unified.calendar.MonthOpts {
           /**
            * Start date of the row If in rendering phase the date property is not in the range startDate + days, it
            * is set to the start date So after setting the start date the date should be set to be in the range of
@@ -38,7 +37,7 @@ declare namespace sap {
           showDayNamesLine?: boolean;
         }
 
-        interface $HeaderSettings extends sap.ui.core.$ControlSettings {
+        interface HeaderOpts extends sap.ui.core.ControlOpts {
           /**
            * @SINCE 1.32.0
            *
@@ -155,7 +154,7 @@ declare namespace sap {
           pressButton2?: Function;
         }
 
-        interface $MonthSettings extends sap.ui.core.$ControlSettings {
+        interface MonthOpts extends sap.ui.core.ControlOpts {
           /**
            * A date as JavaScript Date object. The month including this date is rendered and this date is focused
            * initially (if no other focus is set).
@@ -286,7 +285,7 @@ declare namespace sap {
           legend?: sap.ui.unified.CalendarLegend | string;
         }
 
-        interface $MonthPickerSettings extends sap.ui.core.$ControlSettings {
+        interface MonthPickerOpts extends sap.ui.core.ControlOpts {
           /**
            * The month is initial focused and selected The value must be between 0 and 11
            */
@@ -329,7 +328,7 @@ declare namespace sap {
           pageChange?: Function;
         }
 
-        interface $MonthsRowSettings extends sap.ui.core.$ControlSettings {
+        interface MonthsRowOpts extends sap.ui.core.ControlOpts {
           /**
            * A date as JavaScript Date object. The month including this date is rendered and this date is focused
            * initially (if no other focus is set). If the date property is not in the range `startDate` + `months`
@@ -409,7 +408,7 @@ declare namespace sap {
           legend?: sap.ui.unified.CalendarLegend | string;
         }
 
-        interface $TimesRowSettings extends sap.ui.core.$ControlSettings {
+        interface TimesRowOpts extends sap.ui.core.ControlOpts {
           /**
            * A date as JavaScript Date object. The month including this date is rendered and this date is focused
            * initially (if no other focus is set). If the date property is not in the range `startDate` + `items`
@@ -494,7 +493,7 @@ declare namespace sap {
           legend?: sap.ui.unified.CalendarLegend | string;
         }
 
-        interface $YearPickerSettings extends sap.ui.core.$ControlSettings {
+        interface YearPickerOpts extends sap.ui.core.ControlOpts {
           /**
            * @deprecated (since 1.34.0) - replaced by `date` property
            *
@@ -567,7 +566,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $DatesRowSettings
+            mSettings?: DatesRowOpts
           );
 
           /**
@@ -737,7 +736,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $HeaderSettings
+            mSettings?: HeaderOpts
           );
 
           /**
@@ -1446,7 +1445,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $MonthSettings
+            mSettings?: MonthOpts
           );
 
           /**
@@ -2249,7 +2248,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $MonthPickerSettings
+            mSettings?: MonthPickerOpts
           );
 
           /**
@@ -2577,7 +2576,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $MonthsRowSettings
+            mSettings?: MonthsRowOpts
           );
 
           /**
@@ -3104,7 +3103,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $TimesRowSettings
+            mSettings?: TimesRowOpts
           );
 
           /**
@@ -3652,7 +3651,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $YearPickerSettings
+            mSettings?: YearPickerOpts
           );
 
           /**
@@ -3993,7 +3992,7 @@ declare namespace sap {
         ): Promise<any>;
       }
 
-      interface $CalendarSettings extends sap.ui.core.$ControlSettings {
+      interface CalendarOpts extends sap.ui.core.ControlOpts {
         /**
          * If set, interval selection is allowed
          */
@@ -4179,8 +4178,8 @@ declare namespace sap {
         legend?: sap.ui.unified.CalendarLegend | string;
       }
 
-      interface $CalendarAppointmentSettings
-        extends sap.ui.unified.$DateTypeRangeSettings {
+      interface CalendarAppointmentOpts
+        extends sap.ui.unified.DateTypeRangeOpts {
         /**
          * Title of the appointment.
          */
@@ -4222,8 +4221,7 @@ declare namespace sap {
         color?: sap.ui.core.CSSColor;
       }
 
-      interface $CalendarDateIntervalSettings
-        extends sap.ui.unified.$CalendarSettings {
+      interface CalendarDateIntervalOpts extends sap.ui.unified.CalendarOpts {
         /**
          * Start date of the Interval
          */
@@ -4250,7 +4248,7 @@ declare namespace sap {
         pickerPopup?: boolean;
       }
 
-      interface $CalendarLegendSettings extends sap.ui.core.$ControlSettings {
+      interface CalendarLegendOpts extends sap.ui.core.ControlOpts {
         /**
          * @SINCE 1.54
          *
@@ -4273,8 +4271,7 @@ declare namespace sap {
           | sap.ui.unified.CalendarLegendItem;
       }
 
-      interface $CalendarLegendItemSettings
-        extends sap.ui.core.$ElementSettings {
+      interface CalendarLegendItemOpts extends sap.ui.core.ElementOpts {
         /**
          * Text to be displayed for the item.
          */
@@ -4296,8 +4293,7 @@ declare namespace sap {
         color?: sap.ui.core.CSSColor;
       }
 
-      interface $CalendarMonthIntervalSettings
-        extends sap.ui.core.$ControlSettings {
+      interface CalendarMonthIntervalOpts extends sap.ui.core.ControlOpts {
         /**
          * Width of the `CalendarMonthInterval`. The width of the single months depends on this width.
          */
@@ -4407,7 +4403,7 @@ declare namespace sap {
         legend?: sap.ui.unified.CalendarLegend | string;
       }
 
-      interface $CalendarRowSettings extends sap.ui.core.$ControlSettings {
+      interface CalendarRowOpts extends sap.ui.core.ControlOpts {
         /**
          * Start date, as JavaScript Date object, of the row. As default, the current date is used.
          */
@@ -4590,8 +4586,7 @@ declare namespace sap {
         legend?: sap.ui.unified.CalendarLegend | string;
       }
 
-      interface $CalendarTimeIntervalSettings
-        extends sap.ui.core.$ControlSettings {
+      interface CalendarTimeIntervalOpts extends sap.ui.core.ControlOpts {
         /**
          * Width of the `CalendarTimeInterval`. The width of the single months depends on this width.
          */
@@ -4707,7 +4702,7 @@ declare namespace sap {
         legend?: sap.ui.unified.CalendarLegend | string;
       }
 
-      interface $ColorPickerSettings extends sap.ui.core.$ControlSettings {
+      interface ColorPickerOpts extends sap.ui.core.ControlOpts {
         /**
          * @SINCE 1.48.0
          *
@@ -4753,8 +4748,7 @@ declare namespace sap {
         liveChange?: Function;
       }
 
-      interface $ColorPickerPopoverSettings
-        extends sap.ui.core.$ControlSettings {
+      interface ColorPickerPopoverOpts extends sap.ui.core.ControlOpts {
         /**
          * @SINCE 1.60.0
          *
@@ -4789,7 +4783,7 @@ declare namespace sap {
         change?: Function;
       }
 
-      interface $ContentSwitcherSettings extends sap.ui.core.$ControlSettings {
+      interface ContentSwitcherOpts extends sap.ui.core.ControlOpts {
         /**
          * Set the used animation when changing content. This just sets a CSS-class named "sapUiUnifiedACSwitcherAnimation"
          * + this value on the root element of the control. The animation has to be implemented in CSS. This also
@@ -4814,7 +4808,7 @@ declare namespace sap {
         content2?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $CurrencySettings extends sap.ui.core.$ControlSettings {
+      interface CurrencyOpts extends sap.ui.core.ControlOpts {
         /**
          * Determines the currency value.
          */
@@ -4852,7 +4846,7 @@ declare namespace sap {
         useSymbol?: boolean;
       }
 
-      interface $DateRangeSettings extends sap.ui.core.$ElementSettings {
+      interface DateRangeOpts extends sap.ui.core.ElementOpts {
         /**
          * Start date for a date range. This must be a JavaScript date object.
          */
@@ -4865,15 +4859,14 @@ declare namespace sap {
         endDate?: object;
       }
 
-      interface $DateTypeRangeSettings
-        extends sap.ui.unified.$DateRangeSettings {
+      interface DateTypeRangeOpts extends sap.ui.unified.DateRangeOpts {
         /**
          * Type of the date range.
          */
         type?: sap.ui.unified.CalendarDayType;
       }
 
-      interface $FileUploaderSettings extends sap.ui.core.$ControlSettings {
+      interface FileUploaderOpts extends sap.ui.core.ControlOpts {
         /**
          * Value of the path for file upload.
          */
@@ -5131,8 +5124,7 @@ declare namespace sap {
         xhrSettings?: sap.ui.unified.FileUploaderXHRSettings;
       }
 
-      interface $FileUploaderParameterSettings
-        extends sap.ui.core.$ElementSettings {
+      interface FileUploaderParameterOpts extends sap.ui.core.ElementOpts {
         /**
          * @SINCE 1.12.2
          *
@@ -5148,8 +5140,7 @@ declare namespace sap {
         value?: string;
       }
 
-      interface $FileUploaderXHRSettingsSettings
-        extends sap.ui.core.$ElementSettings {
+      interface FileUploaderXHRSettingsOpts extends sap.ui.core.ElementOpts {
         /**
          * @SINCE 1.52
          *
@@ -5158,7 +5149,7 @@ declare namespace sap {
         withCredentials?: boolean;
       }
 
-      interface $MenuSettings extends sap.ui.core.$ControlSettings {
+      interface MenuOpts extends sap.ui.core.ControlOpts {
         /**
          * When a menu is disabled none of its items can be selected by the user. The enabled property of an item
          * (@link sap.ui.unified.MenuItemBase#getEnabled) has no effect when the menu of the item is disabled.
@@ -5213,7 +5204,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $MenuItemSettings extends sap.ui.unified.$MenuItemBaseSettings {
+      interface MenuItemOpts extends sap.ui.unified.MenuItemBaseOpts {
         /**
          * Defines the text which should be displayed on the item.
          */
@@ -5231,7 +5222,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $MenuItemBaseSettings extends sap.ui.core.$ElementSettings {
+      interface MenuItemBaseOpts extends sap.ui.core.ElementOpts {
         /**
          * When an item is disabled the item can not be selected by the user. The enabled property of the item has
          * no effect when the menu of the item is disabled ({@link sap.ui.unified.Menu#getEnabled Menu#getEnabled}).
@@ -5262,8 +5253,7 @@ declare namespace sap {
         submenu?: sap.ui.unified.Menu;
       }
 
-      interface $MenuTextFieldItemSettings
-        extends sap.ui.unified.$MenuItemBaseSettings {
+      interface MenuTextFieldItemOpts extends sap.ui.unified.MenuItemBaseOpts {
         /**
          * Defines the label of the text field of the item.
          */
@@ -5287,7 +5277,7 @@ declare namespace sap {
         valueState?: sap.ui.core.ValueState;
       }
 
-      interface $ShellSettings extends sap.ui.unified.$ShellLayoutSettings {
+      interface ShellOpts extends sap.ui.unified.ShellLayoutOpts {
         /**
          * The application icon. If a custom header is set this property has no effect.
          */
@@ -5356,7 +5346,7 @@ declare namespace sap {
         user?: sap.ui.unified.ShellHeadUserItem;
       }
 
-      interface $ShellHeadItemSettings extends sap.ui.core.$ElementSettings {
+      interface ShellHeadItemOpts extends sap.ui.core.ElementOpts {
         /**
          * @deprecated (since 1.18) - Dividers are not supported anymore.
          *
@@ -5416,8 +5406,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $ShellHeadUserItemSettings
-        extends sap.ui.core.$ElementSettings {
+      interface ShellHeadUserItemOpts extends sap.ui.core.ElementOpts {
         /**
          * The name of the user.
          */
@@ -5447,7 +5436,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $ShellLayoutSettings extends sap.ui.core.$ControlSettings {
+      interface ShellLayoutOpts extends sap.ui.core.ControlOpts {
         /**
          * Shows / Hides the side pane.
          */
@@ -5480,7 +5469,7 @@ declare namespace sap {
         header?: sap.ui.core.Control;
       }
 
-      interface $ShellOverlaySettings extends sap.ui.core.$ControlSettings {
+      interface ShellOverlayOpts extends sap.ui.core.ControlOpts {
         /**
          * Fired when the overlay was closed.
          */
@@ -5508,7 +5497,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $SplitContainerSettings extends sap.ui.core.$ControlSettings {
+      interface SplitContainerOpts extends sap.ui.core.ControlOpts {
         /**
          * Shows / Hides the secondary area.
          */
@@ -5564,7 +5553,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $CalendarSettings
+          mSettings?: CalendarOpts
         );
 
         /**
@@ -6525,7 +6514,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $CalendarAppointmentSettings
+          mSettings?: CalendarAppointmentOpts
         );
 
         /**
@@ -6727,7 +6716,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $CalendarDateIntervalSettings
+          mSettings?: CalendarDateIntervalOpts
         );
 
         /**
@@ -6906,7 +6895,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $CalendarLegendSettings
+          mSettings?: CalendarLegendOpts
         );
 
         /**
@@ -7070,7 +7059,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $CalendarLegendItemSettings
+          mSettings?: CalendarLegendItemOpts
         );
 
         /**
@@ -7196,7 +7185,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $CalendarMonthIntervalSettings
+          mSettings?: CalendarMonthIntervalOpts
         );
 
         /**
@@ -7850,7 +7839,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $CalendarRowSettings
+          mSettings?: CalendarRowOpts
         );
 
         /**
@@ -8844,7 +8833,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $CalendarTimeIntervalSettings
+          mSettings?: CalendarTimeIntervalOpts
         );
 
         /**
@@ -9532,7 +9521,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ColorPickerSettings
+          mSettings?: ColorPickerOpts
         );
 
         /**
@@ -9903,7 +9892,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ColorPickerPopoverSettings
+          mSettings?: ColorPickerPopoverOpts
         );
 
         /**
@@ -10169,7 +10158,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ContentSwitcherSettings
+          mSettings?: ContentSwitcherOpts
         );
 
         /**
@@ -10422,7 +10411,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $CurrencySettings
+          mSettings?: CurrencyOpts
         );
 
         /**
@@ -10621,7 +10610,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $DateRangeSettings
+          mSettings?: DateRangeOpts
         );
 
         /**
@@ -10712,7 +10701,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $DateTypeRangeSettings
+          mSettings?: DateTypeRangeOpts
         );
 
         /**
@@ -10790,7 +10779,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $FileUploaderSettings
+          mSettings?: FileUploaderOpts
         );
 
         /**
@@ -12461,7 +12450,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $FileUploaderParameterSettings
+          mSettings?: FileUploaderParameterOpts
         );
 
         /**
@@ -12558,7 +12547,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $FileUploaderXHRSettingsSettings
+          mSettings?: FileUploaderXHRSettingsOpts
         );
 
         /**
@@ -12639,7 +12628,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MenuSettings
+          mSettings?: MenuOpts
         );
 
         /**
@@ -13017,7 +13006,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MenuItemSettings
+          mSettings?: MenuItemOpts
         );
 
         /**
@@ -13143,7 +13132,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MenuItemBaseSettings
+          mSettings?: MenuItemBaseOpts
         );
 
         /**
@@ -13414,7 +13403,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MenuTextFieldItemSettings
+          mSettings?: MenuTextFieldItemOpts
         );
 
         /**
@@ -13582,7 +13571,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ShellSettings
+          mSettings?: ShellOpts
         );
 
         /**
@@ -14028,7 +14017,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ShellHeadItemSettings
+          mSettings?: ShellHeadItemOpts
         );
 
         /**
@@ -14355,7 +14344,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ShellHeadUserItemSettings
+          mSettings?: ShellHeadUserItemOpts
         );
 
         /**
@@ -14573,7 +14562,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ShellLayoutSettings
+          mSettings?: ShellLayoutOpts
         );
 
         /**
@@ -14833,7 +14822,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ShellOverlaySettings
+          mSettings?: ShellOverlayOpts
         );
 
         /**
@@ -15079,7 +15068,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $SplitContainerSettings
+          mSettings?: SplitContainerOpts
         );
 
         /**

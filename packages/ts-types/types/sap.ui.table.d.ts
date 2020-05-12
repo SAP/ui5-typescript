@@ -11,7 +11,7 @@ declare namespace sap {
      * Table-like controls, mainly for desktop scenarios.
      */
     namespace table {
-      interface $AnalyticalColumnSettings extends sap.ui.table.$ColumnSettings {
+      interface AnalyticalColumnOpts extends sap.ui.table.ColumnOpts {
         /**
          * Defines the primary model property which is used inside the Column. In case of the analytical extension
          * this means the property which is grouped by for dimensions or the property which is summed for measures.
@@ -41,10 +41,9 @@ declare namespace sap {
         groupHeaderFormatter?: any;
       }
 
-      interface $AnalyticalColumnMenuSettings
-        extends sap.ui.table.$ColumnMenuSettings {}
+      interface AnalyticalColumnMenuOpts extends sap.ui.table.ColumnMenuOpts {}
 
-      interface $AnalyticalTableSettings extends sap.ui.table.$TableSettings {
+      interface AnalyticalTableOpts extends sap.ui.table.TableOpts {
         /**
          * @deprecated (since 1.44.0) - please use the corresponding binding parameter `sumOnTop` instead.
          *
@@ -137,7 +136,7 @@ declare namespace sap {
         dirty?: boolean;
       }
 
-      interface $ColumnSettings extends sap.ui.core.$ElementSettings {
+      interface ColumnOpts extends sap.ui.core.ElementOpts {
         /**
          * Width of the column in CSS units. Default value is `auto`, see
          * Minimal column width is device-dependent, for example on desktop devices the column will not be smaller
@@ -360,16 +359,16 @@ declare namespace sap {
         menu?: sap.ui.unified.Menu;
       }
 
-      interface $ColumnMenuSettings extends sap.ui.unified.$MenuSettings {}
+      interface ColumnMenuOpts extends sap.ui.unified.MenuOpts {}
 
-      interface $RowSettings extends sap.ui.core.$ElementSettings {
+      interface RowOpts extends sap.ui.core.ElementOpts {
         /**
          * The controls for the cells.
          */
         cells?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $RowActionSettings extends sap.ui.core.$ControlSettings {
+      interface RowActionOpts extends sap.ui.core.ControlOpts {
         /**
          * Whether the control should be visible on the screen. If set to `false`, the control is hidden.
          */
@@ -381,7 +380,7 @@ declare namespace sap {
         items?: sap.ui.table.RowActionItem[] | sap.ui.table.RowActionItem;
       }
 
-      interface $RowActionItemSettings extends sap.ui.core.$ElementSettings {
+      interface RowActionItemOpts extends sap.ui.core.ElementOpts {
         /**
          * The icon of the item.
          */
@@ -409,7 +408,7 @@ declare namespace sap {
         press?: Function;
       }
 
-      interface $RowSettingsSettings extends sap.ui.core.$ElementSettings {
+      interface RowSettingsOpts extends sap.ui.core.ElementOpts {
         /**
          * @SINCE 1.48.0
          *
@@ -419,7 +418,7 @@ declare namespace sap {
         highlight?: sap.ui.core.MessageType;
       }
 
-      interface $TableSettings extends sap.ui.core.$ControlSettings {
+      interface TableOpts extends sap.ui.core.ControlOpts {
         /**
          * Width of the Table.
          */
@@ -853,7 +852,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $TreeTableSettings extends sap.ui.table.$TableSettings {
+      interface TreeTableOpts extends sap.ui.table.TableOpts {
         /**
          * @deprecated (since 1.46.3) - replaced by the corresponding binding parameter `numberOfExpandedLevels`.
          *
@@ -931,7 +930,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $AnalyticalColumnSettings
+          mSettings?: AnalyticalColumnOpts
         );
 
         /**
@@ -1101,7 +1100,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $AnalyticalColumnMenuSettings
+          mSettings?: AnalyticalColumnMenuOpts
         );
 
         /**
@@ -1156,7 +1155,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $AnalyticalTableSettings
+          mSettings?: AnalyticalTableOpts
         );
 
         /**
@@ -1661,7 +1660,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ColumnSettings
+          mSettings?: ColumnOpts
         );
 
         /**
@@ -2566,7 +2565,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ColumnMenuSettings
+          mSettings?: ColumnMenuOpts
         );
 
         /**
@@ -2615,7 +2614,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $RowSettings
+          mSettings?: RowOpts
         );
 
         /**
@@ -2732,7 +2731,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $RowActionSettings
+          mSettings?: RowActionOpts
         );
 
         /**
@@ -2868,7 +2867,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $RowActionItemSettings
+          mSettings?: RowActionItemOpts
         );
 
         /**
@@ -3075,7 +3074,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $RowSettingsSettings
+          mSettings?: RowSettingsOpts
         );
 
         /**
@@ -3166,7 +3165,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TableSettings
+          mSettings?: TableOpts
         );
 
         /**
@@ -6170,7 +6169,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TreeTableSettings
+          mSettings?: TreeTableOpts
         );
 
         /**

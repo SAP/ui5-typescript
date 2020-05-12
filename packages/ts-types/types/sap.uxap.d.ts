@@ -48,7 +48,7 @@ declare namespace sap {
      */
     interface IHeaderTitle {}
 
-    interface $AnchorBarSettings extends sap.m.$ToolbarSettings {
+    interface AnchorBarOpts extends sap.m.ToolbarOpts {
       /**
        * Determines whether to show a Popover with Subsection links when clicking on Section links in the Anchor
        * bar.
@@ -76,7 +76,7 @@ declare namespace sap {
       selectedButton?: sap.m.Button | string;
     }
 
-    interface $BlockBaseSettings extends sap.ui.core.$ControlSettings {
+    interface BlockBaseOpts extends sap.ui.core.ControlOpts {
       /**
        * Determines the mode of the block. When block is used inside ObjectPage this mode is inherited my the
        * SubSection. The mode of the block is changed when SubSection mode changes.
@@ -122,7 +122,7 @@ declare namespace sap {
       selectedView?: sap.ui.core.Control | string;
     }
 
-    interface $BreadCrumbsSettings extends sap.ui.core.$ControlSettings {
+    interface BreadCrumbsOpts extends sap.ui.core.ControlOpts {
       /**
        * Sets the visibility of the current/last element in the BreadCrumbs path.
        */
@@ -139,14 +139,14 @@ declare namespace sap {
       currentLocation?: sap.m.Text;
     }
 
-    interface $HierarchicalSelectSettings extends sap.m.$SelectSettings {
+    interface HierarchicalSelectOpts extends sap.m.SelectOpts {
       /**
        * Determines whether the HierarchicalSelect items are displayed in upper case.
        */
       upperCase?: boolean;
     }
 
-    interface $ModelMappingSettings extends sap.ui.core.$ElementSettings {
+    interface ModelMappingOpts extends sap.ui.core.ElementOpts {
       /**
        * Determines the external model name.
        */
@@ -163,7 +163,7 @@ declare namespace sap {
       externalPath?: string;
     }
 
-    interface $ObjectPageHeaderSettings extends sap.ui.core.$ControlSettings {
+    interface ObjectPageHeaderOpts extends sap.ui.core.ControlOpts {
       /**
        * The URL of the image, representing the business object
        */
@@ -326,8 +326,7 @@ declare namespace sap {
       titleSelectorTooltip?: sap.ui.core.TooltipBase;
     }
 
-    interface $ObjectPageHeaderActionButtonSettings
-      extends sap.m.$ButtonSettings {
+    interface ObjectPageHeaderActionButtonOpts extends sap.m.ButtonOpts {
       /**
        * Hide the button text when rendered into the headerTitle part of the ObjectPageLayout. This is useful
        * if you want to display icons only in the headerTitle part but still want to display text + icon in the
@@ -350,8 +349,7 @@ declare namespace sap {
       importance?: sap.uxap.Importance;
     }
 
-    interface $ObjectPageHeaderContentSettings
-      extends sap.ui.core.$ControlSettings {
+    interface ObjectPageHeaderContentOpts extends sap.ui.core.ControlOpts {
       /**
        * @deprecated (since 1.40.1)
        *
@@ -366,8 +364,8 @@ declare namespace sap {
       content?: sap.ui.core.Control[] | sap.ui.core.Control;
     }
 
-    interface $ObjectPageHeaderLayoutDataSettings
-      extends sap.ui.core.$LayoutDataSettings {
+    interface ObjectPageHeaderLayoutDataOpts
+      extends sap.ui.core.LayoutDataOpts {
       /**
        * If this property is set the control will be visible (or not) in a small sized layout.
        */
@@ -399,7 +397,7 @@ declare namespace sap {
       width?: sap.ui.core.CSSSize;
     }
 
-    interface $ObjectPageLayoutSettings extends sap.ui.core.$ControlSettings {
+    interface ObjectPageLayoutOpts extends sap.ui.core.ControlOpts {
       /**
        * Determines whether the Navigation bar (Anchor bar) is displayed.
        */
@@ -631,16 +629,14 @@ declare namespace sap {
       selectedSection?: sap.uxap.ObjectPageSection | string;
     }
 
-    interface $ObjectPageLazyLoaderSettings
-      extends sap.ui.core.$ElementSettings {
+    interface ObjectPageLazyLoaderOpts extends sap.ui.core.ElementOpts {
       /**
        * Controls to be displayed after this element is unstashed
        */
       content?: sap.ui.core.Control[] | sap.ui.core.Control;
     }
 
-    interface $ObjectPageSectionSettings
-      extends sap.uxap.$ObjectPageSectionBaseSettings {
+    interface ObjectPageSectionOpts extends sap.uxap.ObjectPageSectionBaseOpts {
       /**
        * Determines whether to display the Section title or not.
        */
@@ -664,8 +660,7 @@ declare namespace sap {
       selectedSubSection?: sap.uxap.ObjectPageSubSection | string;
     }
 
-    interface $ObjectPageSectionBaseSettings
-      extends sap.ui.core.$ControlSettings {
+    interface ObjectPageSectionBaseOpts extends sap.ui.core.ControlOpts {
       /**
        * Section Title
        */
@@ -707,8 +702,8 @@ declare namespace sap {
       customAnchorBarButton?: sap.m.Button;
     }
 
-    interface $ObjectPageSubSectionSettings
-      extends sap.uxap.$ObjectPageSectionBaseSettings {
+    interface ObjectPageSubSectionOpts
+      extends sap.uxap.ObjectPageSectionBaseOpts {
       /**
        * A mode property that will be passed to the controls in the blocks and moreBlocks aggregations. Only relevant
        * if these aggregations use Object page blocks.
@@ -782,7 +777,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $AnchorBarSettings
+        mSettings?: AnchorBarOpts
       );
 
       /**
@@ -968,7 +963,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $BlockBaseSettings
+        mSettings?: BlockBaseOpts
       );
 
       /**
@@ -1211,7 +1206,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $BreadCrumbsSettings
+        mSettings?: BreadCrumbsOpts
       );
 
       /**
@@ -1366,7 +1361,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $HierarchicalSelectSettings
+        mSettings?: HierarchicalSelectOpts
       );
 
       /**
@@ -1440,7 +1435,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ModelMappingSettings
+        mSettings?: ModelMappingOpts
       );
 
       /**
@@ -1682,7 +1677,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageHeaderSettings
+        mSettings?: ObjectPageHeaderOpts
       );
 
       /**
@@ -2609,7 +2604,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageHeaderActionButtonSettings
+        mSettings?: ObjectPageHeaderActionButtonOpts
       );
 
       /**
@@ -2757,7 +2752,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageHeaderContentSettings
+        mSettings?: ObjectPageHeaderContentOpts
       );
 
       /**
@@ -2900,7 +2895,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageHeaderLayoutDataSettings
+        mSettings?: ObjectPageHeaderLayoutDataOpts
       );
 
       /**
@@ -3134,7 +3129,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageLayoutSettings
+        mSettings?: ObjectPageLayoutOpts
       );
 
       /**
@@ -4272,7 +4267,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageLazyLoaderSettings
+        mSettings?: ObjectPageLazyLoaderOpts
       );
 
       /**
@@ -4386,7 +4381,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageSectionSettings
+        mSettings?: ObjectPageSectionOpts
       );
 
       /**
@@ -4557,7 +4552,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageSectionBaseSettings
+        mSettings?: ObjectPageSectionBaseOpts
       );
 
       /**
@@ -4753,7 +4748,7 @@ declare namespace sap {
         /**
          * Initial settings for the new control
          */
-        mSettings?: $ObjectPageSubSectionSettings
+        mSettings?: ObjectPageSubSectionOpts
       );
 
       /**

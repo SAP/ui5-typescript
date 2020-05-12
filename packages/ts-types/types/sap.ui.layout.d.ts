@@ -34,7 +34,7 @@ declare namespace sap {
           getGridLayoutConfiguration(): sap.ui.layout.cssgrid.GridLayoutBase;
         }
 
-        interface $CSSGridSettings extends sap.ui.core.$ControlSettings {
+        interface CSSGridOpts extends sap.ui.core.ControlOpts {
           /**
            * The width of the control
            */
@@ -115,8 +115,7 @@ declare namespace sap {
           items?: sap.ui.core.Control[] | sap.ui.core.Control;
         }
 
-        interface $GridItemLayoutDataSettings
-          extends sap.ui.core.$LayoutDataSettings {
+        interface GridItemLayoutDataOpts extends sap.ui.core.LayoutDataOpts {
           /**
            * Sets the value for the CSS display:grid item property grid-column-start
            */
@@ -235,7 +234,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $CSSGridSettings
+            mSettings?: CSSGridOpts
           );
 
           /**
@@ -619,7 +618,7 @@ declare namespace sap {
             /**
              * Initial settings for the new element.
              */
-            mSettings?: $GridItemLayoutDataSettings
+            mSettings?: GridItemLayoutDataOpts
           );
 
           /**
@@ -1416,8 +1415,7 @@ declare namespace sap {
       }
 
       namespace form {
-        interface $ColumnContainerDataSettings
-          extends sap.ui.core.$LayoutDataSettings {
+        interface ColumnContainerDataOpts extends sap.ui.core.LayoutDataOpts {
           /**
            * Number of columns the `FormContainer` element uses if the `Form` control has extra-large size.
            *
@@ -1438,8 +1436,7 @@ declare namespace sap {
           columnsM?: sap.ui.layout.form.ColumnsM;
         }
 
-        interface $ColumnElementDataSettings
-          extends sap.ui.core.$LayoutDataSettings {
+        interface ColumnElementDataOpts extends sap.ui.core.LayoutDataOpts {
           /**
            * Number of cells used by a field if the `FormElement` element is large. The label is then beside the fields
            * per default.
@@ -1457,8 +1454,7 @@ declare namespace sap {
           cellsSmall?: sap.ui.layout.form.ColumnCells;
         }
 
-        interface $ColumnLayoutSettings
-          extends sap.ui.layout.form.$FormLayoutSettings {
+        interface ColumnLayoutOpts extends sap.ui.layout.form.FormLayoutOpts {
           /**
            * Number of columns for extra-large size.
            *
@@ -1490,7 +1486,7 @@ declare namespace sap {
           emptyCellsLarge?: sap.ui.layout.form.EmptyCells;
         }
 
-        interface $FormSettings extends sap.ui.core.$ControlSettings {
+        interface FormOpts extends sap.ui.core.ControlOpts {
           /**
            * Width of the `Form`.
            */
@@ -1553,7 +1549,7 @@ declare namespace sap {
           ariaLabelledBy?: sap.ui.core.Control[] | string[];
         }
 
-        interface $FormContainerSettings extends sap.ui.core.$ElementSettings {
+        interface FormContainerOpts extends sap.ui.core.ElementOpts {
           /**
            * Container is expanded.
            *
@@ -1609,7 +1605,7 @@ declare namespace sap {
           ariaLabelledBy?: sap.ui.core.Control[] | string[];
         }
 
-        interface $FormElementSettings extends sap.ui.core.$ElementSettings {
+        interface FormElementOpts extends sap.ui.core.ElementOpts {
           /**
            * If set to `false`, the `FormElement` is not rendered.
            */
@@ -1633,7 +1629,7 @@ declare namespace sap {
           fields?: sap.ui.core.Control[] | sap.ui.core.Control;
         }
 
-        interface $FormLayoutSettings extends sap.ui.core.$ControlSettings {
+        interface FormLayoutOpts extends sap.ui.core.ControlOpts {
           /**
            * @SINCE 1.36.0
            *
@@ -1644,8 +1640,7 @@ declare namespace sap {
           backgroundDesign?: sap.ui.layout.BackgroundDesign;
         }
 
-        interface $GridContainerDataSettings
-          extends sap.ui.core.$LayoutDataSettings {
+        interface GridContainerDataOpts extends sap.ui.core.LayoutDataOpts {
           /**
            * If set, the container takes half the width of the `Form` (8 cells), if not it takes the full width (16
            * cells). If the `GridLayout` is set to `singleColumn`, the full width of the grid is only 8 cells. So
@@ -1654,8 +1649,7 @@ declare namespace sap {
           halfGrid?: boolean;
         }
 
-        interface $GridElementDataSettings
-          extends sap.ui.core.$LayoutDataSettings {
+        interface GridElementDataOpts extends sap.ui.core.LayoutDataOpts {
           /**
            * Number of cells in horizontal direction.
            *
@@ -1677,8 +1671,7 @@ declare namespace sap {
           vCells?: number;
         }
 
-        interface $GridLayoutSettings
-          extends sap.ui.layout.form.$FormLayoutSettings {
+        interface GridLayoutOpts extends sap.ui.layout.form.FormLayoutOpts {
           /**
            * If set, the grid renders only one `FormContainer` per column. That means one `FormContainer` is below
            * the other. The whole grid has 8 cells per row.
@@ -1689,8 +1682,8 @@ declare namespace sap {
           singleColumn?: boolean;
         }
 
-        interface $ResponsiveGridLayoutSettings
-          extends sap.ui.layout.form.$FormLayoutSettings {
+        interface ResponsiveGridLayoutOpts
+          extends sap.ui.layout.form.FormLayoutOpts {
           /**
            * @SINCE 1.34.0
            *
@@ -1833,10 +1826,10 @@ declare namespace sap {
           breakpointM?: number;
         }
 
-        interface $ResponsiveLayoutSettings
-          extends sap.ui.layout.form.$FormLayoutSettings {}
+        interface ResponsiveLayoutOpts
+          extends sap.ui.layout.form.FormLayoutOpts {}
 
-        interface $SimpleFormSettings extends sap.ui.core.$ControlSettings {
+        interface SimpleFormOpts extends sap.ui.core.ControlOpts {
           /**
            * The maximum amount of groups (`FormContainers`) per row that is used before a new row is started.
            *
@@ -2183,7 +2176,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $ColumnContainerDataSettings
+            mSettings?: ColumnContainerDataOpts
           );
 
           /**
@@ -2314,7 +2307,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $ColumnElementDataSettings
+            mSettings?: ColumnElementDataOpts
           );
 
           /**
@@ -2454,7 +2447,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $ColumnLayoutSettings
+            mSettings?: ColumnLayoutOpts
           );
 
           /**
@@ -2649,7 +2642,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $FormSettings
+            mSettings?: FormOpts
           );
 
           /**
@@ -2933,7 +2926,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $FormContainerSettings
+            mSettings?: FormContainerOpts
           );
 
           /**
@@ -3213,7 +3206,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $FormElementSettings
+            mSettings?: FormElementOpts
           );
 
           /**
@@ -3387,7 +3380,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $FormLayoutSettings
+            mSettings?: FormLayoutOpts
           );
 
           /**
@@ -3469,7 +3462,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $GridContainerDataSettings
+            mSettings?: GridContainerDataOpts
           );
 
           /**
@@ -3547,7 +3540,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $GridElementDataSettings
+            mSettings?: GridElementDataOpts
           );
 
           /**
@@ -3675,7 +3668,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $GridLayoutSettings
+            mSettings?: GridLayoutOpts
           );
 
           /**
@@ -3771,7 +3764,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $ResponsiveGridLayoutSettings
+            mSettings?: ResponsiveGridLayoutOpts
           );
 
           /**
@@ -4324,7 +4317,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $ResponsiveLayoutSettings
+            mSettings?: ResponsiveLayoutOpts
           );
 
           /**
@@ -4383,7 +4376,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $SimpleFormSettings
+            mSettings?: SimpleFormOpts
           );
 
           /**
@@ -5402,7 +5395,7 @@ declare namespace sap {
         }
       }
 
-      interface $BlockLayoutSettings extends sap.ui.core.$ControlSettings {
+      interface BlockLayoutOpts extends sap.ui.core.ControlOpts {
         /**
          * @SINCE 1.42
          *
@@ -5423,7 +5416,7 @@ declare namespace sap {
         content?: sap.ui.layout.BlockLayoutRow[] | sap.ui.layout.BlockLayoutRow;
       }
 
-      interface $BlockLayoutCellSettings extends sap.ui.core.$ControlSettings {
+      interface BlockLayoutCellOpts extends sap.ui.core.ControlOpts {
         /**
          * Defines the title of the cell. **Note:** When the `titleLink` aggregation is provided, the title of the
          * cell will be replaced with the text from the `titleLink`.
@@ -5487,8 +5480,7 @@ declare namespace sap {
         titleLink?: sap.ui.core.Control;
       }
 
-      interface $BlockLayoutCellDataSettings
-        extends sap.ui.core.$LayoutDataSettings {
+      interface BlockLayoutCellDataOpts extends sap.ui.core.LayoutDataOpts {
         /**
          * Sets the width of the cell for S size of the BlockLayout.
          */
@@ -5510,7 +5502,7 @@ declare namespace sap {
         xlSize?: number;
       }
 
-      interface $BlockLayoutRowSettings extends sap.ui.core.$ControlSettings {
+      interface BlockLayoutRowOpts extends sap.ui.core.ControlOpts {
         /**
          * Sets the rendering mode of the BlockLayoutRow to scrollable. In scrollable mode, the cells get aligned
          * side by side, with horizontal scroll bar for the row.
@@ -5544,8 +5536,7 @@ declare namespace sap {
         accentCells?: sap.ui.layout.BlockLayoutCell[] | string[];
       }
 
-      interface $DynamicSideContentSettings
-        extends sap.ui.core.$ControlSettings {
+      interface DynamicSideContentOpts extends sap.ui.core.ControlOpts {
         /**
          * Determines whether the side content is visible or hidden.
          */
@@ -5604,7 +5595,7 @@ declare namespace sap {
         sideContent?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $FixFlexSettings extends sap.ui.core.$ControlSettings {
+      interface FixFlexOpts extends sap.ui.core.ControlOpts {
         /**
          * Determines the direction of the layout of child elements. True for vertical and false for horizontal
          * layout.
@@ -5645,7 +5636,7 @@ declare namespace sap {
         flexContent?: sap.ui.core.Control;
       }
 
-      interface $GridSettings extends sap.ui.core.$ControlSettings {
+      interface GridOpts extends sap.ui.core.ControlOpts {
         /**
          * Optional. Defines the width of the `Grid`. If not specified, then 100%.
          */
@@ -5706,7 +5697,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $GridDataSettings extends sap.ui.core.$LayoutDataSettings {
+      interface GridDataOpts extends sap.ui.core.LayoutDataOpts {
         /**
          * A string type that represents the span values of the `Grid` for large, medium and small screens.
          *
@@ -5905,7 +5896,7 @@ declare namespace sap {
         visibleOnSmall?: boolean;
       }
 
-      interface $HorizontalLayoutSettings extends sap.ui.core.$ControlSettings {
+      interface HorizontalLayoutOpts extends sap.ui.core.ControlOpts {
         /**
          * Specifies whether the content inside the Layout shall be line-wrapped in the case that there is less
          * horizontal space available than required.
@@ -5918,7 +5909,7 @@ declare namespace sap {
         content?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $PaneContainerSettings extends sap.ui.core.$ElementSettings {
+      interface PaneContainerOpts extends sap.ui.core.ElementOpts {
         /**
          * The orientation of the Splitter
          */
@@ -5930,8 +5921,7 @@ declare namespace sap {
         panes?: sap.ui.core.Element[] | sap.ui.core.Element;
       }
 
-      interface $ResponsiveFlowLayoutSettings
-        extends sap.ui.core.$ControlSettings {
+      interface ResponsiveFlowLayoutOpts extends sap.ui.core.ControlOpts {
         /**
          * If set to false, all added controls will keep their width, or otherwise, the controls will be stretched
          * to the possible width of a row.
@@ -5952,8 +5942,8 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $ResponsiveFlowLayoutDataSettings
-        extends sap.ui.core.$LayoutDataSettings {
+      interface ResponsiveFlowLayoutDataOpts
+        extends sap.ui.core.LayoutDataOpts {
         /**
          * Defines the minimal size in px of a ResponsiveFlowLayout element. The element will be shrunk down to
          * this value.
@@ -5985,8 +5975,7 @@ declare namespace sap {
         linebreakable?: boolean;
       }
 
-      interface $ResponsiveSplitterSettings
-        extends sap.ui.core.$ControlSettings {
+      interface ResponsiveSplitterOpts extends sap.ui.core.ControlOpts {
         /**
          * The width of the control
          */
@@ -6009,7 +5998,7 @@ declare namespace sap {
         defaultPane?: sap.ui.layout.SplitPane | string;
       }
 
-      interface $SplitPaneSettings extends sap.ui.core.$ElementSettings {
+      interface SplitPaneOpts extends sap.ui.core.ElementOpts {
         /**
          * Determines whether the pane will be moved to the pagination
          */
@@ -6027,7 +6016,7 @@ declare namespace sap {
         content?: sap.ui.core.Control;
       }
 
-      interface $SplitterSettings extends sap.ui.core.$ControlSettings {
+      interface SplitterOpts extends sap.ui.core.ControlOpts {
         /**
          * Whether to split the contents horizontally (default) or vertically.
          */
@@ -6054,8 +6043,7 @@ declare namespace sap {
         contentAreas?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $SplitterLayoutDataSettings
-        extends sap.ui.core.$LayoutDataSettings {
+      interface SplitterLayoutDataOpts extends sap.ui.core.LayoutDataOpts {
         /**
          * Determines whether the control in the splitter can be resized or not.
          */
@@ -6072,7 +6060,7 @@ declare namespace sap {
         minSize?: number;
       }
 
-      interface $VerticalLayoutSettings extends sap.ui.core.$ControlSettings {
+      interface VerticalLayoutOpts extends sap.ui.core.ControlOpts {
         /**
          * Width of the `VerticalLayout`. If no width is set, the width of the content is used. If the content of
          * the layout has a larger width than the layout, it is cut off. There is no scrolling inside the layout.
@@ -6149,7 +6137,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $BlockLayoutSettings
+          mSettings?: BlockLayoutOpts
         );
 
         /**
@@ -6306,7 +6294,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $BlockLayoutCellSettings
+          mSettings?: BlockLayoutCellOpts
         );
 
         /**
@@ -6606,7 +6594,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $BlockLayoutCellDataSettings
+          mSettings?: BlockLayoutCellDataOpts
         );
 
         /**
@@ -6754,7 +6742,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $BlockLayoutRowSettings
+          mSettings?: BlockLayoutRowOpts
         );
 
         /**
@@ -6991,7 +6979,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $DynamicSideContentSettings
+          mSettings?: DynamicSideContentOpts
         );
 
         /**
@@ -7415,7 +7403,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $FixFlexSettings
+          mSettings?: FixFlexOpts
         );
 
         /**
@@ -7668,7 +7656,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $GridSettings
+          mSettings?: GridOpts
         );
 
         /**
@@ -8012,7 +8000,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $GridDataSettings
+          mSettings?: GridDataOpts
         );
 
         /**
@@ -8775,7 +8763,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $HorizontalLayoutSettings
+          mSettings?: HorizontalLayoutOpts
         );
 
         /**
@@ -8918,7 +8906,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $PaneContainerSettings
+          mSettings?: PaneContainerOpts
         );
 
         /**
@@ -9044,7 +9032,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ResponsiveFlowLayoutSettings
+          mSettings?: ResponsiveFlowLayoutOpts
         );
 
         /**
@@ -9216,7 +9204,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ResponsiveFlowLayoutDataSettings
+          mSettings?: ResponsiveFlowLayoutDataOpts
         );
 
         /**
@@ -9415,7 +9403,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ResponsiveSplitterSettings
+          mSettings?: ResponsiveSplitterOpts
         );
 
         /**
@@ -9553,7 +9541,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $SplitPaneSettings
+          mSettings?: SplitPaneOpts
         );
 
         /**
@@ -9691,7 +9679,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $SplitterSettings
+          mSettings?: SplitterOpts
         );
 
         /**
@@ -10029,7 +10017,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $SplitterLayoutDataSettings
+          mSettings?: SplitterLayoutDataOpts
         );
 
         /**
@@ -10149,7 +10137,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $VerticalLayoutSettings
+          mSettings?: VerticalLayoutOpts
         );
 
         /**

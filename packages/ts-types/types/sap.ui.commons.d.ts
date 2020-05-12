@@ -86,31 +86,27 @@ declare namespace sap {
          */
         export const SimpleFormLayout: undefined;
 
-        interface $FormSettings extends sap.ui.layout.form.$FormSettings {}
+        interface FormOpts extends sap.ui.layout.form.FormOpts {}
 
-        interface $FormContainerSettings
-          extends sap.ui.layout.form.$FormContainerSettings {}
+        interface FormContainerOpts
+          extends sap.ui.layout.form.FormContainerOpts {}
 
-        interface $FormElementSettings
-          extends sap.ui.layout.form.$FormElementSettings {}
+        interface FormElementOpts extends sap.ui.layout.form.FormElementOpts {}
 
-        interface $FormLayoutSettings
-          extends sap.ui.layout.form.$FormLayoutSettings {}
+        interface FormLayoutOpts extends sap.ui.layout.form.FormLayoutOpts {}
 
-        interface $GridContainerDataSettings
-          extends sap.ui.layout.form.$GridContainerDataSettings {}
+        interface GridContainerDataOpts
+          extends sap.ui.layout.form.GridContainerDataOpts {}
 
-        interface $GridElementDataSettings
-          extends sap.ui.layout.form.$GridElementDataSettings {}
+        interface GridElementDataOpts
+          extends sap.ui.layout.form.GridElementDataOpts {}
 
-        interface $GridLayoutSettings
-          extends sap.ui.layout.form.$GridLayoutSettings {}
+        interface GridLayoutOpts extends sap.ui.layout.form.GridLayoutOpts {}
 
-        interface $ResponsiveLayoutSettings
-          extends sap.ui.layout.form.$ResponsiveLayoutSettings {}
+        interface ResponsiveLayoutOpts
+          extends sap.ui.layout.form.ResponsiveLayoutOpts {}
 
-        interface $SimpleFormSettings
-          extends sap.ui.layout.form.$SimpleFormSettings {}
+        interface SimpleFormOpts extends sap.ui.layout.form.SimpleFormOpts {}
         /**
          * @SINCE 1.9.1
          * @deprecated (since 1.16.0) - moved to sap.ui.layout library. Please use this one.
@@ -130,7 +126,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $FormSettings
+            mSettings?: FormOpts
           );
 
           /**
@@ -201,7 +197,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $FormContainerSettings
+            mSettings?: FormContainerOpts
           );
 
           /**
@@ -272,7 +268,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $FormElementSettings
+            mSettings?: FormElementOpts
           );
 
           /**
@@ -343,7 +339,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $FormLayoutSettings
+            mSettings?: FormLayoutOpts
           );
 
           /**
@@ -392,7 +388,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $GridContainerDataSettings
+            mSettings?: GridContainerDataOpts
           );
 
           /**
@@ -441,7 +437,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $GridElementDataSettings
+            mSettings?: GridElementDataOpts
           );
 
           /**
@@ -491,7 +487,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $GridLayoutSettings
+            mSettings?: GridLayoutOpts
           );
 
           /**
@@ -539,7 +535,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $ResponsiveLayoutSettings
+            mSettings?: ResponsiveLayoutOpts
           );
 
           /**
@@ -590,7 +586,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $SimpleFormSettings
+            mSettings?: SimpleFormOpts
           );
 
           /**
@@ -648,7 +644,7 @@ declare namespace sap {
        * @deprecated (since 1.38)
        */
       namespace layout {
-        interface $AbsoluteLayoutSettings extends sap.ui.core.$ControlSettings {
+        interface AbsoluteLayoutOpts extends sap.ui.core.ControlOpts {
           /**
            * The overall width of the control. When not set, 100% is automatically set.
            */
@@ -677,7 +673,7 @@ declare namespace sap {
             | sap.ui.commons.layout.PositionContainer;
         }
 
-        interface $BorderLayoutSettings extends sap.ui.core.$ControlSettings {
+        interface BorderLayoutOpts extends sap.ui.core.ControlOpts {
           /**
            * @deprecated (since 1.5.2) - replaced by the global configuration for the page
            *
@@ -721,8 +717,7 @@ declare namespace sap {
           bottom?: sap.ui.commons.layout.BorderLayoutArea;
         }
 
-        interface $BorderLayoutAreaSettings
-          extends sap.ui.core.$ElementSettings {
+        interface BorderLayoutAreaOpts extends sap.ui.core.ElementOpts {
           /**
            * @deprecated (since 1.3.3) - Redundant to the aggregation by the parent border layout.
            *
@@ -761,10 +756,10 @@ declare namespace sap {
           content?: sap.ui.core.Control[] | sap.ui.core.Control;
         }
 
-        interface $HorizontalLayoutSettings
-          extends sap.ui.layout.$HorizontalLayoutSettings {}
+        interface HorizontalLayoutOpts
+          extends sap.ui.layout.HorizontalLayoutOpts {}
 
-        interface $MatrixLayoutSettings extends sap.ui.core.$ControlSettings {
+        interface MatrixLayoutOpts extends sap.ui.core.ControlOpts {
           /**
            * CSS width of the matrix layout. If the LayoutFixed = true an adequate width should be provided.
            */
@@ -802,8 +797,7 @@ declare namespace sap {
             | sap.ui.commons.layout.MatrixLayoutRow;
         }
 
-        interface $MatrixLayoutCellSettings
-          extends sap.ui.core.$ElementSettings {
+        interface MatrixLayoutCellOpts extends sap.ui.core.ElementOpts {
           /**
            * Determines the matrix layout cell's background design.
            */
@@ -852,8 +846,7 @@ declare namespace sap {
           content?: sap.ui.core.Control[] | sap.ui.core.Control;
         }
 
-        interface $MatrixLayoutRowSettings
-          extends sap.ui.core.$ElementSettings {
+        interface MatrixLayoutRowOpts extends sap.ui.core.ElementOpts {
           /**
            * Height of the row.
            */
@@ -867,8 +860,7 @@ declare namespace sap {
             | sap.ui.commons.layout.MatrixLayoutCell;
         }
 
-        interface $PositionContainerSettings
-          extends sap.ui.core.$ElementSettings {
+        interface PositionContainerOpts extends sap.ui.core.ElementOpts {
           /**
            * Defines the distance to the top of the layout (as specified in HTML)
            */
@@ -907,14 +899,13 @@ declare namespace sap {
           control?: sap.ui.core.Control;
         }
 
-        interface $ResponsiveFlowLayoutSettings
-          extends sap.ui.layout.$ResponsiveFlowLayoutSettings {}
+        interface ResponsiveFlowLayoutOpts
+          extends sap.ui.layout.ResponsiveFlowLayoutOpts {}
 
-        interface $ResponsiveFlowLayoutDataSettings
-          extends sap.ui.layout.$ResponsiveFlowLayoutDataSettings {}
+        interface ResponsiveFlowLayoutDataOpts
+          extends sap.ui.layout.ResponsiveFlowLayoutDataOpts {}
 
-        interface $VerticalLayoutSettings
-          extends sap.ui.layout.$VerticalLayoutSettings {}
+        interface VerticalLayoutOpts extends sap.ui.layout.VerticalLayoutOpts {}
         /**
          * @deprecated (since 1.38)
          *
@@ -936,7 +927,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $AbsoluteLayoutSettings
+            mSettings?: AbsoluteLayoutOpts
           );
 
           /**
@@ -1201,7 +1192,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $BorderLayoutSettings
+            mSettings?: BorderLayoutOpts
           );
 
           /**
@@ -1556,7 +1547,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $BorderLayoutAreaSettings
+            mSettings?: BorderLayoutAreaOpts
           );
 
           /**
@@ -1804,7 +1795,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $HorizontalLayoutSettings
+            mSettings?: HorizontalLayoutOpts
           );
 
           /**
@@ -1865,7 +1856,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $MatrixLayoutSettings
+            mSettings?: MatrixLayoutOpts
           );
 
           /**
@@ -2090,7 +2081,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $MatrixLayoutCellSettings
+            mSettings?: MatrixLayoutCellOpts
           );
 
           /**
@@ -2432,7 +2423,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $MatrixLayoutRowSettings
+            mSettings?: MatrixLayoutRowOpts
           );
 
           /**
@@ -2621,7 +2612,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $PositionContainerSettings
+            mSettings?: PositionContainerOpts
           );
 
           /**
@@ -2826,7 +2817,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $ResponsiveFlowLayoutSettings
+            mSettings?: ResponsiveFlowLayoutOpts
           );
 
           /**
@@ -2875,7 +2866,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $ResponsiveFlowLayoutDataSettings
+            mSettings?: ResponsiveFlowLayoutDataOpts
           );
 
           /**
@@ -2945,7 +2936,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $VerticalLayoutSettings
+            mSettings?: VerticalLayoutOpts
           );
 
           /**
@@ -3394,7 +3385,7 @@ declare namespace sap {
        */
       interface ToolbarItem {}
 
-      interface $AccordionSettings extends sap.ui.core.$ControlSettings {
+      interface AccordionOpts extends sap.ui.core.ControlOpts {
         /**
          * When the specified width is less than the width of a section content, a horizontal scroll bar is provided.
          */
@@ -3428,7 +3419,7 @@ declare namespace sap {
           | sap.ui.commons.AccordionSection;
       }
 
-      interface $AccordionSectionSettings extends sap.ui.core.$ElementSettings {
+      interface AccordionSectionOpts extends sap.ui.core.ElementOpts {
         /**
          * When the section content exceeds maxHeight, a vertical scroll bar appears.
          */
@@ -3465,8 +3456,7 @@ declare namespace sap {
         content?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $ApplicationHeaderSettings
-        extends sap.ui.core.$ControlSettings {
+      interface ApplicationHeaderOpts extends sap.ui.core.ControlOpts {
         /**
          * Path (src) to the logo icon to be displayed in the application header.
          */
@@ -3498,7 +3488,7 @@ declare namespace sap {
         logoff?: Function;
       }
 
-      interface $AreaSettings extends sap.ui.core.$ElementSettings {
+      interface AreaOpts extends sap.ui.core.ElementOpts {
         /**
          * The value is a string and can be 'rect' for rectangle, 'poly' for poligon, 'circle', or default.
          */
@@ -3520,7 +3510,7 @@ declare namespace sap {
         alt?: string;
       }
 
-      interface $AutoCompleteSettings extends sap.ui.commons.$ComboBoxSettings {
+      interface AutoCompleteOpts extends sap.ui.commons.ComboBoxOpts {
         /**
          * Determines whether scrolling should be enabled when the number of items is higher than maxPopupItems.
          * If set to false only the first n items (n=maxPopupItems) are shown.
@@ -3533,7 +3523,7 @@ declare namespace sap {
         suggest?: Function;
       }
 
-      interface $ButtonSettings extends sap.ui.core.$ControlSettings {
+      interface ButtonOpts extends sap.ui.core.ControlOpts {
         /**
          * Button text displayed at runtime.
          */
@@ -3618,14 +3608,14 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $CalloutSettings extends sap.ui.commons.$CalloutBaseSettings {
+      interface CalloutOpts extends sap.ui.commons.CalloutBaseOpts {
         /**
          * Determines the content of the Callout
          */
         content?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $CalloutBaseSettings extends sap.ui.core.$TooltipBaseSettings {
+      interface CalloutBaseOpts extends sap.ui.core.TooltipBaseOpts {
         /**
          * The event is fired when the popup is opened.
          */
@@ -3650,7 +3640,7 @@ declare namespace sap {
         opened?: Function;
       }
 
-      interface $CarouselSettings extends sap.ui.core.$ControlSettings {
+      interface CarouselOpts extends sap.ui.core.ControlOpts {
         /**
          * Determines the orientation of the Carousel. Can be either "horizontal" or "vertical"
          */
@@ -3704,7 +3694,7 @@ declare namespace sap {
         content?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $CheckBoxSettings extends sap.ui.core.$ControlSettings {
+      interface CheckBoxOpts extends sap.ui.core.ControlOpts {
         /**
          * Contains the state of the control whether it is flagged with a check mark, or not
          */
@@ -3764,10 +3754,9 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $ColorPickerSettings
-        extends sap.ui.unified.$ColorPickerSettings {}
+      interface ColorPickerOpts extends sap.ui.unified.ColorPickerOpts {}
 
-      interface $ComboBoxSettings extends sap.ui.commons.$TextFieldSettings {
+      interface ComboBoxOpts extends sap.ui.commons.TextFieldOpts {
         /**
          * Defines the number of items that shall be displayed at once. If the overall number of items is higher
          * than this setting, a scrollbar is provided.
@@ -3815,7 +3804,7 @@ declare namespace sap {
         listBox?: sap.ui.commons.ListBox | string;
       }
 
-      interface $DatePickerSettings extends sap.ui.commons.$TextFieldSettings {
+      interface DatePickerOpts extends sap.ui.commons.TextFieldOpts {
         /**
          * Defines the locale (language and country), e.g. "en-US", whose translations and Date formatters should
          * be used to render the DatePicker.If the value property is bound to a model using a Date type the locale
@@ -3830,7 +3819,7 @@ declare namespace sap {
         yyyymmdd?: string;
       }
 
-      interface $DialogSettings extends sap.ui.core.$ControlSettings {
+      interface DialogOpts extends sap.ui.core.ControlOpts {
         /**
          * Outer width of dialog window. When not set and not constrained by one of the width parameters (minWidth/maxWidth),
          * the window size is automatically adapted to the content.
@@ -3964,7 +3953,7 @@ declare namespace sap {
         initialFocus?: sap.ui.core.Control | string;
       }
 
-      interface $DropdownBoxSettings extends sap.ui.commons.$ComboBoxSettings {
+      interface DropdownBoxOpts extends sap.ui.commons.ComboBoxOpts {
         /**
          * Whether the DropdownBox's search help should be enabled.
          */
@@ -4000,14 +3989,12 @@ declare namespace sap {
         searchHelp?: Function;
       }
 
-      interface $FileUploaderSettings
-        extends sap.ui.unified.$FileUploaderSettings {}
+      interface FileUploaderOpts extends sap.ui.unified.FileUploaderOpts {}
 
-      interface $FileUploaderParameterSettings
-        extends sap.ui.unified.$FileUploaderParameterSettings {}
+      interface FileUploaderParameterOpts
+        extends sap.ui.unified.FileUploaderParameterOpts {}
 
-      interface $FormattedTextViewSettings
-        extends sap.ui.core.$ControlSettings {
+      interface FormattedTextViewOpts extends sap.ui.core.ControlOpts {
         /**
          * The ARIA role for the control.
          */
@@ -4024,8 +4011,7 @@ declare namespace sap {
         controls?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $HorizontalDividerSettings
-        extends sap.ui.core.$ControlSettings {
+      interface HorizontalDividerOpts extends sap.ui.core.ControlOpts {
         /**
          * Defines the width of the divider.
          */
@@ -4042,7 +4028,7 @@ declare namespace sap {
         height?: sap.ui.commons.HorizontalDividerHeight;
       }
 
-      interface $ImageSettings extends sap.ui.core.$ControlSettings {
+      interface ImageOpts extends sap.ui.core.ControlOpts {
         /**
          * Relative or absolute path to URL where the image file is stored.
          */
@@ -4085,7 +4071,7 @@ declare namespace sap {
         press?: Function;
       }
 
-      interface $ImageMapSettings extends sap.ui.core.$ControlSettings {
+      interface ImageMapOpts extends sap.ui.core.ControlOpts {
         /**
          * Name for the image that serves as reference
          */
@@ -4102,7 +4088,7 @@ declare namespace sap {
         areas?: sap.ui.commons.Area[] | sap.ui.commons.Area;
       }
 
-      interface $InPlaceEditSettings extends sap.ui.core.$ControlSettings {
+      interface InPlaceEditOpts extends sap.ui.core.ControlOpts {
         /**
          * Visualizes warnings or errors related to the InPlaceEdit. Possible values: Warning, Error, Success. If
          * the content control has an own valueState property this will be used.
@@ -4143,7 +4129,7 @@ declare namespace sap {
         content?: sap.ui.core.Control;
       }
 
-      interface $LabelSettings extends sap.ui.core.$ControlSettings {
+      interface LabelOpts extends sap.ui.core.ControlOpts {
         /**
          * Defines whether the labels are in bold format.
          */
@@ -4206,7 +4192,7 @@ declare namespace sap {
         labelFor?: sap.ui.core.Control | string;
       }
 
-      interface $LinkSettings extends sap.ui.core.$ControlSettings {
+      interface LinkOpts extends sap.ui.core.ControlOpts {
         /**
          * Link text to be displayed.
          */
@@ -4257,7 +4243,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $ListBoxSettings extends sap.ui.core.$ControlSettings {
+      interface ListBoxOpts extends sap.ui.core.ControlOpts {
         /**
          * Determines whether the ListBox is interactive or not. Can be used to disable interaction with mouse or
          * keyboard.
@@ -4360,9 +4346,9 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $MenuSettings extends sap.ui.unified.$MenuSettings {}
+      interface MenuOpts extends sap.ui.unified.MenuOpts {}
 
-      interface $MenuBarSettings extends sap.ui.core.$ControlSettings {
+      interface MenuBarOpts extends sap.ui.core.ControlOpts {
         /**
          * When the MenuBar is not enabled, automatically all single menu items are also displayed as 'disabled'.
          */
@@ -4384,7 +4370,7 @@ declare namespace sap {
         items?: sap.ui.unified.MenuItem[] | sap.ui.unified.MenuItem;
       }
 
-      interface $MenuButtonSettings extends sap.ui.commons.$ButtonSettings {
+      interface MenuButtonOpts extends sap.ui.commons.ButtonOpts {
         /**
          * The position / edge (see sap.ui.core.Popup.Dock) of the button where the menu is docked. Default is 'begin
          * bottom'.
@@ -4408,15 +4394,14 @@ declare namespace sap {
         menu?: sap.ui.unified.Menu;
       }
 
-      interface $MenuItemSettings extends sap.ui.unified.$MenuItemSettings {}
+      interface MenuItemOpts extends sap.ui.unified.MenuItemOpts {}
 
-      interface $MenuItemBaseSettings
-        extends sap.ui.unified.$MenuItemBaseSettings {}
+      interface MenuItemBaseOpts extends sap.ui.unified.MenuItemBaseOpts {}
 
-      interface $MenuTextFieldItemSettings
-        extends sap.ui.unified.$MenuTextFieldItemSettings {}
+      interface MenuTextFieldItemOpts
+        extends sap.ui.unified.MenuTextFieldItemOpts {}
 
-      interface $MessageSettings extends sap.ui.core.$ControlSettings {
+      interface MessageOpts extends sap.ui.core.ControlOpts {
         /**
          * "Success", or "Warning", or "Error" messages. (Mandatory)
          */
@@ -4438,7 +4423,7 @@ declare namespace sap {
         design?: string;
       }
 
-      interface $MessageBarSettings extends sap.ui.core.$ControlSettings {
+      interface MessageBarOpts extends sap.ui.core.ControlOpts {
         /**
          * Element ID upon which the MessageBar will be initially positioned.
          */
@@ -4470,7 +4455,7 @@ declare namespace sap {
         anchorSnapPoint?: string;
       }
 
-      interface $MessageListSettings extends sap.ui.core.$ControlSettings {
+      interface MessageListOpts extends sap.ui.core.ControlOpts {
         /**
          * Specifies whether or not the MessageList is visible. Invisible controls are not rendered.
          */
@@ -4487,7 +4472,7 @@ declare namespace sap {
         maxListed?: string;
       }
 
-      interface $MessageToastSettings extends sap.ui.core.$ControlSettings {
+      interface MessageToastOpts extends sap.ui.core.ControlOpts {
         /**
          * ID of the anchor on top of which the MessageToast is to render.
          */
@@ -4499,7 +4484,7 @@ declare namespace sap {
         next?: Function;
       }
 
-      interface $PaginatorSettings extends sap.ui.core.$ControlSettings {
+      interface PaginatorOpts extends sap.ui.core.ControlOpts {
         /**
          * Represents the current page (first page has index 1, not 0, to match the visual number)
          */
@@ -4516,7 +4501,7 @@ declare namespace sap {
         page?: Function;
       }
 
-      interface $PanelSettings extends sap.ui.core.$ControlSettings {
+      interface PanelOpts extends sap.ui.core.ControlOpts {
         /**
          * Determines the width of the Panel in CSS size.
          */
@@ -4594,11 +4579,9 @@ declare namespace sap {
         buttons?: sap.ui.commons.Button[] | sap.ui.commons.Button;
       }
 
-      interface $PasswordFieldSettings
-        extends sap.ui.commons.$TextFieldSettings {}
+      interface PasswordFieldOpts extends sap.ui.commons.TextFieldOpts {}
 
-      interface $ProgressIndicatorSettings
-        extends sap.ui.core.$ControlSettings {
+      interface ProgressIndicatorOpts extends sap.ui.core.ControlOpts {
         /**
          * Determines whether the control is enabled or not. Disabled controls have different colors, and can not
          * be focused.
@@ -4633,7 +4616,7 @@ declare namespace sap {
         width?: sap.ui.core.CSSSize;
       }
 
-      interface $RadioButtonSettings extends sap.ui.core.$ControlSettings {
+      interface RadioButtonOpts extends sap.ui.core.ControlOpts {
         /**
          * Defines the text displayed next to the RadioButton.
          */
@@ -4699,7 +4682,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $RadioButtonGroupSettings extends sap.ui.core.$ControlSettings {
+      interface RadioButtonGroupOpts extends sap.ui.core.ControlOpts {
         /**
          * Defines the width of the RadioButtonGroup.
          */
@@ -4760,7 +4743,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $RangeSliderSettings extends sap.ui.commons.$SliderSettings {
+      interface RangeSliderOpts extends sap.ui.commons.SliderOpts {
         /**
          * Current second value of the slider. (Position of the second grip.)
          *
@@ -4770,7 +4753,7 @@ declare namespace sap {
         value2?: number;
       }
 
-      interface $RatingIndicatorSettings extends sap.ui.core.$ControlSettings {
+      interface RatingIndicatorOpts extends sap.ui.core.ControlOpts {
         /**
          * Determines if the rating symbols can be edited.
          */
@@ -4834,8 +4817,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $ResponsiveContainerSettings
-        extends sap.ui.core.$ControlSettings {
+      interface ResponsiveContainerOpts extends sap.ui.core.ControlOpts {
         /**
          * The width of the responsive container.
          */
@@ -4864,8 +4846,7 @@ declare namespace sap {
         defaultContent?: sap.ui.core.Control | string;
       }
 
-      interface $ResponsiveContainerRangeSettings
-        extends sap.ui.core.$ElementSettings {
+      interface ResponsiveContainerRangeOpts extends sap.ui.core.ElementOpts {
         /**
          * The minimal width for this range to be displayed.
          */
@@ -4887,7 +4868,7 @@ declare namespace sap {
         content?: sap.ui.core.Control | string;
       }
 
-      interface $RichTooltipSettings extends sap.ui.core.$TooltipBaseSettings {
+      interface RichTooltipOpts extends sap.ui.core.TooltipBaseOpts {
         /**
          * Tool tip title to be displayed in the header.
          */
@@ -4913,7 +4894,7 @@ declare namespace sap {
         imageAltText?: string;
       }
 
-      interface $RoadMapSettings extends sap.ui.core.$ControlSettings {
+      interface RoadMapOpts extends sap.ui.core.ControlOpts {
         /**
          * Total number of steps to be displayed at once
          */
@@ -4950,7 +4931,7 @@ declare namespace sap {
         steps?: sap.ui.commons.RoadMapStep[] | sap.ui.commons.RoadMapStep;
       }
 
-      interface $RoadMapStepSettings extends sap.ui.core.$ElementSettings {
+      interface RoadMapStepOpts extends sap.ui.core.ElementOpts {
         /**
          * Label of the step
          */
@@ -4984,7 +4965,7 @@ declare namespace sap {
         subSteps?: sap.ui.commons.RoadMapStep[] | sap.ui.commons.RoadMapStep;
       }
 
-      interface $RowRepeaterSettings extends sap.ui.core.$ControlSettings {
+      interface RowRepeaterOpts extends sap.ui.core.ControlOpts {
         /**
          * Number of rows displayed.
          */
@@ -5067,8 +5048,7 @@ declare namespace sap {
         noData?: sap.ui.core.Control;
       }
 
-      interface $RowRepeaterFilterSettings
-        extends sap.ui.core.$ElementSettings {
+      interface RowRepeaterFilterOpts extends sap.ui.core.ElementOpts {
         /**
          * The filter title if needed for display.
          */
@@ -5085,8 +5065,7 @@ declare namespace sap {
         filters?: object;
       }
 
-      interface $RowRepeaterSorterSettings
-        extends sap.ui.core.$ElementSettings {
+      interface RowRepeaterSorterOpts extends sap.ui.core.ElementOpts {
         /**
          * The sorter title if needed for display.
          */
@@ -5103,7 +5082,7 @@ declare namespace sap {
         sorter?: object;
       }
 
-      interface $SearchFieldSettings extends sap.ui.core.$ControlSettings {
+      interface SearchFieldOpts extends sap.ui.core.ControlOpts {
         /**
          * Defines whether a pop up list shall be provided for suggestions
          */
@@ -5231,10 +5210,10 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $SearchProviderSettings
-        extends sap.ui.core.search.$OpenSearchProviderSettings {}
+      interface SearchProviderOpts
+        extends sap.ui.core.search.OpenSearchProviderOpts {}
 
-      interface $SegmentedButtonSettings extends sap.ui.core.$ControlSettings {
+      interface SegmentedButtonOpts extends sap.ui.core.ControlOpts {
         /**
          * enabled
          */
@@ -5256,7 +5235,7 @@ declare namespace sap {
         selectedButton?: sap.ui.commons.Button | string;
       }
 
-      interface $SliderSettings extends sap.ui.core.$ControlSettings {
+      interface SliderOpts extends sap.ui.core.ControlOpts {
         /**
          * Width of the horizontal slider.
          */
@@ -5353,7 +5332,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $SplitterSettings extends sap.ui.core.$ControlSettings {
+      interface SplitterOpts extends sap.ui.core.ControlOpts {
         /**
          * The splitter can have horizontal or vertical orientation.
          */
@@ -5409,7 +5388,7 @@ declare namespace sap {
         secondPaneContent?: sap.ui.core.Control[] | sap.ui.core.Control;
       }
 
-      interface $TabSettings extends sap.ui.commons.$PanelSettings {
+      interface TabOpts extends sap.ui.commons.PanelOpts {
         /**
          * Specifies the vertical scrolling.
          */
@@ -5434,7 +5413,7 @@ declare namespace sap {
         selected?: boolean;
       }
 
-      interface $TabStripSettings extends sap.ui.core.$ControlSettings {
+      interface TabStripOpts extends sap.ui.core.ControlOpts {
         /**
          * Specifies the height of the tab bar and content area.
          */
@@ -5471,7 +5450,7 @@ declare namespace sap {
         tabs?: sap.ui.commons.Tab[] | sap.ui.commons.Tab;
       }
 
-      interface $TextAreaSettings extends sap.ui.commons.$TextFieldSettings {
+      interface TextAreaOpts extends sap.ui.commons.TextFieldOpts {
         /**
          * Height of text field. When it is set (CSS-size such as % or px), this is the exact size.
          */
@@ -5511,7 +5490,7 @@ declare namespace sap {
         labeledBy?: string;
       }
 
-      interface $TextFieldSettings extends sap.ui.core.$ControlSettings {
+      interface TextFieldOpts extends sap.ui.core.ControlOpts {
         /**
          * Text inside the `TextField`
          */
@@ -5616,7 +5595,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $TextViewSettings extends sap.ui.core.$ControlSettings {
+      interface TextViewOpts extends sap.ui.core.ControlOpts {
         /**
          * Text to be displayed.
          */
@@ -5680,16 +5659,16 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $TitleSettings extends sap.ui.core.$TitleSettings {}
+      interface TitleOpts extends sap.ui.core.TitleOpts {}
 
-      interface $ToggleButtonSettings extends sap.ui.commons.$ButtonSettings {
+      interface ToggleButtonOpts extends sap.ui.commons.ButtonOpts {
         /**
          * The property is “true” when the control is toggled. The default state of this property is "false".
          */
         pressed?: boolean;
       }
 
-      interface $ToolbarSettings extends sap.ui.core.$ControlSettings {
+      interface ToolbarOpts extends sap.ui.core.ControlOpts {
         /**
          * When there is not enough space for the toolbar to display all items, the rightmost items are overflowing
          * into a drop-down menu.
@@ -5718,7 +5697,7 @@ declare namespace sap {
         rightItems?: sap.ui.commons.ToolbarItem[] | sap.ui.commons.ToolbarItem;
       }
 
-      interface $ToolbarSeparatorSettings extends sap.ui.core.$ElementSettings {
+      interface ToolbarSeparatorOpts extends sap.ui.core.ElementOpts {
         /**
          * When set to false, there is no visual indication of separation by a vertical line but by a wider space.
          */
@@ -5730,7 +5709,7 @@ declare namespace sap {
         design?: sap.ui.commons.ToolbarSeparatorDesign;
       }
 
-      interface $TreeSettings extends sap.ui.core.$ControlSettings {
+      interface TreeOpts extends sap.ui.core.ControlOpts {
         /**
          * Tree title
          */
@@ -5788,7 +5767,7 @@ declare namespace sap {
         nodes?: sap.ui.commons.TreeNode[] | sap.ui.commons.TreeNode;
       }
 
-      interface $TreeNodeSettings extends sap.ui.core.$ElementSettings {
+      interface TreeNodeOpts extends sap.ui.core.ElementOpts {
         /**
          * Node text
          */
@@ -5845,7 +5824,7 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $TriStateCheckBoxSettings extends sap.ui.core.$ControlSettings {
+      interface TriStateCheckBoxOpts extends sap.ui.core.ControlOpts {
         /**
          * Defines the states of the checkbox
          */
@@ -5889,8 +5868,7 @@ declare namespace sap {
         change?: Function;
       }
 
-      interface $ValueHelpFieldSettings
-        extends sap.ui.commons.$TextFieldSettings {
+      interface ValueHelpFieldOpts extends sap.ui.commons.TextFieldOpts {
         /**
          * URL of the standard icon for the value help. If no parameter is supplied the default icon image will
          * be shown. This can be a URI to an image or an icon font URI.
@@ -5937,7 +5915,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $AccordionSettings
+          mSettings?: AccordionOpts
         );
 
         /**
@@ -6324,7 +6302,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $AccordionSectionSettings
+          mSettings?: AccordionSectionOpts
         );
 
         /**
@@ -6586,7 +6564,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ApplicationHeaderSettings
+          mSettings?: ApplicationHeaderOpts
         );
 
         /**
@@ -6806,7 +6784,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $AreaSettings
+          mSettings?: AreaOpts
         );
 
         /**
@@ -6935,7 +6913,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $AutoCompleteSettings
+          mSettings?: AutoCompleteOpts
         );
 
         /**
@@ -7126,7 +7104,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ButtonSettings
+          mSettings?: ButtonOpts
         );
 
         /**
@@ -7593,7 +7571,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $CalloutSettings
+          mSettings?: CalloutOpts
         );
 
         /**
@@ -7703,7 +7681,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $CalloutBaseSettings
+          mSettings?: CalloutBaseOpts
         );
 
         /**
@@ -8063,7 +8041,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $CarouselSettings
+          mSettings?: CarouselOpts
         );
 
         /**
@@ -8419,7 +8397,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $CheckBoxSettings
+          mSettings?: CheckBoxOpts
         );
 
         /**
@@ -8795,7 +8773,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ColorPickerSettings
+          mSettings?: ColorPickerOpts
         );
 
         /**
@@ -8849,7 +8827,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ComboBoxSettings
+          mSettings?: ComboBoxOpts
         );
 
         /**
@@ -9185,7 +9163,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $DatePickerSettings
+          mSettings?: DatePickerOpts
         );
 
         /**
@@ -9304,7 +9282,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $DialogSettings
+          mSettings?: DialogOpts
         );
 
         /**
@@ -10014,7 +9992,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $DropdownBoxSettings
+          mSettings?: DropdownBoxOpts
         );
 
         /**
@@ -10383,7 +10361,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $FileUploaderSettings
+          mSettings?: FileUploaderOpts
         );
 
         /**
@@ -10431,7 +10409,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $FileUploaderParameterSettings
+          mSettings?: FileUploaderParameterOpts
         );
 
         /**
@@ -10483,7 +10461,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $FormattedTextViewSettings
+          mSettings?: FormattedTextViewOpts
         );
 
         /**
@@ -10650,7 +10628,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $HorizontalDividerSettings
+          mSettings?: HorizontalDividerOpts
         );
 
         /**
@@ -10774,7 +10752,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ImageSettings
+          mSettings?: ImageOpts
         );
 
         /**
@@ -11020,7 +10998,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ImageMapSettings
+          mSettings?: ImageMapOpts
         );
 
         /**
@@ -11231,7 +11209,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $InPlaceEditSettings
+          mSettings?: InPlaceEditOpts
         );
 
         /**
@@ -11574,7 +11552,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $LabelSettings
+          mSettings?: LabelOpts
         );
 
         /**
@@ -11867,7 +11845,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $LinkSettings
+          mSettings?: LinkOpts
         );
 
         /**
@@ -12187,7 +12165,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ListBoxSettings
+          mSettings?: ListBoxOpts
         );
 
         /**
@@ -12834,7 +12812,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MenuSettings
+          mSettings?: MenuOpts
         );
 
         /**
@@ -12890,7 +12868,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $MenuBarSettings
+          mSettings?: MenuBarOpts
         );
 
         /**
@@ -13070,7 +13048,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $MenuButtonSettings
+          mSettings?: MenuButtonOpts
         );
 
         /**
@@ -13329,7 +13307,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MenuItemSettings
+          mSettings?: MenuItemOpts
         );
 
         /**
@@ -13377,7 +13355,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MenuItemBaseSettings
+          mSettings?: MenuItemBaseOpts
         );
       }
       /**
@@ -13400,7 +13378,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MenuTextFieldItemSettings
+          mSettings?: MenuTextFieldItemOpts
         );
 
         /**
@@ -13452,7 +13430,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $MessageSettings
+          mSettings?: MessageOpts
         );
 
         /**
@@ -13593,7 +13571,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MessageBarSettings
+          mSettings?: MessageBarOpts
         );
 
         /**
@@ -13793,7 +13771,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MessageListSettings
+          mSettings?: MessageListOpts
         );
 
         /**
@@ -13919,7 +13897,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $MessageToastSettings
+          mSettings?: MessageToastOpts
         );
 
         /**
@@ -14074,7 +14052,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $PaginatorSettings
+          mSettings?: PaginatorOpts
         );
 
         /**
@@ -14250,7 +14228,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $PanelSettings
+          mSettings?: PanelOpts
         );
 
         /**
@@ -14649,7 +14627,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $PasswordFieldSettings
+          mSettings?: PasswordFieldOpts
         );
 
         /**
@@ -14702,7 +14680,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ProgressIndicatorSettings
+          mSettings?: ProgressIndicatorOpts
         );
 
         /**
@@ -14903,7 +14881,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $RadioButtonSettings
+          mSettings?: RadioButtonOpts
         );
 
         /**
@@ -15279,7 +15257,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $RadioButtonGroupSettings
+          mSettings?: RadioButtonGroupOpts
         );
 
         /**
@@ -15702,7 +15680,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $RangeSliderSettings
+          mSettings?: RangeSliderOpts
         );
 
         /**
@@ -15784,7 +15762,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $RatingIndicatorSettings
+          mSettings?: RatingIndicatorOpts
         );
 
         /**
@@ -16165,7 +16143,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ResponsiveContainerSettings
+          mSettings?: ResponsiveContainerOpts
         );
 
         /**
@@ -16408,7 +16386,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ResponsiveContainerRangeSettings
+          mSettings?: ResponsiveContainerRangeOpts
         );
 
         /**
@@ -16543,7 +16521,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $RichTooltipSettings
+          mSettings?: RichTooltipOpts
         );
 
         /**
@@ -16676,7 +16654,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $RoadMapSettings
+          mSettings?: RoadMapOpts
         );
 
         /**
@@ -17006,7 +16984,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $RoadMapStepSettings
+          mSettings?: RoadMapStepOpts
         );
 
         /**
@@ -17233,7 +17211,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $RowRepeaterSettings
+          mSettings?: RowRepeaterOpts
         );
 
         /**
@@ -17985,7 +17963,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $RowRepeaterFilterSettings
+          mSettings?: RowRepeaterFilterOpts
         );
 
         /**
@@ -18094,7 +18072,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $RowRepeaterSorterSettings
+          mSettings?: RowRepeaterSorterOpts
         );
 
         /**
@@ -18203,7 +18181,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $SearchFieldSettings
+          mSettings?: SearchFieldOpts
         );
 
         /**
@@ -18913,7 +18891,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $SearchProviderSettings
+          mSettings?: SearchProviderOpts
         );
 
         /**
@@ -18966,7 +18944,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $SegmentedButtonSettings
+          mSettings?: SegmentedButtonOpts
         );
 
         /**
@@ -19189,7 +19167,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $SliderSettings
+          mSettings?: SliderOpts
         );
 
         /**
@@ -19730,7 +19708,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $SplitterSettings
+          mSettings?: SplitterOpts
         );
 
         /**
@@ -20089,7 +20067,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $TabSettings
+          mSettings?: TabOpts
         );
 
         /**
@@ -20239,7 +20217,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $TabStripSettings
+          mSettings?: TabStripOpts
         );
 
         /**
@@ -20598,7 +20576,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TextAreaSettings
+          mSettings?: TextAreaOpts
         );
 
         /**
@@ -20795,7 +20773,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $TextFieldSettings
+          mSettings?: TextFieldOpts
         );
 
         /**
@@ -21484,7 +21462,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $TextViewSettings
+          mSettings?: TextViewOpts
         );
 
         /**
@@ -21833,7 +21811,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TitleSettings
+          mSettings?: TitleOpts
         );
 
         /**
@@ -21910,7 +21888,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ToggleButtonSettings
+          mSettings?: ToggleButtonOpts
         );
 
         /**
@@ -21992,7 +21970,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ToolbarSettings
+          mSettings?: ToolbarOpts
         );
 
         /**
@@ -22236,7 +22214,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ToolbarSeparatorSettings
+          mSettings?: ToolbarSeparatorOpts
         );
 
         /**
@@ -22329,7 +22307,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TreeSettings
+          mSettings?: TreeOpts
         );
 
         /**
@@ -22806,7 +22784,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TreeNodeSettings
+          mSettings?: TreeNodeOpts
         );
 
         /**
@@ -23264,7 +23242,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TriStateCheckBoxSettings
+          mSettings?: TriStateCheckBoxOpts
         );
 
         /**
@@ -23551,7 +23529,7 @@ declare namespace sap {
           /**
            * Initial settings for the new control
            */
-          mSettings?: $ValueHelpFieldSettings
+          mSettings?: ValueHelpFieldOpts
         );
 
         /**

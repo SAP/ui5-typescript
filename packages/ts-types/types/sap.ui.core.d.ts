@@ -2356,7 +2356,7 @@ declare namespace sap {
         reset(): void;
       }
 
-      interface $ManagedObjectSettings {
+      interface ManagedObjectOpts {
         /**
          * Fired after a new value for a bound property has been propagated to the model. Only fired, when the binding
          * uses a data type.
@@ -3133,7 +3133,7 @@ declare namespace sap {
           /**
            * Optional map/JSON-object with initial property values, aggregated objects etc. for the new object
            */
-          mSettings?: $ManagedObjectSettings,
+          mSettings?: ManagedObjectOpts,
           /**
            * Scope object for resolving string based type and formatter references in bindings. When a scope object
            * is given, `mSettings` cannot be omitted, at least `null` or an empty object literal must be given.
@@ -8530,15 +8530,15 @@ declare namespace sap {
          */
         interface IControllerExtension {}
 
-        interface $HTMLViewSettings extends sap.ui.core.mvc.$ViewSettings {}
+        interface HTMLViewOpts extends sap.ui.core.mvc.ViewOpts {}
 
-        interface $JSONViewSettings extends sap.ui.core.mvc.$ViewSettings {}
+        interface JSONViewOpts extends sap.ui.core.mvc.ViewOpts {}
 
-        interface $JSViewSettings extends sap.ui.core.mvc.$ViewSettings {}
+        interface JSViewOpts extends sap.ui.core.mvc.ViewOpts {}
 
-        interface $TemplateViewSettings extends sap.ui.core.mvc.$ViewSettings {}
+        interface TemplateViewOpts extends sap.ui.core.mvc.ViewOpts {}
 
-        interface $ViewSettings extends sap.ui.core.$ControlSettings {
+        interface ViewOpts extends sap.ui.core.ControlOpts {
           /**
            * The width
            */
@@ -8588,7 +8588,7 @@ declare namespace sap {
           content?: sap.ui.core.Control[] | sap.ui.core.Control;
         }
 
-        interface $XMLViewSettings extends sap.ui.core.mvc.$ViewSettings {}
+        interface XMLViewOpts extends sap.ui.core.mvc.ViewOpts {}
         /**
          * A generic controller implementation for the UI5 Model-View-Controller concept.
          *
@@ -8828,7 +8828,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $HTMLViewSettings
+            mSettings?: HTMLViewOpts
           );
           /**
            * @SINCE 1.30
@@ -8909,7 +8909,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $JSONViewSettings
+            mSettings?: JSONViewOpts
           );
           /**
            * @SINCE 1.30
@@ -8989,7 +8989,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $JSViewSettings
+            mSettings?: JSViewOpts
           );
           /**
            * @SINCE 1.30
@@ -9087,7 +9087,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $TemplateViewSettings
+            mSettings?: TemplateViewOpts
           );
 
           /**
@@ -9144,7 +9144,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $ViewSettings
+            mSettings?: ViewOpts
           );
 
           /**
@@ -9828,7 +9828,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $XMLViewSettings
+            mSettings?: XMLViewOpts
           );
           /**
            * @SINCE 1.30
@@ -10389,7 +10389,7 @@ declare namespace sap {
          */
         interface IDropInfo {}
 
-        interface $DragDropBaseSettings extends sap.ui.core.$ElementSettings {
+        interface DragDropBaseOpts extends sap.ui.core.ElementOpts {
           /**
            * Defines the name of the group to which this object belongs. If `groupName` is specified, then this object
            * will only interacts with other drag-and-drop objects within the same group.
@@ -10404,8 +10404,7 @@ declare namespace sap {
           enabled?: boolean;
         }
 
-        interface $DragDropInfoSettings
-          extends sap.ui.core.dnd.$DropInfoSettings {
+        interface DragDropInfoOpts extends sap.ui.core.dnd.DropInfoOpts {
           /**
            * The name of the aggregation from which all children can be dragged. If undefined, the control itself
            * can be dragged.
@@ -10432,8 +10431,7 @@ declare namespace sap {
           targetElement?: sap.ui.core.Element | string;
         }
 
-        interface $DragInfoSettings
-          extends sap.ui.core.dnd.$DragDropBaseSettings {
+        interface DragInfoOpts extends sap.ui.core.dnd.DragDropBaseOpts {
           /**
            * The name of the aggregation from which all children can be dragged. If undefined, the control itself
            * can be dragged.
@@ -10453,8 +10451,7 @@ declare namespace sap {
           dragEnd?: Function;
         }
 
-        interface $DropInfoSettings
-          extends sap.ui.core.dnd.$DragDropBaseSettings {
+        interface DropInfoOpts extends sap.ui.core.dnd.DragDropBaseOpts {
           /**
            * The aggregation name in the drop target control which is the target of this drag-and-drop action. If
            * undefined, the entire control is the target. This can be handy if the target control does not have any
@@ -10529,7 +10526,7 @@ declare namespace sap {
             /**
              * Initial settings for the new control
              */
-            mSettings?: $DragDropBaseSettings
+            mSettings?: DragDropBaseOpts
           );
 
           /**
@@ -10613,7 +10610,7 @@ declare namespace sap {
             /**
              * Initial settings for the DragDropInfo
              */
-            mSettings?: $DragDropInfoSettings
+            mSettings?: DragDropInfoOpts
           );
 
           /**
@@ -10843,7 +10840,7 @@ declare namespace sap {
             /**
              * Initial settings for the DragInfo
              */
-            mSettings?: $DragInfoSettings
+            mSettings?: DragInfoOpts
           );
 
           /**
@@ -11058,7 +11055,7 @@ declare namespace sap {
             /**
              * Initial settings for the DropInfo
              */
-            mSettings?: $DropInfoSettings
+            mSettings?: DropInfoOpts
           );
 
           /**
@@ -13631,8 +13628,8 @@ declare namespace sap {
       }
 
       namespace search {
-        interface $OpenSearchProviderSettings
-          extends sap.ui.core.search.$SearchProviderSettings {
+        interface OpenSearchProviderOpts
+          extends sap.ui.core.search.SearchProviderOpts {
           /**
            * The URL for suggestions of the search provider. As placeholder for the concrete search queries '{searchTerms}'
            * must be used. For cross domain requests maybe a proxy must be used.
@@ -13645,7 +13642,7 @@ declare namespace sap {
           suggestType?: string;
         }
 
-        interface $SearchProviderSettings extends sap.ui.core.$ElementSettings {
+        interface SearchProviderOpts extends sap.ui.core.ElementOpts {
           /**
            * Icon of the Search Provider
            */
@@ -13670,7 +13667,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $OpenSearchProviderSettings
+            mSettings?: OpenSearchProviderOpts
           );
 
           /**
@@ -13781,7 +13778,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $SearchProviderSettings
+            mSettings?: SearchProviderOpts
           );
 
           /**
@@ -13852,7 +13849,7 @@ declare namespace sap {
       }
 
       namespace tmpl {
-        interface $DOMAttributeSettings extends sap.ui.core.$ElementSettings {
+        interface DOMAttributeOpts extends sap.ui.core.ElementOpts {
           /**
            * Name of the DOM attribute
            */
@@ -13864,7 +13861,7 @@ declare namespace sap {
           value?: string;
         }
 
-        interface $DOMElementSettings extends sap.ui.core.$ControlSettings {
+        interface DOMElementOpts extends sap.ui.core.ControlOpts {
           /**
            * The text content of the DOM element
            */
@@ -13890,8 +13887,7 @@ declare namespace sap {
             | sap.ui.core.tmpl.DOMElement;
         }
 
-        interface $TemplateControlSettings
-          extends sap.ui.core.$ControlSettings {
+        interface TemplateControlOpts extends sap.ui.core.ControlOpts {
           /**
            * The context is a data object. It can be used for default template expressions. A change of the context
            * object leads to a re-rendering whereas a change of a nested property of the context object doesn't. By
@@ -13936,7 +13932,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $DOMAttributeSettings
+            mSettings?: DOMAttributeOpts
           );
 
           /**
@@ -14026,7 +14022,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $DOMElementSettings
+            mSettings?: DOMElementOpts
           );
 
           /**
@@ -14511,7 +14507,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $TemplateControlSettings
+            mSettings?: TemplateControlOpts
           );
 
           /**
@@ -15013,7 +15009,7 @@ declare namespace sap {
           interface delegate {}
         }
 
-        interface $ExportSettings extends sap.ui.core.$ControlSettings {
+        interface ExportOpts extends sap.ui.core.ControlOpts {
           /**
            * Type that generates the content.
            */
@@ -15032,7 +15028,7 @@ declare namespace sap {
           rows?: sap.ui.core.util.ExportRow[] | sap.ui.core.util.ExportRow;
         }
 
-        interface $ExportCellSettings extends sap.ui.core.$ElementSettings {
+        interface ExportCellOpts extends sap.ui.core.ElementOpts {
           /**
            * Cell content.
            */
@@ -15062,7 +15058,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $ExportSettings
+            mSettings?: ExportOpts
           );
 
           /**
@@ -15306,7 +15302,7 @@ declare namespace sap {
             /**
              * initial settings for the new control
              */
-            mSettings?: $ExportCellSettings
+            mSettings?: ExportCellOpts
           );
 
           /**
@@ -16637,8 +16633,7 @@ declare namespace sap {
        */
       interface Toolbar {}
 
-      interface $ComponentContainerSettings
-        extends sap.ui.core.$ControlSettings {
+      interface ComponentContainerOpts extends sap.ui.core.ControlOpts {
         /**
          * Component name, the package where the component is contained. This property can only be applied initially.
          */
@@ -16734,7 +16729,7 @@ declare namespace sap {
         component?: sap.ui.core.UIComponent | string;
       }
 
-      interface $ControlSettings extends sap.ui.core.$ElementSettings {
+      interface ControlOpts extends sap.ui.core.ElementOpts {
         /**
          * Whether the control is currently in blocked state.
          */
@@ -16792,7 +16787,7 @@ declare namespace sap {
         validateFieldGroup?: Function;
       }
 
-      interface $CustomDataSettings extends sap.ui.core.$ElementSettings {
+      interface CustomDataOpts extends sap.ui.core.ElementOpts {
         /**
          * The key of the data in this CustomData object. When the data is just stored, it can be any string, but
          * when it is to be written to HTML (writeToDom == true) then it must also be a valid HTML attribute name
@@ -16821,7 +16816,7 @@ declare namespace sap {
         writeToDom?: boolean;
       }
 
-      interface $ElementSettings extends sap.ui.base.$ManagedObjectSettings {
+      interface ElementOpts extends sap.ui.base.ManagedObjectOpts {
         /**
          * The tooltip that should be shown for this Element.
          *
@@ -16860,7 +16855,7 @@ declare namespace sap {
           | sap.ui.core.dnd.DragDropBase;
       }
 
-      interface $HTMLSettings extends sap.ui.core.$ControlSettings {
+      interface HTMLOpts extends sap.ui.core.ControlOpts {
         /**
          * HTML content to be displayed, defined as a string.
          *
@@ -16921,7 +16916,7 @@ declare namespace sap {
         afterRendering?: Function;
       }
 
-      interface $IconSettings extends sap.ui.core.$ControlSettings {
+      interface IconOpts extends sap.ui.core.ControlOpts {
         /**
          * This property should be set by the return value of calling sap.ui.core.IconPool.getIconURI with an Icon
          * name parameter and an optional collection parameter which is required when using application extended
@@ -17039,14 +17034,14 @@ declare namespace sap {
         ariaLabelledBy?: sap.ui.core.Control[] | string[];
       }
 
-      interface $InvisibleTextSettings extends sap.ui.core.$ControlSettings {
+      interface InvisibleTextOpts extends sap.ui.core.ControlOpts {
         /**
          * The text of the InvisibleText.
          */
         text?: string;
       }
 
-      interface $ItemSettings extends sap.ui.core.$ElementSettings {
+      interface ItemOpts extends sap.ui.core.ElementOpts {
         /**
          * The text to be displayed for the item.
          */
@@ -17068,9 +17063,9 @@ declare namespace sap {
         key?: string;
       }
 
-      interface $LayoutDataSettings extends sap.ui.core.$ElementSettings {}
+      interface LayoutDataOpts extends sap.ui.core.ElementOpts {}
 
-      interface $ListItemSettings extends sap.ui.core.$ItemSettings {
+      interface ListItemOpts extends sap.ui.core.ItemOpts {
         /**
          * The icon belonging to this list item instance. This can be a URI to an image or an icon font URI.
          */
@@ -17082,8 +17077,7 @@ declare namespace sap {
         additionalText?: string;
       }
 
-      interface $LocalBusyIndicatorSettings
-        extends sap.ui.core.$ControlSettings {
+      interface LocalBusyIndicatorOpts extends sap.ui.core.ControlOpts {
         /**
          * This property is the width of the control that has to be covered. With this width the position of the
          * animation can be properly set.
@@ -17097,7 +17091,7 @@ declare namespace sap {
         height?: sap.ui.core.CSSSize;
       }
 
-      interface $MessageSettings extends sap.ui.core.$ElementSettings {
+      interface MessageOpts extends sap.ui.core.ElementOpts {
         /**
          * Message text
          */
@@ -17128,7 +17122,7 @@ declare namespace sap {
         readOnly?: boolean;
       }
 
-      interface $ScrollBarSettings extends sap.ui.core.$ControlSettings {
+      interface ScrollBarOpts extends sap.ui.core.ControlOpts {
         /**
          * Orientation. Defines if the Scrollbar is vertical or horizontal.
          */
@@ -17160,9 +17154,9 @@ declare namespace sap {
         scroll?: Function;
       }
 
-      interface $SeparatorItemSettings extends sap.ui.core.$ItemSettings {}
+      interface SeparatorItemOpts extends sap.ui.core.ItemOpts {}
 
-      interface $TitleSettings extends sap.ui.core.$ElementSettings {
+      interface TitleOpts extends sap.ui.core.ElementOpts {
         /**
          * Defines the title text
          */
@@ -17187,7 +17181,7 @@ declare namespace sap {
         emphasized?: boolean;
       }
 
-      interface $TooltipBaseSettings extends sap.ui.core.$ControlSettings {
+      interface TooltipBaseOpts extends sap.ui.core.ControlOpts {
         /**
          * The text that is shown in the tooltip that extends the TooltipBase class, for example in RichTooltip.
          */
@@ -17243,8 +17237,7 @@ declare namespace sap {
         closed?: Function;
       }
 
-      interface $VariantLayoutDataSettings
-        extends sap.ui.core.$LayoutDataSettings {
+      interface VariantLayoutDataOpts extends sap.ui.core.LayoutDataOpts {
         /**
          * Allows multiple LayoutData.
          */
@@ -17942,7 +17935,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ComponentContainerSettings
+          mSettings?: ComponentContainerOpts
         );
 
         /**
@@ -19043,7 +19036,7 @@ declare namespace sap {
           /**
            * Object with initial settings for the new control
            */
-          mSettings?: $ControlSettings
+          mSettings?: ControlOpts
         );
 
         /**
@@ -20794,7 +20787,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $CustomDataSettings
+          mSettings?: CustomDataOpts
         );
 
         /**
@@ -21004,7 +20997,7 @@ declare namespace sap {
           /**
            * optional map/JSON-object with initial property values, aggregated objects etc. for the new element
            */
-          mSettings?: $ElementSettings
+          mSettings?: ElementOpts
         );
 
         /**
@@ -22203,7 +22196,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $HTMLSettings
+          mSettings?: HTMLOpts
         );
 
         /**
@@ -22508,7 +22501,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $IconSettings
+          mSettings?: IconOpts
         );
 
         /**
@@ -23103,7 +23096,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $InvisibleTextSettings
+          mSettings?: InvisibleTextOpts
         );
 
         /**
@@ -23226,7 +23219,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ItemSettings
+          mSettings?: ItemOpts
         );
 
         /**
@@ -23366,7 +23359,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $LayoutDataSettings
+          mSettings?: LayoutDataOpts
         );
 
         /**
@@ -23416,7 +23409,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ListItemSettings
+          mSettings?: ListItemOpts
         );
 
         /**
@@ -23510,7 +23503,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $LocalBusyIndicatorSettings
+          mSettings?: LocalBusyIndicatorOpts
         );
 
         /**
@@ -24655,7 +24648,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $MessageSettings
+          mSettings?: MessageOpts
         );
 
         /**
@@ -25808,7 +25801,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $ScrollBarSettings
+          mSettings?: ScrollBarOpts
         );
 
         /**
@@ -26061,7 +26054,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $SeparatorItemSettings
+          mSettings?: SeparatorItemOpts
         );
 
         /**
@@ -26112,7 +26105,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TitleSettings
+          mSettings?: TitleOpts
         );
 
         /**
@@ -26252,7 +26245,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $TooltipBaseSettings
+          mSettings?: TooltipBaseOpts
         );
 
         /**
@@ -27085,7 +27078,7 @@ declare namespace sap {
           /**
            * initial settings for the new control
            */
-          mSettings?: $VariantLayoutDataSettings
+          mSettings?: VariantLayoutDataOpts
         );
 
         /**
