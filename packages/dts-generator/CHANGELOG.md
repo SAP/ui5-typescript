@@ -1,3 +1,7 @@
+## 2.0.0
+
+Support skipping/ignoring symbols by fqn.
+
 ## 1.60.5
 
 Optional Interface Methods Support.

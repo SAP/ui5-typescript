@@ -1,5 +1,10 @@
 export interface IDirectives {
   /**
+   * Full Qualified Symbol names from the UI5 SDK to completely ignore/skip during generation.
+   */
+  badSymbols: string[];
+
+  /**
    * names (**not** FQNs) of class methods which should be excluded from the generation
    * -  TODO: This is very inaccurate due to not using FQNs, consider improving the implementation.
    */
