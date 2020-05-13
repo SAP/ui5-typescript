@@ -1,8 +1,8 @@
 const _ = require("lodash");
 
-function fixApiJson(json) {
+function fixApiJson(json, badSymbols) {
   addImplicitNamespaces(json);
-  removeBadData(json);
+  removeBadSymbols(json);
   removeRestrictedInterface(json);
   return json;
 }
@@ -40,14 +40,17 @@ function addImplicitNamespaces(json) {
   });
 }
 
-// TODO: extract this to directives.
-const badData = {
-  // "sap.ui.test.Opa5": true
-};
+function removeBadSymbols(json, badData) {
+  const badDataRecords = _.reduce(
+    badData,
+    (result, fqn) => {
+      result[fqn] = true;
+    },
+    {}
+  );
 
-function removeBadData(json) {
   json.symbols = _.reject(json.symbols, sym => {
-    return badData[sym.name];
+    return badDataRecords[sym.name];
   });
 }
 

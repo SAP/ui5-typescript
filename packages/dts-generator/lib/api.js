@@ -9,6 +9,7 @@ const { buildSymbolTable, mergeSymbolTables } = require("./phases/symbols.js");
 const defaultOptions = {
   dependencies: [],
   directives: {
+    badSymbols: [],
     badMethods: [],
     badInterfaces: [],
     typeTyposMap: [],
@@ -19,10 +20,11 @@ const defaultOptions = {
 
 function jsonToDTS(targetLibJson, options) {
   const actualOptions = _.defaultsDeep(options, defaultOptions);
-
   const targetLibFixedJson = fixApiJson(targetLibJson);
   const depsFixedJsons = timer(function fixJson() {
-    return _.map(actualOptions.dependencies, fixApiJson);
+    return _.map(actualOptions.dependencies, _ =>
+      fixApiJson(_, actualOptions.directives.badSymbols)
+    );
   });
 
   // Transform The api.json files to an hierarchical well defined  Data structure (see ast.d.ts)
