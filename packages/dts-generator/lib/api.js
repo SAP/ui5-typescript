@@ -20,7 +20,10 @@ const defaultOptions = {
 
 function jsonToDTS(targetLibJson, options) {
   const actualOptions = _.defaultsDeep(options, defaultOptions);
-  const targetLibFixedJson = fixApiJson(targetLibJson);
+  const targetLibFixedJson = fixApiJson(
+    targetLibJson,
+    actualOptions.directives.badSymbols
+  );
   const depsFixedJsons = timer(function fixJson() {
     return _.map(actualOptions.dependencies, _ =>
       fixApiJson(_, actualOptions.directives.badSymbols)
