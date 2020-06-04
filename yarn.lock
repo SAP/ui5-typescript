@@ -866,10 +866,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@sapui5/ts-types@1.77.2":
-  version "1.77.2"
-  resolved "https://registry.yarnpkg.com/@sapui5/ts-types/-/ts-types-1.77.2.tgz#154904430f50ff07ae5bdb36b2c7cdcbc42f3db4"
-  integrity sha512-b00MZaW84rIw/hxgwPn4T/J7NNXSmO6Dey3bQOr1A7BTOCO6kXTPkluh6rHjeBIR/N/GFqpLZrlb8uMlIuolLA==
+"@sapui5/ts-types@1.78.2":
+  version "1.78.2"
+  resolved "https://registry.yarnpkg.com/@sapui5/ts-types/-/ts-types-1.78.2.tgz#2cd3fa68a47e38b579670316ebff1c0e8a502208"
+  integrity sha512-Xjy5UPQaj22du9UxGSmw7YWJ+aXHtNATvXcvFWZt23exsn4H2lfpg5D3apIFXMyt5qwH+LJwKFD2NdjfhyPj9g==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
