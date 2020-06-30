@@ -17,13 +17,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run precommit && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*.{ts,js,json,md,yml}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "devDependencies": {
