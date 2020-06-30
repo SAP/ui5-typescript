@@ -96,14 +96,14 @@ sap.ui.define(
    *        // 2. Linking TypeScript global signatures (below)
    * @param {typeof sap.ui.core.TooltipBase} TooltipBase
    */
-  function(TooltipBase) {
+  function (TooltipBase) {
     // 3. Define function parameter
 
     const toolTipInstance = new TooltipBase("myID", {
       // try content assist here:
       dependents: null,
       blocked: true,
-      closeDelay: 666
+      closeDelay: 666,
     });
   }
 );

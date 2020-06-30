@@ -4,7 +4,7 @@ const { assertKnownProps } = require("../utils/runtime-checks");
 function jsonToAst(jsonObj) {
   return {
     version: jsonObj.version,
-    topLevelNamespace: buildNamespace(jsonObj.symbols, "sap")
+    topLevelNamespace: buildNamespace(jsonObj.symbols, "sap"),
   };
 }
 
@@ -14,7 +14,7 @@ function jsonToAst(jsonObj) {
  * @returns {Namespace}
  */
 function buildNamespace(symbols, nsFQN) {
-  const nsSymbol = _.find(symbols, currSymbol => currSymbol.name === nsFQN);
+  const nsSymbol = _.find(symbols, (currSymbol) => currSymbol.name === nsFQN);
 
   assertKnownProps(
     [
@@ -29,7 +29,7 @@ function buildNamespace(symbols, nsFQN) {
       "final",
       "methods",
       "name",
-      "properties"
+      "properties",
     ],
     nsSymbol
   );
@@ -45,7 +45,7 @@ function buildNamespace(symbols, nsFQN) {
     classes: buildNestedClasses(symbols, nsFQN),
     interfaces: buildNestedInterfaces(symbols, nsFQN),
     enums: buildNestedEnums(symbols, nsFQN),
-    visibility: nsSymbol !== undefined ? nsSymbol.visibility : "public"
+    visibility: nsSymbol !== undefined ? nsSymbol.visibility : "public",
   };
 
   addJsDocProps(astNode, nsSymbol);
@@ -54,7 +54,7 @@ function buildNamespace(symbols, nsFQN) {
 
 function buildNestedNamespaces(symbols, nsFQN) {
   const nestedNamespaces = getDirectDescendants(symbols, "namespace", nsFQN);
-  return _.map(nestedNamespaces, currNestedNS =>
+  return _.map(nestedNamespaces, (currNestedNS) =>
     buildNamespace(symbols, currNestedNS.name)
   );
 }
@@ -89,7 +89,7 @@ function buildVariable(property) {
     name: property.name,
     static: property.static === true,
     type: buildType(property.type),
-    visibility: property.visibility
+    visibility: property.visibility,
   };
 
   addJsDocProps(astNode, property);
@@ -119,15 +119,15 @@ function buildFunction(ui5Method) {
     throws: ui5Method.throws ? ui5Method.throws : [],
     deprecated: buildDeprecated(ui5Method.deprecated),
     visibility: ui5Method.visibility,
-    optional: ui5Method.optional
+    optional: ui5Method.optional,
   };
 
   addJsDocProps(astNode, ui5Method);
   return astNode;
 }
 
-const buildOptionalParameter = ui5Param => baseBuildParameter(ui5Param, true);
-const buildParameter = ui5Param => baseBuildParameter(ui5Param, false);
+const buildOptionalParameter = (ui5Param) => baseBuildParameter(ui5Param, true);
+const buildParameter = (ui5Param) => baseBuildParameter(ui5Param, false);
 
 /**
  * @param ui5Param
@@ -145,7 +145,7 @@ function baseBuildParameter(ui5Param, forcedOptional) {
       // from UI5 metadata for mSettings
       "group",
       "methods",
-      "bindable"
+      "bindable",
     ],
     ui5Param
   );
@@ -159,7 +159,7 @@ function baseBuildParameter(ui5Param, forcedOptional) {
       ? buildComplexParamType(complexType)
       : buildType(ui5Param.type),
     defaultValue: ui5Param.defaultValue,
-    optional: forcedOptional === true ? true : ui5Param.optional === true
+    optional: forcedOptional === true ? true : ui5Param.optional === true,
   };
 
   addJsDocProps(astNode, ui5Param);
@@ -192,7 +192,7 @@ function buildParameterWithType(ui5ItemMeta, buildType) {
       //       need to look into this property and its meaning
       //       this only appears 12 times in 350K LOC
       //       so perhaps it is not important enough to care about...
-      "altTypes"
+      "altTypes",
     ],
     ui5ItemMeta
   );
@@ -203,7 +203,7 @@ function buildParameterWithType(ui5ItemMeta, buildType) {
     // TODO: We need to support complex function types to generate those in d.ts (e.g `(a:number, b:string) => boolean`)
     type: buildType(ui5ItemMeta),
     defaultValue: null,
-    optional: true
+    optional: true,
   };
 
   addJsDocProps(astNode, ui5ItemMeta);
@@ -228,7 +228,7 @@ function buildReturnDesc(ui5ReturnValue) {
   return {
     kind: "ReturnDesc",
     type: buildType(ui5ReturnValue.type),
-    description: ui5ReturnValue.description
+    description: ui5ReturnValue.description,
   };
 }
 
@@ -251,7 +251,7 @@ function buildClass(ui5Class) {
       "final",
       "methods",
       "name",
-      "properties"
+      "properties",
     ],
     ui5Class
   );
@@ -267,7 +267,7 @@ function buildClass(ui5Class) {
     fields: _.map(ui5Class.properties, buildVariable),
     methods: _.map(ui5Class.methods, buildFunction),
     isAbstract: ui5Class.abstract === true,
-    visibility: ui5Class.visibility
+    visibility: ui5Class.visibility,
   };
 
   const ui5Meta = ui5Class["ui5-metadata"];
@@ -295,7 +295,7 @@ function buildInterface(ui5Interface) {
     methods: _.map(ui5Interface.methods, buildFunction),
     // The input UI5 interfaces only have methods, never properties
     props: [],
-    visibility: ui5Interface.visibility
+    visibility: ui5Interface.visibility,
   };
 
   addJsDocProps(astNode, ui5Interface);
@@ -313,7 +313,7 @@ function buildEnum(ui5Enum) {
     kind: "Enum",
     name: ui5Enum.basename,
     values: _.map(ui5Enum.properties, buildVariable),
-    visibility: ui5Enum.visibility
+    visibility: ui5Enum.visibility,
   };
 
   addJsDocProps(astNode, ui5Enum);
@@ -335,7 +335,7 @@ function buildDeprecated(ui5Deprecated) {
   return {
     kind: "DeprecatedDesc",
     description: ui5Deprecated.text,
-    since: ui5Deprecated.since
+    since: ui5Deprecated.since,
   };
 }
 
@@ -353,7 +353,7 @@ function buildExperimental(ui5Exp) {
   return {
     kind: "ExperimentalDesc",
     since: ui5Exp.since,
-    text: ui5Exp.text
+    text: ui5Exp.text,
   };
 }
 
@@ -372,7 +372,7 @@ function buildType(ui5Type) {
     return {
       kind: "SimpleType",
       // ignoring any "too complex" types for now
-      type: "any"
+      type: "any",
     };
   }
 
@@ -384,18 +384,18 @@ function buildType(ui5Type) {
     const unionTypesAsts = _.map(trimmed, buildType);
     return {
       kind: "UnionType",
-      types: unionTypesAsts
+      types: unionTypesAsts,
     };
   } else {
     return {
       kind: "SimpleType",
-      type: ui5Type
+      type: ui5Type,
     };
   }
 }
 
 function getDirectDescendants(symbols, kind, nsFQN) {
-  const directDescendantsOfKind = _.filter(symbols, currSymbol => {
+  const directDescendantsOfKind = _.filter(symbols, (currSymbol) => {
     const currKind = currSymbol.kind;
     const currName = currSymbol.name;
     return (
@@ -466,24 +466,24 @@ function augmentMSettingsParam(astNode, ui5Meta) {
 
   const ui5Events = _.reject(ui5Meta.events, { visibility: "hidden" });
   const ui5EventsNames = _.map(ui5Events, "name");
-  const ui5EventsParams = _.map(ui5Events, event =>
+  const ui5EventsParams = _.map(ui5Events, (event) =>
     buildParameterWithType(event, () => {
       // All events (currently return a simple function
       // TODO: what are the arguments for this simple function?
       return {
         kind: "SimpleType",
-        type: "Function"
+        type: "Function",
       };
     })
   );
   const ui5EventComplexType = _.zipObject(ui5EventsNames, ui5EventsParams);
 
   const ui5Aggregations = _.reject(ui5Meta.aggregations, {
-    visibility: "hidden"
+    visibility: "hidden",
   });
   const ui5AggregationsNames = _.map(ui5Aggregations, "name");
-  const ui5AggregationsParams = _.map(ui5Aggregations, aggre =>
-    buildParameterWithType(aggre, aggregation => {
+  const ui5AggregationsParams = _.map(ui5Aggregations, (aggre) =>
+    buildParameterWithType(aggre, (aggregation) => {
       const aggreType = aggregation.type;
       // https://sapui5.hana.ondemand.com/#/api/sap.ui.base.ManagedObject
       // for 0..1 aggregations, the value has to be an instance of the aggregated type
@@ -493,7 +493,7 @@ function augmentMSettingsParam(astNode, ui5Meta) {
         case "0..1":
           return {
             kind: "SimpleType",
-            type: aggreType
+            type: aggreType,
           };
         case "0..n":
           return {
@@ -502,13 +502,13 @@ function augmentMSettingsParam(astNode, ui5Meta) {
               {
                 kind: "SimpleType",
                 // TODO: we need to represent array types in a more consistent manner
-                type: aggreType + "[]"
+                type: aggreType + "[]",
               },
               {
                 kind: "SimpleType",
-                type: aggreType
-              }
-            ]
+                type: aggreType,
+              },
+            ],
           };
         default:
           throw `None Exhaustive Match: <${aggregation.cardinality}>`;
@@ -521,11 +521,11 @@ function augmentMSettingsParam(astNode, ui5Meta) {
   );
 
   const ui5Associations = _.reject(ui5Meta.associations, {
-    visibility: "hidden"
+    visibility: "hidden",
   });
   const ui5AssociationsNames = _.map(ui5Associations, "name");
-  const ui5AssociationsParams = _.map(ui5Associations, assoc =>
-    buildParameterWithType(assoc, aggregation => {
+  const ui5AssociationsParams = _.map(ui5Associations, (assoc) =>
+    buildParameterWithType(assoc, (aggregation) => {
       const assocType = aggregation.type;
       // https://sapui5.hana.ondemand.com/#/api/sap.ui.base.ManagedObject
       // for 0..1 associations, an instance of the associated type or an id (string) is accepted
@@ -539,13 +539,13 @@ function augmentMSettingsParam(astNode, ui5Meta) {
               {
                 kind: "SimpleType",
                 // TODO: we need to represent array types in a more consistent manner
-                type: assocType
+                type: assocType,
               },
               {
                 kind: "SimpleType",
-                type: "string"
-              }
-            ]
+                type: "string",
+              },
+            ],
           };
         case "0..n":
           return {
@@ -554,13 +554,13 @@ function augmentMSettingsParam(astNode, ui5Meta) {
               {
                 kind: "SimpleType",
                 // TODO: we need to represent array types in a more consistent manner
-                type: assocType + "[]"
+                type: assocType + "[]",
               },
               {
                 kind: "SimpleType",
-                type: "string[]"
-              }
-            ]
+                type: "string[]",
+              },
+            ],
           };
         default:
           throw `None Exhaustive Match: <${aggregation.cardinality}>`;
@@ -585,5 +585,5 @@ function augmentMSettingsParam(astNode, ui5Meta) {
 }
 
 module.exports = {
-  jsonToAst
+  jsonToAst,
 };

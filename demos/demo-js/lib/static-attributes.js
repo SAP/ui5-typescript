@@ -4,7 +4,7 @@ sap.ui.define(
    * @param {typeof sap.ui.model.SelectionModel} SelectionModel
    * @param {typeof sap.ui.Device.system} system
    */
-  function(SelectionModel, system) {
+  function (SelectionModel, system) {
     // Static Fields on Class
     console.log(SelectionModel.SINGLE_SELECTION);
     console.log(SelectionModel.MULTI_SELECTION);

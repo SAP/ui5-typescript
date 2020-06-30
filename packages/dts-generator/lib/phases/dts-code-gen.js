@@ -36,7 +36,7 @@ function JSDOC({
   since,
   experimental,
   deprecated,
-  additionalDocs
+  additionalDocs,
 }) {
   if (
     _.every([description, since, deprecated, additionalDocs], _.isUndefined)
@@ -99,7 +99,7 @@ function JSDOC({
   // remove all other html tags
   contents = sanitizeHtml(contents, {
     allowedTags: [],
-    allowedAttributes: {}
+    allowedAttributes: {},
   });
 
   contents = `/**\n * ${contents.replace(/\n/g, "\n * ")} \n */`;
@@ -116,7 +116,7 @@ function JSDOC({
 function APPEND_ITEMS(items, generator, options) {
   const { sep, args } = _.defaults(options, { sep: "", args: [] });
 
-  const itemsText = _.map(items, currItem =>
+  const itemsText = _.map(items, (currItem) =>
     generator.apply(null, [currItem].concat(args))
   );
   return itemsText.join(sep + NL) + NL;
@@ -300,7 +300,7 @@ function genParameter(ast) {
   // "complex" options param
   if (typeof ast.type === "object" && typeof ast.type.kind !== "string") {
     text += ": {" + NL;
-    _.forEach(ast.type, nestedType => {
+    _.forEach(ast.type, (nestedType) => {
       text += genParameter(nestedType) + NL;
     });
     text += "}" + NL;
@@ -431,5 +431,5 @@ function wordWrap(text, maxLineLength) {
 }
 
 module.exports = {
-  genDts
+  genDts,
 };

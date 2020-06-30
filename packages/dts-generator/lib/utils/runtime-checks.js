@@ -18,7 +18,7 @@ const commonIrrelevantProps = [
   "ui5-metadata",
   "ui5-metamodel",
   "static",
-  "visibility"
+  "visibility",
 ];
 function assertKnownProps(expectedPropNames, obj) {
   const objProps = _.keys(obj);
@@ -31,5 +31,5 @@ function assertKnownProps(expectedPropNames, obj) {
 }
 
 module.exports = {
-  assertKnownProps
+  assertKnownProps,
 };

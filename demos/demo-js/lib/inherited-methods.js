@@ -3,7 +3,7 @@ sap.ui.define(
   /**
    * @param {typeof sap.ui.core.TooltipBase} TooltipBase
    */
-  function(TooltipBase) {
+  function (TooltipBase) {
     const toolTipInstance = new TooltipBase();
 
     // Inherited instance methods calls.

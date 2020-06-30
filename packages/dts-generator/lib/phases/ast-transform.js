@@ -39,10 +39,10 @@ function updateConstructorMSettingsParam(ast) {
 
   const controlClasses = _.filter(
     ast.classes,
-    clazz => clazz.kind === "Class" && clazz.isUI5Control === true
+    (clazz) => clazz.kind === "Class" && clazz.isUI5Control === true
   );
 
-  const mSettingsInterfaces = _.map(controlClasses, ctrlClazz => {
+  const mSettingsInterfaces = _.map(controlClasses, (ctrlClazz) => {
     const newInterfaceName = genMsettingInterfaceName(ctrlClazz.name);
     const orgParam = ctrlClazz.constructors[0].parameters[1];
     // Create a new interface for each mSettings param in UI5 Control
@@ -57,7 +57,7 @@ function updateConstructorMSettingsParam(ast) {
       methods: [],
       // "isUI5Control" ensure that the below property access is safe.
       props: _.map(orgParam.type, paramToProp),
-      visibility: ctrlClazz.visibility
+      visibility: ctrlClazz.visibility,
 
       // Not copying the JSDocs because it does not seem like any of these
       // docs are relevant in the context of the new generate interface.
@@ -66,7 +66,7 @@ function updateConstructorMSettingsParam(ast) {
     // Reference the new interface from the original param type.
     orgParam.type = {
       kind: "SimpleType",
-      type: newInterfaceName
+      type: newInterfaceName,
     };
 
     return newInterface;
@@ -82,7 +82,7 @@ function addParentProp(node) {
       addParentProp(child);
       child.parent = node;
     } else if (_.isArray(child)) {
-      _.forEach(child, childElemNode => {
+      _.forEach(child, (childElemNode) => {
         if (_.has(childElemNode, "kind") && key !== "parent") {
           addParentProp(childElemNode);
           childElemNode.parent = node;
@@ -166,7 +166,7 @@ function paramToProp(param) {
     since: param.since,
     deprecated: param.deprecated,
     experimental: param.experimental,
-    additionalDocs: param.additionalDocs
+    additionalDocs: param.additionalDocs,
   };
 }
 
@@ -201,16 +201,16 @@ function addDefineArrayInterface(ast, symbolTable) {
       name: "IUI5DefineDependencyNames",
       extends: [],
       methods: [],
-      props: _.map(defineDepNames, fqn => {
+      props: _.map(defineDepNames, (fqn) => {
         return {
           kind: "Property",
           // These names include "slashes" so we must wrap them in quotes.
           name: `"${fqn.replace(/\./g, "/")}"`,
           type: "undefined",
-          optional: false
+          optional: false,
         };
       }),
-      visibility: "public"
+      visibility: "public",
     });
   }
 }
@@ -219,20 +219,20 @@ function updateDefineArrayDepsTypes(symbolTable) {
   const sapUiNs = symbolTable["sap.ui"];
   const defineFunction = _.find(
     sapUiNs.functions,
-    func => func.name === "define"
+    (func) => func.name === "define"
   );
   const aDependenciesParam = _.find(
     defineFunction.parameters,
-    param => param.name === "aDependencies"
+    (param) => param.name === "aDependencies"
   );
   aDependenciesParam.type = {
     kind: "SimpleType",
     type:
       "(keyof sap.IUI5DefineDependencyNames | (string & { IGNORE_ME?:never}) )[]",
-    ignoreIssues: true
+    ignoreIssues: true,
   };
 }
 
 module.exports = {
-  transformAst
+  transformAst,
 };

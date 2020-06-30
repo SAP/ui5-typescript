@@ -22,17 +22,17 @@ function addImplicitNamespaces(json) {
       json.symbols.push({
         kind: "namespace",
         basename: currFQN,
-        name: currFQN
+        name: currFQN,
       });
     }
 
-    _.forEach(restNames, currNamePart => {
+    _.forEach(restNames, (currNamePart) => {
       currFQN += `.${currNamePart}`;
       if (_.has(symbolTable, currFQN) === false) {
         json.symbols.push({
           kind: "namespace",
           basename: currNamePart,
-          name: currFQN
+          name: currFQN,
         });
       }
       symbolTable[currFQN] = "Fixed";
@@ -50,7 +50,7 @@ function removeBadSymbols(json, badSymbols) {
     {}
   );
 
-  json.symbols = _.reject(json.symbols, sym => {
+  json.symbols = _.reject(json.symbols, (sym) => {
     return badSymbolsRecords[sym.name];
   });
 }
@@ -62,21 +62,21 @@ function removeBadSymbols(json, badSymbols) {
 function removeRestrictedInterface(json) {
   const restrictedInterfaces = _(json.symbols)
     .filter(
-      symbol =>
+      (symbol) =>
         symbol.kind === "interface" && symbol.visibility === "restricted"
     )
-    .map(symbol => symbol.name)
+    .map((symbol) => symbol.name)
     .value();
-  _.forEach(json.symbols, symbol => {
+  _.forEach(json.symbols, (symbol) => {
     if (symbol.kind === "class" && !_.isEmpty(symbol.implements)) {
       _.remove(
         symbol.implements,
-        implementName => restrictedInterfaces.indexOf(implementName) != -1
+        (implementName) => restrictedInterfaces.indexOf(implementName) != -1
       );
     }
   });
 }
 
 module.exports = {
-  fixApiJson
+  fixApiJson,
 };

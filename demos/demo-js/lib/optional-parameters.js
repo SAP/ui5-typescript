@@ -3,7 +3,7 @@ sap.ui.define(
   /**
    * @param {typeof sap.ui.base.ManagedObject} ManagedObject
    */
-  function(ManagedObject) {
+  function (ManagedObject) {
     const instance = new ManagedObject();
 
     // with overload - suboptimal UX

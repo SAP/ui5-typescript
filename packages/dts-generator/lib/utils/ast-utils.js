@@ -14,5 +14,5 @@ function getFqn(ast) {
 }
 
 module.exports = {
-  getFqn
+  getFqn,
 };

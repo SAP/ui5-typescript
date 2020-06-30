@@ -8,7 +8,7 @@ sap.ui.define(
     // Once a "/" is used the filtering resets itself and the auto completed text may be invalid!
     // - This is an Editor Level issue
     "sap/ui/",
-    ""
+    "",
   ],
-  function(TooltipBase: typeof sap.ui.core.TooltipBase) {}
+  function (TooltipBase: typeof sap.ui.core.TooltipBase) {}
 );

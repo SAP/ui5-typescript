@@ -1,4 +1,4 @@
-sap.ui.define(["sap/ui/core/TooltipBase"], function(
+sap.ui.define(["sap/ui/core/TooltipBase"], function (
   TooltipBase: typeof sap.ui.core.TooltipBase
 ) {
   const toolTipInstance = new TooltipBase();

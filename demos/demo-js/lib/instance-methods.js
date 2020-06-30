@@ -3,7 +3,7 @@ sap.ui.define(
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function(Controller) {
+  function (Controller) {
     const ui5Instance = new Controller("666");
 
     // "own" instance methods calls

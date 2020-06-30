@@ -17,7 +17,7 @@ function buildNamespaceSymbols(ast, fqnPrefix) {
   const nsSymbolEntry = {};
   nsSymbolEntry[prefix] = ast;
 
-  const nestedNsSymsArr = _.map(ast.namespaces, nestedNs =>
+  const nestedNsSymsArr = _.map(ast.namespaces, (nestedNs) =>
     buildNamespaceSymbols(nestedNs, prefix)
   );
   const nestedNsSyms = mergeSymbolTables.apply(null, nestedNsSymsArr);
@@ -50,7 +50,7 @@ function mergeSymbolTables(...symTables) {
  */
 function buildGenericSymbols(asts, prefix) {
   const entries = {};
-  _.forEach(asts, currAst => {
+  _.forEach(asts, (currAst) => {
     entries[prefix + "." + currAst.name] = currAst;
   });
 
@@ -59,5 +59,5 @@ function buildGenericSymbols(asts, prefix) {
 
 module.exports = {
   buildSymbolTable,
-  mergeSymbolTables
+  mergeSymbolTables,
 };

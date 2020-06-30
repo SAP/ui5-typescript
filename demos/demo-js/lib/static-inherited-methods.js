@@ -3,7 +3,7 @@ sap.ui.define(
   /**
    * @param {typeof sap.ui.core.message.MessageManager} MessageManager
    */
-  function(MessageManager) {
+  function (MessageManager) {
     // "hasListener" comes from the parent class of "MessageManager"
     MessageManager.isA({}, "");
   }

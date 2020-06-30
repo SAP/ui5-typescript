@@ -1,4 +1,4 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"], function(
+sap.ui.define(["sap/ui/core/mvc/Controller"], function (
   Controller: typeof sap.ui.core.mvc.Controller
 ) {
   const ui5Instance = new Controller("666");

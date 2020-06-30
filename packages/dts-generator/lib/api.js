@@ -14,8 +14,8 @@ const defaultOptions = {
     badInterfaces: [],
     typeTyposMap: [],
     namespacesToInterfaces: {},
-    fqnToIgnore: {}
-  }
+    fqnToIgnore: {},
+  },
 };
 
 function jsonToDTS(targetLibJson, options) {
@@ -25,7 +25,7 @@ function jsonToDTS(targetLibJson, options) {
     actualOptions.directives.badSymbols
   );
   const depsFixedJsons = timer(function fixJson() {
-    return _.map(actualOptions.dependencies, _ =>
+    return _.map(actualOptions.dependencies, (_) =>
       fixApiJson(_, actualOptions.directives.badSymbols)
     );
   });
@@ -61,13 +61,13 @@ function jsonToDTS(targetLibJson, options) {
   );
 
   if (actualOptions.importsGen) {
-    const depLibNames = _.map(actualOptions.dependencies, dep => dep.library);
+    const depLibNames = _.map(actualOptions.dependencies, (dep) => dep.library);
     targetLibDtsText = actualOptions.importsGen(targetLibDtsText, depLibNames);
   }
 
   return {
     library: targetLibJson.library,
-    dtsText: targetLibDtsText
+    dtsText: targetLibDtsText,
   };
 }
 
@@ -81,5 +81,5 @@ function timer(func) {
 }
 
 module.exports = {
-  jsonToDTS
+  jsonToDTS,
 };

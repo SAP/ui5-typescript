@@ -33,7 +33,7 @@ const dtsText = jsonToDTS(libJsonData, {
   directives,
   dependencies: [
     /* Array of api.json dependencies as plain JavaScript objects */
-  ]
+  ],
 });
 
 // Normally one would output the `dtsText` to a file.

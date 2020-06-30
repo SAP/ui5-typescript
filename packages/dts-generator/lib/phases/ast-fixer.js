@@ -40,7 +40,7 @@ function fixAsts(asts, symbolTable, directives) {
  * remove their usage completely until they are fixed...
  */
 function removeBadInterfacesInheritance(groupedAst, badInterfaces) {
-  _.forEach(groupedAst.Class, clazz => {
+  _.forEach(groupedAst.Class, (clazz) => {
     clazz.implements = _.difference(clazz.implements, badInterfaces);
   });
 }
@@ -50,8 +50,8 @@ function removeBadInterfacesInheritance(groupedAst, badInterfaces) {
  * remove their usage completely until they are fixed in the original UI5 JSDocs
  */
 function removeBadMethods(groupedAst, badMethods) {
-  _.forEach(groupedAst.Class, clazz => {
-    clazz.methods = _.reject(clazz.methods, currMethod =>
+  _.forEach(groupedAst.Class, (clazz) => {
+    clazz.methods = _.reject(clazz.methods, (currMethod) =>
       _.includes(badMethods, currMethod.name)
     );
   });
@@ -76,13 +76,13 @@ function flattenAst(ast) {
     else if (key === "type" && typeof val === "object") {
       children = children.concat(_.values(val));
     } else if (_.isArray(val)) {
-      const arrChildren = _.filter(val, currVal => _.has(currVal, "kind"));
+      const arrChildren = _.filter(val, (currVal) => _.has(currVal, "kind"));
       children = children.concat(arrChildren);
     }
   });
 
   let allDescendants = children;
-  _.forEach(children, child => {
+  _.forEach(children, (child) => {
     const currDescendants = flattenAst(child);
     allDescendants = allDescendants.concat(currDescendants);
   });
@@ -99,8 +99,8 @@ function flattenAst(ast) {
 function fixConstructors(groupedAst) {
   const classes = groupedAst.Class;
 
-  _.forEach(classes, clazz => {
-    _.forEach(clazz.constructors, currConstructor => {
+  _.forEach(classes, (clazz) => {
+    _.forEach(clazz.constructors, (currConstructor) => {
       currConstructor.name = "constructor";
       delete currConstructor.returns;
     });
@@ -130,12 +130,12 @@ function fixTypes(groupedAst, symbolTable, typeTyposMap) {
  * @param {Namespace[]} namespaces
  */
 function removeIncorrectlyNamedFunctions(namespaces) {
-  _.forEach(namespaces, ns => {
+  _.forEach(namespaces, (ns) => {
     ns.functions = _.reject(
       ns.functions,
       // a function name must be a single Identifier
       // Spotting a Dot means someone forgot to add another namespace...
-      func => {
+      (func) => {
         const hasInvalidName = func.name.indexOf(".") !== -1;
         if (hasInvalidName) {
           const fqn = getFqn(func);
@@ -155,7 +155,7 @@ function removeIncorrectlyNamedFunctions(namespaces) {
  * @param {Array<AstNode>>} withTypes - AstNode that have a "type" property.
  */
 function fixTyposAndConversions(withTypes, typeTyposMap) {
-  _.forEach(withTypes, astElem => {
+  _.forEach(withTypes, (astElem) => {
     if (_.has(astElem, "type")) {
       const currentType = astElem.type;
       if (_.has(typeTyposMap, currentType) && astElem.ignoreIssues !== true) {
@@ -177,7 +177,7 @@ function fixTyposAndConversions(withTypes, typeTyposMap) {
  * @param symbolTable
  */
 function fixUnknownTypes(withTypes, symbolTable) {
-  _.forEach(withTypes, astElem => {
+  _.forEach(withTypes, (astElem) => {
     if (astElem.type !== undefined && typeof astElem.type === "string") {
       const type = astElem.type;
       // "dotted" type
@@ -206,7 +206,7 @@ function fixUnknownTypes(withTypes, symbolTable) {
  * @param symbolTable
  */
 function fixEnums(groupedAst, symbolTable) {
-  _.forEach(groupedAst.Enum, currEnum => {
+  _.forEach(groupedAst.Enum, (currEnum) => {
     if (currEnum.name.indexOf(".") !== -1) {
       console.warn(
         `AUTOFIXING - Enum named <${currEnum.name}> contains a dot, that is an invalid enum name!`
@@ -232,8 +232,8 @@ function fixNamespacesAsInterfaces(
   symbolTable,
   namespacesToInterfaces
 ) {
-  _.forEach(groupedAst.Namespace, currNS => {
-    const namespacesToConvert = _.filter(currNS.namespaces, nestedNs => {
+  _.forEach(groupedAst.Namespace, (currNS) => {
+    const namespacesToConvert = _.filter(currNS.namespaces, (nestedNs) => {
       return (
         namespacesToInterfaces[nestedNs.name] ||
         // A completely empty Namespace seems to be how UI defined custom types.
@@ -247,16 +247,16 @@ function fixNamespacesAsInterfaces(
     });
     currNS.namespaces = _.difference(currNS.namespaces, namespacesToConvert);
 
-    const replacementInterfaces = _.map(namespacesToConvert, nestedNs => {
+    const replacementInterfaces = _.map(namespacesToConvert, (nestedNs) => {
       return {
         kind: "Interface",
         name: nestedNs.name,
         methods: nestedNs.functions,
-        parent: currNS
+        parent: currNS,
       };
     });
 
-    _.forEach(replacementInterfaces, inter => {
+    _.forEach(replacementInterfaces, (inter) => {
       const interFqn = getFqn(inter);
       console.warn(
         `AUTOFIXING - Replacing Namespace with Interface - <${interFqn}> was Converted to Interface`
@@ -301,7 +301,7 @@ function fixOptionalParams(groupedAst, symbolTable) {
 }
 
 function fixFunctionOptionalParams(containers, prop) {
-  _.forEach(containers, currContainer => {
+  _.forEach(containers, (currContainer) => {
     const toOverload = _.filter(
       currContainer[prop],
       hasRequiredParamAfterOptional
@@ -309,7 +309,7 @@ function fixFunctionOptionalParams(containers, prop) {
     // assumes only a single "optional overload" per func (at most).
     const overloadedFuncs = _.flatMap(toOverload, createOverloadsForOptional);
 
-    _.forEach(overloadedFuncs, func => {
+    _.forEach(overloadedFuncs, (func) => {
       const funcFqn = getFqn(func);
       console.warn(
         `AUTOFIXING - Function Overloads - function/method <${funcFqn}> was overloaded`
@@ -324,11 +324,11 @@ function fixFunctionOptionalParams(containers, prop) {
 function hasRequiredParamAfterOptional(func) {
   const firstOptionalIdx = _.findIndex(
     func.parameters,
-    param => param.optional === true
+    (param) => param.optional === true
   );
   const lastRequiredIdx = _.findLastIndex(
     func.parameters,
-    param => param.optional === false
+    (param) => param.optional === false
   );
   // This func does have both types of params, so the condition can  never be met.
   if (firstOptionalIdx === -1 || lastRequiredIdx === -1) {
@@ -348,7 +348,7 @@ function createOverloadsForOptional(orgFunc) {
   const numOfParams = orgFunc.parameters.length;
   const firstReversedMandatoryIdx = _.findIndex(
     clonedParamsReverse,
-    param => param.optional === false
+    (param) => param.optional === false
   );
 
   // find all optional indices that appear **before** the last required argument
@@ -369,10 +369,10 @@ function createOverloadsForOptional(orgFunc) {
     _.combinations(a, i + 1)
   );
 
-  const overloads = _.map(invalidOptionsCombos, currInvalidCombo => {
+  const overloads = _.map(invalidOptionsCombos, (currInvalidCombo) => {
     const overloadedFunc = cloneAstNodeDeep(orgFunc);
     const toMandatory = _.difference(invalidOptionalIndices, currInvalidCombo);
-    _.forEach(toMandatory, idx => {
+    _.forEach(toMandatory, (idx) => {
       overloadedFunc.parameters[idx].optional = false;
     });
     // PullAt modifies (side effect) the parameter array.
@@ -383,7 +383,7 @@ function createOverloadsForOptional(orgFunc) {
 
   // In the original function/method all the optionals preceding a mandatory argument must be replaced
   // with mandatory parameters
-  _.forEach(invalidOptionalIndices, idx => {
+  _.forEach(invalidOptionalIndices, (idx) => {
     orgFunc.parameters[idx].optional = false;
   });
 
@@ -397,9 +397,9 @@ function createOverloadsForOptional(orgFunc) {
  */
 function markOverwrittenMethods(groupedAst, symbolTable) {
   const classes = groupedAst.Class;
-  _.forEach(classes, clazz => {
+  _.forEach(classes, (clazz) => {
     const ancestors = getClassAncestors(clazz, symbolTable);
-    const ancestorsMethodMaps = _.map(ancestors, currAncestor =>
+    const ancestorsMethodMaps = _.map(ancestors, (currAncestor) =>
       methodArrToMap(currAncestor.methods)
     );
     const combinedAncestorsMethodsMap = _.defaults.apply(
@@ -407,7 +407,7 @@ function markOverwrittenMethods(groupedAst, symbolTable) {
       ancestorsMethodMaps
     );
 
-    _.forEach(clazz.methods, ownMethod => {
+    _.forEach(clazz.methods, (ownMethod) => {
       // overwritten method
       if (combinedAncestorsMethodsMap[ownMethod.name]) {
         ownMethod.overwrite = true;
@@ -461,5 +461,5 @@ function cloneAstNodeDeep(astNode) {
 }
 
 module.exports = {
-  fixAsts
+  fixAsts,
 };

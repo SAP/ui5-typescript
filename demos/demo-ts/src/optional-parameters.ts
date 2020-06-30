@@ -1,4 +1,4 @@
-sap.ui.define(["sap/ui/base/ManagedObject"], function(
+sap.ui.define(["sap/ui/base/ManagedObject"], function (
   ManagedObject: typeof sap.ui.base.ManagedObject
 ) {
   const instance = new ManagedObject();
