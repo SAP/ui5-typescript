@@ -9,6 +9,24 @@ jobs:
       - run: yarn
       - run: yarn run ci
 
+  build-node12:
+    docker:
+      - image: circleci/node:12
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn run ci
+
+  build-node14:
+    docker:
+      - image: circleci/node:14
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn run ci
+
   master-check:
     docker:
       - image: circleci/node:10
@@ -20,7 +38,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:14
     working_directory: ~/repo
     steps:
       - checkout
@@ -34,6 +52,8 @@ workflows:
   commit:
     jobs:
       - build-node10
+      - build-node12
+      - build-node14
       - deploy:
           context: ui5-typescript
           filters:
