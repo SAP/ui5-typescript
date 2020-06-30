@@ -10,12 +10,10 @@
   "scripts": {
     "lerna:version": "lerna version",
     "lerna:publish": "lerna publish from-git --yes",
-    "lerna:nightly": "lerna run nightly --stream",
-    "ci": "npm-run-all format:validate build test",
-    "build": "lerna run build",
-    "test": "lerna run test",
+    "ci": "npm-run-all format:validate ci:subpackages",
     "format:fix": "prettier --write \"**/*.@(ts|js|json|md|yml)\"",
-    "format:validate": "prettier --check \"**/*.@(ts|js|json|md|yml)\""
+    "format:validate": "prettier --check \"**/*.@(ts|js|json|md|yml)\"",
+    "ci:subpackages": "lerna run ci"
   },
   "husky": {
     "hooks": {
@@ -29,6 +27,7 @@
     ]
   },
   "devDependencies": {
+    "typescript": "3.9.5",
     "chai": "^4.2.0",
     "chai-match": "^1.1.1",
     "husky": "^4.2.3",
