@@ -82,7 +82,7 @@ const buildNestedEnums = _.partialRight(buildNestedItems, "enum", buildEnum);
  * @returns {Variable}
  */
 function buildVariable(property) {
-  assertKnownProps(["examples", "name", "type"], property);
+  assertKnownProps(["examples", "name", "type", "value"], property);
 
   const astNode = {
     kind: "Variable",

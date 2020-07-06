@@ -1,0 +1,9 @@
+{
+  "include": ["playground", "output-dts"],
+  "compilerOptions": {
+    "module": "none",
+    "noEmit": true,
+    "checkJs": true,
+    "allowJs": true
+  }
+}
