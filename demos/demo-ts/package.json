@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@sapui5/ts-types": "1.79.2",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   },
   "scripts": {
     "compile": "echo \"tsc\""
