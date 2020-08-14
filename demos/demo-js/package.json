@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@sapui5/ts-types": "1.79.2",
+    "@sapui5/ts-types": "1.81.0",
     "typescript": "3.9.7"
   },
   "scripts": {
