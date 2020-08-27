@@ -3,7 +3,9 @@
 </p>
 
 [![CircleCI](https://circleci.com/gh/SAP/ui5-typescript.svg?style=svg)](https://circleci.com/gh/SAP/ui5-typescript)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Greenkeeper badge](https://badges.greenkeeper.io/SAP/ui5-typescript.svg)](https://greenkeeper.io/)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![dependentbot](https://api.dependabot.com/badges/status?host=github&repo=SAP/ui5-typescript)](https://dependabot.com/)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/ui5-typescript)](https://api.reuse.software/info/github.com/SAP/ui5-typescript)
 
 # UI5-TypeScript
 
@@ -55,11 +57,6 @@ Please open [issues](https://github.com/SAP/ui5-typescript/issues) on github.
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md).
-
-## License
-
-Copyright (c) 2019-2020 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE file](./LICENSE).
 
 [typescript]: https://www.typescriptlang.org/
 [mono-repo]: https://github.com/babel/babel/blob/master/doc/design/monorepo.md

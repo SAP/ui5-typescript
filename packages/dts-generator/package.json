@@ -10,6 +10,11 @@
   },
   "main": "lib/api.js",
   "types": "types/api.d.ts",
+  "files": [
+    ".reuse",
+    "LICENSES",
+    "types"
+  ],
   "dependencies": {
     "lodash": "4.17.19",
     "lodash.combinations": "18.10.0",

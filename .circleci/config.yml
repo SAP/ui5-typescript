@@ -27,14 +27,17 @@ jobs:
       - run: yarn
       - run: yarn run ci
 
-  master-check:
+  compliance:
     docker:
-      - image: circleci/node:10
-    working_directory: ~/repo
+      - image: circleci/python:3.6.4
+    working_directory: ~/workdir
     steps:
       - checkout
-      - run: yarn
-      - run: yarn run lerna:nightly
+      - run:
+          name: compliance check
+          command: |
+            pip3 install --user reuse
+            ~/.local/bin/reuse lint
 
   deploy:
     docker:
@@ -54,6 +57,7 @@ workflows:
       - build-node10
       - build-node12
       - build-node14
+      - compliance
       - deploy:
           context: ui5-typescript
           filters:

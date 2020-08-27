@@ -1,3 +1,11 @@
+# sub-packages files for https://reuse.software (avoid duplication)
+.reuse
+LICENSES
+
+# root files for https://reuse.software
+!/.reuse
+!/LICENSES
+
 # Logs
 logs
 *.log
