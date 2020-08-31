@@ -226,12 +226,15 @@ const genFunction = _.partialRight(genMethodOrFunction, false, true);
  * @return {string}
  */
 function genMethodOrFunction(ast, staticPossible, isFunc) {
+  const genericText = ast.generic ? `<${ast.generic}>` : "";
   let text = "";
   text += JSDOC(ast) + NL;
   text += ast.overwrite ? "// @ts-ignore" + NL : "";
   text += ast.static && staticPossible ? "static " : "";
   text +=
-    `${isFunc ? "function " : ""}${ast.name}${ast.optional ? "?" : ""} (` + NL;
+    `${isFunc ? "function " : ""}${ast.name}${
+      ast.optional ? "?" : ""
+    } ${genericText} (` + NL;
   text += APPEND_ITEMS(ast.parameters, genParameter, { sep: COMMA });
 
   text += ")";
@@ -240,6 +243,19 @@ function genMethodOrFunction(ast, staticPossible, isFunc) {
   text += ":" + (hasReturnType ? genType(ast.returns.type) : "void");
 
   return text;
+}
+
+/**
+ * @param isExists boolean
+ * @param textIfExists string
+ * @return string
+ */
+function getText(isExists) {
+  if (isExists) {
+    return text;
+  } else {
+    return;
+  }
 }
 
 /**

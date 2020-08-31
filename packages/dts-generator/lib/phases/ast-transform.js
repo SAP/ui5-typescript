@@ -4,6 +4,7 @@ function transformAst(ast, symbolTable, libraryName) {
   updateConstructorMSettingsParam(ast.topLevelNamespace);
   filterNonePublicApis(ast);
   addDefineArrayInterface(ast, symbolTable);
+  updateOClassInfo(symbolTable);
 
   if (libraryName === "sap.ui.core") {
     updateDefineArrayDepsTypes(symbolTable);
@@ -213,6 +214,42 @@ function addDefineArrayInterface(ast, symbolTable) {
       visibility: "public",
     });
   }
+}
+
+/**
+ * Adds generic type to `extend` method and update `oClassInfo` parameter
+ *
+ * @param symbolTable
+ */
+function updateOClassInfo(symbolTable) {
+  _.forEach(symbolTable, (symbol) => {
+    if (symbol.kind !== "Class") {
+      return;
+    }
+
+    const extendMethod = _.find(
+      symbol.methods,
+      (method) => method.name === "extend"
+    );
+    if (extendMethod === undefined) {
+      return;
+    }
+
+    const oClassInfoParam = _.find(
+      extendMethod.parameters,
+      (param) => param.name === "oClassInfo"
+    );
+    if (oClassInfoParam === undefined) {
+      return;
+    }
+
+    extendMethod.generic = "T";
+    oClassInfoParam.type = {
+      kind: "SimpleType",
+      type: `T & ThisType <T & ${symbol.extends}>`,
+      ignoreIssues: true,
+    };
+  });
 }
 
 function updateDefineArrayDepsTypes(symbolTable) {
