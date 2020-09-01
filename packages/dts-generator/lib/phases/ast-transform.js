@@ -4,7 +4,7 @@ function transformAst(ast, symbolTable, libraryName) {
   updateConstructorMSettingsParam(ast.topLevelNamespace);
   filterNonePublicApis(ast);
   addDefineArrayInterface(ast, symbolTable);
-  updateOClassInfo(symbolTable);
+  modifyExtendMethods(symbolTable);
 
   if (libraryName === "sap.ui.core") {
     updateDefineArrayDepsTypes(symbolTable);
@@ -217,11 +217,12 @@ function addDefineArrayInterface(ast, symbolTable) {
 }
 
 /**
- * Adds generic type to `extend` method and update `oClassInfo` parameter
+ * Adds generic type to `extend` method and modify `oClassInfo` type.
+ * This is done to specify `this` type inside the `oClassInfo` methods.
  *
  * @param symbolTable
  */
-function updateOClassInfo(symbolTable) {
+function modifyExtendMethods(symbolTable) {
   _.forEach(symbolTable, (symbol) => {
     if (symbol.kind !== "Class") {
       return;
@@ -243,7 +244,11 @@ function updateOClassInfo(symbolTable) {
       return;
     }
 
-    extendMethod.generic = "T";
+    extendMethod.genericType = {
+      kind: "SimpleType",
+      type: "T",
+      ignoreIssues: false,
+    };
     oClassInfoParam.type = {
       kind: "SimpleType",
       type: `T & ThisType <T & ${symbol.extends}>`,

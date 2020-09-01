@@ -31,7 +31,7 @@ interface FunctionDesc extends UI5JSDocs {
   static?: boolean;
   overwrite: boolean;
   parameters: Parameter[];
-  generic?: string;
+  genericType?: SimpleType;
   returns: ReturnDesc;
   // descriptions of potential errors being throws
   throws?: { type?: string; description: string }[];
