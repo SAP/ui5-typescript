@@ -226,12 +226,17 @@ const genFunction = _.partialRight(genMethodOrFunction, false, true);
  * @return {string}
  */
 function genMethodOrFunction(ast, staticPossible, isFunc) {
+  const genericTypeText = ast.genericType
+    ? `<${genType(ast.genericType)}>`
+    : "";
   let text = "";
   text += JSDOC(ast) + NL;
   text += ast.overwrite ? "// @ts-ignore" + NL : "";
   text += ast.static && staticPossible ? "static " : "";
   text +=
-    `${isFunc ? "function " : ""}${ast.name}${ast.optional ? "?" : ""} (` + NL;
+    `${isFunc ? "function " : ""}${ast.name}${
+      ast.optional ? "?" : ""
+    } ${genericTypeText} (` + NL;
   text += APPEND_ITEMS(ast.parameters, genParameter, { sep: COMMA });
 
   text += ")";

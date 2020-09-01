@@ -613,7 +613,7 @@ declare namespace sap {
            * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.unified.calendar.Month.extend}.
            */
           // @ts-ignore
-          static extend(
+          static extend<T extends Record<string, unknown>>(
             /**
              * Name of the class being created
              */
@@ -621,7 +621,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: object,
+            oClassInfo?: T & ThisType<T & sap.ui.unified.calendar.Month>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -966,7 +966,7 @@ declare namespace sap {
            * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
            */
           // @ts-ignore
-          static extend(
+          static extend<T extends Record<string, unknown>>(
             /**
              * Name of the class being created
              */
@@ -974,7 +974,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: object,
+            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -1677,7 +1677,7 @@ declare namespace sap {
            * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
            */
           // @ts-ignore
-          static extend(
+          static extend<T extends Record<string, unknown>>(
             /**
              * Name of the class being created
              */
@@ -1685,7 +1685,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: object,
+            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -2385,7 +2385,7 @@ declare namespace sap {
            * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
            */
           // @ts-ignore
-          static extend(
+          static extend<T extends Record<string, unknown>>(
             /**
              * Name of the class being created
              */
@@ -2393,7 +2393,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: object,
+            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -2844,7 +2844,7 @@ declare namespace sap {
            * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
            */
           // @ts-ignore
-          static extend(
+          static extend<T extends Record<string, unknown>>(
             /**
              * Name of the class being created
              */
@@ -2852,7 +2852,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: object,
+            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -3372,7 +3372,7 @@ declare namespace sap {
            * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
            */
           // @ts-ignore
-          static extend(
+          static extend<T extends Record<string, unknown>>(
             /**
              * Name of the class being created
              */
@@ -3380,7 +3380,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: object,
+            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -3892,7 +3892,7 @@ declare namespace sap {
            * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
            */
           // @ts-ignore
-          static extend(
+          static extend<T extends Record<string, unknown>>(
             /**
              * Name of the class being created
              */
@@ -3900,7 +3900,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: object,
+            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -6105,7 +6105,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -6113,7 +6113,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6827,7 +6827,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.unified.DateTypeRange.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -6835,7 +6835,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.unified.DateTypeRange>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7037,7 +7037,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.unified.Calendar.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -7045,7 +7045,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.unified.Calendar>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7226,7 +7226,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -7234,7 +7234,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7378,7 +7378,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -7386,7 +7386,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7672,7 +7672,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -7680,7 +7680,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -8356,7 +8356,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -8364,7 +8364,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -9322,7 +9322,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -9330,7 +9330,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -9932,7 +9932,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -9940,7 +9940,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10266,7 +10266,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -10274,7 +10274,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10513,7 +10513,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -10521,7 +10521,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10741,7 +10741,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -10749,7 +10749,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10941,7 +10941,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -10949,7 +10949,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -11033,7 +11033,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.unified.DateRange.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -11041,7 +11041,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.unified.DateRange>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -11644,7 +11644,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -11652,7 +11652,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13017,7 +13017,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -13025,7 +13025,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13115,7 +13115,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -13123,7 +13123,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13265,7 +13265,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -13273,7 +13273,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13599,7 +13599,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.unified.MenuItemBase.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -13607,7 +13607,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.unified.MenuItemBase>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13761,7 +13761,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -13769,7 +13769,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13997,7 +13997,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.unified.MenuItemBase.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -14005,7 +14005,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.unified.MenuItemBase>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -14226,7 +14226,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.unified.ShellLayout.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -14234,7 +14234,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.unified.ShellLayout>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -14652,7 +14652,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -14660,7 +14660,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -14980,7 +14980,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -14988,7 +14988,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -15182,7 +15182,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -15190,7 +15190,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -15481,7 +15481,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -15489,7 +15489,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -15686,7 +15686,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -15694,7 +15694,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: object,
+          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class

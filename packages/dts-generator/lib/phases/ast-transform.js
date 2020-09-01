@@ -4,6 +4,7 @@ function transformAst(ast, symbolTable, libraryName) {
   updateConstructorMSettingsParam(ast.topLevelNamespace);
   filterNonePublicApis(ast);
   addDefineArrayInterface(ast, symbolTable);
+  modifyExtendMethods(symbolTable);
 
   if (libraryName === "sap.ui.core") {
     updateDefineArrayDepsTypes(symbolTable);
@@ -213,6 +214,47 @@ function addDefineArrayInterface(ast, symbolTable) {
       visibility: "public",
     });
   }
+}
+
+/**
+ * Adds generic type to `extend` method and modify `oClassInfo` type.
+ * This is done to specify `this` type inside the `oClassInfo` methods.
+ *
+ * @param symbolTable
+ */
+function modifyExtendMethods(symbolTable) {
+  _.forEach(symbolTable, (symbol) => {
+    if (symbol.kind !== "Class") {
+      return;
+    }
+
+    const extendMethod = _.find(
+      symbol.methods,
+      (method) => method.name === "extend" && method.static
+    );
+    if (extendMethod === undefined) {
+      return;
+    }
+
+    const oClassInfoParam = _.find(
+      extendMethod.parameters,
+      (param) => param.name === "oClassInfo"
+    );
+    if (oClassInfoParam === undefined) {
+      return;
+    }
+
+    extendMethod.genericType = {
+      kind: "SimpleType",
+      type: "T extends Record<string, unknown>",
+      ignoreIssues: false,
+    };
+    oClassInfoParam.type = {
+      kind: "SimpleType",
+      type: `T & ThisType <T & ${symbol.extends}>`,
+      ignoreIssues: true,
+    };
+  });
 }
 
 function updateDefineArrayDepsTypes(symbolTable) {
