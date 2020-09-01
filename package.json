@@ -34,7 +34,7 @@
     "husky": "4.2.5",
     "lerna": "3.22.1",
     "lint-staged": "10.2.11",
-    "mocha": "8.0.1",
+    "mocha": "8.1.3",
     "npm-run-all": "4.1.5",
     "prettier": "2.0.5",
     "shx": "^0.3.2"
