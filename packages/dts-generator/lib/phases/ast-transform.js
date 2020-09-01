@@ -230,7 +230,7 @@ function modifyExtendMethods(symbolTable) {
 
     const extendMethod = _.find(
       symbol.methods,
-      (method) => method.name === "extend"
+      (method) => method.name === "extend" && method.static
     );
     if (extendMethod === undefined) {
       return;
@@ -246,7 +246,7 @@ function modifyExtendMethods(symbolTable) {
 
     extendMethod.genericType = {
       kind: "SimpleType",
-      type: "T",
+      type: "T extends Record<string, unknown>",
       ignoreIssues: false,
     };
     oClassInfoParam.type = {

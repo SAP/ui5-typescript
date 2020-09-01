@@ -231,7 +231,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -537,7 +537,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -836,7 +836,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -992,7 +992,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.dnd.DropInfo.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -1099,7 +1099,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.routing.Router.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -1152,7 +1152,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.Object.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -1572,7 +1572,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.routing.Targets.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2192,7 +2192,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2241,7 +2241,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2290,7 +2290,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2339,7 +2339,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2388,7 +2388,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2437,7 +2437,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2486,7 +2486,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2535,7 +2535,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticToggleButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2584,7 +2584,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticToggleButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2633,7 +2633,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.MainAction.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2682,7 +2682,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2735,7 +2735,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2803,7 +2803,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2856,7 +2856,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2928,7 +2928,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -2996,7 +2996,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -3087,7 +3087,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticControl.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -3189,7 +3189,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -3549,7 +3549,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -4881,7 +4881,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -4957,7 +4957,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -5006,7 +5006,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -5055,7 +5055,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.SemanticButton.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -5104,7 +5104,7 @@ declare namespace sap {
          * `oClassInfo` might contain the same kind of information as described in {@link sap.f.semantic.MainAction.extend}.
          */
         // @ts-ignore
-        static extend<T>(
+        static extend<T extends Record<string, unknown>>(
           /**
            * Name of the class being created
            */
@@ -6214,7 +6214,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.m.Avatar.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -6346,7 +6346,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -6534,7 +6534,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -6690,7 +6690,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -6934,7 +6934,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -7302,7 +7302,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -7594,7 +7594,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -7927,7 +7927,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -9116,7 +9116,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -10708,7 +10708,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -11147,7 +11147,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.LayoutData.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -11281,7 +11281,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -11561,7 +11561,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.m.ListBase.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -11660,7 +11660,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.m.ListItemBase.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -11814,7 +11814,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -11963,7 +11963,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -12261,7 +12261,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */
@@ -12965,7 +12965,7 @@ declare namespace sap {
        * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
        */
       // @ts-ignore
-      static extend<T>(
+      static extend<T extends Record<string, unknown>>(
         /**
          * Name of the class being created
          */

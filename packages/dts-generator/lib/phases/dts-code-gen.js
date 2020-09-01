@@ -248,19 +248,6 @@ function genMethodOrFunction(ast, staticPossible, isFunc) {
 }
 
 /**
- * @param isExists boolean
- * @param textIfExists string
- * @return string
- */
-function getText(isExists) {
-  if (isExists) {
-    return text;
-  } else {
-    return;
-  }
-}
-
-/**
  * @param ast {FunctionDesc}
  * @return {string}
  */
