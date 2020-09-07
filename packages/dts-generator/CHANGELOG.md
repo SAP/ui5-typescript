@@ -1,3 +1,7 @@
+## 2.0.3
+
+fix: missing lib folder in published package.
+
 ## 2.0.2
 
 fix: incorrect "this" type inside `oClassInfo` parameter of `extend` method.
