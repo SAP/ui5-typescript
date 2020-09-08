@@ -1,3 +1,7 @@
+## 2.0.4
+
+fix: missing prettier dependency.
+
 ## 2.0.3
 
 fix: missing lib folder in published package.
