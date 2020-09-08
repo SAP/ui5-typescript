@@ -1,7 +1,7 @@
 {
   "name": "@ui5/openui5-snapshot-test",
   "private": true,
-  "version": "2.0.3",
+  "version": "2.0.4",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
     "directory": "test-packages/openui5-snapshot-test"
   },
   "dependencies": {
-    "@ui5/dts-generator": "^2.0.3",
+    "@ui5/dts-generator": "^2.0.4",
     "fs-extra": "9.0.1",
     "lodash": "4.17.20",
     "node-fetch": "2.6.1",
