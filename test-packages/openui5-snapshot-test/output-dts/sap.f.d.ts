@@ -452,7 +452,8 @@ declare namespace sap {
        * 	 - You should always have a maximum of two side indicators.
        * 	 - To show only basic information, use {@link sap.f.cards.Header Header} instead.
        */
-      class NumericHeader extends sap.ui.core.Control
+      class NumericHeader
+        extends sap.ui.core.Control
         implements sap.f.cards.IHeader {
         /**
          * Constructor for a new `NumericHeader`.
@@ -965,7 +966,8 @@ declare namespace sap {
        * **Note:** This configuration might be ignored due to control {@link sap.ui.core.Element.extend metadata}
        * restrictions.
        */
-      class GridDropInfo extends sap.ui.core.dnd.DropInfo
+      class GridDropInfo
+        extends sap.ui.core.dnd.DropInfo
         implements sap.ui.core.dnd.IDropInfo {
         /**
          * Constructor for a new GridDropInfo.
@@ -10560,7 +10562,8 @@ declare namespace sap {
      * drag and drop. The difference is that the `{@link sap.f.dnd.GridDropInfo}` will provide a drop indicator,
      * which mimics the size of the dragged item and shows the potential drop position inside the grid.
      */
-    class GridContainer extends sap.ui.core.Control
+    class GridContainer
+      extends sap.ui.core.Control
       implements sap.f.dnd.IGridDroppable {
       /**
        * Constructor for a new `sap.f.GridContainer`.
@@ -11520,7 +11523,8 @@ declare namespace sap {
      * 	 - For Microsoft Edge 15 and older versions some layouts are not supported, due to browser specifics.
      */
     // @ts-ignore - error TS2420: Class 'GridList' incorrectly implements interface 'IGridConfigurable'.Type 'GridList' is missing the following properties from type 'IGridConfigurable': getGridDomRefs, getGridLayoutConfiguration
-    class GridList extends sap.m.ListBase
+    class GridList
+      extends sap.m.ListBase
       implements
         sap.ui.layout.cssgrid.IGridConfigurable,
         sap.f.dnd.IGridDroppable {
@@ -12567,7 +12571,8 @@ declare namespace sap {
      * Content specified in the `ShellBar` properties and aggregations is automatically positioned in dedicated
      * places of the control.
      */
-    class ShellBar extends sap.ui.core.Control
+    class ShellBar
+      extends sap.ui.core.Control
       implements sap.f.IShellBar, sap.m.IBar, sap.tnt.IToolHeader {
       /**
        * Constructor for a new `ShellBar`.

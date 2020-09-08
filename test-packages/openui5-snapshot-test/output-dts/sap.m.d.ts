@@ -3444,7 +3444,8 @@ declare namespace sap {
        * If your filtering options are a simple list of items and require single choice only, then you can consider
        * using a {@link sap.m.semantic.FilterSelect} instead.
        */
-      class FilterAction extends sap.m.semantic.SemanticButton
+      class FilterAction
+        extends sap.m.semantic.SemanticButton
         implements sap.m.semantic.IFilter {
         /**
          * Constructor for a new FilterAction.
@@ -3501,7 +3502,8 @@ declare namespace sap {
        * is not sufficient for your use case, you can implement your own custom dialog by using {@link sap.m.semantic.FilterAction}
        * to trigger the dialog opening.
        */
-      class FilterSelect extends sap.m.semantic.SemanticSelect
+      class FilterSelect
+        extends sap.m.semantic.SemanticSelect
         implements sap.m.semantic.IFilter {
         /**
          * Constructor for a new FilterSelect.
@@ -4130,7 +4132,8 @@ declare namespace sap {
        * If your grouping options are a simple list of items and require single choice only, then you can consider
        * using a {@link sap.m.semantic.GroupSelect} instead.
        */
-      class GroupAction extends sap.m.semantic.SemanticButton
+      class GroupAction
+        extends sap.m.semantic.SemanticButton
         implements sap.m.semantic.IGroup {
         /**
          * Constructor for a new GroupAction.
@@ -4187,7 +4190,8 @@ declare namespace sap {
        * is not sufficient for your use case, you can implement your own custom dialog by using {@link sap.m.semantic.GroupAction}
        * to trigger the dialog opening.
        */
-      class GroupSelect extends sap.m.semantic.SemanticSelect
+      class GroupSelect
+        extends sap.m.semantic.SemanticSelect
         implements sap.m.semantic.IGroup {
         /**
          * Constructor for a new GroupSelect.
@@ -6449,7 +6453,8 @@ declare namespace sap {
        * If your sorting options are a simple list of items and require single choice only, then you can consider
        * using a {@link sap.m.semantic.SortSelect} instead.
        */
-      class SortAction extends sap.m.semantic.SemanticButton
+      class SortAction
+        extends sap.m.semantic.SemanticButton
         implements sap.m.semantic.ISort {
         /**
          * Constructor for a new SortAction.
@@ -6506,7 +6511,8 @@ declare namespace sap {
        * is not sufficient for your use case, you can implement your own custom dialog by using {@link sap.m.semantic.SortAction}
        * to trigger the dialog opening.
        */
-      class SortSelect extends sap.m.semantic.SemanticSelect
+      class SortSelect
+        extends sap.m.semantic.SemanticSelect
         implements sap.m.semantic.ISort {
         /**
          * Constructor for a new SortSelect.
@@ -24117,7 +24123,8 @@ declare namespace sap {
      * navigation path. The last three steps can be accessed as links directly, while the remaining links prior
      * to them are available in a drop-down menu.
      */
-    class Breadcrumbs extends sap.ui.core.Control
+    class Breadcrumbs
+      extends sap.ui.core.Control
       implements sap.m.IBreadcrumbs {
       /**
        * Constructor for a new `Breadcrumbs`.
@@ -31307,7 +31314,8 @@ declare namespace sap {
      * 			mode on tablet devices. Desktop: The action buttons in the toolbar are **right-aligned**. Use **compact**
      * 			mode on desktop.
      */
-    class Dialog extends sap.ui.core.Control
+    class Dialog
+      extends sap.ui.core.Control
       implements sap.ui.core.PopupInterface {
       /**
        * Constructor for a new Dialog.
@@ -32722,7 +32730,8 @@ declare namespace sap {
      * Additional Information:
      *
      * For more information, go to **Developer Guide** section in the Demo Kit and navigate to **More About Controls** > **sap.m** > **Facet Filter**/
-    class FacetFilter extends sap.ui.core.Control
+    class FacetFilter
+      extends sap.ui.core.Control
       implements sap.ui.core.IShrinkable {
       /**
        * Constructor for a new `FacetFilter`.
@@ -36277,7 +36286,8 @@ declare namespace sap {
      * 	 - Content area that can display either a control of type {@link sap.m.ObjectNumber} or a warning icon
      * 			(optional)
      */
-    class GenericTag extends sap.ui.core.Control
+    class GenericTag
+      extends sap.ui.core.Control
       implements sap.m.IOverflowToolbarContent {
       /**
        * Constructor for a new `sap.m.GenericTag`.
@@ -37534,7 +37544,8 @@ declare namespace sap {
      * on the first control and the End key puts focus on the last control. Use Enter or Space key to choose
      * the control.
      */
-    class HeaderContainer extends sap.ui.core.Control
+    class HeaderContainer
+      extends sap.ui.core.Control
       implements sap.m.ObjectHeaderContainer {
       /**
        * Constructor for the new HeaderContainer control.
@@ -37956,7 +37967,8 @@ declare namespace sap {
      * 			To enable this concept and add responsive paddings to an element of the Icon Tab Bar control, you have
      * 			to add the following classes depending on your use case: `sapUiResponsivePadding--header`, `sapUiResponsivePadding--content`.
      */
-    class IconTabBar extends sap.ui.core.Control
+    class IconTabBar
+      extends sap.ui.core.Control
       implements sap.m.ObjectHeaderContainer, sap.f.IDynamicPageStickyContent {
       /**
        * Constructor for a new IconTabBar.
@@ -38663,7 +38675,8 @@ declare namespace sap {
     /**
      * Represents a selectable item inside an IconTabBar.
      */
-    class IconTabFilter extends sap.ui.core.Item
+    class IconTabFilter
+      extends sap.ui.core.Item
       implements sap.m.IconTab, sap.ui.core.PopupInterface {
       /**
        * Constructor for a new IconTabFilter.
@@ -39546,7 +39559,8 @@ declare namespace sap {
     /**
      * Represents an Icon used to separate 2 tab filters.
      */
-    class IconTabSeparator extends sap.ui.core.Element
+    class IconTabSeparator
+      extends sap.ui.core.Element
       implements sap.m.IconTab {
       /**
        * Constructor for a new IconTabSeparator.
@@ -43179,7 +43193,8 @@ declare namespace sap {
      * 	 - Use title case for labels.  When not to use:
      * 	 -  It is not recommended to use labels in Bold.
      */
-    class Label extends sap.ui.core.Control
+    class Label
+      extends sap.ui.core.Control
       implements
         sap.ui.core.Label,
         sap.ui.core.IShrinkable,
@@ -43547,7 +43562,8 @@ declare namespace sap {
      *
      * Check out the API Reference.
      */
-    class LightBox extends sap.ui.core.Control
+    class LightBox
+      extends sap.ui.core.Control
       implements sap.ui.core.PopupInterface {
       /**
        * Constructor for a new LightBox.
@@ -58202,7 +58218,8 @@ declare namespace sap {
      *
      * The height of the toolbar changes on desktop, tablet, and smartphones.
      */
-    class OverflowToolbar extends sap.m.Toolbar
+    class OverflowToolbar
+      extends sap.m.Toolbar
       implements sap.ui.core.Toolbar, sap.m.IBar {
       /**
        * Constructor for a new `OverflowToolbar`.
@@ -58300,7 +58317,8 @@ declare namespace sap {
      * it is required to have buttons that show only an icon in the toolbar, but icon and text in the overflow
      * menu.
      */
-    class OverflowToolbarButton extends sap.m.Button
+    class OverflowToolbarButton
+      extends sap.m.Button
       implements sap.f.IShellBar {
       /**
        * Constructor for a new `OverflowToolbarButton`.
@@ -68753,7 +68771,8 @@ declare namespace sap {
      * 	 - {@link sap.m.ResponsivePopover} is adaptive and responsive. It renders as a dialog with a close button
      * 			in the header on phones, and as a popover on tablets.
      */
-    class Popover extends sap.ui.core.Control
+    class Popover
+      extends sap.ui.core.Control
       implements sap.ui.core.PopupInterface {
       /**
        * Constructor for a new Popover.
@@ -75806,7 +75825,8 @@ declare namespace sap {
      * in a pressed state. It automatically resizes the buttons to fit proportionally within the control. When
      * no width is set, the control uses the available width.
      */
-    class SegmentedButton extends sap.ui.core.Control
+    class SegmentedButton
+      extends sap.ui.core.Control
       implements sap.m.IOverflowToolbarContent {
       /**
        * Constructor for a new `SegmentedButton`.
@@ -76585,7 +76605,8 @@ declare namespace sap {
     /**
      * The `sap.m.Select` control provides a list of items that allows users to select an item.
      */
-    class Select extends sap.ui.core.Control
+    class Select
+      extends sap.ui.core.Control
       implements sap.m.IOverflowToolbarContent, sap.f.IShellBar {
       /**
        * Constructor for a new `sap.m.Select`.
@@ -94339,7 +94360,8 @@ declare namespace sap {
      * thus {@link sap.m.ToolbarLayoutData} is not supported as value for the `layoutData` aggregation of {@link
      * sap.m.ToolbarSpacer} and if set it's ignored.
      */
-    class Toolbar extends sap.ui.core.Control
+    class Toolbar
+      extends sap.ui.core.Control
       implements sap.ui.core.Toolbar, sap.m.IBar {
       /**
        * Constructor for a new `Toolbar`.
@@ -94875,7 +94897,8 @@ declare namespace sap {
      * Creates a visual separator (theme dependent: padding, margin, line) between the preceding and succeeding
      * {@link sap.m.Toolbar} item.
      */
-    class ToolbarSeparator extends sap.ui.core.Control
+    class ToolbarSeparator
+      extends sap.ui.core.Control
       implements sap.m.IOverflowToolbarContent {
       /**
        * Constructor for a new `ToolbarSeparator`.
@@ -100489,7 +100512,8 @@ declare namespace sap {
      * be added to the {@link sap.f.DynamicPage} as well as `sapUiResponsivePadding--header`, `sapUiResponsivePadding--content`
      * to the `sap.m.Wizard`.
      */
-    class Wizard extends sap.ui.core.Control
+    class Wizard
+      extends sap.ui.core.Control
       implements sap.f.IDynamicPageStickyContent {
       /**
        * Constructor for a new Wizard.

@@ -11108,7 +11108,8 @@ declare namespace sap {
        * with explicit calls, adjustable control sizes, text display after uploads, or tooltips containing complete
        * file paths.
        */
-      class FileUploader extends sap.ui.core.Control
+      class FileUploader
+        extends sap.ui.core.Control
         implements sap.ui.unified.IProcessableBlobs {
         /**
          * Constructor for a new `FileUploader`.
@@ -13170,7 +13171,8 @@ declare namespace sap {
        * (items) can also be organized in submenus. Like other dialog-like controls, the menu is not rendered
        * within the control hierarchy. Instead it can be opened at a specified position via a function call.
        */
-      class Menu extends sap.ui.core.Control
+      class Menu
+        extends sap.ui.core.Control
         implements sap.ui.core.IContextMenu {
         /**
          * Constructor for a new Menu control.

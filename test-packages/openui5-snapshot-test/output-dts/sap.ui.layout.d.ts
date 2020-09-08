@@ -236,7 +236,8 @@ declare namespace sap {
          * 	 - No Named grid areas and lines
          */
         // @ts-ignore - error TS2420: Class 'CSSGrid' incorrectly implements interface 'IGridConfigurable'.Type 'CSSGrid' is missing the following properties from type 'IGridConfigurable': getGridDomRefs, getGridLayoutConfiguration
-        class CSSGrid extends sap.ui.core.Control
+        class CSSGrid
+          extends sap.ui.core.Control
           implements sap.ui.layout.cssgrid.IGridConfigurable {
           /**
            * Constructor for a new CSSGrid.

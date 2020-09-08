@@ -1344,7 +1344,8 @@ declare namespace sap {
      * Support for default (Accent 6) color. Image avatar. -   sap.m.Image
      * Primarily used for displaying the company logo. Interaction states
      */
-    class ToolHeader extends sap.m.OverflowToolbar
+    class ToolHeader
+      extends sap.m.OverflowToolbar
       implements sap.tnt.IToolHeader {
       /**
        * Constructor for a new ToolHeader.
