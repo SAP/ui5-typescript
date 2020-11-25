@@ -1,3 +1,7 @@
+## 2.0.5
+
+fix: oClassInfo in extend method is incomplete.
+
 ## 2.0.4
 
 fix: missing prettier dependency.
