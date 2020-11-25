@@ -223,7 +223,7 @@ function addDefineArrayInterface(ast, symbolTable) {
  * @param symbolTable
  */
 function modifyExtendMethods(symbolTable) {
-  _.forEach(symbolTable, (symbol) => {
+  _.forEach(symbolTable, (symbol, fqn) => {
     if (symbol.kind !== "Class") {
       return;
     }
@@ -251,7 +251,7 @@ function modifyExtendMethods(symbolTable) {
     };
     oClassInfoParam.type = {
       kind: "SimpleType",
-      type: `T & ThisType <T & ${symbol.extends}>`,
+      type: `T & ThisType <T & ${fqn}>`,
       ignoreIssues: true,
     };
   });

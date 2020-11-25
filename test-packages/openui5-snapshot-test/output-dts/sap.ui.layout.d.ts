@@ -292,7 +292,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.cssgrid.CSSGrid>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -656,7 +656,8 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.layout.cssgrid.GridLayoutBase>,
+            oClassInfo?: T &
+              ThisType<T & sap.ui.layout.cssgrid.GridBasicLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -986,7 +987,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.layout.cssgrid.GridLayoutBase>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.cssgrid.GridBoxLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -1108,7 +1109,8 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+            oClassInfo?: T &
+              ThisType<T & sap.ui.layout.cssgrid.GridItemLayoutData>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -1353,7 +1355,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.base.ManagedObject>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.cssgrid.GridLayoutBase>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -1483,7 +1485,8 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.layout.cssgrid.GridLayoutBase>,
+            oClassInfo?: T &
+              ThisType<T & sap.ui.layout.cssgrid.GridResponsiveLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -1669,7 +1672,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.base.ManagedObject>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.cssgrid.GridSettings>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -1953,7 +1956,10 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+            oClassInfo?: T &
+              ThisType<
+                T & sap.ui.layout.cssgrid.ResponsiveColumnItemLayoutData
+              >,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -2095,7 +2101,8 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.layout.cssgrid.GridLayoutBase>,
+            oClassInfo?: T &
+              ThisType<T & sap.ui.layout.cssgrid.ResponsiveColumnLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -2963,7 +2970,8 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+            oClassInfo?: T &
+              ThisType<T & sap.ui.layout.form.ColumnContainerData>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -3095,7 +3103,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.ColumnElementData>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -3236,7 +3244,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.layout.form.FormLayout>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.ColumnLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -3470,7 +3478,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.Form>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -3766,7 +3774,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.FormContainer>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -4045,7 +4053,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.FormElement>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -4213,7 +4221,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.FormLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -4296,7 +4304,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.GridContainerData>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -4375,7 +4383,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.GridElementData>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -4506,7 +4514,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.layout.form.FormLayout>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.GridLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -4603,7 +4611,8 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.layout.form.FormLayout>,
+            oClassInfo?: T &
+              ThisType<T & sap.ui.layout.form.ResponsiveGridLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -5157,7 +5166,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.layout.form.FormLayout>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.ResponsiveLayout>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -5257,7 +5266,7 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+            oClassInfo?: T & ThisType<T & sap.ui.layout.form.SimpleForm>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -7010,7 +7019,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.BlockLayout>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7174,7 +7183,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.BlockLayoutCell>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7441,7 +7450,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.BlockLayoutCellData>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7614,7 +7623,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.BlockLayoutRow>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7903,7 +7912,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.DynamicSideContent>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -8305,7 +8314,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.FixFlex>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -8570,7 +8579,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.Grid>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -8891,7 +8900,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.GridData>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -9668,7 +9677,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.HorizontalLayout>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -9812,7 +9821,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.PaneContainer>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -9951,7 +9960,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.ResponsiveFlowLayout>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10099,7 +10108,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.ResponsiveFlowLayoutData>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10303,7 +10312,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.ResponsiveSplitter>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10442,7 +10451,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.SplitPane>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10689,7 +10698,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.Splitter>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10923,7 +10932,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.SplitterLayoutData>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -11057,7 +11066,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.ui.layout.VerticalLayout>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class

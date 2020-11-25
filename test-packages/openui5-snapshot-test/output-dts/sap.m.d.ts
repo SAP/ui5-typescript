@@ -1234,7 +1234,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+          oClassInfo?: T & ThisType<T & sap.m.plugins.DataStateIndicator>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -1404,7 +1404,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.base.Object>,
+          oClassInfo?: T & ThisType<T & sap.m.routing.RouteMatchedHandler>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -1643,7 +1643,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.routing.Router>,
+          oClassInfo?: T & ThisType<T & sap.m.routing.Router>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -1696,7 +1696,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.base.Object>,
+          oClassInfo?: T & ThisType<T & sap.m.routing.TargetHandler>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -2099,7 +2099,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.routing.Targets>,
+          oClassInfo?: T & ThisType<T & sap.m.routing.Targets>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -2699,7 +2699,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.AddAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -2748,7 +2748,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.CancelAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -2797,7 +2797,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.DeleteAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -2955,7 +2955,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.ShareMenuPage>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.DetailPage>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -3319,7 +3319,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.DiscussInJamAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -3368,7 +3368,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.EditAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -3417,7 +3417,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticToggleButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.FavoriteAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -3476,7 +3476,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.FilterAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -3534,7 +3534,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticSelect>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.FilterSelect>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -3583,7 +3583,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticToggleButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.FlagAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -3632,7 +3632,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.ForwardAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -3790,7 +3790,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.ShareMenuPage>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.FullscreenPage>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4164,7 +4164,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.GroupAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4222,7 +4222,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticSelect>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.GroupSelect>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4275,7 +4275,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.MainAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4424,7 +4424,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticPage>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.MasterPage>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4683,7 +4683,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.MessagesIndicator>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4732,7 +4732,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticToggleButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.MultiSelectAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4785,7 +4785,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.NegativeAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4853,7 +4853,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.OpenInAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4906,7 +4906,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.PositiveAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -4974,7 +4974,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.PrintAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -5023,7 +5023,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SaveAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -5114,7 +5114,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticControl>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -5217,7 +5217,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticControl>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -5420,7 +5420,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticPage>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -5950,7 +5950,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticControl>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticSelect>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6145,7 +6145,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticToggleButton>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6217,7 +6217,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SendEmailAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6266,7 +6266,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SendMessageAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6315,7 +6315,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.ShareInJamAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6380,7 +6380,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticPage>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.ShareMenuPage>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6485,7 +6485,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticButton>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SortAction>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6543,7 +6543,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.m.semantic.SemanticSelect>,
+          oClassInfo?: T & ThisType<T & sap.m.semantic.SortSelect>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7022,7 +7022,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+          oClassInfo?: T & ThisType<T & sap.m.upload.Uploader>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7877,7 +7877,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+          oClassInfo?: T & ThisType<T & sap.m.upload.UploadSet>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -8953,7 +8953,7 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+          oClassInfo?: T & ThisType<T & sap.m.upload.UploadSetItem>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -21997,7 +21997,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.ActionListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -22087,7 +22087,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Select>,
+        oClassInfo?: T & ThisType<T & sap.m.ActionSelect>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -22428,7 +22428,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ActionSheet>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -22891,7 +22891,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.NavContainer>,
+        oClassInfo?: T & ThisType<T & sap.m.App>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -23307,7 +23307,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Avatar>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -23853,7 +23853,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Bar>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -24178,7 +24178,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Breadcrumbs>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -24399,7 +24399,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.BusyDialog>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -24703,7 +24703,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.BusyIndicator>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -25123,7 +25123,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Button>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -25708,7 +25708,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Carousel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -26181,7 +26181,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.base.ManagedObject>,
+        oClassInfo?: T & ThisType<T & sap.m.CarouselLayout>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -26351,7 +26351,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.CheckBox>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -26950,7 +26950,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ColorPalette>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -27112,7 +27112,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ColorPalettePopover>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -27372,7 +27372,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.Column>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -27996,7 +27996,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.ColumnListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -28306,7 +28306,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ComboBoxBase>,
+        oClassInfo?: T & ThisType<T & sap.m.ComboBox>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -28734,7 +28734,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ComboBoxTextField>,
+        oClassInfo?: T & ThisType<T & sap.m.ComboBoxBase>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -29140,7 +29140,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.InputBase>,
+        oClassInfo?: T & ThisType<T & sap.m.ComboBoxTextField>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -29288,7 +29288,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.CustomListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -29396,7 +29396,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Tile>,
+        oClassInfo?: T & ThisType<T & sap.m.CustomTile>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -29491,7 +29491,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.TreeItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.CustomTreeItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -29709,7 +29709,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.DateTimeField>,
+        oClassInfo?: T & ThisType<T & sap.m.DatePicker>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -30187,7 +30187,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.DatePicker>,
+        oClassInfo?: T & ThisType<T & sap.m.DateRangeSelection>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -30426,7 +30426,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.InputBase>,
+        oClassInfo?: T & ThisType<T & sap.m.DateTimeField>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -30647,7 +30647,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.DateTimeInput>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -31194,7 +31194,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.DatePicker>,
+        oClassInfo?: T & ThisType<T & sap.m.DateTimePicker>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -31586,7 +31586,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Dialog>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -32497,7 +32497,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.DisplayListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -32616,7 +32616,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.DraftIndicator>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -32862,7 +32862,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.FacetFilter>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -33175,7 +33175,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.FacetFilterItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -33423,7 +33423,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.List>,
+        oClassInfo?: T & ThisType<T & sap.m.FacetFilterList>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -33961,7 +33961,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.FeedContent>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -34207,7 +34207,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.FeedInput>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -34726,7 +34726,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.FeedListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -35316,7 +35316,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.FeedListItemAction>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -35477,7 +35477,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.FlexBox>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -35785,7 +35785,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+        oClassInfo?: T & ThisType<T & sap.m.FlexItemData>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -36066,7 +36066,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.FormattedText>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -36364,7 +36364,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.GenericTag>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -36628,7 +36628,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.GenericTile>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -37192,7 +37192,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.GroupHeaderListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -37331,7 +37331,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.base.Object>,
+        oClassInfo?: T & ThisType<T & sap.m.GrowingEnablement>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -37386,7 +37386,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.List>,
+        oClassInfo?: T & ThisType<T & sap.m.GrowingList>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -37522,7 +37522,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.FlexBox>,
+        oClassInfo?: T & ThisType<T & sap.m.HBox>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -37604,7 +37604,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.HeaderContainer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -38111,7 +38111,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.IconTabBar>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -38747,7 +38747,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.IconTabFilter>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -39195,7 +39195,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.IconTabHeader>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -39595,7 +39595,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.IconTabSeparator>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -39983,7 +39983,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Image>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -40607,7 +40607,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ImageContent>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -41080,7 +41080,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.InputBase>,
+        oClassInfo?: T & ThisType<T & sap.m.Input>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -42460,7 +42460,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.InputBase>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -43063,7 +43063,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.InputListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -43234,7 +43234,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Label>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -43634,7 +43634,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.LightBox>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -43771,7 +43771,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.LightBoxItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -43968,7 +43968,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Link>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -44400,7 +44400,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListBase>,
+        oClassInfo?: T & ThisType<T & sap.m.List>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -44984,7 +44984,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ListBase>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -46513,7 +46513,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -46959,7 +46959,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.InputBase>,
+        oClassInfo?: T & ThisType<T & sap.m.MaskInput>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -47114,7 +47114,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.MaskInputRule>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -47316,7 +47316,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Menu>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -47600,7 +47600,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.MenuButton>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -48168,7 +48168,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.MenuItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -48457,7 +48457,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.MessageItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -48817,7 +48817,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.MessagePage>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -49654,7 +49654,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.MessagePopover>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -50217,7 +50217,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.MessageItem>,
+        oClassInfo?: T & ThisType<T & sap.m.MessagePopoverItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -50333,7 +50333,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.MessageStrip>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -50860,7 +50860,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.MessageView>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -51449,7 +51449,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ComboBoxBase>,
+        oClassInfo?: T & ThisType<T & sap.m.MultiComboBox>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -51856,7 +51856,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Input>,
+        oClassInfo?: T & ThisType<T & sap.m.MultiInput>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -52525,7 +52525,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.NavContainer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -53099,7 +53099,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.NewsContent>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -53319,7 +53319,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.NotificationListBase>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -53667,7 +53667,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.NotificationListBase>,
+        oClassInfo?: T & ThisType<T & sap.m.NotificationListGroup>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -54017,7 +54017,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.NotificationListBase>,
+        oClassInfo?: T & ThisType<T & sap.m.NotificationListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -54242,7 +54242,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.NumericContent>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -54717,7 +54717,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ObjectAttribute>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -55176,7 +55176,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ObjectHeader>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -56494,7 +56494,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ObjectIdentifier>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -56819,7 +56819,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.ObjectListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -57395,7 +57395,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ObjectMarker>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -57616,7 +57616,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ObjectNumber>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -57902,7 +57902,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ObjectStatus>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -58276,7 +58276,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Toolbar>,
+        oClassInfo?: T & ThisType<T & sap.m.OverflowToolbar>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -58349,7 +58349,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Button>,
+        oClassInfo?: T & ThisType<T & sap.m.OverflowToolbarButton>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -58401,7 +58401,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ToolbarLayoutData>,
+        oClassInfo?: T & ThisType<T & sap.m.OverflowToolbarLayoutData>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -58597,7 +58597,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ToggleButton>,
+        oClassInfo?: T & ThisType<T & sap.m.OverflowToolbarToggleButton>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -58649,7 +58649,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nColumnsItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -58982,7 +58982,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.P13nPanel>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nColumnsPanel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -59361,7 +59361,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nConditionPanel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -59939,7 +59939,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Dialog>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nDialog>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -60228,7 +60228,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nDimMeasureItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -60492,7 +60492,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.P13nPanel>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nDimMeasurePanel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -60728,7 +60728,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nFilterItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -61067,7 +61067,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.P13nPanel>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nFilterPanel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -61490,7 +61490,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nGroupItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -61746,7 +61746,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.P13nPanel>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nGroupPanel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -62026,7 +62026,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -62587,7 +62587,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nPanel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -62892,7 +62892,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nSortItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -63125,7 +63125,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.P13nPanel>,
+        oClassInfo?: T & ThisType<T & sap.m.P13nSortPanel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -63525,7 +63525,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Page>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -64246,7 +64246,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.PageAccessibleLandmarkInfo>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -64598,7 +64598,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.PagingButton>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -64891,7 +64891,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Panel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -65436,7 +65436,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.PDFViewer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -66229,7 +66229,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.PlanningCalendar>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -67298,7 +67298,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.unified.CalendarLegend>,
+        oClassInfo?: T & ThisType<T & sap.m.PlanningCalendarLegend>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -67693,7 +67693,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.PlanningCalendarRow>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -68552,7 +68552,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.PlanningCalendarView>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -69035,7 +69035,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Popover>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -69975,7 +69975,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ProgressIndicator>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -70378,7 +70378,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.PullToRefresh>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -70726,7 +70726,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.QuickViewBase>,
+        oClassInfo?: T & ThisType<T & sap.m.QuickView>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -71065,7 +71065,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.QuickViewBase>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -71330,7 +71330,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.QuickViewBase>,
+        oClassInfo?: T & ThisType<T & sap.m.QuickViewCard>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -71430,7 +71430,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.QuickViewGroup>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -71579,7 +71579,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.QuickViewGroupElement>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -71850,7 +71850,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.QuickViewPage>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -72223,7 +72223,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.RadioButton>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -72716,7 +72716,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.RadioButtonGroup>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -73067,7 +73067,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Slider>,
+        oClassInfo?: T & ThisType<T & sap.m.RangeSlider>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -73307,7 +73307,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.RatingIndicator>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -73918,7 +73918,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ResponsivePopover>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -74630,7 +74630,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.ResponsiveScale>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -74719,7 +74719,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ScrollContainer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -75224,7 +75224,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SearchField>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -76052,7 +76052,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SegmentedButton>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -76494,7 +76494,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.SegmentedButtonItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -76736,7 +76736,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Select>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -77765,7 +77765,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SelectDialog>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -78551,7 +78551,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SelectionDetails>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -79283,7 +79283,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.SelectionDetailsItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -79515,7 +79515,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.SelectionDetailsItemLine>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -79795,7 +79795,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SelectList>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -80269,7 +80269,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Shell>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -81129,7 +81129,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendar>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -82032,7 +82032,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarView>,
+        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarDayView>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -82082,7 +82082,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarView>,
+        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarMonthView>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -82145,7 +82145,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarView>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -82244,7 +82244,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarView>,
+        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarWeekView>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -82294,7 +82294,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarView>,
+        oClassInfo?: T & ThisType<T & sap.m.SinglePlanningCalendarWorkWeekView>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -82511,7 +82511,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Slider>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -83125,7 +83125,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SliderTooltipBase>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -83257,7 +83257,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SlideTile>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -83591,7 +83591,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.SplitContainer>,
+        oClassInfo?: T & ThisType<T & sap.m.SplitApp>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -84324,7 +84324,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.SplitContainer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -85435,7 +85435,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.StandardListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -85826,7 +85826,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Tile>,
+        oClassInfo?: T & ThisType<T & sap.m.StandardTile>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -86083,7 +86083,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.TreeItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.StandardTreeItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -86286,7 +86286,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.StepInput>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -86869,7 +86869,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.SuggestionItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -87046,7 +87046,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Switch>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -87477,7 +87477,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.TabContainer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -87795,7 +87795,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.TabContainerItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -88264,7 +88264,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListBase>,
+        oClassInfo?: T & ThisType<T & sap.m.Table>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -88888,7 +88888,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.base.ManagedObject>,
+        oClassInfo?: T & ThisType<T & sap.m.TablePersoController>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -89221,7 +89221,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.base.ManagedObject>,
+        oClassInfo?: T & ThisType<T & sap.m.TablePersoDialog>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -89486,7 +89486,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.base.ManagedObject>,
+        oClassInfo?: T & ThisType<T & sap.m.TablePersoProvider>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -89849,7 +89849,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.TableSelectDialog>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -90574,7 +90574,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Text>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -90966,7 +90966,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.InputBase>,
+        oClassInfo?: T & ThisType<T & sap.m.TextArea>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -91329,7 +91329,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Tile>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -91570,7 +91570,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.TileContainer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -91901,7 +91901,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.TileContent>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -92202,7 +92202,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.DateTimeField>,
+        oClassInfo?: T & ThisType<T & sap.m.TimePicker>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -92619,7 +92619,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.TimePickerSliders>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -92913,7 +92913,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Title>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -93221,7 +93221,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.Button>,
+        oClassInfo?: T & ThisType<T & sap.m.ToggleButton>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -93511,7 +93511,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Token>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -94004,7 +94004,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Tokenizer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -94471,7 +94471,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Toolbar>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -94811,7 +94811,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.LayoutData>,
+        oClassInfo?: T & ThisType<T & sap.m.ToolbarLayoutData>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -94936,7 +94936,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ToolbarSeparator>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -94998,7 +94998,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ToolbarSpacer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -95177,7 +95177,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListBase>,
+        oClassInfo?: T & ThisType<T & sap.m.Tree>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -95305,7 +95305,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ListItemBase>,
+        oClassInfo?: T & ThisType<T & sap.m.TreeItemBase>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -95888,7 +95888,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.UploadCollection>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -97229,7 +97229,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.UploadCollectionItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -97877,7 +97877,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Element>,
+        oClassInfo?: T & ThisType<T & sap.m.UploadCollectionParameter>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -97979,7 +97979,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.UploadCollectionToolbarPlaceholder>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -98033,7 +98033,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.FlexBox>,
+        oClassInfo?: T & ThisType<T & sap.m.VBox>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -98107,7 +98107,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ViewSettingsItem>,
+        oClassInfo?: T & ThisType<T & sap.m.ViewSettingsCustomItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -98205,7 +98205,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.ViewSettingsCustomTab>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -98744,7 +98744,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.ViewSettingsDialog>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -99632,7 +99632,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.m.ViewSettingsItem>,
+        oClassInfo?: T & ThisType<T & sap.m.ViewSettingsFilterItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -99830,7 +99830,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Item>,
+        oClassInfo?: T & ThisType<T & sap.m.ViewSettingsItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -100078,7 +100078,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.WheelSlider>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -100360,7 +100360,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.WheelSliderContainer>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -100654,7 +100654,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.Wizard>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -101087,7 +101087,7 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.ui.core.Control>,
+        oClassInfo?: T & ThisType<T & sap.m.WizardStep>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
