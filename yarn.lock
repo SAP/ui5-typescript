@@ -852,10 +852,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@sapui5/ts-types@1.79.2":
-  version "1.79.2"
-  resolved "https://registry.yarnpkg.com/@sapui5/ts-types/-/ts-types-1.79.2.tgz#375462eb63e09a156c584ddc3a66abccc35f2fbd"
-  integrity sha512-ZjmlJ1JxbwFyL0PntDWUOEWTJdzZp5houfrkrN7IfhcmMT1BlOewBTev5XLrWV/iO7eMFG9Y4mcmwD+1u9mLBQ==
+"@sapui5/ts-types@1.84.0":
+  version "1.84.0"
+  resolved "https://registry.yarnpkg.com/@sapui5/ts-types/-/ts-types-1.84.0.tgz#8cdf2e1fbd698767a6abaa597f33c1b98047142f"
+  integrity sha512-fZEfDT2wS+ZRoS6aDXiVgMMZ910MiG2hzUV9vntrHU/9JbcI+WTo2VaVgdYgawxdpAsPwiZbSWAF1e+kWIJvgw==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
