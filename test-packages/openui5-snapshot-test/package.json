@@ -16,14 +16,14 @@
     "typescript": "4.1.2"
   },
   "scripts": {
-    "ci": "npm-run-all test:*",
+    "ci": "npm-run-all test",
     "test:": "mocha \"./test/**/*spec.js\"",
-    "test:generate": "npm-run-all sdk:* dts:*",
+    "re-generate": "npm-run-all sdk:* dts:*",
     "sdk:download": "node ./lib/download-sdk.js",
     "sdk:format": "prettier --write \"input-sdk/*.json\"",
     "dts:generate": "node ./lib/generate-dts.js",
     "dts:format": "prettier --write \"output-dts/*.d.ts\"",
-    "dts:compile": "tsc -p ."
+    "dts:verify": "tsc -p ."
   },
   "mocha": {
     "diff": false
