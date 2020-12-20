@@ -25045,7 +25045,7 @@ declare namespace sap {
        * @SINCE 1.11.0
        *
        * Provides a trigger that triggers in a set interval and calls all registered listeners. If the interval
-       * is
+       * is <= 0 the trigger is switched off and won't trigger at all.
        */
       class IntervalTrigger extends sap.ui.base.Object {
         /**
@@ -25054,7 +25054,7 @@ declare namespace sap {
         constructor(
           /**
            * is the interval the trigger should be used. If the trigger is >0 triggering starts/runs and if the interval
-           * is set to
+           * is set to <=0 triggering stops.
            */
           iInterval: number
         );
@@ -25149,7 +25149,7 @@ declare namespace sap {
         ): void;
         /**
          * Sets the trigger interval. If the value is >0 triggering will start if there are any registered listeners.
-         * If the interval is set to
+         * If the interval is set to <=0 triggering will stop.
          */
         setInterval(
           /**
@@ -54769,7 +54769,7 @@ declare namespace sap {
              * declares an `sap.ui.test.matchers.Properties` matcher:
              * ```javascript
              *             matchers: {
-             *                 properties: {}
+             *                 properties: {<...>}
              *             }
              * ```
              *   Every value is an object or an array or objects. Each object represents the properties that
