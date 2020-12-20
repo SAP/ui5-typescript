@@ -1138,6 +1138,161 @@ declare namespace sap {
         fBaseSize: number
       ): number;
     }
+    /**
+     * @SINCE 1.10
+     *
+     * URL (Uniform Resource Locator) Helper.
+     *
+     * This helper can be used to trigger a native application (e.g. email, sms, phone) from the browser. That
+     * means we are restricted of browser or application implementation. e.g.
+     * 	 - Some browsers do not let you pass more than 2022 characters in the URL
+     * 	 - MAPI (Outlook) limit is 2083, max. path under Internet Explorer is 2048
+     * 	 - Different Internet Explorer versions have a different limitation (IE9 approximately 1000 characters)
+     *
+     * 	 - MS mail app under Windows 8 cuts mail links after approximately 100 characters
+     * 	 - Safari gets a confirmation from user before opening a native application and can block other triggers
+     * 			if the user cancels it
+     * 	 - Some mail applications(Outlook) do not respect all encodings (e.g. Cyrillic texts are not encoded
+     * 			correctly)
+     *
+     * **Note:** all the given limitation lengths are for URL encoded text (e.g a space character will be encoded
+     * as "%20").
+     * See:
+     * 	{@link topic:4f1c1075d88c41a5904389fa12b28f6b URL Helper}
+     */
+    namespace URLHelper {
+      /**
+       * Adds an event listener for the `redirect` event.
+       */
+      function attachRedirect(
+        /**
+         * The function to call, when the event occurs.
+         */
+        fnFunction: Function,
+        /**
+         * The object that wants to be notified when the event occurs.
+         */
+        oListener?: Object
+      ): sap.m.URLHelper;
+      /**
+       * Detach an already registered listener of the `redirect` event.
+       */
+      function detachRedirect(
+        /**
+         * The function to call, when the event occurs.
+         */
+        fnFunction: Function,
+        /**
+         * The object, that wants to be notified, when the event occurs.
+         */
+        oListener?: Object
+      ): sap.m.URLHelper;
+      /**
+       * Builds Email URI from given parameter. Trims spaces from email addresses.
+       */
+      function normalizeEmail(
+        /**
+         * Destination email address
+         */
+        sEmail?: string,
+        /**
+         * Subject of the email address
+         */
+        sSubject?: string,
+        /**
+         * Default message text
+         */
+        sBody?: string,
+        /**
+         * Carbon Copy email address
+         */
+        sCC?: string,
+        /**
+         * Blind carbon copy email address
+         */
+        sBCC?: string
+      ): string;
+      /**
+       * Sanitizes the given telephone number and returns a URI using the `sms:` scheme.
+       */
+      function normalizeSms(
+        /**
+         * Telephone number
+         */
+        sTel?: string
+      ): string;
+      /**
+       * Sanitizes the given telephone number and returns a URI using the `tel:` scheme.
+       */
+      function normalizeTel(
+        /**
+         * Telephone number
+         */
+        sTel?: string
+      ): string;
+      /**
+       * Redirects to the given URL.
+       *
+       * This method fires "redirect" event before opening the URL.
+       */
+      function redirect(
+        /**
+         * Uniform resource locator
+         */
+        sURL: string,
+        /**
+         * Opens URL in a new browser window or tab. Please note that, opening a new window/tab can be ignored by
+         * browsers (e.g. on Windows Phone) or by popup blockers. NOTE: On Windows Phone the URL will be enforced
+         * to open in the same window if opening in a new window/tab fails (because of a known system restriction
+         * on cross-window communications). Use sap.m.Link instead (with blank target) if you necessarily need to
+         * open URL in a new window.
+         */
+        bNewWindow?: boolean
+      ): void;
+      /**
+       * Trigger email application to send email. Trims spaces from email addresses.
+       */
+      function triggerEmail(
+        /**
+         * Destination email address
+         */
+        sEmail?: string,
+        /**
+         * Subject of the email address
+         */
+        sSubject?: string,
+        /**
+         * Default message text
+         */
+        sBody?: string,
+        /**
+         * Carbon Copy email address
+         */
+        sCC?: string,
+        /**
+         * Blind carbon copy email address
+         */
+        sBCC?: string
+      ): void;
+      /**
+       * Trigger SMS application to send SMS to given telephone number.
+       */
+      function triggerSms(
+        /**
+         * Telephone number
+         */
+        sTel?: string
+      ): void;
+      /**
+       * Trigger telephone app to call the given telephone number.
+       */
+      function triggerTel(
+        /**
+         * Telephone number
+         */
+        sTel?: string
+      ): void;
+    }
 
     namespace plugins {
       interface $DataStateIndicatorSettings

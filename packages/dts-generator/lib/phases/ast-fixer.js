@@ -224,8 +224,13 @@ function fixEnums(groupedAst, symbolTable) {
  * In TypeScript however, namespaces may not be used as types
  * so this function converts such namespaces to interfaces.
  *
+ * Note that sometimes an API.json namespace is **both** a custom type and
+ * an actual namespace. In such cases we must add the matching interface but do not remove
+ * the original namespace.
+ *
  * @param groupedAst
  * @param symbolTable
+ * @param namespacesToInterfaces
  */
 function fixNamespacesAsInterfaces(
   groupedAst,
@@ -234,8 +239,10 @@ function fixNamespacesAsInterfaces(
 ) {
   _.forEach(groupedAst.Namespace, (currNS) => {
     const namespacesToConvert = _.filter(currNS.namespaces, (nestedNs) => {
+      const nsDirectiveVal = namespacesToInterfaces[nestedNs.name];
       return (
-        namespacesToInterfaces[nestedNs.name] ||
+        nsDirectiveVal === true ||
+        (_.isArray(nsDirectiveVal) && nsDirectiveVal[0] === true) ||
         // A completely empty Namespace seems to be how UI defined custom types.
         (_.isEmpty(nestedNs.classes) &&
           _.isEmpty(nestedNs.enums) &&
@@ -245,7 +252,20 @@ function fixNamespacesAsInterfaces(
           _.isEmpty(nestedNs.variables))
       );
     });
-    currNS.namespaces = _.difference(currNS.namespaces, namespacesToConvert);
+    const namespacesToKeep = _.filter(namespacesToConvert, (nestedNs) => {
+      const nsDirectiveVal = namespacesToInterfaces[nestedNs.name];
+      return (
+        _.isArray(nsDirectiveVal) &&
+        nsDirectiveVal[0] === true &&
+        nsDirectiveVal[1] === "keep_original_ns"
+      );
+    });
+
+    const namespacesToRemove = _.difference(
+      namespacesToConvert,
+      namespacesToKeep
+    );
+    currNS.namespaces = _.difference(currNS.namespaces, namespacesToRemove);
 
     const replacementInterfaces = _.map(namespacesToConvert, (nestedNs) => {
       return {
