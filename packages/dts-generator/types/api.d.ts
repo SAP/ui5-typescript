@@ -22,12 +22,18 @@ export interface IDirectives {
 
   /**
    * This marks UI5 namespaces names (**not** fqns) that are used as Types
-   * And should be converted to Interfaces because such usage is invalid in TypeScript.
+   * And should be converted (replaced with) to Interfaces because such usage is invalid in TypeScript.
    *
    * This conversion is done automatically for **empty** namespaces (heuristic).
-   * So only none empty names need be specified here.
+   * So only none empty namespaces need be specified here.
+   *
+   * Note that some namespaces are used **both** as types and as runtime artifacts.
+   * For these the `[true, "keep_original_ns"]` value should be provided which
+   * will cause a matching interface to be generated **without** replacing the original namespace.
    */
-  namespacesToInterfaces: { [orgNamespace: string]: true };
+  namespacesToInterfaces: {
+    [orgNamespace: string]: true | [true] | [true, "keep_original_ns"];
+  };
 
   /**
    * For these Fully Qualified (currently only **classes**) Names a
