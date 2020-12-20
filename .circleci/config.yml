@@ -26,6 +26,23 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn run ci
+      - run:
+          name: Define environment variable with lastest commit's message
+          command: |
+            echo 'export COMMIT_MESSAGE=$(git log -1 --pretty=format:"%s")' >> $BASH_ENV
+            source $BASH_ENV
+      - run:
+          name: Lint commit message
+          command: echo "$COMMIT_MESSAGE" | npx commitlint
+
+  build-node15:
+    docker:
+      - image: circleci/node:15
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn run ci
 
   compliance:
     docker:
@@ -45,10 +62,12 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: yarn
+      - run: yarn --pure-lockfile
       - run: yarn run ci
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-      - run: yarn run lerna:publish
+      # To help debug when lerna detects changes to the working tree and fails the publish
+      - run: git status
+      - run: yarn run release:publish
 
 workflows:
   version: 2
@@ -57,6 +76,7 @@ workflows:
       - build-node10
       - build-node12
       - build-node14
+      - build-node15
       - compliance
       - deploy:
           context: ui5-typescript
