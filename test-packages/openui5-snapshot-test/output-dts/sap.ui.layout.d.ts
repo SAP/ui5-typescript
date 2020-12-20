@@ -7783,14 +7783,16 @@ declare namespace sap {
        * 	 - Main vs. side content ratio is 75 vs. 25 percent (with a minimum of 320px each).
        * 	 - If the application defines a trigger, the side content can be hidden.
        *
-       * Screen width  720px
+       * Screen width <= 1440 px and > 720px
        *
        *
        * 	 - Main vs. side content ratio is 66.666 vs. 33.333 percent (with a minimum of 320px each). If the side
        * 			content width falls below 320 px, it automatically slides under the main content, unless the app development
        * 			team specifies that it should disappear.
        *
-       * Screen width
+       * Screen width <= 720 px (for example on a mobile device)
+       *
+       *
        * 	 - In this case, the side content automatically disappears from the screen (unless specified to stay
        * 			under the content) and can be triggered from a pre-set trigger (specified within the app). When the side
        * 			content is triggered, it replaces the main content. We recommend that you always place the trigger for

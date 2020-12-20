@@ -19,8 +19,8 @@
   "dependencies": {
     "lodash": "4.17.20",
     "lodash.combinations": "18.10.0",
-    "prettier": "2.1.1",
-    "sanitize-html": "1.27.4"
+    "prettier": "2.2.1",
+    "sanitize-html": "2.3.0"
   },
   "scripts": {
     "ci": "npm-run-all test:*",
