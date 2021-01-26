@@ -280,6 +280,13 @@ function buildClass(ui5Class) {
   return astNode;
 }
 
+const ui5ExtendsToArray = (ui5Extends) => {
+	if ( Array.isArray(ui5Extends) ) {
+		return ui5Extends.slice();
+	}
+	return ui5Extends ? [ ui5Extends ] : [];
+}
+
 /**
  * @param ui5Interface
  * @returns {Interface}
@@ -290,8 +297,8 @@ function buildInterface(ui5Interface) {
   const astNode = {
     kind: "Interface",
     name: ui5Interface.basename,
-    // The input UI5 Interfaces never seem to extend any other interface.
-    extends: [],
+    // The input UI5 Interfaces either have no or a single 'extends', but might have multiple in future.
+    extends: ui5ExtendsToArray(ui5Interface.extends),
     methods: _.map(ui5Interface.methods, buildFunction),
     // The input UI5 interfaces only have methods, never properties
     props: [],
