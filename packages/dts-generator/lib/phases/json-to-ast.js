@@ -281,11 +281,11 @@ function buildClass(ui5Class) {
 }
 
 const ui5ExtendsToArray = (ui5Extends) => {
-	if ( Array.isArray(ui5Extends) ) {
-		return ui5Extends.slice();
-	}
-	return ui5Extends ? [ ui5Extends ] : [];
-}
+  if (_.isArray(ui5Extends)) {
+    return _.clone(ui5Extends);
+  }
+  return ui5Extends ? [ui5Extends] : [];
+};
 
 /**
  * @param ui5Interface
