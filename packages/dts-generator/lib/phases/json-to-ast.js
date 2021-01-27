@@ -24,8 +24,9 @@ function buildNamespace(symbols, nsFQN) {
       "events",
       // TODO: should we add these to the documentation somehow?
       "examples",
-      // TODO: why does a namespace have an "extends" property? :)
+      // TODO: why does a namespace have an "extends" or "implements" property? :)
       "extends",
+      "implements",
       "final",
       "methods",
       "name",
@@ -177,22 +178,26 @@ function buildParameterWithType(ui5ItemMeta, buildType) {
     [
       "name",
       "type",
-      "parameterProperties",
-      "optional",
-      "defaultValue",
+      "parameterProperties", // method parameters only
+      "optional", // method parameters only
+      "defaultValue", // properties only
       // from UI5 metadata for mSettings
-      "group",
-      "methods",
-      "bindable",
-      "parameters",
-      "singularName",
-      "cardinality",
-      "dnd",
+      "group", // properties only
+      "methods", // properties, aggregations, associations, events only
+      "bindable", // property and aggregation only
+      "parameters", // events only
+      "singularName", // aggregation and association only
+      "cardinality", // aggregation and association only
+      "dnd", // aggregations only
       // TODO: more magic new ways to describe types in UI5
       //       need to look into this property and its meaning
       //       this only appears 12 times in 350K LOC
       //       so perhaps it is not important enough to care about...
       "altTypes",
+      // TODO: better separate different types of settings as they
+      //       have different sets of allowed properties
+      "allowPreventDefault", // for events only
+      "enableEventBubbling", // for events only
     ],
     ui5ItemMeta
   );
