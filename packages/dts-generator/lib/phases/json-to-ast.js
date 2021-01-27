@@ -292,7 +292,7 @@ const ui5ExtendsToArray = (ui5Extends) => {
  * @returns {Interface}
  */
 function buildInterface(ui5Interface) {
-  assertKnownProps(["basename", "name", "methods", "events"], ui5Interface);
+  assertKnownProps(["basename", "name", "extends", "methods", "events"], ui5Interface);
 
   const astNode = {
     kind: "Interface",
