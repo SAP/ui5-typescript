@@ -19,6 +19,7 @@ const commonIrrelevantProps = [
   "ui5-metamodel",
   "static",
   "visibility",
+  "allowedFor",
 ];
 function assertKnownProps(expectedPropNames, obj) {
   const objProps = _.keys(obj);
