@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/SAP/ui5-typescript/compare/v2.0.6...v2.1.0) (2021-01-28)
+
+### Features
+
+- align set of allowedProperties with newer UI5 versions ([#218](https://github.com/SAP/ui5-typescript/issues/218)) ([e28646b](https://github.com/SAP/ui5-typescript/commit/e28646b8ac5734f886351074f41e7b100ac5f66f))
+- Support UI5 interfaces extending classes or other interfaces ([#217](https://github.com/SAP/ui5-typescript/issues/217)) ([503fa56](https://github.com/SAP/ui5-typescript/commit/503fa56b37a8a350074fba1956e8786ae4976ae1))
+
 ## [2.0.6](https://github.com/SAP/ui5-typescript/compare/v2.0.5...v2.0.6) (2020-12-22)
 
 ### Bug Fixes

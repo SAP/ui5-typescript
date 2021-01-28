@@ -1,7 +1,7 @@
 {
   "name": "demo-sapui5-typescript-signatures-ts",
   "private": true,
-  "version": "2.0.6",
+  "version": "2.1.0",
   "license": "Apache-2.0",
   "devDependencies": {
     "@sapui5/ts-types": "1.85.2",
