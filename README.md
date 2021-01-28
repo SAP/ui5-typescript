@@ -27,7 +27,7 @@ It currently contains a single public package:
 
   [![npm-ui5-dts-generator][npm-ui5-dts-generator-image]][npm-ui5-dts-generator-url]
 
-[npm-ui5-dts-generator-image]: https://img.shields.io/npm/v/@sapui5/ts-types.svg
+[npm-ui5-dts-generator-image]: https://img.shields.io/npm/v/@ui5/dts-generator.svg
 [npm-ui5-dts-generator-url]: https://www.npmjs.com/package/@ui5/dts-generator
 
 ## How to obtain the UI5 TypeScript signatures?
