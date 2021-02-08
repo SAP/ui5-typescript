@@ -21974,8 +21974,10 @@ declare namespace sap {
         oPopover: sap.ui.core.Control
       ): sap.ui.core.Control;
     }
+    export const InstanceManager: InstanceManager;
 
     interface touch {}
+    export const touch: touch;
 
     interface URLHelper {
       /**
@@ -22110,8 +22112,10 @@ declare namespace sap {
         sTel?: string
       ): void;
     }
+    export const URLHelper: URLHelper;
 
     interface ValueCSSColor {}
+    export const ValueCSSColor: ValueCSSColor;
     /**
      * The `sap.m.ActionListItem` can be used like a `button` to fire actions when pressed. **Note:** The inherited
      * `selected` property of the `sap.m.ListItemBase` is not supported.

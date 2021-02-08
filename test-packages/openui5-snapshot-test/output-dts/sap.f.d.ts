@@ -6174,6 +6174,7 @@ declare namespace sap {
     }
 
     interface DynamicPageTitleShrinkRatio {}
+    export const DynamicPageTitleShrinkRatio: DynamicPageTitleShrinkRatio;
     /**
      * @SINCE 1.46
      * @deprecated (since 1.73) - Use the {@link sap.m.Avatar} instead.

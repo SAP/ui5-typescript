@@ -273,6 +273,7 @@ function fixNamespacesAsInterfaces(
         name: nestedNs.name,
         methods: nestedNs.functions,
         parent: currNS,
+        namespace: true,
       };
     });
 

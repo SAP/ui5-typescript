@@ -15148,8 +15148,10 @@ declare namespace sap {
             }
           ): Promise<any>;
         }
+        export const RuleEngineOpaAssertions: RuleEngineOpaAssertions;
 
         interface usage {}
+        export const usage: usage;
         /**
          * @SINCE 1.48
          *
@@ -16362,6 +16364,7 @@ declare namespace sap {
 
         namespace serializer {
           interface delegate {}
+          export const delegate: delegate;
         }
 
         interface $ExportSettings extends sap.ui.core.$ControlSettings {
@@ -16391,6 +16394,7 @@ declare namespace sap {
         }
 
         interface reflection {}
+        export const reflection: reflection;
         /**
          * @SINCE 1.22.0
          * @deprecated (since 1.73)
@@ -18699,6 +18703,7 @@ declare namespace sap {
       }
 
       interface AbsoluteCSSSize {}
+      export const AbsoluteCSSSize: AbsoluteCSSSize;
 
       interface BusyIndicator {
         /**
@@ -18777,30 +18782,43 @@ declare namespace sap {
           iDelay?: number
         ): void;
       }
+      export const BusyIndicator: BusyIndicator;
 
       interface BusyIndicatorUtils {}
+      export const BusyIndicatorUtils: BusyIndicatorUtils;
 
       interface Collision {}
+      export const Collision: Collision;
 
       interface CSSColor {}
+      export const CSSColor: CSSColor;
 
       interface CSSSize {}
+      export const CSSSize: CSSSize;
 
       interface CSSSizeShortHand {}
+      export const CSSSizeShortHand: CSSSizeShortHand;
 
       interface Dock {}
+      export const Dock: Dock;
 
       interface ID {}
+      export const ID: ID;
 
       interface Percentage {}
+      export const Percentage: Percentage;
 
       interface URI {}
+      export const URI: URI;
 
       interface date {}
+      export const date: date;
 
       interface postmessage {}
+      export const postmessage: postmessage;
 
       interface service {}
+      export const service: service;
       /**
        * @SINCE 1.70
        */

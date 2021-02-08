@@ -183,6 +183,9 @@ function genInterface(ast) {
   text += APPEND_ITEMS(ast.methods, genInstanceMethod);
 
   text += "}";
+  if (ast.namespace) {
+    text += NL + `export const ${ast.name}: ${ast.name};`;
+  }
   return text;
 }
 
