@@ -273,7 +273,9 @@ function fixNamespacesAsInterfaces(
         name: nestedNs.name,
         methods: nestedNs.functions,
         parent: currNS,
-        namespace: true,
+        // indicator to remember that this interface
+        // has been created from a namespace originally
+        isNamespace: true,
       };
     });
 
