@@ -87,6 +87,7 @@ interface Interface extends UI5JSDocs {
   methods: FunctionDesc[];
   props: Property[];
   visibility: UI5Visibility;
+  isNamespace?: boolean;
 }
 
 interface DeprecatedDesc {

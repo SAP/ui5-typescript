@@ -183,6 +183,27 @@ function genInterface(ast) {
   text += APPEND_ITEMS(ast.methods, genInstanceMethod);
 
   text += "}";
+  /*
+   * In order to export namespaces converted to interfaces as
+   * modules we need to assign those mapped interfaces to const
+   *
+   * The following snippet shows how such an interface needs
+   * to be defined to re-export it as module:
+   *
+   *   interface BusyIndicator {
+   *     [...]
+   *   }
+   *   export const BusyIndicator: BusyIndicator;
+   *
+   * The following snippet shows how the re-export as module
+   * can be done:
+   *
+   *   declare module "sap/ui/core/BusyIndicator" { export default sap.ui.core.BusyIndicator; }
+   *
+   */
+  if (ast.isNamespace) {
+    text += NL + `export const ${ast.name}: ${ast.name};`;
+  }
   return text;
 }
 

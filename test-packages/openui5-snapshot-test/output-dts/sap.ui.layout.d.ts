@@ -164,10 +164,13 @@ declare namespace sap {
         }
 
         interface CSSGridGapShortHand {}
+        export const CSSGridGapShortHand: CSSGridGapShortHand;
 
         interface CSSGridLine {}
+        export const CSSGridLine: CSSGridLine;
 
         interface CSSGridTrack {}
+        export const CSSGridTrack: CSSGridTrack;
         /**
          * @SINCE 1.60
          *
@@ -2918,16 +2921,22 @@ declare namespace sap {
         }
 
         interface ColumnCells {}
+        export const ColumnCells: ColumnCells;
 
         interface ColumnsL {}
+        export const ColumnsL: ColumnsL;
 
         interface ColumnsM {}
+        export const ColumnsM: ColumnsM;
 
         interface ColumnsXL {}
+        export const ColumnsXL: ColumnsXL;
 
         interface EmptyCells {}
+        export const EmptyCells: EmptyCells;
 
         interface GridElementCells {}
+        export const GridElementCells: GridElementCells;
         /**
          * @SINCE 1.56.0
          *
@@ -6928,10 +6937,13 @@ declare namespace sap {
       }
 
       interface BoxesPerRowConfig {}
+      export const BoxesPerRowConfig: BoxesPerRowConfig;
 
       interface GridIndent {}
+      export const GridIndent: GridIndent;
 
       interface GridSpan {}
+      export const GridSpan: GridSpan;
       /**
        * @SINCE 1.34
        *
