@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/SAP/ui5-typescript/compare/v2.1.0...v2.2.0) (2021-02-16)
+
+### Features
+
+- export replacement interfaces for module declaration ([#222](https://github.com/SAP/ui5-typescript/issues/222)) ([1a5dc02](https://github.com/SAP/ui5-typescript/commit/1a5dc02adfd0dc44f4c3fd53bcd371079cb20bfd))
+
 # [2.1.0](https://github.com/SAP/ui5-typescript/compare/v2.0.6...v2.1.0) (2021-01-28)
 
 ### Features
