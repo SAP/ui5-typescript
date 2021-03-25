@@ -995,10 +995,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@sapui5/ts-types@1.85.2":
-  version "1.85.2"
-  resolved "https://registry.yarnpkg.com/@sapui5/ts-types/-/ts-types-1.85.2.tgz#8c00f535ad194a4ba165ee631d3cb9f2ef112f8b"
-  integrity sha512-6HGiF+E3VZ9J9OnXoCN6MfjnXH8CJoRi8OX51gqal4HQWVSyEV9lT0GuAuYQzHjbVuu+jKyRG5r7pz8ZgybvQg==
+"@sapui5/ts-types@1.88.0":
+  version "1.88.0"
+  resolved "https://registry.yarnpkg.com/@sapui5/ts-types/-/ts-types-1.88.0.tgz#9bbfc7c52d02716f80b58b9d08b5a2a7218a70e4"
+  integrity sha512-teZnMdFlJcDLC/oT3VWmk4Blo3SDlzOl1H2dYaTXEmQt9KpnvULs9Yxb4O6+6WpHv9fCxIoq0GdoAfv01TemEA==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
