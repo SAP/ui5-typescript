@@ -277,7 +277,9 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.tnt.InfoLabel>,
+        oClassInfo?: T &
+          Partial<sap.tnt.InfoLabel> &
+          ThisType<T & sap.tnt.InfoLabel>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -580,7 +582,9 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.tnt.NavigationList>,
+        oClassInfo?: T &
+          Partial<sap.tnt.NavigationList> &
+          ThisType<T & sap.tnt.NavigationList>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -870,7 +874,9 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.tnt.NavigationListItem>,
+        oClassInfo?: T &
+          Partial<sap.tnt.NavigationListItem> &
+          ThisType<T & sap.tnt.NavigationListItem>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -1164,7 +1170,9 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.tnt.SideNavigation>,
+        oClassInfo?: T &
+          Partial<sap.tnt.SideNavigation> &
+          ThisType<T & sap.tnt.SideNavigation>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -1378,7 +1386,9 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.tnt.ToolHeader>,
+        oClassInfo?: T &
+          Partial<sap.tnt.ToolHeader> &
+          ThisType<T & sap.tnt.ToolHeader>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -1434,7 +1444,9 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.tnt.ToolHeaderUtilitySeparator>,
+        oClassInfo?: T &
+          Partial<sap.tnt.ToolHeaderUtilitySeparator> &
+          ThisType<T & sap.tnt.ToolHeaderUtilitySeparator>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
@@ -1511,7 +1523,9 @@ declare namespace sap {
         /**
          * Object literal with information about the class
          */
-        oClassInfo?: T & ThisType<T & sap.tnt.ToolPage>,
+        oClassInfo?: T &
+          Partial<sap.tnt.ToolPage> &
+          ThisType<T & sap.tnt.ToolPage>,
         /**
          * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
          * used by this class
