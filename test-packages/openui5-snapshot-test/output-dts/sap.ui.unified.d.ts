@@ -621,7 +621,9 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.unified.calendar.DatesRow>,
+            oClassInfo?: T &
+              Partial<sap.ui.unified.calendar.DatesRow> &
+              ThisType<T & sap.ui.unified.calendar.DatesRow>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -974,7 +976,9 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.unified.calendar.Header>,
+            oClassInfo?: T &
+              Partial<sap.ui.unified.calendar.Header> &
+              ThisType<T & sap.ui.unified.calendar.Header>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -1685,7 +1689,9 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.unified.calendar.Month>,
+            oClassInfo?: T &
+              Partial<sap.ui.unified.calendar.Month> &
+              ThisType<T & sap.ui.unified.calendar.Month>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -2393,7 +2399,9 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.unified.calendar.MonthPicker>,
+            oClassInfo?: T &
+              Partial<sap.ui.unified.calendar.MonthPicker> &
+              ThisType<T & sap.ui.unified.calendar.MonthPicker>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -2852,7 +2860,9 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.unified.calendar.MonthsRow>,
+            oClassInfo?: T &
+              Partial<sap.ui.unified.calendar.MonthsRow> &
+              ThisType<T & sap.ui.unified.calendar.MonthsRow>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -3380,7 +3390,9 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.unified.calendar.TimesRow>,
+            oClassInfo?: T &
+              Partial<sap.ui.unified.calendar.TimesRow> &
+              ThisType<T & sap.ui.unified.calendar.TimesRow>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -3900,7 +3912,9 @@ declare namespace sap {
             /**
              * Object literal with information about the class
              */
-            oClassInfo?: T & ThisType<T & sap.ui.unified.calendar.YearPicker>,
+            oClassInfo?: T &
+              Partial<sap.ui.unified.calendar.YearPicker> &
+              ThisType<T & sap.ui.unified.calendar.YearPicker>,
             /**
              * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
              * used by this class
@@ -6113,7 +6127,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.Calendar>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.Calendar> &
+            ThisType<T & sap.ui.unified.Calendar>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -6835,7 +6851,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.CalendarAppointment>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.CalendarAppointment> &
+            ThisType<T & sap.ui.unified.CalendarAppointment>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7045,7 +7063,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.CalendarDateInterval>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.CalendarDateInterval> &
+            ThisType<T & sap.ui.unified.CalendarDateInterval>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7234,7 +7254,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.CalendarLegend>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.CalendarLegend> &
+            ThisType<T & sap.ui.unified.CalendarLegend>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7386,7 +7408,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.CalendarLegendItem>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.CalendarLegendItem> &
+            ThisType<T & sap.ui.unified.CalendarLegendItem>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -7680,7 +7704,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.CalendarMonthInterval>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.CalendarMonthInterval> &
+            ThisType<T & sap.ui.unified.CalendarMonthInterval>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -8364,7 +8390,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.CalendarRow>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.CalendarRow> &
+            ThisType<T & sap.ui.unified.CalendarRow>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -9330,7 +9358,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.CalendarTimeInterval>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.CalendarTimeInterval> &
+            ThisType<T & sap.ui.unified.CalendarTimeInterval>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -9940,7 +9970,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.ColorPicker>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.ColorPicker> &
+            ThisType<T & sap.ui.unified.ColorPicker>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10274,7 +10306,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.ColorPickerPopover>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.ColorPickerPopover> &
+            ThisType<T & sap.ui.unified.ColorPickerPopover>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10521,7 +10555,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.ContentSwitcher>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.ContentSwitcher> &
+            ThisType<T & sap.ui.unified.ContentSwitcher>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10749,7 +10785,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.Currency>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.Currency> &
+            ThisType<T & sap.ui.unified.Currency>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -10949,7 +10987,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.DateRange>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.DateRange> &
+            ThisType<T & sap.ui.unified.DateRange>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -11041,7 +11081,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.DateTypeRange>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.DateTypeRange> &
+            ThisType<T & sap.ui.unified.DateTypeRange>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -11653,7 +11695,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.FileUploader>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.FileUploader> &
+            ThisType<T & sap.ui.unified.FileUploader>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13026,7 +13070,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.FileUploaderParameter>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.FileUploaderParameter> &
+            ThisType<T & sap.ui.unified.FileUploaderParameter>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13124,7 +13170,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.FileUploaderXHRSettings>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.FileUploaderXHRSettings> &
+            ThisType<T & sap.ui.unified.FileUploaderXHRSettings>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13275,7 +13323,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.Menu>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.Menu> &
+            ThisType<T & sap.ui.unified.Menu>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13609,7 +13659,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.MenuItem>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.MenuItem> &
+            ThisType<T & sap.ui.unified.MenuItem>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -13771,7 +13823,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.MenuItemBase>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.MenuItemBase> &
+            ThisType<T & sap.ui.unified.MenuItemBase>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -14007,7 +14061,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.MenuTextFieldItem>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.MenuTextFieldItem> &
+            ThisType<T & sap.ui.unified.MenuTextFieldItem>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -14236,7 +14292,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.Shell>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.Shell> &
+            ThisType<T & sap.ui.unified.Shell>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -14662,7 +14720,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.ShellHeadItem>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.ShellHeadItem> &
+            ThisType<T & sap.ui.unified.ShellHeadItem>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -14990,7 +15050,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.ShellHeadUserItem>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.ShellHeadUserItem> &
+            ThisType<T & sap.ui.unified.ShellHeadUserItem>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -15192,7 +15254,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.ShellLayout>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.ShellLayout> &
+            ThisType<T & sap.ui.unified.ShellLayout>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -15491,7 +15555,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.ShellOverlay>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.ShellOverlay> &
+            ThisType<T & sap.ui.unified.ShellOverlay>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class
@@ -15696,7 +15762,9 @@ declare namespace sap {
           /**
            * Object literal with information about the class
            */
-          oClassInfo?: T & ThisType<T & sap.ui.unified.SplitContainer>,
+          oClassInfo?: T &
+            Partial<sap.ui.unified.SplitContainer> &
+            ThisType<T & sap.ui.unified.SplitContainer>,
           /**
            * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
            * used by this class

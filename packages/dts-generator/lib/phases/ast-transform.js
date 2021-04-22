@@ -251,7 +251,7 @@ function modifyExtendMethods(symbolTable) {
     };
     oClassInfoParam.type = {
       kind: "SimpleType",
-      type: `T & ThisType <T & ${fqn}>`,
+      type: `T & Partial<${fqn}> & ThisType<T & ${fqn}>`,
       ignoreIssues: true,
     };
   });
