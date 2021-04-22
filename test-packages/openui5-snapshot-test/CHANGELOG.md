@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/SAP/ui5-typescript/compare/v2.2.0...v2.2.1) (2021-04-22)
+
+### Bug Fixes
+
+- enable auto-complete for methods overriding ([#245](https://github.com/SAP/ui5-typescript/issues/245)) ([f5d9474](https://github.com/SAP/ui5-typescript/commit/f5d947489fcbc820cdb03a019f188c41413a5429))
+
 # [2.2.0](https://github.com/SAP/ui5-typescript/compare/v2.1.0...v2.2.0) (2021-02-16)
 
 ### Features
