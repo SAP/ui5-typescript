@@ -1,10 +1,11 @@
 const _ = require("lodash");
 const { assertKnownProps } = require("../utils/runtime-checks");
 
-function jsonToAst(jsonObj) {
+function jsonToAst(jsonObj,topLevelNamespaceSymbol) {
+  console.error(topLevelNamespaceSymbol);
   return {
     version: jsonObj.version,
-    topLevelNamespace: buildNamespace(jsonObj.symbols, "sap"),
+    topLevelNamespace: buildNamespace(jsonObj.symbols, topLevelNamespaceSymbol),
   };
 }
 
