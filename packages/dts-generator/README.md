@@ -34,6 +34,7 @@ const dtsText = jsonToDTS(libJsonData, {
   dependencies: [
     /* Array of api.json dependencies as plain JavaScript objects */
   ],
+  topLevelNamespaceSymbol:'sap' //The first part of the namespace to analyze defaults to 'sap'
 });
 
 // Normally one would output the `dtsText` to a file.
