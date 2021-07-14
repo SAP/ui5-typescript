@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/SAP/ui5-typescript/compare/v2.2.1...v2.3.0) (2021-07-14)
+
+### Features
+
+- enable use for custom namespaces ([#272](https://github.com/SAP/ui5-typescript/issues/272)) ([874111d](https://github.com/SAP/ui5-typescript/commit/874111d68b3255f794a280bc28ac3ad231ceb6b6))
+
 ## [2.2.1](https://github.com/SAP/ui5-typescript/compare/v2.2.0...v2.2.1) (2021-04-22)
 
 ### Bug Fixes
