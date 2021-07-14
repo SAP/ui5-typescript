@@ -16,6 +16,7 @@ const defaultOptions = {
     namespacesToInterfaces: {},
     fqnToIgnore: {},
   },
+  topLevelNamespaceSymbol: "sap",
 };
 
 function jsonToDTS(targetLibJson, options) {
@@ -31,9 +32,14 @@ function jsonToDTS(targetLibJson, options) {
   });
 
   // Transform The api.json files to an hierarchical well defined  Data structure (see ast.d.ts)
-  const targetLibAst = jsonToAst(targetLibFixedJson);
+  const targetLibAst = jsonToAst(
+    targetLibFixedJson,
+    actualOptions.topLevelNamespaceSymbol
+  );
   const depsAsts = timer(function buildAst() {
-    return _.map(depsFixedJsons, jsonToAst);
+    return _.map(depsFixedJsons, function (dep) {
+      return jsonToAst(dep, actualOptions.topLevelNamespaceSymbol);
+    });
   });
 
   // Create a Symbol Table
