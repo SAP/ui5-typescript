@@ -30,15 +30,15 @@ integrate UI5 application into the modern JavaScript ecosystem.
 
 #### Editor Tooling
 
-UI5 uses custom proprietary syntax for modules(import / exports) and class inheritance.
-This makes it difficult for popular IDEs to provide editor related capabilities(e.g content assist)
+UI5 uses proprietary syntax for modules (import / exports) and class inheritance.
+This makes it difficult for popular IDEs to provide editor related capabilities (e.g content assist)
 as those tools simply do not understand the UI5 syntax.
 
 By creating TypeScript signatures for UI5 libraries we are effectively **_bridging the gap_**
 thus enabling the IDEs and Editors to provide their advanced capabilities even when implementing
 UI5 applications in JavaScript.
 
-- Note these advance editor services are available in [many IDE][editors-lsp] and Editors via the [LSP](LSP) protocol.
+- Note: these advance editor services are available in [many IDEs][editors-lsp] and Editors via the [LSP](LSP) protocol.
 
 It is even possible to extend the functionality of some of these editor services via Language Server Plugins.
 
@@ -66,24 +66,24 @@ This type system capability which is sorely lacking in JavaScript is very suitab
 of large and complex applications.
 
 By providing type signatures for UI5 libraries we enable easier integration of UI5 apps
-and the TypeScript "flavor" of JavaScript, without such signatures no type checking can be performed
+and the TypeScript "flavor" of JavaScript. Without such signatures no type checking can be performed
 on API usage of UI5 libraries.
 
 References on TypeScript popularity:
 
 - https://www.wired.com/story/typescript-microsoft-javascript-alternative-most-popular/
-- https://www.npmtrends.com/typescript (> 20M monthly downloads on npm).
-- https://2018.stateofjs.com/javascript-flavors/overview/
+- https://www.npmtrends.com/typescript (20M weekly downloads on npm as of summer 2021, up from 6M two years before).
+- https://2020.stateofjs.com/en-US/technologies/javascript-flavors/
 
 #### Improving UI5 Docs
 
 There are two elements to this topic
 
 1. If the UI5 docs are automatically transformed to TypeScript definitions
-   Than the **I5 type system would slowly have to more strongly conform to the TypeScript type system**.
+   Then the **UI5 type system slowly conforms more strongly to the TypeScript type system**.
    The latter being much more robust than the combination of UI5/JSDocs type systems.
 
-2) **Promoting end users to raise issues with errors and inaccuracies in the API reference**:
+2. **Promoting end users to raise issues with errors and inaccuracies in the API reference**:
 
    SAP UI5 has a large in depth API Reference:
 
@@ -91,9 +91,9 @@ There are two elements to this topic
 
    However there exists no validation between an end user's source code and the content of the API Reference.
    In essence the API Reference is meant **only** for human consumption. Once the API Reference is available
-   as a "compiler readable" format (d.ts) inaccuracies and mistakes in the API reference will begin surfacing
-   simply because once type checking is enabled these inaccuracies and mistakes would cause
-   distractions to **end users**.
+   as a "compiler readable" format (`*.d.ts`), inaccuracies and mistakes in the API reference begin surfacing
+   simply because once type checking is enabled these inaccuracies and mistakes cause
+   distractions to **end users** (app developers).
 
    For example: If a method argument is marked as mandatory but is in fact optional
    It would not be possible to use it as optional without receiving a type error.
