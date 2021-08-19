@@ -33,6 +33,7 @@ It currently contains a single public package:
 ## How to obtain the UI5 TypeScript signatures?
 
 The UI5 type signatures are created and published as part of the UI5 build process. There are <b>two flavors</b> of the type definitions right now:
+
 1. the legacy flavor which defines all entities with their global names, like `sap.m.Button`. As using globals is discouraged, using this flavor should be avoided. The definition packages are named `ts-types`.
 2. the "ES modules" flavor which defines ES6-style module names for the entities. These definition support using modern JavaScript syntax with ES modules and classes, but require an additional transformation step, which can be run together with the anyway required TypeScript compilation. These recommended definition packages are named `ts-types-esm`.
 
@@ -42,11 +43,11 @@ Using the legacy definitions for SAPUI5 as example, the type definitions can be 
 
 With npm
 
-  `npm install @sapui5/ts-types --save-dev`
+`npm install @sapui5/ts-types --save-dev`
 
 With Yarn
 
-  `yarn add @sapui5/ts-types --dev`
+`yarn add @sapui5/ts-types --dev`
 
 ## Usage
 
@@ -68,7 +69,6 @@ Please open [issues](https://github.com/SAP/ui5-typescript/issues) on GitHub.
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md).
-
 
 [typescript]: https://www.typescriptlang.org/
 [mono-repo]: https://github.com/babel/babel/blob/master/doc/design/monorepo.md
