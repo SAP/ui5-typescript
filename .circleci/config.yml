@@ -1,3 +1,5 @@
-test:
-  override:
-    - echo "done"
+version: 2
+jobs:
+  noop:
+    steps:
+      - echo "done"
