@@ -1,5 +1,5 @@
 version: 2
 jobs:
-  noop:
+  build:
     steps:
       - echo "done"
