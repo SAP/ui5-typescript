@@ -5,9 +5,10 @@ jobs:
       - run: echo "done"
 
 workflows:
-  build:
+  version: 2
+  noop:
     jobs:
-      - build
+      - build:
           filters:
             branches:
               ignore: gh-pages
