@@ -8,6 +8,6 @@ workflows:
   build:
     jobs:
       - build
-        filters:
+          filters:
             branches:
               ignore: gh-pages
