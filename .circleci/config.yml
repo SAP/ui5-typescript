@@ -3,3 +3,11 @@ jobs:
   build:
     steps:
       - run: echo "done"
+
+workflows:
+  build:
+    jobs:
+      - build
+        filters:
+            branches:
+              ignore: gh-pages
