@@ -1,5 +1,16 @@
 version: 2
 jobs:
-  noop:
+  build:
+    docker:
+      - image: circleci/node:14
     steps:
-      - echo "done"
+      - run: echo "done"
+
+workflows:
+  version: 2
+  noop:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
