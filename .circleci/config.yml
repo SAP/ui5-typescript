@@ -2,4 +2,4 @@ version: 2
 jobs:
   build:
     steps:
-      - echo "done"
+      - run: echo "done"
