@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    docker:
+      - image: circleci/node:14
     steps:
       - run: echo "done"
 
