@@ -1,0 +1,22 @@
+name: Lint Commit Messages
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  # See: https://github.community/t/duplicate-checks-on-push-and-pull-request-simultaneous-event/18012
+  push:
+    branches:
+      - main
+      - gh-pages
+  pull_request:
+    branches:
+      - main
+      - gh-pages
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v4
