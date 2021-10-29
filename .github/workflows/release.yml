@@ -24,7 +24,7 @@ jobs:
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
           npm whoami
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_RELEASE_AUTH_TOKEN }}
 
       - name: Publish to NPM
         run: yarn run release:publish

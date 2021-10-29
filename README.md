@@ -2,7 +2,7 @@
     :construction: Work in Progress! :construction:
 </p>
 
-[![CircleCI](https://circleci.com/gh/SAP/ui5-typescript.svg?style=svg)](https://circleci.com/gh/SAP/ui5-typescript)
+[![Continuous Integration](https://github.com/SAP/ui5-typescript/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/SAP/ui5-typescript/actions/workflows/ci.yml)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![dependentbot](https://api.dependabot.com/badges/status?host=github&repo=SAP/ui5-typescript)](https://dependabot.com/)
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP/ui5-typescript)](https://api.reuse.software/info/github.com/SAP/ui5-typescript)

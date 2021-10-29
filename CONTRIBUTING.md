@@ -26,7 +26,7 @@ The initial setup is trivial:
 - clone this repo
 - `yarn`
 
-### Commit Messages format.
+### Commit Messages format
 
 This project enforces the [conventional-commits][conventional_commits] commit message formats.
 The possible commits types prefixes are limited to those defined by [conventional-commit-types][commit_types].
@@ -42,7 +42,7 @@ It is recommended to use `git cz` to construct valid conventional commit message
 [commit_types]: https://github.com/commitizen/conventional-commit-types/blob/master/index.json
 [conventional_commits]: https://www.conventionalcommits.org/en/v1.0.0/
 
-### Formatting.
+### Formatting
 
 [Prettier](https://prettier.io/) is used to ensure consistent code formatting in this repository.
 This is normally transparent as it automatically activated in a pre-commit hook using [lint-staged](https://github.com/okonet/lint-staged).
@@ -67,11 +67,11 @@ This project is implemented using plain ECMAScript without any compilation / tra
 
 To run the full **C**ontinuous **I**ntegration build run `yarn ci` in either the top-level package or a specific subpackage.
 
-### Release Life-Cycle.
+### Release Life-Cycle
 
-This monorepo uses Lerna's [Fixed/Locked][lerna-mode] which means all the sub-packages share the same version number.
+This monorepo uses Lerna's [Independent][lerna-mode] mode which allows subpackages to have different versions.
 
-[lerna-mode]: https://github.com/lerna/lerna#fixedlocked-mode-default
+[lerna-mode]: https://github.com/lerna/lerna#independent-mode
 
 ### Release Process
 

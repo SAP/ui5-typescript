@@ -7,7 +7,7 @@
       "conventionalCommits": true
     },
     "version": {
-      "message": "chore(release): release %s"
+      "message": "chore(release): publish"
     }
   },
   "version": "independent"
