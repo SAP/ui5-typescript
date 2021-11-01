@@ -80,6 +80,5 @@ Performing a release requires push permissions to the repository.
 - Ensure you are on the default branch and synced with origin.
 - `yarn run release:version`
 - Follow the lerna CLI instructions.
-- Track the newly pushed **tag** (`/^v[0-9]+(\.[0-9]+)*/`) build in the build system
-  until successful completion.
-- Inspect the newly artifacts published on npmjs.com / Github Releases / other relevant release targets.
+- Track the newly pushed commit with the message `chore(release): publish` in the build system for a successful completion (the `Release` GitHub action must be triggered!).
+- Inspect the newly artifacts published on npmjs.com.
