@@ -50,6 +50,6 @@ New files and changed files can be enumerated by calling `program.getSemanticDia
 
 The program object does have a `getState()` method and the state has a `changedFilesSet` property which contains the changed files, but those are not a public API, so they are not used.
 
-So the information about file changes is limited, but it is anyway questionable whether only changed files need to be considered when re-generating the interfaces: a change in a base class or in the UI5 type definitions could also influence the interface of an unchanged control implementation file. As performance for the overall standad flow is REALLY good (~20ms for a re-scan of all modules in UI5 and analyzing the types in the project files), there does not seem to be a need to restrict interface generation to those which MIGHT have an actual change.
+So the information about file changes is limited, but it is anyway questionable whether only changed files need to be considered when re-generating the interfaces: a change in a base class or in the UI5 type definitions could also influence the interface of an unchanged control implementation file. As performance for the overall standard flow is REALLY good (~20ms for a re-scan of all modules in UI5 and analyzing the types in the project files), there does not seem to be a need to restrict interface generation to those which MIGHT have an actual change.
 
 Open: should all interfaces be deleted before generation to get rid of those which are no longer needed?
