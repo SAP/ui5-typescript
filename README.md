@@ -1,6 +1,6 @@
 # UI5-TypeScript
 
-This page provides an overview of all official TypeScript-related ressources in the UI5 world.
+This page provides an overview of all official TypeScript-related resources in the UI5 world.
 
 * <b>What is TypeScript about?</b><br>
 [TypeScript](typescriptlang.org) is an extension of JavaScript for providing type information and helps by error detection through type checking and by providing code assist in many supporting code editors (code completion, inline documentation,...). Browsers cannot execute TypeScript directly, a transpilation step is needed.
@@ -47,6 +47,17 @@ See [CONTRIBUTING.md](https://github.com/SAP/ui5-typescript/blob/master/CONTRIBU
 
 ## License
 
-Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
+Copyright (c) 2021 SAP SE and ui5-typescript contributors.
+
 This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+
+## Privacy Statement
+
+This site is hosted by [GitHub Pages](https://pages.github.com/). Please see the [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement) for any information how GitHub processes your personal data.
+
+Please note the [SAP terms of use](https://www.sap.com/corporate/en/legal/terms-of-use.html).
+
+[Legal Statement / Impressum](https://www.sap.com/about/legal/impressum.html)
+
+[Trademark Notice](https://www.sap.com/corporate/en/legal/trademark.html#third-party-trademark-notices)
 
