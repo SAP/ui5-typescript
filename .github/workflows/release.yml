@@ -1,13 +1,15 @@
 name: Release
 on:
   push:
-    tags:
-      - "do_not_release@*.*.*"
+    branches: [main]
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, 'chore(release): publish')"
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
           node-version: lts/*
@@ -15,16 +17,10 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Build
-        run: yarn run ci
-
-      - name: npm auth setup
+      - name: Publish to NPM
         run: |
-          yarn logout
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
-          npm whoami
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          echo ":::: Publishing as $(npm whoami)"
+          npm run release:publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_RELEASE_AUTH_TOKEN }}
-
-      - name: Publish to NPM
-        run: yarn run release:publish
