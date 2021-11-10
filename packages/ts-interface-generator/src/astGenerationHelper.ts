@@ -759,7 +759,7 @@ function generateMethods(
             undefined,
             "fn",
             undefined,
-            ts.createTypeReferenceNode("Function")
+            callback
           ),
           ts.createParameter(
             undefined,

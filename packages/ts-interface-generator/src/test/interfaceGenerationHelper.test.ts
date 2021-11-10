@@ -104,7 +104,7 @@ declare module "./SampleControl" {
         // event: doublePress
         attachDoublePress(fn: (event: Event) => void, listener?: object): this;
         attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: Event, data: CustomDataType) => void, listener?: object): this;
-        detachDoublePress(fn: Function, listener?: object): this;
+        detachDoublePress(fn: (event: Event) => void, listener?: object): this;
         fireDoublePress(parameters?: object): this;
     }
 }
