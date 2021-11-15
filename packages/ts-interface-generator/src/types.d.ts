@@ -1,3 +1,7 @@
+interface GlobalToModuleMapping {
+  [key: string]: { moduleName: string; exportName?: string };
+}
+
 interface ManagedObjectInfo {
   sourceFile: ts.SourceFile;
   className: string;

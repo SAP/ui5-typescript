@@ -7,7 +7,7 @@ function generateSettingsInterface(
   constructorSignaturesAvailable: boolean,
   settingsTypeFullName: string,
   requiredImports: {},
-  knownGlobals: { [key: string]: { moduleName: string; exportName?: string } }
+  knownGlobals: GlobalToModuleMapping
 ) {
   const interfaceProperties = [];
   const currentClassName = classInfo.name;
@@ -184,7 +184,7 @@ ${astToString(constructorBlock)}===== END =====
 function generateMethods(
   classInfo: ClassInfo,
   requiredImports: RequiredImports,
-  knownGlobals: { [key: string]: { moduleName: string; exportName?: string } }
+  knownGlobals: GlobalToModuleMapping
 ) {
   const allMethods: ts.MethodSignature[] = [];
   const currentClassName = classInfo.name;
@@ -804,7 +804,7 @@ function generateMethods(
 function createTSTypeNode(
   typeName: string,
   requiredImports: RequiredImports,
-  knownGlobals: { [key: string]: { moduleName: string; exportName?: string } },
+  knownGlobals: GlobalToModuleMapping,
   currentClassName: string
 ) {
   switch (typeName) {
@@ -839,7 +839,7 @@ function createTSTypeNode(
 function uniqueImport(
   typeName: string,
   requiredImports: RequiredImports,
-  knownGlobals: { [key: string]: { moduleName: string; exportName?: string } },
+  knownGlobals: GlobalToModuleMapping,
   currentClassName: string
 ) {
   if (typeName === currentClassName) {

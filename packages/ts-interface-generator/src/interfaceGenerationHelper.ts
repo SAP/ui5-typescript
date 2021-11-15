@@ -38,9 +38,7 @@ const interestingBaseClasses: {
 function generateInterfaces(
   sourceFile: ts.SourceFile,
   typeChecker: ts.TypeChecker,
-  allKnownGlobals: {
-    [key: string]: { moduleName: string; exportName?: string };
-  },
+  allKnownGlobals: GlobalToModuleMapping,
   resultProcessor: (
     sourceFileName: string,
     className: string,
@@ -313,9 +311,7 @@ function generateInterface(
       | undefined;
     constructorSignaturesAvailable: boolean;
   },
-  allKnownGlobals: {
-    [key: string]: { moduleName: string; exportName?: string };
-  }
+  allKnownGlobals: GlobalToModuleMapping
 ) {
   const fileName = sourceFile.fileName;
   let metadata: ts.PropertyDeclaration[] = <ts.PropertyDeclaration[]>(
@@ -392,9 +388,7 @@ function buildAST(
   constructorSignaturesAvailable: boolean,
   moduleName: string,
   settingsTypeFullName: string,
-  allKnownGlobals: {
-    [key: string]: { moduleName: string; exportName?: string };
-  }
+  allKnownGlobals: GlobalToModuleMapping
 ) {
   const requiredImports = {};
   const methods = generateMethods(classInfo, requiredImports, allKnownGlobals);

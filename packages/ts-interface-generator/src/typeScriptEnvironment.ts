@@ -17,9 +17,7 @@ type TSProgramUpdateCallback = (
   program: ts.Program,
   typeChecker: ts.TypeChecker,
   changedFiles: string[],
-  allKnownGlobals: {
-    [key: string]: { moduleName: string; exportName?: string };
-  }
+  allKnownGlobals: GlobalToModuleMapping
 ) => void;
 
 let newProgram: ts.SemanticDiagnosticsBuilderProgram;
@@ -187,9 +185,7 @@ function onProgramChanged(
 ) {
   const program = builderProgram.getProgram();
   const typeChecker = program.getTypeChecker();
-  const allKnownGlobals: {
-    [key: string]: { moduleName: string; exportName?: string };
-  } = {};
+  const allKnownGlobals: GlobalToModuleMapping = {};
 
   // build a map of all known modules declared in the d.ts files (and elsewhere) along with their respective exports (so we can correctly identify enums which do not live in a module on their own)
   typeChecker.getAmbientModules().forEach((mod) => {
