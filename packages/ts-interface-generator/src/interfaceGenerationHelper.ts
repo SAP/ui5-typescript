@@ -263,7 +263,7 @@ function getInterestingBaseClass(
   type: ts.Type,
   typeChecker: ts.TypeChecker
 ): "ManagedObject" | "EventProvider" | "Element" | "Control" | undefined {
-  const typeName = typeChecker.typeToString(type);
+  //const typeName = typeChecker.typeToString(type);
   //console.log("-> " + typeName + " (" + typeChecker.getFullyQualifiedName(type.getSymbol()) + ")");
 
   let interestingBaseClass =
@@ -314,7 +314,7 @@ function generateInterface(
   allKnownGlobals: GlobalToModuleMapping
 ) {
   const fileName = sourceFile.fileName;
-  let metadata: ts.PropertyDeclaration[] = <ts.PropertyDeclaration[]>(
+  const metadata: ts.PropertyDeclaration[] = <ts.PropertyDeclaration[]>(
     classDeclaration.members.filter((member) => {
       if (
         ts.isPropertyDeclaration(member) &&
@@ -337,9 +337,9 @@ function generateInterface(
   // by now we have something that looks pretty much like a ManagedObject metadata object
 
   const metadataText = metadata[0].initializer.getText(sourceFile);
-  let metadataObject: { [key: string]: any };
+  let metadataObject: ClassInfo;
   try {
-    metadataObject = Hjson.parse(metadataText); // parse with some fault tolerance: it's not a real JSON object, but JS code which may contain comments and property names which are not enclosed in double quotes
+    metadataObject = Hjson.parse(metadataText) as ClassInfo; // parse with some fault tolerance: it's not a real JSON object, but JS code which may contain comments and property names which are not enclosed in double quotes
   } catch (e) {
     throw new Error(
       `When parsing the metadata of ${className} in ${fileName}: metadata is no valid JSON and could not be quick-fixed to be. Please make the metadata at least close to valid JSON. In particular, TypeScript type annotations cannot be used. Error: ${
@@ -433,7 +433,7 @@ function buildAST(
 
 function getImports(requiredImports: RequiredImports) {
   const imports = [];
-  for (let dependencyName in requiredImports) {
+  for (const dependencyName in requiredImports) {
     const singleImport = requiredImports[dependencyName];
     const localNameIdentifier = ts.createIdentifier(singleImport.localName);
     const namedImportOriginalNameIdentifier =

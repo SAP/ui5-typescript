@@ -38,6 +38,7 @@ interface APIMemberWithType extends APIMember {
 }
 
 interface Property extends APIMemberWithMethods, APIMemberWithType {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   defaultValue?: any;
   bindable?: boolean;
 }
@@ -50,9 +51,17 @@ interface Aggregation extends APIMemberWithMethods, APIMemberWithType {
   bindable: boolean;
 }
 
+interface AggregationMetadata extends Aggregation {
+  multiple: true;
+}
+
 interface Association extends APIMemberWithMethods, APIMemberWithType {
   cardinality: "0..1" | "0..n";
   singularName: string;
+}
+
+interface AssociationMetadata extends Association {
+  multiple: true;
 }
 
 interface UI5Event extends APIMemberWithMethods {
@@ -70,7 +79,7 @@ interface EventParameter {
   type: string;
 }
 
-interface SpecialSetting extends APIMemberWithType {}
+type SpecialSetting = APIMemberWithType;
 
 interface ClassInfo {
   name?: string;
@@ -86,8 +95,8 @@ interface ClassInfo {
   defaultAggregation?: string;
   associations?: { [key: string]: Association };
   events?: { [key: string]: UI5Event };
-  methods?: {};
-  annotations?: {};
+  methods?: Record<string, unknown>; // TODO
+  annotations?: Record<string, unknown>; // TODO
   designtime?: boolean | string;
   designTime?: boolean | string;
   stereotype?: null;

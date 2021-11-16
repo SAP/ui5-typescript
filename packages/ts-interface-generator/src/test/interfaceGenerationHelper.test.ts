@@ -41,10 +41,10 @@ function onTSProgramUpdate(
 }
 
 test("Generating the interface for a sample control", () => {
-  initialize("./tsconfig-test.json", onTSProgramUpdate, {});
+  initialize("./tsconfig-testcontrol.json", onTSProgramUpdate, {});
 });
 
-var expected = `import { CSSColor } from "sap/ui/core/library";
+const expected = `import { CSSColor } from "sap/ui/core/library";
 import Control from "sap/ui/core/Control";
 import { AggregationBindingInfo } from "sap/ui/base/ManagedObject";
 import Event from "sap/ui/base/Event";

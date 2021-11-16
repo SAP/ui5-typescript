@@ -6,14 +6,14 @@ function generateSettingsInterface(
   classFileName: string,
   constructorSignaturesAvailable: boolean,
   settingsTypeFullName: string,
-  requiredImports: {},
+  requiredImports: RequiredImports,
   knownGlobals: GlobalToModuleMapping
 ) {
   const interfaceProperties = [];
   const currentClassName = classInfo.name;
 
   // properties
-  for (let n in classInfo.properties) {
+  for (const n in classInfo.properties) {
     const property = classInfo.properties[n];
     if (property.visibility !== "hidden") {
       interfaceProperties.push(
@@ -34,7 +34,7 @@ function generateSettingsInterface(
   }
 
   // aggregations
-  for (let n in classInfo.aggregations) {
+  for (const n in classInfo.aggregations) {
     const aggregation = classInfo.aggregations[n];
     if (aggregation.visibility !== "hidden") {
       interfaceProperties.push(
@@ -55,7 +55,7 @@ function generateSettingsInterface(
   }
 
   // associations
-  for (let n in classInfo.associations) {
+  for (const n in classInfo.associations) {
     const association = classInfo.associations[n];
     if (association.visibility !== "hidden") {
       interfaceProperties.push(
@@ -79,7 +79,7 @@ function generateSettingsInterface(
   }
 
   // events
-  for (let n in classInfo.events) {
+  for (const n in classInfo.events) {
     const event = classInfo.events[n];
     if (event.visibility !== "hidden") {
       interfaceProperties.push(
@@ -190,7 +190,7 @@ function generateMethods(
   const currentClassName = classInfo.name;
 
   // properties
-  for (let n in classInfo.properties) {
+  for (const n in classInfo.properties) {
     const property = classInfo.properties[n];
     if (property.visibility === "hidden") {
       continue;
@@ -244,7 +244,7 @@ function generateMethods(
   }
 
   // aggregations
-  for (let n in classInfo.aggregations) {
+  for (const n in classInfo.aggregations) {
     const aggregation = classInfo.aggregations[n];
     if (aggregation.visibility === "hidden") {
       continue;
@@ -491,7 +491,7 @@ function generateMethods(
   }
 
   // associations
-  for (let n in classInfo.associations) {
+  for (const n in classInfo.associations) {
     const association = classInfo.associations[n];
     if (association.visibility === "hidden") {
       continue;
@@ -622,7 +622,7 @@ function generateMethods(
   }
 
   // events
-  for (let n in classInfo.events) {
+  for (const n in classInfo.events) {
     const event = classInfo.events[n];
     if (event.visibility === "hidden") {
       continue;
@@ -826,13 +826,9 @@ function createTSTypeNode(
 
     default:
       // UI5 type, something like "sap.ui.core.CSSSize"
-      const localTypeName = uniqueImport(
-        typeName,
-        requiredImports,
-        knownGlobals,
-        currentClassName
+      return ts.createTypeReferenceNode(
+        uniqueImport(typeName, requiredImports, knownGlobals, currentClassName)
       );
-      return ts.createTypeReferenceNode(localTypeName);
   }
 }
 
@@ -900,7 +896,7 @@ function uniqueImport(
 }
 
 function nameIsUsed(localName: string, requiredImports: RequiredImports) {
-  for (let importName in requiredImports) {
+  for (const importName in requiredImports) {
     if (requiredImports[importName].localName === localName) {
       // name already used
       return true;
@@ -908,7 +904,7 @@ function nameIsUsed(localName: string, requiredImports: RequiredImports) {
   }
 }
 
-function addLineBreakBefore(node: ts.Node, count: number = 1) {
+function addLineBreakBefore(node: ts.Node, count = 1) {
   for (let i = 0; i < count; i++) {
     ts.addSyntheticLeadingComment(
       node,

@@ -1,6 +1,5 @@
-import { Console } from "console";
-import ts = require("typescript");
-const { performance } = require("perf_hooks");
+import ts from "typescript";
+import { performance } from "perf_hooks";
 
 /*
  * This sets up TypeScript.
@@ -23,11 +22,6 @@ type TSProgramUpdateCallback = (
 let newProgram: ts.SemanticDiagnosticsBuilderProgram;
 let newChangedFiles: string[] = [];
 
-const formatHost: ts.FormatDiagnosticsHost = {
-  getCanonicalFileName: (path) => path,
-  getCurrentDirectory: ts.sys.getCurrentDirectory,
-  getNewLine: () => ts.sys.newLine,
-};
 let onTSProgramUpdate: TSProgramUpdateCallback;
 
 let watch: ts.WatchOfConfigFile<ts.SemanticDiagnosticsBuilderProgram>;
@@ -61,6 +55,7 @@ function initialize(
   );
 
   // override the "after program create" function because we need access to the new "program"
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   const origPostProgramCreate = host.afterProgramCreate;
   host.afterProgramCreate = (program) => {
     // in run-once mode we immediately trigger generation and then close the watch
@@ -80,11 +75,13 @@ function initialize(
     let diag = program.getSemanticDiagnosticsOfNextAffectedFile();
     const changedFiles = [];
     while (diag) {
-      let aff = diag.affected;
+      const aff = diag.affected;
       if ((aff as ts.SourceFile).kind) {
         changedFiles.push((aff as ts.SourceFile).fileName);
       } else {
-        console.log("### Changed: " + (aff as ts.Program).getRootFileNames());
+        console.log(
+          `### Changed: ${(aff as ts.Program).getRootFileNames().join(", ")}`
+        );
         throw new Error(
           "Not a source file change, but a program change caused the watch mode to trigger. This is unexpected. What does this mean? How did it happen?"
         );
@@ -93,7 +90,7 @@ function initialize(
     }
     newChangedFiles = changedFiles;
     newProgram = program;
-    origPostProgramCreate!(program);
+    origPostProgramCreate(program);
   };
 
   watch = ts.createWatchProgram(host);
@@ -124,12 +121,7 @@ function reportDiagnostic(diagnostic: ts.Diagnostic) {
 /**
  * Once the watch reaction cycle is through, we trigger the interface generation
  */
-function reportWatchStatusChanged(
-  diagnostic: ts.Diagnostic,
-  newLine: string,
-  compilerOptions: ts.CompilerOptions,
-  errorCount?: number
-) {
+function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
   if (diagnostic.code === 6031 || diagnostic.code === 6032) {
     // "[File change detected.] Starting compilation in watch mode..."
     // initial call or before compilation on update
@@ -167,8 +159,7 @@ function reportWatchStatusChanged(
   } else {
     // should not happen
     throw new Error(
-      "reportWatchStatusChanged: diagnostic.code !== 6031 or 6032 or 6193 or 6194, it is: " +
-        diagnostic.code
+      `reportWatchStatusChanged: diagnostic.code !== 6031 or 6032 or 6193 or 6194, it is: ${diagnostic.code}`
     );
   }
 }

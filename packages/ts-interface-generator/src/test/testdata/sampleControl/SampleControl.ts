@@ -47,7 +47,9 @@ class SampleControl extends Button {
     oRm.close("div");
   };
 
-  doit() {}
+  doit() {
+    alert("Hello");
+  }
 }
 
 export { SampleControl };

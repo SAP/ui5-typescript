@@ -13,7 +13,7 @@ const mSingular: { [key: string]: string | number } = {
 
 function collectClassInfo(metadata: ClassInfo, className: string) {
   // mostly rewritten in TypeScript based on lines 732-988 in https://github.com/SAP/openui5/blob/master/lib/jsdoc/ui5/plugin.js
-  let classDoclet: ClassDoclet = null; // TODO
+  const classDoclet: ClassDoclet = null; // TODO
 
   /*	
 let baseType;
@@ -59,27 +59,34 @@ let baseType;
     return n.slice(0, 1).toUpperCase() + n.slice(1);
   }
 
-  function each(
+  function each<APIMemberType extends APIMember>(
     map: { [key: string]: APIMember },
     defaultKey: string,
     callback: (
       n: string,
-      settings: any,
+      settings: APIMemberType,
       doc: ClassDoclet,
       apiMember: APIMember
     ) => void
   ) {
     if (map) {
-      for (let n in map) {
-        if (map.hasOwnProperty(n)) {
+      for (const n in map) {
+        if (Object.prototype.hasOwnProperty.call(map, n)) {
           //const doclet = getLeadingDoclet(map[n]);
-          const settings = expandDefaultKey(map[n], defaultKey);
+          const settings = expandDefaultKey(map[n], defaultKey); // in simple cases just a string is given; this expands the string to a real configuration object
           if (settings == null) {
-            console.warn(`no valid metadata for ${n} (AST type '${map[n]}')`);
+            console.warn(
+              `no valid metadata for ${n} (AST type '${map[n].name}')`
+            );
             continue;
           }
 
-          callback(n, settings, null /* was: doclet */, map[n]);
+          callback(
+            n,
+            settings as APIMemberType,
+            null /* was: doclet */,
+            map[n]
+          );
         }
       }
     }
@@ -123,7 +130,7 @@ let baseType;
       oClassInfo.interfaces = metadata.interfaces;
     }
 
-    each(
+    each<SpecialSetting>(
       metadata.specialSettings,
       "type",
       (n, settings, doclet: ClassDoclet) => {
@@ -142,11 +149,10 @@ let baseType;
     oClassInfo.defaultProperty =
       (metadata.defaultProperty && metadata.defaultProperty) || undefined;
 
-    each(
+    each<Property>(
       metadata.properties,
       "type",
       (n: string, settings, doclet: ClassDoclet) => {
-        let type;
         const N = upper(n);
         let methods: { [key: string]: string };
         oClassInfo.properties[n] = {
@@ -156,7 +162,8 @@ let baseType;
           deprecation: doclet && doclet.deprecated,
           experimental: doclet && doclet.experimental,
           visibility: settings.visibility || "public",
-          type: (type = settings.type || "string"),
+          type: settings.type || "string",
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           defaultValue: settings.defaultValue, // ? convertValueWithRaw(settings.defaultValue, type, n) : null,
           bindable: settings.bindable ? !!settings.bindable : false,
           methods: (methods = {
@@ -177,10 +184,10 @@ let baseType;
     oClassInfo.defaultAggregation =
       (metadata.defaultAggregation && metadata.defaultAggregation) || undefined;
 
-    each(
+    each<AggregationMetadata>(
       metadata.aggregations,
       "type",
-      (n: string, settings, doclet: ClassDoclet) => {
+      (n: string, settings: AggregationMetadata, doclet: ClassDoclet) => {
         const N = upper(n);
         let methods: { [key: string]: string };
         const aggr = (oClassInfo.aggregations[n] = {
@@ -225,10 +232,10 @@ let baseType;
       }
     );
 
-    each(
+    each<AssociationMetadata>(
       metadata.associations,
       "type",
-      (n: string, settings, doclet: ClassDoclet) => {
+      (n: string, settings: AssociationMetadata, doclet: ClassDoclet) => {
         const N = upper(n);
         let methods: { [key: string]: string };
         oClassInfo.associations[n] = {
@@ -258,44 +265,48 @@ let baseType;
       }
     );
 
-    each(metadata.events, null, (n: string, settings, doclet: ClassDoclet) => {
-      const N = upper(n);
-      const info: UI5Event = (oClassInfo.events[n] = {
-        name: n,
-        doc: doclet && doclet.description,
-        deprecation: doclet && doclet.deprecated,
-        since: doclet && doclet.since,
-        experimental: doclet && doclet.experimental,
-        visibility:
-          /* (settings.visibility && settings.visibility) || */ "public",
-        allowPreventDefault: !!(
-          settings.allowPreventDefault && settings.allowPreventDefault
-        ),
-        enableEventBubbling: !!(
-          settings.enableEventBubbling && settings.enableEventBubbling
-        ),
-        parameters: {},
-        methods: {
-          attach: "attach" + N,
-          detach: "detach" + N,
-          fire: "fire" + N,
-        },
-      });
-      each(
-        settings.parameters,
-        "type",
-        (pName: string, pSettings, pDoclet: ClassDoclet) => {
-          info.parameters[pName] = {
-            name: pName,
-            doc: pDoclet && pDoclet.description,
-            deprecation: pDoclet && pDoclet.deprecated,
-            since: pDoclet && pDoclet.since,
-            experimental: pDoclet && pDoclet.experimental,
-            type: pSettings && pSettings.type ? pSettings.type : "",
-          };
-        }
-      );
-    });
+    each<UI5Event>(
+      metadata.events,
+      null,
+      (n: string, settings, doclet: ClassDoclet) => {
+        const N = upper(n);
+        const info: UI5Event = (oClassInfo.events[n] = {
+          name: n,
+          doc: doclet && doclet.description,
+          deprecation: doclet && doclet.deprecated,
+          since: doclet && doclet.since,
+          experimental: doclet && doclet.experimental,
+          visibility:
+            /* (settings.visibility && settings.visibility) || */ "public",
+          allowPreventDefault: !!(
+            settings.allowPreventDefault && settings.allowPreventDefault
+          ),
+          enableEventBubbling: !!(
+            settings.enableEventBubbling && settings.enableEventBubbling
+          ),
+          parameters: {},
+          methods: {
+            attach: "attach" + N,
+            detach: "detach" + N,
+            fire: "fire" + N,
+          },
+        });
+        each<SpecialSetting>(
+          settings.parameters,
+          "type",
+          (pName: string, pSettings, pDoclet: ClassDoclet) => {
+            info.parameters[pName] = {
+              name: pName,
+              doc: pDoclet && pDoclet.description,
+              deprecation: pDoclet && pDoclet.deprecated,
+              since: pDoclet && pDoclet.since,
+              experimental: pDoclet && pDoclet.experimental,
+              type: pSettings && pSettings.type ? pSettings.type : "",
+            };
+          }
+        );
+      }
+    );
 
     const designtime = metadata.designtime || metadata.designTime; // convertValue removed
     if (typeof designtime === "string" || typeof designtime === "boolean") {
@@ -323,17 +334,16 @@ let baseType;
 }
 
 /**
- * Creates a map of property values from a JS object.
- *
- * @param {object} node
- * @param {string} [defaultKey=undefined] A default key to use for simple values
- * @returns {Map<string,Property>} Map of AST nodes of type 'Property', keyed by their property name
+ * When for simplicitly the metadata for an API member only consists of a string instead of a full configuration
+ * object, then this function inflates the string to a full configuration object.
+ * "defaultKey" determines as which property in the configuration object the string should be used.
+ * Example: an association is configured as "SampleControl". This function converts this to {type: "SampleControl"}.
  */
 function expandDefaultKey(node: APIMember, defaultKey: string) {
   if (node != null) {
     // if, instead of an object literal only a string is given and there is a defaultKey, then wrap the literal
     if (typeof node === "string" && defaultKey != null) {
-      let result: { [key: string]: never } = {};
+      const result: { [key: string]: never } = {};
       result[defaultKey] = node;
       return result;
     }
@@ -342,7 +352,7 @@ function expandDefaultKey(node: APIMember, defaultKey: string) {
 }
 
 function guessSingularName(sPluralName: string) {
-  return sPluralName.replace(rPlural, ($, sPlural) => {
+  return sPluralName.replace(rPlural, ($, sPlural: string) => {
     const vRepl = mSingular[sPlural.toLowerCase()];
     return typeof vRepl === "string" ? vRepl : sPlural.slice(0, vRepl);
   });
