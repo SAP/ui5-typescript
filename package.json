@@ -10,7 +10,8 @@
   },
   "scripts": {
     "release:version": "lerna version",
-    "release:publish": "lerna publish from-git --yes",
+    "release:publish": "lerna publish from-git --yes --no-verify-access",
+    "release:publish-manual": "lerna publish from-package --yes --no-verify-access",
     "ci": "npm-run-all format:validate ci:subpackages legal:*",
     "format:fix": "prettier --write \"**/*.@(ts|js|json|md|yml)\"",
     "format:validate": "prettier --check \"**/*.@(ts|js|json|md|yml)\"",
