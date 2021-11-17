@@ -5,7 +5,6 @@
   "author": "SAP SE",
   "license": "Apache-2.0",
   "main": "dist/generateTSInterfaces.js",
-  "bin": "dist/generateTSInterfaces.js",
   "scripts": {
     "start": "node dist/generateTSInterfaces.js",
     "build": "tsc",

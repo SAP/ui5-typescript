@@ -15,6 +15,9 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      - name: Build
+        run: yarn build
+
       - name: Publish to NPM
         run: |
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
