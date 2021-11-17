@@ -6,7 +6,7 @@ import yargs from "yargs";
 import { generateInterfaces } from "./interfaceGenerationHelper";
 import { initialize } from "./typeScriptEnvironment";
 import { addSourceExports } from "./addSourceExports";
-// @ts-ignore
+// @ts-ignore as the "rootDir" in tsconfig.json is set to "src", this file is outside the source tree. But that's fine and we don't want to make "." the root because this would include more files and cause build result path problems (files going to "dist/src").
 import pkg from "../package.json";
 
 interface Args {
