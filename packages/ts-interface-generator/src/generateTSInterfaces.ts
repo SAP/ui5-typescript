@@ -6,6 +6,7 @@ import yargs from "yargs";
 import { generateInterfaces } from "./interfaceGenerationHelper";
 import { initialize } from "./typeScriptEnvironment";
 import { addSourceExports } from "./addSourceExports";
+// @ts-ignore
 import pkg from "../package.json";
 
 interface Args {
