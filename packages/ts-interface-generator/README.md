@@ -16,8 +16,6 @@ Go into a directory containing a TypeScript project which includes UI5 controls 
 npm install --save-dev @ui5/ts-interface-generator
 ```
 
-_NOTE: this will only work once the first npm release has been done!_
-
 ## Usage
 
 To start the generator, run:
