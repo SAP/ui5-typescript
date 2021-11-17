@@ -71,3 +71,9 @@ typings/
 # npm lock file
 package-lock.json
 .idea
+
+# build results
+dist/
+
+# vscode metadata
+.vscode/
