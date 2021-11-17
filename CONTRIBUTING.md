@@ -51,7 +51,7 @@ may result in voter failures due to formatting errors.
 
 ### Compiling
 
-This project is implemented using plain ECMAScript without any compilation / transpilation steps.
+See the respective sub-packages for instructions (if needed at all).
 
 ### Testing
 
