@@ -1,1 +1,6 @@
 node_modules
+dist
+demos
+packages
+test-packages
+.vscode
