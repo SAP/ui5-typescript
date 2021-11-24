@@ -32,6 +32,12 @@ Issues within the type definition files can be [reported in the issue tracker of
 ### What is the Future Roadmap for TypeScript in UI5?
 The current focus is on working on the unfinished corners, like providing better support and guidance for topics like control development and testing.
 
+## Other Resources
+
+* Blog post from Volker Buzek: [How to debug a CAP app with UI5 TypeScript UI component with VS Code](https://blogs.sap.com/2021/11/16/debug-a-cap-app-with-ui5-typescript-ui-component-with-vs-code/)
+* Blog post series "My first experience with TypeScript in UI5" from Wouter Lemaire:
+    * [Introduction](https://blogs.sap.com/2021/11/19/my-first-experience-with-typescript-in-ui5-introduction/)
+	* [Setup project](https://blogs.sap.com/2021/11/23/my-first-experience-with-typescript-in-ui5-prepare-ts-project/)
 ## Status
 
 The type definitions provided for UI5 are in an experimental **_Beta State_**. Significant changes are likely to occur, including potential **breaking changes**.
