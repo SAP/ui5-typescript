@@ -7,11 +7,12 @@
   "main": "dist/generateTSInterfaces.js",
   "scripts": {
     "start": "node dist/generateTSInterfaces.js",
+    "try": "npm run build && node dist/generateTSInterfaces.js --config tsconfig-testcontrol.json",
     "build": "tsc",
     "watch": "tsc --watch",
     "test": "jest",
     "lint": "eslint src",
-    "ci": "npm-run-all test lint"
+    "ci": "npm-run-all build test lint"
   },
   "repository": {
     "type": "git",

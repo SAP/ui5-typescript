@@ -840,6 +840,7 @@ function uniqueImport(
 ) {
   if (typeName === currentClassName) {
     // this is the class we are currently dealing with; no import and no name uniqueness check required
+    requiredImports.selfIsUsed = true; // FIXME: improve this shortcut
     return typeName;
   }
 

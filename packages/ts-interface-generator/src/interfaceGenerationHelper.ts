@@ -390,7 +390,7 @@ function buildAST(
   settingsTypeFullName: string,
   allKnownGlobals: GlobalToModuleMapping
 ) {
-  const requiredImports = {};
+  const requiredImports: RequiredImports = {};
   const methods = generateMethods(classInfo, requiredImports, allKnownGlobals);
   if (methods.length === 0) {
     // nothing needs to be generated!
@@ -410,13 +410,18 @@ function buildAST(
 
   const myInterface = ts.createInterfaceDeclaration(
     undefined,
-    undefined,
+    [
+      ts.createModifier(ts.SyntaxKind.ExportKeyword),
+      ts.createModifier(ts.SyntaxKind.DefaultKeyword),
+    ],
     classInfo.name,
     undefined,
     undefined,
     methods
   );
   addLineBreakBefore(myInterface, 2);
+
+  // assemble the module declaration
   const module = ts.createModuleDeclaration(
     [],
     [ts.createModifier(ts.SyntaxKind.DeclareKeyword)],
@@ -426,14 +431,46 @@ function buildAST(
   if (statements.length > 0) {
     addLineBreakBefore(module, 2);
   }
-
   statements.push(module);
+
+  // if needed, assemble the second module declaration
+  if (requiredImports.selfIsUsed) {
+    const myInterface2 = ts.createInterfaceDeclaration(
+      undefined,
+      undefined,
+      classInfo.name,
+      undefined,
+      undefined,
+      methods
+    );
+
+    const module2 = ts.createModuleDeclaration(
+      [],
+      [ts.createModifier(ts.SyntaxKind.DeclareKeyword)],
+      ts.createStringLiteral("./" + moduleName),
+      ts.createModuleBlock([myInterface2])
+    );
+    addLineBreakBefore(module2, 2);
+    ts.addSyntheticLeadingComment(
+      module2,
+      ts.SyntaxKind.SingleLineCommentTrivia,
+      " this duplicate interface without export is needed to avoid \"Cannot find name '" +
+        classInfo.name +
+        "'\" TypeScript errors above"
+    );
+
+    statements.push(module2);
+  }
+
   return statements;
 }
 
 function getImports(requiredImports: RequiredImports) {
   const imports = [];
   for (const dependencyName in requiredImports) {
+    if (dependencyName === "selfIsUsed") {
+      continue;
+    }
     const singleImport = requiredImports[dependencyName];
     const localNameIdentifier = ts.createIdentifier(singleImport.localName);
     const namedImportOriginalNameIdentifier =

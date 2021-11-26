@@ -17,6 +17,7 @@ interface ManagedObjectInfo {
 }
 
 interface RequiredImports {
+  selfIsUsed?: boolean;
   [key: string]: { localName: string; moduleName: string; exportName?: string };
 }
 

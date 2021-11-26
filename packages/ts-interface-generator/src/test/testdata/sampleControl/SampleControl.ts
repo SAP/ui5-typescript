@@ -52,5 +52,4 @@ class SampleControl extends Button {
   }
 }
 
-export { SampleControl };
 export default SampleControl;

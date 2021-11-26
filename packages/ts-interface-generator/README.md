@@ -33,7 +33,7 @@ After generation, next to the control implementation there will be an additional
 
 Generated interfaces are (as of now) never deleted (even when the original class is deleted), but always completely overridden in case of a new interface generation run.
 
-In case you want to delete all generated interface files, you can do so e.g. by doing the following (first line only needed once):
+In case you want to delete all generated interface files, you can do so manually, e.g. by doing the following (first line only needed once):
 
 ```sh
 npm install shx --save-dev
@@ -52,7 +52,7 @@ Certain requirements need to be fulfilled to make the detection of classes work,
 
 For detecting whether the required constructor signatures are already present in the class implementation, the constructors must syntactically match the content of the suggested three code lines.
 
-In general, if something does not work, try to make the code structure as close as possible to the sample control in this project.
+In general, if something does not work, try to make the code structure as close as possible to the sample control in this project because right now only the straight-forward standard case is supported.
 
 ## Why?
 
@@ -76,10 +76,11 @@ Oh, and the tool itself is implemented in TypeScript because TypeScript makes de
 
 ## TODO
 
-- include documentation to generated files
-- make sure watch mode does it right (also run on deletion? Delete interfaces beforere-creating? Only create interfaces for updated files?)
+- include original API documentation to generated files
+- make sure watch mode does it right (also run on deletion? Delete interfaces before-creating? Only create interfaces for updated files?)
 - consider further information like deprecation etc.
 - last output is "Watching for file changes." even when a _single_ run has finished
+- it is probably needed to check whether the control class being handled is the default export or a named export. Right now it is assumed that it is the default export. Other cases are not tested and likely not working.
 - ...
 
 ## Support
