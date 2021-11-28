@@ -11152,7 +11152,8 @@ declare namespace sap {
        */
       class FileUploader
         extends sap.ui.core.Control
-        implements sap.ui.unified.IProcessableBlobs {
+        implements sap.ui.unified.IProcessableBlobs
+      {
         /**
          * Constructor for a new `FileUploader`.
          *
@@ -13221,7 +13222,8 @@ declare namespace sap {
        */
       class Menu
         extends sap.ui.core.Control
-        implements sap.ui.core.IContextMenu {
+        implements sap.ui.core.IContextMenu
+      {
         /**
          * Constructor for a new Menu control.
          *

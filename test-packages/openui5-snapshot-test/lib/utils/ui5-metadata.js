@@ -28,7 +28,7 @@ async function getSapUI5LibsMeta(version) {
  */
 async function getOpenUI5PossibleLibNames() {
   const openUI5OrgResponse = await fetch(
-    `https://registry.npmjs.com/-/v1/search?text=scope:openui5`
+    `https://registry.npmjs.com/-/v1/search?text=scope:openui5&size=100`
   );
   if (!openUI5OrgResponse.ok) {
     log(`error fetching sapui5 metadata`);

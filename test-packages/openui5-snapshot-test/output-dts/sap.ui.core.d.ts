@@ -7338,7 +7338,8 @@ declare namespace sap {
          */
         class DragDropInfo
           extends sap.ui.core.dnd.DropInfo
-          implements sap.ui.core.dnd.IDragInfo, sap.ui.core.dnd.IDropInfo {
+          implements sap.ui.core.dnd.IDragInfo, sap.ui.core.dnd.IDropInfo
+        {
           /**
            * Constructor for a new DragDropInfo.
            *
@@ -7574,7 +7575,8 @@ declare namespace sap {
          */
         class DragInfo
           extends sap.ui.core.dnd.DragDropBase
-          implements sap.ui.core.dnd.IDragInfo {
+          implements sap.ui.core.dnd.IDragInfo
+        {
           /**
            * Constructor for a new DragInfo.
            *
@@ -7793,7 +7795,8 @@ declare namespace sap {
          */
         class DropInfo
           extends sap.ui.core.dnd.DragDropBase
-          implements sap.ui.core.dnd.IDropInfo {
+          implements sap.ui.core.dnd.IDropInfo
+        {
           /**
            * Constructor for a new DropInfo.
            *

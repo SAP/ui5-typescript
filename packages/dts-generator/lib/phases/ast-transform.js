@@ -269,8 +269,7 @@ function updateDefineArrayDepsTypes(symbolTable) {
   );
   aDependenciesParam.type = {
     kind: "SimpleType",
-    type:
-      "(keyof sap.IUI5DefineDependencyNames | (string & { IGNORE_ME?:never}) )[]",
+    type: "(keyof sap.IUI5DefineDependencyNames | (string & { IGNORE_ME?:never}) )[]",
     ignoreIssues: true,
   };
 }
