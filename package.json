@@ -18,12 +18,15 @@
     "format:validate": "prettier --check \"**/*.@(ts|js|json|md|yml)\"",
     "ci:subpackages": "lerna run ci",
     "legal:delete": "lerna exec \"shx rm -rf .reuse LICENSES\" || true",
-    "legal:copy": "lerna exec \"shx cp -r ../../.reuse .reuse && shx cp -r ../../LICENSES LICENSES\""
+    "legal:copy": "lerna exec \"shx cp -r ../../.reuse .reuse && shx cp -r ../../LICENSES LICENSES\"",
+    "prepare": "husky install",
+    "hooks:pre-commit": "lint-staged",
+    "hooks:commit-msg": "commitlint -e"
   },
   "devDependencies": {
     "typescript": "4.2.4",
     "chai": "4.3.4",
-    "husky": "7.0.4",
+    "husky": "^7.0.0",
     "lerna": "4.0.0",
     "lint-staged": "12.1.2",
     "mocha": "9.1.3",
@@ -33,12 +36,6 @@
     "cz-conventional-changelog": "3.3.0",
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "15.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "*.{ts,js,json,md,yml}": [
