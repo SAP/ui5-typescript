@@ -1354,7 +1354,8 @@ declare namespace sap {
      */
     class ToolHeader
       extends sap.m.OverflowToolbar
-      implements sap.tnt.IToolHeader {
+      implements sap.tnt.IToolHeader
+    {
       /**
        * Constructor for a new ToolHeader.
        * See:

@@ -456,7 +456,8 @@ declare namespace sap {
        */
       class NumericHeader
         extends sap.ui.core.Control
-        implements sap.f.cards.IHeader {
+        implements sap.f.cards.IHeader
+      {
         /**
          * Constructor for a new `NumericHeader`.
          *
@@ -974,7 +975,8 @@ declare namespace sap {
        */
       class GridDropInfo
         extends sap.ui.core.dnd.DropInfo
-        implements sap.ui.core.dnd.IDropInfo {
+        implements sap.ui.core.dnd.IDropInfo
+      {
         /**
          * Constructor for a new GridDropInfo.
          *
@@ -10641,7 +10643,8 @@ declare namespace sap {
      */
     class GridContainer
       extends sap.ui.core.Control
-      implements sap.f.dnd.IGridDroppable {
+      implements sap.f.dnd.IGridDroppable
+    {
       /**
        * Constructor for a new `sap.f.GridContainer`.
        *
@@ -11610,7 +11613,8 @@ declare namespace sap {
       extends sap.m.ListBase
       implements
         sap.ui.layout.cssgrid.IGridConfigurable,
-        sap.f.dnd.IGridDroppable {
+        sap.f.dnd.IGridDroppable
+    {
       /**
        * Constructor for a new GridList.
        *
@@ -12664,7 +12668,8 @@ declare namespace sap {
      */
     class ShellBar
       extends sap.ui.core.Control
-      implements sap.f.IShellBar, sap.m.IBar, sap.tnt.IToolHeader {
+      implements sap.f.IShellBar, sap.m.IBar, sap.tnt.IToolHeader
+    {
       /**
        * Constructor for a new `ShellBar`.
        *
