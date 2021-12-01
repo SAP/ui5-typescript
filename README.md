@@ -2,6 +2,19 @@
 
 This page provides an overview of all official TypeScript-related resources in the UI5 world.
 
+### Topics
+- [<cb>What is TypeScript about?](#cbwhat-is-typescript-about)
+- [What is the overall approach for using TypeScript in UI5 applications?](#what-is-the-overall-approach-for-using-typescript-in-ui5-applications)
+- [How to set up a new UI5 app for TypeScript development?](#how-to-set-up-a-new-ui5-app-for-typescript-development)
+- [How to convert an existing UI5 app to TypeScript?](#how-to-convert-an-existing-ui5-app-to-typescript)
+- [How to develop custom controls in TypeScript?](#how-to-develop-custom-controls-in-typescript)
+- [How to test in TypeScript?](#how-to-test-in-typescript)
+- [How to profit from TypeScript even when doing plain JavaScript development?](#how-to-profit-from-typescript-even-when-doing-plain-javascript-development)
+- [What are the TypeScript projects and releases provided by the UI5 development team?](#what-are-the-typescript-projects-and-releases-provided-by-the-ui5-development-team)
+- [Where to report issues? What is the support status?](#where-to-report-issues)
+- [What is the Future Roadmap for TypeScript in UI5?](#what-is-the-future-roadmap-for-typescript-in-ui5)
+
+
 ### <cb>What is TypeScript about?
 [TypeScript](typescriptlang.org) is an extension of JavaScript for providing type information and helps by error detection through type checking and by providing code assist in many supporting code editors (code completion, inline documentation,...). Browsers cannot execute TypeScript directly, a transpilation step is needed.
 
@@ -27,10 +40,14 @@ The "js-with-typescript-support" branch of the "ui5-cap-event-app" project conta
 UI5 provides type definitions for the UI5 APIs, which let TypeScript understand all the involved types, so it can do its job. They are provided both for OpenUI5 and for SAPUI5, in two different flavors ([`@openui5/ts-types-esm`](https://www.npmjs.com/package/@openui5/ts-types-esm), [`@openui5/ts-types`](https://www.npmjs.com/package/@openui5/ts-types), [`@sapui5/ts-types-esm`](https://www.npmjs.com/package/@sapui5/ts-types-esm), [`@sapui5/ts-types`](https://www.npmjs.com/package/@sapui5/ts-types)). The OpenUI5 esm types are also [provided at npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5). In addition to the samples, tutorials and template generator mentioned above, in the "[ui5-typescript](https://github.com/SAP/ui5-typescript)" repository the generator is developed, which creates the UI5 type definitions from the JavaScript implementation and JSDoc as well as other tools (<b>NOTE</b>: the generator code in the repository is outdated and will NOT produce the type definitions mentioned above!).
 
 ### Where to report issues?
-Issues within the type definition files can be [reported in the issue tracker of the "ui5-typescript" project](https://github.com/SAP/ui5-typescript/issues). Issues in the demo apps or documentation linked above should be reported in the respective GitHub repository. Note that there is no official support guarantee.
+Note that there is no official support guarantee, as the type definitions and code samples are provided "as-is". However, it is in our interest to improve them and fix issues, so please report them:
+* Issues in sample app code or documentation in the repositories linked above should be reported in the issue tracker of the respective GitHub repository. 
+* Issues within the type definition files can *in general* be [reported in the issue tracker of the "ui5-typescript" project](https://github.com/SAP/ui5-typescript/issues).
+* However, when those issues are clearly coming from missing or wrong API documentation within OpenUI5, they can be [reported as OpenUI5 issues](https://github.com/SAP/openui5/blob/master/CONTRIBUTING.md#report-an-issue). However, not all typing constructs of TypeScript can be expressed as JSDoc and converted to TypeScript by our generator (e.g. adding generics), so this should be mainly done for straightforward cases.
+
 
 ### What is the Future Roadmap for TypeScript in UI5?
-The current focus is on working on the unfinished corners, like providing better support and guidance for topics like control development and testing.
+The current focus is on working on the unfinished corners, like providing better support and guidance for topics like testing, but also on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.
 
 ## Other Resources
 
