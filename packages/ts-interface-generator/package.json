@@ -5,6 +5,7 @@
   "author": "SAP SE",
   "license": "Apache-2.0",
   "main": "dist/generateTSInterfaces.js",
+  "bin": "dist/generateTSInterfaces.js",
   "scripts": {
     "start": "node dist/generateTSInterfaces.js",
     "try": "npm run build && node dist/generateTSInterfaces.js --config tsconfig-testcontrol.json",
