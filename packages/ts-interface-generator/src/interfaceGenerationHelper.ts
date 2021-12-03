@@ -485,10 +485,10 @@ function getImports(requiredImports: RequiredImports) {
       let importSpecifier;
       if (parseFloat(ts.version) >= 4.5) {
         // TypeScript API changed incompatibly in 4.5
-        // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
         importSpecifier = ts.createImportSpecifier(
           false /* typeOnly */,
           namedImportOriginalNameIdentifier,
+          // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
           localNameIdentifier
         );
       } else {
