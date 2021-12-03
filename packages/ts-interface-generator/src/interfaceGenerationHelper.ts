@@ -482,14 +482,25 @@ function getImports(requiredImports: RequiredImports) {
     let importClause;
     if (singleImport.exportName) {
       // if we have a named (non-default) export, we need a different import clause (with curly braces around the names to import)
+      let importSpecifier;
+      if (parseFloat(ts.version) >= 4.5) {
+        // TypeScript API changed incompatibly in 4.5
+        // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
+        importSpecifier = ts.createImportSpecifier(
+          false /* typeOnly */,
+          namedImportOriginalNameIdentifier,
+          localNameIdentifier
+        );
+      } else {
+        // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
+        importSpecifier = ts.createImportSpecifier(
+          namedImportOriginalNameIdentifier,
+          localNameIdentifier
+        );
+      }
       importClause = ts.createImportClause(
         undefined,
-        ts.createNamedImports([
-          ts.createImportSpecifier(
-            namedImportOriginalNameIdentifier,
-            localNameIdentifier
-          ),
-        ])
+        ts.createNamedImports([importSpecifier])
       );
     } else {
       importClause = ts.createImportClause(
