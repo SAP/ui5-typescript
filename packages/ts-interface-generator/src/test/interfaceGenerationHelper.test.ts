@@ -58,10 +58,10 @@ declare module "./SampleControl" {
     interface $SampleControlSettings extends $ButtonSettings {
         subtext?: string;
         textColor?: CSSColor;
-        content?: Control;
+        content?: Control[] | Control;
         header?: Control;
         partnerControl?: SampleControl | string;
-        alsoLabelledBy?: Control | string;
+        alsoLabelledBy?: Control | string | (Control | string)[];
         doublePress?: (event: Event) => void;
     }
 

@@ -36,18 +36,32 @@ function generateSettingsInterface(
   // aggregations
   for (const n in classInfo.aggregations) {
     const aggregation = classInfo.aggregations[n];
+
     if (aggregation.visibility !== "hidden") {
+      let aggregationInitializationTypeNode;
+      const aggregationSingleTypeNode = createTSTypeNode(
+        aggregation.type,
+        requiredImports,
+        knownGlobals,
+        currentClassName
+      );
+
+      if (aggregation.cardinality === "0..1") {
+        aggregationInitializationTypeNode = aggregationSingleTypeNode;
+      } else {
+        // 0..n
+        aggregationInitializationTypeNode = ts.createUnionTypeNode([
+          ts.createArrayTypeNode(aggregationSingleTypeNode),
+          aggregationSingleTypeNode,
+        ]);
+      }
+
       interfaceProperties.push(
         ts.createPropertySignature(
           undefined,
           aggregation.name,
           ts.createToken(ts.SyntaxKind.QuestionToken),
-          createTSTypeNode(
-            aggregation.type,
-            requiredImports,
-            knownGlobals,
-            currentClassName
-          ),
+          aggregationInitializationTypeNode,
           undefined
         )
       );
@@ -58,23 +72,44 @@ function generateSettingsInterface(
   for (const n in classInfo.associations) {
     const association = classInfo.associations[n];
     if (association.visibility !== "hidden") {
-      interfaceProperties.push(
-        ts.createPropertySignature(
-          undefined,
-          association.name,
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createUnionTypeNode([
-            createTSTypeNode(
-              association.type,
-              requiredImports,
-              knownGlobals,
-              currentClassName
-            ),
-            ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-          ]),
-          undefined
-        )
+      let associationInitializationTypeNode;
+      const associationSingleTypeNode = createTSTypeNode(
+        association.type,
+        requiredImports,
+        knownGlobals,
+        currentClassName
       );
+
+      // allow object and string (=ID) and in case of multiple associations also arrays
+      if (association.cardinality === "0..1") {
+        associationInitializationTypeNode = ts.createUnionTypeNode([
+          associationSingleTypeNode,
+          ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+        ]);
+      } else {
+        // 0..n
+        associationInitializationTypeNode = ts.createUnionTypeNode([
+          associationSingleTypeNode,
+          ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+          ts.createArrayTypeNode(
+            ts.createUnionTypeNode([
+              associationSingleTypeNode,
+              ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+            ])
+          ),
+        ]);
+      }
+
+      ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+        interfaceProperties.push(
+          ts.createPropertySignature(
+            undefined,
+            association.name,
+            ts.createToken(ts.SyntaxKind.QuestionToken),
+            associationInitializationTypeNode,
+            undefined
+          )
+        );
     }
   }
 
