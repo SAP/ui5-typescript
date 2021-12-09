@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.2.2...@ui5/ts-interface-generator@0.2.3) (2021-12-09)
+
+### Bug Fixes
+
+- **ts-interface-generator:** don't fail on missing superclass ctor parameters ([de4510d](https://github.com/SAP/ui5-typescript/commit/de4510d7bf10df7387c7d5791fe4b3ace00f1154)), closes [#322](https://github.com/SAP/ui5-typescript/issues/322)
+- **ts-interface-generator:** fix wrong type multiplicity in constructor settings ([fb5cd5b](https://github.com/SAP/ui5-typescript/commit/fb5cd5b9961ae744221b269bdff4ca337866a292))
+
 ## [0.2.2](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.2.1...@ui5/ts-interface-generator@0.2.2) (2021-12-03)
 
 ### Bug Fixes
