@@ -248,6 +248,10 @@ function getSettingsType(type: ts.Type) {
     //if (settingsType !== null && settingsType.typeName.escapedText !== lastParameter.type.typeName.escapedText) {  // TODO
     //	console.warn("different constructors have different settings type")
     //}
+    if (!lastParameter) {
+      // we deal with arbitrary classes here, so the parent class constructor may well have no parameters. TODO: log a warning when this is actually a ManagedObject: in this case the generator ignores it.
+      return;
+    }
     if (lastParameter.type.kind === ts.SyntaxKind.TypeReference) {
       // without this check, we get incorrect settings types from e.g. controllers which have a different constructor structure  TODO: check for more deviations
       settingsType = lastParameter.type;
