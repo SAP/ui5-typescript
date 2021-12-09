@@ -44,6 +44,8 @@ npx shx rm **/*.generated.tsinterface.ts
 
 There are limits to what the tool can achieve, trying to find and parse the classes for which it needs to generated an interface.
 
+See the [TODO](#TODO) section for examples of features not yet implemented.
+
 Certain requirements need to be fulfilled to make the detection of classes work, for which interfaces need to be generated:
 
 - the class declaration must be a top-level statement in the file
@@ -76,7 +78,8 @@ Oh, and the tool itself is implemented in TypeScript because TypeScript makes de
 
 ## TODO
 
-- include original API documentation to generated files
+- Allow binding strings in addition to objects of the correct type in the constructor settings objects
+- copy the original API documentation to the generated methods
 - make sure watch mode does it right (also run on deletion? Delete interfaces before-creating? Only create interfaces for updated files?)
 - consider further information like deprecation etc.
 - last output is "Watching for file changes." even when a _single_ run has finished
