@@ -107,22 +107,19 @@ function getManagedObjects(
               }
               const settingsTypeNode = getSettingsType(type);
               if (settingsTypeNode) {
-                const settingsType = typeChecker.getTypeFromTypeNode(
-                  settingsTypeNode
-                );
+                const settingsType =
+                  typeChecker.getTypeFromTypeNode(settingsTypeNode);
                 const symbol = settingsType.getSymbol();
-                const settingsTypeFullName = typeChecker.getFullyQualifiedName(
-                  symbol
-                );
+                const settingsTypeFullName =
+                  typeChecker.getFullyQualifiedName(symbol);
                 const interestingBaseClass = getInterestingBaseClass(
                   type,
                   typeChecker
                 );
                 if (interestingBaseClass) {
                   managedObjectFound = true;
-                  const constructorSignaturesAvailable = checkConstructors(
-                    statement
-                  );
+                  const constructorSignaturesAvailable =
+                    checkConstructors(statement);
                   managedObjects.push({
                     sourceFile,
                     className: statement.name ? statement.name.text : "",

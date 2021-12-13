@@ -3625,7 +3625,8 @@ declare namespace sap {
        */
       class FilterAction
         extends sap.m.semantic.SemanticButton
-        implements sap.m.semantic.IFilter {
+        implements sap.m.semantic.IFilter
+      {
         /**
          * Constructor for a new FilterAction.
          */
@@ -3685,7 +3686,8 @@ declare namespace sap {
        */
       class FilterSelect
         extends sap.m.semantic.SemanticSelect
-        implements sap.m.semantic.IFilter {
+        implements sap.m.semantic.IFilter
+      {
         /**
          * Constructor for a new FilterSelect.
          */
@@ -4323,7 +4325,8 @@ declare namespace sap {
        */
       class GroupAction
         extends sap.m.semantic.SemanticButton
-        implements sap.m.semantic.IGroup {
+        implements sap.m.semantic.IGroup
+      {
         /**
          * Constructor for a new GroupAction.
          */
@@ -4383,7 +4386,8 @@ declare namespace sap {
        */
       class GroupSelect
         extends sap.m.semantic.SemanticSelect
-        implements sap.m.semantic.IGroup {
+        implements sap.m.semantic.IGroup
+      {
         /**
          * Constructor for a new GroupSelect.
          */
@@ -6684,7 +6688,8 @@ declare namespace sap {
        */
       class SortAction
         extends sap.m.semantic.SemanticButton
-        implements sap.m.semantic.ISort {
+        implements sap.m.semantic.ISort
+      {
         /**
          * Constructor for a new SortAction.
          */
@@ -6744,7 +6749,8 @@ declare namespace sap {
        */
       class SortSelect
         extends sap.m.semantic.SemanticSelect
-        implements sap.m.semantic.ISort {
+        implements sap.m.semantic.ISort
+      {
         /**
          * Constructor for a new SortSelect.
          */
@@ -24374,7 +24380,8 @@ declare namespace sap {
      */
     class Breadcrumbs
       extends sap.ui.core.Control
-      implements sap.m.IBreadcrumbs {
+      implements sap.m.IBreadcrumbs
+    {
       /**
        * Constructor for a new `Breadcrumbs`.
        *
@@ -31599,7 +31606,8 @@ declare namespace sap {
      */
     class Dialog
       extends sap.ui.core.Control
-      implements sap.ui.core.PopupInterface {
+      implements sap.ui.core.PopupInterface
+    {
       /**
        * Constructor for a new Dialog.
        *
@@ -33019,7 +33027,8 @@ declare namespace sap {
      * For more information, go to **Developer Guide** section in the Demo Kit and navigate to **More About Controls** > **sap.m** > **Facet Filter**/
     class FacetFilter
       extends sap.ui.core.Control
-      implements sap.ui.core.IShrinkable {
+      implements sap.ui.core.IShrinkable
+    {
       /**
        * Constructor for a new `FacetFilter`.
        *
@@ -36593,7 +36602,8 @@ declare namespace sap {
      */
     class GenericTag
       extends sap.ui.core.Control
-      implements sap.m.IOverflowToolbarContent {
+      implements sap.m.IOverflowToolbarContent
+    {
       /**
        * Constructor for a new `sap.m.GenericTag`.
        *
@@ -37861,7 +37871,8 @@ declare namespace sap {
      */
     class HeaderContainer
       extends sap.ui.core.Control
-      implements sap.m.ObjectHeaderContainer {
+      implements sap.m.ObjectHeaderContainer
+    {
       /**
        * Constructor for the new HeaderContainer control.
        *
@@ -38286,7 +38297,8 @@ declare namespace sap {
      */
     class IconTabBar
       extends sap.ui.core.Control
-      implements sap.m.ObjectHeaderContainer, sap.f.IDynamicPageStickyContent {
+      implements sap.m.ObjectHeaderContainer, sap.f.IDynamicPageStickyContent
+    {
       /**
        * Constructor for a new IconTabBar.
        *
@@ -38996,7 +39008,8 @@ declare namespace sap {
      */
     class IconTabFilter
       extends sap.ui.core.Item
-      implements sap.m.IconTab, sap.ui.core.PopupInterface {
+      implements sap.m.IconTab, sap.ui.core.PopupInterface
+    {
       /**
        * Constructor for a new IconTabFilter.
        *
@@ -39884,7 +39897,8 @@ declare namespace sap {
      */
     class IconTabSeparator
       extends sap.ui.core.Element
-      implements sap.m.IconTab {
+      implements sap.m.IconTab
+    {
       /**
        * Constructor for a new IconTabSeparator.
        *
@@ -43529,7 +43543,8 @@ declare namespace sap {
       implements
         sap.ui.core.Label,
         sap.ui.core.IShrinkable,
-        sap.m.IOverflowToolbarContent {
+        sap.m.IOverflowToolbarContent
+    {
       /**
        * Constructor for a new Label.
        *
@@ -43895,7 +43910,8 @@ declare namespace sap {
      */
     class LightBox
       extends sap.ui.core.Control
-      implements sap.ui.core.PopupInterface {
+      implements sap.ui.core.PopupInterface
+    {
       /**
        * Constructor for a new LightBox.
        *
@@ -58603,7 +58619,8 @@ declare namespace sap {
      */
     class OverflowToolbar
       extends sap.m.Toolbar
-      implements sap.ui.core.Toolbar, sap.m.IBar {
+      implements sap.ui.core.Toolbar, sap.m.IBar
+    {
       /**
        * Constructor for a new `OverflowToolbar`.
        *
@@ -58704,7 +58721,8 @@ declare namespace sap {
      */
     class OverflowToolbarButton
       extends sap.m.Button
-      implements sap.f.IShellBar {
+      implements sap.f.IShellBar
+    {
       /**
        * Constructor for a new `OverflowToolbarButton`.
        */
@@ -69204,7 +69222,8 @@ declare namespace sap {
      */
     class Popover
       extends sap.ui.core.Control
-      implements sap.ui.core.PopupInterface {
+      implements sap.ui.core.PopupInterface
+    {
       /**
        * Constructor for a new Popover.
        *
@@ -76290,7 +76309,8 @@ declare namespace sap {
      */
     class SegmentedButton
       extends sap.ui.core.Control
-      implements sap.m.IOverflowToolbarContent {
+      implements sap.m.IOverflowToolbarContent
+    {
       /**
        * Constructor for a new `SegmentedButton`.
        *
@@ -77074,7 +77094,8 @@ declare namespace sap {
      */
     class Select
       extends sap.ui.core.Control
-      implements sap.m.IOverflowToolbarContent, sap.f.IShellBar {
+      implements sap.m.IOverflowToolbarContent, sap.f.IShellBar
+    {
       /**
        * Constructor for a new `sap.m.Select`.
        *
@@ -94891,7 +94912,8 @@ declare namespace sap {
      */
     class Toolbar
       extends sap.ui.core.Control
-      implements sap.ui.core.Toolbar, sap.m.IBar {
+      implements sap.ui.core.Toolbar, sap.m.IBar
+    {
       /**
        * Constructor for a new `Toolbar`.
        *
@@ -95430,7 +95452,8 @@ declare namespace sap {
      */
     class ToolbarSeparator
       extends sap.ui.core.Control
-      implements sap.m.IOverflowToolbarContent {
+      implements sap.m.IOverflowToolbarContent
+    {
       /**
        * Constructor for a new `ToolbarSeparator`.
        *
@@ -101073,7 +101096,8 @@ declare namespace sap {
      */
     class Wizard
       extends sap.ui.core.Control
-      implements sap.f.IDynamicPageStickyContent {
+      implements sap.f.IDynamicPageStickyContent
+    {
       /**
        * Constructor for a new Wizard.
        *
