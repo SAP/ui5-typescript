@@ -1,4 +1,3 @@
 demos/
 packages/ts-interface-generator/dist/
-packages/ts-interface-generator/src/interfaceGenerationHelper.ts
 test-packages/

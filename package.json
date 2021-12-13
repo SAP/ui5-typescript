@@ -24,14 +24,14 @@
     "hooks:commit-msg": "commitlint -e"
   },
   "devDependencies": {
-    "typescript": "4.2.4",
+    "typescript": "4.5.3",
     "chai": "4.3.4",
-    "husky": "^7.0.0",
+    "husky": "^7.0.4",
     "lerna": "4.0.0",
     "lint-staged": "12.1.2",
     "mocha": "9.1.3",
     "npm-run-all": "4.1.5",
-    "prettier": "2.5.0",
+    "prettier": "2.5.1",
     "shx": "^0.3.3",
     "cz-conventional-changelog": "3.3.0",
     "@commitlint/cli": "15.0.0",
