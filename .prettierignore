@@ -1,3 +1,4 @@
 demos/
 packages/ts-interface-generator/dist/
 test-packages/
+packages/ts-interface-generator/src/test/testdata/sampleControl/SampleControl.generated.tsinterface.ts
