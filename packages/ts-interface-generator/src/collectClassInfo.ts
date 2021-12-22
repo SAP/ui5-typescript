@@ -1,3 +1,5 @@
+import log from "loglevel";
+
 const rPlural = /(children|ies|ves|oes|ses|ches|shes|xes|s)$/i;
 const mSingular: { [key: string]: string | number } = {
   children: -3,
@@ -25,7 +27,7 @@ let baseType;
 		if ( baseCandidate && baseType == null ) {
 			baseType = baseCandidate;
 		} else if ( baseCandidate !== baseType ) {
-			console.warn(`documented base type '${baseType}' doesn't match technical base type '${baseCandidate}'`);
+			log.warn(`documented base type '${baseType}' doesn't match technical base type '${baseCandidate}'`);
 		}
 	}
 	*/
@@ -75,9 +77,7 @@ let baseType;
           //const doclet = getLeadingDoclet(map[n]);
           const settings = expandDefaultKey(map[n], defaultKey); // in simple cases just a string is given; this expands the string to a real configuration object
           if (settings == null) {
-            console.warn(
-              `no valid metadata for ${n} (AST type '${map[n].name}')`
-            );
+            log.warn(`no valid metadata for ${n} (AST type '${map[n].name}')`);
             continue;
           }
 
@@ -114,7 +114,7 @@ let baseType;
 	const metadata = classInfoMap && classInfoMap.metadata && createPropertyMap(classInfoMap.metadata.value);
 	*/
   if (metadata) {
-    //console.log(`  analyzing metadata for '${oClassInfo.name}'`);
+    //log.debug(`  analyzing metadata for '${oClassInfo.name}'`);
 
     // Read the stereotype information from the metadata
     oClassInfo.stereotype =
@@ -176,7 +176,7 @@ let baseType;
           methods["unbind"] = "unbind" + N;
         }
         // if ( !settings.defaultValue ) {
-        //	console.log("property without defaultValue: " + oClassInfo.name + "." + n);
+        //	log.debug("property without defaultValue: " + oClassInfo.name + "." + n);
         //}
       }
     );
@@ -312,7 +312,7 @@ let baseType;
     if (typeof designtime === "string" || typeof designtime === "boolean") {
       oClassInfo.designtime = designtime;
     }
-    // console.log(oClassInfo.name + ":" + JSON.stringify(oClassInfo, null, "  "));
+    // log.debug(oClassInfo.name + ":" + JSON.stringify(oClassInfo, null, "  "));
   }
 
   /*

@@ -47,7 +47,7 @@ function addSourceExports(
     }
   }
   if (!globalName) {
-    // console.warn("No module name could be found for file " + filePath + "\nIs this a problem?");
+    // log.warn("No module name could be found for file " + filePath + "\nIs this a problem?");
   } else if (globalName.endsWith(".library")) {
     // heuristics: library.ts files usually use the parent path as library name
     globalName = globalName.slice(0, -".library".length);

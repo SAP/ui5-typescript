@@ -9,6 +9,7 @@ import {
   addLineBreakBefore,
 } from "./astGenerationHelper";
 import astToString from "./astToString";
+import log from "loglevel";
 
 const interestingBaseClasses: {
   [key: string]:
@@ -78,7 +79,7 @@ function writeInterfaceFile(
     pathName,
     className + ".generated.tsinterface.ts"
   );
-  console.log("Writing interface file: " + newFileName + "\n\n");
+  log.info(`Writing interface file: ${newFileName}\n\n`);
   fs.writeFileSync(newFileName, interfaceText);
 }
 
@@ -178,9 +179,8 @@ function checkConstructors(classDeclaration: ts.ClassDeclaration) {
           }
         }
       } else {
-        console.log(
-          "Unexpected constructor signature with a parameter number other than 1 or 2 in class " +
-            member.parent.name.text
+        log.warn(
+          `Unexpected constructor signature with a parameter number other than 1 or 2 in class ${member.parent.name.text}`
         );
       }
     }
@@ -191,7 +191,7 @@ function checkConstructors(classDeclaration: ts.ClassDeclaration) {
     doubleParameterDeclarationFound &&
     implementationFound;
   if (!found) {
-    console.log(
+    log.debug(
       classDeclaration.name.text +
         " is missing required constructor signatures: " +
         (singleParameterDeclarationFound
@@ -243,7 +243,7 @@ function getSettingsType(type: ts.Type) {
   constructors.forEach((ctor) => {
     const lastParameter = ctor.parameters[ctor.parameters.length - 1];
     //if (settingsType !== null && settingsType.typeName.escapedText !== lastParameter.type.typeName.escapedText) {  // TODO
-    //	console.warn("different constructors have different settings type")
+    //	log.warn("different constructors have different settings type")
     //}
     if (!lastParameter) {
       // we deal with arbitrary classes here, so the parent class constructor may well have no parameters. TODO: log a warning when this is actually a ManagedObject: in this case the generator ignores it.
@@ -265,7 +265,7 @@ function getInterestingBaseClass(
   typeChecker: ts.TypeChecker
 ): "ManagedObject" | "EventProvider" | "Element" | "Control" | undefined {
   //const typeName = typeChecker.typeToString(type);
-  //console.log("-> " + typeName + " (" + typeChecker.getFullyQualifiedName(type.getSymbol()) + ")");
+  //log.debug("-> " + typeName + " (" + typeChecker.getFullyQualifiedName(type.getSymbol()) + ")");
 
   let interestingBaseClass =
     interestingBaseClasses[typeChecker.getFullyQualifiedName(type.getSymbol())];
@@ -331,7 +331,7 @@ function generateInterface(
   );
   if (!metadata || metadata.length !== 1) {
     // no metadata? => nothing to do
-    //console.warn(`There should be one metadata object in a ManagedObject, but there are ${metadata.length} in ${className} inside ${fileName}`);
+    //log.warn(`There should be one metadata object in a ManagedObject, but there are ${metadata.length} in ${className} inside ${fileName}`);
     return;
   }
 
@@ -360,7 +360,7 @@ function generateInterface(
     return;
   }
 
-  console.log(
+  log.debug(
     `\n\nClass ${className} inside ${fileName} inherits from ${interestingBaseClass} and contains metadata.`
   );
 

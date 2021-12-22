@@ -1,5 +1,6 @@
 import ts = require("typescript");
 import astToString from "./astToString";
+import log from "loglevel";
 
 function generateSettingsInterface(
   classInfo: ClassInfo,
@@ -163,10 +164,8 @@ function generateSettingsInterface(
       classFileName
     ); // TODO: only print when the original class is missing the constructors!
   } else {
-    console.log(
-      "Constructor signatures are present in implementation file of " +
-        classInfo.name +
-        "."
+    log.debug(
+      `Constructor signatures are present in implementation file of ${classInfo.name}.`
     );
   }
 
@@ -210,10 +209,10 @@ function printConstructorBlockWarning(
 NOTE:
 Class ${className} in file ${fileName} needs to contain the following constructors, in order to make TypeScript aware of the possible constructor settings. Please copy&paste the block manually, as the ts-interface-generator will not touch your source files:
 ===== BEGIN =====
-// The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures
-${astToString(constructorBlock)}===== END =====
+\t// The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures
+\t${astToString(constructorBlock).replace(/\n(.)/g, "\n\t$1")}===== END =====
 `;
-  console.log(message);
+  log.warn(message);
 }
 
 function generateMethods(
@@ -913,12 +912,8 @@ function uniqueImport(
         moduleName,
         exportName: undefined, // FIXME
       };
-      console.warn(
-        "For the type '" +
-          typeName +
-          "' an import is created with module name '" +
-          moduleName +
-          "', using its default export. Is this correct?"
+      log.warn(
+        `For the type '${typeName}' an import is created with module name '${moduleName}', using its default export. Is this correct?`
       );
     }
   }

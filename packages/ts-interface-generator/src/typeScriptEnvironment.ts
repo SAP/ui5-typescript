@@ -1,5 +1,6 @@
 import ts from "typescript";
 import { performance } from "perf_hooks";
+import log from "loglevel";
 
 /*
  * This sets up TypeScript.
@@ -41,7 +42,7 @@ function initialize(
   options = optionsParameter;
 
   // initialize TypeScript program
-  console.log(
+  log.info(
     "Initializing TypeScript program with all source files and type definitions (this may take a few seconds)..."
   );
 
@@ -62,7 +63,7 @@ function initialize(
     if (!options.watchMode) {
       onProgramChanged(program, []);
       // TODO: shut down the watcher
-      console.log("\n\nDone. Exiting.");
+      log.info("\n\nDone. Exiting.");
       setTimeout(function () {
         // must be asynchronously because createWatchProgram(...) below triggers this synchronously, so the return value "watch" is not yet assigned
         watch.close();
@@ -79,7 +80,7 @@ function initialize(
       if ((aff as ts.SourceFile).kind) {
         changedFiles.push((aff as ts.SourceFile).fileName);
       } else {
-        console.log(
+        log.debug(
           `### Changed: ${(aff as ts.Program).getRootFileNames().join(", ")}`
         );
         throw new Error(
@@ -115,7 +116,7 @@ function reportDiagnostic(diagnostic: ts.Diagnostic) {
 
   // the remaining errors MAY be real - some may still be caused by access to API methods when the interface is not yet generated
   // but also the real errors do not need to be brought to the developer's attention - they will appear in the editor anyway.
-  // console.error("[reportDiagnostic] ", diagnostic.code, ":: [in ", formatHost.getCanonicalFileName(diagnostic.file.fileName), "] ", ts.flattenDiagnosticMessageText( diagnostic.messageText, formatHost.getNewLine()));
+  // log.error("[reportDiagnostic] ", diagnostic.code, ":: [in ", formatHost.getCanonicalFileName(diagnostic.file.fileName), "] ", ts.flattenDiagnosticMessageText( diagnostic.messageText, formatHost.getNewLine()));
 }
 
 /**
@@ -136,19 +137,19 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
       if (newChangedFiles.length) {
         const timer_begin = performance.now();
         !options.watchMode &&
-          console.log("Changed files:\n- " + newChangedFiles.join("\n- "));
+          log.debug("Changed files:\n- " + newChangedFiles.join("\n- "));
         onProgramChanged(newProgram, newChangedFiles);
         const timer_end = performance.now();
-        console.log(
-          "Handling the file change took " +
-            (timer_end - timer_begin).toFixed(1) +
-            " ms."
+        log.debug(
+          `Handling the file change took ${(timer_end - timer_begin).toFixed(
+            1
+          )} ms.`
         );
       } else {
         // no files modified/deleted
         // TODO: handle file deletion... how? On EVERY change check whether the files which are responsible for the known interfaces are still there??
         // TODO: also handle class renaming
-        //console.log("no changes detected")
+        //log.debug("no changes detected")
       }
     } else {
       // should not happen

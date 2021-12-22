@@ -8,6 +8,7 @@ import { initialize } from "./typeScriptEnvironment";
 import { addSourceExports } from "./addSourceExports";
 // @ts-ignore as the "rootDir" in tsconfig.json is set to "src", this file is outside the source tree. But that's fine and we don't want to make "." the root because this would include more files and cause build result path problems (files going to "dist/src").
 import pkg from "../package.json";
+import log from "loglevel";
 
 interface Args {
   watch?: boolean;
@@ -25,23 +26,25 @@ function main(args: Args) {
   const watchMode = args.watch;
 
   let tsconfig = args.config;
+  let logFound = "";
   if (
     !tsconfig ||
     !fs.existsSync(tsconfig) ||
     fs.lstatSync(tsconfig).isDirectory()
   ) {
-    console.log(
-      "No tsconfig file was given using the '--config' parameter, searching for it..."
-    );
     // eslint-disable-next-line @typescript-eslint/unbound-method
     tsconfig = ts.findConfigFile("./", ts.sys.fileExists, "tsconfig.json");
     if (!tsconfig) {
       throw new Error(
-        "Could not find a valid 'tsconfig.json'. Please specify using the '--config' parameter."
+        "Could not find a valid 'tsconfig.json'. Please specify it using the '--config' parameter."
       );
+    } else {
+      logFound = " (automatically found, as none was given)";
     }
   }
-  console.log("Using the following TypeScript configuration file: ", tsconfig);
+  log.info(
+    `Using the following TypeScript configuration file${logFound}: ${tsconfig}`
+  );
 
   initialize(tsconfig, onTSProgramUpdate, { watchMode });
 }
