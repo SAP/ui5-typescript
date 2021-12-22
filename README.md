@@ -15,14 +15,15 @@ This page provides an overview of all official TypeScript-related resources in t
 - [What is the Future Roadmap for TypeScript in UI5?](#what-is-the-future-roadmap-for-typescript-in-ui5)
 
 
-### <cb>What is TypeScript about?
+### What is TypeScript about?
 [TypeScript](typescriptlang.org) is an extension of JavaScript for providing type information and helps by error detection through type checking and by providing code assist in many supporting code editors (code completion, inline documentation,...). Browsers cannot execute TypeScript directly, a transpilation step is needed.
 
 ### What is the overall approach for using TypeScript in UI5 applications?
 The UI5 team publishes type definition files describing all the UI5 APIs and types. With the help of these definitions, the TypeScript tools can do their job and support writing UI5 apps in TypeScript (and [even JavaScript](https://github.com/SAP-samples/ui5-cap-event-app/tree/js-with-typescript-support#applying-typescript-benefits-to-a-javascript-application)). The "typescript" branch of the "ui5-cap-event-app" project gives an [overview on UI5 code written in TypeScript](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md), typical traps and topics like debugging.
 
 ### How to set up a new UI5 app for TypeScript development?
-By adding TypeScript and the UI5 type definitions as dev dependencies and setting up the transpilation step. This can be done in few minutes. The "ui5-typescript-helloworld" project can serve as copy template and provides a [detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) for setting up a TypeScript project. Furthermore, there is a [template generator](https://github.com/ui5-community/generator-ui5-ts-app) for new apps.
+By adding TypeScript and the UI5 type definitions as dev dependencies and setting up the transpilation step. This can be done in few minutes. The "ui5-typescript-helloworld" project can serve as copy template and provides a [detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) for setting up a TypeScript project.<br>
+Furthermore, there is a [template generator](https://github.com/ui5-community/generator-ui5-ts-app) for new apps which gets you started even faster and is explained in [this blog post](https://blogs.sap.com/2021/07/01/getting-started-with-typescript-for-ui5-application-development/).
 
 ### How to convert an existing UI5 app to TypeScript?
 By doing most of the basic [setup for TypeScript projects](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) mentioned in the previous section and then following the [four conversion steps briefly explained here](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md#converting-ui5-apps-from-javascript-to-typescript). The detailed explanation [how to enhance JavaScript applications with type information](https://github.com/SAP-samples/ui5-cap-event-app/tree/js-with-typescript-support#applying-typescript-benefits-to-a-javascript-application) will also help because the process of tightening the checks and then fixing the resulting issues is the same - just use real TypeScript syntax instead of the JSDoc comments used in that guide!
@@ -63,10 +64,15 @@ The current focus is on working on the unfinished corners, like providing better
 
 ## Other Resources
 
+* The UI5con 2021 session on TypeScript ([recording available at YouTube](https://www.youtube.com/watch?v=5jfHNKQ48w8)) explains and demonstrates the overall approach for TypeScript and UI5
 * Blog post from Volker Buzek: [How to debug a CAP app with UI5 TypeScript UI component with VS Code](https://blogs.sap.com/2021/11/16/debug-a-cap-app-with-ui5-typescript-ui-component-with-vs-code/)
 * Blog post series "My first experience with TypeScript in UI5" from Wouter Lemaire:
     * [Introduction](https://blogs.sap.com/2021/11/19/my-first-experience-with-typescript-in-ui5-introduction/)
-	* [Setup project](https://blogs.sap.com/2021/11/23/my-first-experience-with-typescript-in-ui5-prepare-ts-project/)
+	* [Project Setup](https://blogs.sap.com/2021/11/23/my-first-experience-with-typescript-in-ui5-prepare-ts-project/)
+	* [Adding a Base Controller](https://blogs.sap.com/2021/11/25/my-first-experience-with-typescript-in-ui5-basecontroller/)
+	* [ODataModel Service Wrapper](https://blogs.sap.com/2021/11/30/my-first-experience-with-typescript-in-ui5-odatamodel-service-wrapper/)
+	* [Using Classes and State/Model Manager](https://blogs.sap.com/2021/12/07/my-first-experience-with-typescript-in-ui5-classes-and-state-model-manager/)
+	* [Final Part](https://blogs.sap.com/2021/12/08/my-first-experience-with-typescript-in-ui5-final/)
 ## Status
 
 The type definitions provided for UI5 are in an experimental **_Beta State_**. Significant changes are likely to occur, including potential **breaking changes**.
