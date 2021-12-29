@@ -344,6 +344,13 @@ function generateInterface(
     return;
   }
 
+  if (!metadata[0].initializer) {
+    log.warn(
+      `Class ${className} inside ${fileName} has a static metadata member without initializer. Please assign the metadata object immediately to have an interface generated for the API. Write: 'static readonly metadata = { ... }'`
+    );
+    return;
+  }
+
   // by now we have something that looks pretty much like a ManagedObject metadata object
 
   const metadataText = metadata[0].initializer.getText(sourceFile);
