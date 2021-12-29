@@ -11,6 +11,7 @@ function astToString(ast: ts.Node[]) {
   // @ts-ignore this assignment works
   file.statements = ts.createNodeArray(ast);
 
+  // using a *printer* for simplicity; TODO: the TypeScript formatter API would be more appropriate
   const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed });
   let result = printer.printNode(ts.EmitHint.Unspecified, file, undefined);
   result = result.replace(/\s*\/\/\n/g, "\n"); // replace dummy comments with just a linebreak

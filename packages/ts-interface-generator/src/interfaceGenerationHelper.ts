@@ -321,6 +321,7 @@ function generateInterface(
         ts.isPropertyDeclaration(member) &&
         ts.isIdentifier(member.name) &&
         member.name.escapedText === "metadata" &&
+        member.modifiers &&
         member.modifiers.some((modifier) => {
           return modifier.kind === ts.SyntaxKind.StaticKeyword;
         })
@@ -329,9 +330,17 @@ function generateInterface(
       }
     })
   );
-  if (!metadata || metadata.length !== 1) {
+  if (!metadata || metadata.length === 0) {
     // no metadata? => nothing to do
-    //log.warn(`There should be one metadata object in a ManagedObject, but there are ${metadata.length} in ${className} inside ${fileName}`);
+    log.debug(
+      `ManagedObject with no metadata in class ${className} inside ${fileName}. This is not necessarily an issue, but if there is a metadata member in this class which *should* be recognized, make sure it has the 'static' keyword!`
+    );
+    return;
+  } else if (metadata.length > 1) {
+    // no metadata? => nothing to do
+    log.warn(
+      `ManagedObject with ${metadata.length} static metadata members in class ${className} inside ${fileName}. This is unexpected. Ignoring this class.`
+    );
     return;
   }
 
