@@ -29,20 +29,23 @@ export default class SampleControl extends Button {
 		},
 	};
 
-	static renderer = function (rm: RenderManager, control: SampleControl) {
-		rm.openStart("div", control);
-		rm.openEnd();
+	static renderer = {
+		apiVersion: 2,
+		render: function (rm: RenderManager, control: SampleControl) {
+			rm.openStart("div", control);
+			rm.openEnd();
 
-		rm.text(control.getText());
-		// @ts-ignore this only works with the generated interface
-		rm.text(control.getSubtext());
-		// @ts-ignore this only works with the generated interface
-		const content = control.getContent();
-		for (let i = 0; i < content.length; i++) {
-			rm.renderControl(content[i]);
+			rm.text(control.getText());
+			// @ts-ignore this only works with the generated interface
+			rm.text(control.getSubtext());
+			// @ts-ignore this only works with the generated interface
+			const content = control.getContent();
+			for (let i = 0; i < content.length; i++) {
+				rm.renderControl(content[i]);
+			}
+
+			rm.close("div");
 		}
-
-		rm.close("div");
 	};
 
 	doit() {
