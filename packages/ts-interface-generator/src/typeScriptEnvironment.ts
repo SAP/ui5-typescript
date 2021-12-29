@@ -46,6 +46,20 @@ function initialize(
     "Initializing TypeScript program with all source files and type definitions (this may take a few seconds)..."
   );
 
+  if (!options.watchMode) {
+    // in non-watch mode monkey-patch the TypeScript system to avoid misleading console output mentioning watch mode
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    const originalTSwrite = ts.sys.write;
+    ts.sys.write = (text) => {
+      text = text.replace(
+        "Starting compilation in watch mode...",
+        "Starting compilation..."
+      );
+      text = text.replace("Watching for file changes.", "");
+      originalTSwrite(text);
+    };
+  }
+
   const host = ts.createWatchCompilerHost(
     configFile,
     { noEmit: true },

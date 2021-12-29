@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node dist/generateTSInterfaces.js",
     "try": "npm run build && node dist/generateTSInterfaces.js --config tsconfig-testcontrol.json",
+    "try-watch": "npm run build && node dist/generateTSInterfaces.js --watch --config tsconfig-testcontrol.json",
     "build": "tsc",
     "watch": "tsc --watch",
     "test": "jest",
