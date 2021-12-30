@@ -9,16 +9,37 @@ import { addSourceExports } from "./addSourceExports";
 // @ts-ignore as the "rootDir" in tsconfig.json is set to "src", this file is outside the source tree. But that's fine and we don't want to make "." the root because this would include more files and cause build result path problems (files going to "dist/src").
 import pkg from "../package.json";
 import log from "loglevel";
-log.setDefaultLevel("INFO");
+log.setDefaultLevel("info");
 
 interface Args {
   watch?: boolean;
   config?: string;
+  loglevel?: "debug" | "info" | "warn" | "error";
 }
 
 // configure yargs with the cli options as launcher
 const version = `${pkg.version} (from ${__filename})`;
 yargs.version(version);
+yargs
+  .option({
+    config: {
+      alias: "c",
+      type: "string",
+      description: "Path to the configuration file to use",
+    },
+    watch: {
+      alias: "w",
+      type: "boolean",
+      description: "Run in watch mode",
+    },
+    loglevel: {
+      choices: ["debug", "info", "warn", "error"],
+      description: "Set the console logging verbosity",
+    },
+  })
+  .default("watch", false)
+  .default("loglevel", "info");
+
 const appArgs = yargs.argv as Args;
 main(appArgs);
 
@@ -46,6 +67,17 @@ function main(args: Args) {
   log.info(
     `Using the following TypeScript configuration file${logFound}: ${tsconfig}`
   );
+
+  const level = args.loglevel;
+  if (
+    level === "info" ||
+    level === "warn" ||
+    level === "debug" ||
+    level === "error"
+  ) {
+    log.setDefaultLevel(level);
+    log.info(`Log level set to: ${level}`);
+  }
 
   initialize(tsconfig, onTSProgramUpdate, { watchMode });
 }

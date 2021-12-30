@@ -40,7 +40,17 @@ npm install shx --save-dev
 npx shx rm **/*.generated.tsinterface.ts
 ```
 
-### Limitations
+### Commandline Options
+
+This is the list of available commandline arguments, including the ones above:
+
+- `--help`: Display this list of commandline arguments
+- `--version`: Display the version of the generator
+- `-c`, `--config`: Path to the configuration file to use
+- `-w`, `--watch`: Run in watch mode
+- `--loglevel`: Set the console logging verbosity; options are: "debug", "info", "warn", "error"; default level is "info"
+
+## Limitations
 
 There are limits to what the tool can achieve, trying to find and parse the classes for which it needs to generated an interface.
 
@@ -82,8 +92,7 @@ Oh, and the tool itself is implemented in TypeScript because TypeScript makes de
 - copy the original API documentation to the generated methods
 - make sure watch mode does it right (also run on deletion? Delete interfaces before-creating? Only create interfaces for updated files?)
 - consider further information like deprecation etc.
-- last output is "Watching for file changes." even when a _single_ run has finished
-- it is probably needed to check whether the control class being handled is the default export or a named export. Right now it is assumed that it is the default export. Other cases are not tested and likely not working.
+- it is probably required to check whether the control class being handled is the default export or a named export. Right now it is assumed that it is the default export. Other cases are not tested and likely not working.
 - ...
 
 ## Support
