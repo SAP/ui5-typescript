@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.2.3...@ui5/ts-interface-generator@0.3.0) (2022-01-18)
+
+### Bug Fixes
+
+- **ts-interface-generator:** avoid misleading output in non-watch mode ([8b01804](https://github.com/SAP/ui5-typescript/commit/8b01804dcbbc2295aebdae30db85d86110c69eed))
+- **ts-interface-generator:** don't crash on non-static metadata in a ManagedObject ([66acf42](https://github.com/SAP/ui5-typescript/commit/66acf42dc6e11b330428b31c24e8507696e7116f))
+- **ts-interface-generator:** don't crash on uninitialized metadata ([9fc26ba](https://github.com/SAP/ui5-typescript/commit/9fc26ba8fdc87ec3e69c959948eaf088184ab7a8))
+- update project dependencies and fix tests ([#313](https://github.com/SAP/ui5-typescript/issues/313)) ([62626f4](https://github.com/SAP/ui5-typescript/commit/62626f4069d0fa701528d84ae431ccc2a4b69933))
+
+### Features
+
+- **ts-interface-generator:** extend range of log levels (add "warn") ([616c226](https://github.com/SAP/ui5-typescript/commit/616c226dac2943c40a61ce1c345288442971d00a))
+- **ts-interface-generator:** make log level configurable; document commandline arguments ([f8a7834](https://github.com/SAP/ui5-typescript/commit/f8a7834c931a76b523b08b87dd35e90c83b51498))
+
 ## [0.2.3](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.2.2...@ui5/ts-interface-generator@0.2.3) (2021-12-09)
 
 ### Bug Fixes

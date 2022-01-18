@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@2.3.0...@ui5/dts-generator@2.3.1) (2022-01-18)
+
+### Bug Fixes
+
+- update project dependencies and fix tests ([#313](https://github.com/SAP/ui5-typescript/issues/313)) ([62626f4](https://github.com/SAP/ui5-typescript/commit/62626f4069d0fa701528d84ae431ccc2a4b69933))
+
 # [2.3.0](https://github.com/SAP/ui5-typescript/compare/v2.2.1...v2.3.0) (2021-07-14)
 
 ### Features
