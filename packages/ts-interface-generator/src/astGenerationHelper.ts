@@ -209,8 +209,8 @@ function printConstructorBlockWarning(
 NOTE:
 Class ${className} in file ${fileName} needs to contain the following constructors, in order to make TypeScript aware of the possible constructor settings. Please copy&paste the block manually, as the ts-interface-generator will not touch your source files:
 ===== BEGIN =====
-\t// The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures
-\t${astToString(constructorBlock).replace(/\n(.)/g, "\n\t$1")}===== END =====
+// The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures
+${astToString(constructorBlock)}===== END =====
 `;
   log.warn(message);
 }
