@@ -5,7 +5,7 @@ This page provides an overview of all official TypeScript-related resources in t
 ### Topics
 - [What is TypeScript about?](#what-is-typescript-about)
 - [What is the overall approach for using TypeScript in UI5 applications?](#what-is-the-overall-approach-for-using-typescript-in-ui5-applications)
-- [How can I get an end-to-end hands-on impression of creating and developing an app?](#how-can-i-get-an-end-to-end-hands-on-impression-of-creating-and-developing-an-app)
+- [How can I get an end-to-end hands-on impression of creating and developing an app?](#how-can-i-get-an-end-to-end-hands-on-impression-of-creating-and-developing-a-ui5-app-in-typescript)
 - [How to set up a new UI5 app for TypeScript development?](#how-to-set-up-a-new-ui5-app-for-typescript-development)
 - [How to convert an existing UI5 app to TypeScript?](#how-to-convert-an-existing-ui5-app-to-typescript)
 - [How to develop custom controls in TypeScript?](#how-to-develop-custom-controls-in-typescript)
