@@ -33,7 +33,7 @@ yargs
       description: "Run in watch mode",
     },
     loglevel: {
-      choices: ["debug", "info", "warn", "error"],
+      choices: ["error", "warn", "info", "debug", "trace"],
       description: "Set the console logging verbosity",
     },
   })
@@ -46,6 +46,18 @@ main(appArgs);
 // main entry point
 function main(args: Args) {
   const watchMode = args.watch;
+
+  const level = args.loglevel;
+  if (
+    level === "error" ||
+    level === "warn" ||
+    level === "info" ||
+    level === "debug" ||
+    level === "trace"
+  ) {
+    log.setDefaultLevel(level);
+    log.info(`Log level set to: ${level}`);
+  }
 
   let tsconfig = args.config;
   let logFound = "";
@@ -67,17 +79,6 @@ function main(args: Args) {
   log.info(
     `Using the following TypeScript configuration file${logFound}: ${tsconfig}`
   );
-
-  const level = args.loglevel;
-  if (
-    level === "info" ||
-    level === "warn" ||
-    level === "debug" ||
-    level === "error"
-  ) {
-    log.setDefaultLevel(level);
-    log.info(`Log level set to: ${level}`);
-  }
 
   initialize(tsconfig, onTSProgramUpdate, { watchMode });
 }

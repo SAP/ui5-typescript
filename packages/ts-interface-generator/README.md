@@ -48,7 +48,7 @@ This is the list of available commandline arguments, including the ones above:
 - `--version`: Display the version of the generator
 - `-c`, `--config`: Path to the configuration file to use
 - `-w`, `--watch`: Run in watch mode
-- `--loglevel`: Set the console logging verbosity; options are: "debug", "info", "warn", "error"; default level is "info"
+- `--loglevel`: Set the console logging verbosity; options are: "error", "warn", "info", "debug", "trace"; default level is "info"
 
 ## Limitations
 
