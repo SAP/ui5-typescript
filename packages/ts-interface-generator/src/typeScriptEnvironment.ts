@@ -146,7 +146,7 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
     if (newProgram) {
       // TODO: handle errorCount
       newChangedFiles = newChangedFiles.filter(
-        (fileName) => !fileName.endsWith(".generated.tsinterface.ts")
+        (fileName) => !fileName.endsWith(".gen.d.ts")
       ); // not interested in changes to generated files
       if (newChangedFiles.length) {
         const timer_begin = performance.now();

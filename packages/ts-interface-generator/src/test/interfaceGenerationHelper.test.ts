@@ -17,7 +17,7 @@ function onTSProgramUpdate(
       if (
         sourceFile.fileName.indexOf("@types") === -1 &&
         sourceFile.fileName.indexOf("node_modules/") === -1 &&
-        sourceFile.fileName.indexOf(".generated.tsinterface.ts") === -1
+        sourceFile.fileName.indexOf(".gen.d.ts") === -1
       ) {
         return true;
       }

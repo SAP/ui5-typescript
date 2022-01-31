@@ -27,7 +27,7 @@ const interestingBaseClasses: {
 
 /**
  * Checks the given source file for any classes derived from sap.ui.base.ManagedObject and generates for each one an interface file next to the source file
- * with the name <className>.generated.tsinterface.ts
+ * with the name <className>.gen.d.ts
  *
  * @param sourceFile
  * @param typeChecker
@@ -75,10 +75,7 @@ function writeInterfaceFile(
 ) {
   // file output
   const pathName = path.dirname(sourceFileName);
-  const newFileName = path.join(
-    pathName,
-    className + ".generated.tsinterface.ts"
-  );
+  const newFileName = path.join(pathName, className + ".gen.d.ts");
   log.info(`Writing interface file: ${newFileName}\n\n`);
   fs.writeFileSync(newFileName, interfaceText);
 }

@@ -29,7 +29,7 @@ This reqires a `tsconfig.json` file to be present in the same directory in order
 The interface generation is then run a) initially and b) on every TypeScript source file modification or addition.
 In case only a single generation run is wanted, omit the `--watch` parameter.
 
-After generation, next to the control implementation there will be an additional `MyClassName.generated.tsinterface.ts` file. (More precisely: for every class which derives from ManagedObject and defines API metadata.) This file contains an interface declaring the methods generated at runtime and an interface defining the constructor settings object. It is generated in a way that makes TypeScript recognize it as <i>addition</i> to the regular control implementation (using [interface merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) and [module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation)).
+After generation, next to the control implementation there will be an additional `MyClassName.gen.d.ts` file. (More precisely: for every class which derives from ManagedObject and defines API metadata.) This file contains an interface declaring the methods generated at runtime and an interface defining the constructor settings object. It is generated in a way that makes TypeScript recognize it as <i>addition</i> to the regular control implementation (using [interface merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) and [module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation)).
 
 Generated interfaces are (as of now) never deleted (even when the original class is deleted), but always completely overridden in case of a new interface generation run.
 
@@ -37,7 +37,7 @@ In case you want to delete all generated interface files, you can do so manually
 
 ```sh
 npm install shx --save-dev
-npx shx rm **/*.generated.tsinterface.ts
+npx shx rm **/*.gen.d.ts
 ```
 
 ### Commandline Options

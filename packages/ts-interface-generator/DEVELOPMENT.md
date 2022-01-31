@@ -11,7 +11,7 @@ The generation consists of the following parts:
 - A huge map of all UI5 global names (`allKnownGlobals`) is created which contains information in which module the respective entity resides (important to decide whether a certain enum is in a module of its own or inside a library module)
 - All real source files in this list (i.e. <i>not</i> type definitions) are checked for definitions of classes which are derived from `sap.ui.base.ManagedObject`
 - For each such class definition, a TypeScript AST is created which represents a file with an interface definition containing all UI5 accessor methods for the properties, aggregations etc. in the class. It also contains the required imports. The interface has the same name as the class to which it is related, so the TypeScript merging can happen which lets TypeScript know that these additional methods also exist.
-- This AST is transformed to a nicely formatted string and written to a \*.generated.tsinterface.ts file next to the file in which the respective class was defined.
+- This AST is transformed to a nicely formatted string and written to a \*.gen.d.ts file next to the file in which the respective class was defined.
 
 ### npm Publishing
 

@@ -90,7 +90,7 @@ function main(args: Args) {
  * TODO: can we use the knowledge about the changed files to limit the scope here?
  *       A Problem is that also a change in a different file could influence the generation of an unchanged file. E.g. when an update of the
  *       UI5 type definitions changes the base class of sap.m.Button to something where API methods are not generated, then
- *       the next generation run would no longer create a *.generated.tsinterface.ts file for Controls deriving from Button (ok, extreme example...)
+ *       the next generation run would no longer create a *.gen.d.ts file for Controls deriving from Button (ok, extreme example...)
  * @param program
  * @param typeChecker
  * @param changedFiles
