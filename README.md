@@ -10,6 +10,7 @@ This page provides an overview of all official TypeScript-related resources in t
 - [How to convert an existing UI5 app to TypeScript?](#how-to-convert-an-existing-ui5-app-to-typescript)
 - [How to develop custom controls in TypeScript?](#how-to-develop-custom-controls-in-typescript)
 - [How to test in TypeScript?](#how-to-test-in-typescript)
+- [How to use third-party libraries from npm in UI5 apps?](#how-to-use-third-party-libraries-from-npm-in-ui5-apps)
 - [How to profit from TypeScript even when doing plain JavaScript development?](#how-to-profit-from-typescript-even-when-doing-plain-javascript-development)
 - [What are the TypeScript projects and releases provided by the UI5 development team?](#what-are-the-typescript-projects-and-releases-provided-by-the-ui5-development-team)
 - [Where to report issues? What is the support status?](#where-to-report-issues)
@@ -36,6 +37,11 @@ By doing most of the basic [setup for TypeScript projects](https://github.com/SA
 
 ### How to develop custom controls in TypeScript?
 There is [documentation](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/custom-controls/README.md) and sample code in the ["custom-controls" branch of the Hello World application](https://github.com/SAP-samples/ui5-typescript-helloworld/tree/custom-controls) which explains how custom controls can be implemented in TypeScript within UI5 applications. It makes use of a [tool for generating TypeScript interfaces for the control API](https://github.com/SAP/ui5-typescript/tree/main/packages/ts-interface-generator) which has been [released via npm](https://www.npmjs.com/package/@ui5/ts-interface-generator) in alpha state. There is also a sample project that demonstrates how flull-fledged [control libraries can be developed in TypeScript](https://github.com/SAP-samples/ui5-typescript-control-library).
+
+### How to use third-party libraries from npm in UI5 apps?
+Third-part libraries written for running in a browser environment can be easily used with very natural `npm install` and `import <moduleName> from 'dependencyName'`, resulting in code completion for those libraries and automatic transpiling into UI5's own AMD-like module format.
+[Exercise 8 of the TypeScript tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial/tree/main/exercises/ex8) shows how this is done, including the required setup of the [ui5-tooling-modules](https://www.npmjs.com/package/ui5-tooling-modules) extension for the UI5 tooling.
+
 
 ### How to test in TypeScript?
 This topic is not covered by samples and documentation yet. While using qunit is straightforward, the OPA APIs cause a few difficulties for which suitable solutions are still being worked on.
