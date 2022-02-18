@@ -20,10 +20,29 @@ Similar to the existing UI5 API `Component.getRouterFor(this)`, one could add on
 *Maybe* we'll look at allowing `this.byId<Button>("myBtn")` once revisiting generics. But this neither provides a real advantage over `<Button> this.byId("myBtn")`.
 
 #### Adding jQuery, qUnit and three.js as Dependencies
-* UI5 APIs contain types from these libraries. Currently, applications must import these types to avoid "missing types" errors when checking the libraries - and of course also when using these APIs.
-* These libraries come with UI5 in a specific version, so they could easily be added as dependencies and would be automatically available.
-* But then it might be difficult or even impossible to substitute these 3rd-party type definitions with either a different version or an alternative type definition. 
-* Current state of discussion: https://github.com/SAP/ui5-typescript/issues/314#issuecomment-982854155
+SAPUI5 APIs contain types from these libraries (OpenUI5 only from the two former ones). Up to version 1.99 of `@openui5/ts-types-esm` and `@sapui5/ts-types-esm`, applications must import these types to avoid "missing types" errors when checking the libraries - and of course also when application code is using these APIs, so TypeScript knows them.
+These libraries come with UI5 in a specific version, so they could easily be added as dependencies and would be automatically available and could be kept in sync with the version actually bundled with UI5.
+This was requested in: https://github.com/SAP/ui5-typescript/issues/314#issuecomment-982854155
+Initial concerns: then it might be difficult to substitute these 3rd-party type definitions with either a different version (UI5 can be launched with no jQuery, if an alternative jQuery version is loaded beforehand) or an alternative type definition set. But these concerns were found to be unfounded.
+
+Hence for release 1.100 the following change was applied:
+* `@openui5/ts-types-esm` and `@sapui5/ts-types-esm`:
+  * add jquery and qunit types as dependencies (not devDependencies - they are needed when the types are USED, not when developed - devDependencies of devDependencies are not installed) in the correct version (SAPUI5 also the THREE.js types and `@types/offscreencanvas`, which is referenced inside the THREE.js types).
+  * `npm i` in an application using these types then installs these required types to `node_modules/@types`. NO NEED to add them as devDependnecies anymore!
+  * The types will be found by the editor, as they are in the default location for types. However, `tsconfig.json` must contain a `typeRoots` entry when the @*/ts-types-esm` are used. If the typeRoots ONLY include the ts-types-esm path, then the default `@types` directory is NOT used. So in this case it must be added. In most cases it may already be present for other libraries, though.
+    ```
+	        "typeRoots": [
+	            "node_modules/@types",
+	            "node_modules/@openui5/ts-types-esm"
+	        ]
+    ```
+* `@types/openui5`, however:
+  * DOES already have jquery and qunit types as dependencies - due to triple-slash references in the index.d.ts file required by DefinitelyTyped. But without a specific version. (TODO: Can we fix that? It seems like DefinitelyTyped does not foresee the option to reference a specific version.)
+
+How can apps now use a different version of the jQuery, qUnit,... types?
+  * When the app ALSO directly requires the jquery types in a different version in its `package.json` file, then the openui5-required ones go into `node_modules/@openui5/ts-types-esm/node_modules/@types/jquery` and both reside with their respective required version. The code editor uses the version required by the app. Even when that second version of the types is deleted it seems hard to get the copy below ts-types-esm to work for the editor (adding to the typeRoots in `tsconfig.json` didn’t seem to work).
+  * As soon as there is an own copy of the jquery types below ts-types-esm, nothing will move it back up to the main `node_modules/@types` directory. Not even requesting the exactly same version and deleting `package-lock.json` and deleting the toplevel copy of the jquery types. Only when the copy of the types below ts-types-esm is deleted and another `npm i` is done, npm is happy with only placing ONE copy of the jquery types to the main node_modules folder again (if versions match).
+  * All in all, this shows that applications can easily require matching types for their own copy of jquery with a different version. They could also require a different flavor of jquery types and ignore the UI5-required jQuery types by setting specific `typeRoots` paths.
 
 
 ### Part 3: UI5 API Choices Influencing the Generated Types
@@ -38,7 +57,15 @@ However, the type definitions may also be used by control development and SAP-in
 
 It remains open how to support this. A single switch (two versions) is not sufficient because there are different profiles of such consumers.
 
+### Extracting configuration objects into named types using `@typedef`
 
+In general, doing this is currently not a recommendation, as it pulls the structures out of their place, so they are e.g. a click away in the documentation.<br>
+However, when there is re-use of structures in several places, then it is recommended, in order to avoid having to maintain duplicate documentation and to make usage clearer.<br>
+For documentation of structured return types creating separate `@typedef`s is an option, as `@returns` tags cannot be accumulated like `@param` tags to build nested structures.
+
+### Documenting structured return types
+
+This is currently an open point; the only mechanism working right now is defining the structure in JSDoc separately, using a `@typedef`. Defining the structure in-place (like `@returns {{callback: function}} an object with a property 'callback' that is a function`) does ONLY work for function types right now and is overall fragile and not recommended (yet).
 
 ## Generation of Type Definition Files 
 This section explains how the type definition files are generated.
@@ -46,6 +73,11 @@ This section explains how the type definition files are generated.
 TODO:
 * generator project, JSDoc -> api.json -> d.ts
 * .dtsgenrc, removing/fixing APIs
+
+## Testing of Type Definition Files
+
+The type definition files are tested using a
+
 
 ## Distribution of Type Definition Files
 This section explains which packages exist on which channels - and why.
