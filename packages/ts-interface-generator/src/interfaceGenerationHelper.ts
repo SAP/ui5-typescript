@@ -25,6 +25,22 @@ const interestingBaseClasses: {
   '"sap/ui/core/Control".Control': "Control",
 };
 
+const interestingBaseSettingsClasses: {
+  [key: string]:
+    | "$ManagedObjectSettings"
+    | "$EventProviderSettings"
+    | "$ElementSettings"
+    | "$ControlSettings"
+    | undefined;
+} = {
+  '"sap/ui/base/ManagedObject".$ManagedObjectSettings':
+    "$ManagedObjectSettings",
+  '"sap/ui/base/EventProvider".$EventProviderSettings':
+    "$EventProviderSettings",
+  '"sap/ui/core/Element".$UI5ElementSettings': "$ElementSettings",
+  '"sap/ui/core/Control".$ControlSettings': "$ControlSettings",
+};
+
 /**
  * Checks the given source file for any classes derived from sap.ui.base.ManagedObject and generates for each one an interface file next to the source file
  * with the name <className>.gen.d.ts
@@ -103,32 +119,52 @@ function getManagedObjects(
                     " could not be resolved - are the UI5 (and other) type definitions available and known in the tsconfig? Or is there a different reason why this type would not be known?"
                 );
               }
-              const settingsTypeNode = getSettingsType(type);
+
+              // now check whether this type from which has been inherited is a ManagedObject
+              const interestingBaseClass = getInterestingBaseClass(
+                type,
+                typeChecker
+              );
+              if (!interestingBaseClass) {
+                return;
+              }
+              managedObjectFound = true;
+
+              // ok, we have a ManagedObject/Control; now check whether there is a settings type in the superclass
+              // (which the generated settings type needs to inherit from)
+              // There really should be, because all descendants of ManagedObject should have one!
+              let settingsTypeFullName;
+              const settingsTypeNode = getSettingsType(type, typeChecker);
               if (settingsTypeNode) {
                 const settingsType =
                   typeChecker.getTypeFromTypeNode(settingsTypeNode);
                 const symbol = settingsType.getSymbol();
-                const settingsTypeFullName =
+                settingsTypeFullName =
                   typeChecker.getFullyQualifiedName(symbol);
-                const interestingBaseClass = getInterestingBaseClass(
-                  type,
-                  typeChecker
+              } else {
+                throw new Error(
+                  `${
+                    statement.name ? statement.name.text : ""
+                  } inherits from ${interestingBaseClass} but the parent class ${typeChecker.getFullyQualifiedName(
+                    type.getSymbol()
+                  )} seems to have no settings type`
                 );
-                if (interestingBaseClass) {
-                  managedObjectFound = true;
-                  const constructorSignaturesAvailable =
-                    checkConstructors(statement);
-                  managedObjects.push({
-                    sourceFile,
-                    className: statement.name ? statement.name.text : "",
-                    classDeclaration: statement,
-                    settingsTypeFullName,
-                    interestingBaseClass,
-                    constructorSignaturesAvailable,
-                  });
-                  return;
-                }
               }
+
+              // check for already available constructor signatures (if not found, the console output prompts the user to add them)
+              const constructorSignaturesAvailable =
+                checkConstructors(statement);
+
+              // store the information about the identified ManagedObject/Control
+              managedObjects.push({
+                sourceFile,
+                className: statement.name ? statement.name.text : "",
+                classDeclaration: statement,
+                settingsTypeFullName,
+                interestingBaseClass,
+                constructorSignaturesAvailable,
+              });
+              return;
             });
           if (managedObjectFound) {
             // do not look at any other heritage clauses
@@ -220,38 +256,47 @@ function isOneAStringAndTheOtherASettingsObject(
 /**
  * Returns the type of the settings object used in the constructor of the given type
  * Needed to derive the new settings object type for the subclass from it.
- *
- * @param type
  */
-function getSettingsType(type: ts.Type) {
+function getSettingsType(type: ts.Type, typeChecker: ts.TypeChecker) {
   const declarations = type.getSymbol().getDeclarations();
-  const constructors: ts.ConstructorDeclaration[] = [];
   for (let i = 0; i < declarations.length; i++) {
     const declaration = declarations[i] as ts.ClassDeclaration;
     const members = declaration.members;
     for (let j = 0; j < members.length; j++) {
       if (ts.isConstructorDeclaration(members[j])) {
-        constructors.push(members[j] as ts.ConstructorDeclaration);
+        const settingsType = getSettingsTypeFromConstructor(
+          members[j] as ts.ConstructorDeclaration,
+          typeChecker
+        );
+        if (settingsType) {
+          return settingsType;
+        }
       }
     }
   }
+}
 
-  let settingsType: ts.TypeNode = null;
-  constructors.forEach((ctor) => {
-    const lastParameter = ctor.parameters[ctor.parameters.length - 1];
-    //if (settingsType !== null && settingsType.typeName.escapedText !== lastParameter.type.typeName.escapedText) {  // TODO
-    //	log.warn("different constructors have different settings type")
-    //}
-    if (!lastParameter) {
-      // we deal with arbitrary classes here, so the parent class constructor may well have no parameters. TODO: log a warning when this is actually a ManagedObject: in this case the generator ignores it.
-      return;
+/**
+ * Returns the type of the first found settings object (inheriting from sap/ui/base/ManagedObject/$ManagedObjectSettings
+ * occurring among the parameters of the given constructor. Or undefined.
+ */
+function getSettingsTypeFromConstructor(
+  ctor: ts.ConstructorDeclaration,
+  typeChecker: ts.TypeChecker
+) {
+  for (let i = 0; i < ctor.parameters.length; i++) {
+    const parameter = ctor.parameters[i];
+    if (parameter.type.kind === ts.SyntaxKind.TypeReference) {
+      // could be the settings type
+      const interestingBaseSettingsClass = getInterestingBaseSettingsClass(
+        typeChecker.getTypeFromTypeNode(parameter.type),
+        typeChecker
+      );
+      if (interestingBaseSettingsClass) {
+        return parameter.type;
+      }
     }
-    if (lastParameter.type.kind === ts.SyntaxKind.TypeReference) {
-      // without this check, we get incorrect settings types from e.g. controllers which have a different constructor structure  TODO: check for more deviations
-      settingsType = lastParameter.type;
-    }
-  });
-  return settingsType;
+  }
 }
 
 /**
@@ -281,6 +326,43 @@ function getInterestingBaseClass(
       ))
     ) {
       return interestingBaseClass;
+    }
+  }
+  return undefined;
+}
+
+/**
+ * Returns tha name of the closest base class settings type ("$ManagedObjectSettings" | "$EventProviderSettings"
+ * | "$ElementSettings" | "$ControlSettings") - or undefined
+ */
+function getInterestingBaseSettingsClass(
+  type: ts.Type,
+  typeChecker: ts.TypeChecker
+):
+  | "$ManagedObjectSettings"
+  | "$EventProviderSettings"
+  | "$ElementSettings"
+  | "$ControlSettings"
+  | undefined {
+  let interestingBaseSettingsClass =
+    interestingBaseSettingsClasses[
+      typeChecker.getFullyQualifiedName(type.getSymbol())
+    ];
+  if (interestingBaseSettingsClass) {
+    return interestingBaseSettingsClass;
+  }
+  if (!type.isClassOrInterface()) {
+    return;
+  }
+  const baseTypes = typeChecker.getBaseTypes(type);
+  for (let i = 0; i < baseTypes.length; i++) {
+    if (
+      (interestingBaseSettingsClass = getInterestingBaseSettingsClass(
+        baseTypes[i],
+        typeChecker
+      ))
+    ) {
+      return interestingBaseSettingsClass;
     }
   }
   return undefined;

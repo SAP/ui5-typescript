@@ -3,3 +3,7 @@ packages/ts-interface-generator/dist/
 test-packages/
 packages/ts-interface-generator/src/test/testdata/sampleControl/SampleControl.gen.d.ts
 packages/ts-interface-generator/src/test/testdata/sampleControl/SampleControl.ts
+packages/ts-interface-generator/src/test/testdata/sampleManagedObject/SampleManagedObject.gen.d.ts
+packages/ts-interface-generator/src/test/testdata/sampleManagedObject/SampleManagedObject.ts
+packages/ts-interface-generator/src/test/testdata/sampleManagedObject/SampleAnotherManagedObject.gen.d.ts
+packages/ts-interface-generator/src/test/testdata/sampleManagedObject/SampleAnotherManagedObject.ts
