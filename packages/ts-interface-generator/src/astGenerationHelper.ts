@@ -845,18 +845,44 @@ function createTSTypeNode(
     case "string":
       return ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword);
 
+    case "string[]":
+      return ts.createArrayTypeNode(
+        ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+      );
+
     case "int":
     case "float":
       return ts.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword);
 
+    case "int[]":
+    case "float[]":
+      return ts.createArrayTypeNode(
+        ts.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+      );
+
     case "boolean":
       return ts.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword);
+
+    case "boolean[]":
+      return ts.createArrayTypeNode(
+        ts.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword)
+      );
 
     case "object":
       return ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword);
 
+    case "object[]":
+      return ts.createArrayTypeNode(
+        ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+      );
+
     case "any":
       return ts.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword);
+
+    case "any[]": // a kinda strange type, but to be complete, let's cover it
+      return ts.createArrayTypeNode(
+        ts.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword)
+      );
 
     default:
       // UI5 type, something like "sap.ui.core.CSSSize"
