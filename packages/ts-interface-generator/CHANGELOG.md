@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.4.0...@ui5/ts-interface-generator@0.4.1) (2022-03-22)
+
+### Bug Fixes
+
+- **ts-interface-generator:** fix interface not generated when superclass not recognized ([183920f](https://github.com/SAP/ui5-typescript/commit/183920fbb221a30bc0f357d2bf229a6b4f9014a4)), closes [#337](https://github.com/SAP/ui5-typescript/issues/337)
+- **ts-interface-generator:** handle simple type arrays in metadata properly ([9f6ab01](https://github.com/SAP/ui5-typescript/commit/9f6ab01f62044434ada9132510f8ee6e31032250)), closes [#345](https://github.com/SAP/ui5-typescript/issues/345)
+
 # [0.4.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.3.2...@ui5/ts-interface-generator@0.4.0) (2022-01-31)
 
 ### Features
