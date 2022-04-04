@@ -50,6 +50,9 @@ This topic is not covered by samples and documentation yet. While using qunit is
 The "js-with-typescript-support" branch of the "ui5-cap-event-app" project contains an extensive [guide how to add TypeScript-based benefits to an existing JavaScript app](https://github.com/SAP-samples/ui5-cap-event-app/blob/js-with-typescript-support/README.md) without actually switching to TypeScript development.
 
 ### What are the TypeScript projects and releases provided by the UI5 development team?
+
+Type definitions, samples, and various tools. In detail:
+
 UI5 provides *generated* type definitions for the UI5 APIs, which let TypeScript understand all the involved types, so it can do its job. These definitions are provided both for OpenUI5 and for SAPUI5, in two different flavors each. The two flavors are:
 1. the *legacy* type definitions ("ts-types") which allow the (discouraged!) usage of global objects like `sap.ui.Button`. They are not in our focus anymore and receive less support, but may still be needed for old application  projects.
 1. the new type definitions ("ts-types<b>-esm</b>") which require the loading of dependencies as [ES modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) like `import Button from "sap/ui/Button"`, encouraging the use of modern JavaScript language features
@@ -60,9 +63,10 @@ Multiplied out, as result, there are four different type definition packages:
 * [`@sapui5/ts-types-esm`](https://www.npmjs.com/package/@sapui5/ts-types-esm) (SAPUI5, new)
 * [`@sapui5/ts-types`](https://www.npmjs.com/package/@sapui5/ts-types) (SAPUI5, legacy)
 
-The "new OpenUI5" types are also [provided at npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5) because that's the standard name and place to share type definitions and easier to consume. The definition files are identical to `@openui5/ts-types-esm`, but the [versioning *within* a minor release is different](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/openui5/README.md#versioning) (which should not be noticeable, though).
+The "new OpenUI5" types are additionally [provided via npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5) because that's the standard package name and place to share type definitions and easier to consume. These definition files are identical to `@openui5/ts-types-esm`, but the [versioning *within* a minor release](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/openui5/README.md#versioning) and [how the jQuery and QUnit types are referenced](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5#jquery-and-qunit-references-and-their-versions) are slightly different (this should usually not be noticeable, though).
 
-In addition to the samples, tutorials and template generator mentioned elsewhere in this document, in the "[ui5-typescript](https://github.com/SAP/ui5-typescript)" repository, the generator is developed, which creates the UI5 type definitions from the JavaScript implementation and JSDoc as well as other tools (<b>NOTE</b>: the generator code in the repository is currently outdated and will NOT produce the type definitions mentioned above!).
+In addition to the samples, tutorials and template generator mentioned elsewhere in this document, in the "[ui5-typescript](https://github.com/SAP/ui5-typescript)" repository, the generator is developed, which creates the UI5 type definitions from the JavaScript implementation and JSDoc as well as other tools (<b>NOTE</b>: the generator code in the repository is currently outdated and will NOT produce the type definitions mentioned above!).<br>
+For control development in TypeScript, the [control interface generator](https://www.npmjs.com/package/@ui5/ts-interface-generator) is provided.
 
 ### Where to report issues?
 Note that there is no official support guarantee, as the type definitions and code samples are provided "as-is". However, it is in our interest to improve them and fix issues, so please report them:
