@@ -52,9 +52,13 @@ This is the list of available commandline arguments, including the ones above:
 
 ## Limitations
 
-There are limits to what the tool can achieve, trying to find and parse the classes for which it needs to generated an interface.
-
 See the [TODO](#TODO) section for examples of features not yet implemented.
+
+In general, if something does not work, try to make the code structure as close as possible to the sample control in this project because right now only the straight-forward standard case is supported.
+
+### Recognition of Applicable Classes
+
+There are limits to what the tool can achieve, trying to find and parse the classes for which it needs to generated an interface.
 
 Certain requirements need to be fulfilled to make the detection of classes work, for which interfaces need to be generated:
 
@@ -64,7 +68,18 @@ Certain requirements need to be fulfilled to make the detection of classes work,
 
 For detecting whether the required constructor signatures are already present in the class implementation, the constructors must syntactically match the content of the suggested three code lines.
 
-In general, if something does not work, try to make the code structure as close as possible to the sample control in this project because right now only the straight-forward standard case is supported.
+### Second(+)-level Inheritance
+
+When there are at least two levels of custom controls (inheriting from each other), there is the error message: `Class static side 'typeof SomeOtherControl' incorrectly extends base class static side 'typeof MyControl'. The types of 'metadata.properties' are incompatible between these types.`
+
+As a workaround, you can assign a type to the `metadata` field in the parent class. Using type `object` is sufficient, but it can also be more specific:
+
+```ts
+static readonly metadata: object = {
+	...
+```
+
+See [#338](https://github.com/SAP/ui5-typescript/issues/338) for more details.
 
 ## Why?
 
