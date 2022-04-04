@@ -14,6 +14,7 @@ interface ManagedObjectInfo {
     | "Control"
     | undefined;
   constructorSignaturesAvailable: boolean;
+  metadata: ts.PropertyDeclaration[];
 }
 
 interface RequiredImports {

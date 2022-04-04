@@ -114,7 +114,7 @@ function getManagedObjects(
                 throw new Error(
                   "Type '" +
                     typeNode.getText() +
-                    "' in " +
+                    "' referenced in " +
                     sourceFile.fileName +
                     " could not be resolved - are the UI5 (and other) type definitions available and known in the tsconfig? Or is there a different reason why this type would not be known?"
                 );
@@ -130,7 +130,45 @@ function getManagedObjects(
               }
               managedObjectFound = true;
 
-              // ok, we have a ManagedObject/Control; now check whether there is a settings type in the superclass
+              // ok, we have a ManagedObject/Control; now check whether it contains a metadata section, which means that accessor methods need to be generated
+              const metadata: ts.PropertyDeclaration[] = <
+                ts.PropertyDeclaration[]
+              >statement.members.filter((member) => {
+                if (
+                  ts.isPropertyDeclaration(member) &&
+                  ts.isIdentifier(member.name) &&
+                  member.name.escapedText === "metadata" &&
+                  member.modifiers &&
+                  member.modifiers.some((modifier) => {
+                    return modifier.kind === ts.SyntaxKind.StaticKeyword;
+                  })
+                ) {
+                  return true;
+                }
+              });
+              if (!metadata || metadata.length === 0) {
+                // no metadata? => nothing to do
+                log.debug(
+                  `Class ${statement.name ? statement.name.text : ""} in ${
+                    sourceFile.fileName
+                  } inherits from ${interestingBaseClass} but has no metadata. This is not necessarily an issue, but if there is a metadata member in this class which *should* be recognized, make sure it has the 'static' keyword!`
+                );
+                return;
+              } else if (metadata.length > 1) {
+                // no metadata? => nothing to do
+                log.warn(
+                  `ManagedObject with ${
+                    metadata.length
+                  } static metadata members in class ${
+                    statement.name ? statement.name.text : ""
+                  } inside ${
+                    sourceFile.fileName
+                  }. This is unexpected. Ignoring this class.`
+                );
+                return;
+              }
+
+              // now check whether there is a settings type in the superclass
               // (which the generated settings type needs to inherit from)
               // There really should be, because all descendants of ManagedObject should have one!
               let settingsTypeFullName;
@@ -141,13 +179,22 @@ function getManagedObjects(
                 const symbol = settingsType.getSymbol();
                 settingsTypeFullName =
                   typeChecker.getFullyQualifiedName(symbol);
-              } else {
+              } else if (metadata) {
                 throw new Error(
                   `${
                     statement.name ? statement.name.text : ""
-                  } inherits from ${interestingBaseClass} but the parent class ${typeChecker.getFullyQualifiedName(
+                  } inherits from ${interestingBaseClass} and has metadata but the parent class ${typeChecker.getFullyQualifiedName(
                     type.getSymbol()
-                  )} seems to have no settings type`
+                  )} seems to have no settings type. It might have no constructors, this is where the settings type is used.
+
+In case this parent class is also in your project, make sure to add its constructors, then try again. A comment with instructions might be in the console output above.
+Otherwise, you can temporarily remove this file (${
+                    sourceFile.fileName
+                  }) from the project and try again to get the console output with the suggested constructors.
+In any case, you need to make the parent parent class ${typeChecker.getFullyQualifiedName(
+                    type.getSymbol()
+                  )} have constructors with typed settings object to overcome this issue.
+`
                 );
               }
 
@@ -163,6 +210,7 @@ function getManagedObjects(
                 settingsTypeFullName,
                 interestingBaseClass,
                 constructorSignaturesAvailable,
+                metadata,
               });
               return;
             });
@@ -374,14 +422,13 @@ function generateInterface(
   {
     sourceFile,
     className,
-    classDeclaration,
     settingsTypeFullName,
     interestingBaseClass,
     constructorSignaturesAvailable,
+    metadata,
   }: {
     sourceFile: ts.SourceFile;
     className: string;
-    classDeclaration: ts.ClassDeclaration;
     settingsTypeFullName: string;
     interestingBaseClass:
       | "ManagedObject"
@@ -390,45 +437,11 @@ function generateInterface(
       | "Control"
       | undefined;
     constructorSignaturesAvailable: boolean;
+    metadata: ts.PropertyDeclaration[];
   },
   allKnownGlobals: GlobalToModuleMapping
 ) {
   const fileName = sourceFile.fileName;
-  const metadata: ts.PropertyDeclaration[] = <ts.PropertyDeclaration[]>(
-    classDeclaration.members.filter((member) => {
-      if (
-        ts.isPropertyDeclaration(member) &&
-        ts.isIdentifier(member.name) &&
-        member.name.escapedText === "metadata" &&
-        member.modifiers &&
-        member.modifiers.some((modifier) => {
-          return modifier.kind === ts.SyntaxKind.StaticKeyword;
-        })
-      ) {
-        return true;
-      }
-    })
-  );
-  if (!metadata || metadata.length === 0) {
-    // no metadata? => nothing to do
-    log.debug(
-      `ManagedObject with no metadata in class ${className} inside ${fileName}. This is not necessarily an issue, but if there is a metadata member in this class which *should* be recognized, make sure it has the 'static' keyword!`
-    );
-    return;
-  } else if (metadata.length > 1) {
-    // no metadata? => nothing to do
-    log.warn(
-      `ManagedObject with ${metadata.length} static metadata members in class ${className} inside ${fileName}. This is unexpected. Ignoring this class.`
-    );
-    return;
-  }
-
-  if (!metadata[0].initializer) {
-    log.warn(
-      `Class ${className} inside ${fileName} has a static metadata member without initializer. Please assign the metadata object immediately to have an interface generated for the API. Write: 'static readonly metadata = { ... }'`
-    );
-    return;
-  }
 
   // by now we have something that looks pretty much like a ManagedObject metadata object
 
