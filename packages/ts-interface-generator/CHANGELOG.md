@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.4.1...@ui5/ts-interface-generator@0.4.2) (2022-04-04)
+
+### Bug Fixes
+
+- **ts-interface-generator:** fix crash with parent w/o settings type ([c14f042](https://github.com/SAP/ui5-typescript/commit/c14f042d0b96fe7d9e51bf74647982fe36d23622)), closes [#346](https://github.com/SAP/ui5-typescript/issues/346)
+
 ## [0.4.1](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.4.0...@ui5/ts-interface-generator@0.4.1) (2022-03-22)
 
 ### Bug Fixes
