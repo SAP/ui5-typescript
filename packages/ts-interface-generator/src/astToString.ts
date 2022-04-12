@@ -9,7 +9,7 @@ function astToString(ast: ts.Node[]) {
     ts.ScriptKind.TS
   );
   // @ts-ignore this assignment works
-  file.statements = ts.createNodeArray(ast);
+  file.statements = ts.factory.createNodeArray(ast);
 
   // using a *printer* for simplicity; TODO: the TypeScript formatter API would be more appropriate
   const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed });

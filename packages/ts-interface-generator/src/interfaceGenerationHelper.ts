@@ -11,6 +11,8 @@ import {
 import astToString from "./astToString";
 import log from "loglevel";
 
+const factory = ts.factory;
+
 const interestingBaseClasses: {
   [key: string]:
     | "ManagedObject"
@@ -517,11 +519,11 @@ function buildAST(
 
   const statements: ts.Statement[] = getImports(requiredImports);
 
-  const myInterface = ts.createInterfaceDeclaration(
+  const myInterface = factory.createInterfaceDeclaration(
     undefined,
     [
-      ts.createModifier(ts.SyntaxKind.ExportKeyword),
-      ts.createModifier(ts.SyntaxKind.DefaultKeyword),
+      factory.createModifier(ts.SyntaxKind.ExportKeyword),
+      factory.createModifier(ts.SyntaxKind.DefaultKeyword),
     ],
     classInfo.name,
     undefined,
@@ -531,11 +533,11 @@ function buildAST(
   addLineBreakBefore(myInterface, 2);
 
   // assemble the module declaration
-  const module = ts.createModuleDeclaration(
+  const module = factory.createModuleDeclaration(
     [],
-    [ts.createModifier(ts.SyntaxKind.DeclareKeyword)],
-    ts.createStringLiteral("./" + moduleName),
-    ts.createModuleBlock([settingsInterface, myInterface])
+    [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
+    factory.createStringLiteral("./" + moduleName),
+    factory.createModuleBlock([settingsInterface, myInterface])
   );
   if (statements.length > 0) {
     addLineBreakBefore(module, 2);
@@ -544,7 +546,7 @@ function buildAST(
 
   // if needed, assemble the second module declaration
   if (requiredImports.selfIsUsed) {
-    const myInterface2 = ts.createInterfaceDeclaration(
+    const myInterface2 = factory.createInterfaceDeclaration(
       undefined,
       undefined,
       classInfo.name,
@@ -553,11 +555,11 @@ function buildAST(
       methods
     );
 
-    const module2 = ts.createModuleDeclaration(
+    const module2 = factory.createModuleDeclaration(
       [],
-      [ts.createModifier(ts.SyntaxKind.DeclareKeyword)],
-      ts.createStringLiteral("./" + moduleName),
-      ts.createModuleBlock([myInterface2])
+      [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
+      factory.createStringLiteral("./" + moduleName),
+      factory.createModuleBlock([myInterface2])
     );
     addLineBreakBefore(module2, 2);
     ts.addSyntheticLeadingComment(
@@ -581,11 +583,13 @@ function getImports(requiredImports: RequiredImports) {
       continue;
     }
     const singleImport = requiredImports[dependencyName];
-    const localNameIdentifier = ts.createIdentifier(singleImport.localName);
+    const localNameIdentifier = factory.createIdentifier(
+      singleImport.localName
+    );
     const namedImportOriginalNameIdentifier =
       singleImport.exportName &&
       singleImport.localName !== singleImport.exportName
-        ? ts.createIdentifier(singleImport.exportName)
+        ? factory.createIdentifier(singleImport.exportName)
         : undefined;
 
     let importClause;
@@ -594,7 +598,7 @@ function getImports(requiredImports: RequiredImports) {
       let importSpecifier;
       if (parseFloat(ts.version) >= 4.5) {
         // TypeScript API changed incompatibly in 4.5
-        importSpecifier = ts.createImportSpecifier(
+        importSpecifier = factory.createImportSpecifier(
           false /* typeOnly */,
           namedImportOriginalNameIdentifier,
           // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
@@ -602,39 +606,45 @@ function getImports(requiredImports: RequiredImports) {
         );
       } else {
         // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
-        importSpecifier = ts.createImportSpecifier(
+        importSpecifier = factory.createImportSpecifier(
           namedImportOriginalNameIdentifier,
           localNameIdentifier
         );
       }
-      importClause = ts.createImportClause(
+      importClause = factory.createImportClause(
+        false,
         undefined,
-        ts.createNamedImports([importSpecifier])
+        factory.createNamedImports([importSpecifier])
       );
     } else {
-      importClause = ts.createImportClause(
-        ts.createIdentifier(singleImport.localName),
+      importClause = factory.createImportClause(
+        false,
+        factory.createIdentifier(singleImport.localName),
         undefined
       ); // importing the default export, so only the local name matters
     }
 
     imports.push(
-      ts.createImportDeclaration(
+      factory.createImportDeclaration(
         undefined,
         undefined,
         importClause,
-        ts.createStringLiteral(singleImport.moduleName)
+        factory.createStringLiteral(singleImport.moduleName)
       )
     );
   }
 
   if (!imports.length) {
     // this would result in an ambient module declaration which doesn't work for us. Enforce some implementation code to make it non-ambient.
-    const importDeclaration = ts.createImportDeclaration(
+    const importDeclaration = factory.createImportDeclaration(
       undefined,
       undefined,
-      ts.createImportClause(ts.createIdentifier("Core"), undefined),
-      ts.createStringLiteral("sap/ui/core/Core")
+      factory.createImportClause(
+        false,
+        factory.createIdentifier("Core"),
+        undefined
+      ),
+      factory.createStringLiteral("sap/ui/core/Core")
     );
     ts.addSyntheticTrailingComment(
       importDeclaration,

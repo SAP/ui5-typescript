@@ -2,7 +2,7 @@ import ts = require("typescript");
 import astToString from "./astToString";
 import log from "loglevel";
 
-const tsf = ts.factory;
+const factory = ts.factory;
 
 function generateSettingsInterface(
   classInfo: ClassInfo,
@@ -42,12 +42,11 @@ function generateSettingsInterface(
       }
 
       interfaceProperties.push(
-        ts.createPropertySignature(
+        factory.createPropertySignature(
           undefined,
           property.name,
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createUnionTypeNode(propertyTypes),
-          undefined
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createUnionTypeNode(propertyTypes)
         )
       );
     }
@@ -95,15 +94,15 @@ function generateSettingsInterface(
             typesToUse.push(createBindingStringTypeNode());
           }
           aggregationInitializationTypeNode =
-            tsf.createUnionTypeNode(typesToUse);
+            factory.createUnionTypeNode(typesToUse);
         } else {
           // no altTypes
           aggregationInitializationTypeNode = aggregationSingleTypeNode;
         }
       } else {
         // 0..n
-        aggregationInitializationTypeNode = ts.createUnionTypeNode([
-          ts.createArrayTypeNode(aggregationSingleTypeNode), // 1. the type in an array
+        aggregationInitializationTypeNode = factory.createUnionTypeNode([
+          factory.createArrayTypeNode(aggregationSingleTypeNode), // 1. the type in an array
           aggregationSingleTypeNode, // 2. the type as single object
           createTSTypeNode(
             // 3. an aggregation binding info object
@@ -117,12 +116,11 @@ function generateSettingsInterface(
       }
 
       interfaceProperties.push(
-        ts.createPropertySignature(
+        factory.createPropertySignature(
           undefined,
           aggregation.name,
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          aggregationInitializationTypeNode,
-          undefined
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          aggregationInitializationTypeNode
         )
       );
     }
@@ -142,32 +140,31 @@ function generateSettingsInterface(
 
       // allow object and string (=ID) and in case of multiple associations also arrays
       if (association.cardinality === "0..1") {
-        associationInitializationTypeNode = ts.createUnionTypeNode([
+        associationInitializationTypeNode = factory.createUnionTypeNode([
           associationSingleTypeNode,
-          ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         ]);
       } else {
         // 0..n
-        associationInitializationTypeNode = ts.createUnionTypeNode([
+        associationInitializationTypeNode = factory.createUnionTypeNode([
           associationSingleTypeNode,
-          ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-          ts.createArrayTypeNode(
-            ts.createUnionTypeNode([
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+          factory.createArrayTypeNode(
+            factory.createUnionTypeNode([
               associationSingleTypeNode,
-              ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+              factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
             ])
           ),
         ]);
       }
 
-      ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+      factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         interfaceProperties.push(
-          ts.createPropertySignature(
+          factory.createPropertySignature(
             undefined,
             association.name,
-            ts.createToken(ts.SyntaxKind.QuestionToken),
-            associationInitializationTypeNode,
-            undefined
+            factory.createToken(ts.SyntaxKind.QuestionToken),
+            associationInitializationTypeNode
           )
         );
     }
@@ -178,14 +175,14 @@ function generateSettingsInterface(
     const event = classInfo.events[n];
     if (event.visibility !== "hidden") {
       interfaceProperties.push(
-        ts.createPropertySignature(
+        factory.createPropertySignature(
           undefined,
           event.name,
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createFunctionTypeNode(
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createFunctionTypeNode(
             [],
             [
-              ts.createParameter(
+              factory.createParameterDeclaration(
                 undefined,
                 undefined,
                 undefined,
@@ -199,9 +196,8 @@ function generateSettingsInterface(
                 )
               ),
             ],
-            ts.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
-          ),
-          undefined
+            factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
+          )
         )
       );
     }
@@ -228,17 +224,15 @@ function generateSettingsInterface(
     );
   }
 
-  const settingsSuperclass = ts.createIdentifier(localName);
-  const settingsSuperclassAsExpression = ts.createExpressionWithTypeArguments(
-    undefined,
-    settingsSuperclass
-  );
+  const settingsSuperclass = factory.createIdentifier(localName);
+  const settingsSuperclassAsExpression =
+    factory.createExpressionWithTypeArguments(settingsSuperclass, undefined);
   const heritageClauses = [
-    ts.createHeritageClause(ts.SyntaxKind.ExtendsKeyword, [
+    factory.createHeritageClause(ts.SyntaxKind.ExtendsKeyword, [
       settingsSuperclassAsExpression,
     ]),
   ];
-  const myInterface = ts.createInterfaceDeclaration(
+  const myInterface = factory.createInterfaceDeclaration(
     undefined,
     undefined,
     ownSettingsTypeName,
@@ -259,12 +253,15 @@ function generateSettingsInterface(
 
 // creates a template string that matches all binding strings
 function createBindingStringTypeNode() {
-  return tsf.createTemplateLiteralType(tsf.createTemplateHead("{", "{"), [
-    tsf.createTemplateLiteralTypeSpan(
-      tsf.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-      tsf.createTemplateTail("}", "}")
-    ),
-  ]);
+  return factory.createTemplateLiteralType(
+    factory.createTemplateHead("{", "{"),
+    [
+      factory.createTemplateLiteralTypeSpan(
+        factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+        factory.createTemplateTail("}", "}")
+      ),
+    ]
+  );
 }
 
 function printConstructorBlockWarning(
@@ -300,7 +297,10 @@ function generateMethods(
     }
 
     // property getter
-    const getter = ts.createMethodSignature(
+    const getter = factory.createMethodSignature(
+      undefined,
+      property.methods.get,
+      undefined,
       [],
       [],
       createTSTypeNode(
@@ -308,9 +308,7 @@ function generateMethods(
         requiredImports,
         knownGlobals,
         currentClassName
-      ),
-      property.methods.get,
-      undefined
+      )
     );
     addLineBreakBefore(getter, 2);
     ts.addSyntheticLeadingComment(
@@ -322,10 +320,13 @@ function generateMethods(
 
     // property setter
     allMethods.push(
-      ts.createMethodSignature(
+      factory.createMethodSignature(
+        undefined,
+        property.methods.set,
+        undefined,
         [],
         [
-          ts.createParameter(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             undefined,
@@ -339,9 +340,7 @@ function generateMethods(
             )
           ),
         ],
-        ts.createThisTypeNode(),
-        property.methods.set,
-        undefined
+        factory.createThisTypeNode()
       )
     );
   }
@@ -354,11 +353,14 @@ function generateMethods(
     }
 
     // aggregation getter
-    const getter = ts.createMethodSignature(
+    const getter = factory.createMethodSignature(
+      undefined,
+      aggregation.methods.get,
+      undefined,
       [],
       [],
       aggregation.cardinality === "0..n"
-        ? ts.createArrayTypeNode(
+        ? factory.createArrayTypeNode(
             createTSTypeNode(
               aggregation.type,
               requiredImports,
@@ -371,9 +373,7 @@ function generateMethods(
             requiredImports,
             knownGlobals,
             currentClassName
-          ),
-      aggregation.methods.get,
-      undefined
+          )
     );
     addLineBreakBefore(getter, 2);
     ts.addSyntheticLeadingComment(
@@ -386,10 +386,13 @@ function generateMethods(
     if (aggregation.cardinality === "0..n") {
       // add aggregation
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          aggregation.methods.add,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
@@ -403,18 +406,19 @@ function generateMethods(
               )
             ),
           ],
-          ts.createThisTypeNode(),
-          aggregation.methods.add,
-          undefined
+          factory.createThisTypeNode()
         )
       );
 
       // insert aggregation
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          aggregation.methods.insert,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
@@ -427,35 +431,36 @@ function generateMethods(
                 currentClassName
               )
             ),
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
               "index",
               undefined,
-              ts.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+              factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
             ),
           ],
-          ts.createThisTypeNode(),
-          aggregation.methods.insert,
-          undefined
+          factory.createThisTypeNode()
         )
       );
 
       // remove aggregation
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          aggregation.methods.remove,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
               n,
               undefined,
-              ts.createUnionTypeNode([
-                ts.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
-                ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+              factory.createUnionTypeNode([
+                factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
+                factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
                 createTSTypeNode(
                   aggregation.type,
                   requiredImports,
@@ -465,36 +470,38 @@ function generateMethods(
               ])
             ),
           ],
-          ts.createThisTypeNode(),
-          aggregation.methods.remove,
-          undefined
+          factory.createThisTypeNode()
         )
       );
 
       // remove all aggregation
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          aggregation.methods.removeAll,
+          undefined,
           [],
           [],
-          ts.createArrayTypeNode(
+          factory.createArrayTypeNode(
             createTSTypeNode(
               aggregation.type,
               requiredImports,
               knownGlobals,
               currentClassName
             )
-          ),
-          aggregation.methods.removeAll,
-          undefined
+          )
         )
       );
 
       // index of aggregation
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          aggregation.methods.indexOf,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
@@ -508,9 +515,7 @@ function generateMethods(
               )
             ),
           ],
-          ts.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
-          aggregation.methods.indexOf,
-          undefined
+          factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
         )
       );
 
@@ -519,10 +524,13 @@ function generateMethods(
     } else {
       // set aggregation
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          aggregation.methods.set,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
@@ -536,31 +544,33 @@ function generateMethods(
               )
             ),
           ],
-          ts.createThisTypeNode(),
-          aggregation.methods.set,
-          undefined
+          factory.createThisTypeNode()
         )
       );
     }
 
     // destroy aggregation
     allMethods.push(
-      ts.createMethodSignature(
-        [],
-        [],
-        ts.createThisTypeNode(),
+      factory.createMethodSignature(
+        undefined,
         aggregation.methods.destroy,
-        undefined
+        undefined,
+        [],
+        [],
+        factory.createThisTypeNode()
       )
     );
 
     if (aggregation.bindable) {
       // bind aggregation
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          aggregation.methods.bind,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
@@ -574,20 +584,19 @@ function generateMethods(
               )
             ),
           ],
-          ts.createThisTypeNode(),
-          aggregation.methods.bind,
-          undefined
+          factory.createThisTypeNode()
         )
       );
 
       // unbind aggregation
       allMethods.push(
-        ts.createMethodSignature(
-          [],
-          [],
-          ts.createThisTypeNode(),
+        factory.createMethodSignature(
+          undefined,
           aggregation.methods.unbind,
-          undefined
+          undefined,
+          [],
+          [],
+          factory.createThisTypeNode()
         )
       );
     }
@@ -601,16 +610,17 @@ function generateMethods(
     }
 
     // association getter
-    const getter = ts.createMethodSignature(
+    const getter = factory.createMethodSignature(
+      undefined,
+      association.methods.get,
+      undefined,
       [],
       [],
       association.cardinality === "0..n"
-        ? ts.createArrayTypeNode(
-            ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+        ? factory.createArrayTypeNode(
+            factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
           )
-        : ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-      association.methods.get,
-      undefined
+        : factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
     );
     addLineBreakBefore(getter, 2);
     ts.addSyntheticLeadingComment(
@@ -624,17 +634,20 @@ function generateMethods(
     if (association.cardinality === "0..1") {
       // set association
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          association.methods.set,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
               n,
-              ts.createToken(ts.SyntaxKind.QuestionToken),
-              ts.createUnionTypeNode([
-                ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+              factory.createToken(ts.SyntaxKind.QuestionToken),
+              factory.createUnionTypeNode([
+                factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
                 createTSTypeNode(
                   association.type,
                   requiredImports,
@@ -644,9 +657,7 @@ function generateMethods(
               ])
             ),
           ],
-          ts.createThisTypeNode(),
-          association.methods.set,
-          undefined
+          factory.createThisTypeNode()
         )
       );
     } else {
@@ -654,17 +665,20 @@ function generateMethods(
 
       // add association
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          association.methods.add,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
               n,
               undefined,
-              ts.createUnionTypeNode([
-                ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+              factory.createUnionTypeNode([
+                factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
                 createTSTypeNode(
                   association.type,
                   requiredImports,
@@ -674,26 +688,27 @@ function generateMethods(
               ])
             ),
           ],
-          ts.createThisTypeNode(),
-          association.methods.add,
-          undefined
+          factory.createThisTypeNode()
         )
       );
 
       // remove association
       allMethods.push(
-        ts.createMethodSignature(
+        factory.createMethodSignature(
+          undefined,
+          association.methods.remove,
+          undefined,
           [],
           [
-            ts.createParameter(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               undefined,
               n,
               undefined,
-              ts.createUnionTypeNode([
-                ts.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
-                ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+              factory.createUnionTypeNode([
+                factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
+                factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
                 createTSTypeNode(
                   association.type,
                   requiredImports,
@@ -703,22 +718,21 @@ function generateMethods(
               ])
             ),
           ],
-          ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-          association.methods.remove,
-          undefined
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
         )
       );
 
       // remove all aggregation
       allMethods.push(
-        ts.createMethodSignature(
-          [],
-          [],
-          ts.createArrayTypeNode(
-            ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
-          ),
+        factory.createMethodSignature(
+          undefined,
           association.methods.removeAll,
-          undefined
+          undefined,
+          [],
+          [],
+          factory.createArrayTypeNode(
+            factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+          )
         )
       );
     }
@@ -732,10 +746,10 @@ function generateMethods(
     }
 
     // attach event
-    const callback = ts.createFunctionTypeNode(
+    const callback = factory.createFunctionTypeNode(
       [],
       [
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
@@ -749,12 +763,15 @@ function generateMethods(
           )
         ),
       ],
-      ts.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
+      factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
     );
-    const attach = ts.createMethodSignature(
+    const attach = factory.createMethodSignature(
+      undefined,
+      event.methods.attach,
+      undefined,
       [],
       [
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
@@ -762,18 +779,16 @@ function generateMethods(
           undefined,
           callback
         ),
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
           "listener",
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
         ),
       ],
-      ts.createThisTypeNode(),
-      event.methods.attach,
-      undefined
+      factory.createThisTypeNode()
     );
     addLineBreakBefore(attach, 2);
     ts.addSyntheticLeadingComment(
@@ -784,10 +799,10 @@ function generateMethods(
     allMethods.push(attach);
 
     // attach event (with data)
-    const callbackWithData = ts.createFunctionTypeNode(
+    const callbackWithData = factory.createFunctionTypeNode(
       [],
       [
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
@@ -800,35 +815,38 @@ function generateMethods(
             currentClassName
           )
         ),
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
           "data",
           undefined,
-          ts.createTypeReferenceNode("CustomDataType")
+          factory.createTypeReferenceNode("CustomDataType")
         ),
       ],
-      ts.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
+      factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
     );
     allMethods.push(
-      ts.createMethodSignature(
+      factory.createMethodSignature(
+        undefined,
+        event.methods.attach,
+        undefined,
         [
-          ts.createTypeParameterDeclaration(
+          factory.createTypeParameterDeclaration(
             "CustomDataType",
-            ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+            factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
           ),
         ],
         [
-          ts.createParameter(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             undefined,
             "data",
             undefined,
-            ts.createTypeReferenceNode("CustomDataType")
+            factory.createTypeReferenceNode("CustomDataType")
           ),
-          ts.createParameter(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             undefined,
@@ -836,27 +854,28 @@ function generateMethods(
             undefined,
             callbackWithData
           ),
-          ts.createParameter(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             undefined,
             "listener",
-            ts.createToken(ts.SyntaxKind.QuestionToken),
-            ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+            factory.createToken(ts.SyntaxKind.QuestionToken),
+            factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
           ),
         ],
-        ts.createThisTypeNode(),
-        event.methods.attach,
-        undefined
+        factory.createThisTypeNode()
       )
     );
 
     // detach event
     allMethods.push(
-      ts.createMethodSignature(
+      factory.createMethodSignature(
+        undefined,
+        event.methods.detach,
+        undefined,
         [],
         [
-          ts.createParameter(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             undefined,
@@ -864,39 +883,38 @@ function generateMethods(
             undefined,
             callback
           ),
-          ts.createParameter(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             undefined,
             "listener",
-            ts.createToken(ts.SyntaxKind.QuestionToken),
-            ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+            factory.createToken(ts.SyntaxKind.QuestionToken),
+            factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
           ),
         ],
-        ts.createThisTypeNode(),
-        event.methods.detach,
-        undefined
+        factory.createThisTypeNode()
       )
     );
 
     // fire event
     allMethods.push(
-      ts.createMethodSignature(
+      factory.createMethodSignature(
+        undefined,
+        event.methods.fire,
+        undefined,
         [],
         [
           // TODO: describe parameter object with all details
-          ts.createParameter(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             undefined,
             "parameters",
-            ts.createToken(ts.SyntaxKind.QuestionToken),
-            ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+            factory.createToken(ts.SyntaxKind.QuestionToken),
+            factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
           ),
         ],
-        ts.createThisTypeNode(),
-        event.methods.fire,
-        undefined
+        factory.createThisTypeNode()
       )
     );
   }
@@ -909,53 +927,53 @@ function createTSTypeNode(
   requiredImports: RequiredImports,
   knownGlobals: GlobalToModuleMapping,
   currentClassName: string
-) {
+): ts.TypeNode {
   switch (typeName) {
     case "string":
-      return ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword);
+      return factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword);
 
     case "string[]":
-      return ts.createArrayTypeNode(
-        ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+      return factory.createArrayTypeNode(
+        factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
       );
 
     case "int":
     case "float":
-      return ts.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword);
+      return factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword);
 
     case "int[]":
     case "float[]":
-      return ts.createArrayTypeNode(
-        ts.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+      return factory.createArrayTypeNode(
+        factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
       );
 
     case "boolean":
-      return ts.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword);
+      return factory.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword);
 
     case "boolean[]":
-      return ts.createArrayTypeNode(
-        ts.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword)
+      return factory.createArrayTypeNode(
+        factory.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword)
       );
 
     case "object":
-      return ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword);
+      return factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword);
 
     case "object[]":
-      return ts.createArrayTypeNode(
-        ts.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+      return factory.createArrayTypeNode(
+        factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
       );
 
     case "any":
-      return ts.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword);
+      return factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword);
 
     case "any[]": // a kinda strange type, but to be complete, let's cover it
-      return ts.createArrayTypeNode(
-        ts.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword)
+      return factory.createArrayTypeNode(
+        factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword)
       );
 
     default:
       // UI5 type, something like "sap.ui.core.CSSSize"
-      return ts.createTypeReferenceNode(
+      return factory.createTypeReferenceNode(
         uniqueImport(typeName, requiredImports, knownGlobals, currentClassName)
       );
   }
@@ -1046,19 +1064,19 @@ function createConstructorBlock(settingsTypeName: string) {
   // This creates:
   //   constructor(id?: string | $SampleControlSettings);
   nodes.push(
-    ts.createConstructor(
+    factory.createConstructorDeclaration(
       undefined,
       undefined,
       [
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
           "idOrSettings",
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createUnionTypeNode([
-            ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-            ts.createTypeReferenceNode(settingsTypeName),
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createUnionTypeNode([
+            factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+            factory.createTypeReferenceNode(settingsTypeName),
           ])
         ),
       ],
@@ -1069,25 +1087,25 @@ function createConstructorBlock(settingsTypeName: string) {
   // This creates:
   //   constructor(id?: string, settings?: $SampleControlSettings);
   nodes.push(
-    ts.createConstructor(
+    factory.createConstructorDeclaration(
       undefined,
       undefined,
       [
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
           "id",
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
         ),
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
           "settings",
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createTypeReferenceNode(settingsTypeName)
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createTypeReferenceNode(settingsTypeName)
         ),
       ],
       undefined
@@ -1099,32 +1117,32 @@ function createConstructorBlock(settingsTypeName: string) {
   //      super(id, settings);
   //   }
   nodes.push(
-    ts.createConstructor(
+    factory.createConstructorDeclaration(
       undefined,
       undefined,
       [
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
           "id",
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
         ),
-        ts.createParameter(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           undefined,
           "settings",
-          ts.createToken(ts.SyntaxKind.QuestionToken),
-          ts.createTypeReferenceNode(settingsTypeName)
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createTypeReferenceNode(settingsTypeName)
         ),
       ],
-      ts.createBlock([
-        ts.createExpressionStatement(
-          ts.createCall(ts.createSuper(), undefined, [
-            ts.createIdentifier("id"),
-            ts.createIdentifier("settings"),
+      factory.createBlock([
+        factory.createExpressionStatement(
+          factory.createCallExpression(factory.createSuper(), undefined, [
+            factory.createIdentifier("id"),
+            factory.createIdentifier("settings"),
           ])
         ),
       ])
