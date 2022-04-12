@@ -19,6 +19,7 @@ export default class SampleControl extends Button {
 		aggregations: {
 			content: { multiple: true, type: "sap.ui.core.Control", bindable: true },
 			header: { multiple: false, type: "sap.ui.core.Control" },
+			tooltip: { multiple: false, type: "sap.ui.core.TooltipBase", altTypes : ["string"]}
 		},
 		associations: {
 			partnerControl: "SampleControl",

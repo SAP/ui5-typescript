@@ -2,6 +2,8 @@ import ts = require("typescript");
 import astToString from "./astToString";
 import log from "loglevel";
 
+const tsf = ts.factory;
+
 function generateSettingsInterface(
   classInfo: ClassInfo,
   classFileName: string,
@@ -17,17 +19,34 @@ function generateSettingsInterface(
   for (const n in classInfo.properties) {
     const property = classInfo.properties[n];
     if (property.visibility !== "hidden") {
+      const propertyTypes: ts.TypeNode[] = [
+        // allowed types: 1. the actual type, ...
+        createTSTypeNode(
+          property.type,
+          requiredImports,
+          knownGlobals,
+          currentClassName
+        ),
+        createTSTypeNode(
+          // 2. a binding info object...
+          "sap.ui.base.ManagedObject.PropertyBindingInfo",
+          requiredImports,
+          knownGlobals,
+          currentClassName
+        ),
+      ];
+
+      if (property.type !== "string") {
+        // ...and if "string" is not allowed, anyway, then:
+        propertyTypes.push(createBindingStringTypeNode()); // 3. a binding string
+      }
+
       interfaceProperties.push(
         ts.createPropertySignature(
           undefined,
           property.name,
           ts.createToken(ts.SyntaxKind.QuestionToken),
-          createTSTypeNode(
-            property.type,
-            requiredImports,
-            knownGlobals,
-            currentClassName
-          ),
+          ts.createUnionTypeNode(propertyTypes),
           undefined
         )
       );
@@ -48,12 +67,52 @@ function generateSettingsInterface(
       );
 
       if (aggregation.cardinality === "0..1") {
-        aggregationInitializationTypeNode = aggregationSingleTypeNode;
+        if (
+          Array.isArray(aggregation.altTypes) &&
+          aggregation.altTypes.length > 0
+        ) {
+          const typesToUse: ts.TypeNode[] = [
+            aggregationSingleTypeNode,
+            createTSTypeNode(
+              // add first altType as alternative - only ONE is supported by UI5
+              aggregation.altTypes[0],
+              requiredImports,
+              knownGlobals,
+              currentClassName
+            ),
+          ];
+          typesToUse.push(
+            createTSTypeNode(
+              // altType can be bound via property binding
+              "sap.ui.base.ManagedObject.PropertyBindingInfo",
+              requiredImports,
+              knownGlobals,
+              currentClassName
+            )
+          );
+          if (aggregation.altTypes[0] !== "string") {
+            // if "string" is not anyway allowed, also allow binding strings
+            typesToUse.push(createBindingStringTypeNode());
+          }
+          aggregationInitializationTypeNode =
+            tsf.createUnionTypeNode(typesToUse);
+        } else {
+          // no altTypes
+          aggregationInitializationTypeNode = aggregationSingleTypeNode;
+        }
       } else {
         // 0..n
         aggregationInitializationTypeNode = ts.createUnionTypeNode([
-          ts.createArrayTypeNode(aggregationSingleTypeNode),
-          aggregationSingleTypeNode,
+          ts.createArrayTypeNode(aggregationSingleTypeNode), // 1. the type in an array
+          aggregationSingleTypeNode, // 2. the type as single object
+          createTSTypeNode(
+            // 3. an aggregation binding info object
+            "sap.ui.base.ManagedObject.AggregationBindingInfo",
+            requiredImports,
+            knownGlobals,
+            currentClassName
+          ),
+          createBindingStringTypeNode(), // 4. a binding string
         ]);
       }
 
@@ -196,6 +255,16 @@ function generateSettingsInterface(
   );
   addLineBreakBefore(myInterface);
   return myInterface;
+}
+
+// creates a template string that matches all binding strings
+function createBindingStringTypeNode() {
+  return tsf.createTemplateLiteralType(tsf.createTemplateHead("{", "{"), [
+    tsf.createTemplateLiteralTypeSpan(
+      tsf.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+      tsf.createTemplateTail("}", "}")
+    ),
+  ]);
 }
 
 function printConstructorBlockWarning(

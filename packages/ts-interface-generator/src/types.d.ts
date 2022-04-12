@@ -47,7 +47,7 @@ interface Property extends APIMemberWithMethods, APIMemberWithType {
 
 interface Aggregation extends APIMemberWithMethods, APIMemberWithType {
   cardinality: "0..1" | "0..n";
-  altTypes: string;
+  altTypes: [string];
   //dnd: any,
   singularName: string;
   bindable: boolean;

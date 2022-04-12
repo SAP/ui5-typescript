@@ -47,7 +47,9 @@ test("Generating the interface for a sample control", () => {
 const expected = `import { CSSColor } from "sap/ui/core/library";
 import Control from "sap/ui/core/Control";
 import { AggregationBindingInfo } from "sap/ui/base/ManagedObject";
+import TooltipBase from "sap/ui/core/TooltipBase";
 import Event from "sap/ui/base/Event";
+import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $ButtonSettings } from "sap/m/Button";
 
 declare module "./SampleControl" {
@@ -56,10 +58,11 @@ declare module "./SampleControl" {
      * Interface defining the settings object used in constructor calls
      */
     interface $SampleControlSettings extends $ButtonSettings {
-        subtext?: string;
-        textColor?: CSSColor;
-        content?: Control[] | Control;
+        subtext?: string | PropertyBindingInfo;
+        textColor?: CSSColor | PropertyBindingInfo | \`{\${string}}\`;
+        content?: Control[] | Control | AggregationBindingInfo | \`{\${string}}\`;
         header?: Control;
+        tooltip?: TooltipBase | string | PropertyBindingInfo;
         partnerControl?: SampleControl | string;
         alsoLabelledBy?: Control | string | (Control | string)[];
         doublePress?: (event: Event) => void;
@@ -90,6 +93,11 @@ declare module "./SampleControl" {
         getHeader(): Control;
         setHeader(header: Control): this;
         destroyHeader(): this;
+
+        // aggregation: tooltip
+        getTooltip(): TooltipBase;
+        setTooltip(tooltip: TooltipBase): this;
+        destroyTooltip(): this;
 
         // association: partnerControl
         getPartnerControl(): string;
@@ -136,6 +144,11 @@ declare module "./SampleControl" {
         getHeader(): Control;
         setHeader(header: Control): this;
         destroyHeader(): this;
+
+        // aggregation: tooltip
+        getTooltip(): TooltipBase;
+        setTooltip(tooltip: TooltipBase): this;
+        destroyTooltip(): this;
 
         // association: partnerControl
         getPartnerControl(): string;

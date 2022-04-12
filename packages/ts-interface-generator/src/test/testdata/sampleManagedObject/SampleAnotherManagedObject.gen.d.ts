@@ -1,3 +1,4 @@
+import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $SampleManagedObjectSettings } from "./SampleManagedObject";
 
 declare module "./SampleAnotherManagedObject" {
@@ -6,7 +7,7 @@ declare module "./SampleAnotherManagedObject" {
      * Interface defining the settings object used in constructor calls
      */
     interface $SampleAnotherManagedObjectSettings extends $SampleManagedObjectSettings {
-        anotherTest?: number;
+        anotherTest?: number | PropertyBindingInfo | `{${string}}`;
     }
 
     export default interface SampleAnotherManagedObject {
