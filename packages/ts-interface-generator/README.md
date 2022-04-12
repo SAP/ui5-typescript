@@ -103,7 +103,6 @@ Oh, and the tool itself is implemented in TypeScript because TypeScript makes de
 
 ## TODO
 
-- Allow binding strings in addition to objects of the correct type in the constructor settings objects
 - copy the original API documentation to the generated methods
 - make sure watch mode does it right (also run on deletion? Delete interfaces before-creating? Only create interfaces for updated files?)
 - consider further information like deprecation etc.
