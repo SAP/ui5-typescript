@@ -1030,7 +1030,9 @@ function uniqueImport(
         exportName: undefined, // FIXME
       };
       log.warn(
-        `For the type '${typeName}' an import is created with module name '${moduleName}', using its default export. Is this correct?`
+        `For the type '${typeName}' an import is created with module name '${moduleName}', using its default export. Is this correct?
+Usually this indicates some kind of issue. Maybe this import will also show up as error in your code editor.
+The cause of this could be that the type '${typeName}' is referenced somewhere in Class '${currentClassName}', but is mis-spelled or does actually not exist.`
       );
     }
   }
