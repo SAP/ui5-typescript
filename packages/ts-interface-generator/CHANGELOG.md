@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.4.2...@ui5/ts-interface-generator@0.5.0) (2022-04-22)
+
+### Bug Fixes
+
+- **ts-interface-generator:** avoid name clash of settings type ([853603e](https://github.com/SAP/ui5-typescript/commit/853603e653737f9bc9e66531f9327b6734812eae)), closes [#351](https://github.com/SAP/ui5-typescript/issues/351)
+
+### Features
+
+- **ts-interface-generator:** allow binding strings and objects in constructor; support altTypes ([7cb5e04](https://github.com/SAP/ui5-typescript/commit/7cb5e04527ff7c725acf5f9e2972972616b00f45)), closes [#348](https://github.com/SAP/ui5-typescript/issues/348)
+
 ## [0.4.2](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.4.1...@ui5/ts-interface-generator@0.4.2) (2022-04-04)
 
 ### Bug Fixes
