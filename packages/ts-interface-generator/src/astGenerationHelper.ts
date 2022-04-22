@@ -203,7 +203,11 @@ function generateSettingsInterface(
     }
   }
 
-  const ownSettingsTypeName = "$" + classInfo.name + "Settings";
+  let ownSettingsTypeName = "$" + classInfo.name + "Settings";
+  if (settingsTypeFullName.endsWith(ownSettingsTypeName)) {
+    // name clash
+    ownSettingsTypeName += "_1"; // append suffix to make the name unique
+  }
 
   const localName = uniqueImport(
     settingsTypeFullName,
