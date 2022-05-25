@@ -7,6 +7,7 @@ import {
   generateMethods,
   generateSettingsInterface,
   addLineBreakBefore,
+  generateGenericTypeImports,
 } from "./astGenerationHelper";
 import astToString from "./astToString";
 import log from "loglevel";
@@ -42,6 +43,8 @@ const interestingBaseSettingsClasses: {
   '"sap/ui/core/Element".$UI5ElementSettings': "$ElementSettings",
   '"sap/ui/core/Control".$ControlSettings': "$ControlSettings",
 };
+
+const interfaceIncompatibleModifiers = new Set([ts.SyntaxKind.AbstractKeyword]);
 
 /**
  * Checks the given source file for any classes derived from sap.ui.base.ManagedObject and generates for each one an interface file next to the source file
@@ -424,6 +427,7 @@ function generateInterface(
   {
     sourceFile,
     className,
+    classDeclaration,
     settingsTypeFullName,
     interestingBaseClass,
     constructorSignaturesAvailable,
@@ -431,6 +435,7 @@ function generateInterface(
   }: {
     sourceFile: ts.SourceFile;
     className: string;
+    classDeclaration: ts.ClassDeclaration;
     settingsTypeFullName: string;
     interestingBaseClass:
       | "ManagedObject"
@@ -479,7 +484,8 @@ function generateInterface(
   const moduleName = path.basename(fileName, path.extname(fileName));
   const ast = buildAST(
     classInfo,
-    sourceFile.fileName,
+    sourceFile,
+    classDeclaration,
     constructorSignaturesAvailable,
     moduleName,
     settingsTypeFullName,
@@ -495,12 +501,15 @@ function generateInterface(
 
 function buildAST(
   classInfo: ClassInfo,
-  classFileName: string,
+  sourceFile: ts.SourceFile,
+  classDeclaration: ts.ClassDeclaration,
   constructorSignaturesAvailable: boolean,
   moduleName: string,
   settingsTypeFullName: string,
   allKnownGlobals: GlobalToModuleMapping
 ) {
+  const { fileName: classFileName } = sourceFile;
+
   const requiredImports: RequiredImports = {};
   const methods = generateMethods(classInfo, requiredImports, allKnownGlobals);
   if (methods.length === 0) {
@@ -519,14 +528,24 @@ function buildAST(
 
   const statements: ts.Statement[] = getImports(requiredImports);
 
+  const requiredGenericTypeImports = generateGenericTypeImports(
+    sourceFile,
+    classDeclaration,
+    statements,
+    requiredImports
+  );
+
+  if (requiredGenericTypeImports.length > 0) {
+    statements.push(...requiredGenericTypeImports);
+  }
+
   const myInterface = factory.createInterfaceDeclaration(
     undefined,
-    [
-      factory.createModifier(ts.SyntaxKind.ExportKeyword),
-      factory.createModifier(ts.SyntaxKind.DefaultKeyword),
-    ],
+    classDeclaration.modifiers?.filter(
+      (modifier) => !interfaceIncompatibleModifiers.has(modifier.kind)
+    ),
     classInfo.name,
-    undefined,
+    classDeclaration.typeParameters,
     undefined,
     methods
   );
