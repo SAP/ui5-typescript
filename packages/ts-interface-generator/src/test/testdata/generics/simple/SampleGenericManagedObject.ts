@@ -14,4 +14,7 @@ export default class SampleGenericManagedObject<
       },
     },
   };
+
+  private _options: TOptions;
+  private _options2: TOptions2;
 }

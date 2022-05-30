@@ -319,7 +319,12 @@ function generateGenericTypeImports(
       if (nameIsUsed(typeName, requiredImports)) {
         // import is already created
         continue;
-      } else if (existingImportsInSourceFile.hasOwnProperty(typeName)) {
+      } else if (
+        Object.prototype.hasOwnProperty.call(
+          existingImportsInSourceFile,
+          typeName
+        )
+      ) {
         const { statement, exportName } = existingImportsInSourceFile[typeName];
 
         const moduleName = statement.moduleSpecifier.getText();
@@ -346,13 +351,14 @@ function generateGenericTypeImports(
 
           // TODO: Use a method to check for versions
           if (parseFloat(ts.version) >= 4.5) {
+            // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
             importSpecifier = factory.createImportSpecifier(
               true,
               propertyName,
               typeNameIdentifier
             );
           } else {
-            // @ts-ignore
+            // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
             importSpecifier = factory.createImportSpecifier(
               propertyName,
               typeNameIdentifier

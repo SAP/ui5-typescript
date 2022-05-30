@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-types, @typescript-eslint/no-explicit-any */
+
 import ManagedObject from "sap/ui/base/ManagedObject";
-import UIComponent, { $UIComponentSettings } from "sap/ui/core/UIComponent";
+import { $UIComponentSettings } from "sap/ui/core/UIComponent";
 import Component, {
   $ComponentSettings as $RenamedComponentSettings,
 } from "sap/ui/core/Component";
@@ -21,6 +23,8 @@ export default class SampleGenericManagedObject<
     },
   };
 
+  private _uiComponentSettings: TOptions;
+  private _componentSettings: TOptions2;
   private _component: TOptions3;
-  private _uiComponent: UIComponent;
+  private _any: TOptions4;
 }
