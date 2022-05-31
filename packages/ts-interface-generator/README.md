@@ -106,34 +106,35 @@ Oh, and the tool itself is implemented in TypeScript because TypeScript makes de
 ### Handling `default` and named exports
 
 In order that the Declaration Merging of TypeScript works, the modifiers of the generated interface has to match the parsed UI5 artifact.
-
-```typescript
-export class MyCustomControl extends Control {
+- **Named export:**
+  ```typescript
+  export class MyCustomControl extends Control {
 	...
-}
-```
+  }
+  ```
 
-becomes
+  becomes
 
-```typescript
-export interface MyCustomControl {
+  ```typescript
+  export interface MyCustomControl {
 	...
-}
-```
+  }
+  ```
 
-```typescript
-export default abstract class MyAbstractControl extends Control {
+- **Default export:**
+  ```typescript
+  export default abstract class MyAbstractControl extends Control {
 	...
-}
-```
+  }
+  ```
 
-becomes
+  becomes
 
-```typescript
-export default interface MyAbstractControl {
+  ```typescript
+  export default interface MyAbstractControl {
 	...
-}
-```
+  }
+  ```
 
 ### Generics
 
