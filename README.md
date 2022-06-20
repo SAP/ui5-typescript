@@ -14,6 +14,7 @@ This page provides an overview of all official TypeScript-related resources in t
 - [How to profit from TypeScript even when doing plain JavaScript development?](#how-to-profit-from-typescript-even-when-doing-plain-javascript-development)
 - [What are the TypeScript projects and releases provided by the UI5 development team?](#what-are-the-typescript-projects-and-releases-provided-by-the-ui5-development-team)
 - [Where to report issues? What is the support status?](#where-to-report-issues)
+- [What does it mean that the type definitions are "in experimental beta state"?](#what-does-it-mean-that-the-type-definitions-are-in-experimental-beta-state)
 - [What is the future roadmap for TypeScript in UI5?](#what-is-the-future-roadmap-for-typescript-in-ui5)
 
 
@@ -75,6 +76,11 @@ Note that there is no official support guarantee, as the type definitions and co
 * However, when those issues are clearly coming from missing or wrong API documentation within OpenUI5, they can be [reported as OpenUI5 issues](https://github.com/SAP/openui5/blob/master/CONTRIBUTING.md#report-an-issue). However, not all typing constructs of TypeScript can be expressed as JSDoc and converted to TypeScript by our generator (e.g. adding generics), so this should be mainly done for straightforward cases.
 
 
+### What does it mean that the type definitions are "in experimental beta state"?
+
+It means that we might make changes which require adaptation on your side after consuming updated type definitions. But don't let this statement make you shy away from using them! The needed adaptations will not be large and there isn't going to be a lot of difference once the types are no longer called "beta": there will be no 100% compatibility guarantee either. So basically the type definitions are ready for use.<br>
+Find all the details [here](beta-statement.md).
+
 ### What is the future roadmap for TypeScript in UI5?
 The current focus is on working on the unfinished corners, like providing better support and guidance for topics like testing, but also on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.
 
@@ -92,7 +98,7 @@ The current focus is on working on the unfinished corners, like providing better
 * Blog post by Lena Hammerer: [Full Stack TypeScript App for Cloud Foundry – Sample Repository](https://blogs.sap.com/2021/12/09/full-stack-typescript-app-for-cloud-foundry-sample-repository/), including a complete [sample app on GitHub](https://github.com/SAP-samples/btp-full-stack-typescript-app), which uses the SAP Cloud Application Programming Model (CAP) for Node.js.
 ## Status
 
-The type definitions provided for UI5 are in an experimental **_Beta State_**. Significant changes are likely to occur, including potential **breaking changes**.
+The type definitions provided for UI5 are in an experimental **_Beta State_**. Significant changes can occur, including potential **breaking changes**. See the respective section above for details.
 
 ## Support
 
