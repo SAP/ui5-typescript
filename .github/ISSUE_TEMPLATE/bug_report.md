@@ -20,4 +20,4 @@ A clear and concise description of what the bug is.
 A clear and concise description of what you expected to happen.
 
 **Additional context**
-Add any other context about the problem here.
+Add any other context about the problem here, e.g. whether the issue is only/not present in the `-esm` flavor of the UI5 type definitions and in which version of the type definitions it is.
