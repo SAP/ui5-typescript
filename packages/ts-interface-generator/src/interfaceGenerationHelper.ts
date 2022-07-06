@@ -157,7 +157,7 @@ function getManagedObjects(
                 );
                 return;
               } else if (metadata.length > 1) {
-                // no metadata? => nothing to do
+                // more than one metadata block??
                 log.warn(
                   `ManagedObject with ${
                     metadata.length

@@ -967,6 +967,16 @@ function createTSTypeNode(
         factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
       );
 
+    case "function":
+      return factory.createTypeReferenceNode(
+        factory.createIdentifier("Function")
+      );
+
+    case "function[]":
+      return factory.createArrayTypeNode(
+        factory.createTypeReferenceNode(factory.createIdentifier("Function"))
+      );
+
     case "any":
       return factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword);
 
