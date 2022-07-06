@@ -986,10 +986,30 @@ function createTSTypeNode(
       );
 
     default:
-      // UI5 type, something like "sap.ui.core.CSSSize"
-      return factory.createTypeReferenceNode(
-        uniqueImport(typeName, requiredImports, knownGlobals, currentClassName)
-      );
+      // UI5 type
+      if (typeName.endsWith("[]")) {
+        // rare case: an array thereof, something like "sap.ui.core.CSSSize[]"
+        return factory.createArrayTypeNode(
+          factory.createTypeReferenceNode(
+            uniqueImport(
+              typeName.slice(0, -2).trim(),
+              requiredImports,
+              knownGlobals,
+              currentClassName
+            )
+          )
+        );
+      } else {
+        // common case: something like "sap.ui.core.CSSSize"
+        return factory.createTypeReferenceNode(
+          uniqueImport(
+            typeName,
+            requiredImports,
+            knownGlobals,
+            currentClassName
+          )
+        );
+      }
   }
 }
 
