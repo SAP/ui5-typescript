@@ -168,6 +168,17 @@ function getManagedObjects(
                   }. This is unexpected. Ignoring this class.`
                 );
                 return;
+              } else if (!metadata[0].initializer) {
+                // exactly one "metadata" declaration, BUT not initialized with the actual metadata value
+                // this may mean that someone accidentally wrote "metadata: {...}" instead of "metadata = {...}", which is syntactically correct,
+                // but assigns a type structure, not a value. This would fail at runtime, as none of the intended API declarations work, but before
+                // failing at runtime, it would fail here in the generator, which later on tries to access the data. So let's warn the user.
+                log.warn(
+                  `Inside file ${sourceFile.fileName}${
+                    statement.name ? " in class " + statement.name.text : ""
+                  } there is a metadata declaration without a value. Did you accidentally write "metadata: ..." instead of "metadata = ..."?`
+                );
+                return;
               }
 
               // now check whether there is a settings type in the superclass
