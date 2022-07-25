@@ -466,7 +466,6 @@ function generateInterface(
     !metadataObject.events
   ) {
     // No API for which accessors are generated? => no interface needed
-    // FIXME // TODO: constructor may still be needed for inherited properties?
     return;
   }
 
