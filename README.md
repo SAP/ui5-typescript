@@ -85,7 +85,7 @@ To keep track of any significant changes, observe the [Release Notes](releasenot
 
 ### Where can I find release notes or news about changes in the UI5 type definitions?
 
-There is not *one specific* changelog for the type definitions, as they are influenced by changes in three different areas:
+In short: [here](releasenotes.md). There is not *one specific* changelog for the type definitions, as they are influenced by changes in three different areas:
 1. the **JSDoc** across all UI5 code, which is the source of API information
 2. the UI5 JSDoc **parser** (extending the original JSDoc parser), which parses and processes the JSDoc
 3. the UI5 **type generator**, which turns the processed API information into TypeScript type definitions
