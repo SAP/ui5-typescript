@@ -15,6 +15,7 @@ This page provides an overview of all official TypeScript-related resources in t
 - [What are the TypeScript projects and releases provided by the UI5 development team?](#what-are-the-typescript-projects-and-releases-provided-by-the-ui5-development-team)
 - [Where to report issues? What is the support status?](#where-to-report-issues)
 - [What does it mean that the type definitions are "in experimental beta state"?](#what-does-it-mean-that-the-type-definitions-are-in-experimental-beta-state)
+- [Where can I find release notes or news about changes in the UI5 type definitions?](#where-can-i-find-release-notes-or-news-about-changes-in-the-ui5-type-definitions)
 - [What is the future roadmap for TypeScript in UI5?](#what-is-the-future-roadmap-for-typescript-in-ui5)
 
 
@@ -79,7 +80,18 @@ Note that there is no official support guarantee, as the type definitions and co
 ### What does it mean that the type definitions are "in experimental beta state"?
 
 It means that we might make changes which require adaptation on your side after consuming updated type definitions. But don't let this statement make you shy away from using them! The needed adaptations will not be large and there isn't going to be a lot of difference once the types are no longer called "beta": there will be no 100% compatibility guarantee either. So basically the type definitions are ready for use.<br>
-Find all the details [here](beta-statement.md).
+Find all the details [here](beta-statement.md).<br>
+To keep track of any significant changes, observe the [Release Notes](releasenotes.md).
+
+### Where can I find release notes or news about changes in the UI5 type definitions?
+
+There is not *one specific* changelog for the type definitions, as they are influenced by changes in three different areas:
+1. the **JSDoc** across all UI5 code, which is the source of API information
+2. the UI5 JSDoc **parser** (extending the original JSDoc parser), which parses and processes the JSDoc
+3. the UI5 **type generator**, which turns the processed API information into TypeScript type definitions
+
+The former two are included in the general UI5 "[What's New](https://ui5.sap.com/#/topic/99ac68a5b1c3416ab5c84c99fefa250d)" and [Change Log](https://ui5.sap.com/#/releasenotes.html) (which contain also many changes not affecting the type definitions, though).<br>
+The type generator, on the other hand, influences *how* the types are generated and can hence have a huge impact as well, independently of any UI5 changes. It is currently not developed in this repository, but for the time being we list any significant or even *breaking* changes on the [release notes](releasenotes.md) page (also ones originating from the UI5 JSDoc or parser).
 
 ### What is the future roadmap for TypeScript in UI5?
 The current focus is on working on the unfinished corners, like providing better support and guidance for topics like testing, but also on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.

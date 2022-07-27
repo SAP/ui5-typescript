@@ -5,7 +5,7 @@ The UI5 type definitions are currently released as "experimental beta". This pag
 ## TL;DR
 
 There is no estimation yet when "beta" phase will be over, but actually "beta" or "not beta" doesn't make *that* much of a difference:<br>
-On the one hand there are only few breaking changes planned right now (and they also have very limited impact). On the other hand we cannot guarantee eternal 100% compatibility when beta state is over, either.
+On the one hand there are only few breaking changes planned right now (and they also have very limited impact). On the other hand we cannot guarantee 100% compatibility when beta state is over, either.
 
 Get all the details below.
 
@@ -35,7 +35,7 @@ In essence, we already do recommend using the currently published type definitio
 Once we declare the type definitions to be no longer in "experimental beta state", this means that:
 
 1.  We try to limit breaking changes to a minimum, but we can NOT completely avoid all breaking changes (see the section above for examples and reasons).
-2.  We will announce any breaking changes we are aware of and explain how to adapt your code.
+2.  We will announce any breaking changes we are aware of in the [Release Notes](releasenotes.md) and explain how to adapt your code.
 
     * Normally, a breaking change is indicated by an increased major version of the software. However, as the type definitions are versioned in sync with the matching UI5 version, we cannot use this version number. Also, the generator's version number may be used to rather describe incompatibilities of its usage, not of the generated type definitions, so we can't use this version number, either. Hence, we *might* introduce something like an additional generation level compatibility version which would be increased for incompatible changes.
 
