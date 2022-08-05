@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.1...@ui5/ts-interface-generator@0.5.2) (2022-08-05)
+
+### Bug Fixes
+
+- **ts-interface-generator:** handle gracefully the case when metadata is not properly initialized ([307680e](https://github.com/SAP/ui5-typescript/commit/307680ecce7531284d918f6bb8e25780e8d4a23d)), closes [#369](https://github.com/SAP/ui5-typescript/issues/369)
+- **ts-interface-generator:** remove EventProvider from list of ManagedObject sub-classes ([28c8f73](https://github.com/SAP/ui5-typescript/commit/28c8f73638265578dba76c5f9199423762bc827f)), closes [#374](https://github.com/SAP/ui5-typescript/issues/374)
+
 ## [0.5.1](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.0...@ui5/ts-interface-generator@0.5.1) (2022-07-20)
 
 ### Bug Fixes
