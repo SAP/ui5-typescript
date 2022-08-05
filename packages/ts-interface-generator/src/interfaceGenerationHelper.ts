@@ -14,15 +14,9 @@ import log from "loglevel";
 const factory = ts.factory;
 
 const interestingBaseClasses: {
-  [key: string]:
-    | "ManagedObject"
-    | "EventProvider"
-    | "Element"
-    | "Control"
-    | undefined;
+  [key: string]: "ManagedObject" | "Element" | "Control" | undefined;
 } = {
   '"sap/ui/base/ManagedObject".ManagedObject': "ManagedObject",
-  '"sap/ui/base/EventProvider".EventProvider': "EventProvider",
   '"sap/ui/core/Element".UI5Element': "Element",
   '"sap/ui/core/Control".Control': "Control",
 };
@@ -30,15 +24,12 @@ const interestingBaseClasses: {
 const interestingBaseSettingsClasses: {
   [key: string]:
     | "$ManagedObjectSettings"
-    | "$EventProviderSettings"
     | "$ElementSettings"
     | "$ControlSettings"
     | undefined;
 } = {
   '"sap/ui/base/ManagedObject".$ManagedObjectSettings':
     "$ManagedObjectSettings",
-  '"sap/ui/base/EventProvider".$EventProviderSettings':
-    "$EventProviderSettings",
   '"sap/ui/core/Element".$UI5ElementSettings': "$ElementSettings",
   '"sap/ui/core/Control".$ControlSettings': "$ControlSettings",
 };
@@ -361,12 +352,12 @@ function getSettingsTypeFromConstructor(
 }
 
 /**
- * Returns "ManagedObject", "EventProvider", "Element", "Control" - or undefined
+ * Returns "ManagedObject", "Element", "Control" - or undefined
  */
 function getInterestingBaseClass(
   type: ts.Type,
   typeChecker: ts.TypeChecker
-): "ManagedObject" | "EventProvider" | "Element" | "Control" | undefined {
+): "ManagedObject" | "Element" | "Control" | undefined {
   //const typeName = typeChecker.typeToString(type);
   //log.debug("-> " + typeName + " (" + typeChecker.getFullyQualifiedName(type.getSymbol()) + ")");
 
@@ -393,15 +384,13 @@ function getInterestingBaseClass(
 }
 
 /**
- * Returns tha name of the closest base class settings type ("$ManagedObjectSettings" | "$EventProviderSettings"
- * | "$ElementSettings" | "$ControlSettings") - or undefined
+ * Returns the name of the closest base class settings type ("$ManagedObjectSettings" | "$ElementSettings" | "$ControlSettings") - or undefined
  */
 function getInterestingBaseSettingsClass(
   type: ts.Type,
   typeChecker: ts.TypeChecker
 ):
   | "$ManagedObjectSettings"
-  | "$EventProviderSettings"
   | "$ElementSettings"
   | "$ControlSettings"
   | undefined {
@@ -443,12 +432,7 @@ function generateInterface(
     sourceFile: ts.SourceFile;
     className: string;
     settingsTypeFullName: string;
-    interestingBaseClass:
-      | "ManagedObject"
-      | "EventProvider"
-      | "Element"
-      | "Control"
-      | undefined;
+    interestingBaseClass: "ManagedObject" | "Element" | "Control" | undefined;
     constructorSignaturesAvailable: boolean;
     metadata: ts.PropertyDeclaration[];
   },
