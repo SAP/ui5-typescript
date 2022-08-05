@@ -105,11 +105,16 @@ function getManagedObjects(
               const symbol = type.getSymbol();
               if (!symbol) {
                 throw new Error(
-                  "Type '" +
-                    typeNode.getText() +
-                    "' referenced in " +
-                    sourceFile.fileName +
-                    " could not be resolved - are the UI5 (and other) type definitions available and known in the tsconfig? Or is there a different reason why this type would not be known?"
+                  `Type '${typeNode.getText()}' referenced in ${
+                    sourceFile.fileName
+                  } in the inheritance clause '${heritageClause.getFullText()}' could not be resolved.
+Check the respective line in the source code: ts there an error for this type? Make sure the type is properly imported.
+If a working "import" is not possible and it is a UI5 type (or type from another library), the issue could be caused by the respective type definitions not being available. They must be found by the TypeScript compiler according to the configuration in tsconfig. To verify this step-by-step, you can do the following:
+1. Check whether the (UI5 or other) types are added as dependency in package.json (or available as transitive dependency)
+2. Check inside which "node_modules" folder the types are actually available - if they are not, check whether "npm install" (or "yarn" etc.) has run successfully - maybe re-run it
+3. Check the "tsconfig.json" file: types outside the default "@types" package must be explicitly added in the "types" or "typeRoots" section. Is the name and path correct?
+One known cause of this error is that the "typeRoots" setting in tsconfig.json has wrong paths, which are not actually pointing to the correct location of the type definitions.
+Or is there a different reason why this type would not be known?`
                 );
               }
 
