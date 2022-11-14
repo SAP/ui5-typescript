@@ -7,12 +7,7 @@ interface ManagedObjectInfo {
   className: string;
   classDeclaration: ts.ClassDeclaration;
   settingsTypeFullName: string;
-  interestingBaseClass:
-    | "ManagedObject"
-    | "EventProvider"
-    | "Element"
-    | "Control"
-    | undefined;
+  interestingBaseClass: "ManagedObject" | "Element" | "Control" | undefined;
   constructorSignaturesAvailable: boolean;
   metadata: ts.PropertyDeclaration[];
 }

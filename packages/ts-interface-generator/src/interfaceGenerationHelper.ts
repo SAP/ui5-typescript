@@ -15,15 +15,9 @@ import log from "loglevel";
 const factory = ts.factory;
 
 const interestingBaseClasses: {
-  [key: string]:
-    | "ManagedObject"
-    | "EventProvider"
-    | "Element"
-    | "Control"
-    | undefined;
+  [key: string]: "ManagedObject" | "Element" | "Control" | undefined;
 } = {
   '"sap/ui/base/ManagedObject".ManagedObject': "ManagedObject",
-  '"sap/ui/base/EventProvider".EventProvider': "EventProvider",
   '"sap/ui/core/Element".UI5Element': "Element",
   '"sap/ui/core/Control".Control': "Control",
 };
@@ -31,15 +25,12 @@ const interestingBaseClasses: {
 const interestingBaseSettingsClasses: {
   [key: string]:
     | "$ManagedObjectSettings"
-    | "$EventProviderSettings"
     | "$ElementSettings"
     | "$ControlSettings"
     | undefined;
 } = {
   '"sap/ui/base/ManagedObject".$ManagedObjectSettings':
     "$ManagedObjectSettings",
-  '"sap/ui/base/EventProvider".$EventProviderSettings':
-    "$EventProviderSettings",
   '"sap/ui/core/Element".$UI5ElementSettings': "$ElementSettings",
   '"sap/ui/core/Control".$ControlSettings': "$ControlSettings",
 };
@@ -117,11 +108,16 @@ function getManagedObjects(
               const symbol = type.getSymbol();
               if (!symbol) {
                 throw new Error(
-                  "Type '" +
-                    typeNode.getText() +
-                    "' referenced in " +
-                    sourceFile.fileName +
-                    " could not be resolved - are the UI5 (and other) type definitions available and known in the tsconfig? Or is there a different reason why this type would not be known?"
+                  `Type '${typeNode.getText()}' referenced in ${
+                    sourceFile.fileName
+                  } in the inheritance clause '${heritageClause.getFullText()}' could not be resolved.
+Check the respective line in the source code: ts there an error for this type? Make sure the type is properly imported.
+If a working "import" is not possible and it is a UI5 type (or type from another library), the issue could be caused by the respective type definitions not being available. They must be found by the TypeScript compiler according to the configuration in tsconfig. To verify this step-by-step, you can do the following:
+1. Check whether the (UI5 or other) types are added as dependency in package.json (or available as transitive dependency)
+2. Check inside which "node_modules" folder the types are actually available - if they are not, check whether "npm install" (or "yarn" etc.) has run successfully - maybe re-run it
+3. Check the "tsconfig.json" file: types outside the default "@types" package must be explicitly added in the "types" or "typeRoots" section. Is the name and path correct?
+One known cause of this error is that the "typeRoots" setting in tsconfig.json has wrong paths, which are not actually pointing to the correct location of the type definitions.
+Or is there a different reason why this type would not be known?`
                 );
               }
 
@@ -160,7 +156,7 @@ function getManagedObjects(
                 );
                 return;
               } else if (metadata.length > 1) {
-                // no metadata? => nothing to do
+                // more than one metadata block??
                 log.warn(
                   `ManagedObject with ${
                     metadata.length
@@ -169,6 +165,17 @@ function getManagedObjects(
                   } inside ${
                     sourceFile.fileName
                   }. This is unexpected. Ignoring this class.`
+                );
+                return;
+              } else if (!metadata[0].initializer) {
+                // exactly one "metadata" declaration, BUT not initialized with the actual metadata value
+                // this may mean that someone accidentally wrote "metadata: {...}" instead of "metadata = {...}", which is syntactically correct,
+                // but assigns a type structure, not a value. This would fail at runtime, as none of the intended API declarations work, but before
+                // failing at runtime, it would fail here in the generator, which later on tries to access the data. So let's warn the user.
+                log.warn(
+                  `Inside file ${sourceFile.fileName}${
+                    statement.name ? " in class " + statement.name.text : ""
+                  } there is a metadata declaration without a value. Did you accidentally write "metadata: ..." instead of "metadata = ..."?`
                 );
                 return;
               }
@@ -353,12 +360,12 @@ function getSettingsTypeFromConstructor(
 }
 
 /**
- * Returns "ManagedObject", "EventProvider", "Element", "Control" - or undefined
+ * Returns "ManagedObject", "Element", "Control" - or undefined
  */
 function getInterestingBaseClass(
   type: ts.Type,
   typeChecker: ts.TypeChecker
-): "ManagedObject" | "EventProvider" | "Element" | "Control" | undefined {
+): "ManagedObject" | "Element" | "Control" | undefined {
   //const typeName = typeChecker.typeToString(type);
   //log.debug("-> " + typeName + " (" + typeChecker.getFullyQualifiedName(type.getSymbol()) + ")");
 
@@ -385,15 +392,13 @@ function getInterestingBaseClass(
 }
 
 /**
- * Returns tha name of the closest base class settings type ("$ManagedObjectSettings" | "$EventProviderSettings"
- * | "$ElementSettings" | "$ControlSettings") - or undefined
+ * Returns the name of the closest base class settings type ("$ManagedObjectSettings" | "$ElementSettings" | "$ControlSettings") - or undefined
  */
 function getInterestingBaseSettingsClass(
   type: ts.Type,
   typeChecker: ts.TypeChecker
 ):
   | "$ManagedObjectSettings"
-  | "$EventProviderSettings"
   | "$ElementSettings"
   | "$ControlSettings"
   | undefined {
@@ -437,12 +442,7 @@ function generateInterface(
     className: string;
     classDeclaration: ts.ClassDeclaration;
     settingsTypeFullName: string;
-    interestingBaseClass:
-      | "ManagedObject"
-      | "EventProvider"
-      | "Element"
-      | "Control"
-      | undefined;
+    interestingBaseClass: "ManagedObject" | "Element" | "Control" | undefined;
     constructorSignaturesAvailable: boolean;
     metadata: ts.PropertyDeclaration[];
   },
@@ -471,7 +471,6 @@ function generateInterface(
     !metadataObject.events
   ) {
     // No API for which accessors are generated? => no interface needed
-    // FIXME // TODO: constructor may still be needed for inherited properties?
     return;
   }
 

@@ -467,6 +467,46 @@ function generateMethods(
         factory.createThisTypeNode()
       )
     );
+
+    if (property.bindable) {
+      // bind property
+      allMethods.push(
+        factory.createMethodSignature(
+          undefined,
+          property.methods.bind,
+          undefined,
+          [],
+          [
+            factory.createParameterDeclaration(
+              undefined,
+              undefined,
+              undefined,
+              "bindingInfo",
+              undefined,
+              createTSTypeNode(
+                "sap.ui.base.ManagedObject.PropertyBindingInfo",
+                requiredImports,
+                knownGlobals,
+                currentClassName
+              )
+            ),
+          ],
+          factory.createThisTypeNode()
+        )
+      );
+
+      // unbind property
+      allMethods.push(
+        factory.createMethodSignature(
+          undefined,
+          property.methods.unbind,
+          undefined,
+          [],
+          [],
+          factory.createThisTypeNode()
+        )
+      );
+    }
   }
 
   // aggregations
@@ -1087,6 +1127,16 @@ function createTSTypeNode(
         factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
       );
 
+    case "function":
+      return factory.createTypeReferenceNode(
+        factory.createIdentifier("Function")
+      );
+
+    case "function[]":
+      return factory.createArrayTypeNode(
+        factory.createTypeReferenceNode(factory.createIdentifier("Function"))
+      );
+
     case "any":
       return factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword);
 
@@ -1096,10 +1146,30 @@ function createTSTypeNode(
       );
 
     default:
-      // UI5 type, something like "sap.ui.core.CSSSize"
-      return factory.createTypeReferenceNode(
-        uniqueImport(typeName, requiredImports, knownGlobals, currentClassName)
-      );
+      // UI5 type
+      if (typeName.endsWith("[]")) {
+        // rare case: an array thereof, something like "sap.ui.core.CSSSize[]"
+        return factory.createArrayTypeNode(
+          factory.createTypeReferenceNode(
+            uniqueImport(
+              typeName.slice(0, -2).trim(),
+              requiredImports,
+              knownGlobals,
+              currentClassName
+            )
+          )
+        );
+      } else {
+        // common case: something like "sap.ui.core.CSSSize"
+        return factory.createTypeReferenceNode(
+          uniqueImport(
+            typeName,
+            requiredImports,
+            knownGlobals,
+            currentClassName
+          )
+        );
+      }
   }
 }
 

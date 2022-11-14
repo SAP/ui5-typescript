@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.1...@ui5/ts-interface-generator@0.5.2) (2022-08-05)
+
+### Bug Fixes
+
+- **ts-interface-generator:** handle gracefully the case when metadata is not properly initialized ([307680e](https://github.com/SAP/ui5-typescript/commit/307680ecce7531284d918f6bb8e25780e8d4a23d)), closes [#369](https://github.com/SAP/ui5-typescript/issues/369)
+- **ts-interface-generator:** remove EventProvider from list of ManagedObject sub-classes ([28c8f73](https://github.com/SAP/ui5-typescript/commit/28c8f73638265578dba76c5f9199423762bc827f)), closes [#374](https://github.com/SAP/ui5-typescript/issues/374)
+
+## [0.5.1](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.0...@ui5/ts-interface-generator@0.5.1) (2022-07-20)
+
+### Bug Fixes
+
+- **ts-interface-generator:** generate convenience functions for bindable properties ([0e6657f](https://github.com/SAP/ui5-typescript/commit/0e6657fe2a889b820fd42087d52e0283f76439a7)), closes [#372](https://github.com/SAP/ui5-typescript/issues/372)
+- **ts-interface-generator:** handle array types properly ([deb6af4](https://github.com/SAP/ui5-typescript/commit/deb6af4c4974cad1ba817faf9a3757717e0a8af3)), closes [#370](https://github.com/SAP/ui5-typescript/issues/370)
+- **ts-interface-generator:** recognize "function" as built-in type ([c8bf7af](https://github.com/SAP/ui5-typescript/commit/c8bf7afa617e14fc6dc2db049192ae97c7de1514)), closes [#371](https://github.com/SAP/ui5-typescript/issues/371)
+
 # [0.5.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.4.2...@ui5/ts-interface-generator@0.5.0) (2022-04-22)
 
 ### Bug Fixes
