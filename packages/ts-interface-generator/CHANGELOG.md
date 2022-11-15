@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.2...@ui5/ts-interface-generator@0.5.3) (2022-11-15)
+
+### Bug Fixes
+
+- **ts-interface-generator:** fix generated local import paths; update dependencies ([c23dad8](https://github.com/SAP/ui5-typescript/commit/c23dad8079d6bf6f562235606da406cc913ac404)), closes [#381](https://github.com/SAP/ui5-typescript/issues/381)
+- **ts-interface-generator:** improve error message when a type cannot be resolved ([320a370](https://github.com/SAP/ui5-typescript/commit/320a3709ec928d749bf9d5d4cbf2332465f45fb3)), closes [#375](https://github.com/SAP/ui5-typescript/issues/375)
+
 ## [0.5.2](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.1...@ui5/ts-interface-generator@0.5.2) (2022-08-05)
 
 ### Bug Fixes
