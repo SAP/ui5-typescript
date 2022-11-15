@@ -188,19 +188,45 @@ Or is there a different reason why this type would not be known?`
                 const symbol = settingsType.getSymbol();
                 settingsTypeFullName =
                   typeChecker.getFullyQualifiedName(symbol);
+
+                if (settingsTypeFullName.startsWith('"./')) {
+                  const settingsTypeDeclaration = symbol.getDeclarations()[0];
+                  const settingsTypeSourceFile =
+                    settingsTypeDeclaration.getSourceFile().fileName;
+                  const settingsTypeDirectory = path.dirname(
+                    settingsTypeSourceFile
+                  );
+                  const managedObjectDirectory = path.dirname(
+                    sourceFile.fileName
+                  );
+                  if (managedObjectDirectory !== settingsTypeDirectory) {
+                    // settings type of superclass is in different directory, hence the generated import will have to traverse to that directory
+                    const relativePath = path
+                      .relative(managedObjectDirectory, settingsTypeDirectory)
+                      .replace(/\\/, "/");
+                    const match = settingsTypeFullName.match(
+                      /".\/([^/]+\/)*([^/]+)".*/
+                    );
+                    if (match) {
+                      // insert the relative path
+                      settingsTypeFullName =
+                        '"./' + relativePath + settingsTypeFullName.slice(2);
+                    }
+                  }
+                }
               } else if (metadata) {
                 throw new Error(
                   `${
                     statement.name ? statement.name.text : ""
                   } inherits from ${interestingBaseClass} and has metadata but the parent class ${typeChecker.getFullyQualifiedName(
                     type.getSymbol()
-                  )} seems to have no settings type. It might have no constructors, this is where the settings type is used.
+                  )} seems to have no settings type. It might have no constructors, this is where the settings type is used. Or the settings type used there and its inheritance chain could not be resolved.
 
 In case this parent class is also in your project, make sure to add its constructors, then try again. A comment with instructions might be in the console output above.
 Otherwise, you can temporarily remove this file (${
                     sourceFile.fileName
                   }) from the project and try again to get the console output with the suggested constructors.
-In any case, you need to make the parent parent class ${typeChecker.getFullyQualifiedName(
+In any case, you need to make the parent class ${typeChecker.getFullyQualifiedName(
                     type.getSymbol()
                   )} have constructors with typed settings object to overcome this issue.
 `
@@ -410,6 +436,15 @@ function getInterestingBaseSettingsClass(
     return;
   }
   const baseTypes = typeChecker.getBaseTypes(type);
+  if (
+    (!baseTypes || baseTypes.length === 0) &&
+    type.symbol &&
+    type.symbol.escapedName
+  ) {
+    console.warn(
+      `TypeScript could not resolve any base types for ${type.symbol.escapedName.toString()}.`
+    );
+  }
   for (let i = 0; i < baseTypes.length; i++) {
     if (
       (interestingBaseSettingsClass = getInterestingBaseSettingsClass(
