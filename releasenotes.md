@@ -9,6 +9,29 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
 
+## 1.108 (November 2022)
+
+* FEATURE: the JSDoc parser and dts-generator have been improved to support optional properties and nullable map entries. Examples:
+  ```
+  @param {{width: number, height=: number}} dimensions - height is optional
+  ```
+  in JSDoc ends up in the *.d.ts file as:
+  ```ts
+  dimensions: {width: number; height?: number;}
+  ```
+  And
+  ```
+  @param {Object<string,string?>} someMap - with nullable entries
+  ```
+  in JSDoc ends up in the *.d.ts file as:
+  ```ts
+  someMap: Record<string, string | null>
+  ```
+  There are not many occurrences of this yet (one is [`FacetFilterList.getSelectedKeys(...)`](https://sdk.openui5.org/api/sap.m.FacetFilterList#methods/getSelectedKeys)), but this feature can now be used in the ongoing improvements of the UI5 JSDoc.
+
+## 1.107 (October 2022)
+
+no news
 
 ## 1.106 (September 2022)
 
