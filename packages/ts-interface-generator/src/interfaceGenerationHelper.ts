@@ -376,7 +376,7 @@ function getSettingsTypeFromConstructor(
           parameter.type as ts.TypeReferenceNode
         ).typeName.getText()}) to find out whether it is the settings type of the base class.`
       );
-      let potentialSettingsType = typeChecker.getTypeFromTypeNode(
+      const potentialSettingsType = typeChecker.getTypeFromTypeNode(
         parameter.type
       );
       const interestingBaseSettingsClass = getInterestingBaseSettingsClass(
