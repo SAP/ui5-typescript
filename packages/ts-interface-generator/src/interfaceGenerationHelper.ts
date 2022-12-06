@@ -370,9 +370,17 @@ function getSettingsTypeFromConstructor(
   for (let i = 0; i < ctor.parameters.length; i++) {
     const parameter = ctor.parameters[i];
     if (parameter.type.kind === ts.SyntaxKind.TypeReference) {
-      // could be the settings type
+      // This i-th parameter of the base class' constructor could be the settings type
+      log.debug(
+        `Checking constructor parameter ${parameter.name.getText()} (type ${(
+          parameter.type as ts.TypeReferenceNode
+        ).typeName.getText()}) to find out whether it is the settings type of the base class.`
+      );
+      let potentialSettingsType = typeChecker.getTypeFromTypeNode(
+        parameter.type
+      );
       const interestingBaseSettingsClass = getInterestingBaseSettingsClass(
-        typeChecker.getTypeFromTypeNode(parameter.type),
+        potentialSettingsType,
         typeChecker
       );
       if (interestingBaseSettingsClass) {
@@ -425,10 +433,16 @@ function getInterestingBaseSettingsClass(
   | "$ElementSettings"
   | "$ControlSettings"
   | undefined {
+  const symbol = type.getSymbol();
+  if (!symbol) {
+    log.error(`Symbol ${
+      type.aliasSymbol ? `for type '${type.aliasSymbol.getName()}'` : ""
+    } could not be resolved.
+    This means that TypeScript did not find out what this type actually is.
+    Check the source code: is this type defined where it is written? If not, why not?`);
+  }
   let interestingBaseSettingsClass =
-    interestingBaseSettingsClasses[
-      typeChecker.getFullyQualifiedName(type.getSymbol())
-    ];
+    interestingBaseSettingsClasses[typeChecker.getFullyQualifiedName(symbol)];
   if (interestingBaseSettingsClass) {
     return interestingBaseSettingsClass;
   }
