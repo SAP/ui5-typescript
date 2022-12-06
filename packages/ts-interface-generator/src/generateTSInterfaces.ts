@@ -143,8 +143,9 @@ function onTSProgramUpdate(
     .filter((sourceFile) => {
       return (
         sourceFile.fileName.indexOf("@types") === -1 &&
-        sourceFile.fileName.indexOf("node_modules/") === -1
-      ); // do not generate interfaces for dependencies
+        sourceFile.fileName.indexOf("node_modules/") === -1 &&
+        !program.isSourceFileFromExternalLibrary(sourceFile)
+      ); // do not generate interfaces for dependencies; the last check is needed because source files inside node_modules do not have "node_modules" in their file name when symlinked; probably this last check would also be sufficient (and better) than guessing via name
     })
     .forEach((sourceFile: ts.SourceFile) => {
       allRelevantSourceFiles.push(sourceFile);
