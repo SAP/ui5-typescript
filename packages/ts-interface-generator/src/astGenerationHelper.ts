@@ -268,6 +268,126 @@ function createBindingStringTypeNode() {
   );
 }
 
+function generateGenericTypeImports(
+  sourceFile: ts.SourceFile,
+  classDeclaration: ts.ClassDeclaration,
+  statements: ts.Statement[],
+  requiredImports: RequiredImports
+): ts.Statement[] {
+  const { typeParameters } = classDeclaration;
+  const requiredGenericTypeImports: ts.Statement[] = [];
+
+  if (!typeParameters || typeParameters?.length === 0) {
+    return requiredGenericTypeImports;
+  }
+
+  const existingImportsInSourceFile: {
+    [name: string]: { statement: ts.ImportDeclaration; exportName?: string };
+  } = {};
+
+  for (const statement of sourceFile.statements) {
+    if (ts.isImportDeclaration(statement)) {
+      if (statement.importClause) {
+        const { name, namedBindings } = statement.importClause;
+
+        if (name) {
+          existingImportsInSourceFile[name.getText()] = { statement };
+        }
+
+        if (namedBindings) {
+          namedBindings.forEachChild((node) => {
+            if (ts.isImportSpecifier(node)) {
+              const typeName = node.name.getText();
+              let exportName = typeName;
+
+              if (node.propertyName) {
+                exportName = node.propertyName.getText();
+              }
+
+              existingImportsInSourceFile[typeName] = { statement, exportName };
+            }
+          });
+        }
+      }
+    }
+  }
+
+  for (const typeParameter of typeParameters) {
+    if (typeParameter.constraint) {
+      const typeName = typeParameter.constraint.getText();
+
+      if (nameIsUsed(typeName, requiredImports)) {
+        // import is already created
+        continue;
+      } else if (
+        Object.prototype.hasOwnProperty.call(
+          existingImportsInSourceFile,
+          typeName
+        )
+      ) {
+        const { statement, exportName } = existingImportsInSourceFile[typeName];
+
+        const moduleName = statement.moduleSpecifier.getText();
+        const moduleSpecifierClone = factory.createStringLiteral(
+          moduleName.substring(1, moduleName.length - 1)
+        );
+
+        let importClause: ts.ImportClause;
+        const typeNameIdentifier = factory.createIdentifier(typeName);
+
+        if (!exportName) {
+          importClause = factory.createImportClause(
+            true,
+            typeNameIdentifier,
+            undefined
+          );
+        } else {
+          const propertyName =
+            typeName !== exportName
+              ? factory.createIdentifier(exportName)
+              : undefined;
+
+          let importSpecifier: ts.ImportSpecifier;
+
+          // TODO: Use a method to check for versions
+          if (parseFloat(ts.version) >= 4.5) {
+            // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
+            importSpecifier = factory.createImportSpecifier(
+              true,
+              propertyName,
+              typeNameIdentifier
+            );
+          } else {
+            // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
+            importSpecifier = factory.createImportSpecifier(
+              propertyName,
+              typeNameIdentifier
+            );
+          }
+
+          importClause = factory.createImportClause(
+            false,
+            undefined,
+            factory.createNamedImports([importSpecifier])
+          );
+        }
+
+        const clone = factory.createImportDeclaration(
+          statement.decorators,
+          statement.modifiers,
+          importClause,
+          moduleSpecifierClone,
+          statement.assertClause
+        );
+
+        requiredGenericTypeImports.push(clone);
+      }
+    }
+  }
+
+  return requiredGenericTypeImports;
+}
+
 function printConstructorBlockWarning(
   settingsTypeName: string,
   className: string,
@@ -1231,6 +1351,7 @@ function createConstructorBlock(settingsTypeName: string) {
 export {
   generateMethods,
   generateSettingsInterface,
+  generateGenericTypeImports,
   addLineBreakBefore,
   createConstructorBlock,
 };
