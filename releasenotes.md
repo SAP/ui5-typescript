@@ -8,6 +8,17 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.110 (January 2022)
+
+* FEATURE: the `metadata` object specified when defining a new control (or other ManagedObject) has now been formally typed in [sap.ui.core.Element.MetadataOptions](https://openui5nightly.hana.ondemand.com/api/sap.ui.core.Element.MetadataOptions) and related types.<br>
+This not only helps with [issues when inheriting from TypeScript-developed controls],(https://github.com/SAP/ui5-typescript/issues/338) but also gives type safety and code completion for those metadata objects:<br>
+![This is an image](./assets/metadata_object.png)
+
+
+## 1.109 (end of November 2022)
+
+no news
+
 
 ## 1.108 (November 2022)
 
