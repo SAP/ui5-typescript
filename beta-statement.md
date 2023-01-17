@@ -99,7 +99,7 @@ Also note that the list is not complete.
 
     * A change would not affect anyone only using imported modules. Those who access globals will need to import the modules instead.
 
-1.  The generated type definitions still cause a (low) number of TypeScripterrors (actually only *one* in sap.fe.macros.d.ts) and a few dtslint warnings (several in sap.ushell and other libraries, but also one in the v2.ODataListBinding). We might try to get rid of these.
+1.  The generated type definitions still cause a (low) number of TypeScript errors (actually only *one* in sap.fe.macros.d.ts) and a few dtslint warnings (several in sap.ushell and other libraries, but also one in the v2.ODataListBinding). We might try to get rid of these.
 
     * It is not clear whether and how they will be addressed. To pick one example: the proposal given by dtslint with the "unified-signatures" error message regarding the v2.ODataListBinding is misleading and unlikely to lead to any change.
 

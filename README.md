@@ -2,6 +2,8 @@
 
 This page provides an overview of all official TypeScript-related resources in the UI5 world.
 
+To get started quickly with a hands-on example, you can jump into the [UI5 TypeScript Tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) right away, or, for a more structured approach, follow the learning guidance outlined [here](curriculum.md).
+
 ### Topics
 - [What is TypeScript about?](#what-is-typescript-about)
 - [What is the overall approach for using TypeScript in UI5 applications?](#what-is-the-overall-approach-for-using-typescript-in-ui5-applications)
@@ -112,6 +114,7 @@ The current focus is on working on the unfinished corners, like providing better
 	* [Using Classes and State/Model Manager](https://blogs.sap.com/2021/12/07/my-first-experience-with-typescript-in-ui5-classes-and-state-model-manager/)
 	* [Final Part](https://blogs.sap.com/2021/12/08/my-first-experience-with-typescript-in-ui5-final/)
 * Blog post by Lena Hammerer: [Full Stack TypeScript App for Cloud Foundry – Sample Repository](https://blogs.sap.com/2021/12/09/full-stack-typescript-app-for-cloud-foundry-sample-repository/), including a complete [sample app on GitHub](https://github.com/SAP-samples/btp-full-stack-typescript-app), which uses the SAP Cloud Application Programming Model (CAP) for Node.js.
+
 ## Status
 
 The type definitions provided for UI5 are in an experimental **_Beta State_**. Significant changes can occur, including potential **breaking changes**. See the [respective section](#what-does-it-mean-that-the-type-definitions-are-in-experimental-beta-state) above for details on the status and the [release notes](releasenotes.md) for significant changes.
@@ -127,7 +130,7 @@ See [CONTRIBUTING.md](https://github.com/SAP/ui5-typescript/blob/master/CONTRIBU
 
 ## License
 
-Copyright (c) 2022 SAP SE and ui5-typescript contributors.
+Copyright (c) 2023 SAP SE and ui5-typescript contributors.
 
 This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
 
