@@ -14,7 +14,7 @@ It should not be understood as a strict curriculum to follow, but rather as reco
 
 For additional experience, you can [see some realistic TypeScript app code explained](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md).
 
-In any case, keep in mind that https://sap.github.io/ui5-typescript is the primary source of information regarding the use of UI5 with TypeScript and important news can be found in the [release notes](https://sap.github.io/ui5-typescript/releasenotes.html).
+In any case, keep in mind that https://sap.github.io/ui5-typescript is the primary source of information regarding the use of UI5 with TypeScript, providing many additional resources, and important news can be found in the [release notes](https://sap.github.io/ui5-typescript/releasenotes.html).
 
 
 
