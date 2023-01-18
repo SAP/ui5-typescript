@@ -99,7 +99,11 @@ The former two are included in the general UI5 "[What's New](https://ui5.sap.com
 The type generator, on the other hand, influences *how* the types are generated and can hence have a huge impact as well, independently of any UI5 changes. It is currently not developed in this repository, but for the time being we list any significant or even *breaking* changes on the [release notes](releasenotes.md) page (also ones originating from the UI5 JSDoc or parser).
 
 ### What is the future roadmap for TypeScript in UI5?
-The current focus is on working on the unfinished corners, like providing better support and guidance for topics like testing, but also on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.
+The current focus is on getting to a state that is recommended for productive use, working on the unfinished corners, like providing better support and guidance for topics like testing, but also on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.
+
+## Other Deliverables
+
+* There are also type definitions describing the manifest.json files. They are published inside [@ui5/manifest](https://www.npmjs.com/package/@ui5/manifest) on npm.
 
 ## Other Resources
 
