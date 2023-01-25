@@ -2,7 +2,7 @@
 
 This page provides an overview of all official TypeScript-related resources in the UI5 world.
 
-To get started quickly with a hands-on example, you can jump into the [UI5 TypeScript Tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) right away, or, for a more structured approach, follow the learning guidance outlined [here](curriculum.md).
+To get started quickly with a hands-on example, you can jump into the [UI5 TypeScript Tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) right away, or, for a more structured approach, [follow the learning guidance outlined here](curriculum.md).
 
 ### Topics
 - [What is TypeScript about?](#what-is-typescript-about)

@@ -6,6 +6,7 @@ It should not be understood as a strict curriculum to follow, but rather as reco
 
 ## Condensed Summary
 
+0. Don't be afraid of "learning a new language" - it isn't. It's just JavaScript plus some type information.
 1. Get familiar with TypeScript by reading "[TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)" and "[The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)".
 2. Learn about modern JavaScript [modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), because you use them to write UI5 apps in TypeScript.
 3. Follow the [UI5 TypeScript Tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) to get end-to-end hands-on experience developing UI5 apps in TypeScript.
@@ -19,6 +20,13 @@ In any case, keep in mind that https://sap.github.io/ui5-typescript is the prima
 
 
 ## The same, but with more explanations
+
+### Step 0: Don't be afraid
+
+Don't be afraid of having to "learn a new language": TypeScript is not a new language, but basically JavaScript with some additional type information on top.<br>Some suggest thinking of TypeScript as a linter (code checker) - one with type assertions written in the code. Which is not far off as TypeScript only checks the code at development time and is not in the game anymore at runtime.
+
+Not only will most of what you write still be JavaScript, you will thanks to the transpiling even be allowed to write more modern JavaScript.
+
 
 ### Step 1: Get familiar with TypeScript
 
