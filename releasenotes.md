@@ -8,7 +8,80 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
-## 1.110 (January 25th 2022)
+
+## 1.111 (February 2023)
+
+* BREAKING (FIX): some APIs had wrongly been generated in *two* places:<br>
+  a) as named export of a library (or as a module on its own)<br>
+  b) in the global namespace `sap.ui....`<br>
+  The global usage has been disabled in 1.111, as the usage of globals is discouraged and prevents further optimization. In case you used it, switch to the explicit import.<br>
+  Some examples:<br>
+  ```ts
+  import { browser } from "sap/ui/Device";
+  const chromeVariant1 = browser.chrome; // OK: using the import from the line above is still fine
+  const chromeVariant2 = sap.ui.Device.browser.chrome; // global access REMOVED in 1.111
+
+  import { closeKeyboard, touch } from "sap/m/library";
+  closeKeyboard(); // OK: using the import from the line above is still fine
+  sap.m.closeKeyboard(); // global access REMOVED in 1.111
+
+  touch.countContained(...); // OK: using the import from further above is still fine
+  sap.m.touch.countContained(...); // global access REMOVED in 1.111
+  ```
+  List of affected APIs (removed globals):
+  * `sap.ui.Device.browser` ->   `import { browser } from "sap/ui/Device"`
+  * `sap.ui.Device.media`
+  * `sap.ui.Device.orientation`
+  * `sap.ui.Device.os`
+  * `sap.ui.Device.resize`
+  * `sap.ui.Device.support`
+  * `sap.ui.Device.system`
+  * `sap.ui.core.CustomStyleClassSupport()`
+  * `sap.ui.model.odata.ODataTreeBindingAdapter()` -> import from `sap/ui/model/odata/ODataTreeBindingAdapter`
+  * `sap.ui.model.odata.ODataTreeBindingFlat()`
+  * `sap.ui.ux3.ShellPersonalization` -> import from `sap/ui/ux3/ShellPersonalization` 
+  * `sap.m.closeKeyboard()` ->  `import { closeKeyboard } from "sap/m/library"`
+  * `sap.m.getInvalidDate()`
+  * `sap.m.getIScroll()`
+  * `sap.m.getLocale()`
+  * `sap.m.getLocaleData()`
+  * `sap.m.getScrollDelegate()`
+  * `sap.m.isDate()`
+  * `sap.m.touch.countContained()`
+  * `sap.m.touch.find()`
+  * `sap.apf.constants` -> `import { constants } from "sap/apf/library"`
+  * `sap.ca.ui.model.format.FormattingLibrary` -> import from `sap/ca/ui/model/format/FormattingLibrary`
+  * `sap.chart.api.getChartTypeLayout()` -> `import { api } from "sap/chart/library"`
+  * `sap.chart.api.getChartTypes()`
+  * `sap.gantt.simple.*` -> import from `sap/gantt/library`
+  * `sap.gantt.config.*`
+  * `sap.gantt.palette.*`
+  * `sap.ushell.services.ContentExtensionAdapterFactory` -> import from `sap/ushell/services/ContentExtensionAdapterFactory"`
+  * `sap.ui.vk.getCore()` -> `import { getCore } from "sap/ui/vk/library"`
+  * `sap.ui.vtm.AXIS1X` etc. -> `import { AXIS1X } from sap/ui/vtm/library`
+
+
+* BREAKING (FIX): three modules had wrongly been a named export of another module when they are actually a module on their own. They were moved to the correct place.<br>
+  ```ts
+  // previously
+  import { CustomStyleClassSupport } from "sap/ui/core/library";
+  import { FileUploaderHttpRequestMethod } from "sap/ui/unified/library";
+  import { model } from "sap/ca/ui/library";
+  const FormattingLibrary = model.format.FormattingLibrary;
+
+  // from 1.111
+  import CustomStyleClassSupport from "sap/ui/core/CustomStyleClassSupport";
+  import FileUploaderHttpRequestMethod from "sap/ui/unified/FileUploaderHttpRequestMethod";
+  import FormattingLibrary from "sap/ca/ui/model/format/FormattingLibrary";
+  ```
+
+* BREAKING (FIX): some constants in the `simple.exportTableCustomDataType` object of the `sap.gantt` library had wrong names generated, which are now corrected:
+  * `Boolean1` -> `Boolean`
+  * `Date1` -> `Date`
+  * `String1` -> `String`
+
+
+## 1.110 (January 25th 2023)
 
 * FEATURE: the `metadata` object specified when defining a new control (or other ManagedObject) has now been formally typed in [sap.ui.core.Element.MetadataOptions](https://sdk.openui5.org/1.110.0/#/api/sap.ui.core.Element.MetadataOptions) and related types.<br>
 This not only helps with [issues when inheriting from TypeScript-developed controls](https://github.com/SAP/ui5-typescript/issues/338), but also gives type safety and code completion for those metadata objects:<br>

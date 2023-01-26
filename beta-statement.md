@@ -62,6 +62,7 @@ Also note that the list is not complete.
 1.  Entities like "sap.m.BackgroundHelper" are currently declared as namespaces. However, they probably should rather be *named exports* of the respective library. We need to figure out why they are not and whether we can change that.
 
     * A change would mean that those entities need to be imported differently if used in application code.
+    * UPDATE: in 1.111 this has been fixed (without any noticeable impact on applications).
 
 1.  The currently generated type definitions contain methods with optional parameters where occasionally more parameter combinations are allowed by the type definitions than actually supported by the runtime. This happens when the JSDoc is not very precise and additional constraints are only specified in the documentation full-text (or not at all...).
 
@@ -98,6 +99,7 @@ Also note that the list is not complete.
 1.  In general, we intend to remove any remaining globals.
 
     * A change would not affect anyone only using imported modules. Those who access globals will need to import the modules instead.
+    * UPDATE: in 1.111 the majority of remaining globals were removed, see the [release notes](releasenotes.md).
 
 1.  The generated type definitions still cause a (low) number of TypeScript errors (actually only *one* in sap.fe.macros.d.ts) and a few dtslint warnings (several in sap.ushell and other libraries, but also one in the v2.ODataListBinding). We might try to get rid of these.
 
@@ -114,6 +116,7 @@ Also note that the list is not complete.
 1.  We intend to rename the type definition packages from @openui5/ts-types-esm to @openui5/types (and the same for @sapui5). This step will probably happen together with ending the "beta" phase.
 
     * Adapting to this means changing the dependency name of the types in package.json once you transition from using the "beta" types to the "final" ones.
+    * UPDATE: we will NOT change the current delivery from a separate package to within the libraries for the time being. This eases staying on an older version of the types while updating the UI5 runtime (this is one of the options to mitigate incompatible changes in the types).
 
 ## What is the plan regarding different TypeScript versions? Which ones will each type definition release be compatible with?
 
