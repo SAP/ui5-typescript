@@ -185,7 +185,6 @@ function generateSettingsInterface(
               factory.createParameterDeclaration(
                 undefined,
                 undefined,
-                undefined,
                 "event",
                 undefined,
                 createTSTypeNode(
@@ -237,7 +236,6 @@ function generateSettingsInterface(
     ]),
   ];
   const myInterface = factory.createInterfaceDeclaration(
-    undefined,
     undefined,
     ownSettingsTypeName,
     undefined,
@@ -333,7 +331,6 @@ function generateMethods(
           factory.createParameterDeclaration(
             undefined,
             undefined,
-            undefined,
             n,
             undefined,
             createTSTypeNode(
@@ -358,7 +355,6 @@ function generateMethods(
           [],
           [
             factory.createParameterDeclaration(
-              undefined,
               undefined,
               undefined,
               "bindingInfo",
@@ -439,7 +435,6 @@ function generateMethods(
             factory.createParameterDeclaration(
               undefined,
               undefined,
-              undefined,
               n,
               undefined,
               createTSTypeNode(
@@ -465,7 +460,6 @@ function generateMethods(
             factory.createParameterDeclaration(
               undefined,
               undefined,
-              undefined,
               n,
               undefined,
               createTSTypeNode(
@@ -476,7 +470,6 @@ function generateMethods(
               )
             ),
             factory.createParameterDeclaration(
-              undefined,
               undefined,
               undefined,
               "index",
@@ -497,7 +490,6 @@ function generateMethods(
           [],
           [
             factory.createParameterDeclaration(
-              undefined,
               undefined,
               undefined,
               n,
@@ -548,7 +540,6 @@ function generateMethods(
             factory.createParameterDeclaration(
               undefined,
               undefined,
-              undefined,
               n,
               undefined,
               createTSTypeNode(
@@ -575,7 +566,6 @@ function generateMethods(
           [],
           [
             factory.createParameterDeclaration(
-              undefined,
               undefined,
               undefined,
               n,
@@ -615,7 +605,6 @@ function generateMethods(
           [],
           [
             factory.createParameterDeclaration(
-              undefined,
               undefined,
               undefined,
               "bindingInfo",
@@ -687,7 +676,6 @@ function generateMethods(
             factory.createParameterDeclaration(
               undefined,
               undefined,
-              undefined,
               n,
               factory.createToken(ts.SyntaxKind.QuestionToken),
               factory.createUnionTypeNode([
@@ -718,7 +706,6 @@ function generateMethods(
             factory.createParameterDeclaration(
               undefined,
               undefined,
-              undefined,
               n,
               undefined,
               factory.createUnionTypeNode([
@@ -745,7 +732,6 @@ function generateMethods(
           [],
           [
             factory.createParameterDeclaration(
-              undefined,
               undefined,
               undefined,
               n,
@@ -796,7 +782,6 @@ function generateMethods(
         factory.createParameterDeclaration(
           undefined,
           undefined,
-          undefined,
           "event",
           undefined,
           createTSTypeNode(
@@ -818,13 +803,11 @@ function generateMethods(
         factory.createParameterDeclaration(
           undefined,
           undefined,
-          undefined,
           "fn",
           undefined,
           callback
         ),
         factory.createParameterDeclaration(
-          undefined,
           undefined,
           undefined,
           "listener",
@@ -849,7 +832,6 @@ function generateMethods(
         factory.createParameterDeclaration(
           undefined,
           undefined,
-          undefined,
           "event",
           undefined,
           createTSTypeNode(
@@ -860,7 +842,6 @@ function generateMethods(
           )
         ),
         factory.createParameterDeclaration(
-          undefined,
           undefined,
           undefined,
           "data",
@@ -877,13 +858,13 @@ function generateMethods(
         undefined,
         [
           factory.createTypeParameterDeclaration(
+            undefined,
             "CustomDataType",
             factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
           ),
         ],
         [
           factory.createParameterDeclaration(
-            undefined,
             undefined,
             undefined,
             "data",
@@ -893,13 +874,11 @@ function generateMethods(
           factory.createParameterDeclaration(
             undefined,
             undefined,
-            undefined,
             "fn",
             undefined,
             callbackWithData
           ),
           factory.createParameterDeclaration(
-            undefined,
             undefined,
             undefined,
             "listener",
@@ -922,13 +901,11 @@ function generateMethods(
           factory.createParameterDeclaration(
             undefined,
             undefined,
-            undefined,
             "fn",
             undefined,
             callback
           ),
           factory.createParameterDeclaration(
-            undefined,
             undefined,
             undefined,
             "listener",
@@ -950,7 +927,6 @@ function generateMethods(
         [
           // TODO: describe parameter object with all details
           factory.createParameterDeclaration(
-            undefined,
             undefined,
             undefined,
             "parameters",
@@ -1142,10 +1118,8 @@ function createConstructorBlock(settingsTypeName: string) {
   nodes.push(
     factory.createConstructorDeclaration(
       undefined,
-      undefined,
       [
         factory.createParameterDeclaration(
-          undefined,
           undefined,
           undefined,
           "idOrSettings",
@@ -1165,10 +1139,8 @@ function createConstructorBlock(settingsTypeName: string) {
   nodes.push(
     factory.createConstructorDeclaration(
       undefined,
-      undefined,
       [
         factory.createParameterDeclaration(
-          undefined,
           undefined,
           undefined,
           "id",
@@ -1176,7 +1148,6 @@ function createConstructorBlock(settingsTypeName: string) {
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
         ),
         factory.createParameterDeclaration(
-          undefined,
           undefined,
           undefined,
           "settings",
@@ -1195,10 +1166,8 @@ function createConstructorBlock(settingsTypeName: string) {
   nodes.push(
     factory.createConstructorDeclaration(
       undefined,
-      undefined,
       [
         factory.createParameterDeclaration(
-          undefined,
           undefined,
           undefined,
           "id",
@@ -1206,7 +1175,6 @@ function createConstructorBlock(settingsTypeName: string) {
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
         ),
         factory.createParameterDeclaration(
-          undefined,
           undefined,
           undefined,
           "settings",

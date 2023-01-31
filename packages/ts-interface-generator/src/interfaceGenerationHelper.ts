@@ -568,7 +568,6 @@ function buildAST(
   const statements: ts.Statement[] = getImports(requiredImports);
 
   const myInterface = factory.createInterfaceDeclaration(
-    undefined,
     [
       factory.createModifier(ts.SyntaxKind.ExportKeyword),
       factory.createModifier(ts.SyntaxKind.DefaultKeyword),
@@ -582,7 +581,6 @@ function buildAST(
 
   // assemble the module declaration
   const module = factory.createModuleDeclaration(
-    [],
     [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
     factory.createStringLiteral("./" + moduleName),
     factory.createModuleBlock([settingsInterface, myInterface])
@@ -596,7 +594,6 @@ function buildAST(
   if (requiredImports.selfIsUsed) {
     const myInterface2 = factory.createInterfaceDeclaration(
       undefined,
-      undefined,
       classInfo.name,
       undefined,
       undefined,
@@ -604,7 +601,6 @@ function buildAST(
     );
 
     const module2 = factory.createModuleDeclaration(
-      [],
       [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
       factory.createStringLiteral("./" + moduleName),
       factory.createModuleBlock([myInterface2])
@@ -675,7 +671,6 @@ function getImports(requiredImports: RequiredImports) {
     imports.push(
       factory.createImportDeclaration(
         undefined,
-        undefined,
         importClause,
         factory.createStringLiteral(singleImport.moduleName)
       )
@@ -685,7 +680,6 @@ function getImports(requiredImports: RequiredImports) {
   if (!imports.length) {
     // this would result in an ambient module declaration which doesn't work for us. Enforce some implementation code to make it non-ambient.
     const importDeclaration = factory.createImportDeclaration(
-      undefined,
       undefined,
       factory.createImportClause(
         false,
