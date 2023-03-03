@@ -11,6 +11,15 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 
 ## 1.112 (March 2023)
 
+* FEATURE: The frequently used modules `sap/ui/thirdparty/jquery` and `sap/ui/thirdparty/qunit-2` are now declared, so they can be explicitly imported. As both are also available globally, they could just be used without importing so far, but it's cleaner to explicitly import them if needed. This is now possible.<br>
+Other modules from the "sap/ui/thirdparty" folder are not declared, because thirdparty libraries are not really part of the UI5 public API and the others are far less present *within* the UI5 API than jQuery and QUnit. But applications loading them can declare them easily inside separate *.d.ts files within the application, e.g. like:
+  ```ts
+  declare module "sap/ui/thirdparty/URI" {
+    import * as URI from "urijs";
+    export default URI;
+  }
+  ```
+
 * FEATURE: Not a feature of the type definitions per se, but still great news and hence mentioned here: the `babel-plugin-transform-modules-ui5`, which is used in the build pipeline for UI5 TypeScript apps has been [handed over to the UI5 community at GitHub](https://github.com/ui5-community/babel-plugin-transform-modules-ui5) by its creator [Ryan Murphy](https://github.com/r-murphy)! Having additional maintainers now enables the community to further evolve this important part of the pipeline.<br>
 As also the publishing permissions have been handed over, continuity is ensured: the respective [npm package](https://www.npmjs.com/package/babel-preset-transform-ui5) can seamlessly continue to be used. The first new release 7.0.6 has already been published, enabling the feature explained below.<br>
 Big thanks to Ryan!
@@ -28,6 +37,15 @@ Big thanks to Ryan!
   ```
   > *Background:*  Controller Extensions could not be used in TypeScript so far when using ES6 classes - which is the recommended way of using UI5 in TypeScript. Such extensions may have an `override` definition containing methods like `onInit` which are to be overridden by the extension. Specifying this definition block as a static member of the class would lead to a name clash with the static method [ControllerExtension.override(...)](https://ui5.sap.com/#/api/sap.ui.core.mvc.ControllerExtension%23methods/sap.ui.core.mvc.ControllerExtension.override) in the base class `ControllerExtension`. Hence, `overrides` (plural) [is now offered as additional (and soon recommended) name](https://github.com/SAP/openui5/commit/167251ea3cfb98ce7b20a671810dd6814cdd70fe) for this definition block.<br>
 Furthermore, specifying this block as static member did not work - regrdless of its name - because the [transformer](https://github.com/ui5-community/babel-plugin-transform-modules-ui5) would assign this block as static member to the transformed UI5 class instead of moving it **into** the definition block of `BaseClass.extend("ClassName", { ... })` where it is expected. The transformer [has been changed](https://github.com/ui5-community/babel-plugin-transform-modules-ui5/pull/82) to handle `overrides` in a special way - just like it already did with `metadata`.
+
+* FEATURE: the `.isA(...)` method (on all UI5 objects and as static method on sap.ui.base.Object) has been enhanced with generics in a way that it is recognized by TS as type guard.<br>
+This means when you have an object of any kind (e.g. a control requested with `.byId(...)`) and you write
+  ```ts
+  if (control.isA<ComboBox>("sap.m.ComboBox")) { ... }
+  ```
+  then inside the `if` body TypeScript *knows* it is a ComboBox. While this is more code than a plain cast, it actually also checks the type at runtime.<br>
+  Unfortunately the class name has to be written twice, once for TypeScript and once for the UI5 runtime.<br>
+  (more details [in the GitHub request](https://github.com/SAP/ui5-typescript/issues/387)).
 
 
 ## 1.111 (February 2023)
