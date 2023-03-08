@@ -18,3 +18,15 @@ The latter happens when the `package.json` of the application does reference the
 The details are explained in [this issue comment](https://github.com/ui5-community/generator-ui5-ts-app-fcl/issues/5#issuecomment-1199967459).
 
 SOLUTION: remove any additional jQuery/qUnit type definitions from the application's `package.json` file, delete the `.../node_modules/@openui5/node_modules` folder (or `...@sapui5...`, respectively) and do another `npm install`. If the inner `node_modules` folder is created again, also delete `package-lock.json` (or other package manager's lock file) and re-try. In general, check which types exactly end up in this folder and make sure they are only referenced as dependency from ONE place or in exactly the same version.
+
+
+
+# Legal Information & Privacy Statement
+
+This site is hosted by [GitHub Pages](https://pages.github.com/). Please see the [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement) for any information how GitHub processes your personal data.
+
+Please note the [SAP terms of use](https://www.sap.com/corporate/en/legal/terms-of-use.html).
+
+[Legal Statement / Impressum](https://www.sap.com/about/legal/impressum.html)
+
+[Trademark Notice](https://www.sap.com/corporate/en/legal/trademark.html#third-party-trademark-notices)

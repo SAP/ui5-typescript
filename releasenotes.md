@@ -229,3 +229,16 @@ no news
 * FIX: permutations for optional parameters fixed in generator
 * INTERNAL: internally enabled dtslint checks for the types resulting from any UI5 code change
 * INTERNAL: enable type error checks for the so-far-excluded sap.fe library 
+
+
+
+# Legal Information & Privacy Statement
+
+This site is hosted by [GitHub Pages](https://pages.github.com/). Please see the [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement) for any information how GitHub processes your personal data.
+
+Please note the [SAP terms of use](https://www.sap.com/corporate/en/legal/terms-of-use.html).
+
+[Legal Statement / Impressum](https://www.sap.com/about/legal/impressum.html)
+
+[Trademark Notice](https://www.sap.com/corporate/en/legal/trademark.html#third-party-trademark-notices)
+

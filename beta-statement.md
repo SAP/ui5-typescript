@@ -127,3 +127,13 @@ There are three version dimensions:
 
 We cannot guarantee that all possible combinations of these will be supported/available. In general, we aim for testing type definitions with the version of TypeScript which is current at the time of their release. Anything beyond that we will have to see.
 
+
+# Legal Information & Privacy Statement
+
+This site is hosted by [GitHub Pages](https://pages.github.com/). Please see the [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement) for any information how GitHub processes your personal data.
+
+Please note the [SAP terms of use](https://www.sap.com/corporate/en/legal/terms-of-use.html).
+
+[Legal Statement / Impressum](https://www.sap.com/about/legal/impressum.html)
+
+[Trademark Notice](https://www.sap.com/corporate/en/legal/trademark.html#third-party-trademark-notices)

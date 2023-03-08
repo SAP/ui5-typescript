@@ -96,3 +96,15 @@ Decisions:
   * ...start with the control name (with the usual one-to-one mapping of control implementations to files, this makes the files appear next to each other)
   * ...contain the string `.gen.` to indicate that the file is generated
   * ...end with `.d.ts`, as this is the appropriate file ending for pure definition files without implementation parts that don't need to be compiled to JavaScript. `.d.ts` files supposedly contain type information which is only available at runtime, so the TypeScript compiler needs to be made aware. That's exactly what the files are generated for. 
+
+
+
+# Legal Information & Privacy Statement
+
+This site is hosted by [GitHub Pages](https://pages.github.com/). Please see the [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement) for any information how GitHub processes your personal data.
+
+Please note the [SAP terms of use](https://www.sap.com/corporate/en/legal/terms-of-use.html).
+
+[Legal Statement / Impressum](https://www.sap.com/about/legal/impressum.html)
+
+[Trademark Notice](https://www.sap.com/corporate/en/legal/trademark.html#third-party-trademark-notices)
