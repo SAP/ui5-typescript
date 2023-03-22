@@ -9,6 +9,22 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
 
+## 1.113 (April 2023)
+
+* RELATED: New names for the type packages!<br>
+  Starting with the 1.113 release in April, use:<br>
+  * `@openui5/types` instead of `@openui5/ts-types-esm`
+  * `@sapui5/types` instead of `@sapui5/ts-types-esm`
+
+  The old packages are then deprecated and will only continue to be updated for a few months.
+
+
+* FIX(?): APIs which are `@protected` (i.e. shall not be used by applications, only by related framework classes and controls) are now marked as such in the TypeScript documentation.
+
+* RELATED: a *WORK-IN-PROGRESS* sample project demonstrating how to write tests (QUnit and OPA) has been published in the `testing` branch at https://github.com/SAP-samples/ui5-typescript-helloworld/tree/testing. NOTE: this is *experimental* and we are still working on improving the APIs and types especially around OPA! It works, but final testing code will look different (and hopefully simpler).
+
+
+
 ## 1.112 (March 2023)
 
 * FEATURE: The frequently used modules `sap/ui/thirdparty/jquery` and `sap/ui/thirdparty/qunit-2` are now declared, so they can be explicitly imported. As both are also available globally, they could just be used without importing so far, but it's cleaner to explicitly import them if needed. This is now possible.<br>
@@ -20,7 +36,7 @@ Other modules from the "sap/ui/thirdparty" folder are not declared, because thir
   }
   ```
 
-* FEATURE: Not a feature of the type definitions per se, but still great news and hence mentioned here: the `babel-plugin-transform-modules-ui5`, which is used in the build pipeline for UI5 TypeScript apps has been [handed over to the UI5 community at GitHub](https://github.com/ui5-community/babel-plugin-transform-modules-ui5) by its creator [Ryan Murphy](https://github.com/r-murphy)! Having additional maintainers now enables the community to further evolve this important part of the pipeline.<br>
+* RELATED: Not a feature of the type definitions per se, but still great news and hence mentioned here: the `babel-plugin-transform-modules-ui5`, which is used in the build pipeline for UI5 TypeScript apps has been [handed over to the UI5 community at GitHub](https://github.com/ui5-community/babel-plugin-transform-modules-ui5) by its creator [Ryan Murphy](https://github.com/r-murphy)! Having additional maintainers now enables the community to further evolve this important part of the pipeline.<br>
 As also the publishing permissions have been handed over, continuity is ensured: the respective [npm package](https://www.npmjs.com/package/babel-preset-transform-ui5) can seamlessly continue to be used. The first new release 7.0.6 has already been published, enabling the feature explained below.<br>
 Big thanks to Ryan!
 
@@ -128,7 +144,7 @@ This means when you have an object of any kind (e.g. a control requested with `.
 This not only helps with [issues when inheriting from TypeScript-developed controls](https://github.com/SAP/ui5-typescript/issues/338), but also gives type safety and code completion for those metadata objects:<br>
 ![Autocomplete for metadata structure](./assets/metadata_object.png)
 
-* FEATURE: there are now type definitions published describing the UI5 manifest structure. The manifest has its own versioning and repository and is not really relevant for the runtime APIs of UI5, but this news might still be interesting for TypeScript users.<br>
+* RELATED: there are now type definitions published describing the UI5 manifest structure. The manifest has its own versioning and repository and is not really relevant for the runtime APIs of UI5, but this news might still be interesting for TypeScript users.<br>
 These types can be found [in the manifest's GitHub repository](https://github.com/SAP/ui5-manifest/blob/master/types/manifest.d.ts) as well as in the [@ui5/manifest](https://www.npmjs.com/package/@ui5/manifest) npm package.
 
 
