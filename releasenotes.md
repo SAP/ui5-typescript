@@ -1,10 +1,10 @@
 # Release Notes for the UI5 Type Definitions
 
-This page provides information about changes in the UI5 type definitions. It does *not* mention any new UI5 APIs (they are covered by the general UI5 "[What's New](https://ui5.sap.com/#/topic/99ac68a5b1c3416ab5c84c99fefa250d)" and [Change Log](https://ui5.sap.com/#/releasenotes.html)), but focuses on **changes in how the JSDoc is parsed and turned into type definitions**. Some significant JSDoc changes done with the type definitions in mind are also contained.
+This page provides information about changes in the UI5 type definitions and other news regarding TypeScript and UI5. It does *not* mention any new UI5 APIs (they are covered by the general UI5 "[What's New](https://ui5.sap.com/#/topic/99ac68a5b1c3416ab5c84c99fefa250d)" and [Change Log](https://ui5.sap.com/#/releasenotes.html)), but focuses on **changes in how the JSDoc is parsed and turned into type definitions**. Some significant JSDoc changes done with the type definitions in mind are also contained.
 
 The list is manually curated and not necessarily complete. Every release usually also contains several further JSDoc fixes which are meant to improve the type definitions.
 
-Changes are grouped by UI5 version, as parser and generator changes so far only affect type definitions of later UI5 releases.
+Changes are grouped by UI5 version, as parser and generator changes so far only affect type definitions of later UI5 releases. News that are independent from the UI5 or generator code are added to the release that appeared at the same time.
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
@@ -18,8 +18,9 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 
   The old packages are then deprecated and will only continue to be updated for a few months.
 
-
 * FIX(?): APIs which are `@protected` (i.e. shall not be used by applications, only by related framework classes and controls) are now marked as such in the TypeScript documentation.
+
+* FIX(?): the types in the existing OPA-related APIs have been greatly improved (in [this](https://github.com/SAP/openui5/commit/30648677b8d4d40454e439182726c1a2c6891a1f) and [this](https://github.com/SAP/openui5/commit/19d7c7f6cd5ef24fcac625f94a92fba7d82bed73) change). This is a big first step in making OPA usage in TypeScript easier.
 
 * RELATED: a *WORK-IN-PROGRESS* sample project demonstrating how to write tests (QUnit and OPA) has been published in the `testing` branch at https://github.com/SAP-samples/ui5-typescript-helloworld/tree/testing. NOTE: this is *experimental* and we are still working on improving the APIs and types especially around OPA! It works, but final testing code will look different (and hopefully simpler).
 
