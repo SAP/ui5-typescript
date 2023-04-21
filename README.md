@@ -36,7 +36,7 @@ It currently contains two public packages:
 The UI5 type signatures are created and published as part of the UI5 build process. There are <b>two flavors</b> of the type definitions right now:
 
 1. the legacy flavor which defines all entities with their global names, like `sap.m.Button`. As using globals is discouraged, using this flavor should be avoided. The definition packages are named `ts-types`.
-2. the "ES modules" flavor which defines ES6-style module names for the entities. These definition support using modern JavaScript syntax with ES modules and classes, but require an additional transformation step, which can be run together with the anyway required TypeScript compilation. These recommended definition packages are named `ts-types-esm`.
+2. the "ES modules" flavor which defines ES6-style module names for the entities. These definition support using modern JavaScript syntax with ES modules and classes, but require an additional transformation step, which can be run together with the anyway required TypeScript compilation. These recommended definition packages are simply named `types` (used to be `ts-types-esm` before release 1.113).
 
 Both flavors are available for SAPUI5 as well as OpenUI5.
 
@@ -44,15 +44,15 @@ Using the modern definitions for SAPUI5 as example, the type definitions can be 
 
 With npm
 
-`npm install @sapui5/ts-types-esm --save-dev`
+`npm install @sapui5/types --save-dev`
 
 With Yarn
 
-`yarn add @sapui5/ts-types-esm --dev`
+`yarn add @sapui5/types --dev`
 
 ## Usage
 
-To see the basic suggested project setup for TypeScript development with the new `ts-types-esm` packages, please check out the [TypeScript Hello World app](https://github.com/SAP-samples/ui5-typescript-helloworld). It not only can serve as copy template, but also includes a [detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) for creating this setup from scratch.
+To see the basic suggested project setup for TypeScript development with the new `types` packages, please check out the [TypeScript Hello World app](https://github.com/SAP-samples/ui5-typescript-helloworld). It not only can serve as copy template, but also includes a [detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) for creating this setup from scratch.
 
 The [TypeScript branch of the "UI5 CAP Event App"](https://github.com/SAP-samples/ui5-cap-event-app/tree/typescript) sample demonstrates a slightly more complex application, using the same setup. It comes with an [explanation](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md) of what UI5 TypeScript code usually looks like and what to consider.
 
