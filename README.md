@@ -58,16 +58,20 @@ The "js-with-typescript-support" branch of the "ui5-cap-event-app" project conta
 Type definitions, samples, and various tools. In detail:
 
 UI5 provides *generated* type definitions for the UI5 APIs, which let TypeScript understand all the involved types, so it can do its job. These definitions are provided both for OpenUI5 and for SAPUI5, in two different flavors each. The two flavors are:
-1. the *legacy* type definitions ("ts-types") which allow the (discouraged!) usage of global objects like `sap.ui.Button`. They are not in our focus anymore and receive less support, but may still be needed for old application  projects.
-1. the new type definitions ("ts-types<b>-esm</b>") which require the loading of dependencies as [ES modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) like `import Button from "sap/ui/Button"`, encouraging the use of modern JavaScript language features
+1. the *legacy* type definitions ("ts-types") which allow the (discouraged!) usage of global objects like `sap.ui.Button`. They are not in our focus anymore and receive less support, but may still be needed for old application projects.
+1. the new type definitions (simply "types", used to be named "ts-types<b>-esm</b>" before release 1.113) which require the loading of dependencies as [ES modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) like `import Button from "sap/ui/Button"`, encouraging the use of modern JavaScript language features
 
-Multiplied out, as result, there are four different type definition packages:
-* [`@openui5/ts-types-esm`](https://www.npmjs.com/package/@openui5/ts-types-esm) (OpenUI5, new)
+Multiplied out, as result, there are currently four different type definition packages:
+* [`@openui5/types`](https://www.npmjs.com/package/@openui5/types) (OpenUI5, new)
 * [`@openui5/ts-types`](https://www.npmjs.com/package/@openui5/ts-types) (OpenUI5, legacy)
-* [`@sapui5/ts-types-esm`](https://www.npmjs.com/package/@sapui5/ts-types-esm) (SAPUI5, new)
+* [`@sapui5/types`](https://www.npmjs.com/package/@sapui5/types) (SAPUI5, new)
 * [`@sapui5/ts-types`](https://www.npmjs.com/package/@sapui5/ts-types) (SAPUI5, legacy)
 
-The "new OpenUI5" types are additionally [provided via npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5) because that's the standard package name and place to share type definitions and easier to consume. These definition files are identical to `@openui5/ts-types-esm`, but the [versioning *within* a minor release](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/openui5/README.md#versioning) and [how the jQuery and QUnit types are referenced](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5#jquery-and-qunit-references-and-their-versions) are slightly different (this should usually not be noticeable, though).
+Plus for older versions before 1.113 (plus a few releases afterwards), the "types" ones were available under a different name:
+* [`@openui5/ts-types-esm`](https://www.npmjs.com/package/@openui5/ts-types-esm)
+* [`@sapui5/ts-types-esm`](https://www.npmjs.com/package/@sapui5/ts-types-esm)
+
+The "new OpenUI5" types are additionally [provided via npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5) because that's the standard package name and place to share type definitions and easier to consume. These definition files are identical to `@openui5/types`/`@openui5/ts-types-esm`, but the [versioning *within* a minor release](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/openui5/README.md#versioning) and [how the jQuery and QUnit types are referenced](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5#jquery-and-qunit-references-and-their-versions) are slightly different (this should usually not be noticeable, though).
 
 In addition to the samples, tutorials and template generator mentioned elsewhere in this document, in the "[ui5-typescript](https://github.com/SAP/ui5-typescript)" repository, the generator is developed, which creates the UI5 type definitions from the JavaScript implementation and JSDoc as well as other tools (<b>NOTE</b>: the generator code in the repository is currently outdated and will NOT produce the type definitions mentioned above!).<br>
 For control development in TypeScript, the [control interface generator](https://www.npmjs.com/package/@ui5/ts-interface-generator) is provided.

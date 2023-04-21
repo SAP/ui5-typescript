@@ -26,14 +26,14 @@ This was requested in: https://github.com/SAP/ui5-typescript/issues/314#issuecom
 Initial concerns: then it might be difficult to substitute these 3rd-party type definitions with either a different version (UI5 can be launched with no jQuery, if an alternative jQuery version is loaded beforehand) or an alternative type definition set. But these concerns were found to be unfounded.
 
 Hence for release 1.100 the following change was applied:
-* `@openui5/ts-types-esm` and `@sapui5/ts-types-esm`:
+* `@openui5/types` and `@sapui5/types` (back then called: `@openui5/ts-types-esm` and `@sapui5/ts-types-esm`):
   * add jquery and qunit types as dependencies (not devDependencies - they are needed when the types are USED, not when developed - devDependencies of devDependencies are not installed) in the correct version (SAPUI5 also the THREE.js types and `@types/offscreencanvas`, which is referenced inside the THREE.js types).
   * `npm i` in an application using these types then installs these required types to `node_modules/@types`. NO NEED to add them as devDependnecies anymore!
-  * The types will be found by the editor, as they are in the default location for types. However, `tsconfig.json` must contain a `typeRoots` entry when the @*/ts-types-esm` are used. If the typeRoots ONLY include the ts-types-esm path, then the default `@types` directory is NOT used. So in this case it must be added. In most cases it may already be present for other libraries, though.
+  * The types will be found by the editor, as they are in the default location for types. However, `tsconfig.json` must contain a `typeRoots` entry when the `@*/types`/`@*/ts-types-esm` are used. If the typeRoots ONLY include the .../types (or .../ts-types-esm) path, then the default `@types` directory is NOT used. So in this case it must be added. In most cases it may already be present for other libraries, though.
     ```
 	        "typeRoots": [
 	            "node_modules/@types",
-	            "node_modules/@openui5/ts-types-esm"
+	            "node_modules/@openui5/types"
 	        ]
     ```
 * `@types/openui5`, however:

@@ -75,6 +75,7 @@ Also note that the list is not complete.
 1.  Right now, deprecated APIs are still contained in the type definitions. In favor of cleaner usage we might decide to completely omit older deprecated APIs from the type definitions. However, to not force adapting new applications, we would likely do this only for APIs that have been deprecated for a long time already, like e.g. since UI5 1.84 or earlier. We do not intend to also remove newer APIs at a later stage. At least for the foreseeable time, such a removal would only happen *before* the end of the beta phase.
 
     * A change would mean that you have to adapt code using very old deprecated APIs to use any newer replacements.
+    * UPDATE: we will likely keep them and only remove them when they are also removed from UI5.
 
 1.  Enums are declared in an asymmetric way in the UI5 type definitions: where UI5 APIs expect enums, real TypeScript enums AS WELL AS strings (the enum keys) are allowed. This reflects how enums are typically used in application code. However, where UI5 APIs return enums, according to the type definitions they ONLY return the real TypeScript enum entities, not strings.
 
@@ -95,6 +96,7 @@ Also note that the list is not complete.
 1.  The UI5 APIs related to OPA tests are not fitting TypeScript usage well yet. Further analysis will show what can be done about it.
 
     * It is not yet clear what a change would *exactly* mean.
+    * UPDATE: in 1.113 the existing OPA APIs have been described better and in more detail. Changes/additions are still pending.
 
 1.  In general, we intend to remove any remaining globals.
 
@@ -112,11 +114,12 @@ Also note that the list is not complete.
 1.  Currently, the type definitions are single files (one per UI5 library), but published as *one* big package on npm. We consider releasing one package per library.
 
     * A complete switch would mean that the dependencies to the types need to be changed (i.e. replace the dependency in package.json by one dependency per library).
+    * UPDATE: we will NOT change the current delivery from a separate package to within the libraries for the time being. This eases staying on an older version of the types while updating the UI5 runtime (this is one of the options to mitigate incompatible changes in the types).
 
 1.  We intend to rename the type definition packages from @openui5/ts-types-esm to @openui5/types (and the same for @sapui5). This step will probably happen together with ending the "beta" phase.
 
     * Adapting to this means changing the dependency name of the types in package.json once you transition from using the "beta" types to the "final" ones.
-    * UPDATE: we will NOT change the current delivery from a separate package to within the libraries for the time being. This eases staying on an older version of the types while updating the UI5 runtime (this is one of the options to mitigate incompatible changes in the types).
+    * UPDATE: for release 1.113 @openui5/types and @sapui5/types have been published for the first time. the "ts-types-esm" variants will be released a few more times, then no longer updated.
 
 ## What is the plan regarding different TypeScript versions? Which ones will each type definition release be compatible with?
 
