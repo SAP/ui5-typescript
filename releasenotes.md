@@ -9,6 +9,61 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
 
+## 1.115 (June 2023)
+
+* INCOMPATIBLE: Enums and static properties are now properties of the module's default export (before this change they were named exports of the module). This change requires **adaptation in application code where such entities are imported**. Example:
+
+  Before this change `Action`, `Dock` and `registry` were named exports:
+  ```ts
+  import MessageBox, { Action } from "sap/m/MessageBox";
+  import { Dock } from "sap/ui/core/Popup";
+  import { registry } from "sap/ui/core/Element";
+
+  let a: Action = Action.ABORT;
+  let d: Dock = Dock.BeginBottom;
+  registry.get("myElem");
+
+  // dynamic import:
+  let Action = (await import("sap/m/MessageBox")).Action;
+  let x = Action.ABORT;
+  ```
+  Starting with version 1.115, such code will cause errors looking like this:<br>
+  ![Autocomplete for metadata structure](./assets/import_errors.png)
+  
+  However, the fix is simple: now they are accessible as static properties on the respective main object. Import only the default exports like `MessageBox`, `Popup` and `Element` and access `Action`, `Dock`, `registry` and other enums and static properties from there:
+
+  ```ts
+  import MessageBox from "sap/m/MessageBox";
+  import Popup from "sap/ui/core/Popup";
+  import Element from "sap/ui/core/Element";
+
+  let a = MessageBox.Action.ABORT;
+  let d = Popup.Dock.BeginBottom;
+  Element.registry.get("myElem");
+
+  // dynamic import:
+  let MessageBox = (await import("sap/m/MessageBox")).default;
+  let x = MessageBox.Action.ABORT;
+  ```
+
+  However, note that pure types still remain named exports. So do enums etc. defined direct within a library (not in a contained control etc., but in the library module).
+
+* FEATURE: event parameters are now fully typed. Earlier, when a control event was handled, any string could be used to access an event parameter (regardless of whether a parameter of this event actually existed) and the returned type was `any`. Now you get all the code completion and type check goodies for all the Event-related APIs:<br>
+![Autocomplete for metadata structure](./assets/event_getParameter.png)<br>
+![Autocomplete for metadata structure](./assets/event_getParameters.png)
+
+* FIX: the properties of `sap/ui/Device` can now be used in the expected way:
+  ```ts
+  import Device from "sap/ui/Device";
+  alert(Device.browser.name);
+  ```
+  The previous workaround (importing the named export `browser`) should no longer be used and will break sooner or later.
+
+
+## 1.114 (May 2023)
+
+no news
+
 ## 1.113 (April 2023)
 
 * RELATED: New names for the type packages!<br>
