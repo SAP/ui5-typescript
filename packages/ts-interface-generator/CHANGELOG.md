@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.5...@ui5/ts-interface-generator@0.6.0) (2023-05-24)
+
+### Features
+
+- **ts-interface-generator:** add JSDoc to generated interfaces ([fd8ad71](https://github.com/SAP/ui5-typescript/commit/fd8ad711c1db0ee1040b200a89b0fb6fc41f271c)), closes [#393](https://github.com/SAP/ui5-typescript/issues/393)
+
 ## [0.5.5](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.4...@ui5/ts-interface-generator@0.5.5) (2023-04-01)
 
 **Note:** Version bump only for package @ui5/ts-interface-generator
