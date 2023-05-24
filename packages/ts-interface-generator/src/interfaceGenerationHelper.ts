@@ -2,7 +2,7 @@ import path = require("path");
 import fs = require("fs");
 import ts = require("typescript");
 import Hjson = require("hjson");
-import collectClassInfo from "./collectClassInfo";
+import collectClassInfo, { expandDefaultKey } from "./collectClassInfo";
 import {
   generateMethods,
   generateSettingsInterface,
@@ -10,6 +10,8 @@ import {
 } from "./astGenerationHelper";
 import astToString from "./astToString";
 import log from "loglevel";
+import { addJSDoc as addJSDocAST } from "./jsdocGenerator";
+import Preferences from "./preferences";
 
 const factory = ts.factory;
 
@@ -33,6 +35,9 @@ const interestingBaseSettingsClasses: {
   '"sap/ui/core/Element".$UI5ElementSettings': "$ElementSettings",
   '"sap/ui/core/Control".$ControlSettings': "$ControlSettings",
 };
+
+type MetadataSectionName = keyof ClassInfo &
+  ("properties" | "aggregations" | "associations" | "events");
 
 /**
  * Checks the given source file for any classes derived from sap.ui.base.ManagedObject and generates for each one an interface file next to the source file
@@ -474,6 +479,109 @@ function getInterestingBaseSettingsClass(
 
 // const sourceFile = ts.createSourceFile("src/control/MyButton.ts", fs.readFileSync("src/control/MyButton.ts").toString(), ts.ScriptTarget.Latest);
 
+function getTagsWithName(
+  jsDocs: ReadonlyArray<ts.JSDoc | ts.JSDocTag>,
+  tagName: string
+) {
+  const fnCheck =
+    tagName === "deprecated" ? ts.isJSDocDeprecatedTag : ts.isJSDocUnknownTag;
+  let tags: ts.JSDocTag[] = [];
+
+  jsDocs?.forEach((doc) => {
+    // for elements of type JSDoc, the actual tags are properties
+    if (ts.isJSDoc(doc)) {
+      tags = tags.concat(getTagsWithName(doc.tags, tagName));
+    } else if (fnCheck(doc) && doc.tagName.getText() === tagName) {
+      tags.push(doc);
+    }
+  });
+  return tags;
+}
+
+function extractCommentText(jsDocs: ReadonlyArray<ts.JSDoc | ts.JSDocTag>) {
+  const comments: string[] = [];
+  jsDocs.forEach((doc) => {
+    if (ts.isJSDoc(doc)) {
+      if (typeof doc.comment === "string") {
+        comments.push(doc.comment);
+      } else if (Array.isArray(doc.comment)) {
+        // NodeArray<JSDocComment>
+        doc.comment.forEach((singleDoc) => {
+          comments.push(singleDoc.getFullText());
+        });
+      }
+    }
+  });
+  return comments.join("\n");
+}
+
+function handleTag(jsDocs: (ts.JSDoc | ts.JSDocTag)[], tagName: string) {
+  const tags = getTagsWithName(jsDocs, tagName);
+  if (tags.length === 0) {
+    return undefined; // without additional text after the tag, the "else" branch will return an empty string, but this still means the tag is there
+    // so with no tag, we need to return something else
+  } else {
+    return tags.map((tag) => tag.comment).join("; "); // should only be one, but who knows
+  }
+}
+
+function extractJSDoc(jsDocs: (ts.JSDoc | ts.JSDocTag)[]) {
+  return {
+    doc: extractCommentText(jsDocs),
+    experimental: handleTag(jsDocs, "experimental"),
+    since: handleTag(jsDocs, "since"),
+    deprecation: handleTag(jsDocs, "deprecated"),
+  };
+}
+
+// for a single definition in the metadata (a single property, a single aggregation, ...), this method extracts all needed info into the returned APIMember instance
+function getMemberFromPropertyAssignment<T extends MetadataSectionName>(
+  propertyAssignment: ts.PropertyAssignment,
+  memberKind: T
+): TypeForMetadataSectionName[T] {
+  // the name
+  const member: APIMember = {
+    name: propertyAssignment.name.getText(),
+  };
+
+  // the definition object - for the sake of parsing simplicity, let's parse the code as a JSON object
+  let definitionObject;
+  try {
+    definitionObject = Hjson.parse(
+      propertyAssignment.initializer.getText()
+    ) as APIMember; // parse with some fault tolerance: it's not a real JSON object, but JS code which may contain comments and property names which are not enclosed in double quotes
+    definitionObject = expandDefaultKey(
+      definitionObject,
+      memberKind === "events" ? null : "type"
+    );
+    Object.assign(member, definitionObject);
+  } catch (e) {
+    throw new Error(
+      `When parsing the metadata of ${
+        member.name
+      }: metadata is no valid JSON and could not be quick-fixed to be. Please make the metadata at least close to valid JSON. In particular, TypeScript type annotations cannot be used. Error: ${
+        (e as Error).message
+      }`
+    );
+  }
+
+  // need to type this yet undocumented method
+  type GetJSDocCommentsAndTags = (
+    pa: ts.PropertyAssignment
+  ) => (ts.JSDoc | ts.JSDocTag)[];
+
+  // enrich with JSDoc
+  if (Preferences.get().jsdoc !== "none") {
+    const commentsAndTags =
+      // @ts-ignore this method already exists in 5.0.4, but was only made public two weeks ago, maybe for 5.1 (https://github.com/microsoft/TypeScript/commit/a1df8f774fd81c389a10d2e44a3568d7f0647c67)
+      (ts.getJSDocCommentsAndTags as GetJSDocCommentsAndTags)(
+        propertyAssignment
+      );
+    Object.assign(member, extractJSDoc(commentsAndTags));
+  }
+  return member as TypeForMetadataSectionName[T];
+}
+
 function generateInterface(
   {
     sourceFile,
@@ -496,10 +604,55 @@ function generateInterface(
 
   // by now we have something that looks pretty much like a ManagedObject metadata object
 
-  const metadataText = metadata[0].initializer.getText(sourceFile);
-  let metadataObject: ClassInfo;
+  const metadataObject: ClassInfo = {};
+  const objectLiteralExpression = metadata[0]
+    .initializer as ts.ObjectLiteralExpression; // the entire object literal defining all the control metadata
+
+  objectLiteralExpression.properties.forEach((propertyAssignment) => {
+    // each propertyAssignment is something like  properties: {...}  and  aggregations: {...}
+    if (!ts.isPropertyAssignment(propertyAssignment)) {
+      return; // huh, not a property assignment? => does not look like something we are interested in
+    }
+    const memberKind = propertyAssignment.name.getText() as MetadataSectionName;
+    if (
+      !["properties", "aggregations", "associations", "events"].includes(
+        memberKind
+      )
+    ) {
+      return; // not interested in anything else than these four, because methods are generated only for these
+    }
+
+    const innerObjectLiteralExpression = propertyAssignment?.initializer; // the object literal defining ONE kind of control metadata - either the properties, or the aggegations or...
+    try {
+      if (
+        ts.isObjectLiteralExpression(innerObjectLiteralExpression) &&
+        innerObjectLiteralExpression.properties
+      ) {
+        metadataObject[memberKind] = {};
+        innerObjectLiteralExpression.properties
+          .filter((prop) => ts.isPropertyAssignment(prop))
+          .forEach((prop) => {
+            const name = prop.name.getText();
+            metadataObject[memberKind][name] = getMemberFromPropertyAssignment(
+              prop as ts.PropertyAssignment,
+              memberKind
+            );
+          }); // cast ensured to be valid by the line above
+      }
+    } catch (e) {
+      // enrich error info with class/file context
+      throw new Error(
+        `When parsing the metadata of ${className} in ${fileName}: ${
+          (e as Error).message
+        }`
+      );
+    }
+  });
+
   try {
-    metadataObject = Hjson.parse(metadataText) as ClassInfo; // parse with some fault tolerance: it's not a real JSON object, but JS code which may contain comments and property names which are not enclosed in double quotes
+    // @ts-ignore Hjson.rt.* is needed for the comments, but only exists in version 3. But the types are only available for version 2.
+    // TODO: remove! Only for debugging later stages; simple JSON parsing to be replaced with real TS parsing
+    //metadataObject = Hjson.rt.parse(metadata[0].initializer.getFullText()) as ClassInfo; // parse with some fault tolerance: it's not a real JSON object, but JS code which may contain comments and property names which are not enclosed in double quotes
   } catch (e) {
     throw new Error(
       `When parsing the metadata of ${className} in ${fileName}: metadata is no valid JSON and could not be quick-fixed to be. Please make the metadata at least close to valid JSON. In particular, TypeScript type annotations cannot be used. Error: ${
@@ -550,6 +703,10 @@ function buildAST(
   allKnownGlobals: GlobalToModuleMapping
 ) {
   const requiredImports: RequiredImports = {};
+
+  // add all the JSDoc for the generated methods
+  addJSDocAST(classInfo);
+
   const methods = generateMethods(classInfo, requiredImports, allKnownGlobals);
   if (methods.length === 0) {
     // nothing needs to be generated!

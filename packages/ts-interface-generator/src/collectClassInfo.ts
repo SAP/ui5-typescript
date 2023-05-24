@@ -14,31 +14,17 @@ const mSingular: { [key: string]: string | number } = {
 };
 
 function collectClassInfo(metadata: ClassInfo, className: string) {
-  // mostly rewritten in TypeScript based on lines 732-988 in https://github.com/SAP/openui5/blob/master/lib/jsdoc/ui5/plugin.js
-  const classDoclet: ClassDoclet = null; // TODO
+  // !!!
+  // Mostly rewritten in TypeScript based on lines 732-988 in https://github.com/SAP/openui5/blob/ff8dec90ff0591e10f8bac1754a622f5d522a957/lib/jsdoc/ui5/plugin.js#L732-L988
+  // hence still containing commented-out traces of that JS code.
+  // Also, this is the reason why this code is structured and written like it is and may contain unneeded parts.
 
-  /*	
-let baseType;
-	if ( classDoclet && classDoclet.augments && classDoclet.augments.length === 1 ) {
-		baseType = classDoclet.augments[0];
-	}
-	if ( extendCall.callee.type === Syntax.MemberExpression ) {
-		const baseCandidate = getResolvedObjectName(extendCall.callee.object);
-		if ( baseCandidate && baseType == null ) {
-			baseType = baseCandidate;
-		} else if ( baseCandidate !== baseType ) {
-			log.warn(`documented base type '${baseType}' doesn't match technical base type '${baseCandidate}'`);
-		}
-	}
-	*/
+  //const classDoclet: Doclet = null; // Don't need the class documentation in the generated interface - it is used from its original location
+
   const oClassInfo: ClassInfo = {
     name: className, // was: extendCall.arguments[0].value,
     //baseType : baseType,
     interfaces: [],
-    doc: classDoclet && classDoclet.description,
-    deprecation: classDoclet && classDoclet.deprecated,
-    since: classDoclet && classDoclet.since,
-    experimental: classDoclet && classDoclet.experimental,
     specialSettings: {},
     properties: {},
     aggregations: {},
@@ -64,29 +50,18 @@ let baseType;
   function each<APIMemberType extends APIMember>(
     map: { [key: string]: APIMember },
     defaultKey: string,
-    callback: (
-      n: string,
-      settings: APIMemberType,
-      doc: ClassDoclet,
-      apiMember: APIMember
-    ) => void
+    callback: (n: string, settings: APIMemberType, apiMember: APIMember) => void
   ) {
     if (map) {
       for (const n in map) {
         if (Object.prototype.hasOwnProperty.call(map, n)) {
-          //const doclet = getLeadingDoclet(map[n]);
           const settings = expandDefaultKey(map[n], defaultKey); // in simple cases just a string is given; this expands the string to a real configuration object
           if (settings == null) {
             log.warn(`no valid metadata for ${n} (AST type '${map[n].name}')`);
             continue;
           }
 
-          callback(
-            n,
-            settings as APIMemberType,
-            null /* was: doclet */,
-            map[n]
-          );
+          callback(n, settings as APIMemberType, map[n]);
         }
       }
     }
@@ -114,8 +89,6 @@ let baseType;
 	const metadata = classInfoMap && classInfoMap.metadata && createPropertyMap(classInfoMap.metadata.value);
 	*/
   if (metadata) {
-    //log.debug(`  analyzing metadata for '${oClassInfo.name}'`);
-
     // Read the stereotype information from the metadata
     oClassInfo.stereotype =
       (metadata.stereotype && metadata.stereotype) || undefined;
@@ -130,72 +103,64 @@ let baseType;
       oClassInfo.interfaces = metadata.interfaces;
     }
 
-    each<SpecialSetting>(
-      metadata.specialSettings,
-      "type",
-      (n, settings, doclet: ClassDoclet) => {
-        oClassInfo.specialSettings[n] = {
-          name: n,
-          doc: doclet && doclet.description,
-          since: doclet && doclet.since,
-          deprecation: doclet && doclet.deprecated,
-          experimental: doclet && doclet.experimental,
-          visibility: (settings.visibility && settings.visibility) || "public",
-          type: settings.type ? settings.type : "any",
-        };
-      }
-    );
+    each<SpecialSetting>(metadata.specialSettings, "type", (n, settings) => {
+      oClassInfo.specialSettings[n] = {
+        name: n,
+        doc: settings.doc,
+        since: settings.since,
+        deprecation: settings.deprecation,
+        experimental: settings.experimental,
+        visibility: (settings.visibility && settings.visibility) || "public",
+        type: settings.type ? settings.type : "any",
+      };
+    });
 
     oClassInfo.defaultProperty =
       (metadata.defaultProperty && metadata.defaultProperty) || undefined;
 
-    each<Property>(
-      metadata.properties,
-      "type",
-      (n: string, settings, doclet: ClassDoclet) => {
-        const N = upper(n);
-        let methods: { [key: string]: string };
-        oClassInfo.properties[n] = {
-          name: n,
-          doc: doclet && doclet.description,
-          since: doclet && doclet.since,
-          deprecation: doclet && doclet.deprecated,
-          experimental: doclet && doclet.experimental,
-          visibility: settings.visibility || "public",
-          type: settings.type || "string",
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-          defaultValue: settings.defaultValue, // ? convertValueWithRaw(settings.defaultValue, type, n) : null,
-          bindable: settings.bindable ? !!settings.bindable : false,
-          methods: (methods = {
-            get: "get" + N,
-            set: "set" + N,
-          }),
-        };
-        if (oClassInfo.properties[n].bindable) {
-          methods["bind"] = "bind" + N;
-          methods["unbind"] = "unbind" + N;
-        }
-        // if ( !settings.defaultValue ) {
-        //	log.debug("property without defaultValue: " + oClassInfo.name + "." + n);
-        //}
+    each<Property>(metadata.properties, "type", (n: string, settings) => {
+      const N = upper(n);
+      let methods: { [key: string]: string };
+      oClassInfo.properties[n] = {
+        name: n,
+        doc: settings.doc,
+        since: settings.since,
+        deprecation: settings.deprecation,
+        experimental: settings.experimental,
+        visibility: settings.visibility || "public",
+        type: settings.type || "string",
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        defaultValue:
+          settings.defaultValue !== undefined ? settings.defaultValue : null, // ? convertValueWithRaw(settings.defaultValue, type, n) : null,
+        bindable: settings.bindable ? !!settings.bindable : false,
+        methods: (methods = {
+          get: "get" + N,
+          set: "set" + N,
+        }),
+      };
+      if (oClassInfo.properties[n].bindable) {
+        methods["bind"] = "bind" + N;
+        methods["unbind"] = "unbind" + N;
       }
-    );
+      // if ( !settings.defaultValue ) {
+      //	log.debug("property without defaultValue: " + oClassInfo.name + "." + n);
+      //}
+    });
 
-    oClassInfo.defaultAggregation =
-      (metadata.defaultAggregation && metadata.defaultAggregation) || undefined;
+    oClassInfo.defaultAggregation = metadata.defaultAggregation || undefined;
 
     each<AggregationMetadata>(
       metadata.aggregations,
       "type",
-      (n: string, settings: AggregationMetadata, doclet: ClassDoclet) => {
+      (n: string, settings: AggregationMetadata) => {
         const N = upper(n);
         let methods: { [key: string]: string };
         const aggr = (oClassInfo.aggregations[n] = {
           name: n,
-          doc: doclet && doclet.description,
-          deprecation: doclet && doclet.deprecated,
-          since: doclet && doclet.since,
-          experimental: doclet && doclet.experimental,
+          doc: settings.doc,
+          since: settings.since,
+          deprecation: settings.deprecation,
+          experimental: settings.experimental,
           visibility: (settings.visibility && settings.visibility) || "public",
           type: settings.type ? settings.type : "sap.ui.core.Control",
           altTypes: settings.altTypes ? settings.altTypes : undefined,
@@ -235,15 +200,15 @@ let baseType;
     each<AssociationMetadata>(
       metadata.associations,
       "type",
-      (n: string, settings: AssociationMetadata, doclet: ClassDoclet) => {
+      (n: string, settings: AssociationMetadata) => {
         const N = upper(n);
         let methods: { [key: string]: string };
         oClassInfo.associations[n] = {
           name: n,
-          doc: doclet && doclet.description,
-          deprecation: doclet && doclet.deprecated,
-          since: doclet && doclet.since,
-          experimental: doclet && doclet.experimental,
+          doc: settings.doc,
+          since: settings.since,
+          deprecation: settings.deprecation,
+          experimental: settings.experimental,
           visibility: (settings.visibility && settings.visibility) || "public",
           type: settings.type ? settings.type : "sap.ui.core.Control",
           singularName: settings.singularName
@@ -265,48 +230,44 @@ let baseType;
       }
     );
 
-    each<UI5Event>(
-      metadata.events,
-      null,
-      (n: string, settings, doclet: ClassDoclet) => {
-        const N = upper(n);
-        const info: UI5Event = (oClassInfo.events[n] = {
-          name: n,
-          doc: doclet && doclet.description,
-          deprecation: doclet && doclet.deprecated,
-          since: doclet && doclet.since,
-          experimental: doclet && doclet.experimental,
-          visibility:
-            /* (settings.visibility && settings.visibility) || */ "public",
-          allowPreventDefault: !!(
-            settings.allowPreventDefault && settings.allowPreventDefault
-          ),
-          enableEventBubbling: !!(
-            settings.enableEventBubbling && settings.enableEventBubbling
-          ),
-          parameters: {},
-          methods: {
-            attach: "attach" + N,
-            detach: "detach" + N,
-            fire: "fire" + N,
-          },
-        });
-        each<SpecialSetting>(
-          settings.parameters,
-          "type",
-          (pName: string, pSettings, pDoclet: ClassDoclet) => {
-            info.parameters[pName] = {
-              name: pName,
-              doc: pDoclet && pDoclet.description,
-              deprecation: pDoclet && pDoclet.deprecated,
-              since: pDoclet && pDoclet.since,
-              experimental: pDoclet && pDoclet.experimental,
-              type: pSettings && pSettings.type ? pSettings.type : "",
-            };
-          }
-        );
-      }
-    );
+    each<UI5Event>(metadata.events, null, (n: string, settings) => {
+      const N = upper(n);
+      const info: UI5Event = (oClassInfo.events[n] = {
+        name: n,
+        doc: settings.doc,
+        since: settings.since,
+        deprecation: settings.deprecation,
+        experimental: settings.experimental,
+        visibility:
+          /* (settings.visibility && settings.visibility) || */ "public",
+        allowPreventDefault: !!(
+          settings.allowPreventDefault && settings.allowPreventDefault
+        ),
+        enableEventBubbling: !!(
+          settings.enableEventBubbling && settings.enableEventBubbling
+        ),
+        parameters: {},
+        methods: {
+          attach: "attach" + N,
+          detach: "detach" + N,
+          fire: "fire" + N,
+        },
+      });
+      each<SpecialSetting>(
+        settings.parameters,
+        "type",
+        (pName: string, pSettings) => {
+          info.parameters[pName] = {
+            name: pName,
+            doc: settings.doc,
+            since: settings.since,
+            deprecation: settings.deprecation,
+            experimental: settings.experimental,
+            type: pSettings && pSettings.type ? pSettings.type : "",
+          };
+        }
+      );
+    });
 
     const designtime = metadata.designtime || metadata.designTime; // convertValue removed
     if (typeof designtime === "string" || typeof designtime === "boolean") {
@@ -339,7 +300,7 @@ let baseType;
  * "defaultKey" determines as which property in the configuration object the string should be used.
  * Example: an association is configured as "SampleControl". This function converts this to {type: "SampleControl"}.
  */
-function expandDefaultKey(node: APIMember, defaultKey: string) {
+export function expandDefaultKey(node: APIMember, defaultKey: string) {
   if (node != null) {
     // if, instead of an object literal only a string is given and there is a defaultKey, then wrap the literal
     if (typeof node === "string" && defaultKey != null) {

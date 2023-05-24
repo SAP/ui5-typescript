@@ -8,13 +8,15 @@ import { initialize } from "./typeScriptEnvironment";
 import { addSourceExports } from "./addSourceExports";
 // @ts-ignore as the "rootDir" in tsconfig.json is set to "src", this file is outside the source tree. But that's fine and we don't want to make "." the root because this would include more files and cause build result path problems (files going to "dist/src").
 import pkg from "../package.json";
+import Preferences from "./preferences";
 import log from "loglevel";
 log.setDefaultLevel("info");
 
-interface Args {
+export interface Args {
   watch?: boolean;
   config?: string;
   loglevel?: "debug" | "info" | "warn" | "error";
+  jsdoc?: "none" | "minimal" | "verbose";
 }
 
 // configure yargs with the cli options as launcher
@@ -36,6 +38,12 @@ yargs
       choices: ["error", "warn", "info", "debug", "trace"],
       description: "Set the console logging verbosity",
     },
+    jsdoc: {
+      choices: ["none", "minimal", "verbose"],
+      default: "verbose",
+      description:
+        "Determines the amount of JSDoc that is generated for the methods; 'minimal' only adds JSDoc present in the source class, 'verbose' also the standard boilerplate texts.",
+    },
   })
   .default("watch", false)
   .default("loglevel", "info");
@@ -46,6 +54,10 @@ main(appArgs);
 // main entry point
 function main(args: Args) {
   const watchMode = args.watch;
+
+  Preferences.set({
+    jsdoc: args.jsdoc,
+  });
 
   const level = args.loglevel;
   if (

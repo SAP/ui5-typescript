@@ -24,6 +24,7 @@ interface APIMember {
   deprecation?: string;
   experimental?: string;
   visibility?: string;
+  generatedJSDoc?: string;
 }
 
 interface APIMemberWithMethods extends APIMember {
@@ -103,9 +104,50 @@ interface ClassInfo {
 
   abstract?: boolean;
   final?: boolean;
+
+  generatedJSDoc?: GeneratedJSDoc;
 }
 
-interface ClassDoclet {
+type TypeForMetadataSectionName = {
+  properties: Property;
+  aggregations: Aggregation;
+  associations: Association;
+  events: UI5Event;
+};
+
+const enum MethodType {
+  PropertySet = "PropertySet",
+  PropertyGet = "PropertyGet",
+  PropertyBind = "PropertyBind",
+  PropertyUnbind = "PropertyUnbind",
+
+  AggregationGet = "AggregationGet",
+  AggregationInsert = "AggregationInsert",
+  AggregationAdd = "AggregationAdd",
+  AggregationRemove = "AggregationRemove",
+  AggregationRemoveAll = "AggregationRemoveAll",
+  AggregationIndexOf = "AggregationIndexOf",
+  AggregationSet = "AggregationSet",
+  AggregationDestroy = "AggregationDestroy",
+  AggregationBind = "AggregationBind",
+  AggregationUnbind = "AggregationUnbind",
+
+  AssociationGet = "AssociationGet",
+  AssociationAdd = "AssociationAdd",
+  AssociationRemove = "AssociationRemove",
+  AssociationRemoveAll = "AssociationRemoveAll",
+  AssociationSet = "AssociationSet",
+
+  EventAttach = "EventAttach",
+  EventAttachWithData = "EventAttachWithData",
+  EventDetach = "EventDetach",
+  EventFire = "EventFire",
+}
+type GeneratedJSDoc = Partial<{
+  [name in MethodType]: { [name: string]: string };
+}>;
+
+interface Doclet {
   description: string;
   deprecated: string;
   since: string;

@@ -1,6 +1,11 @@
 import ts = require("typescript");
 import astToString from "./astToString";
 import log from "loglevel";
+import {
+  buildJSDocStringFromLines,
+  createJSDocCenterPart,
+} from "./jsdocGenerator";
+import Preferences from "./preferences";
 
 const factory = ts.factory;
 
@@ -41,14 +46,17 @@ function generateSettingsInterface(
         propertyTypes.push(createBindingStringTypeNode()); // 3. a binding string
       }
 
-      interfaceProperties.push(
-        factory.createPropertySignature(
-          undefined,
-          property.name,
-          factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createUnionTypeNode(propertyTypes)
-        )
+      const propertySignature = factory.createPropertySignature(
+        undefined,
+        property.name,
+        factory.createToken(ts.SyntaxKind.QuestionToken),
+        factory.createUnionTypeNode(propertyTypes)
       );
+      addJSDocCommentToNode(
+        propertySignature,
+        buildJSDocStringFromLines(createJSDocCenterPart(property))
+      );
+      interfaceProperties.push(propertySignature);
     }
   }
 
@@ -115,14 +123,17 @@ function generateSettingsInterface(
         ]);
       }
 
-      interfaceProperties.push(
-        factory.createPropertySignature(
-          undefined,
-          aggregation.name,
-          factory.createToken(ts.SyntaxKind.QuestionToken),
-          aggregationInitializationTypeNode
-        )
+      const propertySignature = factory.createPropertySignature(
+        undefined,
+        aggregation.name,
+        factory.createToken(ts.SyntaxKind.QuestionToken),
+        aggregationInitializationTypeNode
       );
+      addJSDocCommentToNode(
+        propertySignature,
+        buildJSDocStringFromLines(createJSDocCenterPart(aggregation))
+      );
+      interfaceProperties.push(propertySignature);
     }
   }
 
@@ -158,15 +169,18 @@ function generateSettingsInterface(
         ]);
       }
 
+      const propertySignature = factory.createPropertySignature(
+        undefined,
+        association.name,
+        factory.createToken(ts.SyntaxKind.QuestionToken),
+        associationInitializationTypeNode
+      );
+      addJSDocCommentToNode(
+        propertySignature,
+        buildJSDocStringFromLines(createJSDocCenterPart(association))
+      );
       factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-        interfaceProperties.push(
-          factory.createPropertySignature(
-            undefined,
-            association.name,
-            factory.createToken(ts.SyntaxKind.QuestionToken),
-            associationInitializationTypeNode
-          )
-        );
+        interfaceProperties.push(propertySignature);
     }
   }
 
@@ -174,31 +188,34 @@ function generateSettingsInterface(
   for (const n in classInfo.events) {
     const event = classInfo.events[n];
     if (event.visibility !== "hidden") {
-      interfaceProperties.push(
-        factory.createPropertySignature(
-          undefined,
-          event.name,
-          factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createFunctionTypeNode(
-            [],
-            [
-              factory.createParameterDeclaration(
-                undefined,
-                undefined,
-                "event",
-                undefined,
-                createTSTypeNode(
-                  "sap.ui.base.Event",
-                  requiredImports,
-                  knownGlobals,
-                  currentClassName
-                )
-              ),
-            ],
-            factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
-          )
+      const propertySignature = factory.createPropertySignature(
+        undefined,
+        event.name,
+        factory.createToken(ts.SyntaxKind.QuestionToken),
+        factory.createFunctionTypeNode(
+          [],
+          [
+            factory.createParameterDeclaration(
+              undefined,
+              undefined,
+              "event",
+              undefined,
+              createTSTypeNode(
+                "sap.ui.base.Event",
+                requiredImports,
+                knownGlobals,
+                currentClassName
+              )
+            ),
+          ],
+          factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
         )
       );
+      addJSDocCommentToNode(
+        propertySignature,
+        buildJSDocStringFromLines(createJSDocCenterPart(event))
+      );
+      interfaceProperties.push(propertySignature);
     }
   }
 
@@ -283,6 +300,20 @@ ${astToString(constructorBlock)}===== END =====
   log.warn(message);
 }
 
+// adds the content into a multiline comment before the given node; te asterisk preceding each line must be present in the content
+function addJSDocCommentToNode(node: ts.Node, content: string) {
+  if (content && Preferences.get().jsdoc !== "none") {
+    addLineBreakBefore(node, 2); // some space before the JSDoc
+    // cannot explicitly create JSDoc: https://github.com/microsoft/TypeScript/issues/17146, so prepend a "*" at the very beginning to make it one
+    ts.addSyntheticLeadingComment(
+      node,
+      ts.SyntaxKind.MultiLineCommentTrivia,
+      "*" + content,
+      true
+    );
+  }
+}
+
 function generateMethods(
   classInfo: ClassInfo,
   requiredImports: RequiredImports,
@@ -318,23 +349,49 @@ function generateMethods(
       ts.SyntaxKind.SingleLineCommentTrivia,
       " property: " + n
     );
+    addJSDocCommentToNode(getter, classInfo.generatedJSDoc?.PropertyGet[n]);
     allMethods.push(getter);
 
     // property setter
-    allMethods.push(
-      factory.createMethodSignature(
+    const setter = factory.createMethodSignature(
+      undefined,
+      property.methods.set,
+      undefined,
+      [],
+      [
+        factory.createParameterDeclaration(
+          undefined,
+          undefined,
+          n,
+          undefined,
+          createTSTypeNode(
+            property.type,
+            requiredImports,
+            knownGlobals,
+            currentClassName
+          )
+        ),
+      ],
+      factory.createThisTypeNode()
+    );
+    addJSDocCommentToNode(setter, classInfo.generatedJSDoc?.PropertySet[n]);
+    allMethods.push(setter);
+
+    if (property.bindable) {
+      // bind property
+      const bind = factory.createMethodSignature(
         undefined,
-        property.methods.set,
+        property.methods.bind,
         undefined,
         [],
         [
           factory.createParameterDeclaration(
             undefined,
             undefined,
-            n,
+            "bindingInfo",
             undefined,
             createTSTypeNode(
-              property.type,
+              "sap.ui.base.ManagedObject.PropertyBindingInfo",
               requiredImports,
               knownGlobals,
               currentClassName
@@ -342,46 +399,24 @@ function generateMethods(
           ),
         ],
         factory.createThisTypeNode()
-      )
-    );
-
-    if (property.bindable) {
-      // bind property
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          property.methods.bind,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              "bindingInfo",
-              undefined,
-              createTSTypeNode(
-                "sap.ui.base.ManagedObject.PropertyBindingInfo",
-                requiredImports,
-                knownGlobals,
-                currentClassName
-              )
-            ),
-          ],
-          factory.createThisTypeNode()
-        )
       );
+      addJSDocCommentToNode(bind, classInfo.generatedJSDoc?.PropertyBind[n]);
+      allMethods.push(bind);
 
       // unbind property
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          property.methods.unbind,
-          undefined,
-          [],
-          [],
-          factory.createThisTypeNode()
-        )
+      const unbind = factory.createMethodSignature(
+        undefined,
+        property.methods.unbind,
+        undefined,
+        [],
+        [],
+        factory.createThisTypeNode()
       );
+      addJSDocCommentToNode(
+        unbind,
+        classInfo.generatedJSDoc?.PropertyUnbind[n]
+      );
+      allMethods.push(unbind);
     }
   }
 
@@ -421,217 +456,236 @@ function generateMethods(
       ts.SyntaxKind.SingleLineCommentTrivia,
       " aggregation: " + n
     );
+    addJSDocCommentToNode(getter, classInfo.generatedJSDoc?.AggregationGet[n]);
     allMethods.push(getter);
 
     if (aggregation.cardinality === "0..n") {
       // add aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          aggregation.methods.add,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              n,
-              undefined,
-              createTSTypeNode(
-                aggregation.type,
-                requiredImports,
-                knownGlobals,
-                currentClassName
-              )
-            ),
-          ],
-          factory.createThisTypeNode()
-        )
-      );
-
-      // insert aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          aggregation.methods.insert,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              n,
-              undefined,
-              createTSTypeNode(
-                aggregation.type,
-                requiredImports,
-                knownGlobals,
-                currentClassName
-              )
-            ),
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              "index",
-              undefined,
-              factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
-            ),
-          ],
-          factory.createThisTypeNode()
-        )
-      );
-
-      // remove aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          aggregation.methods.remove,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              n,
-              undefined,
-              factory.createUnionTypeNode([
-                factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
-                factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-                createTSTypeNode(
-                  aggregation.type,
-                  requiredImports,
-                  knownGlobals,
-                  currentClassName
-                ),
-              ])
-            ),
-          ],
-          factory.createThisTypeNode()
-        )
-      );
-
-      // remove all aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          aggregation.methods.removeAll,
-          undefined,
-          [],
-          [],
-          factory.createArrayTypeNode(
+      const add = factory.createMethodSignature(
+        undefined,
+        aggregation.methods.add,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            n,
+            undefined,
             createTSTypeNode(
               aggregation.type,
               requiredImports,
               knownGlobals,
               currentClassName
             )
-          )
-        )
+          ),
+        ],
+        factory.createThisTypeNode()
       );
+      addJSDocCommentToNode(add, classInfo.generatedJSDoc?.AggregationAdd[n]);
+      allMethods.push(add);
 
-      // index of aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          aggregation.methods.indexOf,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              n,
-              undefined,
+      // insert aggregation
+      const insert = factory.createMethodSignature(
+        undefined,
+        aggregation.methods.insert,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            n,
+            undefined,
+            createTSTypeNode(
+              aggregation.type,
+              requiredImports,
+              knownGlobals,
+              currentClassName
+            )
+          ),
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            "index",
+            undefined,
+            factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+          ),
+        ],
+        factory.createThisTypeNode()
+      );
+      addJSDocCommentToNode(
+        insert,
+        classInfo.generatedJSDoc?.AggregationInsert[n]
+      );
+      allMethods.push(insert);
+
+      // remove aggregation
+      const remove = factory.createMethodSignature(
+        undefined,
+        aggregation.methods.remove,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            n,
+            undefined,
+            factory.createUnionTypeNode([
+              factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
+              factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
               createTSTypeNode(
                 aggregation.type,
                 requiredImports,
                 knownGlobals,
                 currentClassName
-              )
-            ),
-          ],
-          factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+              ),
+            ])
+          ),
+        ],
+        factory.createThisTypeNode()
+      );
+      addJSDocCommentToNode(
+        remove,
+        classInfo.generatedJSDoc?.AggregationRemove[n]
+      );
+      allMethods.push(remove);
+
+      // remove all aggregation
+      const removeAll = factory.createMethodSignature(
+        undefined,
+        aggregation.methods.removeAll,
+        undefined,
+        [],
+        [],
+        factory.createArrayTypeNode(
+          createTSTypeNode(
+            aggregation.type,
+            requiredImports,
+            knownGlobals,
+            currentClassName
+          )
         )
       );
+      addJSDocCommentToNode(
+        removeAll,
+        classInfo.generatedJSDoc?.AggregationRemoveAll[n]
+      );
+      allMethods.push(removeAll);
+
+      // index of aggregation
+      const indexOf = factory.createMethodSignature(
+        undefined,
+        aggregation.methods.indexOf,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            n,
+            undefined,
+            createTSTypeNode(
+              aggregation.type,
+              requiredImports,
+              knownGlobals,
+              currentClassName
+            )
+          ),
+        ],
+        factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+      );
+      addJSDocCommentToNode(
+        indexOf,
+        classInfo.generatedJSDoc?.AggregationIndexOf[n]
+      );
+      allMethods.push(indexOf);
 
       //	this._sUpdater = 'update' + N;
       //	this._sRefresher = 'refresh' + N;
     } else {
       // set aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          aggregation.methods.set,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              n,
-              undefined,
-              createTSTypeNode(
-                aggregation.type,
-                requiredImports,
-                knownGlobals,
-                currentClassName
-              )
-            ),
-          ],
-          factory.createThisTypeNode()
-        )
+      const set = factory.createMethodSignature(
+        undefined,
+        aggregation.methods.set,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            n,
+            undefined,
+            createTSTypeNode(
+              aggregation.type,
+              requiredImports,
+              knownGlobals,
+              currentClassName
+            )
+          ),
+        ],
+        factory.createThisTypeNode()
       );
+      addJSDocCommentToNode(set, classInfo.generatedJSDoc?.AggregationSet[n]);
+      allMethods.push(set);
     }
 
     // destroy aggregation
-    allMethods.push(
-      factory.createMethodSignature(
+    const destroy = factory.createMethodSignature(
+      undefined,
+      aggregation.methods.destroy,
+      undefined,
+      [],
+      [],
+      factory.createThisTypeNode()
+    );
+    addJSDocCommentToNode(
+      destroy,
+      classInfo.generatedJSDoc?.AggregationDestroy[n]
+    );
+    allMethods.push(destroy);
+
+    if (aggregation.bindable) {
+      // bind aggregation
+      const bind = factory.createMethodSignature(
         undefined,
-        aggregation.methods.destroy,
+        aggregation.methods.bind,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            "bindingInfo",
+            undefined,
+            createTSTypeNode(
+              "sap.ui.base.ManagedObject.AggregationBindingInfo",
+              requiredImports,
+              knownGlobals,
+              currentClassName
+            )
+          ),
+        ],
+        factory.createThisTypeNode()
+      );
+      addJSDocCommentToNode(bind, classInfo.generatedJSDoc?.AggregationBind[n]);
+      allMethods.push(bind);
+
+      // unbind aggregation
+      const unbind = factory.createMethodSignature(
+        undefined,
+        aggregation.methods.unbind,
         undefined,
         [],
         [],
         factory.createThisTypeNode()
-      )
-    );
-
-    if (aggregation.bindable) {
-      // bind aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          aggregation.methods.bind,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              "bindingInfo",
-              undefined,
-              createTSTypeNode(
-                "sap.ui.base.ManagedObject.AggregationBindingInfo",
-                requiredImports,
-                knownGlobals,
-                currentClassName
-              )
-            ),
-          ],
-          factory.createThisTypeNode()
-        )
       );
-
-      // unbind aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          aggregation.methods.unbind,
-          undefined,
-          [],
-          [],
-          factory.createThisTypeNode()
-        )
+      addJSDocCommentToNode(
+        unbind,
+        classInfo.generatedJSDoc?.AggregationUnbind[n]
       );
+      allMethods.push(unbind);
     }
   }
 
@@ -661,110 +715,120 @@ function generateMethods(
       ts.SyntaxKind.SingleLineCommentTrivia,
       " association: " + n
     );
+    addJSDocCommentToNode(getter, classInfo.generatedJSDoc?.AssociationGet[n]);
     allMethods.push(getter);
 
     // association setter
     if (association.cardinality === "0..1") {
       // set association
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          association.methods.set,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              n,
-              factory.createToken(ts.SyntaxKind.QuestionToken),
-              factory.createUnionTypeNode([
-                factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-                createTSTypeNode(
-                  association.type,
-                  requiredImports,
-                  knownGlobals,
-                  currentClassName
-                ),
-              ])
-            ),
-          ],
-          factory.createThisTypeNode()
-        )
+      const setter = factory.createMethodSignature(
+        undefined,
+        association.methods.set,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            n,
+            factory.createToken(ts.SyntaxKind.QuestionToken),
+            factory.createUnionTypeNode([
+              factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+              createTSTypeNode(
+                association.type,
+                requiredImports,
+                knownGlobals,
+                currentClassName
+              ),
+            ])
+          ),
+        ],
+        factory.createThisTypeNode()
       );
+      addJSDocCommentToNode(
+        setter,
+        classInfo.generatedJSDoc?.AssociationSet[n]
+      );
+      allMethods.push(setter);
     } else {
       // 0..n
 
       // add association
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          association.methods.add,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              n,
-              undefined,
-              factory.createUnionTypeNode([
-                factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-                createTSTypeNode(
-                  association.type,
-                  requiredImports,
-                  knownGlobals,
-                  currentClassName
-                ),
-              ])
-            ),
-          ],
-          factory.createThisTypeNode()
-        )
+      const add = factory.createMethodSignature(
+        undefined,
+        association.methods.add,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            n,
+            undefined,
+            factory.createUnionTypeNode([
+              factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+              createTSTypeNode(
+                association.type,
+                requiredImports,
+                knownGlobals,
+                currentClassName
+              ),
+            ])
+          ),
+        ],
+        factory.createThisTypeNode()
       );
+      addJSDocCommentToNode(add, classInfo.generatedJSDoc?.AssociationAdd[n]);
+      allMethods.push(add);
 
       // remove association
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          association.methods.remove,
-          undefined,
-          [],
-          [
-            factory.createParameterDeclaration(
-              undefined,
-              undefined,
-              n,
-              undefined,
-              factory.createUnionTypeNode([
-                factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
-                factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-                createTSTypeNode(
-                  association.type,
-                  requiredImports,
-                  knownGlobals,
-                  currentClassName
-                ),
-              ])
-            ),
-          ],
+      const remove = factory.createMethodSignature(
+        undefined,
+        association.methods.remove,
+        undefined,
+        [],
+        [
+          factory.createParameterDeclaration(
+            undefined,
+            undefined,
+            n,
+            undefined,
+            factory.createUnionTypeNode([
+              factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
+              factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+              createTSTypeNode(
+                association.type,
+                requiredImports,
+                knownGlobals,
+                currentClassName
+              ),
+            ])
+          ),
+        ],
+        factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+      );
+      addJSDocCommentToNode(
+        remove,
+        classInfo.generatedJSDoc?.AssociationRemove[n]
+      );
+      allMethods.push(remove);
+
+      // remove all aggregation
+      const removeAll = factory.createMethodSignature(
+        undefined,
+        association.methods.removeAll,
+        undefined,
+        [],
+        [],
+        factory.createArrayTypeNode(
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
         )
       );
-
-      // remove all aggregation
-      allMethods.push(
-        factory.createMethodSignature(
-          undefined,
-          association.methods.removeAll,
-          undefined,
-          [],
-          [],
-          factory.createArrayTypeNode(
-            factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
-          )
-        )
+      addJSDocCommentToNode(
+        removeAll,
+        classInfo.generatedJSDoc?.AssociationRemoveAll[n]
       );
+      allMethods.push(removeAll);
     }
   }
 
@@ -823,6 +887,7 @@ function generateMethods(
       ts.SyntaxKind.SingleLineCommentTrivia,
       " event: " + n
     );
+    addJSDocCommentToNode(attach, classInfo.generatedJSDoc?.EventAttach[n]);
     allMethods.push(attach);
 
     // attach event (with data)
@@ -851,92 +916,99 @@ function generateMethods(
       ],
       factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
     );
-    allMethods.push(
-      factory.createMethodSignature(
-        undefined,
-        event.methods.attach,
-        undefined,
-        [
-          factory.createTypeParameterDeclaration(
-            undefined,
-            "CustomDataType",
-            factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
-          ),
-        ],
-        [
-          factory.createParameterDeclaration(
-            undefined,
-            undefined,
-            "data",
-            undefined,
-            factory.createTypeReferenceNode("CustomDataType")
-          ),
-          factory.createParameterDeclaration(
-            undefined,
-            undefined,
-            "fn",
-            undefined,
-            callbackWithData
-          ),
-          factory.createParameterDeclaration(
-            undefined,
-            undefined,
-            "listener",
-            factory.createToken(ts.SyntaxKind.QuestionToken),
-            factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
-          ),
-        ],
-        factory.createThisTypeNode()
-      )
+    const attach2 = factory.createMethodSignature(
+      undefined,
+      event.methods.attach,
+      undefined,
+      [
+        factory.createTypeParameterDeclaration(
+          undefined,
+          "CustomDataType",
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+        ),
+      ],
+      [
+        factory.createParameterDeclaration(
+          undefined,
+          undefined,
+          "data",
+          undefined,
+          factory.createTypeReferenceNode("CustomDataType")
+        ),
+        factory.createParameterDeclaration(
+          undefined,
+          undefined,
+          "fn",
+          undefined,
+          callbackWithData
+        ),
+        factory.createParameterDeclaration(
+          undefined,
+          undefined,
+          "listener",
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+        ),
+      ],
+      factory.createThisTypeNode()
     );
+    addJSDocCommentToNode(
+      attach2,
+      classInfo.generatedJSDoc?.EventAttachWithData[n]
+    );
+    allMethods.push(attach2);
 
     // detach event
-    allMethods.push(
-      factory.createMethodSignature(
-        undefined,
-        event.methods.detach,
-        undefined,
-        [],
-        [
-          factory.createParameterDeclaration(
-            undefined,
-            undefined,
-            "fn",
-            undefined,
-            callback
-          ),
-          factory.createParameterDeclaration(
-            undefined,
-            undefined,
-            "listener",
-            factory.createToken(ts.SyntaxKind.QuestionToken),
-            factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
-          ),
-        ],
-        factory.createThisTypeNode()
-      )
+    const detach = factory.createMethodSignature(
+      undefined,
+      event.methods.detach,
+      undefined,
+      [],
+      [
+        factory.createParameterDeclaration(
+          undefined,
+          undefined,
+          "fn",
+          undefined,
+          callback
+        ),
+        factory.createParameterDeclaration(
+          undefined,
+          undefined,
+          "listener",
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+        ),
+      ],
+      factory.createThisTypeNode()
     );
+    addJSDocCommentToNode(detach, classInfo.generatedJSDoc?.EventDetach[n]);
+    allMethods.push(detach);
+
+    const returnValue = event.allowPreventDefault
+      ? factory.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword)
+      : factory.createThisTypeNode();
 
     // fire event
-    allMethods.push(
-      factory.createMethodSignature(
-        undefined,
-        event.methods.fire,
-        undefined,
-        [],
-        [
-          // TODO: describe parameter object with all details
-          factory.createParameterDeclaration(
-            undefined,
-            undefined,
-            "parameters",
-            factory.createToken(ts.SyntaxKind.QuestionToken),
-            factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
-          ),
-        ],
-        factory.createThisTypeNode()
-      )
+    const fire = factory.createMethodSignature(
+      undefined,
+      event.methods.fire,
+      undefined,
+      [],
+      [
+        // TODO: describe parameter object with all details
+        factory.createParameterDeclaration(
+          undefined,
+          undefined,
+          "parameters",
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+        ),
+      ],
+      returnValue
     );
+    addJSDocCommentToNode(fire, classInfo.generatedJSDoc?.EventFire[n]);
+    allMethods.push(fire);
   }
 
   return allMethods;
