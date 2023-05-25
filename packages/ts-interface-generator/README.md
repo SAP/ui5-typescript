@@ -52,8 +52,8 @@ This is the list of available commandline arguments, including the ones already 
 - `--version`: Display the version of the generator
 - `-c`, `--config`: Path to the configuration file to use
 - `-w`, `--watch`: Run in watch mode
-- `--loglevel`: Set the console logging verbosity; options are: "error", "warn", "info", "debug", "trace"; default level is "info"
-- `--jsdoc`: Set the amount of JSDoc which should be generated; options are: "none", "minimal", "verbose"; default is "minimal": by default, the JSDoc documentation written in the control metadata for the properties, aggregations etc. is also used for the generated methods. By setting `--jsdoc none` or `--jsdoc verbose` you can decide to omit all JSDoc or to also have all the `@param` and `@returns` tags as well as some additional generic documentation generated.
+- `--loglevel`: Set the console logging verbosity; options are: `error`, `warn`, `info`, `debug`, `trace`; default level is `info`
+- `--jsdoc`: Set the amount of JSDoc which should be generated; options are: `none`, `minimal`, `verbose`; default is `verbose`: by default, the JSDoc documentation written in the control metadata for the properties, aggregations etc. is added to the generated methods, plus generic documentation for the `@param` and `@returns` tags as well as some additional generic documentation like for default values (if any). By setting `--jsdoc none` or `--jsdoc minimal` you can decide to omit all JSDoc or to only add the JSDoc written in the control.
 
 ## Limitations
 

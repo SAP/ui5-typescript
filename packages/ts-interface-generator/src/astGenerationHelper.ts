@@ -9,6 +9,23 @@ import Preferences from "./preferences";
 
 const factory = ts.factory;
 
+const fixedCreateParameterDeclaration =
+  parseFloat(ts.version) >= 4.8
+    ? factory.createParameterDeclaration.bind(this) // not used, but required by linting
+    : function (
+        ...args: [
+          readonly ts.ModifierLike[],
+          ts.DotDotDotToken,
+          string | ts.BindingName,
+          ts.QuestionToken?,
+          ts.TypeNode?,
+          ts.Expression?
+        ]
+      ) {
+        // @ts-ignore old signature before 4.8 is used here
+        return factory.createParameterDeclaration(undefined, ...args);
+      };
+
 function generateSettingsInterface(
   classInfo: ClassInfo,
   classFileName: string,
@@ -195,7 +212,7 @@ function generateSettingsInterface(
         factory.createFunctionTypeNode(
           [],
           [
-            factory.createParameterDeclaration(
+            fixedCreateParameterDeclaration(
               undefined,
               undefined,
               "event",
@@ -252,13 +269,26 @@ function generateSettingsInterface(
       settingsSuperclassAsExpression,
     ]),
   ];
-  const myInterface = factory.createInterfaceDeclaration(
-    undefined,
-    ownSettingsTypeName,
-    undefined,
-    heritageClauses,
-    interfaceProperties
-  );
+  let myInterface;
+  if (parseFloat(ts.version) >= 4.8) {
+    myInterface = factory.createInterfaceDeclaration(
+      undefined,
+      ownSettingsTypeName,
+      undefined,
+      heritageClauses,
+      interfaceProperties
+    );
+  } else {
+    myInterface = factory.createInterfaceDeclaration(
+      undefined,
+      undefined,
+      ownSettingsTypeName,
+      undefined,
+      heritageClauses,
+      // @ts-ignore: below TS 4.8 there were more params
+      interfaceProperties
+    );
+  }
 
   addLineBreakBefore(myInterface, 2);
   ts.addSyntheticLeadingComment(
@@ -359,7 +389,7 @@ function generateMethods(
       undefined,
       [],
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           n,
@@ -385,7 +415,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             "bindingInfo",
@@ -467,7 +497,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -492,7 +522,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -504,7 +534,7 @@ function generateMethods(
               currentClassName
             )
           ),
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             "index",
@@ -527,7 +557,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -581,7 +611,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -612,7 +642,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -654,7 +684,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             "bindingInfo",
@@ -727,7 +757,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -760,7 +790,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -788,7 +818,7 @@ function generateMethods(
         undefined,
         [],
         [
-          factory.createParameterDeclaration(
+          fixedCreateParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -843,7 +873,7 @@ function generateMethods(
     const callback = factory.createFunctionTypeNode(
       [],
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "event",
@@ -864,14 +894,14 @@ function generateMethods(
       undefined,
       [],
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "fn",
           undefined,
           callback
         ),
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "listener",
@@ -894,7 +924,7 @@ function generateMethods(
     const callbackWithData = factory.createFunctionTypeNode(
       [],
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "event",
@@ -906,7 +936,7 @@ function generateMethods(
             currentClassName
           )
         ),
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "data",
@@ -921,28 +951,34 @@ function generateMethods(
       event.methods.attach,
       undefined,
       [
-        factory.createTypeParameterDeclaration(
-          undefined,
-          "CustomDataType",
-          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
-        ),
+        parseFloat(ts.version) >= 4.8
+          ? factory.createTypeParameterDeclaration(
+              undefined,
+              "CustomDataType",
+              factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+            )
+          : factory.createTypeParameterDeclaration(
+              // @ts-ignore this is the old method signature before TS 4.8
+              "CustomDataType",
+              factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+            ),
       ],
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "data",
           undefined,
           factory.createTypeReferenceNode("CustomDataType")
         ),
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "fn",
           undefined,
           callbackWithData
         ),
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "listener",
@@ -965,14 +1001,14 @@ function generateMethods(
       undefined,
       [],
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "fn",
           undefined,
           callback
         ),
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "listener",
@@ -997,7 +1033,7 @@ function generateMethods(
       [],
       [
         // TODO: describe parameter object with all details
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "parameters",
@@ -1191,7 +1227,7 @@ function createConstructorBlock(settingsTypeName: string) {
     factory.createConstructorDeclaration(
       undefined,
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "idOrSettings",
@@ -1212,14 +1248,14 @@ function createConstructorBlock(settingsTypeName: string) {
     factory.createConstructorDeclaration(
       undefined,
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "id",
           factory.createToken(ts.SyntaxKind.QuestionToken),
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
         ),
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "settings",
@@ -1239,14 +1275,14 @@ function createConstructorBlock(settingsTypeName: string) {
     factory.createConstructorDeclaration(
       undefined,
       [
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "id",
           factory.createToken(ts.SyntaxKind.QuestionToken),
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
         ),
-        factory.createParameterDeclaration(
+        fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "settings",

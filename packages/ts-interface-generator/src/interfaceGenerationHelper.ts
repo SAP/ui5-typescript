@@ -724,24 +724,51 @@ function buildAST(
 
   const statements: ts.Statement[] = getImports(requiredImports);
 
-  const myInterface = factory.createInterfaceDeclaration(
-    [
-      factory.createModifier(ts.SyntaxKind.ExportKeyword),
-      factory.createModifier(ts.SyntaxKind.DefaultKeyword),
-    ],
-    classInfo.name,
-    undefined,
-    undefined,
-    methods
-  );
+  let myInterface;
+  if (parseFloat(ts.version) >= 4.8) {
+    myInterface = factory.createInterfaceDeclaration(
+      [
+        factory.createModifier(ts.SyntaxKind.ExportKeyword),
+        factory.createModifier(ts.SyntaxKind.DefaultKeyword),
+      ],
+      classInfo.name,
+      undefined,
+      undefined,
+      methods
+    );
+  } else {
+    myInterface = factory.createInterfaceDeclaration(
+      undefined,
+      [
+        factory.createModifier(ts.SyntaxKind.ExportKeyword),
+        factory.createModifier(ts.SyntaxKind.DefaultKeyword),
+      ],
+      classInfo.name,
+      undefined,
+      undefined,
+      // @ts-ignore: below TS 4.8 there were more params
+      methods
+    );
+  }
   addLineBreakBefore(myInterface, 2);
 
   // assemble the module declaration
-  const module = factory.createModuleDeclaration(
-    [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
-    factory.createStringLiteral("./" + moduleName),
-    factory.createModuleBlock([settingsInterface, myInterface])
-  );
+  let module;
+  if (parseFloat(ts.version) >= 4.8) {
+    module = factory.createModuleDeclaration(
+      [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
+      factory.createStringLiteral("./" + moduleName),
+      factory.createModuleBlock([settingsInterface, myInterface])
+    );
+  } else {
+    module = factory.createModuleDeclaration(
+      undefined,
+      // @ts-ignore old signature
+      [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
+      factory.createStringLiteral("./" + moduleName),
+      factory.createModuleBlock([settingsInterface, myInterface])
+    );
+  }
   if (statements.length > 0) {
     addLineBreakBefore(module, 2);
   }
@@ -749,19 +776,43 @@ function buildAST(
 
   // if needed, assemble the second module declaration
   if (requiredImports.selfIsUsed) {
-    const myInterface2 = factory.createInterfaceDeclaration(
-      undefined,
-      classInfo.name,
-      undefined,
-      undefined,
-      methods
-    );
+    let myInterface2;
+    if (parseFloat(ts.version) >= 4.8) {
+      myInterface2 = factory.createInterfaceDeclaration(
+        undefined,
+        classInfo.name,
+        undefined,
+        undefined,
+        methods
+      );
+    } else {
+      myInterface2 = factory.createInterfaceDeclaration(
+        undefined,
+        undefined,
+        classInfo.name,
+        undefined,
+        undefined,
+        // @ts-ignore: below TS 4.8 there were more params
+        methods
+      );
+    }
 
-    const module2 = factory.createModuleDeclaration(
-      [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
-      factory.createStringLiteral("./" + moduleName),
-      factory.createModuleBlock([myInterface2])
-    );
+    let module2;
+    if (parseFloat(ts.version) >= 4.8) {
+      module2 = factory.createModuleDeclaration(
+        [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
+        factory.createStringLiteral("./" + moduleName),
+        factory.createModuleBlock([myInterface2])
+      );
+    } else {
+      module2 = factory.createModuleDeclaration(
+        undefined,
+        // @ts-ignore old signature
+        [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
+        factory.createStringLiteral("./" + moduleName),
+        factory.createModuleBlock([myInterface2])
+      );
+    }
     addLineBreakBefore(module2, 2);
     ts.addSyntheticLeadingComment(
       module2,
@@ -826,25 +877,48 @@ function getImports(requiredImports: RequiredImports) {
     }
 
     imports.push(
-      factory.createImportDeclaration(
-        undefined,
-        importClause,
-        factory.createStringLiteral(singleImport.moduleName)
-      )
+      parseFloat(ts.version) >= 4.8
+        ? factory.createImportDeclaration(
+            undefined,
+            importClause,
+            factory.createStringLiteral(singleImport.moduleName)
+          )
+        : factory.createImportDeclaration(
+            undefined,
+            undefined,
+            // @ts-ignore old signature before 4.8
+            importClause,
+            factory.createStringLiteral(singleImport.moduleName)
+          )
     );
   }
 
   if (!imports.length) {
     // this would result in an ambient module declaration which doesn't work for us. Enforce some implementation code to make it non-ambient.
-    const importDeclaration = factory.createImportDeclaration(
-      undefined,
-      factory.createImportClause(
-        false,
-        factory.createIdentifier("Core"),
-        undefined
-      ),
-      factory.createStringLiteral("sap/ui/core/Core")
-    );
+    let importDeclaration;
+    if (parseFloat(ts.version) >= 4.8) {
+      importDeclaration = factory.createImportDeclaration(
+        undefined,
+        factory.createImportClause(
+          false,
+          factory.createIdentifier("Core"),
+          undefined
+        ),
+        factory.createStringLiteral("sap/ui/core/Core")
+      );
+    } else {
+      importDeclaration = factory.createImportDeclaration(
+        undefined,
+        undefined,
+        // @ts-ignore old signature before TS 4.8
+        factory.createImportClause(
+          false,
+          factory.createIdentifier("Core"),
+          undefined
+        ),
+        factory.createStringLiteral("sap/ui/core/Core")
+      );
+    }
     ts.addSyntheticTrailingComment(
       importDeclaration,
       ts.SyntaxKind.SingleLineCommentTrivia,
