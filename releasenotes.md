@@ -69,7 +69,7 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 
 ## 1.114 (May 2023)
 
-no news
+No news (but of course several rounds of improvements within the UI5 API definitions, giving more details for previously too-vague types like `object`, `function` or `Promise`).
 
 ## 1.113 (April 2023)
 
