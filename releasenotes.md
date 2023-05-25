@@ -11,7 +11,19 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 
 ## 1.115 (June 2023)
 
-* INCOMPATIBLE: Enums and static properties are now properties of the module's default export (before this change they were named exports of the module). This change requires **adaptation in application code where such entities are imported**. Example:
+* **INCOMPATIBLE** FIX: the properties of `sap/ui/Device` can now be used in the expected way - and *only* in this way:
+  ```ts
+  import Device from "sap/ui/Device";
+  const isMobile = Device.browser.mobile;
+  ```
+  Or, as a dynamic import:
+  ```ts
+  const Device = (await import("sap/ui/Device")).default;
+  const isMobile = Device.browser.mobile;
+  ```
+  The previous workaround (importing the named export `browser` like `import { browser } from "sap/ui/Device";`) **does no longer work**. Please switch to using properties on the default export, as shown above.
+
+* **INCOMPATIBLE**: Enums and static properties are now properties of the module's default export (before this change they were named exports of the module). This change requires **adaptation in application code where such entities are imported**. Example:
 
   Before this change `Action`, `Dock` and `registry` were named exports:
   ```ts
@@ -52,12 +64,7 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 ![Autocomplete for metadata structure](./assets/event_getParameter.png)<br>
 ![Autocomplete for metadata structure](./assets/event_getParameters.png)
 
-* FIX: the properties of `sap/ui/Device` can now be used in the expected way:
-  ```ts
-  import Device from "sap/ui/Device";
-  alert(Device.browser.name);
-  ```
-  The previous workaround (importing the named export `browser`) should no longer be used and will break sooner or later.
+* RELATED: Starting with version 0.6.0, the `@ui5/ts-interface-generator` supporting control development does also add JSDoc to the generated methods (generic documentation as well as taken from the original control metadata section).
 
 
 ## 1.114 (May 2023)
