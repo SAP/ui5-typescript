@@ -540,8 +540,9 @@ function getMemberFromPropertyAssignment<T extends MetadataSectionName>(
   memberKind: T
 ): TypeForMetadataSectionName[T] {
   // the name
+  const memberName = propertyAssignment.name.getText().replace(/['"]/g, "");
   const member: APIMember = {
-    name: propertyAssignment.name.getText(),
+    name: memberName,
   };
 
   // the definition object - for the sake of parsing simplicity, let's parse the code as a JSON object
@@ -613,7 +614,9 @@ function generateInterface(
     if (!ts.isPropertyAssignment(propertyAssignment)) {
       return; // huh, not a property assignment? => does not look like something we are interested in
     }
-    const memberKind = propertyAssignment.name.getText() as MetadataSectionName;
+    const memberKind = propertyAssignment.name
+      .getText()
+      .replace(/['"]/g, "") as MetadataSectionName;
     if (
       !["properties", "aggregations", "associations", "events"].includes(
         memberKind
@@ -632,7 +635,7 @@ function generateInterface(
         innerObjectLiteralExpression.properties
           .filter((prop) => ts.isPropertyAssignment(prop))
           .forEach((prop) => {
-            const name = prop.name.getText();
+            const name = prop.name.getText().replace(/['"]/g, "");
             metadataObject[memberKind][name] = getMemberFromPropertyAssignment(
               prop as ts.PropertyAssignment,
               memberKind
@@ -648,18 +651,6 @@ function generateInterface(
       );
     }
   });
-
-  try {
-    // @ts-ignore Hjson.rt.* is needed for the comments, but only exists in version 3. But the types are only available for version 2.
-    // TODO: remove! Only for debugging later stages; simple JSON parsing to be replaced with real TS parsing
-    //metadataObject = Hjson.rt.parse(metadata[0].initializer.getFullText()) as ClassInfo; // parse with some fault tolerance: it's not a real JSON object, but JS code which may contain comments and property names which are not enclosed in double quotes
-  } catch (e) {
-    throw new Error(
-      `When parsing the metadata of ${className} in ${fileName}: metadata is no valid JSON and could not be quick-fixed to be. Please make the metadata at least close to valid JSON. In particular, TypeScript type annotations cannot be used. Error: ${
-        (e as Error).message
-      }`
-    );
-  }
 
   if (
     !metadataObject.properties &&
