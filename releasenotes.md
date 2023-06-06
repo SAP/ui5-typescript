@@ -218,11 +218,11 @@ no news
 
 ## 1.108 (November 2022)
 
-* FEATURE: the JSDoc parser and dts-generator have been improved to support optional properties and nullable map entries. Examples:
+* FEATURE: the JSDoc parser and dts-generator have been improved to support optional properties and nullable map entries. Examples:<!-- {% raw %} -->
   ```
   @param {{width: number, height=: number}} dimensions - height is optional
   ```
-  in JSDoc ends up in the *.d.ts file as:
+  <!-- {% endraw %} -->in JSDoc ends up in the *.d.ts file as:
   ```ts
   dimensions: {width: number; height?: number;}
   ```
