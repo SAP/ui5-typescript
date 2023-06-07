@@ -137,9 +137,13 @@ This means when you have an object of any kind (e.g. a control requested with `.
   The global usage has been disabled in 1.111, as the usage of globals is discouraged and prevents further optimization. In case you used it, switch to the explicit import.<br>
   Some examples:<br>
   ```ts
+  import Device from "sap/ui/Device";
+  const chromeVariant1 = Device.browser.chrome; // OK: proper way starting with 1.115
+
   import { browser } from "sap/ui/Device";
-  const chromeVariant1 = browser.chrome; // OK: using the import from the line above is still fine
-  const chromeVariant2 = sap.ui.Device.browser.chrome; // global access REMOVED in 1.111
+  const chromeVariant2 = browser.chrome; // using the named export was ok before and after 1.111, but was removed in 1.115
+
+  const chromeVariant3 = sap.ui.Device.browser.chrome; // global access REMOVED in 1.111
 
   import { closeKeyboard, touch } from "sap/m/library";
   closeKeyboard(); // OK: using the import from the line above is still fine
@@ -149,7 +153,7 @@ This means when you have an object of any kind (e.g. a control requested with `.
   sap.m.touch.countContained(...); // global access REMOVED in 1.111
   ```
   List of affected APIs (removed globals):
-  * `sap.ui.Device.browser` ->   `import { browser } from "sap/ui/Device"`
+  * `sap.ui.Device.browser` ->   `import Device from "sap/ui/Device"` (in versions up to 1.114 the named export `browser` was used)
   * `sap.ui.Device.media`
   * `sap.ui.Device.orientation`
   * `sap.ui.Device.os`
