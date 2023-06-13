@@ -60,9 +60,33 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 
   However, note that pure types still remain named exports. So do enums etc. defined direct within a library (not in a contained control etc., but in the library module).
 
-* FEATURE: event parameters are now fully typed. Earlier, when a control event was handled, any string could be used to access an event parameter (regardless of whether a parameter of this event actually existed) and the returned type was `any`. Now you get all the code completion and type check goodies for all the Event-related APIs:<br>
+* (potentially INCOMPATIBLE) FEATURE: event parameters are now fully typed. Earlier, when a control event was handled, any string could be used to access an event parameter (regardless of whether a parameter with this name actually existed) and the returned type was `any`. Now you get all the code completion and type check goodies for all the Event-related APIs:<br>
 ![Autocomplete for metadata structure](./assets/event_getParameter.png)<br>
 ![Autocomplete for metadata structure](./assets/event_getParameters.png)
+
+  This change is incompatible for existing application code where event parameters are accessed on an object typed as "sap/ui/base/Event":
+  ```ts
+  const myControl = new SomeUI5Control({
+    someEvent: (evt: UI5Event) => {
+        const parameterValue = evt.getParameter("eventParamName");
+  ```
+  Because the base class "Event" has no specific parameters, there will now be the following error for the string:
+  ```
+  Argument of type 'string' is not assignable to parameter of type 'never'.ts(2345)
+  ```
+  The solution is to simply remove the type assignment from `evt` - it happens automatically now, with the event's specific parameters!
+  ```ts
+  const myControl = new SomeUI5Control({
+    someEvent: (evt) => {
+        const parameterValue = evt.getParameter("eventParamName");
+  ```
+  However, this only works for places where the type of `evt` can be automatically determined, like in constructors (as above) or in `attachXYEvent(...)` calls. In other places, like controller methods which are assigned as handlers in XMLViews, the type of the event needs to be explicitly specified. As of version 1.115, this works by using Generics, giving the event parameter type to the Event class, in later versions this is planned to be simplified:
+  ```ts
+  public handleChange(evt: UI5Event<$InputBaseChangeEventParameters>) : void {
+      ...
+  }
+  ```
+  In later versions, the parameter type names might change slightly (like `InputBase$ChangeEventParameters`) and also types for the events are planned to be provided (like `InputBase$ChangeEvent`). This will be announced here as well when it happens.
 
 * RELATED: Starting with version 0.6.0, the `@ui5/ts-interface-generator` supporting control development does also add JSDoc to the generated methods (generic documentation as well as taken from the original control metadata section).
 
@@ -117,7 +141,7 @@ Big thanks to Ryan!
   > *Background:*  Controller Extensions could not be used in TypeScript so far when using ES6 classes - which is the recommended way of using UI5 in TypeScript. Such extensions may have an `override` definition containing methods like `onInit` which are to be overridden by the extension. Specifying this definition block as a static member of the class would lead to a name clash with the static method [ControllerExtension.override(...)](https://ui5.sap.com/#/api/sap.ui.core.mvc.ControllerExtension%23methods/sap.ui.core.mvc.ControllerExtension.override) in the base class `ControllerExtension`. Hence, `overrides` (plural) [is now offered as additional (and soon recommended) name](https://github.com/SAP/openui5/commit/167251ea3cfb98ce7b20a671810dd6814cdd70fe) for this definition block.<br>
 Furthermore, specifying this block as static member did not work - regardless of its name - because the [transformer](https://github.com/ui5-community/babel-plugin-transform-modules-ui5) would assign this block as static member to the transformed UI5 class instead of moving it **into** the definition block of `BaseClass.extend("ClassName", { ... })` where it is expected. The transformer [has been changed](https://github.com/ui5-community/babel-plugin-transform-modules-ui5/pull/82) to handle `overrides` in a special way - just like it already did with `metadata`.
 
-  > Note: the new plural form `overrides` is only recognized by the UI5 runtime version 1.112 and higher. But when the new [`overrridesToOverride`](https://github.com/ui5-community/babel-plugin-transform-modules-ui5/pull/89) option is set, the transformer changes the new, non-conflicting plural form to the singular form also recognized by older UI5 runtime versions. 
+  > Note: the new plural form `overrides` is only recognized by the UI5 runtime version 1.112 and higher. But when the new [`overridesToOverride`](https://github.com/ui5-community/babel-plugin-transform-modules-ui5/pull/89) option is set, the transformer changes the new, non-conflicting plural form to the singular form also recognized by older UI5 runtime versions. 
 
 * FEATURE: the `.isA(...)` method (on all UI5 objects and as static method on sap.ui.base.Object) has been enhanced with generics in a way that it is recognized by TS as type guard.<br>
 This means when you have an object of any kind (e.g. a control requested with `.byId(...)`) and you write
