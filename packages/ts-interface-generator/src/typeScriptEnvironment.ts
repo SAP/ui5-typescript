@@ -75,11 +75,12 @@ function initialize(
   host.afterProgramCreate = (program) => {
     // in run-once mode we immediately trigger generation and then close the watch
     if (!options.watchMode) {
+      log.info("Run-once mode: running generation now.");
       onProgramChanged(program, []);
       // TODO: shut down the watcher
-      log.info("\n\nDone. Exiting.");
       setTimeout(function () {
         // must be asynchronously because createWatchProgram(...) below triggers this synchronously, so the return value "watch" is not yet assigned
+        log.info("\n\nDone. Exiting.");
         watch.close();
       }, 0);
     }

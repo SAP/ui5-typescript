@@ -15,13 +15,63 @@ import Preferences from "./preferences";
 
 const factory = ts.factory;
 
-const interestingBaseClasses: {
-  [key: string]: "ManagedObject" | "Element" | "Control" | undefined;
-} = {
-  '"sap/ui/base/ManagedObject".ManagedObject': "ManagedObject",
-  '"sap/ui/core/Element".UI5Element': "Element",
-  '"sap/ui/core/Control".Control': "Control",
-};
+let ManagedObjectSymbol: ts.Symbol,
+  ElementSymbol: ts.Symbol,
+  ControlSymbol: ts.Symbol;
+function interestingBaseClassForSymbol(
+  typeChecker: ts.TypeChecker,
+  symbol: ts.Symbol
+): "ManagedObject" | "Element" | "Control" | undefined {
+  if (!ManagedObjectSymbol) {
+    // cache - TODO: needs to be refreshed when the UI5 type definitions are updated during a run of the tool!
+    // identify the symbols for the interesting classes
+    const managedObjectModuleDeclaration = typeChecker
+      .getAmbientModules()
+      .filter((m) => m.name === '"sap/ui/base/ManagedObject"')[0]
+      .declarations[0] as ts.ModuleDeclaration;
+    const managedObjectClassDeclaration = (
+      managedObjectModuleDeclaration.body as ts.ModuleBlock
+    ).statements.filter(
+      (s) => ts.isClassDeclaration(s) && s.name?.text === "ManagedObject"
+    )[0] as ts.ClassDeclaration;
+    ManagedObjectSymbol = typeChecker.getSymbolAtLocation(
+      managedObjectClassDeclaration.name
+    );
+
+    const elementModuleDeclaration = typeChecker
+      .getAmbientModules()
+      .filter((m) => m.name === '"sap/ui/core/Element"')[0]
+      .declarations[0] as ts.ModuleDeclaration;
+    const elementClassDeclaration = (
+      elementModuleDeclaration.body as ts.ModuleBlock
+    ).statements.filter(
+      (s) => ts.isClassDeclaration(s) && s.name?.text === "UI5Element"
+    )[0] as ts.ClassDeclaration;
+    ElementSymbol = typeChecker.getSymbolAtLocation(
+      elementClassDeclaration.name
+    );
+
+    const controlModuleDeclaration = typeChecker
+      .getAmbientModules()
+      .filter((m) => m.name === '"sap/ui/core/Control"')[0]
+      .declarations[0] as ts.ModuleDeclaration;
+    const controlClassDeclaration = (
+      controlModuleDeclaration.body as ts.ModuleBlock
+    ).statements.filter(
+      (s) => ts.isClassDeclaration(s) && s.name?.text === "Control"
+    )[0] as ts.ClassDeclaration;
+    ControlSymbol = typeChecker.getSymbolAtLocation(
+      controlClassDeclaration.name
+    );
+  }
+  if (symbol === ControlSymbol) {
+    return "Control";
+  } else if (symbol === ElementSymbol) {
+    return "Element";
+  } else if (symbol === ManagedObjectSymbol) {
+    return "ManagedObject";
+  }
+}
 
 const interestingBaseSettingsClasses: {
   [key: string]:
@@ -405,8 +455,10 @@ function getInterestingBaseClass(
   //const typeName = typeChecker.typeToString(type);
   //log.debug("-> " + typeName + " (" + typeChecker.getFullyQualifiedName(type.getSymbol()) + ")");
 
-  let interestingBaseClass =
-    interestingBaseClasses[typeChecker.getFullyQualifiedName(type.getSymbol())];
+  let interestingBaseClass = interestingBaseClassForSymbol(
+    typeChecker,
+    type.getSymbol()
+  );
   if (interestingBaseClass) {
     return interestingBaseClass;
   }
@@ -533,7 +585,6 @@ function extractJSDoc(jsDocs: (ts.JSDoc | ts.JSDocTag)[]) {
     deprecation: handleTag(jsDocs, "deprecated"),
   };
 }
-
 // for a single definition in the metadata (a single property, a single aggregation, ...), this method extracts all needed info into the returned APIMember instance
 function getMemberFromPropertyAssignment<T extends MetadataSectionName>(
   propertyAssignment: ts.PropertyAssignment,
