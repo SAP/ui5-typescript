@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.6.3...@ui5/ts-interface-generator@0.7.0) (2023-06-22)
+
+### Features
+
+- **ts-interface-generator:** add types for event parameters and events ([7bc07b5](https://github.com/SAP/ui5-typescript/commit/7bc07b527ac5f4fd1c970d212b700888d3456447)), closes [#399](https://github.com/SAP/ui5-typescript/issues/399)
+
 ## [0.6.3](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.6.2...@ui5/ts-interface-generator@0.6.3) (2023-06-14)
 
 ### Bug Fixes
