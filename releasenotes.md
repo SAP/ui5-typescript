@@ -9,7 +9,22 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
 
-## 1.115 (June 2023)
+## 1.115.1 - changes on top of those listed below for 1.115.0 (June 2023)
+
+We are providing an extraordinary v1.115.1 patch for the type definitions ([@types/openui5](https://www.npmjs.com/package/@types/openui5/v/1.115.1) on June 21st, @sapui5/types and @openui5/types the following week) with further improvements and with bugfixes. (For the latter packages we *always* release patches, but usually without any significant changes and for @types/openui5 we usually do not release any patches, hence "extraordinary".)
+
+* **SOON INCOMPATIBLE** CHANGE: the names of the new types for event parameters have changed from `$<ControlName><EventName>EventParameters` to `<ControlName>$<EventName>EventParameters` to avoid name clashes. Version 1.115.1 and further 1.115.x patches support BOTH names, but version 1.116 and higher will only support the new names.
+
+* FEATURE: in addition to the types for event parameter objects, there are now also types for the events themselves. If you want to type e.g. an method parameter in an event handler, you no longer need to write it as Event with generics like `Event<Input$ChangeEventParameters>`, but you can simply use the event type `Input$ChangeEvent`.
+
+* FIX: several export-related problems caused by a change in 1.115.0 are fixed (e.g. often encountered with `URLHelper` from `sap/m/library` and `sap/m/DynamicDateUtil`). If you have problems with unavailable types, use 1.115.1 first, but also have a look at the intentional changes in 1.115.0 described below!
+
+* RELATED: Starting with version 0.7.0 released around the same time, the `@ui5/ts-interface-generator` supporting control development does also generate types for the events declared by the controls.
+
+
+## 1.115.0 - also see the separate section on 1.115.1 above! (June 2023)
+
+**NOTE: 1.115.0 had some issues with certain types no longer being exported (on top of the intentional changes described below), hence 1.115.1 with these issues fixed - and further improvements - is being published soon after.**
 
 * **INCOMPATIBLE** FIX: the properties of `sap/ui/Device` can now be used in the expected way - and *only* in this way:
   ```ts
@@ -58,7 +73,7 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
   let x = MessageBox.Action.ABORT;
   ```
 
-  However, note that pure types still remain named exports. So do enums etc. defined direct within a library (not in a contained control etc., but in the library module).
+  However, note that pure *types* still remain named exports. So do enums etc. defined directly within a library (not in a contained control etc., but in the library module).
 
 * (potentially INCOMPATIBLE) FEATURE: event parameters are now fully typed. Earlier, when a control event was handled, any string could be used to access an event parameter (regardless of whether a parameter with this name actually existed) and the returned type was `any`. Now you get all the code completion and type check goodies for all the Event-related APIs:<br>
 ![Autocomplete for metadata structure](./assets/event_getParameter.png)<br>
@@ -80,7 +95,7 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
     someEvent: (evt) => {
         const parameterValue = evt.getParameter("eventParamName");
   ```
-  However, this only works for places where the type of `evt` can be automatically determined, like in constructors (as above) or in `attachXYEvent(...)` calls. In other places, like controller methods which are assigned as handlers in XMLViews, the type of the event needs to be explicitly specified. As of version 1.115, this works by using Generics, giving the event parameter type to the Event class, in later versions this is planned to be simplified:
+  However, this only works for places where the type of `evt` can be automatically determined, like in constructors (as above) or in `attachXYEvent(...)` calls. In other places, like controller methods which are assigned as handlers in XMLViews, the type of the event needs to be explicitly specified. As of version 1.115.0, this works by using Generics, giving the event parameter type to the Event class (in version 1.115.1 and higher there are also types for the events themselves):
   ```ts
   public handleChange(evt: UI5Event<$InputBaseChangeEventParameters>) : void {
       ...
