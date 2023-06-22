@@ -13,7 +13,22 @@ declare module "./SampleManagedObject" {
     export default interface SampleManagedObject {
 
         // property: test
+
+        /**
+         * Gets current value of property "test".
+         *
+         * @returns Value of property "test"
+         */
         getTest(): number;
+
+        /**
+         * Sets a new value for property "test".
+         *
+         * When called with a value of "null" or "undefined", the default value of the property will be restored.
+         *
+         * @param test New value for property "test"
+         * @returns Reference to "this" in order to allow method chaining
+         */
         setTest(test: number): this;
     }
 }

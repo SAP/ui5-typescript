@@ -1,4 +1,5 @@
 import ManagedObject from "sap/ui/base/ManagedObject";
+import { MetadataOptions } from "sap/ui/core/Element";
 
 /**
  * @namespace ui5tssampleapp.control
@@ -10,7 +11,7 @@ export default class SampleManagedObject extends ManagedObject {
 	constructor(id?: string, settings?: $SampleManagedObjectSettings);
 	constructor(id?: string, settings?: $SampleManagedObjectSettings) { super(id, settings); }
 
-	static readonly metadata = {
+	static readonly metadata: MetadataOptions = {
 		properties: {
 			test: {
 				type: "float"

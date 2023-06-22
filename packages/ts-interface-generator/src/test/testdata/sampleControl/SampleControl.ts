@@ -1,4 +1,5 @@
 import Button from "sap/m/Button";
+import { MetadataOptions } from "sap/ui/core/Element";
 import RenderManager from "sap/ui/core/RenderManager";
 
 /**
@@ -13,7 +14,7 @@ export default class SampleControl extends Button {
 	constructor(id?: string, settings?: $SampleControlSettings);
 	constructor(id?: string, settings?: $SampleControlSettings) { super(id, settings); }
 
-	static readonly metadata = {
+	static readonly metadata: MetadataOptions = {
 		properties: {
 			/**
 			 * The text that appears below the main text.
