@@ -7,6 +7,11 @@ import {
 } from "./jsdocGenerator";
 import Preferences from "./preferences";
 
+// CAUTION: incompatible changes in TypeScript!
+// factory.createParameterDeclaration -> use fixedCreateParameterDeclaration
+// factory.createModuleDeclaration -> check TS version or als obuild a fixed one
+// factory.createTypeAliasDeclaration -> same
+
 const factory = ts.factory;
 
 const fixedCreateParameterDeclaration =
@@ -32,7 +37,8 @@ function generateSettingsInterface(
   constructorSignaturesAvailable: boolean,
   settingsTypeFullName: string,
   requiredImports: RequiredImports,
-  knownGlobals: GlobalToModuleMapping
+  knownGlobals: GlobalToModuleMapping,
+  eventTypeAliases: { [eventName: string]: ts.TypeAliasDeclaration }
 ) {
   const interfaceProperties = [];
   const currentClassName = classInfo.name;
@@ -217,12 +223,7 @@ function generateSettingsInterface(
               undefined,
               "event",
               undefined,
-              createTSTypeNode(
-                "sap.ui.base.Event",
-                requiredImports,
-                knownGlobals,
-                currentClassName
-              )
+              factory.createTypeReferenceNode(eventTypeAliases[event.name].name)
             ),
           ],
           factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
@@ -330,7 +331,7 @@ ${astToString(constructorBlock)}===== END =====
   log.warn(message);
 }
 
-// adds the content into a multiline comment before the given node; te asterisk preceding each line must be present in the content
+// adds the content into a multiline comment before the given node; the asterisk preceding each line must be present in the content
 function addJSDocCommentToNode(node: ts.Node, content: string) {
   if (content && Preferences.get().jsdoc !== "none") {
     addLineBreakBefore(node, 2); // some space before the JSDoc
@@ -347,7 +348,9 @@ function addJSDocCommentToNode(node: ts.Node, content: string) {
 function generateMethods(
   classInfo: ClassInfo,
   requiredImports: RequiredImports,
-  knownGlobals: GlobalToModuleMapping
+  knownGlobals: GlobalToModuleMapping,
+  eventParameterInterfaces: { [eventName: string]: ts.InterfaceDeclaration },
+  eventTypeAliases: { [eventName: string]: ts.TypeAliasDeclaration }
 ) {
   const allMethods: ts.MethodSignature[] = [];
   const currentClassName = classInfo.name;
@@ -878,12 +881,7 @@ function generateMethods(
           undefined,
           "event",
           undefined,
-          createTSTypeNode(
-            "sap.ui.base.Event",
-            requiredImports,
-            knownGlobals,
-            currentClassName
-          )
+          factory.createTypeReferenceNode(eventTypeAliases[event.name].name)
         ),
       ],
       factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
@@ -929,12 +927,7 @@ function generateMethods(
           undefined,
           "event",
           undefined,
-          createTSTypeNode(
-            "sap.ui.base.Event",
-            requiredImports,
-            knownGlobals,
-            currentClassName
-          )
+          factory.createTypeReferenceNode(eventTypeAliases[event.name].name)
         ),
         fixedCreateParameterDeclaration(
           undefined,
@@ -1038,7 +1031,9 @@ function generateMethods(
           undefined,
           "parameters",
           factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+          factory.createTypeReferenceNode(
+            eventParameterInterfaces[event.name].name
+          )
         ),
       ],
       returnValue
@@ -1054,7 +1049,8 @@ function createTSTypeNode(
   typeName: string,
   requiredImports: RequiredImports,
   knownGlobals: GlobalToModuleMapping,
-  currentClassName: string
+  currentClassName: string,
+  typeArguments: ts.TypeNode[] = []
 ): ts.TypeNode {
   switch (typeName) {
     case "string":
@@ -1120,7 +1116,8 @@ function createTSTypeNode(
               requiredImports,
               knownGlobals,
               currentClassName
-            )
+            ),
+            typeArguments
           )
         );
       } else {
@@ -1131,7 +1128,8 @@ function createTSTypeNode(
             requiredImports,
             knownGlobals,
             currentClassName
-          )
+          ),
+          typeArguments
         );
       }
   }
@@ -1304,9 +1302,336 @@ function createConstructorBlock(settingsTypeName: string) {
   return nodes;
 }
 
+const makeEventParametersName = (className: string, eventName: string) => {
+  const capitalizedEventName =
+    eventName.charAt(0).toUpperCase() + eventName.slice(1);
+  return {
+    eventParametersName: `${className}$${capitalizedEventName}EventParameters`,
+    eventTypealiasName: `${className}$${capitalizedEventName}Event`,
+  };
+};
+
+function generateEventWithGenericsCompatibilityModule(
+  className: string,
+  requiredImports: RequiredImports,
+  knownGlobals: GlobalToModuleMapping
+) {
+  const typeParameters = [
+    factory.createTypeParameterDeclaration(
+      undefined,
+      factory.createIdentifier("ParamsType"),
+      factory.createTypeReferenceNode(factory.createIdentifier("Record"), [
+        factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+        factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword),
+      ]),
+      factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+    ),
+  ];
+
+  const methods = [
+    factory.createMethodSignature(
+      undefined,
+      factory.createIdentifier("constructor"),
+      undefined,
+      undefined,
+      [
+        fixedCreateParameterDeclaration(
+          undefined,
+          undefined,
+          factory.createIdentifier("id"),
+          undefined,
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+          undefined
+        ),
+        fixedCreateParameterDeclaration(
+          undefined,
+          undefined,
+          factory.createIdentifier("oSource"),
+          undefined,
+          createTSTypeNode(
+            "sap.ui.base.EventProvider",
+            requiredImports,
+            knownGlobals,
+            className
+          ),
+          undefined
+        ),
+        fixedCreateParameterDeclaration(
+          undefined,
+          undefined,
+          factory.createIdentifier("parameters"),
+          undefined,
+          factory.createTypeReferenceNode(
+            factory.createIdentifier("ParamsType"),
+            undefined
+          ),
+          undefined
+        ),
+      ],
+      undefined
+    ),
+    factory.createMethodSignature(
+      undefined,
+      factory.createIdentifier("getParameters"),
+      undefined,
+      undefined,
+      [],
+      factory.createTypeReferenceNode(
+        factory.createIdentifier("ParamsType"),
+        undefined
+      )
+    ),
+    factory.createMethodSignature(
+      undefined,
+      factory.createIdentifier("getParameter"),
+      undefined,
+      [
+        factory.createTypeParameterDeclaration(
+          undefined,
+          factory.createIdentifier("ParamName"),
+          factory.createTypeOperatorNode(
+            ts.SyntaxKind.KeyOfKeyword,
+            factory.createTypeReferenceNode(
+              factory.createIdentifier("ParamsType"),
+              undefined
+            )
+          ),
+          undefined
+        ),
+      ],
+      [
+        fixedCreateParameterDeclaration(
+          undefined,
+          undefined,
+          factory.createIdentifier("name"),
+          undefined,
+          factory.createTypeReferenceNode(
+            factory.createIdentifier("ParamName"),
+            undefined
+          ),
+          undefined
+        ),
+      ],
+      factory.createIndexedAccessTypeNode(
+        factory.createTypeReferenceNode(
+          factory.createIdentifier("ParamsType"),
+          undefined
+        ),
+        factory.createTypeReferenceNode(
+          factory.createIdentifier("ParamName"),
+          undefined
+        )
+      )
+    ),
+  ];
+
+  let interfaceDeclaration: ts.InterfaceDeclaration;
+  if (parseFloat(ts.version) >= 4.8) {
+    interfaceDeclaration = factory.createInterfaceDeclaration(
+      [
+        factory.createToken(ts.SyntaxKind.ExportKeyword),
+        factory.createToken(ts.SyntaxKind.DefaultKeyword),
+      ],
+      factory.createIdentifier("Event"),
+      typeParameters,
+      [],
+      methods
+    );
+  } else {
+    interfaceDeclaration = factory.createInterfaceDeclaration(
+      undefined,
+      [
+        factory.createToken(ts.SyntaxKind.ExportKeyword),
+        factory.createToken(ts.SyntaxKind.DefaultKeyword),
+      ],
+      factory.createIdentifier("Event"),
+      typeParameters,
+      [],
+      // @ts-ignore: below TS 4.8 there were more params
+      methods
+    );
+  }
+
+  const moduleDeclaration =
+    parseFloat(ts.version) >= 4.8
+      ? factory.createModuleDeclaration(
+          [factory.createToken(ts.SyntaxKind.DeclareKeyword)],
+          factory.createStringLiteral("sap/ui/base/Event"),
+          factory.createModuleBlock([interfaceDeclaration])
+        )
+      : factory.createModuleDeclaration(
+          undefined,
+          // @ts-ignore old signature
+          [factory.createToken(ts.SyntaxKind.DeclareKeyword)],
+          factory.createStringLiteral("sap/ui/base/Event"),
+          factory.createModuleBlock([interfaceDeclaration])
+        );
+
+  ts.addSyntheticLeadingComment(
+    moduleDeclaration,
+    ts.SyntaxKind.SingleLineCommentTrivia,
+    " This module enhances sap.ui.base.Event with Generics, which is needed in UI5 type definition versions below 1.115"
+  );
+
+  return moduleDeclaration;
+}
+
+function generateEventParameterInterfaces(
+  events: {
+    [key: string]: UI5Event;
+  },
+  className: string,
+  requiredImports: RequiredImports,
+  knownGlobals: GlobalToModuleMapping
+) {
+  const eventParameterInterfaces: {
+    [eventName: string]: ts.InterfaceDeclaration;
+  } = {};
+
+  for (const eventName in events) {
+    const event = events[eventName];
+    if (event.visibility !== "hidden") {
+      const properties: ts.PropertySignature[] = [];
+      for (const parameterName in event.parameters) {
+        const parameter = event.parameters[parameterName];
+        const property = factory.createPropertySignature(
+          undefined,
+          factory.createIdentifier(parameter.name),
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          createTSTypeNode(
+            parameter.type,
+            requiredImports,
+            knownGlobals,
+            className
+          )
+        );
+        /*
+         TODO: comments for event parameters are not supported yet. From a certain nesting depth, Hjson.parse without comments is used, so they are lost.
+         Once they are available, this can be enabled:
+        addJSDocCommentToNode(
+          property,
+          buildJSDocStringFromLines(createJSDocCenterPart(parameter, []))
+        );
+        */
+        properties.push(property);
+      }
+
+      const interfc =
+        parseFloat(ts.version) >= 4.8
+          ? factory.createInterfaceDeclaration(
+              [factory.createToken(ts.SyntaxKind.ExportKeyword)],
+              factory.createIdentifier(
+                makeEventParametersName(className, eventName)
+                  .eventParametersName
+              ),
+              undefined,
+              undefined,
+              properties
+            )
+          : factory.createInterfaceDeclaration(
+              undefined,
+              [factory.createToken(ts.SyntaxKind.ExportKeyword)],
+              factory.createIdentifier(
+                makeEventParametersName(className, eventName)
+                  .eventParametersName
+              ),
+              undefined,
+              undefined,
+              // @ts-ignore: below TS 4.8 there were more params
+              properties
+            );
+      addJSDocCommentToNode(
+        interfc,
+        buildJSDocStringFromLines(
+          createJSDocCenterPart(event, [
+            `Interface describing the parameters of ${className}'${
+              className.endsWith("s") ? "" : "s"
+            } '${eventName}' event.`,
+          ])
+        )
+      );
+      // empty interfaces can cause issues with linting
+      if (properties.length === 0) {
+        ts.addSyntheticLeadingComment(
+          interfc,
+          ts.SyntaxKind.SingleLineCommentTrivia,
+          " eslint-disable-next-line"
+        );
+      }
+
+      eventParameterInterfaces[eventName] = interfc;
+    }
+  }
+
+  return eventParameterInterfaces;
+}
+
+function generateEventTypeAliases(
+  events: { [eventName: string]: UI5Event },
+  eventParameterInterfaces: { [eventName: string]: ts.InterfaceDeclaration },
+  className: string,
+  requiredImports: RequiredImports,
+  knownGlobals: GlobalToModuleMapping
+) {
+  const eventTypeAliases: { [eventName: string]: ts.TypeAliasDeclaration } = {};
+
+  for (const eventName in eventParameterInterfaces) {
+    const typeNode = createTSTypeNode(
+      "sap.ui.base.Event",
+      requiredImports,
+      knownGlobals,
+      className,
+      [
+        factory.createTypeReferenceNode(
+          factory.createIdentifier(
+            eventParameterInterfaces[eventName].name.text
+          ),
+          undefined
+        ),
+      ]
+    );
+    const typeAlias =
+      parseFloat(ts.version) >= 4.8
+        ? factory.createTypeAliasDeclaration(
+            [factory.createToken(ts.SyntaxKind.ExportKeyword)],
+            factory.createIdentifier(
+              makeEventParametersName(className, eventName).eventTypealiasName
+            ),
+            undefined,
+            typeNode
+          )
+        : factory.createTypeAliasDeclaration(
+            undefined,
+            [factory.createToken(ts.SyntaxKind.ExportKeyword)],
+            factory.createIdentifier(
+              makeEventParametersName(className, eventName).eventTypealiasName
+            ),
+            undefined,
+            // @ts-ignore: below TS 4.8 there were more params
+            typeNode
+          );
+    addJSDocCommentToNode(
+      typeAlias,
+      buildJSDocStringFromLines(
+        createJSDocCenterPart(events[eventName], [
+          `Type describing the ${className}'${
+            className.endsWith("s") ? "" : "s"
+          } '${eventName}' event.`,
+        ])
+      )
+    );
+
+    eventTypeAliases[eventName] = typeAlias;
+  }
+  return eventTypeAliases;
+}
+
 export {
   generateMethods,
+  generateEventWithGenericsCompatibilityModule,
   generateSettingsInterface,
+  generateEventParameterInterfaces,
+  generateEventTypeAliases,
   addLineBreakBefore,
   createConstructorBlock,
 };

@@ -44,11 +44,11 @@ test("Generating the interface for a sample control", () => {
   initialize("./tsconfig-testcontrol.json", onTSProgramUpdate, {});
 });
 
-const expected = `import { CSSColor } from "sap/ui/core/library";
+const expected = `import Event from "sap/ui/base/Event";
+import { CSSColor } from "sap/ui/core/library";
 import Control from "sap/ui/core/Control";
 import { AggregationBindingInfo } from "sap/ui/base/ManagedObject";
 import TooltipBase from "sap/ui/core/TooltipBase";
-import Event from "sap/ui/base/Event";
 import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $ButtonSettings } from "sap/m/Button";
 
@@ -89,7 +89,7 @@ declare module "./SampleControl" {
         /**
          * Fired when double-clicked.
          */
-        doublePress?: (event: Event) => void;
+        doublePress?: (event: SampleControl$DoublePressEvent) => void;
     }
 
     export default interface SampleControl {
@@ -353,7 +353,7 @@ declare module "./SampleControl" {
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachDoublePress(fn: (event: Event) => void, listener?: object): this;
+        attachDoublePress(fn: (event: SampleControl$DoublePressEvent) => void, listener?: object): this;
 
         /**
          * Attaches event handler "fn" to the "doublePress" event of this "SampleControl".
@@ -369,7 +369,7 @@ declare module "./SampleControl" {
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: Event, data: CustomDataType) => void, listener?: object): this;
+        attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleControl$DoublePressEvent, data: CustomDataType) => void, listener?: object): this;
 
         /**
          * Detaches event handler "fn" from the "doublePress" event of this "SampleControl".
@@ -382,7 +382,7 @@ declare module "./SampleControl" {
          * @param listener Context object on which the given function had to be called
          * @returns Reference to "this" in order to allow method chaining
          */
-        detachDoublePress(fn: (event: Event) => void, listener?: object): this;
+        detachDoublePress(fn: (event: SampleControl$DoublePressEvent) => void, listener?: object): this;
 
         /**
          * Fires event "doublePress" to attached listeners.
@@ -395,8 +395,22 @@ declare module "./SampleControl" {
          * @param parameters Parameters to pass along with the event
          * @returns Whether or not to prevent the default action
          */
-        fireDoublePress(parameters?: object): boolean;
+        fireDoublePress(parameters?: SampleControl$DoublePressEventParameters): boolean;
     }
+
+    /**
+     * Interface describing the parameters of SampleControl's 'doublePress' event.
+     * Fired when double-clicked.
+     */
+    // eslint-disable-next-line
+    export interface SampleControl$DoublePressEventParameters {
+    }
+
+    /**
+     * Type describing the SampleControl's 'doublePress' event.
+     * Fired when double-clicked.
+     */
+    export type SampleControl$DoublePressEvent = Event<SampleControl$DoublePressEventParameters>;
 }
 
 // this duplicate interface without export is needed to avoid "Cannot find name 'SampleControl'" TypeScript errors above
@@ -662,7 +676,7 @@ declare module "./SampleControl" {
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachDoublePress(fn: (event: Event) => void, listener?: object): this;
+        attachDoublePress(fn: (event: SampleControl$DoublePressEvent) => void, listener?: object): this;
 
         /**
          * Attaches event handler "fn" to the "doublePress" event of this "SampleControl".
@@ -678,7 +692,7 @@ declare module "./SampleControl" {
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: Event, data: CustomDataType) => void, listener?: object): this;
+        attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleControl$DoublePressEvent, data: CustomDataType) => void, listener?: object): this;
 
         /**
          * Detaches event handler "fn" from the "doublePress" event of this "SampleControl".
@@ -691,7 +705,7 @@ declare module "./SampleControl" {
          * @param listener Context object on which the given function had to be called
          * @returns Reference to "this" in order to allow method chaining
          */
-        detachDoublePress(fn: (event: Event) => void, listener?: object): this;
+        detachDoublePress(fn: (event: SampleControl$DoublePressEvent) => void, listener?: object): this;
 
         /**
          * Fires event "doublePress" to attached listeners.
@@ -704,7 +718,7 @@ declare module "./SampleControl" {
          * @param parameters Parameters to pass along with the event
          * @returns Whether or not to prevent the default action
          */
-        fireDoublePress(parameters?: object): boolean;
+        fireDoublePress(parameters?: SampleControl$DoublePressEventParameters): boolean;
     }
 }
 `;

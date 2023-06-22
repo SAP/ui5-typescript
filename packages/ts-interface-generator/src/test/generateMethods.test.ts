@@ -22,7 +22,13 @@ setText(text: string): this;`;
     defaultProperty: "text",
   };
 
-  const methods = generateMethods(classInfo, requiredImports, knownGlobals);
+  const methods = generateMethods(
+    classInfo,
+    requiredImports,
+    knownGlobals,
+    {},
+    {}
+  );
 
   const interfaceText = astToString(methods);
 
@@ -71,7 +77,13 @@ unbindContent(): this;`;
     defaultAggregation: "content",
   };
 
-  const methods = generateMethods(classInfo, requiredImports, knownGlobals);
+  const methods = generateMethods(
+    classInfo,
+    requiredImports,
+    knownGlobals,
+    {},
+    {}
+  );
 
   const interfaceText = astToString(methods);
 

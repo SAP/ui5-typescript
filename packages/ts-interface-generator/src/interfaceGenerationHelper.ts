@@ -7,6 +7,9 @@ import {
   generateMethods,
   generateSettingsInterface,
   addLineBreakBefore,
+  generateEventParameterInterfaces,
+  generateEventTypeAliases,
+  generateEventWithGenericsCompatibilityModule,
 } from "./astGenerationHelper";
 import astToString from "./astToString";
 import log from "loglevel";
@@ -111,10 +114,24 @@ function generateInterfaces(
   ) => void = writeInterfaceFile
 ) {
   const mos = getManagedObjects(sourceFile, typeChecker);
+
+  // find out whether type version 1.115.1 or later is used, where "Event" is a class with generics (this influences what we need to generate)
+  let isEventGeneric = false;
+  const eventClassDeclaration = typeChecker
+    .getAmbientModules()
+    .filter((m) => m.name === '"sap/ui/base/Event"')[0]
+    ?.exports // @ts-ignore we are asking for the default export
+    ?.get("default")?.declarations?.[0];
+  if (eventClassDeclaration && ts.isClassDeclaration(eventClassDeclaration)) {
+    isEventGeneric =
+      eventClassDeclaration.typeParameters?.[0]?.name?.text === "ParamsType";
+  }
+
   mos.forEach((managedObjectOccurrence) => {
     const interfaceText = generateInterface(
       managedObjectOccurrence,
-      allKnownGlobals
+      allKnownGlobals,
+      { generateEventWithGenerics: !isEventGeneric }
     ); // only returns the interface text if actually needed (it's not for ManagedObjects without metadata etc.)
     if (interfaceText) {
       resultProcessor(
@@ -650,7 +667,8 @@ function generateInterface(
     constructorSignaturesAvailable: boolean;
     metadata: ts.PropertyDeclaration[];
   },
-  allKnownGlobals: GlobalToModuleMapping
+  allKnownGlobals: GlobalToModuleMapping,
+  options: { generateEventWithGenerics: boolean }
 ) {
   const fileName = sourceFile.fileName;
 
@@ -726,7 +744,8 @@ function generateInterface(
     constructorSignaturesAvailable,
     moduleName,
     settingsTypeFullName,
-    allKnownGlobals
+    allKnownGlobals,
+    options
   );
   if (!ast) {
     // no interface needs to be generated
@@ -742,14 +761,47 @@ function buildAST(
   constructorSignaturesAvailable: boolean,
   moduleName: string,
   settingsTypeFullName: string,
-  allKnownGlobals: GlobalToModuleMapping
+  allKnownGlobals: GlobalToModuleMapping,
+  options?: { generateEventWithGenerics?: boolean }
 ) {
   const requiredImports: RequiredImports = {};
 
   // add all the JSDoc for the generated methods
   addJSDocAST(classInfo);
 
-  const methods = generateMethods(classInfo, requiredImports, allKnownGlobals);
+  const eventParameterInterfaces = generateEventParameterInterfaces(
+    classInfo.events,
+    classInfo.name,
+    requiredImports,
+    allKnownGlobals
+  );
+  let genericEventDefinitionModule;
+  if (
+    options?.generateEventWithGenerics &&
+    Object.keys(eventParameterInterfaces).length > 0
+  ) {
+    genericEventDefinitionModule = generateEventWithGenericsCompatibilityModule(
+      classInfo.name,
+      requiredImports,
+      allKnownGlobals
+    );
+  }
+
+  const eventTypeAliases = generateEventTypeAliases(
+    classInfo.events,
+    eventParameterInterfaces,
+    classInfo.name,
+    requiredImports,
+    allKnownGlobals
+  );
+
+  const methods = generateMethods(
+    classInfo,
+    requiredImports,
+    allKnownGlobals,
+    eventParameterInterfaces,
+    eventTypeAliases
+  );
   if (methods.length === 0) {
     // nothing needs to be generated!
     return null;
@@ -761,7 +813,8 @@ function buildAST(
     constructorSignaturesAvailable,
     settingsTypeFullName,
     requiredImports,
-    allKnownGlobals
+    allKnownGlobals,
+    eventTypeAliases
   );
 
   const statements: ts.Statement[] = getImports(requiredImports);
@@ -800,7 +853,12 @@ function buildAST(
     module = factory.createModuleDeclaration(
       [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
       factory.createStringLiteral("./" + moduleName),
-      factory.createModuleBlock([settingsInterface, myInterface])
+      factory.createModuleBlock([
+        settingsInterface,
+        myInterface,
+        ...Object.values(eventParameterInterfaces),
+        ...Object.values(eventTypeAliases),
+      ])
     );
   } else {
     module = factory.createModuleDeclaration(
@@ -808,13 +866,23 @@ function buildAST(
       // @ts-ignore old signature
       [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
       factory.createStringLiteral("./" + moduleName),
-      factory.createModuleBlock([settingsInterface, myInterface])
+      factory.createModuleBlock([
+        settingsInterface,
+        myInterface,
+        ...Object.values(eventParameterInterfaces),
+        ...Object.values(eventTypeAliases),
+      ])
     );
   }
   if (statements.length > 0) {
     addLineBreakBefore(module, 2);
   }
   statements.push(module);
+
+  // if needed add the Event with added generics
+  if (genericEventDefinitionModule) {
+    statements.push(genericEventDefinitionModule);
+  }
 
   // if needed, assemble the second module declaration
   if (requiredImports.selfIsUsed) {
