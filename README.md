@@ -22,7 +22,7 @@ Learn more about the general benefits of TypeScript here:
 
 It currently contains two public packages:
 
-- [@ui5/dts-generator](./packages/dts-generator) [![npm-ui5-dts-generator][npm-ui5-dts-generator-image]][npm-ui5-dts-generator-url] A low level generator which transforms the UI5 api.json format to TypeScript definition (`*.d.ts`) file format.<br> <b>NOTE: the sources in this repository represent an outdated version of the generator tool, not the one used for the new improved TypeScript definition files which are released since June 2021. The code of the new generator version is planned to be released here later as well.</b>
+- [@ui5/dts-generator](./packages/dts-generator) [![npm-ui5-dts-generator][npm-ui5-dts-generator-image]][npm-ui5-dts-generator-url] A low level generator which transforms the UI5 api.json format to TypeScript definition (`*.d.ts`) file format.<br> <b>NOTE: the sources in this repository and also the package released at npm represent an outdated version of the generator tool, not the one used for the new improved TypeScript definition files which are released since June 2021. The code of the new generator version is planned to be released here later as well.</b>
 
 - [@ui5/ts-interface-generator](./packages/ts-interface-generator) [![npm-ui5-ts-interface-generator][npm-ui5-ts-interface-generator-image]][npm-ui5-ts-interface-generator-url] A tool supporting control development in TypeScript. It is used at development time and generates type definitions for the control API methods which are only created at runtime by the UI5 framework.
 
