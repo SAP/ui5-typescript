@@ -143,7 +143,7 @@ As also the publishing permissions have been handed over, continuity is ensured:
 Big thanks to Ryan!
 
 
-* FEATURE: [Controller Extensions](https://ui5.sap.com/#/topic/21515f09c0324218bb705b27407f5d61) can now be specified as ES6 classes in TypeScript, making use of the newly renamed `overrides` block (was `override` before). So new it's not even documented yet anywhere else than here.
+* <span id="overrides">FEATURE</span>: [Controller Extensions](https://ui5.sap.com/#/topic/21515f09c0324218bb705b27407f5d61) can now be specified as ES6 classes in TypeScript, making use of the newly renamed `overrides` block (was `override` before). So new it's not even documented yet anywhere else than here.
   ```ts
     export default class AppExtension extends ControllerExtension {
       static readonly overrides = {
