@@ -8,6 +8,12 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.116.0 (July 2023)
+
+Starting with this version, the UI5 type definitions are no longer in "experimental beta" state but recommended for general usage.
+
+We encourage you to use UI5 with TypeScript for an improved development efficiency and experience. TypeScript itself keeps evolving and we try to further improve the UI5 type definitions, so there could be potential incompatible changes between versions of the type definitions. However, such incompatibilities would only affect the compilation of your code but will not cause runtime issues in your application. Plus, there are various ways to easily deal with them: you can, for example, simply keep using the previous version of the UI5 type definitions together with an updated UI5 runtime.<br>
+To keep track of any significant changes, observe the Release Notes on this page.
 
 ## 1.115.1 - changes on top of those listed below for 1.115.0 (June 2023)
 

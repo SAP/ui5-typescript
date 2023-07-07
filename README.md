@@ -16,7 +16,7 @@ To get started quickly with a hands-on example, you can jump into the [UI5 TypeS
 - [How to profit from TypeScript even when doing plain JavaScript development?](#how-to-profit-from-typescript-even-when-doing-plain-javascript-development)
 - [What are the TypeScript projects and releases provided by the UI5 development team?](#what-are-the-typescript-projects-and-releases-provided-by-the-ui5-development-team)
 - [Where to report issues? What is the support status?](#where-to-report-issues)
-- [What does it mean that the type definitions are "in experimental beta state"?](#what-does-it-mean-that-the-type-definitions-are-in-experimental-beta-state)
+- [Are the type definitions ready for productive use?](#are-the-type-definitions-ready-for-productive-use)
 - [Where can I find release notes or news about changes in the UI5 type definitions?](#where-can-i-find-release-notes-or-news-about-changes-in-the-ui5-type-definitions)
 - [What is the future roadmap for TypeScript in UI5?](#what-is-the-future-roadmap-for-typescript-in-ui5)
 
@@ -34,7 +34,7 @@ To get started **even faster**, there are two Yeoman-/[easy-ui5](https://github.
 * A [more comprehensive template](https://github.com/ui5-community/generator-ui5-ts-app-fcl) including a FlexibleColumnLayout and allowing OData service and entity configuration within the wizard.
 
 ### How can I get an end-to-end hands-on impression of creating and developing a UI5 app in TypeScript?
-There is a [1-2-hours tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial), starting from scratch using an app template, extending the resulting app, and also covering advanced topics later on, like control development and integrating third-party libraries from npm.
+There is a [2-hours tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial), starting from scratch using an app template, extending the resulting app, and also covering advanced topics later on, like control development and integrating third-party libraries from npm.
 
 ### How to convert an existing UI5 app to TypeScript?
 By doing most of the basic [setup for TypeScript projects](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) mentioned [above](#how-to-set-up-a-new-ui5-app-for-typescript-development) and then following the [four conversion steps briefly explained here](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md#converting-ui5-apps-from-javascript-to-typescript). The detailed explanation [how to enhance JavaScript applications with type information](https://github.com/SAP-samples/ui5-cap-event-app/tree/js-with-typescript-support#applying-typescript-benefits-to-a-javascript-application) will also help because the process of tightening the checks and then fixing the resulting issues is the same - just use real TypeScript syntax instead of the JSDoc comments used in that guide!
@@ -85,11 +85,17 @@ Note that there is no official support guarantee, as the type definitions and co
 Before reporting an issue, please check the [list of known issues](known-issues.md).
 
 
-### What does it mean that the type definitions are "in experimental beta state"?
+### Are the type definitions ready for productive use?
 
-It means that we might make changes which require adaptation on your side after consuming updated type definitions. But don't let this statement make you shy away from using them! The needed adaptations will not be large and there isn't going to be a lot of difference once the types are no longer called "beta": there will be no 100% compatibility guarantee either. So basically the type definitions are ready for use.<br>
-Find all the details [here](beta-statement.md).<br>
+Yes, starting with version 1.116.0 (mid July 2023) they are.
+
+We encourage you to use UI5 with TypeScript for an improved development efficiency and experience. TypeScript itself keeps evolving and we try to further improve the UI5 type definitions, so there could be potential incompatible changes between versions of the type definitions. However, such incompatibilities would only affect the compilation of your code but will not cause runtime issues in your application. Plus, there are various ways to easily deal with them: you can, for example, simply keep using the previous version of the UI5 type definitions together with an updated UI5 runtime.<br>
 To keep track of any significant changes, observe the [Release Notes](releasenotes.md).
+
+Versions prior to 1.116.0 are in "experimental beta" state, which means an increased likelyhood of issues and of incompatibilities with upgrades. However, the list of known such changes is available in the [Release Notes](releasenotes.md), so you know what is ahead on the road to version 1.116. Note that "non-beta" releases do not come with a 100% compatibility guarantee either.<br>
+Find all the details [here](beta-statement.md).
+
+If you are bound to a UI5 runtime version lower than 1.116.0, you can still consider using it with UI5 types 1.116.0 or later. You can definitely encounter issues such as APIs being offered by TypeScript which do not actually exist yet in your runtime version of UI5, but this is in fact not different at all from regular JavaScript development, where - when using the newest version of the API documentation you would also have to check the "since" annotation of APIs before using them. And of course such a new API would be noticed as soon as the code is executed. There is no support for this usage, but it could improve the usage experience a lot, as the types have become better and better.
 
 ### Where can I find release notes or news about changes in the UI5 type definitions?
 
@@ -103,7 +109,7 @@ The former two are included in the general UI5 "[What's New](https://ui5.sap.com
 The type generator, on the other hand, influences *how* the types are generated and can hence have a huge impact as well, independently of any UI5 changes. It is currently not developed in this repository, but for the time being we list any significant or even *breaking* changes on the [release notes](releasenotes.md) page (also ones originating from the UI5 JSDoc or parser).
 
 ### What is the future roadmap for TypeScript in UI5?
-The current focus is on getting to a state that is recommended for productive use, working on the unfinished corners, like providing better support and guidance for topics like testing, but also on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.
+The current focus is working on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.
 
 ## Other Deliverables
 
@@ -125,7 +131,12 @@ The current focus is on getting to a state that is recommended for productive us
 
 ## Status
 
-The type definitions provided for UI5 are in an experimental **_Beta State_**. Significant changes can occur, including potential **breaking changes**. See the [respective section](#what-does-it-mean-that-the-type-definitions-are-in-experimental-beta-state) above for details on the status and the [release notes](releasenotes.md) for significant changes.
+Starting with version 1.116.0, the UI5 type definitions are provided for general use.
+
+We encourage you to use UI5 with TypeScript for an improved development efficiency and experience. TypeScript itself keeps evolving and we try to further improve the UI5 type definitions, so there could be potential incompatible changes between versions of the type definitions. However, such incompatibilities would only affect the compilation of your code but will not cause runtime issues in your application. Plus, there are various ways to easily deal with them: you can, for example, simply keep using the previous version of the UI5 type definitions together with an updated UI5 runtime.<br>
+To keep track of any significant changes, observe the [Release Notes](releasenotes.md).
+
+ Lower versions are in an experimental **_Beta State_** and significant changes on the way to 1.116.0 can be looked up in the [release notes](releasenotes.md).
 
 ## Support
 
