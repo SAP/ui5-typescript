@@ -8,6 +8,10 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.117.0 (August 2023)
+
+- FIX: for few (about a dozen) events the typing of the event parameters had been missing, this is now fixed. This issue affected events in ODataModel v4 related classes: `ODataModel` (e.g. `dataReceived`),  `ODataListBinding` (e.g. `createCompleted`),  `ODataPropertyBinding` and `ODataContextBinding`. 
+
 ## 1.116.0 (July 2023)
 
 Starting with this version, the UI5 type definitions are no longer in "experimental beta" state but recommended for general usage.
@@ -21,7 +25,7 @@ We are providing an extraordinary v1.115.1 patch for the type definitions ([@typ
 
 * **SOON INCOMPATIBLE** CHANGE: the names of the new types for event parameters have changed from `$<ControlName><EventName>EventParameters` to `<ControlName>$<EventName>EventParameters` to avoid name clashes. Version 1.115.1 and further 1.115.x patches support BOTH names, but version 1.116 and higher will only support the new names.
 
-* FEATURE: in addition to the types for event parameter objects, there are now also types for the events themselves. If you want to type e.g. an method parameter in an event handler, you no longer need to write it as Event with generics like `Event<Input$ChangeEventParameters>`, but you can simply use the event type `Input$ChangeEvent`.
+* FEATURE: in addition to the types for event parameter objects, there are now also types for the events themselves. If you want to type e.g. an method parameter in an event handler, you no longer need to write it as Event with generics like `Event<InputBase$ChangeEventParameters>`, but you can simply use the event type `InputBase$ChangeEvent`.
 
 * FIX: several export-related problems caused by a change in 1.115.0 are fixed (e.g. often encountered with `URLHelper` from `sap/m/library` and `sap/m/DynamicDateUtil`). If you have problems with unavailable types, use 1.115.1 first, but also have a look at the intentional changes in 1.115.0 described below!
 
@@ -87,8 +91,10 @@ We are providing an extraordinary v1.115.1 patch for the type definitions ([@typ
 
   This change is incompatible for existing application code where event parameters are accessed on an object typed as "sap/ui/base/Event":
   ```ts
+  import Event from "sap/ui/base/Event";
+
   const myControl = new SomeUI5Control({
-    someEvent: (evt: UI5Event) => {
+    someEvent: (evt: Event) => {
         const parameterValue = evt.getParameter("eventParamName");
   ```
   Because the base class "Event" has no specific parameters, there will now be the following error for the string:
@@ -103,11 +109,13 @@ We are providing an extraordinary v1.115.1 patch for the type definitions ([@typ
   ```
   However, this only works for places where the type of `evt` can be automatically determined, like in constructors (as above) or in `attachXYEvent(...)` calls. In other places, like controller methods which are assigned as handlers in XMLViews, the type of the event needs to be explicitly specified. As of version 1.115.0, this works by using Generics, giving the event parameter type to the Event class (in version 1.115.1 and higher there are also types for the events themselves):
   ```ts
-  public handleChange(evt: UI5Event<$InputBaseChangeEventParameters>) : void {
+  import Event from "sap/ui/base/Event";
+
+  public handleChange(evt: Event<$InputBaseChangeEventParameters>) : void {
       ...
   }
   ```
-  In later versions, the parameter type names might change slightly (like `InputBase$ChangeEventParameters`) and also types for the events are planned to be provided (like `InputBase$ChangeEvent`). This will be announced here as well when it happens.
+  In later versions, starting from 1.116.0, the parameter type names change slightly (`InputBase$ChangeEventParameters`) and also types for the events are provided since 1.115.1 (like `InputBase$ChangeEvent`).
 
 * RELATED: Starting with version 0.6.0, the `@ui5/ts-interface-generator` supporting control development does also add JSDoc to the generated methods (generic documentation as well as taken from the original control metadata section).
 
