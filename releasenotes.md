@@ -12,12 +12,15 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 
 - FIX: for few (about a dozen) events the typing of the event parameters had been missing, this is now fixed. This issue affected events in ODataModel v4 related classes: `ODataModel` (e.g. `dataReceived`),  `ODataListBinding` (e.g. `createCompleted`),  `ODataPropertyBinding` and `ODataContextBinding`. 
 
+
 ## 1.116.0 (July 2023)
 
 Starting with this version, the UI5 type definitions are no longer in "experimental beta" state but recommended for general usage.
 
 We encourage you to use UI5 with TypeScript for an improved development efficiency and experience. TypeScript itself keeps evolving and we try to further improve the UI5 type definitions, so there could be potential incompatible changes between versions of the type definitions. However, such incompatibilities would only affect the compilation of your code but will not cause runtime issues in your application. Plus, there are various ways to easily deal with them: you can, for example, simply keep using the previous version of the UI5 type definitions together with an updated UI5 runtime.<br>
 To keep track of any significant changes, observe the Release Notes on this page.
+
+- RELATED: a [video "UI5 TypeScript Tutorial"](https://www.youtube.com/watch?v=CRKNIiXZN6U) has been published with the current, updated state of the [ui5-typescript-tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) repository.
 
 ## 1.115.1 - changes on top of those listed below for 1.115.0 (June 2023)
 
@@ -144,6 +147,7 @@ No news (but of course several rounds of improvements within the UI5 API definit
 ## 1.112 (March 2023)
 
 * FEATURE: The frequently used modules `sap/ui/thirdparty/jquery` and `sap/ui/thirdparty/qunit-2` are now declared, so they can be explicitly imported. As both are also available globally, they could just be used without importing so far, but it's cleaner to explicitly import them if needed. This is now possible.<br>
+However, in case of QUnit, an error is raised when it is loaded a second time at runtime, so it may not be loaded before. To make it work, you would have to remove any direct `<script>` imports of QUnit and only load it through the UI5 module loader using `import` statements.<br>
 Other modules from the "sap/ui/thirdparty" folder are not declared, because thirdparty libraries are not really part of the UI5 public API and the others are far less present *within* the UI5 API than jQuery and QUnit. But applications loading them can declare them easily inside separate *.d.ts files within the application, e.g. like:
   ```ts
   declare module "sap/ui/thirdparty/URI" {
