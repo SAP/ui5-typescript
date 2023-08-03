@@ -2,7 +2,8 @@
 
 This page provides an overview of all official TypeScript-related resources in the UI5 world.
 
-To get started quickly with a hands-on example, you can jump into the [UI5 TypeScript Tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) right away (or watch the [video](https://www.youtube.com/watch?v=CRKNIiXZN6U) walking you through this tutorial), or, for a more structured approach, [follow the learning guidance outlined here](curriculum.md).<br>
+To get started quickly with a hands-on example, you can jump into the [UI5 TypeScript Tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) right away (or watch the [video](https://www.youtube.com/watch?v=CRKNIiXZN6U) walking you through this tutorial), or, for a more structured approach, [follow the learning guidance outlined here](curriculum.md).
+
 If your development is based on SAP Fiori Elements, using the SAP Fiori tools, and you are less interested in the basic technical setup and general TypeScript coding introduction, then [this workshop](https://github.com/c-kobo/ui5con2023/) is for you. A [presentation recording](https://www.youtube.com/watch?v=aCyMC27ED80&t=3703s) and [resulting repository](https://github.com/MariusFreitag/ui5con2023) demonstrates important aspects in a more compact way.
 
 ### Topics
