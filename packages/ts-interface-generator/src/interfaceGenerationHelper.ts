@@ -20,57 +20,73 @@ const factory = ts.factory;
 
 let ManagedObjectSymbol: ts.Symbol,
   ElementSymbol: ts.Symbol,
-  ControlSymbol: ts.Symbol;
+  ControlSymbol: ts.Symbol,
+  WebComponentSymbol: ts.Symbol;
 function interestingBaseClassForSymbol(
   typeChecker: ts.TypeChecker,
   symbol: ts.Symbol
-): "ManagedObject" | "Element" | "Control" | undefined {
+): "ManagedObject" | "Element" | "Control" | "WebComponent" | undefined {
   if (!ManagedObjectSymbol) {
     // cache - TODO: needs to be refreshed when the UI5 type definitions are updated during a run of the tool!
     // identify the symbols for the interesting classes
     const managedObjectModuleDeclaration = typeChecker
       .getAmbientModules()
       .filter((m) => m.name === '"sap/ui/base/ManagedObject"')[0]
-      .declarations[0] as ts.ModuleDeclaration;
+      ?.declarations[0] as ts.ModuleDeclaration;
     const managedObjectClassDeclaration = (
-      managedObjectModuleDeclaration.body as ts.ModuleBlock
-    ).statements.filter(
+      managedObjectModuleDeclaration?.body as ts.ModuleBlock
+    )?.statements.filter(
       (s) => ts.isClassDeclaration(s) && s.name?.text === "ManagedObject"
     )[0] as ts.ClassDeclaration;
     ManagedObjectSymbol = typeChecker.getSymbolAtLocation(
-      managedObjectClassDeclaration.name
+      managedObjectClassDeclaration?.name
     );
 
     const elementModuleDeclaration = typeChecker
       .getAmbientModules()
       .filter((m) => m.name === '"sap/ui/core/Element"')[0]
-      .declarations[0] as ts.ModuleDeclaration;
+      ?.declarations[0] as ts.ModuleDeclaration;
     const elementClassDeclaration = (
-      elementModuleDeclaration.body as ts.ModuleBlock
-    ).statements.filter(
+      elementModuleDeclaration?.body as ts.ModuleBlock
+    )?.statements.filter(
       (s) => ts.isClassDeclaration(s) && s.name?.text === "UI5Element"
     )[0] as ts.ClassDeclaration;
     ElementSymbol = typeChecker.getSymbolAtLocation(
-      elementClassDeclaration.name
+      elementClassDeclaration?.name
     );
 
     const controlModuleDeclaration = typeChecker
       .getAmbientModules()
       .filter((m) => m.name === '"sap/ui/core/Control"')[0]
-      .declarations[0] as ts.ModuleDeclaration;
+      ?.declarations[0] as ts.ModuleDeclaration;
     const controlClassDeclaration = (
-      controlModuleDeclaration.body as ts.ModuleBlock
-    ).statements.filter(
+      controlModuleDeclaration?.body as ts.ModuleBlock
+    )?.statements.filter(
       (s) => ts.isClassDeclaration(s) && s.name?.text === "Control"
     )[0] as ts.ClassDeclaration;
     ControlSymbol = typeChecker.getSymbolAtLocation(
-      controlClassDeclaration.name
+      controlClassDeclaration?.name
+    );
+
+    const webComponentModuleDeclaration = typeChecker
+      .getAmbientModules()
+      .filter((m) => m.name === '"sap/ui/core/webc/WebComponent"')[0]
+      ?.declarations[0] as ts.ModuleDeclaration;
+    const webComponentClassDeclaration = (
+      webComponentModuleDeclaration?.body as ts.ModuleBlock
+    )?.statements.filter(
+      (s) => ts.isClassDeclaration(s) && s.name?.text === "WebComponent"
+    )[0] as ts.ClassDeclaration;
+    WebComponentSymbol = typeChecker.getSymbolAtLocation(
+      webComponentClassDeclaration?.name
     );
   }
   if (symbol === ControlSymbol) {
     return "Control";
   } else if (symbol === ElementSymbol) {
     return "Element";
+  } else if (symbol === WebComponentSymbol) {
+    return "WebComponent";
   } else if (symbol === ManagedObjectSymbol) {
     return "ManagedObject";
   }
@@ -81,12 +97,15 @@ const interestingBaseSettingsClasses: {
     | "$ManagedObjectSettings"
     | "$ElementSettings"
     | "$ControlSettings"
+    | "$WebComponentSettings"
     | undefined;
 } = {
   '"sap/ui/base/ManagedObject".$ManagedObjectSettings':
     "$ManagedObjectSettings",
   '"sap/ui/core/Element".$UI5ElementSettings': "$ElementSettings",
   '"sap/ui/core/Control".$ControlSettings': "$ControlSettings",
+  '"sap/ui/core/webc/WebComponent".$WebComponentSettings':
+    "$WebComponentSettings",
 };
 
 type MetadataSectionName = keyof ClassInfo &
@@ -468,7 +487,7 @@ function getSettingsTypeFromConstructor(
 function getInterestingBaseClass(
   type: ts.Type,
   typeChecker: ts.TypeChecker
-): "ManagedObject" | "Element" | "Control" | undefined {
+): "ManagedObject" | "Element" | "Control" | "WebComponent" | undefined {
   //const typeName = typeChecker.typeToString(type);
   //log.debug("-> " + typeName + " (" + typeChecker.getFullyQualifiedName(type.getSymbol()) + ")");
 
@@ -506,6 +525,7 @@ function getInterestingBaseSettingsClass(
   | "$ManagedObjectSettings"
   | "$ElementSettings"
   | "$ControlSettings"
+  | "$WebComponentSettings"
   | undefined {
   const symbol = type.getSymbol();
   if (!symbol) {
@@ -663,7 +683,12 @@ function generateInterface(
     sourceFile: ts.SourceFile;
     className: string;
     settingsTypeFullName: string;
-    interestingBaseClass: "ManagedObject" | "Element" | "Control" | undefined;
+    interestingBaseClass:
+      | "ManagedObject"
+      | "Element"
+      | "Control"
+      | "WebComponent"
+      | undefined;
     constructorSignaturesAvailable: boolean;
     metadata: ts.PropertyDeclaration[];
   },
