@@ -51,6 +51,9 @@
     "loglevel": "1.8.1",
     "yargs": "17.7.2"
   },
+  "peerDependencies": {
+    "typescript": ">=4.4.3"
+  },
   "files": [
     "dist"
   ]
