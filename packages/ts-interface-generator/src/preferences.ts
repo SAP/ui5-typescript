@@ -1,4 +1,4 @@
-import type { Args } from "./generateTSInterfaces";
+import type { Args } from "./generateTSInterfacesAPI";
 
 class Preferences {
   private static instance: Preferences;
