@@ -98,7 +98,8 @@ interface ClassInfo {
   defaultAggregation?: string;
   associations?: { [key: string]: Association };
   events?: { [key: string]: UI5Event };
-  methods?: Record<string, unknown>; // TODO
+  methods?: Array<string>; // TODO (used for sap/ui/core/webc/WebComponent)
+  getters?: Array<string>; // TODO (used for sap/ui/core/webc/WebComponent)
   annotations?: Record<string, unknown>; // TODO
   designtime?: boolean | string;
   designTime?: boolean | string;
