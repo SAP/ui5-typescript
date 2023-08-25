@@ -29,5 +29,10 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: [".eslintrc.js", "someFile.js", "*.gen.d.ts"],
+  ignorePatterns: [
+    ".eslintrc.js",
+    "someFile.js",
+    "*.gen.d.ts",
+    "src/test/testdata/sampleWebComponent/**/*",
+  ],
 };
