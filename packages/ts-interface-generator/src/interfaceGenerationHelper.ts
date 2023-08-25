@@ -226,6 +226,7 @@ Or is there a different reason why this type would not be known?`
                 if (
                   ts.isPropertyDeclaration(member) &&
                   ts.isIdentifier(member.name) &&
+                  // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
                   member.name.escapedText === "metadata" &&
                   member.modifiers &&
                   member.modifiers.some((modifier) => {
