@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.8.0...@ui5/ts-interface-generator@0.8.1) (2023-08-25)
+
+### Bug Fixes
+
+- **ts-interface-generator:** added webc sample for UI5 >=1.118 ([#414](https://github.com/SAP/ui5-typescript/issues/414)) ([f4af575](https://github.com/SAP/ui5-typescript/commit/f4af575dd534672349d3c52faa2ed1aa0194ab5f))
+
 # [0.8.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.7.0...@ui5/ts-interface-generator@0.8.0) (2023-08-25)
 
 ### Features
