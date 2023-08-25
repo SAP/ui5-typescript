@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.7.0...@ui5/ts-interface-generator@0.8.0) (2023-08-25)
+
+### Features
+
+- **ts-interface-generator:** split main CLI and API ([#413](https://github.com/SAP/ui5-typescript/issues/413)) ([477dab6](https://github.com/SAP/ui5-typescript/commit/477dab6193fcc47ebfbda4a5f2fd3197f6c4edf7))
+- **ts-interface-generator:** support WebComponents ([#412](https://github.com/SAP/ui5-typescript/issues/412)) ([fa680d6](https://github.com/SAP/ui5-typescript/commit/fa680d68bfb44ef4bef932ebaf6b27c0f492eb0c))
+
 # [0.7.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.6.3...@ui5/ts-interface-generator@0.7.0) (2023-06-22)
 
 ### Features
