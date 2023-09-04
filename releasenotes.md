@@ -8,7 +8,30 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.118.0 (September 2023)
+
+- No particular news, only various type improvements for specific APIs.
+
 ## 1.117.0 (August 2023)
+
+- FEATURE: the `getSource()` method of events no longer returns the base type `EventProvider`, but the specific type on which this event was defined. This makes the usage easier in many cases by avoiding additional type casts. But note: the event might be defined on a superclass of the control on which you register the event handler. In this case the returned type is this superclass. Example:
+  ```ts
+  handlePress: function(event: Button$PressEvent) {
+    const source = event.getSource();
+    // "source" is automatically typed as sap.m.Button now, not as sap.ui.base.EventProvider. Nice!
+  }
+
+  // Beware:
+  handleChange: function(event: InputBase$ChangeEvent) {
+    const source = event.getSource();
+    // Even when the event source is a sap.m.Input control,
+    // "source" is still typed as its superclass sap.m.InputBase, not sap.m.Input,
+    // because this is the type on which the event was introduced.
+    // The same is the case for the name of the event type, this
+    // should help and at least makes the behavior consistent.
+  }
+  ```
+
 
 - FIX: for few (about a dozen) events the typing of the event parameters had been missing, this is now fixed. This issue affected events in ODataModel v4 related classes: `ODataModel` (e.g. `dataReceived`),  `ODataListBinding` (e.g. `createCompleted`),  `ODataPropertyBinding` and `ODataContextBinding`. 
 
