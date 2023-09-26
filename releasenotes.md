@@ -8,9 +8,12 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+
+
 ## 1.118.0 (September 2023)
 
-- No particular news, only various type improvements for specific APIs.
+- RELATED: The [`ts-interface-generator`](https://www.npmjs.com/package/@ui5/ts-interface-generator) for control development in TS is now triggered by [`ui5-tooling-transpile`](https://www.npmjs.com/package/ui5-tooling-transpile): this means that you no longer need to run the interface generator explicitly, it simply runs automatically as soon as the project has a dependency to it.<br> 
+This suggestion came up in our TypeScript workshop at UI5con in July - and it's already implemented!
 
 ## 1.117.0 (August 2023)
 
