@@ -8,7 +8,13 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.120.0 (November 2023)
+- FEATURE: The `$...Settings` types (the structures describing what data can be passed into constructors) now also contain the "specialSettings" (non-bindable data for initialization, like the id, objectBindings, bindingContexts, and the componentData for Components).
+- FIX: Interfaces representing static objects from namespaces support inheritance now. This was done for (and mainly affects) the Delegates in the sap.ui.mdc library.
 
+## 1.119.0 (October 2023)
+
+- FIX: The technically accurate description of this fix in the types generator would be: functions/properties on namespaces without "export" are now always declared as member of the namespace when they have a different "module" than the namespace itself. In practice - and easier to understand - this means: the `sap.ushell.bootstrap(...)` function gets available in the type definitions.
 
 ## 1.118.0 (September 2023)
 
