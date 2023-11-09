@@ -17,6 +17,7 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 
 ## 1.119.0 (October 2023)
 
+- BUG: for the `@types/openui5` package, the 1.120.0 types have accidentally been published as 1.119.3 (we missed adapting to a change in DefinitelyTyped, then our automated process caused this because it did not update the version number in the newly added `package.json` file). As result, `@types/openui5` 1.119.3 contains APIs which are only available since UI5 1.120. If this is a problem, use 1.119.2 instead. `@sapui5/types` and `@openui5/types` are not affected.
 - FIX: The technically accurate description of this fix in the types generator would be: functions/properties on namespaces without "export" are now always declared as member of the namespace when they have a different "module" than the namespace itself. In practice - and easier to understand - this means: the `sap.ushell.bootstrap(...)` function gets available in the type definitions.
 
 ## 1.118.0 (September 2023)
