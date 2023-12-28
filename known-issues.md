@@ -1,4 +1,4 @@
-# Release Notes for the UI5 Type Definitions
+# Known Issues for the UI5 Type Definitions
 
 This page lists known issues one might encounter when using UI5 with TypeScript. In addition, please also check the issues reports in the respective GitHub repository and the central [UI5 TypeScript issue tracker](https://github.com/SAP/ui5-typescript/issues).
 

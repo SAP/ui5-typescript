@@ -8,7 +8,7 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
-## 1.121.0 (November/December 2023)
+## 1.121.0 (January 2024?)
 - FEATURE: `abstract` classes are now supported.
 
 ## 1.120.0 (November 2023)

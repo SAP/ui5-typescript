@@ -21,13 +21,14 @@ If your development is based on SAP Fiori Elements, using the SAP Fiori tools, a
 - [Are the type definitions ready for productive use?](#are-the-type-definitions-ready-for-productive-use)
 - [Where can I find release notes or news about changes in the UI5 type definitions?](#where-can-i-find-release-notes-or-news-about-changes-in-the-ui5-type-definitions)
 - [What is the future roadmap for TypeScript in UI5?](#what-is-the-future-roadmap-for-typescript-in-ui5)
+- [What if I have further questions?](#what-if-i-have-further-questions)
 
 
 ### What is TypeScript about?
 [TypeScript](typescriptlang.org) is an extension of JavaScript for providing type information and helps by error detection through type checking and by providing code assist in many supporting code editors (code completion, inline documentation,...). Browsers cannot execute TypeScript directly, a transpilation step to JavaScript is needed, which basically strips away the type information.
 
 ### What is the overall approach for using TypeScript in UI5 applications?
-The UI5 team publishes type definition files describing all the UI5 APIs and types. With the help of these definitions, the TypeScript tools can do their job and support writing UI5 apps in TypeScript (and [even JavaScript](https://github.com/SAP-samples/ui5-cap-event-app/tree/js-with-typescript-support#applying-typescript-benefits-to-a-javascript-application)). The "typescript" branch of the "ui5-cap-event-app" project gives an [overview on UI5 code written in TypeScript](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md), typical traps and topics like debugging.
+The UI5 team publishes type definition files describing all the UI5 APIs and types. With the help of these definitions, the TypeScript compiler and the editors can do their job and support writing UI5 apps in TypeScript (and [even JavaScript](https://github.com/SAP-samples/ui5-cap-event-app/tree/js-with-typescript-support#applying-typescript-benefits-to-a-javascript-application)). The "typescript" branch of the "ui5-cap-event-app" project gives an [overview on UI5 code written in TypeScript](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md), typical traps and topics like debugging.
 
 ### How to set up a new UI5 app for TypeScript development?
 By adding TypeScript and the UI5 type definitions as dev dependencies and setting up the transpilation step. The fastest way to get started are two Yeoman-/[easy-ui5](https://github.com/SAP/generator-easy-ui5)-based TypeScript app templates:
@@ -117,6 +118,11 @@ The type generator, on the other hand, influences *how* the types are generated 
 
 ### What is the future roadmap for TypeScript in UI5?
 The current focus is working on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.
+
+### What if I have further questions?
+
+For more specific questions, please see [the FAQ](faq.md). If it does not contain an answer, please try asking the [community](https://openui5.org/community/) or in cases that are interesting for a wider audience and go beyond a specific issue with your code open an issue in the [GitHub issue tracker](https://github.com/SAP/ui5-typescript/issues).
+
 
 ## Other Deliverables
 
