@@ -20,6 +20,8 @@ The details are explained in [this issue comment](https://github.com/ui5-communi
 SOLUTION: remove any additional jQuery/qUnit type definitions from the application's `package.json` file, delete the `.../node_modules/@openui5/node_modules` folder (or `...@sapui5...`, respectively) and do another `npm install`. If the inner `node_modules` folder is created again, also delete `package-lock.json` (or other package manager's lock file) and re-try. In general, check which types exactly end up in this folder and make sure they are only referenced as dependency from ONE place or in exactly the same version.<br>
 Not setting any `typeRoots` - as recommended below - should also solve the issue.
 
+Also see [this FAQ entry](how-to-reference-the-ui5-types-in-tsconfigjson-as-types-or-typeroots-also-error-ts2688-cannot-find-type-definition-file-for-node_modules).
+
 
 ## Error TS2688: Cannot find type definition file for '@sapui5/types'
 (or Error TS2688: Cannot find type definition file for '@openui5/types')<br>
@@ -37,6 +39,9 @@ error TS2688: Cannot find type definition file for '@sapui5/types'.
 ```
 
 The recommendation for tsconfig in TypeScript 5.1 onwards (but also usable in lower versions) is hence not to set *any* `typeRoots`, but instead to set `types` to `@openui5/types` or `@sapui5/types` respectively - plus all other used types (once any `types` are listed, only the listed ones are available). In case `@types/openui5` in the default types namespace is used, none of these settings are needed.
+
+Also see [this FAQ entry](how-to-reference-the-ui5-types-in-tsconfigjson-as-types-or-typeroots-also-error-ts2688-cannot-find-type-definition-file-for-node_modules).
+
 
 # Legal Information & Privacy Statement
 
