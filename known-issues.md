@@ -40,6 +40,8 @@ error TS2688: Cannot find type definition file for '@sapui5/types'.
 
 The recommendation for tsconfig in TypeScript 5.1 onwards (but also usable in lower versions) is hence not to set *any* `typeRoots`, but instead to set `types` to `@openui5/types` or `@sapui5/types` respectively - plus all other used types (once any `types` are listed, only the listed ones are available). In case `@types/openui5` in the default types namespace is used, none of these settings are needed.
 
+When Yarn 2.x or later with PnP is used, dependencies are handled in a different way than with regular yarn or (p)npm and you need to create a special setup. This is independent from the UI5 type definitions, please do the setup according to instructions for this yarn version.
+
 Also see [this FAQ entry](how-to-reference-the-ui5-types-in-tsconfigjson-as-types-or-typeroots-also-error-ts2688-cannot-find-type-definition-file-for-node_modules).
 
 
