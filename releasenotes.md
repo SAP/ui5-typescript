@@ -9,7 +9,8 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
 ## 1.121.0 (February 2024)
-- FEATURE: `abstract` classes are now supported.
+- FEATURE: `abstract` classes are now supported (UI5 classes marked as “abstract” are now also marked as such in the type definitions).
+- FEATURE: constructors hidden in UI5 via `@hideconstructor` are now `protected` in the type definitions.
 
 ## 1.120.0 (November 2023)
 - FEATURE: The `$...Settings` types (the structures describing what data can be passed into constructors) now also contain the "specialSettings" (non-bindable data for initialization, like the id, objectBindings, bindingContexts, and the componentData for Components).
