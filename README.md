@@ -40,7 +40,8 @@ Exercises 0 and 1 of the [UI5 TypeScript Tutorial](https://github.com/SAP-sample
 If you prefer understanding how everything works under the hood in this template, you can create the setup in few minutes on your own. A [detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) shows how to create the "ui5-typescript-helloworld" project, which is the same as what you get using the template.
 
 ### How can I get an end-to-end hands-on impression of creating and developing a UI5 app in TypeScript?
-There is a [2-hours tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial), starting from scratch using an app template, extending the resulting app, and covering further topics later on, like control development, integrating third-party libraries from npm, and testing.
+There is a [2-hours tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial), starting from scratch using an app template, extending the resulting app, and covering further topics later on, like control development, integrating third-party libraries from npm, and testing.<br>
+A very comprehensive look at all the important concepts in UI5 and how they are being used in TypeScript can be found in the [TypeScript Walkthrough](https://github.com/SAP-samples/ui5-typescript-walkthrough/).
 
 ### How to convert an existing UI5 app to TypeScript?
 By doing most of the basic [setup for TypeScript projects](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) mentioned [above](#how-to-set-up-a-new-ui5-app-for-typescript-development) and then following the [four conversion steps briefly explained here](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md#converting-ui5-apps-from-javascript-to-typescript). The detailed explanation [how to enhance JavaScript applications with type information](https://github.com/SAP-samples/ui5-cap-event-app/tree/js-with-typescript-support#applying-typescript-benefits-to-a-javascript-application) will also help because the process of tightening the checks and then fixing the resulting issues is the same - just use real TypeScript syntax instead of the JSDoc comments used in that guide!
@@ -164,7 +165,7 @@ See [CONTRIBUTING.md](https://github.com/SAP/ui5-typescript/blob/master/CONTRIBU
 
 ## License
 
-Copyright (c) 2021-2023 SAP SE and ui5-typescript contributors.
+Copyright (c) 2021-2024 SAP SE and ui5-typescript contributors.
 
 This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
 
