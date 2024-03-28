@@ -86,10 +86,10 @@ In addition to the samples, tutorials and template generator mentioned elsewhere
 For control development in TypeScript, the [control interface generator](https://www.npmjs.com/package/@ui5/ts-interface-generator) is provided and the [ui5-tooling-transpile](https://www.npmjs.com/package/ui5-tooling-transpile) task and middleware nicely integrates all TypeScript transpilation related tasks into the UI5 build tooling, so you are not bothered with configuring the Babel transpiler.
 
 ### Where to report issues?
-Note that there is no official support guarantee, as the type definitions and code samples are provided "as-is". However, it is in our interest to improve them and fix issues, so please report them:
 * Issues in sample app code or documentation in the repositories linked above should be reported in the issue tracker of the respective GitHub repository. 
-* Issues within the type definition files can *in general* be [reported in the issue tracker of the "ui5-typescript" project](https://github.com/SAP/ui5-typescript/issues).
-* But when those issues are coming from missing or wrong API documentation within OpenUI5, they can be [reported as OpenUI5 issues](https://github.com/SAP/openui5/blob/master/CONTRIBUTING.md#report-an-issue). However, not all typing constructs of TypeScript can be expressed as JSDoc and converted to TypeScript by our generator (e.g. adding generics), so this should be mainly done for straightforward cases.
+* Issues within the type definition files can have one of two origins and trying to choose the correct place to report them helps us dealing with them faster:
+  1. Some issues stem from missing or wrong API documentation within OpenUI5/SAPUI5. This is often the case when one (/some) specific API has wrong types or is missing. Such issues can be reported in the regular support channels where functional issues for the same code would be reported ([OpenUI5 issue tracker](https://github.com/SAP/openui5/blob/master/CONTRIBUTING.md#report-an-issue) and public or internal SAPUI5 support components).
+  2. Other issues are caused by how the type definitions are generated from the JSDoc in the UI5 sources. The "dts-generator" may accidentally omit certain parts of APIs or translate them in a wrong way. Such issues would typically be visible for many similar APIs across the UI5 code base. These issues can be [reported in the issue tracker of this "ui5-typescript" project on GitHub](https://github.com/SAP/ui5-typescript/issues).
 
 Before reporting an issue, please check the [list of known issues](known-issues.md).
 
