@@ -45,6 +45,11 @@ When Yarn 2.x or later with PnP is used, dependencies are handled in a different
 Also see [this FAQ entry](how-to-reference-the-ui5-types-in-tsconfigjson-as-types-or-typeroots-also-error-ts2688-cannot-find-type-definition-file-for-node_modules).
 
 
+## @sapui5/types 1.121.1 and 1.122.1: errors in type definitions
+
+Only in these versions and only in the SAPUI5 types there are TypeScript errors like `'JQuery' only refers to a type, but is used as namespace here.`. This is because some of the type definition files were wrongly named (e.g. `core-1.122.0-esm-d.ts` instead of `sap.ui.core.d.ts`) and hence no longer treated as ambient files (they no longer end with ".d.ts"). As a workaround, stick to the initial patch version 1.121.0 or 1.122.0 until you can use 1.123.x.
+
+
 # Legal Information & Privacy Statement
 
 This site is hosted by [GitHub Pages](https://pages.github.com/). Please see the [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement) for any information how GitHub processes your personal data.
