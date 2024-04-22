@@ -17,7 +17,7 @@ type TSProgramUpdateCallback = (
   program: ts.Program,
   typeChecker: ts.TypeChecker,
   changedFiles: string[],
-  allKnownGlobals: GlobalToModuleMapping
+  allKnownGlobals: GlobalToModuleMapping,
 ) => void;
 
 let newProgram: ts.SemanticDiagnosticsBuilderProgram;
@@ -31,11 +31,11 @@ let options: { watchMode?: boolean };
 function initialize(
   configFile: string,
   onTSProgramUpdateCallback: TSProgramUpdateCallback,
-  optionsParameter: { watchMode?: boolean } = {}
+  optionsParameter: { watchMode?: boolean } = {},
 ) {
   if (onTSProgramUpdate) {
     throw new Error(
-      "There may be only ONE call to either initializeForOneRun or initializeWatchMode"
+      "There may be only ONE call to either initializeForOneRun or initializeWatchMode",
     );
   }
   onTSProgramUpdate = onTSProgramUpdateCallback;
@@ -43,7 +43,7 @@ function initialize(
 
   // initialize TypeScript program
   log.info(
-    "Initializing TypeScript program with all source files and type definitions (this may take a few seconds)..."
+    "Initializing TypeScript program with all source files and type definitions (this may take a few seconds)...",
   );
 
   if (!options.watchMode) {
@@ -53,7 +53,7 @@ function initialize(
     ts.sys.write = (text) => {
       text = text.replace(
         "Starting compilation in watch mode...",
-        "Starting compilation..."
+        "Starting compilation...",
       );
       text = text.replace("Watching for file changes.", "");
       originalTSwrite(text);
@@ -66,7 +66,7 @@ function initialize(
     ts.sys,
     ts.createSemanticDiagnosticsBuilderProgram,
     options.watchMode ? reportDiagnostic : undefined,
-    options.watchMode ? reportWatchStatusChanged : undefined
+    options.watchMode ? reportWatchStatusChanged : undefined,
   );
 
   // override the "after program create" function because we need access to the new "program"
@@ -96,10 +96,10 @@ function initialize(
         changedFiles.push((aff as ts.SourceFile).fileName);
       } else {
         log.debug(
-          `### Changed: ${(aff as ts.Program).getRootFileNames().join(", ")}`
+          `### Changed: ${(aff as ts.Program).getRootFileNames().join(", ")}`,
         );
         throw new Error(
-          "Not a source file change, but a program change caused the watch mode to trigger. This is unexpected. What does this mean? How did it happen?"
+          "Not a source file change, but a program change caused the watch mode to trigger. This is unexpected. What does this mean? How did it happen?",
         );
       }
       diag = program.getSemanticDiagnosticsOfNextAffectedFile();
@@ -147,7 +147,7 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
     if (newProgram) {
       // TODO: handle errorCount
       newChangedFiles = newChangedFiles.filter(
-        (fileName) => !fileName.endsWith(".gen.d.ts")
+        (fileName) => !fileName.endsWith(".gen.d.ts"),
       ); // not interested in changes to generated files
       if (newChangedFiles.length) {
         const timer_begin = performance.now();
@@ -157,8 +157,8 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
         const timer_end = performance.now();
         log.debug(
           `Handling the file change took ${(timer_end - timer_begin).toFixed(
-            1
-          )} ms.`
+            1,
+          )} ms.`,
         );
       } else {
         // no files modified/deleted
@@ -169,13 +169,13 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
     } else {
       // should not happen
       throw new Error(
-        "reportWatchStatusChanged: diagnostic.code === 6194, but globalProgram not available"
+        "reportWatchStatusChanged: diagnostic.code === 6194, but globalProgram not available",
       );
     }
   } else {
     // should not happen
     throw new Error(
-      `reportWatchStatusChanged: diagnostic.code !== 6031 or 6032 or 6193 or 6194, it is: ${diagnostic.code}`
+      `reportWatchStatusChanged: diagnostic.code !== 6031 or 6032 or 6193 or 6194, it is: ${diagnostic.code}`,
     );
   }
 }
@@ -188,7 +188,7 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
  */
 function onProgramChanged(
   builderProgram: ts.SemanticDiagnosticsBuilderProgram,
-  changedFiles: string[]
+  changedFiles: string[],
 ) {
   const program = builderProgram.getProgram();
   const typeChecker = program.getTypeChecker();

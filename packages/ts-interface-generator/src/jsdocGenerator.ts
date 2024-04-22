@@ -91,7 +91,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
     propertyName: string,
     info: APIMember,
     lines: string[],
-    suffixLines: string[]
+    suffixLines: string[],
   ) {
     if (!oClassInfo.generatedJSDoc[methodType]) {
       oClassInfo.generatedJSDoc[methodType] = {};
@@ -118,7 +118,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
     n: string,
     type: string,
     description: string,
-    defaultValue: string
+    defaultValue: string,
   ) {
     let s = "@param ";
 
@@ -149,7 +149,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           ? "Default value is: " + JSON.stringify(info.defaultValue)
           : "",
         '@returns Value of property "' + n + '"',
-      ]
+      ],
     );
     newJSDoc(
       MethodType.PropertySet,
@@ -166,10 +166,10 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           n,
           info.type,
           'New value for property "' + n + '"',
-          info.defaultValue as string
+          info.defaultValue as string,
         ),
         '@returns Reference to "this" in order to allow method chaining',
-      ]
+      ],
     );
     if (info.bindable) {
       newJSDoc(
@@ -182,14 +182,14 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           'detailed description of the possible properties of "oBindingInfo"',
           "@param oBindingInfo The binding information",
           '@returns Reference to "this" in order to allow method chaining',
-        ]
+        ],
       );
       newJSDoc(
         MethodType.PropertyUnbind,
         n,
         info,
         ['Unbinds property "' + n + '" from model data.'],
-        ['@returns Reference to "this" in order to allow method chaining']
+        ['@returns Reference to "this" in order to allow method chaining'],
       );
     }
   }
@@ -211,7 +211,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
       ],
       [
         // TODO: @returns missing?!?
-      ]
+      ],
     );
     if (info.cardinality == "0..n") {
       const n1 = info.singularName;
@@ -237,7 +237,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
             " is inserted at",
           "             the last position",
           '@returns Reference to "this" in order to allow method chaining',
-        ]
+        ],
       );
       newJSDoc(
         MethodType.AggregationAdd,
@@ -251,7 +251,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
             n1 +
             " to add; if empty, nothing is inserted",
           '@returns Reference to "this" in order to allow method chaining',
-        ]
+        ],
       );
       newJSDoc(
         MethodType.AggregationRemove,
@@ -261,7 +261,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
         [
           "@param " + n1 + " The " + n1 + " to remove or its index or id",
           "@returns The removed " + n1 + ' or "null"',
-        ]
+        ],
       );
       newJSDoc(
         MethodType.AggregationRemoveAll,
@@ -271,7 +271,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           'Removes all the controls from the aggregation "' + n + '".',
           "Additionally, it unregisters them from the hosting UIArea.",
         ],
-        ["@returns  An array of the removed elements (might be empty)"]
+        ["@returns  An array of the removed elements (might be empty)"],
       );
       newJSDoc(
         MethodType.AggregationIndexOf,
@@ -288,7 +288,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
         [
           "@param " + n1 + " The " + n1 + " whose index is looked for",
           "@returns The index of the provided control in the aggregation if found, or -1 otherwise",
-        ]
+        ],
       );
     } else {
       newJSDoc(
@@ -299,7 +299,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
         [
           "@param " + n + " The " + n + " to set",
           '@returns Reference to "this" in order to allow method chaining',
-        ]
+        ],
       );
     }
     newJSDoc(
@@ -315,7 +315,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           n +
           '".',
       ],
-      ['@returns Reference to "this" in order to allow method chaining']
+      ['@returns Reference to "this" in order to allow method chaining'],
     );
     if (info.bindable) {
       newJSDoc(
@@ -328,14 +328,14 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           'detailed description of the possible properties of "oBindingInfo".',
           "@param oBindingInfo The binding information",
           '@returns Reference to "this" in order to allow method chaining',
-        ]
+        ],
       );
       newJSDoc(
         MethodType.AggregationUnbind,
         n,
         info,
         ['Unbinds aggregation "' + n + '" from model data.'],
-        ['@returns Reference to "this" in order to allow method chaining']
+        ['@returns Reference to "this" in order to allow method chaining'],
       );
     }
   }
@@ -358,7 +358,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
             n +
             '", or "null".',
       ],
-      []
+      [],
     );
     if (info.cardinality === "0..n") {
       const n1 = info.singularName;
@@ -374,7 +374,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
             n +
             " to add; if empty, nothing is inserted",
           '@returns Reference to "this" in order to allow method chaining',
-        ]
+        ],
       );
       newJSDoc(
         MethodType.AssociationRemove,
@@ -384,14 +384,14 @@ export function addJSDoc(oClassInfo: ClassInfo) {
         [
           "@param " + n1 + " The " + n1 + " to be removed or its index or ID",
           "@returns The removed " + n1 + ' or "null"',
-        ]
+        ],
       );
       newJSDoc(
         MethodType.AssociationRemoveAll,
         n,
         info,
         ["Removes all the controls in the association named " + n + "."],
-        ["@returns An array of the removed elements (might be empty)"]
+        ["@returns An array of the removed elements (might be empty)"],
       );
     } else {
       newJSDoc(
@@ -406,7 +406,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
             n +
             '" association; alternatively, an element instance may be given',
           '@returns Reference to "this" in order to allow method chaining',
-        ]
+        ],
       );
     }
   }
@@ -436,7 +436,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
         "@param oControlEvent.getParameters." +
           pName +
           " " +
-          (info.parameters[pName].doc || "")
+          (info.parameters[pName].doc || ""),
       );
     }
     //newJSDoc(lines); // TODO
@@ -462,7 +462,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           '" itself',
         "",
         '@returns Reference to "this" in order to allow method chaining',
-      ]
+      ],
     );
     newJSDoc(
       MethodType.EventAttachWithData,
@@ -486,7 +486,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           '" itself',
         "",
         '@returns Reference to "this" in order to allow method chaining',
-      ]
+      ],
     );
     newJSDoc(
       MethodType.EventDetach,
@@ -508,7 +508,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
         info.since ? "@since " + info.since : "",
         info.deprecation ? "@deprecated " + info.deprecation : "",
         info.experimental ? "@experimental " + info.experimental : "",
-      ]
+      ],
     );
 
     // build documentation for fireEvent. It contains conditional parts which makes it a bit more complicated
@@ -519,12 +519,12 @@ export function addJSDoc(oClassInfo: ClassInfo) {
         "",
         'Listeners may prevent the default action of this event by calling the "preventDefault" method on the event object.',
         "The return value of this method indicates whether the default action should be executed.",
-        ""
+        "",
       );
     }
     suffixLines.push(
       "",
-      "@param parameters Parameters to pass along with the event"
+      "@param parameters Parameters to pass along with the event",
     );
     if (!isEmpty(info.parameters)) {
       for (const pName in info.parameters) {
@@ -532,7 +532,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
           "@param [mParameters." +
             pName +
             "] " +
-            (info.parameters[pName].doc || "")
+            (info.parameters[pName].doc || ""),
         );
       }
       suffixLines.push("");
@@ -541,7 +541,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
       suffixLines.push("@returns Whether or not to prevent the default action");
     } else {
       suffixLines.push(
-        '@returns Reference to "this" in order to allow method chaining'
+        '@returns Reference to "this" in order to allow method chaining',
       );
     }
     newJSDoc(MethodType.EventFire, n, info, lines, suffixLines);
