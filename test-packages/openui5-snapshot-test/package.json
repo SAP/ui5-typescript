@@ -9,27 +9,30 @@
     "directory": "test-packages/openui5-snapshot-test"
   },
   "dependencies": {
-    "@ui5/dts-generator": "^2.3.2",
-    "fs-extra": "10.0.0",
+    "@ui5/dts-generator": "file:../../packages/dts-generator",
+    "fs-extra": "11.2.0",
     "lodash": "4.17.21",
-    "node-fetch": "2.6.7",
-    "typescript": "4.2.4"
+    "node-fetch": "3.3.2",
+    "typescript": "5.4.5"
+  },
+  "devDependencies": {
+    "@types/jquery": "3.5.13",
+    "@types/qunit": "2.5.4"
   },
   "scripts": {
     "ci": "npm-run-all test",
-    "test:": "mocha \"./test/**/*spec.js\"",
+    "test": "mocha \"./test/**/*spec.js\"",
     "re-generate": "npm-run-all sdk:* dts:*",
     "sdk:download": "node ./lib/download-sdk.js",
     "sdk:format": "prettier --write \"input-sdk/*.json\"",
     "dts:generate": "node ./lib/generate-dts.js",
-    "dts:format": "prettier --write \"output-dts/*.d.ts\"",
     "dts:verify": "tsc -p ."
   },
   "mocha": {
     "diff": false
   },
   "snapshot": {
-    "version": "1.78.1",
+    "version": "1.120.12",
     "libs": [
       "sap.ui.core",
       "sap.m",

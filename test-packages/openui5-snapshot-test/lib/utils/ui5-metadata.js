@@ -55,7 +55,7 @@ async function downloadLibs(libs, version, outDir) {
   // https://sapui5-sapui5.dispatcher.us1.hana.ondemand.com/test-resources/sap/m/designtime/api.json
   // Older versions:
   // https://sapui5.hana.ondemand.com/1.71.14/test-resources/sap/m/designtime/api.json
-  const baseUrl = `https://openui5.hana.ondemand.com/${version}/test-resources/`;
+  const baseUrl = `https://sdk.openui5.org/${version}/test-resources/`;
   const nameToFile = zipObject(
     libs,
     map(libs, (_) => `${baseUrl}${_.replace(/\./g, "/")}/designtime/api.json`)

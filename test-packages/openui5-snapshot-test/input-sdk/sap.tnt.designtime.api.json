@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.78.1",
+  "version": "1.120.12",
   "library": "sap.tnt",
   "symbols": [
     {
@@ -12,6 +12,7 @@
       "export": "",
       "static": true,
       "visibility": "public",
+      "since": "1.36",
       "description": "SAPUI5 library with controls specialized for administrative applications."
     },
     {
@@ -26,8 +27,7 @@
       "since": "1.54",
       "extends": "sap.ui.core.Control",
       "implements": ["sap.ui.core.IFormContent"],
-      "description": "The <code>InfoLabel</code> is a small non-interactive control which contains text information and non-semantic color chosen from a list of predefined color schemes. It serves the purpose to attract the user attention to some piece of information (state, quantity, condition, etc.).\n\n<h3>Overview</h3>\n\nThe control visualizes text information without user interaction. The text inside the control is always in upper case. It can have smaller or larger side paddings which can be specified by the <code>renderMode</code> property. The text-background color pair can be changed by setting a number between 1 and 10 that corresponds to the 10 predefined color combinations of the <code>colorScheme</code> property. The control is designed to be vertically aligned with UI5 Input and Button control families. When using <code>InfoLabel</code> in non-editable <code>Forms</code>, <code>Tables</code>, etc., set <code>displayOnly=true</code> for best visual results.\n\n<h3>Usage Guidelines</h3> <ul> <li>If the text is longer than the width of the control, it doesn’t wrap. Instead, it’s represented as ellipsis. </li> <li>When truncated, the full text in the control is not visible. Therefore, it’s recommended to make more space for longer items to be fully displayed.</li> <li>Colors are not semantic and have no visual representation in sap_belize_hcb and sap_belize_hcw themes.</li> <li>The control shows plain text only, formatting is not visualized.</li> </ul>",
-      "ui5-metamodel": true,
+      "description": "The <code>InfoLabel</code> is a small non-interactive control which contains text information and non-semantic color chosen from a list of predefined color schemes. It serves the purpose to attract the user attention to some piece of information (state, quantity, condition, etc.).\n\n<h3>Overview</h3>\n\nThe control visualizes text information without user interaction. The text-background color pair can be changed by setting a number between 1 and 10 that corresponds to the 10 predefined color combinations of the <code>colorScheme</code> property. The control is designed to be vertically aligned with UI5 Input and Button control families. When using <code>InfoLabel</code> in non-editable <code>Forms</code>, <code>Tables</code>, etc., set <code>displayOnly=true</code> for best visual results.\n\n<h3>Usage Guidelines</h3> <ul> <li>If the text is longer than the width of the control, it doesn’t wrap. Instead, it’s represented as ellipsis. </li> <li>When truncated, the full text in the control is not visible. Therefore, it’s recommended to make more space for longer items to be fully displayed.</li> <li>Colors are not semantic and have no visual representation in sap_belize_hcb, sap_belize_hcw, sap_fiori_3_hcb and sap_fiori_3_hcw themes.</li> <li>The control shows plain text only, formatting is not visualized.</li> </ul>",
       "ui5-metadata": {
         "stereotype": "control",
         "properties": [
@@ -47,7 +47,7 @@
             "defaultValue": "Loose",
             "group": "Appearance",
             "visibility": "public",
-            "description": "Specifies the type of the <code>InfoLabel</code> paddings - loose or narrow. <b>Note:</b> By default the padding is loose. It is recommended to use narrow (smaller) paddings for numeric texts.",
+            "description": "Specifies the type of the <code>InfoLabel</code> paddings - loose or narrow. <b>Note:</b> By default the padding is loose. It is recommended to use narrow (smaller) paddings for numeric texts. <b>Note:</b> In Horizon theme there is only one mode and setting this property will not have effect.",
             "methods": ["getRenderMode", "setRenderMode"]
           },
           {
@@ -56,7 +56,7 @@
             "defaultValue": 7,
             "group": "Misc",
             "visibility": "public",
-            "description": "Specifies the fill and text color of the control. Accepts a number between 1 and 10 as a value. You can choose from 10 predefined background and text color combinations. The color schemes are non-semantic, you can select them according to your own preferences. <b>Note:</b> ColorScheme 10 is available only in Fiori 3 theme. The default <code>colorScheme</code> is 7.",
+            "description": "Specifies the fill and text color of the control. Accepts a number between 1 and 10 as a value. You can choose from 10 predefined background and text color combinations. The color schemes are non-semantic, you can select them according to your own preferences. <b>Note:</b> ColorScheme 10 is available only in Fiori 3 and Horizon themes. The default <code>colorScheme</code> is 7.",
             "methods": ["getColorScheme", "setColorScheme"]
           },
           {
@@ -121,13 +121,13 @@
           "name": "bindText",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "oBindingInfo",
-              "type": "object",
+              "type": "sap.ui.base.ManagedObject.PropertyBindingInfo",
               "optional": false,
               "description": "The binding information"
             }
@@ -171,7 +171,7 @@
             "type": "int",
             "description": "Value of property <code>colorScheme</code>"
           },
-          "description": "Gets current value of property {@link #getColorScheme colorScheme}.\n\nSpecifies the fill and text color of the control. Accepts a number between 1 and 10 as a value. You can choose from 10 predefined background and text color combinations. The color schemes are non-semantic, you can select them according to your own preferences. <b>Note:</b> ColorScheme 10 is available only in Fiori 3 theme. The default <code>colorScheme</code> is 7.\n\nDefault value is <code>7</code>."
+          "description": "Gets current value of property {@link #getColorScheme colorScheme}.\n\nSpecifies the fill and text color of the control. Accepts a number between 1 and 10 as a value. You can choose from 10 predefined background and text color combinations. The color schemes are non-semantic, you can select them according to your own preferences. <b>Note:</b> ColorScheme 10 is available only in Fiori 3 and Horizon themes. The default <code>colorScheme</code> is 7.\n\nDefault value is <code>7</code>."
         },
         {
           "name": "getDisplayOnly",
@@ -209,7 +209,7 @@
             "type": "sap.tnt.RenderMode",
             "description": "Value of property <code>renderMode</code>"
           },
-          "description": "Gets current value of property {@link #getRenderMode renderMode}.\n\nSpecifies the type of the <code>InfoLabel</code> paddings - loose or narrow. <b>Note:</b> By default the padding is loose. It is recommended to use narrow (smaller) paddings for numeric texts.\n\nDefault value is <code>Loose</code>."
+          "description": "Gets current value of property {@link #getRenderMode renderMode}.\n\nSpecifies the type of the <code>InfoLabel</code> paddings - loose or narrow. <b>Note:</b> By default the padding is loose. It is recommended to use narrow (smaller) paddings for numeric texts. <b>Note:</b> In Horizon theme there is only one mode and setting this property will not have effect.\n\nDefault value is <code>Loose</code>."
         },
         {
           "name": "getText",
@@ -242,31 +242,33 @@
           "name": "setColorScheme",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "iColorScheme",
               "type": "int",
-              "optional": false,
+              "optional": true,
+              "defaultValue": 7,
               "description": "New value for property <code>colorScheme</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getColorScheme colorScheme}.\n\nSpecifies the fill and text color of the control. Accepts a number between 1 and 10 as a value. You can choose from 10 predefined background and text color combinations. The color schemes are non-semantic, you can select them according to your own preferences. <b>Note:</b> ColorScheme 10 is available only in Fiori 3 theme. The default <code>colorScheme</code> is 7.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>7</code>."
+          "description": "Sets a new value for property {@link #getColorScheme colorScheme}.\n\nSpecifies the fill and text color of the control. Accepts a number between 1 and 10 as a value. You can choose from 10 predefined background and text color combinations. The color schemes are non-semantic, you can select them according to your own preferences. <b>Note:</b> ColorScheme 10 is available only in Fiori 3 and Horizon themes. The default <code>colorScheme</code> is 7.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>7</code>."
         },
         {
           "name": "setDisplayOnly",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "bDisplayOnly",
               "type": "boolean",
-              "optional": false,
+              "optional": true,
+              "defaultValue": false,
               "description": "New value for property <code>displayOnly</code>"
             }
           ],
@@ -277,14 +279,15 @@
           "visibility": "public",
           "since": "1.74",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "sIcon",
               "type": "sap.ui.core.URI",
-              "optional": false,
+              "optional": true,
+              "defaultValue": "\"\"",
               "description": "New value for property <code>icon</code>"
             }
           ],
@@ -294,31 +297,33 @@
           "name": "setRenderMode",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "sRenderMode",
               "type": "sap.tnt.RenderMode",
-              "optional": false,
+              "optional": true,
+              "defaultValue": "Loose",
               "description": "New value for property <code>renderMode</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getRenderMode renderMode}.\n\nSpecifies the type of the <code>InfoLabel</code> paddings - loose or narrow. <b>Note:</b> By default the padding is loose. It is recommended to use narrow (smaller) paddings for numeric texts.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Loose</code>."
+          "description": "Sets a new value for property {@link #getRenderMode renderMode}.\n\nSpecifies the type of the <code>InfoLabel</code> paddings - loose or narrow. <b>Note:</b> By default the padding is loose. It is recommended to use narrow (smaller) paddings for numeric texts. <b>Note:</b> In Horizon theme there is only one mode and setting this property will not have effect.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Loose</code>."
         },
         {
           "name": "setText",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "sText",
               "type": "string",
-              "optional": false,
+              "optional": true,
+              "defaultValue": "\"\"",
               "description": "New value for property <code>text</code>"
             }
           ],
@@ -328,14 +333,15 @@
           "name": "setTextDirection",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "sTextDirection",
               "type": "sap.ui.core.TextDirection",
-              "optional": false,
+              "optional": true,
+              "defaultValue": "Inherit",
               "description": "New value for property <code>textDirection</code>"
             }
           ],
@@ -345,14 +351,15 @@
           "name": "setWidth",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "sWidth",
               "type": "sap.ui.core.CSSSize",
-              "optional": false,
+              "optional": true,
+              "defaultValue": null,
               "description": "New value for property <code>width</code>"
             }
           ],
@@ -362,7 +369,7 @@
           "name": "unbindText",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.InfoLabel",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Unbinds property {@link #getText text} from model data."
@@ -378,8 +385,7 @@
       "static": true,
       "visibility": "public",
       "since": "1.68",
-      "description": "Interface for controls suitable for the <code>header</code> aggregation of {@link sap.tnt.ToolPage}.",
-      "ui5-metamodel": true
+      "description": "Interface for controls suitable for the <code>header</code> aggregation of {@link sap.tnt.ToolPage}."
     },
     {
       "kind": "class",
@@ -393,7 +399,6 @@
       "since": "1.34",
       "extends": "sap.ui.core.Control",
       "description": "The NavigationList control is an interactive control, which provides a choice of different items, ordered as a list.",
-      "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
         "properties": [
@@ -442,6 +447,19 @@
               "removeItem",
               "indexOfItem",
               "removeAllItems"
+            ]
+          },
+          {
+            "name": "_overflowItem",
+            "singularName": "_overflowItem",
+            "type": "sap.tnt.NavigationListItem",
+            "cardinality": "0..1",
+            "visibility": "hidden",
+            "description": "The overflow item.",
+            "methods": [
+              "get_overflowItem",
+              "destroy_overflowItem",
+              "set_overflowItem"
             ]
           }
         ],
@@ -562,7 +580,7 @@
           "name": "addAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -579,7 +597,7 @@
           "name": "addAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -596,7 +614,7 @@
           "name": "addItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -613,7 +631,7 @@
           "name": "attachItemSelect",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -625,7 +643,7 @@
             },
             {
               "name": "fnFunction",
-              "type": "function",
+              "type": "function(sap.ui.base.Event) : void",
               "optional": false,
               "description": "The function to be called when the event occurs"
             },
@@ -642,7 +660,7 @@
           "name": "destroyItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys all the items in the aggregation {@link #getItems items}."
@@ -651,13 +669,13 @@
           "name": "detachItemSelect",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "fnFunction",
-              "type": "function",
+              "type": "function(sap.ui.base.Event) : void",
               "optional": false,
               "description": "The function to be called, when the event occurs"
             },
@@ -704,7 +722,7 @@
           "name": "fireItemSelect",
           "visibility": "protected",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -767,7 +785,7 @@
           "visibility": "public",
           "returnValue": {
             "type": "sap.tnt.NavigationListItem|null",
-            "description": "The selected item or null if nothing is selected"
+            "description": "The selected item or <code>null</code> if nothing is selected"
           },
           "description": "Gets the currently selected <code>NavigationListItem</code>."
         },
@@ -811,7 +829,7 @@
           "name": "insertItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -861,7 +879,7 @@
           "name": "removeAriaDescribedBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID",
+            "type": "sap.ui.core.ID|null",
             "description": "The removed ariaDescribedBy or <code>null</code>"
           },
           "parameters": [
@@ -878,7 +896,7 @@
           "name": "removeAriaLabelledBy",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.ID",
+            "type": "sap.ui.core.ID|null",
             "description": "The removed ariaLabelledBy or <code>null</code>"
           },
           "parameters": [
@@ -895,7 +913,7 @@
           "name": "removeItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "sap.tnt.NavigationListItem|null",
             "description": "The removed item or <code>null</code>"
           },
           "parameters": [
@@ -912,14 +930,15 @@
           "name": "setExpanded",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "bExpanded",
               "type": "boolean",
-              "optional": false,
+              "optional": true,
+              "defaultValue": true,
               "description": "New value for property <code>expanded</code>"
             }
           ],
@@ -946,7 +965,7 @@
           "name": "setSelectedKey",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "this pointer for chaining"
           },
           "parameters": [
@@ -963,7 +982,7 @@
           "name": "setWidth",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationList",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -990,7 +1009,6 @@
       "since": "1.34",
       "extends": "sap.ui.core.Item",
       "description": "The NavigationListItem control represents an action, which can be selected by the user. It can provide sub items.",
-      "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "element",
         "properties": [
@@ -1030,6 +1048,38 @@
             "since": "1.52",
             "description": "Specifies if the item should be shown.",
             "methods": ["getVisible", "setVisible"]
+          },
+          {
+            "name": "selectable",
+            "type": "boolean",
+            "defaultValue": true,
+            "group": "Behavior",
+            "visibility": "public",
+            "since": "1.116",
+            "description": "Specifies if the item can be selected.",
+            "experimental": {
+              "since": "1.116",
+              "text": "Disclaimer: this property is in a beta state - incompatible API changes may be done before its official public release."
+            },
+            "methods": ["getSelectable", "setSelectable"]
+          },
+          {
+            "name": "href",
+            "type": "sap.ui.core.URI",
+            "defaultValue": null,
+            "group": "Data",
+            "visibility": "public",
+            "description": "Defines the link target URI. Supports standard hyperlink behavior. If a JavaScript action should be triggered, this should not be set, but instead an event handler for the <code>select</code> event should be registered.",
+            "methods": ["getHref", "setHref"]
+          },
+          {
+            "name": "target",
+            "type": "string",
+            "defaultValue": null,
+            "group": "Behavior",
+            "visibility": "public",
+            "description": "Specifies the browsing context where the linked content will open.\n\nOptions are the standard values for window.open() supported by browsers: <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>, <code>_search</code>. Alternatively, a frame name can be entered. This property is only used when the <code>href</code> property is set.",
+            "methods": ["getTarget", "setTarget"]
           }
         ],
         "aggregations": [
@@ -1137,7 +1187,7 @@
           "name": "addItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1154,7 +1204,7 @@
           "name": "attachSelect",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1166,7 +1216,7 @@
             },
             {
               "name": "fnFunction",
-              "type": "function",
+              "type": "function(sap.ui.base.Event) : void",
               "optional": false,
               "description": "The function to be called when the event occurs"
             },
@@ -1183,7 +1233,7 @@
           "name": "destroyItems",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys all the items in the aggregation {@link #getItems items}."
@@ -1192,13 +1242,13 @@
           "name": "detachSelect",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "fnFunction",
-              "type": "function",
+              "type": "function(sap.ui.base.Event) : void",
               "optional": false,
               "description": "The function to be called, when the event occurs"
             },
@@ -1245,7 +1295,7 @@
           "name": "fireSelect",
           "visibility": "protected",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1276,6 +1326,15 @@
           "description": "Gets current value of property {@link #getExpanded expanded}.\n\nSpecifies if the item is expanded.\n\nDefault value is <code>true</code>."
         },
         {
+          "name": "getFocusDomRef",
+          "visibility": "protected",
+          "returnValue": {
+            "type": "Element",
+            "description": "Returns the DOM Element that should get the focus"
+          },
+          "description": "Returns the DOM Element that should get the focus."
+        },
+        {
           "name": "getHasExpander",
           "visibility": "public",
           "returnValue": {
@@ -1283,6 +1342,15 @@
             "description": "Value of property <code>hasExpander</code>"
           },
           "description": "Gets current value of property {@link #getHasExpander hasExpander}.\n\nSpecifies if the item has an expander.\n\nDefault value is <code>true</code>."
+        },
+        {
+          "name": "getHref",
+          "visibility": "public",
+          "returnValue": {
+            "type": "sap.ui.core.URI",
+            "description": "Value of property <code>href</code>"
+          },
+          "description": "Gets current value of property {@link #getHref href}.\n\nDefines the link target URI. Supports standard hyperlink behavior. If a JavaScript action should be triggered, this should not be set, but instead an event handler for the <code>select</code> event should be registered."
         },
         {
           "name": "getIcon",
@@ -1308,6 +1376,29 @@
             "description": "Metadata object describing this class"
           },
           "description": "Returns a metadata object for class sap.tnt.NavigationListItem."
+        },
+        {
+          "name": "getSelectable",
+          "visibility": "public",
+          "since": "1.116",
+          "returnValue": {
+            "type": "boolean",
+            "description": "Value of property <code>selectable</code>"
+          },
+          "description": "Gets current value of property {@link #getSelectable selectable}.\n\nSpecifies if the item can be selected.\n\nDefault value is <code>true</code>.",
+          "experimental": {
+            "since": "1.116",
+            "text": "Disclaimer: this property is in a beta state - incompatible API changes may be done before its official public release."
+          }
+        },
+        {
+          "name": "getTarget",
+          "visibility": "public",
+          "returnValue": {
+            "type": "string",
+            "description": "Value of property <code>target</code>"
+          },
+          "description": "Gets current value of property {@link #getTarget target}.\n\nSpecifies the browsing context where the linked content will open.\n\nOptions are the standard values for window.open() supported by browsers: <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>, <code>_search</code>. Alternatively, a frame name can be entered. This property is only used when the <code>href</code> property is set."
         },
         {
           "name": "getVisible",
@@ -1340,7 +1431,7 @@
           "name": "insertItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1372,7 +1463,7 @@
           "name": "removeItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "sap.tnt.NavigationListItem|null",
             "description": "The removed item or <code>null</code>"
           },
           "parameters": [
@@ -1389,14 +1480,15 @@
           "name": "setExpanded",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "bExpanded",
               "type": "boolean",
-              "optional": false,
+              "optional": true,
+              "defaultValue": true,
               "description": "New value for property <code>expanded</code>"
             }
           ],
@@ -1406,49 +1498,111 @@
           "name": "setHasExpander",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "bHasExpander",
               "type": "boolean",
-              "optional": false,
+              "optional": true,
+              "defaultValue": true,
               "description": "New value for property <code>hasExpander</code>"
             }
           ],
           "description": "Sets a new value for property {@link #getHasExpander hasExpander}.\n\nSpecifies if the item has an expander.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>true</code>."
         },
         {
+          "name": "setHref",
+          "visibility": "public",
+          "returnValue": {
+            "type": "this",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sHref",
+              "type": "sap.ui.core.URI",
+              "optional": true,
+              "defaultValue": null,
+              "description": "New value for property <code>href</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getHref href}.\n\nDefines the link target URI. Supports standard hyperlink behavior. If a JavaScript action should be triggered, this should not be set, but instead an event handler for the <code>select</code> event should be registered.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+        },
+        {
           "name": "setIcon",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "sIcon",
               "type": "sap.ui.core.URI",
-              "optional": false,
+              "optional": true,
+              "defaultValue": "''",
               "description": "New value for property <code>icon</code>"
             }
           ],
           "description": "Sets a new value for property {@link #getIcon icon}.\n\nSpecifies the icon for the item.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>empty string</code>."
         },
         {
+          "name": "setSelectable",
+          "visibility": "public",
+          "since": "1.116",
+          "returnValue": {
+            "type": "this",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "bSelectable",
+              "type": "boolean",
+              "optional": true,
+              "defaultValue": true,
+              "description": "New value for property <code>selectable</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getSelectable selectable}.\n\nSpecifies if the item can be selected.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>true</code>.",
+          "experimental": {
+            "since": "1.116",
+            "text": "Disclaimer: this property is in a beta state - incompatible API changes may be done before its official public release."
+          }
+        },
+        {
+          "name": "setTarget",
+          "visibility": "public",
+          "returnValue": {
+            "type": "this",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sTarget",
+              "type": "string",
+              "optional": true,
+              "defaultValue": null,
+              "description": "New value for property <code>target</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getTarget target}.\n\nSpecifies the browsing context where the linked content will open.\n\nOptions are the standard values for window.open() supported by browsers: <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>, <code>_search</code>. Alternatively, a frame name can be entered. This property is only used when the <code>href</code> property is set.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+        },
+        {
           "name": "setVisible",
           "visibility": "public",
           "since": "1.52",
           "returnValue": {
-            "type": "sap.tnt.NavigationListItem",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "bVisible",
               "type": "boolean",
-              "optional": false,
+              "optional": true,
+              "defaultValue": true,
               "description": "New value for property <code>visible</code>"
             }
           ],
@@ -1466,7 +1620,6 @@
       "static": true,
       "visibility": "public",
       "description": "Predefined types of <code>InfoLabel</code>",
-      "ui5-metamodel": true,
       "ui5-metadata": { "stereotype": "enum" },
       "properties": [
         {
@@ -1497,10 +1650,19 @@
       "since": "1.34",
       "extends": "sap.ui.core.Control",
       "description": "The SideNavigation control is a container, which consists of flexible and fixed parts on top of each other. <h4>Responsive Behavior</h4> <ul> <li>The flexible part adapts its size to the fixed one.</li> <li>The flexible part has a scrollbar when the content is larger than the available space.</li> </ul> <b>Note:</b> In order for the SideNavigation to stretch properly, its parent layout control should only be the sap.tnt.ToolPage.",
-      "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
         "properties": [
+          {
+            "name": "width",
+            "type": "sap.ui.core.CSSSize",
+            "defaultValue": null,
+            "group": "Dimension",
+            "visibility": "public",
+            "since": "1.120",
+            "description": "Specifies the width of the control.\n\n<Note:> Depending on the theme, there is a minimum width set (16rem for Horizon theme). This property can be used to set a bigger width.",
+            "methods": ["getWidth", "setWidth"]
+          },
           {
             "name": "expanded",
             "type": "boolean",
@@ -1519,6 +1681,16 @@
             "since": "1.62.0",
             "description": "Specifies the currently selected key.",
             "methods": ["getSelectedKey", "setSelectedKey"]
+          },
+          {
+            "name": "ariaLabel",
+            "type": "string",
+            "defaultValue": null,
+            "group": "Accessibility",
+            "visibility": "public",
+            "since": "1.98",
+            "description": "Specifies an optional aria-label that can be used by the screen readers.",
+            "methods": ["getAriaLabel", "setAriaLabel"]
           }
         ],
         "aggregations": [
@@ -1554,33 +1726,11 @@
             "cardinality": "0..1",
             "visibility": "public",
             "description": "Defines the content inside the footer.",
+            "deprecated": {
+              "since": "1.120",
+              "text": "Use the aggregation <code>fixedItem</code> instead."
+            },
             "methods": ["getFooter", "destroyFooter", "setFooter"]
-          },
-          {
-            "name": "_topArrowControl",
-            "singularName": "_topArrowControl",
-            "type": "sap.ui.core.Icon",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "description": "The top arrow, used for scrolling throw items when SideNavigation is collapsed.",
-            "methods": [
-              "get_topArrowControl",
-              "destroy_topArrowControl",
-              "set_topArrowControl"
-            ]
-          },
-          {
-            "name": "_bottomArrowControl",
-            "singularName": "_bottomArrowControl",
-            "type": "sap.ui.core.Icon",
-            "cardinality": "0..1",
-            "visibility": "hidden",
-            "description": "The bottom arrow, used for scrolling throw items when SideNavigation is collapsed.",
-            "methods": [
-              "get_bottomArrowControl",
-              "destroy_bottomArrowControl",
-              "set_bottomArrowControl"
-            ]
           }
         ],
         "defaultAggregation": "item",
@@ -1632,10 +1782,7 @@
             "description": "Initial settings for the new control"
           }
         ],
-        "description": "Constructor for a new SideNavigation.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.",
-        "references": [
-          "{@link fiori:https://experience.sap.com/fiori-design-web/side-navigation/ Side Navigation}"
-        ]
+        "description": "Constructor for a new SideNavigation.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object."
       },
       "events": [
         {
@@ -1675,7 +1822,7 @@
           "name": "attachItemSelect",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1687,7 +1834,7 @@
             },
             {
               "name": "fnFunction",
-              "type": "function",
+              "type": "function(sap.ui.base.Event) : void",
               "optional": false,
               "description": "The function to be called when the event occurs"
             },
@@ -1704,13 +1851,13 @@
           "name": "bindItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "oBindingInfo",
-              "type": "object",
+              "type": "sap.ui.base.ManagedObject.AggregationBindingInfo",
               "optional": false,
               "description": "The binding information"
             }
@@ -1721,7 +1868,7 @@
           "name": "destroyFixedItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys the fixedItem in the aggregation {@link #getFixedItem fixedItem}."
@@ -1730,16 +1877,20 @@
           "name": "destroyFooter",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
-          "description": "Destroys the footer in the aggregation {@link #getFooter footer}."
+          "description": "Destroys the footer in the aggregation {@link #getFooter footer}.",
+          "deprecated": {
+            "since": "1.120",
+            "text": "Use the aggregation <code>fixedItem</code> instead."
+          }
         },
         {
           "name": "destroyItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys the item in the aggregation {@link #getItem item}."
@@ -1748,13 +1899,13 @@
           "name": "detachItemSelect",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
             {
               "name": "fnFunction",
-              "type": "function",
+              "type": "function(sap.ui.base.Event) : void",
               "optional": false,
               "description": "The function to be called, when the event occurs"
             },
@@ -1801,7 +1952,7 @@
           "name": "fireItemSelect",
           "visibility": "protected",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1823,6 +1974,16 @@
           "description": "Fires event {@link #event:itemSelect itemSelect} to attached listeners."
         },
         {
+          "name": "getAriaLabel",
+          "visibility": "public",
+          "since": "1.98",
+          "returnValue": {
+            "type": "string",
+            "description": "Value of property <code>ariaLabel</code>"
+          },
+          "description": "Gets current value of property {@link #getAriaLabel ariaLabel}.\n\nSpecifies an optional aria-label that can be used by the screen readers."
+        },
+        {
           "name": "getExpanded",
           "visibility": "public",
           "returnValue": {
@@ -1841,7 +2002,11 @@
           "name": "getFooter",
           "visibility": "public",
           "returnValue": { "type": "sap.tnt.NavigationList" },
-          "description": "Gets content of aggregation {@link #getFooter footer}.\n\nDefines the content inside the footer."
+          "description": "Gets content of aggregation {@link #getFooter footer}.\n\nDefines the content inside the footer.",
+          "deprecated": {
+            "since": "1.120",
+            "text": "Use the aggregation <code>fixedItem</code> instead."
+          }
         },
         {
           "name": "getItem",
@@ -1877,10 +2042,39 @@
           "description": "Gets current value of property {@link #getSelectedKey selectedKey}.\n\nSpecifies the currently selected key."
         },
         {
+          "name": "getWidth",
+          "visibility": "public",
+          "since": "1.120",
+          "returnValue": {
+            "type": "sap.ui.core.CSSSize",
+            "description": "Value of property <code>width</code>"
+          },
+          "description": "Gets current value of property {@link #getWidth width}.\n\nSpecifies the width of the control.\n\n<Note:> Depending on the theme, there is a minimum width set (16rem for Horizon theme). This property can be used to set a bigger width."
+        },
+        {
+          "name": "setAriaLabel",
+          "visibility": "public",
+          "since": "1.98",
+          "returnValue": {
+            "type": "this",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sAriaLabel",
+              "type": "string",
+              "optional": true,
+              "defaultValue": null,
+              "description": "New value for property <code>ariaLabel</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getAriaLabel ariaLabel}.\n\nSpecifies an optional aria-label that can be used by the screen readers.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+        },
+        {
           "name": "setExpanded",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "this SideNavigation reference for chaining."
           },
           "parameters": [
@@ -1897,7 +2091,7 @@
           "name": "setFixedItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1914,7 +2108,7 @@
           "name": "setFooter",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1925,13 +2119,17 @@
               "description": "The footer to set"
             }
           ],
-          "description": "Sets the aggregated {@link #getFooter footer}."
+          "description": "Sets the aggregated {@link #getFooter footer}.",
+          "deprecated": {
+            "since": "1.120",
+            "text": "Use the aggregation <code>fixedItem</code> instead."
+          }
         },
         {
           "name": "setItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -1965,7 +2163,7 @@
           "name": "setSelectedKey",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "this pointer for chaining"
           },
           "parameters": [
@@ -1979,10 +2177,28 @@
           "description": "Sets the selected item based on a key."
         },
         {
+          "name": "setWidth",
+          "visibility": "public",
+          "since": "1.120",
+          "returnValue": {
+            "type": "this",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sWidth",
+              "type": "sap.ui.core.CSSSize",
+              "optional": false,
+              "description": "New value for property <code>width</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getWidth width}.\n\nSpecifies the width of the control.\n\n<Note:> Depending on the theme, there is a minimum width set (16rem for Horizon theme). This property can be used to set a bigger width.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+        },
+        {
           "name": "unbindItem",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.SideNavigation",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Unbinds aggregation {@link #getItem item} from model data."
@@ -2001,8 +2217,7 @@
       "since": "1.34",
       "extends": "sap.m.OverflowToolbar",
       "implements": ["sap.tnt.IToolHeader"],
-      "description": "The ToolHeader control is a horizontal container that is most commonly used to display buttons, labels, and other various input controls. <h3>Overview</h3> The ToolHeader control is based on {@link sap.m.OverflowToolbar}. It contains clearly structured menus of commands that are available across the various apps within the same tool layout. <h3>Usage</h3> <ul> <li>If an app implements side navigation in addition to the tool header menu, the menu icon must be the first item on the left-hand side of the tool header.</li> <li>The app menu and the side navigation must not have any dependencies and must work independently.</li> </ul> <h4>Fiori 3 theme specifics</h4> In Fiori 3 Default theme the ToolHeader is with dark design unlike most of the other controls. This defines the usage of limited controls inside it, which will result in good design combination.<br/> The ToolHeader stylizes the contained controls with the Shell color parameters, to match the dark design requirement. However, that's not a dark theme.<br/><br/> Only the following controls are supported: <div> <table>\n\n<tr> <th style=\"text-align: left;\">Control name</th> <th style=\"text-align: left;\">Supported</th> <th style=\"text-align: left;\">Not supported</th> </tr> <tr> <td>sap.m.Text</td> <td>Single line text, text truncation</td> <td>Wrapping</td> </tr> <tr> <td>sap.m.Title</td> <td>Single line text, text truncation. Consider using title headings of H4, H5, H6.</td> <td>Wrapping</td> </tr> <tr> <td>sap.m.Label</td> <td>Single line text, text truncation</td> <td>Wrapping</td> </tr> <tr> <td>sap.m.ObjectStatus</td> <td>Labels, semantic colors</td> <td>Indication colors</td> </tr> <tr> <td>sap.ui.core.Icon</td> <td>sap.ui.core.IconColor enumeration for both icons and backgrounds.</td> <td>Interaction state colors</td> </tr> <tr> <td>sap.m.Button</td> <td>Buttons in their Back, Default, Transparent and Up types. All four types are over-styled to look as transparent buttons.</td> <td>-</td> </tr> <tr> <td>sap.m.MenuButton</td> <td>Emphasized button type. Should be used for triggering Mega menu. If there is no Mega menu, use Title (H6) instead. </br> Default (over-styled as Transparent) and Transparent types are used for standard menu representation.</td> <td>-</td> </tr> <tr> <td>sap.m.Select</td> <td>Default and IconOnly types. IconOnly looks like a button while Default looks is like an input.</td> <td>Semantic states</td> </tr> <tr> <td>sap.m.SearchField</td> <td>Support for the regular state of the control.</td> <td>-</td> </tr> <tr> <td>sap.m.IconTabHeader</td> <td>All background design variations (all are transparent). Text tab filters or text and count tab filters in Inline mode only.</td> <td>Semantic colors, icons and separators.</td> </tr> <tr> <td>sap.f.Avatar/sap.m.Avatar</td> <td>Support for default (Accent 6) color. Image avatar.</td> <td>-</td> </tr> <tr> <td>sap.m.Image</td> <td>Primarily used for displaying the company logo.</td> <td>Interaction states</td> </tr> </table> </div>",
-      "ui5-metamodel": true,
+      "description": "The ToolHeader control is a horizontal container that is most commonly used to display buttons, texts, and other various input controls. <h3>Overview</h3> The ToolHeader control is based on {@link sap.m.OverflowToolbar}. It contains clearly structured menus of commands that are available across the various apps within the same tool layout. <h3>Usage</h3> <ul> <li>This control is specialized for administrative applications. For other types of applications use: {@link sap.m.Shell}</li> <li>If an app implements side navigation in addition to the tool header menu, the menu icon must be the first item on the left-hand side of the tool header.</li> <li>The app menu and the side navigation must not have any dependencies and must work independently.</li> </ul> <h4>Horizon theme specifics</h4> Only the following controls are supported: sap.m.Button, sap.m.Image, sap.m.Title, sap.m.Text, sap.m.SearchField, sap.m.Avatar. <h4>Fiori 3 theme specifics</h4> In Fiori 3 Default theme the ToolHeader is with dark design unlike most of the other controls. This defines the usage of limited controls inside it, which will result in good design combination.<br/> The ToolHeader stylizes the contained controls with the Shell color parameters, to match the dark design requirement. However, that's not a dark theme.<br/><br/> Only the following controls are supported: <div> <table> <tr> <th>Control name</th> <th>Supported</th> <th>Not supported</th> </tr> <tr> <td>sap.m.Text</td> <td>Single line text, text truncation</td> <td>Wrapping</td> </tr> <tr> <td>sap.m.Title</td> <td>Single line text, text truncation. Consider using title headings of H4, H5, H6.</td> <td>Wrapping</td> </tr> <tr> <td>sap.m.Label</td> <td>Single line text, text truncation</td> <td>Wrapping</td> </tr> <tr> <td>sap.m.ObjectStatus</td> <td>Labels, semantic colors</td> <td>Indication colors</td> </tr> <tr> <td>sap.ui.core.Icon</td> <td>sap.ui.core.IconColor enumeration for both icons and backgrounds.</td> <td>Interaction state colors</td> </tr> <tr> <td>sap.m.Button</td> <td>Buttons in their Back, Default, Transparent and Up types. All four types are over-styled to look as transparent buttons.</td> <td>-</td> </tr> <tr> <td>sap.m.MenuButton</td> <td>Emphasized button type. Should be used for triggering Mega menu. If there is no Mega menu, use Title (H6) instead. </br> Default (over-styled as Transparent) and Transparent types are used for standard menu representation.</td> <td>-</td> </tr> <tr> <td>sap.m.Select</td> <td>Default and IconOnly types. IconOnly looks like a button while Default looks is like an input.</td> <td>Semantic states</td> </tr> <tr> <td>sap.m.SearchField</td> <td>Support for the regular state of the control.</td> <td>-</td> </tr> <tr> <td>sap.m.IconTabHeader</td> <td>All background design variations (all are transparent). Text tab filters or text and count tab filters in Inline mode only.</td> <td>Semantic colors, icons and separators.</td> </tr> <tr> <td>sap.f.Avatar/sap.m.Avatar</td> <td>Support for default (Accent 6) color. Image avatar.</td> <td>-</td> </tr> <tr> <td>sap.m.Image</td> <td>Primarily used for displaying the company logo.</td> <td>Interaction states</td> </tr> </table> </div>",
       "ui5-metadata": { "stereotype": "control" },
       "constructor": {
         "visibility": "public",
@@ -2020,10 +2235,7 @@
             "description": "Initial settings for the new control"
           }
         ],
-        "description": "Constructor for a new ToolHeader.",
-        "references": [
-          "{@link fiori:https://experience.sap.com/fiori-design-web/tool-header/ Tool Header}"
-        ]
+        "description": "Constructor for a new ToolHeader.\n\nAccepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.\n\nThis class does not have its own settings, but all settings applicable to the base type {@link sap.m.OverflowToolbar#constructor sap.m.OverflowToolbar} can be used."
       },
       "methods": [
         {
@@ -2080,7 +2292,6 @@
       "since": "1.16",
       "extends": "sap.ui.core.Control",
       "description": "The ToolHeaderUtilitySeparator control is used in the sap.tnt.ToolHeader control to specify where the overflow button is placed.",
-      "ui5-metamodel": true,
       "ui5-metadata": { "stereotype": "control" },
       "constructor": {
         "visibility": "public",
@@ -2155,7 +2366,6 @@
       "since": "1.34",
       "extends": "sap.ui.core.Control",
       "description": "The ToolPage is a layout control, used to create a basic tools app that has a header, side navigation and contents area. <h4>Overview</h4> The control has three main areas - a header on top, navigation to the side and a content area that can hold any control. The header and side navigation use custom controls - {@link sap.tnt.ToolHeader} and {@link sap.tnt.SideNavigation}. <h4>Usage</h4> The main usage of the sap.tnt controls is for scenarios in the tooling or administration space.",
-      "ui5-metamodel": true,
       "ui5-metadata": {
         "stereotype": "control",
         "properties": [
@@ -2165,8 +2375,21 @@
             "defaultValue": true,
             "group": "Misc",
             "visibility": "public",
-            "description": "Indicates if the side area is expanded. Overrides the expanded property of the sideContent aggregation.",
+            "description": "Indicates if the side menu is expanded. Overrides the <code>expanded</code> property of the <code>sideContent</code> aggregation.",
             "methods": ["getSideExpanded", "setSideExpanded"]
+          },
+          {
+            "name": "contentBackgroundDesign",
+            "type": "sap.m.PageBackgroundDesign",
+            "defaultValue": "Standard",
+            "group": "Appearance",
+            "visibility": "public",
+            "since": "1.115",
+            "description": "Specifies the content background design.",
+            "methods": [
+              "getContentBackgroundDesign",
+              "setContentBackgroundDesign"
+            ]
           }
         ],
         "aggregations": [
@@ -2178,6 +2401,16 @@
             "visibility": "public",
             "description": "The control to appear in the header area.",
             "methods": ["getHeader", "destroyHeader", "setHeader"]
+          },
+          {
+            "name": "subHeader",
+            "singularName": "subHeader",
+            "type": "sap.tnt.IToolHeader",
+            "cardinality": "0..1",
+            "visibility": "public",
+            "since": "1.93",
+            "description": "The control to appear in the subheader area.",
+            "methods": ["getSubHeader", "destroySubHeader", "setSubHeader"]
           },
           {
             "name": "sideContent",
@@ -2234,7 +2467,7 @@
           "name": "addMainContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -2251,7 +2484,7 @@
           "name": "destroyHeader",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys the header in the aggregation {@link #getHeader header}."
@@ -2260,7 +2493,7 @@
           "name": "destroyMainContents",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys all the mainContents in the aggregation {@link #getMainContents mainContents}."
@@ -2269,10 +2502,20 @@
           "name": "destroySideContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "description": "Destroys the sideContent in the aggregation {@link #getSideContent sideContent}."
+        },
+        {
+          "name": "destroySubHeader",
+          "visibility": "public",
+          "since": "1.93",
+          "returnValue": {
+            "type": "this",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "description": "Destroys the subHeader in the aggregation {@link #getSubHeader subHeader}."
         },
         {
           "name": "extend",
@@ -2303,6 +2546,16 @@
             }
           ],
           "description": "Creates a new subclass of class sap.tnt.ToolPage with name <code>sClassName</code> and enriches it with the information contained in <code>oClassInfo</code>.\n\n<code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}."
+        },
+        {
+          "name": "getContentBackgroundDesign",
+          "visibility": "public",
+          "since": "1.115",
+          "returnValue": {
+            "type": "sap.m.PageBackgroundDesign",
+            "description": "Value of property <code>contentBackgroundDesign</code>"
+          },
+          "description": "Gets current value of property {@link #getContentBackgroundDesign contentBackgroundDesign}.\n\nSpecifies the content background design.\n\nDefault value is <code>Standard</code>."
         },
         {
           "name": "getHeader",
@@ -2339,7 +2592,14 @@
             "type": "boolean",
             "description": "Value of property <code>sideExpanded</code>"
           },
-          "description": "Gets current value of property {@link #getSideExpanded sideExpanded}.\n\nIndicates if the side area is expanded. Overrides the expanded property of the sideContent aggregation.\n\nDefault value is <code>true</code>."
+          "description": "Gets current value of property {@link #getSideExpanded sideExpanded}.\n\nIndicates if the side menu is expanded. Overrides the <code>expanded</code> property of the <code>sideContent</code> aggregation.\n\nDefault value is <code>true</code>."
+        },
+        {
+          "name": "getSubHeader",
+          "visibility": "public",
+          "since": "1.93",
+          "returnValue": { "type": "sap.tnt.IToolHeader" },
+          "description": "Gets content of aggregation {@link #getSubHeader subHeader}.\n\nThe control to appear in the subheader area."
         },
         {
           "name": "indexOfMainContent",
@@ -2362,7 +2622,7 @@
           "name": "insertMainContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -2394,7 +2654,7 @@
           "name": "removeMainContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.ui.core.Control",
+            "type": "sap.ui.core.Control|null",
             "description": "The removed mainContent or <code>null</code>"
           },
           "parameters": [
@@ -2408,10 +2668,29 @@
           "description": "Removes a mainContent from the aggregation {@link #getMainContents mainContents}."
         },
         {
+          "name": "setContentBackgroundDesign",
+          "visibility": "public",
+          "since": "1.115",
+          "returnValue": {
+            "type": "this",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "sContentBackgroundDesign",
+              "type": "sap.m.PageBackgroundDesign",
+              "optional": true,
+              "defaultValue": "Standard",
+              "description": "New value for property <code>contentBackgroundDesign</code>"
+            }
+          ],
+          "description": "Sets a new value for property {@link #getContentBackgroundDesign contentBackgroundDesign}.\n\nSpecifies the content background design.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.\n\nDefault value is <code>Standard</code>."
+        },
+        {
           "name": "setHeader",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -2428,7 +2707,7 @@
           "name": "setSideContent",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Reference to <code>this</code> in order to allow method chaining"
           },
           "parameters": [
@@ -2445,12 +2724,12 @@
           "name": "setSideExpanded",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Pointer to the control instance for chaining"
           },
           "parameters": [
             {
-              "name": "isSideExpanded",
+              "name": "bSideExpanded",
               "type": "boolean",
               "optional": false,
               "description": "defines whether the SideNavigation is expanded."
@@ -2459,10 +2738,28 @@
           "description": "Sets the expand/collapse state of the SideContent."
         },
         {
+          "name": "setSubHeader",
+          "visibility": "public",
+          "since": "1.93",
+          "returnValue": {
+            "type": "this",
+            "description": "Reference to <code>this</code> in order to allow method chaining"
+          },
+          "parameters": [
+            {
+              "name": "oSubHeader",
+              "type": "sap.tnt.IToolHeader",
+              "optional": false,
+              "description": "The subHeader to set"
+            }
+          ],
+          "description": "Sets the aggregated {@link #getSubHeader subHeader}."
+        },
+        {
           "name": "toggleSideContentMode",
           "visibility": "public",
           "returnValue": {
-            "type": "sap.tnt.ToolPage",
+            "type": "this",
             "description": "Pointer to the control instance for chaining."
           },
           "description": "Toggles the expand/collapse state of the SideContent."

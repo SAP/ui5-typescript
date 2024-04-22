@@ -1,0 +1,180 @@
+[
+  {
+    "comment": "#############################  this is the beginning of the ignorelist for esm ##################################################",
+    "module": "",
+    "dtsFileName": "sap.fe.macros.d.ts",
+    "message": "',' expected."
+  },
+
+  {
+    "comment": "#############################  this is the beginning of the ignorelist for globals ##################################################",
+    "module": "sap.apf.utils.Filter",
+    "message": "Cannot find namespace 'constants'."
+  },
+  {
+    "module": "sap.apf.utils.FilterAnd",
+    "message": "Cannot find namespace 'constants'."
+  },
+  {
+    "module": "sap.apf.utils.FilterExpression",
+    "message": "Cannot find namespace 'constants'."
+  },
+  {
+    "module": "sap.apf.utils.FilterOr",
+    "message": "Cannot find namespace 'constants'."
+  },
+  {
+    "module": "sap.fe.test.ListReport",
+    "message": "Class static side 'typeof ListReport' incorrectly extends base class static side 'typeof TemplatePage'. ###   Types of property 'actions' are incompatible. ###     Type 'actions' is missing the following properties from type 'actions': onActionDialog, onConfirmationDialog, onCreateDialog, onDialog, and 3 more."
+  },
+  {
+    "module": "sap.fe.test.ObjectPage",
+    "message": "Class static side 'typeof ObjectPage' incorrectly extends base class static side 'typeof TemplatePage'. ###   Types of property 'actions' are incompatible. ###     Type 'actions' is missing the following properties from type 'actions': onActionDialog, onConfirmationDialog, onCreateDialog, onDialog, and 3 more."
+  },
+  {
+    "module": "sap.gantt.shape.ext.rls",
+    "message": "Interface '$RelationshipSettings' incorrectly extends interface '$PathSettings'. ###   Types of property 'selectedShape' are incompatible. ###     Type 'SelectedRelationship' is missing the following properties from type 'SelectedShape': getHeight, setHeight"
+  },
+  {
+    "module": "sap.m",
+    "message": "Duplicate identifier 'MessageBox'."
+  },
+  {
+    "module": "sap.m.MessageBox",
+    "message": "Duplicate identifier 'MessageBox'."
+  },
+  {
+    "module": "sap.ui",
+    "message": "Duplicate identifier 'Device'."
+  },
+  {
+    "module": "sap.ui.commons",
+    "message": "Duplicate identifier 'MessageBox'."
+  },
+  {
+    "module": "sap.ui.commons.MessageBox",
+    "message": "Duplicate identifier 'MessageBox'."
+  },
+  {
+    "module": "sap.ui.comp.transport.TransportDialog",
+    "message": "Property 'fl' does not exist on type 'typeof ui'."
+  },
+  {
+    "module": "sap.ui.core",
+    "message": "Duplicate identifier 'Configuration'."
+  },
+  {
+    "module": "sap.ui.core.Configuration",
+    "message": "Duplicate identifier 'Configuration'."
+  },
+  {
+    "module": "sap.ui.Device",
+    "message": "Duplicate identifier 'Device'."
+  },
+  {
+    "module": "sap.ui.Device",
+    "message": "Duplicate identifier 'browser'."
+  },
+  {
+    "module": "sap.ui.Device",
+    "message": "Duplicate identifier 'media'."
+  },
+  {
+    "module": "sap.ui.Device",
+    "message": "Duplicate identifier 'os'."
+  },
+  {
+    "module": "sap.ui.Device.browser",
+    "message": "Duplicate identifier 'browser'."
+  },
+  {
+    "module": "sap.ui.Device.media",
+    "message": "Duplicate identifier 'media'."
+  },
+  {
+    "module": "sap.ui.Device.os",
+    "message": "Duplicate identifier 'os'."
+  },
+  {
+    "module": "sap.ui.model.analytics",
+    "message": "Duplicate identifier 'odata4analytics'."
+  },
+  {
+    "module": "sap.ui.model.analytics.odata4analytics",
+    "message": "Duplicate identifier 'odata4analytics'."
+  },
+  {
+    "module": "sap.ui.test.gherkin",
+    "message": "Duplicate identifier 'dataTableUtils'."
+  },
+  {
+    "module": "sap.ui.test.gherkin.dataTableUtils",
+    "message": "Duplicate identifier 'dataTableUtils'."
+  },
+  {
+    "module": "sap.viz.ui5.format",
+    "message": "Duplicate identifier 'ChartFormatter'."
+  },
+  {
+    "module": "sap.viz.ui5.format.ChartFormatter",
+    "message": "Duplicate identifier 'ChartFormatter'."
+  },
+  {
+    "module": "sap.collaboration.components.feed.Component",
+    "message": "Cannot find module 'sap/suite/ui/commons/library'. Did you mean to set the 'moduleResolution' option to 'node', or to add aliases to the 'paths' option?"
+  },
+  {
+    "module": "sap.collaboration.components.socialtimeline.Component",
+    "message": "Cannot find module 'sap/suite/ui/commons/library'. Did you mean to set the 'moduleResolution' option to 'node', or to add aliases to the 'paths' option?"
+  },
+  {
+    "module": "sap.ui.vtm.MatrixUtilities",
+    "message": "Cannot find module 'sap/ui/vk/TransformationMatrix'. Did you mean to set the 'moduleResolution' option to 'node', or to add aliases to the 'paths' option?"
+  },
+  {
+    "module": "sap.ui.generic.app.navigation.service.NavError",
+    "message": "Cannot find module 'sap/fe/navigation/NavError'. Did you mean to set the 'moduleResolution' option to 'node', or to add aliases to the 'paths' option?"
+  },
+  {
+    "module": "sap.ui.generic.app.navigation.service.NavigationHandler",
+    "message": "Cannot find module 'sap/fe/navigation/NavigationHandler'. Did you mean to set the 'moduleResolution' option to 'node', or to add aliases to the 'paths' option?"
+  },
+  {
+    "module": "sap.ui.generic.app.navigation.service.PresentationVariant",
+    "message": "Cannot find module 'sap/fe/navigation/PresentationVariant'. Did you mean to set the 'moduleResolution' option to 'node', or to add aliases to the 'paths' option?"
+  },
+  {
+    "module": "sap.ui.generic.app.navigation.service.SelectionVariant",
+    "message": "Cannot find module 'sap/fe/navigation/SelectionVariant'. Did you mean to set the 'moduleResolution' option to 'node', or to add aliases to the 'paths' option?"
+  },
+
+  {
+    "comment": "##################  this one and the next six are for issues in sap.firefly.fiori.esm-d.ts, which occur only outside our sandbox #####################################",
+    "module": "",
+    "message": "Parameter declaration expected."
+  },
+  {
+    "module": "",
+    "message": "';' expected."
+  },
+  {
+    "module": "",
+    "message": "Unexpected token. A constructor, method, accessor, or property was expected."
+  },
+  {
+    "module": "",
+    "message": "Parameter declaration expected."
+  },
+  {
+    "module": "",
+    "message": "Parameter 'undefined' implicitly has an 'any' type."
+  },
+  {
+    "module": "",
+    "message": "Parameter declaration expected."
+  },
+  {
+    "module": "",
+    "message": "Parameter 'undefined' implicitly has an 'any' type."
+  }
+]

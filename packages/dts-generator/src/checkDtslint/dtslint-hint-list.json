@@ -1,0 +1,22 @@
+[
+  {
+    "ruleName": "unified-signatures",
+    "hint": "This COULD be caused by a method which has more than one optional parameter followed by non-optional parameters. Because this is not allowed in TypeScript, but happening in the existing UI5 code base (though discouraged!!), the TypeScript dts generator generates multiple method documentations out of this, with all required permutations of the optional parameters before mandatory ones. The TypeScript linting check, however, does not like those multiple declarations where only one parameter can have either one or onother type. To solve this, avoid the use of optional parameters which are followed by non-optional ones!"
+  },
+  {
+    "ruleName": "redundant-undefined",
+    "hint": "When a parameter/property is marked as optional in JSDoc, then do not specify 'undefined' as one of the possible values. The fact that it is optional already implies that the value can be undefined. Simply remove 'undefined' from the list of possible values."
+  },
+  {
+    "ruleName": "no-irregular-whitespace",
+    "hint": "Do not encode space characters in JSDoc as '&nbsp;' - it would be converted to a special whitespace character. If you want a space, use a space, and if you want the HTML entity '&nbsp;' to appear literally, write it as '&amp;npsp;'"
+  },
+  {
+    "ruleName": "ban-types",
+    "hint": "This error is usually caused by a simple built-in JavaScript type like 'boolean' or 'string' or 'number' written with a leading uppercase letter. The types 'Boolean', 'String' and 'Number' also exist as object wrappers, but are usually not the intended ones. If you mean a regular boolean/string/number, please use lower-case initial letters! And in cae of 'number' even better differentiate between 'float' and 'int' if possible."
+  },
+  {
+    "ruleName": "no-redundant-jsdoc-2",
+    "hint": "This error is usually caused by a '@returns' JSDoc tag followed by either a broken type (e.g. duplicate curly braces like '{{this}' or a typing mistake in a type reference) or by TWO subsequent curly-braces blocks. The latter could look like this: '@returns {SomeHelper} {@link SomeHelper} which helps you'. Try to add another word before the '{@link ...}' in this case."
+  }
+]
