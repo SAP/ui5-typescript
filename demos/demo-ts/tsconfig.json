@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "module": "none",
-    "types": ["@sapui5/ts-types"],
-    "outDir": "lib",
-    "skipLibCheck": true
-  }
-}

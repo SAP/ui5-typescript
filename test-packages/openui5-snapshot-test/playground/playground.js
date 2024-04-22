@@ -1,7 +1,7 @@
 sap.ui.define(
   ["sap/ui/core/mvc/Controller"],
   /**
-   * @param {typeof sap.ui.core.mvc.Controller} Controller
+   * @param {typeof import('sap/ui/core/mvc/Controller').default} Controller
    */
   function (Controller) {
     Controller.extend("foo", {

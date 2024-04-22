@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "target": "es2022",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "./dist/**/*",
+    "./node_modules/**/*",
+    "./src/checkDtslint/dtslintConfig/openui5-tests.ts",
+    "./src/checkDtslint/dtslintConfig/tsconfig.json",
+    "./src/resources/core-preamble.d.ts"
+  ]
+}

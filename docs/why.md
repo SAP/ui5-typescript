@@ -1,11 +1,11 @@
 # Why UI5-TypeScript?
 
 This document lists the main potential benefits for the UI5-TypeScript project
-and how it could benefit the UI5 eco-system in general.
+and how it benefits the UI5 eco-system in general.
 
 ## Short Version
 
-- Better Integrating SAP UI5 and the **modern** JavaScript eco-system.
+- Better Integrating SAPUI5 and the **modern** JavaScript eco-system.
 
   - **Editor Tooling** & Functionality.
 
@@ -23,7 +23,7 @@ and how it could benefit the UI5 eco-system in general.
 
 ## In Depth
 
-### Better Integrating SAP UI5 and the **modern** JavaScript eco-system:
+### Better Integrating SAPUI5 and the **modern** JavaScript eco-system:
 
 By providing TypeScript type signatures for UI5 libraries it becomes possible to
 integrate UI5 application into the modern JavaScript ecosystem.
@@ -72,8 +72,8 @@ on API usage of UI5 libraries.
 References on TypeScript popularity:
 
 - https://www.wired.com/story/typescript-microsoft-javascript-alternative-most-popular/
-- https://www.npmtrends.com/typescript (20M weekly downloads on npm as of summer 2021, up from 6M two years before).
-- https://2020.stateofjs.com/en-US/technologies/javascript-flavors/
+- https://www.npmtrends.com/typescript (50M weekly downloads on npm as of early 2024, up from less than 20M three years before and 2M six years before).
+- https://2020.stateofjs.com/en-US/technologies/javascript-flavors/, https://2022.stateofjs.com/en-US/usage/#js_ts_balance
 
 #### Improving UI5 Docs
 
@@ -85,7 +85,7 @@ There are two elements to this topic
 
 2. **Promoting end users to raise issues with errors and inaccuracies in the API reference**:
 
-   SAP UI5 has a large in depth API Reference:
+   SAPUI5 has a large in depth API Reference:
 
    - https://sapui5.hana.ondemand.com/#/api
 

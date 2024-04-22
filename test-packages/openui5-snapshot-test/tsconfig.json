@@ -1,9 +1,14 @@
 {
   "include": ["playground", "output-dts"],
   "compilerOptions": {
-    "module": "none",
+    "module": "ES2022",
+    "target": "ES2022",
     "noEmit": true,
     "checkJs": true,
-    "allowJs": true
+    "allowJs": true,
+    "types": [
+      "../../node_modules/@types/jquery", 
+      "../../node_modules/@types/qunit"
+    ]
   }
 }

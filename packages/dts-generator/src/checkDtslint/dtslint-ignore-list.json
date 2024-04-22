@@ -1,0 +1,124 @@
+[
+  {
+    "ruleName": "unified-signatures",
+    "ui5Module": "sap.fe.navigation.NavigationHandler",
+    "status": "warning",
+    "comment": "still current as of 2022-02-03"
+  },
+  {
+    "ruleName": "unified-signatures",
+    "ui5Module": "sap.ui.core.tmpl.Template",
+    "status": "warning",
+    "comment": "still current as of 2022-02-03"
+  },
+  {
+    "ruleName": "unified-signatures",
+    "ui5Module": "sap.ui.core.tmpl.TemplateControl",
+    "status": "warning",
+    "comment": "still current as of 2022-02-03"
+  },
+  {
+    "ruleName": "unified-signatures",
+    "ui5Module": "sap.ui.core.util.MockServer",
+    "status": "warning",
+    "comment": "still current as of 2022-02-03"
+  },
+  {
+    "ruleName": "unified-signatures",
+    "ui5Module": "sap.ui.model.odata.v2.ODataListBinding",
+    "status": "warning",
+    "comment": "still current as of 2022-02-03"
+  },
+  {
+    "ruleName": "unified-signatures",
+    "ui5Module": "sap.ui",
+    "status": "warning",
+    "comment": "still current as of 2022-02-03"
+  },
+  {
+    "ruleName": "unified-signatures",
+    "ui5Module": "sap.ui.generic.app.navigation.service.NavigationHandler",
+    "status": "warning",
+    "comment": "still current as of 2022-02-03"
+  },
+
+  {
+    "ruleName": "no-irregular-whitespace",
+    "ui5Module": "sap.ui.webc.fiori.ShellBar",
+    "status": "warning",
+    "comment": "webc"
+  },
+  {
+    "ruleName": "ban-types",
+    "errorMessage": "Don't use 'Boolean' as a type. Avoid using the `Boolean` type. Did you mean `boolean`?",
+    "ui5Module": "sap.ui.webc.fiori.Wizard",
+    "status": "warning",
+    "comment": "webc"
+  },
+  {
+    "ruleName": "ban-types",
+    "errorMessage": "Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?",
+    "ui5Module": "sap.ui.webc.main.ColorPalette",
+    "status": "warning",
+    "comment": "webc"
+  },
+
+  {
+    "ruleName": "ban-types",
+    "errorMessage": "Don't use 'Function' as a type. Avoid using the `Function` type. Prefer a specific function type, like `() => void`.",
+    "status": "ignore",
+    "comment": "this entry needs to stay for the time being; only few occurrences are being fixed (non-Object/Function ones); could be further improved with quite some work: some cases originate from JSDoc"
+  },
+  {
+    "ruleName": "ban-types",
+    "errorMessage": "Don't use 'Object' as a type. Avoid using the `Object` type. Did you mean `object`?",
+    "status": "ignore",
+    "comment": "this entry needs to stay for the time being; only few occurrences are being fixed (non-Object/Function ones); could be further improved with quite some work: some cases originate from JSDoc"
+  },
+  {
+    "fileName": "sap.fe.macros.d.ts",
+    "status": "ignore",
+    "comment": "this entry needs to stay for the time being; masses of errors in sap.fe.macros.d.ts"
+  },
+
+  {
+    "ruleName": "no-redundant-jsdoc-2",
+    "ui5Module": "sap.ushell.services.Personalization",
+    "status": "warning",
+    "comment": ""
+  },
+  {
+    "ruleName": "no-redundant-jsdoc-2",
+    "ui5Module": "sap.ushell.services.Personalization.VariantSet",
+    "status": "warning",
+    "comment": ""
+  },
+  {
+    "ruleName": "no-redundant-jsdoc-2",
+    "ui5Module": "sap.ushell.services.Personalization.VariantSetAdapter",
+    "status": "warning",
+    "comment": ""
+  },
+  {
+    "ruleName": "no-redundant-jsdoc-2",
+    "ui5Module": "sap.ushell.services.PersonalizationContainer",
+    "status": "warning",
+    "comment": ""
+  },
+  {
+    "ruleName": "no-redundant-jsdoc-2",
+    "ui5Module": "sap.ushell.services.PersonalizationContainerVariantSet",
+    "status": "warning",
+    "comment": ""
+  },
+
+  {
+    "fileName": "sap.gantt.d.ts",
+    "status": "warning",
+    "comment": "Let's just exclude the more problematic dist-layer libraries. They don't have this check in their voter, so new errors are likely as well as unproblematic, as dtslint only needs to succeed for DefinitelyTyped (=OpenUI5)."
+  },
+  {
+    "fileName": "sap.sac.df.d.ts",
+    "status": "warning"
+  }
+]

@@ -1,6 +1,6 @@
 # @ui5/openui5-snapshot-test
 
-This test-package is used in two development flows:
+This is a test package for the dts-generator package. This test package is used in two development flows:
 
 ## Local Playground
 
@@ -9,9 +9,10 @@ would affect the output d.ts files (in `output-dts` dir).
 
 ## Snapshot Testing
 
-On each CI build the d.ts files would be re-generated and compared
-to the source controlled contents in `output-dts` dir. In isolation this has little value.
-However, this forces the `output-dts` contents to be synced in any PR
+On each CI build, the d.ts files would be re-generated and compared
+to the source controlled contents in `output-dts` dir. This has two benefits:
+1. When a code change is not supposed to have an effect on the generated `*.d.ts` files (e.g. refactoring), then the test is likely to reveal any unintended effect.
+2. This forces the `output-dts` contents to be synced in any PR
 which means the expected changes to the .d.ts files will also be **reviewed** in new PRs.
 
 Note that this means that if you have changed the `dts-generator` package's output

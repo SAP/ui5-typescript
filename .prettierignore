@@ -1,9 +1,15 @@
 demos/
+packages/dts-generator/api-report/
+packages/dts-generator/dist/
+packages/dts-generator/src/checkDtslint/dtslintConfig/openui5-tests.ts
+packages/dts-generator/src/resources/core-preamble.d.ts
+packages/dts-generator/temp/
 packages/ts-interface-generator/dist/
-test-packages/
 packages/ts-interface-generator/src/test/testdata/sampleControl/SampleControl.gen.d.ts
 packages/ts-interface-generator/src/test/testdata/sampleControl/SampleControl.ts
 packages/ts-interface-generator/src/test/testdata/sampleManagedObject/SampleManagedObject.gen.d.ts
 packages/ts-interface-generator/src/test/testdata/sampleManagedObject/SampleManagedObject.ts
 packages/ts-interface-generator/src/test/testdata/sampleManagedObject/SampleAnotherManagedObject.gen.d.ts
 packages/ts-interface-generator/src/test/testdata/sampleManagedObject/SampleAnotherManagedObject.ts
+packages/ts-interface-generator/src/test/testdata/sampleWebComponent/SampleWebComponent.gen.d.ts
+test-packages

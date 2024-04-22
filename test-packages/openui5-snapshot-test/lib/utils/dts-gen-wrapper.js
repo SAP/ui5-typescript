@@ -1,7 +1,6 @@
 const { resolve } = require("path");
 const { emptyDirSync, readJsonSync, writeFileSync } = require("fs-extra");
 const { map, forEach, keys, mapValues, uniq, flatMap } = require("lodash");
-const { jsonToDTS } = require("@ui5/dts-generator");
 const directives = require("../directives");
 
 /**
@@ -9,7 +8,9 @@ const directives = require("../directives");
  * @param {string} inputDir
  * @param {string} outputDir
  */
-function genDtsToDir({ inputDir, outputDir }) {
+async function genDtsToDir({ inputDir, outputDir }) {
+  const { generateFromObjects } = await import("@ui5/dts-generator");
+
   function readJsonApi(libName) {
     const libJsonPath = resolve(inputDir, libName + ".designtime.api.json");
     const libJsonData = readJsonSync(libJsonPath);
@@ -40,20 +41,23 @@ function genDtsToDir({ inputDir, outputDir }) {
   );
 
   const librariesAllDeps = mapValues(librariesDirectDeps, getTransitiveDeps);
-  forEach(librariesAllDeps, (deps, libName) => {
+  // use for...of to allow for an async function
+  for (const [libName, deps] of Object.entries(librariesAllDeps)) {
     console.log(`Compiling <${libName}> library.`);
     const depsJsonsData = map(deps, readJsonApi);
     const libJsonData = readJsonApi(libName);
-    const libDTSResult = jsonToDTS(libJsonData, {
-      directives,
-      dependencies: depsJsonsData,
+    const libDTSResult = await generateFromObjects({
+      apiObject: libJsonData,
+      directives: directives,
+      dependencyApiObjects: depsJsonsData,
+      generateGlobals: false
     });
 
     writeFileSync(
       resolve(outputDir, libDTSResult.library + ".d.ts"),
       libDTSResult.dtsText
     );
-  });
+  }
 
   const imports = map(
     keys(librariesDirectDeps),

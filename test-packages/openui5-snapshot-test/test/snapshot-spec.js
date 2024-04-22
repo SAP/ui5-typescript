@@ -6,7 +6,7 @@ const { emptyDirSync } = require("fs-extra");
 
 const { genDtsToDir } = require("../lib/utils/dts-gen-wrapper");
 
-describe("The OpenUI5 d.ts snapshots", () => {
+describe("The OpenUI5 d.ts snapshots", async () => {
   const projectRootDir = resolve(__dirname, "..");
   const apiJsonDir = resolve(__dirname, "..", "input-sdk");
   const snapshotsDir = resolve(projectRootDir, "output-dts");
@@ -21,9 +21,9 @@ describe("The OpenUI5 d.ts snapshots", () => {
     _.replace(".designtime.api.json", ".d.ts")
   );
 
-  before(function () {
-    this.timeout(30000);
-    genDtsToDir({ inputDir: apiJsonDir, outputDir: tempOutDir });
+  before( function () {
+    this.timeout(60000);
+    return genDtsToDir({ inputDir: apiJsonDir, outputDir: tempOutDir }); // return the Promise to signal the test has to wait
   });
 
   forEach(relevantDTSFiles, (_) => {

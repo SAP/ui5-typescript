@@ -16,7 +16,7 @@ This is managed automatically via https://cla-assistant.io/ pull request voter.
 ### pre-requisites
 
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/) >= 1.4.2
-- A [Long-Term Support version](https://nodejs.org/en/about/releases/) of node.js
+- A current [Long-Term Support version](https://nodejs.org/en/about/releases/) of node.js
 - (optional) [commitizen](https://github.com/commitizen/cz-cli#installing-the-command-line-tool) for managing commit messages.
 
 ### Initial Setup
@@ -46,8 +46,7 @@ It is recommended to use `git cz` to construct valid conventional commit message
 
 [Prettier](https://prettier.io/) is used to ensure consistent code formatting in this repository.
 This is normally transparent as it automatically activated in a pre-commit hook using [lint-staged](https://github.com/okonet/lint-staged).
-However, this does mean that dev flows that do not use a full dev env (e.g editing directly on github)
-may result in voter failures due to formatting errors.
+However, this does mean that dev flows that do not use a full dev env (e.g editing directly on github) may result in voter failures due to formatting errors.
 
 ### Compiling
 
@@ -55,12 +54,12 @@ See the respective sub-packages for instructions (if needed at all).
 
 ### Testing
 
-[Mocha][mocha] and [Chai][chai] are used for unit-testing
+[Mocha][mocha] and [Chai][chai] are used for unit-testing.
 
 [mocha]: https://mochajs.org/
 [chai]: https://www.chaijs.com
 
-- To run the tests execute `yarn test` in a specific sub-package.
+- To run the tests, execute `yarn test` in a specific sub-package.
   - Note that not all sub-packages contain tests.
 
 ### Full Build

@@ -1,7 +1,3 @@
-<p align="center">
-    :construction: Work in Progress! :construction:
-</p>
-
 [![Continuous Integration](https://github.com/SAP/ui5-typescript/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/SAP/ui5-typescript/actions/workflows/ci.yml)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP/ui5-typescript)](https://api.reuse.software/info/github.com/SAP/ui5-typescript)
@@ -15,14 +11,9 @@ This tooling can enable:
 - Using TypeScript compiler to perform type checks on UI5 application code.
 - More easily implementing UI5 applications and controls in TypeScript thus enjoying the general benefits of TypeScript.
 
-Learn more about the general benefits of TypeScript here:
-
-- https://stackoverflow.com/a/35048303
-- https://channel9.msdn.com/posts/Anders-Hejlsberg-Introducing-TypeScript
-
 It currently contains two public packages:
 
-- [@ui5/dts-generator](./packages/dts-generator) [![npm-ui5-dts-generator][npm-ui5-dts-generator-image]][npm-ui5-dts-generator-url] A low level generator which transforms the UI5 api.json format to TypeScript definition (`*.d.ts`) file format.<br> <b>NOTE: the sources in this repository and also the package released at npm represent an outdated version of the generator tool, not the one used for the new improved TypeScript definition files which are released since June 2021. The code of the new generator version is planned to be released here later as well.</b>
+- [@ui5/dts-generator](./packages/dts-generator) [![npm-ui5-dts-generator][npm-ui5-dts-generator-image]][npm-ui5-dts-generator-url] A generator which transforms the UI5 `api.json` format to TypeScript type definition (`*.d.ts`) format. This is useful to enable the type-safe usage of a UI5 control library written in JavaScript in code that uses TypeScript.
 
 - [@ui5/ts-interface-generator](./packages/ts-interface-generator) [![npm-ui5-ts-interface-generator][npm-ui5-ts-interface-generator-image]][npm-ui5-ts-interface-generator-url] A tool supporting control development in TypeScript. It is used at development time and generates type definitions for the control API methods which are only created at runtime by the UI5 framework.
 
@@ -33,14 +24,7 @@ It currently contains two public packages:
 
 ## How to obtain the UI5 TypeScript signatures?
 
-The UI5 type signatures are created and published as part of the UI5 build process. There are <b>two flavors</b> of the type definitions right now:
-
-1. the legacy flavor which defines all entities with their global names, like `sap.m.Button`. As using globals is discouraged, using this flavor should be avoided. The definition packages are named `ts-types`.
-2. the "ES modules" flavor which defines ES6-style module names for the entities. These definition support using modern JavaScript syntax with ES modules and classes, but require an additional transformation step, which can be run together with the anyway required TypeScript compilation. These recommended definition packages are simply named `types` (used to be `ts-types-esm` before release 1.113).
-
-Both flavors are available for SAPUI5 as well as OpenUI5.
-
-Using the modern definitions for SAPUI5 as example, the type definitions can be obtained like this:
+The UI5 type signatures are created and published as part of the UI5 build process. They are available for SAPUI5 as well as OpenUI5. The SAPUI5 type definitions can be obtained like this:
 
 With npm
 
@@ -50,19 +34,21 @@ With Yarn
 
 `yarn add @sapui5/types --dev`
 
+> **NOTE:** the type definitions define ES6-style module names for the entities. They require the usage of modern JavaScript syntax with ES modules and classes, which requires an additional transformation step that can be run together with the anyway required TypeScript transpilation.
+>
+> Before the type definitions were generated in ES module style, they did declare all APIs with their global names, which are discouraged to be used and will no longer be available in UI5 2.x. The dts-generator still has the capability to generate this legacy "globals" version of the type definitions, for compatibility reasons. These legacy definitions are released as "ts-types" instead of "types", but will no longer be produced for UI5 2.x.
+
+Find all information about using UI5 with TypeScript at https://sap.github.io/ui5-typescript!
+
 ## Usage
 
-To see the basic suggested project setup for TypeScript development with the new `types` packages, please check out the [TypeScript Hello World app](https://github.com/SAP-samples/ui5-typescript-helloworld). It not only can serve as copy template, but also includes a [detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) for creating this setup from scratch.
+To see the suggested project setup for TypeScript development with the `types` packages, please check out the [TypeScript Hello World app](https://github.com/SAP-samples/ui5-typescript-helloworld). It not only can serve as copy template, but also includes a [detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) for creating this setup from scratch.
 
 The [TypeScript branch of the "UI5 CAP Event App"](https://github.com/SAP-samples/ui5-cap-event-app/tree/typescript) sample demonstrates a slightly more complex application, using the same setup. It comes with an [explanation](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md) of what UI5 TypeScript code usually looks like and what to consider.
 
-Overall, the best resource for using UI5 with TypeScript is https://sap.github.io/ui5-typescript.
+As mentioned, the best resource for using UI5 with TypeScript is https://sap.github.io/ui5-typescript.
 
 See the [demos](./demos) directory for consumption examples of the legacy signatures.
-
-## Status
-
-This project is in an experimental **_Beta State_**. Significant changes are likely to occur, including potential **breaking changes**. More details and why you should not be afraid of this can be found [here](https://sap.github.io/ui5-typescript/beta-statement.html).
 
 ## Support
 
