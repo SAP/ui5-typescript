@@ -27,7 +27,7 @@ setText(text: string): this;`;
     requiredImports,
     knownGlobals,
     {},
-    {}
+    {},
   );
 
   const interfaceText = astToString(methods);
@@ -82,7 +82,7 @@ unbindContent(): this;`;
     requiredImports,
     knownGlobals,
     {},
-    {}
+    {},
   );
 
   const interfaceText = astToString(methods);

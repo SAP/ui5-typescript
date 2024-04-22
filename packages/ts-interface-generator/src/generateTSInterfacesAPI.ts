@@ -46,14 +46,14 @@ export function main(args: Args) {
     tsconfig = ts.findConfigFile("./", ts.sys.fileExists, "tsconfig.json");
     if (!tsconfig) {
       throw new Error(
-        "Could not find a valid 'tsconfig.json'. Please specify it using the '--config' parameter."
+        "Could not find a valid 'tsconfig.json'. Please specify it using the '--config' parameter.",
       );
     } else {
       logFound = " (automatically found, as none was given)";
     }
   }
   log.info(
-    `Using the following TypeScript configuration file${logFound}: ${tsconfig}`
+    `Using the following TypeScript configuration file${logFound}: ${tsconfig}`,
   );
 
   initialize(tsconfig, onTSProgramUpdate, { watchMode });
@@ -76,7 +76,7 @@ function onTSProgramUpdate(
   program: ts.Program,
   typeChecker: ts.TypeChecker,
   changedFiles: string[], // is an empty array in non-watch case; is at least one file in watch case - but overall not reliable!
-  allKnownGlobals: GlobalToModuleMapping
+  allKnownGlobals: GlobalToModuleMapping,
 ) {
   // this block collects all path mappings from the compiler configuration, so we can find out the logical name for a concrete file path
   const paths = program.getCompilerOptions().paths;
@@ -130,7 +130,7 @@ function onTSProgramUpdate(
         basePath,
         typeChecker,
         allPathMappings,
-        allKnownLocalExports
+        allKnownLocalExports,
       ); // extract all local exports
     });
 
@@ -139,7 +139,7 @@ function onTSProgramUpdate(
     generateInterfaces(
       sourceFile,
       typeChecker,
-      Object.assign(allKnownLocalExports, allKnownGlobals)
+      Object.assign(allKnownLocalExports, allKnownGlobals),
     ); // don't modify the ambient globals here, as they might have a different lifecycle and we don't want to keep adding the same properties again
   });
 }

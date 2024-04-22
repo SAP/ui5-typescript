@@ -6,7 +6,7 @@ function astToString(ast: ts.Node[]) {
     "",
     ts.ScriptTarget.Latest,
     false,
-    ts.ScriptKind.TS
+    ts.ScriptKind.TS,
   );
   // @ts-ignore this assignment works
   file.statements = ts.factory.createNodeArray(ast);

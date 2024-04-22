@@ -8,7 +8,7 @@ function onTSProgramUpdate(
   changedFiles: string[], // is an empty array in non-watch case; is at least one file in watch case
   allKnownGlobals: {
     [key: string]: { moduleName: string; exportName?: string };
-  }
+  },
 ) {
   // files recognized as "real" app source files should be exactly one: SampleControl.ts
   const sourceFiles: ts.SourceFile[] = program
@@ -29,7 +29,7 @@ function onTSProgramUpdate(
   function checkResult(
     sourceFileName: string,
     className: string,
-    interfaceText: string
+    interfaceText: string,
   ) {
     expect(sourceFileName).toMatch(/.*SampleControl.ts/);
     expect(className).toEqual("SampleControl");

@@ -24,7 +24,7 @@ let ManagedObjectSymbol: ts.Symbol,
   WebComponentSymbol: ts.Symbol;
 function interestingBaseClassForSymbol(
   typeChecker: ts.TypeChecker,
-  symbol: ts.Symbol
+  symbol: ts.Symbol,
 ): "ManagedObject" | "Element" | "Control" | "WebComponent" | undefined {
   if (!ManagedObjectSymbol) {
     // cache - TODO: needs to be refreshed when the UI5 type definitions are updated during a run of the tool!
@@ -36,10 +36,10 @@ function interestingBaseClassForSymbol(
     const managedObjectClassDeclaration = (
       managedObjectModuleDeclaration?.body as ts.ModuleBlock
     )?.statements.filter(
-      (s) => ts.isClassDeclaration(s) && s.name?.text === "ManagedObject"
+      (s) => ts.isClassDeclaration(s) && s.name?.text === "ManagedObject",
     )[0] as ts.ClassDeclaration;
     ManagedObjectSymbol = typeChecker.getSymbolAtLocation(
-      managedObjectClassDeclaration?.name
+      managedObjectClassDeclaration?.name,
     );
 
     const elementModuleDeclaration = typeChecker
@@ -49,10 +49,10 @@ function interestingBaseClassForSymbol(
     const elementClassDeclaration = (
       elementModuleDeclaration?.body as ts.ModuleBlock
     )?.statements.filter(
-      (s) => ts.isClassDeclaration(s) && s.name?.text === "UI5Element"
+      (s) => ts.isClassDeclaration(s) && s.name?.text === "UI5Element",
     )[0] as ts.ClassDeclaration;
     ElementSymbol = typeChecker.getSymbolAtLocation(
-      elementClassDeclaration?.name
+      elementClassDeclaration?.name,
     );
 
     const controlModuleDeclaration = typeChecker
@@ -62,10 +62,10 @@ function interestingBaseClassForSymbol(
     const controlClassDeclaration = (
       controlModuleDeclaration?.body as ts.ModuleBlock
     )?.statements.filter(
-      (s) => ts.isClassDeclaration(s) && s.name?.text === "Control"
+      (s) => ts.isClassDeclaration(s) && s.name?.text === "Control",
     )[0] as ts.ClassDeclaration;
     ControlSymbol = typeChecker.getSymbolAtLocation(
-      controlClassDeclaration?.name
+      controlClassDeclaration?.name,
     );
 
     const webComponentModuleDeclaration = typeChecker
@@ -75,10 +75,10 @@ function interestingBaseClassForSymbol(
     const webComponentClassDeclaration = (
       webComponentModuleDeclaration?.body as ts.ModuleBlock
     )?.statements.filter(
-      (s) => ts.isClassDeclaration(s) && s.name?.text === "WebComponent"
+      (s) => ts.isClassDeclaration(s) && s.name?.text === "WebComponent",
     )[0] as ts.ClassDeclaration;
     WebComponentSymbol = typeChecker.getSymbolAtLocation(
-      webComponentClassDeclaration?.name
+      webComponentClassDeclaration?.name,
     );
   }
   if (symbol === ControlSymbol) {
@@ -129,8 +129,8 @@ function generateInterfaces(
   resultProcessor: (
     sourceFileName: string,
     className: string,
-    interfaceText: string
-  ) => void = writeInterfaceFile
+    interfaceText: string,
+  ) => void = writeInterfaceFile,
 ) {
   const mos = getManagedObjects(sourceFile, typeChecker);
 
@@ -150,13 +150,13 @@ function generateInterfaces(
     const interfaceText = generateInterface(
       managedObjectOccurrence,
       allKnownGlobals,
-      { generateEventWithGenerics: !isEventGeneric }
+      { generateEventWithGenerics: !isEventGeneric },
     ); // only returns the interface text if actually needed (it's not for ManagedObjects without metadata etc.)
     if (interfaceText) {
       resultProcessor(
         sourceFile.fileName,
         managedObjectOccurrence.className,
-        interfaceText
+        interfaceText,
       );
     }
   });
@@ -171,7 +171,7 @@ function generateInterfaces(
 function writeInterfaceFile(
   sourceFileName: string,
   className: string,
-  interfaceText: string
+  interfaceText: string,
 ) {
   // file output
   const pathName = path.dirname(sourceFileName);
@@ -182,7 +182,7 @@ function writeInterfaceFile(
 
 function getManagedObjects(
   sourceFile: ts.SourceFile,
-  typeChecker: ts.TypeChecker
+  typeChecker: ts.TypeChecker,
 ) {
   const managedObjects: ManagedObjectInfo[] = [];
   sourceFile.statements.forEach((statement) => {
@@ -205,14 +205,14 @@ If a working "import" is not possible and it is a UI5 type (or type from another
 2. Check inside which "node_modules" folder the types are actually available - if they are not, check whether "npm install" (or "yarn" etc.) has run successfully - maybe re-run it
 3. Check the "tsconfig.json" file: types outside the default "@types" package must be explicitly added in the "types" or "typeRoots" section. Is the name and path correct?
 One known cause of this error is that the "typeRoots" setting in tsconfig.json has wrong paths, which are not actually pointing to the correct location of the type definitions.
-Or is there a different reason why this type would not be known?`
+Or is there a different reason why this type would not be known?`,
                 );
               }
 
               // now check whether this type from which has been inherited is a ManagedObject
               const interestingBaseClass = getInterestingBaseClass(
                 type,
-                typeChecker
+                typeChecker,
               );
               if (!interestingBaseClass) {
                 return;
@@ -241,7 +241,7 @@ Or is there a different reason why this type would not be known?`
                 log.debug(
                   `Class ${statement.name ? statement.name.text : ""} in ${
                     sourceFile.fileName
-                  } inherits from ${interestingBaseClass} but has no metadata. This is not necessarily an issue, but if there is a metadata member in this class which *should* be recognized, make sure it has the 'static' keyword!`
+                  } inherits from ${interestingBaseClass} but has no metadata. This is not necessarily an issue, but if there is a metadata member in this class which *should* be recognized, make sure it has the 'static' keyword!`,
                 );
                 return;
               } else if (metadata.length > 1) {
@@ -253,7 +253,7 @@ Or is there a different reason why this type would not be known?`
                     statement.name ? statement.name.text : ""
                   } inside ${
                     sourceFile.fileName
-                  }. This is unexpected. Ignoring this class.`
+                  }. This is unexpected. Ignoring this class.`,
                 );
                 return;
               } else if (!metadata[0].initializer) {
@@ -264,7 +264,7 @@ Or is there a different reason why this type would not be known?`
                 log.warn(
                   `Inside file ${sourceFile.fileName}${
                     statement.name ? " in class " + statement.name.text : ""
-                  } there is a metadata declaration without a value. Did you accidentally write "metadata: ..." instead of "metadata = ..."?`
+                  } there is a metadata declaration without a value. Did you accidentally write "metadata: ..." instead of "metadata = ..."?`,
                 );
                 return;
               }
@@ -286,10 +286,10 @@ Or is there a different reason why this type would not be known?`
                   const settingsTypeSourceFile =
                     settingsTypeDeclaration.getSourceFile().fileName;
                   const settingsTypeDirectory = path.dirname(
-                    settingsTypeSourceFile
+                    settingsTypeSourceFile,
                   );
                   const managedObjectDirectory = path.dirname(
-                    sourceFile.fileName
+                    sourceFile.fileName,
                   );
                   if (managedObjectDirectory !== settingsTypeDirectory) {
                     // settings type of superclass is in different directory, hence the generated import will have to traverse to that directory
@@ -297,7 +297,7 @@ Or is there a different reason why this type would not be known?`
                       .relative(managedObjectDirectory, settingsTypeDirectory)
                       .replace(/\\/, "/");
                     const match = settingsTypeFullName.match(
-                      /".\/([^/]+\/)*([^/]+)".*/
+                      /".\/([^/]+\/)*([^/]+)".*/,
                     );
                     if (match) {
                       // insert the relative path
@@ -311,7 +311,7 @@ Or is there a different reason why this type would not be known?`
                   `${
                     statement.name ? statement.name.text : ""
                   } inherits from ${interestingBaseClass} and has metadata but the parent class ${typeChecker.getFullyQualifiedName(
-                    type.getSymbol()
+                    type.getSymbol(),
                   )} seems to have no settings type. It might have no constructors, this is where the settings type is used. Or the settings type used there and its inheritance chain could not be resolved.
 
 In case this parent class is also in your project, make sure to add its constructors, then try again. A comment with instructions might be in the console output above.
@@ -319,9 +319,9 @@ Otherwise, you can temporarily remove this file (${
                     sourceFile.fileName
                   }) from the project and try again to get the console output with the suggested constructors.
 In any case, you need to make the parent class ${typeChecker.getFullyQualifiedName(
-                    type.getSymbol()
+                    type.getSymbol(),
                   )} have constructors with typed settings object to overcome this issue.
-`
+`,
                 );
               }
 
@@ -366,7 +366,7 @@ function checkConstructors(classDeclaration: ts.ClassDeclaration) {
             if (
               isOneAStringAndTheOtherASettingsObject(
                 parameter.type.types[0],
-                parameter.type.types[1]
+                parameter.type.types[1],
               )
             ) {
               singleParameterDeclarationFound = true;
@@ -377,7 +377,7 @@ function checkConstructors(classDeclaration: ts.ClassDeclaration) {
         if (
           isOneAStringAndTheOtherASettingsObject(
             member.parameters[0].type,
-            member.parameters[1].type
+            member.parameters[1].type,
           )
         ) {
           if (member.body) {
@@ -388,7 +388,7 @@ function checkConstructors(classDeclaration: ts.ClassDeclaration) {
         }
       } else {
         log.warn(
-          `Unexpected constructor signature with a parameter number other than 1 or 2 in class ${member.parent.name.text}`
+          `Unexpected constructor signature with a parameter number other than 1 or 2 in class ${member.parent.name.text}`,
         );
       }
     }
@@ -410,7 +410,7 @@ function checkConstructors(classDeclaration: ts.ClassDeclaration) {
           : "\n- constructor declaration with two parameters") +
         (implementationFound
           ? ""
-          : "\n- constructor implementation with two parameters")
+          : "\n- constructor implementation with two parameters"),
     );
   }
   return found;
@@ -418,7 +418,7 @@ function checkConstructors(classDeclaration: ts.ClassDeclaration) {
 
 function isOneAStringAndTheOtherASettingsObject(
   type1: ts.TypeNode,
-  type2: ts.TypeNode
+  type2: ts.TypeNode,
 ) {
   return (
     (type1.kind === ts.SyntaxKind.StringKeyword &&
@@ -441,7 +441,7 @@ function getSettingsType(type: ts.Type, typeChecker: ts.TypeChecker) {
       if (ts.isConstructorDeclaration(members[j])) {
         const settingsType = getSettingsTypeFromConstructor(
           members[j] as ts.ConstructorDeclaration,
-          typeChecker
+          typeChecker,
         );
         if (settingsType) {
           return settingsType;
@@ -457,7 +457,7 @@ function getSettingsType(type: ts.Type, typeChecker: ts.TypeChecker) {
  */
 function getSettingsTypeFromConstructor(
   ctor: ts.ConstructorDeclaration,
-  typeChecker: ts.TypeChecker
+  typeChecker: ts.TypeChecker,
 ) {
   for (let i = 0; i < ctor.parameters.length; i++) {
     const parameter = ctor.parameters[i];
@@ -466,14 +466,14 @@ function getSettingsTypeFromConstructor(
       log.debug(
         `Checking constructor parameter ${parameter.name.getText()} (type ${(
           parameter.type as ts.TypeReferenceNode
-        ).typeName.getText()}) to find out whether it is the settings type of the base class.`
+        ).typeName.getText()}) to find out whether it is the settings type of the base class.`,
       );
       const potentialSettingsType = typeChecker.getTypeFromTypeNode(
-        parameter.type
+        parameter.type,
       );
       const interestingBaseSettingsClass = getInterestingBaseSettingsClass(
         potentialSettingsType,
-        typeChecker
+        typeChecker,
       );
       if (interestingBaseSettingsClass) {
         return parameter.type;
@@ -487,14 +487,14 @@ function getSettingsTypeFromConstructor(
  */
 function getInterestingBaseClass(
   type: ts.Type,
-  typeChecker: ts.TypeChecker
+  typeChecker: ts.TypeChecker,
 ): "ManagedObject" | "Element" | "Control" | "WebComponent" | undefined {
   //const typeName = typeChecker.typeToString(type);
   //log.debug("-> " + typeName + " (" + typeChecker.getFullyQualifiedName(type.getSymbol()) + ")");
 
   let interestingBaseClass = interestingBaseClassForSymbol(
     typeChecker,
-    type.getSymbol()
+    type.getSymbol(),
   );
   if (interestingBaseClass) {
     return interestingBaseClass;
@@ -507,7 +507,7 @@ function getInterestingBaseClass(
     if (
       (interestingBaseClass = getInterestingBaseClass(
         baseTypes[i],
-        typeChecker
+        typeChecker,
       ))
     ) {
       return interestingBaseClass;
@@ -521,7 +521,7 @@ function getInterestingBaseClass(
  */
 function getInterestingBaseSettingsClass(
   type: ts.Type,
-  typeChecker: ts.TypeChecker
+  typeChecker: ts.TypeChecker,
 ):
   | "$ManagedObjectSettings"
   | "$ElementSettings"
@@ -551,14 +551,14 @@ function getInterestingBaseSettingsClass(
     type.symbol.escapedName
   ) {
     console.warn(
-      `TypeScript could not resolve any base types for ${type.symbol.escapedName.toString()}.`
+      `TypeScript could not resolve any base types for ${type.symbol.escapedName.toString()}.`,
     );
   }
   for (let i = 0; i < baseTypes.length; i++) {
     if (
       (interestingBaseSettingsClass = getInterestingBaseSettingsClass(
         baseTypes[i],
-        typeChecker
+        typeChecker,
       ))
     ) {
       return interestingBaseSettingsClass;
@@ -571,7 +571,7 @@ function getInterestingBaseSettingsClass(
 
 function getTagsWithName(
   jsDocs: ReadonlyArray<ts.JSDoc | ts.JSDocTag>,
-  tagName: string
+  tagName: string,
 ) {
   const fnCheck =
     tagName === "deprecated" ? ts.isJSDocDeprecatedTag : ts.isJSDocUnknownTag;
@@ -626,7 +626,7 @@ function extractJSDoc(jsDocs: (ts.JSDoc | ts.JSDocTag)[]) {
 // for a single definition in the metadata (a single property, a single aggregation, ...), this method extracts all needed info into the returned APIMember instance
 function getMemberFromPropertyAssignment<T extends MetadataSectionName>(
   propertyAssignment: ts.PropertyAssignment,
-  memberKind: T
+  memberKind: T,
 ): TypeForMetadataSectionName[T] {
   // the name
   const memberName = propertyAssignment.name.getText().replace(/['"]/g, "");
@@ -638,11 +638,11 @@ function getMemberFromPropertyAssignment<T extends MetadataSectionName>(
   let definitionObject;
   try {
     definitionObject = Hjson.parse(
-      propertyAssignment.initializer.getText()
+      propertyAssignment.initializer.getText(),
     ) as APIMember; // parse with some fault tolerance: it's not a real JSON object, but JS code which may contain comments and property names which are not enclosed in double quotes
     definitionObject = expandDefaultKey(
       definitionObject,
-      memberKind === "events" ? null : "type"
+      memberKind === "events" ? null : "type",
     );
     Object.assign(member, definitionObject);
   } catch (e) {
@@ -651,13 +651,13 @@ function getMemberFromPropertyAssignment<T extends MetadataSectionName>(
         member.name
       }: metadata is no valid JSON and could not be quick-fixed to be. Please make the metadata at least close to valid JSON. In particular, TypeScript type annotations cannot be used. Error: ${
         (e as Error).message
-      }`
+      }`,
     );
   }
 
   // need to type this yet undocumented method
   type GetJSDocCommentsAndTags = (
-    pa: ts.PropertyAssignment
+    pa: ts.PropertyAssignment,
   ) => (ts.JSDoc | ts.JSDocTag)[];
 
   // enrich with JSDoc
@@ -665,7 +665,7 @@ function getMemberFromPropertyAssignment<T extends MetadataSectionName>(
     const commentsAndTags =
       // @ts-ignore this method already exists in 5.0.4, but was only made public two weeks ago, maybe for 5.1 (https://github.com/microsoft/TypeScript/commit/a1df8f774fd81c389a10d2e44a3568d7f0647c67)
       (ts.getJSDocCommentsAndTags as GetJSDocCommentsAndTags)(
-        propertyAssignment
+        propertyAssignment,
       );
     Object.assign(member, extractJSDoc(commentsAndTags));
   }
@@ -694,7 +694,7 @@ function generateInterface(
     metadata: ts.PropertyDeclaration[];
   },
   allKnownGlobals: GlobalToModuleMapping,
-  options: { generateEventWithGenerics: boolean }
+  options: { generateEventWithGenerics: boolean },
 ) {
   const fileName = sourceFile.fileName;
 
@@ -714,7 +714,7 @@ function generateInterface(
       .replace(/['"]/g, "") as MetadataSectionName;
     if (
       !["properties", "aggregations", "associations", "events"].includes(
-        memberKind
+        memberKind,
       )
     ) {
       return; // not interested in anything else than these four, because methods are generated only for these
@@ -733,7 +733,7 @@ function generateInterface(
             const name = prop.name.getText().replace(/['"]/g, "");
             metadataObject[memberKind][name] = getMemberFromPropertyAssignment(
               prop as ts.PropertyAssignment,
-              memberKind
+              memberKind,
             );
           }); // cast ensured to be valid by the line above
       }
@@ -742,7 +742,7 @@ function generateInterface(
       throw new Error(
         `When parsing the metadata of ${className} in ${fileName}: ${
           (e as Error).message
-        }`
+        }`,
       );
     }
   });
@@ -758,7 +758,7 @@ function generateInterface(
   }
 
   log.debug(
-    `\n\nClass ${className} inside ${fileName} inherits from ${interestingBaseClass} and contains metadata.`
+    `\n\nClass ${className} inside ${fileName} inherits from ${interestingBaseClass} and contains metadata.`,
   );
 
   const classInfo = collectClassInfo(metadataObject, className);
@@ -771,7 +771,7 @@ function generateInterface(
     moduleName,
     settingsTypeFullName,
     allKnownGlobals,
-    options
+    options,
   );
   if (!ast) {
     // no interface needs to be generated
@@ -788,7 +788,7 @@ function buildAST(
   moduleName: string,
   settingsTypeFullName: string,
   allKnownGlobals: GlobalToModuleMapping,
-  options?: { generateEventWithGenerics?: boolean }
+  options?: { generateEventWithGenerics?: boolean },
 ) {
   const requiredImports: RequiredImports = {};
 
@@ -799,7 +799,7 @@ function buildAST(
     classInfo.events,
     classInfo.name,
     requiredImports,
-    allKnownGlobals
+    allKnownGlobals,
   );
   let genericEventDefinitionModule;
   if (
@@ -809,7 +809,7 @@ function buildAST(
     genericEventDefinitionModule = generateEventWithGenericsCompatibilityModule(
       classInfo.name,
       requiredImports,
-      allKnownGlobals
+      allKnownGlobals,
     );
   }
 
@@ -818,7 +818,7 @@ function buildAST(
     eventParameterInterfaces,
     classInfo.name,
     requiredImports,
-    allKnownGlobals
+    allKnownGlobals,
   );
 
   const methods = generateMethods(
@@ -826,7 +826,7 @@ function buildAST(
     requiredImports,
     allKnownGlobals,
     eventParameterInterfaces,
-    eventTypeAliases
+    eventTypeAliases,
   );
   if (methods.length === 0) {
     // nothing needs to be generated!
@@ -840,7 +840,7 @@ function buildAST(
     settingsTypeFullName,
     requiredImports,
     allKnownGlobals,
-    eventTypeAliases
+    eventTypeAliases,
   );
 
   const statements: ts.Statement[] = getImports(requiredImports);
@@ -855,7 +855,7 @@ function buildAST(
       classInfo.name,
       undefined,
       undefined,
-      methods
+      methods,
     );
   } else {
     myInterface = factory.createInterfaceDeclaration(
@@ -868,7 +868,7 @@ function buildAST(
       undefined,
       undefined,
       // @ts-ignore: below TS 4.8 there were more params
-      methods
+      methods,
     );
   }
   addLineBreakBefore(myInterface, 2);
@@ -884,7 +884,7 @@ function buildAST(
         myInterface,
         ...Object.values(eventParameterInterfaces),
         ...Object.values(eventTypeAliases),
-      ])
+      ]),
     );
   } else {
     module = factory.createModuleDeclaration(
@@ -897,7 +897,7 @@ function buildAST(
         myInterface,
         ...Object.values(eventParameterInterfaces),
         ...Object.values(eventTypeAliases),
-      ])
+      ]),
     );
   }
   if (statements.length > 0) {
@@ -919,7 +919,7 @@ function buildAST(
         classInfo.name,
         undefined,
         undefined,
-        methods
+        methods,
       );
     } else {
       myInterface2 = factory.createInterfaceDeclaration(
@@ -929,7 +929,7 @@ function buildAST(
         undefined,
         undefined,
         // @ts-ignore: below TS 4.8 there were more params
-        methods
+        methods,
       );
     }
 
@@ -938,7 +938,7 @@ function buildAST(
       module2 = factory.createModuleDeclaration(
         [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
         factory.createStringLiteral("./" + moduleName),
-        factory.createModuleBlock([myInterface2])
+        factory.createModuleBlock([myInterface2]),
       );
     } else {
       module2 = factory.createModuleDeclaration(
@@ -946,7 +946,7 @@ function buildAST(
         // @ts-ignore old signature
         [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
         factory.createStringLiteral("./" + moduleName),
-        factory.createModuleBlock([myInterface2])
+        factory.createModuleBlock([myInterface2]),
       );
     }
     addLineBreakBefore(module2, 2);
@@ -955,7 +955,7 @@ function buildAST(
       ts.SyntaxKind.SingleLineCommentTrivia,
       " this duplicate interface without export is needed to avoid \"Cannot find name '" +
         classInfo.name +
-        "'\" TypeScript errors above"
+        "'\" TypeScript errors above",
     );
 
     statements.push(module2);
@@ -972,7 +972,7 @@ function getImports(requiredImports: RequiredImports) {
     }
     const singleImport = requiredImports[dependencyName];
     const localNameIdentifier = factory.createIdentifier(
-      singleImport.localName
+      singleImport.localName,
     );
     const namedImportOriginalNameIdentifier =
       singleImport.exportName &&
@@ -990,25 +990,25 @@ function getImports(requiredImports: RequiredImports) {
           false /* typeOnly */,
           namedImportOriginalNameIdentifier,
           // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
-          localNameIdentifier
+          localNameIdentifier,
         );
       } else {
         // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
         importSpecifier = factory.createImportSpecifier(
           namedImportOriginalNameIdentifier,
-          localNameIdentifier
+          localNameIdentifier,
         );
       }
       importClause = factory.createImportClause(
         false,
         undefined,
-        factory.createNamedImports([importSpecifier])
+        factory.createNamedImports([importSpecifier]),
       );
     } else {
       importClause = factory.createImportClause(
         false,
         factory.createIdentifier(singleImport.localName),
-        undefined
+        undefined,
       ); // importing the default export, so only the local name matters
     }
 
@@ -1017,15 +1017,15 @@ function getImports(requiredImports: RequiredImports) {
         ? factory.createImportDeclaration(
             undefined,
             importClause,
-            factory.createStringLiteral(singleImport.moduleName)
+            factory.createStringLiteral(singleImport.moduleName),
           )
         : factory.createImportDeclaration(
             undefined,
             undefined,
             // @ts-ignore old signature before 4.8
             importClause,
-            factory.createStringLiteral(singleImport.moduleName)
-          )
+            factory.createStringLiteral(singleImport.moduleName),
+          ),
     );
   }
 
@@ -1038,9 +1038,9 @@ function getImports(requiredImports: RequiredImports) {
         factory.createImportClause(
           false,
           factory.createIdentifier("Core"),
-          undefined
+          undefined,
         ),
-        factory.createStringLiteral("sap/ui/core/Core")
+        factory.createStringLiteral("sap/ui/core/Core"),
       );
     } else {
       importDeclaration = factory.createImportDeclaration(
@@ -1050,15 +1050,15 @@ function getImports(requiredImports: RequiredImports) {
         factory.createImportClause(
           false,
           factory.createIdentifier("Core"),
-          undefined
+          undefined,
         ),
-        factory.createStringLiteral("sap/ui/core/Core")
+        factory.createStringLiteral("sap/ui/core/Core"),
       );
     }
     ts.addSyntheticTrailingComment(
       importDeclaration,
       ts.SyntaxKind.SingleLineCommentTrivia,
-      " dummy import to make this non-ambient"
+      " dummy import to make this non-ambient",
     );
     imports.push(importDeclaration);
   }
