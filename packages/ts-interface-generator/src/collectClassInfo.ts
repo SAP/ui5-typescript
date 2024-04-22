@@ -51,7 +51,11 @@ function collectClassInfo(metadata: ClassInfo, className: string) {
   function each<APIMemberType extends APIMember>(
     map: { [key: string]: APIMember },
     defaultKey: string,
-    callback: (n: string, settings: APIMemberType, apiMember: APIMember) => void
+    callback: (
+      n: string,
+      settings: APIMemberType,
+      apiMember: APIMember,
+    ) => void,
   ) {
     if (map) {
       for (const n in map) {
@@ -195,7 +199,7 @@ function collectClassInfo(metadata: ClassInfo, className: string) {
           methods["bind"] = "bind" + N;
           methods["unbind"] = "unbind" + N;
         }
-      }
+      },
     );
 
     each<AssociationMetadata>(
@@ -228,7 +232,7 @@ function collectClassInfo(metadata: ClassInfo, className: string) {
           methods["remove"] = "remove" + N1;
           methods["removeAll"] = "removeAll" + N;
         }
-      }
+      },
     );
 
     each<UI5Event>(metadata.events, null, (n: string, settings) => {
@@ -266,7 +270,7 @@ function collectClassInfo(metadata: ClassInfo, className: string) {
             experimental: settings.experimental,
             type: pSettings && pSettings.type ? pSettings.type : "",
           };
-        }
+        },
       );
     });
 

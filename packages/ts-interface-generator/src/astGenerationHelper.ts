@@ -24,7 +24,7 @@ const fixedCreateParameterDeclaration =
           string | ts.BindingName,
           ts.QuestionToken?,
           ts.TypeNode?,
-          ts.Expression?
+          ts.Expression?,
         ]
       ) {
         // @ts-ignore old signature before 4.8 is used here
@@ -38,7 +38,7 @@ function generateSettingsInterface(
   settingsTypeFullName: string,
   requiredImports: RequiredImports,
   knownGlobals: GlobalToModuleMapping,
-  eventTypeAliases: { [eventName: string]: ts.TypeAliasDeclaration }
+  eventTypeAliases: { [eventName: string]: ts.TypeAliasDeclaration },
 ) {
   const interfaceProperties = [];
   const currentClassName = classInfo.name;
@@ -53,14 +53,14 @@ function generateSettingsInterface(
           property.type,
           requiredImports,
           knownGlobals,
-          currentClassName
+          currentClassName,
         ),
         createTSTypeNode(
           // 2. a binding info object...
           "sap.ui.base.ManagedObject.PropertyBindingInfo",
           requiredImports,
           knownGlobals,
-          currentClassName
+          currentClassName,
         ),
       ];
 
@@ -73,11 +73,11 @@ function generateSettingsInterface(
         undefined,
         property.name,
         factory.createToken(ts.SyntaxKind.QuestionToken),
-        factory.createUnionTypeNode(propertyTypes)
+        factory.createUnionTypeNode(propertyTypes),
       );
       addJSDocCommentToNode(
         propertySignature,
-        buildJSDocStringFromLines(createJSDocCenterPart(property))
+        buildJSDocStringFromLines(createJSDocCenterPart(property)),
       );
       interfaceProperties.push(propertySignature);
     }
@@ -93,7 +93,7 @@ function generateSettingsInterface(
         aggregation.type,
         requiredImports,
         knownGlobals,
-        currentClassName
+        currentClassName,
       );
 
       if (aggregation.cardinality === "0..1") {
@@ -108,7 +108,7 @@ function generateSettingsInterface(
               aggregation.altTypes[0],
               requiredImports,
               knownGlobals,
-              currentClassName
+              currentClassName,
             ),
           ];
           typesToUse.push(
@@ -117,8 +117,8 @@ function generateSettingsInterface(
               "sap.ui.base.ManagedObject.PropertyBindingInfo",
               requiredImports,
               knownGlobals,
-              currentClassName
-            )
+              currentClassName,
+            ),
           );
           if (aggregation.altTypes[0] !== "string") {
             // if "string" is not anyway allowed, also allow binding strings
@@ -140,7 +140,7 @@ function generateSettingsInterface(
             "sap.ui.base.ManagedObject.AggregationBindingInfo",
             requiredImports,
             knownGlobals,
-            currentClassName
+            currentClassName,
           ),
           createBindingStringTypeNode(), // 4. a binding string
         ]);
@@ -150,11 +150,11 @@ function generateSettingsInterface(
         undefined,
         aggregation.name,
         factory.createToken(ts.SyntaxKind.QuestionToken),
-        aggregationInitializationTypeNode
+        aggregationInitializationTypeNode,
       );
       addJSDocCommentToNode(
         propertySignature,
-        buildJSDocStringFromLines(createJSDocCenterPart(aggregation))
+        buildJSDocStringFromLines(createJSDocCenterPart(aggregation)),
       );
       interfaceProperties.push(propertySignature);
     }
@@ -169,7 +169,7 @@ function generateSettingsInterface(
         association.type,
         requiredImports,
         knownGlobals,
-        currentClassName
+        currentClassName,
       );
 
       // allow object and string (=ID) and in case of multiple associations also arrays
@@ -187,7 +187,7 @@ function generateSettingsInterface(
             factory.createUnionTypeNode([
               associationSingleTypeNode,
               factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-            ])
+            ]),
           ),
         ]);
       }
@@ -196,11 +196,11 @@ function generateSettingsInterface(
         undefined,
         association.name,
         factory.createToken(ts.SyntaxKind.QuestionToken),
-        associationInitializationTypeNode
+        associationInitializationTypeNode,
       );
       addJSDocCommentToNode(
         propertySignature,
-        buildJSDocStringFromLines(createJSDocCenterPart(association))
+        buildJSDocStringFromLines(createJSDocCenterPart(association)),
       );
       factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         interfaceProperties.push(propertySignature);
@@ -223,15 +223,17 @@ function generateSettingsInterface(
               undefined,
               "event",
               undefined,
-              factory.createTypeReferenceNode(eventTypeAliases[event.name].name)
+              factory.createTypeReferenceNode(
+                eventTypeAliases[event.name].name,
+              ),
             ),
           ],
-          factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
-        )
+          factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword),
+        ),
       );
       addJSDocCommentToNode(
         propertySignature,
-        buildJSDocStringFromLines(createJSDocCenterPart(event))
+        buildJSDocStringFromLines(createJSDocCenterPart(event)),
       );
       interfaceProperties.push(propertySignature);
     }
@@ -247,18 +249,18 @@ function generateSettingsInterface(
     settingsTypeFullName,
     requiredImports,
     knownGlobals,
-    currentClassName
+    currentClassName,
   );
 
   if (!constructorSignaturesAvailable) {
     printConstructorBlockWarning(
       ownSettingsTypeName,
       classInfo.name,
-      classFileName
+      classFileName,
     ); // TODO: only print when the original class is missing the constructors!
   } else {
     log.debug(
-      `Constructor signatures are present in implementation file of ${classInfo.name}.`
+      `Constructor signatures are present in implementation file of ${classInfo.name}.`,
     );
   }
 
@@ -277,7 +279,7 @@ function generateSettingsInterface(
       ownSettingsTypeName,
       undefined,
       heritageClauses,
-      interfaceProperties
+      interfaceProperties,
     );
   } else {
     myInterface = factory.createInterfaceDeclaration(
@@ -287,7 +289,7 @@ function generateSettingsInterface(
       undefined,
       heritageClauses,
       // @ts-ignore: below TS 4.8 there were more params
-      interfaceProperties
+      interfaceProperties,
     );
   }
 
@@ -295,7 +297,7 @@ function generateSettingsInterface(
   ts.addSyntheticLeadingComment(
     myInterface,
     ts.SyntaxKind.MultiLineCommentTrivia,
-    "*\n * Interface defining the settings object used in constructor calls\n "
+    "*\n * Interface defining the settings object used in constructor calls\n ",
   );
   addLineBreakBefore(myInterface);
   return myInterface;
@@ -308,16 +310,16 @@ function createBindingStringTypeNode() {
     [
       factory.createTemplateLiteralTypeSpan(
         factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-        factory.createTemplateTail("}", "}")
+        factory.createTemplateTail("}", "}"),
       ),
-    ]
+    ],
   );
 }
 
 function printConstructorBlockWarning(
   settingsTypeName: string,
   className: string,
-  fileName: string
+  fileName: string,
 ) {
   const constructorBlock = createConstructorBlock(settingsTypeName);
 
@@ -340,7 +342,7 @@ function addJSDocCommentToNode(node: ts.Node, content: string) {
       node,
       ts.SyntaxKind.MultiLineCommentTrivia,
       "*" + content,
-      true
+      true,
     );
   }
 }
@@ -350,7 +352,7 @@ function generateMethods(
   requiredImports: RequiredImports,
   knownGlobals: GlobalToModuleMapping,
   eventParameterInterfaces: { [eventName: string]: ts.InterfaceDeclaration },
-  eventTypeAliases: { [eventName: string]: ts.TypeAliasDeclaration }
+  eventTypeAliases: { [eventName: string]: ts.TypeAliasDeclaration },
 ) {
   const allMethods: ts.MethodSignature[] = [];
   const currentClassName = classInfo.name;
@@ -373,14 +375,14 @@ function generateMethods(
         property.type,
         requiredImports,
         knownGlobals,
-        currentClassName
-      )
+        currentClassName,
+      ),
     );
     addLineBreakBefore(getter, 2);
     ts.addSyntheticLeadingComment(
       getter,
       ts.SyntaxKind.SingleLineCommentTrivia,
-      " property: " + n
+      " property: " + n,
     );
     addJSDocCommentToNode(getter, classInfo.generatedJSDoc?.PropertyGet[n]);
     allMethods.push(getter);
@@ -401,11 +403,11 @@ function generateMethods(
             property.type,
             requiredImports,
             knownGlobals,
-            currentClassName
-          )
+            currentClassName,
+          ),
         ),
       ],
-      factory.createThisTypeNode()
+      factory.createThisTypeNode(),
     );
     addJSDocCommentToNode(setter, classInfo.generatedJSDoc?.PropertySet[n]);
     allMethods.push(setter);
@@ -427,11 +429,11 @@ function generateMethods(
               "sap.ui.base.ManagedObject.PropertyBindingInfo",
               requiredImports,
               knownGlobals,
-              currentClassName
-            )
+              currentClassName,
+            ),
           ),
         ],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(bind, classInfo.generatedJSDoc?.PropertyBind[n]);
       allMethods.push(bind);
@@ -443,11 +445,11 @@ function generateMethods(
         undefined,
         [],
         [],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(
         unbind,
-        classInfo.generatedJSDoc?.PropertyUnbind[n]
+        classInfo.generatedJSDoc?.PropertyUnbind[n],
       );
       allMethods.push(unbind);
     }
@@ -473,21 +475,21 @@ function generateMethods(
               aggregation.type,
               requiredImports,
               knownGlobals,
-              currentClassName
-            )
+              currentClassName,
+            ),
           )
         : createTSTypeNode(
             aggregation.type,
             requiredImports,
             knownGlobals,
-            currentClassName
-          )
+            currentClassName,
+          ),
     );
     addLineBreakBefore(getter, 2);
     ts.addSyntheticLeadingComment(
       getter,
       ts.SyntaxKind.SingleLineCommentTrivia,
-      " aggregation: " + n
+      " aggregation: " + n,
     );
     addJSDocCommentToNode(getter, classInfo.generatedJSDoc?.AggregationGet[n]);
     allMethods.push(getter);
@@ -509,11 +511,11 @@ function generateMethods(
               aggregation.type,
               requiredImports,
               knownGlobals,
-              currentClassName
-            )
+              currentClassName,
+            ),
           ),
         ],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(add, classInfo.generatedJSDoc?.AggregationAdd[n]);
       allMethods.push(add);
@@ -534,22 +536,22 @@ function generateMethods(
               aggregation.type,
               requiredImports,
               knownGlobals,
-              currentClassName
-            )
+              currentClassName,
+            ),
           ),
           fixedCreateParameterDeclaration(
             undefined,
             undefined,
             "index",
             undefined,
-            factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+            factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
           ),
         ],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(
         insert,
-        classInfo.generatedJSDoc?.AggregationInsert[n]
+        classInfo.generatedJSDoc?.AggregationInsert[n],
       );
       allMethods.push(insert);
 
@@ -572,16 +574,16 @@ function generateMethods(
                 aggregation.type,
                 requiredImports,
                 knownGlobals,
-                currentClassName
+                currentClassName,
               ),
-            ])
+            ]),
           ),
         ],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(
         remove,
-        classInfo.generatedJSDoc?.AggregationRemove[n]
+        classInfo.generatedJSDoc?.AggregationRemove[n],
       );
       allMethods.push(remove);
 
@@ -597,13 +599,13 @@ function generateMethods(
             aggregation.type,
             requiredImports,
             knownGlobals,
-            currentClassName
-          )
-        )
+            currentClassName,
+          ),
+        ),
       );
       addJSDocCommentToNode(
         removeAll,
-        classInfo.generatedJSDoc?.AggregationRemoveAll[n]
+        classInfo.generatedJSDoc?.AggregationRemoveAll[n],
       );
       allMethods.push(removeAll);
 
@@ -623,15 +625,15 @@ function generateMethods(
               aggregation.type,
               requiredImports,
               knownGlobals,
-              currentClassName
-            )
+              currentClassName,
+            ),
           ),
         ],
-        factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+        factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
       );
       addJSDocCommentToNode(
         indexOf,
-        classInfo.generatedJSDoc?.AggregationIndexOf[n]
+        classInfo.generatedJSDoc?.AggregationIndexOf[n],
       );
       allMethods.push(indexOf);
 
@@ -654,11 +656,11 @@ function generateMethods(
               aggregation.type,
               requiredImports,
               knownGlobals,
-              currentClassName
-            )
+              currentClassName,
+            ),
           ),
         ],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(set, classInfo.generatedJSDoc?.AggregationSet[n]);
       allMethods.push(set);
@@ -671,11 +673,11 @@ function generateMethods(
       undefined,
       [],
       [],
-      factory.createThisTypeNode()
+      factory.createThisTypeNode(),
     );
     addJSDocCommentToNode(
       destroy,
-      classInfo.generatedJSDoc?.AggregationDestroy[n]
+      classInfo.generatedJSDoc?.AggregationDestroy[n],
     );
     allMethods.push(destroy);
 
@@ -696,11 +698,11 @@ function generateMethods(
               "sap.ui.base.ManagedObject.AggregationBindingInfo",
               requiredImports,
               knownGlobals,
-              currentClassName
-            )
+              currentClassName,
+            ),
           ),
         ],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(bind, classInfo.generatedJSDoc?.AggregationBind[n]);
       allMethods.push(bind);
@@ -712,11 +714,11 @@ function generateMethods(
         undefined,
         [],
         [],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(
         unbind,
-        classInfo.generatedJSDoc?.AggregationUnbind[n]
+        classInfo.generatedJSDoc?.AggregationUnbind[n],
       );
       allMethods.push(unbind);
     }
@@ -738,15 +740,15 @@ function generateMethods(
       [],
       association.cardinality === "0..n"
         ? factory.createArrayTypeNode(
-            factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+            factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
           )
-        : factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+        : factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
     );
     addLineBreakBefore(getter, 2);
     ts.addSyntheticLeadingComment(
       getter,
       ts.SyntaxKind.SingleLineCommentTrivia,
-      " association: " + n
+      " association: " + n,
     );
     addJSDocCommentToNode(getter, classInfo.generatedJSDoc?.AssociationGet[n]);
     allMethods.push(getter);
@@ -771,16 +773,16 @@ function generateMethods(
                 association.type,
                 requiredImports,
                 knownGlobals,
-                currentClassName
+                currentClassName,
               ),
-            ])
+            ]),
           ),
         ],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(
         setter,
-        classInfo.generatedJSDoc?.AssociationSet[n]
+        classInfo.generatedJSDoc?.AssociationSet[n],
       );
       allMethods.push(setter);
     } else {
@@ -804,12 +806,12 @@ function generateMethods(
                 association.type,
                 requiredImports,
                 knownGlobals,
-                currentClassName
+                currentClassName,
               ),
-            ])
+            ]),
           ),
         ],
-        factory.createThisTypeNode()
+        factory.createThisTypeNode(),
       );
       addJSDocCommentToNode(add, classInfo.generatedJSDoc?.AssociationAdd[n]);
       allMethods.push(add);
@@ -833,16 +835,16 @@ function generateMethods(
                 association.type,
                 requiredImports,
                 knownGlobals,
-                currentClassName
+                currentClassName,
               ),
-            ])
+            ]),
           ),
         ],
-        factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+        factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
       );
       addJSDocCommentToNode(
         remove,
-        classInfo.generatedJSDoc?.AssociationRemove[n]
+        classInfo.generatedJSDoc?.AssociationRemove[n],
       );
       allMethods.push(remove);
 
@@ -854,12 +856,12 @@ function generateMethods(
         [],
         [],
         factory.createArrayTypeNode(
-          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
-        )
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
+        ),
       );
       addJSDocCommentToNode(
         removeAll,
-        classInfo.generatedJSDoc?.AssociationRemoveAll[n]
+        classInfo.generatedJSDoc?.AssociationRemoveAll[n],
       );
       allMethods.push(removeAll);
     }
@@ -881,10 +883,10 @@ function generateMethods(
           undefined,
           "event",
           undefined,
-          factory.createTypeReferenceNode(eventTypeAliases[event.name].name)
+          factory.createTypeReferenceNode(eventTypeAliases[event.name].name),
         ),
       ],
-      factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
+      factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword),
     );
     const attach = factory.createMethodSignature(
       undefined,
@@ -897,23 +899,23 @@ function generateMethods(
           undefined,
           "fn",
           undefined,
-          callback
+          callback,
         ),
         fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "listener",
           factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
         ),
       ],
-      factory.createThisTypeNode()
+      factory.createThisTypeNode(),
     );
     addLineBreakBefore(attach, 2);
     ts.addSyntheticLeadingComment(
       attach,
       ts.SyntaxKind.SingleLineCommentTrivia,
-      " event: " + n
+      " event: " + n,
     );
     addJSDocCommentToNode(attach, classInfo.generatedJSDoc?.EventAttach[n]);
     allMethods.push(attach);
@@ -927,17 +929,17 @@ function generateMethods(
           undefined,
           "event",
           undefined,
-          factory.createTypeReferenceNode(eventTypeAliases[event.name].name)
+          factory.createTypeReferenceNode(eventTypeAliases[event.name].name),
         ),
         fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "data",
           undefined,
-          factory.createTypeReferenceNode("CustomDataType")
+          factory.createTypeReferenceNode("CustomDataType"),
         ),
       ],
-      factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword)
+      factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword),
     );
     const attach2 = factory.createMethodSignature(
       undefined,
@@ -948,12 +950,12 @@ function generateMethods(
           ? factory.createTypeParameterDeclaration(
               undefined,
               "CustomDataType",
-              factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+              factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
             )
           : factory.createTypeParameterDeclaration(
               // @ts-ignore this is the old method signature before TS 4.8
               "CustomDataType",
-              factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+              factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
             ),
       ],
       [
@@ -962,28 +964,28 @@ function generateMethods(
           undefined,
           "data",
           undefined,
-          factory.createTypeReferenceNode("CustomDataType")
+          factory.createTypeReferenceNode("CustomDataType"),
         ),
         fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "fn",
           undefined,
-          callbackWithData
+          callbackWithData,
         ),
         fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "listener",
           factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
         ),
       ],
-      factory.createThisTypeNode()
+      factory.createThisTypeNode(),
     );
     addJSDocCommentToNode(
       attach2,
-      classInfo.generatedJSDoc?.EventAttachWithData[n]
+      classInfo.generatedJSDoc?.EventAttachWithData[n],
     );
     allMethods.push(attach2);
 
@@ -999,17 +1001,17 @@ function generateMethods(
           undefined,
           "fn",
           undefined,
-          callback
+          callback,
         ),
         fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "listener",
           factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
         ),
       ],
-      factory.createThisTypeNode()
+      factory.createThisTypeNode(),
     );
     addJSDocCommentToNode(detach, classInfo.generatedJSDoc?.EventDetach[n]);
     allMethods.push(detach);
@@ -1032,11 +1034,11 @@ function generateMethods(
           "parameters",
           factory.createToken(ts.SyntaxKind.QuestionToken),
           factory.createTypeReferenceNode(
-            eventParameterInterfaces[event.name].name
-          )
+            eventParameterInterfaces[event.name].name,
+          ),
         ),
       ],
-      returnValue
+      returnValue,
     );
     addJSDocCommentToNode(fire, classInfo.generatedJSDoc?.EventFire[n]);
     allMethods.push(fire);
@@ -1050,7 +1052,7 @@ function createTSTypeNode(
   requiredImports: RequiredImports,
   knownGlobals: GlobalToModuleMapping,
   currentClassName: string,
-  typeArguments: ts.TypeNode[] = []
+  typeArguments: ts.TypeNode[] = [],
 ): ts.TypeNode {
   switch (typeName) {
     case "string":
@@ -1058,7 +1060,7 @@ function createTSTypeNode(
 
     case "string[]":
       return factory.createArrayTypeNode(
-        factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+        factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
       );
 
     case "int":
@@ -1068,7 +1070,7 @@ function createTSTypeNode(
     case "int[]":
     case "float[]":
       return factory.createArrayTypeNode(
-        factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword)
+        factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword),
       );
 
     case "boolean":
@@ -1076,7 +1078,7 @@ function createTSTypeNode(
 
     case "boolean[]":
       return factory.createArrayTypeNode(
-        factory.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword)
+        factory.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword),
       );
 
     case "object":
@@ -1084,17 +1086,17 @@ function createTSTypeNode(
 
     case "object[]":
       return factory.createArrayTypeNode(
-        factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+        factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
       );
 
     case "function":
       return factory.createTypeReferenceNode(
-        factory.createIdentifier("Function")
+        factory.createIdentifier("Function"),
       );
 
     case "function[]":
       return factory.createArrayTypeNode(
-        factory.createTypeReferenceNode(factory.createIdentifier("Function"))
+        factory.createTypeReferenceNode(factory.createIdentifier("Function")),
       );
 
     case "any":
@@ -1102,7 +1104,7 @@ function createTSTypeNode(
 
     case "any[]": // a kinda strange type, but to be complete, let's cover it
       return factory.createArrayTypeNode(
-        factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword)
+        factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword),
       );
 
     default:
@@ -1115,10 +1117,10 @@ function createTSTypeNode(
               typeName.slice(0, -2).trim(),
               requiredImports,
               knownGlobals,
-              currentClassName
+              currentClassName,
             ),
-            typeArguments
-          )
+            typeArguments,
+          ),
         );
       } else {
         // common case: something like "sap.ui.core.CSSSize"
@@ -1127,9 +1129,9 @@ function createTSTypeNode(
             typeName,
             requiredImports,
             knownGlobals,
-            currentClassName
+            currentClassName,
           ),
-          typeArguments
+          typeArguments,
         );
       }
   }
@@ -1139,7 +1141,7 @@ function uniqueImport(
   typeName: string,
   requiredImports: RequiredImports,
   knownGlobals: GlobalToModuleMapping,
-  currentClassName: string
+  currentClassName: string,
 ) {
   if (typeName === currentClassName) {
     // this is the class we are currently dealing with; no import and no name uniqueness check required
@@ -1184,7 +1186,7 @@ function uniqueImport(
       log.warn(
         `For the type '${typeName}' an import is created with module name '${moduleName}', using its default export. Is this correct?
 Usually this indicates some kind of issue. Maybe this import will also show up as error in your code editor.
-The cause of this could be that the type '${typeName}' is referenced somewhere in Class '${currentClassName}', but is mis-spelled or does actually not exist.`
+The cause of this could be that the type '${typeName}' is referenced somewhere in Class '${currentClassName}', but is mis-spelled or does actually not exist.`,
       );
     }
   }
@@ -1211,7 +1213,7 @@ function addLineBreakBefore(node: ts.Node, count = 1) {
     ts.addSyntheticLeadingComment(
       node,
       ts.SyntaxKind.SingleLineCommentTrivia,
-      ""
+      "",
     );
   }
 }
@@ -1233,11 +1235,11 @@ function createConstructorBlock(settingsTypeName: string) {
           factory.createUnionTypeNode([
             factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
             factory.createTypeReferenceNode(settingsTypeName),
-          ])
+          ]),
         ),
       ],
-      undefined
-    )
+      undefined,
+    ),
   );
 
   // This creates:
@@ -1251,18 +1253,18 @@ function createConstructorBlock(settingsTypeName: string) {
           undefined,
           "id",
           factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         ),
         fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "settings",
           factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createTypeReferenceNode(settingsTypeName)
+          factory.createTypeReferenceNode(settingsTypeName),
         ),
       ],
-      undefined
-    )
+      undefined,
+    ),
   );
 
   // This creates:
@@ -1278,14 +1280,14 @@ function createConstructorBlock(settingsTypeName: string) {
           undefined,
           "id",
           factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword)
+          factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         ),
         fixedCreateParameterDeclaration(
           undefined,
           undefined,
           "settings",
           factory.createToken(ts.SyntaxKind.QuestionToken),
-          factory.createTypeReferenceNode(settingsTypeName)
+          factory.createTypeReferenceNode(settingsTypeName),
         ),
       ],
       factory.createBlock([
@@ -1293,10 +1295,10 @@ function createConstructorBlock(settingsTypeName: string) {
           factory.createCallExpression(factory.createSuper(), undefined, [
             factory.createIdentifier("id"),
             factory.createIdentifier("settings"),
-          ])
+          ]),
         ),
-      ])
-    )
+      ]),
+    ),
   );
 
   return nodes;
@@ -1314,7 +1316,7 @@ const makeEventParametersName = (className: string, eventName: string) => {
 function generateEventWithGenericsCompatibilityModule(
   className: string,
   requiredImports: RequiredImports,
-  knownGlobals: GlobalToModuleMapping
+  knownGlobals: GlobalToModuleMapping,
 ) {
   const typeParameters = [
     factory.createTypeParameterDeclaration(
@@ -1324,7 +1326,7 @@ function generateEventWithGenericsCompatibilityModule(
         factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword),
       ]),
-      factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword)
+      factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
     ),
   ];
 
@@ -1341,7 +1343,7 @@ function generateEventWithGenericsCompatibilityModule(
           factory.createIdentifier("id"),
           undefined,
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-          undefined
+          undefined,
         ),
         fixedCreateParameterDeclaration(
           undefined,
@@ -1352,9 +1354,9 @@ function generateEventWithGenericsCompatibilityModule(
             "sap.ui.base.EventProvider",
             requiredImports,
             knownGlobals,
-            className
+            className,
           ),
-          undefined
+          undefined,
         ),
         fixedCreateParameterDeclaration(
           undefined,
@@ -1363,12 +1365,12 @@ function generateEventWithGenericsCompatibilityModule(
           undefined,
           factory.createTypeReferenceNode(
             factory.createIdentifier("ParamsType"),
-            undefined
+            undefined,
           ),
-          undefined
+          undefined,
         ),
       ],
-      undefined
+      undefined,
     ),
     factory.createMethodSignature(
       undefined,
@@ -1378,8 +1380,8 @@ function generateEventWithGenericsCompatibilityModule(
       [],
       factory.createTypeReferenceNode(
         factory.createIdentifier("ParamsType"),
-        undefined
-      )
+        undefined,
+      ),
     ),
     factory.createMethodSignature(
       undefined,
@@ -1393,10 +1395,10 @@ function generateEventWithGenericsCompatibilityModule(
             ts.SyntaxKind.KeyOfKeyword,
             factory.createTypeReferenceNode(
               factory.createIdentifier("ParamsType"),
-              undefined
-            )
+              undefined,
+            ),
           ),
-          undefined
+          undefined,
         ),
       ],
       [
@@ -1407,21 +1409,21 @@ function generateEventWithGenericsCompatibilityModule(
           undefined,
           factory.createTypeReferenceNode(
             factory.createIdentifier("ParamName"),
-            undefined
+            undefined,
           ),
-          undefined
+          undefined,
         ),
       ],
       factory.createIndexedAccessTypeNode(
         factory.createTypeReferenceNode(
           factory.createIdentifier("ParamsType"),
-          undefined
+          undefined,
         ),
         factory.createTypeReferenceNode(
           factory.createIdentifier("ParamName"),
-          undefined
-        )
-      )
+          undefined,
+        ),
+      ),
     ),
   ];
 
@@ -1435,7 +1437,7 @@ function generateEventWithGenericsCompatibilityModule(
       factory.createIdentifier("Event"),
       typeParameters,
       [],
-      methods
+      methods,
     );
   } else {
     interfaceDeclaration = factory.createInterfaceDeclaration(
@@ -1448,7 +1450,7 @@ function generateEventWithGenericsCompatibilityModule(
       typeParameters,
       [],
       // @ts-ignore: below TS 4.8 there were more params
-      methods
+      methods,
     );
   }
 
@@ -1457,20 +1459,20 @@ function generateEventWithGenericsCompatibilityModule(
       ? factory.createModuleDeclaration(
           [factory.createToken(ts.SyntaxKind.DeclareKeyword)],
           factory.createStringLiteral("sap/ui/base/Event"),
-          factory.createModuleBlock([interfaceDeclaration])
+          factory.createModuleBlock([interfaceDeclaration]),
         )
       : factory.createModuleDeclaration(
           undefined,
           // @ts-ignore old signature
           [factory.createToken(ts.SyntaxKind.DeclareKeyword)],
           factory.createStringLiteral("sap/ui/base/Event"),
-          factory.createModuleBlock([interfaceDeclaration])
+          factory.createModuleBlock([interfaceDeclaration]),
         );
 
   ts.addSyntheticLeadingComment(
     moduleDeclaration,
     ts.SyntaxKind.SingleLineCommentTrivia,
-    " This module enhances sap.ui.base.Event with Generics, which is needed in UI5 type definition versions below 1.115"
+    " This module enhances sap.ui.base.Event with Generics, which is needed in UI5 type definition versions below 1.115",
   );
 
   return moduleDeclaration;
@@ -1482,7 +1484,7 @@ function generateEventParameterInterfaces(
   },
   className: string,
   requiredImports: RequiredImports,
-  knownGlobals: GlobalToModuleMapping
+  knownGlobals: GlobalToModuleMapping,
 ) {
   const eventParameterInterfaces: {
     [eventName: string]: ts.InterfaceDeclaration;
@@ -1502,8 +1504,8 @@ function generateEventParameterInterfaces(
             parameter.type,
             requiredImports,
             knownGlobals,
-            className
-          )
+            className,
+          ),
         );
         /*
          TODO: comments for event parameters are not supported yet. From a certain nesting depth, Hjson.parse without comments is used, so they are lost.
@@ -1522,23 +1524,23 @@ function generateEventParameterInterfaces(
               [factory.createToken(ts.SyntaxKind.ExportKeyword)],
               factory.createIdentifier(
                 makeEventParametersName(className, eventName)
-                  .eventParametersName
+                  .eventParametersName,
               ),
               undefined,
               undefined,
-              properties
+              properties,
             )
           : factory.createInterfaceDeclaration(
               undefined,
               [factory.createToken(ts.SyntaxKind.ExportKeyword)],
               factory.createIdentifier(
                 makeEventParametersName(className, eventName)
-                  .eventParametersName
+                  .eventParametersName,
               ),
               undefined,
               undefined,
               // @ts-ignore: below TS 4.8 there were more params
-              properties
+              properties,
             );
       addJSDocCommentToNode(
         interfc,
@@ -1547,15 +1549,15 @@ function generateEventParameterInterfaces(
             `Interface describing the parameters of ${className}'${
               className.endsWith("s") ? "" : "s"
             } '${eventName}' event.`,
-          ])
-        )
+          ]),
+        ),
       );
       // empty interfaces can cause issues with linting
       if (properties.length === 0) {
         ts.addSyntheticLeadingComment(
           interfc,
           ts.SyntaxKind.SingleLineCommentTrivia,
-          " eslint-disable-next-line"
+          " eslint-disable-next-line",
         );
       }
 
@@ -1571,7 +1573,7 @@ function generateEventTypeAliases(
   eventParameterInterfaces: { [eventName: string]: ts.InterfaceDeclaration },
   className: string,
   requiredImports: RequiredImports,
-  knownGlobals: GlobalToModuleMapping
+  knownGlobals: GlobalToModuleMapping,
 ) {
   const eventTypeAliases: { [eventName: string]: ts.TypeAliasDeclaration } = {};
 
@@ -1584,31 +1586,31 @@ function generateEventTypeAliases(
       [
         factory.createTypeReferenceNode(
           factory.createIdentifier(
-            eventParameterInterfaces[eventName].name.text
+            eventParameterInterfaces[eventName].name.text,
           ),
-          undefined
+          undefined,
         ),
-      ]
+      ],
     );
     const typeAlias =
       parseFloat(ts.version) >= 4.8
         ? factory.createTypeAliasDeclaration(
             [factory.createToken(ts.SyntaxKind.ExportKeyword)],
             factory.createIdentifier(
-              makeEventParametersName(className, eventName).eventTypealiasName
+              makeEventParametersName(className, eventName).eventTypealiasName,
             ),
             undefined,
-            typeNode
+            typeNode,
           )
         : factory.createTypeAliasDeclaration(
             undefined,
             [factory.createToken(ts.SyntaxKind.ExportKeyword)],
             factory.createIdentifier(
-              makeEventParametersName(className, eventName).eventTypealiasName
+              makeEventParametersName(className, eventName).eventTypealiasName,
             ),
             undefined,
             // @ts-ignore: below TS 4.8 there were more params
-            typeNode
+            typeNode,
           );
     addJSDocCommentToNode(
       typeAlias,
@@ -1617,8 +1619,8 @@ function generateEventTypeAliases(
           `Type describing the ${className}'${
             className.endsWith("s") ? "" : "s"
           } '${eventName}' event.`,
-        ])
-      )
+        ]),
+      ),
     );
 
     eventTypeAliases[eventName] = typeAlias;

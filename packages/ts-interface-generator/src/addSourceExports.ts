@@ -19,7 +19,7 @@ function addSourceExports(
   basePath: string,
   typeChecker: ts.TypeChecker,
   allPathMappings: { target: string; sourcePattern: string }[],
-  allExports: GlobalToModuleMapping
+  allExports: GlobalToModuleMapping,
 ) {
   const fileName = sourceFile.fileName;
   const moduleSymbol = typeChecker.getSymbolAtLocation(sourceFile);
