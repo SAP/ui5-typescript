@@ -5,7 +5,7 @@ export function TypeParser(
   defaultBuilder: TSASTTypeBuilder = new TSASTTypeBuilder(),
 ) {
   const rLexer =
-    /\s*(Array\.?<|Object\.?<|Set\.?<|Promise\.?<|function\(|\{|:|\(|\||\}|\.?<|>|\)|,|\[\]|\*|\?|!|=|\.\.\.)|\s*(false|true|(?:\+|-)?(?:\d+(?:\.\d+)?|NaN|Infinity)|'[^']*'|"[^"]*"|null|undefined)|\s*((?:module:)?\w+(?:[/.#~][$\w_]+)*)|./g;
+    /\s*(Array\.?<|Object\.?<|Set\.?<|Promise\.?<|function\(|\{|:|\(|\||\}|\.?<|>|\)|,|\[\]|\*|\?|!|=|\.\.\.)|(false|true|(?:\+|-)?(?:\d+(?:\.\d+)?|NaN|Infinity)|'[^']*'|"[^"]*"|null|undefined)|((?:module:)?\w+(?:[/.#~][$\w_]+)*))|./g;
 
   let input: string;
   let builder: TSASTTypeBuilder;

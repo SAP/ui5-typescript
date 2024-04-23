@@ -1,7 +1,6 @@
 const { resolve } = require("path");
 const { zipObject, map, union, flatMap } = require("lodash");
 const { emptyDir } = require("fs-extra");
-const fetch = require("node-fetch");
 
 const { writeUrlToFile } = require("./write-url-to-file");
 const { log } = require("./logger");
@@ -11,6 +10,7 @@ const { log } = require("./logger");
  * @returns {Promise<Record<string, UI5Lib>>}
  */
 async function getSapUI5LibsMeta(version) {
+  const fetch = (await import("node-fetch")).default;
   const sapUI5Response = await fetch(
     `https://unpkg.com/@sapui5/distribution-metadata@${version}/metadata.json`
   );
@@ -27,6 +27,7 @@ async function getSapUI5LibsMeta(version) {
  * @returns {Promise<string[]>}
  */
 async function getOpenUI5PossibleLibNames() {
+  const fetch = (await import("node-fetch")).default;
   const openUI5OrgResponse = await fetch(
     `https://registry.npmjs.com/-/v1/search?text=scope:openui5&size=100`
   );
