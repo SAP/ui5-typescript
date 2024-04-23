@@ -1,9 +1,8 @@
 {
   "name": "@ui5/dts-generator",
   "description": "Generates TypeScript type definitions from UI5 api.json files",
-  "version": "2.2.0",
+  "version": "2.3.2",
   "license": "Apache-2.0",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:SAP/ui5-typescript.git",
