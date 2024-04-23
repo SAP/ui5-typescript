@@ -9,7 +9,7 @@
     "directory": "test-packages/openui5-snapshot-test"
   },
   "dependencies": {
-    "@ui5/dts-generator": "file:../../packages/dts-generator",
+    "@ui5/dts-generator": "link:../../packages/dts-generator",
     "fs-extra": "11.2.0",
     "lodash": "4.17.21",
     "node-fetch": "3.3.2",
