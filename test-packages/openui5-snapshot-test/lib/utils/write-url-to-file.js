@@ -1,5 +1,4 @@
 const { writeFile } = require("fs-extra");
-const fetch = require("node-fetch");
 const { log, error } = require("./logger");
 
 /**
@@ -8,6 +7,7 @@ const { log, error } = require("./logger");
  * @returns {Promise<void>}
  */
 async function writeUrlToFile(url, file) {
+  const fetch = (await import("node-fetch")).default;
   log(`fetching: ${url}`);
   const response = await fetch(url);
   if (!response.ok) {
