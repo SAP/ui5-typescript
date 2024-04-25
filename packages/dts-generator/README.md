@@ -26,7 +26,7 @@ Install the latest version via npm:
 `npm install @ui5/dts-generator --save-dev`
 
 You can then use the tool either from the command line as CLI or from your own NodeJS code using its APIs. Make sure to use at least version 3.x of the dts-generator, as its usage and API changed vastly compared to previous versions 2.x and below!<br>
-There is a complete [example for using one of the APIs a few sections below](#generatefromobjects-example). A simple CLI call looks like this:
+There is a complete [example for using one of the APIs a few sections below](#generatefromobjects-example). A simple CLI call looks like this (you can use the value of the `apiObject` from the sample as content of the API json file):
 
 `npx @ui5/dts-generator <api_json_file> --targetFile <dts_target_file>`
 
@@ -92,27 +92,47 @@ With:
 ```javascript
 import { generateFromObjects } from "@ui5/dts-generator";
 // Note: as the dts-generator is implemented as ES modules, this import only works
-// when your code is an ES module as well. Otherwise, you can use:
+// when your code is an ES module as well. You can e.g. set "type": "module" in your
+// package.json to enable ES module support.
+// Otherwise, you can use:
 // const { generateFromObjects } = await import("@ui5/dts-generator");
 
-// This is the content of some minimal dummy api.json file.
+// This is the content of some minimal api.json file with a class.
 // Normally these files are huge (3.5 MB in case of the sap.ui.core library),
 // containing all APIs and documentation of the library,
-// and are created by the UI5 build (as explained above).
+// and are created by the UI5 build tools (as explained above).
 const apiObject = {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
   version: "1.120.0",
-  library: "sap.dummy",
-  symbols: [],
+  library: "my.lib",
+  symbols: [
+    {
+      kind: "class",
+      name: "module:my/lib/MyClass",
+      basename: "MyClass",
+      resource: "my/lib/MyClass.js",
+      module: "my/lib/MyClass",
+      export: "",
+      visibility: "public",
+      description: "A dummy class",
+      methods: [
+        {
+          name: "doSomething",
+          visibility: "public",
+          description: "Does something",
+        },
+      ],
+    },
+  ],
 };
 
-// Directives help the dts Generator handle typos and other inconsistencies in api.json files.
+// Directives help the dts generator handle typos and other inconsistencies in api.json files.
 // They are maintained as '.dtsgenrc' files within some of the UI5 control libraries, e.g. in
 // sap.ui.core, sap.m, and sap.f
 const directives = {};
 
-// Trigger the d.ts generation
-const result = generateFromObjects({
+// Trigger the d.ts generation (async, so await the result)
+const result = await generateFromObjects({
   apiObject,
   directives,
   dependencyApiObjects: [
@@ -125,6 +145,32 @@ const result = generateFromObjects({
 // Usually one would output the d.ts content to a file instead.
 console.log(result.dtsText);
 ```
+
+When the above code is executed, the resulting type definition written to the console looks like this:
+
+```ts
+// For Library Version: 1.120.0
+
+declare module "my/lib/MyClass" {
+  /**
+   * A dummy class
+   */
+  export default class MyClass {
+    /**
+     * Does something
+     */
+    doSomething(): void;
+  }
+}
+
+declare namespace sap {
+  interface IUI5DefineDependencyNames {
+    "my/lib/MyClass": undefined;
+  }
+}
+```
+
+The last block which may be unexpected at first sight is for providing code completion in `sap.ui.require`/`sap.ui.define` statements.
 
 ## Support
 
