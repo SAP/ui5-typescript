@@ -44,7 +44,7 @@
   },
   "scripts": {
     "clean": "del-cli -f dist",
-    "copy-files": "copyfiles -V -u 1 \"src/**/*.json\" \"src/**/core-preamble.d.ts\" \"src/**/dtslintConfig/.npmignore\" \"src/**/dtslintConfig/openui5-tests.ts\" \"src/**/dtslintConfig/.eslintrc.json\" \"src/**/dtslintConfig/forDefinitelyTypedDir/.eslintrc.cjs\" \"src/**/api-json.d.ts\" dist/",
+    "copy-files": "copyfiles -V -u 1 \"src/**/*.json\" \"src/**/core-preamble.d.ts\" \"src/**/dtslintConfig/.npm___ignore\" \"src/**/dtslintConfig/openui5-tests.ts\" \"src/**/dtslintConfig/.eslintrc.json\" \"src/**/dtslintConfig/forDefinitelyTypedDir/.eslintrc.cjs\" \"src/**/api-json.d.ts\" dist/",
     "prebuild": "npm-run-all clean copy-files",
     "build": "tsc",
     "postbuild": "npm-run-all build-api-types clean-implementation-types",
