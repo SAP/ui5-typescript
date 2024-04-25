@@ -74,50 +74,63 @@ const mFileContents: { [fileName: string]: string[] } = {};
 const MIN_TYPESCRIPT_VERSION = "5.0"; // the lowest TypeScript version which should be used by dtslint for testing
 
 // make sure there is an empty temp directory
-const tempDir = path.join(
-  process.cwd(),
-  "/temp-dtslint",
-  "DefinitelyTyped",
-  "types",
-  "openui5",
-);
-const tempDefinitelyTypedDir = path.join(
-  process.cwd(),
-  "/temp-dtslint",
-  "DefinitelyTyped",
-); // parent of the above
-if (!fs.existsSync(tempDir)) {
-  fs.mkdirSync(tempDir, { recursive: true });
-} else {
-  const previousFiles = fs.readdirSync(tempDir);
-  for (const file of previousFiles) {
-    fs.unlinkSync(path.join(tempDir, file));
-  }
-}
-// fill it with the config files required for dtslint (dtslint is very strict about checking its environment and even the content of the files it expects)
-[
-  "tsconfig.json",
-  ".eslintrc.json",
-  "package.json",
-  ".npm___ignore", // renamed to avoid it being used when npm releases the dts-generator package
-  "openui5-tests.ts",
-].forEach((file) => {
-  fs.copyFileSync(
-    new URL("dtslintConfig/" + file, import.meta.url),
-    path.join(tempDir, file === ".npm___ignore" ? ".npmignore" : file),
+function prepareTempDir(): string {
+  const tempDir = path.join(
+    process.cwd(),
+    "/temp-dtslint",
+    "DefinitelyTyped",
+    "types",
+    "openui5",
   );
-});
-fs.copyFileSync(
-  new URL(
-    "dtslintConfig/forDefinitelyTypedDir/notNeededPackages.json",
-    import.meta.url,
-  ),
-  path.join(tempDefinitelyTypedDir, "notNeededPackages.json"),
-);
-fs.copyFileSync(
-  new URL("dtslintConfig/forDefinitelyTypedDir/.eslintrc.cjs", import.meta.url),
-  path.join(tempDefinitelyTypedDir, ".eslintrc.cjs"),
-);
+
+  const tempDefinitelyTypedDir = path.join(
+    process.cwd(),
+    "/temp-dtslint",
+    "DefinitelyTyped",
+  ); // parent of the above
+
+  // create the directory or delete its contents if needed, so it is an existing empty directory
+  if (!fs.existsSync(tempDir)) {
+    fs.mkdirSync(tempDir, { recursive: true });
+  } else {
+    const previousFiles = fs.readdirSync(tempDir);
+    for (const file of previousFiles) {
+      fs.unlinkSync(path.join(tempDir, file));
+    }
+  }
+
+  // fill it with the config files required for dtslint (dtslint is very strict about checking its environment and even the content of the files it expects)
+  [
+    "tsconfig.json",
+    ".eslintrc.json",
+    "package.json",
+    ".npm___ignore", // renamed to avoid it being used when npm releases the dts-generator package
+    "openui5-tests.ts",
+  ].forEach((file) => {
+    fs.copyFileSync(
+      new URL("dtslintConfig/" + file, import.meta.url),
+      path.join(tempDir, file === ".npm___ignore" ? ".npmignore" : file),
+    );
+  });
+
+  // some files need to go one level above
+  fs.copyFileSync(
+    new URL(
+      "dtslintConfig/forDefinitelyTypedDir/notNeededPackages.json",
+      import.meta.url,
+    ),
+    path.join(tempDefinitelyTypedDir, "notNeededPackages.json"),
+  );
+  fs.copyFileSync(
+    new URL(
+      "dtslintConfig/forDefinitelyTypedDir/.eslintrc.cjs",
+      import.meta.url,
+    ),
+    path.join(tempDefinitelyTypedDir, ".eslintrc.cjs"),
+  );
+
+  return tempDir;
+}
 
 const MIN_TYPESCRIPT_VERSION_LINES = `/**
 * Copyright (c) 2024 SAP SE or an SAP affiliate company and OpenUI5 contributors.
@@ -175,6 +188,7 @@ export default function checkDtslint(
         " is not an existing d.ts file or directory containing such files",
     );
   }
+  const tempDir = prepareTempDir(); // existing and empty now  TODO: consider making this a parameter
 
   // copy the files to test to the temp folder
   const aFiles = fs.lstatSync(dtsFileOrDir).isFile()
