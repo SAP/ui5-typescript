@@ -94,17 +94,17 @@ if (!fs.existsSync(tempDir)) {
     fs.unlinkSync(path.join(tempDir, file));
   }
 }
-// fill it with the config files required for dtslint
+// fill it with the config files required for dtslint (dtslint is very strict about checking its environment and even the content of the files it expects)
 [
   "tsconfig.json",
   ".eslintrc.json",
   "package.json",
-  ".npmignore",
+  ".npm___ignore", // renamed to avoid it being used when npm releases the dts-generator package
   "openui5-tests.ts",
 ].forEach((file) => {
   fs.copyFileSync(
     new URL("dtslintConfig/" + file, import.meta.url),
-    path.join(tempDir, file),
+    path.join(tempDir, file === ".npm___ignore" ? ".npmignore" : file),
   );
 });
 fs.copyFileSync(
