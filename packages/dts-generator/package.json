@@ -1,7 +1,7 @@
 {
   "name": "@ui5/dts-generator",
   "description": "Generates TypeScript type definitions from UI5 api.json files",
-  "version": "2.3.2",
+  "version": "3.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -31,6 +31,8 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@definitelytyped/dtslint": "latest",
+    "@definitelytyped/eslint-plugin": "latest",
     "@microsoft/api-extractor": "^7.43.1",
     "@types/argparse": "^2.0.16",
     "@types/lodash": "4.17.0",
@@ -38,8 +40,6 @@
     "@types/urijs": "1.19.25",
     "copyfiles": "^2.4.1",
     "del-cli": "^5.1.0",
-    "@definitelytyped/dtslint": "latest",
-    "@definitelytyped/eslint-plugin": "latest",
     "npm-run-all": "^4.1.5"
   },
   "scripts": {

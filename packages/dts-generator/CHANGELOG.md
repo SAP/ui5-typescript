@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@2.3.2...@ui5/dts-generator@3.0.0) (2024-04-25)
+
+### Bug Fixes
+
+- avoid potential polynomial RegExp execution in type-parser ([#439](https://github.com/SAP/ui5-typescript/issues/439)) ([2e03607](https://github.com/SAP/ui5-typescript/commit/2e036073a0ab452f20297ab3646fe9493c83cca0))
+
+### Features
+
+- **dts-generator:** huge update to the currently used generator ([1b2fbf5](https://github.com/SAP/ui5-typescript/commit/1b2fbf550678d12502abee3f5abf258dd0ab5fa9))
+
+### BREAKING CHANGES
+
+- **dts-generator:** the API and behavior and generation results of the
+  dts-generator have completely changed. To migrate, basically re-write
+  the usage of it.
+
 ## [2.3.2](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@2.3.1...@ui5/dts-generator@2.3.2) (2022-11-15)
 
 **Note:** Version bump only for package @ui5/dts-generator

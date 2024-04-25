@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SAP/ui5-typescript/compare/@ui5/openui5-snapshot-test@2.4.1...@ui5/openui5-snapshot-test@3.0.0) (2024-04-25)
+
+
+### Features
+
+* **dts-generator:** huge update to the currently used generator ([1b2fbf5](https://github.com/SAP/ui5-typescript/commit/1b2fbf550678d12502abee3f5abf258dd0ab5fa9))
+
+
+### BREAKING CHANGES
+
+* **dts-generator:** the API and behavior and generation results of the
+dts-generator have completely changed. To migrate, basically re-write
+the usage of it.
+
+
+
+
+
 ## [2.4.1](https://github.com/SAP/ui5-typescript/compare/@ui5/openui5-snapshot-test@2.4.0...@ui5/openui5-snapshot-test@2.4.1) (2022-11-15)
 
 **Note:** Version bump only for package @ui5/openui5-snapshot-test
