@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.0.0...@ui5/dts-generator@3.0.1) (2024-04-25)
+
+### Bug Fixes
+
+- dtslint adaptations ([#447](https://github.com/SAP/ui5-typescript/issues/447)) ([944411c](https://github.com/SAP/ui5-typescript/commit/944411c2cdcb136c8e9f40560dbc954b5563c9ea))
+- set up the dtslint temp folder only when needed ([#449](https://github.com/SAP/ui5-typescript/issues/449)) ([2a4f38e](https://github.com/SAP/ui5-typescript/commit/2a4f38e9fd6bab591e3ae6058283bbe3a4133b6b))
+
 # [3.0.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@2.3.2...@ui5/dts-generator@3.0.0) (2024-04-25)
 
 ### Features
