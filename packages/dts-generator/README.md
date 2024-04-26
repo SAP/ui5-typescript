@@ -2,20 +2,21 @@
 
 # @ui5/dts-Generator
 
-This npm package is used for generating (and checking) TypeScript type definitions (`*.d.ts` files) for SAPUI5/OpenUI5 libraries implemented in JavaScript, using their `api.json` files as input.
+This npm package is used for generating (and checking) TypeScript type definitions (`*.d.ts` files) for SAPUI5/OpenUI5 libraries implemented in JavaScript. Input for this generation are the `api.json` files which describe the API of a library.
 
-These `api.json` files for a UI5 library can be generated with the command `ui5 build jsdoc`, executed within the root folder of the respective library. This works for your own custom libraries as well as for the original UI5 sources.
+These `api.json` files for a UI5 library can be generated with the normal UI5 build tools using the command `ui5 build jsdoc`, executed within the root folder of the respective library. This works for your own custom libraries as well as for the original UI5 sources.
 This command creates the `api.json` file at `dist/test-resources/<library_namespace_and_name>/designtime/api.json` (do not confuse this file with the `api.json` file one folder below inside `apiref` - that one is meant for the UI5 SDK). For the api.json files of original UI5 libraries, however, there is also a download tool provided.
 
 For the original UI5 framework libraries, the resulting type definitions are published as [@sapui5/types](https://www.npmjs.com/package/@sapui5/types) and [@openui5/types](https://www.npmjs.com/package/@openui5/types).
 
-The generator can produce both, the new "ES modules" version of the type definitions as well as the legacy "globals" version of the types, which is released as `ts-types` but will be discontinued for UI5 2.x.
+The generator can produce both, the standard "ES modules" version of the type definitions as well as the legacy "globals" version of the types, which is released as `ts-types` but will be discontinued for UI5 2.x.
 
 In addition to the generation, this package also provides means to _check_ the generated `*.d.ts` files in two ways:
 
 1. by compiling them with the TypeScript compiler and
 2. by running a `dtslint` check.
-   The latter is mainly done because it is required for publishing the resulting type definitions at [DefinitelyTyped](http://definitelytyped.org/). The UI5 team only applies this check to the OpenUI5 libraries which are actually published there. A working `dtslint` check is notoriously difficult to maintain due to changing requirements and a missing API (only CLI), hence it is only recommended when a release via DefinitelyTyped is required.
+
+   The latter is only done because it is required for publishing the resulting type definitions at [DefinitelyTyped](http://definitelytyped.org/). The UI5 team only applies this check to the OpenUI5 libraries which are actually published there, not for the other libraries in SAPUI5. A working `dtslint` check is notoriously difficult to maintain due to changing requirements and a missing API (only CLI), hence it is only recommended when a release via DefinitelyTyped is required.
 
 Details about the implementation of this package can be found in [TECHNICAL.md](./TECHNICAL.md).
 
@@ -25,14 +26,18 @@ Install the latest version via npm:
 
 `npm install @ui5/dts-generator --save-dev`
 
-You can then use the tool either from the command line as CLI or from your own NodeJS code using its APIs. Make sure to use at least version 3.x of the dts-generator, as its usage and API changed vastly compared to previous versions 2.x and below!<br>
-There is a complete [example for using one of the APIs a few sections below](#generatefromobjects-example).
+You can then use the tool either from the command line as CLI or from your own NodeJS code using its APIs.
 
-A minimal CLI call looks like this (you can use the value of the `apiObject` from the sample as content of the API json file):
+- For using it as CLI, which is probably the typical use-case, a complete [end-to-end example from creating the library to generating the type definitions can be found on this page](end-to-end-sample.md).
+- For using one of the APIs, there is an [example a few sections below](#generatefromobjects-example).
+
+> NOTE: Make sure to use at least version 3.x of the dts-generator, as its usage, API and functionality changed vastly compared to previous versions 2.x and below!
+
+A simple CLI call looks like this (you can use the value of the `apiObject` from the sample as content of the API json file):
 
 `npx @ui5/dts-generator <api_json_file> --targetFile <dts_target_file>`
 
-But usually you will have to pass additional arguments related to generation directives, paths of library dependencies etc.
+But normally you need to pass additional arguments related to libraries on which your library depends and maybe to generation directives.
 
 ### The APIs
 
@@ -55,7 +60,7 @@ Please see the [TypeScript API](./types/api.d.ts) for a detailed documentation a
 
 ### The CLIs
 
-When started from the command line, the main file `index.js` is an entry point for generating `*.d.ts` files. When you got the package from npm, you will typically call this using `npx @ui5/dts-generator`. But when you checked out the sources, you can call `index.js` directly. The
+When started from the command line, the main file `index.js` is an entry point for generating `*.d.ts` files. When you got the package from npm, you will typically call this using `npx @ui5/dts-generator`. But when you checked out the sources, you can call `index.js` directly:
 
 ```
 Usage:
@@ -124,7 +129,7 @@ With:
   --checkDtslint  Set when the test compilation should be skipped.
 ```
 
-### Usage Example `generateFromObjects`<a id='generatefromobjects-example'></a>
+### API Usage Example `generateFromObjects`<a id='generatefromobjects-example'></a>
 
 ```javascript
 import { generateFromObjects } from "@ui5/dts-generator";
@@ -211,7 +216,7 @@ declare namespace sap {
 
 The last block which may be unexpected at first sight is for providing code completion in `sap.ui.require`/`sap.ui.define` statements.
 
-As soon as a class in your library inherits from a class in another library, however, the `dependencyApiObjects` must given, otherwise you will notice that the base class is replaced with something generic like `Object`, which means that your type definitions are not providing the intended type-safety and code completion.
+> NOTE: This code only works when the library has no dependency on other UI5 libraries. But regular libraries e.g. contain controls, which inherit from `sap.ui.core.Control`, so there is at least a dependency to the `sap.ui.core` library. In such cases, the `dependencyApiObjects` property must contain the `api.json` files of all such dependency libraries.
 
 ## Support
 
