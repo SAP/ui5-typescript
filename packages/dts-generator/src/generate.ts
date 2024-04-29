@@ -86,8 +86,27 @@ export type GenerateConfig = {
 
   /**
    * An array of file paths and names of the d.ts files of the libraries on which the currently to-be-built library depends.
+   *
+   * This is meant for other libraries which belong to the same project and are built in the same build run, as opposed to external
+   * libraries. E.g. when the OpenUI5 types are built, then the core library is built first and its resulting d.ts file is a dependency
+   * for building the types of other libraries like sap.m.
+   *
+   * Only needed for the check.
    */
   dependencyDTSFilesForCheck: string[];
+
+  /**
+   * Array of package names of the libraries on which the currently to-be-built types depends.
+   *
+   * This is meant for entire npm packages developed separately (often by others), not sibling libraries built in the same batch.
+   * E.g. when a custom UI5 control library is built by an application team, then it usually depends on the OpenUI5 types because
+   * those define the base classes like Control.
+   * Setting this has the effect that for the TS compilation check, the `types` field of the package.json file will be set to the
+   * respective package names and any other type packages are no longer considered.
+   *
+   * Only needed for the check.
+   */
+  dependenciesTypePackagesForCheck?: string[];
 
   /**
    * Whether types for deprecated globals (instead of ES modules) should be generated.
@@ -118,6 +137,7 @@ export async function generate({
   directiveFiles,
   targetFile,
   dependencyDTSFilesForCheck,
+  dependenciesTypePackagesForCheck,
   generateGlobals,
   runCheckCompile,
   errorOutputFile,
@@ -146,16 +166,29 @@ export async function generate({
         targetFile,
       ]}`,
     );
+
+    // set up the tsconfig for the test compile
+    const tsOptions: ts.BuildOptions = {
+      noEmit: true,
+      noImplicitAny: true,
+      strict: true,
+      target: ts.ScriptTarget.ES2015,
+      module: ts.ModuleKind.ES2015,
+      lib: ["lib.es2015.d.ts", "lib.dom.d.ts"],
+    };
+
+    // if type dependencies are set, use them
+    if (
+      dependenciesTypePackagesForCheck &&
+      dependenciesTypePackagesForCheck.length > 0
+    ) {
+      tsOptions.types = dependenciesTypePackagesForCheck;
+    }
+
     const success = checkCompile({
       mainFile: targetFile,
       dependencyFiles: dependencyDTSFilesForCheck,
-      tsOptions: {
-        noEmit: true,
-        noImplicitAny: true,
-        strict: true,
-        target: ts.ScriptTarget.ES2015,
-        module: ts.ModuleKind.ES2015,
-      },
+      tsOptions,
       errorOutputFile: errorOutputFile,
     });
     const end = Date.now();

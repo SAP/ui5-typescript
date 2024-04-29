@@ -39,6 +39,7 @@ async function main() {
     dependenciesApiPath,
     dependenciesDTSPathForCheckForGlobals,
     dependenciesDTSPathForCheck,
+    dependenciesTypePackagesForCheck,
     directivesPath,
     targetFileForGlobals,
     targetFile,
@@ -60,6 +61,11 @@ async function main() {
       dependenciesDTSPathForCheck || "(none)"
     }`,
   );
+  log.info(
+    `  dependency type packages: ${
+      dependenciesTypePackagesForCheck || "(none)"
+    }`,
+  );
   log.info(`  target file for globals: ${targetFileForGlobals}`);
   log.info(`  target file for modules: ${targetFile}`);
   log.info(`  verbose: ${verbose}`);
@@ -78,6 +84,7 @@ async function main() {
       dependenciesApiPath,
       directivesPath,
       dependenciesDTSPathForCheck: dependenciesDTSPathForCheckForGlobals,
+      dependenciesTypePackagesForCheck,
       targetFile: targetFileForGlobals,
       runCheckCompile,
       verbose,
@@ -92,6 +99,7 @@ async function main() {
       dependenciesApiPath,
       directivesPath,
       dependenciesDTSPathForCheck,
+      dependenciesTypePackagesForCheck,
       targetFile,
       runCheckCompile,
       verbose,

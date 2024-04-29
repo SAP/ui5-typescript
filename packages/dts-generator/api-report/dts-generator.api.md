@@ -57,7 +57,7 @@ export interface Directives {
 }
 
 // @public
-export function generate({ apiFile, dependencyApiFiles, directiveFiles, targetFile, dependencyDTSFilesForCheck, generateGlobals, runCheckCompile, errorOutputFile, }: GenerateConfig): Promise<boolean>;
+export function generate({ apiFile, dependencyApiFiles, directiveFiles, targetFile, dependencyDTSFilesForCheck, dependenciesTypePackagesForCheck, generateGlobals, runCheckCompile, errorOutputFile, }: GenerateConfig): Promise<boolean>;
 
 // @public
 export type GenerateConfig = {
@@ -66,6 +66,7 @@ export type GenerateConfig = {
     directiveFiles: string[];
     targetFile: string;
     dependencyDTSFilesForCheck: string[];
+    dependenciesTypePackagesForCheck?: string[];
     generateGlobals?: boolean;
     runCheckCompile?: boolean;
     errorOutputFile?: string;
@@ -93,6 +94,7 @@ export interface GenerateFromPathsConfig {
     apiFile: string;
     dependenciesApiPath: string;
     dependenciesDTSPathForCheck: string;
+    dependenciesTypePackagesForCheck?: string;
     directivesPath: string;
     generateGlobals?: boolean;
     runCheckCompile?: boolean;

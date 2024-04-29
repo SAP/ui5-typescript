@@ -45,9 +45,28 @@ export interface GenerateFromPathsConfig {
   directivesPath: string;
 
   /**
-   * Directory where the d.ts files are located of the libraries on which the currently to-be-built library depends. Only needed for the check.
+   * Directory where the d.ts files are located of the libraries on which the currently to-be-built library depends.
+   *
+   * This is meant for other libraries which belong to the same project and are built in the same build run, as opposed to external
+   * libraries. E.g. when the OpenUI5 types are built, then the core library is built first and its resulting d.ts file is a dependency
+   * for building the types of other libraries like sap.m.
+   *
+   * Only needed for the check.
    */
   dependenciesDTSPathForCheck: string;
+
+  /**
+   * Comma-separated list of package names of the libraries on which the currently to-be-built types depends.
+   *
+   * This is meant for entire npm packages developed separately (often by others), not sibling libraries built in the same batch.
+   * E.g. when a custom UI5 control library is built by an application team, then it usually depends on the OpenUI5 types because
+   * those define the base classes like Control.
+   * Setting this has the effect that for the TS compilation check, the `types` field of the package.json file will be set to the
+   * respective package names and any other type packages are no longer considered.
+   *
+   * Only needed for the check.
+   */
+  dependenciesTypePackagesForCheck?: string;
 
   /**
    * File path and name of the target d.ts file to write.
@@ -92,8 +111,11 @@ export async function generateFromPaths(config: GenerateFromPathsConfig) {
     targetFile: config.targetFile,
     dependencyDTSFilesForCheck: await findFiles(
       config.dependenciesDTSPathForCheck,
-      "-d.ts",
+      "d.ts",
     ),
+    dependenciesTypePackagesForCheck: config.dependenciesTypePackagesForCheck
+      ? config.dependenciesTypePackagesForCheck.split(",")
+      : [],
     runCheckCompile: config.runCheckCompile,
   });
   return success;
