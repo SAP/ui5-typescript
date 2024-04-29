@@ -50,8 +50,6 @@
     "postbuild": "npm-run-all build-api-types clean-implementation-types",
     "build-api-types": "api-extractor run --local --verbose",
     "clean-implementation-types": "del-cli -f \"dist/**/*.d.ts.map\" \"dist/**/*.d.ts\" \"!dist/**/index.d.ts\" \"!dist/**/core-preamble.d.ts\"",
-    "clean-for-sapui5-runtime": "del-cli -f \"dist/**/*.d.ts\" \"dist/**/tsdoc-metadata.json\" \"dist/*.js.map\" \"dist/**/*.js.map\" \"!dist/**/core-preamble.d.ts\"",
-    "build-for-sapui5": "npm-run-all clean build clean-for-sapui5-runtime",
     "ci": "npm-run-all test:*",
     "test:apis": "tsc ./src/types/api-json.d.ts ./src/types/ast.d.ts ./src/types/ui5-logger-types.d.ts",
     "prewatch": "npm-run-all clean copy-files",
