@@ -466,12 +466,7 @@ function getErrorDetails(lintErrorText: string) {
     throw new Error(`
 Internal error: The string parsing of the dtslint output found no errors although the output contained the term 'error' (${errorStringsFound} times).
 This is a hint that dtslint either encountered a general error (details below) or might have been updated and changed its format, so the parsing needs to be adapted.
-As dtslint version "latest" is being used, this could suddenly happen for ALL lint/voter runs without any related change in UI5 code. When this situation is encountered in a UI5 CI voter run,
-it might be desirable to quickly disable this check. This can be done by adding the entry
-   {
-      "status": "ignore"
-   }
-to the list in "dtslint-ignore-list.json" in the "src/dist/docbuilder-maven-plugin/src/main/resources/com/sap/ui5/tools/build/maven/dtsgen/ui5-dts-generator" in sapui5.runtime.
+As dtslint version "latest" is being used, this could suddenly happen for ALL lint/voter runs without any related change in UI5 code.
 The actual error message was:
 ${lines.join("\n")}`);
   }

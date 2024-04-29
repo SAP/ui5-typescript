@@ -87,7 +87,7 @@ There are two elements to this topic
 
    SAPUI5 has a large in depth API Reference:
 
-   - https://sapui5.hana.ondemand.com/#/api
+   - https://ui5.sap.com/#/api
 
    However there exists no validation between an end user's source code and the content of the API Reference.
    In essence the API Reference is meant **only** for human consumption. Once the API Reference is available

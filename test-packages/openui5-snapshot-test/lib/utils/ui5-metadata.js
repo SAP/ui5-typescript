@@ -53,9 +53,7 @@ async function downloadLibs(libs, version, outDir) {
   emptyDir(outDir);
 
   // CDN libraries (example URL):
-  // https://sapui5-sapui5.dispatcher.us1.hana.ondemand.com/test-resources/sap/m/designtime/api.json
-  // Older versions:
-  // https://sapui5.hana.ondemand.com/1.71.14/test-resources/sap/m/designtime/api.json
+  // https://sdk.openui5.org/${version}/test-resources/sap/m/designtime/api.json
   const baseUrl = `https://sdk.openui5.org/${version}/test-resources/`;
   const nameToFile = zipObject(
     libs,
