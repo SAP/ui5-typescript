@@ -56,8 +56,12 @@ With:
   --dependenciesApiPath PATH
                         Directory where the api.json files are located for the libraries on which the currently to-be-built library depends.
   --dependenciesDTSPathForCheck PATH
-                        Directory where the d.ts files are located of the libraries on which the currently to-be-built library depends. Only needed for the
-                        check.
+                        Directory where the d.ts files are located of the libraries on which the currently to-be-built library depends. Typically used for
+                        other UI5 libraries for which types are being generated in the same build run. Only needed for the check.
+  --dependenciesTypePackagesForCheck
+                        The names of type packages on which the currently to-be-built library depends. Typically used for other UI5 libraries being
+                        developed separately. E.g. for @types/openui5 when the current build is for a library developed outside the UI5 teams. Only needed
+                        for the check.
   --directivesPath PATH
                         Directory where the .dtsgenrc files for the libraries (current and dependencies) are located.
   --targetFile FILE

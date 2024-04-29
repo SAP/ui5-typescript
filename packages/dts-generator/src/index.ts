@@ -84,7 +84,7 @@ async function main() {
       dependenciesApiPath,
       directivesPath,
       dependenciesDTSPathForCheck: dependenciesDTSPathForCheckForGlobals,
-      dependenciesTypePackagesForCheck,
+      dependenciesTypePackagesForCheck, // would actually need to be a separate config for globals, but as they are deprecated we don't want to extend the API
       targetFile: targetFileForGlobals,
       runCheckCompile,
       verbose,
