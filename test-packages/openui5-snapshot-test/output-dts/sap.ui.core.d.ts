@@ -5276,168 +5276,6 @@ declare module "sap/ui/dom/includeStylesheet" {
   ): void | Promise<Event>;
 }
 
-declare module "sap/ui/dom/jquery/Aria" {
-  /**
-   * This module provides the following API:
-   * 	 - {@link jQuery#addAriaLabelledBy}
-   * 	 - {@link jQuery#removeAriaLabelledBy}
-   * 	 - {@link jQuery#addAriaDescribedBy}
-   * 	 - {@link jQuery#removeAriaDescribedBy}
-   *
-   * @since 1.58
-   */
-  interface Aria {}
-  const Aria: Aria;
-  export default Aria;
-}
-
-declare module "sap/ui/dom/jquery/control" {
-  /**
-   * This module provides the {@link jQuery#control} API.
-   *
-   * @since 1.58
-   */
-  interface control {}
-  const control: control;
-  export default control;
-}
-
-declare module "sap/ui/dom/jquery/cursorPos" {
-  /**
-   * This module provides the {@link jQuery#cursorPos} API.
-   *
-   * @since 1.58
-   */
-  interface cursorPos {}
-  const cursorPos: cursorPos;
-  export default cursorPos;
-}
-
-declare module "sap/ui/dom/jquery/Focusable" {
-  /**
-   * This module provides the following API:
-   * 	 - {@link jQuery#firstFocusableDomRef}
-   * 	 - {@link jQuery#lastFocusableDomRef}
-   *
-   * @since 1.58
-   */
-  interface Focusable {}
-  const Focusable: Focusable;
-  export default Focusable;
-}
-
-declare module "sap/ui/dom/jquery/getSelectedText" {
-  /**
-   * This module provides the {@link jQuery#getSelectedText} API.
-   *
-   * @since 1.58
-   */
-  interface getSelectedText {}
-  const getSelectedText: getSelectedText;
-  export default getSelectedText;
-}
-
-declare module "sap/ui/dom/jquery/hasTabIndex" {
-  /**
-   * This module provides the {@link jQuery#hasTabIndex} API.
-   *
-   * @since 1.58
-   */
-  interface hasTabIndex {}
-  const hasTabIndex: hasTabIndex;
-  export default hasTabIndex;
-}
-
-declare module "sap/ui/dom/jquery/parentByAttribute" {
-  /**
-   * This module provides the {@link jQuery#parentByAttribute} API.
-   *
-   * @since 1.58
-   */
-  interface parentByAttribute {}
-  const parentByAttribute: parentByAttribute;
-  export default parentByAttribute;
-}
-
-declare module "sap/ui/dom/jquery/rect" {
-  /**
-   * This module provides the {@link jQuery#rect} API.
-   *
-   * @since 1.58
-   */
-  interface rect {}
-  const rect: rect;
-  export default rect;
-}
-
-declare module "sap/ui/dom/jquery/rectContains" {
-  /**
-   * This module provides the {@link jQuery#rectContains} API.
-   *
-   * @since 1.58
-   */
-  interface rectContains {}
-  const rectContains: rectContains;
-  export default rectContains;
-}
-
-declare module "sap/ui/dom/jquery/scrollLeftRTL" {
-  /**
-   * This module provides the {@link jQuery#scrollLeftRTL} API.
-   *
-   * @since 1.58
-   */
-  interface scrollLeftRTL {}
-  const scrollLeftRTL: scrollLeftRTL;
-  export default scrollLeftRTL;
-}
-
-declare module "sap/ui/dom/jquery/scrollRightRTL" {
-  /**
-   * This module provides the {@link jQuery#scrollRightRTL} API.
-   *
-   * @since 1.58
-   */
-  interface scrollRightRTL {}
-  const scrollRightRTL: scrollRightRTL;
-  export default scrollRightRTL;
-}
-
-declare module "sap/ui/dom/jquery/Selectors" {
-  /**
-   * This module provides the following jQuery selectors:
-   * 	 - :focusable/li> :sapFocusable
-   * 	 - :sapTabbable
-   *
-   * @since 1.58
-   */
-  interface Selectors {}
-  const Selectors: Selectors;
-  export default Selectors;
-}
-
-declare module "sap/ui/dom/jquery/selectText" {
-  /**
-   * This module provides the {@link jQuery#selectText} API.
-   *
-   * @since 1.58
-   */
-  interface selectText {}
-  const selectText: selectText;
-  export default selectText;
-}
-
-declare module "sap/ui/dom/jquery/zIndex" {
-  /**
-   * This module provides the {@link jQuery#zIndex} API.
-   *
-   * @since 1.58
-   */
-  interface zIndex {}
-  const zIndex: zIndex;
-  export default zIndex;
-}
-
 declare module "sap/ui/events/checkMouseEnterOrLeave" {
   /**
    * Checks a given mouseover or mouseout event whether it is equivalent to a mouseenter or mouseleave event
@@ -7554,12 +7392,12 @@ declare module "sap/ui/base/Event" {
      *
      * @returns Value of the named parameter
      */
-    getParameter(
+    getParameter<ParamName extends keyof ParamsType>(
       /**
        * Name of the parameter to return
        */
-      sName: string
-    ): any;
+      sName: ParamName
+    ): ParamsType[ParamName];
     /**
      * Returns an object with all parameter values of the event.
      *
@@ -8461,7 +8299,7 @@ declare module "sap/ui/base/ManagedObject" {
       /**
        * the settings to apply to this managed object
        */
-      mSettings: object,
+      mSettings: $ManagedObjectSettings,
       /**
        * Scope object to resolve types and formatters
        */
@@ -11929,7 +11767,7 @@ declare module "sap/ui/base/Object" {
      *
      * @returns Whether the given object is an instance of the given type or of any of the given types
      */
-    static isA(
+    static isA<T extends BaseObject = BaseObject>(
       /**
        * Object which will be checked whether it is an instance of the given type
        */
@@ -11938,7 +11776,7 @@ declare module "sap/ui/base/Object" {
        * Type or types to check for
        */
       vTypeName: string | string[]
-    ): boolean;
+    ): oObject is T;
     /**
      * Checks whether the given object is an instance of the named type. This function is a short-hand convenience
      * for {@link sap.ui.base.Object#isA}.
@@ -12004,12 +11842,12 @@ declare module "sap/ui/base/Object" {
      *
      * @returns Whether this object is an instance of the given type or of any of the given types
      */
-    isA(
+    isA<T extends BaseObject = BaseObject>(
       /**
        * Type or types to check for
        */
       vTypeName: string | string[]
-    ): boolean;
+    ): this is T;
   }
   /**
    * The structure of the "metadata" object which is passed when inheriting from sap.ui.base.Object using
@@ -14498,7 +14336,7 @@ declare module "sap/ui/core/Component" {
         /**
          * Settings of the new Component
          */
-        settings?: object;
+        settings?: $ComponentSettings;
         /**
          * Whether and from where to load the manifest.json for the Component. When set to any truthy value, the
          * manifest will be loaded and evaluated before the Component controller. If it is set to a falsy value,
@@ -14838,7 +14676,7 @@ declare module "sap/ui/core/Component" {
             /**
              * Settings for the nested component like for {#link sap.ui.component} or the component constructor
              */
-            settings?: object;
+            settings?: $ComponentSettings;
             /**
              * Initial data of the component (@see sap.ui.core.Component#getComponentData)
              */
@@ -15284,6 +15122,8 @@ declare module "sap/ui/core/ComponentContainer" {
 
   import ElementMetadata from "sap/ui/core/ElementMetadata";
 
+  import { $ComponentSettings } from "sap/ui/core/Component";
+
   import UIComponent from "sap/ui/core/UIComponent";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
@@ -15674,7 +15514,7 @@ declare module "sap/ui/core/ComponentContainer" {
      *
      * @returns Value of property `settings`
      */
-    getSettings(): object;
+    getSettings(): $ComponentSettings;
     /**
      * Gets current value of property {@link #getUrl url}.
      *
@@ -15895,7 +15735,7 @@ declare module "sap/ui/core/ComponentContainer" {
       /**
        * New value for property `settings`
        */
-      oSettings?: object
+      oSettings?: $ComponentSettings
     ): this;
     /**
      * Sets a new value for property {@link #getUrl url}.
@@ -15985,7 +15825,7 @@ declare module "sap/ui/core/ComponentContainer" {
     /**
      * The settings object passed to the component when created. This property can only be applied initially.
      */
-    settings?: object | PropertyBindingInfo | `{${string}}`;
+    settings?: $ComponentSettings | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Defines whether binding information is propagated to the component.
@@ -25141,7 +24981,12 @@ declare module "sap/ui/core/format/DateFormat" {
        * `12` it cannot be parsed and `null` is returned
        */
       bStrict?: boolean
-    ): any[];
+    ):
+      | [
+          Date | import("sap/ui/core/date/UI5Date").default | undefined,
+          string | undefined,
+        ]
+      | null;
   }
 }
 
@@ -28613,6 +28458,89 @@ declare module "sap/ui/core/IntervalTrigger" {
       iInterval: int
     ): void;
   }
+}
+
+declare module "sap/ui/core/InvisibleMessage" {
+  import {
+    default as ManagedObject,
+    $ManagedObjectSettings,
+  } from "sap/ui/base/ManagedObject";
+
+  import { InvisibleMessageMode } from "sap/ui/core/library";
+
+  import ManagedObjectMetadata from "sap/ui/base/ManagedObjectMetadata";
+
+  /**
+   * The InvisibleMessage provides a way to programmatically expose dynamic content changes in a way that
+   * can be announced by screen readers.
+   *
+   * Overview: This class is a singleton. The class instance can be retrieved via the static method {@link sap.ui.core.InvisibleMessage.getInstance}.
+   *
+   * **Note:** Keep in mind that, according to the ARIA standard, the live regions should be presented and
+   * should be empty. Thus, we recommend to instantiate `InvisibleMessage` via `sap.ui.core.InvisibleMessage.getInstance()`
+   * as early as possible in the application logic, e.g. with the Component initialization, with the main
+   * Controller initialization, after Core initialization, etc. Then, you should specify the text that has
+   * to be announced by the screen reader and the live region’s mode using the `announce` method.
+   *
+   * @since 1.78
+   */
+  export default class InvisibleMessage extends ManagedObject {
+    /**
+     * Creates a new subclass of class sap.ui.core.InvisibleMessage with name `sClassName` and enriches it with
+     * the information contained in `oClassInfo`.
+     *
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}.
+     *
+     *
+     * @returns Created class / constructor function
+     */
+    static extend<T extends Record<string, unknown>>(
+      /**
+       * Name of the class being created
+       */
+      sClassName: string,
+      /**
+       * Object literal with information about the class
+       */
+      oClassInfo?: sap.ClassInfo<T, InvisibleMessage>,
+      /**
+       * Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+       * used by this class
+       */
+      FNMetaImpl?: Function
+    ): Function;
+    /**
+     * Returns the instance of the class.
+     *
+     *
+     * @returns oInstance
+     */
+    static getInstance(): InvisibleMessage;
+    /**
+     * Returns a metadata object for class sap.ui.core.InvisibleMessage.
+     *
+     *
+     * @returns Metadata object describing this class
+     */
+    static getMetadata(): ManagedObjectMetadata;
+    /**
+     * Inserts the string into the respective span, depending on the mode provided.
+     */
+    announce(
+      /**
+       * String to be announced by the screen reader.
+       */
+      sText: string,
+      /**
+       * The mode to be inserted in the aria-live attribute.
+       */
+      sMode: InvisibleMessageMode | keyof typeof InvisibleMessageMode
+    ): void;
+  }
+  /**
+   * Describes the settings that can be provided to the InvisibleMessage constructor.
+   */
+  export interface $InvisibleMessageSettings extends $ManagedObjectSettings {}
 }
 
 declare module "sap/ui/core/InvisibleText" {
@@ -44134,7 +44062,7 @@ declare module "sap/ui/core/UIArea" {
      *
      * @returns id of this UIArea
      */
-    getId(): string | null;
+    getId(): string;
     /**
      * Returns the content control of this `UIArea` at the specified index. If no index is given the first content
      * control is returned.
@@ -82750,7 +82678,7 @@ declare module "sap/ui/test/Opa" {
     /**
      * "and" property for chaining actions and assertions
      */
-    and: this;
+    and: Omit<this, "and">;
 
     /**
      * A map of QUnit-style assertions to be used in an opaTest. Contains all methods available on QUnit.assert
@@ -83024,7 +82952,7 @@ declare module "sap/ui/test/Opa5" {
     /**
      * "and" property for chaining
      */
-    and: this;
+    and: Omit<this, "and">;
 
     /**
      * A map of QUnit-style assertions to be used in an opaTest.
@@ -84481,15 +84409,6 @@ declare module "sap/ui/test/RecordReplay" {
 
     Press = "PRESS",
   }
-}
-
-declare module "sap/ui/core/InvisibleMessage" {
-  import { $ManagedObjectSettings } from "sap/ui/base/ManagedObject";
-
-  /**
-   * Describes the settings that can be provided to the InvisibleMessage constructor.
-   */
-  export interface $InvisibleMessageSettings extends $ManagedObjectSettings {}
 }
 /**
  * Root namespace for JavaScript functionality provided by SAP SE.

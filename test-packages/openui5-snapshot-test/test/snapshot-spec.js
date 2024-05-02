@@ -13,10 +13,8 @@ describe("The OpenUI5 d.ts snapshots", async () => {
   const tempOutDir = resolve(__dirname, "./output-dts-temp");
 
   const apiJsonSDKFiles = readdirSync(apiJsonDir);
-  // Only interested in the actual metadata.
-  const relevantApiJsonSDKFiles = difference(apiJsonSDKFiles, [
-    "openui5-meta.json",
-  ]);
+  // Only interested in the actual api.json files
+  const relevantApiJsonSDKFiles = apiJsonSDKFiles.filter((_) => _.endsWith(".api.json"));
   const relevantDTSFiles = map(relevantApiJsonSDKFiles, (_) =>
     _.replace(".designtime.api.json", ".d.ts")
   );
