@@ -1,5 +1,11 @@
 // For Library Version: 1.120.12
 
+declare module "sap/tnt/library" {
+  export interface IToolHeader {
+    __implements__sap_tnt_IToolHeader: boolean;
+  }
+}
+
 declare module "sap/f/library" {
   import AvatarColor1 from "sap/m/AvatarColor";
 
@@ -19282,6 +19288,8 @@ declare module "sap/f/ShellBar" {
 
   import { IBar } from "sap/m/library";
 
+  import { IToolHeader } from "sap/tnt/library";
+
   import { BarContexts } from "sap/m/BarInPageEnabler";
 
   import { URI } from "sap/ui/core/library";
@@ -19322,7 +19330,7 @@ declare module "sap/f/ShellBar" {
    */
   export default class ShellBar
     extends Control
-    implements IShellBar, IBar, /* was: sap.tnt.IToolHeader */ Object
+    implements IShellBar, IBar, IToolHeader
   {
     __implements__sap_f_IShellBar: boolean;
     __implements__sap_m_IBar: boolean;
@@ -21995,5 +22003,7 @@ declare namespace sap {
     "sap/f/SidePanel": undefined;
 
     "sap/f/SidePanelItem": undefined;
+
+    "sap/tnt/library": undefined;
   }
 }

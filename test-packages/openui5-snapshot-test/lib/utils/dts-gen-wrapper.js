@@ -1,7 +1,8 @@
 const { resolve } = require("path");
+const { readdirSync } = require('fs');
 const { emptyDirSync, readJsonSync, writeFileSync } = require("fs-extra");
-const { map, forEach, keys, mapValues, uniq, flatMap } = require("lodash");
-const directives = require("../directives");
+const { map, keys, mapValues, uniq, flatMap } = require("lodash");
+const { loadDirectives } = require("./ui5-metadata");
 
 /**
  *
@@ -14,7 +15,7 @@ async function genDtsToDir({ inputDir, outputDir }) {
   function readJsonApi(libName) {
     const libJsonPath = resolve(inputDir, libName + ".designtime.api.json");
     const libJsonData = readJsonSync(libJsonPath);
-    // Generating The api.jsons using to ui5-cli seems to lose the `library` property
+    // Generating the api.jsons using to ui5-cli seems to lose the `library` property
     libJsonData.library = libName;
     return libJsonData;
   }
@@ -41,14 +42,18 @@ async function genDtsToDir({ inputDir, outputDir }) {
   );
 
   const librariesAllDeps = mapValues(librariesDirectDeps, getTransitiveDeps);
+  const allInputDirFiles = readdirSync(inputDir).map((file) => resolve(inputDir, file));
+  const directiveFiles = allInputDirFiles.filter(file => file.endsWith(".dtsgenrc"));
+  const directives = await loadDirectives(directiveFiles);
+
   // use for...of to allow for an async function
   for (const [libName, deps] of Object.entries(librariesAllDeps)) {
-    console.log(`Compiling <${libName}> library.`);
+    console.log(`Generating type definitions for <${libName}> library.`);
     const depsJsonsData = map(deps, readJsonApi);
     const libJsonData = readJsonApi(libName);
     const libDTSResult = await generateFromObjects({
       apiObject: libJsonData,
-      directives: directives,
+      directives,
       dependencyApiObjects: depsJsonsData,
       generateGlobals: false
     });
