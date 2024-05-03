@@ -44,7 +44,7 @@ export const args = (() => {
     help: "Directory where the d.ts files (using globals, not ES modules) are located of the libraries on which the currently to-be-built library depends. Only needed when globals are generated and the check is run.",
   });
   parser.add_argument("--targetFileForGlobals", {
-    help: "File path and name of the target d.ts file to write for the type defiitions with globals (not ES modules). Only needed when globals should be generated.",
+    help: "File path and name of the target d.ts file to write for the type definitions with globals (not ES modules). Only needed when globals should be generated.",
   });
 
   const args = parser.parse_args();

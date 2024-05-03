@@ -28,6 +28,7 @@ export {
   generateFromPaths,
   GenerateFromPathsConfig,
 } from "./generate-from-paths.js";
+export { download as downloadApiJson } from "./download-apijson.js";
 
 // CLI support for generation of (optionally) both globals and modules flavor in one go
 async function main() {

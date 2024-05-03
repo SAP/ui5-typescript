@@ -5,7 +5,7 @@
 This npm package is used for generating (and checking) TypeScript type definitions (`*.d.ts` files) for SAPUI5/OpenUI5 libraries implemented in JavaScript, using their `api.json` files as input.
 
 These `api.json` files for a UI5 library can be generated with the command `ui5 build jsdoc`, executed within the root folder of the respective library. This works for your own custom libraries as well as for the original UI5 sources.
-This command creates the `api.json` file at `dist/test-resources/<library_namespace_and_name>/designtime/api.json` (do not confuse this file with the `api.json` file one folder below inside `apiref` - that one is meant for the UI5 SDK).
+This command creates the `api.json` file at `dist/test-resources/<library_namespace_and_name>/designtime/api.json` (do not confuse this file with the `api.json` file one folder below inside `apiref` - that one is meant for the UI5 SDK). For the api.json files of original UI5 libraries, however, there is also a download tool provided.
 
 For the original UI5 framework libraries, the resulting type definitions are published as [@sapui5/types](https://www.npmjs.com/package/@sapui5/types) and [@openui5/types](https://www.npmjs.com/package/@openui5/types).
 
@@ -15,7 +15,7 @@ In addition to the generation, this package also provides means to _check_ the g
 
 1. by compiling them with the TypeScript compiler and
 2. by running a `dtslint` check.
-   The latter is mainly done because it is required for publishing the resulting type definitions at [DefinitelyTyped](http://definitelytyped.org/). The UI5 team only applies this check to the OpenUI5 libraries which are actually published there.
+   The latter is mainly done because it is required for publishing the resulting type definitions at [DefinitelyTyped](http://definitelytyped.org/). The UI5 team only applies this check to the OpenUI5 libraries which are actually published there. A working `dtslint` check is notoriously difficult to maintain due to changing requirements and a missing API (only CLI), hence it is only recommended when a release via DefinitelyTyped is required.
 
 Details about the implementation of this package can be found in [TECHNICAL.md](./TECHNICAL.md).
 
@@ -26,27 +26,44 @@ Install the latest version via npm:
 `npm install @ui5/dts-generator --save-dev`
 
 You can then use the tool either from the command line as CLI or from your own NodeJS code using its APIs. Make sure to use at least version 3.x of the dts-generator, as its usage and API changed vastly compared to previous versions 2.x and below!<br>
-There is a complete [example for using one of the APIs a few sections below](#generatefromobjects-example). A simple CLI call looks like this (you can use the value of the `apiObject` from the sample as content of the API json file):
+There is a complete [example for using one of the APIs a few sections below](#generatefromobjects-example).
+
+A minimal CLI call looks like this (you can use the value of the `apiObject` from the sample as content of the API json file):
 
 `npx @ui5/dts-generator <api_json_file> --targetFile <dts_target_file>`
 
-But in many cases you will want to pass additional arguments related to generation directives, paths of library dependencies etc.
+But usually you will have to pass additional arguments related to generation directives, paths of library dependencies etc.
 
 ### The APIs
+
+There are several alternative APIs for type generation. The difference is what input they require. Choose the most suitable one from:
 
 - `generate`: generate the `*.d.ts` **file** for one UI5 library from its `api.json` **file** (and optionally other **files**)
 - `generateFromObjects`: generate the `*.d.ts` content as **string** for one UI5 library from its `api.json` **content** given as JS object (and optionally other **objects**)
 - `generateFromPaths`: generate the `*.d.ts` **file** for one UI5 library from its `api.json` **file** (and optionally other directory **paths**)
 
+The api.json download utility API is:
+
+- `downloadApiJson`: download api.json files for OpenUI5 libraries on which your library depends. Usually this is at least `sap.ui.core`, which contains all the base classes like `sap.ui.core.Control`.
+
+The check APIs are:
+
+- `checkCompile`: test d.ts files by running a TypeScript compilation
+- `checkDtslint`: run the dtslint tool provided by DefinitelyTyped
+
 Please see the [TypeScript API](./types/api.d.ts) for a detailed documentation and the respective arguments.
 
 ### The CLIs
 
-When started from the command line, the main file `index.js` is an entry point for generating `*.d.ts` files:
+When started from the command line, the main file `index.js` is an entry point for generating `*.d.ts` files. When you got the package from npm, you will typically call this using `npx @ui5/dts-generator`. But when you checked out the sources, you can call `index.js` directly. The
 
 ```
 Usage:
-node index.js <apiFile> <options>
+npx ui5-dts-generator <apiFile> <options>
+
+(or: npx @ui5/dts-generator <apiFile> <options>)
+
+(or: node <path-to-file>/index.js <apiFile> <options>)
 
 With:
 <apiFile>               File path+name of the api.json file for the library for which the d.ts file should be generated.
@@ -72,15 +89,31 @@ With:
                         Directory where the d.ts files (using globals, not ES modules) are located of the libraries on which the currently to-be-built library
                         depends. Only needed when globals are generated and the check is run.
   --targetFileForGlobals FILE
-                        File path and name of the target d.ts file to write for the type defiitions with globals (not ES modules). Only needed when globals
+                        File path and name of the target d.ts file to write for the type definitions with globals (not ES modules). Only needed when globals
                         should be generated.
+```
+
+The file `download-apijson.js` is used to fetch the `api.json` files which are needed in the above call for `--dependenciesApiPath`. In the npm package it is exposed as a separate binary and can be called as `npx ui5-download-apijson`.
+
+```
+Usage:
+npx ui5-download-apijson <libs> <version> <options>
+
+(or: node <path-to-file>/download-apijson.js <libs> <version> <options>)
+
+With:
+<libs>                  Comma-separated list of OpenUI5 library names, like: sap.ui.core,sap.m
+<version>               Full version string of a UI5 version currently available from CDN, like: 1.120.2
+<options>:
+  -h, --help            Show this help message and exit
+  --targetDir PATH      Directory where the downloaded files shall be saved. Optional; if not given, the following path is used: ./temp/dependency-apijson
 ```
 
 The file `runCheck.js` is used for triggering a check of the generated `*.d.ts` files.
 
 ```
 Usage:
-node runCheck.js <dtsDir> [-h, --help] [--verbose] [--checkDtslint]
+node <path-to-file>/runCheck.js <dtsDir> [-h, --help] [--verbose] [--checkDtslint]
 
 With:
 <dtsDir>          File path+name of the api.json file for the library for which the d.ts file should be generated.
@@ -142,7 +175,9 @@ const result = await generateFromObjects({
   dependencyApiObjects: [
     // Array of api.json files for library dependencies
     // (as plain JavaScript objects just like libJsonData).
-    // The above dummy library has no dependencies, hence the array is empty.
+    // The above dummy library has no dependencies, hence the array is empty,
+    // but real control libraries will usually have at least sap.ui.core as dependency,
+    // because that's where the required base classes like sap.ui.core.Control live.
   ],
 });
 
@@ -175,6 +210,8 @@ declare namespace sap {
 ```
 
 The last block which may be unexpected at first sight is for providing code completion in `sap.ui.require`/`sap.ui.define` statements.
+
+As soon as a class in your library inherits from a class in another library, however, the `dependencyApiObjects` must given, otherwise you will notice that the base class is replaced with something generic like `Object`, which means that your type definitions are not providing the intended type-safety and code completion.
 
 ## Support
 

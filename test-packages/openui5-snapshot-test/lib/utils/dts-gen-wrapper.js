@@ -2,7 +2,6 @@ const { resolve } = require("path");
 const { readdirSync } = require('fs');
 const { emptyDirSync, readJsonSync, writeFileSync } = require("fs-extra");
 const { map, keys, mapValues, uniq, flatMap } = require("lodash");
-const { loadDirectives } = require("./ui5-metadata");
 
 /**
  *
@@ -11,9 +10,10 @@ const { loadDirectives } = require("./ui5-metadata");
  */
 async function genDtsToDir({ inputDir, outputDir }) {
   const { generateFromObjects } = await import("@ui5/dts-generator");
+  const { loadDirectives } = await import("../../../../packages/dts-generator/src/js-utils/ui5-metadata.js"); // not exposed as api of the package, hence referenced directly
 
   function readJsonApi(libName) {
-    const libJsonPath = resolve(inputDir, libName + ".designtime.api.json");
+    const libJsonPath = resolve(inputDir, libName + ".api.json");
     const libJsonData = readJsonSync(libJsonPath);
     // Generating the api.jsons using to ui5-cli seems to lose the `library` property
     libJsonData.library = libName;
