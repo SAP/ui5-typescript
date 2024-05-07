@@ -8,14 +8,27 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.123.0 (April 2024)
+- FEATURE: Documentation is now generated for all the Settings/Event/Eventparameter types (those with a `$` in their name). This allows carrying over deprecation info from the actual class which they belong to.
+- RELATED: the new major [version 3 of the @ui5/dts-generator](https://www.npmjs.com/package/@ui5/dts-generator) has been published on npm 🎉. Finally, the same tool that creates the UI5 type definitions can be used for any UI5 library written in JavaScript! Also the updated sources of this updated dts-generator are now [available on GitHub](https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator). See [this general documentation](https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator) or dive right into [this step-by-step end-to-end tutorial](https://github.com/SAP/ui5-typescript/blob/main/packages/dts-generator/end-to-end-sample.md) that demonstrates its usage.
+
+## 1.122.0 (March 2024)
+- No news
+
 ## 1.121.0 (February 2024)
 - FEATURE: `abstract` classes are now supported (UI5 classes marked as “abstract” are now also marked as such in the type definitions).
 - FEATURE: constructors hidden in UI5 via `@hideconstructor` are now `protected` in the type definitions.
 - RELATED: the huge and popular "Walkthrough" tutorial of UI5 is now available in a new and updated [TypeScript version](https://github.com/SAP-samples/ui5-typescript-walkthrough/)
+- ISSUE: Due to a glitch with the DefinitelyTyped release, the `@types/openui5` package was not released for this version. Instead the content was released as version 1.120.3. This issue does not affect the `@openui5/types` and `@sapui5/types` packages which we release ourselves. The [attempt to enforce a 1.121.0 release](https://github.com/DefinitelyTyped/DefinitelyTyped/commit/ffd45c5522753f13c1fd3b221846b92b4ea8769a) failed.
 
 ## 1.120.0 (November 2023)
 - FEATURE: The `$...Settings` types (the structures describing what data can be passed into constructors) now also contain the "specialSettings" (non-bindable data for initialization, like the id, objectBindings, bindingContexts, and the componentData for Components).
 - FIX: Interfaces representing static objects from namespaces support inheritance now. This was done for (and mainly affects) the Delegates in the sap.ui.mdc library.
+- ISSUE: There are some glitches in the `@types/openui5` package released via DefinitelyTyped. These glitches do not affect the `@openui5/types` and `@sapui5/types` packages which we release ourselves.
+  - Version 1.120.0 are the true 1.120 types as intended by us
+  - Version 1.120.1 was released due to a [commit by DefinitelyTyped staff](https://github.com/DefinitelyTyped/DefinitelyTyped/commit/cefea686428358cdffe2211406d411fe9f3b0bb5), but without any change of content.
+  - Version 1.120.2 was also released due to a [commit by DefinitelyTyped staff](https://github.com/DefinitelyTyped/DefinitelyTyped/commit/958ebc6a272d19ae5242d7d04077fed841117963), but without any change of content.
+  - Version 1.120.3 accidentally contains the 1.121.0 content. However, it contains only minimal actual changes but lots of improvements regarding @since, @deprecated and @abstract, hence we did not override it with yet another 1.120 version.
 
 ## 1.119.0 (October 2023)
 
