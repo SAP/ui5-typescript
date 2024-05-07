@@ -1,13 +1,6 @@
 const { resolve } = require("path");
 const { pick } = require("lodash");
 const { writeJsonSync } = require("fs-extra");
-const {
-  downloadApiJsonFiles,
-  downloadDtsgenrcFiles,
-  expandTransitiveDeps,
-  getOpenUI5PossibleLibNames,
-  getSAPUI5LibsMeta,
-} = require("./utils/ui5-metadata");
 const { log } = require("./utils/logger");
 
 /*
@@ -20,6 +13,13 @@ const { log } = require("./utils/logger");
  */
 
 async function main() {
+  const {
+    downloadApiJsonFiles,
+    downloadDtsgenrcFiles,
+    expandTransitiveDeps,
+    getOpenUI5PossibleLibNames,
+    getSAPUI5LibsMeta,
+  } = await import("@ui5/dts-generator/src/js-utils/ui5-metadata.js");
   const pkgJson = require("../package.json");
   const version = pkgJson.snapshot.version;
   const ui5LibsMeta = await getSAPUI5LibsMeta(version);

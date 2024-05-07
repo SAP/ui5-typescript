@@ -1,6 +1,6 @@
 const { readdirSync, readFileSync } = require("fs");
 const { resolve, relative } = require("path");
-const { forEach, difference, map } = require("lodash");
+const { forEach, map } = require("lodash");
 const { expect } = require("chai");
 const { emptyDirSync } = require("fs-extra");
 
@@ -16,7 +16,7 @@ describe("The OpenUI5 d.ts snapshots", async () => {
   // Only interested in the actual api.json files
   const relevantApiJsonSDKFiles = apiJsonSDKFiles.filter((_) => _.endsWith(".api.json"));
   const relevantDTSFiles = map(relevantApiJsonSDKFiles, (_) =>
-    _.replace(".designtime.api.json", ".d.ts")
+    _.replace(".api.json", ".d.ts")
   );
 
   before( function () {
