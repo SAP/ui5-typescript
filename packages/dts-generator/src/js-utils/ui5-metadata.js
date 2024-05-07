@@ -30,7 +30,8 @@ const log = getLogger("@ui5/dts-generator/download-apijson");
  * @returns {Promise<Record<string, UI5Lib>>}
  */
 export async function getSAPUI5LibsMeta(version) {
-  if (!version || version.length < 5) {
+  const version_pattern = /^[0-9]+\.[0-9]+\.[0-9]+.*$/; // .* to cover any potential suffixes; being ready for that is more important than being 100% strict
+  if (!version_pattern.test(version)) {
     throw new Error(
       `Version is given as '${version}', but must be a full UI5 version string like '1.120.2'.`,
     );
