@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SAP/ui5-typescript/compare/@ui5/openui5-snapshot-test@3.0.2...@ui5/openui5-snapshot-test@3.1.0) (2024-05-07)
+
+
+### Features
+
+* **dts-generator:** add download-apijson API and CLI ([49f0db2](https://github.com/SAP/ui5-typescript/commit/49f0db20d917a9820767814326f037c80e4ea64c))
+
+
+
+
+
 ## [3.0.2](https://github.com/SAP/ui5-typescript/compare/@ui5/openui5-snapshot-test@3.0.1...@ui5/openui5-snapshot-test@3.0.2) (2024-04-26)
 
 **Note:** Version bump only for package @ui5/openui5-snapshot-test
