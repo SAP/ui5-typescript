@@ -8,6 +8,10 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.124.0 (May 2024)
+
+- No news; these types are the first ones that were released using the updated publicly available npm package.
+
 ## 1.123.0 (April 2024)
 - FEATURE: Documentation is now generated for all the Settings/Event/Eventparameter types (those with a `$` in their name). This allows carrying over deprecation info from the actual class which they belong to.
 - RELATED: the new major [version 3 of the @ui5/dts-generator](https://www.npmjs.com/package/@ui5/dts-generator) has been published on npm 🎉. Finally, the same tool that creates the UI5 type definitions can be used for any UI5 library written in JavaScript! Also the updated sources of this updated dts-generator are now [available on GitHub](https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator). See [this general documentation](https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator) or dive right into [this step-by-step end-to-end tutorial](https://github.com/SAP/ui5-typescript/blob/main/packages/dts-generator/end-to-end-sample.md) that demonstrates its usage.
