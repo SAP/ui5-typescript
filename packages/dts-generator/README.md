@@ -18,7 +18,7 @@ In addition to the generation, this package also provides means to _check_ the g
 
    The latter is only done because it is required for publishing the resulting type definitions at [DefinitelyTyped](http://definitelytyped.org/). The UI5 team only applies this check to the OpenUI5 libraries which are actually published there, not for the other libraries in SAPUI5. A working `dtslint` check is notoriously difficult to maintain due to changing requirements and a missing API (only CLI), hence it is only recommended when a release via DefinitelyTyped is required.
 
-Details about the implementation of this package can be found in [TECHNICAL.md](./TECHNICAL.md).
+Details about the implementation of this package can be found in [docs/TECHNICAL.md](docs/TECHNICAL.md).
 
 ## Usage
 
@@ -28,7 +28,7 @@ Install the latest version via npm:
 
 You can then use the tool either from the command line as CLI or from your own NodeJS code using its APIs.
 
-- For using it as CLI, which is probably the typical use-case, a complete [end-to-end example from creating the library to generating the type definitions can be found on this page](end-to-end-sample.md).
+- For using it as CLI, which is probably the typical use-case, a complete [end-to-end example from creating the library to generating the type definitions can be found on this page](docs/end-to-end-sample.md).
 - For using one of the APIs, there is an [example a few sections below](#generatefromobjects-example).
 
 > NOTE: Make sure to use at least version 3.x of the dts-generator, as its usage, API and functionality changed vastly compared to previous versions 2.x and below!

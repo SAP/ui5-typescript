@@ -129,9 +129,9 @@ npx @ui5/dts-generator dist/test-resources/com/myorg/mylib/designtime/api.json -
 
 > NOTE: In case you get the error `Cannot find namespace 'com'.` mentioning the line `>>>  sColor?: com.myorg.mylib.ExampleColor`, then check whether the `api.json` file contains the enum `com.myorg.mylib.ExampleColor`. If not, you might have used an older version of the library template, which contained an error in the JSDoc, which was only [fixed in May 2024](https://github.com/ui5-community/generator-ui5-library/pull/24).
 
-## Step 5: Check the Result
+## Step 5: Inspect the Resulting Types
 
-The resulting file `dist/types.d.ts` should then start like this:
+The resulting file `dist/types.d.ts` should then start like this, containing the enum from `library.js` and the control, including the JSDoc documentation:
 
 ```ts
 // For Library Version: 1.0.0
@@ -174,9 +174,54 @@ declare module "com/myorg/mylib/Example" {
 ...
 ```
 
+Scanning through the `types.d.ts` file you will notice that it contains additional methods that are not in the original source code of the control, like `getText()`, `setText()`, `attachPress()` etc. - all the accessors for the properties, aggregations, events etc. of the control, which UI5 generates at runtime.
+
 > NOTE: Your IDE might show errors like `Cannot find module 'sap/ui/core/Control' or its corresponding type declarations.` in this d.ts file because the original UI5 modules are not known. This is the case because your JavaScript library does not have a proper TypeScript setup. However, the compilation check executed automatically after the type generation ensures that there are no real errors.
 
-## Step 6: Integrate to Your Workflow
+Furthermore, the type definition file contains additional synthetic types:
+
+- `$ExampleSettings`, defining the object that can be passed into the constructor with all the properties, aggregations, events etc.
+- `Example$PressEvent`, defining the type of the `press` event
+- `Example$PressEventParameters`, defining the type of the `press` event's parameters. There are no parameters initially, so this type has no properties.
+
+All of this is exactly what is also generated for the original UI5 libraries to make TypeScript support complete for the library users.
+
+## Step 6: Try the Resulting Types
+
+Even though the library and its generated sample page (`test/Example.html` and `test/Example.js`) are implemented in JavaScript, you can use the generated type definitions right there. You only need to add two things in the `test` folder:
+
+1. In `test/Example.js`, add a JSDoc comment defining the types of the dependencies in `sap.ui.define`. The beginning of the file should look like this, then:
+   ```js
+   sap.ui.define(["com/myorg/mylib/library", "com/myorg/mylib/Example"],
+    /**
+    * @param {typeof import('com/myorg/mylib/library')} library
+    * @param {typeof import('com/myorg/mylib/Example').default} Example
+    */
+    function (library, Example) {
+   ```
+2. Add a `tsconfig.json` file in the `test` folder, with the following content:
+   ```json
+   {
+     "compilerOptions": {
+       "types": ["@types/openui5", "../dist/types.d.ts"],
+       "lib": ["ES2022", "DOM"],
+       "noEmit": true,
+       "skipLibCheck": true,
+       "module": "none",
+       "allowJs": true,
+       "checkJs": true,
+       "strict": true
+     },
+     "include": ["**/*.js"]
+   }
+   ```
+   These settings activate the TypeScript compiler (at least in VSCode) and ensure it also runs in JS files, but does not actually write any transpiled files. It also points it to the original UI5 types as well as to those you just generated.<br>
+   In your productive environment you might want to change some of the settings or add others, but for this sample they are fine.
+
+As result (you might have to do "Restart TS Server" from the command palette), you get code completion, type checks and inline documentation in the sample code, provided by the generated type definitions:
+![alt text](ts-in-js-sample.png)
+
+## Step 7: Integrate to Your Workflow
 
 For a library that is continued to be developed, you can now add e.g. scripts like the below - depending on your desired project setup - to `package.json` and integrate them into the main `build` script of the library:
 
@@ -185,3 +230,5 @@ For a library that is continued to be developed, you can now add e.g. scripts li
 "build:download-apijson": "ui5-download-apijson sap.ui.core 1.123.0 --targetDir ./temp/dependency-apijson",
 "build:types": "ui5-dts-generator dist/test-resources/com/myorg/mylib/designtime/api.json --targetFile dist/types.d.ts --dependenciesTypePackagesForCheck @types/openui5 --dependenciesApiPath ./temp/dependency-apijson"
 ```
+
+You might also want to copy the `package.json` file to the dist folder during the build and add `"types": "types.d.ts"` to its settings and experiment with the consumption of the package, which then comes with types included. Or you might publish the type definitions independently, like the UI5 team does.
