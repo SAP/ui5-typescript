@@ -273,6 +273,7 @@ export interface ObjProperty {
 export interface Ui5Property {
   name: Ui5SettingName;
   type?: TypeReference; // a string in the original api.json files, but parsed into an object in one of the prepare steps before json-to-ast sees it
+  valueType?: TypeReference;
   defaultValue?: any;
   group?: string;
   visibility?: "public" | "hidden" | "restricted";

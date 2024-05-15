@@ -146,7 +146,7 @@ function createConstructorSettingsInterfaces(
           const propType = {
             kind: "UnionType",
             types: [
-              clone(prop.type),
+              clone(prop.valueType),
               {
                 kind: "TypeReference",
                 typeName: "sap.ui.base.ManagedObject.PropertyBindingInfo",
@@ -156,8 +156,8 @@ function createConstructorSettingsInterfaces(
 
           if (
             !(
-              prop.type.kind === "TypeReference" &&
-              prop.type.typeName === "string"
+              prop.valueType.kind === "TypeReference" &&
+              prop.valueType.typeName === "string"
             )
           ) {
             propType.types.push({
