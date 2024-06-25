@@ -39,6 +39,11 @@ export async function getSAPUI5LibsMeta(version) {
   const fetch = (await import("node-fetch")).default;
   const sapUI5Response = await fetch(
     `https://unpkg.com/@sapui5/distribution-metadata@${version}/metadata.json`,
+    {
+      headers: {
+        "User-Agent": "@ui5-dts-generator",
+      },
+    },
   );
   if (!sapUI5Response.ok) {
     log.error(`error fetching sapui5 metadata`);
@@ -57,6 +62,11 @@ export async function getOpenUI5PossibleLibNames() {
   const fetch = (await import("node-fetch")).default;
   const openUI5OrgResponse = await fetch(
     `https://registry.npmjs.com/-/v1/search?text=scope:openui5&size=100`,
+    {
+      headers: {
+        "User-Agent": "@ui5-dts-generator",
+      },
+    },
   );
   if (!openUI5OrgResponse.ok) {
     log.error(`error fetching sapui5 metadata`);
