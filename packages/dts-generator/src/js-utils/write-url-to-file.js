@@ -11,7 +11,11 @@ const log = getLogger("@ui5/dts-generator/write-url-to-file");
 export default async function writeUrlToFile(url, file) {
   const fetch = (await import("node-fetch")).default;
   log.info(`fetching: ${url}`);
-  const response = await fetch(url);
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "@ui5-dts-generator",
+    },
+  });
   if (!response.ok) {
     log.error(`error fetching from ${url}`);
     return false;
