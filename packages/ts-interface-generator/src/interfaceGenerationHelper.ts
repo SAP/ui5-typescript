@@ -732,10 +732,10 @@ function generateInterface(
           .forEach((prop) => {
             const name = prop.name.getText().replace(/['"]/g, "");
             metadataObject[memberKind][name] = getMemberFromPropertyAssignment(
-              prop as ts.PropertyAssignment,
+              prop,
               memberKind,
             );
-          }); // cast ensured to be valid by the line above
+          });
       }
     } catch (e) {
       // enrich error info with class/file context
