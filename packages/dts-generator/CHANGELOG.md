@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.1.0...@ui5/dts-generator@3.2.0) (2024-06-27)
+
+### Features
+
+- **dts-generator:** add user-agent to HTTP requests ([#462](https://github.com/SAP/ui5-typescript/issues/462)) ([b65eafa](https://github.com/SAP/ui5-typescript/commit/b65eafab80155b548c5abc7e9e175a04987a5669))
+
 # [3.1.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.0.2...@ui5/dts-generator@3.1.0) (2024-05-07)
 
 ### Features
