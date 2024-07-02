@@ -67,9 +67,14 @@ function mergeOverlays(apijson: ApiJSON, directives: Directives) {
     obj[prop] = value;
   }
 
-  function mergeProps(obj: { [key: string]: unknown }, overlay: object) {
+  function mergeProps(
+    obj: { [key: string]: unknown },
+    overlay: object,
+    preserveName?: boolean,
+  ) {
     Object.entries(overlay).forEach(([prop, value]) => {
-      if (prop !== "name") {
+      if (prop !== "name" || !preserveName) {
+        // only change name in deeper recursive calls where preserveName flag is not set anymore
         mergeProp(obj, prop, value);
       }
     });
@@ -105,7 +110,7 @@ function mergeOverlays(apijson: ApiJSON, directives: Directives) {
             symbolItems.push(overlayItem);
             return;
           }
-          mergeProps(item, overlayItem);
+          mergeProps(item, overlayItem, true /* preserveName */);
         });
       } else {
         mergeProp(symbol, prop, overlay[prop]);
