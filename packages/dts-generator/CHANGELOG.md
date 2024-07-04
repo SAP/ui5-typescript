@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.2.0...@ui5/dts-generator@3.3.0) (2024-07-04)
+
+### Features
+
+- **dts-generator:** allow changing names in .dtsgenrc overlays ([#464](https://github.com/SAP/ui5-typescript/issues/464)) ([5d5e690](https://github.com/SAP/ui5-typescript/commit/5d5e69082b174c2336ce36d9c90401eab49da60c))
+
 # [3.2.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.1.0...@ui5/dts-generator@3.2.0) (2024-06-27)
 
 ### Features
