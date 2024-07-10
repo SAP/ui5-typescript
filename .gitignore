@@ -4,3 +4,4 @@ demos
 packages
 test-packages
 .vscode
+*.log

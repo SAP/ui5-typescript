@@ -8,8 +8,19 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
-## 1.124.0 (May 2024)
+## 1.127.0 (August 2024)
+- FEATURE/FIX: Controller extension support is now complete. This in particular concerns using pre-defined controller extensions like `sap/fe/core/controllerextensions/Routing` in your own controllers to add functionality. They can be used as-is or be partly overridded/enhanced using their static `override` method. A dummy method `ControllerExtension.use(...)` has been introduced in the type definitions for this. To make it work, also a new upcoming version >= 7.5.0 of [`babel-plugin-transform-modules-ui5`](https://www.npmjs.com/package/babel-plugin-transform-modules-ui5) (or a respective new version of [`ui5-tooling-transpile`](https://www.npmjs.com/package/ui5-tooling-transpile) embedding it as dependency) is required. See [the documentation](https://github.com/ui5-community/babel-plugin-transform-modules-ui5?tab=readme-ov-file#properties-related-to-controller-extensions) for details once the new release of babel-plugin-transform-modules-ui5 is published. This might get downported also to later patches of 1.120, 1.124 and 1.126, but not to the out-of-maintenance versions in between.
+- FIX: abstract methods in base classes are now marked as optional in the type definitions.
 
+## 1.126.0 (July 2024)
+- BREAKING: some APIs in UI5 are marked as `restricted`, which means they are like `private`, but permitted to be used by specific target groups. From TypeScript perspective, they are considered `private`, which means they are not contained in the type definitions. In some cases, the `restricted` flag had not been considered before. Now it is, which means that some APIs are now removed from the type definitions. In particular, this is the case for properties (and events) declared in the metadata, so the respective `set...` and `get...` functions (or `fire...`,  `attach...` and `detach...`) are now removed from the types.
+One example is `sap.m.ComboBoxBase.setOpen()` and `sap.m.ComboBoxBase.getOpen()`. They had been marked as "deprecated" and also "private" before, though, so the using them was not a good idea, anyway. Other examples are `sap.m.GenericTile.dropAreaOffset`, `sap.m.TabContainerItem.itemPropertyChanged`, `sap.ui.model.Binding.refresh` and `sap.ui.core.hyphenation.Hyphenation` (the only instances of this removal in the sap.ui.core library).
+Still, this change can be breaking your build (not the runtime), but we reserve the right to do such fixes which have this effect. In case of issues, you can continue using older types or define the missing methods on your side.
+
+## 1.125.0 (June 2024)
+- No news
+
+## 1.124.0 (May 2024)
 - No news; these types are the first ones that were released using the updated publicly available npm package.
 
 ## 1.123.0 (April 2024)
