@@ -9,7 +9,12 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
 ## 1.127.0 (August 2024)
-- FEATURE/FIX: Controller extension support is now complete. This in particular concerns using pre-defined controller extensions like `sap/fe/core/controllerextensions/Routing` in your own controllers to add functionality. They can be used as-is or be partly overridded/enhanced using their static `override` method. A dummy method `ControllerExtension.use(...)` has been introduced in the type definitions for this. To make it work, also a new upcoming version >= 7.5.0 of [`babel-plugin-transform-modules-ui5`](https://www.npmjs.com/package/babel-plugin-transform-modules-ui5) (or a respective new version of [`ui5-tooling-transpile`](https://www.npmjs.com/package/ui5-tooling-transpile) embedding it as dependency) is required. See [the documentation](https://github.com/ui5-community/babel-plugin-transform-modules-ui5?tab=readme-ov-file#properties-related-to-controller-extensions) for details once the new release of babel-plugin-transform-modules-ui5 is published. This might get downported also to later patches of 1.120, 1.124 and 1.126, but not to the out-of-maintenance versions in between.
+- FEATURE/FIX: Controller extension support is now complete. This in particular concerns using pre-defined controller extensions like `sap/fe/core/controllerextensions/Routing` in your own controllers to add functionality. They can be used as-is or be partly overridded/enhanced using their static `override` method. A dummy method `ControllerExtension.use(...)` has been introduced in the type definitions for this. To make it work, also at least version 7.5.0 of [`babel-plugin-transform-modules-ui5`](https://www.npmjs.com/package/babel-plugin-transform-modules-ui5) is required (when using [`ui5-tooling-transpile`](https://www.npmjs.com/package/ui5-tooling-transpile) instead, make sure to `npm update` in your project). See [the documentation](https://github.com/ui5-community/babel-plugin-transform-modules-ui5?tab=readme-ov-file#properties-related-to-controller-extensions) for details once the new release of babel-plugin-transform-modules-ui5 is published. This dummy function is also being downported to patches of older `@openui5/types` and `@sapui5/types` releases:
+  - 1.126.1
+  - 1.124.3
+  - 1.120.18
+
+  but not to the out-of-maintenance versions in between. Also, `@types/openui5` is released differently and a downport is tbd.
 - FIX: abstract methods in base classes are now marked as optional in the type definitions.
 
 ## 1.126.0 (July 2024)
