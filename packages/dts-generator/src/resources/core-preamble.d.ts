@@ -64,7 +64,7 @@ interface JQuery<TElement = HTMLElement> extends Iterable<TElement> {
 
   /**
    * Extension function to the jQuery.fn which identifies SAPUI5 controls in the given jQuery context.
-   * @deprecated since 1.106, use sap.ui.core.Element.closestTo instead.
+   * @deprecated as of version 1.106. Use {@link sap.ui.core.Element.closestTo} instead.
    */
   control(
     /**
@@ -75,7 +75,7 @@ interface JQuery<TElement = HTMLElement> extends Iterable<TElement> {
 
   /**
    * Extension function to the jQuery.fn which identifies SAPUI5 controls in the given jQuery context.
-   * @deprecated since 1.106, use sap.ui.core.Element.closestTo instead.
+   * @deprecated as of version 1.106. Use {@link sap.ui.core.Element.closestTo} instead.
    */
   control(
     /**
