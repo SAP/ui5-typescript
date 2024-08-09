@@ -28,7 +28,7 @@ declare module "sap/ui/unified/library" {
    * Types of a calendar appointment display mode
    *
    * @since 1.81.0
-   * @experimental (since 1.81.0)
+   * @experimental As of version 1.81.0.
    */
   export enum CalendarAppointmentRoundWidth {
     /**
@@ -206,7 +206,7 @@ declare module "sap/ui/unified/library" {
    * Predefined animations for the ContentSwitcher
    *
    * @since 1.16.0
-   * @experimental (since 1.16.0) - API is not yet finished and might change completely
+   * @experimental As of version 1.16.0. API is not yet finished and might change completely
    */
   export enum ContentSwitcherAnimation {
     /**
@@ -7307,7 +7307,7 @@ declare module "sap/ui/unified/calendar/YearPicker" {
      *
      * Default value is `2000`.
      *
-     * @deprecated (since 1.34.0) - replaced by `date` property
+     * @deprecated As of version 1.34.0. replaced by `date` property
      *
      * @returns Value of property `year`
      */
@@ -7507,7 +7507,7 @@ declare module "sap/ui/unified/calendar/YearPicker" {
     /**
      * The year is initial focused and selected The value must be between 0 and 9999
      *
-     * @deprecated (since 1.34.0) - replaced by `date` property
+     * @deprecated As of version 1.34.0. replaced by `date` property
      */
     year?: int | PropertyBindingInfo | `{${string}}`;
 
@@ -7699,8 +7699,8 @@ declare module "sap/ui/unified/CalendarAppointment" {
      * Adds some customContent to the aggregation {@link #getCustomContent customContent}.
      *
      * @since 1.93.0
-     * @experimental (since 1.93) - providing only limited functionality. Also, the API might be changed in
-     * the future.
+     * @experimental As of version 1.93. providing only limited functionality. Also, the API might be changed
+     * in the future.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -7714,8 +7714,8 @@ declare module "sap/ui/unified/CalendarAppointment" {
      * Destroys all the customContent in the aggregation {@link #getCustomContent customContent}.
      *
      * @since 1.93.0
-     * @experimental (since 1.93) - providing only limited functionality. Also, the API might be changed in
-     * the future.
+     * @experimental As of version 1.93. providing only limited functionality. Also, the API might be changed
+     * in the future.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -7746,8 +7746,8 @@ declare module "sap/ui/unified/CalendarAppointment" {
      *     and may lead to unpredictable results.
      *
      * @since 1.93.0
-     * @experimental (since 1.93) - providing only limited functionality. Also, the API might be changed in
-     * the future.
+     * @experimental As of version 1.93. providing only limited functionality. Also, the API might be changed
+     * in the future.
      */
     getCustomContent(): Control[];
     /**
@@ -7825,8 +7825,8 @@ declare module "sap/ui/unified/CalendarAppointment" {
      * and returns its index if found or -1 otherwise.
      *
      * @since 1.93.0
-     * @experimental (since 1.93) - providing only limited functionality. Also, the API might be changed in
-     * the future.
+     * @experimental As of version 1.93. providing only limited functionality. Also, the API might be changed
+     * in the future.
      *
      * @returns The index of the provided control in the aggregation if found, or -1 otherwise
      */
@@ -7840,8 +7840,8 @@ declare module "sap/ui/unified/CalendarAppointment" {
      * Inserts a customContent into the aggregation {@link #getCustomContent customContent}.
      *
      * @since 1.93.0
-     * @experimental (since 1.93) - providing only limited functionality. Also, the API might be changed in
-     * the future.
+     * @experimental As of version 1.93. providing only limited functionality. Also, the API might be changed
+     * in the future.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -7863,8 +7863,8 @@ declare module "sap/ui/unified/CalendarAppointment" {
      * Additionally, it unregisters them from the hosting UIArea.
      *
      * @since 1.93.0
-     * @experimental (since 1.93) - providing only limited functionality. Also, the API might be changed in
-     * the future.
+     * @experimental As of version 1.93. providing only limited functionality. Also, the API might be changed
+     * in the future.
      *
      * @returns An array of the removed elements (might be empty)
      */
@@ -7873,8 +7873,8 @@ declare module "sap/ui/unified/CalendarAppointment" {
      * Removes a customContent from the aggregation {@link #getCustomContent customContent}.
      *
      * @since 1.93.0
-     * @experimental (since 1.93) - providing only limited functionality. Also, the API might be changed in
-     * the future.
+     * @experimental As of version 1.93. providing only limited functionality. Also, the API might be changed
+     * in the future.
      *
      * @returns The removed customContent or `null`
      */
@@ -8086,8 +8086,8 @@ declare module "sap/ui/unified/CalendarAppointment" {
      *     and may lead to unpredictable results.
      *
      * @since 1.93.0
-     * @experimental (since 1.93) - providing only limited functionality. Also, the API might be changed in
-     * the future.
+     * @experimental As of version 1.93. providing only limited functionality. Also, the API might be changed
+     * in the future.
      */
     customContent?:
       | Control[]
@@ -10314,7 +10314,7 @@ declare module "sap/ui/unified/CalendarRow" {
      * Default value is `None`.
      *
      * @since 1.81.0
-     * @experimental (since 1.81.0)
+     * @experimental As of version 1.81.0.
      *
      * @returns Value of property `appointmentRoundWidth`
      */
@@ -10340,7 +10340,7 @@ declare module "sap/ui/unified/CalendarRow" {
      * Default value is `false`.
      *
      * @since 1.38.0
-     * @deprecated (since 1.81) - Please use the `appointmentHeight` with value "Automatic" property instead.
+     * @deprecated As of version 1.81. Please use the `appointmentHeight` with value "Automatic" property instead.
      *
      * @returns Value of property `appointmentsReducedHeight`
      */
@@ -10760,7 +10760,7 @@ declare module "sap/ui/unified/CalendarRow" {
      * Default value is `None`.
      *
      * @since 1.81.0
-     * @experimental (since 1.81.0)
+     * @experimental As of version 1.81.0.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -10785,7 +10785,7 @@ declare module "sap/ui/unified/CalendarRow" {
      * Default value is `false`.
      *
      * @since 1.38.0
-     * @deprecated (since 1.81) - Please use the `appointmentHeight` with value "Automatic" property instead.
+     * @deprecated As of version 1.81. Please use the `appointmentHeight` with value "Automatic" property instead.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -11259,7 +11259,7 @@ declare module "sap/ui/unified/CalendarRow" {
      * to allow touching.
      *
      * @since 1.38.0
-     * @deprecated (since 1.81) - Please use the `appointmentHeight` with value "Automatic" property instead.
+     * @deprecated As of version 1.81. Please use the `appointmentHeight` with value "Automatic" property instead.
      */
     appointmentsReducedHeight?: boolean | PropertyBindingInfo | `{${string}}`;
 
@@ -11293,7 +11293,7 @@ declare module "sap/ui/unified/CalendarRow" {
      * the calendar interval type is day and the view shows more than 20 days
      *
      * @since 1.81.0
-     * @experimental (since 1.81.0)
+     * @experimental As of version 1.81.0.
      */
     appointmentRoundWidth?:
       | (
@@ -13607,8 +13607,8 @@ declare module "sap/ui/unified/ContentSwitcher" {
    * Switches between two control areas and animates it via CSS transitions
    *
    * @since 1.16.0
-   * @deprecated (since 1.44.0)
-   * @experimental (since 1.16.0) - API is not yet finished and might change completely
+   * @deprecated As of version 1.44.0.
+   * @experimental As of version 1.16.0. API is not yet finished and might change completely
    */
   export default class ContentSwitcher extends Control {
     /**
@@ -13900,8 +13900,8 @@ declare module "sap/ui/unified/ContentSwitcher" {
   /**
    * Describes the settings that can be provided to the ContentSwitcher constructor.
    *
-   * @deprecated (since 1.44.0)
-   * @experimental (since 1.16.0) - API is not yet finished and might change completely
+   * @deprecated As of version 1.44.0.
+   * @experimental As of version 1.16.0. API is not yet finished and might change completely
    */
   export interface $ContentSwitcherSettings extends $ControlSettings {
     /**
@@ -18096,7 +18096,7 @@ declare module "sap/ui/unified/Menu" {
      *
      * Accessible label / description of the menu for assistive technologies like screenreaders.
      *
-     * @deprecated (since 1.27.0) - replaced by `ariaLabelledBy` association
+     * @deprecated As of version 1.27.0. replaced by `ariaLabelledBy` association
      *
      * @returns Value of property `ariaDescription`
      */
@@ -18297,7 +18297,7 @@ declare module "sap/ui/unified/Menu" {
      *
      * When called with a value of `null` or `undefined`, the default value of the property will be restored.
      *
-     * @deprecated (since 1.27.0) - replaced by `ariaLabelledBy` association
+     * @deprecated As of version 1.27.0. replaced by `ariaLabelledBy` association
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -18385,7 +18385,7 @@ declare module "sap/ui/unified/Menu" {
     /**
      * Accessible label / description of the menu for assistive technologies like screenreaders.
      *
-     * @deprecated (since 1.27.0) - replaced by `ariaLabelledBy` association
+     * @deprecated As of version 1.27.0. replaced by `ariaLabelledBy` association
      */
     ariaDescription?: string | PropertyBindingInfo;
 
@@ -19134,8 +19134,8 @@ declare module "sap/ui/unified/MenuTextFieldItem" {
     /**
      * The aggregation `submenu` (inherited from parent class) is not supported for this type of menu item.
      *
-     * @deprecated (since 1.21) - the aggregation `submenu` (inherited from parent class) is not supported for
-     * this type of menu item.
+     * @deprecated As of version 1.21. the aggregation `submenu` (inherited from parent class) is not supported
+     * for this type of menu item.
      *
      * @returns `this` to allow method chaining
      */
@@ -19162,8 +19162,8 @@ declare module "sap/ui/unified/MenuTextFieldItem" {
     /**
      * The aggregation `submenu` (inherited from parent class) is not supported for this type of menu item.
      *
-     * @deprecated (since 1.21) - the aggregation `submenu` (inherited from parent class) is not supported for
-     * this type of menu item.
+     * @deprecated As of version 1.21. the aggregation `submenu` (inherited from parent class) is not supported
+     * for this type of menu item.
      */
     getSubmenu(): Menu;
     /**
@@ -19223,8 +19223,8 @@ declare module "sap/ui/unified/MenuTextFieldItem" {
     /**
      * The aggregation `submenu` (inherited from parent class) is not supported for this type of menu item.
      *
-     * @deprecated (since 1.21) - the aggregation `submenu` (inherited from parent class) is not supported for
-     * this type of menu item.
+     * @deprecated As of version 1.21. the aggregation `submenu` (inherited from parent class) is not supported
+     * for this type of menu item.
      *
      * @returns `this` to allow method chaining
      */
@@ -19329,7 +19329,7 @@ declare module "sap/ui/unified/Shell" {
    * than the root control usecase.
    *
    * @since 1.15.1
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export default class Shell extends ShellLayout {
     /**
@@ -19553,7 +19553,7 @@ declare module "sap/ui/unified/Shell" {
      *
      * Shows / Hides the curtain.
      *
-     * @deprecated (since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.
+     * @deprecated As of version 1.16.3. Curtain is deprecated and replaced by ShellOverlay mechanism.
      *
      * @returns Value of property `showCurtain`
      */
@@ -19563,7 +19563,7 @@ declare module "sap/ui/unified/Shell" {
      *
      * Shows / Hides the side pane on the curtain.
      *
-     * @deprecated (since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.
+     * @deprecated As of version 1.16.3. Curtain is deprecated and replaced by ShellOverlay mechanism.
      *
      * @returns Value of property `showCurtainPane`
      */
@@ -19852,7 +19852,7 @@ declare module "sap/ui/unified/Shell" {
      *
      * When called with a value of `null` or `undefined`, the default value of the property will be restored.
      *
-     * @deprecated (since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.
+     * @deprecated As of version 1.16.3. Curtain is deprecated and replaced by ShellOverlay mechanism.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -19869,7 +19869,7 @@ declare module "sap/ui/unified/Shell" {
      *
      * When called with a value of `null` or `undefined`, the default value of the property will be restored.
      *
-     * @deprecated (since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.
+     * @deprecated As of version 1.16.3. Curtain is deprecated and replaced by ShellOverlay mechanism.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -19896,7 +19896,7 @@ declare module "sap/ui/unified/Shell" {
   /**
    * Describes the settings that can be provided to the Shell constructor.
    *
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export interface $ShellSettings extends $ShellLayoutSettings {
     /**
@@ -19907,14 +19907,14 @@ declare module "sap/ui/unified/Shell" {
     /**
      * Shows / Hides the curtain.
      *
-     * @deprecated (since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.
+     * @deprecated As of version 1.16.3. Curtain is deprecated and replaced by ShellOverlay mechanism.
      */
     showCurtain?: boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Shows / Hides the side pane on the curtain.
      *
-     * @deprecated (since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.
+     * @deprecated As of version 1.16.3. Curtain is deprecated and replaced by ShellOverlay mechanism.
      */
     showCurtainPane?: boolean | PropertyBindingInfo | `{${string}}`;
 
@@ -19997,7 +19997,7 @@ declare module "sap/ui/unified/ShellHeadItem" {
    * Header Action item of the Shell.
    *
    * @since 1.15.1
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export default class ShellHeadItem extends UI5Element {
     /**
@@ -20184,7 +20184,7 @@ declare module "sap/ui/unified/ShellHeadItem" {
      *
      * Default value is `false`.
      *
-     * @deprecated (since 1.18) - Markers should not be used anymore.
+     * @deprecated As of version 1.18. Markers should not be used anymore.
      *
      * @returns Value of property `showMarker`
      */
@@ -20208,7 +20208,7 @@ declare module "sap/ui/unified/ShellHeadItem" {
      *
      * Default value is `false`.
      *
-     * @deprecated (since 1.18) - Dividers are not supported anymore.
+     * @deprecated As of version 1.18. Dividers are not supported anymore.
      *
      * @returns Value of property `startsSection`
      */
@@ -20302,7 +20302,7 @@ declare module "sap/ui/unified/ShellHeadItem" {
      *
      * Default value is `false`.
      *
-     * @deprecated (since 1.18) - Markers should not be used anymore.
+     * @deprecated As of version 1.18. Markers should not be used anymore.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -20340,7 +20340,7 @@ declare module "sap/ui/unified/ShellHeadItem" {
      *
      * Default value is `false`.
      *
-     * @deprecated (since 1.18) - Dividers are not supported anymore.
+     * @deprecated As of version 1.18. Dividers are not supported anymore.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -20394,13 +20394,13 @@ declare module "sap/ui/unified/ShellHeadItem" {
   /**
    * Describes the settings that can be provided to the ShellHeadItem constructor.
    *
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export interface $ShellHeadItemSettings extends $ElementSettings {
     /**
      * If set to true, a divider is displayed before the item.
      *
-     * @deprecated (since 1.18) - Dividers are not supported anymore.
+     * @deprecated As of version 1.18. Dividers are not supported anymore.
      */
     startsSection?: boolean | PropertyBindingInfo | `{${string}}`;
 
@@ -20428,7 +20428,7 @@ declare module "sap/ui/unified/ShellHeadItem" {
     /**
      * If set to true, a theme dependent marker is shown on the item.
      *
-     * @deprecated (since 1.18) - Markers should not be used anymore.
+     * @deprecated As of version 1.18. Markers should not be used anymore.
      */
     showMarker?: boolean | PropertyBindingInfo | `{${string}}`;
 
@@ -20487,7 +20487,7 @@ declare module "sap/ui/unified/ShellHeadUserItem" {
    * User Header Action Item of the Shell.
    *
    * @since 1.22.0
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export default class ShellHeadUserItem extends UI5Element {
     /**
@@ -20756,7 +20756,7 @@ declare module "sap/ui/unified/ShellHeadUserItem" {
   /**
    * Describes the settings that can be provided to the ShellHeadUserItem constructor.
    *
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export interface $ShellHeadUserItemSettings extends $ElementSettings {
     /**
@@ -20819,7 +20819,7 @@ declare module "sap/ui/unified/ShellLayout" {
    * do not use it for other scenarios than the root control usecase.
    *
    * @since 1.25.0
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export default class ShellLayout extends Control {
     /**
@@ -21156,7 +21156,7 @@ declare module "sap/ui/unified/ShellLayout" {
   /**
    * Describes the settings that can be provided to the ShellLayout constructor.
    *
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export interface $ShellLayoutSettings extends $ControlSettings {
     /**
@@ -21209,7 +21209,7 @@ declare module "sap/ui/unified/ShellOverlay" {
    * ShellOverlay to be opened in front of an sap.ui.unified.Shell
    *
    * @since 1.16.3
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export default class ShellOverlay extends Control {
     /**
@@ -21519,7 +21519,7 @@ declare module "sap/ui/unified/ShellOverlay" {
   /**
    * Describes the settings that can be provided to the ShellOverlay constructor.
    *
-   * @deprecated (since 1.44.0)
+   * @deprecated As of version 1.44.0.
    */
   export interface $ShellOverlaySettings extends $ControlSettings {
     /**
@@ -21579,8 +21579,8 @@ declare module "sap/ui/unified/SplitContainer" {
    * Provides a main content and a secondary content area
    *
    * @since 1.15.0
-   * @deprecated (since 1.44.0)
-   * @experimental (since 1.15.0) - API is not yet finished and might change completely
+   * @deprecated As of version 1.44.0.
+   * @experimental As of version 1.15.0. API is not yet finished and might change completely
    */
   export default class SplitContainer extends Control {
     /**
@@ -21725,7 +21725,7 @@ declare module "sap/ui/unified/SplitContainer" {
      *
      * Default value is `'250px'`.
      *
-     * @deprecated (since 1.22) - Only available for backwards compatibility.
+     * @deprecated As of version 1.22. Only available for backwards compatibility.
      *
      * @returns Value of property `secondaryContentWidth`
      */
@@ -21889,7 +21889,7 @@ declare module "sap/ui/unified/SplitContainer" {
      *
      * Default value is `'250px'`.
      *
-     * @deprecated (since 1.22) - Only available for backwards compatibility.
+     * @deprecated As of version 1.22. Only available for backwards compatibility.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -21919,8 +21919,8 @@ declare module "sap/ui/unified/SplitContainer" {
   /**
    * Describes the settings that can be provided to the SplitContainer constructor.
    *
-   * @deprecated (since 1.44.0)
-   * @experimental (since 1.15.0) - API is not yet finished and might change completely
+   * @deprecated As of version 1.44.0.
+   * @experimental As of version 1.15.0. API is not yet finished and might change completely
    */
   export interface $SplitContainerSettings extends $ControlSettings {
     /**
@@ -21936,7 +21936,7 @@ declare module "sap/ui/unified/SplitContainer" {
     /**
      * Do not use. Use secondaryContentSize instead.
      *
-     * @deprecated (since 1.22) - Only available for backwards compatibility.
+     * @deprecated As of version 1.22. Only available for backwards compatibility.
      */
     secondaryContentWidth?: CSSSize | PropertyBindingInfo | `{${string}}`;
 

@@ -1154,7 +1154,7 @@ declare module "sap/tnt/NavigationListItem" {
      * Default value is `true`.
      *
      * @since 1.116
-     * @experimental (since 1.116) - Disclaimer: this property is in a beta state - incompatible API changes
+     * @experimental As of version 1.116. Disclaimer: this property is in a beta state - incompatible API changes
      * may be done before its official public release.
      *
      * @returns Value of property `selectable`
@@ -1318,7 +1318,7 @@ declare module "sap/tnt/NavigationListItem" {
      * Default value is `true`.
      *
      * @since 1.116
-     * @experimental (since 1.116) - Disclaimer: this property is in a beta state - incompatible API changes
+     * @experimental As of version 1.116. Disclaimer: this property is in a beta state - incompatible API changes
      * may be done before its official public release.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -1399,7 +1399,7 @@ declare module "sap/tnt/NavigationListItem" {
      * Specifies if the item can be selected.
      *
      * @since 1.116
-     * @experimental (since 1.116) - Disclaimer: this property is in a beta state - incompatible API changes
+     * @experimental As of version 1.116. Disclaimer: this property is in a beta state - incompatible API changes
      * may be done before its official public release.
      */
     selectable?: boolean | PropertyBindingInfo | `{${string}}`;
@@ -1617,7 +1617,7 @@ declare module "sap/tnt/SideNavigation" {
     /**
      * Destroys the footer in the aggregation {@link #getFooter footer}.
      *
-     * @deprecated (since 1.120) - Use the aggregation `fixedItem` instead.
+     * @deprecated As of version 1.120. Use the aggregation `fixedItem` instead.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -1692,7 +1692,7 @@ declare module "sap/tnt/SideNavigation" {
      *
      * Defines the content inside the footer.
      *
-     * @deprecated (since 1.120) - Use the aggregation `fixedItem` instead.
+     * @deprecated As of version 1.120. Use the aggregation `fixedItem` instead.
      */
     getFooter(): NavigationList;
     /**
@@ -1775,7 +1775,7 @@ declare module "sap/tnt/SideNavigation" {
     /**
      * Sets the aggregated {@link #getFooter footer}.
      *
-     * @deprecated (since 1.120) - Use the aggregation `fixedItem` instead.
+     * @deprecated As of version 1.120. Use the aggregation `fixedItem` instead.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -1895,7 +1895,7 @@ declare module "sap/tnt/SideNavigation" {
     /**
      * Defines the content inside the footer.
      *
-     * @deprecated (since 1.120) - Use the aggregation `fixedItem` instead.
+     * @deprecated As of version 1.120. Use the aggregation `fixedItem` instead.
      */
     footer?: NavigationList;
 
