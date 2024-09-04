@@ -188,7 +188,7 @@ declare module "./SampleControl" {
          * @param content The content to remove or its index or id
          * @returns The removed content or "null"
          */
-        removeContent(content: number | string | Control): this;
+        removeContent(content: number | string | Control): Control | null;
 
         /**
          * Removes all the controls from the aggregation "content".
@@ -511,7 +511,7 @@ declare module "./SampleControl" {
          * @param content The content to remove or its index or id
          * @returns The removed content or "null"
          */
-        removeContent(content: number | string | Control): this;
+        removeContent(content: number | string | Control): Control | null;
 
         /**
          * Removes all the controls from the aggregation "content".

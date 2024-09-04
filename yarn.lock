@@ -1606,17 +1606,17 @@
     expect "^29.0.0"
     pretty-format "^29.0.0"
 
-"@types/jquery@*":
-  version "3.5.30"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.30.tgz#888d584cbf844d3df56834b69925085038fd80f7"
-  integrity sha512-nbWKkkyb919DOUxjmRVk8vwtDb0/k8FKncmUKFi+NY+QXqWltooxTrswvz4LspQwxvLdvzBN1TImr6cw3aQx2A==
-  dependencies:
-    "@types/sizzle" "*"
-
 "@types/jquery@3.5.13":
   version "3.5.13"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.13.tgz#5482d3ee325d5862f77a91c09369ae0a5b082bf3"
   integrity sha512-ZxJrup8nz/ZxcU0vantG+TPdboMhB24jad2uSap50zE7Q9rUeYlCF25kFMSmHR33qoeOgqcdHEp3roaookC0Sg==
+  dependencies:
+    "@types/sizzle" "*"
+
+"@types/jquery@~3.5.13":
+  version "3.5.30"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.30.tgz#888d584cbf844d3df56834b69925085038fd80f7"
+  integrity sha512-nbWKkkyb919DOUxjmRVk8vwtDb0/k8FKncmUKFi+NY+QXqWltooxTrswvz4LspQwxvLdvzBN1TImr6cw3aQx2A==
   dependencies:
     "@types/sizzle" "*"
 
@@ -1659,23 +1659,23 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.4.tgz#56e2cc26c397c038fab0e3a917a12d5c5909e901"
   integrity sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==
 
-"@types/openui5@1.117.0":
-  version "1.117.0"
-  resolved "https://registry.yarnpkg.com/@types/openui5/-/openui5-1.117.0.tgz#24525e588717a20f915c77c26c1412150439dc40"
-  integrity sha512-cSrT++FOAVQbjxnosbaqjiEEq67LSkCc0U+PwPDtZhqiLPQ8otFWJTZGXMj4kqookmeO9fSRZGnxCGRPlPmNuA==
+"@types/openui5@1.127.0":
+  version "1.127.0"
+  resolved "https://registry.yarnpkg.com/@types/openui5/-/openui5-1.127.0.tgz#4b84a5fd721a3cfda3d9e3445a38f705626e2a2a"
+  integrity sha512-MIauyuHgaNnN7PDMZ71vS9XqpVlo0tXL6EaMhdmNjQTMblm6IJxlmOz0UX1BkdJwGKIA2rVE+2WGz6xn7ndJaQ==
   dependencies:
-    "@types/jquery" "*"
-    "@types/qunit" "*"
-
-"@types/qunit@*":
-  version "2.19.10"
-  resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.19.10.tgz#ab859a76a1e6aadcba45d20d6d6307cd1fc11a01"
-  integrity sha512-gVB+rxvxmbyPFWa6yjjKgcumWal3hyqoTXI0Oil161uWfo1OCzWZ/rnEumsx+6uVgrwPrCrhpQbLkzfildkSbg==
+    "@types/jquery" "~3.5.13"
+    "@types/qunit" "^2.5.4"
 
 "@types/qunit@2.5.4":
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.5.4.tgz#0518940acc6013259a8619a1ec34ce0e4ff8d1c4"
   integrity sha512-VHi2lEd4/zp8OOouf43JXGJJ5ZxHvdLL1dU0Yakp6Iy73SjpuXl7yjwAwmh1qhTv8krDgHteSwaySr++uXX9YQ==
+
+"@types/qunit@^2.5.4":
+  version "2.19.10"
+  resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.19.10.tgz#ab859a76a1e6aadcba45d20d6d6307cd1fc11a01"
+  integrity sha512-gVB+rxvxmbyPFWa6yjjKgcumWal3hyqoTXI0Oil161uWfo1OCzWZ/rnEumsx+6uVgrwPrCrhpQbLkzfildkSbg==
 
 "@types/sanitize-html@2.11.0":
   version "2.11.0"
@@ -1793,7 +1793,7 @@
     eslint-visitor-keys "^3.4.3"
 
 "@ui5/dts-generator@link:packages/dts-generator":
-  version "3.1.0"
+  version "3.3.0"
   dependencies:
     "@definitelytyped/dtslint" latest
     "@definitelytyped/eslint-plugin" latest
