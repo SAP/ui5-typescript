@@ -118,8 +118,12 @@ function JSDOC({
   }
 
   contents += since ? `@since ${since}` + NL : EMPTY_STRING;
-  contents += deprecated ? genDeprecated(deprecated) + NL : EMPTY_STRING;
-  contents += experimental ? genExperimental(experimental) + NL : EMPTY_STRING;
+  contents += deprecated
+    ? genDeprecatedOrExperimental(deprecated) + NL
+    : EMPTY_STRING;
+  contents += experimental
+    ? genDeprecatedOrExperimental(experimental) + NL
+    : EMPTY_STRING;
   contents += isProtected
     ? genProtected({ callable: kind === "FunctionDesc" }) + NL
     : EMPTY_STRING;
@@ -219,11 +223,15 @@ function NAMED_INTERFACE_MARKER(fqn: string): string {
  * @param ast
  * @return
  */
-function genDeprecated(ast: DeprecatedDesc) {
+function genDeprecatedOrExperimental(ast: DeprecatedDesc | ExperimentalDesc) {
   let contents = EMPTY_STRING;
-  contents += "@deprecated";
-  contents += ast.since ? ` (since ${ast.since})` : EMPTY_STRING;
-  contents += ast.description ? ` - ${ast.description}` : EMPTY_STRING;
+  if (ast.kind === "DeprecatedDesc") {
+    contents += "@deprecated";
+  } else if (ast.kind === "ExperimentalDesc") {
+    contents += "@experimental";
+  }
+  contents += ast.since ? ` As of version ${ast.since}.` : EMPTY_STRING;
+  contents += ast.description ? ` ${ast.description}` : EMPTY_STRING;
   return contents;
 }
 
@@ -234,18 +242,6 @@ function genProtected({ callable = false }) {
   return callable
     ? "@ui5-protected Do not call from applications (only from related classes in the framework)"
     : "@ui5-protected DO NOT USE IN APPLICATIONS (only for related classes in the framework)";
-}
-
-/**
- * @param ast
- * @return
- */
-function genExperimental(ast: ExperimentalDesc) {
-  let contents = EMPTY_STRING;
-  contents += "@experimental";
-  contents += ast.since ? ` (since ${ast.since})` : EMPTY_STRING;
-  contents += ast.description ? ` - ${ast.description}` : EMPTY_STRING;
-  return contents;
 }
 
 /**

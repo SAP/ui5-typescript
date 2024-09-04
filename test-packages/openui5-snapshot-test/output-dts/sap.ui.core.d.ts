@@ -64,7 +64,7 @@ interface JQuery<TElement = HTMLElement> extends Iterable<TElement> {
 
   /**
    * Extension function to the jQuery.fn which identifies SAPUI5 controls in the given jQuery context.
-   * @deprecated since 1.106, use sap.ui.core.Element.closestTo instead.
+   * @deprecated As of version 1.106, use {@link sap.ui.core.Element.closestTo} instead.
    */
   control(
     /**
@@ -75,7 +75,7 @@ interface JQuery<TElement = HTMLElement> extends Iterable<TElement> {
 
   /**
    * Extension function to the jQuery.fn which identifies SAPUI5 controls in the given jQuery context.
-   * @deprecated since 1.106, use sap.ui.core.Element.closestTo instead.
+   * @deprecated As of version 1.106, use {@link sap.ui.core.Element.closestTo} instead.
    */
   control(
     /**
@@ -2519,7 +2519,7 @@ declare module "sap/base/security/URLWhitelist" {
   /**
    * Entry object of the URLWhitelist.
    *
-   * @deprecated (since 1.85) - use {@link module:sap/base/security/URLListValidator.Entry} instead.
+   * @deprecated As of version 1.85. use {@link module:sap/base/security/URLListValidator.Entry} instead.
    */
   export type Entry = {
     /**
@@ -2939,7 +2939,7 @@ declare module "sap/base/util/includes" {
    * Checks if value is included in collection.
    *
    * @since 1.58
-   * @deprecated (since 1.90) - Use the `Array.prototype.includes` or `String.prototype.includes` instead,
+   * @deprecated As of version 1.90. Use the `Array.prototype.includes` or `String.prototype.includes` instead,
    * but note that `Array.prototype.includes` or `String.prototype.includes` fail when called on null values.
    *
    * @returns - true if value is in the collection, false otherwise
@@ -3269,7 +3269,7 @@ declare module "sap/base/util/UriParameters" {
    *     `null` serves the same purpose.
    *
    * @since 1.68
-   * @deprecated (since 1.119) - See class description for details.
+   * @deprecated As of version 1.119. See class description for details.
    */
   export default class UriParameters {
     /**
@@ -4125,7 +4125,7 @@ declare module "sap/ui/core/date/UI5Date" {
     /**
      * Returns the year of this date instance minus 1900 according to the configured time zone, see `Date.prototype.getYear`.
      *
-     * @deprecated (since 1.111) - as it is deprecated in the base class JavaScript Date; use {@link #getFullYear }
+     * @deprecated As of version 1.111. as it is deprecated in the base class JavaScript Date; use {@link #getFullYear }
      * instead
      *
      * @returns The year of this date instance minus 1900 according to the configured time zone
@@ -4405,7 +4405,7 @@ declare module "sap/ui/core/date/UI5Date" {
     /**
      * Sets the year for this date instance plus 1900 considering the configured time zone, see `Date.prototype.setYear`.
      *
-     * @deprecated (since 1.111) - as it is deprecated in the base class JavaScript Date; use {@link #setFullYear }
+     * @deprecated As of version 1.111. as it is deprecated in the base class JavaScript Date; use {@link #setFullYear }
      * instead
      *
      * @returns The milliseconds of the new timestamp based on the UNIX epoch, or `NaN` if the timestamp could
@@ -4673,7 +4673,7 @@ declare module "sap/ui/core/getCompatibilityVersion" {
   /**
    * Returns the used compatibility version for the given feature.
    *
-   * @deprecated (since 1.119) - without a replacement. All features that have been controlled by a compatibility
+   * @deprecated As of version 1.119. without a replacement. All features that have been controlled by a compatibility
    * version in UI5 1.x will abandon their legacy behavior, starting with the next major version. In other
    * words, they will behave as if compatibility version "edge" was configured. Due to this, no more access
    * to the compatibility version will be required starting with the next major version.
@@ -6759,8 +6759,9 @@ declare module "sap/ui/app/Application" {
   /**
    * Abstract application class. Extend this class to create a central application class.
    *
-   * @deprecated (since 1.15.1) - The Component class is enhanced to take care about the Application code.
-   * @experimental (since 1.11.1) - The Application class is still under construction, so some implementation
+   * @deprecated As of version 1.15.1. The Component class is enhanced to take care about the Application
+   * code.
+   * @experimental As of version 1.11.1. The Application class is still under construction, so some implementation
    * details can be changed in future.
    */
   export default abstract class Application extends Component {
@@ -6870,7 +6871,7 @@ declare module "sap/ui/app/Application" {
      * Returns the application root component.
      *
      * @since 1.13.1
-     * @deprecated (since 1.14)
+     * @deprecated As of version 1.14.
      *
      * @returns The root component
      */
@@ -6952,8 +6953,9 @@ declare module "sap/ui/app/Application" {
   /**
    * Describes the settings that can be provided to the Application constructor.
    *
-   * @deprecated (since 1.15.1) - The Component class is enhanced to take care about the Application code.
-   * @experimental (since 1.11.1) - The Application class is still under construction, so some implementation
+   * @deprecated As of version 1.15.1. The Component class is enhanced to take care about the Application
+   * code.
+   * @experimental As of version 1.11.1. The Application class is still under construction, so some implementation
    * details can be changed in future.
    */
   export interface $ApplicationSettings extends $ComponentSettings {
@@ -6974,9 +6976,9 @@ declare module "sap/ui/app/MockServer" {
   /**
    * Class to mock a server.
    *
-   * @deprecated (since 1.15.1) - The mock server code has been moved to sap.ui.core.util - see {@link sap.ui.core.util.MockServer}
-   * @experimental (since 1.13.0) - The mock server is still under construction, so some implementation details
-   * can be changed in future.
+   * @deprecated As of version 1.15.1. The mock server code has been moved to sap.ui.core.util - see {@link sap.ui.core.util.MockServer}
+   * @experimental As of version 1.13.0. The mock server is still under construction, so some implementation
+   * details can be changed in future.
    */
   export default abstract class MockServer extends ManagedObject {
     /**
@@ -7016,9 +7018,9 @@ declare module "sap/ui/app/MockServer" {
   /**
    * Describes the settings that can be provided to the MockServer constructor.
    *
-   * @deprecated (since 1.15.1) - The mock server code has been moved to sap.ui.core.util - see {@link sap.ui.core.util.MockServer}
-   * @experimental (since 1.13.0) - The mock server is still under construction, so some implementation details
-   * can be changed in future.
+   * @deprecated As of version 1.15.1. The mock server code has been moved to sap.ui.core.util - see {@link sap.ui.core.util.MockServer}
+   * @experimental As of version 1.13.0. The mock server is still under construction, so some implementation
+   * details can be changed in future.
    */
   export interface $MockServerSettings extends $ManagedObjectSettings {}
 }
@@ -8594,7 +8596,7 @@ declare module "sap/ui/base/ManagedObject" {
      * bound properties or aggregations of the object itself and all of its children relatively to the given
      * path.
      *
-     * @deprecated (since 1.11.1) - please use {@link #bindObject} instead.
+     * @deprecated As of version 1.11.1. please use {@link #bindObject} instead.
      *
      * @returns reference to the instance itself
      */
@@ -9860,7 +9862,7 @@ declare module "sap/ui/base/ManagedObject" {
      * Removes the defined binding context of this object, all bindings will now resolve relative to the parent
      * context again.
      *
-     * @deprecated (since 1.11.1) - please use {@link #unbindObject} instead.
+     * @deprecated As of version 1.11.1. please use {@link #unbindObject} instead.
      *
      * @returns reference to the instance itself
      */
@@ -11539,12 +11541,12 @@ declare module "sap/ui/base/Metadata" {
      * Returns an array with the names of all public methods declared by the described class and all its ancestors
      * classes.
      *
-     * @deprecated (since 1.58) - this method should not be used for productive code. The accuracy of the returned
-     * information highly depends on the concrete class and is not actively monitored. There might be more public
-     * methods or some of the returned methods might not really be intended for public use. In general, pure
-     * visibility information should not be exposed in runtime metadata but be part of the documentation. Subclasses
-     * of `sap.ui.base.Object` might decide to provide runtime metadata describing their public API, but this
-     * then should not be backed by this method. See {@link sap.ui.core.mvc.ControllerMetadata#getAllMethods }
+     * @deprecated As of version 1.58. this method should not be used for productive code. The accuracy of the
+     * returned information highly depends on the concrete class and is not actively monitored. There might
+     * be more public methods or some of the returned methods might not really be intended for public use. In
+     * general, pure visibility information should not be exposed in runtime metadata but be part of the documentation.
+     * Subclasses of `sap.ui.base.Object` might decide to provide runtime metadata describing their public API,
+     * but this then should not be backed by this method. See {@link sap.ui.core.mvc.ControllerMetadata#getAllMethods }
      * for an example.
      *
      * @returns array with names of all public methods provided by the described class and its ancestors
@@ -11576,12 +11578,12 @@ declare module "sap/ui/base/Metadata" {
      * Returns an array with the names of the public methods declared by the described class, methods of ancestors
      * are not listed.
      *
-     * @deprecated (since 1.58) - this method should not be used for productive code. The accuracy of the returned
-     * information highly depends on the concrete class and is not actively monitored. There might be more public
-     * methods or some of the returned methods might not really be intended for public use. In general, pure
-     * visibility information should not be exposed in runtime metadata but be part of the documentation. Subclasses
-     * of `sap.ui.base.Object` might decide to provide runtime metadata describing their public API, but this
-     * then should not be backed by this method. See {@link sap.ui.core.mvc.ControllerMetadata#getAllMethods }
+     * @deprecated As of version 1.58. this method should not be used for productive code. The accuracy of the
+     * returned information highly depends on the concrete class and is not actively monitored. There might
+     * be more public methods or some of the returned methods might not really be intended for public use. In
+     * general, pure visibility information should not be exposed in runtime metadata but be part of the documentation.
+     * Subclasses of `sap.ui.base.Object` might decide to provide runtime metadata describing their public API,
+     * but this then should not be backed by this method. See {@link sap.ui.core.mvc.ControllerMetadata#getAllMethods }
      * for an example.
      *
      * @returns array with names of public methods declared by the described class
@@ -11671,7 +11673,7 @@ declare module "sap/ui/base/Object" {
      * 	 - publicMethods: {string} an array of method names that will be visible in the interface proxy returned
      *     by {@link #getInterface}
      *
-     * @deprecated (since 1.3.1) - Use the static `extend` method of the desired base class (e.g. {@link sap.ui.base.Object.extend})
+     * @deprecated As of version 1.3.1. Use the static `extend` method of the desired base class (e.g. {@link sap.ui.base.Object.extend})
      *
      * @returns the created metadata object
      */
@@ -11763,7 +11765,7 @@ declare module "sap/ui/base/Object" {
      * Please see the API documentation of {@link sap.ui.base.Object#isA} for more details.
      *
      * @since 1.56
-     * @deprecated (since 1.120) - please use {@link sap.ui.base.Object.isObjectA}.
+     * @deprecated As of version 1.120. please use {@link sap.ui.base.Object.isObjectA}.
      *
      * @returns Whether the given object is an instance of the given type or of any of the given types
      */
@@ -12681,7 +12683,7 @@ declare module "sap/ui/core/library" {
    * Implementing this interface allows a control to be accessible via access keys.
    *
    * @since 1.104
-   * @experimental (since 1.104)
+   * @experimental As of version 1.104.
    */
   export interface IAccessKeySupport {
     __implements__sap_ui_core_IAccessKeySupport: boolean;
@@ -12691,21 +12693,21 @@ declare module "sap/ui/core/library" {
      * method is used.
      *
      * @since 1.104
-     * @experimental (since 1.104)
+     * @experimental As of version 1.104.
      */
     getAccessKeysFocusTarget?(): void;
     /**
      * If implemented called when access keys feature is enabled and highlighting is over
      *
      * @since 1.104
-     * @experimental (since 1.104)
+     * @experimental As of version 1.104.
      */
     onAccKeysHighlightEnd?(): void;
     /**
      * If implemented called when access keys feature is enabled and highlighting is ongoing
      *
      * @since 1.104
-     * @experimental (since 1.104)
+     * @experimental As of version 1.104.
      */
     onAccKeysHighlightStart?(): void;
   }
@@ -12742,7 +12744,7 @@ declare module "sap/ui/core/library" {
    * Implementation of this interface implements the `openBy` and `getAriaHasPopupType` methods.
    *
    * @since 1.98
-   * @experimental (since 1.98)
+   * @experimental As of version 1.98.
    */
   export interface IColumnHeaderMenu {
     __implements__sap_ui_core_IColumnHeaderMenu: boolean;
@@ -12751,7 +12753,7 @@ declare module "sap/ui/core/library" {
      * Returns the sap.ui.core.aria.HasPopup<\code> type of the menu.
      *
      * @since 1.98.0
-     * @experimental (since 1.98)
+     * @experimental As of version 1.98.
      *
      * @returns sap.ui.core.aria.HasPopup<\code> type of the menu
      */
@@ -12760,7 +12762,7 @@ declare module "sap/ui/core/library" {
      * Opens the menu using the column header.
      *
      * @since 1.98
-     * @experimental (since 1.98)
+     * @experimental As of version 1.98.
      */
     openBy(
       /**
@@ -13033,7 +13035,7 @@ declare module "sap/ui/core/library" {
    * Enumeration for different mode behaviors of the `InvisibleMessage`.
    *
    * @since 1.78
-   * @experimental (since 1.73)
+   * @experimental As of version 1.73.
    */
   export enum InvisibleMessageMode {
     /**
@@ -13174,7 +13176,7 @@ declare module "sap/ui/core/library" {
   /**
    * Specifies possible message types.
    *
-   * @deprecated (since 1.120) - Please use {@link sap.ui.core.message.MessageType} instead.
+   * @deprecated As of version 1.120. Please use {@link sap.ui.core.message.MessageType} instead.
    */
   export enum MessageType {
     /**
@@ -13889,7 +13891,7 @@ declare module "sap/ui/core/CalendarType" {
   /**
    * The types of `Calendar`.
    *
-   * @deprecated (since 1.120) - Please use {@link module:sap/base/18n/date/CalendarType} instead.
+   * @deprecated As of version 1.120. Please use {@link module:sap/base/18n/date/CalendarType} instead.
    */
   enum CalendarType {
     /**
@@ -14276,7 +14278,7 @@ declare module "sap/ui/core/Component" {
      * Registry of all `Component`s that currently exist.
      *
      * @since 1.67
-     * @deprecated (since 1.120) - Use {@link module:sap/ui/core/ComponentRegistry} instead.
+     * @deprecated As of version 1.120. Use {@link module:sap/ui/core/ComponentRegistry} instead.
      */
     static registry: registry;
 
@@ -14425,7 +14427,7 @@ declare module "sap/ui/core/Component" {
      * Returns an existing component instance, identified by its ID.
      *
      * @since 1.56.0
-     * @deprecated (since 1.120) - please use the static {@link sap.ui.core.Component.getComponentById getComponentById }
+     * @deprecated As of version 1.120. please use the static {@link sap.ui.core.Component.getComponentById getComponentById }
      * instead.
      *
      * @returns Component instance or `undefined` when no component with the given ID exists.
@@ -14913,8 +14915,8 @@ declare module "sap/ui/core/Component" {
      * cleanup before the real unload or to prompt a question to the user, if the component should be exited.
      *
      * @since 1.15.1
-     * @deprecated (since 1.119) - recommended to use the browser-native page lifecycle API, providing events
-     * such as 'pageshow' and 'pagehide'
+     * @deprecated As of version 1.119. recommended to use the browser-native page lifecycle API, providing
+     * events such as 'pageshow' and 'pagehide'
      *
      * @returns a string if a prompt should be displayed to the user confirming closing the Component (e.g.
      * when the Component is not yet saved), or `undefined` if no prompt should be shown.
@@ -14925,7 +14927,7 @@ declare module "sap/ui/core/Component" {
      * errors.
      *
      * @since 1.15.1
-     * @deprecated (since 1.119) - recommended to use the browser-native API to listen for errors: window.addEventListener("error",
+     * @deprecated As of version 1.119. recommended to use the browser-native API to listen for errors: window.addEventListener("error",
      * function() { ... })
      */
     onWindowError(
@@ -14947,9 +14949,9 @@ declare module "sap/ui/core/Component" {
      * of the component once the window will be unloaded (e.g. closed).
      *
      * @since 1.15.1
-     * @deprecated (since 1.119) - Newer browser versions deprecate the browser-native 'unload' event. Therefore,
-     * the former API won't reliably work anymore. Please have a look at the browser-native page lifecycle API,
-     * e.g. its events 'pageshow' and 'pagehide'.
+     * @deprecated As of version 1.119. Newer browser versions deprecate the browser-native 'unload' event.
+     * Therefore, the former API won't reliably work anymore. Please have a look at the browser-native page
+     * lifecycle API, e.g. its events 'pageshow' and 'pagehide'.
      */
     onWindowUnload(): void;
     /**
@@ -14992,7 +14994,7 @@ declare module "sap/ui/core/Component" {
    * Registry of all `Component`s that currently exist.
    *
    * @since 1.67
-   * @deprecated (since 1.120) - Use {@link module:sap/ui/core/ComponentRegistry} instead.
+   * @deprecated As of version 1.120. Use {@link module:sap/ui/core/ComponentRegistry} instead.
    */
   interface registry {
     /**
@@ -15991,7 +15993,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * ignores the entries of the manifest file! It returns only the entries which have been defined in the
      * Component metadata or in the proper Component manifest.
      *
-     * @deprecated (since 1.27.1) - Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies/components")
+     * @deprecated As of version 1.27.1. Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies/components")
      *
      * @returns Required Components.
      */
@@ -16001,7 +16003,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * the complete configuration property
      *
      * @since 1.15.1
-     * @deprecated (since 1.27.1) - Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/config")
+     * @deprecated As of version 1.27.1. Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/config")
      *
      * @returns the value of the configuration property
      */
@@ -16024,7 +16026,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      *
      * The configuration above can be accessed via `sample.Component.getMetadata().getCustomEntry("my.custom.config")`.
      *
-     * @deprecated (since 1.27.1) - Please use the sap.ui.core.ComponentMetadata#getManifestEntry
+     * @deprecated As of version 1.27.1. Please use the sap.ui.core.ComponentMetadata#getManifestEntry
      *
      * @returns custom Component configuration with the specified key.
      */
@@ -16045,7 +16047,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * ignores the entries of the manifest file! It returns only the entries which have been defined in the
      * Component metadata or in the proper Component manifest.
      *
-     * @deprecated (since 1.27.1) - Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies")
+     * @deprecated As of version 1.27.1. Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies")
      *
      * @returns Component dependencies.
      */
@@ -16057,7 +16059,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * ignores the entries of the manifest file! It returns only the entries which have been defined in the
      * Component metadata or in the proper Component manifest.
      *
-     * @deprecated (since 1.27.1) - For CSS, please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/resources/css").
+     * @deprecated As of version 1.27.1. For CSS, please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/resources/css").
      *
      * @returns Included files.
      */
@@ -16070,7 +16072,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * ignores the entries of the manifest file! It returns only the entries which have been defined in the
      * Component metadata or in the proper Component manifest.
      *
-     * @deprecated (since 1.27.1) - Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies/libs")
+     * @deprecated As of version 1.27.1. Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies/libs")
      *
      * @returns Required libraries.
      */
@@ -16080,7 +16082,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * null.
      *
      * @since 1.27.1
-     * @deprecated (since 1.33.0) - Please use the sap.ui.core.Component#getManifest
+     * @deprecated As of version 1.33.0. Please use the sap.ui.core.Component#getManifest
      *
      * @returns manifest.
      */
@@ -16101,7 +16103,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * a slash (/).
      *
      * @since 1.27.1
-     * @deprecated (since 1.33.0) - Please use the sap.ui.core.Component#getManifest
+     * @deprecated As of version 1.33.0. Please use the sap.ui.core.Component#getManifest
      *
      * @returns Value of the manifest section or the key (could be any kind of value)
      */
@@ -16138,7 +16140,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * is null.
      *
      * @since 1.29.0
-     * @deprecated (since 1.33.0) - Please use the sap.ui.core.Component#getManifest
+     * @deprecated As of version 1.33.0. Please use the sap.ui.core.Component#getManifest
      *
      * @returns manifest
      */
@@ -16150,7 +16152,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * ignores the entries of the manifest file! It returns only the entries which have been defined in the
      * Component metadata or in the proper Component manifest.
      *
-     * @deprecated (since 1.27.1) - Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies/minUI5Version")
+     * @deprecated As of version 1.27.1. Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.ui5/dependencies/minUI5Version")
      *
      * @returns Required version of UI5 or if not specified then `null`.
      */
@@ -16161,7 +16163,7 @@ declare module "sap/ui/core/ComponentMetadata" {
      * ignores the entries of the manifest file! It returns only the entries which have been defined in the
      * Component metadata or in the proper Component manifest.
      *
-     * @deprecated (since 1.34.2) - Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.app/applicationVersion/version")
+     * @deprecated As of version 1.34.2. Please use {@link sap.ui.core.Component#getManifestEntry}("/sap.app/applicationVersion/version")
      *
      * @returns The version of the component.
      */
@@ -16219,10 +16221,10 @@ declare module "sap/ui/core/Configuration" {
    *
    * Values of boolean parameters are case insensitive where "true" and "x" are interpreted as true.
    *
-   * @deprecated (since 1.120) - There's no single replacement for this class. Instead, several facades have
-   * been created for different topics, e.g. {@link module:sap/base/i18n/Localization Localization} for settings
-   * related to localization, {@link module:sap/base/i18n/Formatting Formatting} for settings related to data
-   * formatting, {@link module:sap/ui/core/Theming Theming} for theming related settings, {@link module:sap/ui/core/ControlBehavior ControlBehavior }
+   * @deprecated As of version 1.120. There's no single replacement for this class. Instead, several facades
+   * have been created for different topics, e.g. {@link module:sap/base/i18n/Localization Localization} for
+   * settings related to localization, {@link module:sap/base/i18n/Formatting Formatting} for settings related
+   * to data formatting, {@link module:sap/ui/core/Theming Theming} for theming related settings, {@link module:sap/ui/core/ControlBehavior ControlBehavior }
    * for settings that are typically required when implementing the behavior of a control, {@link module:sap/ui/security/Security Security }
    * for settings around security.
    *
@@ -16237,7 +16239,7 @@ declare module "sap/ui/core/Configuration" {
      * for each animation mode.
      *
      * @since 1.50.0
-     * @deprecated (since 1.120) - Please use module {@link module:sap/ui/core/AnimationMode AnimationMode }
+     * @deprecated As of version 1.120. Please use module {@link module:sap/ui/core/AnimationMode AnimationMode }
      * instead.
      */
     AnimationMode: typeof AnimationMode;
@@ -16255,7 +16257,7 @@ declare module "sap/ui/core/Configuration" {
      * API can be provided in a nested object with name `formatSettings`.
      *
      * @since 1.38.6
-     * @deprecated (since 1.120) - without a replacement. As the different settings have been spread across
+     * @deprecated As of version 1.120. without a replacement. As the different settings have been spread across
      * multiple new APIs (see {@link sap.ui.core.Configuration the deprecation hint for this class}), a common
      * API for changing multiple settings no longer made sense.
      *
@@ -16298,7 +16300,7 @@ declare module "sap/ui/core/Configuration" {
      * Returns whether the accessibility mode is enabled or not.
      *
      * @since 1.20
-     * @deprecated (since 1.120) - Please use {@link module:sap/ui/core/ControlBehavior.isAccessibilityEnabled ControlBehavior.isAccessibilityEnabled }
+     * @deprecated As of version 1.120. Please use {@link module:sap/ui/core/ControlBehavior.isAccessibilityEnabled ControlBehavior.isAccessibilityEnabled }
      * instead.
      *
      * @returns whether the accessibility mode is enabled or not
@@ -16308,7 +16310,7 @@ declare module "sap/ui/core/Configuration" {
      * Returns the list of active terminologies defined via the Configuration.
      *
      * @since 1.77.0
-     * @deprecated (since 1.118) - Please use {@link module:sap/base/i18n/Localization.getActiveTerminologies Localization.getActiveTerminologies }
+     * @deprecated As of version 1.118. Please use {@link module:sap/base/i18n/Localization.getActiveTerminologies Localization.getActiveTerminologies }
      * instead.
      *
      * @returns if no active terminologies are set, the default value `undefined` is returned.
@@ -16317,7 +16319,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * URL of the allowlist service.
      *
-     * @deprecated (since 1.120) - Please use {@link module:sap/ui/security/Security.getAllowlistService Security.getAllowlistService }
+     * @deprecated As of version 1.120. Please use {@link module:sap/ui/security/Security.getAllowlistService Security.getAllowlistService }
      * instead.
      *
      * @returns allowlist service URL
@@ -16326,7 +16328,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Returns whether the animations are globally used.
      *
-     * @deprecated (since 1.50) - Since 1.20, please use {@link module:sap/ui/core/ControlBehavior.getAnimationMode ControlBehavior.getAnimationMode }
+     * @deprecated As of version 1.50. Since 1.20, please use {@link module:sap/ui/core/ControlBehavior.getAnimationMode ControlBehavior.getAnimationMode }
      * instead.
      *
      * @returns whether the animations are globally used
@@ -16336,7 +16338,7 @@ declare module "sap/ui/core/Configuration" {
      * Returns the current animation mode.
      *
      * @since 1.50.0
-     * @deprecated (since 1.120) - Please use {@link module:sap/ui/core/ControlBehavior.getAnimationMode ControlBehavior.getAnimationMode }
+     * @deprecated As of version 1.120. Please use {@link module:sap/ui/core/ControlBehavior.getAnimationMode ControlBehavior.getAnimationMode }
      * instead.
      *
      * @returns The current animationMode
@@ -16345,7 +16347,8 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Base URLs to AppCacheBuster ETag-Index files.
      *
-     * @deprecated (since 1.120) - without a replacement. Was only used within the implementation of the `AppCacheBuster`.
+     * @deprecated As of version 1.120. without a replacement. Was only used within the implementation of the
+     * `AppCacheBuster`.
      *
      * @returns array of base URLs
      */
@@ -16353,7 +16356,8 @@ declare module "sap/ui/core/Configuration" {
     /**
      * The loading mode (sync|async|batch) of the AppCacheBuster (sync is default)
      *
-     * @deprecated (since 1.120) - without a replacement. Was only used within the implementation of the `AppCacheBuster`.
+     * @deprecated As of version 1.120. without a replacement. Was only used within the implementation of the
+     * `AppCacheBuster`.
      *
      * @returns "sync" | "async" | "batch"
      */
@@ -16361,7 +16365,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * The name of the application to start or empty.
      *
-     * @deprecated (since 1.15.1) - Please use {@link module:sap/ui/core/ComponentSupport ComponentSupport }
+     * @deprecated As of version 1.15.1. Please use {@link module:sap/ui/core/ComponentSupport ComponentSupport }
      * instead. See also {@link topic:82a0fcecc3cb427c91469bc537ebdddf Declarative API for Initial Components}.
      *
      * @returns name of the application
@@ -16371,7 +16375,7 @@ declare module "sap/ui/core/Configuration" {
      * Returns whether the framework automatically adds the ARIA role 'application' to the HTML body or not.
      *
      * @since 1.27.0
-     * @deprecated (since 1.120) - without a replacement. Was only used in the implementation of the framework
+     * @deprecated As of version 1.120. without a replacement. Was only used in the implementation of the framework
      * itself.
      *
      * @returns Wether the ARIA role 'application' should be added to the HTML body or not
@@ -16384,7 +16388,7 @@ declare module "sap/ui/core/Configuration" {
      * calendar type is determined by checking the format settings and current locale.
      *
      * @since 1.28.6
-     * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting.getCalendarType Formatting.getCalendarType }
+     * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting.getCalendarType Formatting.getCalendarType }
      * instead.
      *
      * @returns the current calendar type, e.g. `Gregorian`
@@ -16395,7 +16399,7 @@ declare module "sap/ui/core/Configuration" {
      * calendar week of the year, see {@link sap.ui.core.date.CalendarWeekNumbering}.
      *
      * @since 1.113.0
-     * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting.getCalendarWeekNumbering Formatting.getCalendarWeekNumbering }
+     * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting.getCalendarWeekNumbering Formatting.getCalendarWeekNumbering }
      * instead.
      *
      * @returns The calendar week numbering algorithm
@@ -16404,7 +16408,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Returns the used compatibility version for the given feature.
      *
-     * @deprecated (since 1.119) - without a replacement. All features that have been controlled by a compatibility
+     * @deprecated As of version 1.119. without a replacement. All features that have been controlled by a compatibility
      * version in UI5 1.x will abandon their legacy behavior, starting with the next major version. In other
      * words, they will behave as if compatibility version "edge" was configured. Due to this, no more access
      * to the compatibility version will be required starting with the next major version.
@@ -16420,7 +16424,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Returns whether the page runs in full debug mode.
      *
-     * @deprecated (since 1.120) - without a replacement. All debug mode functionality is implemented within
+     * @deprecated As of version 1.120. without a replacement. All debug mode functionality is implemented within
      * the framework and should be transparent for application code. There's no need for a public accessor method.
      *
      * @returns Whether the page runs in full debug mode
@@ -16434,7 +16438,7 @@ declare module "sap/ui/core/Configuration" {
      * The contract of the module is not defined by the configuration API.
      *
      * @since 1.102
-     * @deprecated (since 1.120) - without a replacement. The configuration is only relevant for the `sap.ui.export`
+     * @deprecated As of version 1.120. without a replacement. The configuration is only relevant for the `sap.ui.export`
      * library.
      *
      * @returns Module name (ID) of a file share support module
@@ -16443,8 +16447,8 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Returns whether the Fiori2Adaptation is on.
      *
-     * @deprecated (since 1.120) - without a replacement. All the Fiori 2.0 adaptation logic is handled by the
-     * framework, there should be no need for apps to know about it.
+     * @deprecated As of version 1.120. without a replacement. All the Fiori 2.0 adaptation logic is handled
+     * by the framework, there should be no need for apps to know about it.
      *
      * @returns false - no adaptation, true - full adaptation, comma-separated list - partial adaptation Possible
      * values: style, collapse, title, back, hierarchy
@@ -16455,8 +16459,8 @@ declare module "sap/ui/core/Configuration" {
      * are not called.
      *
      * @since 1.60.0
-     * @deprecated (since 1.120) - without a replacement. Was only used by the Flexibility feature which now
-     * resolves this on its own.
+     * @deprecated As of version 1.120. without a replacement. Was only used by the Flexibility feature which
+     * now resolves this on its own.
      *
      * @returns Flexibility services configuration
      */
@@ -16465,7 +16469,7 @@ declare module "sap/ui/core/Configuration" {
      * Returns the format locale string with language and region code. Falls back to language configuration,
      * in case it has not been explicitly defined.
      *
-     * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting.getLanguageTag Formatting.getLanguageTag }
+     * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting.getLanguageTag Formatting.getLanguageTag }
      * instead.
      *
      * @returns the format locale string with language and country code
@@ -16474,7 +16478,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Returns a configuration object that bundles the format settings of UI5.
      *
-     * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting Formatting} instead.
+     * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting Formatting} instead.
      *
      * @returns A FormatSettings object.
      */
@@ -16482,7 +16486,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * frameOptions mode (allow/deny/trusted).
      *
-     * @deprecated (since 1.120) - Please use {@link module:sap/ui/security/Security.getFrameOptions Security.getFrameOptions }
+     * @deprecated As of version 1.120. Please use {@link module:sap/ui/security/Security.getFrameOptions Security.getFrameOptions }
      * instead.
      *
      * @returns frameOptions mode
@@ -16493,10 +16497,10 @@ declare module "sap/ui/core/Configuration" {
      *
      * Has only an effect when the sap-ui-debug module has been loaded.
      *
-     * @deprecated (since 1.120) - without a replacement. The inspect option is related to the very old sap-ui-debug
-     * module. As there are now much better development tools (e.g. the UI5 Inpsector browser extension), this
-     * option has been deprecated and the sap-ui-debug feature might be removed in future major versions of
-     * UI5.
+     * @deprecated As of version 1.120. without a replacement. The inspect option is related to the very old
+     * sap-ui-debug module. As there are now much better development tools (e.g. the UI5 Inpsector browser extension),
+     * this option has been deprecated and the sap-ui-debug feature might be removed in future major versions
+     * of UI5.
      *
      * @returns whether the UI5 control inspector is displayed
      */
@@ -16531,7 +16535,7 @@ declare module "sap/ui/core/Configuration" {
      * For a normalized BCP47 tag, call {@link #.getLanguageTag Configuration.getLanguageTag} or call {@link #.getLocale Configuration.getLocale }
      * to get a {@link sap.ui.core.Locale Locale} object matching the language.
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.getLanguage Localization.getLanguage }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.getLanguage Localization.getLanguage }
      * instead.
      *
      * @returns Language string as configured
@@ -16544,7 +16548,7 @@ declare module "sap/ui/core/Configuration" {
      *
      * Retrieves the modern locale, e.g. sr-Latn (Serbian (Latin)), he (Hebrew), yi (Yiddish)
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.getLanguageTag Localization.getLanguageTag }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.getLanguageTag Localization.getLanguageTag }
      * instead.
      *
      * @returns The language tag for the current language, conforming to BCP47
@@ -16555,7 +16559,7 @@ declare module "sap/ui/core/Configuration" {
      *
      * The Locale is derived from the {@link #.getLanguage language} property.
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.getLanguageTag Localization.getLanguageTag }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.getLanguageTag Localization.getLanguageTag }
      * instead.
      *
      * @returns The locale
@@ -16565,7 +16569,7 @@ declare module "sap/ui/core/Configuration" {
      * Flag whether a Component should load the manifest first.
      *
      * @since 1.33.0
-     * @deprecated (since 1.120) - 'manifest-first' is the default for the {@link sap.ui.core.Component.create Component.create }
+     * @deprecated As of version 1.120. 'manifest-first' is the default for the {@link sap.ui.core.Component.create Component.create }
      * factory.
      *
      * @returns true if a Component should load the manifest first
@@ -16581,8 +16585,8 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Returns whether there should be an exception on any duplicate element IDs.
      *
-     * @deprecated (since 1.120) - without a replacement. Future major versions of UI5 will always report duplicate
-     * IDs as an error as the framework heavily relies on their uniqueness.
+     * @deprecated As of version 1.120. without a replacement. Future major versions of UI5 will always report
+     * duplicate IDs as an error as the framework heavily relies on their uniqueness.
      *
      * @returns whether there should be an exception on any duplicate element IDs
      */
@@ -16590,8 +16594,8 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Returns whether the text origin information is collected.
      *
-     * @deprecated (since 1.120) - The origin info was intended as a mean to track down translation issues to
-     * the origin of a translated text. Meanwhile, with the pseudo logon language 3Q, a similar, more lightweight
+     * @deprecated As of version 1.120. The origin info was intended as a mean to track down translation issues
+     * to the origin of a translated text. Meanwhile, with the pseudo logon language 3Q, a similar, more lightweight
      * feature exists for use with OpenUI5 or SAPUI5 libraries.
      *
      * @returns whether the text info is collected
@@ -16600,8 +16604,8 @@ declare module "sap/ui/core/Configuration" {
     /**
      * The name of the root component to start or empty.
      *
-     * @deprecated (since 1.95) - Please use {@link module:sap/ui/core/ComponentSupport ComponentSupport} instead.
-     * See also {@link topic:82a0fcecc3cb427c91469bc537ebdddf Declarative API for Initial Components}.
+     * @deprecated As of version 1.95. Please use {@link module:sap/ui/core/ComponentSupport ComponentSupport }
+     * instead. See also {@link topic:82a0fcecc3cb427c91469bc537ebdddf Declarative API for Initial Components}.
      *
      * @returns name of the root component
      */
@@ -16612,7 +16616,7 @@ declare module "sap/ui/core/Configuration" {
      * If no mode has been explicitly set (neither `true` nor `false`), the mode is derived from the current
      * language setting.
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.getRTL Localization.getRTL }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.getRTL Localization.getRTL }
      * instead.
      *
      * @returns whether the page uses the RTL text direction
@@ -16623,7 +16627,7 @@ declare module "sap/ui/core/Configuration" {
      *
      * It will be returned in uppercase. e.g. "EN", "DE"
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.getSAPLogonLanguage Localization.getSAPLogonLanguage }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.getSAPLogonLanguage Localization.getSAPLogonLanguage }
      * instead.
      *
      * @returns The SAP logon language code for the current language
@@ -16634,7 +16638,7 @@ declare module "sap/ui/core/Configuration" {
      * See:
      * 	{@link #.setSecurityTokenHandlers}
      *
-     * @deprecated (since 1.120) - Please use {@link module:sap/ui/security/Security.getSecurityTokenHandlers Security.getSecurityTokenHandlers }
+     * @deprecated As of version 1.120. Please use {@link module:sap/ui/security/Security.getSecurityTokenHandlers Security.getSecurityTokenHandlers }
      * instead.
      *
      * @returns the security token handlers (an empty array if there are none)
@@ -16647,7 +16651,8 @@ declare module "sap/ui/core/Configuration" {
      * via TechnicalInfo.
      *
      * @since 1.106.0
-     * @deprecated (since 1.120) - without a replacment. The configuration is only relevant within the framework.
+     * @deprecated As of version 1.120. without a replacment. The configuration is only relevant within the
+     * framework.
      *
      * @returns Whether statistics are enabled
      */
@@ -16655,7 +16660,8 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Returns the theme name
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/ui/core/Theming.getTheme Theming.getTheme} instead.
+     * @deprecated As of version 1.119. Please use {@link module:sap/ui/core/Theming.getTheme Theming.getTheme }
+     * instead.
      *
      * @returns the theme name
      */
@@ -16663,7 +16669,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Retrieves the configured IANA timezone ID.
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.getTimezone Localization.getTimezone }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.getTimezone Localization.getTimezone }
      * instead.
      *
      * @returns The configured IANA timezone ID, e.g. "America/New_York"
@@ -16672,7 +16678,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Prefix to be used for automatically generated control IDs. Default is a double underscore "__".
      *
-     * @deprecated (since 1.119) - Please use {@link sap.ui.base.ManagedObjectMetadata.getUIDPrefix ManagedObjectMetadata.getUIDPrefix }
+     * @deprecated As of version 1.119. Please use {@link sap.ui.base.ManagedObjectMetadata.getUIDPrefix ManagedObjectMetadata.getUIDPrefix }
      * instead.
      *
      * @returns the prefix to be used
@@ -16683,7 +16689,7 @@ declare module "sap/ui/core/Configuration" {
      *
      * Similar to `sap.ui.version`.
      *
-     * @deprecated (since 1.120) - Please use the async {@link module:sap/ui/VersionInfo.load VersionInfo.load }
+     * @deprecated As of version 1.120. Please use the async {@link module:sap/ui/VersionInfo.load VersionInfo.load }
      * instead.
      *
      * @returns the version
@@ -16692,7 +16698,7 @@ declare module "sap/ui/core/Configuration" {
     /**
      * URL of the whitelist service.
      *
-     * @deprecated (since 1.85) - Use {@link module:sap/ui/security/Security.getAllowlistService Security.getAllowlistService }
+     * @deprecated As of version 1.85. Use {@link module:sap/ui/security/Security.getAllowlistService Security.getAllowlistService }
      * instead. SAP strives to replace insensitive terms with inclusive language. Since APIs cannot be renamed
      * or immediately removed for compatibility reasons, this API has been deprecated.
      *
@@ -16708,7 +16714,7 @@ declare module "sap/ui/core/Configuration" {
      * the old `animation` property is set to `false`, otherwise it is set to `true`.
      *
      * @since 1.50.0
-     * @deprecated (since 1.120) - Please use {@link module:sap/ui/core/ControlBehavior.setAnimationMode ControlBehavior.setAnimationMode }
+     * @deprecated As of version 1.120. Please use {@link module:sap/ui/core/ControlBehavior.setAnimationMode ControlBehavior.setAnimationMode }
      * instead.
      */
     setAnimationMode(
@@ -16722,7 +16728,7 @@ declare module "sap/ui/core/Configuration" {
      * translation texts, etc.).
      *
      * @since 1.28.6
-     * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting.setCalendarType Formatting.setCalendarType }
+     * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting.setCalendarType Formatting.setCalendarType }
      * instead.
      *
      * @returns `this` to allow method chaining
@@ -16739,7 +16745,7 @@ declare module "sap/ui/core/Configuration" {
      * first calendar week of the year, see {@link sap.ui.core.date.CalendarWeekNumbering}.
      *
      * @since 1.113.0
-     * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting.setCalendarWeekNumbering Formatting.setCalendarWeekNumbering }
+     * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting.setCalendarWeekNumbering Formatting.setCalendarWeekNumbering }
      * instead.
      *
      * @returns `this` to allow method chaining
@@ -16765,7 +16771,7 @@ declare module "sap/ui/core/Configuration" {
      *
      * **Note**: See documentation of {@link #.setLanguage} for restrictions.
      *
-     * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting.setLanguageTag Formatting.setLanguageTag }
+     * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting.setLanguageTag Formatting.setLanguageTag }
      * instead.
      *
      * @returns `this` to allow method chaining
@@ -16822,7 +16828,7 @@ declare module "sap/ui/core/Configuration" {
      * See:
      * 	http://scn.sap.com/docs/DOC-14377
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.setLanguage Localization.setLanguage }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.setLanguage Localization.setLanguage }
      * instead.
      *
      * @returns `this` to allow method chaining
@@ -16852,7 +16858,7 @@ declare module "sap/ui/core/Configuration" {
      *
      * **Note**: See documentation of {@link #.setLanguage} for restrictions.
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.setRTL Localization.setRTL }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.setRTL Localization.setRTL }
      * instead.
      *
      * @returns `this` to allow method chaining
@@ -16868,7 +16874,7 @@ declare module "sap/ui/core/Configuration" {
      * See:
      * 	{@link #.getSecurityTokenHandlers}
      *
-     * @deprecated (since 1.120) - Please use {@link module:sap/ui/security/Security.setSecurityTokenHandlers Security.setSecurityTokenHandlers }
+     * @deprecated As of version 1.120. Please use {@link module:sap/ui/security/Security.setSecurityTokenHandlers Security.setSecurityTokenHandlers }
      * instead.
      */
     setSecurityTokenHandlers(
@@ -16880,7 +16886,8 @@ declare module "sap/ui/core/Configuration" {
     /**
      * Allows setting the theme name
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/ui/core/Theming.setTheme Theming.setTheme} instead.
+     * @deprecated As of version 1.119. Please use {@link module:sap/ui/core/Theming.setTheme Theming.setTheme }
+     * instead.
      *
      * @returns `this` to allow method chaining
      */
@@ -16903,7 +16910,7 @@ declare module "sap/ui/core/Configuration" {
      * event.
      *
      * @since 1.99.0
-     * @deprecated (since 1.119) - Please use {@link module:sap/base/i18n/Localization.setTimezone Localization.setTimezone }
+     * @deprecated As of version 1.119. Please use {@link module:sap/base/i18n/Localization.setTimezone Localization.setTimezone }
      * instead.
      *
      * @returns `this` to allow method chaining
@@ -16918,10 +16925,10 @@ declare module "sap/ui/core/Configuration" {
   }
   const Configuration: Configuration;
   /**
-   * @deprecated (since 1.120) - There's no single replacement for this class. Instead, several facades have
-   * been created for different topics, e.g. {@link module:sap/base/i18n/Localization Localization} for settings
-   * related to localization, {@link module:sap/base/i18n/Formatting Formatting} for settings related to data
-   * formatting, {@link module:sap/ui/core/Theming Theming} for theming related settings, {@link module:sap/ui/core/ControlBehavior ControlBehavior }
+   * @deprecated As of version 1.120. There's no single replacement for this class. Instead, several facades
+   * have been created for different topics, e.g. {@link module:sap/base/i18n/Localization Localization} for
+   * settings related to localization, {@link module:sap/base/i18n/Formatting Formatting} for settings related
+   * to data formatting, {@link module:sap/ui/core/Theming Theming} for theming related settings, {@link module:sap/ui/core/ControlBehavior ControlBehavior }
    * for settings that are typically required when implementing the behavior of a control, {@link module:sap/ui/security/Security Security }
    * for settings around security.
    *
@@ -16937,7 +16944,7 @@ declare module "sap/ui/core/Configuration" {
    * for each animation mode.
    *
    * @since 1.50.0
-   * @deprecated (since 1.120) - Please use module {@link module:sap/ui/core/AnimationMode AnimationMode }
+   * @deprecated As of version 1.120. Please use module {@link module:sap/ui/core/AnimationMode AnimationMode }
    * instead.
    */
   enum AnimationMode {
@@ -16965,7 +16972,7 @@ declare module "sap/ui/core/Configuration" {
    * objects created after that point in time will honor the modifications. To be on the safe side, applications
    * should do any modifications early in their lifecycle or recreate any model/UI that is locale dependent.
    *
-   * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting Formatting} instead.
+   * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting Formatting} instead.
    */
   export class FormatSettings extends BaseObject {
     constructor();
@@ -17048,7 +17055,7 @@ declare module "sap/ui/core/Configuration" {
      * been specified, then a special private use subtag is added to the locale, indicating to the framework
      * that these user preferences should be applied.
      *
-     * @deprecated (since 1.120) - Please use {@link module:sap/base/i18n/Formatting.getLanguageTag Formatting.getLanguageTag }
+     * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/Formatting.getLanguageTag Formatting.getLanguageTag }
      * instead.
      *
      * @returns the format locale
@@ -17172,7 +17179,7 @@ declare module "sap/ui/core/Configuration" {
      * UI. See the documentation of {@link sap.ui.core.Configuration.setLanguage Configuration.setLanguage }
      * for details and restrictions.
      *
-     * @deprecated (since 1.113) - Use {@link sap.ui.core.Configuration.FormatSettings#setCalendarWeekNumbering FormatSettings#setCalendarWeekNumbering }
+     * @deprecated As of version 1.113. Use {@link sap.ui.core.Configuration.FormatSettings#setCalendarWeekNumbering FormatSettings#setCalendarWeekNumbering }
      * instead.
      *
      * @returns Returns `this` to allow method chaining
@@ -17805,8 +17812,8 @@ declare module "sap/ui/core/Control" {
      *
      * Default value is `false`.
      *
-     * @deprecated (since 1.69) - The blocked property is deprecated. There is no accessibility support for
-     * this property. Blocked controls should not be used inside Controls, which rely on keyboard navigation,
+     * @deprecated As of version 1.69. The blocked property is deprecated. There is no accessibility support
+     * for this property. Blocked controls should not be used inside Controls, which rely on keyboard navigation,
      * e.g. List controls.
      *
      * @returns Value of property `blocked`
@@ -17945,7 +17952,7 @@ declare module "sap/ui/core/Control" {
     /**
      * Check if the control is currently in busy state.
      *
-     * @deprecated (since 1.15) - use {@link #getBusy} instead
+     * @deprecated As of version 1.15. use {@link #getBusy} instead
      */
     isBusy(): boolean;
     /**
@@ -18043,10 +18050,10 @@ declare module "sap/ui/core/Control" {
      * Note that this method can only be called when the control already has a DOM representation (it has been
      * rendered before) and when the control still is assigned to a UIArea.
      *
-     * @deprecated (since 1.70) - using this method is no longer recommended, but still works. Synchronous DOM
-     * updates via this method have several drawbacks: they only work when the control has been rendered before
-     * (no initial rendering possible), multiple state changes won't be combined automatically into a single
-     * re-rendering, they might cause additional layout trashing, standard invalidation might cause another
+     * @deprecated As of version 1.70. using this method is no longer recommended, but still works. Synchronous
+     * DOM updates via this method have several drawbacks: they only work when the control has been rendered
+     * before (no initial rendering possible), multiple state changes won't be combined automatically into a
+     * single re-rendering, they might cause additional layout trashing, standard invalidation might cause another
      * async re-rendering.
      *
      * The recommended alternative is to rely on invalidation and standard re-rendering.
@@ -18200,8 +18207,8 @@ declare module "sap/ui/core/Control" {
     /**
      * Whether the control is currently in blocked state.
      *
-     * @deprecated (since 1.69) - The blocked property is deprecated. There is no accessibility support for
-     * this property. Blocked controls should not be used inside Controls, which rely on keyboard navigation,
+     * @deprecated As of version 1.69. The blocked property is deprecated. There is no accessibility support
+     * for this property. Blocked controls should not be used inside Controls, which rely on keyboard navigation,
      * e.g. List controls.
      */
     blocked?: boolean | PropertyBindingInfo | `{${string}}`;
@@ -18423,8 +18430,8 @@ declare module "sap/ui/core/Core" {
      *
      * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.ManagedObject.extend}.
      *
-     * @deprecated (since 1.119) - without replacement. In future major versions, the Core no longer has a class
-     * nature and therefore can't be extended.
+     * @deprecated As of version 1.119. without replacement. In future major versions, the Core no longer has
+     * a class nature and therefore can't be extended.
      *
      * @returns The created class / constructor function
      */
@@ -18447,8 +18454,8 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the metadata for class `sap.ui.core.Core`.
      *
-     * @deprecated (since 1.119) - without replacement. In future major versions, the Core no longer has a class
-     * nature and no longer inherits from sap.ui.base.Object and therefore no longer has metadata.
+     * @deprecated As of version 1.119. without replacement. In future major versions, the Core no longer has
+     * a class nature and no longer inherits from sap.ui.base.Object and therefore no longer has metadata.
      *
      * @returns Metadata object describing this class
      */
@@ -18459,8 +18466,8 @@ declare module "sap/ui/core/Core" {
      * In general, applications and Controls should avoid calling this method and instead let the framework
      * manage any necessary rendering.
      *
-     * @deprecated (since 1.118) - without replacement. In the next major version, synchronously rendering UI
-     * updates is no longer supported as it can lead to unnecessary intermediate DOM updates or layout shifting
+     * @deprecated As of version 1.118. without replacement. In the next major version, synchronously rendering
+     * UI updates is no longer supported as it can lead to unnecessary intermediate DOM updates or layout shifting
      * etc. Controls should rather use invalidation and apps should not trigger rendering at all but rather
      * rely on the framework's automatic update mechanisms. Test code can use the test module `sap/ui/qunit/utils/nextUIUpdate`
      * as a convenient way to wait for the next asynchronous rendering.
@@ -18484,7 +18491,8 @@ declare module "sap/ui/core/Core" {
      * If the theme resources are not all either below this base location or with their respective libraries,
      * then setThemePath must be used to configure individual locations.
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/ui/core/Theming.setTheme Theming.setTheme} instead.
+     * @deprecated As of version 1.119. Please use {@link module:sap/ui/core/Theming.setTheme Theming.setTheme }
+     * instead.
      */
     applyTheme(
       /**
@@ -18502,7 +18510,7 @@ declare module "sap/ui/core/Core" {
      * When called, the context of the listener (its `this`) will be bound to `oListener` if specified, otherwise
      * it will be bound to a dummy event provider object.
      *
-     * @deprecated (since 1.119) - without a replacement. Applications should not have the need to intercept
+     * @deprecated As of version 1.119. without a replacement. Applications should not have the need to intercept
      * all control events.
      */
     attachControlEvent(
@@ -18523,7 +18531,7 @@ declare module "sap/ui/core/Core" {
      *
      * Please note that this event is a bubbling event and may already be canceled before reaching the core.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#attachFormatError ManagedObject#attachFormatError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#attachFormatError ManagedObject#attachFormatError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18550,7 +18558,7 @@ declare module "sap/ui/core/Core" {
      *
      * Please note that this event is a bubbling event and may already be canceled before reaching the core.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#attachFormatError ManagedObject#attachFormatError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#attachFormatError ManagedObject#attachFormatError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18575,7 +18583,7 @@ declare module "sap/ui/core/Core" {
      * topic "{@link https://ui5.sap.com/#/topic/91f2c9076f4d1014b6dd926db0e91070 Initialization Process}".
      *
      * @since 1.13.2
-     * @deprecated (since 1.118) - Please use {@link sap.ui.core.Core.ready Core.ready} instead.
+     * @deprecated As of version 1.118. Please use {@link sap.ui.core.Core.ready Core.ready} instead.
      */
     attachInit(
       /**
@@ -18591,7 +18599,7 @@ declare module "sap/ui/core/Core" {
      * instead. This guarantees that the given function is executed exactly once, independent of the state of
      * the framework.
      *
-     * @deprecated (since 1.13.2) - Register with the more convenient {@link #attachInit} function instead
+     * @deprecated As of version 1.13.2. Register with the more convenient {@link #attachInit} function instead
      */
     attachInitEvent(
       /**
@@ -18606,7 +18614,8 @@ declare module "sap/ui/core/Core" {
      * it will be bound to the interval timer instance.
      *
      * @since 1.16.0
-     * @deprecated (since 1.61) - Use `IntervalTrigger.addListener()` from "sap/ui/core/IntervalTrigger" module.
+     * @deprecated As of version 1.61. Use `IntervalTrigger.addListener()` from "sap/ui/core/IntervalTrigger"
+     * module.
      */
     attachIntervalTimer(
       /**
@@ -18624,7 +18633,7 @@ declare module "sap/ui/core/Core" {
      * When called, the context of the listener (its `this`) will be bound to `oListener` if specified, otherwise
      * it will be bound to a dummy event provider object.
      *
-     * @deprecated (since 1.118) - Please use {@link module:sap/base/i18n/Localization.attachChange Localization.attachChange }
+     * @deprecated As of version 1.118. Please use {@link module:sap/base/i18n/Localization.attachChange Localization.attachChange }
      * instead.
      */
     attachLocalizationChanged(
@@ -18645,7 +18654,7 @@ declare module "sap/ui/core/Core" {
      *
      * Please note that this event is a bubbling event and may already be canceled before reaching the core.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#attachParseError ManagedObject#attachParseError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#attachParseError ManagedObject#attachParseError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18673,7 +18682,7 @@ declare module "sap/ui/core/Core" {
      *
      * Please note that this event is a bubbling event and may already be canceled before reaching the core.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#attachParseError ManagedObject#attachParseError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#attachParseError ManagedObject#attachParseError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18694,7 +18703,7 @@ declare module "sap/ui/core/Core" {
      * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
      * otherwise it will be bound to a dummy event provider object.
      *
-     * @deprecated (since 1.118) - See {@link module:sap/ui/core/Theming.attachApplied Theming.attachApplied }
+     * @deprecated As of version 1.118. See {@link module:sap/ui/core/Theming.attachApplied Theming.attachApplied }
      * instead.
      */
     attachThemeChanged(
@@ -18715,7 +18724,7 @@ declare module "sap/ui/core/Core" {
      *
      * Please note that this event is a bubbling event and may already be canceled before reaching the core.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#attachValidationError ManagedObject#attachValidationError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#attachValidationError ManagedObject#attachValidationError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18743,7 +18752,7 @@ declare module "sap/ui/core/Core" {
      *
      * Please note that this event is a bubbling event and may already be canceled before reaching the core.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#attachValidationError ManagedObject#attachValidationError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#attachValidationError ManagedObject#attachValidationError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18767,7 +18776,7 @@ declare module "sap/ui/core/Core" {
      *
      * Please note that this event is a bubbling event and may already be canceled before reaching the core.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#attachValidationSuccess ManagedObject#attachValidationSuccess }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#attachValidationSuccess ManagedObject#attachValidationSuccess }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18795,7 +18804,7 @@ declare module "sap/ui/core/Core" {
      *
      * Please note that this event is a bubbling event and may already be canceled before reaching the core.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#attachValidationSuccess ManagedObject#attachValidationSuccess }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#attachValidationSuccess ManagedObject#attachValidationSuccess }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18814,7 +18823,7 @@ declare module "sap/ui/core/Core" {
      * Returns a list of all controls with a field group ID. See {@link sap.ui.core.Control#checkFieldGroupIds Control.prototype.checkFieldGroupIds }
      * for a description of the `vFieldGroupIds` parameter.
      *
-     * @deprecated (since 1.118) - use {@link sap.ui.core.Control.getControlsByFieldGroupId Control.getControlsByFieldGroupId }
+     * @deprecated As of version 1.118. use {@link sap.ui.core.Control.getControlsByFieldGroupId Control.getControlsByFieldGroupId }
      * instead.
      *
      * @returns The list of controls with matching field group IDs
@@ -18835,7 +18844,7 @@ declare module "sap/ui/core/Core" {
      * can only be executed on the corresponding scope (e.g. on an XMLView instance), by using the {@link sap.ui.core.mvc.View#byId View#byId }
      * method of that scope.
      *
-     * @deprecated (since 1.119) - Please use {@link sap.ui.core.Element.getElementById Element.getElementById }
+     * @deprecated As of version 1.119. Please use {@link sap.ui.core.Element.getElementById Element.getElementById }
      * instead.
      *
      * @returns Element with the given ID or `undefined`
@@ -18861,7 +18870,7 @@ declare module "sap/ui/core/Core" {
      * ```
      *
      *
-     * @deprecated (since 1.95) - Please use {@link sap.ui.core.Component.create Component.create} instead.
+     * @deprecated As of version 1.95. Please use {@link sap.ui.core.Component.create Component.create} instead.
      *
      * @returns The created component instance or a promise on it in the async use case
      */
@@ -18912,8 +18921,8 @@ declare module "sap/ui/core/Core" {
      * The caller must take care to destroy the render manager when it is no longer needed. Calling this method
      * before the Core has been {@link #isInitialized initialized}, is not recommended.
      *
-     * @deprecated (since 1.119) - without replacement. In the next major version, synchronously rendering UI
-     * updates is no longer supported as it can lead to unnecessary intermediate DOM updates or layout shifting
+     * @deprecated As of version 1.119. without replacement. In the next major version, synchronously rendering
+     * UI updates is no longer supported as it can lead to unnecessary intermediate DOM updates or layout shifting
      * etc. Controls should rather use invalidation.
      *
      * @returns New instance of the RenderManager
@@ -18922,7 +18931,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Creates a new {@link sap.ui.core.UIArea UIArea}.
      *
-     * @deprecated (since 1.1) - use {@link sap.ui.core.Control#placeAt Control#placeAt} instead!
+     * @deprecated As of version 1.1. use {@link sap.ui.core.Control#placeAt Control#placeAt} instead!
      *
      * @returns a new UIArea
      */
@@ -18937,7 +18946,7 @@ declare module "sap/ui/core/Core" {
      *
      * The passed function and listener object must match the ones used for event registration.
      *
-     * @deprecated (since 1.119) - without a replacement. Applications should not have the need to intercept
+     * @deprecated As of version 1.119. without a replacement. Applications should not have the need to intercept
      * all control events.
      */
     detachControlEvent(
@@ -18955,7 +18964,7 @@ declare module "sap/ui/core/Core" {
      *
      * The passed function and listener object must match the ones used for event registration.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#detachFormatError ManagedObject#detachFormatError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#detachFormatError ManagedObject#detachFormatError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -18977,7 +18986,7 @@ declare module "sap/ui/core/Core" {
      * call.
      *
      * @since 1.16.0
-     * @deprecated (since 1.61) - Use `IntervalTrigger.removeListener()` from "sap/ui/core/IntervalTrigger"
+     * @deprecated As of version 1.61. Use `IntervalTrigger.removeListener()` from "sap/ui/core/IntervalTrigger"
      * module.
      */
     detachIntervalTimer(
@@ -18996,7 +19005,7 @@ declare module "sap/ui/core/Core" {
      * The listener will only be unregistered if the same function/context combination is given as in the call
      * to `attachLocalizationListener`.
      *
-     * @deprecated (since 1.118) - Please use {@link module:sap/base/i18n/Localization.detachChange Localization.detachChange }
+     * @deprecated As of version 1.118. Please use {@link module:sap/base/i18n/Localization.detachChange Localization.detachChange }
      * instead.
      */
     detachLocalizationChanged(
@@ -19014,7 +19023,7 @@ declare module "sap/ui/core/Core" {
      *
      * The passed function and listener object must match the ones used for event registration.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#detachParseError ManagedObject#detachParseError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#detachParseError ManagedObject#detachParseError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -19034,7 +19043,7 @@ declare module "sap/ui/core/Core" {
      *
      * The passed function and listener object must match the ones used for event registration.
      *
-     * @deprecated (since 1.118) - See {@link module:sap/ui/core/Theming.detachApplied Theming#detachApplied }
+     * @deprecated As of version 1.118. See {@link module:sap/ui/core/Theming.detachApplied Theming#detachApplied }
      * instead.
      */
     detachThemeChanged(
@@ -19053,7 +19062,7 @@ declare module "sap/ui/core/Core" {
      *
      * The passed function and listener object must match the ones used for event registration.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#detachValidationError ManagedObject#detachValidationError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#detachValidationError ManagedObject#detachValidationError }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -19074,7 +19083,7 @@ declare module "sap/ui/core/Core" {
      *
      * The passed function and listener object must match the ones used for event registration.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#detachValidationSuccess ManagedObject#detachValidationSuccess }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#detachValidationSuccess ManagedObject#detachValidationSuccess }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -19092,7 +19101,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Fires event {@link #event:formatError formatError} to attached listeners.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#fireFormatError ManagedObject#fireFormatError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#fireFormatError ManagedObject#fireFormatError }
      * instead.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
@@ -19132,7 +19141,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Fires event {@link #event:parseError parseError} to attached listeners.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#fireParseError ManagedObject#fireParseError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#fireParseError ManagedObject#fireParseError }
      * instead.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
@@ -19172,7 +19181,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Fires event {@link #event:validationError validationError} to attached listeners.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#fireValidationError ManagedObject.fireValidationError }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#fireValidationError ManagedObject.fireValidationError }
      * instead.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
@@ -19219,7 +19228,7 @@ declare module "sap/ui/core/Core" {
      * 	 - 'newValue' of type `object`
      * 	 - 'oldValue' of type `object`
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#fireValidationSuccess ManagedObject#fireValidationSuccess }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#fireValidationSuccess ManagedObject#fireValidationSuccess }
      * instead.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
@@ -19234,7 +19243,8 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the instance of the application (if exists).
      *
-     * @deprecated (since 1.15.1) - The Component class is enhanced to take care about the Application code.
+     * @deprecated As of version 1.15.1. The Component class is enhanced to take care about the Application
+     * code.
      *
      * @returns instance of the current application
      */
@@ -19242,7 +19252,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the registered component for the given id, if any.
      *
-     * @deprecated (since 1.95) - Please use {@link sap.ui.core.Component.get Component.get} instead.
+     * @deprecated As of version 1.95. Please use {@link sap.ui.core.Component.get Component.get} instead.
      *
      * @returns the component for the given id
      */
@@ -19250,7 +19260,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the Configuration of the Core.
      *
-     * @deprecated (since 1.120) - Please see {@link sap.ui.core.Configuration Configuration} for the corrsponding
+     * @deprecated As of version 1.120. Please see {@link sap.ui.core.Configuration Configuration} for the corrsponding
      * replacements.
      *
      * @returns the Configuration of the current Core.
@@ -19259,7 +19269,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the registered element for the given ID, if any.
      *
-     * @deprecated (since 1.1) - use `sap.ui.core.Core.byId` instead!
+     * @deprecated As of version 1.1. use `sap.ui.core.Core.byId` instead!
      *
      * @returns Element for the given ID or `undefined`
      */
@@ -19272,7 +19282,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the ID of the control/element currently in focus.
      *
-     * @deprecated (since 1.119) - Please use {@link sap.ui.core.Element.getActiveElement Element.getActiveElement }
+     * @deprecated As of version 1.119. Please use {@link sap.ui.core.Element.getActiveElement Element.getActiveElement }
      * to get the currently focused element. You can then retrieve the ID of that element with {@link sap.ui.core.Element#getId Element#getId}.
      * Please be aware, {@link sap.ui.core.Element.getActiveElement Element.getActiveElement} can return 'undefined'.
      *
@@ -19282,7 +19292,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the registered element for the given ID, if any.
      *
-     * @deprecated (since 1.1) - use `sap.ui.core.Core.byId` instead!
+     * @deprecated As of version 1.1. use `sap.ui.core.Core.byId` instead!
      *
      * @returns Element for the given ID or `undefined`
      */
@@ -19296,7 +19306,7 @@ declare module "sap/ui/core/Core" {
      * Returns the event bus.
      *
      * @since 1.8.0
-     * @deprecated (since 1.119.0) - Please use {@link sap.ui.core.EventBus.getInstance EventBus.getInstance }
+     * @deprecated As of version 1.119.0. Please use {@link sap.ui.core.EventBus.getInstance EventBus.getInstance }
      * for global usage instead. Creating an own local instance is the preferred usage.
      *
      * @returns the event bus
@@ -19332,7 +19342,7 @@ declare module "sap/ui/core/Core" {
      * code. Only when the bundle is needed at module execution time (by top level code in a control module),
      * then the asynchronous variant of this method should be preferred.
      *
-     * @deprecated (since 1.119) - Please use {@link sap.ui.core.Lib.getResourceBundleFor Lib.getResourceBundleFor }
+     * @deprecated As of version 1.119. Please use {@link sap.ui.core.Lib.getResourceBundleFor Lib.getResourceBundleFor }
      * instead.
      *
      * @returns The best matching resource bundle for the given parameters or `undefined`; in asynchronous case
@@ -19382,7 +19392,7 @@ declare module "sap/ui/core/Core" {
      * code. Only when the bundle is needed at module execution time (by top level code in a control module),
      * then the asynchronous variant of this method should be preferred.
      *
-     * @deprecated (since 1.119) - Please use {@link sap.ui.core.Lib.getResourceBundleFor Lib.getResourceBundleFor }
+     * @deprecated As of version 1.119. Please use {@link sap.ui.core.Lib.getResourceBundleFor Lib.getResourceBundleFor }
      * instead.
      *
      * @returns The best matching resource bundle for the given parameters or `undefined`; in asynchronous case
@@ -19409,8 +19419,8 @@ declare module "sap/ui/core/Core" {
      * **Note:** The returned info objects must not be modified. They might be a living copy of the internal
      * data (for efficiency reasons) and the framework is not prepared to handle modifications to these objects.
      *
-     * @deprecated (since 1.119) - without a 1:1 replacement. Callers that used `getLoadedLibraries` to check
-     * whether a certain library is loaded, should rather use {@link sap.ui.core.Lib#isLoaded Library#isLoaded}.
+     * @deprecated As of version 1.119. without a 1:1 replacement. Callers that used `getLoadedLibraries` to
+     * check whether a certain library is loaded, should rather use {@link sap.ui.core.Lib#isLoaded Library#isLoaded}.
      *
      * @returns Map of library info objects keyed by the library names.
      */
@@ -19419,7 +19429,7 @@ declare module "sap/ui/core/Core" {
      * Returns the `Messaging` module.
      *
      * @since 1.33.0
-     * @deprecated (since 1.118) - Please use {@link module:sap/ui/core/Messaging Messaging} instead.
+     * @deprecated As of version 1.118. Please use {@link module:sap/ui/core/Messaging Messaging} instead.
      */
     getMessageManager(): Messaging;
     /**
@@ -19430,7 +19440,7 @@ declare module "sap/ui/core/Core" {
      * Note: to be compatible with future versions of this API, applications must not use the value `null`,
      * the empty string `""` or the string literals `"null"` or `"undefined"` as model name.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#getModel ManagedObject#getModel }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#getModel ManagedObject#getModel }
      * instead.
      *
      * @returns oModel
@@ -19444,7 +19454,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Creates a new `RenderManager` instance for use by the caller.
      *
-     * @deprecated (since 0.15.0) - Replaced by `createRenderManager()`
+     * @deprecated As of version 0.15.0. Replaced by `createRenderManager()`
      *
      * @returns A newly createdRenderManeger
      */
@@ -19452,7 +19462,8 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the instance of the root component (if exists).
      *
-     * @deprecated (since 1.95) - Please use {@link module:sap/ui/core/ComponentSupport} instead. See also {@link topic:82a0fcecc3cb427c91469bc537ebdddf Declarative API for Initial Components}.
+     * @deprecated As of version 1.95. Please use {@link module:sap/ui/core/ComponentSupport} instead. See also
+     * {@link topic:82a0fcecc3cb427c91469bc537ebdddf Declarative API for Initial Components}.
      *
      * @returns instance of the current root component
      */
@@ -19464,7 +19475,7 @@ declare module "sap/ui/core/Core" {
      *
      * If it is not yet available, a DIV is created and appended to the body.
      *
-     * @deprecated (since 1.119.0) - Please use {@link module:sap/ui/core/StaticArea.getDomRef StaticArea.getDomRef }
+     * @deprecated As of version 1.119.0. Please use {@link module:sap/ui/core/StaticArea.getDomRef StaticArea.getDomRef }
      * instead.
      *
      * @returns the static, hidden area DOM element belonging to this core instance.
@@ -19473,7 +19484,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the registered template for the given id, if any.
      *
-     * @deprecated (since 1.29.1) - Require 'sap/ui/core/tmpl/Template' and use {@link sap.ui.core.tmpl.Template.byId Template.byId }
+     * @deprecated As of version 1.29.1. Require 'sap/ui/core/tmpl/Template' and use {@link sap.ui.core.tmpl.Template.byId Template.byId }
      * instead.
      *
      * @returns the template for the given id
@@ -19482,7 +19493,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the {@link sap.ui.core.UIArea UIArea} with the given ID or that belongs to the given DOM element.
      *
-     * @deprecated (since 1.107) - For access to the static UIArea, please use the {@link module:sap/ui/core/StaticArea StaticArea }
+     * @deprecated As of version 1.107. For access to the static UIArea, please use the {@link module:sap/ui/core/StaticArea StaticArea }
      * instead.
      *
      * @returns UIArea with the given ID or DOM element or `null` or `undefined`.
@@ -19497,8 +19508,8 @@ declare module "sap/ui/core/Core" {
      * Returns `true` if there are any pending rendering tasks or when such rendering tasks are currently being
      * executed.
      *
-     * @deprecated (since 1.118) - without replacement. The known use cases in testing environments are covered
-     * by other APIs or features, e.g. OPA's waitFor mechanism.
+     * @deprecated As of version 1.118. without replacement. The known use cases in testing environments are
+     * covered by other APIs or features, e.g. OPA's waitFor mechanism.
      *
      * @returns true if there are pending (or executing) rendering tasks.
      */
@@ -19506,7 +19517,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Check if a Model is set to the core
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#hasModel ManagedObject#hasModel }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#hasModel ManagedObject#hasModel }
      * instead.
      *
      * @returns true or false
@@ -19516,8 +19527,8 @@ declare module "sap/ui/core/Core" {
      * Includes a library theme into the current page (if a variant is specified it will include the variant
      * library theme)
      *
-     * @deprecated (since 1.119) - without replacement. There's no known use case that would require a public
-     * API.
+     * @deprecated As of version 1.119. without replacement. There's no known use case that would require a
+     * public API.
      */
     includeLibraryTheme(
       /**
@@ -19591,7 +19602,7 @@ declare module "sap/ui/core/Core" {
      * When the `manifest.json` is generated from the `.library` file (which is the default for UI5 libraries
      * built with Maven), then the content of the `.library` and `library.js` files must be kept in sync.
      *
-     * @deprecated (since 1.119) - Please use {@link sap.ui.core.Lib.init Lib.init} instead.
+     * @deprecated As of version 1.119. Please use {@link sap.ui.core.Lib.init Lib.init} instead.
      *
      * @returns As of version 1.101; returns the library namespace, based on the given library name. Returns
      * 'undefined' if no library name is provided.
@@ -19606,7 +19617,7 @@ declare module "sap/ui/core/Core" {
      * Returns true if the Core has already been initialized. This means that instances of RenderManager etc.
      * do already exist and the init event has already been fired (and will not be fired again).
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.core.Core.ready Core.ready} instead.
+     * @deprecated As of version 1.118. Please use {@link sap.ui.core.Core.ready Core.ready} instead.
      *
      * @returns whether the Core has already been initialized
      */
@@ -19614,8 +19625,9 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the locked state of the `sap.ui.core.Core`.
      *
-     * @deprecated (since 1.118) - without a replacement. The ability to prevent the re-rendering of all `UIArea`s
-     * wasn't really used in the past and did not provide a meaningful feature. It therefore has been abandoned.
+     * @deprecated As of version 1.118. without a replacement. The ability to prevent the re-rendering of all
+     * `UIArea`s wasn't really used in the past and did not provide a meaningful feature. It therefore has been
+     * abandoned.
      *
      * @returns locked state
      */
@@ -19623,7 +19635,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Check if the script is running on mobile
      *
-     * @deprecated (since 1.118) - use {@link sap.ui.Device.browser.mobile Device.browser.mobile} instead.
+     * @deprecated As of version 1.118. use {@link sap.ui.Device.browser.mobile Device.browser.mobile} instead.
      *
      * @returns true or false
      */
@@ -19631,7 +19643,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Checks whether the given DOM element is the root of the static area.
      *
-     * @deprecated (since 1.119.0) - Please use {@link module:sap/ui/core/StaticArea.contains StaticArea.contains }
+     * @deprecated As of version 1.119.0. Please use {@link module:sap/ui/core/StaticArea.contains StaticArea.contains }
      * instead.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
@@ -19649,7 +19661,7 @@ declare module "sap/ui/core/Core" {
      * This function must not be used before the init event of the Core. If the styles are not yet applied a
      * theme changed event will follow when the styles will be applied.
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/ui/core/Theming.attachApplied Theming.attachApplied }
+     * @deprecated As of version 1.119. Please use {@link module:sap/ui/core/Theming.attachApplied Theming.attachApplied }
      * instead.
      *
      * @returns whether the styles of the current theme are already applied
@@ -19722,7 +19734,7 @@ declare module "sap/ui/core/Core" {
      * ```
      *
      *
-     * @deprecated (since 1.119) - Please use {@link sap.ui.core.Lib.load Lib.load} instead.
+     * @deprecated As of version 1.119. Please use {@link sap.ui.core.Lib.load Lib.load} instead.
      *
      * @returns An info object for the library (sync) or a Promise on it (async).
      */
@@ -19754,8 +19766,9 @@ declare module "sap/ui/core/Core" {
      * Lock should be called before and after the DOM is modified for rendering, roundtrips... Exceptions might
      * be the case for asynchronous UI behavior
      *
-     * @deprecated (since 1.118) - without a replacement. The ability to prevent the re-rendering of all `UIArea`s
-     * wasn't really used in the past and did not provide a meaningful feature. It therefore has been abandoned.
+     * @deprecated As of version 1.118. without a replacement. The ability to prevent the re-rendering of all
+     * `UIArea`s wasn't really used in the past and did not provide a meaningful feature. It therefore has been
+     * abandoned.
      */
     lock(): void;
     /**
@@ -19768,7 +19781,7 @@ declare module "sap/ui/core/Core" {
      * only a few controls it might not be necessary to trigger the realigment of all controls placed in the
      * DOM, for example changing the cozy/compact CSS class at a single control
      *
-     * @deprecated (since 1.119) - Please use {@link module:sap/ui/core/Theming.notifyContentDensityChanged Theming.notifyContentDensityChanged }
+     * @deprecated As of version 1.119. Please use {@link module:sap/ui/core/Theming.notifyContentDensityChanged Theming.notifyContentDensityChanged }
      * instead.
      */
     notifyContentDensityChanged(): void;
@@ -19793,8 +19806,8 @@ declare module "sap/ui/core/Core" {
      *     the Core will be provided
      * 	 - `stopPlugin()`: will be invoked, when the Plugin should stop
      *
-     * @deprecated (since 1.73) - Plugins never have been meant as a public offering, but were intended for
-     * internal usage only. They unfortunately allow access to all internals of the Core and therefore break
+     * @deprecated As of version 1.73. Plugins never have been meant as a public offering, but were intended
+     * for internal usage only. They unfortunately allow access to all internals of the Core and therefore break
      * encapsulation and hinder evolution of the Core. The most common use case of accessing the set of all
      * controls/elements or all components can now be addressed by using the APIs {@link sap.ui.core.Element.registry }
      * or {@link sap.ui.core.Component.registry}, respectively. Future refactorings of the Core will only take
@@ -19820,7 +19833,7 @@ declare module "sap/ui/core/Core" {
      * Note: to be compatible with future versions of this API, applications must not use the value `null`,
      * the empty string `""` or the string literals `"null"` or `"undefined"` as model name.
      *
-     * @deprecated (since 1.118) - Please use {@link sap.ui.base.ManagedObject#setModel ManagedObject#setModel }
+     * @deprecated As of version 1.118. Please use {@link sap.ui.base.ManagedObject#setModel ManagedObject#setModel }
      * instead.
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -19839,7 +19852,8 @@ declare module "sap/ui/core/Core" {
      * Implicitly creates a new `UIArea` (or reuses an exiting one) for the given DOM reference and adds the
      * given control reference to the UIAreas content (existing content will be removed).
      *
-     * @deprecated (since 1.1) - use {@link sap.ui.core.Control#placeAt oControl.placeAt(oDomRef, "only")} instead.
+     * @deprecated As of version 1.1. use {@link sap.ui.core.Control#placeAt oControl.placeAt(oDomRef, "only") }
+     * instead.
      */
     setRoot(
       /**
@@ -19899,8 +19913,8 @@ declare module "sap/ui/core/Core" {
      * in order to configure the theme location early enough.
      *
      * @since 1.10
-     * @deprecated (since 1.119) - without replacement. The need to define the location for a theme should be
-     * fully covered with the capabiltites of the {@link sap/base/config base configuration}.
+     * @deprecated As of version 1.119. without replacement. The need to define the location for a theme should
+     * be fully covered with the capabiltites of the {@link sap/base/config base configuration}.
      *
      * @returns the Core, to allow method chaining
      */
@@ -19970,8 +19984,8 @@ declare module "sap/ui/core/Core" {
      * in order to configure the theme location early enough.
      *
      * @since 1.10
-     * @deprecated (since 1.119) - without replacement. The need to define the location for a theme should be
-     * fully covered with the capabiltites of the {@link sap/base/config base configuration}.
+     * @deprecated As of version 1.119. without replacement. The need to define the location for a theme should
+     * be fully covered with the capabiltites of the {@link sap/base/config base configuration}.
      *
      * @returns the Core, to allow method chaining
      */
@@ -19994,15 +20008,16 @@ declare module "sap/ui/core/Core" {
      *
      * Browser events are dispatched to the controls again after this method is called.
      *
-     * @deprecated (since 1.118) - without a replacement. The ability to prevent the re-rendering of all `UIArea`s
-     * wasn't really used in the past and did not provide a meaningful feature. It therefore has been abandoned.
+     * @deprecated As of version 1.118. without a replacement. The ability to prevent the re-rendering of all
+     * `UIArea`s wasn't really used in the past and did not provide a meaningful feature. It therefore has been
+     * abandoned.
      */
     unlock(): void;
     /**
      * Unregisters a Plugin out of the `sap.ui.core.Core`
      *
-     * @deprecated (since 1.73) - Plugins never have been meant as a public offering, but were intended for
-     * internal usage only. They unfortunately allow access to all internals of the Core and therefore break
+     * @deprecated As of version 1.73. Plugins never have been meant as a public offering, but were intended
+     * for internal usage only. They unfortunately allow access to all internals of the Core and therefore break
      * encapsulation and hinder evolution of the Core. The most common use case of accessing the set of all
      * controls/elements or all components can now be addressed by using the APIs {@link sap.ui.core.Element.registry }
      * or {@link sap.ui.core.Component.registry}, respectively. Future refactorings of the Core will only take
@@ -20302,7 +20317,7 @@ declare module "sap/ui/core/date/CalendarWeekNumbering" {
    * 	 - the first week of the year.
    *
    * @since 1.108.0
-   * @deprecated (since 1.120) - Please use {@link module:sap/base/18n/date/CalendarWeekNumbering} instead.
+   * @deprecated As of version 1.120. Please use {@link module:sap/base/18n/date/CalendarWeekNumbering} instead.
    */
   enum CalendarWeekNumbering {
     /**
@@ -20339,7 +20354,7 @@ declare module "sap/ui/core/DeclarativeSupport" {
    * Static class for enabling declarative UI support.
    *
    * @since 1.7.0
-   * @deprecated (since 1.120) - Please consider using {@link sap.ui.core.mvc.XMLView XMLViews} or {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed Views }
+   * @deprecated As of version 1.120. Please consider using {@link sap.ui.core.mvc.XMLView XMLViews} or {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed Views }
    * instead. For more information, see the documentation on {@link topic:91f27e3e6f4d1014b6dd926db0e91070 View types}.
    */
   export default class DeclarativeSupport {
@@ -20934,7 +20949,7 @@ declare module "sap/ui/core/delegate/ScrollEnablement" {
      * Setter for property `bounce`.
      *
      * @since 1.17
-     * @deprecated (since 1.42)
+     * @deprecated As of version 1.42.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      */
     setBounce(
@@ -22855,7 +22870,7 @@ declare module "sap/ui/core/Element" {
      * Registry of all `sap.ui.core.Element`s that currently exist.
      *
      * @since 1.67
-     * @deprecated (since 1.120) - Use {@link module:sap/ui/core/ElementRegistry} instead.
+     * @deprecated As of version 1.120. Use {@link module:sap/ui/core/ElementRegistry} instead.
      */
     static registry: registry;
 
@@ -22886,7 +22901,7 @@ declare module "sap/ui/core/Element" {
     /**
      * Creates metadata for a UI Element by extending the Object Metadata.
      *
-     * @deprecated (since 1.3.1) - Use the static `extend` method of the desired base class (e.g. {@link sap.ui.core.Element.extend})
+     * @deprecated As of version 1.3.1. Use the static `extend` method of the desired base class (e.g. {@link sap.ui.core.Element.extend})
      *
      * @returns the created metadata
      */
@@ -23658,7 +23673,7 @@ declare module "sap/ui/core/Element" {
      * This function either calls set[sPropertyName] or get[sPropertyName] with the specified property name
      * depending if an `oValue` is provided or not.
      *
-     * @deprecated (since 1.28.0) - The contract of this method is not fully defined and its write capabilities
+     * @deprecated As of version 1.28.0. The contract of this method is not fully defined and its write capabilities
      * overlap with applySettings
      *
      * @returns Returns `this` to allow method chaining in case of setter and the property value in case of
@@ -23759,10 +23774,10 @@ declare module "sap/ui/core/Element" {
     /**
      * This triggers immediate rerendering of its parent and thus of itself and its children.
      *
-     * @deprecated (since 1.70) - using this method is no longer recommended, but still works. Synchronous DOM
-     * updates via this method have several drawbacks: they only work when the control has been rendered before
-     * (no initial rendering possible), multiple state changes won't be combined automatically into a single
-     * re-rendering, they might cause additional layout trashing, standard invalidation might cause another
+     * @deprecated As of version 1.70. using this method is no longer recommended, but still works. Synchronous
+     * DOM updates via this method have several drawbacks: they only work when the control has been rendered
+     * before (no initial rendering possible), multiple state changes won't be combined automatically into a
+     * single re-rendering, they might cause additional layout trashing, standard invalidation might cause another
      * async re-rendering.
      *
      * The recommended alternative is to rely on invalidation and standard re-rendering.
@@ -23838,7 +23853,7 @@ declare module "sap/ui/core/Element" {
    * Registry of all `sap.ui.core.Element`s that currently exist.
    *
    * @since 1.67
-   * @deprecated (since 1.120) - Use {@link module:sap/ui/core/ElementRegistry} instead.
+   * @deprecated As of version 1.120. Use {@link module:sap/ui/core/ElementRegistry} instead.
    */
   interface registry {
     /**
@@ -24995,7 +25010,7 @@ declare module "sap/ui/core/format/DateFormatTimezoneDisplay" {
    * Configuration options for the `showTimezone` format option of `DateFormat#getDateTimeWithTimezoneInstance`.
    *
    * @since 1.99.0
-   * @deprecated (since 1.101) - replaced by `DateFormat#getDateTimeWithTimezoneInstance` with the `showDate`,
+   * @deprecated As of version 1.101. replaced by `DateFormat#getDateTimeWithTimezoneInstance` with the `showDate`,
    * `showTime` and `showTimezone` format options.
    */
   enum DateFormatTimezoneDisplay {
@@ -28659,19 +28674,19 @@ declare module "sap/ui/core/InvisibleText" {
      */
     getText(): string;
     /**
-     * @deprecated (since 1.27) - local BusyIndicator is not supported by control.
+     * @deprecated As of version 1.27. local BusyIndicator is not supported by control.
      *
      * @returns Returns `this` to allow method chaining
      */
     setBusy(): this;
     /**
-     * @deprecated (since 1.27) - local BusyIndicator is not supported by control.
+     * @deprecated As of version 1.27. local BusyIndicator is not supported by control.
      *
      * @returns Returns `this` to allow method chaining
      */
     setBusyIndicatorDelay(): this;
     /**
-     * @deprecated (since 1.54) - local BusyIndicator is not supported by control.
+     * @deprecated As of version 1.54. local BusyIndicator is not supported by control.
      *
      * @returns Returns `this` to allow method chaining
      */
@@ -28695,13 +28710,13 @@ declare module "sap/ui/core/InvisibleText" {
       sText?: string
     ): this;
     /**
-     * @deprecated (since 1.27) - tooltip is not supported by control.
+     * @deprecated As of version 1.27. tooltip is not supported by control.
      *
      * @returns Returns `this` to allow method chaining
      */
     setTooltip(): this;
     /**
-     * @deprecated (since 1.27) - property `visible` is not supported by control.
+     * @deprecated As of version 1.27. property `visible` is not supported by control.
      *
      * @returns Returns `this` to allow method chaining
      */
@@ -29586,7 +29601,7 @@ declare module "sap/ui/core/LocalBusyIndicator" {
    * to the ListBox control (see the init-function of the ListBox).
    *
    * @since 1.11.0
-   * @deprecated (since 1.14.2) - The LocalBusyIndicator Control is not needed anymore by the new implementation
+   * @deprecated As of version 1.14.2. The LocalBusyIndicator Control is not needed anymore by the new implementation
    * of the LBI. Hence, it is not used anymore.
    */
   export default class LocalBusyIndicator extends Control {
@@ -29718,7 +29733,7 @@ declare module "sap/ui/core/LocalBusyIndicator" {
   /**
    * Describes the settings that can be provided to the LocalBusyIndicator constructor.
    *
-   * @deprecated (since 1.14.2) - The LocalBusyIndicator Control is not needed anymore by the new implementation
+   * @deprecated As of version 1.14.2. The LocalBusyIndicator Control is not needed anymore by the new implementation
    * of the LBI. Hence, it is not used anymore.
    */
   export interface $LocalBusyIndicatorSettings extends $ControlSettings {
@@ -29862,8 +29877,8 @@ declare module "sap/ui/core/Locale" {
      * of SAP languages. This method has no knowledge about the concrete languages of any given backend system.
      *
      * @since 1.17.0
-     * @deprecated (since 1.44) - use {@link sap.ui.core.Configuration#getSAPLogonLanguage} instead as that
-     * class allows to configure an SAP Logon language.
+     * @deprecated As of version 1.44. use {@link sap.ui.core.Configuration#getSAPLogonLanguage} instead as
+     * that class allows to configure an SAP Logon language.
      *
      * @returns a language code that should
      */
@@ -31119,7 +31134,7 @@ declare module "sap/ui/core/Message" {
    *
    * Rendering must be done within the control that uses this kind of element. Its default level is none.
    *
-   * @deprecated (since 1.120) - Please use {@link sap.ui.core.message.Message} instead.
+   * @deprecated As of version 1.120. Please use {@link sap.ui.core.message.Message} instead.
    */
   export default class Message extends UI5Element {
     /**
@@ -31375,7 +31390,7 @@ declare module "sap/ui/core/Message" {
   /**
    * Describes the settings that can be provided to the Message constructor.
    *
-   * @deprecated (since 1.120) - Please use {@link sap.ui.core.message.Message} instead.
+   * @deprecated As of version 1.120. Please use {@link sap.ui.core.message.Message} instead.
    */
   export interface $MessageSettings extends $ElementSettings {
     /**
@@ -31681,7 +31696,7 @@ declare module "sap/ui/core/message/Message" {
     /**
      * Returns the message target or the first target if the message has multiple targets.
      *
-     * @deprecated (since 1.79.0) - As a message may have multiple targets, use {@link #getTargets} instead
+     * @deprecated As of version 1.79.0. As a message may have multiple targets, use {@link #getTargets} instead
      *
      * @returns The message target
      */
@@ -31792,7 +31807,7 @@ declare module "sap/ui/core/message/Message" {
      * Sets the message target; in case the message has multiple targets, sets the first target of the message.
      * The syntax is MessageProcessor dependent. See the documentation of the respective MessageProcessor.
      *
-     * @deprecated (since 1.79.0) - As a message may have multiple targets, use {@link #setTargets} instead
+     * @deprecated As of version 1.79.0. As a message may have multiple targets, use {@link #setTargets} instead
      */
     setTarget(
       /**
@@ -31855,7 +31870,7 @@ declare module "sap/ui/core/message/MessageManager" {
   import ManagedObject from "sap/ui/base/ManagedObject";
 
   /**
-   * @deprecated (since 1.118) - Please use {@link module:sap/ui/core/Messaging Messaging} instead.
+   * @deprecated As of version 1.118. Please use {@link module:sap/ui/core/Messaging Messaging} instead.
    */
   export default class MessageManager extends BaseObject {
     /**
@@ -32190,7 +32205,7 @@ declare module "sap/ui/core/message/MessageProcessor" {
     /**
      * Fires event {@link #event:messageChange messageChange} to attached listeners.
      *
-     * @deprecated (since 1.115) - Use {@link module:sap/ui/core/Messaging.updateMessages} instead
+     * @deprecated As of version 1.115. Use {@link module:sap/ui/core/Messaging.updateMessages} instead
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -32717,8 +32732,8 @@ declare module "sap/ui/core/mvc/HTMLView" {
    * A view defined/constructed by declarative HTML.
    *
    * @since 1.9.2
-   * @deprecated (since 1.108) - as there are no more known usages of `HTMLViews`, and as the use of HTML
-   * as syntax does not bring any advantages over XML. The HTML necessary for the `HTMLView` is not re-used
+   * @deprecated As of version 1.108. as there are no more known usages of `HTMLViews`, and as the use of
+   * HTML as syntax does not bring any advantages over XML. The HTML necessary for the `HTMLView` is not re-used
    * for the HTML of the controls, but is fully replaced.
    *
    * Consider using {@link sap.ui.core.mvc.XMLView XMLViews} or "typed views" (view classes written in JavaScript)
@@ -32844,8 +32859,8 @@ declare module "sap/ui/core/mvc/HTMLView" {
   /**
    * Describes the settings that can be provided to the HTMLView constructor.
    *
-   * @deprecated (since 1.108) - as there are no more known usages of `HTMLViews`, and as the use of HTML
-   * as syntax does not bring any advantages over XML. The HTML necessary for the `HTMLView` is not re-used
+   * @deprecated As of version 1.108. as there are no more known usages of `HTMLViews`, and as the use of
+   * HTML as syntax does not bring any advantages over XML. The HTML necessary for the `HTMLView` is not re-used
    * for the HTML of the controls, but is fully replaced.
    *
    * Consider using {@link sap.ui.core.mvc.XMLView XMLViews} or "typed views" (view classes written in JavaScript)
@@ -32864,7 +32879,7 @@ declare module "sap/ui/core/mvc/JSONView" {
   /**
    * A View defined using JSON.
    *
-   * @deprecated (since 1.120) - please consider using {@link sap.ui.core.mvc.XMLView XMLViews} or "typed
+   * @deprecated As of version 1.120. please consider using {@link sap.ui.core.mvc.XMLView XMLViews} or "typed
    * views" (view classes written in JavaScript) instead. For more information, see the documentation on {@link topic:91f27e3e6f4d1014b6dd926db0e91070 View types}.
    */
   export default class JSONView extends View {
@@ -32988,7 +33003,7 @@ declare module "sap/ui/core/mvc/JSONView" {
   /**
    * Describes the settings that can be provided to the JSONView constructor.
    *
-   * @deprecated (since 1.120) - please consider using {@link sap.ui.core.mvc.XMLView XMLViews} or "typed
+   * @deprecated As of version 1.120. please consider using {@link sap.ui.core.mvc.XMLView XMLViews} or "typed
    * views" (view classes written in JavaScript) instead. For more information, see the documentation on {@link topic:91f27e3e6f4d1014b6dd926db0e91070 View types}.
    */
   export interface $JSONViewSettings extends $ViewSettings {}
@@ -33006,9 +33021,9 @@ declare module "sap/ui/core/mvc/JSView" {
   /**
    * A View defined/constructed by JavaScript code.
    *
-   * @deprecated (since 1.90) - Instead use {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed Views} by
-   * defining the view class with {@link sap.ui.core.mvc.View.extend View.extend} and creating the view instances
-   * with {@link sap.ui.core.mvc.View.create View.create}.
+   * @deprecated As of version 1.90. Instead use {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed Views }
+   * by defining the view class with {@link sap.ui.core.mvc.View.extend View.extend} and creating the view
+   * instances with {@link sap.ui.core.mvc.View.create View.create}.
    */
   export default class JSView extends View {
     /**
@@ -33058,7 +33073,7 @@ declare module "sap/ui/core/mvc/JSView" {
      * Creates an instance of the view with the given name (and id).
      *
      * @since 1.56.0
-     * @deprecated (since 1.90) - Use {@link sap.ui.core.mvc.View.create View.create} to create view instances
+     * @deprecated As of version 1.90. Use {@link sap.ui.core.mvc.View.create View.create} to create view instances
      *
      * @returns A promise that resolves with the view instance
      */
@@ -33129,9 +33144,9 @@ declare module "sap/ui/core/mvc/JSView" {
   /**
    * Describes the settings that can be provided to the JSView constructor.
    *
-   * @deprecated (since 1.90) - Instead use {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed Views} by
-   * defining the view class with {@link sap.ui.core.mvc.View.extend View.extend} and creating the view instances
-   * with {@link sap.ui.core.mvc.View.create View.create}.
+   * @deprecated As of version 1.90. Instead use {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed Views }
+   * by defining the view class with {@link sap.ui.core.mvc.View.extend View.extend} and creating the view
+   * instances with {@link sap.ui.core.mvc.View.create View.create}.
    */
   export interface $JSViewSettings extends $ViewSettings {}
 }
@@ -33169,7 +33184,7 @@ declare module "sap/ui/core/mvc/TemplateView" {
   /**
    * A view defined in a template.
    *
-   * @deprecated (since 1.56.0) - use {@link sap.ui.core.mvc.XMLView} in combination with {@link topic:5ee619fc1370463ea674ee04b65ed83b XML Templating }
+   * @deprecated As of version 1.56.0. use {@link sap.ui.core.mvc.XMLView} in combination with {@link topic:5ee619fc1370463ea674ee04b65ed83b XML Templating }
    * instead.
    */
   export default class TemplateView extends View {
@@ -33251,7 +33266,7 @@ declare module "sap/ui/core/mvc/TemplateView" {
   /**
    * Describes the settings that can be provided to the TemplateView constructor.
    *
-   * @deprecated (since 1.56.0) - use {@link sap.ui.core.mvc.XMLView} in combination with {@link topic:5ee619fc1370463ea674ee04b65ed83b XML Templating }
+   * @deprecated As of version 1.56.0. use {@link sap.ui.core.mvc.XMLView} in combination with {@link topic:5ee619fc1370463ea674ee04b65ed83b XML Templating }
    * instead.
    */
   export interface $TemplateViewSettings extends $ViewSettings {}
@@ -33783,7 +33798,7 @@ declare module "sap/ui/core/mvc/View" {
      * For more details see the {@link https://ui5.sap.com/#/topic/a575619e25c2487f904bae71764e2350 View Cloning }
      * section in the documentation.
      *
-     * @deprecated (since 1.120) - please call the corresponding View factory instead, e.g. {@link sap.ui.core.mvc.XMLView.create}
+     * @deprecated As of version 1.120. please call the corresponding View factory instead, e.g. {@link sap.ui.core.mvc.XMLView.create}
      *
      * @returns Reference to the newly created clone
      */
@@ -34133,7 +34148,7 @@ declare module "sap/ui/core/mvc/View" {
      * Synchronously loading views get wrapped in an immediately resolving Promise.
      *
      * @since 1.30
-     * @deprecated (since 1.66) - Use {@link sap.ui.core.mvc.View.create View.create} instead
+     * @deprecated As of version 1.66. Use {@link sap.ui.core.mvc.View.create View.create} instead
      *
      * @returns resolves with the complete view instance, rejects with any thrown error
      */
@@ -34527,27 +34542,27 @@ declare module "sap/ui/core/mvc/ViewType" {
     /**
      * HTML view
      *
-     * @deprecated (since 1.108) - Consider using {@link sap.ui.core.mvx.XMLView XMLViews} or "typed views"
+     * @deprecated As of version 1.108. Consider using {@link sap.ui.core.mvx.XMLView XMLViews} or "typed views"
      * (view classes written in JavaScript) instead.
      */
     HTML = "HTML",
     /**
      * JS View
      *
-     * @deprecated (since 1.90)
+     * @deprecated As of version 1.90.
      */
     JS = "JS",
     /**
      * JSON View
      *
-     * @deprecated (since 1.120) - please consider using {@link sap.ui.core.mvc.XMLView XMLViews} or "typed
+     * @deprecated As of version 1.120. please consider using {@link sap.ui.core.mvc.XMLView XMLViews} or "typed
      * views" (view classes written in JavaScript) instead.
      */
     JSON = "JSON",
     /**
      * Template View
      *
-     * @deprecated (since 1.56)
+     * @deprecated As of version 1.56.
      */
     Template = "Template",
     /**
@@ -35539,7 +35554,7 @@ declare module "sap/ui/core/Popup" {
       bAutoClose: boolean
     ): this;
     /**
-     * @deprecated (since 1.75) - please use {@link #setExtraContent} instead.
+     * @deprecated As of version 1.75. please use {@link #setExtraContent} instead.
      */
     setAutoCloseAreas(): void;
     /**
@@ -36348,7 +36363,7 @@ declare module "sap/ui/core/RenderManager" {
      * Adds a class to the class collection if the name is not empty or null. The class collection is flushed
      * if it is written to the buffer using {@link #writeClasses}
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#class} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#class} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -36362,7 +36377,7 @@ declare module "sap/ui/core/RenderManager" {
      * Adds a style property to the style collection if the value is not empty or null The style collection
      * is flushed if it is written to the buffer using {@link #writeStyle}
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#style} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#style} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -36546,7 +36561,7 @@ declare module "sap/ui/core/RenderManager" {
     /**
      * Returns the configuration object Shortcut for `sap.ui.getCore().getConfiguration()`
      *
-     * @deprecated (since 1.92) - Instead, use the {@link sap.ui.core.Core#getConfiguration} API.
+     * @deprecated As of version 1.92. Instead, use the {@link sap.ui.core.Core#getConfiguration} API.
      *
      * @returns the configuration object
      */
@@ -36555,7 +36570,7 @@ declare module "sap/ui/core/RenderManager" {
      * Renders the given {@link sap.ui.core.Control} and finally returns the content of the rendering buffer.
      * Ensures the buffer is restored to the state before calling this method.
      *
-     * @deprecated (since 0.15.0) - Use `flush()` instead render content outside the rendering phase.
+     * @deprecated As of version 0.15.0. Use `flush()` instead render content outside the rendering phase.
      *
      * @returns the resulting HTML of the provided control
      */
@@ -36716,7 +36731,7 @@ declare module "sap/ui/core/RenderManager" {
       sText: string
     ): this;
     /**
-     * @deprecated (since 1.1) - never has been implemented - DO NOT USE
+     * @deprecated As of version 1.1. never has been implemented - DO NOT USE
      */
     translate(
       /**
@@ -36774,7 +36789,7 @@ declare module "sap/ui/core/RenderManager" {
     /**
      * Write the given texts to the buffer.
      *
-     * @deprecated (since 1.92) - Instead, use the {@link sap.ui.core.RenderManager Semantic Rendering API}.
+     * @deprecated As of version 1.92. Instead, use the {@link sap.ui.core.RenderManager Semantic Rendering API}.
      * There is no 1:1 replacement for `write`. Typically, `write` is used to create a longer sequence of HTML
      * markup (e.g. an element with attributes and children) in a single call. Such a markup sequence has to
      * be split into the individual calls of the Semantic Rendering API.
@@ -36802,7 +36817,7 @@ declare module "sap/ui/core/RenderManager" {
       sText: string | number
     ): this;
     /**
-     * @deprecated (since 1.1) - never has been implemented - DO NOT USE
+     * @deprecated As of version 1.1. never has been implemented - DO NOT USE
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -36865,7 +36880,8 @@ declare module "sap/ui/core/RenderManager" {
      * ```
      *  (assuming that "ida idb" is the auto-generated part based on the association `ariaDescribedBy`).
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#accessibilityState} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#accessibilityState} of the
+     * {@link sap.ui.core.RenderManager Semantic Rendering API}.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -36884,7 +36900,7 @@ declare module "sap/ui/core/RenderManager" {
      *
      * For details about the escaping refer to {@link sap/base/security/encodeXML}.
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#attr} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#attr} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -36903,7 +36919,7 @@ declare module "sap/ui/core/RenderManager" {
      *
      * The value is properly encoded to avoid XSS attacks.
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#attr} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#attr} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -36923,7 +36939,7 @@ declare module "sap/ui/core/RenderManager" {
      * are added by default from the currently rendered control. If an oElement is given, this Element's custom
      * style classes are added instead. If oElement === false, no custom style classes are added.
      *
-     * @deprecated (since 1.92) - Not longer needed, when using the {@link sap.ui.core.RenderManager Semantic Rendering API }
+     * @deprecated As of version 1.92. Not longer needed, when using the {@link sap.ui.core.RenderManager Semantic Rendering API }
      * the actual writing of classes happens when {@link sap.ui.core.RenderManager#openEnd} or {@link sap.ui.core.RenderManager#voidEnd }
      * are used.
      *
@@ -36938,7 +36954,7 @@ declare module "sap/ui/core/RenderManager" {
     /**
      * Writes the controls data into the HTML. Control Data consists at least of the id of a control
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#openStart} or {@link sap.ui.core.RenderManager#voidStart }
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#openStart} or {@link sap.ui.core.RenderManager#voidStart }
      * of the {@link sap.ui.core.RenderManager Semantic Rendering API} and pass the desired control data as
      * the second parameter to the new API.
      *
@@ -36953,7 +36969,7 @@ declare module "sap/ui/core/RenderManager" {
     /**
      * Writes the elements data into the HTML. Element Data consists at least of the id of an element
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#openStart} or {@link sap.ui.core.RenderManager#voidStart }
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#openStart} or {@link sap.ui.core.RenderManager#voidStart }
      * of the {@link sap.ui.core.RenderManager Semantic Rendering API} and pass the desired element data as
      * the second parameter to the new API.
      *
@@ -36970,7 +36986,7 @@ declare module "sap/ui/core/RenderManager" {
      *
      * For details about the escaping refer to {@link sap/base/security/encodeXML}.
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#text} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#text} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -36996,7 +37012,7 @@ declare module "sap/ui/core/RenderManager" {
      * with corresponding values in the `mAttributes` parameter:
      * 	 - `role: "presentation"` `alt: ""`
      *
-     * @deprecated (since 1.92) - Instead use {@link sap.ui.core.RenderManager#icon} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
+     * @deprecated As of version 1.92. Instead use {@link sap.ui.core.RenderManager#icon} of the {@link sap.ui.core.RenderManager Semantic Rendering API}.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -37017,7 +37033,7 @@ declare module "sap/ui/core/RenderManager" {
     /**
      * Writes and flushes the style collection
      *
-     * @deprecated (since 1.92) - Not longer needed, when using the {@link sap.ui.core.RenderManager Semantic Rendering API }
+     * @deprecated As of version 1.92. Not longer needed, when using the {@link sap.ui.core.RenderManager Semantic Rendering API }
      * the actual writing of styles happens when {@link sap.ui.core.RenderManager#openEnd} or {@link sap.ui.core.RenderManager#voidEnd }
      * are used.
      *
@@ -37056,8 +37072,8 @@ declare module "sap/ui/core/ResizeHandler" {
     /**
      * Creates a new subclass of class `sap.ui.core.ResizeHandler`.
      *
-     * @deprecated (since 1.110) - As the class nature of ResizeHandler is deprecated since 1.103, the `extend`
-     * method shouldn't be called either
+     * @deprecated As of version 1.110. As the class nature of ResizeHandler is deprecated since 1.103, the
+     * `extend` method shouldn't be called either
      *
      * @returns Created class / constructor function
      */
@@ -37079,8 +37095,8 @@ declare module "sap/ui/core/ResizeHandler" {
     /**
      * Returns a metadata object for class `sap.ui.core.ResizeHandler`.
      *
-     * @deprecated (since 1.110) - As the class nature of ResizeHandler is deprecated since 1.103, the `getMetadata`
-     * method shouldn't be called either
+     * @deprecated As of version 1.110. As the class nature of ResizeHandler is deprecated since 1.103, the
+     * `getMetadata` method shouldn't be called either
      *
      * @returns Metadata object describing this class
      */
@@ -39156,7 +39172,7 @@ declare module "sap/ui/core/routing/Router" {
      * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
      * otherwise it will be bound to this `sap.ui.core.routing.Router` itself.
      *
-     * @deprecated (since 1.28) - use {@link #getViews} instead.
+     * @deprecated As of version 1.28. use {@link #getViews} instead.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -39181,7 +39197,7 @@ declare module "sap/ui/core/routing/Router" {
      * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
      * otherwise it will be bound to this `sap.ui.core.routing.Router` itself.
      *
-     * @deprecated (since 1.28) - use {@link #getViews} instead.
+     * @deprecated As of version 1.28. use {@link #getViews} instead.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -39306,7 +39322,7 @@ declare module "sap/ui/core/routing/Router" {
      *
      * The passed function and listener object must match the ones used for event registration.
      *
-     * @deprecated (since 1.28) - use {@link #getViews} instead.
+     * @deprecated As of version 1.28. use {@link #getViews} instead.
      *
      * @returns Reference to `this` in order to allow method chaining
      */
@@ -39380,7 +39396,7 @@ declare module "sap/ui/core/routing/Router" {
     /**
      * Fires event {@link #event:viewCreated viewCreated} to attached listeners.
      *
-     * @deprecated (since 1.28) - use {@link #getViews} instead.
+     * @deprecated As of version 1.28. use {@link #getViews} instead.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
      * @returns Reference to `this` in order to allow method chaining
@@ -39493,7 +39509,7 @@ declare module "sap/ui/core/routing/Router" {
     /**
      * Returns a cached view for a given name or creates it if it does not exist yet.
      *
-     * @deprecated (since 1.28.1) - use {@link #getViews} instead.
+     * @deprecated As of version 1.28.1. use {@link #getViews} instead.
      *
      * @returns The view instance
      */
@@ -39724,7 +39740,7 @@ declare module "sap/ui/core/routing/Router" {
      * and the "undefined" key.
      *
      * @since 1.22
-     * @deprecated (since 1.28) - use {@link #getViews} instead.
+     * @deprecated As of version 1.28. use {@link #getViews} instead.
      *
      * @returns Since 1.28, the `this` pointer for chaining
      */
@@ -40746,7 +40762,7 @@ declare module "sap/ui/core/ScrollBar" {
    * the respective part only. E.g. a Table control can take care of only rendering the currently visible
    * rows and use this ScrollBar control to make the user think he actually scrolls through a long list.
    *
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export default class ScrollBar extends Control {
     /**
@@ -41048,7 +41064,7 @@ declare module "sap/ui/core/ScrollBar" {
   /**
    * Describes the settings that can be provided to the ScrollBar constructor.
    *
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export interface $ScrollBarSettings extends $ControlSettings {
     /**
@@ -41131,7 +41147,7 @@ declare module "sap/ui/core/search/OpenSearchProvider" {
   /**
    * A SearchProvider which uses the OpenSearch protocol (either JSON or XML).
    *
-   * @deprecated (since 1.120)
+   * @deprecated As of version 1.120.
    */
   export default class OpenSearchProvider extends SearchProvider {
     /**
@@ -41271,7 +41287,7 @@ declare module "sap/ui/core/search/OpenSearchProvider" {
   /**
    * Describes the settings that can be provided to the OpenSearchProvider constructor.
    *
-   * @deprecated (since 1.120)
+   * @deprecated As of version 1.120.
    */
   export interface $OpenSearchProviderSettings extends $SearchProviderSettings {
     /**
@@ -41299,7 +41315,7 @@ declare module "sap/ui/core/search/SearchProvider" {
    *
    * Do not create instances of this class, but use a concrete subclass instead.
    *
-   * @deprecated (since 1.120)
+   * @deprecated As of version 1.120.
    */
   export default abstract class SearchProvider extends UI5Element {
     /**
@@ -41408,7 +41424,7 @@ declare module "sap/ui/core/search/SearchProvider" {
   /**
    * Describes the settings that can be provided to the SearchProvider constructor.
    *
-   * @deprecated (since 1.120)
+   * @deprecated As of version 1.120.
    */
   export interface $SearchProviderSettings extends $ElementSettings {
     /**
@@ -41767,8 +41783,8 @@ declare module "sap/ui/core/theming/Parameters" {
      * Resets the CSS parameters which finally will reload the parameters the next time they are queried via
      * the method `get`.
      *
-     * @deprecated (since 1.92) - without a replacement. Application code should not be able to interfere with
-     * the automated determination of theme parameters. Resetting the parameters unnecessarily could impact
+     * @deprecated As of version 1.92. without a replacement. Application code should not be able to interfere
+     * with the automated determination of theme parameters. Resetting the parameters unnecessarily could impact
      * performance. Please use the (potentially async) API to get parameter values and rely on the framework
      * to update parameter values when the theme changes.
      */
@@ -42018,7 +42034,7 @@ declare module "sap/ui/core/tmpl/DOMAttribute" {
    * Represents a DOM attribute of a DOM element.
    *
    * @since 1.15
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export default class DOMAttribute extends UI5Element {
     /**
@@ -42137,7 +42153,7 @@ declare module "sap/ui/core/tmpl/DOMAttribute" {
   /**
    * Describes the settings that can be provided to the DOMAttribute constructor.
    *
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export interface $DOMAttributeSettings extends $ElementSettings {
     /**
@@ -42168,7 +42184,7 @@ declare module "sap/ui/core/tmpl/DOMElement" {
    * Represents a DOM element. It allows to use databinding for the properties and nested DOM attributes.
    *
    * @since 1.15
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export default class DOMElement extends Control {
     /**
@@ -42475,7 +42491,7 @@ declare module "sap/ui/core/tmpl/DOMElement" {
   /**
    * Describes the settings that can be provided to the DOMElement constructor.
    *
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export interface $DOMElementSettings extends $ControlSettings {
     /**
@@ -42520,7 +42536,7 @@ declare module "sap/ui/core/tmpl/HandlebarsTemplate" {
    * The class for Handlebars Templates.
    *
    * @since 1.15
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export default abstract class HandlebarsTemplate extends Template {
     /**
@@ -42602,7 +42618,7 @@ declare module "sap/ui/core/tmpl/HandlebarsTemplate" {
   /**
    * Describes the settings that can be provided to the HandlebarsTemplate constructor.
    *
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export interface $HandlebarsTemplateSettings extends $TemplateSettings {}
 }
@@ -42626,7 +42642,7 @@ declare module "sap/ui/core/tmpl/Template" {
    * Base Class for Template.
    *
    * @since 1.15
-   * @deprecated (since 1.56) - use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * @deprecated As of version 1.56. use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
    * instead.
    */
   export default abstract class Template extends ManagedObject {
@@ -42869,7 +42885,7 @@ declare module "sap/ui/core/tmpl/Template" {
   /**
    * Describes the settings that can be provided to the Template constructor.
    *
-   * @deprecated (since 1.56) - use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * @deprecated As of version 1.56. use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
    * instead.
    */
   export interface $TemplateSettings extends $ManagedObjectSettings {
@@ -42899,7 +42915,7 @@ declare module "sap/ui/core/tmpl/TemplateControl" {
    * This is the base class for all template controls. Template controls are declared based on templates.
    *
    * @since 1.15
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export default class TemplateControl extends Control {
     /**
@@ -43330,7 +43346,7 @@ declare module "sap/ui/core/tmpl/TemplateControl" {
   /**
    * Describes the settings that can be provided to the TemplateControl constructor.
    *
-   * @deprecated (since 1.56)
+   * @deprecated As of version 1.56.
    */
   export interface $TemplateControlSettings extends $ControlSettings {
     /**
@@ -43930,8 +43946,8 @@ declare module "sap/ui/core/UIArea" {
      * Registry of all `sap.ui.core.UIArea`s that currently exist.
      *
      * @since 1.107
-     * @deprecated (since 1.120) - without a replacement. Applications should not be interested in the set of
-     * all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
+     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      */
     static registry: registry;
@@ -44067,7 +44083,7 @@ declare module "sap/ui/core/UIArea" {
      * Returns the content control of this `UIArea` at the specified index. If no index is given the first content
      * control is returned.
      *
-     * @deprecated (since 1.1) - use function {@link #getContent} instead
+     * @deprecated As of version 1.1. use function {@link #getContent} instead
      *
      * @returns the content control of this `UIArea` at the specified index.
      */
@@ -44233,7 +44249,7 @@ declare module "sap/ui/core/UIArea" {
      * to this UIArea will be cut off). Then the parent relationship for the new content control (if not empty)
      * will be set to this UIArea and finally, the UIArea will be marked for re-rendering.
      *
-     * @deprecated (since 1.1) - use {@link #removeAllContent} and {@link #addContent} instead
+     * @deprecated As of version 1.1. use {@link #removeAllContent} and {@link #addContent} instead
      */
     setRootControl(
       /**
@@ -44246,7 +44262,7 @@ declare module "sap/ui/core/UIArea" {
      *
      * The node must have an ID that will be used as ID for this instance of `UIArea`.
      *
-     * @deprecated (since 1.107) - without a replacement. Applications should not create or modify `UIArea`s
+     * @deprecated As of version 1.107. without a replacement. Applications should not create or modify `UIArea`s
      * programmatically. THey should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      */
@@ -44267,16 +44283,16 @@ declare module "sap/ui/core/UIArea" {
    * Registry of all `sap.ui.core.UIArea`s that currently exist.
    *
    * @since 1.107
-   * @deprecated (since 1.120) - without a replacement. Applications should not be interested in the set of
-   * all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+   * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
+   * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
    * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
    */
   interface registry {
     /**
      * Number of existing UIAreas.
      *
-     * @deprecated (since 1.120) - without a replacement. Applications should not be interested in the set of
-     * all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
+     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      */
     size: int;
@@ -44291,8 +44307,8 @@ declare module "sap/ui/core/UIArea" {
      * **Note**: The returned object is created by a call to `Object.create(null)`, and therefore lacks all
      * methods of `Object.prototype`, e.g. `toString` etc.
      *
-     * @deprecated (since 1.120) - without a replacement. Applications should not be interested in the set of
-     * all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
+     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      *
      * @returns Object with all UIAreas, keyed by their ID
@@ -44321,8 +44337,8 @@ declare module "sap/ui/core/UIArea" {
      * in the array is not specified and might change between calls (over time and across different versions
      * of UI5).
      *
-     * @deprecated (since 1.120) - without a replacement. Applications should not be interested in the set of
-     * all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
+     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      *
      * @returns Array of UIAreas matching the predicate; order is undefined and might change in newer versions
@@ -44360,8 +44376,8 @@ declare module "sap/ui/core/UIArea" {
      * that the implementation of `callback` sees, depends on the usual resolution mechanism. E.g. when `callback`
      * was bound to some context object, that object wins over the given `thisArg`.
      *
-     * @deprecated (since 1.120) - without a replacement. Applications should not be interested in the set of
-     * all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
+     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      */
     forEach(
@@ -44380,8 +44396,8 @@ declare module "sap/ui/core/UIArea" {
      * When the ID is `null` or `undefined` or when there's no UIArea with the given ID, then `undefined` is
      * returned.
      *
-     * @deprecated (since 1.120) - without a replacement. Applications should not be interested in the set of
-     * all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
+     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      *
      * @returns UIArea with the given ID or `undefined`
@@ -44885,7 +44901,7 @@ declare module "sap/ui/core/util/Export" {
    * it in other programs / applications.
    *
    * @since 1.22.0
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export default class Export extends Control {
     /**
@@ -45208,7 +45224,7 @@ declare module "sap/ui/core/util/Export" {
   /**
    * Describes the settings that can be provided to the Export constructor.
    *
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export interface $ExportSettings extends $ControlSettings {
     /**
@@ -45244,7 +45260,7 @@ declare module "sap/ui/core/util/ExportCell" {
    * / {@link sap.ui.core.util.Export Export}.
    *
    * @since 1.22.0
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export default class ExportCell extends UI5Element {
     /**
@@ -45338,7 +45354,7 @@ declare module "sap/ui/core/util/ExportCell" {
   /**
    * Describes the settings that can be provided to the ExportCell constructor.
    *
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export interface $ExportCellSettings extends $ElementSettings {
     /**
@@ -45363,7 +45379,7 @@ declare module "sap/ui/core/util/ExportColumn" {
    * Can have a name and a cell template.
    *
    * @since 1.22.0
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export default class ExportColumn extends ManagedObject {
     /**
@@ -45482,7 +45498,7 @@ declare module "sap/ui/core/util/ExportColumn" {
   /**
    * Describes the settings that can be provided to the ExportColumn constructor.
    *
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export interface $ExportColumnSettings extends $ManagedObjectSettings {
     /**
@@ -45512,7 +45528,7 @@ declare module "sap/ui/core/util/ExportRow" {
    * Internally used in {@link sap.ui.core.util.Export Export}.
    *
    * @since 1.22.0
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export default class ExportRow extends ManagedObject {
     /**
@@ -45658,7 +45674,7 @@ declare module "sap/ui/core/util/ExportRow" {
   /**
    * Describes the settings that can be provided to the ExportRow constructor.
    *
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export interface $ExportRowSettings extends $ManagedObjectSettings {
     /**
@@ -45683,7 +45699,7 @@ declare module "sap/ui/core/util/ExportType" {
    * Base export type. Subclasses can be used for {@link sap.ui.core.util.Export Export}.
    *
    * @since 1.22.0
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export default class ExportType extends ManagedObject {
     /**
@@ -45919,7 +45935,7 @@ declare module "sap/ui/core/util/ExportType" {
   /**
    * Describes the settings that can be provided to the ExportType constructor.
    *
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export interface $ExportTypeSettings extends $ManagedObjectSettings {
     /**
@@ -45970,7 +45986,7 @@ declare module "sap/ui/core/util/ExportTypeCSV" {
    * be cut off.
    *
    * @since 1.22.0
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export default class ExportTypeCSV extends ExportType {
     /**
@@ -46074,7 +46090,7 @@ declare module "sap/ui/core/util/ExportTypeCSV" {
   /**
    * Describes the settings that can be provided to the ExportTypeCSV constructor.
    *
-   * @deprecated (since 1.73)
+   * @deprecated As of version 1.73.
    */
   export interface $ExportTypeCSVSettings extends $ExportTypeSettings {
     /**
@@ -47129,7 +47145,7 @@ declare module "sap/ui/core/webc/WebComponent" {
    * controls in the dedicated slots of the Web Component.
    *
    * @since 1.118.0
-   * @experimental (since 1.118.0) - The API might change. It is not intended for productive usage yet!
+   * @experimental As of version 1.118.0. The API might change. It is not intended for productive usage yet!
    */
   export default class WebComponent extends Control {
     /**
@@ -47277,7 +47293,7 @@ declare module "sap/ui/core/webc/WebComponent" {
   /**
    * Describes the settings that can be provided to the WebComponent constructor.
    *
-   * @experimental (since 1.118.0) - The API might change. It is not intended for productive usage yet!
+   * @experimental As of version 1.118.0. The API might change. It is not intended for productive usage yet!
    */
   export interface $WebComponentSettings extends $ControlSettings {}
 
@@ -47378,7 +47394,7 @@ declare module "sap/ui/core/webc/WebComponentMetadata" {
 
   /**
    * @since 1.118.0
-   * @experimental (since 1.118.0) - The API might change. It is not intended for productive usage yet!
+   * @experimental As of version 1.118.0. The API might change. It is not intended for productive usage yet!
    */
   export default class WebComponentMetadata extends ElementMetadata {
     /**
@@ -48079,8 +48095,8 @@ declare module "sap/ui/core/XMLComposite" {
    * Base Class for XMLComposite controls.
    *
    * @since 1.56.0
-   * @deprecated (since 1.88) - use {@link topic:c1512f6ce1454ff1913e3857bad56392 Standard Composite Controls}
-   * @experimental (since 1.56.0)
+   * @deprecated As of version 1.88. use {@link topic:c1512f6ce1454ff1913e3857bad56392 Standard Composite Controls}
+   * @experimental As of version 1.56.0.
    */
   export default abstract class XMLComposite extends Control {
     /**
@@ -48365,8 +48381,8 @@ declare module "sap/ui/core/XMLComposite" {
   /**
    * Describes the settings that can be provided to the XMLComposite constructor.
    *
-   * @deprecated (since 1.88) - use {@link topic:c1512f6ce1454ff1913e3857bad56392 Standard Composite Controls}
-   * @experimental (since 1.56.0)
+   * @deprecated As of version 1.88. use {@link topic:c1512f6ce1454ff1913e3857bad56392 Standard Composite Controls}
+   * @experimental As of version 1.56.0.
    */
   export interface $XMLCompositeSettings extends $ControlSettings {
     /**
@@ -48571,7 +48587,7 @@ declare module "sap/ui/Device" {
      * have the possibility to customize the user agent, and to explicitly add this information.
      *
      * @since 1.31.0
-     * @deprecated (since 1.98)
+     * @deprecated As of version 1.98.
      */
     export const webview: boolean;
 
@@ -49198,7 +49214,7 @@ declare module "sap/ui/model/analytics/AnalyticalBinding" {
    * to OData requests. If a binding count mode is set to `Request` or `Both`, a warning is logged to remind
    * the application that the OData requests generated by the AnalyticalBinding include a $inlinecount.
    *
-   * @experimental - This module is only for experimental use!
+   * @experimental This module is only for experimental use!
    * @ui5-protected DO NOT USE IN APPLICATIONS (only for related classes in the framework)
    */
   export default class AnalyticalBinding extends TreeBinding {
@@ -49631,7 +49647,7 @@ declare module "sap/ui/model/analytics/AnalyticalBinding" {
     /**
      * Gets the total number of leaves or `-1` if this is unknown.
      *
-     * @deprecated (since 1.92) - use {@link #getCount} instead
+     * @deprecated As of version 1.92. use {@link #getCount} instead
      *
      * @returns The total number of leaves, or `-1` if the number is not yet known or if the binding parameter
      * `provideTotalResultSize` is set to `false`
@@ -49938,7 +49954,7 @@ declare module "sap/ui/model/analytics/odata4analytics" {
    *
    * Lazy initialization of attributes will cause unexpected values when you access object attributes directly.
    *
-   * @experimental - This module is only for experimental use!
+   * @experimental This module is only for experimental use!
    * @ui5-protected DO NOT USE IN APPLICATIONS (only for related classes in the framework)
    */
   interface odata4analytics {
@@ -51822,7 +51838,7 @@ declare module "sap/ui/model/analytics/odata4analytics" {
     /**
      * Handle to an OData model by the URI pointing to it.
      *
-     * @deprecated (since 1.94) - use {@link sap.ui.model.analytics.odata4analytics.Model.ReferenceByModel }
+     * @deprecated As of version 1.94. use {@link sap.ui.model.analytics.odata4analytics.Model.ReferenceByModel }
      * instead
      */
     class ReferenceByURI {
@@ -51884,7 +51900,7 @@ declare module "sap/ui/model/base/ManagedObjectModel" {
    * Provides model access to a given {@link sap.ui.base.ManagedObject}. Such access allows to bind to properties
    * and aggregations of this object.
    *
-   * @experimental (since 1.58)
+   * @experimental As of version 1.58.
    */
   export default class ManagedObjectModel extends JSONModel {
     /**
@@ -55298,7 +55314,7 @@ declare module "sap/ui/model/ListBinding" {
      * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
      * otherwise it will be bound to this `sap.ui.model.ListBinding` itself.
      *
-     * @deprecated (since 1.11) - use the `change` event. It now contains a parameter `(reason : "filter")`
+     * @deprecated As of version 1.11. use the `change` event. It now contains a parameter `(reason : "filter")`
      * when a filter event is fired.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      */
@@ -55318,8 +55334,8 @@ declare module "sap/ui/model/ListBinding" {
      * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
      * otherwise it will be bound to this `sap.ui.model.ListBinding` itself.
      *
-     * @deprecated (since 1.11) - use the `change` event. It now contains a parameter `(reason : "sort")` when
-     * a sorter event is fired.
+     * @deprecated As of version 1.11. use the `change` event. It now contains a parameter `(reason : "sort")`
+     * when a sorter event is fired.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      */
     attachSort(
@@ -55335,7 +55351,7 @@ declare module "sap/ui/model/ListBinding" {
     /**
      * Detaches event handler `fnFunction` from the {@link #event:filter filter} event of this `sap.ui.model.ListBinding`.
      *
-     * @deprecated (since 1.11) - use the `change` event.
+     * @deprecated As of version 1.11. use the `change` event.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      */
     detachFilter(
@@ -55351,7 +55367,7 @@ declare module "sap/ui/model/ListBinding" {
     /**
      * Detaches event handler `fnFunction` from the {@link #event:sort sort} event of this `sap.ui.model.ListBinding`.
      *
-     * @deprecated (since 1.11) - use the `change` event.
+     * @deprecated As of version 1.11. use the `change` event.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      */
     detachSort(
@@ -55666,7 +55682,7 @@ declare module "sap/ui/model/ListBinding" {
   /**
    * Parameters of the ListBinding#filter event.
    *
-   * @deprecated (since 1.11) - use the `change` event. It now contains a parameter `(reason : "filter")`
+   * @deprecated As of version 1.11. use the `change` event. It now contains a parameter `(reason : "filter")`
    * when a filter event is fired.
    */
   export interface ListBinding$FilterEventParameters {}
@@ -55674,7 +55690,7 @@ declare module "sap/ui/model/ListBinding" {
   /**
    * Event object of the ListBinding#filter event.
    *
-   * @deprecated (since 1.11) - use the `change` event. It now contains a parameter `(reason : "filter")`
+   * @deprecated As of version 1.11. use the `change` event. It now contains a parameter `(reason : "filter")`
    * when a filter event is fired.
    */
   export type ListBinding$FilterEvent = Event<
@@ -55685,16 +55701,16 @@ declare module "sap/ui/model/ListBinding" {
   /**
    * Parameters of the ListBinding#sort event.
    *
-   * @deprecated (since 1.11) - use the `change` event. It now contains a parameter `(reason : "sort")` when
-   * a sorter event is fired.
+   * @deprecated As of version 1.11. use the `change` event. It now contains a parameter `(reason : "sort")`
+   * when a sorter event is fired.
    */
   export interface ListBinding$SortEventParameters {}
 
   /**
    * Event object of the ListBinding#sort event.
    *
-   * @deprecated (since 1.11) - use the `change` event. It now contains a parameter `(reason : "sort")` when
-   * a sorter event is fired.
+   * @deprecated As of version 1.11. use the `change` event. It now contains a parameter `(reason : "sort")`
+   * when a sorter event is fired.
    */
   export type ListBinding$SortEvent = Event<
     ListBinding$SortEventParameters,
@@ -56547,7 +56563,7 @@ declare module "sap/ui/model/Model" {
     /**
      * Returns whether legacy path syntax is used.
      *
-     * @deprecated (since 1.88.0) - legacy path syntax is not supported by most model implementations.
+     * @deprecated As of version 1.88.0. legacy path syntax is not supported by most model implementations.
      *
      * @returns Whether legacy path syntax is used
      */
@@ -56586,7 +56602,7 @@ declare module "sap/ui/model/Model" {
      * to earlier releases which means they are resolved relative to the root element or handled strict and
      * stay unresolved until a binding context is set.
      *
-     * @deprecated (since 1.88.0) - legacy path syntax is not supported by most model implementations.
+     * @deprecated As of version 1.88.0. legacy path syntax is not supported by most model implementations.
      */
     setLegacySyntax(
       /**
@@ -56804,7 +56820,7 @@ declare module "sap/ui/model/odata/ODataTreeBindingAdapter" {
    * controls. Only usable with the sap.ui.table.TreeTable control. The functions defined here are only available
    * when you are using a TreeTable and an ODataModel.
    *
-   * @experimental - This module is only for experimental and internal use!
+   * @experimental This module is only for experimental and internal use!
    */
   export default function ODataTreeBindingAdapter(): void;
 }
@@ -57201,7 +57217,7 @@ declare module "sap/ui/model/odata/CountMode" {
      * before the introduction of the `CountMode`. For compatibility reasons, it is the default for the `ODataModel`
      * (v1) and shouldn't be used otherwise.
      *
-     * @deprecated (since 1.43) - this shouldn't be used any longer, decide for one of the other modes.
+     * @deprecated As of version 1.43. this shouldn't be used any longer, decide for one of the other modes.
      */
     Both = "Both",
     /**
@@ -57238,7 +57254,7 @@ declare module "sap/ui/model/odata/Filter" {
   /**
    * Filter for the list binding
    *
-   * @deprecated (since 1.22) - Please use the {@link sap.ui.model.Filter} instead.
+   * @deprecated As of version 1.22. Please use the {@link sap.ui.model.Filter} instead.
    */
   export default class Filter extends BaseObject {
     /**
@@ -57334,7 +57350,7 @@ declare module "sap/ui/model/odata/ODataAnnotations" {
   /**
    * Implementation to access OData Annotations
    *
-   * @deprecated (since 1.66) - please use {@link sap.ui.model.odata.v2.ODataAnnotations} instead.
+   * @deprecated As of version 1.66. please use {@link sap.ui.model.odata.v2.ODataAnnotations} instead.
    */
   export default class ODataAnnotations extends EventProvider {
     constructor(
@@ -57659,7 +57675,7 @@ declare module "sap/ui/model/odata/ODataContextBinding" {
   /**
    * The ContextBinding is a specific binding for a setting context for the model
    *
-   * @deprecated (since 1.66) - please use {@link sap.ui.model.odata.v2.ODataContextBinding} instead.
+   * @deprecated As of version 1.66. please use {@link sap.ui.model.odata.v2.ODataContextBinding} instead.
    */
   export default abstract class ODataContextBinding extends ContextBinding {
     /**
@@ -57731,7 +57747,7 @@ declare module "sap/ui/model/odata/ODataListBinding" {
   /**
    * List binding implementation for OData format.
    *
-   * @deprecated (since 1.66) - please use {@link sap.ui.model.odata.v2.ODataListBinding} instead.
+   * @deprecated As of version 1.66. please use {@link sap.ui.model.odata.v2.ODataListBinding} instead.
    */
   export default class ODataListBinding extends ListBinding {
     constructor(
@@ -59597,7 +59613,7 @@ declare module "sap/ui/model/odata/ODataModel" {
   /**
    * Model implementation for OData format
    *
-   * @deprecated (since 1.48) - please use {@link sap.ui.model.odata.v2.ODataModel} instead.
+   * @deprecated As of version 1.48. please use {@link sap.ui.model.odata.v2.ODataModel} instead.
    */
   export default class ODataModel extends Model {
     /**
@@ -60364,8 +60380,8 @@ declare module "sap/ui/model/odata/ODataModel" {
     /**
      * Force no caching
      *
-     * @deprecated (since 1.13) - the caching should be controlled by the backend by setting the correct cache
-     * control header
+     * @deprecated As of version 1.13. the caching should be controlled by the backend by setting the correct
+     * cache control header
      */
     forceNoCache(
       /**
@@ -60376,7 +60392,7 @@ declare module "sap/ui/model/odata/ODataModel" {
     /**
      * Return requested data as object if the data has already been loaded and stored in the model.
      *
-     * @deprecated (since 1.6.0) - please use {@link #getProperty} instead
+     * @deprecated As of version 1.6.0. please use {@link #getProperty} instead
      *
      * @returns oData Object containing the requested data if the path is valid.
      */
@@ -60508,7 +60524,7 @@ declare module "sap/ui/model/odata/ODataModel" {
     /**
      * Returns whether this model supports `$count` on its collections.
      *
-     * @deprecated (since 1.20) - please use {@link #getDefaultCountMode} instead.
+     * @deprecated As of version 1.20. please use {@link #getDefaultCountMode} instead.
      *
      * @returns Whether this model supports `$count` on its collections
      */
@@ -60672,7 +60688,7 @@ declare module "sap/ui/model/odata/ODataModel" {
     /**
      * Sets whether this OData service supports `$count` on its collections.
      *
-     * @deprecated (since 1.20) - please use {@link #setDefaultCountMode} instead.
+     * @deprecated As of version 1.20. please use {@link #setDefaultCountMode} instead.
      */
     setCountSupported(
       /**
@@ -61202,7 +61218,7 @@ declare module "sap/ui/model/odata/OperationMode" {
      *     there is much more data than expected.
      * 	 - Count mode `None` is not supported together with operation mode `Auto`
      *
-     * @deprecated (since 1.102.0) - because filtering and sorting may lead to different results when executed
+     * @deprecated As of version 1.102.0. because filtering and sorting may lead to different results when executed
      * on the client and on the server, and thus to inconsistent behavior. If it is certain that the collection
      * is completely loaded on the client, use {@link sap.ui.model.odata.OperationMode.Client}; otherwise, use
      * {@link sap.ui.model.odata.OperationMode.Default} or {@link sap.ui.model.odata.OperationMode.Server}.
@@ -64464,9 +64480,9 @@ declare module "sap/ui/model/odata/v2/BatchMode" {
   /**
    * Different modes for retrieving the count of collections.
    *
-   * @deprecated (since 1.74.0) - Use {@link sap.ui.model.odata.CountMode} to specify how the count of collections
-   * is retrieved. Use the `useBatch` parameter of the {@link sap.ui.model.odata.v2.ODataModel} constructor
-   * to specify whether requests are sent in $batch.
+   * @deprecated As of version 1.74.0. Use {@link sap.ui.model.odata.CountMode} to specify how the count of
+   * collections is retrieved. Use the `useBatch` parameter of the {@link sap.ui.model.odata.v2.ODataModel }
+   * constructor to specify whether requests are sent in $batch.
    */
   enum BatchMode {
     /**
@@ -64684,7 +64700,7 @@ declare module "sap/ui/model/odata/v2/ODataAnnotations" {
     /**
      * Returns the parsed and merged annotation data object.
      *
-     * @deprecated (since 1.37.0) - only kept for compatibility with V1 API, use {@link #getData} instead.
+     * @deprecated As of version 1.37.0. only kept for compatibility with V1 API, use {@link #getData} instead.
      */
     getAnnotationsData: undefined;
 
@@ -67209,7 +67225,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      * **Note:** Controls are not updated. Use {@link #resetChanges} instead to update also the controls, for
      * example: `oModel.resetChanges([oContext.getPath()], undefined, true);`
      *
-     * @deprecated (since 1.95.0) - use {@link #resetChanges} instead
+     * @deprecated As of version 1.95.0. use {@link #resetChanges} instead
      */
     deleteCreatedEntry(
       /**
@@ -67456,7 +67472,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * Returns the definition of batch groups per entity type for two-way binding changes.
      *
-     * @deprecated (since 1.36) - use {@link #getChangeGroups} instead
+     * @deprecated As of version 1.36. use {@link #getChangeGroups} instead
      *
      * @returns Definition of batch groups for two-way binding changes, keyed by entity names.
      */
@@ -67471,7 +67487,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * Return requested data as object if the data has already been loaded and stored in the model.
      *
-     * @deprecated (since 1.24) - please use {@link #getProperty} instead
+     * @deprecated As of version 1.24. please use {@link #getProperty} instead
      *
      * @returns Object containing the requested data if the path is valid.
      */
@@ -67505,7 +67521,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * Returns the array of batch group IDs that are set as deferred
      *
-     * @deprecated (since 1.32) - use {@link #getDeferredGroups} instead
+     * @deprecated As of version 1.32. use {@link #getDeferredGroups} instead
      *
      * @returns aGroupIds The array of deferred batch group IDs
      */
@@ -67768,7 +67784,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      * Returns the current security token if available; triggers a request to fetch the security token if it
      * is not available.
      *
-     * @deprecated (since 1.119.0) - use {@link #securityTokenAvailable} instead
+     * @deprecated As of version 1.119.0. use {@link #securityTokenAvailable} instead
      *
      * @returns The security token; `undefined` if it is not available
      */
@@ -68022,7 +68038,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      *
      * Returns a new promise which can be resolved or rejected depending on the metadata loading state.
      *
-     * @deprecated (since 1.42)
+     * @deprecated As of version 1.42.
      *
      * @returns A promise on metadata loaded state or `undefined` if metadata is not initialized or currently
      * refreshed
@@ -68157,7 +68173,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * Definition of batch groups per entity type for two-way binding changes.
      *
-     * @deprecated (since 1.32) - Use {@link #setChangeGroups} instead
+     * @deprecated As of version 1.32. Use {@link #setChangeGroups} instead
      */
     setChangeBatchGroups(
       /**
@@ -68232,7 +68248,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      *
      * Requests that belong to a deferred batch group have to be sent by explicitly calling {@link #submitChanges}.
      *
-     * @deprecated (since 1.32) - use {@link #setDeferredGroups} instead
+     * @deprecated As of version 1.32. use {@link #setDeferredGroups} instead
      */
     setDeferredBatchGroups(
       /**
@@ -69932,7 +69948,7 @@ declare module "sap/ui/model/odata/v4/Context" {
      * Returns the parent node (in case of a recursive hierarchy; see {@link sap.ui.model.odata.v4.ODataListBinding#setAggregation})
      * or `undefined` if the parent of this node hasn't been read yet; it can then be requested via {@link #requestParent}.
      *
-     * @experimental (since 1.120.0)
+     * @experimental As of version 1.120.0.
      *
      * @returns The parent node, or `null` if this node is a root node and thus has no parent, or `undefined`
      * if the parent node hasn't been read yet
@@ -70058,7 +70074,7 @@ declare module "sap/ui/model/odata/v4/Context" {
      * See:
      * 	#setSelected
      *
-     * @experimental (since 1.111.0)
+     * @experimental As of version 1.111.0.
      *
      * @returns Whether this context is currently selected
      */
@@ -70087,7 +70103,7 @@ declare module "sap/ui/model/odata/v4/Context" {
      * This context's {@link #getIndex index} may change and it becomes "created persisted", with {@link #isTransient }
      * returning `false` etc.
      *
-     * @experimental (since 1.119.0)
+     * @experimental As of version 1.119.0.
      *
      * @returns A promise which is resolved without a defined result when the move is finished, or rejected
      * in case of an error
@@ -70186,7 +70202,7 @@ declare module "sap/ui/model/odata/v4/Context" {
      * See:
      * 	#getParent
      *
-     * @experimental (since 1.120.0)
+     * @experimental As of version 1.120.0.
      *
      * @returns A promise which:
      * 	 -  Resolves if successful with either the parent node or `null` for a root node that has no parent
@@ -70430,7 +70446,7 @@ declare module "sap/ui/model/odata/v4/Context" {
      * See:
      * 	#isSelected
      *
-     * @experimental (since 1.111.0)
+     * @experimental As of version 1.111.0.
      */
     setSelected(
       /**
@@ -72568,8 +72584,8 @@ declare module "sap/ui/model/odata/v4/ODataMetaModel" {
      * Returns the maximum value of all "Last-Modified" response headers seen so far.
      *
      * @since 1.47.0
-     * @deprecated (since 1.51.0) - use {@link #getETags} instead because modifications to old files may be
-     * shadowed by a new file in certain scenarios.
+     * @deprecated As of version 1.51.0. use {@link #getETags} instead because modifications to old files may
+     * be shadowed by a new file in certain scenarios.
      *
      * @returns The maximum value of all "Last-Modified" (or, as a fallback, "Date") response headers seen so
      * far when loading $metadata or annotation files. It is `new Date(0)` initially as long as no such files
@@ -74122,7 +74138,7 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
      * an element binding.
      *
      * @since 1.37.0
-     * @deprecated (since 1.39.0) - Use {@link sap.ui.model.odata.v4.Context#requestCanonicalPath} instead.
+     * @deprecated As of version 1.39.0. Use {@link sap.ui.model.odata.v4.Context#requestCanonicalPath} instead.
      *
      * @returns A promise which is resolved with the canonical path (e.g. "/SalesOrderList('0500000000')") in
      * case of success, or rejected with an instance of `Error` in case of failure, e.g. when the given context
@@ -76188,7 +76204,7 @@ declare module "sap/ui/model/TreeBinding" {
      * When called, the context of the event handler (its `this`) will be bound to `oListener` if specified,
      * otherwise it will be bound to this `sap.ui.model.TreeBinding` itself.
      *
-     * @deprecated (since 1.11) - use the `change` event. It now contains a parameter `(reason : "filter")`
+     * @deprecated As of version 1.11. use the `change` event. It now contains a parameter `(reason : "filter")`
      * when a filter event is fired.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      */
@@ -76207,7 +76223,7 @@ declare module "sap/ui/model/TreeBinding" {
      *
      * The passed function and listener object must match the ones used for event registration.
      *
-     * @deprecated (since 1.11) - use the `change` event.
+     * @deprecated As of version 1.11. use the `change` event.
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      */
     detachFilter(
@@ -76459,7 +76475,7 @@ declare module "sap/ui/model/TreeBindingCompatibilityAdapter" {
   import TreeBinding from "sap/ui/model/TreeBinding";
 
   /**
-   * @deprecated (since 1.96.0) - use {@link sap.ui.model.TreeBindingAdapter} instead
+   * @deprecated As of version 1.96.0. use {@link sap.ui.model.TreeBindingAdapter} instead
    * @ui5-protected DO NOT USE IN APPLICATIONS (only for related classes in the framework)
    */
   export default class TreeBindingCompatibilityAdapter {
@@ -84445,7 +84461,7 @@ declare namespace sap {
      *
      *
      * @since 1.15.0
-     * @deprecated (since 1.56) - use {@link sap.ui.core.Component.get Component.get} or {@link sap.ui.core.Component.create Component.create }
+     * @deprecated As of version 1.56. use {@link sap.ui.core.Component.get Component.get} or {@link sap.ui.core.Component.create Component.create }
      * instead. Note: {@link sap.ui.core.Component.create Component.create} does not support synchronous loading
      * or the deprecated options ***manifestFirst*** and ***manifestUrl***.
      *
@@ -84554,7 +84570,7 @@ declare namespace sap {
      *
      * If only a name is given, a new instance of the named controller class is returned.
      *
-     * @deprecated (since 1.56) - use {@link sap.ui.core.mvc.Controller.extend Controller.extend} to define
+     * @deprecated As of version 1.56. use {@link sap.ui.core.mvc.Controller.extend Controller.extend} to define
      * the controller class and {@link sap.ui.core.mvc.Controller.create Controller.create} to create controller
      * instances. For further information, see {@link sap.ui.core.mvc.Controller}.
      *
@@ -85558,7 +85574,7 @@ declare namespace sap {
      * point to an aggregation after the target control has already been instantiated. In the latter case the
      * optional parameters oTargetControls and oTargetAggregation need to be specified.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.ExtensionPoint.load} instead
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.ExtensionPoint.load} instead
      *
      * @returns An array with 0..n controls created from an ExtensionPoint or if fnCreateDefaultContent is called
      * and returns a Promise, a Promise with the controls is returned instead
@@ -85620,7 +85636,7 @@ declare namespace sap {
      * Otherwise the Fragment ID is generated. In any case, the Fragment ID will be used as prefix for the ID
      * of all contained controls.
      *
-     * @deprecated (since 1.58) - use {@link sap.ui.core.Fragment.load} instead
+     * @deprecated As of version 1.58. use {@link sap.ui.core.Fragment.load} instead
      *
      * @returns the root Control(s) of the Fragment content
      */
@@ -85645,8 +85661,8 @@ declare namespace sap {
     /**
      * Retrieve the {@link sap.ui.core.Core SAPUI5 Core} instance for the current window.
      *
-     * @deprecated (since 1.118) - Please require 'sap/ui/core/Core' instead and use the module export directly
-     * without using 'new'."
+     * @deprecated As of version 1.118. Please require 'sap/ui/core/Core' instead and use the module export
+     * directly without using 'new'."
      *
      * @returns the API of the current SAPUI5 Core instance.
      */
@@ -85657,7 +85673,7 @@ declare namespace sap {
      *
      * In case of the version info file is not available an error will occur when calling this function.
      *
-     * @deprecated (since 1.56) - Use {@link module:sap/ui/VersionInfo.load} instead
+     * @deprecated As of version 1.56. Use {@link module:sap/ui/VersionInfo.load} instead
      *
      * @returns the full version info, the library specific one, undefined (if library is not listed or there
      * was an error and "failOnError" is set to "false") or a Promise which resolves with one of them
@@ -85708,7 +85724,7 @@ declare namespace sap {
      * must be given and the fragment content definition is loaded by the module system. Again, if `oController`
      * is given, any methods referenced in the fragment will be called on this controller.
      *
-     * @deprecated (since 1.58) - use {@link sap.ui.core.Fragment.load} instead
+     * @deprecated As of version 1.58. use {@link sap.ui.core.Fragment.load} instead
      *
      * @returns Root control or controls of the created fragment instance
      */
@@ -85773,7 +85789,7 @@ declare namespace sap {
      * must be given and the fragment content definition is loaded by the module system. Again, if `oController`
      * is given, any methods referenced in the fragment will be called on this controller.
      *
-     * @deprecated (since 1.58) - use {@link sap.ui.core.Fragment.load} instead
+     * @deprecated As of version 1.58. use {@link sap.ui.core.Fragment.load} instead
      *
      * @returns Root control or controls of the created fragment instance
      */
@@ -85824,8 +85840,8 @@ declare namespace sap {
      * Any other call signature will lead to a runtime error. If the id is omitted in the second variant, an
      * id will be created automatically.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.HTMLView.create HTMLView.create} to create view
-     * instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.HTMLView.create HTMLView.create} to create
+     * view instances
      *
      * @returns the created HTMLView instance in the creation case, otherwise undefined
      */
@@ -85861,8 +85877,8 @@ declare namespace sap {
      * Any other call signature will lead to a runtime error. If the id is omitted in the second variant, an
      * id will be created automatically.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.HTMLView.create HTMLView.create} to create view
-     * instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.HTMLView.create HTMLView.create} to create
+     * view instances
      *
      * @returns the created HTMLView instance in the creation case, otherwise undefined
      */
@@ -85910,7 +85926,7 @@ declare namespace sap {
      * the fragment will be called on this controller. Note that fragments may require a controller to be given
      * and certain methods to be available.
      *
-     * @deprecated (since 1.58) - use {@link sap.ui.core.Fragment.load} instead
+     * @deprecated As of version 1.58. use {@link sap.ui.core.Fragment.load} instead
      *
      * @returns The root control(s) of the created fragment instance
      */
@@ -85971,8 +85987,8 @@ declare namespace sap {
      *
      * Like with any other control, an id is optional and will be created when missing.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.JSONView.create JSONView.create} to create view
-     * instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.JSONView.create JSONView.create} to create
+     * view instances
      *
      * @returns the created JSONView instance
      */
@@ -86026,8 +86042,8 @@ declare namespace sap {
      *
      * Like with any other control, an id is optional and will be created when missing.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.JSONView.create JSONView.create} to create view
-     * instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.JSONView.create JSONView.create} to create
+     * view instances
      *
      * @returns the created JSONView instance
      */
@@ -86089,8 +86105,8 @@ declare namespace sap {
      *
      * **Note:** Any other call signature will lead to a runtime error.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.View.extend View.extend} to define the view class
-     * and {@link sap.ui.core.mvc.View.create View.create} to create view instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.View.extend View.extend} to define the view
+     * class and {@link sap.ui.core.mvc.View.create View.create} to create view instances
      *
      * @returns the created JSView instance in the creation case, otherwise undefined
      */
@@ -86141,8 +86157,8 @@ declare namespace sap {
      *
      * **Note:** Any other call signature will lead to a runtime error.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.View.extend View.extend} to define the view class
-     * and {@link sap.ui.core.mvc.View.create View.create} to create view instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.View.extend View.extend} to define the view
+     * class and {@link sap.ui.core.mvc.View.create View.create} to create view instances
      *
      * @returns the created JSView instance in the creation case, otherwise undefined
      */
@@ -86173,7 +86189,7 @@ declare namespace sap {
      *
      * **Note**: As a side effect of this method, the namespace containing the given class is created **immediately**.
      *
-     * @deprecated (since 1.56) - Lazy loading enforces synchronous requests and therefore has been deprecated
+     * @deprecated As of version 1.56. Lazy loading enforces synchronous requests and therefore has been deprecated
      * without a replacement. Instead of loading classes via lazy stubs, they should be required as dependencies
      * of an AMD module (using {@link sap.ui.define}) or on demand with a call to {@link sap.ui.require}.
      */
@@ -86222,7 +86238,7 @@ declare namespace sap {
      * When applications need a more flexible mapping between resource names and their location, they can use
      * {@link sap.ui.loader.config} with option `paths`.
      *
-     * @deprecated (since 1.56) - use {@link sap.ui.loader.config} and its `paths` option instead.
+     * @deprecated As of version 1.56. use {@link sap.ui.loader.config} and its `paths` option instead.
      */
     function localResources(
       /**
@@ -86233,7 +86249,7 @@ declare namespace sap {
     /**
      * Ensures that a given a namespace or hierarchy of nested namespaces exists in the current `window`.
      *
-     * @deprecated (since 1.1) - see {@link topic:c78c07c094e04ccfaab659378a1707c7 Creating Control and Class Modules}.
+     * @deprecated As of version 1.1. see {@link topic:c78c07c094e04ccfaab659378a1707c7 Creating Control and Class Modules}.
      *
      * @returns the innermost namespace of the hierarchy
      */
@@ -86318,7 +86334,7 @@ declare namespace sap {
      * when the given sResourcePath starts with "themes/" (= when it is a theme-dependent resource). Even when
      * for this theme a different location outside the normal library location is configured.
      *
-     * @deprecated (since 1.56.0) - use {@link sap.ui.require.toUrl} instead.
+     * @deprecated As of version 1.56.0. use {@link sap.ui.require.toUrl} instead.
      *
      * @returns the URL of the requested resource
      */
@@ -86353,7 +86369,7 @@ declare namespace sap {
      * Internally, if a string is given that does not identify a UIArea or a control then implicitly a new `UIArea`
      * is created for the given DOM reference and the given control is added.
      *
-     * @deprecated (since 1.1) - use {@link sap.ui.core.Control#placeAt Control#placeAt} instead.
+     * @deprecated As of version 1.1. use {@link sap.ui.core.Control#placeAt Control#placeAt} instead.
      */
     function setRoot(
       /**
@@ -86429,7 +86445,7 @@ declare namespace sap {
      * ```
      *
      *
-     * @deprecated (since 1.56) - use an {@link sap.ui.core.mvc.XMLView XMLView} or {@link sap.ui.core.mvc.JSView JSView }
+     * @deprecated As of version 1.56. use an {@link sap.ui.core.mvc.XMLView XMLView} or {@link sap.ui.core.mvc.JSView JSView }
      * instead.
      *
      * @returns the created Template instance or in case of usage without parameters any array of templates
@@ -86487,7 +86503,7 @@ declare namespace sap {
      * Any other call signature will lead to a runtime error. If the id is omitted in the second variant, an
      * id will be created automatically.
      *
-     * @deprecated (since 1.56) - use {@link sap.ui.core.mvc.XMLView} in combination with {@link topic:5ee619fc1370463ea674ee04b65ed83b XML Templating }
+     * @deprecated As of version 1.56. use {@link sap.ui.core.mvc.XMLView} in combination with {@link topic:5ee619fc1370463ea674ee04b65ed83b XML Templating }
      * instead
      *
      * @returns the created TemplateView instance in the creation case, otherwise undefined
@@ -86517,7 +86533,7 @@ declare namespace sap {
      * Any other call signature will lead to a runtime error. If the id is omitted in the second variant, an
      * id will be created automatically.
      *
-     * @deprecated (since 1.56) - use {@link sap.ui.core.mvc.XMLView} in combination with {@link topic:5ee619fc1370463ea674ee04b65ed83b XML Templating }
+     * @deprecated As of version 1.56. use {@link sap.ui.core.mvc.XMLView} in combination with {@link topic:5ee619fc1370463ea674ee04b65ed83b XML Templating }
      * instead
      *
      * @returns the created TemplateView instance in the creation case, otherwise undefined
@@ -86531,8 +86547,8 @@ declare namespace sap {
     /**
      * Creates a view of the given type, name and with the given ID.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.View.extend View.extend} to define the view class
-     * and {@link sap.ui.core.mvc.View.create View.create} to create view instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.View.extend View.extend} to define the view
+     * class and {@link sap.ui.core.mvc.View.create View.create} to create view instances
      *
      * @returns the created View instance
      */
@@ -86611,7 +86627,7 @@ declare namespace sap {
      * must be given and the fragment content definition is loaded via the module system. Again, if `oController`
      * is given, the methods referenced in the fragment will be called on this controller.
      *
-     * @deprecated (since 1.58) - use {@link sap.ui.core.Fragment.load} instead
+     * @deprecated As of version 1.58. use {@link sap.ui.core.Fragment.load} instead
      *
      * @returns the root Control(s) of the created fragment instance
      */
@@ -86677,7 +86693,7 @@ declare namespace sap {
      * must be given and the fragment content definition is loaded via the module system. Again, if `oController`
      * is given, the methods referenced in the fragment will be called on this controller.
      *
-     * @deprecated (since 1.58) - use {@link sap.ui.core.Fragment.load} instead
+     * @deprecated As of version 1.58. use {@link sap.ui.core.Fragment.load} instead
      *
      * @returns the root Control(s) of the created fragment instance
      */
@@ -86746,7 +86762,8 @@ declare namespace sap {
      *
      * Like with any other control, `sId` is optional and an ID will be created automatically.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.XMLView.create XMLView.create} to create view instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.XMLView.create XMLView.create} to create view
+     * instances
      *
      * @returns the created XMLView instance
      */
@@ -86826,7 +86843,8 @@ declare namespace sap {
      *
      * Like with any other control, `sId` is optional and an ID will be created automatically.
      *
-     * @deprecated (since 1.56) - Use {@link sap.ui.core.mvc.XMLView.create XMLView.create} to create view instances
+     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.XMLView.create XMLView.create} to create view
+     * instances
      *
      * @returns the created XMLView instance
      */
@@ -87106,7 +87124,7 @@ declare namespace sap {
         /**
          * If called on an instance of an (v1/v2) ODataModel it will enrich it with analytics capabilities.
          *
-         * @experimental - This module is only for experimental use!
+         * @experimental This module is only for experimental use!
          * @ui5-protected Do not call from applications (only from related classes in the framework)
          */
         function ODataModelAdapter(): void;
@@ -87160,7 +87178,7 @@ declare namespace sap {
        * synchronous.
        *
        * @since 1.16.3
-       * @deprecated (since 1.56) - use {@link sap.ui.core.Component.load}
+       * @deprecated As of version 1.56. use {@link sap.ui.core.Component.load}
        *
        * @returns Constructor of the component class or a Promise that will be fulfilled with the same
        */
