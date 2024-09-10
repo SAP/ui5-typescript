@@ -579,7 +579,16 @@ function generateMethods(
             ]),
           ),
         ],
-        factory.createThisTypeNode(),
+        factory.createUnionTypeNode([
+          // the removed child or null if not found
+          createTSTypeNode(
+            aggregation.type,
+            requiredImports,
+            knownGlobals,
+            currentClassName,
+          ),
+          factory.createLiteralTypeNode(ts.factory.createNull()),
+        ]),
       );
       addJSDocCommentToNode(
         remove,

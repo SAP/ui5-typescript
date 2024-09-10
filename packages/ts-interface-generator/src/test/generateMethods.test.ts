@@ -40,7 +40,7 @@ test("Generate methods for aggregation", () => {
 getContent(): Control[];
 addContent(content: Control): this;
 insertContent(content: Control, index: number): this;
-removeContent(content: number | string | Control): this;
+removeContent(content: number | string | Control): Control | null;
 removeAllContent(): Control[];
 indexOfContent(content: Control): number;
 destroyContent(): this;
