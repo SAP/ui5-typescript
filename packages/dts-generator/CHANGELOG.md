@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.3.0...@ui5/dts-generator@3.3.1) (2024-09-11)
+
+### Bug Fixes
+
+- **dts-generator:** align deprecation/experimental tags with UI5 SDK ([#469](https://github.com/SAP/ui5-typescript/issues/469)) ([aa36d21](https://github.com/SAP/ui5-typescript/commit/aa36d21309695d8cd30a77b192f495df8db75101))
+
 # [3.3.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.2.0...@ui5/dts-generator@3.3.0) (2024-07-04)
 
 ### Features

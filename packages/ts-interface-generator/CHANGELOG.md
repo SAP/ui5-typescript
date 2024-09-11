@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.4](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.8.3...@ui5/ts-interface-generator@0.8.4) (2024-09-11)
+
+### Bug Fixes
+
+- **ts-interface-generator:** fix return type of removeAggregation ([#471](https://github.com/SAP/ui5-typescript/issues/471)) ([8164fb6](https://github.com/SAP/ui5-typescript/commit/8164fb65130bc7acf005a94b5147546161bcba46)), closes [#470](https://github.com/SAP/ui5-typescript/issues/470)
+
 ## [0.8.3](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.8.2...@ui5/ts-interface-generator@0.8.3) (2024-06-27)
 
 **Note:** Version bump only for package @ui5/ts-interface-generator
