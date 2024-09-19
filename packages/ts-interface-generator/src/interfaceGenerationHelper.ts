@@ -269,6 +269,8 @@ Or is there a different reason why this type would not be known?`,
                 return;
               }
 
+              // invariant: there is exactly one metadata block with an initializer
+
               // now check whether there is a settings type in the superclass
               // (which the generated settings type needs to inherit from)
               // There really should be, because all descendants of ManagedObject should have one!
@@ -308,11 +310,11 @@ Or is there a different reason why this type would not be known?`,
                 }
               } else if (metadata) {
                 throw new Error(
-                  `${
+                  `'${
                     statement.name ? statement.name.text : ""
-                  } inherits from ${interestingBaseClass} and has metadata but the parent class ${typeChecker.getFullyQualifiedName(
+                  }' inherits from '${interestingBaseClass}' and has metadata, but the parent class '${typeChecker.getFullyQualifiedName(
                     type.getSymbol(),
-                  )} seems to have no settings type. It might have no constructors, this is where the settings type is used. Or the settings type used there and its inheritance chain could not be resolved.
+                  )}' seems to have no settings type. It might have no constructors - this is where the settings type is used. Or the settings type used there and its inheritance chain could not be resolved.
 
 In case this parent class is also in your project, make sure to add its constructors, then try again. A comment with instructions might be in the console output above.
 Otherwise, you can temporarily remove this file (${
@@ -432,7 +434,10 @@ function isOneAStringAndTheOtherASettingsObject(
  * Returns the type of the settings object used in the constructor of the given type
  * Needed to derive the new settings object type for the subclass from it.
  */
-function getSettingsType(type: ts.Type, typeChecker: ts.TypeChecker) {
+function getSettingsType(
+  type: ts.Type,
+  typeChecker: ts.TypeChecker,
+): ts.TypeNode | undefined {
   const declarations = type.getSymbol().getDeclarations();
   for (let i = 0; i < declarations.length; i++) {
     const declaration = declarations[i] as ts.ClassDeclaration;
@@ -448,7 +453,26 @@ function getSettingsType(type: ts.Type, typeChecker: ts.TypeChecker) {
         }
       }
     }
+
+    // if no constructor is found, check the base type
+    // TODO: it would be better to try to find the settings type directly, by guessing its name, in this case.
+    //       If present, it should be used even if it does not add anything to the parent class' settings type,
+    //       because in the future it could add something.
+    const heritageClauses = declaration.heritageClauses;
+    if (heritageClauses) {
+      for (const clause of heritageClauses) {
+        if (clause.token === ts.SyntaxKind.ExtendsKeyword) {
+          const baseTypeNode = clause.types[0];
+          const baseType = typeChecker.getTypeAtLocation(baseTypeNode);
+          const baseSettingsType = getSettingsType(baseType, typeChecker);
+          if (baseSettingsType) {
+            return baseSettingsType;
+          }
+        }
+      }
+    }
   }
+  return undefined;
 }
 
 /**
@@ -680,19 +704,21 @@ function generateInterface(
     interestingBaseClass,
     constructorSignaturesAvailable,
     metadata,
-  }: {
-    sourceFile: ts.SourceFile;
-    className: string;
-    settingsTypeFullName: string;
-    interestingBaseClass:
-      | "ManagedObject"
-      | "Element"
-      | "Control"
-      | "WebComponent"
-      | undefined;
-    constructorSignaturesAvailable: boolean;
-    metadata: ts.PropertyDeclaration[];
-  },
+  }:
+    | {
+        sourceFile: ts.SourceFile;
+        className: string;
+        settingsTypeFullName: string;
+        interestingBaseClass:
+          | "ManagedObject"
+          | "Element"
+          | "Control"
+          | "WebComponent"
+          | undefined;
+        constructorSignaturesAvailable: boolean;
+        metadata: ts.PropertyDeclaration[];
+      }
+    | undefined,
   allKnownGlobals: GlobalToModuleMapping,
   options: { generateEventWithGenerics: boolean },
 ) {
@@ -701,10 +727,19 @@ function generateInterface(
   // by now we have something that looks pretty much like a ManagedObject metadata object
 
   const metadataObject: ClassInfo = {};
-  const objectLiteralExpression = metadata[0]
-    .initializer as ts.ObjectLiteralExpression; // the entire object literal defining all the control metadata
+  const initializer = metadata[0].initializer;
+  if (!initializer || !ts.isObjectLiteralExpression(initializer)) {
+    // no initializer? => no interface needed
+    // TODO: but it could be that the metadata is not an object literal, but a variable or a function call, which returns the metadata object.
+    // This is not supported yet, but could be in the future. Warn the user about this.
+    log.warn(
+      `Class '${className}' inside '${fileName}' inherits from ${interestingBaseClass} and has a 'metadata' property, but no object literal is assigned to this property. This is not supported (yet?), hence no TypeScript interface is generated for this class by @ui5/ts-interface-generator.`,
+    );
+    return;
+  }
 
-  objectLiteralExpression.properties.forEach((propertyAssignment) => {
+  // initializer is now known to be a ts.ObjectLiteralExpression - the entire object literal defining all the control metadata... loop it
+  initializer.properties.forEach((propertyAssignment) => {
     // each propertyAssignment is something like  properties: {...}  and  aggregations: {...}
     if (!ts.isPropertyAssignment(propertyAssignment)) {
       return; // huh, not a property assignment? => does not look like something we are interested in
@@ -753,7 +788,7 @@ function generateInterface(
     !metadataObject.associations &&
     !metadataObject.events
   ) {
-    // No API for which accessors are generated? => no interface needed
+    // No API for which accessors need to be generated? => no interface needed
     return;
   }
 
