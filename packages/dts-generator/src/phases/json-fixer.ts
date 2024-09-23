@@ -525,6 +525,9 @@ function parseTypeExpressions(symbols: ConcreteSymbol[]) {
     if (Array.isArray(method.throws)) {
       method.throws.forEach(visitAnythingWithAType);
     }
+    if (Array.isArray(method.variations)) {
+      method.variations.forEach(visitMethod);
+    }
   }
 
   function visitEvent(event: Ui5Event) {

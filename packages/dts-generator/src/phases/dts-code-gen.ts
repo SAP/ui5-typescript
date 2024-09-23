@@ -545,6 +545,13 @@ function genMethodOrFunction(
     ? ""
     : `<${_.map(ast.typeParameters, genTypeParameter).join(",")}>`;
   let text = "";
+  if (ast.variations) {
+    text += _.map(
+      ast.variations,
+      (variation) =>
+        genMethodOrFunction(variation, staticPossible, isFunc, options) + NL,
+    ).join("");
+  }
   text += JSDOC(ast) + NL;
   text += applyTsIgnore(ast);
   text += ast.overwrite ? "// @ts-ignore" + NL : "";
