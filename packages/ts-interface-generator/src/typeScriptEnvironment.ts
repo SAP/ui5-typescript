@@ -13,6 +13,10 @@ import log from "loglevel";
  *
  */
 
+interface GlobalToModuleMapping {
+  [key: string]: { moduleName: string; exportName?: string };
+}
+
 type TSProgramUpdateCallback = (
   program: ts.Program,
   typeChecker: ts.TypeChecker,
@@ -192,6 +196,16 @@ function onProgramChanged(
 ) {
   const program = builderProgram.getProgram();
   const typeChecker = program.getTypeChecker();
+  const allKnownGlobals: GlobalToModuleMapping =
+    getAllKnownGlobals(typeChecker);
+
+  // call the callback
+  onTSProgramUpdate(program, typeChecker, changedFiles, allKnownGlobals);
+}
+
+function getAllKnownGlobals(
+  typeChecker: ts.TypeChecker,
+): GlobalToModuleMapping {
   const allKnownGlobals: GlobalToModuleMapping = {};
 
   // build a map of all known modules declared in the d.ts files (and elsewhere) along with their respective exports (so we can correctly identify enums which do not live in a module on their own)
@@ -215,11 +229,9 @@ function onProgramChanged(
       }
       allKnownGlobals[globalName] = entry;
     });
-    //allKnownModules[mod.name] = exports;
   });
 
-  // call the callback
-  onTSProgramUpdate(program, typeChecker, changedFiles, allKnownGlobals);
+  return allKnownGlobals;
 }
 
-export { initialize };
+export { initialize, getAllKnownGlobals, GlobalToModuleMapping };

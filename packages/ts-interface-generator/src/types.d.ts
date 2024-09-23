@@ -6,6 +6,7 @@ interface ManagedObjectInfo {
   sourceFile: ts.SourceFile;
   className: string;
   classDeclaration: ts.ClassDeclaration;
+  isDefaultExport: boolean;
   settingsTypeFullName: string;
   interestingBaseClass:
     | "ManagedObject"
