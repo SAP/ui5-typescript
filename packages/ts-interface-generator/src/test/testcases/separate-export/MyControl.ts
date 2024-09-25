@@ -5,7 +5,7 @@ import RenderManager from "sap/ui/core/RenderManager";
 /**
  * @namespace my
  */
-export class MyControl extends Control {
+class MyControl extends Control {
   static readonly metadata: MetadataOptions = {
     properties: {
       text: "string",
@@ -24,4 +24,4 @@ export class MyControl extends Control {
   };
 }
 
-export default new MyControl();
+export default MyControl;

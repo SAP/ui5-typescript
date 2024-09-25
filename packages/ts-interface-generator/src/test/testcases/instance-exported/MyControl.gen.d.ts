@@ -7,12 +7,6 @@ declare module "./MyControl" {
      * Interface defining the settings object used in constructor calls
      */
     interface $MyControlSettings extends $ControlSettings {
-
-        /**
-         * The text.
-         *
-         * @since 1.0
-         */
         text?: string | PropertyBindingInfo;
     }
 
@@ -23,10 +17,6 @@ declare module "./MyControl" {
         /**
          * Gets current value of property "text".
          *
-         * The text.
-         *
-         * @since 1.0
-         *
          * @returns Value of property "text"
          */
         getText(): string;
@@ -34,9 +24,6 @@ declare module "./MyControl" {
         /**
          * Sets a new value for property "text".
          *
-         * The text.
-         *
-         * @since 1.0
          * When called with a value of "null" or "undefined", the default value of the property will be restored.
          *
          * @param text New value for property "text"

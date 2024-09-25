@@ -34,11 +34,20 @@ export default class SampleControl extends Button {
 			 * Determines the content of the <code>SampleControl</code>.
 			 */
 			content: { multiple: true, type: "sap.ui.core.Control", bindable: true },
+			/**
+			 * The header - there can be only one
+			 */
 			header: { multiple: false, type: "sap.ui.core.Control" },
+			/**
+			 * The tooltip - either a string or a TooltipBase
+			 */
 			tooltip: { multiple: false, type: "sap.ui.core.TooltipBase", altTypes : ["string"]}
 		},
 		defaultAggregation: "content",
 		associations: {
+			/**
+			 * Another control belonging to this one
+			 */
 			partnerControl: "SampleControl",
 			/**
 			 * This is an association.
@@ -47,7 +56,7 @@ export default class SampleControl extends Button {
 		},
 		events: {
 			/**
-			 * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+			 * Fired when single-clicked. This event has no parameters.
 			 */
 			singlePress: {},
 			/**
@@ -84,8 +93,10 @@ export default class SampleControl extends Button {
 	};
 
 	doit() {
+		this.fireDoublePress({
+			delay: 100
+		});
 		this.fireSinglePress();
-		this.fireDoublePress({ delay: 100 });
 		alert("Hello");
 	}
 }

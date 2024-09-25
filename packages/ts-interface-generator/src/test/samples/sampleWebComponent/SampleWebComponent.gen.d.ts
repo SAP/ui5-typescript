@@ -12,7 +12,7 @@ declare module "./SampleWebComponent" {
     /**
      * Interface defining the settings object used in constructor calls
      */
-    interface $SampleWebComponentSettings extends $WebComponentSettings {
+    interface $SampleWebComp onentSettings extends $WebComponentSettings {
 
         /**
          * The text that appears below the main text.
