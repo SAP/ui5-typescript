@@ -61,7 +61,7 @@ export default class SampleControl extends Button {
 					 */
 					delay: { type: "int" }
 				}
-			 }
+			}
 		},
 	};
 
