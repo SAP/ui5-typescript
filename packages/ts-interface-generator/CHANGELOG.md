@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.8.4...@ui5/ts-interface-generator@0.9.0) (2024-09-26)
+
+### Bug Fixes
+
+- **ts-interface-generator:** no error when parent class has no c'tor ([#474](https://github.com/SAP/ui5-typescript/issues/474)) ([bf24e51](https://github.com/SAP/ui5-typescript/commit/bf24e51cd89a41c36a78a00e1a00bd9f27c58a5f))
+
+### Features
+
+- **ts-interface-generator:** support non-default-export classes ([#476](https://github.com/SAP/ui5-typescript/issues/476)) ([569ed0b](https://github.com/SAP/ui5-typescript/commit/569ed0bf6eb262572b60fe159f7d816e3bba0562))
+
 ## [0.8.4](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.8.3...@ui5/ts-interface-generator@0.8.4) (2024-09-11)
 
 ### Bug Fixes
