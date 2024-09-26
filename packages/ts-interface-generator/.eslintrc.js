@@ -33,6 +33,6 @@ module.exports = {
     ".eslintrc.js",
     "someFile.js",
     "*.gen.d.ts",
-    "src/test/testdata/sampleWebComponent/**/*",
+    "src/test/samples/sampleWebComponent/**/*",
   ],
 };

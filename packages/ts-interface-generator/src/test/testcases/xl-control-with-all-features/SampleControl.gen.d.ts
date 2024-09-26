@@ -1,50 +1,4 @@
-import ts from "typescript";
-import { generateInterfaces } from "../interfaceGenerationHelper";
-import { initialize } from "../typeScriptEnvironment";
-
-function onTSProgramUpdate(
-  program: ts.Program,
-  typeChecker: ts.TypeChecker,
-  changedFiles: string[], // is an empty array in non-watch case; is at least one file in watch case
-  allKnownGlobals: {
-    [key: string]: { moduleName: string; exportName?: string };
-  },
-) {
-  // files recognized as "real" app source files should be exactly one: SampleControl.ts
-  const sourceFiles: ts.SourceFile[] = program
-    .getSourceFiles()
-    .filter((sourceFile) => {
-      if (
-        sourceFile.fileName.indexOf("@types") === -1 &&
-        sourceFile.fileName.indexOf("node_modules/") === -1 &&
-        sourceFile.fileName.indexOf(".gen.d.ts") === -1
-      ) {
-        return true;
-      }
-    });
-  expect(sourceFiles).toHaveLength(1);
-  expect(sourceFiles[0].fileName).toMatch(/.*SampleControl.ts/);
-
-  // this function will be called with the resulting generated interface text - here the big result check occurs
-  function checkResult(
-    sourceFileName: string,
-    className: string,
-    interfaceText: string,
-  ) {
-    expect(sourceFileName).toMatch(/.*SampleControl.ts/);
-    expect(className).toEqual("SampleControl");
-    expect(interfaceText).toEqual(expected);
-  }
-
-  // trigger the interface generation - the result will be given to and checked in the function above
-  generateInterfaces(sourceFiles[0], typeChecker, allKnownGlobals, checkResult);
-}
-
-test("Generating the interface for a sample control", () => {
-  initialize("./tsconfig-testcontrol.json", onTSProgramUpdate, {});
-});
-
-const expected = `import Event from "sap/ui/base/Event";
+import Event from "sap/ui/base/Event";
 import { CSSColor } from "sap/ui/core/library";
 import Control from "sap/ui/core/Control";
 import { AggregationBindingInfo } from "sap/ui/base/ManagedObject";
@@ -71,14 +25,26 @@ declare module "./SampleControl" {
          *
          * @experimental
          */
-        textColor?: CSSColor | PropertyBindingInfo | \`{\${string}}\`;
+        textColor?: CSSColor | PropertyBindingInfo | `{${string}}`;
 
         /**
          * Determines the content of the <code>SampleControl</code>.
          */
-        content?: Control[] | Control | AggregationBindingInfo | \`{\${string}}\`;
+        content?: Control[] | Control | AggregationBindingInfo | `{${string}}`;
+
+        /**
+         * The header - there can be only one
+         */
         header?: Control;
+
+        /**
+         * The tooltip - either a string or a TooltipBase
+         */
         tooltip?: TooltipBase | string | PropertyBindingInfo;
+
+        /**
+         * Another control belonging to this one
+         */
         partnerControl?: SampleControl | string;
 
         /**
@@ -87,7 +53,7 @@ declare module "./SampleControl" {
         alsoLabelledBy?: Control | string | (Control | string)[];
 
         /**
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          */
         singlePress?: (event: SampleControl$SinglePressEvent) => void;
 
@@ -250,11 +216,15 @@ declare module "./SampleControl" {
 
         /**
          * Gets content of aggregation "header".
+         *
+         * The header - there can be only one
          */
         getHeader(): Control;
 
         /**
          * Sets the aggregated header.
+         *
+         * The header - there can be only one
          *
          * @param header The header to set
          * @returns Reference to "this" in order to allow method chaining
@@ -264,6 +234,8 @@ declare module "./SampleControl" {
         /**
          * Destroys the header in the aggregation "header".
          *
+         * The header - there can be only one
+         *
          * @returns Reference to "this" in order to allow method chaining
          */
         destroyHeader(): this;
@@ -272,11 +244,15 @@ declare module "./SampleControl" {
 
         /**
          * Gets content of aggregation "tooltip".
+         *
+         * The tooltip - either a string or a TooltipBase
          */
         getTooltip(): TooltipBase;
 
         /**
          * Sets the aggregated tooltip.
+         *
+         * The tooltip - either a string or a TooltipBase
          *
          * @param tooltip The tooltip to set
          * @returns Reference to "this" in order to allow method chaining
@@ -286,6 +262,8 @@ declare module "./SampleControl" {
         /**
          * Destroys the tooltip in the aggregation "tooltip".
          *
+         * The tooltip - either a string or a TooltipBase
+         *
          * @returns Reference to "this" in order to allow method chaining
          */
         destroyTooltip(): this;
@@ -294,11 +272,15 @@ declare module "./SampleControl" {
 
         /**
          * ID of the element which is the current target of the association "partnerControl", or "null".
+         *
+         * Another control belonging to this one
          */
         getPartnerControl(): string;
 
         /**
          * Sets the associated partnerControl.
+         *
+         * Another control belonging to this one
          *
          * @param partnerControl ID of an element which becomes the new target of this "partnerControl" association; alternatively, an element instance may be given
          * @returns Reference to "this" in order to allow method chaining
@@ -348,7 +330,7 @@ declare module "./SampleControl" {
         /**
          * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
          *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          *
          * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
          * otherwise it will be bound to this "SampleControl" itself.
@@ -363,7 +345,7 @@ declare module "./SampleControl" {
         /**
          * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
          *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          *
          * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
          * otherwise it will be bound to this "SampleControl" itself.
@@ -379,7 +361,7 @@ declare module "./SampleControl" {
         /**
          * Detaches event handler "fn" from the "singlePress" event of this "SampleControl".
          *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          *
          * The passed function and listener object must match the ones used for event registration.
          *
@@ -392,7 +374,7 @@ declare module "./SampleControl" {
         /**
          * Fires event "singlePress" to attached listeners.
          *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          *
          * @param parameters Parameters to pass along with the event
          * @returns Reference to "this" in order to allow method chaining
@@ -463,7 +445,7 @@ declare module "./SampleControl" {
 
     /**
      * Interface describing the parameters of SampleControl's 'singlePress' event.
-     * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+     * Fired when single-clicked. This event has no parameters.
      */
     // eslint-disable-next-line
     export interface SampleControl$SinglePressEventParameters {
@@ -479,7 +461,7 @@ declare module "./SampleControl" {
 
     /**
      * Type describing the SampleControl's 'singlePress' event.
-     * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+     * Fired when single-clicked. This event has no parameters.
      */
     export type SampleControl$SinglePressEvent = Event<SampleControl$SinglePressEventParameters>;
 
@@ -645,11 +627,15 @@ declare module "./SampleControl" {
 
         /**
          * Gets content of aggregation "header".
+         *
+         * The header - there can be only one
          */
         getHeader(): Control;
 
         /**
          * Sets the aggregated header.
+         *
+         * The header - there can be only one
          *
          * @param header The header to set
          * @returns Reference to "this" in order to allow method chaining
@@ -659,6 +645,8 @@ declare module "./SampleControl" {
         /**
          * Destroys the header in the aggregation "header".
          *
+         * The header - there can be only one
+         *
          * @returns Reference to "this" in order to allow method chaining
          */
         destroyHeader(): this;
@@ -667,11 +655,15 @@ declare module "./SampleControl" {
 
         /**
          * Gets content of aggregation "tooltip".
+         *
+         * The tooltip - either a string or a TooltipBase
          */
         getTooltip(): TooltipBase;
 
         /**
          * Sets the aggregated tooltip.
+         *
+         * The tooltip - either a string or a TooltipBase
          *
          * @param tooltip The tooltip to set
          * @returns Reference to "this" in order to allow method chaining
@@ -681,6 +673,8 @@ declare module "./SampleControl" {
         /**
          * Destroys the tooltip in the aggregation "tooltip".
          *
+         * The tooltip - either a string or a TooltipBase
+         *
          * @returns Reference to "this" in order to allow method chaining
          */
         destroyTooltip(): this;
@@ -689,11 +683,15 @@ declare module "./SampleControl" {
 
         /**
          * ID of the element which is the current target of the association "partnerControl", or "null".
+         *
+         * Another control belonging to this one
          */
         getPartnerControl(): string;
 
         /**
          * Sets the associated partnerControl.
+         *
+         * Another control belonging to this one
          *
          * @param partnerControl ID of an element which becomes the new target of this "partnerControl" association; alternatively, an element instance may be given
          * @returns Reference to "this" in order to allow method chaining
@@ -743,7 +741,7 @@ declare module "./SampleControl" {
         /**
          * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
          *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          *
          * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
          * otherwise it will be bound to this "SampleControl" itself.
@@ -758,7 +756,7 @@ declare module "./SampleControl" {
         /**
          * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
          *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          *
          * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
          * otherwise it will be bound to this "SampleControl" itself.
@@ -774,7 +772,7 @@ declare module "./SampleControl" {
         /**
          * Detaches event handler "fn" from the "singlePress" event of this "SampleControl".
          *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          *
          * The passed function and listener object must match the ones used for event registration.
          *
@@ -787,7 +785,7 @@ declare module "./SampleControl" {
         /**
          * Fires event "singlePress" to attached listeners.
          *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         * Fired when single-clicked. This event has no parameters.
          *
          * @param parameters Parameters to pass along with the event
          * @returns Reference to "this" in order to allow method chaining
@@ -856,4 +854,3 @@ declare module "./SampleControl" {
         fireDoublePress(parameters?: SampleControl$DoublePressEventParameters): boolean;
     }
 }
-`;

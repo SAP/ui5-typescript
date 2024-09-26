@@ -1,63 +1,18 @@
-import ts from "typescript";
-import { generateInterfaces } from "../interfaceGenerationHelper";
-import { initialize } from "../typeScriptEnvironment";
-
-function onTSProgramUpdate(
-  program: ts.Program,
-  typeChecker: ts.TypeChecker,
-  changedFiles: string[], // is an empty array in non-watch case; is at least one file in watch case
-  allKnownGlobals: {
-    [key: string]: { moduleName: string; exportName?: string };
-  },
-) {
-  // files recognized as "real" app source files should be exactly one: SampleControl.ts
-  const sourceFiles: ts.SourceFile[] = program
-    .getSourceFiles()
-    .filter((sourceFile) => {
-      if (
-        sourceFile.fileName.indexOf("@types") === -1 &&
-        sourceFile.fileName.indexOf("node_modules/") === -1 &&
-        sourceFile.fileName.indexOf(".gen.d.ts") === -1
-      ) {
-        return true;
-      }
-    });
-  expect(sourceFiles).toHaveLength(1);
-  expect(sourceFiles[0].fileName).toMatch(/.*SampleControl.ts/);
-
-  // this function will be called with the resulting generated interface text - here the big result check occurs
-  function checkResult(
-    sourceFileName: string,
-    className: string,
-    interfaceText: string,
-  ) {
-    expect(sourceFileName).toMatch(/.*SampleControl.ts/);
-    expect(className).toEqual("SampleControl");
-    expect(interfaceText).toEqual(expected);
-  }
-
-  // trigger the interface generation - the result will be given to and checked in the function above
-  generateInterfaces(sourceFiles[0], typeChecker, allKnownGlobals, checkResult);
-}
-
-test("Generating the interface for a sample control", () => {
-  initialize("./tsconfig-testcontrol.json", onTSProgramUpdate, {});
-});
-
-const expected = `import Event from "sap/ui/base/Event";
+import Event from "sap/ui/base/Event";
 import { CSSColor } from "sap/ui/core/library";
 import Control from "sap/ui/core/Control";
 import { AggregationBindingInfo } from "sap/ui/base/ManagedObject";
+import WebComponent from "sap/ui/core/webc/WebComponent";
 import TooltipBase from "sap/ui/core/TooltipBase";
 import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
-import { $ButtonSettings } from "sap/m/Button";
+import { $WebComponentSettings } from "sap/ui/core/webc/WebComponent";
 
-declare module "./SampleControl" {
+declare module "./SampleWebComponent" {
 
     /**
      * Interface defining the settings object used in constructor calls
      */
-    interface $SampleControlSettings extends $ButtonSettings {
+    interface $SampleWebComp onentSettings extends $WebComponentSettings {
 
         /**
          * The text that appears below the main text.
@@ -67,19 +22,24 @@ declare module "./SampleControl" {
         subtext?: string | PropertyBindingInfo;
 
         /**
-         * Determines the text color of the <code>SampleControl</code>.
+         * Determines the text color of the <code>SampleWebComponent</code>.
          *
          * @experimental
          */
-        textColor?: CSSColor | PropertyBindingInfo | \`{\${string}}\`;
+        textColor?: CSSColor | PropertyBindingInfo | `{${string}}`;
 
         /**
-         * Determines the content of the <code>SampleControl</code>.
+         * Usage of mapping
          */
-        content?: Control[] | Control | AggregationBindingInfo | \`{\${string}}\`;
-        header?: Control;
+        text?: string | PropertyBindingInfo;
+
+        /**
+         * Determines the content of the <code>SampleWebComponent</code>.
+         */
+        content?: Control[] | Control | AggregationBindingInfo | `{${string}}`;
+        header?: WebComponent;
         tooltip?: TooltipBase | string | PropertyBindingInfo;
-        partnerControl?: SampleControl | string;
+        partnerControl?: SampleWebComponent | string;
 
         /**
          * This is an association.
@@ -87,17 +47,12 @@ declare module "./SampleControl" {
         alsoLabelledBy?: Control | string | (Control | string)[];
 
         /**
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         */
-        singlePress?: (event: SampleControl$SinglePressEvent) => void;
-
-        /**
          * Fired when double-clicked.
          */
-        doublePress?: (event: SampleControl$DoublePressEvent) => void;
+        doublePress?: (event: SampleWebComponent$DoublePressEvent) => void;
     }
 
-    export default interface SampleControl {
+    export default interface SampleWebComponent {
 
         // property: subtext
 
@@ -130,7 +85,7 @@ declare module "./SampleControl" {
         /**
          * Gets current value of property "textColor".
          *
-         * Determines the text color of the <code>SampleControl</code>.
+         * Determines the text color of the <code>SampleWebComponent</code>.
          *
          * @experimental
          * Default value is: ""
@@ -141,7 +96,7 @@ declare module "./SampleControl" {
         /**
          * Sets a new value for property "textColor".
          *
-         * Determines the text color of the <code>SampleControl</code>.
+         * Determines the text color of the <code>SampleWebComponent</code>.
          *
          * @experimental
          * When called with a value of "null" or "undefined", the default value of the property will be restored.
@@ -152,19 +107,42 @@ declare module "./SampleControl" {
          */
         setTextColor(textColor: CSSColor): this;
 
+        // property: text
+
+        /**
+         * Gets current value of property "text".
+         *
+         * Usage of mapping
+         *
+         * @returns Value of property "text"
+         */
+        getText(): string;
+
+        /**
+         * Sets a new value for property "text".
+         *
+         * Usage of mapping
+         *
+         * When called with a value of "null" or "undefined", the default value of the property will be restored.
+         *
+         * @param text New value for property "text"
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        setText(text: string): this;
+
         // aggregation: content
 
         /**
          * Gets content of aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          */
         getContent(): Control[];
 
         /**
          * Adds some content to the aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @param content The content to add; if empty, nothing is inserted
          * @returns Reference to "this" in order to allow method chaining
@@ -174,7 +152,7 @@ declare module "./SampleControl" {
         /**
          * Inserts a content into the aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @param content The content to insert; if empty, nothing is inserted
          * @param index The "0"-based index the content should be inserted at; for
@@ -188,7 +166,7 @@ declare module "./SampleControl" {
         /**
          * Removes a content from the aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @param content The content to remove or its index or id
          * @returns The removed content or "null"
@@ -199,7 +177,7 @@ declare module "./SampleControl" {
          * Removes all the controls from the aggregation "content".
          * Additionally, it unregisters them from the hosting UIArea.
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @returns  An array of the removed elements (might be empty)
          */
@@ -209,7 +187,7 @@ declare module "./SampleControl" {
          * Checks for the provided "sap.ui.core.Control" in the aggregation "content".
          * and returns its index if found or -1 otherwise.
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @param content The content whose index is looked for
          * @returns The index of the provided control in the aggregation if found, or -1 otherwise
@@ -219,7 +197,7 @@ declare module "./SampleControl" {
         /**
          * Destroys all the content in the aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @returns Reference to "this" in order to allow method chaining
          */
@@ -228,7 +206,7 @@ declare module "./SampleControl" {
         /**
          * Binds aggregation "content" to model data.
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * See {@link sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation} for a
          * detailed description of the possible properties of "oBindingInfo".
@@ -240,7 +218,7 @@ declare module "./SampleControl" {
         /**
          * Unbinds aggregation "content" from model data.
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @returns Reference to "this" in order to allow method chaining
          */
@@ -251,7 +229,7 @@ declare module "./SampleControl" {
         /**
          * Gets content of aggregation "header".
          */
-        getHeader(): Control;
+        getHeader(): WebComponent;
 
         /**
          * Sets the aggregated header.
@@ -259,7 +237,7 @@ declare module "./SampleControl" {
          * @param header The header to set
          * @returns Reference to "this" in order to allow method chaining
          */
-        setHeader(header: Control): this;
+        setHeader(header: WebComponent): this;
 
         /**
          * Destroys the header in the aggregation "header".
@@ -303,7 +281,7 @@ declare module "./SampleControl" {
          * @param partnerControl ID of an element which becomes the new target of this "partnerControl" association; alternatively, an element instance may be given
          * @returns Reference to "this" in order to allow method chaining
          */
-        setPartnerControl(partnerControl?: string | SampleControl): this;
+        setPartnerControl(partnerControl?: string | SampleWebComponent): this;
 
         // association: alsoLabelledBy
 
@@ -343,97 +321,41 @@ declare module "./SampleControl" {
          */
         removeAllAlsoLabelledBy(): string[];
 
-        // event: singlePress
-
-        /**
-         * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
-         *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         *
-         * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
-         * otherwise it will be bound to this "SampleControl" itself.
-         *
-         * @param fn The function to be called when the event occurs
-         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
-         *
-         * @returns Reference to "this" in order to allow method chaining
-         */
-        attachSinglePress(fn: (event: SampleControl$SinglePressEvent) => void, listener?: object): this;
-
-        /**
-         * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
-         *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         *
-         * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
-         * otherwise it will be bound to this "SampleControl" itself.
-         *
-         * @param data An application-specific payload object that will be passed to the event handler along with the event object when firing the event
-         * @param fn The function to be called when the event occurs
-         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
-         *
-         * @returns Reference to "this" in order to allow method chaining
-         */
-        attachSinglePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleControl$SinglePressEvent, data: CustomDataType) => void, listener?: object): this;
-
-        /**
-         * Detaches event handler "fn" from the "singlePress" event of this "SampleControl".
-         *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         *
-         * @param fn The function to be called, when the event occurs
-         * @param listener Context object on which the given function had to be called
-         * @returns Reference to "this" in order to allow method chaining
-         */
-        detachSinglePress(fn: (event: SampleControl$SinglePressEvent) => void, listener?: object): this;
-
-        /**
-         * Fires event "singlePress" to attached listeners.
-         *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         *
-         * @param parameters Parameters to pass along with the event
-         * @returns Reference to "this" in order to allow method chaining
-         */
-        fireSinglePress(parameters?: SampleControl$SinglePressEventParameters): this;
-
         // event: doublePress
 
         /**
-         * Attaches event handler "fn" to the "doublePress" event of this "SampleControl".
+         * Attaches event handler "fn" to the "doublePress" event of this "SampleWebComponent".
          *
          * Fired when double-clicked.
          *
          * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
-         * otherwise it will be bound to this "SampleControl" itself.
+         * otherwise it will be bound to this "SampleWebComponent" itself.
          *
          * @param fn The function to be called when the event occurs
-         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
+         * @param listener Context object to call the event handler with. Defaults to this "SampleWebComponent" itself
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachDoublePress(fn: (event: SampleControl$DoublePressEvent) => void, listener?: object): this;
+        attachDoublePress(fn: (event: SampleWebComponent$DoublePressEvent) => void, listener?: object): this;
 
         /**
-         * Attaches event handler "fn" to the "doublePress" event of this "SampleControl".
+         * Attaches event handler "fn" to the "doublePress" event of this "SampleWebComponent".
          *
          * Fired when double-clicked.
          *
          * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
-         * otherwise it will be bound to this "SampleControl" itself.
+         * otherwise it will be bound to this "SampleWebComponent" itself.
          *
          * @param data An application-specific payload object that will be passed to the event handler along with the event object when firing the event
          * @param fn The function to be called when the event occurs
-         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
+         * @param listener Context object to call the event handler with. Defaults to this "SampleWebComponent" itself
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleControl$DoublePressEvent, data: CustomDataType) => void, listener?: object): this;
+        attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleWebComponent$DoublePressEvent, data: CustomDataType) => void, listener?: object): this;
 
         /**
-         * Detaches event handler "fn" from the "doublePress" event of this "SampleControl".
+         * Detaches event handler "fn" from the "doublePress" event of this "SampleWebComponent".
          *
          * Fired when double-clicked.
          *
@@ -443,7 +365,7 @@ declare module "./SampleControl" {
          * @param listener Context object on which the given function had to be called
          * @returns Reference to "this" in order to allow method chaining
          */
-        detachDoublePress(fn: (event: SampleControl$DoublePressEvent) => void, listener?: object): this;
+        detachDoublePress(fn: (event: SampleWebComponent$DoublePressEvent) => void, listener?: object): this;
 
         /**
          * Fires event "doublePress" to attached listeners.
@@ -454,45 +376,29 @@ declare module "./SampleControl" {
          * The return value of this method indicates whether the default action should be executed.
          *
          * @param parameters Parameters to pass along with the event
-         * @param [mParameters.delay] Fired when double-clicked.
-         *
          * @returns Whether or not to prevent the default action
          */
-        fireDoublePress(parameters?: SampleControl$DoublePressEventParameters): boolean;
+        fireDoublePress(parameters?: SampleWebComponent$DoublePressEventParameters): boolean;
     }
 
     /**
-     * Interface describing the parameters of SampleControl's 'singlePress' event.
-     * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+     * Interface describing the parameters of SampleWebComponent's 'doublePress' event.
+     * Fired when double-clicked.
      */
     // eslint-disable-next-line
-    export interface SampleControl$SinglePressEventParameters {
+    export interface SampleWebComponent$DoublePressEventParameters {
     }
 
     /**
-     * Interface describing the parameters of SampleControl's 'doublePress' event.
+     * Type describing the SampleWebComponent's 'doublePress' event.
      * Fired when double-clicked.
      */
-    export interface SampleControl$DoublePressEventParameters {
-        delay?: number;
-    }
-
-    /**
-     * Type describing the SampleControl's 'singlePress' event.
-     * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-     */
-    export type SampleControl$SinglePressEvent = Event<SampleControl$SinglePressEventParameters>;
-
-    /**
-     * Type describing the SampleControl's 'doublePress' event.
-     * Fired when double-clicked.
-     */
-    export type SampleControl$DoublePressEvent = Event<SampleControl$DoublePressEventParameters>;
+    export type SampleWebComponent$DoublePressEvent = Event<SampleWebComponent$DoublePressEventParameters>;
 }
 
-// this duplicate interface without export is needed to avoid "Cannot find name 'SampleControl'" TypeScript errors above
-declare module "./SampleControl" {
-    interface SampleControl {
+// this duplicate interface without export is needed to avoid "Cannot find name 'SampleWebComponent'" TypeScript errors above
+declare module "./SampleWebComponent" {
+    interface SampleWebComponent {
 
         // property: subtext
 
@@ -525,7 +431,7 @@ declare module "./SampleControl" {
         /**
          * Gets current value of property "textColor".
          *
-         * Determines the text color of the <code>SampleControl</code>.
+         * Determines the text color of the <code>SampleWebComponent</code>.
          *
          * @experimental
          * Default value is: ""
@@ -536,7 +442,7 @@ declare module "./SampleControl" {
         /**
          * Sets a new value for property "textColor".
          *
-         * Determines the text color of the <code>SampleControl</code>.
+         * Determines the text color of the <code>SampleWebComponent</code>.
          *
          * @experimental
          * When called with a value of "null" or "undefined", the default value of the property will be restored.
@@ -547,19 +453,42 @@ declare module "./SampleControl" {
          */
         setTextColor(textColor: CSSColor): this;
 
+        // property: text
+
+        /**
+         * Gets current value of property "text".
+         *
+         * Usage of mapping
+         *
+         * @returns Value of property "text"
+         */
+        getText(): string;
+
+        /**
+         * Sets a new value for property "text".
+         *
+         * Usage of mapping
+         *
+         * When called with a value of "null" or "undefined", the default value of the property will be restored.
+         *
+         * @param text New value for property "text"
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        setText(text: string): this;
+
         // aggregation: content
 
         /**
          * Gets content of aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          */
         getContent(): Control[];
 
         /**
          * Adds some content to the aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @param content The content to add; if empty, nothing is inserted
          * @returns Reference to "this" in order to allow method chaining
@@ -569,7 +498,7 @@ declare module "./SampleControl" {
         /**
          * Inserts a content into the aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @param content The content to insert; if empty, nothing is inserted
          * @param index The "0"-based index the content should be inserted at; for
@@ -583,7 +512,7 @@ declare module "./SampleControl" {
         /**
          * Removes a content from the aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @param content The content to remove or its index or id
          * @returns The removed content or "null"
@@ -594,7 +523,7 @@ declare module "./SampleControl" {
          * Removes all the controls from the aggregation "content".
          * Additionally, it unregisters them from the hosting UIArea.
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @returns  An array of the removed elements (might be empty)
          */
@@ -604,7 +533,7 @@ declare module "./SampleControl" {
          * Checks for the provided "sap.ui.core.Control" in the aggregation "content".
          * and returns its index if found or -1 otherwise.
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @param content The content whose index is looked for
          * @returns The index of the provided control in the aggregation if found, or -1 otherwise
@@ -614,7 +543,7 @@ declare module "./SampleControl" {
         /**
          * Destroys all the content in the aggregation "content".
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @returns Reference to "this" in order to allow method chaining
          */
@@ -623,7 +552,7 @@ declare module "./SampleControl" {
         /**
          * Binds aggregation "content" to model data.
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * See {@link sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation} for a
          * detailed description of the possible properties of "oBindingInfo".
@@ -635,7 +564,7 @@ declare module "./SampleControl" {
         /**
          * Unbinds aggregation "content" from model data.
          *
-         * Determines the content of the <code>SampleControl</code>.
+         * Determines the content of the <code>SampleWebComponent</code>.
          *
          * @returns Reference to "this" in order to allow method chaining
          */
@@ -646,7 +575,7 @@ declare module "./SampleControl" {
         /**
          * Gets content of aggregation "header".
          */
-        getHeader(): Control;
+        getHeader(): WebComponent;
 
         /**
          * Sets the aggregated header.
@@ -654,7 +583,7 @@ declare module "./SampleControl" {
          * @param header The header to set
          * @returns Reference to "this" in order to allow method chaining
          */
-        setHeader(header: Control): this;
+        setHeader(header: WebComponent): this;
 
         /**
          * Destroys the header in the aggregation "header".
@@ -698,7 +627,7 @@ declare module "./SampleControl" {
          * @param partnerControl ID of an element which becomes the new target of this "partnerControl" association; alternatively, an element instance may be given
          * @returns Reference to "this" in order to allow method chaining
          */
-        setPartnerControl(partnerControl?: string | SampleControl): this;
+        setPartnerControl(partnerControl?: string | SampleWebComponent): this;
 
         // association: alsoLabelledBy
 
@@ -738,97 +667,41 @@ declare module "./SampleControl" {
          */
         removeAllAlsoLabelledBy(): string[];
 
-        // event: singlePress
-
-        /**
-         * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
-         *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         *
-         * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
-         * otherwise it will be bound to this "SampleControl" itself.
-         *
-         * @param fn The function to be called when the event occurs
-         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
-         *
-         * @returns Reference to "this" in order to allow method chaining
-         */
-        attachSinglePress(fn: (event: SampleControl$SinglePressEvent) => void, listener?: object): this;
-
-        /**
-         * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
-         *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         *
-         * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
-         * otherwise it will be bound to this "SampleControl" itself.
-         *
-         * @param data An application-specific payload object that will be passed to the event handler along with the event object when firing the event
-         * @param fn The function to be called when the event occurs
-         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
-         *
-         * @returns Reference to "this" in order to allow method chaining
-         */
-        attachSinglePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleControl$SinglePressEvent, data: CustomDataType) => void, listener?: object): this;
-
-        /**
-         * Detaches event handler "fn" from the "singlePress" event of this "SampleControl".
-         *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         *
-         * The passed function and listener object must match the ones used for event registration.
-         *
-         * @param fn The function to be called, when the event occurs
-         * @param listener Context object on which the given function had to be called
-         * @returns Reference to "this" in order to allow method chaining
-         */
-        detachSinglePress(fn: (event: SampleControl$SinglePressEvent) => void, listener?: object): this;
-
-        /**
-         * Fires event "singlePress" to attached listeners.
-         *
-         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
-         *
-         * @param parameters Parameters to pass along with the event
-         * @returns Reference to "this" in order to allow method chaining
-         */
-        fireSinglePress(parameters?: SampleControl$SinglePressEventParameters): this;
-
         // event: doublePress
 
         /**
-         * Attaches event handler "fn" to the "doublePress" event of this "SampleControl".
+         * Attaches event handler "fn" to the "doublePress" event of this "SampleWebComponent".
          *
          * Fired when double-clicked.
          *
          * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
-         * otherwise it will be bound to this "SampleControl" itself.
+         * otherwise it will be bound to this "SampleWebComponent" itself.
          *
          * @param fn The function to be called when the event occurs
-         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
+         * @param listener Context object to call the event handler with. Defaults to this "SampleWebComponent" itself
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachDoublePress(fn: (event: SampleControl$DoublePressEvent) => void, listener?: object): this;
+        attachDoublePress(fn: (event: SampleWebComponent$DoublePressEvent) => void, listener?: object): this;
 
         /**
-         * Attaches event handler "fn" to the "doublePress" event of this "SampleControl".
+         * Attaches event handler "fn" to the "doublePress" event of this "SampleWebComponent".
          *
          * Fired when double-clicked.
          *
          * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
-         * otherwise it will be bound to this "SampleControl" itself.
+         * otherwise it will be bound to this "SampleWebComponent" itself.
          *
          * @param data An application-specific payload object that will be passed to the event handler along with the event object when firing the event
          * @param fn The function to be called when the event occurs
-         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
+         * @param listener Context object to call the event handler with. Defaults to this "SampleWebComponent" itself
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleControl$DoublePressEvent, data: CustomDataType) => void, listener?: object): this;
+        attachDoublePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleWebComponent$DoublePressEvent, data: CustomDataType) => void, listener?: object): this;
 
         /**
-         * Detaches event handler "fn" from the "doublePress" event of this "SampleControl".
+         * Detaches event handler "fn" from the "doublePress" event of this "SampleWebComponent".
          *
          * Fired when double-clicked.
          *
@@ -838,7 +711,7 @@ declare module "./SampleControl" {
          * @param listener Context object on which the given function had to be called
          * @returns Reference to "this" in order to allow method chaining
          */
-        detachDoublePress(fn: (event: SampleControl$DoublePressEvent) => void, listener?: object): this;
+        detachDoublePress(fn: (event: SampleWebComponent$DoublePressEvent) => void, listener?: object): this;
 
         /**
          * Fires event "doublePress" to attached listeners.
@@ -849,11 +722,8 @@ declare module "./SampleControl" {
          * The return value of this method indicates whether the default action should be executed.
          *
          * @param parameters Parameters to pass along with the event
-         * @param [mParameters.delay] Fired when double-clicked.
-         *
          * @returns Whether or not to prevent the default action
          */
-        fireDoublePress(parameters?: SampleControl$DoublePressEventParameters): boolean;
+        fireDoublePress(parameters?: SampleWebComponent$DoublePressEventParameters): boolean;
     }
 }
-`;

@@ -47,9 +47,21 @@ export default class SampleControl extends Button {
 		},
 		events: {
 			/**
+			 * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+			 */
+			singlePress: {},
+			/**
 			 * Fired when double-clicked.
 			 */
-			doublePress: { allowPreventDefault: true },
+			doublePress: {
+				allowPreventDefault: true,
+				parameters: {
+					/**
+					 * The amount of milliseconds between the first and second press
+					 */
+					delay: { type: "int" }
+				}
+			}
 		},
 	};
 
@@ -72,6 +84,8 @@ export default class SampleControl extends Button {
 	};
 
 	doit() {
+		this.fireSinglePress();
+		this.fireDoublePress({ delay: 100 });
 		alert("Hello");
 	}
 }

@@ -41,6 +41,11 @@ declare module "./SampleControl" {
         alsoLabelledBy?: Control | string | (Control | string)[];
 
         /**
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         */
+        singlePress?: (event: SampleControl$SinglePressEvent) => void;
+
+        /**
          * Fired when double-clicked.
          */
         doublePress?: (event: SampleControl$DoublePressEvent) => void;
@@ -292,6 +297,62 @@ declare module "./SampleControl" {
          */
         removeAllAlsoLabelledBy(): string[];
 
+        // event: singlePress
+
+        /**
+         * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
+         *
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         *
+         * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
+         * otherwise it will be bound to this "SampleControl" itself.
+         *
+         * @param fn The function to be called when the event occurs
+         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
+         *
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        attachSinglePress(fn: (event: SampleControl$SinglePressEvent) => void, listener?: object): this;
+
+        /**
+         * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
+         *
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         *
+         * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
+         * otherwise it will be bound to this "SampleControl" itself.
+         *
+         * @param data An application-specific payload object that will be passed to the event handler along with the event object when firing the event
+         * @param fn The function to be called when the event occurs
+         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
+         *
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        attachSinglePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleControl$SinglePressEvent, data: CustomDataType) => void, listener?: object): this;
+
+        /**
+         * Detaches event handler "fn" from the "singlePress" event of this "SampleControl".
+         *
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         *
+         * The passed function and listener object must match the ones used for event registration.
+         *
+         * @param fn The function to be called, when the event occurs
+         * @param listener Context object on which the given function had to be called
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        detachSinglePress(fn: (event: SampleControl$SinglePressEvent) => void, listener?: object): this;
+
+        /**
+         * Fires event "singlePress" to attached listeners.
+         *
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         *
+         * @param parameters Parameters to pass along with the event
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        fireSinglePress(parameters?: SampleControl$SinglePressEventParameters): this;
+
         // event: doublePress
 
         /**
@@ -347,18 +408,34 @@ declare module "./SampleControl" {
          * The return value of this method indicates whether the default action should be executed.
          *
          * @param parameters Parameters to pass along with the event
+         * @param [mParameters.delay] Fired when double-clicked.
+         *
          * @returns Whether or not to prevent the default action
          */
         fireDoublePress(parameters?: SampleControl$DoublePressEventParameters): boolean;
     }
 
     /**
+     * Interface describing the parameters of SampleControl's 'singlePress' event.
+     * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+     */
+    // eslint-disable-next-line
+    export interface SampleControl$SinglePressEventParameters {
+    }
+
+    /**
      * Interface describing the parameters of SampleControl's 'doublePress' event.
      * Fired when double-clicked.
      */
-    // eslint-disable-next-line
     export interface SampleControl$DoublePressEventParameters {
+        delay?: number;
     }
+
+    /**
+     * Type describing the SampleControl's 'singlePress' event.
+     * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+     */
+    export type SampleControl$SinglePressEvent = Event<SampleControl$SinglePressEventParameters>;
 
     /**
      * Type describing the SampleControl's 'doublePress' event.
@@ -615,6 +692,62 @@ declare module "./SampleControl" {
          */
         removeAllAlsoLabelledBy(): string[];
 
+        // event: singlePress
+
+        /**
+         * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
+         *
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         *
+         * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
+         * otherwise it will be bound to this "SampleControl" itself.
+         *
+         * @param fn The function to be called when the event occurs
+         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
+         *
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        attachSinglePress(fn: (event: SampleControl$SinglePressEvent) => void, listener?: object): this;
+
+        /**
+         * Attaches event handler "fn" to the "singlePress" event of this "SampleControl".
+         *
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         *
+         * When called, the context of the event handler (its "this") will be bound to "oListener" if specified,
+         * otherwise it will be bound to this "SampleControl" itself.
+         *
+         * @param data An application-specific payload object that will be passed to the event handler along with the event object when firing the event
+         * @param fn The function to be called when the event occurs
+         * @param listener Context object to call the event handler with. Defaults to this "SampleControl" itself
+         *
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        attachSinglePress<CustomDataType extends object>(data: CustomDataType, fn: (event: SampleControl$SinglePressEvent, data: CustomDataType) => void, listener?: object): this;
+
+        /**
+         * Detaches event handler "fn" from the "singlePress" event of this "SampleControl".
+         *
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         *
+         * The passed function and listener object must match the ones used for event registration.
+         *
+         * @param fn The function to be called, when the event occurs
+         * @param listener Context object on which the given function had to be called
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        detachSinglePress(fn: (event: SampleControl$SinglePressEvent) => void, listener?: object): this;
+
+        /**
+         * Fires event "singlePress" to attached listeners.
+         *
+         * Fired when single-clicked. This event has no parameters, which requires an eslint-disable in the generated code.
+         *
+         * @param parameters Parameters to pass along with the event
+         * @returns Reference to "this" in order to allow method chaining
+         */
+        fireSinglePress(parameters?: SampleControl$SinglePressEventParameters): this;
+
         // event: doublePress
 
         /**
@@ -670,6 +803,8 @@ declare module "./SampleControl" {
          * The return value of this method indicates whether the default action should be executed.
          *
          * @param parameters Parameters to pass along with the event
+         * @param [mParameters.delay] Fired when double-clicked.
+         *
          * @returns Whether or not to prevent the default action
          */
         fireDoublePress(parameters?: SampleControl$DoublePressEventParameters): boolean;

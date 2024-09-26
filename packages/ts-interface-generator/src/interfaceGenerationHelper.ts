@@ -22,12 +22,21 @@ let ManagedObjectSymbol: ts.Symbol,
   ElementSymbol: ts.Symbol,
   ControlSymbol: ts.Symbol,
   WebComponentSymbol: ts.Symbol;
+
+// needs to be called to reset the base classes cache, so they are re-identified in the new type world
+function resetBaseClasses() {
+  ManagedObjectSymbol = undefined;
+  ElementSymbol = undefined;
+  ControlSymbol = undefined;
+  WebComponentSymbol = undefined;
+}
+
 function interestingBaseClassForSymbol(
   typeChecker: ts.TypeChecker,
   symbol: ts.Symbol,
 ): "ManagedObject" | "Element" | "Control" | "WebComponent" | undefined {
   if (!ManagedObjectSymbol) {
-    // cache - TODO: needs to be refreshed when the UI5 type definitions are updated during a run of the tool!
+    // cache (execution takes one-digit milliseconds) - TODO: does it need to be refreshed when the UI5 type definitions are updated during a run of the tool, or is the clearing from generateInterfaces sufficient?
     // identify the symbols for the interesting classes
     const managedObjectModuleDeclaration = typeChecker
       .getAmbientModules()
@@ -132,6 +141,7 @@ function generateInterfaces(
     interfaceText: string,
   ) => void = writeInterfaceFile,
 ) {
+  resetBaseClasses(); // typeChecker might be from a new type world
   const mos = getManagedObjects(sourceFile, typeChecker);
 
   // find out whether type version 1.115.1 or later is used, where "Event" is a class with generics (this influences what we need to generate)
@@ -184,6 +194,30 @@ function getManagedObjects(
   sourceFile: ts.SourceFile,
   typeChecker: ts.TypeChecker,
 ) {
+  // First find the default export (in contrast to named exports) of this ES module - we want to find top-level statements like:
+  //   export default class MyControl extends Control {...} // direct export of the class
+  //   export default MyControl; // export of a variable which holds the class
+  // we don't care about other default exports, including instances of the class:
+  //   export default new MyControl(); // instance export
+  // and we are also not interested in named exports of the class here
+  //   export class MyControl extends Control {...} // etc.
+  let defaultExport: ts.Identifier | ts.ClassDeclaration | undefined;
+  sourceFile.statements.forEach((statement) => {
+    if (
+      ts.isExportAssignment(statement) &&
+      ts.isIdentifier(statement.expression)
+    ) {
+      defaultExport = statement.expression;
+    } else if (ts.isClassDeclaration(statement)) {
+      const hasDefaultModifier = statement.modifiers?.some(
+        (modifier) => modifier.kind === ts.SyntaxKind.DefaultKeyword,
+      );
+      if (hasDefaultModifier) {
+        defaultExport = statement;
+      }
+    }
+  });
+
   const managedObjects: ManagedObjectInfo[] = [];
   sourceFile.statements.forEach((statement) => {
     if (ts.isClassDeclaration(statement)) {
@@ -331,10 +365,20 @@ In any case, you need to make the parent class ${typeChecker.getFullyQualifiedNa
               const constructorSignaturesAvailable =
                 checkConstructors(statement);
 
+              const className = statement.name ? statement.name.text : "";
+
+              // is this class a default export?
+              const isDefaultExport =
+                defaultExport &&
+                ((ts.isIdentifier(defaultExport) &&
+                  defaultExport.text === className) ||
+                  defaultExport === statement);
+
               // store the information about the identified ManagedObject/Control
               managedObjects.push({
                 sourceFile,
-                className: statement.name ? statement.name.text : "",
+                className,
+                isDefaultExport,
                 classDeclaration: statement,
                 settingsTypeFullName,
                 interestingBaseClass,
@@ -700,6 +744,7 @@ function generateInterface(
   {
     sourceFile,
     className,
+    isDefaultExport,
     settingsTypeFullName,
     interestingBaseClass,
     constructorSignaturesAvailable,
@@ -708,6 +753,7 @@ function generateInterface(
     | {
         sourceFile: ts.SourceFile;
         className: string;
+        isDefaultExport: boolean;
         settingsTypeFullName: string;
         interestingBaseClass:
           | "ManagedObject"
@@ -801,6 +847,7 @@ function generateInterface(
   const moduleName = path.basename(fileName, path.extname(fileName));
   const ast = buildAST(
     classInfo,
+    isDefaultExport,
     sourceFile.fileName,
     constructorSignaturesAvailable,
     moduleName,
@@ -818,6 +865,7 @@ function generateInterface(
 
 function buildAST(
   classInfo: ClassInfo,
+  isDefaultExport: boolean,
   classFileName: string,
   constructorSignaturesAvailable: boolean,
   moduleName: string,
@@ -882,29 +930,51 @@ function buildAST(
 
   let myInterface;
   if (parseFloat(ts.version) >= 4.8) {
-    myInterface = factory.createInterfaceDeclaration(
-      [
-        factory.createModifier(ts.SyntaxKind.ExportKeyword),
-        factory.createModifier(ts.SyntaxKind.DefaultKeyword),
-      ],
-      classInfo.name,
-      undefined,
-      undefined,
-      methods,
-    );
+    if (isDefaultExport) {
+      myInterface = factory.createInterfaceDeclaration(
+        [
+          factory.createModifier(ts.SyntaxKind.ExportKeyword),
+          factory.createModifier(ts.SyntaxKind.DefaultKeyword),
+        ],
+        classInfo.name,
+        undefined,
+        undefined,
+        methods,
+      );
+    } else {
+      myInterface = factory.createInterfaceDeclaration(
+        [], // no export needed for module augmentation when class is a named export in the original file!
+        classInfo.name,
+        undefined,
+        undefined,
+        methods,
+      );
+    }
   } else {
-    myInterface = factory.createInterfaceDeclaration(
-      undefined,
-      [
-        factory.createModifier(ts.SyntaxKind.ExportKeyword),
-        factory.createModifier(ts.SyntaxKind.DefaultKeyword),
-      ],
-      classInfo.name,
-      undefined,
-      undefined,
-      // @ts-ignore: below TS 4.8 there were more params
-      methods,
-    );
+    if (isDefaultExport) {
+      myInterface = factory.createInterfaceDeclaration(
+        undefined,
+        [
+          factory.createModifier(ts.SyntaxKind.ExportKeyword),
+          factory.createModifier(ts.SyntaxKind.DefaultKeyword),
+        ],
+        classInfo.name,
+        undefined,
+        undefined,
+        // @ts-ignore: below TS 4.8 there were more params
+        methods,
+      );
+    } else {
+      myInterface = factory.createInterfaceDeclaration(
+        undefined,
+        [], // no export needed for module augmentation when class is a named export in the original file!
+        classInfo.name,
+        undefined,
+        undefined,
+        // @ts-ignore: below TS 4.8 there were more params
+        methods,
+      );
+    }
   }
   addLineBreakBefore(myInterface, 2);
 
@@ -945,8 +1015,9 @@ function buildAST(
     statements.push(genericEventDefinitionModule);
   }
 
-  // if needed, assemble the second module declaration
-  if (requiredImports.selfIsUsed) {
+  // If needed, assemble the second module declaration.
+  // In case the class is not a default export, the first module declaration will already be without export, so this second module declaration is not needed anyway
+  if (requiredImports.selfIsUsed && isDefaultExport) {
     let myInterface2;
     if (parseFloat(ts.version) >= 4.8) {
       myInterface2 = factory.createInterfaceDeclaration(
@@ -988,7 +1059,7 @@ function buildAST(
     ts.addSyntheticLeadingComment(
       module2,
       ts.SyntaxKind.SingleLineCommentTrivia,
-      " this duplicate interface without export is needed to avoid \"Cannot find name '" +
+      " this duplicate interface without export is needed to avoid \"Cannot find name '" + // TODO: does not seem to be needed any longer; investigate and try to reproduce
         classInfo.name +
         "'\" TypeScript errors above",
     );
