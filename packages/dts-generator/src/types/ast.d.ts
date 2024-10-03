@@ -135,7 +135,7 @@ export interface VariableWithValue extends Variable {
 export interface FunctionDesc extends AstNode, UI5JSDocs {
   kind: "FunctionDesc";
   name: string;
-  variations?: Array<FunctionDesc>;
+  overloads?: Array<FunctionDesc>;
   static?: boolean;
   overwrite?: boolean;
   typeParameters?: TypeParameter[];
