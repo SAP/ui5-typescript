@@ -20,6 +20,7 @@ If your development is based on SAP Fiori Elements, using the SAP Fiori tools, a
 - [Where to report issues? What is the support status?](#where-to-report-issues)
 - [Are the type definitions ready for productive use?](#are-the-type-definitions-ready-for-productive-use)
 - [Where can I find release notes or news about changes in the UI5 type definitions?](#where-can-i-find-release-notes-or-news-about-changes-in-the-ui5-type-definitions)
+- [Where can I find the types for UI5 2.0?](#where-can-i-find-the-types-for-ui5-20)
 - [What is the future roadmap for TypeScript in UI5?](#what-is-the-future-roadmap-for-typescript-in-ui5)
 - [What if I have further questions?](#what-if-i-have-further-questions)
 
@@ -116,6 +117,15 @@ There is not *one specific* changelog for the type definitions, as they are infl
 
 The former two are included in the general UI5 "[What's New](https://ui5.sap.com/#/topic/99ac68a5b1c3416ab5c84c99fefa250d)" and [Change Log](https://ui5.sap.com/#/releasenotes.html) (which contain also many changes not affecting the type definitions, though).<br>
 The type generator, on the other hand, influences *how* the types are generated and can hence have a huge impact as well, independently of any UI5 changes. It is currently not developed in this repository, but for the time being we list any significant or even *breaking* changes on the [release notes](releasenotes.md) page (also ones originating from the UI5 JSDoc or parser).
+
+### Where can I find the types for UI5 2.0?
+
+The type definitions for the OpenUI5 2.0 preview are published as part of its nightly release at https://sdk.openui5.org/nightly/2/-/types.tgz. The [`ui5-2.0` branch](https://github.com/SAP-samples/ui5-typescript-helloworld/tree/ui5-2.0) of the ui5-typescript-helloworld sample app demonstrates how these type definitions can be used for trying them: simply reference the types package in `package.json` via URL like
+   ```
+   "@types/openui5": "https://sdk.openui5.org/nightly/2/-/types.tgz"
+   ```
+   The difference of this package to the 1.x types is mainly that the deprecated methods/classes/libraries of UI5 1.x have been removed.<br>
+   The SAPUI5 2.x types are not available yet.
 
 ### What is the future roadmap for TypeScript in UI5?
 The current focus is working on an overall improvement of the TypeScript usage experience, so we are reacting on feedback and issue reports.

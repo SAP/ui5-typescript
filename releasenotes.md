@@ -8,6 +8,20 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.130.0 (October 2024)
+- RELATED: The type definitions for the preview version of OpenUI5 2.0 are now published as part of the preview's nightly release at https://sdk.openui5.org/nightly/2/-/types.tgz. The [`ui5-2.0` branch](https://github.com/SAP-samples/ui5-typescript-helloworld/tree/ui5-2.0) of the ui5-typescript-helloworld sample app demonstrates how these type definitions can be used for testing. In fact, it is trivial: simply reference the types package in `package.json` via URL like
+   ```
+   "@types/openui5": "https://sdk.openui5.org/nightly/2/-/types.tgz"
+   ```
+   The difference of this package to the 1.x types is mainly that the deprecated methods/classes/libraries of UI5 1.x have been removed.<br>
+   The SAPUI5 2.x types are not available yet.
+
+## 1.129.0 (end of September 2024)
+- No news
+
+## 1.128.0 (beginning of September 2024)
+- No news
+
 ## 1.127.0 (August 2024)
 - FEATURE/FIX: Controller extension support is now complete. This in particular concerns using pre-defined controller extensions like `sap/fe/core/controllerextensions/Routing` in your own controllers to add functionality. They can be used as-is or be partly overridden/enhanced using their static `override` method. A dummy method `ControllerExtension.use(...)` has been introduced in the type definitions for this. To make it work, also at least version 7.5.0 of [`babel-plugin-transform-modules-ui5`](https://www.npmjs.com/package/babel-plugin-transform-modules-ui5) is required (when using [`ui5-tooling-transpile`](https://www.npmjs.com/package/ui5-tooling-transpile) instead, make sure to `npm update` in your project). See [the documentation](https://github.com/ui5-community/babel-plugin-transform-modules-ui5?tab=readme-ov-file#properties-related-to-controller-extensions) for details once the new release of babel-plugin-transform-modules-ui5 is published. This dummy function is also being downported to patches of older `@openui5/types` and `@sapui5/types` releases:
   - 1.126.1
