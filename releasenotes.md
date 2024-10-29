@@ -13,6 +13,10 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
    ```
    "@types/openui5": "https://sdk.openui5.org/nightly/2/-/types.tgz"
    ```
+   by creating this entry manually or by entering
+   ```
+   npm install --save-dev https://sdk.openui5.org/nightly/2/-/types.tgz
+   ```
    The difference of this package to the 1.x types is mainly that the deprecated methods/classes/libraries of UI5 1.x have been removed.<br>
    The SAPUI5 2.x types are not available yet.
 
