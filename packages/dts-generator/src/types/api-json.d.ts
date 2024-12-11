@@ -157,6 +157,7 @@ export type EnumSymbol = SymbolBase & {
   "ui5-metadata"?: {
     stereotype?: "enum";
   };
+  deprecatedAliasFor?: string;
   [k: string]: any;
 };
 /**

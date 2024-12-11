@@ -84,6 +84,16 @@ export interface Directives {
   overlays: {
     [libraryName: string]: ConcreteSymbol[];
   };
+
+  /**
+   * If a symbol of kind "enum" is used as key in this map, this enum is a deprecated
+   * alias for another enum, whose name is given as value in the map.
+   * For such deprecated aliases for enums, a different type signature is generated,
+   * see method `genDeprecatedAliasForEnum` in dts-code-gen.ts.
+   */
+  deprecatedEnumAliases: {
+    [fqn: string]: string;
+  };
 }
 
 /**
@@ -124,6 +134,7 @@ const defaultOptions: GenerateFromObjectsConfig = {
     forwardDeclarations: {},
     fqnToIgnore: {},
     overlays: {},
+    deprecatedEnumAliases: {},
   },
   generateGlobals: false,
 };

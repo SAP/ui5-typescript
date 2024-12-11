@@ -82,6 +82,10 @@ export interface Enum extends AstSymbol, UI5JSDocs {
   values: VariableWithValue[];
   withValues: true;
   isLibraryEnum: boolean;
+  /**
+   * When set, this enum is a deprecated alias for another enum whose name is given by this property
+   */
+  deprecatedAliasFor?: string;
 }
 
 // Other Nodes
@@ -206,7 +210,7 @@ export interface TypeReference {
   typeName: string;
   nullable?: boolean;
   typeArguments?: Type[];
-  isStandardEnum?: boolean;
+  isStandardEnum?: boolean; // only set when generating esm types
 }
 
 export interface TypeLiteral {

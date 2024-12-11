@@ -286,43 +286,23 @@ function genImport(entity: Import) {
 
 function genExport(_export: Export) {
   if (_export.expression) {
+    const options = {
+      export: _export.export,
+      exportAsDefault: _export.asDefault,
+    };
     switch (_export.expression.kind) {
       case "Class":
-        return genClass(_export.expression, {
-          export: _export.export,
-          exportAsDefault: _export.asDefault,
-        });
+        return genClass(_export.expression, options);
       case "Enum":
-        if (_export.asDefault) {
-          // TS does not allow export of enums as default
-          // see https://github.com/microsoft/TypeScript/issues/3320
-          return (
-            genEnum(_export.expression) +
-            NL +
-            `export default ${_export.expression.name}`
-          );
-        }
-        return genEnum(_export.expression, { export: _export.export });
+        return genEnum(_export.expression, options);
       case "TypeAliasDeclaration":
-        return genTypeDefinition(_export.expression, {
-          export: _export.export,
-          exportAsDefault: _export.asDefault,
-        });
+        return genTypeDefinition(_export.expression, options);
       case "Interface":
-        return genInterface(_export.expression, {
-          export: _export.export,
-          exportAsDefault: _export.asDefault,
-        });
+        return genInterface(_export.expression, options);
       case "FunctionDesc":
-        return genFunction(_export.expression, {
-          export: _export.export,
-          exportAsDefault: _export.asDefault,
-        });
+        return genFunction(_export.expression, options);
       case "Variable":
-        return genConstExport(_export.expression, {
-          export: _export.export,
-          exportAsDefault: _export.asDefault,
-        });
+        return genConstExport(_export.expression, options);
       case "Namespace":
         return genNamespace(_export.expression, {
           export:
@@ -559,7 +539,7 @@ function genMethodOrFunction(
   text += ")";
 
   let hasReturnType = ast.returns !== undefined && ast.returns.type;
-  text += `: ${hasReturnType ? genType(ast.returns.type) : "void"}`;
+  text += `: ${hasReturnType ? genType(ast.returns.type, "returnValue") : "void"}`;
 
   return text;
 }
@@ -609,7 +589,7 @@ function genInterfaceProperty(ast: Variable) {
   text += applyTsIgnore(ast);
   text +=
     `${ast.name}${ast.optional ? "?" : ""} : ${
-      ast.type ? genType(ast.type) : "any"
+      ast.type ? genType(ast.type, "property") : "any"
     }` + NL;
   return text;
 }
@@ -626,14 +606,16 @@ function genConstExport(
   if (options.export && options.exportAsDefault) {
     text += JSDOC(ast) + NL;
     text += applyTsIgnore(ast);
-    text += `const ${ast.name} : ${ast.type ? genType(ast.type) : "any"};` + NL;
+    text +=
+      `const ${ast.name} : ${ast.type ? genType(ast.type, "const") : "any"};` +
+      NL;
     text += NL;
     text += `export default ${ast.name};` + NL;
   } else if (options.export) {
     text += JSDOC(ast) + NL;
     text += applyTsIgnore(ast);
     text +=
-      `export const ${ast.name} : ${ast.type ? genType(ast.type) : "any"};` +
+      `export const ${ast.name} : ${ast.type ? genType(ast.type, "const") : "any"};` +
       NL;
   }
   return text;
@@ -648,7 +630,8 @@ function genField(ast: Variable) {
   text += JSDOC(ast) + NL;
   text += applyTsIgnore(ast);
   text += ast.static ? "static " : "";
-  text += `${ast.name} : ${ast.type ? genType(ast.type) : "any"}` + NL;
+  text +=
+    `${ast.name} : ${ast.type ? genType(ast.type, "property") : "any"}` + NL;
   return text;
 }
 
@@ -677,7 +660,7 @@ function genParameter(ast: Parameter) {
     });
     text += "}" + NL;
   } else {
-    text += `: ${ast.type ? genType(ast.type) : "any"}`;
+    text += `: ${ast.type ? genType(ast.type, "parameter") : "any"}`;
   }
 
   return text;
@@ -694,15 +677,55 @@ function genEnum(
     exportAsDefault: false,
   },
 ) {
+  if (options.export && ast.deprecatedAliasFor) {
+    return genDeprecatedAliasForEnum(ast, options);
+  }
+
   let text = "";
   text += JSDOC(ast) + NL;
   text +=
-    `${options.export ? "export " + (options.exportAsDefault ? "default " : "") : ""}enum ${ast.name} {` +
+    `${options.export && !options.exportAsDefault ? "export " : ""}enum ${ast.name} {` +
     NL;
   text += APPEND_ITEMS(ast.values, (prop: Variable) =>
     genEnumValue(prop, ast.withValues),
   );
   text += "}";
+  if (options.export && options.exportAsDefault) {
+    // TS does not allow export of enums as default
+    // see https://github.com/microsoft/TypeScript/issues/3320
+    text += NL + `export default ${ast.name}`;
+  }
+  return text;
+}
+
+/**
+ * @param ast
+ * @return
+ */
+function genDeprecatedAliasForEnum(
+  ast: Enum,
+  options: { export: boolean; exportAsDefault?: boolean } = {
+    export: undefined,
+    exportAsDefault: false,
+  },
+) {
+  if (!options.export) {
+    console.error(
+      "deprecated alias is only supported for exported enums",
+      ast,
+      options,
+    );
+    throw new TypeError(
+      `deprecated alias is only supported for exported enums (${ast.name})`,
+    );
+  }
+  let text = "";
+  text += "export {";
+  text += JSDOC(ast) + NL;
+  text +=
+    `${ast.deprecatedAliasFor} as ${options.exportAsDefault ? "default " : ast.name}` +
+    NL;
+  text += "}" + NL;
 
   return text;
 }
@@ -731,7 +754,7 @@ function genEnumValue(ast: Variable, withValue = false) {
 function genVariable(ast: Variable) {
   let text = "";
   text += JSDOC(ast) + NL;
-  text += `export const ${ast.name} : ${genType(ast.type)};` + NL;
+  text += `export const ${ast.name} : ${genType(ast.type, "const")};` + NL;
 
   return text;
 }
@@ -781,9 +804,10 @@ function hasSimpleElementType(ast: ArrayType): boolean {
 
 /**
  * @param ast
+ * @param usage Context in which the type is used
  * @returns
  */
-function genType(ast: Type): string {
+function genType(ast: Type, usage: string = "unknown"): string {
   let text;
   switch (ast.kind) {
     case "TypeReference":
@@ -799,15 +823,15 @@ function genType(ast: Type): string {
       if (ast.nullable) {
         text += `|null`;
       }
-      if (ast.isStandardEnum) {
+      if (ast.isStandardEnum && usage !== "returnValue") {
         text = `(${text} | keyof typeof ${ast.typeName})`; // TODO parentheses not always required
       }
       return text;
     case "ArrayType":
       if (hasSimpleElementType(ast)) {
-        return `${genType(ast.elementType)}[]`;
+        return `${genType(ast.elementType, usage)}[]`;
       }
-      return `Array<${genType(ast.elementType)}>`;
+      return `Array<${genType(ast.elementType, usage)}>`;
     case "LiteralType":
       return String(ast.literal);
     case "TypeLiteral":
@@ -815,24 +839,24 @@ function genType(ast: Type): string {
         let ptext = "";
         ptext += JSDOC(prop) + NL;
         ptext +=
-          `${prop.name}${prop.optional ? "?" : ""}: ${genType(prop.type)},` +
+          `${prop.name}${prop.optional ? "?" : ""}: ${genType(prop.type, usage)},` +
           NL;
         return ptext;
       }).join("")}}`;
     case "UnionType":
       const unionTypes: string[] = _.map(ast.types, (variantType) => {
         if (variantType.kind === "FunctionType") {
-          return `(${genType(variantType)})`;
+          return `(${genType(variantType, usage)})`;
         }
-        return genType(variantType);
+        return genType(variantType, usage);
       });
       return unionTypes.join(" | ");
     case "IntersectionType":
       const intersectionTypes: string[] = _.map(ast.types, (variantType) => {
         if (variantType.kind === "FunctionType") {
-          return `(${genType(variantType)})`;
+          return `(${genType(variantType, usage)})`;
         }
-        return genType(variantType);
+        return genType(variantType, usage);
       });
       return intersectionTypes.join(" & ");
     case "FunctionType":
@@ -840,8 +864,8 @@ function genType(ast: Type): string {
       if (!_.isEmpty(ast.typeParameters)) {
         text += `<${_.map(ast.typeParameters, (param) => param.name).join(", ")}>`; // TODO defaults, constraints, expressions
       }
-      text += `(${_.map(ast.parameters, (param) => `${param.name}: ${genType(param.type)}`).join(", ")})`;
-      text += ` => ${ast.type ? genType(ast.type) : "void"}`;
+      text += `(${_.map(ast.parameters, (param) => `${param.name}: ${genType(param.type, "parameter")}`).join(", ")})`;
+      text += ` => ${ast.type ? genType(ast.type, "returnValue") : "void"}`;
       return text;
     case "NativeTSTypeExpression":
       // native TS type expression, emit the 'type' string "as is"

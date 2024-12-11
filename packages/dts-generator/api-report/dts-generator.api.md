@@ -39,6 +39,9 @@ export interface Directives {
     badInterfaces: string[];
     badMethods: string[];
     badSymbols: string[];
+    deprecatedEnumAliases: {
+        [fqn: string]: string;
+    };
     forwardDeclarations: {
         [libraryName: string]: ConcreteSymbol[];
     };
