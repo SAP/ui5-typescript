@@ -52,6 +52,7 @@ Using `directives` as input and the information whether modules or globals shoul
 - `convertNamespacesIntoTypedefsOrInterfaces` converts namespaces which are used as substitute for static objects into something else (static object or typedef); contains hardcoded knowledge about sap.ui.Device and uses "namespacesToInterfaces" directive; examples: 'jQuery.sap.PseudoEvents', 'jQuery.sap.storage', 'module:sap/base/Log', 'sap.ui.base.BindingInfo', 'sap.ui.core.AppCacheBuster', 'sap.ui.core.BusyIndicator' to object and 'sap.ui.core.AbsoluteCSSSize', 'sap.ui.core.Collision', 'sap.ui.core.CSSColor', 'sap.ui.core.Dock', 'sap.ui.core.URI' to typedef.
 - `determineMissingExportsForTypes` adds exports for typedefs and interfaces where they are needed for the designtime - they are so far omitted because not needed at runtime
 - `parseTypeExpressions` converts all type expressions into a TypeScript AST
+- `markDeprecatedAliasesForEnums` marks enums (based on the directives) which are deprecated and should only be generated as alias for the new replacement enum
 - `addForwardDeclarations` (from directives) - this relates to inverse dependencies
 - `addInterfaceWithModuleNames` adds all visible modules to `sap.IUI5DefineDependencyNames`, which is merged across libraries from TypeScript perspective and can be used to type module imports
 - `addConstructorSettingsInterfaces` and `addEventParameterInterfaces` create two additional interfaces defining important structures:
