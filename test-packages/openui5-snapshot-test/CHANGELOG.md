@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/SAP/ui5-typescript/compare/@ui5/openui5-snapshot-test@3.1.3...@ui5/openui5-snapshot-test@3.2.0) (2025-01-08)
+
+
+### Features
+
+* **dts-generator:** change how enums are referenced in the generated… ([#478](https://github.com/SAP/ui5-typescript/issues/478)) ([42fc290](https://github.com/SAP/ui5-typescript/commit/42fc290bb359a2962949a7d6da32407b69f01c32))
+
+
+
+
+
 ## [3.1.3](https://github.com/SAP/ui5-typescript/compare/@ui5/openui5-snapshot-test@3.1.2...@ui5/openui5-snapshot-test@3.1.3) (2024-09-11)
 
 
