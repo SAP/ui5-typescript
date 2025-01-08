@@ -751,7 +751,7 @@ declare module "sap/f/AvatarGroup" {
      *
      * @returns Value of property `avatarDisplaySize`
      */
-    getAvatarDisplaySize(): AvatarSize | keyof typeof AvatarSize;
+    getAvatarDisplaySize(): AvatarSize;
     /**
      * Gets current value of property {@link #getGroupType groupType}.
      *
@@ -762,7 +762,7 @@ declare module "sap/f/AvatarGroup" {
      *
      * @returns Value of property `groupType`
      */
-    getGroupType(): AvatarGroupType | keyof typeof AvatarGroupType;
+    getGroupType(): AvatarGroupType;
     /**
      * Gets content of aggregation {@link #getItems items}.
      *
@@ -1339,9 +1339,7 @@ declare module "sap/f/Card" {
      *
      * @returns Value of property `headerPosition`
      */
-    getHeaderPosition():
-      | cards.HeaderPosition
-      | keyof typeof cards.HeaderPosition;
+    getHeaderPosition(): cards.HeaderPosition;
     /**
      * Sets the aggregated {@link #getContent content}.
      *
@@ -2088,7 +2086,7 @@ declare module "sap/f/cards/Header" {
      *
      * @returns Value of property `iconBackgroundColor`
      */
-    getIconBackgroundColor(): AvatarColor | keyof typeof AvatarColor;
+    getIconBackgroundColor(): AvatarColor;
     /**
      * Gets current value of property {@link #getIconDisplayShape iconDisplayShape}.
      *
@@ -2099,7 +2097,7 @@ declare module "sap/f/cards/Header" {
      *
      * @returns Value of property `iconDisplayShape`
      */
-    getIconDisplayShape(): AvatarShape | keyof typeof AvatarShape;
+    getIconDisplayShape(): AvatarShape;
     /**
      * Gets current value of property {@link #getIconInitials iconInitials}.
      *
@@ -2122,7 +2120,7 @@ declare module "sap/f/cards/Header" {
      *
      * @returns Value of property `iconSize`
      */
-    getIconSize(): AvatarSize | keyof typeof AvatarSize;
+    getIconSize(): AvatarSize;
     /**
      * Gets current value of property {@link #getIconSrc iconSrc}.
      *
@@ -2840,7 +2838,7 @@ declare module "sap/f/cards/NumericHeader" {
      *
      * @returns Value of property `detailsState`
      */
-    getDetailsState(): ValueState | keyof typeof ValueState;
+    getDetailsState(): ValueState;
     /**
      * Gets current value of property {@link #getIconAlt iconAlt}.
      *
@@ -2866,7 +2864,7 @@ declare module "sap/f/cards/NumericHeader" {
      *
      * @returns Value of property `iconBackgroundColor`
      */
-    getIconBackgroundColor(): AvatarColor | keyof typeof AvatarColor;
+    getIconBackgroundColor(): AvatarColor;
     /**
      * Gets current value of property {@link #getIconDisplayShape iconDisplayShape}.
      *
@@ -2879,7 +2877,7 @@ declare module "sap/f/cards/NumericHeader" {
      *
      * @returns Value of property `iconDisplayShape`
      */
-    getIconDisplayShape(): AvatarShape | keyof typeof AvatarShape;
+    getIconDisplayShape(): AvatarShape;
     /**
      * Gets current value of property {@link #getIconInitials iconInitials}.
      *
@@ -2904,7 +2902,7 @@ declare module "sap/f/cards/NumericHeader" {
      *
      * @returns Value of property `iconSize`
      */
-    getIconSize(): AvatarSize | keyof typeof AvatarSize;
+    getIconSize(): AvatarSize;
     /**
      * Gets current value of property {@link #getIconSrc iconSrc}.
      *
@@ -2992,9 +2990,7 @@ declare module "sap/f/cards/NumericHeader" {
      *
      * @returns Value of property `sideIndicatorsAlignment`
      */
-    getSideIndicatorsAlignment():
-      | cards.NumericHeaderSideIndicatorsAlignment
-      | keyof typeof cards.NumericHeaderSideIndicatorsAlignment;
+    getSideIndicatorsAlignment(): cards.NumericHeaderSideIndicatorsAlignment;
     /**
      * Gets current value of property {@link #getState state}.
      *
@@ -3007,7 +3003,7 @@ declare module "sap/f/cards/NumericHeader" {
      *
      * @returns Value of property `state`
      */
-    getState(): ValueColor | keyof typeof ValueColor;
+    getState(): ValueColor;
     /**
      * Gets current value of property {@link #getStatusText statusText}.
      *
@@ -3071,7 +3067,7 @@ declare module "sap/f/cards/NumericHeader" {
      *
      * @returns Value of property `trend`
      */
-    getTrend(): DeviationIndicator | keyof typeof DeviationIndicator;
+    getTrend(): DeviationIndicator;
     /**
      * Gets current value of property {@link #getUnitOfMeasurement unitOfMeasurement}.
      *
@@ -3876,7 +3872,7 @@ declare module "sap/f/cards/NumericSideIndicator" {
      *
      * @returns Value of property `state`
      */
-    getState(): ValueColor | keyof typeof ValueColor;
+    getState(): ValueColor;
     /**
      * Gets current value of property {@link #getTitle title}.
      *
@@ -4430,9 +4426,7 @@ declare module "sap/f/DynamicPage" {
      *
      * @returns Value of property `backgroundDesign`
      */
-    getBackgroundDesign():
-      | PageBackgroundDesign
-      | keyof typeof PageBackgroundDesign;
+    getBackgroundDesign(): PageBackgroundDesign;
     /**
      * Gets content of aggregation {@link #getContent content}.
      *
@@ -5129,9 +5123,7 @@ declare module "sap/f/DynamicPageAccessibleLandmarkInfo" {
      *
      * @returns Value of property `contentRole`
      */
-    getContentRole():
-      | AccessibleLandmarkRole
-      | keyof typeof AccessibleLandmarkRole;
+    getContentRole(): AccessibleLandmarkRole;
     /**
      * Gets current value of property {@link #getFooterLabel footerLabel}.
      *
@@ -5156,9 +5148,7 @@ declare module "sap/f/DynamicPageAccessibleLandmarkInfo" {
      *
      * @returns Value of property `footerRole`
      */
-    getFooterRole():
-      | AccessibleLandmarkRole
-      | keyof typeof AccessibleLandmarkRole;
+    getFooterRole(): AccessibleLandmarkRole;
     /**
      * Gets current value of property {@link #getHeaderLabel headerLabel}.
      *
@@ -5183,9 +5173,7 @@ declare module "sap/f/DynamicPageAccessibleLandmarkInfo" {
      *
      * @returns Value of property `headerRole`
      */
-    getHeaderRole():
-      | AccessibleLandmarkRole
-      | keyof typeof AccessibleLandmarkRole;
+    getHeaderRole(): AccessibleLandmarkRole;
     /**
      * Gets current value of property {@link #getRootLabel rootLabel}.
      *
@@ -5210,7 +5198,7 @@ declare module "sap/f/DynamicPageAccessibleLandmarkInfo" {
      *
      * @returns Value of property `rootRole`
      */
-    getRootRole(): AccessibleLandmarkRole | keyof typeof AccessibleLandmarkRole;
+    getRootRole(): AccessibleLandmarkRole;
     /**
      * Sets a new value for property {@link #getContentLabel contentLabel}.
      *
@@ -5579,7 +5567,7 @@ declare module "sap/f/DynamicPageHeader" {
      *
      * @returns Value of property `backgroundDesign`
      */
-    getBackgroundDesign(): BackgroundDesign | keyof typeof BackgroundDesign;
+    getBackgroundDesign(): BackgroundDesign;
     /**
      * Gets content of aggregation {@link #getContent content}.
      *
@@ -6131,7 +6119,7 @@ declare module "sap/f/DynamicPageTitle" {
      *
      * @returns Value of property `backgroundDesign`
      */
-    getBackgroundDesign(): BackgroundDesign | keyof typeof BackgroundDesign;
+    getBackgroundDesign(): BackgroundDesign;
     /**
      * Gets content of aggregation {@link #getBreadcrumbs breadcrumbs}.
      *
@@ -6228,7 +6216,7 @@ declare module "sap/f/DynamicPageTitle" {
      *
      * @returns Value of property `primaryArea`
      */
-    getPrimaryArea(): DynamicPageTitleArea | keyof typeof DynamicPageTitleArea;
+    getPrimaryArea(): DynamicPageTitleArea;
     /**
      * Gets content of aggregation {@link #getSnappedContent snappedContent}.
      *
@@ -8015,7 +8003,7 @@ declare module "sap/f/FlexibleColumnLayout" {
      *
      * @returns Value of property `backgroundDesign`
      */
-    getBackgroundDesign(): BackgroundDesign | keyof typeof BackgroundDesign;
+    getBackgroundDesign(): BackgroundDesign;
     /**
      * Gets content of aggregation {@link #getBeginColumnPages beginColumnPages}.
      *
@@ -8134,7 +8122,7 @@ declare module "sap/f/FlexibleColumnLayout" {
      *
      * @returns Value of property `layout`
      */
-    getLayout(): LayoutType | keyof typeof LayoutType;
+    getLayout(): LayoutType;
     /**
      * Returns the maximum number of columns that can be displayed at once based on the control width
      *
@@ -17342,9 +17330,7 @@ declare module "sap/f/semantic/SemanticPage" {
      *
      * @returns Value of property `titlePrimaryArea`
      */
-    getTitlePrimaryArea():
-      | DynamicPageTitleArea
-      | keyof typeof DynamicPageTitleArea;
+    getTitlePrimaryArea(): DynamicPageTitleArea;
     /**
      * Gets content of aggregation {@link #getTitleSnappedContent titleSnappedContent}.
      *
@@ -21230,7 +21216,7 @@ declare module "sap/f/SidePanel" {
      *
      * @returns Value of property `sidePanelPosition`
      */
-    getSidePanelPosition(): SidePanelPosition | keyof typeof SidePanelPosition;
+    getSidePanelPosition(): SidePanelPosition;
     /**
      * Gets current value of property {@link #getSidePanelResizable sidePanelResizable}.
      *

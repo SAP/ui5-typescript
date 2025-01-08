@@ -8742,7 +8742,7 @@ declare module "sap/ui/unified/CalendarLegendItem" {
      *
      * @returns Value of property `type`
      */
-    getType(): CalendarDayType | keyof typeof CalendarDayType;
+    getType(): CalendarDayType;
     /**
      * Sets a new value for property {@link #getColor color}.
      *
@@ -10302,9 +10302,7 @@ declare module "sap/ui/unified/CalendarRow" {
      *
      * @returns Value of property `appointmentHeight`
      */
-    getAppointmentHeight():
-      | CalendarAppointmentHeight
-      | keyof typeof CalendarAppointmentHeight;
+    getAppointmentHeight(): CalendarAppointmentHeight;
     /**
      * Gets current value of property {@link #getAppointmentRoundWidth appointmentRoundWidth}.
      *
@@ -10318,9 +10316,7 @@ declare module "sap/ui/unified/CalendarRow" {
      *
      * @returns Value of property `appointmentRoundWidth`
      */
-    getAppointmentRoundWidth():
-      | CalendarAppointmentRoundWidth
-      | keyof typeof CalendarAppointmentRoundWidth;
+    getAppointmentRoundWidth(): CalendarAppointmentRoundWidth;
     /**
      * Gets content of aggregation {@link #getAppointments appointments}.
      *
@@ -10358,9 +10354,7 @@ declare module "sap/ui/unified/CalendarRow" {
      *
      * @returns Value of property `appointmentsVisualization`
      */
-    getAppointmentsVisualization():
-      | CalendarAppointmentVisualization
-      | keyof typeof CalendarAppointmentVisualization;
+    getAppointmentsVisualization(): CalendarAppointmentVisualization;
     /**
      * Returns array of IDs of the elements which are the current targets of the association {@link #getAriaLabelledBy ariaLabelledBy}.
      */
@@ -10404,9 +10398,7 @@ declare module "sap/ui/unified/CalendarRow" {
      *
      * @returns Value of property `groupAppointmentsMode`
      */
-    getGroupAppointmentsMode():
-      | GroupAppointmentsMode
-      | keyof typeof GroupAppointmentsMode;
+    getGroupAppointmentsMode(): GroupAppointmentsMode;
     /**
      * Gets current value of property {@link #getHeight height}.
      *
@@ -12767,9 +12759,7 @@ declare module "sap/ui/unified/ColorPicker" {
      *
      * @returns Value of property `displayMode`
      */
-    getDisplayMode():
-      | ColorPickerDisplayMode
-      | keyof typeof ColorPickerDisplayMode;
+    getDisplayMode(): ColorPickerDisplayMode;
     /**
      * Gets current value of property {@link #getMode mode}.
      *
@@ -12785,7 +12775,7 @@ declare module "sap/ui/unified/ColorPicker" {
      *
      * @returns Value of property `mode`
      */
-    getMode(): ColorPickerMode | keyof typeof ColorPickerMode;
+    getMode(): ColorPickerMode;
     /**
      * Gets current RGB values.
      *
@@ -13332,9 +13322,7 @@ declare module "sap/ui/unified/ColorPickerPopover" {
      *
      * @returns Value of property `displayMode`
      */
-    getDisplayMode():
-      | ColorPickerDisplayMode
-      | keyof typeof ColorPickerDisplayMode;
+    getDisplayMode(): ColorPickerDisplayMode;
     /**
      * Gets current value of property {@link #getMode mode}.
      *
@@ -13346,7 +13334,7 @@ declare module "sap/ui/unified/ColorPickerPopover" {
      *
      * @returns Value of property `mode`
      */
-    getMode(): ColorPickerMode | keyof typeof ColorPickerMode;
+    getMode(): ColorPickerMode;
     /**
      * Opens the `ColorPickerPopover`. The popover is positioned relative to the control parameter on tablet
      * or desktop and is full screen on phone. Therefore the openBy parameter is only used on tablet or desktop
@@ -14475,7 +14463,7 @@ declare module "sap/ui/unified/DateTypeRange" {
      *
      * @returns Value of property `secondaryType`
      */
-    getSecondaryType(): CalendarDayType | keyof typeof CalendarDayType;
+    getSecondaryType(): CalendarDayType;
     /**
      * Gets current value of property {@link #getType type}.
      *
@@ -14486,7 +14474,7 @@ declare module "sap/ui/unified/DateTypeRange" {
      *
      * @returns Value of property `type`
      */
-    getType(): CalendarDayType | keyof typeof CalendarDayType;
+    getType(): CalendarDayType;
     /**
      * Sets a new value for property {@link #getColor color}.
      *
@@ -16181,7 +16169,7 @@ declare module "sap/ui/unified/FileUploader" {
      *
      * @returns Value of property `valueState`
      */
-    getValueState(): ValueState | keyof typeof ValueState;
+    getValueState(): ValueState;
     /**
      * Gets current value of property {@link #getValueStateText valueStateText}.
      *
@@ -19186,7 +19174,7 @@ declare module "sap/ui/unified/MenuTextFieldItem" {
      *
      * @returns Value of property `valueState`
      */
-    getValueState(): ValueState | keyof typeof ValueState;
+    getValueState(): ValueState;
     /**
      * Sets a new value for property {@link #getIcon icon}.
      *
@@ -21700,7 +21688,7 @@ declare module "sap/ui/unified/SplitContainer" {
      *
      * @returns Value of property `orientation`
      */
-    getOrientation(): Orientation | keyof typeof Orientation;
+    getOrientation(): Orientation;
     /**
      * Gets content of aggregation {@link #getSecondaryContent secondaryContent}.
      *

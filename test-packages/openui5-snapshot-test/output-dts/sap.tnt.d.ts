@@ -195,7 +195,7 @@ declare module "sap/tnt/InfoLabel" {
      *
      * @returns Value of property `renderMode`
      */
-    getRenderMode(): RenderMode | keyof typeof RenderMode;
+    getRenderMode(): RenderMode;
     /**
      * Gets current value of property {@link #getText text}.
      *
@@ -218,7 +218,7 @@ declare module "sap/tnt/InfoLabel" {
      *
      * @returns Value of property `textDirection`
      */
-    getTextDirection(): TextDirection | keyof typeof TextDirection;
+    getTextDirection(): TextDirection;
     /**
      * Gets current value of property {@link #getWidth width}.
      *
@@ -2287,9 +2287,7 @@ declare module "sap/tnt/ToolPage" {
      *
      * @returns Value of property `contentBackgroundDesign`
      */
-    getContentBackgroundDesign():
-      | PageBackgroundDesign
-      | keyof typeof PageBackgroundDesign;
+    getContentBackgroundDesign(): PageBackgroundDesign;
     /**
      * Gets content of aggregation {@link #getHeader header}.
      *
