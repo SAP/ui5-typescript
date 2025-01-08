@@ -391,16 +391,28 @@ class ConvertGlobalsToImports extends ASTVisitor {
       this.#scopeBuilder.topLevelScope as ModuleBuilder
     ).typeUniverse.get(type);
     return (
-      symbolForType != null &&
-      symbolForType["ui5-metadata"] != null &&
-      symbolForType["ui5-metadata"].stereotype === "enum"
+      (symbolForType != null &&
+        symbolForType["ui5-metadata"] != null &&
+        symbolForType["ui5-metadata"].stereotype === "enum") ||
+      (generateGlobals === false &&
+        symbolForType != null &&
+        symbolForType.deprecatedAliasFor &&
+        this._isStandardEnum(symbolForType.deprecatedAliasFor))
     );
   }
-  _visitTypeName(typeName: string, usage: "extends" | "implements") {
+  _visitTypeName(typeName: string, usage: string) {
     return this._import(
       typeName,
       usage !== "extends" && usage !== "implements",
     );
+  }
+  _visitEnum(_enum: Enum) {
+    if (_enum.deprecatedAliasFor) {
+      _enum.deprecatedAliasFor = this._visitTypeName(
+        _enum.deprecatedAliasFor,
+        "alias",
+      );
+    }
   }
   _visitTypeReference(type) {
     if (this.mode !== "type-alias") {
@@ -1639,7 +1651,10 @@ function buildInterfaceFromObject(ui5Object): Interface {
  * @returns
  */
 function buildEnum(ui5Enum: EnumSymbol) {
-  assertKnownProps(["name", "basename", "properties"], ui5Enum);
+  assertKnownProps(
+    ["name", "basename", "properties", "deprecatedAliasFor"],
+    ui5Enum,
+  );
 
   const isStandardEnum =
     ui5Enum["ui5-metadata"] != null &&
@@ -1650,6 +1665,7 @@ function buildEnum(ui5Enum: EnumSymbol) {
     name: ui5Enum.basename,
     withValues: true,
     isLibraryEnum: ui5Enum.module.endsWith("/library"),
+    deprecatedAliasFor: ui5Enum.deprecatedAliasFor,
     values: _.map(ui5Enum.properties, (prop) =>
       buildVariableWithValue(prop, isStandardEnum),
     ),

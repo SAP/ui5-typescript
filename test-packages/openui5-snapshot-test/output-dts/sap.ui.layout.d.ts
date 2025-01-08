@@ -629,7 +629,7 @@ declare module "sap/ui/layout/BlockLayout" {
      *
      * @returns Value of property `background`
      */
-    getBackground(): BlockBackgroundType | keyof typeof BlockBackgroundType;
+    getBackground(): BlockBackgroundType;
     /**
      * Gets content of aggregation {@link #getContent content}.
      *
@@ -894,9 +894,7 @@ declare module "sap/ui/layout/BlockLayoutCell" {
      *
      * @returns Value of property `backgroundColorSet`
      */
-    getBackgroundColorSet():
-      | BlockLayoutCellColorSet
-      | keyof typeof BlockLayoutCellColorSet;
+    getBackgroundColorSet(): BlockLayoutCellColorSet;
     /**
      * Gets current value of property {@link #getBackgroundColorShade backgroundColorShade}.
      *
@@ -907,9 +905,7 @@ declare module "sap/ui/layout/BlockLayoutCell" {
      *
      * @returns Value of property `backgroundColorShade`
      */
-    getBackgroundColorShade():
-      | BlockLayoutCellColorShade
-      | keyof typeof BlockLayoutCellColorShade;
+    getBackgroundColorShade(): BlockLayoutCellColorShade;
     /**
      * Gets content of aggregation {@link #getContent content}.
      *
@@ -936,7 +932,7 @@ declare module "sap/ui/layout/BlockLayoutCell" {
      *
      * @returns Value of property `titleAlignment`
      */
-    getTitleAlignment(): HorizontalAlign | keyof typeof HorizontalAlign;
+    getTitleAlignment(): HorizontalAlign;
     /**
      * Gets current value of property {@link #getTitleLevel titleLevel}.
      *
@@ -948,7 +944,7 @@ declare module "sap/ui/layout/BlockLayoutCell" {
      *
      * @returns Value of property `titleLevel`
      */
-    getTitleLevel(): TitleLevel | keyof typeof TitleLevel;
+    getTitleLevel(): TitleLevel;
     /**
      * Gets content of aggregation {@link #getTitleLink titleLink}.
      *
@@ -1591,7 +1587,7 @@ declare module "sap/ui/layout/BlockLayoutRow" {
      *
      * @returns Value of property `rowColorSet`
      */
-    getRowColorSet(): BlockRowColorSets | keyof typeof BlockRowColorSets;
+    getRowColorSet(): BlockRowColorSets;
     /**
      * Gets current value of property {@link #getScrollable scrollable}.
      *
@@ -1959,9 +1955,7 @@ declare module "sap/ui/layout/cssgrid/CSSGrid" {
      *
      * @returns Value of property `gridAutoFlow`
      */
-    getGridAutoFlow():
-      | cssgrid.CSSGridAutoFlow
-      | keyof typeof cssgrid.CSSGridAutoFlow;
+    getGridAutoFlow(): cssgrid.CSSGridAutoFlow;
     /**
      * Gets current value of property {@link #getGridAutoRows gridAutoRows}.
      *
@@ -2472,9 +2466,7 @@ declare module "sap/ui/layout/cssgrid/GridBasicLayout" {
      *
      * @returns Value of property `gridAutoFlow`
      */
-    getGridAutoFlow():
-      | cssgrid.CSSGridAutoFlow
-      | keyof typeof cssgrid.CSSGridAutoFlow;
+    getGridAutoFlow(): cssgrid.CSSGridAutoFlow;
     /**
      * Gets current value of property {@link #getGridAutoRows gridAutoRows}.
      *
@@ -3901,9 +3893,7 @@ declare module "sap/ui/layout/cssgrid/GridSettings" {
      *
      * @returns Value of property `gridAutoFlow`
      */
-    getGridAutoFlow():
-      | cssgrid.CSSGridAutoFlow
-      | keyof typeof cssgrid.CSSGridAutoFlow;
+    getGridAutoFlow(): cssgrid.CSSGridAutoFlow;
     /**
      * Gets current value of property {@link #getGridAutoRows gridAutoRows}.
      *
@@ -4900,9 +4890,7 @@ declare module "sap/ui/layout/DynamicSideContent" {
      *
      * @returns Value of property `sideContentFallDown`
      */
-    getSideContentFallDown():
-      | SideContentFallDown
-      | keyof typeof SideContentFallDown;
+    getSideContentFallDown(): SideContentFallDown;
     /**
      * Gets current value of property {@link #getSideContentPosition sideContentPosition}.
      *
@@ -4914,9 +4902,7 @@ declare module "sap/ui/layout/DynamicSideContent" {
      *
      * @returns Value of property `sideContentPosition`
      */
-    getSideContentPosition():
-      | SideContentPosition
-      | keyof typeof SideContentPosition;
+    getSideContentPosition(): SideContentPosition;
     /**
      * Gets current value of property {@link #getSideContentVisibility sideContentVisibility}.
      *
@@ -4927,9 +4913,7 @@ declare module "sap/ui/layout/DynamicSideContent" {
      *
      * @returns Value of property `sideContentVisibility`
      */
-    getSideContentVisibility():
-      | SideContentVisibility
-      | keyof typeof SideContentVisibility;
+    getSideContentVisibility(): SideContentVisibility;
     /**
      * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getMainContent mainContent}.
      * and returns its index if found or -1 otherwise.
@@ -7636,7 +7620,7 @@ declare module "sap/ui/layout/form/FormLayout" {
      *
      * @returns Value of property `backgroundDesign`
      */
-    getBackgroundDesign(): BackgroundDesign | keyof typeof BackgroundDesign;
+    getBackgroundDesign(): BackgroundDesign;
     /**
      * In {@link sap.ui.layout.SemanticFormElement SemanticFormElement}, delimiters are rendered. They should
      * use only a small space. So `Layout`-dependent `LayoutData` are needed.
@@ -9531,7 +9515,7 @@ declare module "sap/ui/layout/form/SimpleForm" {
      *
      * @returns Value of property `backgroundDesign`
      */
-    getBackgroundDesign(): BackgroundDesign | keyof typeof BackgroundDesign;
+    getBackgroundDesign(): BackgroundDesign;
     /**
      * Gets current value of property {@link #getBreakpointL breakpointL}.
      *
@@ -9847,7 +9831,7 @@ declare module "sap/ui/layout/form/SimpleForm" {
      *
      * @returns Value of property `layout`
      */
-    getLayout(): form.SimpleFormLayout | keyof typeof form.SimpleFormLayout;
+    getLayout(): form.SimpleFormLayout;
     /**
      * Gets current value of property {@link #getMaxContainerCols maxContainerCols}.
      *
@@ -11115,7 +11099,7 @@ declare module "sap/ui/layout/Grid" {
      *
      * @returns Value of property `position`
      */
-    getPosition(): GridPosition | keyof typeof GridPosition;
+    getPosition(): GridPosition;
     /**
      * Gets current value of property {@link #getVSpacing vSpacing}.
      *
@@ -13003,7 +12987,7 @@ declare module "sap/ui/layout/PaneContainer" {
      *
      * @returns Value of property `orientation`
      */
-    getOrientation(): Orientation | keyof typeof Orientation;
+    getOrientation(): Orientation;
     /**
      * Gets content of aggregation {@link #getPanes panes}.
      *
@@ -14375,7 +14359,7 @@ declare module "sap/ui/layout/Splitter" {
      *
      * @returns Value of property `orientation`
      */
-    getOrientation(): Orientation | keyof typeof Orientation;
+    getOrientation(): Orientation;
     /**
      * Gets current value of property {@link #getWidth width}.
      *

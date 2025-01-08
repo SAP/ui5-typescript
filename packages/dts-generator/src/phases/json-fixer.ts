@@ -839,6 +839,28 @@ function removeRestrictedMembers(json: ApiJSON) {
   });
 }
 
+/**
+ * The map `deprecatedEnumAliases`, which is part of the directives, can list deprecated enums
+ * for which a special type alias should be generated.
+ *
+ * In this method, the aliases are added to those enums, both as a marker and as input for
+ * later generation of the alias.
+ *
+ * @param symbols Array of symbols for a library
+ * @param directives Directives for all libraries
+ */
+function markDeprecatedAliasesForEnums(
+  symbols: ConcreteSymbol[],
+  directives: Directives,
+) {
+  const deprecatedEnumAliases = directives.deprecatedEnumAliases;
+  symbols.forEach((symbol) => {
+    if (symbol.kind === "enum" && symbol.name in deprecatedEnumAliases) {
+      symbol.deprecatedAliasFor = deprecatedEnumAliases[symbol.name];
+    }
+  });
+}
+
 function _prepareApiJson(
   json: ApiJSON,
   directives: Directives,
@@ -853,6 +875,7 @@ function _prepareApiJson(
   convertNamespacesIntoTypedefsOrInterfaces(json.symbols, directives);
   determineMissingExportsForTypes(json.symbols);
   parseTypeExpressions(json.symbols);
+  markDeprecatedAliasesForEnums(json.symbols, directives);
   if (options.mainLibrary) {
     addForwardDeclarations(json, directives);
     addInterfaceWithModuleNames(json.symbols);

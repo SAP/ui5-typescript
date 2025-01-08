@@ -466,7 +466,7 @@ declare module "sap/base/i18n/Formatting" {
      *
      * @returns the current calendar type, e.g. `Gregorian`
      */
-    getCalendarType(): CalendarType | keyof typeof CalendarType;
+    getCalendarType(): CalendarType;
     /**
      * Returns the calendar week numbering algorithm used to determine the first day of the week and the first
      * calendar week of the year, see {@link module:sap/base/i18n/date/CalendarWeekNumbering CalendarWeekNumbering}.
@@ -475,9 +475,7 @@ declare module "sap/base/i18n/Formatting" {
      *
      * @returns The calendar week numbering algorithm
      */
-    getCalendarWeekNumbering():
-      | CalendarWeekNumbering
-      | keyof typeof CalendarWeekNumbering;
+    getCalendarWeekNumbering(): CalendarWeekNumbering;
     /**
      * Retrieves the custom currencies. E.g. ` { "KWD": {"digits": 3}, "TND" : {"digits": 3} } `
      * See:
@@ -3843,7 +3841,7 @@ declare module "sap/ui/core/ControlBehavior" {
      *
      * @returns The current animationMode
      */
-    getAnimationMode(): AnimationMode | keyof typeof AnimationMode;
+    getAnimationMode(): AnimationMode;
     /**
      * Returns whether the accessibility mode is enabled or not.
      *
@@ -6557,7 +6555,7 @@ declare module "sap/ui/util/Storage" {
      *
      * @returns Type of this storage or "unknown" when the Storage was created with an unknown type or implementation
      */
-    static getType(): (Type | keyof typeof Type) | string;
+    static getType(): Type | string;
     /**
      * Returns whether the given storage is supported.
      *
@@ -6639,7 +6637,7 @@ declare module "sap/ui/util/Storage" {
      *
      * @returns Type of this storage or "unknown" when the Storage was created with an unknown type or implementation
      */
-    getType(): (Type | keyof typeof Type) | string;
+    getType(): Type | string;
     /**
      * Returns whether the given storage is supported.
      *
@@ -12757,7 +12755,7 @@ declare module "sap/ui/core/library" {
      *
      * @returns sap.ui.core.aria.HasPopup<\code> type of the menu
      */
-    getAriaHasPopupType(): aria.HasPopup | keyof typeof aria.HasPopup;
+    getAriaHasPopupType(): aria.HasPopup;
     /**
      * Opens the menu using the column header.
      *
@@ -15474,7 +15472,7 @@ declare module "sap/ui/core/ComponentContainer" {
      *
      * @returns Value of property `lifecycle`
      */
-    getLifecycle(): ComponentLifecycle | keyof typeof ComponentLifecycle;
+    getLifecycle(): ComponentLifecycle;
     /**
      * Gets current value of property {@link #getManifest manifest}.
      *
@@ -17855,7 +17853,7 @@ declare module "sap/ui/core/Control" {
      *
      * @returns Value of property `busyIndicatorSize`
      */
-    getBusyIndicatorSize(): BusyIndicatorSize | keyof typeof BusyIndicatorSize;
+    getBusyIndicatorSize(): BusyIndicatorSize;
     /**
      * Returns a list of all child controls with a field group ID. See {@link #checkFieldGroupIds checkFieldGroupIds }
      * for a description of the `vFieldGroupIds` parameter. Associated controls are not taken into account.
@@ -22006,9 +22004,7 @@ declare module "sap/ui/core/dnd/DragAndDrop" {
      *
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      */
-    getDropPosition():
-      | dnd.RelativeDropPosition
-      | keyof typeof dnd.RelativeDropPosition;
+    getDropPosition(): dnd.RelativeDropPosition;
     /**
      * Returns the drop indicator.
      *
@@ -22429,7 +22425,7 @@ declare module "sap/ui/core/dnd/DropInfo" {
      *
      * @returns Value of property `dropEffect`
      */
-    getDropEffect(): dnd.DropEffect | keyof typeof dnd.DropEffect;
+    getDropEffect(): dnd.DropEffect;
     /**
      * Gets current value of property {@link #getDropLayout dropLayout}.
      *
@@ -22440,7 +22436,7 @@ declare module "sap/ui/core/dnd/DropInfo" {
      *
      * @returns Value of property `dropLayout`
      */
-    getDropLayout(): dnd.DropLayout | keyof typeof dnd.DropLayout;
+    getDropLayout(): dnd.DropLayout;
     /**
      * Gets current value of property {@link #getDropPosition dropPosition}.
      *
@@ -22451,7 +22447,7 @@ declare module "sap/ui/core/dnd/DropInfo" {
      *
      * @returns Value of property `dropPosition`
      */
-    getDropPosition(): dnd.DropPosition | keyof typeof dnd.DropPosition;
+    getDropPosition(): dnd.DropPosition;
     /**
      * Gets current value of property {@link #getTargetAggregation targetAggregation}.
      *
@@ -28858,7 +28854,7 @@ declare module "sap/ui/core/Item" {
      *
      * @returns Value of property `textDirection`
      */
-    getTextDirection(): TextDirection | keyof typeof TextDirection;
+    getTextDirection(): TextDirection;
     /**
      * Sets a new value for property {@link #getEnabled enabled}.
      *
@@ -31729,7 +31725,7 @@ declare module "sap/ui/core/message/Message" {
      *
      * @returns type
      */
-    getType(): MessageType | keyof typeof MessageType;
+    getType(): MessageType;
     /**
      * Sets the additionaltext for the message or merge different additionaltext strings
      */
@@ -35424,7 +35420,7 @@ declare module "sap/ui/core/Popup" {
      *
      * @returns whether the Popup is opened
      */
-    getOpenState(): OpenState | keyof typeof OpenState;
+    getOpenState(): OpenState;
     /**
      * Returns whether the Popup is currently open (this includes opening and closing animations).
      *
@@ -38597,9 +38593,7 @@ declare module "sap/ui/core/routing/History" {
        * optional, if this parameter is not passed the last hashChange is taken.
        */
       sNewHash?: string
-    ):
-      | (routing.HistoryDirection | keyof typeof routing.HistoryDirection)
-      | undefined;
+    ): routing.HistoryDirection | undefined;
     /**
      * Returns the length difference between the history state stored in browser's pushState and the state maintained
      * in this class.
@@ -41909,7 +41903,7 @@ declare module "sap/ui/core/Title" {
      *
      * @returns Value of property `level`
      */
-    getLevel(): TitleLevel | keyof typeof TitleLevel;
+    getLevel(): TitleLevel;
     /**
      * Gets current value of property {@link #getText text}.
      *
@@ -46938,7 +46932,7 @@ declare module "sap/ui/core/ValueStateSupport" {
        * the state as an integer
        */
       iState: int
-    ): ValueState | keyof typeof ValueState;
+    ): ValueState;
     /**
      * Returns a generic success, warning or error message if the given Element has a property "valueState"
      * with one of these three states or the given ValueState represents one of these states.
@@ -54634,7 +54628,7 @@ declare module "sap/ui/model/Filter" {
      *
      * @returns The operator
      */
-    getOperator(): (FilterOperator | keyof typeof FilterOperator) | undefined;
+    getOperator(): FilterOperator | undefined;
     /**
      * Returns the binding path for this filter, see {@link sap.ui.model.Filter#constructor}, parameter `vFilterInfo`
      * or `vFilterInfo.path`.
@@ -56456,7 +56450,7 @@ declare module "sap/ui/model/Model" {
      *
      * @returns Default binding mode of the model
      */
-    getDefaultBindingMode(): BindingMode | keyof typeof BindingMode;
+    getDefaultBindingMode(): BindingMode;
     /**
      * Returns messages of this model associated with the given context, that is messages belonging to the object
      * referred to by this context or a child object of that object. The messages are sorted by their {@link sap.ui.core.message.Message#getType type }
@@ -60422,7 +60416,7 @@ declare module "sap/ui/model/odata/ODataModel" {
      *
      * @returns The default count mode for retrieving the count of collections
      */
-    getDefaultCountMode(): CountMode | keyof typeof CountMode;
+    getDefaultCountMode(): CountMode;
     /**
      * Returns all headers and custom headers which are stored in the OData model.
      *
@@ -67517,7 +67511,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      *
      * @returns Returns the default count mode for this model
      */
-    getDefaultCountMode(): CountMode | keyof typeof CountMode;
+    getDefaultCountMode(): CountMode;
     /**
      * Returns the array of batch group IDs that are set as deferred
      *
@@ -67582,7 +67576,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      *
      * @returns The message scope
      */
-    getMessageScope(): MessageScope | keyof typeof MessageScope;
+    getMessageScope(): MessageScope;
     /**
      * Returns an instance of an OData meta model which offers a unified access to both OData V2 metadata and
      * V4 annotations. It uses the existing {@link sap.ui.model.odata.ODataMetadata} as a foundation and merges
@@ -69438,9 +69432,7 @@ declare module "sap/ui/model/odata/v4/AnnotationHelper" {
          */
         schemaChildName: string;
       }
-    ):
-      | (ValueListType | keyof typeof ValueListType)
-      | Promise<ValueListType | keyof typeof ValueListType>;
+    ): ValueListType | Promise<ValueListType | keyof typeof ValueListType>;
     /**
      * A function that helps to interpret OData V4 annotations. It knows about the syntax of the path value
      * used by the following dynamic expressions:
@@ -72704,7 +72696,7 @@ declare module "sap/ui/model/odata/v4/ODataMetaModel" {
        * An absolute path to an OData property within the OData data model
        */
       sPropertyPath: string
-    ): ValueListType | keyof typeof ValueListType;
+    ): ValueListType;
     /**
      * Method not supported
      * See:
@@ -74512,7 +74504,7 @@ declare module "sap/ui/model/odata/v4/ODataPropertyBinding" {
      *
      * @returns The value list type
      */
-    getValueListType(): ValueListType | keyof typeof ValueListType;
+    getValueListType(): ValueListType;
     /**
      * Returns `true` if this binding or its dependent bindings have property changes, created entities, or
      * entity deletions which have not been sent successfully to the server. This function does not take the
@@ -75046,7 +75038,7 @@ declare module "sap/ui/model/PropertyBinding" {
      *
      * @returns The binding mode
      */
-    getBindingMode(): BindingMode | keyof typeof BindingMode;
+    getBindingMode(): BindingMode;
     /**
      * Returns the current external value of the bound target which is formatted via a type or formatter function.
      *
