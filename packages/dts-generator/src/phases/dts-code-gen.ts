@@ -785,9 +785,9 @@ function genTypeDefinition(
  * @param ast
  * @returns
  */
-function hasSimpleElementType(ast: ArrayType): boolean {
+function hasSimpleElementType(ast: ArrayType, usage = "unknown"): boolean {
   if (ast.elementType.kind === "ArrayType") {
-    return hasSimpleElementType(ast.elementType);
+    return hasSimpleElementType(ast.elementType, usage);
   }
   // TODO TypeReference with import type should be handled in json-to-ast
   // (requires re-write of GlobalsVisitor#visitTypeName and its callers)
@@ -796,7 +796,7 @@ function hasSimpleElementType(ast: ArrayType): boolean {
       (!ast.elementType.typeArguments ||
         ast.elementType.typeArguments.length === 0) &&
       !ast.elementType.typeName.startsWith("import(") &&
-      !ast.elementType.isStandardEnum
+      (!ast.elementType.isStandardEnum || usage === "returnValue")
     );
   }
   return false;
@@ -828,7 +828,7 @@ function genType(ast: Type, usage: string = "unknown"): string {
       }
       return text;
     case "ArrayType":
-      if (hasSimpleElementType(ast)) {
+      if (hasSimpleElementType(ast, usage)) {
         return `${genType(ast.elementType, usage)}[]`;
       }
       return `Array<${genType(ast.elementType, usage)}>`;
