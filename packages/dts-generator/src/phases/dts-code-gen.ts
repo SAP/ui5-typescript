@@ -861,6 +861,9 @@ function genType(ast: Type, usage: string = "unknown"): string {
       return intersectionTypes.join(" & ");
     case "FunctionType":
       text = "";
+      if (ast.isConstructor) {
+        text += "new ";
+      }
       if (!_.isEmpty(ast.typeParameters)) {
         text += `<${_.map(ast.typeParameters, (param) => param.name).join(", ")}>`; // TODO defaults, constraints, expressions
       }
