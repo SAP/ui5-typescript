@@ -114,6 +114,7 @@ export class TSASTTypeBuilder {
       kind: "Parameter",
       name: "p" + (idx + 1), // JSDoc function types don't allow parameter names -> generate names
       type: param,
+      optional: (param as any).optional,
     }));
     if (thisType != null) {
       // for TS, a 'this' type is specified as the first parameter type of a function
