@@ -861,10 +861,13 @@ function genType(ast: Type, usage: string = "unknown"): string {
       return intersectionTypes.join(" & ");
     case "FunctionType":
       text = "";
+      if (ast.isConstructor) {
+        text += "new ";
+      }
       if (!_.isEmpty(ast.typeParameters)) {
         text += `<${_.map(ast.typeParameters, (param) => param.name).join(", ")}>`; // TODO defaults, constraints, expressions
       }
-      text += `(${_.map(ast.parameters, (param) => `${param.name}: ${genType(param.type, "parameter")}`).join(", ")})`;
+      text += `(${_.map(ast.parameters, (param) => `${param.name}${param.optional ? "?" : ""}: ${genType(param.type, "parameter")}`).join(", ")})`;
       text += ` => ${ast.type ? genType(ast.type, "returnValue") : "void"}`;
       return text;
     case "NativeTSTypeExpression":
