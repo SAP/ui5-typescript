@@ -6,7 +6,6 @@ import {
   TypeReference,
   UnionType,
   TypeLiteral,
-  Parameter,
 } from "../types/ast.js";
 
 /**
@@ -110,25 +109,18 @@ export class TSASTTypeBuilder {
     thisType: Type,
     constructorType: Type,
   ): FunctionType {
-    const parameters: Parameter[] = paramTypes.map((param, idx) => ({
-      kind: "Parameter",
-      name: "p" + (idx + 1), // JSDoc function types don't allow parameter names -> generate names
-      type: param,
-      optional: (param as any).optional,
-    }));
-    if (thisType != null) {
-      // for TS, a 'this' type is specified as the first parameter type of a function
-      parameters.unshift({
-        kind: "Parameter",
-        name: "this",
-        type: thisType,
-      });
-    }
     return {
       kind: "FunctionType",
-      parameters,
-      type: constructorType ?? returnType,
-      isConstructor: constructorType != null,
+      parameters: paramTypes.map((param, idx) => ({
+        kind: "Parameter",
+        name: "p" + (idx + 1), // JSDoc function types don't allow parameter names -> generate names
+        type: param,
+      })),
+      type: returnType,
+      /* TODO not supported yet:
+			"this": thisType,
+			constructor: constructorType
+			*/
     };
   }
   structure(structure: {
