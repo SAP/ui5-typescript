@@ -134,12 +134,6 @@ export function TypeParser(
         next(":");
         returnType = parseType();
       }
-      if (constructorType != null && returnType != null) {
-        throw new SyntaxError(
-          `A function signature must either use the 'new' keyword or have a return type, ` +
-            `but not both (pos: ${rLexer.lastIndex}, input='${input}')`,
-        );
-      }
       type = builder.function(
         paramTypes,
         returnType,
