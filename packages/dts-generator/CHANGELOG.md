@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.4.1...@ui5/dts-generator@3.5.0) (2025-02-08)
+
+### Features
+
+- **dts-generator:** improve support for function types ([#487](https://github.com/SAP/ui5-typescript/issues/487)) ([28b412e](https://github.com/SAP/ui5-typescript/commit/28b412e73cafe7888aa79b8855e1da9745876322))
+
+### Reverts
+
+- support constructor types and option parameters in function types ([#485](https://github.com/SAP/ui5-typescript/issues/485)) ([#486](https://github.com/SAP/ui5-typescript/issues/486)) ([27ce957](https://github.com/SAP/ui5-typescript/commit/27ce957db450e6c8fe9ab455dc588f083310aa4c))
+
 ## [3.4.1](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.4.0...@ui5/dts-generator@3.4.1) (2025-01-08)
 
 ### Bug Fixes
