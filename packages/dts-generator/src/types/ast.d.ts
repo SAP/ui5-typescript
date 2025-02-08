@@ -238,6 +238,7 @@ export interface FunctionType {
   parameters: Parameter[];
   typeParameters?: TypeParameter[];
   type?: Type;
+  isConstructor?: boolean;
 }
 
 export interface LiteralType {
