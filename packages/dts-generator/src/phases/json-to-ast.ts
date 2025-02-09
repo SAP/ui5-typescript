@@ -254,6 +254,9 @@ class ASTVisitor {
    * @param fct
    */
   _visitFunction(fct: FunctionDesc) {
+    if (fct.overloads) {
+      _.forEach(fct.overloads, (overload) => this._visitFunction(overload));
+    }
     _.forEach(fct.typeParameters, (typeParam) =>
       this._visitTypeParam(typeParam),
     );
@@ -1277,6 +1280,7 @@ function buildFunction(ui5Method: ObjMethod): FunctionDesc {
   assertKnownProps(
     [
       "name",
+      "overloads",
       "typeParameters",
       "parameters",
       "returnValue",
@@ -1289,6 +1293,9 @@ function buildFunction(ui5Method: ObjMethod): FunctionDesc {
   const astNode: FunctionDesc = {
     kind: "FunctionDesc",
     name: ui5Method.name,
+    overloads: ui5Method.overloads
+      ? _.map(ui5Method.overloads, buildFunction)
+      : undefined,
     static: ui5Method.static === true,
     typeParameters: _.map(ui5Method.typeParameters, buildTypeParameter),
     parameters: _.map(ui5Method.parameters, buildParameter),
