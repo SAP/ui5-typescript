@@ -58,7 +58,7 @@ Third-part libraries written for running in a browser environment can be easily 
 
 
 ### How to test in TypeScript?
-How to write tests is documented in [exercise 6 of the TypeScript tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial/blob/main/exercises/ex6/README.md) and in the [`testing` branch of the "Hello World" sample app](https://github.com/SAP-samples/ui5-typescript-helloworld/tree/testing). While using qunit is straightforward, the OPA APIs cause a few difficulties in TypeScript, which we avoid using a simplified suggestion for how to write the pages and journeys.
+How to write tests is documented in [exercise 6 of the TypeScript tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial/blob/main/exercises/ex6/README.md) and in the [testing-related sections of the "Hello World" sample app](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md#table-of-contents). While using qunit in TypeScript is straightforward, the OPA APIs cause a few difficulties in TypeScript, which we avoid using a simplified suggestion for how to write the OPA pages and journeys.
 
 ### How to profit from TypeScript even when doing plain JavaScript development?
 The "js-with-typescript-support" branch of the "ui5-cap-event-app" project contains an extensive [guide how to add TypeScript-based benefits to an existing JavaScript app](https://github.com/SAP-samples/ui5-cap-event-app/blob/js-with-typescript-support/README.md) without actually switching to TypeScript development.
