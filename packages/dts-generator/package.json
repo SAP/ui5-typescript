@@ -18,8 +18,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "/dist",
-    ".reuse",
-    "LICENSES",
+    "LICENSE",
     "types"
   ],
   "dependencies": {
