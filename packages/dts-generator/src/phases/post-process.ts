@@ -3,10 +3,11 @@ const log = getLogger("@ui5/dts-generator/post-process");
 import * as fs from "fs";
 import prettier from "prettier";
 const { format } = prettier;
+import semver from "semver";
 
 export async function postProcess(
   dtsResult: { library: string; dtsText: string },
-  options: { generateGlobals?: boolean },
+  options: { generateGlobals?: boolean; ui5Version?: string } = {},
 ) {
   switch (dtsResult.library) {
     case "sap.ui.core":
@@ -29,8 +30,13 @@ export async function postProcess(
         );
       }
 
-      // add the TypedJSONModel - but only if we do not generate globals
-      if (!options.generateGlobals) {
+      // add the TypedJSONModel - but only if we do not generate globals and the UI5 version is >=1.140.0
+      if (
+        !options.generateGlobals &&
+        options.ui5Version &&
+        (semver.gte(options.ui5Version, "1.140.0") ||
+          options.ui5Version === "1.140.0-SNAPSHOT")
+      ) {
         const typedJsonModel = fs
           .readFileSync(
             new URL("../resources/typed-json-model.d.ts", import.meta.url),

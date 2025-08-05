@@ -210,7 +210,10 @@ export async function generateFromObjects(config: GenerateFromObjectsConfig) {
 
   // Phase 7 - postProcess:
   // Tweak d.ts text by e.g. prepending a hardcoded preamble to the sap.ui.core d.ts file
-  await postProcess(dtsResult, { generateGlobals }); // modifies dtsResult.dtsText
+  await postProcess(dtsResult, {
+    generateGlobals,
+    ui5Version: apiObject.version,
+  }); // modifies dtsResult.dtsText
 
   return dtsResult;
 }

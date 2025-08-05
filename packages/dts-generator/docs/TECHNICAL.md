@@ -99,5 +99,5 @@ This is where the actual TypeScript code is produced:
 
 Tweaks the dts file content:
 
-- for sap.ui.core: prepends a long preamble with the jQuery object (will be merged by TypeScript with the original jQuery types) and the functions attached to it
+- for sap.ui.core: prepends a long preamble with the jQuery object (will be merged by TypeScript with the original jQuery types) and the functions attached to it; also insert the TypedJSONModel typings - if possible close to the JSONModel
 - for sap.ui.export: rewrites the namespace "export" because it is a reserved name
