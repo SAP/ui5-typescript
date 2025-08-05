@@ -1,0 +1,28 @@
+{
+  "name": "typed-json-model",
+  "version": "1.0.0",
+  "description": "Test-driven implementation of a typesafe JSONModel for UI5",
+  "author": "Martin Broede",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build:demo": "ui5 build --clean-dest",
+    "start": "ui5 serve --port 8080 -o index.html",
+    "start:dist": "ui5 serve  --port 8080 -o index.html --config ui5-dist.yaml",
+    "ts-typecheck": "tsc --noEmit",
+    "lint": "eslint webapp",
+    "test": "node ./test_typing.mjs webapp/model/test/cases",
+    "ui5lint": "ui5lint"
+  },
+  "devDependencies": {
+    "@types/openui5": "1.135.0",
+    "@ui5/cli": "^4.0.19",
+    "@ui5/linter": "^1.1.1",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.11.0",
+    "ui5-middleware-livereload": "^3",
+    "ui5-middleware-simpleproxy": "^3",
+    "ui5-tooling-transpile": "^3"
+  }
+}

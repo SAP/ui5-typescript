@@ -16,6 +16,7 @@
     "build": "lerna run build",
     "preci": "lerna run build",
     "ci": "npm-run-all format:validate ci:subpackages legal:*",
+    "test:typed-json-model": "cd test-packages/typed-json-model && npm run test",
     "format:fix": "prettier --write \"**/*.@(ts|js|json|md|yml)\"",
     "format:validate": "prettier --check \"**/*.@(ts|js|json|md|yml)\"",
     "ci:subpackages": "lerna run ci",

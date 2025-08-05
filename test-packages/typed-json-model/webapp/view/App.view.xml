@@ -1,0 +1,37 @@
+<mvc:View
+    controllerName="typed.json.model.controller.App"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <App
+        id="app"
+        class="sapUiSmallMargin"
+    >
+        <VBox
+            class="sapUiSmallMargin"
+            width="30rem"
+        >
+            <List
+                binding="{/order}"
+                headerText="{type}"
+                items="{items}"
+            >
+                <items>
+                    <StandardListItem
+                        title="{description} ({item_id})"
+                        counter="{quantity}"
+                        description="Price: {price} USD"
+                        press="onPressItem"
+                        type="Active"
+                    />
+                </items>
+            </List>
+            <Button
+                visible="{/order/approved}"
+                text="Revoke Approval"
+                press="onPressRevoke"
+            />
+        </VBox>
+    </App>
+</mvc:View>
