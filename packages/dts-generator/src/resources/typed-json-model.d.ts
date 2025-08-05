@@ -1,6 +1,7 @@
 declare module "sap/ui/model/json/TypedJSONModel" {
   import JSONModel from "sap/ui/model/json/JSONModel";
   import TypedJSONContext from "sap/ui/model/json/TypedJSONContext";
+  import Context from "sap/ui/model/Context";
 
   /**
    * TypedJSONModel is a subclass of JSONModel that provides type-safe access to the model data. It is only available when using UI5 with TypeScript.
@@ -9,9 +10,15 @@ declare module "sap/ui/model/json/TypedJSONModel" {
    */
   export default class TypedJSONModel<Data extends object> extends JSONModel {
     constructor(oData?: Data, bObserve?: boolean);
-
+    createBindingContext<Path extends AbsoluteBindingPath<Data>>(
+      sPath: Path,
+      oContext?: Context,
+      mParameters?: object,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+      fnCallBack?: Function,
+      bReload?: boolean,
+    ): TypedJSONContext<Data, Path>;
     getData(): Data;
-
     getProperty<Path extends AbsoluteBindingPath<Data>>(
       sPath: Path,
     ): PropertyByAbsoluteBindingPath<Data, Path>;
@@ -22,18 +29,12 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       sPath: Path,
       oContext: TypedJSONContext<Data, Root>,
     ): PropertyByRelativeBindingPath<Data, Root, Path>;
-    getProperty<
-      Path extends AbsoluteBindingPath<Data> | RelativeBindingPath<Data, Root>,
-      Root extends AbsoluteBindingPath<Data>,
-    >(
-      sPath: Path,
-      oContext?: TypedJSONContext<Data, Root>,
-    ):
-      | PropertyByAbsoluteBindingPath<Data, Path>
-      | PropertyByRelativeBindingPath<Data, Root, Path>;
 
     setData(data: Data): void;
 
+    // setProperty with AbsoluteBindingPath (context === undefined),
+    // PLEASE NOTE: the parameter is still necessary so
+    // the bAsyncUpdate parameter can also be used with absolute paths.
     setProperty<Path extends AbsoluteBindingPath<Data>>(
       sPath: Path,
       oValue: PropertyByAbsoluteBindingPath<Data, Path>,
@@ -44,20 +45,9 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       Path extends RelativeBindingPath<Data, Root>,
       Root extends AbsoluteBindingPath<Data>,
     >(
-      sPath: Path extends RelativeBindingPath<Data, Root> ? Path : never,
+      sPath: Path,
       oValue: PropertyByRelativeBindingPath<Data, Root, Path>,
       oContext: TypedJSONContext<Data, Root>,
-      bAsyncUpdate?: boolean,
-    ): boolean;
-    setProperty<
-      Path extends AbsoluteBindingPath<Data> | RelativeBindingPath<Data, Root>,
-      Root extends AbsoluteBindingPath<Data>,
-    >(
-      sPath: Path,
-      oValue: Path extends AbsoluteBindingPath<Data>
-        ? PropertyByAbsoluteBindingPath<Data, Path>
-        : PropertyByRelativeBindingPath<Data, Root, Path>,
-      oContext?: TypedJSONContext<Data, Root>,
       bAsyncUpdate?: boolean,
     ): boolean;
   }
@@ -67,8 +57,8 @@ declare module "sap/ui/model/json/TypedJSONModel" {
    * Counterpart to {@link PropertyByAbsoluteBindingPath}
    * @example
    * type Person = { name: string, id: number };
-   * type PersonNamePath = PathInJSONModel<Person>; // "/name" | "/id"
-   * let path: PersonNamePath = "/name"; // ok
+   * type PathInPerson = PathInJSONModel<Person>; // "/name" | "/id"
+   * let path: PathInPerson = "/name"; // ok
    * path = "/firstName"; // error
    */
   export type AbsoluteBindingPath<Type> =
@@ -98,7 +88,7 @@ declare module "sap/ui/model/json/TypedJSONModel" {
    *
    * @example
    * type PersonWrapper = { person: { name: string, id: number } };
-   * type PersonNamePath = RelativeBindingPath<PersonWrapper, "/person">; // "name" | "id"
+   * type PathRelativeToPerson = RelativeBindingPath<PersonWrapper, "/person">; // "name" | "id"
    */
   export type RelativeBindingPath<
     Type,
