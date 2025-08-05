@@ -47,14 +47,14 @@ export function exampleBinding() {
   const model = new TypedJSONModel(data);
   const typedContext = new TypedJSONContext(model, "/order");
 
-  console.assert(typedContext.getProperty("approved") == true);
-  console.assert(typedContext.getProperty("items/0/description") == "Notebook");
+  console.assert(typedContext.getProperty("approved") === true);
+  console.assert(typedContext.getProperty("items/0/description") === "Notebook");
 
-  console.assert(model.getProperty("/order/approved") == true);
+  console.assert(model.getProperty("/order/approved") === true);
   console.assert(model.getProperty("/order") === data.order);
   console.assert(model.getProperty("/order/items/0") === data.order.items[0]);
-  console.assert(model.getProperty("approved", typedContext) == true);
-  console.assert(model.getProperty("items/0/description", typedContext) == "Notebook");
+  console.assert(model.getProperty("approved", typedContext) === true);
+  console.assert(model.getProperty("items/0/description", typedContext) === "Notebook");
   console.assert(model.getProperty("items/0", typedContext) === data.order.items[0]);
 
   console.assert(model.setProperty("approved", false, typedContext) === true);

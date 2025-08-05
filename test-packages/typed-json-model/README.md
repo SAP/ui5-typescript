@@ -1,6 +1,6 @@
 # Type Safe JSONModel
 
-This package explores type-safe data binding in UI5 applications,
+This package provides type-safe data binding in UI5 applications,
 focusing on the `JSONModel` and its methods.
 
 ## Prerequisites
@@ -28,11 +28,11 @@ the inference of the retrieved data by `getProperty` and `getData` is type-safe,
 as well as the binding paths in all methods mentioned above.
 The limits are presumably a rather theoretical problem, but are to be kept in mind.
 
-I followed a test-driven approach to implement the required types:
+A test-driven approach has been followed to implement the required types:
 Expectations have been articulated in the folder [`webapp/model/test/cases`](webapp/model/test/cases).
 
-I could not find a common approach to test typings, so
-I wrote a simple [test framework](test_typing.mjs) to evaluate the expectations
+Since there is no common approach to test typings,
+a simple [test framework](test_typing.mjs) has been implemented to evaluate the expectations
 from the test cases. It is kind of an integration test that
 runs the TypeScript compiler and checks if the specified errors are thrown.
 

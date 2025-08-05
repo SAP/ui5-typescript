@@ -57,8 +57,8 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
       | PropertyByRelativeBindingPath<Data, Root, Path>;
   }
 
-  setData(data: Data): void {
-    super.setData(data);
+  setData(oData: Data, bMerge?: boolean): void {
+    super.setData(oData, bMerge);
   }
 
   // setProperty with AbsoluteBindingPath (context === undefined),

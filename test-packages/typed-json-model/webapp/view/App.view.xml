@@ -22,7 +22,7 @@
                         title="{description} ({item_id})"
                         counter="{quantity}"
                         description="Price: {price} USD"
-                        press="onPressItem"
+                        press=".onPressItem"
                         type="Active"
                     />
                 </items>
@@ -30,7 +30,7 @@
             <Button
                 visible="{/order/approved}"
                 text="Revoke Approval"
-                press="onPressRevoke"
+                press=".onPressRevoke"
             />
         </VBox>
     </App>
