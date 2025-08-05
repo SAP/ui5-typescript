@@ -1,5 +1,5 @@
 import Controller from "sap/ui/core/mvc/Controller";
-import { TypedContext, TypedJSONModel } from "../model/model";
+import { TypedJSONContext, TypedJSONModel } from "../model/model";
 import { exampleBinding } from "./Example";
 import { List$ItemClickEvent } from "sap/ui/webc/main/List";
 import MessageBox from "sap/m/MessageBox";
@@ -55,7 +55,10 @@ export default class App extends Controller {
    * Example on how to how to use the typed context
    */
   onPressItem(event: List$ItemClickEvent): void {
-    const context = event.getSource().getBindingContext() as TypedContext<{ order: PurchaseOrder }, `/order/items/${bigint}`>;
+    const context = event.getSource().getBindingContext() as TypedJSONContext<
+      { order: PurchaseOrder },
+      `/order/items/${number}`
+    >;
 
     const price = context.getProperty("price"); // should automatically be typed as number!
     const description = this.model.getProperty("description", context); // should automatically be typed as string!

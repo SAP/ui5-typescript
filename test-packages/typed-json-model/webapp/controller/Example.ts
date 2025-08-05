@@ -1,4 +1,4 @@
-import { TypedContext, TypedJSONModel } from "../model/model";
+import { TypedJSONContext, TypedJSONModel } from "../model/model";
 
 interface Order {
   order_id: string;
@@ -45,7 +45,7 @@ const data: { order: PurchaseOrder } = {
  */
 export function exampleBinding() {
   const model = new TypedJSONModel(data);
-  const typedContext = new TypedContext(model, "/order");
+  const typedContext = new TypedJSONContext(model, "/order");
 
   console.assert(typedContext.getProperty("approved") == true);
   console.assert(typedContext.getProperty("items/0/description") == "Notebook");

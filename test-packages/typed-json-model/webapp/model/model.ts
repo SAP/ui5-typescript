@@ -7,7 +7,7 @@ import {
   RelativeBindingPath,
 } from "./typing";
 
-export class TypedContext<Data extends object, Root extends AbsoluteBindingPath<Data>> extends Context {
+export class TypedJSONContext<Data extends object, Root extends AbsoluteBindingPath<Data>> extends Context {
   constructor(oModel: TypedJSONModel<Data>, sPath: Root) {
     super(oModel, sPath);
   }
@@ -35,8 +35,8 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     fnCallBack?: Function,
     bReload?: boolean,
-  ): TypedContext<Data, Path> {
-    return super.createBindingContext(sPath, oContext, mParameters, fnCallBack, bReload) as TypedContext<Data, Path>;
+  ): TypedJSONContext<Data, Path> {
+    return super.createBindingContext(sPath, oContext, mParameters, fnCallBack, bReload) as TypedJSONContext<Data, Path>;
   }
 
   getData(): Data {
@@ -46,11 +46,11 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
   getProperty<Path extends AbsoluteBindingPath<Data>>(sPath: Path): PropertyByAbsoluteBindingPath<Data, Path>;
   getProperty<Path extends RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
     sPath: Path,
-    oContext: TypedContext<Data, Root>,
+    oContext: TypedJSONContext<Data, Root>,
   ): PropertyByRelativeBindingPath<Data, Root, Path>;
   getProperty<Path extends AbsoluteBindingPath<Data> | RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
     sPath: Path,
-    oContext?: TypedContext<Data, Root>,
+    oContext?: TypedJSONContext<Data, Root>,
   ): PropertyByAbsoluteBindingPath<Data, Path> | PropertyByRelativeBindingPath<Data, Root, Path> {
     return super.getProperty(sPath, oContext) as
       | PropertyByAbsoluteBindingPath<Data, Path>
@@ -73,7 +73,7 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
   setProperty<Path extends RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
     sPath: Path,
     oValue: PropertyByRelativeBindingPath<Data, Root, Path>,
-    oContext: TypedContext<Data, Root>,
+    oContext: TypedJSONContext<Data, Root>,
     bAsyncUpdate?: boolean,
   ): boolean;
   setProperty<Path extends AbsoluteBindingPath<Data> | RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
@@ -81,7 +81,7 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     oValue: Path extends AbsoluteBindingPath<Data>
       ? PropertyByAbsoluteBindingPath<Data, Path>
       : PropertyByRelativeBindingPath<Data, Root, Path>,
-    oContext?: TypedContext<Data, Root>,
+    oContext?: TypedJSONContext<Data, Root>,
     bAsyncUpdate?: boolean,
   ): boolean {
     return super.setProperty(sPath, oValue, oContext, bAsyncUpdate);
