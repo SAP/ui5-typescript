@@ -1,5 +1,5 @@
 {
-  "name": "typed-json-model",
+  "name": "@ui5/typed-json-model",
   "private": true,
   "version": "1.0.0",
   "description": "Test-driven implementation of a typesafe JSONModel for UI5",
