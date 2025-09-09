@@ -8,8 +8,14 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.140.0 (September 2025)
+- FEATURE: Specifically for TypeScript usage of UI5, we have introduced `sap.ui.model.json.TypedJSONModel` and `sap.ui.model.json.TypedJSONContext` as strongly-typed wrappers around sap.ui.model.json.JSONModel and sap.ui.model.Context. These wrappers don't affect runtime behavior. They enable autocompletion features in IDEs and support static type checking during development. Note that these wrappers aren't available in JavaScript projects. For more information, see [Using the Typed JSON Model](https://ui5.sap.com/1.140.0/#/topic/96804e3315ff440aa0a50fd290805116.html#loiob8cd1692485d4108af607af347982dd9).
+
+## 1.139.0 (August 2025)
+- No news
+
 ## 1.138.0 (July 2025)
-- RELATED: as UI5 became big enough to have its own GitHub org and we want to bundle all things UI5 there, along with other UI5 repositories, the https://github.com/SAP/ui5-typescript repository was moved to https://github.com/UI5/typescript on July 14th.
+- RELATED: as UI5 became big enough to have its own GitHub org and we want to bundle all things UI5 there, along with other UI5 repositories, the https://github.com/SAP/ui5-typescript repository was moved to https://github.com/UI5/typescript on July 14th. This also changes the root of this documentation page to https://ui5.github.io/typescript/ (but there is auto-forwarding for the old URLs).
 
 ## 1.137.0 (entire UI5 release was skipped)
 
