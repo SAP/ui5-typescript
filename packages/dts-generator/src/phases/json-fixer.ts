@@ -20,7 +20,7 @@ import {
 import { TypeParser } from "../utils/type-parser.js";
 import { TSASTTypeBuilder } from "../utils/ts-ast-type-builder.js";
 import { addConstructorSettingsInterfaces } from "../utils/json-constructor-settings-interfaces.js";
-import { splitName } from "../utils/base-utils.js";
+import { calculateDerivedNames, splitName } from "../utils/base-utils.js";
 import { Directives } from "../generate-from-objects.js";
 import { addEventParameterInterfaces } from "../utils/json-event-parameter-interfaces.js";
 
@@ -452,12 +452,7 @@ function determineMissingExportsForTypes(symbols: ConcreteSymbol[]) {
 
   function basename(fqn: string) {
     // Note: this differs from splitName(fqn)[0] as it handles module:* namepaths
-    if (fqn.startsWith("module:")) {
-      const p = fqn.lastIndexOf("/");
-      fqn = fqn.slice(p + 1);
-    }
-    const p = fqn.lastIndexOf(".");
-    return fqn.slice(p + 1);
+    return calculateDerivedNames(fqn).basename;
   }
 
   symbols.forEach((symbol) => {
@@ -481,12 +476,13 @@ function determineMissingExportsForTypes(symbols: ConcreteSymbol[]) {
     } else {
       // non-canonical names need to be reported at least
       // TODO consumers need some documentation about the necessary imports (SDK enhancement?)
+      const { exportName } = calculateDerivedNames(symbol.name);
       log.warn(
         `**** symbol ${symbol.name} exported from "${
           symbol.module
-        }" as "${basename(symbol.name)}"`,
+        }" as "${exportName}"`,
       );
-      symbol.export = basename(symbol.name);
+      symbol.export = exportName;
     }
   });
 }

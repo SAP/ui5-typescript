@@ -5,13 +5,11 @@ import {
   ConcreteSymbol,
   InterfaceSymbol,
   ObjCallableParameter,
-  ObjEvent,
-  ObjMethod,
   TypedefSymbol,
   Ui5Event,
 } from "../types/api-json.js";
 const log = getLogger("@ui5/dts-generator/constructor-settings-interfaces");
-import { splitName } from "./base-utils.js";
+import { calculateDerivedNames } from "./base-utils.js";
 import {
   addJsDocProps,
   isA,
@@ -60,12 +58,16 @@ function createEventParameterInterfaces(
   const makeEventParametersName = (fqn: string, eventName: string) => {
     const capitalizedEventName =
       eventName.charAt(0).toUpperCase() + eventName.slice(1);
-    const [pkgname, basename] = splitName(fqn);
     return {
-      fullEventParametersName: `${pkgname}.${basename}\$${capitalizedEventName}EventParameters`,
-      shortEventParametersName: `${basename}\$${capitalizedEventName}EventParameters`,
-      fullEventTypealiasName: `${pkgname}.${basename}\$${capitalizedEventName}Event`,
-      shortEventTypealiasName: `${basename}\$${capitalizedEventName}Event`,
+      eventParametersNames: calculateDerivedNames(
+        fqn,
+        (basename: string) =>
+          `${basename}\$${capitalizedEventName}EventParameters`,
+      ),
+      eventTypeAliasNames: calculateDerivedNames(
+        fqn,
+        (basename: string) => `${basename}\$${capitalizedEventName}Event`,
+      ),
     };
   };
 
@@ -254,19 +256,15 @@ function createEventParameterInterfaces(
       if (symbol.events) {
         symbol.events.forEach((event) => {
           // build the interface (with no properties (event parameters) yet)
-          const {
-            fullEventParametersName,
-            shortEventParametersName,
-            fullEventTypealiasName,
-            shortEventTypealiasName,
-          } = makeEventParametersName(symbol.name, event.name);
+          const { eventParametersNames, eventTypeAliasNames } =
+            makeEventParametersName(symbol.name, event.name);
           const eventParametersInterface: InterfaceSymbol = {
             kind: "interface",
-            name: fullEventParametersName,
-            basename: shortEventParametersName,
+            name: eventParametersNames.name,
+            basename: eventParametersNames.basename,
             module: symbol.module,
             resource: symbol.resource,
-            export: shortEventParametersName,
+            export: eventParametersNames.exportName,
             visibility: symbol.visibility,
             __isNotAMarkerInterface: true,
           };
@@ -290,7 +288,7 @@ function createEventParameterInterfaces(
               eventParametersInterface.extends = makeEventParametersName(
                 superClass.name,
                 superEvent.name,
-              ).fullEventParametersName;
+              ).eventParametersNames.name;
             }
 
             // get inherited parameters to check compatibility and remove them from the new inheriting interface
@@ -338,14 +336,14 @@ function createEventParameterInterfaces(
           // now also create a type alias for the event with these parameters and the concrete event source type
           const eventTypedef: TypedefSymbol = {
             kind: "typedef",
-            name: fullEventTypealiasName,
+            name: eventTypeAliasNames.name,
             type: {
               kind: "TypeReference",
               typeName: "sap.ui.base.Event",
               typeArguments: [
                 {
                   kind: "TypeReference",
-                  typeName: shortEventParametersName,
+                  typeName: eventParametersNames.basename,
                 },
                 {
                   kind: "TypeReference",
@@ -353,10 +351,10 @@ function createEventParameterInterfaces(
                 },
               ],
             },
-            basename: shortEventTypealiasName,
+            basename: eventTypeAliasNames.basename,
             module: symbol.module,
             resource: symbol.resource,
-            export: shortEventTypealiasName,
+            export: eventTypeAliasNames.exportName,
             visibility: symbol.visibility,
           };
           eventTypedef.description = `Event object of the ${symbol.basename}#${event.name} event.`;
@@ -374,7 +372,7 @@ function createEventParameterInterfaces(
             enrichEventMethods(
               symbol,
               event.name,
-              shortEventTypealiasName,
+              eventTypeAliasNames.basename,
               eventParametersInterface.name,
             );
 
@@ -399,7 +397,7 @@ function createEventParameterInterfaces(
                   "sap.ui.base.Event"
               ) {
                 eventPropertyType.parameters[0].type.typeName =
-                  shortEventTypealiasName; // replace "Event" with the specific event type
+                  eventTypeAliasNames.basename; // replace "Event" with the specific event type
               } else {
                 log.info(
                   `Property '${event.name}' in the settings object for ${symbol.name} does not relate to an event. Maybe shadowed by a property with same name.`,
