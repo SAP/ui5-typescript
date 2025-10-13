@@ -94,6 +94,15 @@ export interface Directives {
   deprecatedEnumAliases: {
     [fqn: string]: string;
   };
+
+  /**
+   * A list of modules (their names w/o the *.js extension) for which named exports
+   * will be generated.
+   *
+   * All `** /library.js` modules automatically use named exports, they don't have
+   * to be listed.
+   */
+  modulesWithNamedExports: string[];
 }
 
 /**
@@ -135,6 +144,7 @@ const defaultOptions: GenerateFromObjectsConfig = {
     fqnToIgnore: {},
     overlays: {},
     deprecatedEnumAliases: {},
+    modulesWithNamedExports: [],
   },
   generateGlobals: false,
 };

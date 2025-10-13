@@ -899,6 +899,23 @@ function markDeprecatedAliasesForEnums(
   });
 }
 
+function markEnumsAsUsingNamedExports(
+  symbols: ConcreteSymbol[],
+  directives: Directives,
+) {
+  const modulesWithNamedExports = new Set(directives.modulesWithNamedExports);
+  symbols.forEach((symbol) => {
+    if (
+      symbol.kind === "enum" &&
+      symbol.module &&
+      symbol.export &&
+      modulesWithNamedExports.has(symbol.module)
+    ) {
+      symbol.useNamedExport = true;
+    }
+  });
+}
+
 function _prepareApiJson(
   json: ApiJSON,
   directives: Directives,
@@ -915,6 +932,7 @@ function _prepareApiJson(
   determineMissingExportsForTypes(json.symbols);
   parseTypeExpressions(json.symbols);
   markDeprecatedAliasesForEnums(json.symbols, directives);
+  markEnumsAsUsingNamedExports(json.symbols, directives);
   if (options.mainLibrary) {
     addForwardDeclarations(json, directives);
     addInterfaceWithModuleNames(json.symbols);

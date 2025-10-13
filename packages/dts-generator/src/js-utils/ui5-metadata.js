@@ -243,6 +243,8 @@ export async function loadDirectives(directivesFiles) {
     forwardDeclarations: {},
     fqnToIgnore: {},
     overlays: {},
+    deprecatedEnumAliases: {},
+    modulesWithNamedExports: [],
   };
   function mergeDirectives(loadedDirectives) {
     Object.keys(loadedDirectives).forEach((key) => {

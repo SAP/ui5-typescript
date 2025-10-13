@@ -700,7 +700,8 @@ class ModuleBuilder extends ScopeBuilder {
           if (
             !moduleImport.module.endsWith("/library") &&
             exportName != "" &&
-            symbol.kind === "enum"
+            symbol.kind === "enum" &&
+            !symbol.useNamedExport
           ) {
             const defaultFQN = fqn.substring(0, fqn.lastIndexOf("."));
             const defaultImportName =
@@ -1656,7 +1657,7 @@ function buildInterfaceFromObject(ui5Object): Interface {
  */
 function buildEnum(ui5Enum: EnumSymbol) {
   assertKnownProps(
-    ["name", "basename", "properties", "deprecatedAliasFor"],
+    ["name", "basename", "properties", "deprecatedAliasFor", "useNamedExport"],
     ui5Enum,
   );
 
@@ -1668,7 +1669,8 @@ function buildEnum(ui5Enum: EnumSymbol) {
     kind: "Enum",
     name: ui5Enum.basename,
     withValues: true,
-    isLibraryEnum: ui5Enum.module.endsWith("/library"),
+    isLibraryEnum:
+      ui5Enum.useNamedExport || ui5Enum.module.endsWith("/library"),
     deprecatedAliasFor: ui5Enum.deprecatedAliasFor,
     values: _.map(ui5Enum.properties, (prop) =>
       buildVariableWithValue(prop, isStandardEnum),

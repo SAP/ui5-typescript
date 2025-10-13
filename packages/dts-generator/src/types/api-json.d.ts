@@ -158,6 +158,7 @@ export type EnumSymbol = SymbolBase & {
     stereotype?: "enum";
   };
   deprecatedAliasFor?: string;
+  useNamedExport?: boolean;
   [k: string]: any;
 };
 /**

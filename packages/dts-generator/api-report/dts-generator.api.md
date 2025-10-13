@@ -48,6 +48,7 @@ export interface Directives {
     fqnToIgnore: {
         [fqn: string]: string;
     };
+    modulesWithNamedExports: string[];
     namespacesToInterfaces: {
         [orgNamespace: string]: true | [true] | [true, "keep_original_ns"];
     };
