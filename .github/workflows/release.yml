@@ -2,16 +2,22 @@ name: Release
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write # Required for trusted publishing via OIDC (https://docs.npmjs.com/trusted-publishers)
-    if: "contains(github.event.head_commit.message, 'chore(release): publish')"
+      id-token: write
+    # Only gate push events by commit message; allow workflow_dispatch always
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && contains(github.event.head_commit.message, 'chore(release): publish'))
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
@@ -22,5 +28,11 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Publish to NPM
+      # Choose publish command based on the event type
+      - name: Publish to NPM (push)
+        if: github.event_name == 'push'
         run: npm run release:publish
+
+      - name: Publish to NPM (manual)
+        if: github.event_name == 'workflow_dispatch'
+        run: npm run release:publish-manual
