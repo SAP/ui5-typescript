@@ -1,4 +1,4 @@
-import ts = require("typescript");
+import ts from "typescript";
 import astToString from "./astToString";
 import log from "loglevel";
 import {

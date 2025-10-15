@@ -155,8 +155,9 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
       ); // not interested in changes to generated files
       if (newChangedFiles.length) {
         const timer_begin = performance.now();
-        !options.watchMode &&
+        if (!options.watchMode) {
           log.debug("Changed files:\n- " + newChangedFiles.join("\n- "));
+        }
         onProgramChanged(newProgram, newChangedFiles);
         const timer_end = performance.now();
         log.debug(

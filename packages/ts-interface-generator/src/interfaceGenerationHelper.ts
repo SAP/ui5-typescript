@@ -1,7 +1,7 @@
-import path = require("path");
-import fs = require("fs");
-import ts = require("typescript");
-import Hjson = require("hjson");
+import path from "path";
+import fs from "fs";
+import ts from "typescript";
+import Hjson from "hjson";
 import collectClassInfo, { expandDefaultKey } from "./collectClassInfo";
 import {
   generateMethods,
@@ -220,19 +220,17 @@ function getManagedObjects(
 
   const managedObjects: ManagedObjectInfo[] = [];
   sourceFile.statements.forEach((statement) => {
-    if (ts.isClassDeclaration(statement)) {
+    if (ts.isClassDeclaration(statement) && statement.heritageClauses) {
       let managedObjectFound = false;
-      statement.heritageClauses &&
-        statement.heritageClauses.forEach((heritageClause) => {
-          heritageClause.types &&
-            heritageClause.types.forEach((typeNode) => {
-              const type = typeChecker.getTypeFromTypeNode(typeNode);
-              const symbol = type.getSymbol();
-              if (!symbol) {
-                throw new Error(
-                  `Type '${typeNode.getText()}' referenced in ${
-                    sourceFile.fileName
-                  } in the inheritance clause '${heritageClause.getFullText()}' could not be resolved.
+      statement.heritageClauses.forEach((heritageClause) => {
+        heritageClause.types?.forEach((typeNode) => {
+          const type = typeChecker.getTypeFromTypeNode(typeNode);
+          const symbol = type.getSymbol();
+          if (!symbol) {
+            throw new Error(
+              `Type '${typeNode.getText()}' referenced in ${
+                sourceFile.fileName
+              } in the inheritance clause '${heritageClause.getFullText()}' could not be resolved.
 Check the respective line in the source code: ts there an error for this type? Make sure the type is properly imported.
 If a working "import" is not possible and it is a UI5 type (or type from another library), the issue could be caused by the respective type definitions not being available. They must be found by the TypeScript compiler according to the configuration in tsconfig. To verify this step-by-step, you can do the following:
 1. Check whether the (UI5 or other) types are added as dependency in package.json (or available as transitive dependency)
@@ -240,158 +238,154 @@ If a working "import" is not possible and it is a UI5 type (or type from another
 3. Check the "tsconfig.json" file: types outside the default "@types" package must be explicitly added in the "types" or "typeRoots" section. Is the name and path correct?
 One known cause of this error is that the "typeRoots" setting in tsconfig.json has wrong paths, which are not actually pointing to the correct location of the type definitions.
 Or is there a different reason why this type would not be known?`,
-                );
-              }
+            );
+          }
 
-              // now check whether this type from which has been inherited is a ManagedObject
-              const interestingBaseClass = getInterestingBaseClass(
-                type,
-                typeChecker,
+          // now check whether this type from which has been inherited is a ManagedObject
+          const interestingBaseClass = getInterestingBaseClass(
+            type,
+            typeChecker,
+          );
+          if (!interestingBaseClass) {
+            return;
+          }
+          managedObjectFound = true;
+
+          // ok, we have a ManagedObject/Control; now check whether it contains a metadata section, which means that accessor methods need to be generated
+          const metadata: ts.PropertyDeclaration[] = <ts.PropertyDeclaration[]>(
+            statement.members.filter((member) => {
+              if (
+                ts.isPropertyDeclaration(member) &&
+                ts.isIdentifier(member.name) &&
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
+                member.name.escapedText === "metadata" &&
+                member.modifiers &&
+                member.modifiers.some((modifier) => {
+                  return modifier.kind === ts.SyntaxKind.StaticKeyword;
+                })
+              ) {
+                return true;
+              }
+            })
+          );
+          if (!metadata || metadata.length === 0) {
+            // no metadata? => nothing to do
+            log.debug(
+              `Class ${statement.name ? statement.name.text : ""} in ${
+                sourceFile.fileName
+              } inherits from ${interestingBaseClass} but has no metadata. This is not necessarily an issue, but if there is a metadata member in this class which *should* be recognized, make sure it has the 'static' keyword!`,
+            );
+            return;
+          } else if (metadata.length > 1) {
+            // more than one metadata block??
+            log.warn(
+              `ManagedObject with ${
+                metadata.length
+              } static metadata members in class ${
+                statement.name ? statement.name.text : ""
+              } inside ${
+                sourceFile.fileName
+              }. This is unexpected. Ignoring this class.`,
+            );
+            return;
+          } else if (!metadata[0].initializer) {
+            // exactly one "metadata" declaration, BUT not initialized with the actual metadata value
+            // this may mean that someone accidentally wrote "metadata: {...}" instead of "metadata = {...}", which is syntactically correct,
+            // but assigns a type structure, not a value. This would fail at runtime, as none of the intended API declarations work, but before
+            // failing at runtime, it would fail here in the generator, which later on tries to access the data. So let's warn the user.
+            log.warn(
+              `Inside file ${sourceFile.fileName}${
+                statement.name ? " in class " + statement.name.text : ""
+              } there is a metadata declaration without a value. Did you accidentally write "metadata: ..." instead of "metadata = ..."?`,
+            );
+            return;
+          }
+
+          // invariant: there is exactly one metadata block with an initializer
+
+          // now check whether there is a settings type in the superclass
+          // (which the generated settings type needs to inherit from)
+          // There really should be, because all descendants of ManagedObject should have one!
+          let settingsTypeFullName;
+          const settingsTypeNode = getSettingsType(type, typeChecker);
+          if (settingsTypeNode) {
+            const settingsType =
+              typeChecker.getTypeFromTypeNode(settingsTypeNode);
+            const symbol = settingsType.getSymbol();
+            settingsTypeFullName = typeChecker.getFullyQualifiedName(symbol);
+
+            if (settingsTypeFullName.startsWith('"./')) {
+              const settingsTypeDeclaration = symbol.getDeclarations()[0];
+              const settingsTypeSourceFile =
+                settingsTypeDeclaration.getSourceFile().fileName;
+              const settingsTypeDirectory = path.dirname(
+                settingsTypeSourceFile,
               );
-              if (!interestingBaseClass) {
-                return;
-              }
-              managedObjectFound = true;
-
-              // ok, we have a ManagedObject/Control; now check whether it contains a metadata section, which means that accessor methods need to be generated
-              const metadata: ts.PropertyDeclaration[] = <
-                ts.PropertyDeclaration[]
-              >statement.members.filter((member) => {
-                if (
-                  ts.isPropertyDeclaration(member) &&
-                  ts.isIdentifier(member.name) &&
-                  // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
-                  member.name.escapedText === "metadata" &&
-                  member.modifiers &&
-                  member.modifiers.some((modifier) => {
-                    return modifier.kind === ts.SyntaxKind.StaticKeyword;
-                  })
-                ) {
-                  return true;
+              const managedObjectDirectory = path.dirname(sourceFile.fileName);
+              if (managedObjectDirectory !== settingsTypeDirectory) {
+                // settings type of superclass is in different directory, hence the generated import will have to traverse to that directory
+                const relativePath = path
+                  .relative(managedObjectDirectory, settingsTypeDirectory)
+                  .replace(/\\/g, "/");
+                const match = settingsTypeFullName.match(
+                  /".\/([^/]+\/)*([^/]+)".*/,
+                );
+                if (match) {
+                  // insert the relative path
+                  settingsTypeFullName =
+                    '"./' + relativePath + settingsTypeFullName.slice(2);
                 }
-              });
-              if (!metadata || metadata.length === 0) {
-                // no metadata? => nothing to do
-                log.debug(
-                  `Class ${statement.name ? statement.name.text : ""} in ${
-                    sourceFile.fileName
-                  } inherits from ${interestingBaseClass} but has no metadata. This is not necessarily an issue, but if there is a metadata member in this class which *should* be recognized, make sure it has the 'static' keyword!`,
-                );
-                return;
-              } else if (metadata.length > 1) {
-                // more than one metadata block??
-                log.warn(
-                  `ManagedObject with ${
-                    metadata.length
-                  } static metadata members in class ${
-                    statement.name ? statement.name.text : ""
-                  } inside ${
-                    sourceFile.fileName
-                  }. This is unexpected. Ignoring this class.`,
-                );
-                return;
-              } else if (!metadata[0].initializer) {
-                // exactly one "metadata" declaration, BUT not initialized with the actual metadata value
-                // this may mean that someone accidentally wrote "metadata: {...}" instead of "metadata = {...}", which is syntactically correct,
-                // but assigns a type structure, not a value. This would fail at runtime, as none of the intended API declarations work, but before
-                // failing at runtime, it would fail here in the generator, which later on tries to access the data. So let's warn the user.
-                log.warn(
-                  `Inside file ${sourceFile.fileName}${
-                    statement.name ? " in class " + statement.name.text : ""
-                  } there is a metadata declaration without a value. Did you accidentally write "metadata: ..." instead of "metadata = ..."?`,
-                );
-                return;
               }
-
-              // invariant: there is exactly one metadata block with an initializer
-
-              // now check whether there is a settings type in the superclass
-              // (which the generated settings type needs to inherit from)
-              // There really should be, because all descendants of ManagedObject should have one!
-              let settingsTypeFullName;
-              const settingsTypeNode = getSettingsType(type, typeChecker);
-              if (settingsTypeNode) {
-                const settingsType =
-                  typeChecker.getTypeFromTypeNode(settingsTypeNode);
-                const symbol = settingsType.getSymbol();
-                settingsTypeFullName =
-                  typeChecker.getFullyQualifiedName(symbol);
-
-                if (settingsTypeFullName.startsWith('"./')) {
-                  const settingsTypeDeclaration = symbol.getDeclarations()[0];
-                  const settingsTypeSourceFile =
-                    settingsTypeDeclaration.getSourceFile().fileName;
-                  const settingsTypeDirectory = path.dirname(
-                    settingsTypeSourceFile,
-                  );
-                  const managedObjectDirectory = path.dirname(
-                    sourceFile.fileName,
-                  );
-                  if (managedObjectDirectory !== settingsTypeDirectory) {
-                    // settings type of superclass is in different directory, hence the generated import will have to traverse to that directory
-                    const relativePath = path
-                      .relative(managedObjectDirectory, settingsTypeDirectory)
-                      .replace(/\\/, "/");
-                    const match = settingsTypeFullName.match(
-                      /".\/([^/]+\/)*([^/]+)".*/,
-                    );
-                    if (match) {
-                      // insert the relative path
-                      settingsTypeFullName =
-                        '"./' + relativePath + settingsTypeFullName.slice(2);
-                    }
-                  }
-                }
-              } else if (metadata) {
-                throw new Error(
-                  `'${
-                    statement.name ? statement.name.text : ""
-                  }' inherits from '${interestingBaseClass}' and has metadata, but the parent class '${typeChecker.getFullyQualifiedName(
-                    type.getSymbol(),
-                  )}' seems to have no settings type. It might have no constructors - this is where the settings type is used. Or the settings type used there and its inheritance chain could not be resolved.
+            }
+          } else if (metadata) {
+            throw new Error(
+              `'${
+                statement.name ? statement.name.text : ""
+              }' inherits from '${interestingBaseClass}' and has metadata, but the parent class '${typeChecker.getFullyQualifiedName(
+                type.getSymbol(),
+              )}' seems to have no settings type. It might have no constructors - this is where the settings type is used. Or the settings type used there and its inheritance chain could not be resolved.
 
 In case this parent class is also in your project, make sure to add its constructors, then try again. A comment with instructions might be in the console output above.
 Otherwise, you can temporarily remove this file (${
-                    sourceFile.fileName
-                  }) from the project and try again to get the console output with the suggested constructors.
+                sourceFile.fileName
+              }) from the project and try again to get the console output with the suggested constructors.
 In any case, you need to make the parent class ${typeChecker.getFullyQualifiedName(
-                    type.getSymbol(),
-                  )} have constructors with typed settings object to overcome this issue.
+                type.getSymbol(),
+              )} have constructors with typed settings object to overcome this issue.
 `,
-                );
-              }
-
-              // check for already available constructor signatures (if not found, the console output prompts the user to add them)
-              const constructorSignaturesAvailable =
-                checkConstructors(statement);
-
-              const className = statement.name ? statement.name.text : "";
-
-              // is this class a default export?
-              const isDefaultExport =
-                defaultExport &&
-                ((ts.isIdentifier(defaultExport) &&
-                  defaultExport.text === className) ||
-                  defaultExport === statement);
-
-              // store the information about the identified ManagedObject/Control
-              managedObjects.push({
-                sourceFile,
-                className,
-                isDefaultExport,
-                classDeclaration: statement,
-                settingsTypeFullName,
-                interestingBaseClass,
-                constructorSignaturesAvailable,
-                metadata,
-              });
-              return;
-            });
-          if (managedObjectFound) {
-            // do not look at any other heritage clauses
-            return;
+            );
           }
+
+          // check for already available constructor signatures (if not found, the console output prompts the user to add them)
+          const constructorSignaturesAvailable = checkConstructors(statement);
+
+          const className = statement.name ? statement.name.text : "";
+
+          // is this class a default export?
+          const isDefaultExport =
+            defaultExport &&
+            ((ts.isIdentifier(defaultExport) &&
+              defaultExport.text === className) ||
+              defaultExport === statement);
+
+          // store the information about the identified ManagedObject/Control
+          managedObjects.push({
+            sourceFile,
+            className,
+            isDefaultExport,
+            classDeclaration: statement,
+            settingsTypeFullName,
+            interestingBaseClass,
+            constructorSignaturesAvailable,
+            metadata,
+          });
+          return;
         });
+        if (managedObjectFound) {
+          // do not look at any other heritage clauses
+          return;
+        }
+      });
     }
   });
   return managedObjects;

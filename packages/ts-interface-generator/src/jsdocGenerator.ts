@@ -110,7 +110,7 @@ export function addJSDoc(oClassInfo: ClassInfo) {
 
     if (!minimal) {
       // only add generated suffix when prefs are not set to "minimal"
-      suffixLines && suffixLines.forEach((line) => lines.push(line));
+      suffixLines?.forEach((line) => lines.push(line));
       lines.push("");
     }
 

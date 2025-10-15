@@ -8,8 +8,8 @@ import yargs from "yargs";
 
 // configure yargs with the cli options as launcher
 const version = `${pkgJson.version} (from ${__filename})`;
-yargs.version(version);
-yargs
+const appArgs = yargs()
+  .version(version)
   .option({
     config: {
       alias: "c",
@@ -33,7 +33,6 @@ yargs
     },
   })
   .default("watch", false)
-  .default("loglevel", "info");
+  .default("loglevel", "info").argv as Args;
 
-const appArgs = yargs.argv as Args;
 main(appArgs);

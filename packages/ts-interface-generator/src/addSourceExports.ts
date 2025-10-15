@@ -1,5 +1,5 @@
-import path = require("path");
-import ts = require("typescript");
+import path from "path";
+import ts from "typescript";
 
 /**
  * This function aims to find the UI5-style global name for all exports of the given source file
