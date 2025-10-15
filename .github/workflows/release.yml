@@ -5,6 +5,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Required for trusted publishing via OIDC (https://docs.npmjs.com/trusted-publishers)
     if: "contains(github.event.head_commit.message, 'chore(release): publish')"
     steps:
       - uses: actions/checkout@v4
@@ -21,9 +23,4 @@ jobs:
         run: yarn build
 
       - name: Publish to NPM
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-          echo ":::: Publishing as $(npm whoami)"
-          npm run release:publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_RELEASE_AUTH_TOKEN }}
+        run: npm run release:publish
