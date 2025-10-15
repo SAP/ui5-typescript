@@ -2825,10 +2825,10 @@
     "@types/jquery" "~3.5.13"
     "@types/qunit" "^2.5.4"
 
-"@types/openui5@1.141.0":
-  version "1.141.0"
-  resolved "https://registry.yarnpkg.com/@types/openui5/-/openui5-1.141.0.tgz#dc9e95d89525316dd4ebb08dfbba2b5be0097510"
-  integrity sha512-rNHg/8natPE8aLFs+N+aivzjws+bB4VfS67apKBCzd7LJJze59qTPxrPjdST+skQ0jBwKYvwVAB4Td7lWJoXUA==
+"@types/openui5@1.136.0":
+  version "1.136.0"
+  resolved "https://registry.yarnpkg.com/@types/openui5/-/openui5-1.136.0.tgz#9cada8f12d5d03d03f4975553cb763da2e7fa104"
+  integrity sha512-gdjK8/bYKsdZUiinARbYW+B6sbAVo0B4KLbHMs/noBzx2wfUoHOb9DiS+lpBpjtfD28NyiluReCp2R4kp7fceA==
   dependencies:
     "@types/jquery" "~3.5.13"
     "@types/qunit" "^2.5.4"
