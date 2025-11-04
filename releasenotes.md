@@ -8,6 +8,13 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.142.0 (October 2025)
+- BUG: the @openui5/types and @sapui5/types definitions in version 1.142.0 accidentally come with an incompatible change: in `sap/ui/table/RowActionItem` the methods `setIcon` and `setText` have been removed. Version 1.142.1 will likely be fixed and re-introduce these methods. Also, @types/openui5 version 1.142.0 is already fixed.
+- FIX: in `sap/m/ListBase` and subclasses including `sap/m/List` and `sap/m/Table`, the `itemActionPress` event parameter holdign the action has been corrected from `itemAction` to `action`. Code accessing the former will cause a TS error now, but never did work in the first place. 
+
+## 1.141.0 (September 2025)
+- No news
+
 ## 1.140.0 (September 2025)
 - FEATURE: Specifically for TypeScript usage of UI5, we have introduced `sap.ui.model.json.TypedJSONModel` and `sap.ui.model.json.TypedJSONContext` as strongly-typed wrappers around sap.ui.model.json.JSONModel and sap.ui.model.Context. These wrappers don't affect runtime behavior. They enable autocompletion features in IDEs and support static type checking during development. Note that these wrappers aren't available in JavaScript projects. For more information, see [Using the Typed JSON Model](https://ui5.sap.com/1.140.0/#/topic/96804e3315ff440aa0a50fd290805116.html#loiob8cd1692485d4108af607af347982dd9).
 
