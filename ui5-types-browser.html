@@ -38,13 +38,13 @@
 							<layout:fixContent>
 								<Toolbar>
 									<Label text="Framework:" labelFor="frameworkSelect"/>
-									<Select id="frameworkSelect" change=".onFrameworkSelectChange" width="250px"/>
+									<Select id="frameworkSelect" change=".onFrameworkSelectChange" width="22em"/>
 									<ToolbarSpacer/>
 									<Label text="Version:" labelFor="versionSelect"/>
-									<Select id="versionSelect" change=".onVersionSelectChange" width="200px"/>
+									<Select id="versionSelect" change=".onVersionSelectChange" width="7em"/>
 									<ToolbarSpacer/>
-									<Label text="File:" labelFor="fileSelect"/>
-									<Select id="fileSelect" change=".onFileSelectChange" width="300px"/>
+									<Label text="Library:" labelFor="fileSelect"/>
+									<Select id="fileSelect" change=".onFileSelectChange" width="12em"/>
 								</Toolbar>
 							</layout:fixContent>
 							<layout:flexContent>
@@ -102,8 +102,8 @@
 							npmPackage: '@sapui5/types'
 						},
 						'openui5': {
-							name: 'OpenUI5 (@openui5/ts-types-esm)',
-							npmPackage: '@openui5/ts-types-esm'
+							name: 'OpenUI5 (@openui5/types)',
+							npmPackage: '@openui5/types'
 						},
 						'openui5-dt': {
 							name: 'OpenUI5 via DefinitelyTyped (@types/openui5)',
@@ -364,7 +364,7 @@
 					}
 				},
 
-				loadTypesForVersion: async function (version) {
+				loadTypesForVersion: async function (version, preferredFile) {
 					if (!version) {
 						sap.m.MessageToast.show("Invalid version selected");
 						return;
@@ -398,13 +398,34 @@
 						// Populate file dropdown
 						this.createFileDropdownEntries();
 
-						// Load first file (sap.ui.core.d.ts if available)
-						var defaultFile = this.availableFiles.find(f => f.includes('sap.ui.core.d.ts')) || this.availableFiles[0];
-						if (defaultFile) {
+						// Determine which file to load
+						var fileToLoad;
+						if (preferredFile) {
+							// Try exact match first
+							if (this.availableFiles.includes(preferredFile)) {
+								fileToLoad = preferredFile;
+							} else {
+								// Try to find the same file name even if the path differs
+								// Extract just the filename from the preferred file
+								var preferredFileName = preferredFile.split('/').pop();
+								var matchByName = this.availableFiles.find(f => f.endsWith(preferredFileName));
+								if (matchByName) {
+									fileToLoad = matchByName;
+								} else {
+									// Fall back to default file
+									fileToLoad = this.availableFiles.find(f => f.includes('sap.ui.core.d.ts')) || this.availableFiles[0];
+								}
+							}
+						} else {
+							// No preferred file, use default
+							fileToLoad = this.availableFiles.find(f => f.includes('sap.ui.core.d.ts')) || this.availableFiles[0];
+						}
+
+						if (fileToLoad) {
 							// Use actual version for file loading
 							var originalVersion = this.currentVersion;
 							this.currentVersion = actualVersion;
-							await this.loadAndDisplayFile(defaultFile);
+							await this.loadAndDisplayFile(fileToLoad);
 							this.currentVersion = originalVersion; // Restore for URL hash
 						}
 
@@ -518,20 +539,37 @@
 					var framework = evt.getParameter("selectedItem").getKey();
 					this.currentFramework = framework;
 
+					// Store current selections to try to preserve them
+					var currentVersion = this.currentVersion;
+					var currentFile = this.byId("fileSelect").getSelectedKey();
+
 					// Don't dispose models - keep them cached for reuse
 					this.models = {};
+
+					// Prevent hash updates during the framework change process
+					this.isLoadingFromHash = true;
 
 					// Load versions for new framework
 					await this.loadAvailableVersions();
 
-					// Load "latest" for new framework (not the resolved version)
-					await this.loadTypesForVersion('latest');
+					// Try to preserve the version selection
+					var versionSelect = this.byId("versionSelect");
+					var versionExists = versionSelect.getItems().some(function (item) {
+						return item.getKey() === currentVersion;
+					});
+
+					var versionToLoad = versionExists ? currentVersion : 'latest';
+					await this.loadTypesForVersion(versionToLoad, currentFile);
+
+					// Re-enable hash updates and update once at the end
+					this.isLoadingFromHash = false;
 					this.updateHashParameters();
 				},
 
 				onVersionSelectChange: async function (evt) {
 					var version = evt.getParameter("selectedItem").getKey();
-					await this.loadTypesForVersion(version);
+					var currentFile = this.byId("fileSelect").getSelectedKey();
+					await this.loadTypesForVersion(version, currentFile);
 					this.updateHashParameters();
 				},
 
