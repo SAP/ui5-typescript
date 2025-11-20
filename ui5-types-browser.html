@@ -258,11 +258,11 @@
 							// Load available versions for default framework
 							await this.loadAvailableVersions();
 
-							// Load latest version by default
-							var latestVersion = await this.getLatestVersion();
-							if (latestVersion) {
-								await this.loadTypesForVersion(latestVersion);
-							}
+							// Load "latest" by default (not the resolved version)
+							this.isLoadingFromHash = true; // Prevent hash update during initial load
+							await this.loadTypesForVersion('latest');
+							this.isLoadingFromHash = false;
+							this.updateHashParameters(); // Now update hash with "latest"
 						}
 					} catch (error) {
 						console.error("Initialization error:", error);
@@ -289,6 +289,13 @@
 							var versions = this.cache.versions[this.currentFramework];
 							var versionSelect = this.byId("versionSelect");
 							versionSelect.destroyItems();
+
+							// Add "latest" entry at the top
+							versionSelect.addItem(new sap.ui.core.Item({
+								key: 'latest',
+								text: 'latest'
+							}));
+
 							versions.forEach(version => {
 								versionSelect.addItem(new sap.ui.core.Item({
 									key: version,
@@ -320,6 +327,13 @@
 
 						var versionSelect = this.byId("versionSelect");
 						versionSelect.destroyItems();
+
+						// Add "latest" entry at the top
+						versionSelect.addItem(new sap.ui.core.Item({
+							key: 'latest',
+							text: 'latest'
+						}));
+
 						versions.forEach(version => {
 							versionSelect.addItem(new sap.ui.core.Item({
 								key: version,
@@ -357,13 +371,26 @@
 					}
 
 					sap.ui.core.BusyIndicator.show(0);
-					this.currentVersion = version;
+
+					// Resolve "latest" to actual version number
+					var actualVersion = version;
+					if (version === 'latest') {
+						actualVersion = await this.getLatestVersion();
+						if (!actualVersion) {
+							sap.m.MessageBox.error("Failed to resolve latest version");
+							sap.ui.core.BusyIndicator.hide();
+							return;
+						}
+					}
+
+					this.currentVersion = version; // Keep "latest" or specific version for URL
 					var frameworkName = this.frameworks[this.currentFramework].name;
-					this.byId("page").setTitle("UI5 TypeScript Definitions Browser - " + frameworkName + " (" + version + ")");
+					var displayVersion = version === 'latest' ? version + ' (' + actualVersion + ')' : version;
+					this.byId("page").setTitle("UI5 TypeScript Definitions Browser - " + frameworkName + " (" + displayVersion + ")");
 
 					try {
-						// Get list of available .d.ts files
-						this.availableFiles = await this.getTypesFileList(version);
+						// Get list of available .d.ts files using actual version
+						this.availableFiles = await this.getTypesFileList(actualVersion);
 
 						// Don't dispose models anymore - keep them cached
 						this.models = {};
@@ -374,7 +401,11 @@
 						// Load first file (sap.ui.core.d.ts if available)
 						var defaultFile = this.availableFiles.find(f => f.includes('sap.ui.core.d.ts')) || this.availableFiles[0];
 						if (defaultFile) {
+							// Use actual version for file loading
+							var originalVersion = this.currentVersion;
+							this.currentVersion = actualVersion;
 							await this.loadAndDisplayFile(defaultFile);
+							this.currentVersion = originalVersion; // Restore for URL hash
 						}
 
 						this.byId("versionSelect").setSelectedKey(version);
@@ -493,11 +524,8 @@
 					// Load versions for new framework
 					await this.loadAvailableVersions();
 
-					// Load latest version for new framework
-					var latestVersion = await this.getLatestVersion();
-					if (latestVersion) {
-						await this.loadTypesForVersion(latestVersion);
-					}
+					// Load "latest" for new framework (not the resolved version)
+					await this.loadTypesForVersion('latest');
 					this.updateHashParameters();
 				},
 
