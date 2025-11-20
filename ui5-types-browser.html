@@ -55,7 +55,6 @@
 				</App>
 			</mvc:View>
 		</script>
-
 		<script>
 			// Global error handler
 			window.onerror = function (msg, url, lineNo, columnNo, error) {
@@ -88,6 +87,13 @@
 					this.currentVersion = null;
 					this.availableFiles = [];
 					this.isLoadingFromHash = false;
+
+					// Cache for previously loaded data
+					this.cache = {
+						versions: {}, // Cache versions per framework: { 'sapui5': [...], 'openui5': [...] }
+						files: {}, // Cache file lists per framework+version: { 'sapui5@1.120.0': [...] }
+						models: {} // Cache monaco models per framework+version+file: { 'sapui5@1.120.0@/types/sap.m.d.ts': model }
+					};
 
 					// Framework configuration
 					this.frameworks = {
@@ -278,6 +284,21 @@
 
 				loadAvailableVersions: async function () {
 					try {
+						// Check cache first
+						if (this.cache.versions[this.currentFramework]) {
+							var versions = this.cache.versions[this.currentFramework];
+							var versionSelect = this.byId("versionSelect");
+							versionSelect.destroyItems();
+							versions.forEach(version => {
+								versionSelect.addItem(new sap.ui.core.Item({
+									key: version,
+									text: version
+								}));
+							});
+							return;
+						}
+
+						// Fetch from network if not cached
 						var npmPackage = this.frameworks[this.currentFramework].npmPackage;
 						var url = `https://registry.npmjs.org/${npmPackage}`;
 						var response = await fetch(url);
@@ -293,6 +314,9 @@
 						versions.sort((a, b) => {
 							return b.localeCompare(a, undefined, { numeric: true, sensitivity: 'base' });
 						});
+
+						// Cache the versions
+						this.cache.versions[this.currentFramework] = versions;
 
 						var versionSelect = this.byId("versionSelect");
 						versionSelect.destroyItems();
@@ -341,11 +365,7 @@
 						// Get list of available .d.ts files
 						this.availableFiles = await this.getTypesFileList(version);
 
-						// Clear old models
-						var oldModels = monaco.editor.getModels();
-						for (var i = 0; i < oldModels.length; i++) {
-							oldModels[i].dispose();
-						}
+						// Don't dispose models anymore - keep them cached
 						this.models = {};
 
 						// Populate file dropdown
@@ -368,6 +388,14 @@
 
 				getTypesFileList: async function (version) {
 					try {
+						var cacheKey = this.currentFramework + '@' + version;
+
+						// Check cache first
+						if (this.cache.files[cacheKey]) {
+							return this.cache.files[cacheKey];
+						}
+
+						// Fetch from network if not cached
 						var npmPackage = this.frameworks[this.currentFramework].npmPackage;
 						var url = `https://unpkg.com/${npmPackage}@${version}/?meta`;
 						var response = await fetch(url);
@@ -391,6 +419,10 @@
 							});
 
 						dtsFiles.sort();
+
+						// Cache the file list
+						this.cache.files[cacheKey] = dtsFiles;
+
 						return dtsFiles;
 					} catch (error) {
 						console.error("Error getting file list:", error);
@@ -429,13 +461,18 @@
 					sap.ui.core.BusyIndicator.show(0);
 
 					try {
-						// Check if model already exists
-						if (!this.models[filepath]) {
+						var cacheKey = this.currentFramework + '@' + this.currentVersion + '@' + filepath;
+
+						// Check global cache first
+						if (!this.cache.models[cacheKey]) {
 							var content = await this.loadTypeFile(this.currentVersion, filepath);
-							this.models[filepath] = monaco.editor.createModel(content, "typescript");
+							this.cache.models[cacheKey] = monaco.editor.createModel(content, "typescript");
+							console.log("Loaded and cached model:", cacheKey);
+						} else {
+							console.log("Reusing cached model:", cacheKey);
 						}
 
-						this.editor.setModel(this.models[filepath]);
+						this.editor.setModel(this.cache.models[cacheKey]);
 						this.byId("fileSelect").setSelectedKey(filepath);
 						this.updateHashParameters();
 					} catch (error) {
@@ -450,11 +487,7 @@
 					var framework = evt.getParameter("selectedItem").getKey();
 					this.currentFramework = framework;
 
-					// Clear models when switching frameworks
-					var oldModels = monaco.editor.getModels();
-					for (var i = 0; i < oldModels.length; i++) {
-						oldModels[i].dispose();
-					}
+					// Don't dispose models - keep them cached for reuse
 					this.models = {};
 
 					// Load versions for new framework
