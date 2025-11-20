@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Browse UI5 TypeScript type definitions">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ui5.sap.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://ui5.sap.com https://cdnjs.cloudflare.com; connect-src https://registry.npmjs.org https://unpkg.com https://ui5.sap.com https://cdnjs.cloudflare.com; font-src 'self' https://ui5.sap.com https://cdnjs.cloudflare.com; img-src 'self' data:;">
+
+		<title>UI5 TypeScript type definitions browser</title>
+
+		<script id='sap-ui-bootstrap'
+			src='https://ui5.sap.com/resources/sap-ui-core.js'
+			data-sap-ui-theme='sap_fiori_3'
+			data-sap-ui-libs='sap.m,sap.ui.layout'
+			data-sap-ui-resourceRoots='{"vs": "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs"}'
+			data-sap-ui-compatVersion='edge'></script>
+		
+		<link
+			rel="stylesheet"
+			data-name="vs/editor/editor.main"
+			href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/editor/editor.main.css"
+		/>
+		
+		<script>
+			var require = { paths: { vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs" } };
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/editor/editor.main.nls.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/editor/editor.main.js"></script>
+
+		<script id="myXml" type="text/xmldata">
+			<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core"
+				controllerName="myController" displayBlock="true">
+				<App>
+					<Page id="page" title="UI5 TypeScript Definitions Browser">
+						<layout:FixFlex>
+							<layout:fixContent>
+								<Toolbar>
+									<Label text="Framework:" labelFor="frameworkSelect"/>
+									<Select id="frameworkSelect" change=".onFrameworkSelectChange" width="250px"/>
+									<ToolbarSpacer/>
+									<Label text="Version:" labelFor="versionSelect"/>
+									<Select id="versionSelect" change=".onVersionSelectChange" width="200px"/>
+									<ToolbarSpacer/>
+									<Label text="File:" labelFor="fileSelect"/>
+									<Select id="fileSelect" change=".onFileSelectChange" width="300px"/>
+								</Toolbar>
+							</layout:fixContent>
+							<layout:flexContent>
+								<core:HTML id="ce" content="&lt;div id='editorContainer' style='position:absolute;width: 100%; height: 100%;'&gt;&lt;/div&gt;" />
+							</layout:flexContent>
+						</layout:FixFlex>
+					</Page>
+				</App>
+			</mvc:View>
+		</script>
+
+		<script>
+			// Global error handler
+			window.onerror = function (msg, url, lineNo, columnNo, error) {
+				console.error('Global error:', msg, error);
+				sap.ui.core.BusyIndicator.hide();
+				return false;
+			};
+
+			async function sleep(i) {
+				return new Promise((resolve) => {
+					setTimeout(() => {
+						resolve();
+					}, i)
+				})
+			}
+
+			sap.ui.controller("myController", {
+				onInit: function () {
+					// Browser compatibility check
+					if (!window.fetch || !window.Promise) {
+						alert("Your browser is not supported. Please use a modern browser.");
+						return;
+					}
+
+					var MONACO_EDITOR = "vs/editor/editor.main";
+					sap.ui.core.BusyIndicator.show(0);
+
+					this.models = {};
+					this.currentFramework = null;
+					this.currentVersion = null;
+					this.availableFiles = [];
+					this.isLoadingFromHash = false;
+
+					// Framework configuration
+					this.frameworks = {
+						'sapui5': {
+							name: 'SAPUI5 (@sapui5/types)',
+							npmPackage: '@sapui5/types'
+						},
+						'openui5': {
+							name: 'OpenUI5 (@openui5/ts-types-esm)',
+							npmPackage: '@openui5/ts-types-esm'
+						},
+						'openui5-dt': {
+							name: 'OpenUI5 via DefinitelyTyped (@types/openui5)',
+							npmPackage: '@types/openui5'
+						}
+					};
+
+					// Listen for hash changes (browser back/forward navigation)
+					window.addEventListener('hashchange', this.onHashChange.bind(this));
+
+					sap.ui.require([MONACO_EDITOR], this.editorLoaded.bind(this));
+				},
+
+				parseHashParameters: function () {
+					var hash = window.location.hash;
+					if (!hash || hash.length <= 1) {
+						return null;
+					}
+
+					// Remove leading '#' and parse parameters
+					var params = {};
+					var pairs = hash.substring(1).split('&');
+					for (var i = 0; i < pairs.length; i++) {
+						var pair = pairs[i].split('=');
+						if (pair.length === 2) {
+							params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+						}
+					}
+
+					return Object.keys(params).length > 0 ? params : null;
+				},
+
+				updateHashParameters: function () {
+					if (this.isLoadingFromHash) {
+						return; // Don't update hash while loading from hash
+					}
+
+					var params = [];
+					if (this.currentFramework) {
+						params.push('framework=' + encodeURIComponent(this.currentFramework));
+					}
+					if (this.currentVersion) {
+						params.push('version=' + encodeURIComponent(this.currentVersion));
+					}
+					var selectedFile = this.byId("fileSelect").getSelectedKey();
+					if (selectedFile) {
+						params.push('file=' + encodeURIComponent(selectedFile));
+					}
+
+					var newHash = '#' + params.join('&');
+					if (window.location.hash !== newHash) {
+						window.history.pushState(null, null, newHash);
+					}
+				},
+
+				onHashChange: function () {
+					var params = this.parseHashParameters();
+					if (params) {
+						this.loadFromHashParameters(params);
+					}
+				},
+
+				loadFromHashParameters: async function (params) {
+					this.isLoadingFromHash = true;
+					sap.ui.core.BusyIndicator.show(0);
+
+					try {
+						var framework = params.framework;
+						var version = params.version;
+						var file = params.file;
+
+						// Validate and load framework
+						if (framework && this.frameworks[framework]) {
+							if (this.currentFramework !== framework) {
+								this.currentFramework = framework;
+								this.byId("frameworkSelect").setSelectedKey(framework);
+								await this.loadAvailableVersions();
+							}
+						} else if (framework) {
+							console.warn("Invalid framework in URL:", framework);
+							sap.m.MessageToast.show("Invalid framework in URL, using default");
+						}
+
+						// Load version
+						if (version) {
+							var versionSelect = this.byId("versionSelect");
+							var versionExists = versionSelect.getItems().some(function (item) {
+								return item.getKey() === version;
+							});
+
+							if (versionExists) {
+								await this.loadTypesForVersion(version);
+							} else {
+								console.warn("Version not found:", version);
+								sap.m.MessageToast.show("Version " + version + " not found, using latest");
+								var latestVersion = await this.getLatestVersion();
+								if (latestVersion) {
+									await this.loadTypesForVersion(latestVersion);
+								}
+							}
+						}
+
+						// Load file
+						if (file && this.availableFiles.includes(file)) {
+							await this.loadAndDisplayFile(file);
+						} else if (file) {
+							console.warn("File not found:", file);
+							sap.m.MessageToast.show("File not found in this version");
+						}
+					} catch (error) {
+						console.error("Error loading from hash parameters:", error);
+						sap.m.MessageBox.error("Error loading from URL parameters. Using defaults.");
+					} finally {
+						this.isLoadingFromHash = false;
+						sap.ui.core.BusyIndicator.hide();
+					}
+				},
+
+				editorLoaded: async function () {
+					try {
+						while (!document.getElementById('editorContainer') || !window.monaco || !monaco.editor) {
+							await sleep(500);
+						}
+						this.editor = monaco.editor.create(document.getElementById('editorContainer'), {
+							theme: 'vs-dark',
+							model: null,
+							automaticLayout: true,
+							readOnly: true
+						});
+						monaco.languages.typescript.javascriptDefaults.setEagerModelSync(true);
+						monaco.languages.typescript.javascriptDefaults.setCompilerOptions({
+							allowNonTsExtensions: true
+						});
+
+						// Populate framework dropdown
+						this.createFrameworkDropdownEntries();
+
+						// Check for URL parameters
+						var hashParams = this.parseHashParameters();
+
+						if (hashParams && (hashParams.framework || hashParams.version || hashParams.file)) {
+							// Load from URL parameters
+							this.currentFramework = hashParams.framework || 'sapui5';
+							this.byId("frameworkSelect").setSelectedKey(this.currentFramework);
+							await this.loadAvailableVersions();
+							await this.loadFromHashParameters(hashParams);
+						} else {
+							// Set default framework to SAPUI5
+							this.currentFramework = 'sapui5';
+							this.byId("frameworkSelect").setSelectedKey('sapui5');
+
+							// Load available versions for default framework
+							await this.loadAvailableVersions();
+
+							// Load latest version by default
+							var latestVersion = await this.getLatestVersion();
+							if (latestVersion) {
+								await this.loadTypesForVersion(latestVersion);
+							}
+						}
+					} catch (error) {
+						console.error("Initialization error:", error);
+						sap.m.MessageBox.error("Failed to initialize the editor. Please refresh the page.");
+					} finally {
+						sap.ui.core.BusyIndicator.hide();
+					}
+				},
+
+				createFrameworkDropdownEntries: function () {
+					var frameworkSelect = this.byId("frameworkSelect");
+					for (var key in this.frameworks) {
+						frameworkSelect.addItem(new sap.ui.core.Item({
+							key: key,
+							text: this.frameworks[key].name
+						}));
+					}
+				},
+
+				loadAvailableVersions: async function () {
+					try {
+						var npmPackage = this.frameworks[this.currentFramework].npmPackage;
+						var url = `https://registry.npmjs.org/${npmPackage}`;
+						var response = await fetch(url);
+
+						if (!response.ok) {
+							throw new Error(`HTTP error! status: ${response.status}`);
+						}
+
+						var data = await response.json();
+
+						// Get all versions and sort them (newest first)
+						var versions = Object.keys(data.versions);
+						versions.sort((a, b) => {
+							return b.localeCompare(a, undefined, { numeric: true, sensitivity: 'base' });
+						});
+
+						var versionSelect = this.byId("versionSelect");
+						versionSelect.destroyItems();
+						versions.forEach(version => {
+							versionSelect.addItem(new sap.ui.core.Item({
+								key: version,
+								text: version
+							}));
+						});
+					} catch (error) {
+						console.error("Error loading versions:", error);
+						sap.m.MessageBox.error("Error loading available versions. Please check your internet connection and refresh the page.");
+					}
+				},
+
+				getLatestVersion: async function () {
+					try {
+						var npmPackage = this.frameworks[this.currentFramework].npmPackage;
+						var url = `https://registry.npmjs.org/${npmPackage}`;
+						var response = await fetch(url);
+
+						if (!response.ok) {
+							throw new Error(`HTTP error! status: ${response.status}`);
+						}
+
+						var data = await response.json();
+						return data['dist-tags'].latest;
+					} catch (error) {
+						console.error("Error getting latest version:", error);
+						return null;
+					}
+				},
+
+				loadTypesForVersion: async function (version) {
+					if (!version) {
+						sap.m.MessageToast.show("Invalid version selected");
+						return;
+					}
+
+					sap.ui.core.BusyIndicator.show(0);
+					this.currentVersion = version;
+					var frameworkName = this.frameworks[this.currentFramework].name;
+					this.byId("page").setTitle("UI5 TypeScript Definitions Browser - " + frameworkName + " (" + version + ")");
+
+					try {
+						// Get list of available .d.ts files
+						this.availableFiles = await this.getTypesFileList(version);
+
+						// Clear old models
+						var oldModels = monaco.editor.getModels();
+						for (var i = 0; i < oldModels.length; i++) {
+							oldModels[i].dispose();
+						}
+						this.models = {};
+
+						// Populate file dropdown
+						this.createFileDropdownEntries();
+
+						// Load first file (sap.ui.core.d.ts if available)
+						var defaultFile = this.availableFiles.find(f => f.includes('sap.ui.core.d.ts')) || this.availableFiles[0];
+						if (defaultFile) {
+							await this.loadAndDisplayFile(defaultFile);
+						}
+
+						this.byId("versionSelect").setSelectedKey(version);
+					} catch (error) {
+						console.error("Error loading types for version:", error);
+						sap.m.MessageBox.error("Error loading type definitions for version " + version + ". The version may not exist or the service may be unavailable.");
+					} finally {
+						sap.ui.core.BusyIndicator.hide();
+					}
+				},
+
+				getTypesFileList: async function (version) {
+					try {
+						var npmPackage = this.frameworks[this.currentFramework].npmPackage;
+						var url = `https://unpkg.com/${npmPackage}@${version}/?meta`;
+						var response = await fetch(url);
+
+						if (!response.ok) {
+							throw new Error(`HTTP error! status: ${response.status}`);
+						}
+
+						var data = await response.json();
+
+						// Filter for .d.ts files
+						var dtsFiles = data.files
+							.filter(file => file.path.endsWith('.d.ts'))
+							.map(file => file.path)
+							.filter(path => {
+								// Exclude node_modules and other non-type files
+								return !path.includes('node_modules') &&
+									!path.includes('dist/') &&
+									path !== '/index.d.ts' &&
+									path !== '/package.json';
+							});
+
+						dtsFiles.sort();
+						return dtsFiles;
+					} catch (error) {
+						console.error("Error getting file list:", error);
+						throw error;
+					}
+				},
+
+				loadTypeFile: async function (version, filepath, retries = 3) {
+					for (let i = 0; i < retries; i++) {
+						try {
+							var npmPackage = this.frameworks[this.currentFramework].npmPackage;
+							var url = `https://unpkg.com/${npmPackage}@${version}${filepath}`;
+							var response = await fetch(url);
+
+							if (response.status === 429) { // Rate limited
+								console.warn("Rate limited, retrying...");
+								await sleep(Math.pow(2, i) * 1000); // Exponential backoff
+								continue;
+							}
+
+							if (!response.ok) {
+								throw new Error(`HTTP error! status: ${response.status}`);
+							}
+
+							var content = await response.text();
+							return content;
+						} catch (error) {
+							console.error(`Error loading file (attempt ${i + 1}/${retries}):`, filepath, error);
+							if (i === retries - 1) throw error;
+							await sleep(1000);
+						}
+					}
+				},
+
+				loadAndDisplayFile: async function (filepath) {
+					sap.ui.core.BusyIndicator.show(0);
+
+					try {
+						// Check if model already exists
+						if (!this.models[filepath]) {
+							var content = await this.loadTypeFile(this.currentVersion, filepath);
+							this.models[filepath] = monaco.editor.createModel(content, "typescript");
+						}
+
+						this.editor.setModel(this.models[filepath]);
+						this.byId("fileSelect").setSelectedKey(filepath);
+						this.updateHashParameters();
+					} catch (error) {
+						console.error("Error loading and displaying file:", error);
+						sap.m.MessageBox.error("Error loading file: " + filepath.replace('/types/', ''));
+					} finally {
+						sap.ui.core.BusyIndicator.hide();
+					}
+				},
+
+				onFrameworkSelectChange: async function (evt) {
+					var framework = evt.getParameter("selectedItem").getKey();
+					this.currentFramework = framework;
+
+					// Clear models when switching frameworks
+					var oldModels = monaco.editor.getModels();
+					for (var i = 0; i < oldModels.length; i++) {
+						oldModels[i].dispose();
+					}
+					this.models = {};
+
+					// Load versions for new framework
+					await this.loadAvailableVersions();
+
+					// Load latest version for new framework
+					var latestVersion = await this.getLatestVersion();
+					if (latestVersion) {
+						await this.loadTypesForVersion(latestVersion);
+					}
+					this.updateHashParameters();
+				},
+
+				onVersionSelectChange: async function (evt) {
+					var version = evt.getParameter("selectedItem").getKey();
+					await this.loadTypesForVersion(version);
+					this.updateHashParameters();
+				},
+
+				onFileSelectChange: async function (evt) {
+					var filepath = evt.getParameter("selectedItem").getKey();
+					await this.loadAndDisplayFile(filepath);
+				},
+
+				createFileDropdownEntries: function () {
+					var fileSelect = this.byId("fileSelect");
+					fileSelect.destroyItems();
+
+					this.availableFiles.forEach(filepath => {
+						var displayName = filepath.replace('/types/', '').replace(/^\//, '');
+						fileSelect.addItem(new sap.ui.core.Item({
+							key: filepath,
+							text: displayName
+						}));
+					});
+				}
+			});
+			sap.ui.xmlview({ viewContent: jQuery('#myXml').html() }).placeAt("content");
+		</script>
+
+	</head>
+
+	<body id='content' class='sapUiBody'>
+	</body>
+
+</html>
