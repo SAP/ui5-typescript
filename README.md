@@ -26,7 +26,7 @@ If your development is based on SAP Fiori Elements, using the SAP Fiori tools, a
 
 
 ### What is TypeScript about?
-[TypeScript](typescriptlang.org) is an extension of JavaScript for providing type information and helps by error detection through type checking and by providing code assist in many supporting code editors (code completion, inline documentation,...). Browsers cannot execute TypeScript directly, a transpilation step to JavaScript is needed, which basically strips away the type information.
+[TypeScript](https://www.typescriptlang.org) is an extension of JavaScript for providing type information and helps by error detection through type checking and by providing code assist in many supporting code editors (code completion, inline documentation,...). Browsers cannot execute TypeScript directly, a transpilation step to JavaScript is needed, which basically strips away the type information.
 
 ### What is the overall approach for using TypeScript in UI5 applications?
 The UI5 team publishes type definition files describing all the UI5 APIs and types. With the help of these definitions, the TypeScript compiler and the editors can do their job and support writing UI5 apps in TypeScript (and [even JavaScript](https://github.com/SAP-samples/ui5-cap-event-app/tree/js-with-typescript-support#applying-typescript-benefits-to-a-javascript-application)). The "typescript" branch of the "ui5-cap-event-app" project gives an [overview on UI5 code written in TypeScript](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md), typical traps and topics like debugging.
@@ -41,7 +41,7 @@ Exercises 0 and 1 of the [UI5 TypeScript Tutorial](https://github.com/SAP-sample
 If you prefer understanding how everything works under the hood in this template, you can create the setup in few minutes on your own. A [detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md) shows how to create the "ui5-typescript-helloworld" project, which is the same as what you get using the template.
 
 ### How can I get an end-to-end hands-on impression of creating and developing a UI5 app in TypeScript?
-There is a [2-hours tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial), starting from scratch using an app template, extending the resulting app, and covering further topics later on, like control development, integrating third-party libraries from npm, and testing.<br>
+There is a [2-hour tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial), starting from scratch using an app template, extending the resulting app, and covering further topics later on, like control development, integrating third-party libraries from npm, and testing.<br>
 A very comprehensive look at all the important concepts in UI5 and how they are being used in TypeScript can be found in the [TypeScript Walkthrough](https://github.com/SAP-samples/ui5-typescript-walkthrough/).
 
 ### How to convert an existing UI5 app to TypeScript?
@@ -50,10 +50,10 @@ By doing most of the basic [setup for TypeScript projects](https://github.com/SA
 ### How to develop custom controls in TypeScript?
 [Exercise 5 of the TypeScript tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial/tree/main/exercises/ex5) is all about control development. Furthermore, there is [documentation](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/custom-controls/README.md) and sample code in the ["custom-controls" branch of the Hello World application](https://github.com/SAP-samples/ui5-typescript-helloworld/tree/custom-controls) which explains how custom controls can be implemented in TypeScript within UI5 applications.<br>
 Control development makes use of a [tool for generating TypeScript interfaces for the control API](https://github.com/SAP/ui5-typescript/tree/main/packages/ts-interface-generator) which has been [released via npm](https://www.npmjs.com/package/@ui5/ts-interface-generator) in alpha state.<br>
-There is also a sample project that demonstrates how flull-fledged [control libraries can be developed in TypeScript](https://github.com/SAP-samples/ui5-typescript-control-library).
+There is also a sample project that demonstrates how full-fledged [control libraries can be developed in TypeScript](https://github.com/SAP-samples/ui5-typescript-control-library).
 
 ### How to use third-party libraries from npm in UI5 apps?
-Third-part libraries written for running in a browser environment can be easily used with very natural `npm install` and `import <moduleName> from 'dependencyName'`, resulting in code completion for those libraries and automatic transpiling into UI5's own AMD-like module format.
+Third-party libraries written for running in a browser environment can be easily used with very natural `npm install` and `import <moduleName> from 'dependencyName'`, resulting in code completion for those libraries and automatic transpiling into UI5's own AMD-like module format.
 [Exercise 4 of the TypeScript tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial/tree/main/exercises/ex4) shows how this is done, including the required setup of the [ui5-tooling-modules](https://www.npmjs.com/package/ui5-tooling-modules) extension for the UI5 tooling.
 
 
@@ -67,24 +67,26 @@ The "js-with-typescript-support" branch of the "ui5-cap-event-app" project conta
 
 Type definitions, samples, and various tools. In detail:
 
-UI5 provides *generated* type definitions for the UI5 APIs, which let TypeScript understand all the involved types, so it can do its job. These definitions are provided both for OpenUI5 and for SAPUI5, in two different flavors each. The two flavors are:
-1. the *legacy* type definitions ("ts-types") which allow the (discouraged!) usage of global objects like `sap.ui.Button`. They are not in our focus anymore and receive less support, but may still be needed for old application projects.
-1. the new type definitions (simply "types", used to be named "ts-types<b>-esm</b>" before release 1.113) which require the loading of dependencies as [ES modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) like `import Button from "sap/ui/Button"`, encouraging the use of modern JavaScript language features
+UI5 provides *generated* type definitions for the UI5 APIs, which let TypeScript understand all the involved types, so it can do its job. These definitions are provided both for OpenUI5 and for SAPUI5:
+* [`@openui5/types`](https://www.npmjs.com/package/@openui5/types) (OpenUI5)
+* [`@sapui5/types`](https://www.npmjs.com/package/@sapui5/types) (SAPUI5)
 
-Multiplied out, as result, there are currently four different type definition packages:
-* [`@openui5/types`](https://www.npmjs.com/package/@openui5/types) (OpenUI5, new)
-* [`@openui5/ts-types`](https://www.npmjs.com/package/@openui5/ts-types) (OpenUI5, legacy)
-* [`@sapui5/types`](https://www.npmjs.com/package/@sapui5/types) (SAPUI5, new)
-* [`@sapui5/ts-types`](https://www.npmjs.com/package/@sapui5/ts-types) (SAPUI5, legacy)
-
-Plus for older versions before 1.113 (plus a few releases afterwards), the "types" ones were available under a different name:
+For older versions before 1.113 (plus a few releases afterwards), the types were available under a different name:
 * [`@openui5/ts-types-esm`](https://www.npmjs.com/package/@openui5/ts-types-esm)
 * [`@sapui5/ts-types-esm`](https://www.npmjs.com/package/@sapui5/ts-types-esm)
 
-The "new OpenUI5" types are additionally [provided at npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5) because that's the standard package name and place to share type definitions and easier to consume. These definition files are identical to `@openui5/types`, but the [versioning *within* a minor release](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/openui5/README.md#versioning) and [how the jQuery and QUnit types are referenced](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5#jquery-and-qunit-references-and-their-versions) are slightly different (this should usually not be noticeable, though).
+The OpenUI5 types are additionally [provided at npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5) because that's the standard package name and place to share type definitions and easier to consume. These definition files are identical to `@openui5/types`, but the [versioning *within* a minor release](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/openui5/README.md#versioning) and [how the jQuery and QUnit types are referenced](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5#jquery-and-qunit-references-and-their-versions) are slightly different (this should usually not be noticeable, though).
+
+To inspect the different variants and versions of the type definitions without downloading them, you can use the [UI5 type definition browser](https://ui5.github.io/typescript/ui5-types-browser.html) tool.
 
 In addition to the samples, tutorials and template generator mentioned elsewhere in this document, in the "[ui5-typescript](https://github.com/SAP/ui5-typescript)" repository, the generator is developed, which creates the UI5 type definitions from the JavaScript implementation and JSDoc as well as other tools (<b>NOTE</b>: the generator code in the repository is currently outdated and will NOT produce the type definitions mentioned above!).<br>
 For control development in TypeScript, the [control interface generator](https://www.npmjs.com/package/@ui5/ts-interface-generator) is provided and the [ui5-tooling-transpile](https://www.npmjs.com/package/ui5-tooling-transpile) task and middleware nicely integrates all TypeScript transpilation related tasks into the UI5 build tooling, so you are not bothered with configuring the Babel transpiler.
+
+#### Legacy types
+
+There are also *legacy* type definitions which allow the use of the now-discouraged global namespace `sap.*` (like `new sap.ui.Button(...)` - don't do this!):
+* [`@openui5/ts-types`](https://www.npmjs.com/package/@openui5/ts-types) (OpenUI5, legacy)
+* [`@sapui5/ts-types`](https://www.npmjs.com/package/@sapui5/ts-types) (SAPUI5, legacy)
 
 ### Where to report issues?
 * Issues in sample app code or documentation in the repositories linked above should be reported in the issue tracker of the respective GitHub repository. 
@@ -102,7 +104,7 @@ Yes, starting with version 1.116.0 (mid July 2023) they are.
 We encourage you to use UI5 with TypeScript for an improved development efficiency and experience. TypeScript itself keeps evolving and we try to further improve the UI5 type definitions, so there could be potential incompatible changes between versions of the type definitions. However, such incompatibilities would only affect the compilation of your code but will not cause runtime issues in your application. Plus, there are various ways to easily deal with them: you can, for example, simply keep using the previous version of the UI5 type definitions together with an updated UI5 runtime.<br>
 To keep track of any significant changes, observe the [Release Notes](releasenotes.md).
 
-Versions prior to 1.116.0 are in "experimental beta" state, which means an increased likelyhood of issues and of incompatibilities with upgrades. However, the list of known such changes is available in the [Release Notes](releasenotes.md), so you know what is ahead on the road to version 1.116. Note that "non-beta" releases do not come with a 100% compatibility guarantee either.<br>
+Versions prior to 1.116.0 are in "experimental beta" state, which means an increased likelihood of issues and of incompatibilities with upgrades. However, the list of known such changes is available in the [Release Notes](releasenotes.md), so you know what is ahead on the road to version 1.116. Note that "non-beta" releases do not come with a 100% compatibility guarantee either.<br>
 Find all the details [here](beta-statement.md).
 
 If you are bound to a UI5 runtime version lower than 1.116.0, you can still consider using it with UI5 types 1.116.0 or later. You can definitely encounter issues such as APIs being offered by TypeScript which do not actually exist yet in your runtime version of UI5, but this is in fact not different at all from regular JavaScript development, where - when using the newest version of the API documentation you would also have to check the "since" annotation of APIs before using them. And of course such a new API would be noticed as soon as the code is executed. There is no support for this usage, but it could improve the usage experience a lot, as the types have become better and better.
@@ -141,13 +143,13 @@ For more specific questions, please see [the FAQ](faq.md). If it does not contai
 
 ## Other Deliverables
 
-* There are also type definitions describing the manifest.json files. They are published inside [@ui5/manifest](https://www.npmjs.com/package/@ui5/manifest) on npm. They would only be useful, though, wehn you write code interacting with `manifest.json` content.
+* There are also type definitions describing the manifest.json files. They are published inside [@ui5/manifest](https://www.npmjs.com/package/@ui5/manifest) on npm. They would only be useful, though, when you write code interacting with `manifest.json` content.
 
 ## Other Resources
 
 While the already mentioned UI5 TypeScript [tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) is the best starting point and [its recording](https://www.youtube.com/watch?v=CRKNIiXZN6U) also comes with a short introduction to TypeScript and how it is transpiled in UI5 apps, there are other not yet mentioned resources which provide partly complementary content:
 
-* The UI5con 2021 session on TypeScript ([recording available at YouTube](https://www.youtube.com/watch?v=5jfHNKQ48w8)) explains and demonstrates the overall approach for TypeScript and UI5 but is outdated regardign the build pipeline setup.
+* The UI5con 2021 session on TypeScript ([recording available at YouTube](https://www.youtube.com/watch?v=5jfHNKQ48w8)) explains and demonstrates the overall approach for TypeScript and UI5 but is outdated regarding the build pipeline setup.
 * The ["UI5 NewsCast" Podcast session #27 ("Bringing TypeScript to UI5")](https://podcast.opensap.info/ui5-newscast/2022/06/29/ui5-newscast-027-bringing-typescript-to-ui5/) explains background, history and the work being done in UI5 for TypeScript support.
 * Blog post by Volker Buzek: [How to debug a CAP app with UI5 TypeScript UI component with VS Code](https://blogs.sap.com/2021/11/16/debug-a-cap-app-with-ui5-typescript-ui-component-with-vs-code/)
 * Blog post series "My first experience with TypeScript in UI5" by Wouter Lemaire:
@@ -179,7 +181,7 @@ See [CONTRIBUTING.md](https://github.com/SAP/ui5-typescript/blob/master/CONTRIBU
 
 ## License
 
-Copyright (c) 2021-2024 SAP SE and ui5-typescript contributors.
+Copyright (c) 2021-2025 SAP SE and ui5-typescript contributors.
 
 This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
 

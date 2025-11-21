@@ -8,9 +8,14 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.143.0 (November 2025)
+- No news, code-wise
+- A browser for all released UI5 type definitions has been published at https://ui5.github.io/typescript/ui5-types-browser.html
+
+
 ## 1.142.0 (October 2025)
 - BUG: the @openui5/types and @sapui5/types definitions in version 1.142.0 accidentally come with an incompatible change: in `sap/ui/table/RowActionItem` the methods `setIcon` and `setText` have been removed. Version 1.142.1 will likely be fixed and re-introduce these methods. Also, @types/openui5 version 1.142.0 is already fixed.
-- FIX: in `sap/m/ListBase` and subclasses including `sap/m/List` and `sap/m/Table`, the `itemActionPress` event parameter holdign the action has been corrected from `itemAction` to `action`. Code accessing the former will cause a TS error now, but never did work in the first place. 
+- FIX: in `sap/m/ListBase` and subclasses including `sap/m/List` and `sap/m/Table`, the `itemActionPress` event parameter holding the action has been corrected from `itemAction` to `action`. Code accessing the former will cause a TS error now, but never did work in the first place. 
 
 ## 1.141.0 (September 2025)
 - No news
@@ -24,7 +29,7 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 ## 1.138.0 (July 2025)
 - RELATED: as UI5 became big enough to have its own GitHub org and we want to bundle all things UI5 there, along with other UI5 repositories, the https://github.com/SAP/ui5-typescript repository was moved to https://github.com/UI5/typescript on July 14th. This also changes the root of this documentation page to https://ui5.github.io/typescript/ (but there is auto-forwarding for the old URLs).
 
-## 1.137.0 (entire UI5 release was skipped)
+## 1.137.0 (does not exist - entire UI5 release was skipped)
 
 ## 1.136.0 (May 2025)
 - No news
@@ -176,7 +181,7 @@ We are providing an extraordinary v1.115.1 patch for the type definitions ([@typ
   const Device = (await import("sap/ui/Device")).default;
   const isMobile = Device.browser.mobile;
   ```
-  The previous workaround (importing the named export `browser` like `import { browser } from "sap/ui/Device";`) **does no longer work**. Please switch to using properties on the default export, as shown above.
+  The previous workaround (importing the named export `browser` like `import { browser } from "sap/ui/Device";`) **no longer works**. Please switch to using properties on the default export, as shown above.
 
 * **INCOMPATIBLE**: Enums and static properties are now properties of the module's default export (before this change they were named exports of the module). This change requires **adaptation in application code where such entities are imported**. Example:
 
@@ -447,7 +452,7 @@ A possible solution is to change the code like this
     view.doSomething();
   }
   ```
-  This seems tedious, as in "normal" controllers, when "properly" set up with a view, always the actual view will be returned - never "undefined". But the point of the "strictNullChecks" option of TypeScript is to protect from running into an issue at runtime where an object is not defined. This protection can only work when every posible "undefined" value is properly documented.
+  This seems tedious, as in "normal" controllers, when "properly" set up with a view, always the actual view will be returned - never "undefined". But the point of the "strictNullChecks" option of TypeScript is to protect from running into an issue at runtime where an object is not defined. This protection can only work when every possible "undefined" value is properly documented.
 
 * FEATURE: the JSDoc parser plugin has been [enhanced](https://github.com/SAP/openui5/commit/dae14be1a2b7ad7a4dbe4b084ba925328ca3da5e) to no longer collapse all object structure descriptions into the type "object", but to preserve the structure, so it gets part of the type definitions.<br>
 This means the type information about return structures can now be more detailed than with the JSDoc default behavior. This has an immediate positive effect on those APIs which already had precise descriptions and allows further upcoming improvements (e.g. the return type fix mentioned two bullet points below).
