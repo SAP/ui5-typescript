@@ -57,6 +57,23 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
       | PropertyByRelativeBindingPath<Data, Root, Path>;
   }
 
+  getOriginalProperty<Path extends AbsoluteBindingPath<Data>>(sPath: Path): PropertyByAbsoluteBindingPath<Data, Path>;
+  getOriginalProperty<Path extends RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
+    sPath: Path,
+    oContext: TypedJSONContext<Data, Root>,
+  ): PropertyByRelativeBindingPath<Data, Root, Path>;
+  getOriginalProperty<
+    Path extends AbsoluteBindingPath<Data> | RelativeBindingPath<Data, Root>,
+    Root extends AbsoluteBindingPath<Data>,
+  >(
+    sPath: Path,
+    oContext?: TypedJSONContext<Data, Root>,
+  ): PropertyByAbsoluteBindingPath<Data, Path> | PropertyByRelativeBindingPath<Data, Root, Path> {
+    return super.getOriginalProperty(sPath, oContext) as
+      | PropertyByAbsoluteBindingPath<Data, Path>
+      | PropertyByRelativeBindingPath<Data, Root, Path>;
+  }
+
   setData(oData: Data, bMerge?: boolean): void {
     super.setData(oData, bMerge);
   }

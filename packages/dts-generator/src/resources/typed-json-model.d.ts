@@ -19,10 +19,22 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       bReload?: boolean,
     ): TypedJSONContext<Data, Path>;
     getData(): Data;
+
     getProperty<Path extends AbsoluteBindingPath<Data>>(
       sPath: Path,
     ): PropertyByAbsoluteBindingPath<Data, Path>;
     getProperty<
+      Path extends RelativeBindingPath<Data, Root>,
+      Root extends AbsoluteBindingPath<Data>,
+    >(
+      sPath: Path,
+      oContext: TypedJSONContext<Data, Root>,
+    ): PropertyByRelativeBindingPath<Data, Root, Path>;
+
+    getOriginalProperty<Path extends AbsoluteBindingPath<Data>>(
+      sPath: Path,
+    ): PropertyByAbsoluteBindingPath<Data, Path>;
+    getOriginalProperty<
       Path extends RelativeBindingPath<Data, Root>,
       Root extends AbsoluteBindingPath<Data>,
     >(
