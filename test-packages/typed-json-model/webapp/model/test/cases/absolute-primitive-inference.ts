@@ -54,3 +54,24 @@ let aSymbol: symbol = Symbol("test");
 
 // value is a symbol -> not JSON serializable!
 /** @expect ts2322 */ aSymbol = model.getProperty("/aSymbol");
+
+/***********************************************************************************************************************
+ * Check model.getOriginalProperty
+ **********************************************************************************************************************/
+
+/** @expect ok     */ aString = model.getOriginalProperty("/aString");
+/** @expect ok     */ aNumber = model.getOriginalProperty("/aNumber");
+/** @expect ok     */ aBoolean = model.getOriginalProperty("/aBoolean");
+/** @expect ok     */ aNull = model.getOriginalProperty("/aNull");
+/** @expect ok     */ anUndefined = model.getOriginalProperty("/anUndefined");
+
+/** @expect ts2345 */ const test1 = model.getOriginalProperty("/doesNotExist");
+
+/** @expect ts2322 */ aNumber = model.getOriginalProperty("/aString");
+/** @expect ts2322 */ aString = model.getOriginalProperty("/aNumber");
+/** @expect ts2322 */ anUndefined = model.getOriginalProperty("/aNull");
+/** @expect ts2322 */ aNull = model.getOriginalProperty("/anUndefined");
+/** @expect ts2322 */ aBoolean = model.getOriginalProperty("/aDate");
+
+// value is a symbol -> not JSON serializable!
+/** @expect ts2322 */ aSymbol = model.getOriginalProperty("/aSymbol");

@@ -12,6 +12,7 @@ const array = [1, 2, 3];
 
 /** @expect ok     */ const model1 = new TypedJSONModel(array);
 /** @expect ok     */ let someNumber: number = model1.getProperty("/0");
+/** @expect ok     */ let anOriginalNumber: number = model1.getOriginalProperty("/0");
 /** @expect ok     */ model1.setProperty("/0", 42);
 /** @expect ts2345 */ model1.setProperty("/0", "42");
 
@@ -22,7 +23,9 @@ const model2 = new TypedJSONModel([] as TestArray);
 
 /** @expect ok     */ const someObject: { aNumber: number } = model2.getProperty("/0");
 /** @expect ok     */ someNumber = model2.getProperty("/0/aNumber");
+/** @expect ok     */ anOriginalNumber = model2.getOriginalProperty("/0/aNumber");
 /** @expect ts2322 */ const someString: string = model2.getProperty("/0");
+/** @expect ts2322 */ const anOriginalString: string = model2.getOriginalProperty("/0");
 /** @expect ok     */ model2.setProperty("/0", { aNumber: 42 });
 /** @expect ts2345 */ model2.setProperty("/0", {});
 

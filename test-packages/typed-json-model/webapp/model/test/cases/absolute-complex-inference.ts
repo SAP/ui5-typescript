@@ -68,6 +68,32 @@ import { TypedJSONModel } from "../../model";
 /** @expect ts2322 */ anObject = model.getProperty("/aTuple/0");
 
 /***********************************************************************************************************************
+ * Check model.getOriginalProperty
+ **********************************************************************************************************************/
+
+/** @expect ok     */ anObject = model.getOriginalProperty("/anObject");
+/** @expect ok     */ anArray = model.getOriginalProperty("/anArray");
+/** @expect ok     */ aJsonSafeArray = model.getOriginalProperty("/aJsonSafeArray");
+/** @expect ok     */ aJsonSafe = model.getOriginalProperty("/aJsonSafeArray/0");
+/** @expect ok     */ aPlaceholder = model.getOriginalProperty("/aPlaceholder");
+/** @expect ok     */ anArrayOfPlaceholders = model.getOriginalProperty("/anArrayOfPlaceholders");
+/** @expect ok     */ anotherPlaceholder = model.getOriginalProperty("/anArrayOfPlaceholders/0");
+/** @expect ok     */ aTuple = model.getOriginalProperty("/aTuple");
+/** @expect ok     */ anElementInATuple = model.getOriginalProperty("/aTuple/0");
+
+/** @expect ts2345 */ anything = model.getOriginalProperty("/anObject/0");
+/** @expect ts2345 */ anything = model.getOriginalProperty("/doesNotExist");
+/** @expect ts2345 */ anything = model.getOriginalProperty("/anArray/0/doesNotExist");
+
+/** @expect ts2739 */ aPlaceholder = model.getOriginalProperty("/anObject");
+/** @expect ts2322 */ anArrayOfPlaceholders = model.getOriginalProperty("/aJsonSafeArray");
+/** @expect ts2322 */ anObject = model.getOriginalProperty("/aJsonSafeArray/0");
+/** @expect ts2322 */ aJsonSafe = model.getOriginalProperty("/aPlaceholder");
+/** @expect ts2322 */ aJsonSafe = model.getOriginalProperty("/anArrayOfPlaceholders/0");
+/** @expect ts2322 */ anElementInATuple = model.getOriginalProperty("/aTuple");
+/** @expect ts2322 */ anObject = model.getOriginalProperty("/aTuple/0");
+
+/***********************************************************************************************************************
  * Check model.getData / model.setData
  **********************************************************************************************************************/
 

@@ -67,3 +67,29 @@ import { TypedJSONModel } from "../../model";
 /** @expect ts2322 */ aJsonSafe = model.getProperty("anArrayOfPlaceholders/0", context);
 /** @expect ts2322 */ anElementInATuple = model.getProperty("aTuple", context);
 /** @expect ts2322 */ anObject = model.getProperty("aTuple/0", context);
+
+/***********************************************************************************************************************
+ * Check model.getOriginalProperty
+ **********************************************************************************************************************/
+
+/** @expect ok     */ anObject = model.getOriginalProperty("anObject", context);
+/** @expect ok     */ anArray = model.getOriginalProperty("anArray", context);
+/** @expect ok     */ aJsonSafeArray = model.getOriginalProperty("aJsonSafeArray", context);
+/** @expect ok     */ aJsonSafe = model.getOriginalProperty("aJsonSafeArray/0", context);
+/** @expect ok     */ aPlaceholder = model.getOriginalProperty("aPlaceholder", context);
+/** @expect ok     */ anArrayOfPlaceholders = model.getOriginalProperty("anArrayOfPlaceholders", context);
+/** @expect ok     */ anotherPlaceholder = model.getOriginalProperty("anArrayOfPlaceholders/0", context);
+/** @expect ok     */ aTuple = model.getOriginalProperty("aTuple", context);
+/** @expect ok     */ anElementInATuple = model.getOriginalProperty("aTuple/0", context);
+
+/** @expect ts2345 */ anything = model.getOriginalProperty("anObject/0", context);
+/** @expect ts2345 */ anything = model.getOriginalProperty("doesNotExist", context);
+/** @expect ts2345 */ anything = model.getOriginalProperty("anArray/0/doesNotExist", context);
+
+/** @expect ts2739 */ aPlaceholder = model.getOriginalProperty("anObject", context);
+/** @expect ts2322 */ anArrayOfPlaceholders = model.getOriginalProperty("aJsonSafeArray", context);
+/** @expect ts2322 */ anObject = model.getOriginalProperty("aJsonSafeArray/0", context);
+/** @expect ts2322 */ aJsonSafe = model.getOriginalProperty("aPlaceholder", context);
+/** @expect ts2322 */ aJsonSafe = model.getOriginalProperty("anArrayOfPlaceholders/0", context);
+/** @expect ts2322 */ anElementInATuple = model.getOriginalProperty("aTuple", context);
+/** @expect ts2322 */ anObject = model.getOriginalProperty("aTuple/0", context);
