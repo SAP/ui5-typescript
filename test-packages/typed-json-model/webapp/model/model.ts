@@ -69,7 +69,7 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     sPath: Path,
     oContext?: TypedJSONContext<Data, Root>,
   ): PropertyByAbsoluteBindingPath<Data, Path> | PropertyByRelativeBindingPath<Data, Root, Path> {
-    return super.getProperty(sPath, oContext) as
+    return super.getOriginalProperty(sPath, oContext) as
       | PropertyByAbsoluteBindingPath<Data, Path>
       | PropertyByRelativeBindingPath<Data, Root, Path>;
   }
