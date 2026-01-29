@@ -127,8 +127,13 @@ export const primitivesByInference = {
 export const objectLikeByTypeAlias: TObjectLike = {
   anObject: {},
   anArray: [],
+  anArrayOfArrays: [
+    ["string", 1],
+    [true, false],
+  ],
   aJsonSafeArray: ["string", 1, true],
   anArrayOfPlaceholders: [new Placeholder()],
+  anObjectWithArray: { anArray: ["string"] },
   aPlaceholder: new Placeholder(),
   aTuple: ["string", 1],
 };
@@ -140,8 +145,13 @@ export const objectLikeByTypeAlias: TObjectLike = {
 export const objectLikeByInterface: IObjectLike = {
   anObject: {},
   anArray: [],
+  anArrayOfArrays: [
+    ["string", 1],
+    [true, false],
+  ],
   aJsonSafeArray: ["string", 1, true],
   anArrayOfPlaceholders: [new Placeholder()],
+  anObjectWithArray: { anArray: ["string"] },
   aPlaceholder: new Placeholder(),
   aTuple: ["string", 1],
 };
