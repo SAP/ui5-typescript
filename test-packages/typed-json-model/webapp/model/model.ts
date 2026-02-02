@@ -71,7 +71,7 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     mParameters?: object,
   ): JSONListBinding;
   // Overload for relative paths
-  bindList<Root extends AbsoluteBindingPath<Data>, Path extends RelativeListBindingPath<Data, Root>>(
+  bindList<Path extends RelativeListBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
     sPath: Path,
     oContext: TypedJSONContext<Data, Root>,
     aSorters?: Sorter | Sorter[],
