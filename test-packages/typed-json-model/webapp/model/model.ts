@@ -1,8 +1,8 @@
 import Context from "sap/ui/model/Context";
+import Filter from "sap/ui/model/Filter";
+import Sorter from "sap/ui/model/Sorter";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import JSONListBinding from "sap/ui/model/json/JSONListBinding";
-import Sorter from "sap/ui/model/Sorter";
-import Filter from "sap/ui/model/Filter";
 import {
   AbsoluteBindingPath,
   AbsoluteListBindingPath,
