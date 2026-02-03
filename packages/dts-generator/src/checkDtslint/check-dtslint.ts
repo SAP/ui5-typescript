@@ -133,7 +133,7 @@ function prepareTempDir(): string {
 }
 
 const MIN_TYPESCRIPT_VERSION_LINES = `/**
-* Copyright (c) 2025 SAP SE or an SAP affiliate company and OpenUI5 contributors.
+* Copyright (c) 2026 SAP SE or an SAP affiliate company and OpenUI5 contributors.
 */
 
 /**
