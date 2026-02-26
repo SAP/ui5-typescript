@@ -1,10 +1,15 @@
 import Context from "sap/ui/model/Context";
+import Filter from "sap/ui/model/Filter";
+import Sorter from "sap/ui/model/Sorter";
 import JSONModel from "sap/ui/model/json/JSONModel";
+import JSONListBinding from "sap/ui/model/json/JSONListBinding";
 import {
   AbsoluteBindingPath,
+  AbsoluteListBindingPath,
   PropertyByAbsoluteBindingPath,
   PropertyByRelativeBindingPath,
   RelativeBindingPath,
+  RelativeListBindingPath,
 } from "./typing";
 
 export class TypedJSONContext<Data extends object, Root extends AbsoluteBindingPath<Data>> extends Context {
@@ -55,6 +60,36 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     return super.getProperty(sPath, oContext) as
       | PropertyByAbsoluteBindingPath<Data, Path>
       | PropertyByRelativeBindingPath<Data, Root, Path>;
+  }
+
+  // Overload for absolute paths
+  bindList<Path extends AbsoluteListBindingPath<Data>>(
+    sPath: Path,
+    oContext?: undefined,
+    aSorters?: Sorter | Sorter[],
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+  ): JSONListBinding;
+  // Overload for relative paths
+  bindList<Path extends RelativeListBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
+    sPath: Path,
+    oContext: TypedJSONContext<Data, Root>,
+    aSorters?: Sorter | Sorter[],
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+  ): JSONListBinding;
+  // Implementation
+  bindList<
+    Path extends AbsoluteListBindingPath<Data> | RelativeListBindingPath<Data, Root>,
+    Root extends AbsoluteBindingPath<Data>,
+  >(
+    sPath: Path,
+    oContext?: TypedJSONContext<Data, Root>,
+    aSorters?: Sorter | Sorter[],
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+  ): JSONListBinding {
+    return super.bindList(sPath, oContext, aSorters, aFilters, mParameters);
   }
 
   setData(oData: Data, bMerge?: boolean): void {

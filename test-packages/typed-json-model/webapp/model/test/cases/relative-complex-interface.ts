@@ -10,6 +10,7 @@
  */
 
 import { JSONSafe, objectLikeByInterface, Placeholder } from "../input";
+import JSONListBinding from "sap/ui/model/json/JSONListBinding";
 
 import { TypedJSONModel } from "../../model";
 
@@ -67,3 +68,22 @@ import { TypedJSONModel } from "../../model";
 /** @expect ts2322 */ aJsonSafe = model.getProperty("anArrayOfPlaceholders/0", context);
 /** @expect ts2322 */ anElementInATuple = model.getProperty("aTuple", context);
 /** @expect ts2322 */ anObject = model.getProperty("aTuple/0", context);
+
+/***********************************************************************************************************************
+ * Check model.bindList
+ **********************************************************************************************************************/
+
+/** @expect ok     */ let listBinding: JSONListBinding = model.bindList("anArray", context);
+/** @expect ok     */ listBinding = model.bindList("anArrayOfArrays/0", context);
+/** @expect ok     */ listBinding = model.bindList("anObjectWithArray/anArray", context);
+
+// incorrect binding paths
+/** @expect ts2769 */ listBinding = model.bindList("aJsonSafeArray/0", context);
+/** @expect ts2769 */ listBinding = model.bindList("anArrayOfArrays/0/0", context);
+/** @expect ts2769 */ listBinding = model.bindList("anObjectWithArray/anArray/0", context);
+/** @expect ts2769 */ listBinding = model.bindList("anArrayOfPlaceholders/0", context);
+/** @expect ts2769 */ listBinding = model.bindList("anArrayOfObjects/0", context);
+
+// bindList always returns a JSONListBinding and cannot be assigned to other types
+/** @expect ts2739 */ aPlaceholder = model.bindList("anArray", context);
+/** @expect ts2322 */ aJsonSafe = model.bindList("anArray", context);
