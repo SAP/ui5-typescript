@@ -29,6 +29,20 @@ export type AbsoluteBindingPath<Type> =
         never;
 
 /**
+ * Valid absolute binding path for underlying `Array` types.
+ *
+ * @example
+ * type SalesOrder = { id: string, items: string[] };
+ * type PathInObject = PathInJSONModel<SalesOrder>; // "/id" | "/items"
+ * let path: PathInObject = "/items"; // ok
+ * path = "/id"; // error
+ * path = "/items/0"; // error, since an element in the array is a string
+ */
+export type AbsoluteListBindingPath<Type> = {
+  [Path in AbsoluteBindingPath<Type>]: PropertyByAbsoluteBindingPath<Type, Path> extends Array<unknown> ? Path : never;
+}[AbsoluteBindingPath<Type>];
+
+/**
  * Valid relative binding path in a JSONModel.
  * The root of the path is defined by the given root string.
  *
@@ -38,6 +52,20 @@ export type AbsoluteBindingPath<Type> =
  */
 export type RelativeBindingPath<Type, Root extends AbsoluteBindingPath<Type>> =
   AbsoluteBindingPath<TypeAtPath<Type, Root>> extends `/${infer Rest}` ? Rest : never;
+
+/**
+ * Valid relative binding path for underlying `Array` types.
+ * The root of the path is defined by the given root string.
+ *
+ * @example
+ * type SalesOrder = { buyer: { id: string, items: string[] } };
+ * type PathRelativeToSalesOrder = RelativeListBindingPath<SalesOrderWrapper, "/buyer">; // "id" | "items"
+ */
+export type RelativeListBindingPath<Type, Root extends AbsoluteBindingPath<Type>> = {
+  [Path in RelativeBindingPath<Type, Root>]: PropertyByRelativeBindingPath<Type, Root, Path> extends Array<unknown>
+    ? Path
+    : never;
+}[RelativeBindingPath<Type, Root>];
 
 /**
  * The type of a property in a JSONModel identified by the given path.
