@@ -2,6 +2,7 @@ declare module "sap/ui/model/json/TypedJSONModel" {
   import JSONModel from "sap/ui/model/json/JSONModel";
   import TypedJSONContext from "sap/ui/model/json/TypedJSONContext";
   import Context from "sap/ui/model/Context";
+  import Message from "sap/ui/core/message/Message";
 
   /**
    * TypedJSONModel is a subclass of JSONModel that provides type-safe access to the model data. It is only available when using UI5 with TypeScript.
@@ -19,6 +20,10 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       bReload?: boolean,
     ): TypedJSONContext<Data, Path>;
     getData(): Data;
+    getMessagesByPath<Path extends AbsoluteBindingPath<Data>>(
+      sPath: Path,
+      bPrefixMatch?: boolean,
+    ): Message[];
     getProperty<Path extends AbsoluteBindingPath<Data>>(
       sPath: Path,
     ): PropertyByAbsoluteBindingPath<Data, Path>;
