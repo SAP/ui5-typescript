@@ -6,6 +6,7 @@ import {
   PropertyByRelativeBindingPath,
   RelativeBindingPath,
 } from "./typing";
+import Message from "sap/ui/core/message/Message";
 
 export class TypedJSONContext<Data extends object, Root extends AbsoluteBindingPath<Data>> extends Context {
   constructor(oModel: TypedJSONModel<Data>, sPath: Root) {
@@ -41,6 +42,10 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
 
   getData(): Data {
     return super.getData() as Data;
+  }
+
+  getMessagesByPath<Path extends AbsoluteBindingPath<Data>>(sPath: Path, bPrefixMatch?: boolean): Message[] {
+    return super.getMessagesByPath(sPath, bPrefixMatch);
   }
 
   getProperty<Path extends AbsoluteBindingPath<Data>>(sPath: Path): PropertyByAbsoluteBindingPath<Data, Path>;
