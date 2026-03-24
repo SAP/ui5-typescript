@@ -2,10 +2,13 @@ import Context from "sap/ui/model/Context";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import {
   AbsoluteBindingPath,
+  AbsoluteObjectBindingPath,
   PropertyByAbsoluteBindingPath,
   PropertyByRelativeBindingPath,
   RelativeBindingPath,
+  RelativeObjectBindingPath,
 } from "./typing";
+import ClientContextBinding from "sap/ui/model/ClientContextBinding";
 
 export class TypedJSONContext<Data extends object, Root extends AbsoluteBindingPath<Data>> extends Context {
   constructor(oModel: TypedJSONModel<Data>, sPath: Root) {
@@ -37,6 +40,26 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     bReload?: boolean,
   ): TypedJSONContext<Data, Path> {
     return super.createBindingContext(sPath, oContext, mParameters, fnCallBack, bReload) as TypedJSONContext<Data, Path>;
+  }
+
+  // Overload for absolute paths
+  bindContext<Path extends AbsoluteObjectBindingPath<Data>>(
+    sPath: Path,
+    oContext?: undefined,
+    mParameters?: object,
+  ): ClientContextBinding;
+  // Overload for relative paths
+  bindContext<Path extends RelativeObjectBindingPath<Data, Root>, Root extends AbsoluteObjectBindingPath<Data>>(
+    sPath: Path,
+    oContext?: TypedJSONContext<Data, Root>,
+    mParameters?: object,
+  ): ClientContextBinding;
+  // Implementation
+  bindContext<
+    Path extends AbsoluteObjectBindingPath<Data> | RelativeObjectBindingPath<Data, Root>,
+    Root extends AbsoluteObjectBindingPath<Data>,
+  >(sPath: Path, oContext?: TypedJSONContext<Data, Root>, mParameters?: object): ClientContextBinding {
+    return super.bindContext(sPath, oContext, mParameters);
   }
 
   getData(): Data {
