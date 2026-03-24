@@ -43,6 +43,21 @@ export type AbsoluteListBindingPath<Type> = {
 }[AbsoluteBindingPath<Type>];
 
 /**
+ * Valid absolute binding path for underlying object types (excludes arrays and primitives).
+ *
+ * @example
+ * type Order = { customer: { address: { city: string } }, items: string[], total: number };
+ * type ObjectPaths = AbsoluteObjectBindingPath<Order>; // "/customer" | "/customer/address"
+ */
+export type AbsoluteObjectBindingPath<Type> = {
+  [Path in AbsoluteBindingPath<Type>]: PropertyByAbsoluteBindingPath<Type, Path> extends Array<unknown>
+    ? never
+    : PropertyByAbsoluteBindingPath<Type, Path> extends object
+      ? Path
+      : never;
+}[AbsoluteBindingPath<Type>];
+
+/**
  * Valid relative binding path in a JSONModel.
  * The root of the path is defined by the given root string.
  *
@@ -114,6 +129,25 @@ export type PropertyByRelativeBindingPath<
   Root extends string,
   RelativePath extends string,
 > = PropertyByAbsoluteBindingPath<Type, `${Root}/${RelativePath}`>;
+
+/**
+ * Valid relative binding path for underlying object types (excludes arrays and primitives).
+ * The root of the path is defined by the given root string.
+ *
+ * @example
+ * type SalesOrder = { buyer: { id: string, name: string }, items: string[] };
+ * type PathRelativeToSalesOrder = RelativeObjectBindingPath<SalesOrder, "/buyer">; // never (no nested objects)
+ *
+ * type Order = { customer: { address: { city: string } }, total: number };
+ * type PathInOrder = RelativeObjectBindingPath<Order, "/">; // "customer" | "customer/address"
+ */
+export type RelativeObjectBindingPath<Type, Root extends AbsoluteBindingPath<Type>> = {
+  [Path in RelativeBindingPath<Type, Root>]: PropertyByRelativeBindingPath<Type, Root, Path> extends Array<unknown>
+    ? never
+    : PropertyByRelativeBindingPath<Type, Root, Path> extends object
+      ? Path
+      : never;
+}[RelativeBindingPath<Type, Root>];
 
 /***********************************************************************************************************************
  * Helper types to split the types above into separate parts

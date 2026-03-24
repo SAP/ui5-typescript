@@ -6,10 +6,7 @@
 import { TypedJSONModel } from "../../model";
 import JSONListBinding from "sap/ui/model/json/JSONListBinding";
 import { JSONSafe, Placeholder } from "../input";
-
-/***********************************************************************************************************************
- * bindList - Absolute cases
- **********************************************************************************************************************/
+import ClientContextBinding from "sap/ui/model/ClientContextBinding";
 
 const data = {
   root: {
@@ -26,6 +23,47 @@ const data = {
     string: "foo",
   },
 };
+
+/***********************************************************************************************************************
+ * bindContext - Absolute cases
+ **********************************************************************************************************************/
+
+const model1 = new TypedJSONModel(data);
+
+/** @expect ok     */ let clientContextBindingAbsolute: ClientContextBinding = model1.bindContext("/root/anObject");
+/** @expect ok     */ model1.bindContext("/root/anArrayOfObjects/0");
+/** @expect ok     */ model1.bindContext("/root/aPlaceholder");
+/** @expect ok     */ model1.bindContext("/root/anArrayOfPlaceholders/0");
+
+/** @expect ts2769 */ model1.bindContext("/root/anArray");
+/** @expect ts2769 */ model1.bindContext("/root/aTuple");
+/** @expect ts2769 */ model1.bindContext("/root/aTuple/0");
+/** @expect ts2769 */ model1.bindContext("/root/aJsonSafeArray/0");
+/** @expect ts2769 */ model1.bindContext("/root/anArrayOfObjects/0/aNumber");
+/** @expect ts2769 */ model1.bindContext("/root/anArray/0/doesNotExist");
+
+/***********************************************************************************************************************
+ * bindContext - Relative cases
+ **********************************************************************************************************************/
+
+const context1 = model1.createBindingContext("/root");
+
+/** @expect ok     */ let clientContextBindingRelative: ClientContextBinding = model1.bindContext("anObject", context1);
+/** @expect ok     */ model1.bindContext("anArrayOfObjects/0", context1);
+/** @expect ok     */ model1.bindContext("aPlaceholder", context1);
+/** @expect ok     */ model1.bindContext("anArrayOfPlaceholders/0", context1);
+
+/** @expect ts2769 */ model1.bindContext("anArray", context1);
+/** @expect ts2769 */ model1.bindContext("aTuple", context1);
+/** @expect ts2769 */ model1.bindContext("aTuple/0", context1);
+/** @expect ts2769 */ model1.bindContext("aJsonSafeArray/0", context1);
+/** @expect ts2769 */ model1.bindContext("anArrayOfObjects/0/aNumber", context1);
+/** @expect ts2769 */ model1.bindContext("anArray/0/doesNotExist", context1);
+
+/***********************************************************************************************************************
+ * bindList - Absolute cases
+ **********************************************************************************************************************/
+
 let aPlaceholder: Placeholder = new Placeholder();
 let aJsonSafe: JSONSafe = "foo";
 const model3 = new TypedJSONModel(data);
