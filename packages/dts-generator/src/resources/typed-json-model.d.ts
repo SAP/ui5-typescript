@@ -5,6 +5,7 @@ declare module "sap/ui/model/json/TypedJSONModel" {
   import JSONListBinding from "sap/ui/model/json/JSONListBinding";
   import TypedJSONContext from "sap/ui/model/json/TypedJSONContext";
   import Context from "sap/ui/model/Context";
+  import ClientContextBinding from "sap/ui/model/ClientContextBinding";
 
   /**
    * TypedJSONModel is a subclass of JSONModel that provides type-safe access to the model data. It is only available when using UI5 with TypeScript.
@@ -21,6 +22,19 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       fnCallBack?: Function,
       bReload?: boolean,
     ): TypedJSONContext<Data, Path>;
+    bindContext<Path extends AbsoluteObjectBindingPath<Data>>(
+      sPath: Path,
+      oContext?: undefined,
+      mParameters?: object,
+    ): ClientContextBinding;
+    bindContext<
+      Path extends RelativeObjectBindingPath<Data, Root>,
+      Root extends AbsoluteObjectBindingPath<Data>,
+    >(
+      sPath: Path,
+      oContext?: TypedJSONContext<Data, Root>,
+      mParameters?: object,
+    ): ClientContextBinding;
     getData(): Data;
     getProperty<Path extends AbsoluteBindingPath<Data>>(
       sPath: Path,
@@ -123,6 +137,24 @@ declare module "sap/ui/model/json/TypedJSONModel" {
   }[AbsoluteBindingPath<Type>];
 
   /**
+   * Valid absolute binding path for underlying object types (excludes arrays and primitives).
+   *
+   * @example
+   * type Order = { customer: { address: { city: string } }, items: string[], total: number };
+   * type ObjectPaths = AbsoluteObjectBindingPath<Order>; // "/customer" | "/customer/address"
+   */
+  export type AbsoluteObjectBindingPath<Type> = {
+    [Path in AbsoluteBindingPath<Type>]: PropertyByAbsoluteBindingPath<
+      Type,
+      Path
+    > extends Array<unknown>
+      ? never
+      : PropertyByAbsoluteBindingPath<Type, Path> extends object
+        ? Path
+        : never;
+  }[AbsoluteBindingPath<Type>];
+
+  /**
    * Valid relative binding path in a JSONModel.
    * The root of the path is defined by the given root string.
    *
@@ -157,6 +189,32 @@ declare module "sap/ui/model/json/TypedJSONModel" {
     > extends Array<unknown>
       ? Path
       : never;
+  }[RelativeBindingPath<Type, Root>];
+
+  /**
+   * Valid relative binding path for underlying object types (excludes arrays and primitives).
+   * The root of the path is defined by the given root string.
+   *
+   * @example
+   * type SalesOrder = { buyer: { id: string, name: string }, items: string[] };
+   * type PathRelativeToSalesOrder = RelativeObjectBindingPath<SalesOrder, "/buyer">; // never (no nested objects)
+   *
+   * type Order = { customer: { address: { city: string } }, total: number };
+   * type PathInOrder = RelativeObjectBindingPath<Order, "/">; // "customer" | "customer/address"
+   */
+  export type RelativeObjectBindingPath<
+    Type,
+    Root extends AbsoluteBindingPath<Type>,
+  > = {
+    [Path in RelativeBindingPath<Type, Root>]: PropertyByRelativeBindingPath<
+      Type,
+      Root,
+      Path
+    > extends Array<unknown>
+      ? never
+      : PropertyByRelativeBindingPath<Type, Root, Path> extends object
+        ? Path
+        : never;
   }[RelativeBindingPath<Type, Root>];
 
   /**
