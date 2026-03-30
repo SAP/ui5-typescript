@@ -12,7 +12,6 @@
 import { JSONSafe, objectLikeByInference, Placeholder } from "../input";
 
 import { TypedJSONModel } from "../../model";
-import ClientContextBinding from "sap/ui/model/ClientContextBinding";
 
 /***********************************************************************************************************************
  * Check model.setProperty
