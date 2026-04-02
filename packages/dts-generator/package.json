@@ -28,7 +28,7 @@
     "argparse": "^2.0.1",
     "es-main": "^1.4.0",
     "fs-extra": "11.3.2",
-    "lodash": "4.17.21",
+    "lodash": "4.18.1",
     "lodash.combinations": "18.11.1",
     "node-fetch": "^3.3.2",
     "prettier": "3.6.2",
