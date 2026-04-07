@@ -2,10 +2,15 @@ import Context from "sap/ui/model/Context";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import {
   AbsoluteBindingPath,
+  AbsoluteTreeBindingPath,
   PropertyByAbsoluteBindingPath,
   PropertyByRelativeBindingPath,
   RelativeBindingPath,
+  RelativeTreeBindingPath,
 } from "./typing";
+import Filter from "sap/ui/model/Filter";
+import Sorter from "sap/ui/model/Sorter";
+import JSONTreeBinding from "sap/ui/model/json/JSONTreeBinding";
 
 export class TypedJSONContext<Data extends object, Root extends AbsoluteBindingPath<Data>> extends Context {
   constructor(oModel: TypedJSONModel<Data>, sPath: Root) {
@@ -37,6 +42,36 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     bReload?: boolean,
   ): TypedJSONContext<Data, Path> {
     return super.createBindingContext(sPath, oContext, mParameters, fnCallBack, bReload) as TypedJSONContext<Data, Path>;
+  }
+
+  // Overload for absolute paths
+  bindTree<Path extends AbsoluteTreeBindingPath<Data>>(
+    sPath: Path,
+    oContext?: undefined,
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+    aSorters?: Sorter | Sorter[],
+  ): JSONTreeBinding;
+  // Overload for relative paths
+  bindTree<Path extends RelativeTreeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
+    sPath: Path,
+    oContext: TypedJSONContext<Data, Root>,
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+    aSorters?: Sorter | Sorter[],
+  ): JSONTreeBinding;
+  // Implementation
+  bindTree<
+    Path extends AbsoluteTreeBindingPath<Data> | RelativeTreeBindingPath<Data, Root>,
+    Root extends AbsoluteBindingPath<Data>,
+  >(
+    sPath: Path,
+    oContext?: TypedJSONContext<Data, Root>,
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+    aSorters?: Sorter | Sorter[],
+  ): JSONTreeBinding {
+    return super.bindTree(sPath, oContext, aFilters, mParameters, aSorters);
   }
 
   getData(): Data {

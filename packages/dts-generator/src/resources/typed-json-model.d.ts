@@ -1,5 +1,10 @@
+import { AbsoluteTreeBindingPath } from "../../../../test-packages/typed-json-model/webapp/model/typing";
+
 declare module "sap/ui/model/json/TypedJSONModel" {
   import JSONModel from "sap/ui/model/json/JSONModel";
+  import JSONTreeBinding from "sap/ui/model/json/JSONTreeBinding";
+  import Filter from "sap/ui/model/Filter";
+  import Sorter from "sap/ui/model/Sorter";
   import TypedJSONContext from "sap/ui/model/json/TypedJSONContext";
   import Context from "sap/ui/model/Context";
 
@@ -18,6 +23,27 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       fnCallBack?: Function,
       bReload?: boolean,
     ): TypedJSONContext<Data, Path>;
+
+    // Overload for absolute paths
+    bindTree<Path extends AbsoluteTreeBindingPath<Data>>(
+      sPath: Path,
+      oContext?: undefined,
+      aFilters?: Filter | Filter[],
+      mParameters?: object,
+      aSorters?: Sorter | Sorter[],
+    ): JSONTreeBinding;
+    // Overload for relative paths
+    bindTree<
+      Path extends RelativeTreeBindingPath<Data, Root>,
+      Root extends AbsoluteBindingPath<Data>,
+    >(
+      sPath: Path,
+      oContext: TypedJSONContext<Data, Root>,
+      aFilters?: Filter | Filter[],
+      mParameters?: object,
+      aSorters?: Sorter | Sorter[],
+    ): JSONTreeBinding;
+
     getData(): Data;
     getProperty<Path extends AbsoluteBindingPath<Data>>(
       sPath: Path,
