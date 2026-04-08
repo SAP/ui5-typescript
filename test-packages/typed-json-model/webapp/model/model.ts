@@ -1,4 +1,5 @@
 import Context from "sap/ui/model/Context";
+import PropertyBinding from "sap/ui/model/PropertyBinding";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import {
   AbsoluteBindingPath,
@@ -55,6 +56,25 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     return super.getProperty(sPath, oContext) as
       | PropertyByAbsoluteBindingPath<Data, Path>
       | PropertyByRelativeBindingPath<Data, Root, Path>;
+  }
+
+  // Overload for absolute paths
+  bindProperty<Path extends AbsoluteBindingPath<Data>>(
+    sPath: Path,
+    oContext?: undefined,
+    mParameters?: object,
+  ): PropertyBinding;
+  // Overload for relative paths
+  bindProperty<Path extends RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
+    sPath: Path,
+    oContext: TypedJSONContext<Data, Root>,
+    mParameters?: object,
+  ): PropertyBinding;
+  bindProperty<
+    Path extends AbsoluteBindingPath<Data> | RelativeBindingPath<Data, Root>,
+    Root extends AbsoluteBindingPath<Data>,
+  >(sPath: Path, oContext?: TypedJSONContext<Data, Root>, mParameters?: object): PropertyBinding {
+    return super.bindProperty(sPath, oContext, mParameters);
   }
 
   setData(oData: Data, bMerge?: boolean): void {
