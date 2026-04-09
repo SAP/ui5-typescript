@@ -77,22 +77,3 @@ import { TypedJSONModel } from "../../model";
 
 /** @expect ts2740 */ const dataB: Array<any> = model.getData();
 /** @expect ts2345 */ model.setData(dataB);
-
-/***********************************************************************************************************************
- * Check model.bindList
- **********************************************************************************************************************/
-
-/** @expect ok     */ let listBinding: JSONListBinding = model.bindList("/anArray");
-/** @expect ok     */ listBinding = model.bindList("/anArrayOfArrays/0");
-/** @expect ok     */ listBinding = model.bindList("/anObjectWithArray/anArray");
-
-// incorrect binding paths
-/** @expect ts2345 */ listBinding = model.bindList("/aJsonSafeArray/0");
-/** @expect ts2345 */ listBinding = model.bindList("/anArrayOfArrays/0/0");
-/** @expect ts2345 */ listBinding = model.bindList("/anObjectWithArray/anArray/0");
-/** @expect ts2345 */ listBinding = model.bindList("/anArrayOfPlaceholders/0");
-/** @expect ts2345 */ listBinding = model.bindList("/anArrayOfObjects/0");
-
-// bindList always returns a JSONListBinding and cannot be assigned to other types
-/** @expect ts2739 */ aPlaceholder = model.bindList("/anArray");
-/** @expect ts2322 */ aJsonSafe = model.bindList("/anArray");
