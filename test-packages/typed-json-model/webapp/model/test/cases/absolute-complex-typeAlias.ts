@@ -10,7 +10,6 @@
  */
 
 import { IObjectLike, JSONSafe, objectLikeByTypeAlias, Placeholder, TObjectLike } from "../input";
-import JSONListBinding from "sap/ui/model/json/JSONListBinding";
 
 import { TypedJSONModel } from "../../model";
 
