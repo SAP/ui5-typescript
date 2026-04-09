@@ -2,7 +2,6 @@
  * @file Various edge cases to test the TypedJSONModel
  */
 
-import Message from "sap/ui/core/message/Message";
 import { TypedJSONModel } from "../../model";
 
 /***********************************************************************************************************************
