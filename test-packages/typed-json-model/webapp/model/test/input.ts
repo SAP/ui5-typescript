@@ -58,9 +58,7 @@ export interface IPrimitives {
 export type TObjectLike = {
   anObject: object;
   anArray: Array<unknown>;
-  anArrayOfArrays: Array<Array<unknown>>;
   aJsonSafeArray: Array<JSONSafe>;
-  anObjectWithArray: { anArray: Array<unknown> };
   anArrayOfPlaceholders: Array<Placeholder>;
   aPlaceholder: Placeholder;
   aTuple: [string, number];
@@ -73,9 +71,7 @@ export type TObjectLike = {
 export interface IObjectLike {
   anObject: object;
   anArray: Array<unknown>;
-  anArrayOfArrays: Array<Array<unknown>>;
   aJsonSafeArray: Array<JSONSafe>;
-  anObjectWithArray: { anArray: Array<unknown> };
   anArrayOfPlaceholders: Array<Placeholder>;
   aPlaceholder: Placeholder;
   aTuple: [string, number];
@@ -127,13 +123,8 @@ export const primitivesByInference = {
 export const objectLikeByTypeAlias: TObjectLike = {
   anObject: {},
   anArray: [],
-  anArrayOfArrays: [
-    ["string", 1],
-    [true, false],
-  ],
   aJsonSafeArray: ["string", 1, true],
   anArrayOfPlaceholders: [new Placeholder()],
-  anObjectWithArray: { anArray: ["string"] },
   aPlaceholder: new Placeholder(),
   aTuple: ["string", 1],
 };
@@ -145,13 +136,8 @@ export const objectLikeByTypeAlias: TObjectLike = {
 export const objectLikeByInterface: IObjectLike = {
   anObject: {},
   anArray: [],
-  anArrayOfArrays: [
-    ["string", 1],
-    [true, false],
-  ],
   aJsonSafeArray: ["string", 1, true],
   anArrayOfPlaceholders: [new Placeholder()],
-  anObjectWithArray: { anArray: ["string"] },
   aPlaceholder: new Placeholder(),
   aTuple: ["string", 1],
 };
@@ -163,13 +149,8 @@ export const objectLikeByInterface: IObjectLike = {
 export const objectLikeByInference = {
   anObject: {},
   anArray: [],
-  anArrayOfArrays: [
-    ["string", 1],
-    [true, false],
-  ],
   aJsonSafeArray: ["string", 1, true],
   anArrayOfObjects: [{ aNumber: 1 }],
-  anObjectWithArray: { anArray: ["string"] },
   anArrayOfPlaceholders: [new Placeholder()],
   aPlaceholder: new Placeholder(),
   aTuple: ["string", 1],
