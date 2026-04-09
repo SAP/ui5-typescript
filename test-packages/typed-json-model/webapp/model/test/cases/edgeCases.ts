@@ -2,9 +2,7 @@
  * @file Various edge cases to test the TypedJSONModel
  */
 
-import ClientContextBinding from "sap/ui/model/ClientContextBinding";
 import { TypedJSONModel } from "../../model";
-import { Placeholder } from "../input";
 
 /***********************************************************************************************************************
  * Edge Case: The underlying data structure is an array (rather unusual)
