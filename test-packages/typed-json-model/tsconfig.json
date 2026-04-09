@@ -11,7 +11,8 @@
     "baseUrl": "./",
     "paths": {},
     "composite": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "types": ["@openui5/types"]
   },
   "include": ["./webapp/**/*"],
   "exclude": ["./**/*.mjs", "./webapp/**/test/**"]

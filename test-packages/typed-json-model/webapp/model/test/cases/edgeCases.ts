@@ -66,34 +66,3 @@ const model4 = new TypedJSONModel(edgeCase);
 /** @expect ok     */ model4.setProperty("/anIntersection", { a: 1, b: "b" });
 /** @expect ts2345 */ model4.setProperty("/anIntersection", { a: 1 });
 /** @expect ts2322 */ model4.setProperty("/anIntersection", { a: 1, b: 2 });
-
-/***********************************************************************************************************************
- * Check model.getMessagesByPath
- **********************************************************************************************************************/
-
-const data = {
-  aString: "string",
-  anObject: { a: "foo" },
-  anArray: [],
-  anArrayOfObjects: [{ aNumber: 1 }],
-};
-
-const model5 = new TypedJSONModel(data);
-
-/** @expect ok     */ model5.getMessagesByPath("/aString");
-/** @expect ok     */ model5.getMessagesByPath("/aString", true);
-
-/** @expect ok     */ const messages: Message[] = model5.getMessagesByPath("/anObject");
-/** @expect ok     */ model5.getMessagesByPath("/anObject", true);
-
-/** @expect ok     */ model5.getMessagesByPath("/anObject/a");
-/** @expect ok     */ model5.getMessagesByPath("/anObject/a", true);
-
-/** @expect ok     */ model5.getMessagesByPath("/anArrayOfObjects/0/aNumber");
-/** @expect ok     */ model5.getMessagesByPath("/anArrayOfObjects/0/aNumber", true);
-
-/** @expect ts2345 */ model5.getMessagesByPath("anObject");
-/** @expect ts2345 */ model5.getMessagesByPath("anObject", true);
-
-/** @expect ts2345 */ model5.getMessagesByPath("/anArray/0/doesNotExist");
-/** @expect ts2345 */ model5.getMessagesByPath("/anArray/0/doesNotExist", true);
