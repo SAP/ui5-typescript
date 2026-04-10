@@ -61,7 +61,7 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
   // Overload for relative paths
   bindContext<Path extends RelativeObjectBindingPath<Data, Root>, Root extends AbsoluteObjectBindingPath<Data>>(
     sPath: Path,
-    oContext?: TypedJSONContext<Data, Root>,
+    oContext: TypedJSONContext<Data, Root>,
     mParameters?: object,
   ): ClientContextBinding;
   // Implementation
