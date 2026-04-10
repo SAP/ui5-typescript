@@ -6,9 +6,10 @@
 import { TypedJSONModel } from "../../model";
 import { Placeholder } from "../input";
 import Message from "sap/ui/core/message/Message";
-import JSONTreeBinding from "sap/ui/model/json/JSONTreeBinding";
-import JSONListBinding from "sap/ui/model/json/JSONListBinding";
 import ClientContextBinding from "sap/ui/model/ClientContextBinding";
+import JSONListBinding from "sap/ui/model/json/JSONListBinding";
+import JSONPropertyBinding from "sap/ui/model/json/JSONPropertyBinding";
+import JSONTreeBinding from "sap/ui/model/json/JSONTreeBinding";
 
 const data = {
   root: {
@@ -133,3 +134,31 @@ const context = model.createBindingContext("/root");
 /** @expect ts2345 */ model.getMessagesByPath("anObjectWithArray", true);
 /** @expect ts2345 */ model.getMessagesByPath("/root/array/0/doesNotExist");
 /** @expect ts2345 */ model.getMessagesByPath("/root/array/0/doesNotExist", true);
+
+/***********************************************************************************************************************
+ * bindProperty - Absolute cases
+ **********************************************************************************************************************/
+
+/** @expect ok     */ const propertyBindingAbsolute: JSONPropertyBinding = model.bindProperty("/root/string");
+/** @expect ok     */ model.bindProperty("/root/number");
+/** @expect ok     */ model.bindProperty("/root/nested");
+/** @expect ok     */ model.bindProperty("/root/nested/0");
+/** @expect ok     */ model.bindProperty("/root/nested/0/value");
+/** @expect ok     */ model.bindProperty("/root/string", undefined);
+/** @expect ok     */ model.bindProperty("/root/number", undefined);
+
+/** @expect ts2345 */ model.bindProperty("/root/foo");
+/** @expect ts2345 */ model.bindProperty("/root/array/doesNotExist");
+/** @expect ts2345 */ model.bindProperty("/root/anObjectWithArray/anArray/0/doesNotExist");
+/** @expect ts2345 */ model.bindProperty("/doesNotExist");
+
+/***********************************************************************************************************************
+ * bindProperty - Relative cases
+ **********************************************************************************************************************/
+
+/** @expect ok     */ const propertyBindingRelative: JSONPropertyBinding = model.bindProperty("string", context);
+/** @expect ok     */ model.bindProperty("number", context);
+
+/** @expect ts2769 */ model.bindProperty("foo", context);
+/** @expect ts2769 */ model.bindProperty("doesNotExist", context);
+/** @expect ts2769 */ model.bindProperty("/string", "notAContext");
