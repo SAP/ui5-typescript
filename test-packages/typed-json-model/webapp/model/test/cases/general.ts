@@ -64,12 +64,12 @@ const context = model.createBindingContext("/root");
 /** @expect ok     */ model.bindContext("/root/aPlaceholder");
 /** @expect ok     */ model.bindContext("/root/anArrayOfPlaceholders/0");
 
-/** @expect ts2769 */ model.bindContext("/root/anArray");
-/** @expect ts2769 */ model.bindContext("/root/aTuple");
-/** @expect ts2769 */ model.bindContext("/root/aTuple/0");
-/** @expect ts2769 */ model.bindContext("/root/aJsonSafeArray/0");
-/** @expect ts2769 */ model.bindContext("/root/anArrayOfObjects/0/aNumber");
-/** @expect ts2769 */ model.bindContext("/root/anArray/0/doesNotExist");
+/** @expect ts2345 */ model.bindContext("/root/anArray");
+/** @expect ts2345 */ model.bindContext("/root/aTuple");
+/** @expect ts2345 */ model.bindContext("/root/aTuple/0");
+/** @expect ts2345 */ model.bindContext("/root/aJsonSafeArray/0");
+/** @expect ts2345 */ model.bindContext("/root/anArrayOfObjects/0/aNumber");
+/** @expect ts2345 */ model.bindContext("/root/anArray/0/doesNotExist");
 
 /***********************************************************************************************************************
  * bindContext - Relative cases

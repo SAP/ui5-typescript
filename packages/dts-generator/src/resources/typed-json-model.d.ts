@@ -36,7 +36,7 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       Root extends AbsoluteObjectBindingPath<Data>,
     >(
       sPath: Path,
-      oContext?: TypedJSONContext<Data, Root>,
+      oContext: TypedJSONContext<Data, Root>,
       mParameters?: object,
     ): ClientContextBinding;
 
@@ -52,7 +52,7 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       Root extends AbsoluteBindingPath<Data>,
     >(
       sPath: Path,
-      oContext?: TypedJSONContext<Data, Root>,
+      oContext: TypedJSONContext<Data, Root>,
       aSorters?: Sorter | Sorter[],
       aFilters?: Filter | Filter[],
       mParameters?: object,
