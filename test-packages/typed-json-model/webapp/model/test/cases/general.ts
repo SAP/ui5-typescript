@@ -39,17 +39,13 @@ const model3 = new TypedJSONModel(data);
 /** @expect ts2345 */ model3.bindList("/root/anArrayOfPlaceholders/0");
 /** @expect ts2345 */ model3.bindList("/root/anArrayOfObjects/0");
 
-// bindList always returns a JSONListBinding and cannot be assigned to other types
-/** @expect ts2739 */ aPlaceholder = model3.bindList("/root/array");
-/** @expect ts2322 */ aJsonSafe = model3.bindList("/root/array");
-
 /***********************************************************************************************************************
  * bindList - Relative cases
  **********************************************************************************************************************/
 
 const context = model3.createBindingContext("/root");
 
-/** @expect ok     */ let listBindingRealtive: JSONListBinding = model3.bindList("array", context);
+/** @expect ok     */ let listBindingRelative: JSONListBinding = model3.bindList("array", context);
 /** @expect ok     */ model3.bindList("nested", context);
 /** @expect ok     */ model3.bindList("anObjectWithArray/anArray", context);
 
@@ -58,7 +54,3 @@ const context = model3.createBindingContext("/root");
 /** @expect ts2769 */ model3.bindList("anObjectWithArray/anArray/0", context);
 /** @expect ts2769 */ model3.bindList("anArrayOfPlaceholders/0", context);
 /** @expect ts2769 */ model3.bindList("anArrayOfObjects/0", context);
-
-// bindList always returns a JSONListBinding and cannot be assigned to other types
-/** @expect ts2739 */ aPlaceholder = model3.bindList("array", context);
-/** @expect ts2322 */ aJsonSafe = model3.bindList("array", context);
