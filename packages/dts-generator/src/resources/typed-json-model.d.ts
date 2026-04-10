@@ -6,6 +6,7 @@ declare module "sap/ui/model/json/TypedJSONModel" {
   import Sorter from "sap/ui/model/Sorter";
   import JSONModel from "sap/ui/model/json/JSONModel";
   import JSONListBinding from "sap/ui/model/json/JSONListBinding";
+  import JSONPropertyBinding from "sap/ui/model/json/JSONPropertyBinding";
   import JSONTreeBinding from "sap/ui/model/json/JSONTreeBinding";
   import TypedJSONContext from "sap/ui/model/json/TypedJSONContext";
 
@@ -56,6 +57,20 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       aFilters?: Filter | Filter[],
       mParameters?: object,
     ): JSONListBinding;
+
+    bindProperty<Path extends AbsoluteBindingPath<Data>>(
+      sPath: Path,
+      oContext?: undefined,
+      mParameters?: object,
+    ): JSONPropertyBinding;
+    bindProperty<
+      Path extends RelativeBindingPath<Data, Root>,
+      Root extends AbsoluteBindingPath<Data>,
+    >(
+      sPath: Path,
+      oContext: TypedJSONContext<Data, Root>,
+      mParameters?: object,
+    ): JSONPropertyBinding;
 
     bindTree<Path extends AbsoluteTreeBindingPath<Data>>(
       sPath: Path,
