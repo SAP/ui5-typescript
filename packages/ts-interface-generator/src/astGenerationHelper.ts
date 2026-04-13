@@ -1090,7 +1090,10 @@ function createTSTypeNode(
       );
 
     case "object":
-      return factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword);
+      return factory.createUnionTypeNode([
+        factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
+        factory.createLiteralTypeNode(factory.createNull()),
+      ]);
 
     case "object[]":
       return factory.createArrayTypeNode(
@@ -1098,9 +1101,10 @@ function createTSTypeNode(
       );
 
     case "function":
-      return factory.createTypeReferenceNode(
-        factory.createIdentifier("Function"),
-      );
+      return factory.createUnionTypeNode([
+        factory.createTypeReferenceNode(factory.createIdentifier("Function")),
+        factory.createLiteralTypeNode(factory.createNull()),
+      ]);
 
     case "function[]":
       return factory.createArrayTypeNode(
