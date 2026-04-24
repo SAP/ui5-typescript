@@ -1,3 +1,5 @@
+import Message from "sap/ui/core/message/Message";
+import ClientContextBinding from "sap/ui/model/ClientContextBinding";
 import Context from "sap/ui/model/Context";
 import Filter from "sap/ui/model/Filter";
 import Sorter from "sap/ui/model/Sorter";
@@ -16,7 +18,6 @@ import {
   AbsoluteTreeBindingPath,
   RelativeTreeBindingPath,
 } from "./typing";
-import ClientContextBinding from "sap/ui/model/ClientContextBinding";
 
 export class TypedJSONContext<Data extends object, Root extends AbsoluteBindingPath<Data>> extends Context {
   constructor(oModel: TypedJSONModel<Data>, sPath: Root) {
@@ -132,6 +133,10 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
 
   getData(): Data {
     return super.getData() as Data;
+  }
+
+  getMessagesByPath<Path extends AbsoluteBindingPath<Data>>(sPath: Path, bPrefixMatch?: boolean): Message[] {
+    return super.getMessagesByPath(sPath, bPrefixMatch);
   }
 
   getProperty<Path extends AbsoluteBindingPath<Data>>(sPath: Path): PropertyByAbsoluteBindingPath<Data, Path>;
