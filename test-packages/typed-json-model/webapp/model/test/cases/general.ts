@@ -5,6 +5,7 @@
 
 import { TypedJSONModel } from "../../model";
 import { Placeholder } from "../input";
+import Message from "sap/ui/core/message/Message";
 import JSONTreeBinding from "sap/ui/model/json/JSONTreeBinding";
 import JSONListBinding from "sap/ui/model/json/JSONListBinding";
 import ClientContextBinding from "sap/ui/model/ClientContextBinding";
@@ -33,31 +34,31 @@ const context = model.createBindingContext("/root");
  * bindTree - Absolute cases
  **********************************************************************************************************************/
 
-/** @expect ok     */ let jsonTreeBindingAbsolute: JSONTreeBinding = model.bindTree("/root/array");
-/** @expect ok     */ jsonTreeBindingAbsolute = model.bindTree("/root/nested");
-/** @expect ts2345 */ jsonTreeBindingAbsolute = model.bindTree("/root/number");
-/** @expect ts2345 */ jsonTreeBindingAbsolute = model.bindTree("/root/string");
-/** @expect ts2345 */ jsonTreeBindingAbsolute = model.bindTree("/root/nonExisting");
-/** @expect ts2345 */ jsonTreeBindingAbsolute = model.bindTree("/root/array/0");
-/** @expect ts2345 */ jsonTreeBindingAbsolute = model.bindTree("/root/nested/value");
+/** @expect ok     */ const jsonTreeBindingAbsolute: JSONTreeBinding = model.bindTree("/root/array");
+/** @expect ok     */ model.bindTree("/root/nested");
+/** @expect ts2345 */ model.bindTree("/root/number");
+/** @expect ts2345 */ model.bindTree("/root/string");
+/** @expect ts2345 */ model.bindTree("/root/nonExisting");
+/** @expect ts2345 */ model.bindTree("/root/array/0");
+/** @expect ts2345 */ model.bindTree("/root/nested/value");
 
 /***********************************************************************************************************************
  * bindTree - Relative cases
  **********************************************************************************************************************/
 
-/** @expect ok     */ let jsonTreeBindingRelative: JSONTreeBinding = model.bindTree("array", context);
-/** @expect ok     */ jsonTreeBindingRelative = model.bindTree("nested", context);
-/** @expect ts2769 */ jsonTreeBindingRelative = model.bindTree("number", context);
-/** @expect ts2769 */ jsonTreeBindingRelative = model.bindTree("string", context);
-/** @expect ts2769 */ jsonTreeBindingRelative = model.bindTree("nonExisting", context);
-/** @expect ts2769 */ jsonTreeBindingRelative = model.bindTree("array/0", context);
-/** @expect ts2769 */ jsonTreeBindingRelative = model.bindTree("nested/value", context);
+/** @expect ok     */ const jsonTreeBindingRelative: JSONTreeBinding = model.bindTree("array", context);
+/** @expect ok     */ model.bindTree("nested", context);
+/** @expect ts2769 */ model.bindTree("number", context);
+/** @expect ts2769 */ model.bindTree("string", context);
+/** @expect ts2769 */ model.bindTree("nonExisting", context);
+/** @expect ts2769 */ model.bindTree("array/0", context);
+/** @expect ts2769 */ model.bindTree("nested/value", context);
 
 /***********************************************************************************************************************
  * bindContext - Absolute cases
  **********************************************************************************************************************/
 
-/** @expect ok     */ let clientContextBindingAbsolute: ClientContextBinding = model.bindContext("/root/anObjectWithArray");
+/** @expect ok     */ const clientContextBindingAbsolute: ClientContextBinding = model.bindContext("/root/anObjectWithArray");
 /** @expect ok     */ model.bindContext("/root/anArrayOfObjects/0");
 /** @expect ok     */ model.bindContext("/root/aPlaceholder");
 /** @expect ok     */ model.bindContext("/root/anArrayOfPlaceholders/0");
@@ -73,7 +74,10 @@ const context = model.createBindingContext("/root");
  * bindContext - Relative cases
  **********************************************************************************************************************/
 
-/** @expect ok     */ let clientContextBindingRelative: ClientContextBinding = model.bindContext("anObjectWithArray", context);
+/** @expect ok     */ const clientContextBindingRelative: ClientContextBinding = model.bindContext(
+  "anObjectWithArray",
+  context,
+);
 /** @expect ok     */ model.bindContext("anArrayOfObjects/0", context);
 /** @expect ok     */ model.bindContext("aPlaceholder", context);
 /** @expect ok     */ model.bindContext("anArrayOfPlaceholders/0", context);
@@ -89,7 +93,7 @@ const context = model.createBindingContext("/root");
  * bindList - Absolute cases
  **********************************************************************************************************************/
 
-/** @expect ok     */ let listBinding: JSONListBinding = model.bindList("/root/array");
+/** @expect ok     */ const listBinding: JSONListBinding = model.bindList("/root/array");
 /** @expect ok     */ model.bindList("/root/nested");
 /** @expect ok     */ model.bindList("/root/anObjectWithArray/anArray");
 
@@ -102,7 +106,7 @@ const context = model.createBindingContext("/root");
  * bindList - Relative cases
  **********************************************************************************************************************/
 
-/** @expect ok     */ let listBindingRelative: JSONListBinding = model.bindList("array", context);
+/** @expect ok     */ const listBindingRelative: JSONListBinding = model.bindList("array", context);
 /** @expect ok     */ model.bindList("nested", context);
 /** @expect ok     */ model.bindList("anObjectWithArray/anArray", context);
 
@@ -111,3 +115,21 @@ const context = model.createBindingContext("/root");
 /** @expect ts2769 */ model.bindList("anObjectWithArray/anArray/0", context);
 /** @expect ts2769 */ model.bindList("anArrayOfPlaceholders/0", context);
 /** @expect ts2769 */ model.bindList("anArrayOfObjects/0", context);
+
+/***********************************************************************************************************************
+ * getMessagesByPath - Only absolute paths are supported
+ **********************************************************************************************************************/
+
+/** @expect ok     */ const messages: Message[] = model.getMessagesByPath("/root/string");
+/** @expect ok     */ model.getMessagesByPath("/root/string", true);
+/** @expect ok     */ model.getMessagesByPath("/root/anObjectWithArray");
+/** @expect ok     */ model.getMessagesByPath("/root/anObjectWithArray", true);
+/** @expect ok     */ model.getMessagesByPath("/root/anObjectWithArray/anArray");
+/** @expect ok     */ model.getMessagesByPath("/root/anObjectWithArray/anArray", true);
+/** @expect ok     */ model.getMessagesByPath("/root/anObjectWithArray/anArray/0");
+/** @expect ok     */ model.getMessagesByPath("/root/anObjectWithArray/anArray/0", true);
+
+/** @expect ts2345 */ model.getMessagesByPath("anObjectWithArray");
+/** @expect ts2345 */ model.getMessagesByPath("anObjectWithArray", true);
+/** @expect ts2345 */ model.getMessagesByPath("/root/array/0/doesNotExist");
+/** @expect ts2345 */ model.getMessagesByPath("/root/array/0/doesNotExist", true);
