@@ -3,6 +3,7 @@ import Filter from "sap/ui/model/Filter";
 import Sorter from "sap/ui/model/Sorter";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import JSONListBinding from "sap/ui/model/json/JSONListBinding";
+import JSONTreeBinding from "sap/ui/model/json/JSONTreeBinding";
 import {
   AbsoluteBindingPath,
   AbsoluteListBindingPath,
@@ -12,6 +13,8 @@ import {
   RelativeListBindingPath,
   AbsoluteObjectBindingPath,
   RelativeObjectBindingPath,
+  AbsoluteTreeBindingPath,
+  RelativeTreeBindingPath,
 } from "./typing";
 import ClientContextBinding from "sap/ui/model/ClientContextBinding";
 
@@ -67,24 +70,6 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     return super.bindContext(sPath, oContext, mParameters);
   }
 
-  getData(): Data {
-    return super.getData() as Data;
-  }
-
-  getProperty<Path extends AbsoluteBindingPath<Data>>(sPath: Path): PropertyByAbsoluteBindingPath<Data, Path>;
-  getProperty<Path extends RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
-    sPath: Path,
-    oContext: TypedJSONContext<Data, Root>,
-  ): PropertyByRelativeBindingPath<Data, Root, Path>;
-  getProperty<Path extends AbsoluteBindingPath<Data> | RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
-    sPath: Path,
-    oContext?: TypedJSONContext<Data, Root>,
-  ): PropertyByAbsoluteBindingPath<Data, Path> | PropertyByRelativeBindingPath<Data, Root, Path> {
-    return super.getProperty(sPath, oContext) as
-      | PropertyByAbsoluteBindingPath<Data, Path>
-      | PropertyByRelativeBindingPath<Data, Root, Path>;
-  }
-
   // Overload for absolute paths
   bindList<Path extends AbsoluteListBindingPath<Data>>(
     sPath: Path,
@@ -113,6 +98,54 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     mParameters?: object,
   ): JSONListBinding {
     return super.bindList(sPath, oContext, aSorters, aFilters, mParameters);
+  }
+
+  // Overload for absolute paths
+  bindTree<Path extends AbsoluteTreeBindingPath<Data>>(
+    sPath: Path,
+    oContext?: undefined,
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+    aSorters?: Sorter | Sorter[],
+  ): JSONTreeBinding;
+  // Overload for relative paths
+  bindTree<Path extends RelativeTreeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
+    sPath: Path,
+    oContext: TypedJSONContext<Data, Root>,
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+    aSorters?: Sorter | Sorter[],
+  ): JSONTreeBinding;
+  // Implementation
+  bindTree<
+    Path extends AbsoluteTreeBindingPath<Data> | RelativeTreeBindingPath<Data, Root>,
+    Root extends AbsoluteBindingPath<Data>,
+  >(
+    sPath: Path,
+    oContext?: TypedJSONContext<Data, Root>,
+    aFilters?: Filter | Filter[],
+    mParameters?: object,
+    aSorters?: Sorter | Sorter[],
+  ): JSONTreeBinding {
+    return super.bindTree(sPath, oContext, aFilters, mParameters, aSorters);
+  }
+
+  getData(): Data {
+    return super.getData() as Data;
+  }
+
+  getProperty<Path extends AbsoluteBindingPath<Data>>(sPath: Path): PropertyByAbsoluteBindingPath<Data, Path>;
+  getProperty<Path extends RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
+    sPath: Path,
+    oContext: TypedJSONContext<Data, Root>,
+  ): PropertyByRelativeBindingPath<Data, Root, Path>;
+  getProperty<Path extends AbsoluteBindingPath<Data> | RelativeBindingPath<Data, Root>, Root extends AbsoluteBindingPath<Data>>(
+    sPath: Path,
+    oContext?: TypedJSONContext<Data, Root>,
+  ): PropertyByAbsoluteBindingPath<Data, Path> | PropertyByRelativeBindingPath<Data, Root, Path> {
+    return super.getProperty(sPath, oContext) as
+      | PropertyByAbsoluteBindingPath<Data, Path>
+      | PropertyByRelativeBindingPath<Data, Root, Path>;
   }
 
   setData(oData: Data, bMerge?: boolean): void {
