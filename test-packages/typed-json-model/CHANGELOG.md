@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/UI5/typescript/compare/@ui5/typed-json-model@1.2.1...@ui5/typed-json-model@1.3.0) (2026-04-24)
+
+### Features
+
+- **dts-generator:** add bindContext declarations and tests to TypedJSONModel ([b2575d1](https://github.com/UI5/typescript/commit/b2575d12456b99a4b9385ce785e1d21d4337a1e8))
+- **dts-generator:** add bindList declarations and tests to TypedJSONModel ([2064445](https://github.com/UI5/typescript/commit/2064445468fb6bf22628db032a14abcf6236cbe8))
+- **dts-generator:** add bindProperty declarations and tests to TypedJSONModel ([66a87f5](https://github.com/UI5/typescript/commit/66a87f5ef68332c23147600857d138d1ea8f791a))
+- **dts-generator:** add bindTree declarations and tests to TypedJSONModel ([ab756ba](https://github.com/UI5/typescript/commit/ab756ba7c33f5173107aa74badfa423e057a208d))
+- **dts-generator:** add getMessagesByPath declarations and tests to TypedJSONModel ([b7ecc5d](https://github.com/UI5/typescript/commit/b7ecc5d9e11d39a1343be84ecc5028276bc16a90))
+
 ## [1.2.1](https://github.com/UI5/typescript/compare/@ui5/typed-json-model@1.2.0...@ui5/typed-json-model@1.2.1) (2026-01-26)
 
 ### Reverts
