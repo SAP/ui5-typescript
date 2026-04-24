@@ -3,6 +3,7 @@ declare module "sap/ui/model/json/TypedJSONModel" {
   import Sorter from "sap/ui/model/Sorter";
   import JSONModel from "sap/ui/model/json/JSONModel";
   import JSONListBinding from "sap/ui/model/json/JSONListBinding";
+  import JSONTreeBinding from "sap/ui/model/json/JSONTreeBinding";
   import TypedJSONContext from "sap/ui/model/json/TypedJSONContext";
   import Context from "sap/ui/model/Context";
   import ClientContextBinding from "sap/ui/model/ClientContextBinding";
@@ -22,6 +23,7 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       fnCallBack?: Function,
       bReload?: boolean,
     ): TypedJSONContext<Data, Path>;
+
     bindContext<Path extends AbsoluteObjectBindingPath<Data>>(
       sPath: Path,
       oContext?: undefined,
@@ -35,17 +37,6 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       oContext?: TypedJSONContext<Data, Root>,
       mParameters?: object,
     ): ClientContextBinding;
-    getData(): Data;
-    getProperty<Path extends AbsoluteBindingPath<Data>>(
-      sPath: Path,
-    ): PropertyByAbsoluteBindingPath<Data, Path>;
-    getProperty<
-      Path extends RelativeBindingPath<Data, Root>,
-      Root extends AbsoluteBindingPath<Data>,
-    >(
-      sPath: Path,
-      oContext: TypedJSONContext<Data, Root>,
-    ): PropertyByRelativeBindingPath<Data, Root, Path>;
 
     bindList<Path extends AbsoluteListBindingPath<Data>>(
       sPath: Path,
@@ -64,6 +55,36 @@ declare module "sap/ui/model/json/TypedJSONModel" {
       aFilters?: Filter | Filter[],
       mParameters?: object,
     ): JSONListBinding;
+
+    bindTree<Path extends AbsoluteTreeBindingPath<Data>>(
+      sPath: Path,
+      oContext?: undefined,
+      aFilters?: Filter | Filter[],
+      mParameters?: object,
+      aSorters?: Sorter | Sorter[],
+    ): JSONTreeBinding;
+    bindTree<
+      Path extends RelativeTreeBindingPath<Data, Root>,
+      Root extends AbsoluteBindingPath<Data>,
+    >(
+      sPath: Path,
+      oContext: TypedJSONContext<Data, Root>,
+      aFilters?: Filter | Filter[],
+      mParameters?: object,
+      aSorters?: Sorter | Sorter[],
+    ): JSONTreeBinding;
+
+    getData(): Data;
+    getProperty<Path extends AbsoluteBindingPath<Data>>(
+      sPath: Path,
+    ): PropertyByAbsoluteBindingPath<Data, Path>;
+    getProperty<
+      Path extends RelativeBindingPath<Data, Root>,
+      Root extends AbsoluteBindingPath<Data>,
+    >(
+      sPath: Path,
+      oContext: TypedJSONContext<Data, Root>,
+    ): PropertyByRelativeBindingPath<Data, Root, Path>;
 
     setData(oData: Data, bMerge?: boolean): void;
 
@@ -137,6 +158,28 @@ declare module "sap/ui/model/json/TypedJSONModel" {
   }[AbsoluteBindingPath<Type>];
 
   /**
+   * Valid absolute binding path for underlying `Array` or `object` types.
+   *
+   * @example
+   * type SalesOrder = { id: string, items: string[], parameters: { weight: number } };
+   * type PathInObject = PathInJSONModel<SalesOrder>; // "/id" | "/items" | "/parameters"
+   * let path: PathInObject = "/items"; // ok
+   * path = "/parameters"; // ok
+   * path = "/id"; // error
+   * path = "/items/0"; // error, since an element in the array is a string
+   */
+  export type AbsoluteTreeBindingPath<Type> = {
+    [Path in AbsoluteBindingPath<Type>]: PropertyByAbsoluteBindingPath<
+      Type,
+      Path
+    > extends Array<unknown>
+      ? Path
+      : PropertyByAbsoluteBindingPath<Type, Path> extends object
+        ? Path
+        : never;
+  }[AbsoluteBindingPath<Type>];
+
+  /**
    * Valid absolute binding path for underlying object types (excludes arrays and primitives).
    *
    * @example
@@ -189,6 +232,29 @@ declare module "sap/ui/model/json/TypedJSONModel" {
     > extends Array<unknown>
       ? Path
       : never;
+  }[RelativeBindingPath<Type, Root>];
+
+  /**
+   * Valid relative binding path for underlying `Array` or `object` types.
+   * The root of the path is defined by the given root string.
+   *
+   * @example
+   * type SalesOrder = { buyer: { id: string, items: string[], parameters: { weight: number } } };
+   * type PathRelativeToSalesOrder = RelativeTreeBindingPath<SalesOrderWrapper, "/buyer">; // "items" | "parameters"
+   */
+  export type RelativeTreeBindingPath<
+    Type,
+    Root extends AbsoluteBindingPath<Type>,
+  > = {
+    [Path in RelativeBindingPath<Type, Root>]: PropertyByRelativeBindingPath<
+      Type,
+      Root,
+      Path
+    > extends Array<unknown>
+      ? Path
+      : PropertyByRelativeBindingPath<Type, Root, Path> extends object
+        ? Path
+        : never;
   }[RelativeBindingPath<Type, Root>];
 
   /**
