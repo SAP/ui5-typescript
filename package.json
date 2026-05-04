@@ -11,8 +11,8 @@
   "scripts": {
     "release:version": "lerna version",
     "release:version-simulate": "lerna version --no-push --no-git-tag-version",
-    "release:publish": "lerna publish from-git --yes --no-verify-access",
-    "release:publish-manual": "lerna publish from-package --yes --no-verify-access",
+    "release:publish": "lerna publish from-git --yes --no-verify-access --provenance",
+    "release:publish-manual": "lerna publish from-package --yes --no-verify-access --provenance",
     "build": "lerna run build",
     "preci": "lerna run build",
     "ci": "npm-run-all format:validate ci:subpackages",
