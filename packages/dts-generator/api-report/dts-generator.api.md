@@ -66,7 +66,7 @@ export interface Directives {
 export function downloadApiJson(libs: string[], version: string, targetDir?: string): Promise<void>;
 
 // @public
-export function generate({ apiFile, dependencyApiFiles, directiveFiles, targetFile, dependencyDTSFilesForCheck, dependenciesTypePackagesForCheck, generateGlobals, runCheckCompile, errorOutputFile, }: GenerateConfig): Promise<boolean>;
+export function generate(input: GenerateConfig): Promise<boolean>;
 
 // @public
 export type GenerateConfig = {
