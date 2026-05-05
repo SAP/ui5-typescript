@@ -1,8 +1,8 @@
 import Controller from "sap/ui/core/mvc/Controller";
 import { TypedJSONContext, TypedJSONModel } from "../model/model";
 import { exampleBinding } from "./Example";
-import { List$ItemClickEvent } from "sap/ui/webc/main/List";
 import MessageBox from "sap/m/MessageBox";
+import { ListBase$ItemPressEvent } from "sap/m/ListBase";
 
 type PurchaseOrderId = `PO-${string}`;
 type PurchaseOrderType = "Purchase Order";
@@ -54,7 +54,7 @@ export default class App extends Controller {
   /**
    * Example on how to how to use the typed context
    */
-  onPressItem(event: List$ItemClickEvent): void {
+  onPressItem(event: ListBase$ItemPressEvent): void {
     const context = event.getSource().getBindingContext() as TypedJSONContext<
       { order: PurchaseOrder },
       `/order/items/${number}`
