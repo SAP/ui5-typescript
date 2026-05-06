@@ -7,29 +7,7 @@ import {
 } from "./jsdocGenerator";
 import Preferences from "./preferences";
 
-// CAUTION: incompatible changes in TypeScript!
-// factory.createParameterDeclaration -> use fixedCreateParameterDeclaration
-// factory.createModuleDeclaration -> check TS version or als obuild a fixed one
-// factory.createTypeAliasDeclaration -> same
-
 const factory = ts.factory;
-
-const fixedCreateParameterDeclaration =
-  parseFloat(ts.version) >= 4.8
-    ? factory.createParameterDeclaration.bind(this) // not used, but required by linting
-    : function (
-        ...args: [
-          readonly ts.ModifierLike[],
-          ts.DotDotDotToken,
-          string | ts.BindingName,
-          ts.QuestionToken?,
-          ts.TypeNode?,
-          ts.Expression?,
-        ]
-      ) {
-        // @ts-ignore old signature before 4.8 is used here
-        return factory.createParameterDeclaration(undefined, ...args);
-      };
 
 function generateSettingsInterface(
   classInfo: ClassInfo,
@@ -217,7 +195,7 @@ function generateSettingsInterface(
         factory.createFunctionTypeNode(
           [],
           [
-            fixedCreateParameterDeclaration(
+            factory.createParameterDeclaration(
               undefined,
               undefined,
               "event",
@@ -271,26 +249,13 @@ function generateSettingsInterface(
       settingsSuperclassAsExpression,
     ]),
   ];
-  let myInterface;
-  if (parseFloat(ts.version) >= 4.8) {
-    myInterface = factory.createInterfaceDeclaration(
-      undefined,
-      ownSettingsTypeName,
-      undefined,
-      heritageClauses,
-      interfaceProperties,
-    );
-  } else {
-    myInterface = factory.createInterfaceDeclaration(
-      undefined,
-      undefined,
-      ownSettingsTypeName,
-      undefined,
-      heritageClauses,
-      // @ts-ignore: below TS 4.8 there were more params
-      interfaceProperties,
-    );
-  }
+  const myInterface = factory.createInterfaceDeclaration(
+    undefined,
+    ownSettingsTypeName,
+    undefined,
+    heritageClauses,
+    interfaceProperties,
+  );
 
   addLineBreakBefore(myInterface, 2);
   ts.addSyntheticLeadingComment(
@@ -393,7 +358,7 @@ function generateMethods(
       undefined,
       [],
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           n,
@@ -419,7 +384,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             "bindingInfo",
@@ -501,7 +466,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -526,7 +491,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -538,7 +503,7 @@ function generateMethods(
               currentClassName,
             ),
           ),
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             "index",
@@ -561,7 +526,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -624,7 +589,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -655,7 +620,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -697,7 +662,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             "bindingInfo",
@@ -770,7 +735,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -803,7 +768,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -831,7 +796,7 @@ function generateMethods(
         undefined,
         [],
         [
-          fixedCreateParameterDeclaration(
+          factory.createParameterDeclaration(
             undefined,
             undefined,
             n,
@@ -886,7 +851,7 @@ function generateMethods(
     const callback = factory.createFunctionTypeNode(
       [],
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "event",
@@ -902,14 +867,14 @@ function generateMethods(
       undefined,
       [],
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "fn",
           undefined,
           callback,
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "listener",
@@ -932,14 +897,14 @@ function generateMethods(
     const callbackWithData = factory.createFunctionTypeNode(
       [],
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "event",
           undefined,
           factory.createTypeReferenceNode(eventTypeAliases[event.name].name),
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "data",
@@ -954,34 +919,28 @@ function generateMethods(
       event.methods.attach,
       undefined,
       [
-        parseFloat(ts.version) >= 4.8
-          ? factory.createTypeParameterDeclaration(
-              undefined,
-              "CustomDataType",
-              factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
-            )
-          : factory.createTypeParameterDeclaration(
-              // @ts-ignore this is the old method signature before TS 4.8
-              "CustomDataType",
-              factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
-            ),
+        factory.createTypeParameterDeclaration(
+          undefined,
+          "CustomDataType",
+          factory.createKeywordTypeNode(ts.SyntaxKind.ObjectKeyword),
+        ),
       ],
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "data",
           undefined,
           factory.createTypeReferenceNode("CustomDataType"),
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "fn",
           undefined,
           callbackWithData,
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "listener",
@@ -1004,14 +963,14 @@ function generateMethods(
       undefined,
       [],
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "fn",
           undefined,
           callback,
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "listener",
@@ -1036,7 +995,7 @@ function generateMethods(
       [],
       [
         // TODO: describe parameter object with all details
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "parameters",
@@ -1235,7 +1194,7 @@ function createConstructorBlock(settingsTypeName: string) {
     factory.createConstructorDeclaration(
       undefined,
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "idOrSettings",
@@ -1256,14 +1215,14 @@ function createConstructorBlock(settingsTypeName: string) {
     factory.createConstructorDeclaration(
       undefined,
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "id",
           factory.createToken(ts.SyntaxKind.QuestionToken),
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "settings",
@@ -1283,14 +1242,14 @@ function createConstructorBlock(settingsTypeName: string) {
     factory.createConstructorDeclaration(
       undefined,
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "id",
           factory.createToken(ts.SyntaxKind.QuestionToken),
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           "settings",
@@ -1345,7 +1304,7 @@ function generateEventWithGenericsCompatibilityModule(
       undefined,
       undefined,
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           factory.createIdentifier("id"),
@@ -1353,7 +1312,7 @@ function generateEventWithGenericsCompatibilityModule(
           factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
           undefined,
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           factory.createIdentifier("oSource"),
@@ -1366,7 +1325,7 @@ function generateEventWithGenericsCompatibilityModule(
           ),
           undefined,
         ),
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           factory.createIdentifier("parameters"),
@@ -1410,7 +1369,7 @@ function generateEventWithGenericsCompatibilityModule(
         ),
       ],
       [
-        fixedCreateParameterDeclaration(
+        factory.createParameterDeclaration(
           undefined,
           undefined,
           factory.createIdentifier("name"),
@@ -1435,47 +1394,22 @@ function generateEventWithGenericsCompatibilityModule(
     ),
   ];
 
-  let interfaceDeclaration: ts.InterfaceDeclaration;
-  if (parseFloat(ts.version) >= 4.8) {
-    interfaceDeclaration = factory.createInterfaceDeclaration(
-      [
-        factory.createToken(ts.SyntaxKind.ExportKeyword),
-        factory.createToken(ts.SyntaxKind.DefaultKeyword),
-      ],
-      factory.createIdentifier("Event"),
-      typeParameters,
-      [],
-      methods,
-    );
-  } else {
-    interfaceDeclaration = factory.createInterfaceDeclaration(
-      undefined,
-      [
-        factory.createToken(ts.SyntaxKind.ExportKeyword),
-        factory.createToken(ts.SyntaxKind.DefaultKeyword),
-      ],
-      factory.createIdentifier("Event"),
-      typeParameters,
-      [],
-      // @ts-ignore: below TS 4.8 there were more params
-      methods,
-    );
-  }
+  const interfaceDeclaration = factory.createInterfaceDeclaration(
+    [
+      factory.createToken(ts.SyntaxKind.ExportKeyword),
+      factory.createToken(ts.SyntaxKind.DefaultKeyword),
+    ],
+    factory.createIdentifier("Event"),
+    typeParameters,
+    [],
+    methods,
+  );
 
-  const moduleDeclaration =
-    parseFloat(ts.version) >= 4.8
-      ? factory.createModuleDeclaration(
-          [factory.createToken(ts.SyntaxKind.DeclareKeyword)],
-          factory.createStringLiteral("sap/ui/base/Event"),
-          factory.createModuleBlock([interfaceDeclaration]),
-        )
-      : factory.createModuleDeclaration(
-          undefined,
-          // @ts-ignore old signature
-          [factory.createToken(ts.SyntaxKind.DeclareKeyword)],
-          factory.createStringLiteral("sap/ui/base/Event"),
-          factory.createModuleBlock([interfaceDeclaration]),
-        );
+  const moduleDeclaration = factory.createModuleDeclaration(
+    [factory.createToken(ts.SyntaxKind.DeclareKeyword)],
+    factory.createStringLiteral("sap/ui/base/Event"),
+    factory.createModuleBlock([interfaceDeclaration]),
+  );
 
   ts.addSyntheticLeadingComment(
     moduleDeclaration,
@@ -1526,30 +1460,15 @@ function generateEventParameterInterfaces(
         properties.push(property);
       }
 
-      const interfc =
-        parseFloat(ts.version) >= 4.8
-          ? factory.createInterfaceDeclaration(
-              [factory.createToken(ts.SyntaxKind.ExportKeyword)],
-              factory.createIdentifier(
-                makeEventParametersName(className, eventName)
-                  .eventParametersName,
-              ),
-              undefined,
-              undefined,
-              properties,
-            )
-          : factory.createInterfaceDeclaration(
-              undefined,
-              [factory.createToken(ts.SyntaxKind.ExportKeyword)],
-              factory.createIdentifier(
-                makeEventParametersName(className, eventName)
-                  .eventParametersName,
-              ),
-              undefined,
-              undefined,
-              // @ts-ignore: below TS 4.8 there were more params
-              properties,
-            );
+      const interfc = factory.createInterfaceDeclaration(
+        [factory.createToken(ts.SyntaxKind.ExportKeyword)],
+        factory.createIdentifier(
+          makeEventParametersName(className, eventName).eventParametersName,
+        ),
+        undefined,
+        undefined,
+        properties,
+      );
       addJSDocCommentToNode(
         interfc,
         buildJSDocStringFromLines(
@@ -1600,26 +1519,14 @@ function generateEventTypeAliases(
         ),
       ],
     );
-    const typeAlias =
-      parseFloat(ts.version) >= 4.8
-        ? factory.createTypeAliasDeclaration(
-            [factory.createToken(ts.SyntaxKind.ExportKeyword)],
-            factory.createIdentifier(
-              makeEventParametersName(className, eventName).eventTypealiasName,
-            ),
-            undefined,
-            typeNode,
-          )
-        : factory.createTypeAliasDeclaration(
-            undefined,
-            [factory.createToken(ts.SyntaxKind.ExportKeyword)],
-            factory.createIdentifier(
-              makeEventParametersName(className, eventName).eventTypealiasName,
-            ),
-            undefined,
-            // @ts-ignore: below TS 4.8 there were more params
-            typeNode,
-          );
+    const typeAlias = factory.createTypeAliasDeclaration(
+      [factory.createToken(ts.SyntaxKind.ExportKeyword)],
+      factory.createIdentifier(
+        makeEventParametersName(className, eventName).eventTypealiasName,
+      ),
+      undefined,
+      typeNode,
+    );
     addJSDocCommentToNode(
       typeAlias,
       buildJSDocStringFromLines(
