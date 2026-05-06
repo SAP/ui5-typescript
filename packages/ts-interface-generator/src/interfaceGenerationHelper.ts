@@ -923,82 +923,39 @@ function buildAST(
   const statements: ts.Statement[] = getImports(requiredImports);
 
   let myInterface;
-  if (parseFloat(ts.version) >= 4.8) {
-    if (isDefaultExport) {
-      myInterface = factory.createInterfaceDeclaration(
-        [
-          factory.createModifier(ts.SyntaxKind.ExportKeyword),
-          factory.createModifier(ts.SyntaxKind.DefaultKeyword),
-        ],
-        classInfo.name,
-        undefined,
-        undefined,
-        methods,
-      );
-    } else {
-      myInterface = factory.createInterfaceDeclaration(
-        [], // no export needed for module augmentation when class is a named export in the original file!
-        classInfo.name,
-        undefined,
-        undefined,
-        methods,
-      );
-    }
+  if (isDefaultExport) {
+    myInterface = factory.createInterfaceDeclaration(
+      [
+        factory.createModifier(ts.SyntaxKind.ExportKeyword),
+        factory.createModifier(ts.SyntaxKind.DefaultKeyword),
+      ],
+      classInfo.name,
+      undefined,
+      undefined,
+      methods,
+    );
   } else {
-    if (isDefaultExport) {
-      myInterface = factory.createInterfaceDeclaration(
-        undefined,
-        [
-          factory.createModifier(ts.SyntaxKind.ExportKeyword),
-          factory.createModifier(ts.SyntaxKind.DefaultKeyword),
-        ],
-        classInfo.name,
-        undefined,
-        undefined,
-        // @ts-ignore: below TS 4.8 there were more params
-        methods,
-      );
-    } else {
-      myInterface = factory.createInterfaceDeclaration(
-        undefined,
-        [], // no export needed for module augmentation when class is a named export in the original file!
-        classInfo.name,
-        undefined,
-        undefined,
-        // @ts-ignore: below TS 4.8 there were more params
-        methods,
-      );
-    }
+    myInterface = factory.createInterfaceDeclaration(
+      [], // no export needed for module augmentation when class is a named export in the original file!
+      classInfo.name,
+      undefined,
+      undefined,
+      methods,
+    );
   }
   addLineBreakBefore(myInterface, 2);
 
   // assemble the module declaration
-  let module;
-  if (parseFloat(ts.version) >= 4.8) {
-    module = factory.createModuleDeclaration(
-      [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
-      factory.createStringLiteral("./" + moduleName),
-      factory.createModuleBlock([
-        settingsInterface,
-        myInterface,
-        ...Object.values(eventParameterInterfaces),
-        ...Object.values(eventTypeAliases),
-      ]),
-    );
-  } else {
-    module = factory.createModuleDeclaration(
-      undefined,
-      // @ts-ignore old signature
-      [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
-      factory.createStringLiteral("./" + moduleName),
-      factory.createModuleBlock([
-        settingsInterface,
-        myInterface,
-        ...Object.values(eventParameterInterfaces),
-        ...Object.values(eventTypeAliases),
-      ]),
-    );
-  }
+  const module = factory.createModuleDeclaration(
+    [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
+    factory.createStringLiteral("./" + moduleName),
+    factory.createModuleBlock([
+      settingsInterface,
+      myInterface,
+      ...Object.values(eventParameterInterfaces),
+      ...Object.values(eventTypeAliases),
+    ]),
+  );
   if (statements.length > 0) {
     addLineBreakBefore(module, 2);
   }
@@ -1012,43 +969,19 @@ function buildAST(
   // If needed, assemble the second module declaration.
   // In case the class is not a default export, the first module declaration will already be without export, so this second module declaration is not needed anyway
   if (requiredImports.selfIsUsed && isDefaultExport) {
-    let myInterface2;
-    if (parseFloat(ts.version) >= 4.8) {
-      myInterface2 = factory.createInterfaceDeclaration(
-        undefined,
-        classInfo.name,
-        undefined,
-        undefined,
-        methods,
-      );
-    } else {
-      myInterface2 = factory.createInterfaceDeclaration(
-        undefined,
-        undefined,
-        classInfo.name,
-        undefined,
-        undefined,
-        // @ts-ignore: below TS 4.8 there were more params
-        methods,
-      );
-    }
+    const myInterface2 = factory.createInterfaceDeclaration(
+      undefined,
+      classInfo.name,
+      undefined,
+      undefined,
+      methods,
+    );
 
-    let module2;
-    if (parseFloat(ts.version) >= 4.8) {
-      module2 = factory.createModuleDeclaration(
-        [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
-        factory.createStringLiteral("./" + moduleName),
-        factory.createModuleBlock([myInterface2]),
-      );
-    } else {
-      module2 = factory.createModuleDeclaration(
-        undefined,
-        // @ts-ignore old signature
-        [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
-        factory.createStringLiteral("./" + moduleName),
-        factory.createModuleBlock([myInterface2]),
-      );
-    }
+    const module2 = factory.createModuleDeclaration(
+      [factory.createModifier(ts.SyntaxKind.DeclareKeyword)],
+      factory.createStringLiteral("./" + moduleName),
+      factory.createModuleBlock([myInterface2]),
+    );
     addLineBreakBefore(module2, 2);
     ts.addSyntheticLeadingComment(
       module2,
@@ -1083,22 +1016,11 @@ function getImports(requiredImports: RequiredImports) {
     let importClause;
     if (singleImport.exportName) {
       // if we have a named (non-default) export, we need a different import clause (with curly braces around the names to import)
-      let importSpecifier;
-      if (parseFloat(ts.version) >= 4.5) {
-        // TypeScript API changed incompatibly in 4.5
-        importSpecifier = factory.createImportSpecifier(
-          false /* typeOnly */,
-          namedImportOriginalNameIdentifier,
-          // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
-          localNameIdentifier,
-        );
-      } else {
-        // @ts-ignore after 4.5, createImportSpecifier got a third parameter (in the beginning!). This code shall work with older and newer versions, but as the compile-time error check is considering either <4.5 or >=4.5, one of these lines is recognized as error
-        importSpecifier = factory.createImportSpecifier(
-          namedImportOriginalNameIdentifier,
-          localNameIdentifier,
-        );
-      }
+      const importSpecifier = factory.createImportSpecifier(
+        false /* typeOnly */,
+        namedImportOriginalNameIdentifier,
+        localNameIdentifier,
+      );
       importClause = factory.createImportClause(
         false,
         undefined,
@@ -1113,48 +1035,25 @@ function getImports(requiredImports: RequiredImports) {
     }
 
     imports.push(
-      parseFloat(ts.version) >= 4.8
-        ? factory.createImportDeclaration(
-            undefined,
-            importClause,
-            factory.createStringLiteral(singleImport.moduleName),
-          )
-        : factory.createImportDeclaration(
-            undefined,
-            undefined,
-            // @ts-ignore old signature before 4.8
-            importClause,
-            factory.createStringLiteral(singleImport.moduleName),
-          ),
+      factory.createImportDeclaration(
+        undefined,
+        importClause,
+        factory.createStringLiteral(singleImport.moduleName),
+      ),
     );
   }
 
   if (!imports.length) {
     // this would result in an ambient module declaration which doesn't work for us. Enforce some implementation code to make it non-ambient.
-    let importDeclaration;
-    if (parseFloat(ts.version) >= 4.8) {
-      importDeclaration = factory.createImportDeclaration(
+    const importDeclaration = factory.createImportDeclaration(
+      undefined,
+      factory.createImportClause(
+        false,
+        factory.createIdentifier("Core"),
         undefined,
-        factory.createImportClause(
-          false,
-          factory.createIdentifier("Core"),
-          undefined,
-        ),
-        factory.createStringLiteral("sap/ui/core/Core"),
-      );
-    } else {
-      importDeclaration = factory.createImportDeclaration(
-        undefined,
-        undefined,
-        // @ts-ignore old signature before TS 4.8
-        factory.createImportClause(
-          false,
-          factory.createIdentifier("Core"),
-          undefined,
-        ),
-        factory.createStringLiteral("sap/ui/core/Core"),
-      );
-    }
+      ),
+      factory.createStringLiteral("sap/ui/core/Core"),
+    );
     ts.addSyntheticTrailingComment(
       importDeclaration,
       ts.SyntaxKind.SingleLineCommentTrivia,
