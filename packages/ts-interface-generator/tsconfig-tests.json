@@ -10,7 +10,9 @@
     "moduleResolution": "node16",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "types": ["node", "jest", "openui5"]
   },
   "include": ["./src/test/**/*"]
 }
