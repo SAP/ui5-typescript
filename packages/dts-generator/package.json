@@ -42,6 +42,7 @@
     "@microsoft/api-extractor": "^7.58.7",
     "@types/argparse": "^2.0.17",
     "@types/lodash": "4.17.24",
+    "@types/node": "^22.0.0",
     "@types/sanitize-html": "2.16.1",
     "@types/urijs": "1.19.26",
     "copyfiles": "^2.4.1",
