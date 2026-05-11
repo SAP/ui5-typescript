@@ -21,7 +21,7 @@
     "@ui5/linter": "^1.21.0",
     "eslint": "^10.3.0",
     "globals": "^17.6.0",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.2",
     "ui5-middleware-livereload": "^3",
     "ui5-middleware-simpleproxy": "^3",

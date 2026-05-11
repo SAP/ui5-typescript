@@ -10,7 +10,8 @@
     "moduleResolution": "node16",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "types": ["openui5"]
   },
   "include": ["./src/test/samples/sampleControl/**/*"]
 }

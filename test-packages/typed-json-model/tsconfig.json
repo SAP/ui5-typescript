@@ -2,14 +2,12 @@
   "compilerOptions": {
     "target": "es2023",
     "module": "es2022",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "skipLibCheck": true,
     "allowJs": true,
     "strict": true,
     "strictPropertyInitialization": false,
     "rootDir": "./webapp",
-    "baseUrl": "./",
-    "paths": {},
     "composite": true,
     "outDir": "./dist",
     "types": ["@openui5/types"]

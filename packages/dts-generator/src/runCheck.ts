@@ -57,7 +57,7 @@ async function main() {
       strict: true,
       target: ScriptTarget.ES2015,
       module: ModuleKind.ES2015,
-      moduleResolution: ModuleResolutionKind.NodeJs,
+      moduleResolution: ModuleResolutionKind.Node16,
     },
   });
 

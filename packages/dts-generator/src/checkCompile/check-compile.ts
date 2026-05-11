@@ -45,7 +45,7 @@ export interface CheckCompileConfig {
   dependencyFiles: string[];
 
   /**
-   * The options for the TypeScript compiler, a map with properties like "strict", "noEmit", "moduleResolution" etc. (note that enums are given like ts.ModuleResolutionKind.NodeJs)
+   * The options for the TypeScript compiler, a map with properties like "strict", "noEmit", "moduleResolution" etc. (note that enums are given like ts.ModuleResolutionKind.Node16)
    */
   tsOptions: ts.BuildOptions;
 

@@ -16,6 +16,7 @@ const standardTsConfig: ts.CompilerOptions = {
   esModuleInterop: true,
   skipLibCheck: true,
   forceConsistentCasingInFileNames: true,
+  types: ["openui5"],
 };
 
 describe("Single Testcases", () => {

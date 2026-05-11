@@ -7,6 +7,7 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
+        "types": ["openui5"],
         "noEmit": true,
         "paths": {
             "my/*": ["${configDir}/*"]
