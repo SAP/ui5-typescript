@@ -2143,8 +2143,7 @@ declare module "sap/tnt/ToolHeaderUtilitySeparator" {
   /**
    * Describes the settings that can be provided to the ToolHeaderUtilitySeparator constructor.
    */
-  export interface $ToolHeaderUtilitySeparatorSettings
-    extends $ControlSettings {}
+  export interface $ToolHeaderUtilitySeparatorSettings extends $ControlSettings {}
 }
 
 declare module "sap/tnt/ToolPage" {

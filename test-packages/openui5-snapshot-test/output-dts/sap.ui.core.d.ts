@@ -7316,9 +7316,9 @@ declare module "sap/ui/base/Event" {
    * the event handler is done.
    */
   export default class Event<
-      ParamsType extends Record<string, any> = object,
-      SourceType extends EventProvider = EventProvider,
-    >
+    ParamsType extends Record<string, any> = object,
+    SourceType extends EventProvider = EventProvider,
+  >
     extends BaseObject
     implements Poolable
   {
@@ -47621,8 +47621,7 @@ declare module "sap/ui/core/ws/SapPcpWebSocket" {
   /**
    * Parameters of the SapPcpWebSocket#message event.
    */
-  export interface SapPcpWebSocket$MessageEventParameters
-    extends WebSocket$MessageEventParameters {
+  export interface SapPcpWebSocket$MessageEventParameters extends WebSocket$MessageEventParameters {
     /**
      * Received pcpFields as a key-value map.
      */
@@ -68830,8 +68829,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
   /**
    * Parameters of the ODataModel#requestCompleted event.
    */
-  export interface ODataModel$RequestCompletedEventParameters
-    extends Model$RequestCompletedEventParameters {
+  export interface ODataModel$RequestCompletedEventParameters extends Model$RequestCompletedEventParameters {
     /**
      * The request ID
      */
@@ -68865,8 +68863,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
   /**
    * Parameters of the ODataModel#requestFailed event.
    */
-  export interface ODataModel$RequestFailedEventParameters
-    extends Model$RequestFailedEventParameters {
+  export interface ODataModel$RequestFailedEventParameters extends Model$RequestFailedEventParameters {
     /**
      * The request ID
      */
@@ -68915,8 +68912,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
   /**
    * Parameters of the ODataModel#requestSent event.
    */
-  export interface ODataModel$RequestSentEventParameters
-    extends Model$RequestSentEventParameters {
+  export interface ODataModel$RequestSentEventParameters extends Model$RequestSentEventParameters {
     /**
      * The request ID
      */
@@ -71059,8 +71055,7 @@ declare module "sap/ui/model/odata/v4/ODataContextBinding" {
   /**
    * Parameters of the ODataContextBinding#change event.
    */
-  export interface ODataContextBinding$ChangeEventParameters
-    extends Binding$ChangeEventParameters {}
+  export interface ODataContextBinding$ChangeEventParameters extends Binding$ChangeEventParameters {}
 
   /**
    * Event object of the ODataContextBinding#change event.
@@ -71073,8 +71068,7 @@ declare module "sap/ui/model/odata/v4/ODataContextBinding" {
   /**
    * Parameters of the ODataContextBinding#dataReceived event.
    */
-  export interface ODataContextBinding$DataReceivedEventParameters
-    extends Binding$DataReceivedEventParameters {
+  export interface ODataContextBinding$DataReceivedEventParameters extends Binding$DataReceivedEventParameters {
     /**
      * The error object if a back-end request failed. If there are multiple failed back-end requests, the error
      * of the first one is provided.
@@ -71093,8 +71087,7 @@ declare module "sap/ui/model/odata/v4/ODataContextBinding" {
   /**
    * Parameters of the ODataContextBinding#dataRequested event.
    */
-  export interface ODataContextBinding$DataRequestedEventParameters
-    extends Binding$DataRequestedEventParameters {}
+  export interface ODataContextBinding$DataRequestedEventParameters extends Binding$DataRequestedEventParameters {}
 
   /**
    * Event object of the ODataContextBinding#dataRequested event.
@@ -72269,8 +72262,7 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
   /**
    * Parameters of the ODataListBinding#change event.
    */
-  export interface ODataListBinding$ChangeEventParameters
-    extends Binding$ChangeEventParameters {
+  export interface ODataListBinding$ChangeEventParameters extends Binding$ChangeEventParameters {
     /**
      * During automatic determination of $expand and $select, a "virtual" context is first added with detailed
      * reason "AddVirtualContext" and then removed with detailed reason "RemoveVirtualContext" (since 1.69.0);
@@ -72349,8 +72341,7 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
   /**
    * Parameters of the ODataListBinding#dataReceived event.
    */
-  export interface ODataListBinding$DataReceivedEventParameters
-    extends Binding$DataReceivedEventParameters {
+  export interface ODataListBinding$DataReceivedEventParameters extends Binding$DataReceivedEventParameters {
     /**
      * The error object if a back-end request failed. If there are multiple failed back-end requests, the error
      * of the first one is provided.
@@ -72369,8 +72360,7 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
   /**
    * Parameters of the ODataListBinding#dataRequested event.
    */
-  export interface ODataListBinding$DataRequestedEventParameters
-    extends Binding$DataRequestedEventParameters {}
+  export interface ODataListBinding$DataRequestedEventParameters extends Binding$DataRequestedEventParameters {}
 
   /**
    * Event object of the ODataListBinding#dataRequested event.
@@ -74357,8 +74347,7 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
   /**
    * Parameters of the ODataModel#parseError event.
    */
-  export interface ODataModel$ParseErrorEventParameters
-    extends Model$ParseErrorEventParameters {}
+  export interface ODataModel$ParseErrorEventParameters extends Model$ParseErrorEventParameters {}
 
   /**
    * Event object of the ODataModel#parseError event.
@@ -74371,8 +74360,7 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
   /**
    * Parameters of the ODataModel#propertyChange event.
    */
-  export interface ODataModel$PropertyChangeEventParameters
-    extends Model$PropertyChangeEventParameters {
+  export interface ODataModel$PropertyChangeEventParameters extends Model$PropertyChangeEventParameters {
     /**
      * A promise on the outcome of the PATCH request, much like {@link sap.ui.model.odata.v4.Context#setProperty }
      * provides it for `bRetry === true`; missing in case there is no PATCH
@@ -74396,8 +74384,7 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
   /**
    * Parameters of the ODataModel#requestCompleted event.
    */
-  export interface ODataModel$RequestCompletedEventParameters
-    extends Model$RequestCompletedEventParameters {}
+  export interface ODataModel$RequestCompletedEventParameters extends Model$RequestCompletedEventParameters {}
 
   /**
    * Event object of the ODataModel#requestCompleted event.
@@ -74410,8 +74397,7 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
   /**
    * Parameters of the ODataModel#requestFailed event.
    */
-  export interface ODataModel$RequestFailedEventParameters
-    extends Model$RequestFailedEventParameters {}
+  export interface ODataModel$RequestFailedEventParameters extends Model$RequestFailedEventParameters {}
 
   /**
    * Event object of the ODataModel#requestFailed event.
@@ -74424,8 +74410,7 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
   /**
    * Parameters of the ODataModel#requestSent event.
    */
-  export interface ODataModel$RequestSentEventParameters
-    extends Model$RequestSentEventParameters {}
+  export interface ODataModel$RequestSentEventParameters extends Model$RequestSentEventParameters {}
 
   /**
    * Event object of the ODataModel#requestSent event.
@@ -74800,8 +74785,7 @@ declare module "sap/ui/model/odata/v4/ODataPropertyBinding" {
   /**
    * Parameters of the ODataPropertyBinding#change event.
    */
-  export interface ODataPropertyBinding$ChangeEventParameters
-    extends Binding$ChangeEventParameters {}
+  export interface ODataPropertyBinding$ChangeEventParameters extends Binding$ChangeEventParameters {}
 
   /**
    * Event object of the ODataPropertyBinding#change event.
@@ -74814,8 +74798,7 @@ declare module "sap/ui/model/odata/v4/ODataPropertyBinding" {
   /**
    * Parameters of the ODataPropertyBinding#dataReceived event.
    */
-  export interface ODataPropertyBinding$DataReceivedEventParameters
-    extends Binding$DataReceivedEventParameters {
+  export interface ODataPropertyBinding$DataReceivedEventParameters extends Binding$DataReceivedEventParameters {
     /**
      * The error object if a back-end request failed. If there are multiple failed back-end requests, the error
      * of the first one is provided.
@@ -74834,8 +74817,7 @@ declare module "sap/ui/model/odata/v4/ODataPropertyBinding" {
   /**
    * Parameters of the ODataPropertyBinding#dataRequested event.
    */
-  export interface ODataPropertyBinding$DataRequestedEventParameters
-    extends Binding$DataRequestedEventParameters {}
+  export interface ODataPropertyBinding$DataRequestedEventParameters extends Binding$DataRequestedEventParameters {}
 
   /**
    * Event object of the ODataPropertyBinding#dataRequested event.
@@ -79876,8 +79858,7 @@ declare module "sap/ui/test/matchers/AggregationContainsPropertyEqual" {
   /**
    * Describes the settings that can be provided to the AggregationContainsPropertyEqual constructor.
    */
-  export interface $AggregationContainsPropertyEqualSettings
-    extends $MatcherSettings {
+  export interface $AggregationContainsPropertyEqualSettings extends $MatcherSettings {
     /**
      * The Name of the aggregation that is used for matching.
      */

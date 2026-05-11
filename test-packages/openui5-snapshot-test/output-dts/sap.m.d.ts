@@ -15155,8 +15155,7 @@ declare module "sap/m/ComboBox" {
   /**
    * Parameters of the ComboBox#change event.
    */
-  export interface ComboBox$ChangeEventParameters
-    extends InputBase$ChangeEventParameters {
+  export interface ComboBox$ChangeEventParameters extends InputBase$ChangeEventParameters {
     /**
      * Indicates whether the change event was caused by selecting an item in the list
      */
@@ -17801,8 +17800,7 @@ declare module "sap/m/DatePicker" {
   /**
    * Parameters of the DatePicker#change event.
    */
-  export interface DatePicker$ChangeEventParameters
-    extends InputBase$ChangeEventParameters {
+  export interface DatePicker$ChangeEventParameters extends InputBase$ChangeEventParameters {
     /**
      * Indicator for a valid date.
      */
@@ -18252,8 +18250,7 @@ declare module "sap/m/DateRangeSelection" {
   /**
    * Parameters of the DateRangeSelection#change event.
    */
-  export interface DateRangeSelection$ChangeEventParameters
-    extends DatePicker$ChangeEventParameters {
+  export interface DateRangeSelection$ChangeEventParameters extends DatePicker$ChangeEventParameters {
     /**
      * Current start date after change.
      */
@@ -23982,8 +23979,7 @@ declare module "sap/m/DynamicDateValueHelpUIType" {
   /**
    * Describes the settings that can be provided to the DynamicDateValueHelpUIType constructor.
    */
-  export interface $DynamicDateValueHelpUITypeSettings
-    extends $ElementSettings {
+  export interface $DynamicDateValueHelpUITypeSettings extends $ElementSettings {
     /**
      * One of the predefined types - "date", "daterange", "month", "int". They determine controls - calendar
      * or input.
@@ -62706,8 +62702,7 @@ declare module "sap/m/NotificationListGroup" {
   /**
    * Describes the settings that can be provided to the NotificationListGroup constructor.
    */
-  export interface $NotificationListGroupSettings
-    extends $NotificationListBaseSettings {
+  export interface $NotificationListGroupSettings extends $NotificationListBaseSettings {
     /**
      * Determines if the group is collapsed or expanded.
      */
@@ -63064,8 +63059,7 @@ declare module "sap/m/NotificationListItem" {
   /**
    * Describes the settings that can be provided to the NotificationListItem constructor.
    */
-  export interface $NotificationListItemSettings
-    extends $NotificationListBaseSettings {
+  export interface $NotificationListItemSettings extends $NotificationListBaseSettings {
     /**
      * Determines the description of the NotificationListItem.
      */
@@ -70274,8 +70268,7 @@ declare module "sap/m/OverflowToolbarLayoutData" {
   /**
    * Describes the settings that can be provided to the OverflowToolbarLayoutData constructor.
    */
-  export interface $OverflowToolbarLayoutDataSettings
-    extends $ToolbarLayoutDataSettings {
+  export interface $OverflowToolbarLayoutDataSettings extends $ToolbarLayoutDataSettings {
     /**
      * The OverflowToolbar item can or cannot move to the overflow area
      *
@@ -70393,8 +70386,7 @@ declare module "sap/m/OverflowToolbarMenuButton" {
   /**
    * Describes the settings that can be provided to the OverflowToolbarMenuButton constructor.
    */
-  export interface $OverflowToolbarMenuButtonSettings
-    extends $MenuButtonSettings {}
+  export interface $OverflowToolbarMenuButtonSettings extends $MenuButtonSettings {}
 }
 
 declare module "sap/m/OverflowToolbarToggleButton" {
@@ -70473,8 +70465,7 @@ declare module "sap/m/OverflowToolbarToggleButton" {
   /**
    * Describes the settings that can be provided to the OverflowToolbarToggleButton constructor.
    */
-  export interface $OverflowToolbarToggleButtonSettings
-    extends $ToggleButtonSettings {}
+  export interface $OverflowToolbarToggleButtonSettings extends $ToggleButtonSettings {}
 }
 
 declare module "sap/m/p13n/BasePanel" {
@@ -71275,8 +71266,7 @@ declare module "sap/m/p13n/GroupPanel" {
   /**
    * Describes the settings that can be provided to the GroupPanel constructor.
    */
-  export interface $GroupPanelSettings
-    extends /* was: sap.m.p13n.$QueryPanelSettings */ Object {
+  export interface $GroupPanelSettings extends /* was: sap.m.p13n.$QueryPanelSettings */ Object {
     /**
      * A short text describing the panel. **Note:** This text will only be displayed if the panel is being used
      * in a `sap.m.p13n.Popup`.
@@ -72577,8 +72567,7 @@ declare module "sap/m/p13n/SortPanel" {
   /**
    * Describes the settings that can be provided to the SortPanel constructor.
    */
-  export interface $SortPanelSettings
-    extends /* was: sap.m.p13n.$QueryPanelSettings */ Object {
+  export interface $SortPanelSettings extends /* was: sap.m.p13n.$QueryPanelSettings */ Object {
     /**
      * A short text describing the panel. **Note:** This text will only be displayed if the panel is being used
      * in a `sap.m.p13n.Popup`.
@@ -81337,8 +81326,7 @@ declare module "sap/m/PageAccessibleLandmarkInfo" {
   /**
    * Describes the settings that can be provided to the PageAccessibleLandmarkInfo constructor.
    */
-  export interface $PageAccessibleLandmarkInfoSettings
-    extends $ElementSettings {
+  export interface $PageAccessibleLandmarkInfoSettings extends $ElementSettings {
     /**
      * Landmark role of the root container of the corresponding `sap.m.Page` control.
      *
@@ -86242,8 +86230,7 @@ declare module "sap/m/PlanningCalendarLegend" {
   /**
    * Describes the settings that can be provided to the PlanningCalendarLegend constructor.
    */
-  export interface $PlanningCalendarLegendSettings
-    extends $CalendarLegendSettings {
+  export interface $PlanningCalendarLegendSettings extends $CalendarLegendSettings {
     /**
      * Defines the text displayed in the header of the items list. It is commonly related to the calendar days.
      */
@@ -112106,8 +112093,7 @@ declare module "sap/m/semantic/DiscussInJamAction" {
   /**
    * Describes the settings that can be provided to the DiscussInJamAction constructor.
    */
-  export interface $DiscussInJamActionSettings
-    extends $SemanticButtonSettings {}
+  export interface $DiscussInJamActionSettings extends $SemanticButtonSettings {}
 }
 
 declare module "sap/m/semantic/EditAction" {
@@ -112291,8 +112277,7 @@ declare module "sap/m/semantic/FavoriteAction" {
   /**
    * Describes the settings that can be provided to the FavoriteAction constructor.
    */
-  export interface $FavoriteActionSettings
-    extends $SemanticToggleButtonSettings {}
+  export interface $FavoriteActionSettings extends $SemanticToggleButtonSettings {}
 }
 
 declare module "sap/m/semantic/FilterAction" {
@@ -114526,8 +114511,7 @@ declare module "sap/m/semantic/MultiSelectAction" {
   /**
    * Describes the settings that can be provided to the MultiSelectAction constructor.
    */
-  export interface $MultiSelectActionSettings
-    extends $SemanticToggleButtonSettings {}
+  export interface $MultiSelectActionSettings extends $SemanticToggleButtonSettings {}
 }
 
 declare module "sap/m/semantic/NegativeAction" {
@@ -116769,8 +116753,7 @@ declare module "sap/m/semantic/SemanticToggleButton" {
   /**
    * Describes the settings that can be provided to the SemanticToggleButton constructor.
    */
-  export interface $SemanticToggleButtonSettings
-    extends $SemanticButtonSettings {
+  export interface $SemanticToggleButtonSettings extends $SemanticButtonSettings {
     /**
      * The property is “true” when the control is toggled. The default state of this property is "false".
      */
@@ -120421,8 +120404,7 @@ declare module "sap/m/SinglePlanningCalendarDayView" {
   /**
    * Describes the settings that can be provided to the SinglePlanningCalendarDayView constructor.
    */
-  export interface $SinglePlanningCalendarDayViewSettings
-    extends $SinglePlanningCalendarViewSettings {}
+  export interface $SinglePlanningCalendarDayViewSettings extends $SinglePlanningCalendarViewSettings {}
 }
 
 declare module "sap/m/SinglePlanningCalendarMonthView" {
@@ -120512,8 +120494,7 @@ declare module "sap/m/SinglePlanningCalendarMonthView" {
   /**
    * Describes the settings that can be provided to the SinglePlanningCalendarMonthView constructor.
    */
-  export interface $SinglePlanningCalendarMonthViewSettings
-    extends $SinglePlanningCalendarViewSettings {}
+  export interface $SinglePlanningCalendarMonthViewSettings extends $SinglePlanningCalendarViewSettings {}
 }
 
 declare module "sap/m/SinglePlanningCalendarView" {
@@ -120739,8 +120720,7 @@ declare module "sap/m/SinglePlanningCalendarView" {
   /**
    * Describes the settings that can be provided to the SinglePlanningCalendarView constructor.
    */
-  export interface $SinglePlanningCalendarViewSettings
-    extends $ElementSettings {
+  export interface $SinglePlanningCalendarViewSettings extends $ElementSettings {
     /**
      * Indicates a unique key for the view
      */
@@ -120862,8 +120842,7 @@ declare module "sap/m/SinglePlanningCalendarWeekView" {
   /**
    * Describes the settings that can be provided to the SinglePlanningCalendarWeekView constructor.
    */
-  export interface $SinglePlanningCalendarWeekViewSettings
-    extends $SinglePlanningCalendarViewSettings {}
+  export interface $SinglePlanningCalendarWeekViewSettings extends $SinglePlanningCalendarViewSettings {}
 }
 
 declare module "sap/m/SinglePlanningCalendarWorkWeekView" {
@@ -120953,8 +120932,7 @@ declare module "sap/m/SinglePlanningCalendarWorkWeekView" {
   /**
    * Describes the settings that can be provided to the SinglePlanningCalendarWorkWeekView constructor.
    */
-  export interface $SinglePlanningCalendarWorkWeekViewSettings
-    extends $SinglePlanningCalendarViewSettings {}
+  export interface $SinglePlanningCalendarWorkWeekViewSettings extends $SinglePlanningCalendarViewSettings {}
 }
 
 declare module "sap/m/Slider" {
@@ -130531,8 +130509,7 @@ declare module "sap/m/Table" {
   /**
    * Parameters of the Table#beforeOpenContextMenu event.
    */
-  export interface Table$BeforeOpenContextMenuEventParameters
-    extends ListBase$BeforeOpenContextMenuEventParameters {
+  export interface Table$BeforeOpenContextMenuEventParameters extends ListBase$BeforeOpenContextMenuEventParameters {
     /**
      * Column in which the context menu was opened. **Note:** This parameter might be undefined for the items
      * that are not part of a column definition.
@@ -134496,8 +134473,7 @@ declare module "sap/m/TablePersoController" {
    * @deprecated As of version 1.115. Please use the {@link sap.m.p13n.Engine Engine} for personalization
    * instead.
    */
-  export interface $TablePersoControllerSettings
-    extends $ManagedObjectSettings {
+  export interface $TablePersoControllerSettings extends $ManagedObjectSettings {
     contentWidth?: CSSSize | PropertyBindingInfo | `{${string}}`;
 
     contentHeight?: CSSSize | PropertyBindingInfo | `{${string}}`;
@@ -136399,8 +136375,7 @@ declare module "sap/m/TableSelectDialog" {
   /**
    * Describes the settings that can be provided to the TableSelectDialog constructor.
    */
-  export interface $TableSelectDialogSettings
-    extends $SelectDialogBaseSettings {
+  export interface $TableSelectDialogSettings extends $SelectDialogBaseSettings {
     /**
      * Specifies the title text in the dialog header.
      */
@@ -140319,8 +140294,7 @@ declare module "sap/m/TimePicker" {
   /**
    * Parameters of the TimePicker#change event.
    */
-  export interface TimePicker$ChangeEventParameters
-    extends InputBase$ChangeEventParameters {
+  export interface TimePicker$ChangeEventParameters extends InputBase$ChangeEventParameters {
     /**
      * Indicator for a valid time
      */
@@ -140338,8 +140312,7 @@ declare module "sap/m/TimePicker" {
   /**
    * Parameters of the TimePicker#liveChange event.
    */
-  export interface TimePicker$LiveChangeEventParameters
-    extends DateTimeField$LiveChangeEventParameters {}
+  export interface TimePicker$LiveChangeEventParameters extends DateTimeField$LiveChangeEventParameters {}
 
   /**
    * Event object of the TimePicker#liveChange event.
@@ -141880,8 +141853,7 @@ declare module "sap/m/ToggleButton" {
   /**
    * Parameters of the ToggleButton#press event.
    */
-  export interface ToggleButton$PressEventParameters
-    extends Button$PressEventParameters {
+  export interface ToggleButton$PressEventParameters extends Button$PressEventParameters {
     /**
      * The current pressed state of the control.
      */
@@ -152007,8 +151979,7 @@ declare module "sap/m/upload/UploadSetToolbarPlaceholder" {
   /**
    * Describes the settings that can be provided to the UploadSetToolbarPlaceholder constructor.
    */
-  export interface $UploadSetToolbarPlaceholderSettings
-    extends $ControlSettings {}
+  export interface $UploadSetToolbarPlaceholderSettings extends $ControlSettings {}
 }
 
 declare module "sap/m/upload/UploadSetwithTable" {
@@ -154579,8 +154550,7 @@ declare module "sap/m/upload/UploadSetwithTableItem" {
    *
    * @experimental As of version 1.120.
    */
-  export interface $UploadSetwithTableItemSettings
-    extends $ColumnListItemSettings {
+  export interface $UploadSetwithTableItemSettings extends $ColumnListItemSettings {
     /**
      * Specifies the name of the uploaded file.
      */
@@ -158434,8 +158404,7 @@ declare module "sap/m/UploadCollectionToolbarPlaceholder" {
    *
    * @deprecated As of version 1.88.
    */
-  export interface $UploadCollectionToolbarPlaceholderSettings
-    extends $ControlSettings {}
+  export interface $UploadCollectionToolbarPlaceholderSettings extends $ControlSettings {}
 }
 
 declare module "sap/m/VariantItem" {
@@ -160517,8 +160486,7 @@ declare module "sap/m/ViewSettingsCustomItem" {
   /**
    * Describes the settings that can be provided to the ViewSettingsCustomItem constructor.
    */
-  export interface $ViewSettingsCustomItemSettings
-    extends $ViewSettingsItemSettings {
+  export interface $ViewSettingsCustomItemSettings extends $ViewSettingsItemSettings {
     /**
      * The number of currently active filters for this custom filter item. It will be displayed in the filter
      * list of the ViewSettingsDialog to represent the filter state of the custom control.
@@ -161071,8 +161039,7 @@ declare module "sap/m/ViewSettingsFilterItem" {
   /**
    * Describes the settings that can be provided to the ViewSettingsFilterItem constructor.
    */
-  export interface $ViewSettingsFilterItemSettings
-    extends $ViewSettingsItemSettings {
+  export interface $ViewSettingsFilterItemSettings extends $ViewSettingsItemSettings {
     /**
      * If set to (true), multi selection will be allowed for the items aggregation.
      */

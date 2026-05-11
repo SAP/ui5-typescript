@@ -17,12 +17,12 @@
   },
   "devDependencies": {
     "@openui5/types": "^1.146.0",
-    "@ui5/cli": "^4.0.30",
-    "@ui5/linter": "^1.20.2",
-    "eslint": "^9.37.0",
-    "globals": "^16.4.0",
+    "@ui5/cli": "^4.0.52",
+    "@ui5/linter": "^1.21.0",
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.1",
+    "typescript-eslint": "^8.59.2",
     "ui5-middleware-livereload": "^3",
     "ui5-middleware-simpleproxy": "^3",
     "ui5-tooling-transpile": "^3"

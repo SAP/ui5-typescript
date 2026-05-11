@@ -10,7 +10,7 @@
 export type AbsoluteBindingPath<Type> =
   Type extends Array<unknown>
     ? // if Type is an array:
-      | `/${number}` // /0 -> first element of array
+        | `/${number}` // /0 -> first element of array
         | `/${number}${AbsoluteBindingPath<Type[number]>}` // /0/{NestedPath}
     : // if Type is not an array:
       Type extends object
@@ -18,7 +18,7 @@ export type AbsoluteBindingPath<Type> =
           | {
               [Key in keyof Type]: Type[Key] extends Array<unknown>
                 ? // Type[Key] is an array:
-                  | `/${string & Key}/${number}` // items/0 -> elem of array
+                    | `/${string & Key}/${number}` // items/0 -> elem of array
                     // path can end there or:
                     | `/${string & Key}/${number}${AbsoluteBindingPath<Type[Key][number]>}` // items/0/{NestedPath}
                 : // Type[Key] is NOT an array:
