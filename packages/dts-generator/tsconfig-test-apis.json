@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "noEmit": true,
-    "skipLibCheck": true,
     "module": "Node16",
     "moduleResolution": "Node16",
     "strict": false
