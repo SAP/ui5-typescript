@@ -5361,8 +5361,7 @@ declare module "sap/f/DynamicPageAccessibleLandmarkInfo" {
   /**
    * Describes the settings that can be provided to the DynamicPageAccessibleLandmarkInfo constructor.
    */
-  export interface $DynamicPageAccessibleLandmarkInfoSettings
-    extends $ElementSettings {
+  export interface $DynamicPageAccessibleLandmarkInfoSettings extends $ElementSettings {
     /**
      * Landmark role of the root container of the corresponding `sap.f.DynamicPage` control.
      *
@@ -9780,8 +9779,7 @@ declare module "sap/f/FlexibleColumnLayoutAccessibleLandmarkInfo" {
   /**
    * Describes the settings that can be provided to the FlexibleColumnLayoutAccessibleLandmarkInfo constructor.
    */
-  export interface $FlexibleColumnLayoutAccessibleLandmarkInfoSettings
-    extends $ElementSettings {
+  export interface $FlexibleColumnLayoutAccessibleLandmarkInfoSettings extends $ElementSettings {
     /**
      * Text that describes the landmark of the first column of the corresponding `sap.f.FlexibleColumnLayout`
      * control.
@@ -11545,8 +11543,7 @@ declare module "sap/f/GridContainerItemLayoutData" {
    *
    * @experimental As of version 1.65. This class is experimental. The API may change.
    */
-  export interface $GridContainerItemLayoutDataSettings
-    extends $LayoutDataSettings {
+  export interface $GridContainerItemLayoutDataSettings extends $LayoutDataSettings {
     /**
      * Specifies the number of columns, which the item should take
      *
@@ -11850,8 +11847,7 @@ declare module "sap/f/GridContainerSettings" {
    *
    * @experimental As of version 1.65. This class is experimental. The API may change.
    */
-  export interface $GridContainerSettingsSettings
-    extends $ManagedObjectSettings {
+  export interface $GridContainerSettingsSettings extends $ManagedObjectSettings {
     /**
      * How many columns to have on a row.
      *
@@ -12546,8 +12542,7 @@ declare module "sap/f/IllustratedMessage" {
    *
    * @deprecated As of version 1.98. Use the {@link sap.m.IllustratedMessage} instead.
    */
-  export interface $IllustratedMessageSettings
-    extends $IllustratedMessageSettings1 {}
+  export interface $IllustratedMessageSettings extends $IllustratedMessageSettings1 {}
 }
 
 declare module "sap/f/Illustration" {
@@ -15006,8 +15001,7 @@ declare module "sap/f/semantic/DiscussInJamAction" {
   /**
    * Describes the settings that can be provided to the DiscussInJamAction constructor.
    */
-  export interface $DiscussInJamActionSettings
-    extends $SemanticButtonSettings {}
+  export interface $DiscussInJamActionSettings extends $SemanticButtonSettings {}
 }
 
 declare module "sap/f/semantic/EditAction" {
@@ -15191,8 +15185,7 @@ declare module "sap/f/semantic/ExitFullScreenAction" {
   /**
    * Describes the settings that can be provided to the ExitFullScreenAction constructor.
    */
-  export interface $ExitFullScreenActionSettings
-    extends $SemanticButtonSettings {}
+  export interface $ExitFullScreenActionSettings extends $SemanticButtonSettings {}
 }
 
 declare module "sap/f/semantic/FavoriteAction" {
@@ -15284,8 +15277,7 @@ declare module "sap/f/semantic/FavoriteAction" {
   /**
    * Describes the settings that can be provided to the FavoriteAction constructor.
    */
-  export interface $FavoriteActionSettings
-    extends $SemanticToggleButtonSettings {}
+  export interface $FavoriteActionSettings extends $SemanticToggleButtonSettings {}
 }
 
 declare module "sap/f/semantic/FlagAction" {
@@ -18895,8 +18887,7 @@ declare module "sap/f/semantic/SemanticToggleButton" {
   /**
    * Describes the settings that can be provided to the SemanticToggleButton constructor.
    */
-  export interface $SemanticToggleButtonSettings
-    extends $SemanticToggleButtonSettings1 {}
+  export interface $SemanticToggleButtonSettings extends $SemanticToggleButtonSettings1 {}
 }
 
 declare module "sap/f/semantic/SendEmailAction" {

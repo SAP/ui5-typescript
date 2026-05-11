@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "@ui5/dts-generator": "link:../../packages/dts-generator",
-    "fs-extra": "11.3.2",
-    "lodash": "4.17.21",
+    "fs-extra": "11.3.5",
+    "lodash": "4.18.1",
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@types/jquery": "3.5.13",
+    "@types/jquery": "3.5.32",
     "@types/qunit": "2.5.4"
   },
   "scripts": {
