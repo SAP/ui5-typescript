@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/UI5/typescript/compare/@ui5/openui5-snapshot-test@3.2.13...@ui5/openui5-snapshot-test@4.0.0) (2026-05-11)
+
+
+* chore(dts-generator)!: update TypeScript to 6.0.3 across repo ([050d7df](https://github.com/UI5/typescript/commit/050d7df30c5d9b7bfb7614058493f2bab7be9189))
+
+
+### BREAKING CHANGES
+
+* The re-exported ModuleResolutionKind enum no longer
+includes the deprecated NodeJs value. Consumers using
+ModuleResolutionKind.NodeJs must switch to Node16.
+The runCheck CLI now uses Node16 module resolution instead of Node10,
+which enforces file extensions and respects package.json exports.
+
+Adapt all tsconfigs for TS6 changed defaults:
+- explicit types arrays (TS6 defaults to [])
+- explicit rootDir (TS6 requires it with outDir)
+- explicit strict: false where previously relying on default
+- moduleResolution: "node" → "bundler" in test-packages
+- dedicated tsconfig for API type-check test (TS6 errors on tsc + files
++ tsconfig)
+
+
+
+
+
 ## [3.2.13](https://github.com/UI5/typescript/compare/@ui5/openui5-snapshot-test@3.2.12...@ui5/openui5-snapshot-test@3.2.13) (2025-10-15)
 
 **Note:** Version bump only for package @ui5/openui5-snapshot-test

@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.11.0...@ui5/dts-generator@4.0.0) (2026-05-11)
+
+### Bug Fixes
+
+- **dts-generator:** add explicit @types/node devDependency ([e930e8c](https://github.com/UI5/typescript/commit/e930e8c6e18ce9e6dfab55080b543f15400072b9))
+- **dts-generator:** address review comment ([7b656a3](https://github.com/UI5/typescript/commit/7b656a3d189f71cb21fa20311fbb7b428e3bd296))
+
+- chore(dts-generator)!: update TypeScript to 6.0.3 across repo ([050d7df](https://github.com/UI5/typescript/commit/050d7df30c5d9b7bfb7614058493f2bab7be9189))
+- feat(dts-generator)!: drop Node.js 16/18 support, require >=20 ([1d2518f](https://github.com/UI5/typescript/commit/1d2518fdb72ac9361497ff052ed90e74362a949b))
+
+### BREAKING CHANGES
+
+- The re-exported ModuleResolutionKind enum no longer
+  includes the deprecated NodeJs value. Consumers using
+  ModuleResolutionKind.NodeJs must switch to Node16.
+  The runCheck CLI now uses Node16 module resolution instead of Node10,
+  which enforces file extensions and respects package.json exports.
+
+Adapt all tsconfigs for TS6 changed defaults:
+
+- explicit types arrays (TS6 defaults to [])
+- explicit rootDir (TS6 requires it with outDir)
+- explicit strict: false where previously relying on default
+- moduleResolution: "node" → "bundler" in test-packages
+- dedicated tsconfig for API type-check test (TS6 errors on tsc + files
+
+* tsconfig)
+
+- The minimum supported Node.js version is now 20.0.0.
+  CI tests on Node 22 and 24 only.
+
 # [3.11.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.10.1...@ui5/dts-generator@3.11.0) (2026-04-24)
 
 ### Features

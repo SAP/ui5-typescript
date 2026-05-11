@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/UI5/typescript/compare/@ui5/ts-interface-generator@0.10.5...@ui5/ts-interface-generator@0.11.0) (2026-05-11)
+
+### Bug Fixes
+
+- **ts-interface-generator:** add explicit types to tsconfigs for TS6 compat ([42abf49](https://github.com/UI5/typescript/commit/42abf4971a59c3bf10bd52fcd84064f405c8f29d))
+
+- chore(dts-generator)!: update TypeScript to 6.0.3 across repo ([050d7df](https://github.com/UI5/typescript/commit/050d7df30c5d9b7bfb7614058493f2bab7be9189))
+- fix(ts-interface-generator)!: properly type getters (#565) ([f2502fe](https://github.com/UI5/typescript/commit/f2502fecec13a434e6a3163cabad25c4d3df46c8)), closes [#565](https://github.com/UI5/typescript/issues/565)
+
+### BREAKING CHANGES
+
+- The re-exported ModuleResolutionKind enum no longer
+  includes the deprecated NodeJs value. Consumers using
+  ModuleResolutionKind.NodeJs must switch to Node16.
+  The runCheck CLI now uses Node16 module resolution instead of Node10,
+  which enforces file extensions and respects package.json exports.
+
+Adapt all tsconfigs for TS6 changed defaults:
+
+- explicit types arrays (TS6 defaults to [])
+- explicit rootDir (TS6 requires it with outDir)
+- explicit strict: false where previously relying on default
+- moduleResolution: "node" → "bundler" in test-packages
+- dedicated tsconfig for API type-check test (TS6 errors on tsc + files
+
+* tsconfig)
+
+- code assuming such getters always return non-null values will break with control interfaces generated with the updated @ui5/ts-interface-generator.
+
 ## [0.10.5](https://github.com/UI5/typescript/compare/@ui5/ts-interface-generator@0.10.4...@ui5/ts-interface-generator@0.10.5) (2026-01-20)
 
 **Note:** Version bump only for package @ui5/ts-interface-generator
