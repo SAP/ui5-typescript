@@ -36,7 +36,7 @@
     "sanitize-html": "2.17.3",
     "semver": "^7.8.0",
     "strip-json-comments": "^5.0.3",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.58.7",
@@ -57,7 +57,7 @@
     "build-api-types": "api-extractor run --local --verbose",
     "clean-implementation-types": "del-cli -f \"dist/**/*.d.ts.map\" \"dist/**/*.d.ts\" \"!dist/**/index.d.ts\" \"!dist/**/core-preamble.d.ts\" \"!dist/**/typed-json-model.d.ts\"",
     "ci": "npm-run-all test:*",
-    "test:apis": "tsc ./src/types/api-json.d.ts ./src/types/ast.d.ts ./src/types/ui5-logger-types.d.ts",
+    "test:apis": "tsc -p tsconfig-test-apis.json",
     "prewatch": "npm-run-all clean copy-files",
     "watch": "tsc -w"
   },

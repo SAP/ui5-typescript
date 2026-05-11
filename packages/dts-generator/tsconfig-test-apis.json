@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "skipLibCheck": true,
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "strict": false
+  },
+  "include": [
+    "./src/types/api-json.d.ts",
+    "./src/types/ast.d.ts",
+    "./src/types/ui5-logger-types.d.ts"
+  ]
+}
