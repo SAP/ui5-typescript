@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import ts from "typescript";
 import log from "loglevel";
-import { execSync } from "child_process";
+import { execSync, execFileSync } from "child_process";
 import { generateInterfaces } from "../interfaceGenerationHelper";
 import {
   getAllKnownGlobals,
@@ -111,6 +111,66 @@ process.stdout.write(argv.jsdoc);`,
     } finally {
       fs.unlinkSync(script);
     }
+  });
+});
+
+describe("CLI end-to-end (issue #542)", () => {
+  const cliEntryPoint = path.resolve(
+    __dirname,
+    "../../dist/generateTSInterfaces.js",
+  );
+  const testCaseDir = path.resolve(
+    __dirname,
+    "testcases/tsconfig-path-relative",
+  );
+  const genFile = path.join(testCaseDir, "MyControl.gen.d.ts");
+
+  beforeAll(() => {
+    if (!fs.existsSync(cliEntryPoint)) {
+      execSync("npx tsc", { cwd: path.resolve(__dirname, "../..") });
+    }
+  });
+
+  afterEach(() => {
+    // Restore original gen files
+    execSync("git checkout -- .", { cwd: testCaseDir });
+  });
+
+  test("--jsdoc minimal produces output without boilerplate JSDoc", () => {
+    fs.unlinkSync(genFile);
+    execFileSync("node", [cliEntryPoint, "--jsdoc", "minimal"], {
+      cwd: testCaseDir,
+    });
+    const output = fs.readFileSync(genFile, "utf-8");
+
+    expect(output).toContain("getMyJSEnumVal(): MyJSEnum;");
+    expect(output).not.toContain("@returns");
+    expect(output).not.toContain("@param");
+    expect(output).not.toContain("Gets current value of property");
+  });
+
+  test("--jsdoc none produces output without any method-level JSDoc", () => {
+    fs.unlinkSync(genFile);
+    execFileSync("node", [cliEntryPoint, "--jsdoc", "none"], {
+      cwd: testCaseDir,
+    });
+    const output = fs.readFileSync(genFile, "utf-8");
+
+    expect(output).toContain("getMyJSEnumVal(): MyJSEnum;");
+    expect(output).not.toContain("@returns");
+    expect(output).not.toContain("@param");
+  });
+
+  test("--jsdoc verbose produces output with full boilerplate JSDoc", () => {
+    fs.unlinkSync(genFile);
+    execFileSync("node", [cliEntryPoint, "--jsdoc", "verbose"], {
+      cwd: testCaseDir,
+    });
+    const output = fs.readFileSync(genFile, "utf-8");
+
+    expect(output).toContain("@returns");
+    expect(output).toContain("@param");
+    expect(output).toContain('Gets current value of property "myJSEnumVal"');
   });
 });
 
