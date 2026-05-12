@@ -344,6 +344,7 @@ export interface ObjEvent {
   examples?: Examples;
   references?: References;
   allowedFor?: string[];
+  explicit?: boolean;
 }
 export interface Ui5Metadata {
   stereotype?:
@@ -453,6 +454,7 @@ export interface Ui5Event {
   allowPreventDefault?: boolean;
   enableEventBubbling?: boolean;
   allowedFor?: string[];
+  explicit?: boolean;
 }
 export interface EnumProperty {
   name: string;

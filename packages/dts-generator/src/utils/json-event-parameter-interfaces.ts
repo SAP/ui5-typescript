@@ -71,20 +71,22 @@ function createEventParameterInterfaces(
     };
   };
 
-  function buildProperties(srcProperties) {
+  function buildProperties(srcProperties, explicit?: boolean) {
     const transformedProperties = [];
     for (let propertyName in srcProperties) {
       const prop = srcProperties[propertyName];
-      transformedProperties.push(
-        addJsDocProps(
-          {
-            name: prop.name,
-            type: prop.type,
-            visibility: "public", // prop.visibility,
-          },
-          prop,
-        ),
+      const transformed = addJsDocProps(
+        {
+          name: prop.name,
+          type: prop.type,
+          visibility: "public", // prop.visibility,
+        },
+        prop,
       );
+      if (explicit && prop.optional === false) {
+        transformed.optional = false;
+      }
+      transformedProperties.push(transformed);
     }
     return transformedProperties;
   }
@@ -320,7 +322,10 @@ function createEventParameterInterfaces(
           }
 
           // now add the parameters to the interface
-          const parameters = buildProperties(allParameters);
+          const parameters = buildProperties(
+            allParameters,
+            event.explicit === true,
+          );
           eventParametersInterface.properties = parameters;
           eventParametersInterface.description = `Parameters of the ${symbol.basename}#${event.name} event.`;
           if (event.deprecated) {

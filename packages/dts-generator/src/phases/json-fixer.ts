@@ -49,7 +49,7 @@ function mergeOverlays(
     );
   }
 
-  const mapLikeProperties = new Set(["methods", "properties"]);
+  const mapLikeProperties = new Set(["methods", "properties", "events"]);
 
   function mergeProp(
     obj: { [key: string]: unknown },
