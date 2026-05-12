@@ -5,10 +5,11 @@ import pkgJson from "../package.json";
 import { Args, main } from "./generateTSInterfacesAPI";
 
 import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
 // configure yargs with the cli options as launcher
 const version = `${pkgJson.version} (from ${__filename})`;
-const appArgs = yargs()
+const appArgs = yargs(hideBin(process.argv))
   .version(version)
   .option({
     config: {
