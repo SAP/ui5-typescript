@@ -572,4 +572,610 @@ describe("explicit event parameters", function () {
       assert.match(result.dtsText, /selectedItem\?/);
     });
   });
+
+  describe("overlay merge for events", function () {
+    const baseLibApi = {
+      library: "sap.ui.core",
+      version: "3.0.0",
+      symbols: [
+        {
+          kind: "namespace",
+          name: "sap.ui.base",
+          basename: "base",
+          resource: "sap/ui/base/library.js",
+          module: "sap/ui/base/library",
+          export: "",
+          visibility: "public",
+          description: "",
+        },
+        {
+          kind: "class",
+          name: "sap.ui.base.EventProvider",
+          basename: "EventProvider",
+          resource: "sap/ui/base/EventProvider.js",
+          module: "sap/ui/base/EventProvider",
+          export: "",
+          visibility: "public",
+          abstract: true,
+          description: "Base event provider.",
+          methods: [
+            {
+              name: "attachEvent",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "sEventId", type: "string", optional: false },
+                { name: "oData", type: "object", optional: true },
+                { name: "fnFunction", type: "function", optional: false },
+                { name: "oListener", type: "object", optional: true },
+              ],
+            },
+            {
+              name: "detachEvent",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "sEventId", type: "string", optional: false },
+                { name: "fnFunction", type: "function", optional: false },
+                { name: "oListener", type: "object", optional: true },
+              ],
+            },
+            {
+              name: "fireEvent",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "sEventId", type: "string", optional: false },
+                { name: "mParameters", type: "object", optional: true },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    it("overlay can set explicit: true on an existing event by name", async () => {
+      const apiObject = {
+        library: "testlib",
+        version: "1.0.0",
+        symbols: [
+          {
+            kind: "namespace",
+            name: "testlib",
+            basename: "testlib",
+            resource: "testlib/library.js",
+            module: "testlib/library",
+            export: "",
+            visibility: "public",
+            description: "",
+          },
+          {
+            kind: "class",
+            name: "testlib.MyClass",
+            basename: "MyClass",
+            resource: "testlib/MyClass.js",
+            module: "testlib/MyClass",
+            export: "",
+            visibility: "public",
+            extends: "sap.ui.base.EventProvider",
+            description: "A test class.",
+            events: [
+              makeEvent("change", {
+                selectedItem: {
+                  name: "selectedItem",
+                  type: "string",
+                  optional: false,
+                  description: "The selected item.",
+                },
+              }),
+            ],
+            methods: [
+              {
+                name: "attachChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "oData", type: "object", optional: true },
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "detachChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "fireChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "mParameters", type: "object", optional: true },
+                ],
+              },
+            ],
+          },
+        ],
+      };
+
+      const directivesWithOverlay = {
+        ...directives,
+        overlays: {
+          testlib: [
+            {
+              name: "testlib.MyClass",
+              events: [{ name: "change", explicit: true }],
+            },
+          ],
+        },
+      };
+
+      const result = await generateFromObjects({
+        apiObject: structuredClone(apiObject),
+        dependencyApiObjects: [structuredClone(baseLibApi)],
+        directives: directivesWithOverlay,
+      });
+
+      const selectedItemLine = findPropertyLine(result.dtsText, "selectedItem");
+      assert.ok(selectedItemLine, "selectedItem should appear in output");
+      assert.ok(
+        !selectedItemLine.includes("?"),
+        `overlay should make selectedItem required, got: "${selectedItemLine.trim()}"`,
+      );
+    });
+
+    it("overlay does not affect events with different names", async () => {
+      const apiObject = {
+        library: "testlib",
+        version: "1.0.0",
+        symbols: [
+          {
+            kind: "namespace",
+            name: "testlib",
+            basename: "testlib",
+            resource: "testlib/library.js",
+            module: "testlib/library",
+            export: "",
+            visibility: "public",
+            description: "",
+          },
+          {
+            kind: "class",
+            name: "testlib.MyClass",
+            basename: "MyClass",
+            resource: "testlib/MyClass.js",
+            module: "testlib/MyClass",
+            export: "",
+            visibility: "public",
+            extends: "sap.ui.base.EventProvider",
+            description: "A test class.",
+            events: [
+              makeEvent("change", {
+                selectedItem: {
+                  name: "selectedItem",
+                  type: "string",
+                  optional: false,
+                  description: "The selected item.",
+                },
+              }),
+              makeEvent("press", {
+                source: {
+                  name: "source",
+                  type: "string",
+                  optional: false,
+                  description: "The source.",
+                },
+              }),
+            ],
+            methods: [
+              {
+                name: "attachChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "oData", type: "object", optional: true },
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "detachChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "fireChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "mParameters", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "attachPress",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "oData", type: "object", optional: true },
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "detachPress",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "firePress",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "mParameters", type: "object", optional: true },
+                ],
+              },
+            ],
+          },
+        ],
+      };
+
+      const directivesWithOverlay = {
+        ...directives,
+        overlays: {
+          testlib: [
+            {
+              name: "testlib.MyClass",
+              events: [{ name: "change", explicit: true }],
+            },
+          ],
+        },
+      };
+
+      const result = await generateFromObjects({
+        apiObject: structuredClone(apiObject),
+        dependencyApiObjects: [structuredClone(baseLibApi)],
+        directives: directivesWithOverlay,
+      });
+
+      const selectedItemLine = findPropertyLine(result.dtsText, "selectedItem");
+      assert.ok(
+        !selectedItemLine.includes("?"),
+        `change event should have required selectedItem, got: "${selectedItemLine.trim()}"`,
+      );
+      // press event was NOT targeted by overlay, so source stays optional
+      assert.match(result.dtsText, /source\?/);
+    });
+  });
+
+  describe("inheritance with explicit flag", function () {
+    const baseLibApi = {
+      library: "sap.ui.core",
+      version: "4.0.0",
+      symbols: [
+        {
+          kind: "namespace",
+          name: "sap.ui.base",
+          basename: "base",
+          resource: "sap/ui/base/library.js",
+          module: "sap/ui/base/library",
+          export: "",
+          visibility: "public",
+          description: "",
+        },
+        {
+          kind: "class",
+          name: "sap.ui.base.EventProvider",
+          basename: "EventProvider",
+          resource: "sap/ui/base/EventProvider.js",
+          module: "sap/ui/base/EventProvider",
+          export: "",
+          visibility: "public",
+          abstract: true,
+          description: "Base event provider.",
+          methods: [
+            {
+              name: "attachEvent",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "sEventId", type: "string", optional: false },
+                { name: "oData", type: "object", optional: true },
+                { name: "fnFunction", type: "function", optional: false },
+                { name: "oListener", type: "object", optional: true },
+              ],
+            },
+            {
+              name: "detachEvent",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "sEventId", type: "string", optional: false },
+                { name: "fnFunction", type: "function", optional: false },
+                { name: "oListener", type: "object", optional: true },
+              ],
+            },
+            {
+              name: "fireEvent",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "sEventId", type: "string", optional: false },
+                { name: "mParameters", type: "object", optional: true },
+              ],
+            },
+          ],
+        },
+        {
+          kind: "class",
+          name: "sap.ui.base.Parent",
+          basename: "Parent",
+          resource: "sap/ui/base/Parent.js",
+          module: "sap/ui/base/Parent",
+          export: "",
+          visibility: "public",
+          extends: "sap.ui.base.EventProvider",
+          description: "A parent class with a change event.",
+          events: [
+            makeEvent("change", {
+              value: {
+                name: "value",
+                type: "string",
+                optional: false,
+                description: "The value.",
+              },
+            }),
+          ],
+          methods: [
+            {
+              name: "attachChange",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "oData", type: "object", optional: true },
+                { name: "fnFunction", type: "function", optional: false },
+                { name: "oListener", type: "object", optional: true },
+              ],
+            },
+            {
+              name: "detachChange",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "fnFunction", type: "function", optional: false },
+                { name: "oListener", type: "object", optional: true },
+              ],
+            },
+            {
+              name: "fireChange",
+              visibility: "public",
+              returnValue: { type: "this" },
+              parameters: [
+                { name: "mParameters", type: "object", optional: true },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    it("inherited parameters remain optional when only subclass is explicit", async () => {
+      // Parent has "change" event with "value" (optional: false) but is NOT explicit
+      // Child has "change" event with "value" (inherited) + "extra" (new, optional: false) and IS explicit
+      // Expected: "extra" becomes required, but "value" stays optional (inherited from parent interface)
+      const childEvent = makeEvent(
+        "change",
+        {
+          value: {
+            name: "value",
+            type: "string",
+            optional: false,
+            description: "The value.",
+          },
+          extra: {
+            name: "extra",
+            type: "string",
+            optional: false,
+            description: "Extra param added by child.",
+          },
+        },
+        true,
+      );
+
+      const apiObject = {
+        library: "testlib",
+        version: "1.0.0",
+        symbols: [
+          {
+            kind: "namespace",
+            name: "testlib",
+            basename: "testlib",
+            resource: "testlib/library.js",
+            module: "testlib/library",
+            export: "",
+            visibility: "public",
+            description: "",
+          },
+          {
+            kind: "class",
+            name: "testlib.Child",
+            basename: "Child",
+            resource: "testlib/Child.js",
+            module: "testlib/Child",
+            export: "",
+            visibility: "public",
+            extends: "sap.ui.base.Parent",
+            description: "A child class.",
+            events: [childEvent],
+            methods: [
+              {
+                name: "attachChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "oData", type: "object", optional: true },
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "detachChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "fireChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "mParameters", type: "object", optional: true },
+                ],
+              },
+            ],
+          },
+        ],
+      };
+
+      const result = await generate(apiObject, [baseLibApi]);
+
+      // "extra" is new in the child and explicit: true → required
+      const extraLine = findPropertyLine(result.dtsText, "extra");
+      assert.ok(extraLine, "extra should appear in output");
+      assert.ok(
+        !extraLine.includes("?"),
+        `extra should be required (no '?'), got: "${extraLine.trim()}"`,
+      );
+
+      // "value" is inherited from parent (not explicit) → stays optional in parent interface
+      // The child interface extends the parent interface and does NOT redeclare "value"
+      assert.ok(
+        !findPropertyLine(result.dtsText, "value"),
+        "value should NOT appear in child interface (it is inherited from parent)",
+      );
+
+      // The child interface should extend the parent interface
+      assert.match(
+        result.dtsText,
+        /Child\$ChangeEventParameters extends Parent\$ChangeEventParameters/,
+      );
+    });
+
+    it("inherited parameters become required when parent is also explicit", async () => {
+      // Both parent and child have explicit: true
+      const baseLibApiWithExplicitParent = structuredClone(baseLibApi);
+      const parentEvent = baseLibApiWithExplicitParent.symbols.find(
+        (s) => s.name === "sap.ui.base.Parent",
+      ).events[0];
+      parentEvent.explicit = true;
+
+      const childEvent = makeEvent(
+        "change",
+        {
+          value: {
+            name: "value",
+            type: "string",
+            optional: false,
+            description: "The value.",
+          },
+          extra: {
+            name: "extra",
+            type: "string",
+            optional: false,
+            description: "Extra param.",
+          },
+        },
+        true,
+      );
+
+      const apiObject = {
+        library: "testlib",
+        version: "1.0.0",
+        symbols: [
+          {
+            kind: "namespace",
+            name: "testlib",
+            basename: "testlib",
+            resource: "testlib/library.js",
+            module: "testlib/library",
+            export: "",
+            visibility: "public",
+            description: "",
+          },
+          {
+            kind: "class",
+            name: "testlib.Child",
+            basename: "Child",
+            resource: "testlib/Child.js",
+            module: "testlib/Child",
+            export: "",
+            visibility: "public",
+            extends: "sap.ui.base.Parent",
+            description: "A child class.",
+            events: [childEvent],
+            methods: [
+              {
+                name: "attachChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "oData", type: "object", optional: true },
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "detachChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "fnFunction", type: "function", optional: false },
+                  { name: "oListener", type: "object", optional: true },
+                ],
+              },
+              {
+                name: "fireChange",
+                visibility: "public",
+                returnValue: { type: "this" },
+                parameters: [
+                  { name: "mParameters", type: "object", optional: true },
+                ],
+              },
+            ],
+          },
+        ],
+      };
+
+      const result = await generate(apiObject, [baseLibApiWithExplicitParent]);
+
+      // "extra" is new in the child and explicit → required
+      const extraLine = findPropertyLine(result.dtsText, "extra");
+      assert.ok(extraLine, "extra should appear in output");
+      assert.ok(
+        !extraLine.includes("?"),
+        `extra should be required, got: "${extraLine.trim()}"`,
+      );
+
+      // "value" is inherited from parent which is also explicit → required in parent interface
+      // It should NOT appear in the child interface (still inherited)
+      assert.ok(
+        !findPropertyLine(result.dtsText, "value"),
+        "value should NOT appear in child interface (inherited from explicit parent)",
+      );
+    });
+  });
 });
