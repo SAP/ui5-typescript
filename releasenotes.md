@@ -8,8 +8,28 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.148.0 (May 2026)
+- **IMPORTANT**: the **`@types/openui5` package is deprecated** now because it no longer provides any benefit when used with TypeScript version 6.x and above (types in the default package namespace `@types` are no longer automatically used). Use the identical `@openui5/types` instead. Releases will continue for at least the rest of 2026, but please move away from this package.
+- FEATURE: `TypedJSONModel` now has typed declarations for `bindList()`, `bindContext()`, `bindTree()`, `bindProperty()`, and `getMessagesByPath()` — enabling type-safe binding creation directly from the model. Previously these were only available as untyped inherited methods.
+- related (`@ui5/dts-generator` and `@ui5/ts-interface-generator`) BREAKING: These tools now require **Node.js >= 20**. Node.js 16 and 18 are no longer supported.
+- related (`@ui5/ts-interface-generator`) BREAKING: TypeScript **peer dependency capped at <7.0.0**, because the Go-based TS7 has no JavaScript compiler API that the tool relies on.
+-related (`@ui5/ts-interface-generator`) BREAKING (`@ui5/ts-interface-generator`): The generator now properly types **getters for properties with `defaultValue: null`** (types `object` and `function`). E.g., `getSomeFunc()` now correctly returns `Function | null` instead of `Function`. Code assuming such getters always return non-null will get new TypeScript errors.
+- related (`@ui5/ts-interface-generator`) FIX: CLI flags (`--jsdoc`, `--watch`, `--config`, `--loglevel`) were silently ignored since the yargs v18 migration — every run was using defaults.
+
+## 1.147.0 (April 2026)
+- No big news
+
+## 1.146.0 (March 2026)
+- No big news
+
+## 1.145.0 (February 2026)
+- No big news
+
+## 1.144.0 (January 2025)
+- No big news
+
 ## 1.143.0 (November 2025)
-- No news, code-wise
+- No big news, code-wise
 - A browser for all released UI5 type definitions has been published at https://ui5.github.io/typescript/ui5-types-browser.html
 
 
@@ -18,13 +38,13 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 - FIX: in `sap/m/ListBase` and subclasses including `sap/m/List` and `sap/m/Table`, the `itemActionPress` event parameter holding the action has been corrected from `itemAction` to `action`. Code accessing the former will cause a TS error now, but never did work in the first place. 
 
 ## 1.141.0 (September 2025)
-- No news
+- No big news
 
 ## 1.140.0 (September 2025)
 - FEATURE: Specifically for TypeScript usage of UI5, we have introduced `sap.ui.model.json.TypedJSONModel` and `sap.ui.model.json.TypedJSONContext` as strongly-typed wrappers around sap.ui.model.json.JSONModel and sap.ui.model.Context. These wrappers don't affect runtime behavior. They enable autocompletion features in IDEs and support static type checking during development. Note that these wrappers aren't available in JavaScript projects. For more information, see [Using the Typed JSON Model](https://ui5.sap.com/1.140.0/#/topic/96804e3315ff440aa0a50fd290805116.html#loiob8cd1692485d4108af607af347982dd9).
 
 ## 1.139.0 (August 2025)
-- No news
+- No big news
 
 ## 1.138.0 (July 2025)
 - RELATED: as UI5 became big enough to have its own GitHub org and we want to bundle all things UI5 there, along with other UI5 repositories, the https://github.com/SAP/ui5-typescript repository was moved to https://github.com/UI5/typescript on July 14th. This also changes the root of this documentation page to https://ui5.github.io/typescript/ (but there is auto-forwarding for the old URLs).
@@ -32,13 +52,13 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 ## 1.137.0 (does not exist - entire UI5 release was skipped)
 
 ## 1.136.0 (May 2025)
-- No news
+- No big news
 
 ## 1.135.0 (April 2025)
-- No news
+- No big news
 
 ## 1.134.0 (March 2025)
-- No news
+- No big news
 
 ## 1.133.0 (February 2025)
 - BREAKING (only theoretically): the type alternative of using *literals* instead of *enum values* is no longer present for the return type of a function. E.g. the return type of `sap.ui.core.message.Message.getType()` is no longer `MessageType | keyof typeof MessageType` (either enum value or string), but it is now only the enum value `MessageType`. Usually, this shouldn't break any TypeScript code in applications, as the code had to deal with *both* types before the change, anyway. Returning only *one* of the possible types will hence still be fine. In rare cases, theoretically, code might have used this union type for e.g. typing a variable and then assigned a string value which corresponds to an enum entry. This would now be flagged by the TypeScript compiler. Casting to the enum type will easily fix this compiler error. At runtime, the behavior does not change anyway, as those values are always strings.
@@ -46,10 +66,10 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
 - RELATED: the https://github.com/SAP-samples/ui5-typescript-helloworld has received a complete overhaul, in particular updating and making consistent the testing-related content. The `testing` branch has been emptied after merging its content into the `main` branch.
 
 ## 1.132.0 (January 2025)
-- No news
+- No big news
 
 ## 1.131.0 (November 2024)
-- No news
+- No big news
 
 ## 1.130.0 (October 2024)
 - RELATED: The type definitions for the preview version of OpenUI5 2.0 are now published as part of the preview's nightly release at https://sdk.openui5.org/nightly/2/-/types.tgz. The [`ui5-2.0` branch](https://github.com/SAP-samples/ui5-typescript-helloworld/tree/ui5-2.0) of the ui5-typescript-helloworld sample app demonstrates how these type definitions can be used for testing. In fact, it is trivial: simply reference the types package in `package.json` via URL like
@@ -64,10 +84,10 @@ When doing control development also be aware of the [@ui5/ts-interface-generator
    The SAPUI5 2.x types are not available yet.
 
 ## 1.129.0 (end of September 2024)
-- No news
+- No big news
 
 ## 1.128.0 (beginning of September 2024)
-- No news
+- No big news
 
 ## 1.127.0 (August 2024)
 - FEATURE/FIX: Controller extension support is now complete. This in particular concerns using pre-defined controller extensions like `sap/fe/core/controllerextensions/Routing` in your own controllers to add functionality. They can be used as-is or be partly overridden/enhanced using their static `override` method. A dummy method `ControllerExtension.use(...)` has been introduced in the type definitions for this. To make it work, also at least version 7.5.0 of [`babel-plugin-transform-modules-ui5`](https://www.npmjs.com/package/babel-plugin-transform-modules-ui5) is required (when using [`ui5-tooling-transpile`](https://www.npmjs.com/package/ui5-tooling-transpile) instead, make sure to `npm update` in your project). See [the documentation](https://github.com/ui5-community/babel-plugin-transform-modules-ui5?tab=readme-ov-file#properties-related-to-controller-extensions) for details once the new release of babel-plugin-transform-modules-ui5 is published. This dummy function is also being downported to patches of older `@openui5/types` and `@sapui5/types` releases:
@@ -84,17 +104,17 @@ One example is `sap.m.ComboBoxBase.setOpen()` and `sap.m.ComboBoxBase.getOpen()`
 Still, this change can be breaking your build (not the runtime), but we reserve the right to do such fixes which have this effect. In case of issues, you can continue using older types or define the missing methods on your side.
 
 ## 1.125.0 (June 2024)
-- No news
+- No big news
 
 ## 1.124.0 (May 2024)
-- No news; these types are the first ones that were released using the updated publicly available npm package.
+- No big news; these types are the first ones that were released using the updated publicly available npm package.
 
 ## 1.123.0 (April 2024)
 - FEATURE: Documentation is now generated for all the Settings/Event/Eventparameter types (those with a `$` in their name). This allows carrying over deprecation info from the actual class which they belong to.
 - RELATED: the new major [version 3 of the @ui5/dts-generator](https://www.npmjs.com/package/@ui5/dts-generator) has been published on npm 🎉. Finally, the same tool that creates the UI5 type definitions can be used for any UI5 library written in JavaScript! Also the updated sources of this updated dts-generator are now [available on GitHub](https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator). See [this general documentation](https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator) or dive right into [this step-by-step end-to-end tutorial](https://github.com/SAP/ui5-typescript/blob/main/packages/dts-generator/end-to-end-sample.md) that demonstrates its usage.
 
 ## 1.122.0 (March 2024)
-- No news
+- No big news
 
 ## 1.121.0 (February 2024)
 - FEATURE: `abstract` classes are now supported (UI5 classes marked as “abstract” are now also marked as such in the type definitions).
@@ -257,7 +277,7 @@ We are providing an extraordinary v1.115.1 patch for the type definitions ([@typ
 
 ## 1.114 (May 2023)
 
-No news (but of course several rounds of improvements within the UI5 API definitions, giving more details for previously too-vague types like `object`, `function` or `Promise`).
+No big news (but of course several rounds of improvements within the UI5 API definitions, giving more details for previously too-vague types like `object`, `function` or `Promise`).
 
 ## 1.113 (April 2023)
 
@@ -406,7 +426,7 @@ These types can be found [in the manifest's GitHub repository](https://github.co
 
 ## 1.109 (end of November 2022)
 
-no news
+No big news
 
 
 ## 1.108 (November 2022)
@@ -431,7 +451,7 @@ no news
 
 ## 1.107 (October 2022)
 
-no news
+No big news
 
 ## 1.106 (September 2022)
 
@@ -472,7 +492,7 @@ If you are using [`strictNullChecks=true`](https://www.typescriptlang.org/tsconf
 
 ## 1.104 (July 2022)
 
-no news
+No big news
 
 ## 1.103 (June 2022)
 
@@ -485,7 +505,7 @@ This has a huge impact on the type definitions across all of UI5: before this ch
 
 ## 1.101 (April 2022)
 
-no news
+No big news
 
 ## 1.100 (March 2022)
 
