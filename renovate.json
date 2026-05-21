@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices"],
+  "minimumReleaseAge": "7 days",
+  "rangeStrategy": "pin",
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "minimumReleaseAge": "3 days",
+    "labels": ["security"]
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Group all non-major updates to reduce PR noise",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "non-major dependencies"
+    },
+    {
+      "description": "Auto-merge patch updates for @types packages after age gate",
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "matchPackageNames": ["/^@types//"],
+      "minimumReleaseAge": "7 days"
+    }
+  ],
+  "prCreation": "not-pending"
+}
