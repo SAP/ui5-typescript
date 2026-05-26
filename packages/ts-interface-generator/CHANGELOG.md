@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.1](https://github.com/UI5/typescript/compare/@ui5/ts-interface-generator@0.11.0...@ui5/ts-interface-generator@0.11.1) (2026-05-26)
+
+### Bug Fixes
+
+- **ts-interface-generator:** pass process.argv to yargs so CLI flags work ([ea03e83](https://github.com/UI5/typescript/commit/ea03e83194632567d5d6441329c79499b1726176)), closes [#542](https://github.com/UI5/typescript/issues/542)
+
 # [0.11.0](https://github.com/UI5/typescript/compare/@ui5/ts-interface-generator@0.10.5...@ui5/ts-interface-generator@0.11.0) (2026-05-11)
 
 ### Bug Fixes
