@@ -56,7 +56,7 @@ async function main() {
       noImplicitAny: true,
       strict: true,
       target: ScriptTarget.ES2015,
-      module: ModuleKind.ES2015,
+      module: ModuleKind.Node16,
       moduleResolution: ModuleResolutionKind.Node16,
     },
   });
