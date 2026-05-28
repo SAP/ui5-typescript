@@ -19,8 +19,9 @@
     "@types/qunit": "2.5.4"
   },
   "scripts": {
-    "ci": "npm-run-all test",
+    "ci": "npm-run-all test dts:run-check",
     "test": "mocha \"./test/**/*spec.js\"",
+    "dts:run-check": "node ../../packages/dts-generator/dist/runCheck.js output-dts",
     "re-generate": "npm-run-all sdk:* dts:*",
     "sdk:download": "node ./lib/download-sdk.js",
     "sdk:format": "prettier --write \"input-sdk/*.json\"",
