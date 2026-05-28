@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.1...@ui5/dts-generator@4.0.2) (2026-05-28)
+
+### Bug Fixes
+
+- **dts-generator:** fix runCheck for TS6 compatibility ([4932904](https://github.com/UI5/typescript/commit/4932904aff94bd6c5264ca18cae2b5ae6679a581))
+
 ## [4.0.1](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.0...@ui5/dts-generator@4.0.1) (2026-05-26)
 
 ### Bug Fixes
