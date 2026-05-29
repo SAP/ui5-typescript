@@ -56,7 +56,7 @@ export interface GenerateFromPathsConfig {
   dependenciesDTSPathForCheck: string;
 
   /**
-   * @deprecated Since 4.0.3. Declared @types/* dependencies are now auto-discovered
+   * @deprecated Since 4.0.3. Declared `@types/*` dependencies are now auto-discovered
    * from the nearest package.json. This option is still accepted for backward
    * compatibility and merges additively with the discovered types.
    */
