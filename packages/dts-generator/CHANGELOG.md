@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.2...@ui5/dts-generator@4.0.3) (2026-05-29)
+
+### Bug Fixes
+
+- **dts-generator:** add [@types](https://github.com/types) discovery to generate check-compile path ([fe0da50](https://github.com/UI5/typescript/commit/fe0da50165eeace90230e8872bb2083b0f5c9cbf))
+
 ## [4.0.2](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.1...@ui5/dts-generator@4.0.2) (2026-05-28)
 
 ### Bug Fixes
