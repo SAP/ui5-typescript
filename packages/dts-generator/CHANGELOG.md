@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.3...@ui5/dts-generator@4.0.4) (2026-05-29)
+
+### Bug Fixes
+
+- **dts-generator:** escape [@types](https://github.com/types) in TSDoc to fix api-extractor report ([035233f](https://github.com/UI5/typescript/commit/035233f141dd105fbb900774ecb241f83b5ebcd5))
+
 ## [4.0.3](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.2...@ui5/dts-generator@4.0.3) (2026-05-29)
 
 ### Bug Fixes
