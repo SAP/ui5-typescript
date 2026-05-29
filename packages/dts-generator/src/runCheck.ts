@@ -3,7 +3,7 @@ const log = getLogger("@ui5/dts-generator/runCheck");
 import esMain from "es-main";
 
 import * as path from "path";
-import { promises as fsp, readdirSync, readFileSync } from "fs";
+import { promises as fsp } from "fs";
 const readdir = fsp.readdir;
 
 import {
@@ -13,6 +13,7 @@ import {
   ModuleKind,
   ModuleResolutionKind,
 } from "./index.js";
+import { discoverTypes } from "./utils/discover-types.js";
 
 async function findFiles(dir: string, extension: string) {
   if (dir == null) {
@@ -48,52 +49,7 @@ async function main() {
 
   const dtsFiles = await findFiles(dtsDir, "d.ts");
 
-  // TS6 no longer auto-includes @types packages; discover which ones are declared
-  // as dependencies and walk up from CWD to find where they're installed.
-  const declaredTypes = new Set<string>();
-  let dir = process.cwd();
-  while (true) {
-    try {
-      const pkg = JSON.parse(
-        readFileSync(path.join(dir, "package.json"), "utf8"),
-      );
-      for (const deps of [pkg.dependencies, pkg.devDependencies]) {
-        if (deps) {
-          for (const name of Object.keys(deps)) {
-            if (name.startsWith("@types/")) {
-              declaredTypes.add(name.slice("@types/".length));
-            }
-          }
-        }
-      }
-      break;
-    } catch {
-      // no package.json at this level
-    }
-    const parent = path.dirname(dir);
-    if (parent === dir) break;
-    dir = parent;
-  }
-
-  const typeRoots: string[] = [];
-  const types = new Set<string>();
-  dir = process.cwd();
-  while (true) {
-    const candidate = path.join(dir, "node_modules", "@types");
-    try {
-      for (const entry of readdirSync(candidate, { withFileTypes: true })) {
-        if (entry.isDirectory() && declaredTypes.has(entry.name)) {
-          types.add(entry.name);
-        }
-      }
-      typeRoots.push(candidate);
-    } catch {
-      // doesn't exist at this level
-    }
-    const parent = path.dirname(dir);
-    if (parent === dir) break;
-    dir = parent;
-  }
+  const { typeRoots, types } = discoverTypes();
 
   log.verbose(`Running a compile check for ${dtsFiles}`);
   const success = checkCompile({
@@ -105,7 +61,7 @@ async function main() {
       target: ScriptTarget.ES2015,
       module: ModuleKind.ESNext,
       moduleResolution: ModuleResolutionKind.Bundler,
-      ...(typeRoots.length > 0 && { typeRoots, types: [...types] }),
+      ...(typeRoots.length > 0 && { typeRoots, types }),
     },
   });
 
