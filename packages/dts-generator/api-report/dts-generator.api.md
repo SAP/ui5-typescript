@@ -4,11 +4,16 @@
 
 ```ts
 
-import { ApiJSON } from './types/api-json.js';
-import { ConcreteSymbol } from './types/api-json.js';
+import type { FunctionType } from './ast.d.ts';
 import ts from 'typescript';
+import type { TypeReference } from './ast.d.ts';
 
-export { ApiJSON }
+// @public
+export type ApiJSON = {
+    library: string;
+    version: string;
+    symbols: ConcreteSymbol[];
+};
 
 // @public
 export function checkCompile(options: CheckCompileConfig): boolean;
@@ -115,6 +120,10 @@ export const ModuleResolutionKind: typeof ts.ModuleResolutionKind;
 
 // @public (undocumented)
 export const ScriptTarget: typeof ts.ScriptTarget;
+
+// Warnings were encountered during analysis:
+//
+// dist/types/api-json.d.ts:13:3 - (ae-forgotten-export) The symbol "ConcreteSymbol" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 
