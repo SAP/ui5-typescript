@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.4...@ui5/dts-generator@4.0.5) (2026-05-29)
+
+### Bug Fixes
+
+- **dts-generator:** regenerate api-report from monorepo root context ([c506db9](https://github.com/UI5/typescript/commit/c506db9a910b5254aabe28db6be59c1dd74abb9e))
+
 ## [4.0.4](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.3...@ui5/dts-generator@4.0.4) (2026-05-29)
 
 ### Bug Fixes
