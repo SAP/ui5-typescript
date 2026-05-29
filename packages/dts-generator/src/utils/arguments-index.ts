@@ -19,11 +19,9 @@ export const args = (() => {
   });
   parser.add_argument("--dependenciesTypePackagesForCheck", {
     help:
-      "Comma-separated list of package names of the libraries on which the currently to-be-built types depends.  This is meant for entire npm packages" +
-      " developed separately (often by others), not sibling libraries built in the same generation run. E.g. when a custom UI5 control library is built by an" +
-      " application team, then it usually depends on the OpenUI5 types because those define the base classes like Control. Setting this has the effect" +
-      " that for the TS compilation check, the `types` field of the package.json file will be set to the respective package names and any other type packages" +
-      " are no longer considered. Only needed for the check.",
+      "[DEPRECATED: @types packages are now auto-discovered from the nearest package.json] " +
+      "Comma-separated list of additional @types package names to include in the TS compilation check." +
+      " Typically no longer needed — declared @types/* dependencies are discovered automatically.",
   });
   parser.add_argument("--directivesPath", {
     help: "Directory where the .dtsgenrc files for the libraries (current and dependencies) are located.",

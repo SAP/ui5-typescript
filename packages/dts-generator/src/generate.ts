@@ -5,6 +5,7 @@ import ts from "typescript";
 import { generateFromObjects, Directives } from "./generate-from-objects.js";
 import { default as checkCompile } from "./checkCompile/check-compile.js";
 import { writeFileSafe, loadJSON } from "./utils/file-utils.js";
+import { discoverTypes } from "./utils/discover-types.js";
 
 const loadedCache = new Map();
 
@@ -98,15 +99,9 @@ export type GenerateConfig = {
   dependencyDTSFilesForCheck: string[];
 
   /**
-   * Array of package names of the libraries on which the currently to-be-built types depends.
-   *
-   * This is meant for entire npm packages developed separately (often by others), not sibling libraries built in the same batch.
-   * E.g. when a custom UI5 control library is built by an application team, then it usually depends on the OpenUI5 types because
-   * those define the base classes like Control.
-   * Setting this has the effect that for the TS compilation check, the `types` field of the package.json file will be set to the
-   * respective package names and any other type packages are no longer considered.
-   *
-   * Only needed for the check.
+   * @deprecated Since 4.0.3. Declared @types/* dependencies are now auto-discovered
+   * from the nearest package.json. This option is still accepted for backward
+   * compatibility and merges additively with the discovered types.
    */
   dependenciesTypePackagesForCheck?: string[];
 
@@ -170,22 +165,23 @@ export async function generate({
     );
 
     // set up the tsconfig for the test compile
+    const discovered = discoverTypes();
     const tsOptions: ts.BuildOptions = {
       noEmit: true,
       noImplicitAny: true,
       strict: true,
       target: ts.ScriptTarget.ES2015,
-      module: ts.ModuleKind.ES2015,
+      module: ts.ModuleKind.ESNext,
+      moduleResolution: ts.ModuleResolutionKind.Bundler,
       lib: ["lib.es2015.d.ts", "lib.dom.d.ts"],
+      ...(discovered.typeRoots.length > 0 && {
+        typeRoots: discovered.typeRoots,
+        types: [
+          ...discovered.types,
+          ...(dependenciesTypePackagesForCheck || []),
+        ],
+      }),
     };
-
-    // if type dependencies are set, use them
-    if (
-      dependenciesTypePackagesForCheck &&
-      dependenciesTypePackagesForCheck.length > 0
-    ) {
-      tsOptions.types = dependenciesTypePackagesForCheck;
-    }
 
     const success = checkCompile({
       mainFile: targetFile,
