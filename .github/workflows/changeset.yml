@@ -1,0 +1,51 @@
+name: Changeset
+
+# Verifies that every PR carries a changeset (or an explicit empty one).
+# Runs only on pull_request — `push` to main carries already-merged
+# changesets that the Release workflow then consumes.
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "PR number to test (for fork PRs)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  changeset:
+    name: Changeset present
+    runs-on: ubuntu-latest
+    # Skip on the auto-generated "Version Packages" PR (it consumes all changesets).
+    if: github.head_ref != 'changeset-release/main'
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          ref: ${{ inputs.pr_number && format('refs/pull/{0}/head', inputs.pr_number) || '' }}
+          # Full history so `changeset status --since=origin/main` can diff.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 24.x
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      # Fails the PR if no changeset describes the change.
+      # Add one with `yarn changeset` (or `yarn changeset:empty` for PRs
+      # that don't need a release entry) and commit it.
+      # We check `.changesets` (not `.releases`) so that empty changesets
+      # — which have 0 package bumps but still document the PR — pass.
+      - name: Verify changeset is present
+        run: |
+          yarn changeset status --since=origin/main --output=/tmp/cs.json
+          if [ "$(jq '.changesets | length' /tmp/cs.json)" -eq 0 ]; then
+            echo "::error::No changeset found on this PR. Run 'yarn changeset' (or 'yarn changeset:empty' for PRs that don't need a release entry) and commit the file."
+            exit 1
+          fi
