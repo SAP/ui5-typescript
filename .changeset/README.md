@@ -23,6 +23,4 @@ versioning and releases. The flow is:
 Private packages (`test-packages/*`, `demos/*`) are skipped automatically by `changeset publish`.
 Only the public packages under `packages/*` are released.
 
-If a change does not warrant a release (docs-only, internal tooling, test refactors, etc.) just
-don't add a changeset — the PR will surface a "no changeset detected" hint, which is fine to
-acknowledge and merge.
+If a change does not warrant a release (docs-only, internal tooling, test refactors, etc.) run `yarn changeset:empty` and commit the generated file — it satisfies the required changeset check without producing any package bump.

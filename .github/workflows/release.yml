@@ -21,7 +21,7 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, 'skip ci')
     steps:
       - name: Checkout
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
@@ -40,12 +40,14 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Detect token usage (optional safety)
+      - name: Detect auth mode (OIDC vs token)
+        env:
+          NPM_BOOTSTRAP_TOKEN: ${{ secrets.NPM_BOOTSTRAP_TOKEN }}
         run: |
-          if npm whoami 2>/dev/null; then
-            echo "::warning::Token-based auth active (expected only when OIDC isn't configured)"
+          if [ -n "$NPM_BOOTSTRAP_TOKEN" ]; then
+            echo "::warning::NPM bootstrap token is configured; token-based auth will be used (OIDC will not be exercised)."
           else
-            echo "OIDC auth active"
+            echo "No NPM bootstrap token configured; using OIDC trusted publishing."
           fi
 
       - name: Configure NPM bootstrap token (non OIDC flow)

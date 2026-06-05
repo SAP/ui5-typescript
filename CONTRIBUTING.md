@@ -173,7 +173,7 @@ How `yarn changeset:auto` chooses the bump:
 
 Commits whose only file changes are under `packages/<pkg>/test/` are also skipped — test-only changes don't ship in the published tarball.
 
-If a change does not warrant a release at all (CI tweaks, internal tooling, etc.) just don't add a changeset — the PR can still be merged.
+If a change does not warrant a release at all (CI tweaks, internal tooling, etc.) run `yarn changeset:empty` and commit the generated file — it satisfies the required changeset check without producing any package release.
 
 ### For maintainers — cutting a release
 
