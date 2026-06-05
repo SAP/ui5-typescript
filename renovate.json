@@ -19,12 +19,21 @@
       "groupName": "non-major dependencies"
     },
     {
-      "description": "Auto-merge patch updates for @types packages after age gate",
-      "matchUpdateTypes": ["patch"],
+      "description": "Auto-merge minor and patch updates after age gate",
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
-      "automergeType": "pr",
-      "matchPackageNames": ["/^@types//"],
-      "minimumReleaseAge": "7 days"
+      "automergeType": "pr"
+    },
+    {
+      "description": "Do NOT auto-merge minor updates for UI5/framework-coupled packages",
+      "matchPackageNames": [
+        "@types/openui5",
+        "@openui5/*",
+        "@types/jquery",
+        "@types/qunit"
+      ],
+      "matchUpdateTypes": ["minor"],
+      "automerge": false
     }
   ],
   "prCreation": "not-pending"
