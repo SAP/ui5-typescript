@@ -203,9 +203,9 @@ function classify(commit, covered) {
 	}
 
 	// Skip-if-covered.
-	const overlap = pkgNames.filter((n) => covered.has(n));
-	if (overlap.length > 0) {
-		return { skip: `already covered (${overlap.join(", ")})` };
+	const uncovered = pkgNames.filter((n) => !covered.has(n));
+	if (uncovered.length === 0) {
+		return { skip: `already covered (${pkgNames.join(", ")})` };
 	}
 
 	return { pkgNames, bump, subject };
