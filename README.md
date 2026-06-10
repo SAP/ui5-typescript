@@ -75,7 +75,7 @@ For older versions before 1.113 (plus a few releases afterwards), the types were
 * [`@openui5/ts-types-esm`](https://www.npmjs.com/package/@openui5/ts-types-esm)
 * [`@sapui5/ts-types-esm`](https://www.npmjs.com/package/@sapui5/ts-types-esm)
 
-The OpenUI5 types are additionally [provided at npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5) because that's the standard package name and place to share type definitions and easier to consume. These definition files are identical to `@openui5/types`, but the [versioning *within* a minor release](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/openui5/README.md#versioning) and [how the jQuery and QUnit types are referenced](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5#jquery-and-qunit-references-and-their-versions) are slightly different (this should usually not be noticeable, though).
+The OpenUI5 types have additionally been [provided at npm as `@types/openui5`](https://www.npmjs.com/package/@types/openui5) via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5) because that's the standard package name and place to share type definitions and easier to consume. Those packages are deprecated, however, and will soon after the end of 2026 be no longer released. These definition files are identical to `@openui5/types`, but the [versioning *within* a minor release](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/openui5/README.md#versioning) and [how the jQuery and QUnit types are referenced](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/openui5#jquery-and-qunit-references-and-their-versions) are slightly different (this should usually not be noticeable, though).
 
 To inspect the different variants and versions of the type definitions without downloading them, you can use the [UI5 type definition browser](https://ui5.github.io/typescript/ui5-types-browser.html) tool.
 
@@ -124,7 +124,7 @@ The type generator, on the other hand, influences *how* the types are generated 
 
 The type definitions for the OpenUI5 2.0 preview are published as part of its nightly release at https://sdk.openui5.org/nightly/2/-/types.tgz. The [`ui5-2.0` branch](https://github.com/SAP-samples/ui5-typescript-helloworld/tree/ui5-2.0) of the ui5-typescript-helloworld sample app demonstrates how these type definitions can be used for trying them: simply reference the types package in `package.json` via URL like
    ```
-   "@types/openui5": "https://sdk.openui5.org/nightly/2/-/types.tgz"
+   "@openui5/types": "https://sdk.openui5.org/nightly/2/-/types.tgz"
    ```
    When you are newly adding the types, the following command will create this entry:
    ```

@@ -4,13 +4,11 @@ While the [main page](README.md) answers the high-level questions, this page foc
 
 ## How to reference the UI5 types in tsconfig.json? As `types` or `typeRoots`? (also: "*error TS2688 Cannot find type definition file for 'node_modules'*")
 
-Short answer: 
-* `@types/openui5` do not need to be specifically listed in tsconfig due to the standard package name
-* for `@openui5/types` and `@sapui5/types` the current suggestion is to write:
+Short answer (using the OpenUI5 types as example): 
   ```
   "types": ["@openui5/types", ...]
   ```
-  where `...` is the list of other needed type packages. (As soon as *one* package is explicitly listed as `types`, other packages from the default namespace `@types` are no longer automatically loaded.)
+  where `...` is the list of other needed type packages. (Starting with TypeScript 6.x all type packages must be explicitly listed. In lower TS versions, as soon as *one* package is explicitly listed as `types`, other packages from the default namespace `@types` are no longer automatically loaded.
 
 The history of this topic unfolds in [this issue report](https://github.com/ui5-community/generator-ui5-ts-app-fcl/issues/5). An in-depth analysis [can be found here](https://github.com/ui5-community/generator-ui5-ts-app-fcl/issues/5#issuecomment-1199967459). The proposed solution changed over time, triggered by [changes in TypeScript](https://github.com/ui5-community/generator-ui5-ts-app-fcl/issues/5#issuecomment-1589396608) itself.
 

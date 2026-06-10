@@ -8,6 +8,10 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.149.0 (June 2026)
+- **BREAKING**: the long-deprecated packages `@sapui5/ts-types-esm` and `@openui5/ts-types-esm` are no longer released. Please use the identical `@sapui5/types` and `@openui5/types` packages. **This is also the case for patch releases of older UI5 versions!** For those, either also switch or simply stay on the patch version you already have. APIs don't change in patches and fixes in type definitions of old versions are extremely rare.
+- **RELATED**: Read the round-up of recent changes, especially regarding TypeScript 6.x and 7.x in [this blog post](https://community.sap.com/t5/technology-blog-posts-by-sap/typescript-6-and-7-what-ui5-typescript-developers-need-to-know-in-2026/ba-p/14393526).
+
 ## 1.148.0 (May 2026)
 - **IMPORTANT**: the **`@types/openui5` package is deprecated** now because it no longer provides any benefit when used with TypeScript version 6.x and above (types in the default package namespace `@types` are no longer automatically used). Use the identical `@openui5/types` instead. Releases will continue for at least the rest of 2026, but please move away from this package.
 - FEATURE: `TypedJSONModel` now has typed declarations for `bindList()`, `bindContext()`, `bindTree()`, `bindProperty()`, and `getMessagesByPath()` — enabling type-safe binding creation directly from the model. Previously these were only available as untyped inherited methods.

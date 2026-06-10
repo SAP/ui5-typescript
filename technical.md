@@ -37,7 +37,7 @@ Hence for release 1.100 the following change was applied:
 	        ]
     ```
 * `@types/openui5`, however:
-  * DOES already have jquery and qunit types as dependencies - due to triple-slash references in the index.d.ts file required by DefinitelyTyped. But without a specific version. (TODO: Can we fix that? It seems like DefinitelyTyped does not foresee the option to reference a specific version.)
+  * DOES already have jquery and qunit types as dependencies - due to triple-slash references in the index.d.ts file required by DefinitelyTyped. But without a specific version. (Won't try to fix that as this package is deprecated now.)
 
 How can apps now use a different version of the jQuery, qUnit,... types?
   * When the app ALSO directly requires the jquery types in a different version in its `package.json` file, then the openui5-required ones go into `node_modules/@openui5/types/node_modules/@types/jquery` and both reside with their respective required version. The code editor uses the version required by the app. Even when that second version of the types is deleted it seems hard to get the copy below "node_modules/@openui5/types" to work for the editor (adding to the typeRoots in `tsconfig.json` didn't seem to work).
