@@ -1,0 +1,165 @@
+name: Generate TypeScript API Docs
+
+on:
+  schedule:
+    # Check nightly — generation only runs if new versions are detected
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+    inputs:
+      versions:
+        description: "Specific versions to generate (comma-separated, e.g. '1.148.1,1.120.25'). Leave empty for auto-detect from maintenance versions."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: generate-api-docs
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main (scripts + workflow)
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          ref: main
+          path: main
+
+      - name: Checkout gh-pages (published site)
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22.16.0"
+
+      - name: Install generator dependencies
+        working-directory: main/scripts/generate-api-docs
+        run: npm ci --ignore-scripts
+
+      - name: Determine versions to generate
+        id: versions
+        run: |
+          if [ -n "${{ inputs.versions }}" ]; then
+            # Manual dispatch with explicit versions
+            echo "versions=${{ inputs.versions }}" >> "$GITHUB_OUTPUT"
+            echo "Manual versions: ${{ inputs.versions }}"
+          else
+            # Auto-detect: fetch LTS + latest versions from version overview APIs
+            # Then find the latest patch of each that has a types package on npm
+            VERSIONS=""
+
+            for OVERVIEW_URL in "https://sdk.openui5.org/versionoverview.json" "https://ui5.sap.com/versionoverview.json"; do
+              # Get LTS versions + the latest (highest) maintenance version
+              # Filter: lts===true OR highest minor. Hard floor: minor >= 120.
+              MAINT_LINES=$(curl -sf "$OVERVIEW_URL" | node -e "
+                const data = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+                const maintained = data.versions.filter(v => v.support === 'Maintenance');
+                const latest = maintained[0]; // first entry is always the newest
+                const lines = maintained
+                  .filter(v => v.lts === true || v === latest)
+                  .map(v => v.version.replace('.*',''))
+                  .filter(v => parseInt(v.split('.')[1]) >= 120);
+                console.log(lines.join(' '));
+              ")
+
+              PKG=$( [[ "$OVERVIEW_URL" == *"openui5"* ]] && echo "@openui5/types" || echo "@sapui5/types" )
+
+              for LINE in $MAINT_LINES; do
+                # Get the latest published patch for this minor line
+                LATEST=$(npm show "${PKG}@~${LINE}.0" version 2>/dev/null | tail -1)
+                if [ -n "$LATEST" ]; then
+                  VERSIONS="${VERSIONS}${VERSIONS:+,}${PKG}@${LATEST}"
+                fi
+              done
+            done
+
+            echo "versions=$VERSIONS" >> "$GITHUB_OUTPUT"
+            echo "Detected versions: $VERSIONS"
+          fi
+
+      - name: Generate API docs
+        working-directory: main/scripts/generate-api-docs
+        run: |
+          IFS=',' read -ra ENTRIES <<< "${{ steps.versions.outputs.versions }}"
+          GENERATED=""
+
+          for ENTRY in "${ENTRIES[@]}"; do
+            # Skip empty entries (from trailing commas or empty versions output)
+            [[ -z "$ENTRY" ]] && continue
+
+            # Parse: either "@openui5/types@1.148.1" or just "1.148.1" (defaults to @openui5/types)
+            if [[ "$ENTRY" == @* ]]; then
+              PKG=$(echo "$ENTRY" | sed 's/@[^@]*$//')
+              VERSION=$(echo "$ENTRY" | sed 's/.*@//')
+            else
+              PKG="@openui5/types"
+              VERSION="$ENTRY"
+            fi
+
+            FRAMEWORK=$( [[ "$PKG" == *"openui5"* ]] && echo "openui5" || echo "sapui5" )
+            DIR=$(echo "$VERSION" | sed 's/\([0-9]*\.[0-9]*\).*/\1/')
+
+            # Validate VERSION looks like semver and DIR like major.minor
+            if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "⚠ Invalid version format: '$VERSION' — skipping"
+              continue
+            fi
+
+            # Check if this exact version is already generated
+            VERSION_FILE="../../../gh-pages/api/${FRAMEWORK}/${DIR}/.version"
+            if [ -f "$VERSION_FILE" ]; then
+              EXISTING=$(cat "$VERSION_FILE")
+              if [ "$EXISTING" = "$VERSION" ]; then
+                echo "✓ ${FRAMEWORK} ${VERSION} already up to date — skipping"
+                continue
+              else
+                echo "↻ ${FRAMEWORK} ${EXISTING} → ${VERSION} (updating)"
+              fi
+            else
+              echo "+ ${FRAMEWORK} ${VERSION} (new)"
+            fi
+
+            # Generate into a temp directory; only replace target on success
+            TEMP_OUT="../../../gh-pages/api/${FRAMEWORK}/${DIR}.tmp"
+            TARGET="../../../gh-pages/api/${FRAMEWORK}/${DIR}"
+            if node generate.mjs \
+              --package "$PKG" \
+              --version "$VERSION" \
+              --out "$TEMP_OUT" \
+              --base-url "https://ui5.github.io/typescript/api/${FRAMEWORK}/${DIR}/"; then
+              rm -rf "$TARGET"
+              mv "$TEMP_OUT" "$TARGET"
+              GENERATED="${GENERATED}${GENERATED:+, }${FRAMEWORK}@${VERSION}"
+            else
+              echo "⚠ FAILED: ${FRAMEWORK} ${VERSION} — keeping existing docs"
+              rm -rf "$TEMP_OUT"
+            fi
+          done
+
+          echo "generated=$GENERATED" >> "$GITHUB_OUTPUT"
+          if [ -z "$GENERATED" ]; then
+            echo "All versions up to date — nothing to generate"
+          fi
+
+      - name: Commit and push to gh-pages
+        working-directory: gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add api/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: update TypeScript API reference"
+            git push
+          fi
