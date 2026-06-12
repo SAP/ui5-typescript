@@ -1,0 +1,18 @@
+{
+  "name": "@ui5/generate-api-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node generate.mjs",
+    "start": "http-server ../../api -o -c-1"
+  },
+  "dependencies": {
+    "marked": "15.0.12",
+    "typedoc": "0.28.19",
+    "typedoc-plugin-markdown": "4.12.0",
+    "typescript": "5.8.3"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1"
+  }
+}
