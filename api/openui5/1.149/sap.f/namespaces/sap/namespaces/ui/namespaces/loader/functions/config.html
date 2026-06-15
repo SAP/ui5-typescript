@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Function: config() — OpenUI5 TypeScript API</title>
+<meta name="description" content="Function: config() — OpenUI5 TypeScript API Reference (1.149.0)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.149/sap.f/namespaces/sap/namespaces/ui/namespaces/loader/functions/config.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../../sap.f/README.html">sap.f</a> › namespaces › <a href="../../../../../../../../sap.f/namespaces/sap/README.html">sap</a> › namespaces › <a href="../../../../../../../../sap.f/namespaces/sap/namespaces/ui/README.html">ui</a> › namespaces › <a href="../../../../../../../../sap.f/namespaces/sap/namespaces/ui/namespaces/loader/README.html">loader</a> › functions</nav>
+<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.149.0)</strong></a></p>
+<hr>
+<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.149.0)</a> / <a href="../../../../../../../README.html">sap.f</a> / <a href="../../../../../README.html">sap</a> / <a href="../../../README.html">ui</a> / <a href="../README.html">loader</a> / config</p>
+<h1>Function: config()</h1>
+<blockquote>
+<p><strong>config</strong>(<code>cfg?</code>): <code>object</code></p>
+</blockquote>
+<p>Sets the configuration for the UI5 loader. The configuration can be updated multiple times. Later changes
+do not impact modules that have been loaded before.</p>
+<p>If no parameter is given, a partial copy of UI5 loader configuration in use is returned.</p>
+<p>The configuration options are aligned with the &quot;Common Config&quot; draft of the AMD spec (<a href="https://github.com/amdjs/amdjs-api/blob/master/CommonConfig.html">https://github.com/amdjs/amdjs-api/blob/master/CommonConfig.md</a>).</p>
+<p>The following code shows an example of what a UI5 loader configuration might look like:</p>
+<pre><code class="language-javascript">
+  sap.ui.loader.config({
+
+    // location from where to load all modules by default
+    baseUrl: &#39;../../resources/&#39;,
+
+    paths: {
+      // load modules whose ID equals to or starts with &#39;my/module&#39; from example.com
+      &#39;my/module&#39;: &#39;https://example.com/resources/my/module&#39;
+    },
+
+    map: {
+      // if any module requires &#39;sinon&#39;, load module &#39;sap/ui/thirdparty/sinon-4&#39;
+      &#39;*&#39;: {
+        &#39;sinon&#39;: &#39;sap/ui/thirdparty/sinon-4&#39;
+      },
+      // but if a module whose ID equals to or starts with &#39;app&#39; requires &#39;sinon&#39;
+      // then load a legacy version instead
+      &quot;app&quot;: {
+        &#39;sinon&#39;: &#39;sap/ui/legacy/sinon&#39;
+      }
+    },
+
+    // define two bundles that consists of JS modules only
+    bundles: {
+      bundle1: [&#39;module1&#39;, &#39;module2&#39;],
+      bundle2: [&#39;moduleX&#39;, &#39;moduleY&#39;]
+    },
+
+    // define a bundle that also contains non-JS resources
+    bundlesUI5: {
+      &#39;all.js&#39;: [&#39;Component.js&#39;, &#39;manifest.json&#39;,
+                 &#39;App.controller.js&#39;, &#39;App.view.xml&#39;]
+    },
+
+    // activate real async loading and module definitions
+    // (will become obsolete in 2.0 contexts as async will be the only mode there)
+    async: true,
+
+    // provide dependency and export metadata for non-UI5 modules
+    shim: {
+      &#39;sap/ui/thirdparty/blanket&#39;: {
+        amd: true,
+        exports: &#39;blanket&#39;
+      }
+    }
+
+  });
+</code></pre>
+<h2>Parameters</h2>
+<h3>cfg?</h3>
+<p>The provided configuration gets merged with the UI5 loader configuration in use. If <code>cfg</code> is omitted
+or <code>undefined</code>, a copy of the current configuration gets returned, containing at least the properties
+<code>amd</code> and <code>async</code>.</p>
+<h4>amd?</h4>
+<p><code>boolean</code></p>
+<p>When set to true, the ui5loader will overwrite the global properties <code>define</code> and <code>require</code> with its
+own implementations. Any previously active AMD loader will be remembered internally and can be restored
+by setting <code>amd</code> to false again.</p>
+<p><strong>Note:</strong> Switching to the <code>amd</code> mode, the ui5loader will set <code>async</code> to true implicitly for activating
+asynchronous loading. Once the loading behaviour has been defined to be asynchronous, it can not be changed
+to synchronous behaviour again, also not via setting <code>amd</code> to false.</p>
+<h4>async?</h4>
+<p><code>boolean</code></p>
+<p>When set to true, <code>sap.ui.require</code> loads modules asynchronously via script tags and <code>sap.ui.define</code> executes
+asynchronously. To enable this feature, it is recommended to set the attribute <code>data-sap-ui-async=&quot;true&quot;</code>
+on the application bootstrap tag.</p>
+<p><strong>Note:</strong> Switching back from async to sync is not supported and trying to do so will throw an <code>Error</code></p>
+<p>In the next major version of UI5, this option will become obsolete as async will be the only mode.</p>
+<h4>baseUrl?</h4>
+<p><code>string</code></p>
+<p>Default location to load modules from. If none of the configured <code>paths</code> prefixes matches a module ID,
+the module will be loaded from the concatenation of the <code>baseUrl</code> and the module ID.</p>
+<p>If the <code>baseUrl</code> itself is a relative URL, it is evaluated relative to <code>document.baseURI</code>.</p>
+<h4>bundles?</h4>
+<p><code>Record</code>&lt;<code>string</code>, <code>string</code>[]&gt;</p>
+<p>A map of arrays that each define the modules contained in a bundle.</p>
+<p>Each key of the map represents the module ID of a bundle file. The array value represents the set of
+JavaScript modules (their module IDs) that are contained in the bundle.</p>
+<p>When a module is required that has not been loaded yet, and for which a containing bundle is known, that
+bundle will be required first. Only then the original module will be required again and usually be taken
+from the just loaded bundle.</p>
+<p>A bundle will be loaded asynchronously only when the loader is in asynchronous mode and when the request
+for the contained module originates from an asynchronous API. In all other cases, the bundle has to be
+loaded synchronously to fulfill API contracts.</p>
+<p><strong>Note:</strong> The loader only supports one containing bundle per module. If a module is declared to be part
+of multiple bundles, only the last one will be taken into account.</p>
+<p>This configuration option is basically provided to be compatible with requireJS or SystemJS configuration.</p>
+<h4>bundlesUI5?</h4>
+<p><code>Record</code>&lt;<code>string</code>, <code>string</code>[]&gt;</p>
+<p>A map of arrays that each define the resources contained in a bundle.</p>
+<p>This is similar to <code>bundles</code>, but all strings are unified resource names including a file type extension,
+not only module IDs. This allows to represent more than just JavaScript modules.</p>
+<p>Each key of the map represents the resource name (in unified resource name syntax) of a bundle file.
+The array value represents the set of resources (also in unified resource name syntax) that are contained
+in the bundle. The array can contain JavaScript as well as other textual resource types (e.g. *.xml or
+*.json resources).</p>
+<p>When a module is required that has not been loaded yet, and for which a containing bundle is known, that
+bundle will be required first. Only then the original module will be required again and usually be taken
+from the just loaded bundle.</p>
+<p>A bundle will be loaded asynchronously only when the loader is in asynchronous mode and when the request
+for the contained module originates from an asynchronous API. In all other cases, the bundle has to be
+loaded synchronously to fulfill API contracts.</p>
+<p><strong>Note:</strong> The loader only supports one containing bundle per module. If a module is declared to be part
+of multiple bundles, only the last one will be taken into account.</p>
+<p><strong>Note:</strong> Although non-JS resources can be declared to be part of a bundle, only requests for JavaScript
+modules will currently trigger the loading of a bundle.</p>
+<h4>map?</h4>
+<p><code>Record</code>&lt;<code>string</code>, <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;&gt;</p>
+<p>A map of maps that defines how to map module IDs to other module IDs (inner maps) in the context of a
+specific set of modules (keys of outer map).</p>
+<p>Each key of the outer map represents a module ID prefix that describes the context for which its value
+(inner map) has to be used. The special key <code>*</code> describes the default context which applies for any module.
+Only the most specific matching context will be taken into account.</p>
+<p>Each inner map maps a module ID or module ID prefix to another module ID or module ID prefix. Again,
+only the most specific match is taken into account and only one mapping is evaluated (the evaluation
+of the mappings is not done recursively).</p>
+<p>Matches are always complete matches, a prefix &#39;a/b/c&#39; does not match the module ID &#39;a/b/com&#39;.</p>
+<h4>paths?</h4>
+<p><code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+<p>A map of resource locations keyed by a corresponding module ID prefix. When a module is to be loaded,
+the longest key in <code>paths</code> is searched that is a prefix of the module ID. The module will be loaded from
+the concatenation of the corresponding value in <code>paths</code> and the remainder of the module ID (after the
+prefix). If no entry in <code>paths</code> matches, then the module will be loaded from the <code>baseUrl</code>.</p>
+<p>The prefixes (keys) must not contain relative segments (./ or ../), a trailing slash will be removed,
+and only full name segment matches are considered a match (prefix &#39;sap/m&#39; does not match a module ID
+&#39;sap/main&#39;).</p>
+<p><strong>Note</strong>: In contrast to the &quot;Common Config&quot; of the AMD spec, the paths (values in the map) are interpreted
+relative to <code>document.baseURI</code>, not relative to <code>cfg.baseUrl</code>.</p>
+<h4>shim?</h4>
+<p><code>Record</code>&lt;<code>string</code>, { <code>amd</code>: <code>boolean</code>; <code>deps</code>: <code>string</code>[]; <code>exports</code>: <code>string</code> | <code>string</code>[]; }&gt;</p>
+<p>Defines additional metadata for modules for which the normal behavior of the AMD APIs is not sufficient.</p>
+<p>A typical example are scripts that don&#39;t use <code>define</code> or <code>sap.ui.define</code>, but export to a global name.
+With the <code>exports</code> property, one or more export names can be specified, and the loader can retrieve the
+exported value after executing the corresponding module. If such a module has dependencies, they can
+be specified in the <code>deps</code> array and are loaded and executed before executing the module.</p>
+<p>The <code>amd</code> flag of a shim is a ui5loader-specific extension of the standard AMD shims. If set, the ui5loader
+hides a currently active AMD loader before executing the module and restores it afterwards. Otherwise,
+it might miss the export of third party modules that check for an AMD loader and register with it instead
+of exporting to a global name. A future version of the ui5loader might ignore this flag when it acts
+as an AMD loader by itself.</p>
+<p><strong>Note:</strong> The ui5loader does not support the <code>init</code> option described by the &quot;Common Config&quot; section of
+the AMD spec.</p>
+<h2>Returns</h2>
+<p><code>object</code></p>
+<p>UI5 loader configuration in use.</p>
+<h3>amd</h3>
+<blockquote>
+<p><strong>amd</strong>: <code>boolean</code></p>
+</blockquote>
+<h3>async</h3>
+<blockquote>
+<p><strong>async</strong>: <code>boolean</code></p>
+</blockquote>
+<h3>noConflict</h3>
+<blockquote>
+<p><strong>noConflict</strong>: <code>boolean</code></p>
+</blockquote>
+<h2>Since</h2>
+<p>1.56.0</p>
+
+<footer>Generated from <code>@openui5/types@1.149.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.149/">Back to index</a>.</footer>
+</body>
+</html>

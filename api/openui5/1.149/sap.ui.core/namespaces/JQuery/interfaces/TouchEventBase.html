@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: TouchEventBase\&lt;TDelegateTarget, TData, TCurrentTarget, TTarget\&gt; — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: TouchEventBase\&lt;TDelegateTarget, TData, TCurrentTarget, TTarget\&gt; — OpenUI5 TypeScript API Reference (1.149.0)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.149/sap.ui.core/namespaces/JQuery/interfaces/TouchEventBase.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../index.html">OpenUI5 API</a> › <a href="../../../../sap.ui.core/README.html">sap.ui.core</a> › namespaces › JQuery › interfaces</nav>
+<p><a href="../../../../README.html"><strong>OpenUI5 TypeScript API (1.149.0)</strong></a></p>
+<hr>
+<p><a href="../../../../README.html">OpenUI5 TypeScript API (1.149.0)</a> / <a href="../../../README.html">sap.ui.core</a> / <a href="../README-1.html">JQuery</a> / TouchEventBase</p>
+<h1>Interface: TouchEventBase&lt;TDelegateTarget, TData, TCurrentTarget, TTarget&gt;</h1>
+<pre class="sig"><span class="kw">import</span> { TouchEventBase } <span class="kw">from</span> <span class="str">"namespaces/JQuery"</span>;</pre>
+<p>Base type for jQuery events that have been triggered (including events triggered on plain objects).</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="UIEventBase.html"><code>UIEventBase</code></a>&lt;<code>TDelegateTarget</code>, <code>TData</code>, <code>TCurrentTarget</code>, <code>TTarget</code>&gt;</li>
+</ul>
+<h2>Extended by</h2>
+<ul>
+<li><a href="TouchCancelEvent.html"><code>TouchCancelEvent</code></a></li>
+<li><a href="TouchEndEvent.html"><code>TouchEndEvent</code></a></li>
+<li><a href="TouchMoveEvent.html"><code>TouchMoveEvent</code></a></li>
+<li><a href="TouchStartEvent.html"><code>TouchStartEvent</code></a></li>
+</ul>
+<h2>Type Parameters</h2>
+<h3>TDelegateTarget</h3>
+<p><code>TDelegateTarget</code> = <code>any</code></p>
+<h3>TData</h3>
+<p><code>TData</code> = <code>any</code></p>
+<h3>TCurrentTarget</h3>
+<p><code>TCurrentTarget</code> = <code>any</code></p>
+<h3>TTarget</h3>
+<p><code>TTarget</code> = <code>any</code></p>
+<h2>Properties</h2>
+<h3>altKey</h3>
+<blockquote>
+<p><strong>altKey</strong>: <code>boolean</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#altkey"><code>altKey</code></a></p>
+<hr>
+<h3>button</h3>
+<blockquote>
+<p><strong>button</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#button"><code>button</code></a></p>
+<hr>
+<h3>buttons</h3>
+<blockquote>
+<p><strong>buttons</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#buttons"><code>buttons</code></a></p>
+<hr>
+<h3>changedTouches</h3>
+<blockquote>
+<p><strong>changedTouches</strong>: <code>TouchList</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#changedtouches"><code>changedTouches</code></a></p>
+<hr>
+<h3><del>char</del></h3>
+<blockquote>
+<p><strong>char</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Deprecated</h4>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#char"><code>char</code></a></p>
+<hr>
+<h3><del>charCode</del></h3>
+<blockquote>
+<p><strong>charCode</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Deprecated</h4>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#charcode"><code>charCode</code></a></p>
+<hr>
+<h3>clientX</h3>
+<blockquote>
+<p><strong>clientX</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#clientx"><code>clientX</code></a></p>
+<hr>
+<h3>clientY</h3>
+<blockquote>
+<p><strong>clientY</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#clienty"><code>clientY</code></a></p>
+<hr>
+<h3>ctrlKey</h3>
+<blockquote>
+<p><strong>ctrlKey</strong>: <code>boolean</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#ctrlkey"><code>ctrlKey</code></a></p>
+<hr>
+<h3>key</h3>
+<blockquote>
+<p><strong>key</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#key"><code>key</code></a></p>
+<hr>
+<h3><del>keyCode</del></h3>
+<blockquote>
+<p><strong>keyCode</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Deprecated</h4>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#keycode"><code>keyCode</code></a></p>
+<hr>
+<h3>metaKey</h3>
+<blockquote>
+<p><strong>metaKey</strong>: <code>boolean</code></p>
+</blockquote>
+<p>Indicates whether the META key was pressed when the event fired.</p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/event.metaKey/](https://api.jquery.com/event.metaKey/)</code></p>
+<h4>Since</h4>
+<p>1.0.4</p>
+<h4>Example</h4>
+<p><strong>​ ````Determine whether the META key was pressed when the event fired.</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;event.metaKey demo&lt;/title&gt;
+&lt;style&gt;
+body {
+background-color: #eef;
+}
+div {
+padding: 20px;
+}
+&lt;/style&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;button value=&quot;Test&quot; name=&quot;Test&quot; id=&quot;checkMetaKey&quot;&gt;Click me!&lt;/button&gt;
+&lt;div id=&quot;display&quot;&gt;&lt;/div&gt;
+​
+&lt;script&gt;
+$( &quot;#checkMetaKey&quot; ).click(function( event ) {
+$( &quot;#display&quot; ).text( event.metaKey );
+});
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#metakey"><code>metaKey</code></a></p>
+<hr>
+<h3>offsetX</h3>
+<blockquote>
+<p><strong>offsetX</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#offsetx"><code>offsetX</code></a></p>
+<hr>
+<h3>offsetY</h3>
+<blockquote>
+<p><strong>offsetY</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#offsety"><code>offsetY</code></a></p>
+<hr>
+<h3>originalEvent?</h3>
+<blockquote>
+<p><code>optional</code> <strong>originalEvent?</strong>: <code>TouchEvent</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#originalevent"><code>originalEvent</code></a></p>
+<hr>
+<h3>pageX</h3>
+<blockquote>
+<p><strong>pageX</strong>: <code>undefined</code></p>
+</blockquote>
+<p>The mouse position relative to the left edge of the document.</p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/event.pageX/](https://api.jquery.com/event.pageX/)</code></p>
+<h4>Since</h4>
+<p>1.0.4</p>
+<h4>Example</h4>
+<p><strong>​ ````Show the mouse position relative to the left and top edges of the document (within this iframe).</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;event.pageX demo&lt;/title&gt;
+&lt;style&gt;
+body {
+background-color: #eef;
+}
+div {
+padding: 20px;
+}
+&lt;/style&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;div id=&quot;log&quot;&gt;&lt;/div&gt;
+​
+&lt;script&gt;
+$( document ).on( &quot;mousemove&quot;, function( event ) {
+$( &quot;#log&quot; ).text( &quot;pageX: &quot; + event.pageX + &quot;, pageY: &quot; + event.pageY );
+});
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#pagex"><code>pageX</code></a></p>
+<hr>
+<h3>pageY</h3>
+<blockquote>
+<p><strong>pageY</strong>: <code>undefined</code></p>
+</blockquote>
+<p>The mouse position relative to the top edge of the document.</p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/event.pageY/](https://api.jquery.com/event.pageY/)</code></p>
+<h4>Since</h4>
+<p>1.0.4</p>
+<h4>Example</h4>
+<p><strong>​ ````Show the mouse position relative to the left and top edges of the document (within this iframe).</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;event.pageY demo&lt;/title&gt;
+&lt;style&gt;
+body {
+background-color: #eef;
+}
+div {
+padding: 20px;
+}
+&lt;/style&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;div id=&quot;log&quot;&gt;&lt;/div&gt;
+​
+&lt;script&gt;
+$( document ).on( &quot;mousemove&quot;, function( event ) {
+$( &quot;#log&quot; ).text( &quot;pageX: &quot; + event.pageX + &quot;, pageY: &quot; + event.pageY );
+});
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#pagey"><code>pageY</code></a></p>
+<hr>
+<h3>pointerId</h3>
+<blockquote>
+<p><strong>pointerId</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#pointerid"><code>pointerId</code></a></p>
+<hr>
+<h3>pointerType</h3>
+<blockquote>
+<p><strong>pointerType</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#pointertype"><code>pointerType</code></a></p>
+<hr>
+<h3>relatedTarget?</h3>
+<blockquote>
+<p><code>optional</code> <strong>relatedTarget?</strong>: <code>undefined</code></p>
+</blockquote>
+<p>The other DOM element involved in the event, if any.</p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/event.relatedTarget/](https://api.jquery.com/event.relatedTarget/)</code></p>
+<h4>Since</h4>
+<p>1.1.4</p>
+<h4>Example</h4>
+<p><strong>​ ````On mouseout of anchors, alert the element type being entered.</strong></p>
+<pre><code class="language-javascript">$( &quot;a&quot; ).mouseout(function( event ) {
+alert( event.relatedTarget.nodeName ); // &quot;DIV&quot;
+});
+</code></pre>
+<hr>
+<h3>screenX</h3>
+<blockquote>
+<p><strong>screenX</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#screenx"><code>screenX</code></a></p>
+<hr>
+<h3>screenY</h3>
+<blockquote>
+<p><strong>screenY</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#screeny"><code>screenY</code></a></p>
+<hr>
+<h3>shiftKey</h3>
+<blockquote>
+<p><strong>shiftKey</strong>: <code>boolean</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#shiftkey"><code>shiftKey</code></a></p>
+<hr>
+<h3>targetTouches</h3>
+<blockquote>
+<p><strong>targetTouches</strong>: <code>TouchList</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#targettouches"><code>targetTouches</code></a></p>
+<hr>
+<h3><del>toElement</del></h3>
+<blockquote>
+<p><strong>toElement</strong>: <code>undefined</code></p>
+</blockquote>
+<h4>Deprecated</h4>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#toelement"><code>toElement</code></a></p>
+<hr>
+<h3>touches</h3>
+<blockquote>
+<p><strong>touches</strong>: <code>TouchList</code></p>
+</blockquote>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#touches"><code>touches</code></a></p>
+<hr>
+<h3><del>which</del></h3>
+<blockquote>
+<p><strong>which</strong>: <code>undefined</code></p>
+</blockquote>
+<p>For key or mouse events, this property indicates the specific key or button that was pressed.</p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/event.which/](https://api.jquery.com/event.which/)</code></p>
+<h4>Since</h4>
+<p>1.1.3</p>
+<h4>Deprecated</h4>
+<p>​ Deprecated since 3.3. See <code>[https://github.com/jquery/api.jquery.com/issues/821](https://github.com/jquery/api.jquery.com/issues/821)</code>.</p>
+<h4>Example</h4>
+<p><strong>​ ````Log which key was depressed.
+```html
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;event.which demo&lt;/title&gt;
+&lt;script src=&quot;<a href="https://code.jquery.com/jquery-3.3.1.js%22%5C%3E%5C">https://code.jquery.com/jquery-3.3.1.js&quot;\&gt;\</a>&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;input id=&quot;whichkey&quot; value=&quot;type something&quot;&gt;
+&lt;div id=&quot;log&quot;&gt;&lt;/div&gt;
+​
+&lt;script&gt;
+$( &quot;#whichkey&quot; ).on( &quot;keydown&quot;, function( event ) {
+$( &quot;#log&quot; ).html( event.type + &quot;: &quot; +  event.which );
+});
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+```
+@example ​ ````Log which mouse button was depressed.</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;event.which demo&lt;/title&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;input id=&quot;whichkey&quot; value=&quot;click here&quot;&gt;
+&lt;div id=&quot;log&quot;&gt;&lt;/div&gt;
+​
+&lt;script&gt;
+$( &quot;#whichkey&quot; ).on( &quot;mousedown&quot;, function( event ) {
+$( &quot;#log&quot; ).html( event.type + &quot;: &quot; +  event.which );
+});
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>Overrides</h4>
+<p><a href="UIEventBase.html"><code>UIEventBase</code></a>.<a href="UIEventBase.html#which"><code>which</code></a></p>
+<h2>Methods</h2>
+
+<footer>Generated from <code>@openui5/types@1.149.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.149/">Back to index</a>.</footer>
+</body>
+</html>
