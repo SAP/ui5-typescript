@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: AnimationStatic() — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: AnimationStatic() — OpenUI5 TypeScript API Reference (1.149.0)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.149/sap.ui.core/namespaces/JQuery/interfaces/AnimationStatic.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../index.html">OpenUI5 API</a> › <a href="../../../../sap.ui.core/README.html">sap.ui.core</a> › namespaces › JQuery › interfaces</nav>
+<p><a href="../../../../README.html"><strong>OpenUI5 TypeScript API (1.149.0)</strong></a></p>
+<hr>
+<p><a href="../../../../README.html">OpenUI5 TypeScript API (1.149.0)</a> / <a href="../../../README.html">sap.ui.core</a> / <a href="../README-1.html">JQuery</a> / AnimationStatic</p>
+<h1>Interface: AnimationStatic()</h1>
+<pre class="sig"><span class="kw">import</span> { AnimationStatic } <span class="kw">from</span> <span class="str">"namespaces/JQuery"</span>;</pre>
+<h2>See</h2>
+<p><code>[https://gist.github.com/gnarf/54829d408993526fe475#animation-factory](https://gist.github.com/gnarf/54829d408993526fe475#animation-factory)</code></p>
+<h2>Since</h2>
+<p>1.8</p>
+<blockquote>
+<p><strong>AnimationStatic</strong>&lt;<code>TElement</code>&gt;(<code>element</code>, <code>props</code>, <code>opts</code>): <a href="Animation.html"><code>Animation</code></a>&lt;<code>TElement</code>&gt;</p>
+</blockquote>
+<h2>Type Parameters</h2>
+<h3>TElement</h3>
+<p><code>TElement</code></p>
+<h2>Parameters</h2>
+<h3>element</h3>
+<p><code>TElement</code></p>
+<h3>props</h3>
+<p><a href="PlainObject.html"><code>PlainObject</code></a></p>
+<h3>opts</h3>
+<p><a href="EffectsOptions.html"><code>EffectsOptions</code></a>&lt;<code>TElement</code>&gt;</p>
+<h2>Returns</h2>
+<p><a href="Animation.html"><code>Animation</code></a>&lt;<code>TElement</code>&gt;</p>
+<h2>See</h2>
+<p><code>[https://gist.github.com/gnarf/54829d408993526fe475#animation-factory](https://gist.github.com/gnarf/54829d408993526fe475#animation-factory)</code></p>
+<h2>Since</h2>
+<p>1.8</p>
+<h2>Methods</h2>
+<h3>prefilter()</h3>
+<blockquote>
+<p><strong>prefilter</strong>&lt;<code>TElement</code>&gt;(<code>callback</code>, <code>prepend?</code>): <code>void</code></p>
+</blockquote>
+<p>During the initial setup, <code>jQuery.Animation</code> will call any callbacks that have been registered through <code>jQuery.Animation.prefilter( function( element, props, opts ) )</code>.</p>
+<h4>Type Parameters</h4>
+<h5>TElement</h5>
+<p><code>TElement</code></p>
+<h4>Parameters</h4>
+<h5>callback</h5>
+<p>(<code>this</code>, <code>element</code>, <code>props</code>, <code>opts</code>) =&gt; <code>void</code> | <a href="Animation.html"><code>Animation</code></a>&lt;<code>TElement</code>&gt; | <a href="../type-aliases/Falsy.html"><code>_Falsy</code></a></p>
+<p>The prefilter will have <code>this</code> set to an animation object, and you can modify any of the <code>props</code> or
+                <code>opts</code> however you need. The prefilter <em>may</em> return its own promise which also implements <code>stop()</code>,
+                in which case, processing of prefilters stops. If the prefilter is not trying to override the animation
+                entirely, it should return <code>undefined</code> or some other falsy value.</p>
+<h5>prepend?</h5>
+<p><code>boolean</code></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>See</h4>
+<p><code>[https://gist.github.com/gnarf/54829d408993526fe475#prefilters](https://gist.github.com/gnarf/54829d408993526fe475#prefilters)</code></p>
+<h4>Since</h4>
+<p>1.8</p>
+<hr>
+<h3>tweener()</h3>
+<blockquote>
+<p><strong>tweener</strong>(<code>props</code>, <code>callback</code>): <code>void</code></p>
+</blockquote>
+<p>A &quot;Tweener&quot; is a function responsible for creating a tween object, and you might want to override these if you want to implement complex values ( like a clip/transform array matrix ) in a single property.</p>
+<p>You can override the default process for creating a tween in order to provide your own tween object by using <code>jQuery.Animation.tweener( props, callback( prop, value ) )</code>.</p>
+<h4>Parameters</h4>
+<h5>props</h5>
+<p><code>string</code></p>
+<p>A space separated list of properties to be passed to your tweener, or <code>&quot;*&quot;</code> if it should be called
+             for all properties.</p>
+<h5>callback</h5>
+<p><a href="../type-aliases/Tweener.html"><code>Tweener</code></a>&lt;<code>any</code>&gt;</p>
+<p>The callback will be called with <code>this</code> being an <code>Animation</code> object. The tweener function will
+                generally start with <code>var tween = this.createTween( prop, value );</code>, but doesn&#39;t nessecarily need to
+                use the <code>jQuery.Tween()</code> factory.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>See</h4>
+<p><code>[https://gist.github.com/gnarf/54829d408993526fe475#tweeners](https://gist.github.com/gnarf/54829d408993526fe475#tweeners)</code></p>
+<h4>Since</h4>
+<p>1.8</p>
+
+<footer>Generated from <code>@openui5/types@1.149.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.149/">Back to index</a>.</footer>
+</body>
+</html>
