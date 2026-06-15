@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Class: DataProvider — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: DataProvider — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.sac.df/sap/sac/df/model/DataProvider/classes/DataProvider.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.sac.df/README.html">sap.sac.df</a> › sap › sac › df › model › <a href="../../../../../../../sap.sac.df/sap/sac/df/model/DataProvider/README.html">DataProvider</a> › classes</nav>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<hr>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../../README.html">sap.sac.df</a> / <a href="../README.html">sap/sac/df/model/DataProvider</a> / DataProvider</p>
+<h1>Class: DataProvider</h1>
+<pre class="sig"><span class="kw">import</span> DataProvider <span class="kw">from</span> <span class="str">"sap/sac/df/model/DataProvider"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>A data provider is an analytical query exposed via an analytical engine and accessed via InA protocol.
+It represents a navigable query manager and allows to access and change data. Instances of this class
+should only be created by the sap.sac.df.model.MultiDimModel.</p>
+<p><strong>Structure of Exposed Data:</strong></p>
+<pre><code class="language-javascript">
+&quot;Name&quot;: &quot;&quot;,
+&quot;DataSourceInfo&quot;: { },
+&quot;Variables&quot;: { }
+&quot;Dimensions&quot;: { },
+&quot;Measures&quot;: [ ],
+&quot;Messages&quot;: [ ]
+&quot;AutoFetchEnabled&quot;: &quot;&quot;
+</code></pre>
+<h2>Since</h2>
+<p>1.119
+ As of version 1.119.</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a></li>
+</ul>
+<h2>Properties</h2>
+<h3>AutoFetchEnabled</h3>
+<blockquote>
+<p><strong>AutoFetchEnabled</strong>: <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Indicator if the result set should be fetched automatically. The default value is true.</p>
+<hr>
+<h3>DataSourceInfo</h3>
+<blockquote>
+<p><strong>DataSourceInfo</strong>: <a href="../../DataSourceInfo/classes/DataSourceInfo.html"><code>DataSourceInfo</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>DataSourceInfo</p>
+<hr>
+<h3>Dimensions</h3>
+<blockquote>
+<p><strong>Dimensions</strong>: <code>Record</code>&lt;<code>string</code>, <a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Dimensions</p>
+<hr>
+<h3>Measures</h3>
+<blockquote>
+<p><strong>Measures</strong>: <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Measures</p>
+<hr>
+<h3>Variables</h3>
+<blockquote>
+<p><strong>Variables</strong>: <code>Record</code>&lt;<code>string</code>, <a href="../../Variable/classes/Variable.html"><code>Variable</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Variables</p>
+<hr>
+<h3>Visualizations</h3>
+<blockquote>
+<p><strong>Visualizations</strong>: <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Visualizations</p>
+<h2>Methods</h2>
+<h3>addVisualization()</h3>
+<blockquote>
+<p><strong>addVisualization</strong>(<code>sName</code>, <code>sType</code>): <code>any</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Add new visualization</p>
+<h4>Parameters</h4>
+<h5>sName</h5>
+<p><code>string</code></p>
+<p>visualization name</p>
+<h5>sType</h5>
+<p><code>any</code></p>
+<p>type of visualization</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Returns visualization</p>
+<hr>
+<h3>createScenario()</h3>
+<blockquote>
+<p><strong>createScenario</strong>(<code>sScenarioId</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Execute scenario on data provider</p>
+<h4>Parameters</h4>
+<h5>sScenarioId</h5>
+<p><code>undefined</code></p>
+<p>scenario</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>Promise with reference to created scenario</p>
+<h4>Since</h4>
+<p>1.134</p>
+<hr>
+<h3>deserialize()</h3>
+<blockquote>
+<p><strong>deserialize</strong>(<code>oModelState</code>, <code>sFormat?</code>, <code>bSuppressUpdate?</code>): <code>Promise</code>&lt;<code>DataProvider</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Updates the multidimensional model from the given the state of a data provider</p>
+<h4>Parameters</h4>
+<h5>oModelState</h5>
+<p><code>object</code></p>
+<p>the JSON object containing the persisted state of a data provider to be applied.</p>
+<h5>sFormat?</h5>
+<p><code>string</code></p>
+<p>Format of the serialization (INA_REPOSITORY_DELTA or INA_REPOSITORY).</p>
+<h5>bSuppressUpdate?</h5>
+<p><code>boolean</code></p>
+<p>Indicator if the data provider updated should be suppressed after deserialization</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>DataProvider</code>&gt;</p>
+<p>Promise with reference to this in order to allow method chaining</p>
+<hr>
+<h3>exportData()</h3>
+<blockquote>
+<p><strong>exportData</strong>(<code>oDataExportConfig</code>): <code>void</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Export Data</p>
+<h4>Parameters</h4>
+<h5>oDataExportConfig</h5>
+<p><code>object</code></p>
+<p>Data export configuration</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3>fireDataUpdated()</h3>
+<blockquote>
+<p><strong>fireDataUpdated</strong>(<code>oParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:dataUpdated dataUpdated to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>oParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>fireVisualizationAdded()</h3>
+<blockquote>
+<p><strong>fireVisualizationAdded</strong>(<code>oParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:visualizationAdded visualizationAdded to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>oParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>fireVisualizationRemoved()</h3>
+<blockquote>
+<p><strong>fireVisualizationRemoved</strong>(<code>oParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:visualizationRemoved visualizationRemoved to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>oParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>getAutoFetchEnabled()</h3>
+<blockquote>
+<p><strong>getAutoFetchEnabled</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get the property AutoFetchEnabled</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<hr>
+<h3>getDataSourceInfo()</h3>
+<blockquote>
+<p><strong>getDataSourceInfo</strong>(): <a href="../../DataSourceInfo/classes/DataSourceInfo.html"><code>DataSourceInfo</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get data source information</p>
+<h4>Returns</h4>
+<p><a href="../../DataSourceInfo/classes/DataSourceInfo.html"><code>DataSourceInfo</code></a></p>
+<p>data source information object</p>
+<hr>
+<h3>getDecimalPlaces()</h3>
+<blockquote>
+<p><strong>getDecimalPlaces</strong>(<code>sMeasureStructureMember</code>, <code>sStructureMember</code>): <code>number</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get the scaling factor of a measure or cell</p>
+<h4>Parameters</h4>
+<h5>sMeasureStructureMember</h5>
+<p><code>string</code></p>
+<p>Measure structure member</p>
+<h5>sStructureMember</h5>
+<p><code>string</code></p>
+<p>Structure (non-measure) member</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Number of decimal places</p>
+<hr>
+<h3>getDimension()</h3>
+<blockquote>
+<p><strong>getDimension</strong>(<code>sDimensionName</code>): <a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get Dimension</p>
+<h4>Parameters</h4>
+<h5>sDimensionName</h5>
+<p><code>string</code></p>
+<p>Dimension name</p>
+<h4>Returns</h4>
+<p><a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a></p>
+<p>Dimension object</p>
+<hr>
+<h3>getDimensions()</h3>
+<blockquote>
+<p><strong>getDimensions</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get all dimensions</p>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a>&gt;</p>
+<p>Object of all dimensions</p>
+<hr>
+<h3>getGridVisualization()</h3>
+<blockquote>
+<p><strong>getGridVisualization</strong>(): <code>any</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get grid visualization</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>visualization object if found</p>
+<hr>
+<h3>getMeasure()</h3>
+<blockquote>
+<p><strong>getMeasure</strong>(<code>sMeasureName</code>): <code>any</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get measure</p>
+<h4>Parameters</h4>
+<h5>sMeasureName</h5>
+<p><code>string</code></p>
+<p>Measure name</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Measure object</p>
+<hr>
+<h3>getMeasures()</h3>
+<blockquote>
+<p><strong>getMeasures</strong>(): <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get all measures</p>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+<p>Object of all measures</p>
+<hr>
+<h3>getMeasureStructureDimension()</h3>
+<blockquote>
+<p><strong>getMeasureStructureDimension</strong>(): <a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get Measure Structure Dimension</p>
+<h4>Returns</h4>
+<p><a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a></p>
+<p>Measure structure dimension</p>
+<hr>
+<h3>getScalingFactor()</h3>
+<blockquote>
+<p><strong>getScalingFactor</strong>(<code>sMeasureStructureMember</code>, <code>sStructureMember</code>): <code>number</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get the scaling factor of a measure or cell</p>
+<h4>Parameters</h4>
+<h5>sMeasureStructureMember</h5>
+<p><code>string</code></p>
+<p>Measure structure member</p>
+<h5>sStructureMember</h5>
+<p><code>string</code></p>
+<p>Structure (non-measure) member</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Scaling factor</p>
+<hr>
+<h3>getStructureDimension()</h3>
+<blockquote>
+<p><strong>getStructureDimension</strong>(): <a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get structure (non-measure) dimension</p>
+<h4>Returns</h4>
+<p><a href="../../Dimension/classes/Dimension.html"><code>Dimension</code></a></p>
+<p>Structure dimension object</p>
+<hr>
+<h3>getVariable()</h3>
+<blockquote>
+<p><strong>getVariable</strong>(<code>sVariableName</code>): <a href="../../Variable/classes/Variable.html"><code>Variable</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get Variable</p>
+<h4>Parameters</h4>
+<h5>sVariableName</h5>
+<p><code>string</code></p>
+<p>Variable Name</p>
+<h4>Returns</h4>
+<p><a href="../../Variable/classes/Variable.html"><code>Variable</code></a></p>
+<p>Variable object</p>
+<hr>
+<h3>getVariables()</h3>
+<blockquote>
+<p><strong>getVariables</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../../Variable/classes/Variable.html"><code>Variable</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get all variables</p>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../Variable/classes/Variable.html"><code>Variable</code></a>&gt;</p>
+<p>Object of all variables</p>
+<hr>
+<h3>getVisualization()</h3>
+<blockquote>
+<p><strong>getVisualization</strong>(<code>sName</code>): <code>any</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get visualization</p>
+<h4>Parameters</h4>
+<h5>sName</h5>
+<p><code>String</code></p>
+<p>visualization name</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>visualization object if found</p>
+<hr>
+<h3>getVisualizations()</h3>
+<blockquote>
+<p><strong>getVisualizations</strong>(): <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get all visualizations</p>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+<p>Object of all visualizations</p>
+<hr>
+<h3>removeVisualization()</h3>
+<blockquote>
+<p><strong>removeVisualization</strong>(<code>sName</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Remove existing visualization from data provider</p>
+<h4>Parameters</h4>
+<h5>sName</h5>
+<p><code>string</code></p>
+<p>visualization name</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<p>Promise which resolves when the removing s finished</p>
+<hr>
+<h3>serialize()</h3>
+<blockquote>
+<p><strong>serialize</strong>(<code>sFormat?</code>): <code>object</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Serialize the data provider state to a JSON representation</p>
+<h4>Parameters</h4>
+<h5>sFormat?</h5>
+<p><code>string</code></p>
+<p>Format of the serialization (INA_REPOSITORY_DELTA or INA_REPOSITORY)</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>A JSON object which represents the data provider</p>
+<hr>
+<h3>setAutoFetchEnabled()</h3>
+<blockquote>
+<p><strong>setAutoFetchEnabled</strong>(<code>bAutoFetchEnabled</code>): <code>void</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set the property <code>AutoFetchEnabled</code>, if the data should be automatically be refreshed on invalid.</p>
+<h4>Parameters</h4>
+<h5>bAutoFetchEnabled</h5>
+<p><code>boolean</code></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3>setDecimalPlaces()</h3>
+<blockquote>
+<p><strong>setDecimalPlaces</strong>(<code>nNumberOfDecimalPlaces</code>, <code>sMeasureStructureMember</code>, <code>sStructureMember</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set the number of decimal places of a measure or cell</p>
+<h4>Parameters</h4>
+<h5>nNumberOfDecimalPlaces</h5>
+<p><code>number</code></p>
+<p>Number of the decimal places</p>
+<h5>sMeasureStructureMember</h5>
+<p><code>string</code></p>
+<p>Measure structure member</p>
+<h5>sStructureMember</h5>
+<p><code>string</code></p>
+<p>Structure (non-measure) member</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>setScalingFactor()</h3>
+<blockquote>
+<p><strong>setScalingFactor</strong>(<code>nFactor</code>, <code>sMeasureStructureMember</code>, <code>sStructureMember</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set the scaling factor of a measure or cell</p>
+<h4>Parameters</h4>
+<h5>nFactor</h5>
+<p><code>number</code></p>
+<p>Scaling factor</p>
+<h5>sMeasureStructureMember</h5>
+<p><code>string</code></p>
+<p>Measure structure member</p>
+<h5>sStructureMember</h5>
+<p><code>string</code></p>
+<p>Structure (non-measure) member</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>supportsCapability()</h3>
+<blockquote>
+<p><strong>supportsCapability</strong>(<code>sCapability</code>): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Checks whether an InA capability is supported by the server. Throws an error for unhandled capabilities.
+List of handled capabilities can be seen in type sap.sac.df.model.Capability</p>
+<h4>Parameters</h4>
+<h5>sCapability</h5>
+<p><code>undefined</code></p>
+<p>Capability name</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Returns true, if the capability is supported, else false</p>
+<hr>
+<h3>extend()</h3>
+<blockquote>
+<p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a new subclass of class sap.sac.df.model.DataProvider with name <code>sClassName</code> and enriches it
+with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.model.json.JSONModel.extend.</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>Name of the class being created</p>
+<h5>oClassInfo?</h5>
+<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>DataProvider</code>&gt;</p>
+<p>Object literal with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+used by this class</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Created class / constructor function</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html#extend"><code>extend</code></a></p>
+<hr>
+<h3>getMetadata()</h3>
+<blockquote>
+<p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Returns a metadata object for class sap.sac.df.model.DataProvider.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
+<p>Metadata object describing this class</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html#getmetadata-1"><code>getMetadata</code></a></p>
+<hr>
+
+<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+</body>
+</html>

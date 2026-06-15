@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: HandleObject\&lt;TTarget, TData\&gt; — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: HandleObject\&lt;TTarget, TData\&gt; — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.core/namespaces/JQuery/interfaces/HandleObject.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../index.html">SAPUI5 API</a> › <a href="../../../../sap.ui.core/README.html">sap.ui.core</a> › namespaces › JQuery › interfaces</nav>
+<p><a href="../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<hr>
+<p><a href="../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../README.html">sap.ui.core</a> / <a href="../README-1.html">JQuery</a> / HandleObject</p>
+<h1>Interface: HandleObject&lt;TTarget, TData&gt;</h1>
+<pre class="sig"><span class="kw">import</span> { HandleObject } <span class="kw">from</span> <span class="str">"namespaces/JQuery"</span>;</pre>
+<p>Many of the special event hook functions below are passed a <code>handleObj</code> object that provides more information about the event, how it was attached, and its current state. This object and its contents should be treated as read-only data, and only the properties below are documented for use by special event handlers.</p>
+<h2>See</h2>
+<p><code>[https://learn.jquery.com/events/event-extensions/#the-handleobj-object](https://learn.jquery.com/events/event-extensions/#the-handleobj-object)</code></p>
+<h2>Type Parameters</h2>
+<h3>TTarget</h3>
+<p><code>TTarget</code></p>
+<h3>TData</h3>
+<p><code>TData</code></p>
+<h2>Properties</h2>
+<h3>data</h3>
+<blockquote>
+<p><code>readonly</code> <strong>data</strong>: <code>TData</code></p>
+</blockquote>
+<p>The data, if any, passed to jQuery during event binding, e.g. <code>{ myData: 42 }</code>. If the data argument was omitted or <code>undefined</code>, this property is <code>undefined</code> as well.</p>
+<hr>
+<h3>handler</h3>
+<blockquote>
+<p><code>readonly</code> <strong>handler</strong>: <a href="../type-aliases/EventHandler.html"><code>EventHandler</code></a>&lt;<code>TTarget</code>, <code>TData</code>&gt;</p>
+</blockquote>
+<p>Event handler function passed to jQuery during event binding. If <code>false</code> was passed during event binding, the handler refers to a single shared function that simply returns <code>false</code>.</p>
+<hr>
+<h3>namespace</h3>
+<blockquote>
+<p><code>readonly</code> <strong>namespace</strong>: <code>string</code></p>
+</blockquote>
+<p>Namespace(s), if any, provided when the event was attached, such as <code>&quot;myPlugin&quot;</code>. When multiple namespaces are given, they are separated by periods and sorted in ascending alphabetical order. If no namespaces are provided, this property is an empty string.</p>
+<hr>
+<h3>origType</h3>
+<blockquote>
+<p><code>readonly</code> <strong>origType</strong>: <code>string</code></p>
+</blockquote>
+<p>The original type name regardless of whether it was mapped via <code>bindType</code> or <code>delegateType</code>. So when a &quot;pushy&quot; event is mapped to &quot;click&quot; its <code>origType</code> would be &quot;pushy&quot;.</p>
+<hr>
+<h3>selector</h3>
+<blockquote>
+<p><code>readonly</code> <strong>selector</strong>: <code>string</code></p>
+</blockquote>
+<p>For delegated events, this is the selector used to filter descendant elements and determine if the handler should be called. For directly bound events, this property is <code>null</code>.</p>
+<hr>
+<h3>type</h3>
+<blockquote>
+<p><code>readonly</code> <strong>type</strong>: <code>string</code></p>
+</blockquote>
+<p>The type of event, such as <code>&quot;click&quot;</code>. When special event mapping is used via <code>bindType</code> or <code>delegateType</code>, this will be the mapped type.</p>
+
+<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Function: require() — SAPUI5 TypeScript API</title>
+<meta name="description" content="Function: require() — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.apf/namespaces/sap/namespaces/ui/functions/require.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.apf/README.html">sap.apf</a> › namespaces › <a href="../../../../../../sap.apf/namespaces/sap/README.html">sap</a> › namespaces › <a href="../../../../../../sap.apf/namespaces/sap/namespaces/ui/README.html">ui</a> › functions</nav>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<hr>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../README.html">sap.apf</a> / <a href="../../../README.html">sap</a> / <a href="../README.html">ui</a> / require</p>
+<h1>Function: require()</h1>
+<blockquote>
+<p><strong>require</strong>(<code>vDependencies</code>, <code>fnCallback?</code>, <code>fnErrback?</code>): <code>any</code></p>
+</blockquote>
+<p>Resolves one or more module dependencies.</p>
+<p>Synchronous Retrieval of a Single Module Export Value (Probing):</p>
+<p>When called with a single string, that string is assumed to be the ID of an already loaded module and
+the export of that module is returned. If the module has not been loaded yet, or if it is a Non-UI5 module
+(e.g. third-party module) without a shim, <code>undefined</code> is returned.</p>
+<p>This signature variant allows synchronous access to module exports without initiating module loading.</p>
+<p>Sample:</p>
+<pre><code class="language-javascript">
+  var JSONModel = sap.ui.require(&quot;sap/ui/model/json/JSONModel&quot;);
+</code></pre>
+<p>For modules that are known to be UI5 modules, this signature variant can be used to check whether the
+module has been loaded.</p>
+<p>Asynchronous Loading of Multiple Modules:</p>
+<p>If an array of strings is given and (optionally) a callback function, then the strings are interpreted
+as module IDs and the corresponding modules (and their transitive dependencies) are loaded. Then the
+callback function will be called asynchronously. The module exports of the specified modules will be
+provided as parameters to the callback function in the same order in which they appeared in the dependencies
+array.</p>
+<p>The return value for the asynchronous use case is <code>undefined</code>.</p>
+<pre><code class="language-javascript">
+  sap.ui.require([&#39;sap/ui/model/json/JSONModel&#39;, &#39;sap/ui/core/UIComponent&#39;], function(JSONModel,UIComponent) {
+
+    var MyComponent = UIComponent.extend(&#39;MyComponent&#39;, {
+      ...
+    });
+    ...
+
+  });
+</code></pre>
+<p>This method uses the same variation of the jQuery.sap.getResourcePath unified resource name syntax
+that <a href="define.html">sap.ui.define</a> uses: module names are specified without the implicit extension &#39;.js&#39;. Relative
+module names are not supported.</p>
+<h2>Parameters</h2>
+<h3>vDependencies</h3>
+<p><code>string</code> | (keyof IUI5DefineDependencyNames | <code>string</code> &amp; <code>object</code>)[]</p>
+<p>Dependency (dependencies) to resolve</p>
+<h3>fnCallback?</h3>
+<p><code>Function</code></p>
+<p>Callback function to execute after resolving an array of dependencies</p>
+<h3>fnErrback?</h3>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>Callback function to execute if an error was detected while loading the dependencies or executing the
+factory function. Note that due to browser restrictions not all errors will be reported via this callback.
+In general, module loading is designed for the non-error case. Error handling is not complete.</p>
+<h2>Returns</h2>
+<p><code>any</code></p>
+<p>A single module export value (sync probing variant) or <code>undefined</code> (async loading variant)</p>
+
+<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+</body>
+</html>

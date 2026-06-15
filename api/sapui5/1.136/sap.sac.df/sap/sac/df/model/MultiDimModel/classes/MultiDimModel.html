@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Class: MultiDimModel — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: MultiDimModel — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.sac.df/sap/sac/df/model/MultiDimModel/classes/MultiDimModel.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.sac.df/README.html">sap.sac.df</a> › sap › sac › df › model › <a href="../../../../../../../sap.sac.df/sap/sac/df/model/MultiDimModel/README.html">MultiDimModel</a> › classes</nav>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<hr>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../../README.html">sap.sac.df</a> / <a href="../README.html">sap/sac/df/model/MultiDimModel</a> / MultiDimModel</p>
+<h1>Class: MultiDimModel</h1>
+<pre class="sig"><span class="kw">import</span> MultiDimModel <span class="kw">from</span> <span class="str">"sap/sac/df/model/MultiDimModel"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>The multidimensional model allows to access and change data accessed via the InA Protocol. The multidimensional
+model populate it&#39;s exposed data in JSON format via binding to controls.</p>
+<p><strong>Structure of Exposed Data:</strong></p>
+<pre><code class="language-javascript">
+&quot;DataProviders&quot;: { },
+&quot;VariableGroups&quot;: { },
+&quot;Messages&quot;: [ ]
+</code></pre>
+<h2>Since</h2>
+<p>1.119
+ As of version 1.119.</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a></li>
+</ul>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new MultiDimModel</strong>(<code>sId?</code>, <code>mSettings?</code>): <code>MultiDimModel</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Constructor for a new MultiDimModel. After model creation you need to wait for the event #event:loaded loaded.</p>
+<h4>Parameters</h4>
+<h5>sId?</h5>
+<p><code>string</code></p>
+<p>ID for the new control, generated automatically if no ID is given</p>
+<h5>mSettings?</h5>
+<p><code>object</code></p>
+<p>Initial settings for the new control.</p>
+<h4>Returns</h4>
+<p><code>MultiDimModel</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html#constructor"><code>constructor</code></a></p>
+<h2>Properties</h2>
+<h3>Configuration</h3>
+<blockquote>
+<p><strong>Configuration</strong>: <code>Record</code>&lt;<code>string</code>, <a href="../../Configuration/classes/Configuration.html"><code>Configuration</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Configuration</p>
+<hr>
+<h3>DataProviders</h3>
+<blockquote>
+<p><strong>DataProviders</strong>: <code>Record</code>&lt;<code>string</code>, <a href="../../DataProvider/classes/DataProvider.html"><code>DataProvider</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Data Providers</p>
+<hr>
+<h3>Messages</h3>
+<blockquote>
+<p><strong>Messages</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Messages</p>
+<hr>
+<h3>VariableGroups</h3>
+<blockquote>
+<p><strong>VariableGroups</strong>: <code>Record</code>&lt;<code>string</code>, <a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Variable Groups</p>
+<h2>Methods</h2>
+<h3>addDataProvider()</h3>
+<blockquote>
+<p><strong>addDataProvider</strong>(<code>sDataProviderName</code>, <code>sDataSourceName</code>, <code>sSystem?</code>, <code>sPackage?</code>, <code>sSchema?</code>, <code>sDataSourceType?</code>, <code>bAutoFetchEnabled?</code>): <code>Promise</code>&lt;<a href="../../DataProvider/classes/DataProvider.html"><code>DataProvider</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a new data provider and attaches it to the model.</p>
+<h4>Parameters</h4>
+<h5>sDataProviderName</h5>
+<p><code>string</code></p>
+<p>Data provider name</p>
+<h5>sDataSourceName</h5>
+<p><code>string</code> | <a href="../../DataProvider/type-aliases/Configuration.html"><code>Configuration</code></a></p>
+<p>Datasource name which the data provider is supposed to expose</p>
+<h5>sSystem?</h5>
+<p><code>string</code></p>
+<p>System name</p>
+<h5>sPackage?</h5>
+<p><code>string</code></p>
+<p>Package name</p>
+<h5>sSchema?</h5>
+<p><code>string</code></p>
+<p>Schema name</p>
+<h5>sDataSourceType?</h5>
+<p><a href="../../../types/DataSourceType/enumerations/DataSourceType.html"><code>DataSourceType</code></a> | <code>&quot;CDSProjectionView&quot;</code> | <code>&quot;Cube&quot;</code> | <code>&quot;InAModel&quot;</code> | <code>&quot;Insight&quot;</code> | <code>&quot;Query&quot;</code> | <code>&quot;View&quot;</code></p>
+<p>Data source type</p>
+<h5>bAutoFetchEnabled?</h5>
+<p><code>boolean</code></p>
+<p>if the data should be fetched automatically</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<a href="../../DataProvider/classes/DataProvider.html"><code>DataProvider</code></a>&gt;</p>
+<p>Promise which resolves the created data provider</p>
+<hr>
+<h3>createVariableGroup()</h3>
+<blockquote>
+<p><strong>createVariableGroup</strong>(<code>sVariableGroupName</code>, <code>fnRule</code>, <code>oProperties</code>): <a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a new variable group and attaches it to the model.</p>
+<p>A variable group defines which variables of the underlying data providers should behave as the same variable.
+The group is defined by a name and a rule. The first added variable becomes automatically the <code>MergedVariable</code>.</p>
+<h4>Parameters</h4>
+<h5>sVariableGroupName</h5>
+<p><code>string</code></p>
+<p>Variable group name</p>
+<h5>fnRule</h5>
+<p><code>Function</code></p>
+<p>Rule is a function which accept the variable definition and decides if the variable has to be part of
+te group.</p>
+<h5>oProperties</h5>
+<p><code>Object</code></p>
+<p>Additional properties</p>
+<h4>Returns</h4>
+<p><a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a></p>
+<p>created variable group</p>
+<hr>
+<h3>deserialize()</h3>
+<blockquote>
+<p><strong>deserialize</strong>(<code>oModelState</code>, <code>sFormat?</code>): <code>Promise</code>&lt;<code>MultiDimModel</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Updates the model from the given the model state including all aggregated data providers</p>
+<h4>Parameters</h4>
+<h5>oModelState</h5>
+<p><code>object</code></p>
+<p>A JSON object which represents the multidimensional model to be applied</p>
+<h5>sFormat?</h5>
+<p><code>string</code></p>
+<p>Format of the serialization (INA_REPOSITORY_DELTA or INA_REPOSITORY).</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>MultiDimModel</code>&gt;</p>
+<p>Promise with reference to this in order to allow method chaining</p>
+<hr>
+<h3>destroy()</h3>
+<blockquote>
+<p><strong>destroy</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Ensures all aggregated data providers are destroyed.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>Promise which resolves when destroy is finished.</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html#destroy"><code>destroy</code></a></p>
+<hr>
+<h3>fireDataProviderAdded()</h3>
+<blockquote>
+<p><strong>fireDataProviderAdded</strong>(<code>oParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:dataProviderAdded dataProviderAdded to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>oParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>fireDataProviderRemoved()</h3>
+<blockquote>
+<p><strong>fireDataProviderRemoved</strong>(<code>oParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:dataProviderRemoved dataProviderRemoved to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>oParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>fireDataProviderUpdated()</h3>
+<blockquote>
+<p><strong>fireDataProviderUpdated</strong>(<code>oParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:dataProviderUpdated dataProviderUpdated to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>oParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>fireVariableGroupsAdded()</h3>
+<blockquote>
+<p><strong>fireVariableGroupsAdded</strong>(<code>oParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:variableGroupsAdded variableGroupsAdded to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>oParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>getContextMenuProviderRegistry()</h3>
+<blockquote>
+<p><strong>getContextMenuProviderRegistry</strong>(): <code>undefined</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get context menu provider registry</p>
+<h4>Returns</h4>
+<p><code>undefined</code></p>
+<p>sap.sac.df.model.extentsions.contextMenu.ContextMenuProviderRegistry</p>
+<hr>
+<h3>getDataProvider()</h3>
+<blockquote>
+<p><strong>getDataProvider</strong>(<code>sDataProviderName</code>): <a href="../../DataProvider/classes/DataProvider.html"><code>DataProvider</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get a data provider</p>
+<h4>Parameters</h4>
+<h5>sDataProviderName</h5>
+<p><code>string</code></p>
+<p>Data provider name</p>
+<h4>Returns</h4>
+<p><a href="../../DataProvider/classes/DataProvider.html"><code>DataProvider</code></a></p>
+<p>Data provider object if found</p>
+<hr>
+<h3>getDataProviders()</h3>
+<blockquote>
+<p><strong>getDataProviders</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../../DataProvider/classes/DataProvider.html"><code>DataProvider</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get all data providers</p>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../DataProvider/classes/DataProvider.html"><code>DataProvider</code></a>&gt;</p>
+<p>Object of all data providers</p>
+<hr>
+<h3><del>getGridStylingTemplateRegistry()</del></h3>
+<blockquote>
+<p><strong>getGridStylingTemplateRegistry</strong>(): <code>undefined</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get grid styling template registry</p>
+<h4>Returns</h4>
+<p><code>undefined</code></p>
+<p>sap.sac.df.model.extentsions.styling.GridStylingTemplateRegistry</p>
+<h4>Deprecated</h4>
+<p>As of version 1.135. the concept has been discarded.</p>
+<hr>
+<h3>getMessages()</h3>
+<blockquote>
+<p><strong>getMessages</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get all messages</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p>Array of messages</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html#getmessages"><code>getMessages</code></a></p>
+<hr>
+<h3>getVariableGroup()</h3>
+<blockquote>
+<p><strong>getVariableGroup</strong>(<code>sVariableGroupName</code>): <a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get a variable group</p>
+<h4>Parameters</h4>
+<h5>sVariableGroupName</h5>
+<p><code>string</code></p>
+<p>Variable group name</p>
+<h4>Returns</h4>
+<p><a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a></p>
+<p>Variable group object</p>
+<hr>
+<h3>getVariableGroups()</h3>
+<blockquote>
+<p><strong>getVariableGroups</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get all variable groups</p>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a>&gt;</p>
+<p>Object of all variable groups</p>
+<hr>
+<h3>removeDataProvider()</h3>
+<blockquote>
+<p><strong>removeDataProvider</strong>(<code>sDataProviderName</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Remove existing data provider from the model.</p>
+<h4>Parameters</h4>
+<h5>sDataProviderName</h5>
+<p><code>string</code></p>
+<p>Data provider name to be removed</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<p>Promise which resolves when the removing s finished</p>
+<hr>
+<h3>resetModel()</h3>
+<blockquote>
+<p><strong>resetModel</strong>(): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Reset the model to the initial state</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<p>Promise which resolves when reset is finished.</p>
+<hr>
+<h3>serialize()</h3>
+<blockquote>
+<p><strong>serialize</strong>(<code>sFormat?</code>): <code>object</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Serialize the model with all aggregated data providers to a JSON representation</p>
+<h4>Parameters</h4>
+<h5>sFormat?</h5>
+<p><code>string</code></p>
+<p>Format of the serialization (INA_REPOSITORY_DELTA or INA_REPOSITORY)</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>A JSON object which represents the multidimensional model</p>
+<hr>
+<h3>setMessages()</h3>
+<blockquote>
+<p><strong>setMessages</strong>(<code>mMessages</code>): <code>void</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Resets the messages</p>
+<h4>Parameters</h4>
+<h5>mMessages</h5>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../../../../../../sap.ui.core/sap/ui/core/message/Message/classes/Message.html"><code>Message</code></a>[]&gt;</p>
+<p>The new messages for the model, mapping a binding path to an array of sap.ui.core.message.Message objects</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html#setmessages"><code>setMessages</code></a></p>
+<hr>
+<h3>setVariableGroups()</h3>
+<blockquote>
+<p><strong>setVariableGroups</strong>(<code>aVariableGroups</code>): <code>Promise</code>&lt;<a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a>[]&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set variable groups.</p>
+<p>A variable group defines which variables of the underlying data providers should behave as the same variable.
+The group is defined by a name and a rule. The first added variable becomes automatically the <code>MergedVariable</code>.</p>
+<h4>Parameters</h4>
+<h5>aVariableGroups</h5>
+<p><a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a>[]</p>
+<p>array of variable groups</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<a href="../../VariableGroup/classes/VariableGroup.html"><code>VariableGroup</code></a>[]&gt;</p>
+<p>Promise which resolves the created variable group</p>
+<hr>
+<h3>extend()</h3>
+<blockquote>
+<p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a new subclass of class sap.sac.df.model.MultiDimModel with name <code>sClassName</code> and enriches it
+with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.model.json.JSONModel.extend.</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>Name of the class being created</p>
+<h5>oClassInfo?</h5>
+<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>MultiDimModel</code>&gt;</p>
+<p>Object literal with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+used by this class</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Created class / constructor function</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html#extend"><code>extend</code></a></p>
+<hr>
+<h3>getMetadata()</h3>
+<blockquote>
+<p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Returns a metadata object for class sap.sac.df.model.MultiDimModel.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
+<p>Metadata object describing this class</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html"><code>JSONModel</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html#getmetadata-1"><code>getMetadata</code></a></p>
+<hr>
+
+<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+</body>
+</html>

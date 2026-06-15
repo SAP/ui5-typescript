@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Class: Dimension — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: Dimension — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.sac.df/sap/sac/df/model/Dimension/classes/Dimension.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.sac.df/README.html">sap.sac.df</a> › sap › sac › df › model › <a href="../../../../../../../sap.sac.df/sap/sac/df/model/Dimension/README.html">Dimension</a> › classes</nav>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<hr>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../../README.html">sap.sac.df</a> / <a href="../README.html">sap/sac/df/model/Dimension</a> / Dimension</p>
+<h1>Class: Dimension</h1>
+<pre class="sig"><span class="kw">import</span> Dimension <span class="kw">from</span> <span class="str">"sap/sac/df/model/Dimension"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Dimension Object</p>
+<p><strong>Structure of Exposed Data:</strong></p>
+<pre><code class="language-javascript">
+&quot;Name&quot;: &quot;&quot;,
+&quot;TechName&quot;: &quot;&quot;,
+&quot;Description&quot;: &quot;&quot;,
+&quot;Axis&quot;: &quot;&quot;,
+&quot;Type&quot;: &quot;&quot;,
+&quot;HierarchyActive&quot;: &quot;&quot;,
+&quot;HasFilter&quot;: &quot;&quot;,
+&quot;MemberFilter&quot;: [],
+&quot;SortDirection&quot;: &quot;&quot;,
+&quot;Position&quot;: &quot;&quot;,
+&quot;LastPosition&quot;: &quot;&quot;,
+&quot;IsStructure&quot;: &quot;&quot;,
+&quot;IsMeasureStructure&quot;: &quot;&quot;,
+&quot;ValueType&quot;: &quot;&quot;,
+&quot;SemanticObject&quot;: &quot;&quot;,
+&quot;Members&quot;: [{
+  &quot;Key&quot;: &quot;&quot;,
+  &quot;Name&quot;: &quot;&quot;,
+  &quot;TechName&quot;: &quot;&quot;,
+  &quot;Description&quot;: &quot;&quot;,
+  &quot;SemanticObject&quot;: &quot;
+}],
+&quot;SupportedOperators&quot;: [&quot;EQ&quot;]
+</code></pre>
+<h2>Since</h2>
+<p>1.119
+ As of version 1.119.</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
+</ul>
+<h2>Methods</h2>
+<h3>addMemberFilter()</h3>
+<blockquote>
+<p><strong>addMemberFilter</strong>(<code>oMemberFilter</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Add dimension filters</p>
+<h4>Parameters</h4>
+<h5>oMemberFilter</h5>
+<p><code>any</code></p>
+<p>a member filter object</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>addMemberFilterByKey()</h3>
+<blockquote>
+<p><strong>addMemberFilterByKey</strong>(<code>sKey</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Add a member filter by its (internal) key</p>
+<h4>Parameters</h4>
+<h5>sKey</h5>
+<p><code>string</code></p>
+<p>(internal) key of a dimension member</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>clearMemberFilter()</h3>
+<blockquote>
+<p><strong>clearMemberFilter</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Clear the filter of a dimension</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>getMemberFilter()</h3>
+<blockquote>
+<p><strong>getMemberFilter</strong>(): <code>any</code>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get effective dimension filters</p>
+<h4>Returns</h4>
+<p><code>any</code>[]</p>
+<p>array of member filters</p>
+<hr>
+<h3>moveDown()</h3>
+<blockquote>
+<p><strong>moveDown</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Move dimension one position down on its axis</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>moveUp()</h3>
+<blockquote>
+<p><strong>moveUp</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Move dimension one position up on it&#39;s axis</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>openPropertyDialog()</h3>
+<blockquote>
+<p><strong>openPropertyDialog</strong>(): <code>Promise</code>&lt;<code>boolean</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Open a dialog to display and change the settings of a dimension of the <code>DataProvider</code></p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>boolean</code>&gt;</p>
+<p>indicator whether the dialog was confirmed or canceled</p>
+<hr>
+<h3>openValueHelpDialog()</h3>
+<blockquote>
+<p><strong>openValueHelpDialog</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Open a dialog to display and change the filter on a dimension</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>resolving to a boolean which is false when the dialog is cancelled and true if is was closed
+with Ok and dynamic filters of the given dimension are updated</p>
+<hr>
+<h3>readHierarchy()</h3>
+<blockquote>
+<p><strong>readHierarchy</strong>(<code>iLevel</code>): <code>Object</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Read hierarchy</p>
+<h4>Parameters</h4>
+<h5>iLevel</h5>
+<p><code>number</code></p>
+<p>level</p>
+<h4>Returns</h4>
+<p><code>Object</code></p>
+<p>resolving to the object of hierarchy nodes.</p>
+<hr>
+<h3>removeDrilldown()</h3>
+<blockquote>
+<p><strong>removeDrilldown</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Remove a drill operation on a dimension member</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>removeMemberFilter()</h3>
+<blockquote>
+<p><strong>removeMemberFilter</strong>(<code>oMemberFilter</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Remove the filter of a dimension</p>
+<h4>Parameters</h4>
+<h5>oMemberFilter</h5>
+<p><code>any</code></p>
+<p>a member filter object</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>removeMemberFilterByKey()</h3>
+<blockquote>
+<p><strong>removeMemberFilterByKey</strong>(<code>sKey</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Remove a member filter by its (internal) key</p>
+<h4>Parameters</h4>
+<h5>sKey</h5>
+<p><code>string</code></p>
+<p>(internal) key of a dimension member</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>setDimensionDisplay()</h3>
+<blockquote>
+<p><strong>setDimensionDisplay</strong>(<code>sDisplayType</code>): <code>Dimension</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set Display Type of Dimension</p>
+<h4>Parameters</h4>
+<h5>sDisplayType</h5>
+<p><code>string</code></p>
+<p>level</p>
+<h4>Returns</h4>
+<p><code>Dimension</code></p>
+<p>} resolving to the Dimension to allow chaining.</p>
+<hr>
+<h3>setDisplayHierarchy()</h3>
+<blockquote>
+<p><strong>setDisplayHierarchy</strong>(<code>bActive</code>, <code>sHierarchyName</code>, <code>sVersion</code>): <code>Dimension</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set Display Hierarchy</p>
+<h4>Parameters</h4>
+<h5>bActive</h5>
+<p><code>boolean</code></p>
+<p>whether the hierarchy should be activated</p>
+<h5>sHierarchyName</h5>
+<p><code>string</code></p>
+<p>the name of the hierarchy (optional)</p>
+<h5>sVersion</h5>
+<p><code>string</code></p>
+<p>the version of the hierarchy (optional)</p>
+<h4>Returns</h4>
+<p><code>Dimension</code></p>
+<p>resolving to the <code>Dimension</code> to allow chaining.</p>
+<hr>
+<h3>setHierarchyDrillLevel()</h3>
+<blockquote>
+<p><strong>setHierarchyDrillLevel</strong>(<code>iDrillLevel</code>): <code>Dimension</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set hierarchy drill level</p>
+<h4>Parameters</h4>
+<h5>iDrillLevel</h5>
+<p><code>number</code></p>
+<p>drill level (from root)</p>
+<h4>Returns</h4>
+<p><code>Dimension</code></p>
+<p>resolving to the <code>Dimension</code> to allow chaining.</p>
+<hr>
+<h3>setMemberFilter()</h3>
+<blockquote>
+<p><strong>setMemberFilter</strong>(<code>aMemberFilter</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set dimension filters</p>
+<h4>Parameters</h4>
+<h5>aMemberFilter</h5>
+<p><code>any</code>[]</p>
+<p>array of member filters</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>setMemberFilterByKey()</h3>
+<blockquote>
+<p><strong>setMemberFilterByKey</strong>(<code>sKey</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set a member filter by its (internal) key</p>
+<h4>Parameters</h4>
+<h5>sKey</h5>
+<p><code>string</code></p>
+<p>(internal) key of a dimension member</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>sort()</h3>
+<blockquote>
+<p><strong>sort</strong>(<code>direction</code>, <code>type</code>, <code>sMeasureStructureMember</code>, <code>sStructureMember</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sort the members of a dimension</p>
+<h4>Parameters</h4>
+<h5>direction</h5>
+<p><a href="../../../types/SortDirection/enumerations/SortDirection.html"><code>SortDirection</code></a></p>
+<p>of sorting</p>
+<h5>type</h5>
+<p><a href="../../../types/SortType/enumerations/SortType.html"><code>SortType</code></a></p>
+<p>of sorting</p>
+<h5>sMeasureStructureMember</h5>
+<p><code>string</code></p>
+<p>in case of a measure structure the member according to which is sorted</p>
+<h5>sStructureMember</h5>
+<p><code>string</code></p>
+<p>in case of a secondary structure the member according to which is sorted</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>toColumns()</h3>
+<blockquote>
+<p><strong>toColumns</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Move dimension to the columns axis</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>toRows()</h3>
+<blockquote>
+<p><strong>toRows</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Move dimension to the rows axis</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>extend()</h3>
+<blockquote>
+<p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a new subclass of class sap.sac.df.model.Dimension with name <code>sClassName</code> and enriches it with
+the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.Object.extend.</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>Name of the class being created</p>
+<h5>oClassInfo?</h5>
+<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Dimension</code>&gt;</p>
+<p>Object literal with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+used by this class</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Created class / constructor function</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html#extend"><code>extend</code></a></p>
+<hr>
+<h3>getMetadata()</h3>
+<blockquote>
+<p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Returns a metadata object for class sap.sac.df.model.Dimension.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
+<p>Metadata object describing this class</p>
+<hr>
+
+<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+</body>
+</html>
