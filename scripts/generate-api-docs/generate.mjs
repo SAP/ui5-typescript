@@ -330,14 +330,21 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 .kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}`;
 
 function htmlTemplate(title, breadcrumb, content, canonicalUrl) {
+  const fullTitle = escapeHtml(`${title} — ${frameworkName} TypeScript API`);
+  const description = escapeHtml(`${title} — ${frameworkName} TypeScript API Reference (${actualVersion})`);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>${escapeHtml(title)} — ${frameworkName} TypeScript API</title>
-<meta name="description" content="${escapeHtml(title)} — ${frameworkName} TypeScript API Reference (${actualVersion})">
+<title>${fullTitle}</title>
+<meta name="description" content="${description}">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 ${canonicalUrl ? `<link rel="canonical" href="${canonicalUrl}">` : ""}
+<meta property="og:title" content="${fullTitle}">
+<meta property="og:description" content="${description}">
+<meta property="og:type" content="article">
+${canonicalUrl ? `<meta property="og:url" content="${canonicalUrl}">` : ""}
+<meta property="og:site_name" content="UI5 TypeScript API">
 <style>${CSS}</style>
 </head>
 <body>
@@ -459,6 +466,7 @@ console.log(`  Rendered ${fileCount} HTML files (skipped ${skippedCount} jQuery-
 // --- Step 5: Generate sitemap ---
 console.log("\nStep 5: Generating sitemap...");
 const sitemapEntries = [];
+const today = new Date().toISOString().slice(0, 10);
 
 function collectUrls(dir) {
   for (const entry of readdirSync(dir)) {
@@ -477,7 +485,7 @@ collectUrls(OUT_DIR);
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries.map((url) => `  <url><loc>${url}</loc></url>`).join("\n")}
+${sitemapEntries.map((url) => `  <url><loc>${url}</loc><lastmod>${today}</lastmod></url>`).join("\n")}
 </urlset>`;
 
 writeFileSync(join(OUT_DIR, "sitemap.xml"), sitemap);
