@@ -17,7 +17,7 @@
  */
 
 import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from "fs";
-import { join, basename } from "path";
+import { join } from "path";
 
 // --- Argument parsing ---
 
@@ -226,7 +226,9 @@ if (latestOpenUI5) {
   }
 }
 
-llmsTxt += `\n## Resources\n
+llmsTxt += `
+## Resources
+
 - [Sitemap Index](${SITE_URL}/sitemap.xml): Machine-readable index of all per-version sitemaps
 - [UI5 & TypeScript Guide](${SITE_URL}/): Getting started, FAQ, release notes
 - [npm: @openui5/types](https://www.npmjs.com/package/@openui5/types): OpenUI5 type definitions package

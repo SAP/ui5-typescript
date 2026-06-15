@@ -103,15 +103,26 @@ let totalReplacements = 0;
 // Maps module path → default export name, e.g. "sap/m/Button" → "Button", "sap/ui/core/Element" → "UI5Element"
 const defaultExports = new Map();
 
+// Also collect which module paths are declared in each library file.
+// This is used later to exclude cross-library re-exports from the output.
+// Maps library name (e.g. "sap.f") → Set of module paths declared in that .d.ts
+const libraryModules = new Map();
+
 for (const file of dtsFiles) {
   const filePath = join(TYPES_DIR, file);
   const content = readFileSync(filePath, "utf8");
+
+  // Track which modules are declared in this library file (e.g. "sap.f.d.ts" → "sap.f")
+  const libName = file.replace(/\.d\.ts$/, ""); // e.g. "sap.f"
+  if (!libraryModules.has(libName)) libraryModules.set(libName, new Set());
+  const libModules = libraryModules.get(libName);
 
   // Find: declare module "sap/m/Button" { ... export default class Button
   const moduleRegex = /^declare module "([^"]+)"/gm;
   let moduleMatch;
   while ((moduleMatch = moduleRegex.exec(content)) !== null) {
     const moduleName = moduleMatch[1];
+    libModules.add(moduleName);
     const moduleStart = moduleMatch.index;
     // Find the next declare module to bound our search
     const nextModule = content.indexOf("\ndeclare module ", moduleStart + 1);
@@ -365,11 +376,54 @@ let skippedCount = 0;
 // Directories/files to exclude from output (not UI5-specific)
 const EXCLUDE_PATTERNS = ["interfaces/JQuery", "interfaces/JQuery.", "/JQueryStatic", "JQueryPromise"];
 
+// Precompute namespace prefixes for all libraries (used to detect augmentations)
+// e.g. "sap.f" → "sap/f/", "sap.ui.core" → "sap/ui/core/"
+const libNamespacePrefixes = new Map();
+for (const lib of libraryModules.keys()) {
+  libNamespacePrefixes.set(lib, lib.replace(/\./g, "/") + "/");
+}
+
 function shouldExclude(relPath) {
   // Exclude jQuery-related pages
   if (EXCLUDE_PATTERNS.some((p) => relPath.includes(p))) return true;
   // Exclude residual "default.html" pages (from un-renamed default exports)
   if (relPath.endsWith("/default.html")) return true;
+  // Exclude cross-library re-exports.
+  // TypeDoc merges all .d.ts files into one documentation set, so the shared "sap" namespace
+  // causes content from other libraries to appear under each library's directory.
+  // We exclude a page if:
+  //   (a) it doesn't match any module declared in the library's own .d.ts, OR
+  //   (b) the module it matches belongs to another library's namespace (an augmentation).
+  // For example, sap.f.d.ts augments "sap/tnt/library" — but sap.tnt owns that namespace,
+  // so we exclude it from sap.f's output. Meanwhile sap.ui.core.d.ts declares "sap/base/Log"
+  // which no other library owns, so it stays.
+  const libMatch = relPath.match(/^(sap\.[^/]+)\//);
+  if (libMatch) {
+    const lib = libMatch[1]; // e.g. "sap.f"
+    const afterLib = relPath.slice(lib.length + 1); // path after "sap.f/"
+    // Always keep the library's own README (the module index page)
+    if (afterLib === "README.html") return false;
+    // Check against the definitive module list for this library
+    const modules = libraryModules.get(lib);
+    if (modules && modules.size > 0) {
+      // Find the declared module that matches this page's path (iterate Set directly)
+      let matchingModule;
+      for (const mod of modules) {
+        if (afterLib.startsWith(mod + "/")) {
+          matchingModule = mod;
+          break;
+        }
+      }
+      if (!matchingModule) return true; // no matching module → re-export/namespace artefact
+      // Check if another library owns this module's namespace (= augmentation)
+      const moduleNs = matchingModule + "/"; // e.g. "sap/tnt/library/"
+      for (const [otherLib, otherNs] of libNamespacePrefixes) {
+        if (otherLib !== lib && moduleNs.startsWith(otherNs)) {
+          return true;
+        }
+      }
+    }
+  }
   return false;
 }
 
