@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: EventStatic() — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: EventStatic() — SAPUI5 TypeScript API Reference (1.149.0)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.149/sap.ui.core/namespaces/JQuery/interfaces/EventStatic.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../index.html">SAPUI5 API</a> › <a href="../../../../sap.ui.core/README.html">sap.ui.core</a> › namespaces › JQuery › interfaces</nav>
+<p><a href="../../../../README.html"><strong>SAPUI5 TypeScript API (1.149.0)</strong></a></p>
+<hr>
+<p><a href="../../../../README.html">SAPUI5 TypeScript API (1.149.0)</a> / <a href="../../../README.html">sap.ui.core</a> / <a href="../README-1.html">JQuery</a> / EventStatic</p>
+<h1>Interface: EventStatic()</h1>
+<pre class="sig"><span class="kw">import</span> { EventStatic } <span class="kw">from</span> <span class="str">"namespaces/JQuery"</span>;</pre>
+<p>jQuery&#39;s event system normalizes the event object according to W3C standards. The event object is guaranteed to be passed to the event handler (no checks for window.event required). It normalizes the target, relatedTarget, which, metaKey and pageX/Y properties and provides both stopPropagation() and preventDefault() methods.</p>
+<p>Those properties are all documented, and accompanied by examples, on the <code>[Event object](http://api.jquery.com/category/events/event-object/)</code> page.</p>
+<p>The standard events in the Document Object Model are: <code>blur</code>, <code>focus</code>, <code>load</code>, <code>resize</code>, <code>scroll</code>, <code>unload</code>, <code>beforeunload</code>, <code>click</code>, <code>dblclick</code>, <code>mousedown</code>, <code>mouseup</code>, <code>mousemove</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code>, <code>mouseleave</code>, <code>change</code>, <code>select</code>, <code>submit</code>, <code>keydown</code>, <code>keypress</code>, and <code>keyup</code>. Since the DOM event names have predefined meanings for some elements, using them for other purposes is not recommended. jQuery&#39;s event model can trigger an event by any name on an element, and it is propagated up the DOM tree to which that element belongs, if any.</p>
+<h2>See</h2>
+<p><code>[https://api.jquery.com/category/events/event-object/](https://api.jquery.com/category/events/event-object/)</code></p>
+<blockquote>
+<p><strong>EventStatic</strong>&lt;<code>T</code>&gt;(<code>event</code>, <code>properties?</code>): <a href="Event.html"><code>Event</code></a> &amp; <code>T</code></p>
+</blockquote>
+<p>The jQuery.Event constructor is exposed and can be used when calling trigger. The new operator is optional.</p>
+<p>Check <code>[trigger](https://api.jquery.com/trigger/)</code>&#39;s documentation to see how to combine it with your own event object.</p>
+<h2>Type Parameters</h2>
+<h3>T</h3>
+<p><code>T</code> <em>extends</em> <code>object</code></p>
+<h2>Parameters</h2>
+<h3>event</h3>
+<p><code>string</code></p>
+<h3>properties?</h3>
+<p><code>T</code></p>
+<h2>Returns</h2>
+<p><a href="Event.html"><code>Event</code></a> &amp; <code>T</code></p>
+<h2>See</h2>
+<p><code>[https://api.jquery.com/category/events/event-object/](https://api.jquery.com/category/events/event-object/)</code></p>
+<h2>Since</h2>
+<p>1.6</p>
+<h2>Examples</h2>
+<pre><code class="language-javascript">//Create a new jQuery.Event object without the &quot;new&quot; operator.
+var e = jQuery.Event( &quot;click&quot; );
+​
+// trigger an artificial click event
+jQuery( &quot;body&quot; ).trigger( e );
+</code></pre>
+<pre><code class="language-javascript">// Create a new jQuery.Event object with specified event properties.
+var e = jQuery.Event( &quot;keydown&quot;, { keyCode: 64 } );
+​
+// trigger an artificial keydown event with keyCode 64
+jQuery( &quot;body&quot; ).trigger( e );
+</code></pre>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new EventStatic</strong>&lt;<code>T</code>&gt;(<code>event</code>, <code>properties?</code>): <a href="Event.html"><code>Event</code></a> &amp; <code>T</code></p>
+</blockquote>
+<p>The jQuery.Event constructor is exposed and can be used when calling trigger. The new operator is optional.</p>
+<p>Check <code>[trigger](https://api.jquery.com/trigger/)</code>&#39;s documentation to see how to combine it with your own event object.</p>
+<h4>Parameters</h4>
+<h5>event</h5>
+<p><code>string</code></p>
+<h5>properties?</h5>
+<p><code>T</code></p>
+<h4>Returns</h4>
+<p><a href="Event.html"><code>Event</code></a> &amp; <code>T</code></p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/category/events/event-object/](https://api.jquery.com/category/events/event-object/)</code></p>
+<h4>Since</h4>
+<p>1.6</p>
+<h4>Examples</h4>
+<pre><code class="language-javascript">//Create a new jQuery.Event object without the &quot;new&quot; operator.
+var e = jQuery.Event( &quot;click&quot; );
+​
+// trigger an artificial click event
+jQuery( &quot;body&quot; ).trigger( e );
+</code></pre>
+<pre><code class="language-javascript">// Create a new jQuery.Event object with specified event properties.
+var e = jQuery.Event( &quot;keydown&quot;, { keyCode: 64 } );
+​
+// trigger an artificial keydown event with keyCode 64
+jQuery( &quot;body&quot; ).trigger( e );
+</code></pre>
+
+<footer>Generated from <code>@sapui5/types@1.149.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.149/">Back to index</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: Effects — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: Effects — SAPUI5 TypeScript API Reference (1.149.0)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.149/sap.ui.core/namespaces/JQuery/interfaces/Effects.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../index.html">SAPUI5 API</a> › <a href="../../../../sap.ui.core/README.html">sap.ui.core</a> › namespaces › JQuery › interfaces</nav>
+<p><a href="../../../../README.html"><strong>SAPUI5 TypeScript API (1.149.0)</strong></a></p>
+<hr>
+<p><a href="../../../../README.html">SAPUI5 TypeScript API (1.149.0)</a> / <a href="../../../README.html">sap.ui.core</a> / <a href="../README-1.html">JQuery</a> / Effects</p>
+<h1>Interface: Effects</h1>
+<pre class="sig"><span class="kw">import</span> { Effects } <span class="kw">from</span> <span class="str">"namespaces/JQuery"</span>;</pre>
+<h2>Properties</h2>
+<h3><del>interval</del></h3>
+<blockquote>
+<p><strong>interval</strong>: <code>number</code></p>
+</blockquote>
+<p>The rate (in milliseconds) at which animations fire.</p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/jQuery.fx.interval/](https://api.jquery.com/jQuery.fx.interval/)</code></p>
+<h4>Since</h4>
+<p>1.4.3</p>
+<h4>Deprecated</h4>
+<p>​ Deprecated since 3.0. See <code>[https://api.jquery.com/jQuery.fx.interval/](https://api.jquery.com/jQuery.fx.interval/)</code>.</p>
+<p><strong>Cause</strong>: As of jQuery 3.0 the <code>jQuery.fx.interval</code> property can be used to change the animation interval only on browsers that do not support the <code>window.requestAnimationFrame()</code> method. That is currently only Internet Explorer 9 and the Android Browser. Once support is dropped for these browsers, the property will serve no purpose and it will be removed.</p>
+<p><strong>Solution</strong>: Find and remove code that changes or uses <code>jQuery.fx.interval</code>. If the value is being used by code in your page or a plugin, the code may be making assumptions that are no longer valid. The default value of <code>jQuery.fx.interval</code> is <code>13</code> (milliseconds), which could be used instead of accessing this property.</p>
+<h4>Example</h4>
+<p><strong>​ ````Cause all animations to run with less frames.</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;jQuery.fx.interval demo&lt;/title&gt;
+&lt;style&gt;
+div {
+width: 50px;
+height: 30px;
+margin: 5px;
+float: left;
+background: green;
+}
+&lt;/style&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;Run&quot;&gt;&lt;/p&gt;
+&lt;div&gt;&lt;/div&gt;
+​
+&lt;script&gt;
+jQuery.fx.interval = 100;
+$( &quot;input&quot; ).click(function() {
+$( &quot;div&quot; ).toggle( 3000 );
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<hr>
+<h3>off</h3>
+<blockquote>
+<p><strong>off</strong>: <code>boolean</code></p>
+</blockquote>
+<p>Globally disable all animations.</p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/jQuery.fx.off/](https://api.jquery.com/jQuery.fx.off/)</code></p>
+<h4>Since</h4>
+<p>1.3</p>
+<h4>Example</h4>
+<p><strong>​ ````Toggle animation on and off</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;jQuery.fx.off demo&lt;/title&gt;
+&lt;style&gt;
+div {
+width: 50px;
+height: 30px;
+margin: 5px;
+float: left;
+background: green;
+}
+&lt;/style&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;input type=&quot;button&quot; value=&quot;Run&quot;&gt;
+&lt;button&gt;Toggle fx&lt;/button&gt;
+&lt;div&gt;&lt;/div&gt;
+​
+&lt;script&gt;
+var toggleFx = function() {
+$.fx.off = !$.fx.off;
+};
+toggleFx();
+$( &quot;button&quot; ).click( toggleFx );
+$( &quot;input&quot; ).click(function() {
+$( &quot;div&quot; ).toggle( &quot;slow&quot; );
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<hr>
+<h3><del>step</del></h3>
+<blockquote>
+<p><strong>step</strong>: <a href="PlainObject.html"><code>PlainObject</code></a>&lt;<a href="../type-aliases/AnimationHook.html"><code>AnimationHook</code></a>&lt;<a href="../type-aliases/Node.html"><code>Node</code></a>&gt;&gt;</p>
+</blockquote>
+<h4>Deprecated</h4>
+<p>​ Deprecated since 1.8. Use <code>Tween.propHooks jQuery.Tween.propHooks</code>.</p>
+<p><code>jQuery.fx.step</code> functions are being replaced by <code>jQuery.Tween.propHooks</code> and may eventually be removed, but are still supported via the default tween propHook.</p>
+<h2>Methods</h2>
+<h3>stop()</h3>
+<blockquote>
+<p><strong>stop</strong>(): <code>void</code></p>
+</blockquote>
+<p><em>overridable</em> Clears up the <code>setInterval</code></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>See</h4>
+<p><code>[https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop](https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop)</code></p>
+<h4>Since</h4>
+<p>1.8</p>
+<hr>
+<h3>tick()</h3>
+<blockquote>
+<p><strong>tick</strong>(): <code>void</code></p>
+</blockquote>
+<p>Calls <code>.run()</code> on each object in the <code>jQuery.timers</code> array, removing it from the array if <code>.run()</code> returns a falsy value. Calls <code>jQuery.fx.stop()</code> whenever there are no timers remaining.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>See</h4>
+<p><code>[https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop](https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop)</code></p>
+<h4>Since</h4>
+<p>1.8</p>
+<hr>
+<h3>timer()</h3>
+<blockquote>
+<p><strong>timer</strong>(<code>tickFunction</code>): <code>void</code></p>
+</blockquote>
+<p><em>overridable</em> Creates a <code>setInterval</code> if one doesn&#39;t already exist, and pushes <code>tickFunction</code> to the <code>jQuery.timers</code> array. <code>tickFunction</code> should also have <code>anim</code>, <code>elem</code>, and <code>queue</code> properties that reference the animation object, animated element, and queue option to facilitate <code>jQuery.fn.stop()</code></p>
+<p>By overriding <code>fx.timer</code> and <code>fx.stop</code> you should be able to implement any animation tick behaviour you desire. (like using <code>requestAnimationFrame</code> instead of <code>setTimeout</code>.)</p>
+<p>There is an example of overriding the timer loop in <code>[jquery.requestAnimationFrame](https://github.com/gnarf37/jquery-requestAnimationFrame)</code></p>
+<h4>Parameters</h4>
+<h5>tickFunction</h5>
+<p><a href="TickFunction.html"><code>TickFunction</code></a>&lt;<code>any</code>&gt;</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>See</h4>
+<p><code>[https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop](https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop)</code></p>
+<h4>Since</h4>
+<p>1.8</p>
+
+<footer>Generated from <code>@sapui5/types@1.149.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.149/">Back to index</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: PromiseBase\&lt;TR, TJ, TN, UR, UJ, UN, VR, VJ, VN, SR, SJ, SN\&gt; — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: PromiseBase\&lt;TR, TJ, TN, UR, UJ, UN, VR, VJ, VN, SR, SJ, SN\&gt; — SAPUI5 TypeScript API Reference (1.149.0)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.149/sap.ui.core/namespaces/JQuery/interfaces/PromiseBase.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../index.html">SAPUI5 API</a> › <a href="../../../../sap.ui.core/README.html">sap.ui.core</a> › namespaces › JQuery › interfaces</nav>
+<p><a href="../../../../README.html"><strong>SAPUI5 TypeScript API (1.149.0)</strong></a></p>
+<hr>
+<p><a href="../../../../README.html">SAPUI5 TypeScript API (1.149.0)</a> / <a href="../../../README.html">sap.ui.core</a> / <a href="../README-1.html">JQuery</a> / PromiseBase</p>
+<h1>Interface: PromiseBase&lt;TR, TJ, TN, UR, UJ, UN, VR, VJ, VN, SR, SJ, SN&gt;</h1>
+<pre class="sig"><span class="kw">import</span> { PromiseBase } <span class="kw">from</span> <span class="str">"namespaces/JQuery"</span>;</pre>
+<p>This object provides a subset of the methods of the Deferred object (then, done, fail, always, pipe, progress, state and promise) to prevent users from changing the state of the Deferred.</p>
+<h2>See</h2>
+<p><code>[https://api.jquery.com/Types/#Promise](https://api.jquery.com/Types/#Promise)</code></p>
+<h2>Extended by</h2>
+<ul>
+<li><a href="Promise3.html"><code>Promise3</code></a></li>
+<li><a href="Promise2.html"><code>Promise2</code></a></li>
+<li><a href="Promise.html"><code>Promise</code></a></li>
+</ul>
+<h2>Type Parameters</h2>
+<h3>TR</h3>
+<p><code>TR</code></p>
+<h3>TJ</h3>
+<p><code>TJ</code></p>
+<h3>TN</h3>
+<p><code>TN</code></p>
+<h3>UR</h3>
+<p><code>UR</code></p>
+<h3>UJ</h3>
+<p><code>UJ</code></p>
+<h3>UN</h3>
+<p><code>UN</code></p>
+<h3>VR</h3>
+<p><code>VR</code></p>
+<h3>VJ</h3>
+<p><code>VJ</code></p>
+<h3>VN</h3>
+<p><code>VN</code></p>
+<h3>SR</h3>
+<p><code>SR</code></p>
+<h3>SJ</h3>
+<p><code>SJ</code></p>
+<h3>SN</h3>
+<p><code>SN</code></p>
+<h2>Methods</h2>
+<h3>always()</h3>
+<blockquote>
+<p><strong>always</strong>(<code>alwaysCallback</code>, ...<code>alwaysCallbacks</code>): <code>this</code></p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is either resolved or rejected.</p>
+<h4>Parameters</h4>
+<h5>alwaysCallback</h5>
+<p><a href="../type-aliases/TypeOrArray.html"><code>TypeOrArray</code></a>&lt;<a href="../namespaces/Deferred/type-aliases/CallbackBase.html"><code>CallbackBase</code></a>&lt;<code>TR</code> | <code>TJ</code>, <code>UR</code> | <code>UJ</code>, <code>VR</code> | <code>VJ</code>, <code>SR</code> | <code>SJ</code>&gt;&gt;</p>
+<p>A function, or array of functions, that is called when the Deferred is resolved or rejected.</p>
+<h5>alwaysCallbacks</h5>
+<p>...<a href="../type-aliases/TypeOrArray.html"><code>TypeOrArray</code></a>&lt;<a href="../namespaces/Deferred/type-aliases/CallbackBase.html"><code>CallbackBase</code></a>&lt;<code>TR</code> | <code>TJ</code>, <code>UR</code> | <code>UJ</code>, <code>VR</code> | <code>VJ</code>, <code>SR</code> | <code>SJ</code>&gt;&gt;[]</p>
+<p>Optional additional functions, or arrays of functions, that are called when the Deferred is resolved or rejected.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/deferred.always/](https://api.jquery.com/deferred.always/)</code></p>
+<h4>Since</h4>
+<p>1.6</p>
+<h4>Example</h4>
+<p><strong>​ ````Since the jQuery.get() method returns a jqXHR object, which is derived from a Deferred object, we can attach a callback for both success and error using the deferred.always() method.</strong></p>
+<pre><code class="language-javascript">$.get( &quot;test.php&quot; ).always(function() {
+alert( &quot;$.get completed with success or error callback arguments&quot; );
+});
+</code></pre>
+<hr>
+<h3>catch()</h3>
+<blockquote>
+<p><strong>catch</strong>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;(<code>failFilter?</code>): <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;</p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is rejected.</p>
+<h4>Type Parameters</h4>
+<h5>ARF</h5>
+<p><code>ARF</code> = <code>never</code></p>
+<h5>AJF</h5>
+<p><code>AJF</code> = <code>never</code></p>
+<h5>ANF</h5>
+<p><code>ANF</code> = <code>never</code></p>
+<h5>BRF</h5>
+<p><code>BRF</code> = <code>never</code></p>
+<h5>BJF</h5>
+<p><code>BJF</code> = <code>never</code></p>
+<h5>BNF</h5>
+<p><code>BNF</code> = <code>never</code></p>
+<h5>CRF</h5>
+<p><code>CRF</code> = <code>never</code></p>
+<h5>CJF</h5>
+<p><code>CJF</code> = <code>never</code></p>
+<h5>CNF</h5>
+<p><code>CNF</code> = <code>never</code></p>
+<h5>RRF</h5>
+<p><code>RRF</code> = <code>never</code></p>
+<h5>RJF</h5>
+<p><code>RJF</code> = <code>never</code></p>
+<h5>RNF</h5>
+<p><code>RNF</code> = <code>never</code></p>
+<h4>Parameters</h4>
+<h5>failFilter?</h5>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARF</code>&gt;</p>
+<p>A function that is called when the Deferred is rejected.</p>
+<h4>Returns</h4>
+<p><code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;</p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/deferred.catch/](https://api.jquery.com/deferred.catch/)</code></p>
+<h4>Since</h4>
+<p>3.0</p>
+<h4>Example</h4>
+<p><strong>​ ````Since the jQuery.get method returns a jqXHR object, which is derived from a Deferred object, we can rejection handlers using the .catch method.</strong></p>
+<pre><code class="language-javascript">$.get( &quot;test.php&quot; )
+.then( function() {
+alert( &quot;$.get succeeded&quot; );
+} )
+.catch( function() {
+alert( &quot;$.get failed!&quot; );
+} );
+</code></pre>
+<hr>
+<h3>done()</h3>
+<blockquote>
+<p><strong>done</strong>(<code>doneCallback</code>, ...<code>doneCallbacks</code>): <code>this</code></p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is resolved.</p>
+<h4>Parameters</h4>
+<h5>doneCallback</h5>
+<p><a href="../type-aliases/TypeOrArray.html"><code>TypeOrArray</code></a>&lt;<a href="../namespaces/Deferred/type-aliases/CallbackBase.html"><code>CallbackBase</code></a>&lt;<code>TR</code>, <code>UR</code>, <code>VR</code>, <code>SR</code>&gt;&gt;</p>
+<p>A function, or array of functions, that are called when the Deferred is resolved.</p>
+<h5>doneCallbacks</h5>
+<p>...<a href="../type-aliases/TypeOrArray.html"><code>TypeOrArray</code></a>&lt;<a href="../namespaces/Deferred/type-aliases/CallbackBase.html"><code>CallbackBase</code></a>&lt;<code>TR</code>, <code>UR</code>, <code>VR</code>, <code>SR</code>&gt;&gt;[]</p>
+<p>Optional additional functions, or arrays of functions, that are called when the Deferred is resolved.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/deferred.done/](https://api.jquery.com/deferred.done/)</code></p>
+<h4>Since</h4>
+<p>1.5</p>
+<h4>Example</h4>
+<p><strong>​ ````Since the jQuery.get method returns a jqXHR object, which is derived from a Deferred object, we can attach a success callback using the .done() method.
+```javascript
+$.get( &quot;test.php&quot; ).done(function() {
+alert( &quot;$.get succeeded&quot; );
+});
+```
+@example ​ ````Resolve a Deferred object when the user clicks a button, triggering a number of callback functions:</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;deferred.done demo&lt;/title&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;button&gt;Go&lt;/button&gt;
+&lt;p&gt;Ready...&lt;/p&gt;
+​
+&lt;script&gt;
+// 3 functions to call when the Deferred object is resolved
+function fn1() {
+$( &quot;p&quot; ).append( &quot; 1 &quot; );
+}
+function fn2() {
+$( &quot;p&quot; ).append( &quot; 2 &quot; );
+}
+function fn3( n ) {
+$( &quot;p&quot; ).append( n + &quot; 3 &quot; + n );
+}
+​
+// Create a deferred object
+var dfd = $.Deferred();
+​
+// Add handlers to be called when dfd is resolved
+dfd
+// .done() can take any number of functions or arrays of functions
+.done( [ fn1, fn2 ], fn3, [ fn2, fn1 ] )
+// We can chain done methods, too
+.done(function( n ) {
+$( &quot;p&quot; ).append( n + &quot; we&#39;re done.&quot; );
+});
+​
+// Resolve the Deferred object when the button is clicked
+$( &quot;button&quot; ).on( &quot;click&quot;, function() {
+dfd.resolve( &quot;and&quot; );
+});
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<hr>
+<h3>fail()</h3>
+<blockquote>
+<p><strong>fail</strong>(<code>failCallback</code>, ...<code>failCallbacks</code>): <code>this</code></p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is rejected.</p>
+<h4>Parameters</h4>
+<h5>failCallback</h5>
+<p><a href="../type-aliases/TypeOrArray.html"><code>TypeOrArray</code></a>&lt;<a href="../namespaces/Deferred/type-aliases/CallbackBase.html"><code>CallbackBase</code></a>&lt;<code>TJ</code>, <code>UJ</code>, <code>VJ</code>, <code>SJ</code>&gt;&gt;</p>
+<p>A function, or array of functions, that are called when the Deferred is rejected.</p>
+<h5>failCallbacks</h5>
+<p>...<a href="../type-aliases/TypeOrArray.html"><code>TypeOrArray</code></a>&lt;<a href="../namespaces/Deferred/type-aliases/CallbackBase.html"><code>CallbackBase</code></a>&lt;<code>TJ</code>, <code>UJ</code>, <code>VJ</code>, <code>SJ</code>&gt;&gt;[]</p>
+<p>Optional additional functions, or arrays of functions, that are called when the Deferred is rejected.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/deferred.fail/](https://api.jquery.com/deferred.fail/)</code></p>
+<h4>Since</h4>
+<p>1.5</p>
+<h4>Example</h4>
+<p><strong>​ ````Since the jQuery.get method returns a jqXHR object, which is derived from a Deferred, you can attach a success and failure callback using the deferred.done() and deferred.fail() methods.</strong></p>
+<pre><code class="language-javascript">$.get( &quot;test.php&quot; )
+.done(function() {
+alert( &quot;$.get succeeded&quot; );
+})
+.fail(function() {
+alert( &quot;$.get failed!&quot; );
+});
+</code></pre>
+<hr>
+<h3><del>pipe()</del></h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>pipe</strong>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>, <code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>, <code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter</code>): <code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARF</code> | <code>ARP</code>, <code>AJD</code> | <code>AJF</code> | <code>AJP</code>, <code>AND</code> | <code>ANF</code> | <code>ANP</code>, <code>BRD</code> | <code>BRF</code> | <code>BRP</code>, <code>BJD</code> | <code>BJF</code> | <code>BJP</code>, <code>BND</code> | <code>BNF</code> | <code>BNP</code>, <code>CRD</code> | <code>CRF</code> | <code>CRP</code>, <code>CJD</code> | <code>CJF</code> | <code>CJP</code>, <code>CND</code> | <code>CNF</code> | <code>CNP</code>, <code>RRD</code> | <code>RRF</code> | <code>RRP</code>, <code>RJD</code> | <code>RJF</code> | <code>RJP</code>, <code>RND</code> | <code>RNF</code> | <code>RNP</code>&gt;</p>
+</blockquote>
+<p>Utility method to filter and/or chain Deferreds.</p>
+<h5>Type Parameters</h5>
+<h6>ARD</h6>
+<p><code>ARD</code> = <code>never</code></p>
+<h6>AJD</h6>
+<p><code>AJD</code> = <code>never</code></p>
+<h6>AND</h6>
+<p><code>AND</code> = <code>never</code></p>
+<h6>BRD</h6>
+<p><code>BRD</code> = <code>never</code></p>
+<h6>BJD</h6>
+<p><code>BJD</code> = <code>never</code></p>
+<h6>BND</h6>
+<p><code>BND</code> = <code>never</code></p>
+<h6>CRD</h6>
+<p><code>CRD</code> = <code>never</code></p>
+<h6>CJD</h6>
+<p><code>CJD</code> = <code>never</code></p>
+<h6>CND</h6>
+<p><code>CND</code> = <code>never</code></p>
+<h6>RRD</h6>
+<p><code>RRD</code> = <code>never</code></p>
+<h6>RJD</h6>
+<p><code>RJD</code> = <code>never</code></p>
+<h6>RND</h6>
+<p><code>RND</code> = <code>never</code></p>
+<h6>ARF</h6>
+<p><code>ARF</code> = <code>never</code></p>
+<h6>AJF</h6>
+<p><code>AJF</code> = <code>never</code></p>
+<h6>ANF</h6>
+<p><code>ANF</code> = <code>never</code></p>
+<h6>BRF</h6>
+<p><code>BRF</code> = <code>never</code></p>
+<h6>BJF</h6>
+<p><code>BJF</code> = <code>never</code></p>
+<h6>BNF</h6>
+<p><code>BNF</code> = <code>never</code></p>
+<h6>CRF</h6>
+<p><code>CRF</code> = <code>never</code></p>
+<h6>CJF</h6>
+<p><code>CJF</code> = <code>never</code></p>
+<h6>CNF</h6>
+<p><code>CNF</code> = <code>never</code></p>
+<h6>RRF</h6>
+<p><code>RRF</code> = <code>never</code></p>
+<h6>RJF</h6>
+<p><code>RJF</code> = <code>never</code></p>
+<h6>RNF</h6>
+<p><code>RNF</code> = <code>never</code></p>
+<h6>ARP</h6>
+<p><code>ARP</code> = <code>never</code></p>
+<h6>AJP</h6>
+<p><code>AJP</code> = <code>never</code></p>
+<h6>ANP</h6>
+<p><code>ANP</code> = <code>never</code></p>
+<h6>BRP</h6>
+<p><code>BRP</code> = <code>never</code></p>
+<h6>BJP</h6>
+<p><code>BJP</code> = <code>never</code></p>
+<h6>BNP</h6>
+<p><code>BNP</code> = <code>never</code></p>
+<h6>CRP</h6>
+<p><code>CRP</code> = <code>never</code></p>
+<h6>CJP</h6>
+<p><code>CJP</code> = <code>never</code></p>
+<h6>CNP</h6>
+<p><code>CNP</code> = <code>never</code></p>
+<h6>RRP</h6>
+<p><code>RRP</code> = <code>never</code></p>
+<h6>RJP</h6>
+<p><code>RJP</code> = <code>never</code></p>
+<h6>RNP</h6>
+<p><code>RNP</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARD</code> | <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARD</code>&gt;</p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>AJF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>AJF</code>&gt;</p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ANP</code> | <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ANP</code>&gt;</p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARF</code> | <code>ARP</code>, <code>AJD</code> | <code>AJF</code> | <code>AJP</code>, <code>AND</code> | <code>ANF</code> | <code>ANP</code>, <code>BRD</code> | <code>BRF</code> | <code>BRP</code>, <code>BJD</code> | <code>BJF</code> | <code>BJP</code>, <code>BND</code> | <code>BNF</code> | <code>BNP</code>, <code>CRD</code> | <code>CRF</code> | <code>CRP</code>, <code>CJD</code> | <code>CJF</code> | <code>CJP</code>, <code>CND</code> | <code>CNF</code> | <code>CNP</code>, <code>RRD</code> | <code>RRF</code> | <code>RRP</code>, <code>RJD</code> | <code>RJF</code> | <code>RJP</code>, <code>RND</code> | <code>RNF</code> | <code>RNP</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.pipe/](https://api.jquery.com/deferred.pipe/)</code></p>
+<h5>Since</h5>
+<p>1.6</p>
+<h5>Since</h5>
+<p>1.7</p>
+<h5>Deprecated</h5>
+<p>​ Deprecated since 1.8. Use <code>[then](#then)</code>.</p>
+<p><strong>Cause</strong>: The <code>.pipe()</code> method on a <code>jQuery.Deferred</code> object was deprecated as of jQuery 1.8, when the <code>.then()</code> method was changed to perform the same function.</p>
+<p><strong>Solution</strong>: In most cases it is sufficient to change all occurrences of <code>.pipe()</code> to <code>.then()</code>. Ensure that you aren&#39;t relying on context/state propagation (e.g., using <code>this</code>) or synchronous callback invocation, which were dropped from <code>.then()</code> for Promises/A+ interoperability as of jQuery 3.0.</p>
+<h5>Examples</h5>
+<p><strong>​ ````Filter resolve value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.pipe(function( value ) {
+return value * 2;
+});
+​
+defer.resolve( 5 );
+filtered.done(function( value ) {
+alert( &quot;Value is ( 2*5 = ) 10: &quot; + value );
+});
+```
+@example ​ ````Filter reject value:</strong></p>
+<pre><code class="language-javascript">var defer = $.Deferred(),
+filtered = defer.pipe( null, function( value ) {
+return value * 3;
+});
+​
+defer.reject( 6 );
+filtered.fail(function( value ) {
+alert( &quot;Value is ( 3*6 = ) 18: &quot; + value );
+});
+</code></pre>
+<p><strong>​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.pipe(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>pipe</strong>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>, <code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter</code>): <code>PromiseBase</code>&lt;<code>ARF</code> | <code>ARP</code>, <code>AJF</code> | <code>AJP</code>, <code>ANF</code> | <code>ANP</code>, <code>BRF</code> | <code>BRP</code>, <code>BJF</code> | <code>BJP</code>, <code>BNF</code> | <code>BNP</code>, <code>CRF</code> | <code>CRP</code>, <code>CJF</code> | <code>CJP</code>, <code>CNF</code> | <code>CNP</code>, <code>RRF</code> | <code>RRP</code>, <code>RJF</code> | <code>RJP</code>, <code>RNF</code> | <code>RNP</code>&gt;</p>
+</blockquote>
+<p>Utility method to filter and/or chain Deferreds.</p>
+<h5>Type Parameters</h5>
+<h6>ARF</h6>
+<p><code>ARF</code> = <code>never</code></p>
+<h6>AJF</h6>
+<p><code>AJF</code> = <code>never</code></p>
+<h6>ANF</h6>
+<p><code>ANF</code> = <code>never</code></p>
+<h6>BRF</h6>
+<p><code>BRF</code> = <code>never</code></p>
+<h6>BJF</h6>
+<p><code>BJF</code> = <code>never</code></p>
+<h6>BNF</h6>
+<p><code>BNF</code> = <code>never</code></p>
+<h6>CRF</h6>
+<p><code>CRF</code> = <code>never</code></p>
+<h6>CJF</h6>
+<p><code>CJF</code> = <code>never</code></p>
+<h6>CNF</h6>
+<p><code>CNF</code> = <code>never</code></p>
+<h6>RRF</h6>
+<p><code>RRF</code> = <code>never</code></p>
+<h6>RJF</h6>
+<p><code>RJF</code> = <code>never</code></p>
+<h6>RNF</h6>
+<p><code>RNF</code> = <code>never</code></p>
+<h6>ARP</h6>
+<p><code>ARP</code> = <code>never</code></p>
+<h6>AJP</h6>
+<p><code>AJP</code> = <code>never</code></p>
+<h6>ANP</h6>
+<p><code>ANP</code> = <code>never</code></p>
+<h6>BRP</h6>
+<p><code>BRP</code> = <code>never</code></p>
+<h6>BJP</h6>
+<p><code>BJP</code> = <code>never</code></p>
+<h6>BNP</h6>
+<p><code>BNP</code> = <code>never</code></p>
+<h6>CRP</h6>
+<p><code>CRP</code> = <code>never</code></p>
+<h6>CJP</h6>
+<p><code>CJP</code> = <code>never</code></p>
+<h6>CNP</h6>
+<p><code>CNP</code> = <code>never</code></p>
+<h6>RRP</h6>
+<p><code>RRP</code> = <code>never</code></p>
+<h6>RJP</h6>
+<p><code>RJP</code> = <code>never</code></p>
+<h6>RNP</h6>
+<p><code>RNP</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>AJF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>AJF</code>&gt;</p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ANP</code> | <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ANP</code>&gt;</p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARF</code> | <code>ARP</code>, <code>AJF</code> | <code>AJP</code>, <code>ANF</code> | <code>ANP</code>, <code>BRF</code> | <code>BRP</code>, <code>BJF</code> | <code>BJP</code>, <code>BNF</code> | <code>BNP</code>, <code>CRF</code> | <code>CRP</code>, <code>CJF</code> | <code>CJP</code>, <code>CNF</code> | <code>CNP</code>, <code>RRF</code> | <code>RRP</code>, <code>RJF</code> | <code>RJP</code>, <code>RNF</code> | <code>RNP</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.pipe/](https://api.jquery.com/deferred.pipe/)</code></p>
+<h5>Since</h5>
+<p>1.6</p>
+<h5>Since</h5>
+<p>1.7</p>
+<h5>Deprecated</h5>
+<p>​ Deprecated since 1.8. Use <code>[then](#then)</code>.</p>
+<p><strong>Cause</strong>: The <code>.pipe()</code> method on a <code>jQuery.Deferred</code> object was deprecated as of jQuery 1.8, when the <code>.then()</code> method was changed to perform the same function.</p>
+<p><strong>Solution</strong>: In most cases it is sufficient to change all occurrences of <code>.pipe()</code> to <code>.then()</code>. Ensure that you aren&#39;t relying on context/state propagation (e.g., using <code>this</code>) or synchronous callback invocation, which were dropped from <code>.then()</code> for Promises/A+ interoperability as of jQuery 3.0.</p>
+<h5>Example</h5>
+<p><strong>​ ````Filter reject value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.pipe( null, function( value ) {
+return value * 3;
+});
+​
+defer.reject( 6 );
+filtered.fail(function( value ) {
+alert( &quot;Value is ( 3*6 = ) 18: &quot; + value );
+});
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.pipe(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>pipe</strong>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>, <code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter</code>): <code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARP</code>, <code>AJD</code> | <code>AJP</code>, <code>AND</code> | <code>ANP</code>, <code>BRD</code> | <code>BRP</code>, <code>BJD</code> | <code>BJP</code>, <code>BND</code> | <code>BNP</code>, <code>CRD</code> | <code>CRP</code>, <code>CJD</code> | <code>CJP</code>, <code>CND</code> | <code>CNP</code>, <code>RRD</code> | <code>RRP</code>, <code>RJD</code> | <code>RJP</code>, <code>RND</code> | <code>RNP</code>&gt;</p>
+</blockquote>
+<p>Utility method to filter and/or chain Deferreds.</p>
+<h5>Type Parameters</h5>
+<h6>ARD</h6>
+<p><code>ARD</code> = <code>never</code></p>
+<h6>AJD</h6>
+<p><code>AJD</code> = <code>never</code></p>
+<h6>AND</h6>
+<p><code>AND</code> = <code>never</code></p>
+<h6>BRD</h6>
+<p><code>BRD</code> = <code>never</code></p>
+<h6>BJD</h6>
+<p><code>BJD</code> = <code>never</code></p>
+<h6>BND</h6>
+<p><code>BND</code> = <code>never</code></p>
+<h6>CRD</h6>
+<p><code>CRD</code> = <code>never</code></p>
+<h6>CJD</h6>
+<p><code>CJD</code> = <code>never</code></p>
+<h6>CND</h6>
+<p><code>CND</code> = <code>never</code></p>
+<h6>RRD</h6>
+<p><code>RRD</code> = <code>never</code></p>
+<h6>RJD</h6>
+<p><code>RJD</code> = <code>never</code></p>
+<h6>RND</h6>
+<p><code>RND</code> = <code>never</code></p>
+<h6>ARP</h6>
+<p><code>ARP</code> = <code>never</code></p>
+<h6>AJP</h6>
+<p><code>AJP</code> = <code>never</code></p>
+<h6>ANP</h6>
+<p><code>ANP</code> = <code>never</code></p>
+<h6>BRP</h6>
+<p><code>BRP</code> = <code>never</code></p>
+<h6>BJP</h6>
+<p><code>BJP</code> = <code>never</code></p>
+<h6>BNP</h6>
+<p><code>BNP</code> = <code>never</code></p>
+<h6>CRP</h6>
+<p><code>CRP</code> = <code>never</code></p>
+<h6>CJP</h6>
+<p><code>CJP</code> = <code>never</code></p>
+<h6>CNP</h6>
+<p><code>CNP</code> = <code>never</code></p>
+<h6>RRP</h6>
+<p><code>RRP</code> = <code>never</code></p>
+<h6>RJP</h6>
+<p><code>RJP</code> = <code>never</code></p>
+<h6>RNP</h6>
+<p><code>RNP</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARD</code> | <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARD</code>&gt;</p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ANP</code> | <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ANP</code>&gt;</p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARP</code>, <code>AJD</code> | <code>AJP</code>, <code>AND</code> | <code>ANP</code>, <code>BRD</code> | <code>BRP</code>, <code>BJD</code> | <code>BJP</code>, <code>BND</code> | <code>BNP</code>, <code>CRD</code> | <code>CRP</code>, <code>CJD</code> | <code>CJP</code>, <code>CND</code> | <code>CNP</code>, <code>RRD</code> | <code>RRP</code>, <code>RJD</code> | <code>RJP</code>, <code>RND</code> | <code>RNP</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.pipe/](https://api.jquery.com/deferred.pipe/)</code></p>
+<h5>Since</h5>
+<p>1.6</p>
+<h5>Since</h5>
+<p>1.7</p>
+<h5>Deprecated</h5>
+<p>​ Deprecated since 1.8. Use <code>[then](#then)</code>.</p>
+<p><strong>Cause</strong>: The <code>.pipe()</code> method on a <code>jQuery.Deferred</code> object was deprecated as of jQuery 1.8, when the <code>.then()</code> method was changed to perform the same function.</p>
+<p><strong>Solution</strong>: In most cases it is sufficient to change all occurrences of <code>.pipe()</code> to <code>.then()</code>. Ensure that you aren&#39;t relying on context/state propagation (e.g., using <code>this</code>) or synchronous callback invocation, which were dropped from <code>.then()</code> for Promises/A+ interoperability as of jQuery 3.0.</p>
+<h5>Example</h5>
+<p><strong>​ ````Filter resolve value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.pipe(function( value ) {
+return value * 2;
+});
+​
+defer.resolve( 5 );
+filtered.done(function( value ) {
+alert( &quot;Value is ( 2*5 = ) 10: &quot; + value );
+});
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.pipe(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>pipe</strong>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter?</code>): <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;</p>
+</blockquote>
+<p>Utility method to filter and/or chain Deferreds.</p>
+<h5>Type Parameters</h5>
+<h6>ARP</h6>
+<p><code>ARP</code> = <code>never</code></p>
+<h6>AJP</h6>
+<p><code>AJP</code> = <code>never</code></p>
+<h6>ANP</h6>
+<p><code>ANP</code> = <code>never</code></p>
+<h6>BRP</h6>
+<p><code>BRP</code> = <code>never</code></p>
+<h6>BJP</h6>
+<p><code>BJP</code> = <code>never</code></p>
+<h6>BNP</h6>
+<p><code>BNP</code> = <code>never</code></p>
+<h6>CRP</h6>
+<p><code>CRP</code> = <code>never</code></p>
+<h6>CJP</h6>
+<p><code>CJP</code> = <code>never</code></p>
+<h6>CNP</h6>
+<p><code>CNP</code> = <code>never</code></p>
+<h6>RRP</h6>
+<p><code>RRP</code> = <code>never</code></p>
+<h6>RJP</h6>
+<p><code>RJP</code> = <code>never</code></p>
+<h6>RNP</h6>
+<p><code>RNP</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter?</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ANP</code> | <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ANP</code>&gt;</p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.pipe/](https://api.jquery.com/deferred.pipe/)</code></p>
+<h5>Since</h5>
+<p>1.6</p>
+<h5>Since</h5>
+<p>1.7</p>
+<h5>Deprecated</h5>
+<p>​ Deprecated since 1.8. Use <code>[then](#then)</code>.</p>
+<p><strong>Cause</strong>: The <code>.pipe()</code> method on a <code>jQuery.Deferred</code> object was deprecated as of jQuery 1.8, when the <code>.then()</code> method was changed to perform the same function.</p>
+<p><strong>Solution</strong>: In most cases it is sufficient to change all occurrences of <code>.pipe()</code> to <code>.then()</code>. Ensure that you aren&#39;t relying on context/state propagation (e.g., using <code>this</code>) or synchronous callback invocation, which were dropped from <code>.then()</code> for Promises/A+ interoperability as of jQuery 3.0.</p>
+<h5>Example</h5>
+<p><strong>​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.pipe(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>pipe</strong>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>, <code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter?</code>): <code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARF</code>, <code>AJD</code> | <code>AJF</code>, <code>AND</code> | <code>ANF</code>, <code>BRD</code> | <code>BRF</code>, <code>BJD</code> | <code>BJF</code>, <code>BND</code> | <code>BNF</code>, <code>CRD</code> | <code>CRF</code>, <code>CJD</code> | <code>CJF</code>, <code>CND</code> | <code>CNF</code>, <code>RRD</code> | <code>RRF</code>, <code>RJD</code> | <code>RJF</code>, <code>RND</code> | <code>RNF</code>&gt;</p>
+</blockquote>
+<p>Utility method to filter and/or chain Deferreds.</p>
+<h5>Type Parameters</h5>
+<h6>ARD</h6>
+<p><code>ARD</code> = <code>never</code></p>
+<h6>AJD</h6>
+<p><code>AJD</code> = <code>never</code></p>
+<h6>AND</h6>
+<p><code>AND</code> = <code>never</code></p>
+<h6>BRD</h6>
+<p><code>BRD</code> = <code>never</code></p>
+<h6>BJD</h6>
+<p><code>BJD</code> = <code>never</code></p>
+<h6>BND</h6>
+<p><code>BND</code> = <code>never</code></p>
+<h6>CRD</h6>
+<p><code>CRD</code> = <code>never</code></p>
+<h6>CJD</h6>
+<p><code>CJD</code> = <code>never</code></p>
+<h6>CND</h6>
+<p><code>CND</code> = <code>never</code></p>
+<h6>RRD</h6>
+<p><code>RRD</code> = <code>never</code></p>
+<h6>RJD</h6>
+<p><code>RJD</code> = <code>never</code></p>
+<h6>RND</h6>
+<p><code>RND</code> = <code>never</code></p>
+<h6>ARF</h6>
+<p><code>ARF</code> = <code>never</code></p>
+<h6>AJF</h6>
+<p><code>AJF</code> = <code>never</code></p>
+<h6>ANF</h6>
+<p><code>ANF</code> = <code>never</code></p>
+<h6>BRF</h6>
+<p><code>BRF</code> = <code>never</code></p>
+<h6>BJF</h6>
+<p><code>BJF</code> = <code>never</code></p>
+<h6>BNF</h6>
+<p><code>BNF</code> = <code>never</code></p>
+<h6>CRF</h6>
+<p><code>CRF</code> = <code>never</code></p>
+<h6>CJF</h6>
+<p><code>CJF</code> = <code>never</code></p>
+<h6>CNF</h6>
+<p><code>CNF</code> = <code>never</code></p>
+<h6>RRF</h6>
+<p><code>RRF</code> = <code>never</code></p>
+<h6>RJF</h6>
+<p><code>RJF</code> = <code>never</code></p>
+<h6>RNF</h6>
+<p><code>RNF</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARD</code> | <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARD</code>&gt;</p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>AJF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>AJF</code>&gt;</p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter?</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARF</code>, <code>AJD</code> | <code>AJF</code>, <code>AND</code> | <code>ANF</code>, <code>BRD</code> | <code>BRF</code>, <code>BJD</code> | <code>BJF</code>, <code>BND</code> | <code>BNF</code>, <code>CRD</code> | <code>CRF</code>, <code>CJD</code> | <code>CJF</code>, <code>CND</code> | <code>CNF</code>, <code>RRD</code> | <code>RRF</code>, <code>RJD</code> | <code>RJF</code>, <code>RND</code> | <code>RNF</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.pipe/](https://api.jquery.com/deferred.pipe/)</code></p>
+<h5>Since</h5>
+<p>1.6</p>
+<h5>Since</h5>
+<p>1.7</p>
+<h5>Deprecated</h5>
+<p>​ Deprecated since 1.8. Use <code>[then](#then)</code>.</p>
+<p><strong>Cause</strong>: The <code>.pipe()</code> method on a <code>jQuery.Deferred</code> object was deprecated as of jQuery 1.8, when the <code>.then()</code> method was changed to perform the same function.</p>
+<p><strong>Solution</strong>: In most cases it is sufficient to change all occurrences of <code>.pipe()</code> to <code>.then()</code>. Ensure that you aren&#39;t relying on context/state propagation (e.g., using <code>this</code>) or synchronous callback invocation, which were dropped from <code>.then()</code> for Promises/A+ interoperability as of jQuery 3.0.</p>
+<h5>Examples</h5>
+<p><strong>​ ````Filter resolve value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.pipe(function( value ) {
+return value * 2;
+});
+​
+defer.resolve( 5 );
+filtered.done(function( value ) {
+alert( &quot;Value is ( 2*5 = ) 10: &quot; + value );
+});
+```
+@example ​ ````Filter reject value:</strong></p>
+<pre><code class="language-javascript">var defer = $.Deferred(),
+filtered = defer.pipe( null, function( value ) {
+return value * 3;
+});
+​
+defer.reject( 6 );
+filtered.fail(function( value ) {
+alert( &quot;Value is ( 3*6 = ) 18: &quot; + value );
+});
+</code></pre>
+<p><strong>​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.pipe(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>pipe</strong>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter?</code>): <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;</p>
+</blockquote>
+<p>Utility method to filter and/or chain Deferreds.</p>
+<h5>Type Parameters</h5>
+<h6>ARF</h6>
+<p><code>ARF</code> = <code>never</code></p>
+<h6>AJF</h6>
+<p><code>AJF</code> = <code>never</code></p>
+<h6>ANF</h6>
+<p><code>ANF</code> = <code>never</code></p>
+<h6>BRF</h6>
+<p><code>BRF</code> = <code>never</code></p>
+<h6>BJF</h6>
+<p><code>BJF</code> = <code>never</code></p>
+<h6>BNF</h6>
+<p><code>BNF</code> = <code>never</code></p>
+<h6>CRF</h6>
+<p><code>CRF</code> = <code>never</code></p>
+<h6>CJF</h6>
+<p><code>CJF</code> = <code>never</code></p>
+<h6>CNF</h6>
+<p><code>CNF</code> = <code>never</code></p>
+<h6>RRF</h6>
+<p><code>RRF</code> = <code>never</code></p>
+<h6>RJF</h6>
+<p><code>RJF</code> = <code>never</code></p>
+<h6>RNF</h6>
+<p><code>RNF</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>AJF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>AJF</code>&gt;</p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter?</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.pipe/](https://api.jquery.com/deferred.pipe/)</code></p>
+<h5>Since</h5>
+<p>1.6</p>
+<h5>Since</h5>
+<p>1.7</p>
+<h5>Deprecated</h5>
+<p>​ Deprecated since 1.8. Use <code>[then](#then)</code>.</p>
+<p><strong>Cause</strong>: The <code>.pipe()</code> method on a <code>jQuery.Deferred</code> object was deprecated as of jQuery 1.8, when the <code>.then()</code> method was changed to perform the same function.</p>
+<p><strong>Solution</strong>: In most cases it is sufficient to change all occurrences of <code>.pipe()</code> to <code>.then()</code>. Ensure that you aren&#39;t relying on context/state propagation (e.g., using <code>this</code>) or synchronous callback invocation, which were dropped from <code>.then()</code> for Promises/A+ interoperability as of jQuery 3.0.</p>
+<h5>Example</h5>
+<p><strong>​ ````Filter reject value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.pipe( null, function( value ) {
+return value * 3;
+});
+​
+defer.reject( 6 );
+filtered.fail(function( value ) {
+alert( &quot;Value is ( 3*6 = ) 18: &quot; + value );
+});
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.pipe(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>pipe</strong>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt;(<code>doneFilter</code>, <code>failFilter?</code>, <code>progressFilter?</code>): <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt;</p>
+</blockquote>
+<p>Utility method to filter and/or chain Deferreds.</p>
+<h5>Type Parameters</h5>
+<h6>ARD</h6>
+<p><code>ARD</code> = <code>never</code></p>
+<h6>AJD</h6>
+<p><code>AJD</code> = <code>never</code></p>
+<h6>AND</h6>
+<p><code>AND</code> = <code>never</code></p>
+<h6>BRD</h6>
+<p><code>BRD</code> = <code>never</code></p>
+<h6>BJD</h6>
+<p><code>BJD</code> = <code>never</code></p>
+<h6>BND</h6>
+<p><code>BND</code> = <code>never</code></p>
+<h6>CRD</h6>
+<p><code>CRD</code> = <code>never</code></p>
+<h6>CJD</h6>
+<p><code>CJD</code> = <code>never</code></p>
+<h6>CND</h6>
+<p><code>CND</code> = <code>never</code></p>
+<h6>RRD</h6>
+<p><code>RRD</code> = <code>never</code></p>
+<h6>RJD</h6>
+<p><code>RJD</code> = <code>never</code></p>
+<h6>RND</h6>
+<p><code>RND</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARD</code> | <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARD</code>&gt;</p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter?</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter?</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.pipe/](https://api.jquery.com/deferred.pipe/)</code></p>
+<h5>Since</h5>
+<p>1.6</p>
+<h5>Since</h5>
+<p>1.7</p>
+<h5>Deprecated</h5>
+<p>​ Deprecated since 1.8. Use <code>[then](#then)</code>.</p>
+<p><strong>Cause</strong>: The <code>.pipe()</code> method on a <code>jQuery.Deferred</code> object was deprecated as of jQuery 1.8, when the <code>.then()</code> method was changed to perform the same function.</p>
+<p><strong>Solution</strong>: In most cases it is sufficient to change all occurrences of <code>.pipe()</code> to <code>.then()</code>. Ensure that you aren&#39;t relying on context/state propagation (e.g., using <code>this</code>) or synchronous callback invocation, which were dropped from <code>.then()</code> for Promises/A+ interoperability as of jQuery 3.0.</p>
+<h5>Example</h5>
+<p><strong>​ ````Filter resolve value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.pipe(function( value ) {
+return value * 2;
+});
+​
+defer.resolve( 5 );
+filtered.done(function( value ) {
+alert( &quot;Value is ( 2*5 = ) 10: &quot; + value );
+});
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.pipe(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<hr>
+<h3>progress()</h3>
+<blockquote>
+<p><strong>progress</strong>(<code>progressCallback</code>, ...<code>progressCallbacks</code>): <code>this</code></p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object generates progress notifications.</p>
+<h4>Parameters</h4>
+<h5>progressCallback</h5>
+<p><a href="../type-aliases/TypeOrArray.html"><code>TypeOrArray</code></a>&lt;<a href="../namespaces/Deferred/type-aliases/CallbackBase.html"><code>CallbackBase</code></a>&lt;<code>TN</code>, <code>UN</code>, <code>VN</code>, <code>SN</code>&gt;&gt;</p>
+<p>A function, or array of functions, to be called when the Deferred generates progress notifications.</p>
+<h5>progressCallbacks</h5>
+<p>...<a href="../type-aliases/TypeOrArray.html"><code>TypeOrArray</code></a>&lt;<a href="../namespaces/Deferred/type-aliases/CallbackBase.html"><code>CallbackBase</code></a>&lt;<code>TN</code>, <code>UN</code>, <code>VN</code>, <code>SN</code>&gt;&gt;[]</p>
+<p>Optional additional functions, or arrays of functions, to be called when the Deferred generates
+                         progress notifications.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/deferred.progress/](https://api.jquery.com/deferred.progress/)</code></p>
+<h4>Since</h4>
+<p>1.7</p>
+<hr>
+<h3>promise()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>promise</strong>&lt;<code>TTarget</code>&gt;(<code>target</code>): <code>PromiseBase</code>&lt;<code>TR</code>, <code>TJ</code>, <code>TN</code>, <code>UR</code>, <code>UJ</code>, <code>UN</code>, <code>VR</code>, <code>VJ</code>, <code>VN</code>, <code>SR</code>, <code>SJ</code>, <code>SN</code>&gt; &amp; <code>TTarget</code></p>
+</blockquote>
+<p>Return a Deferred&#39;s Promise object.</p>
+<h5>Type Parameters</h5>
+<h6>TTarget</h6>
+<p><code>TTarget</code> <em>extends</em> <code>object</code></p>
+<h5>Parameters</h5>
+<h6>target</h6>
+<p><code>TTarget</code></p>
+<p>Object onto which the promise methods have to be attached</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>TR</code>, <code>TJ</code>, <code>TN</code>, <code>UR</code>, <code>UJ</code>, <code>UN</code>, <code>VR</code>, <code>VJ</code>, <code>VN</code>, <code>SR</code>, <code>SJ</code>, <code>SN</code>&gt; &amp; <code>TTarget</code></p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.promise/](https://api.jquery.com/deferred.promise/)</code></p>
+<h5>Since</h5>
+<p>1.5</p>
+<h5>Example</h5>
+<p><strong>​ ````Create a Deferred and set two timer-based functions to either resolve or reject the Deferred after a random interval. Whichever one fires first &quot;wins&quot; and will call one of the callbacks. The second timeout has no effect since the Deferred is already complete (in a resolved or rejected state) from the first timeout action. Also set a timer-based progress notification function, and call a progress handler that adds &quot;working...&quot; to the document body.</strong></p>
+<pre><code class="language-javascript">function asyncEvent() {
+var dfd = jQuery.Deferred();
+​
+// Resolve after a random interval
+setTimeout(function() {
+dfd.resolve( &quot;hurray&quot; );
+}, Math.floor( 400 + Math.random() * 2000 ) );
+​
+// Reject after a random interval
+setTimeout(function() {
+dfd.reject( &quot;sorry&quot; );
+}, Math.floor( 400 + Math.random() * 2000 ) );
+​
+// Show a &quot;working...&quot; message every half-second
+setTimeout(function working() {
+if ( dfd.state() === &quot;pending&quot; ) {
+dfd.notify( &quot;working... &quot; );
+setTimeout( working, 500 );
+}
+}, 1 );
+​
+// Return the Promise so caller can&#39;t change the Deferred
+return dfd.promise();
+}
+​
+// Attach a done, fail, and progress handler for the asyncEvent
+$.when( asyncEvent() ).then(
+function( status ) {
+alert( status + &quot;, things are going well&quot; );
+},
+function( status ) {
+alert( status + &quot;, you fail this time&quot; );
+},
+function( status ) {
+$( &quot;body&quot; ).append( status );
+}
+);
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>promise</strong>(): <code>this</code></p>
+</blockquote>
+<p>Return a Deferred&#39;s Promise object.</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.promise/](https://api.jquery.com/deferred.promise/)</code></p>
+<h5>Since</h5>
+<p>1.5</p>
+<h5>Example</h5>
+<p><strong>​ ````Use the target argument to promote an existing object to a Promise:</strong></p>
+<pre><code class="language-javascript">// Existing object
+var obj = {
+hello: function( name ) {
+alert( &quot;Hello &quot; + name );
+}
+},
+// Create a Deferred
+defer = $.Deferred();
+​
+// Set object as a promise
+defer.promise( obj );
+​
+// Resolve the deferred
+defer.resolve( &quot;John&quot; );
+​
+// Use the object as a Promise
+obj.done(function( name ) {
+obj.hello( name ); // Will alert &quot;Hello John&quot;
+}).hello( &quot;Karl&quot; ); // Will alert &quot;Hello Karl&quot;
+</code></pre>
+<hr>
+<h3>state()</h3>
+<blockquote>
+<p><strong>state</strong>(): <code>&quot;pending&quot;</code> | <code>&quot;resolved&quot;</code> | <code>&quot;rejected&quot;</code></p>
+</blockquote>
+<p>Determine the current state of a Deferred object.</p>
+<h4>Returns</h4>
+<p><code>&quot;pending&quot;</code> | <code>&quot;resolved&quot;</code> | <code>&quot;rejected&quot;</code></p>
+<h4>See</h4>
+<p><code>[https://api.jquery.com/deferred.state/](https://api.jquery.com/deferred.state/)</code></p>
+<h4>Since</h4>
+<p>1.7</p>
+<hr>
+<h3>then()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>then</strong>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>, <code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>, <code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter</code>): <code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARF</code> | <code>ARP</code>, <code>AJD</code> | <code>AJF</code> | <code>AJP</code>, <code>AND</code> | <code>ANF</code> | <code>ANP</code>, <code>BRD</code> | <code>BRF</code> | <code>BRP</code>, <code>BJD</code> | <code>BJF</code> | <code>BJP</code>, <code>BND</code> | <code>BNF</code> | <code>BNP</code>, <code>CRD</code> | <code>CRF</code> | <code>CRP</code>, <code>CJD</code> | <code>CJF</code> | <code>CJP</code>, <code>CND</code> | <code>CNF</code> | <code>CNP</code>, <code>RRD</code> | <code>RRF</code> | <code>RRP</code>, <code>RJD</code> | <code>RJF</code> | <code>RJP</code>, <code>RND</code> | <code>RNF</code> | <code>RNP</code>&gt;</p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.</p>
+<h5>Type Parameters</h5>
+<h6>ARD</h6>
+<p><code>ARD</code> = <code>never</code></p>
+<h6>AJD</h6>
+<p><code>AJD</code> = <code>never</code></p>
+<h6>AND</h6>
+<p><code>AND</code> = <code>never</code></p>
+<h6>BRD</h6>
+<p><code>BRD</code> = <code>never</code></p>
+<h6>BJD</h6>
+<p><code>BJD</code> = <code>never</code></p>
+<h6>BND</h6>
+<p><code>BND</code> = <code>never</code></p>
+<h6>CRD</h6>
+<p><code>CRD</code> = <code>never</code></p>
+<h6>CJD</h6>
+<p><code>CJD</code> = <code>never</code></p>
+<h6>CND</h6>
+<p><code>CND</code> = <code>never</code></p>
+<h6>RRD</h6>
+<p><code>RRD</code> = <code>never</code></p>
+<h6>RJD</h6>
+<p><code>RJD</code> = <code>never</code></p>
+<h6>RND</h6>
+<p><code>RND</code> = <code>never</code></p>
+<h6>ARF</h6>
+<p><code>ARF</code> = <code>never</code></p>
+<h6>AJF</h6>
+<p><code>AJF</code> = <code>never</code></p>
+<h6>ANF</h6>
+<p><code>ANF</code> = <code>never</code></p>
+<h6>BRF</h6>
+<p><code>BRF</code> = <code>never</code></p>
+<h6>BJF</h6>
+<p><code>BJF</code> = <code>never</code></p>
+<h6>BNF</h6>
+<p><code>BNF</code> = <code>never</code></p>
+<h6>CRF</h6>
+<p><code>CRF</code> = <code>never</code></p>
+<h6>CJF</h6>
+<p><code>CJF</code> = <code>never</code></p>
+<h6>CNF</h6>
+<p><code>CNF</code> = <code>never</code></p>
+<h6>RRF</h6>
+<p><code>RRF</code> = <code>never</code></p>
+<h6>RJF</h6>
+<p><code>RJF</code> = <code>never</code></p>
+<h6>RNF</h6>
+<p><code>RNF</code> = <code>never</code></p>
+<h6>ARP</h6>
+<p><code>ARP</code> = <code>never</code></p>
+<h6>AJP</h6>
+<p><code>AJP</code> = <code>never</code></p>
+<h6>ANP</h6>
+<p><code>ANP</code> = <code>never</code></p>
+<h6>BRP</h6>
+<p><code>BRP</code> = <code>never</code></p>
+<h6>BJP</h6>
+<p><code>BJP</code> = <code>never</code></p>
+<h6>BNP</h6>
+<p><code>BNP</code> = <code>never</code></p>
+<h6>CRP</h6>
+<p><code>CRP</code> = <code>never</code></p>
+<h6>CJP</h6>
+<p><code>CJP</code> = <code>never</code></p>
+<h6>CNP</h6>
+<p><code>CNP</code> = <code>never</code></p>
+<h6>RRP</h6>
+<p><code>RRP</code> = <code>never</code></p>
+<h6>RJP</h6>
+<p><code>RJP</code> = <code>never</code></p>
+<h6>RNP</h6>
+<p><code>RNP</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARD</code> | <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARD</code>&gt;</p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARF</code>&gt;</p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ANP</code> | <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ANP</code>&gt;</p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARF</code> | <code>ARP</code>, <code>AJD</code> | <code>AJF</code> | <code>AJP</code>, <code>AND</code> | <code>ANF</code> | <code>ANP</code>, <code>BRD</code> | <code>BRF</code> | <code>BRP</code>, <code>BJD</code> | <code>BJF</code> | <code>BJP</code>, <code>BND</code> | <code>BNF</code> | <code>BNP</code>, <code>CRD</code> | <code>CRF</code> | <code>CRP</code>, <code>CJD</code> | <code>CJF</code> | <code>CJP</code>, <code>CND</code> | <code>CNF</code> | <code>CNP</code>, <code>RRD</code> | <code>RRF</code> | <code>RRP</code>, <code>RJD</code> | <code>RJF</code> | <code>RJP</code>, <code>RND</code> | <code>RNF</code> | <code>RNP</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.then/](https://api.jquery.com/deferred.then/)</code></p>
+<h5>Since</h5>
+<p>1.8</p>
+<h5>Examples</h5>
+<p><strong>​ ````Since the jQuery.get method returns a jqXHR object, which is derived from a Deferred object, we can attach handlers using the .then method.
+```javascript
+$.get( &quot;test.php&quot; ).then(
+function() {
+alert( &quot;$.get succeeded&quot; );
+}, function() {
+alert( &quot;$.get failed!&quot; );
+}
+);
+```
+@example ​ ````Filter the resolve value:</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;deferred.then demo&lt;/title&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;button&gt;Filter Resolve&lt;/button&gt;
+&lt;p&gt;&lt;/p&gt;
+​
+&lt;script&gt;
+var filterResolve = function() {
+var defer = $.Deferred(),
+filtered = defer.then(function( value ) {
+return value * 2;
+});
+​
+defer.resolve( 5 );
+filtered.done(function( value ) {
+$( &quot;p&quot; ).html( &quot;Value is ( 2*5 = ) 10: &quot; + value );
+});
+};
+​
+$( &quot;button&quot; ).on( &quot;click&quot;, filterResolve );
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>​ ````Filter reject value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.then( null, function( value ) {
+return value * 3;
+});
+​
+defer.reject( 6 );
+filtered.fail(function( value ) {
+alert( &quot;Value is ( 3*6 = ) 18: &quot; + value );
+});
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.then(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>then</strong>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>, <code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter</code>): <code>PromiseBase</code>&lt;<code>ARF</code> | <code>ARP</code>, <code>AJF</code> | <code>AJP</code>, <code>ANF</code> | <code>ANP</code>, <code>BRF</code> | <code>BRP</code>, <code>BJF</code> | <code>BJP</code>, <code>BNF</code> | <code>BNP</code>, <code>CRF</code> | <code>CRP</code>, <code>CJF</code> | <code>CJP</code>, <code>CNF</code> | <code>CNP</code>, <code>RRF</code> | <code>RRP</code>, <code>RJF</code> | <code>RJP</code>, <code>RNF</code> | <code>RNP</code>&gt;</p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.</p>
+<h5>Type Parameters</h5>
+<h6>ARF</h6>
+<p><code>ARF</code> = <code>never</code></p>
+<h6>AJF</h6>
+<p><code>AJF</code> = <code>never</code></p>
+<h6>ANF</h6>
+<p><code>ANF</code> = <code>never</code></p>
+<h6>BRF</h6>
+<p><code>BRF</code> = <code>never</code></p>
+<h6>BJF</h6>
+<p><code>BJF</code> = <code>never</code></p>
+<h6>BNF</h6>
+<p><code>BNF</code> = <code>never</code></p>
+<h6>CRF</h6>
+<p><code>CRF</code> = <code>never</code></p>
+<h6>CJF</h6>
+<p><code>CJF</code> = <code>never</code></p>
+<h6>CNF</h6>
+<p><code>CNF</code> = <code>never</code></p>
+<h6>RRF</h6>
+<p><code>RRF</code> = <code>never</code></p>
+<h6>RJF</h6>
+<p><code>RJF</code> = <code>never</code></p>
+<h6>RNF</h6>
+<p><code>RNF</code> = <code>never</code></p>
+<h6>ARP</h6>
+<p><code>ARP</code> = <code>never</code></p>
+<h6>AJP</h6>
+<p><code>AJP</code> = <code>never</code></p>
+<h6>ANP</h6>
+<p><code>ANP</code> = <code>never</code></p>
+<h6>BRP</h6>
+<p><code>BRP</code> = <code>never</code></p>
+<h6>BJP</h6>
+<p><code>BJP</code> = <code>never</code></p>
+<h6>BNP</h6>
+<p><code>BNP</code> = <code>never</code></p>
+<h6>CRP</h6>
+<p><code>CRP</code> = <code>never</code></p>
+<h6>CJP</h6>
+<p><code>CJP</code> = <code>never</code></p>
+<h6>CNP</h6>
+<p><code>CNP</code> = <code>never</code></p>
+<h6>RRP</h6>
+<p><code>RRP</code> = <code>never</code></p>
+<h6>RJP</h6>
+<p><code>RJP</code> = <code>never</code></p>
+<h6>RNP</h6>
+<p><code>RNP</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARF</code>&gt;</p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ANP</code> | <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ANP</code>&gt;</p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARF</code> | <code>ARP</code>, <code>AJF</code> | <code>AJP</code>, <code>ANF</code> | <code>ANP</code>, <code>BRF</code> | <code>BRP</code>, <code>BJF</code> | <code>BJP</code>, <code>BNF</code> | <code>BNP</code>, <code>CRF</code> | <code>CRP</code>, <code>CJF</code> | <code>CJP</code>, <code>CNF</code> | <code>CNP</code>, <code>RRF</code> | <code>RRP</code>, <code>RJF</code> | <code>RJP</code>, <code>RNF</code> | <code>RNP</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.then/](https://api.jquery.com/deferred.then/)</code></p>
+<h5>Since</h5>
+<p>1.8</p>
+<h5>Example</h5>
+<p><strong>​ ````Filter reject value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.then( null, function( value ) {
+return value * 3;
+});
+​
+defer.reject( 6 );
+filtered.fail(function( value ) {
+alert( &quot;Value is ( 3*6 = ) 18: &quot; + value );
+});
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.then(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>then</strong>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>, <code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter</code>): <code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARP</code>, <code>AJD</code> | <code>AJP</code>, <code>AND</code> | <code>ANP</code>, <code>BRD</code> | <code>BRP</code>, <code>BJD</code> | <code>BJP</code>, <code>BND</code> | <code>BNP</code>, <code>CRD</code> | <code>CRP</code>, <code>CJD</code> | <code>CJP</code>, <code>CND</code> | <code>CNP</code>, <code>RRD</code> | <code>RRP</code>, <code>RJD</code> | <code>RJP</code>, <code>RND</code> | <code>RNP</code>&gt;</p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.</p>
+<h5>Type Parameters</h5>
+<h6>ARD</h6>
+<p><code>ARD</code> = <code>never</code></p>
+<h6>AJD</h6>
+<p><code>AJD</code> = <code>never</code></p>
+<h6>AND</h6>
+<p><code>AND</code> = <code>never</code></p>
+<h6>BRD</h6>
+<p><code>BRD</code> = <code>never</code></p>
+<h6>BJD</h6>
+<p><code>BJD</code> = <code>never</code></p>
+<h6>BND</h6>
+<p><code>BND</code> = <code>never</code></p>
+<h6>CRD</h6>
+<p><code>CRD</code> = <code>never</code></p>
+<h6>CJD</h6>
+<p><code>CJD</code> = <code>never</code></p>
+<h6>CND</h6>
+<p><code>CND</code> = <code>never</code></p>
+<h6>RRD</h6>
+<p><code>RRD</code> = <code>never</code></p>
+<h6>RJD</h6>
+<p><code>RJD</code> = <code>never</code></p>
+<h6>RND</h6>
+<p><code>RND</code> = <code>never</code></p>
+<h6>ARP</h6>
+<p><code>ARP</code> = <code>never</code></p>
+<h6>AJP</h6>
+<p><code>AJP</code> = <code>never</code></p>
+<h6>ANP</h6>
+<p><code>ANP</code> = <code>never</code></p>
+<h6>BRP</h6>
+<p><code>BRP</code> = <code>never</code></p>
+<h6>BJP</h6>
+<p><code>BJP</code> = <code>never</code></p>
+<h6>BNP</h6>
+<p><code>BNP</code> = <code>never</code></p>
+<h6>CRP</h6>
+<p><code>CRP</code> = <code>never</code></p>
+<h6>CJP</h6>
+<p><code>CJP</code> = <code>never</code></p>
+<h6>CNP</h6>
+<p><code>CNP</code> = <code>never</code></p>
+<h6>RRP</h6>
+<p><code>RRP</code> = <code>never</code></p>
+<h6>RJP</h6>
+<p><code>RJP</code> = <code>never</code></p>
+<h6>RNP</h6>
+<p><code>RNP</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARD</code> | <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARD</code>&gt;</p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ANP</code> | <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ANP</code>&gt;</p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARP</code>, <code>AJD</code> | <code>AJP</code>, <code>AND</code> | <code>ANP</code>, <code>BRD</code> | <code>BRP</code>, <code>BJD</code> | <code>BJP</code>, <code>BND</code> | <code>BNP</code>, <code>CRD</code> | <code>CRP</code>, <code>CJD</code> | <code>CJP</code>, <code>CND</code> | <code>CNP</code>, <code>RRD</code> | <code>RRP</code>, <code>RJD</code> | <code>RJP</code>, <code>RND</code> | <code>RNP</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.then/](https://api.jquery.com/deferred.then/)</code></p>
+<h5>Since</h5>
+<p>1.8</p>
+<h5>Example</h5>
+<p><strong>​ ````Filter the resolve value:
+```html
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;deferred.then demo&lt;/title&gt;
+&lt;script src=&quot;<a href="https://code.jquery.com/jquery-3.3.1.js%22%5C%3E%5C">https://code.jquery.com/jquery-3.3.1.js&quot;\&gt;\</a>&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;button&gt;Filter Resolve&lt;/button&gt;
+&lt;p&gt;&lt;/p&gt;
+​
+&lt;script&gt;
+var filterResolve = function() {
+var defer = $.Deferred(),
+filtered = defer.then(function( value ) {
+return value * 2;
+});
+​
+defer.resolve( 5 );
+filtered.done(function( value ) {
+$( &quot;p&quot; ).html( &quot;Value is ( 2*5 = ) 10: &quot; + value );
+});
+};
+​
+$( &quot;button&quot; ).on( &quot;click&quot;, filterResolve );
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.then(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>then</strong>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter?</code>): <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;</p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.</p>
+<h5>Type Parameters</h5>
+<h6>ARP</h6>
+<p><code>ARP</code> = <code>never</code></p>
+<h6>AJP</h6>
+<p><code>AJP</code> = <code>never</code></p>
+<h6>ANP</h6>
+<p><code>ANP</code> = <code>never</code></p>
+<h6>BRP</h6>
+<p><code>BRP</code> = <code>never</code></p>
+<h6>BJP</h6>
+<p><code>BJP</code> = <code>never</code></p>
+<h6>BNP</h6>
+<p><code>BNP</code> = <code>never</code></p>
+<h6>CRP</h6>
+<p><code>CRP</code> = <code>never</code></p>
+<h6>CJP</h6>
+<p><code>CJP</code> = <code>never</code></p>
+<h6>CNP</h6>
+<p><code>CNP</code> = <code>never</code></p>
+<h6>RRP</h6>
+<p><code>RRP</code> = <code>never</code></p>
+<h6>RJP</h6>
+<p><code>RJP</code> = <code>never</code></p>
+<h6>RNP</h6>
+<p><code>RNP</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter?</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ANP</code> | <code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ANP</code>&gt;</p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARP</code>, <code>AJP</code>, <code>ANP</code>, <code>BRP</code>, <code>BJP</code>, <code>BNP</code>, <code>CRP</code>, <code>CJP</code>, <code>CNP</code>, <code>RRP</code>, <code>RJP</code>, <code>RNP</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.then/](https://api.jquery.com/deferred.then/)</code></p>
+<h5>Since</h5>
+<p>1.8</p>
+<h5>Example</h5>
+<p><strong>​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.then(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>then</strong>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>, <code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter?</code>): <code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARF</code>, <code>AJD</code> | <code>AJF</code>, <code>AND</code> | <code>ANF</code>, <code>BRD</code> | <code>BRF</code>, <code>BJD</code> | <code>BJF</code>, <code>BND</code> | <code>BNF</code>, <code>CRD</code> | <code>CRF</code>, <code>CJD</code> | <code>CJF</code>, <code>CND</code> | <code>CNF</code>, <code>RRD</code> | <code>RRF</code>, <code>RJD</code> | <code>RJF</code>, <code>RND</code> | <code>RNF</code>&gt;</p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.</p>
+<h5>Type Parameters</h5>
+<h6>ARD</h6>
+<p><code>ARD</code> = <code>never</code></p>
+<h6>AJD</h6>
+<p><code>AJD</code> = <code>never</code></p>
+<h6>AND</h6>
+<p><code>AND</code> = <code>never</code></p>
+<h6>BRD</h6>
+<p><code>BRD</code> = <code>never</code></p>
+<h6>BJD</h6>
+<p><code>BJD</code> = <code>never</code></p>
+<h6>BND</h6>
+<p><code>BND</code> = <code>never</code></p>
+<h6>CRD</h6>
+<p><code>CRD</code> = <code>never</code></p>
+<h6>CJD</h6>
+<p><code>CJD</code> = <code>never</code></p>
+<h6>CND</h6>
+<p><code>CND</code> = <code>never</code></p>
+<h6>RRD</h6>
+<p><code>RRD</code> = <code>never</code></p>
+<h6>RJD</h6>
+<p><code>RJD</code> = <code>never</code></p>
+<h6>RND</h6>
+<p><code>RND</code> = <code>never</code></p>
+<h6>ARF</h6>
+<p><code>ARF</code> = <code>never</code></p>
+<h6>AJF</h6>
+<p><code>AJF</code> = <code>never</code></p>
+<h6>ANF</h6>
+<p><code>ANF</code> = <code>never</code></p>
+<h6>BRF</h6>
+<p><code>BRF</code> = <code>never</code></p>
+<h6>BJF</h6>
+<p><code>BJF</code> = <code>never</code></p>
+<h6>BNF</h6>
+<p><code>BNF</code> = <code>never</code></p>
+<h6>CRF</h6>
+<p><code>CRF</code> = <code>never</code></p>
+<h6>CJF</h6>
+<p><code>CJF</code> = <code>never</code></p>
+<h6>CNF</h6>
+<p><code>CNF</code> = <code>never</code></p>
+<h6>RRF</h6>
+<p><code>RRF</code> = <code>never</code></p>
+<h6>RJF</h6>
+<p><code>RJF</code> = <code>never</code></p>
+<h6>RNF</h6>
+<p><code>RNF</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARD</code> | <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARD</code>&gt;</p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARF</code>&gt;</p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter?</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARD</code> | <code>ARF</code>, <code>AJD</code> | <code>AJF</code>, <code>AND</code> | <code>ANF</code>, <code>BRD</code> | <code>BRF</code>, <code>BJD</code> | <code>BJF</code>, <code>BND</code> | <code>BNF</code>, <code>CRD</code> | <code>CRF</code>, <code>CJD</code> | <code>CJF</code>, <code>CND</code> | <code>CNF</code>, <code>RRD</code> | <code>RRF</code>, <code>RJD</code> | <code>RJF</code>, <code>RND</code> | <code>RNF</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.then/](https://api.jquery.com/deferred.then/)</code></p>
+<h5>Since</h5>
+<p>1.8</p>
+<h5>Examples</h5>
+<p><strong>​ ````Since the jQuery.get method returns a jqXHR object, which is derived from a Deferred object, we can attach handlers using the .then method.
+```javascript
+$.get( &quot;test.php&quot; ).then(
+function() {
+alert( &quot;$.get succeeded&quot; );
+}, function() {
+alert( &quot;$.get failed!&quot; );
+}
+);
+```
+@example ​ ````Filter the resolve value:</strong></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;deferred.then demo&lt;/title&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;button&gt;Filter Resolve&lt;/button&gt;
+&lt;p&gt;&lt;/p&gt;
+​
+&lt;script&gt;
+var filterResolve = function() {
+var defer = $.Deferred(),
+filtered = defer.then(function( value ) {
+return value * 2;
+});
+​
+defer.resolve( 5 );
+filtered.done(function( value ) {
+$( &quot;p&quot; ).html( &quot;Value is ( 2*5 = ) 10: &quot; + value );
+});
+};
+​
+$( &quot;button&quot; ).on( &quot;click&quot;, filterResolve );
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>​ ````Filter reject value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.then( null, function( value ) {
+return value * 3;
+});
+​
+defer.reject( 6 );
+filtered.fail(function( value ) {
+alert( &quot;Value is ( 3*6 = ) 18: &quot; + value );
+});
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.then(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>then</strong>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;(<code>doneFilter</code>, <code>failFilter</code>, <code>progressFilter?</code>): <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;</p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.</p>
+<h5>Type Parameters</h5>
+<h6>ARF</h6>
+<p><code>ARF</code> = <code>never</code></p>
+<h6>AJF</h6>
+<p><code>AJF</code> = <code>never</code></p>
+<h6>ANF</h6>
+<p><code>ANF</code> = <code>never</code></p>
+<h6>BRF</h6>
+<p><code>BRF</code> = <code>never</code></p>
+<h6>BJF</h6>
+<p><code>BJF</code> = <code>never</code></p>
+<h6>BNF</h6>
+<p><code>BNF</code> = <code>never</code></p>
+<h6>CRF</h6>
+<p><code>CRF</code> = <code>never</code></p>
+<h6>CJF</h6>
+<p><code>CJF</code> = <code>never</code></p>
+<h6>CNF</h6>
+<p><code>CNF</code> = <code>never</code></p>
+<h6>RRF</h6>
+<p><code>RRF</code> = <code>never</code></p>
+<h6>RJF</h6>
+<p><code>RJF</code> = <code>never</code></p>
+<h6>RNF</h6>
+<p><code>RNF</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARF</code> | <code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARF</code>&gt;</p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter?</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARF</code>, <code>AJF</code>, <code>ANF</code>, <code>BRF</code>, <code>BJF</code>, <code>BNF</code>, <code>CRF</code>, <code>CJF</code>, <code>CNF</code>, <code>RRF</code>, <code>RJF</code>, <code>RNF</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.then/](https://api.jquery.com/deferred.then/)</code></p>
+<h5>Since</h5>
+<p>1.8</p>
+<h5>Example</h5>
+<p><strong>​ ````Filter reject value:
+```javascript
+var defer = $.Deferred(),
+filtered = defer.then( null, function( value ) {
+return value * 3;
+});
+​
+defer.reject( 6 );
+filtered.fail(function( value ) {
+alert( &quot;Value is ( 3*6 = ) 18: &quot; + value );
+});
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.then(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>then</strong>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt;(<code>doneFilter</code>, <code>failFilter?</code>, <code>progressFilter?</code>): <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt;</p>
+</blockquote>
+<p>Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.</p>
+<h5>Type Parameters</h5>
+<h6>ARD</h6>
+<p><code>ARD</code> = <code>never</code></p>
+<h6>AJD</h6>
+<p><code>AJD</code> = <code>never</code></p>
+<h6>AND</h6>
+<p><code>AND</code> = <code>never</code></p>
+<h6>BRD</h6>
+<p><code>BRD</code> = <code>never</code></p>
+<h6>BJD</h6>
+<p><code>BJD</code> = <code>never</code></p>
+<h6>BND</h6>
+<p><code>BND</code> = <code>never</code></p>
+<h6>CRD</h6>
+<p><code>CRD</code> = <code>never</code></p>
+<h6>CJD</h6>
+<p><code>CJD</code> = <code>never</code></p>
+<h6>CND</h6>
+<p><code>CND</code> = <code>never</code></p>
+<h6>RRD</h6>
+<p><code>RRD</code> = <code>never</code></p>
+<h6>RJD</h6>
+<p><code>RJD</code> = <code>never</code></p>
+<h6>RND</h6>
+<p><code>RND</code> = <code>never</code></p>
+<h5>Parameters</h5>
+<h6>doneFilter</h6>
+<p>(<code>t</code>, <code>u</code>, <code>v</code>, ...<code>s</code>) =&gt; <code>ARD</code> | <code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt; | <a href="Thenable.html"><code>Thenable</code></a>&lt;<code>ARD</code>&gt;</p>
+<p>An optional function that is called when the Deferred is resolved.</p>
+<h6>failFilter?</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when the Deferred is rejected.</p>
+<h6>progressFilter?</h6>
+<p><code>null</code></p>
+<p>An optional function that is called when progress notifications are sent to the Deferred.</p>
+<h5>Returns</h5>
+<p><code>PromiseBase</code>&lt;<code>ARD</code>, <code>AJD</code>, <code>AND</code>, <code>BRD</code>, <code>BJD</code>, <code>BND</code>, <code>CRD</code>, <code>CJD</code>, <code>CND</code>, <code>RRD</code>, <code>RJD</code>, <code>RND</code>&gt;</p>
+<h5>See</h5>
+<p><code>[https://api.jquery.com/deferred.then/](https://api.jquery.com/deferred.then/)</code></p>
+<h5>Since</h5>
+<p>1.8</p>
+<h5>Example</h5>
+<p><strong>​ ````Filter the resolve value:
+```html
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;deferred.then demo&lt;/title&gt;
+&lt;script src=&quot;<a href="https://code.jquery.com/jquery-3.3.1.js%22%5C%3E%5C">https://code.jquery.com/jquery-3.3.1.js&quot;\&gt;\</a>&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+​
+&lt;button&gt;Filter Resolve&lt;/button&gt;
+&lt;p&gt;&lt;/p&gt;
+​
+&lt;script&gt;
+var filterResolve = function() {
+var defer = $.Deferred(),
+filtered = defer.then(function( value ) {
+return value * 2;
+});
+​
+defer.resolve( 5 );
+filtered.done(function( value ) {
+$( &quot;p&quot; ).html( &quot;Value is ( 2*5 = ) 10: &quot; + value );
+});
+};
+​
+$( &quot;button&quot; ).on( &quot;click&quot;, filterResolve );
+&lt;/script&gt;
+​
+&lt;/body&gt;
+&lt;/html&gt;
+```
+@example ​ ````Chain tasks:</strong></p>
+<pre><code class="language-javascript">var request = $.ajax( url, { dataType: &quot;json&quot; } ),
+chained = request.then(function( data ) {
+return $.ajax( url2, { data: { user: data.userId } } );
+});
+​
+chained.done(function( data ) {
+// data retrieved from url2 as provided by the first request
+});
+</code></pre>
+
+<footer>Generated from <code>@sapui5/types@1.149.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.149/">Back to index</a>.</footer>
+</body>
+</html>
