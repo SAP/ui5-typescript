@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Type Alias: SpecialEventHook\&lt;TTarget, TData\&gt; — OpenUI5 TypeScript API</title>
+<meta name="description" content="Type Alias: SpecialEventHook\&lt;TTarget, TData\&gt; — OpenUI5 TypeScript API Reference (1.136.17)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.136/sap.ui.core/namespaces/JQuery/type-aliases/SpecialEventHook.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../index.html">OpenUI5 API</a> › <a href="../../../../sap.ui.core/README.html">sap.ui.core</a> › namespaces › JQuery › type-aliases</nav>
+<p><a href="../../../../README.html"><strong>OpenUI5 TypeScript API (1.136.17)</strong></a></p>
+<hr>
+<p><a href="../../../../README.html">OpenUI5 TypeScript API (1.136.17)</a> / <a href="../../../README.html">sap.ui.core</a> / <a href="../README-1.html">JQuery</a> / SpecialEventHook</p>
+<h1>Type Alias: SpecialEventHook&lt;TTarget, TData&gt;</h1>
+<pre class="sig"><span class="kw">import</span> { SpecialEventHook } <span class="kw">from</span> <span class="str">"namespaces/JQuery"</span>;</pre>
+<blockquote>
+<p><strong>SpecialEventHook</strong>&lt;<code>TTarget</code>, <code>TData</code>&gt; = { <code>noBubble</code>: <code>boolean</code>; } | { <code>bindType</code>: <code>string</code>; } | { <code>delegateType</code>: <code>string</code>; } | { <code>setup</code>: <code>false</code> | <code>void</code>; } | { <code>teardown</code>: <code>false</code> | <code>void</code>; } | { <code>add</code>: <code>void</code>; } | { <code>remove</code>: <code>void</code>; } | { <code>trigger</code>: <code>false</code> | <code>void</code>; } | { <code>_default</code>: <code>false</code> | <code>void</code>; } | { <code>handle</code>: <code>void</code>; } | { <code>preDispatch</code>: <code>false</code> | <code>void</code>; } | { <code>postDispatch</code>: <code>void</code>; } | {[<code>key</code>: <code>string</code>]: <code>any</code>; }</p>
+</blockquote>
+<p>The jQuery special event hooks are a set of per-event-name functions and properties that allow code to control the behavior of event processing within jQuery. The mechanism is similar to <code>fixHooks</code> in that the special event information is stored in <code>jQuery.event.special.NAME</code>, where <code>NAME</code> is the name of the special event. Event names are case sensitive.</p>
+<p>As with <code>fixHooks</code>, the special event hooks design assumes it will be very rare that two unrelated pieces of code want to process the same event name. Special event authors who need to modify events with existing hooks will need to take precautions to avoid introducing unwanted side-effects by clobbering those hooks.</p>
+<h2>Type Parameters</h2>
+<h3>TTarget</h3>
+<p><code>TTarget</code></p>
+<h3>TData</h3>
+<p><code>TData</code></p>
+<h2>Union Members</h2>
+<h3>Type Literal</h3>
+<p>{ <code>noBubble</code>: <code>boolean</code>; }</p>
+<h4>noBubble</h4>
+<blockquote>
+<p><strong>noBubble</strong>: <code>boolean</code></p>
+</blockquote>
+<p>Indicates whether this event type should be bubbled when the <code>.trigger()</code> method is called; by default it is <code>false</code>, meaning that a triggered event will bubble to the element&#39;s parents up to the document (if attached to a document) and then to the window. Note that defining <code>noBubble</code> on an event will effectively prevent that event from being used for delegated events with <code>.trigger()</code>.</p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#nobubble-boolean](https://learn.jquery.com/events/event-extensions/#nobubble-boolean)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>bindType</code>: <code>string</code>; }</p>
+<h4>bindType</h4>
+<blockquote>
+<p><strong>bindType</strong>: <code>string</code></p>
+</blockquote>
+<p>When defined, these string properties specify that a special event should be handled like another event type until the event is delivered. The <code>bindType</code> is used if the event is attached directly, and the <code>delegateType</code> is used for delegated events. These types are generally DOM event types, and <em>should not</em> be a special event themselves.</p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#bindtype-string-delegatetype-string](https://learn.jquery.com/events/event-extensions/#bindtype-string-delegatetype-string)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>delegateType</code>: <code>string</code>; }</p>
+<h4>delegateType</h4>
+<blockquote>
+<p><strong>delegateType</strong>: <code>string</code></p>
+</blockquote>
+<p>When defined, these string properties specify that a special event should be handled like another event type until the event is delivered. The <code>bindType</code> is used if the event is attached directly, and the <code>delegateType</code> is used for delegated events. These types are generally DOM event types, and <em>should not</em> be a special event themselves.</p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#bindtype-string-delegatetype-string](https://learn.jquery.com/events/event-extensions/#bindtype-string-delegatetype-string)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>setup</code>: <code>false</code> | <code>void</code>; }</p>
+<h4>setup()</h4>
+<blockquote>
+<p><strong>setup</strong>(<code>this</code>, <code>data</code>, <code>namespaces</code>, <code>eventHandle</code>): <code>false</code> | <code>void</code></p>
+</blockquote>
+<p>The setup hook is called the first time an event of a particular type is attached to an element; this provides the hook an opportunity to do processing that will apply to all events of this type on this element. The <code>this</code> keyword will be a reference to the element where the event is being attached and <code>eventHandle</code> is jQuery&#39;s event handler function. In most cases the <code>namespaces</code> argument should not be used, since it only represents the namespaces of the <em>first</em> event being attached; subsequent events may not have this same namespaces.</p>
+<p>This hook can perform whatever processing it desires, including attaching its own event handlers to the element or to other elements and recording setup information on the element using the <code>jQuery.data()</code> method. If the setup hook wants jQuery to add a browser event (via <code>addEventListener</code> or <code>attachEvent</code>, depending on browser) it should return <code>false</code>. In all other cases, jQuery will not add the browser event, but will continue all its other bookkeeping for the event. This would be appropriate, for example, if the event was never fired by the browser but invoked by <code>.trigger()</code>. To attach the jQuery event handler in the setup hook, use the <code>eventHandle</code> argument.</p>
+<h5>Parameters</h5>
+<h6>this</h6>
+<p><code>TTarget</code></p>
+<h6>data</h6>
+<p><code>TData</code></p>
+<h6>namespaces</h6>
+<p><code>string</code></p>
+<h6>eventHandle</h6>
+<p><a href="EventHandler.html"><code>EventHandler</code></a>&lt;<code>TTarget</code>, <code>TData</code>&gt;</p>
+<h5>Returns</h5>
+<p><code>false</code> | <code>void</code></p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#setup-function-data-object-namespaces-eventhandle-function](https://learn.jquery.com/events/event-extensions/#setup-function-data-object-namespaces-eventhandle-function)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>teardown</code>: <code>false</code> | <code>void</code>; }</p>
+<h4>teardown()</h4>
+<blockquote>
+<p><strong>teardown</strong>(<code>this</code>): <code>false</code> | <code>void</code></p>
+</blockquote>
+<p>The teardown hook is called when the final event of a particular type is removed from an element. The <code>this</code> keyword will be a reference to the element where the event is being cleaned up. This hook should return <code>false</code> if it wants jQuery to remove the event from the browser&#39;s event system (via <code>removeEventListener</code> or <code>detachEvent</code>). In most cases, the setup and teardown hooks should return the same value.</p>
+<p>If the setup hook attached event handlers or added data to an element through a mechanism such as <code>jQuery.data()</code>, the teardown hook should reverse the process and remove them. jQuery will generally remove the data and events when an element is totally removed from the document, but failing to remove data or events on teardown will cause a memory leak if the element stays in the document.</p>
+<h5>Parameters</h5>
+<h6>this</h6>
+<p><code>TTarget</code></p>
+<h5>Returns</h5>
+<p><code>false</code> | <code>void</code></p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#teardown-function](https://learn.jquery.com/events/event-extensions/#teardown-function)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>add</code>: <code>void</code>; }</p>
+<h4>add()</h4>
+<blockquote>
+<p><strong>add</strong>(<code>this</code>, <code>handleObj</code>): <code>void</code></p>
+</blockquote>
+<p>Each time an event handler is added to an element through an API such as <code>.on()</code>, jQuery calls this hook. The <code>this</code> keyword will be the element to which the event handler is being added, and the <code>handleObj</code> argument is as described in the section above. The return value of this hook is ignored.</p>
+<h5>Parameters</h5>
+<h6>this</h6>
+<p><code>TTarget</code></p>
+<h6>handleObj</h6>
+<p><a href="../interfaces/HandleObject.html"><code>HandleObject</code></a>&lt;<code>TTarget</code>, <code>TData</code>&gt;</p>
+<h5>Returns</h5>
+<p><code>void</code></p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#add-function-handleobj](https://learn.jquery.com/events/event-extensions/#add-function-handleobj)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>remove</code>: <code>void</code>; }</p>
+<h4>remove()</h4>
+<blockquote>
+<p><strong>remove</strong>(<code>this</code>, <code>handleObj</code>): <code>void</code></p>
+</blockquote>
+<p>When an event handler is removed from an element using an API such as <code>.off()</code>, this hook is called. The <code>this</code> keyword will be the element where the handler is being removed, and the <code>handleObj</code> argument is as described in the section above. The return value of this hook is ignored.</p>
+<h5>Parameters</h5>
+<h6>this</h6>
+<p><code>TTarget</code></p>
+<h6>handleObj</h6>
+<p><a href="../interfaces/HandleObject.html"><code>HandleObject</code></a>&lt;<code>TTarget</code>, <code>TData</code>&gt;</p>
+<h5>Returns</h5>
+<p><code>void</code></p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#remove-function-handleobj](https://learn.jquery.com/events/event-extensions/#remove-function-handleobj)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>trigger</code>: <code>false</code> | <code>void</code>; }</p>
+<h4>trigger()</h4>
+<blockquote>
+<p><strong>trigger</strong>(<code>this</code>, <code>event</code>, <code>data</code>): <code>false</code> | <code>void</code></p>
+</blockquote>
+<p>Called when the <code>.trigger()</code> or <code>.triggerHandler()</code> methods are used to trigger an event for the special type from code, as opposed to events that originate from within the browser. The <code>this</code> keyword will be the element being triggered, and the event argument will be a <code>jQuery.Event</code> object constructed from the caller&#39;s input. At minimum, the event type, data, namespace, and target properties are set on the event. The data argument represents additional data passed by <code>.trigger()</code> if present.</p>
+<p>The trigger hook is called early in the process of triggering an event, just after the <code>jQuery.Event</code> object is constructed and before any handlers have been called. It can process the triggered event in any way, for example by calling <code>event.stopPropagation()</code> or <code>event.preventDefault()</code> before returning. If the hook returns <code>false</code>, jQuery does not perform any further event triggering actions and returns immediately. Otherwise, it performs the normal trigger processing, calling any event handlers for the element and bubbling the event (unless propagation is stopped in advance or <code>noBubble</code> was specified for the special event) to call event handlers attached to parent elements.</p>
+<h5>Parameters</h5>
+<h6>this</h6>
+<p><code>TTarget</code></p>
+<h6>event</h6>
+<p><a href="../interfaces/Event.html"><code>Event</code></a></p>
+<h6>data</h6>
+<p><code>TData</code></p>
+<h5>Returns</h5>
+<p><code>false</code> | <code>void</code></p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#trigger-function-event-jquery-event-data-object](https://learn.jquery.com/events/event-extensions/#trigger-function-event-jquery-event-data-object)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>_default</code>: <code>false</code> | <code>void</code>; }</p>
+<h4>_default()</h4>
+<blockquote>
+<p><strong>_default</strong>(<code>event</code>, <code>data</code>): <code>false</code> | <code>void</code></p>
+</blockquote>
+<p>When the <code>.trigger()</code> method finishes running all the event handlers for an event, it also looks for and runs any method on the target object by the same name unless of the handlers called <code>event.preventDefault()</code>. So, <code>.trigger( &quot;submit&quot; )</code> will execute the <code>submit()</code> method on the element if one exists. When a <code>_default</code> hook is specified, the hook is called just prior to checking for and executing the element&#39;s default method. If this hook returns the value <code>false</code> the element&#39;s default method will be called; otherwise it is not.</p>
+<h5>Parameters</h5>
+<h6>event</h6>
+<p><a href="../interfaces/TriggeredEvent.html"><code>TriggeredEvent</code></a>&lt;<code>TTarget</code>, <code>TData</code>&gt;</p>
+<h6>data</h6>
+<p><code>TData</code></p>
+<h5>Returns</h5>
+<p><code>false</code> | <code>void</code></p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#\_default-function-event-jquery-event-data-object](https://learn.jquery.com/events/event-extensions/#_default-function-event-jquery-event-data-object)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>handle</code>: <code>void</code>; }</p>
+<h4>handle()</h4>
+<blockquote>
+<p><strong>handle</strong>(<code>this</code>, <code>event</code>, ...<code>data</code>): <code>void</code></p>
+</blockquote>
+<p>jQuery calls a handle hook when the event has occurred and jQuery would normally call the user&#39;s event handler specified by <code>.on()</code> or another event binding method. If the hook exists, jQuery calls it <em>instead</em> of that event handler, passing it the event and any data passed from <code>.trigger()</code> if it was not a native event. The <code>this</code> keyword is the DOM element being handled, and <code>event.handleObj</code> property has the detailed event information.</p>
+<p>Based in the information it has, the handle hook should decide whether to call the original handler function which is in <code>event.handleObj.handler</code>. It can modify information in the event object before calling the original handler, but <em>must restore</em> that data before returning or subsequent unrelated event handlers may act unpredictably. In most cases, the handle hook should return the result of the original handler, but that is at the discretion of the hook. The handle hook is unique in that it is the only special event function hook that is called under its original special event name when the type is mapped using <code>bindType</code> and <code>delegateType</code>. For that reason, it is almost always an error to have anything other than a handle hook present if the special event defines a <code>bindType</code> and <code>delegateType</code>, since those other hooks will never be called.</p>
+<h5>Parameters</h5>
+<h6>this</h6>
+<p><code>TTarget</code></p>
+<h6>event</h6>
+<p><a href="../interfaces/TriggeredEvent.html"><code>TriggeredEvent</code></a>&lt;<code>TTarget</code>, <code>TData</code>, <code>any</code>, <code>any</code>&gt; &amp; <code>object</code></p>
+<h6>data</h6>
+<p>...<code>TData</code>[]</p>
+<h5>Returns</h5>
+<p><code>void</code></p>
+<h5>See</h5>
+<p><code>[https://learn.jquery.com/events/event-extensions/#handle-function-event-jquery-event-data-object](https://learn.jquery.com/events/event-extensions/#handle-function-event-jquery-event-data-object)</code></p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>preDispatch</code>: <code>false</code> | <code>void</code>; }</p>
+<hr>
+<h3>Type Literal</h3>
+<p>{ <code>postDispatch</code>: <code>void</code>; }</p>
+<hr>
+<h3>Type Literal</h3>
+<p>{[<code>key</code>: <code>string</code>]: <code>any</code>; }</p>
+<h2>See</h2>
+<p><code>[https://learn.jquery.com/events/event-extensions/#special-event-hooks](https://learn.jquery.com/events/event-extensions/#special-event-hooks)</code></p>
+
+<footer>Generated from <code>@openui5/types@1.136.17</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.136/">Back to index</a>.</footer>
+</body>
+</html>

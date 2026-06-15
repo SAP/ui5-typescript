@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>~~Function: htmlview()~~ — OpenUI5 TypeScript API</title>
+<meta name="description" content="~~Function: htmlview()~~ — OpenUI5 TypeScript API Reference (1.136.17)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.136/sap.f/namespaces/sap/namespaces/ui/functions/htmlview.html">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.f/README.html">sap.f</a> › namespaces › <a href="../../../../../../sap.f/namespaces/sap/README.html">sap</a> › namespaces › <a href="../../../../../../sap.f/namespaces/sap/namespaces/ui/README.html">ui</a> › functions</nav>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.136.17)</strong></a></p>
+<hr>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.136.17)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../../../README.html">sap</a> / <a href="../README.html">ui</a> / htmlview</p>
+<h1><del>Function: htmlview()</del></h1>
+<h2>Call Signature</h2>
+<blockquote>
+<p><strong>htmlview</strong>(<code>sId</code>, <code>vView</code>): <code>any</code></p>
+</blockquote>
+<p>Defines or creates an instance of a declarative HTML view.</p>
+<p>The behavior of this method depends on the signature of the call and on the current context.</p>
+<pre><code> - View Definition `sap.ui.htmlview(sId, vView)`: Defines a view of the given name with the given implementation.
+sId must be the views name, vView must be an object and can contain implementations for any of the hooks
+provided by HTMLView
+ - View Instantiation `sap.ui.htmlview(sId?, vView)`: Creates an instance of the view with the given
+name (and id).
+</code></pre>
+<p>Any other call signature will lead to a runtime error. If the id is omitted in the second variant, an
+id will be created automatically.</p>
+<h3>Parameters</h3>
+<h4>sId</h4>
+<p><code>string</code></p>
+<p>id of the newly created view, only allowed for instance creation</p>
+<h4>vView</h4>
+<p><code>string</code> | { <code>async?</code>: <code>boolean</code>; }</p>
+<p>name or implementation of the view.</p>
+<p><code>string</code></p>
+<hr>
+<h5>Type Literal</h5>
+<p>{ <code>async?</code>: <code>boolean</code>; }</p>
+<p>name or implementation of the view.</p>
+<h6>async?</h6>
+<p><code>boolean</code></p>
+<p>whether the view source is loaded asynchronously</p>
+<h3>Returns</h3>
+<p><code>any</code></p>
+<p>the created HTMLView instance in the creation case, otherwise undefined</p>
+<h3>Deprecated</h3>
+<p>As of version 1.56. Use sap.ui.core.mvc.HTMLView.create HTMLView.create to create
+view instances</p>
+<h2>Call Signature</h2>
+<blockquote>
+<p><strong>htmlview</strong>(<code>vView</code>): <code>any</code></p>
+</blockquote>
+<p>Defines or creates an instance of a declarative HTML view.</p>
+<p>The behavior of this method depends on the signature of the call and on the current context.</p>
+<pre><code> - View Definition `sap.ui.htmlview(sId, vView)`: Defines a view of the given name with the given implementation.
+sId must be the views name, vView must be an object and can contain implementations for any of the hooks
+provided by HTMLView
+ - View Instantiation `sap.ui.htmlview(sId?, vView)`: Creates an instance of the view with the given
+name (and id).
+</code></pre>
+<p>Any other call signature will lead to a runtime error. If the id is omitted in the second variant, an
+id will be created automatically.</p>
+<h3>Parameters</h3>
+<h4>vView</h4>
+<p><code>string</code> | { <code>async?</code>: <code>boolean</code>; }</p>
+<p>name or implementation of the view.</p>
+<p><code>string</code></p>
+<hr>
+<h5>Type Literal</h5>
+<p>{ <code>async?</code>: <code>boolean</code>; }</p>
+<p>name or implementation of the view.</p>
+<h6>async?</h6>
+<p><code>boolean</code></p>
+<p>whether the view source is loaded asynchronously</p>
+<h3>Returns</h3>
+<p><code>any</code></p>
+<p>the created HTMLView instance in the creation case, otherwise undefined</p>
+<h3>Deprecated</h3>
+<p>As of version 1.56. Use sap.ui.core.mvc.HTMLView.create HTMLView.create to create
+view instances</p>
+
+<footer>Generated from <code>@openui5/types@1.136.17</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.136/">Back to index</a>.</footer>
+</body>
+</html>
