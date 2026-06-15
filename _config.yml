@@ -1,4 +1,4 @@
 theme: jekyll-theme-slate
 title: UI5 & TypeScript
 description: The central entry point for everything TypeScript-related in SAPUI5/OpenUI5
-exclude: [api, scripts, node_modules, package.json, package-lock.json]
+exclude: [scripts, node_modules, package.json, package-lock.json]
