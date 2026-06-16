@@ -421,7 +421,7 @@ function shouldExclude(relPath) {
         if (lastSlash < 0) break;
         candidate = candidate.slice(0, lastSlash);
       }
-      if (!matchingModule) return true; // no matching module → re-export/namespace artefact
+      if (!matchingModule) return true; // not declared in this library's .d.ts — exclude
       // Check if another library owns this module's namespace (= augmentation)
       const moduleNs = matchingModule + "/"; // e.g. "sap/tnt/library/"
       for (const [otherLib, otherNs] of libNamespacePrefixes) {
