@@ -75,8 +75,9 @@ jobs:
               PKG=$( [[ "$OVERVIEW_URL" == *"openui5"* ]] && echo "@openui5/types" || echo "@sapui5/types" )
 
               for LINE in $MAINT_LINES; do
-                # Get the latest published patch for this minor line
-                LATEST=$(npm show "${PKG}@~${LINE}.0" version 2>/dev/null | tail -1)
+                # Get the latest published patch for this minor line.
+                # npm show with a range outputs "pkg@ver 'ver'" per match; extract the bare version.
+                LATEST=$(npm show "${PKG}@~${LINE}.0" version 2>/dev/null | tail -1 | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | tail -1)
                 if [ -n "$LATEST" ]; then
                   VERSIONS="${VERSIONS}${VERSIONS:+,}${PKG}@${LATEST}"
                 fi
