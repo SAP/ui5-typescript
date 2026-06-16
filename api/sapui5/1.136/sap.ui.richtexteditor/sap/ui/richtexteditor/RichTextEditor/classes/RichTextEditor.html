@@ -3,9 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Class: RichTextEditor — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: RichTextEditor — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="description" content="Class: RichTextEditor — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/classes/RichTextEditor.html">
+<meta property="og:title" content="Class: RichTextEditor — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: RichTextEditor — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/classes/RichTextEditor.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
 <style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
 pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
 code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -28,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.richtexteditor/README.html">sap.ui.richtexteditor</a> › sap › ui › richtexteditor › <a href="../../../../../../sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/README.html">RichTextEditor</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../README.html">sap.ui.richtexteditor</a> / <a href="../README.html">sap/ui/richtexteditor/RichTextEditor</a> / RichTextEditor</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.ui.richtexteditor</a> / <a href="../README.html">sap/ui/richtexteditor/RichTextEditor</a> / RichTextEditor</p>
 <h1>Class: RichTextEditor</h1>
 <pre class="sig"><span class="kw">import</span> RichTextEditor <span class="kw">from</span> <span class="str">"sap/ui/richtexteditor/RichTextEditor"</span>;</pre>
 <p>The RichTextEditor-Control is used to enter formatted text. It uses the third-party component called
@@ -43,7 +48,10 @@ a wrapper to the native toolbar and takes care of synchronizing the state of its
 the current state of the selection in the editor (bold, italics, font styles etc.).</p>
 <p>Restrictions:</p>
 <p>**Note: The <code>RichTextEditor</code> uses a third-party component and therefore some additional restrictions
-apply for its proper usage and support. For more information see the Preamble section in <a href="https://ui5.sap.com/#/topic/d4f3f1598373452bb73f2120930c133c">sap.ui.richtexteditor</a>.
+apply for its proper usage and support. Use the native third-party API cautiously. Ensure you migrate
+to newer versions within 12 months of deprecation. Unsupported third-party versions, once deprecated
+by us, may be removed without notice if critical vulnerabilities or other serious issues are discovered
+in their code. For more information see the Preamble section in <a href="https://ui5.sap.com/#/topic/d4f3f1598373452bb73f2120930c133c">sap.ui.richtexteditor</a>.
 **</p>
 <p>Guidelines:
 	 -  The <code>RichTextEditor</code> should be used for desktop apps only. However, if it is essential for your
@@ -79,16 +87,15 @@ This is possible in few ways:
 <p>Below is a list of supported groups and buttons, which can be specified in the configuration objects
 (format is &lt;&gt;: &lt;&gt;):
 	 - font-style: bold, italic, underline, strikethrough
-	 - font: fontfamily (fontselect in TinyMCE5), fontsize (fontsizeselect in TinyMCE5), forecolor, backcolor</p>
-<pre><code> - clipboard: cut, copy, paste
- - structure: bullist, numlist, outdent, indent
- - undo: undo, redo
- - insert: image, emoticons
- - link: link, unlink
- - text-align: alignleft, aligncenter, alignright, alignjustify  Additional supported groups, which
-can be added only after the editor is loaded (they can not be specified in the above mentioned configuration):
-
- - table: table
+	 - font: fontfamily, fontsize, forecolor, backcolor
+	 - clipboard: cut, copy, paste
+	 - structure: bullist, numlist, outdent, indent
+	 - undo: undo, redo
+	 - insert: image, emoticons
+	 - link: link, unlink
+	 - text-align: alignleft, aligncenter, alignright, alignjustify  Additional supported groups, which
+    can be added only after the editor is loaded (they can not be specified in the above mentioned configuration):</p>
+<pre><code> - table: table
  - styleselect: styleselect  **Note!** Adding configuration for &quot;text-align&quot; group with any buttons
 will still render a menu button with all available options inside. Removing/hiding the group can be achieved
 by invoking `removeButtonGroup` or `setShowGroupTextAlign(false)` depending on the desired result.
@@ -667,17 +674,19 @@ to set this property after the first rendering will not have any effect.</p>
 <p>Valid values are the ones found under sap.ui.richtexteditor.EditorType and any other editor identifier
 that may be introduced by other groups (hence this is not an enumeration).</p>
 <p><strong>Notes:</strong>
-	 - TinyMCE version 3 and 4 are no longer supported and cannot be used. If you set the property to TinyMCE,
-    it will load TinyMCE version 7.
-	 - Any attempts to set this property after the first rendering will not have any effect.
-	 - The default value of the property will always resolve to the recommended version by UI5. Due to the
-    different support cycles, we will be constantly getting newer TinyMCE versions and update the default
-    value accordingly.
-	 - Usage of internal TinyMCE APIs is not recommended, since it might lead to issues upon TinyMCE version
-    update.
-	 - Have in mind when choosing a specific TinyMCE version that there might be differences in the support
-    rules compared to UI5, therefore we might be forced to remove any TinyMCE version.
-	 - TinyMCE 5 and TinyMCE 6 will be removed in future releases.</p>
+	 - Do not use TinyMCE versions that are no longer supported. We may remove such versions without notice
+    in future releases if critical vulnerabilities or other serious issues are discovered in their code.</p>
+<pre><code> - Setting the property to `TinyMCE` loads the latest TinyMCE available.
+ - Any attempts to set this property after the first rendering will not have any effect.
+ - The default value of the property will always resolve to the recommended version by UI5. Due to the
+different support cycles, we will be constantly getting newer TinyMCE versions and update the default
+value accordingly.
+ - Usage of internal TinyMCE APIs is not recommended, since it might lead to issues upon TinyMCE version
+update.
+ - Have in mind when choosing a specific TinyMCE version that there might be differences in the support
+rules compared to UI5, therefore we might be forced to remove any TinyMCE version.
+ - TinyMCE 6 will be removed in future releases.
+</code></pre>
 <p>Default value is <code>&#39;TinyMCE&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
@@ -714,6 +723,9 @@ is used, the height property is not taken into account.</p>
 <p>Returns the current editor&#39;s instance. CAUTION: using the native editor introduces a dependency to that
 editor and breaks the wrapping character of the RichTextEditor control, so it should only be done in
 justified cases.</p>
+<p><strong>Note: Use the native third-party API cautiously. Ensure you migrate to newer versions within 12 months
+of deprecation. Unsupported third-party versions, once deprecated by us, may be removed without notice
+if critical vulnerabilities or other serious issues are discovered in their code.</strong></p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>The native editor object (here: The TinyMCE editor instance)</p>
@@ -1135,7 +1147,7 @@ should be set after this has been invoked</p>
 <h4>Parameters</h4>
 <h5>sEditorType?</h5>
 <p><code>string</code></p>
-<p>Which editor type to be used (currently only 5 and 6)</p>
+<p>Which editor type to be used (currently only 6 and 7)</p>
 <h4>Returns</h4>
 <p><code>RichTextEditor</code></p>
 <p>Control instance (for method chaining)</p>
@@ -1515,6 +1527,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

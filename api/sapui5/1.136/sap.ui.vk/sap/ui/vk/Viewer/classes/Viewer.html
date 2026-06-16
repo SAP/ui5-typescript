@@ -3,9 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Viewer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Viewer — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="description" content="Class: Viewer — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/Viewer/classes/Viewer.html">
+<meta property="og:title" content="Class: Viewer — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: Viewer — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/Viewer/classes/Viewer.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
 <style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
 pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
 code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -28,13 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/Viewer/README.html">Viewer</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/Viewer</a> / Viewer</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/Viewer</a> / Viewer</p>
 <h1>Class: Viewer</h1>
 <pre class="sig"><span class="kw">import</span> Viewer <span class="kw">from</span> <span class="str">"sap/ui/vk/Viewer"</span>;</pre>
 <p>Provides simple 3D visualization capability by connecting, configuring and presenting the essential Visualization
 Toolkit controls a single composite control.</p>
+<p><strong>NOTE:</strong> To use this control the application developer should add dependencies to the following libraries
+on application level to ensure that the libraries are loaded before the module dependencies will be required:</p>
+<pre><code> - sap.f
+ - sap.ui.comp
+</code></pre>
 <h2>Since</h2>
 <p>1.32.0</p>
 <h2>Extends</h2>
@@ -80,9 +90,13 @@ of the syntax of the settings object.</p>
 <h2>Properties</h2>
 <h3>activateFullScreenMode()</h3>
 <blockquote>
-<p><strong>activateFullScreenMode</strong>(): <code>this</code></p>
+<p><strong>activateFullScreenMode</strong>(<code>value</code>): <code>this</code></p>
 </blockquote>
 <p>It activates or deactivates full screen mode.</p>
+<h4>Parameters</h4>
+<h5>value</h5>
+<p><code>boolean</code></p>
+<p>If <code>true</code>, it activates full screen mode; if <code>false</code>, it deactivates full screen mode.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
@@ -754,6 +768,28 @@ listeners.</p>
 <h4>Returns</h4>
 <p><a href="../../ContentResource/classes/ContentResource.html"><code>ContentResource</code></a>[]</p>
 <hr>
+<h3>getEnableElementsPanel()</h3>
+<blockquote>
+<p><strong>getEnableElementsPanel</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getEnableElementsPanel enableElementsPanel.</p>
+<p>Disables the ECAD elements panel control</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableElementsPanel</code></p>
+<hr>
+<h3>getEnableLayersPanel()</h3>
+<blockquote>
+<p><strong>getEnableLayersPanel</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getEnableLayersPanel enableLayersPanel.</p>
+<p>Disables the ECAD layers panel control</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableLayersPanel</code></p>
+<hr>
 <h3>getEnableMiniMap()</h3>
 <blockquote>
 <p><strong>getEnableMiniMap</strong>(): <code>boolean</code></p>
@@ -775,6 +811,17 @@ listeners.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableNotifications</code></p>
+<hr>
+<h3>getEnablePageGallery()</h3>
+<blockquote>
+<p><strong>getEnablePageGallery</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getEnablePageGallery enablePageGallery.</p>
+<p>Disables the page gallery control</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enablePageGallery</code></p>
 <hr>
 <h3>getEnableProgressIndicator()</h3>
 <blockquote>
@@ -848,7 +895,7 @@ have direct replacement. Use sap.ui.vk.ContentConnector for scene loading events
 </blockquote>
 <p>Gets current value of property #getHotspotColor hotspotColor.</p>
 <p>Color used for highlighting Smart2D hotspots in the CSS Color format.</p>
-<p>Default value is <code>&quot;rgba(255, 0, 0, 0.7529411764705882)&quot;</code>.</p>
+<p>Default value is <code>&quot;rgba(89, 0, 0, 0.73)&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>hotspotColor</code></p>
@@ -859,10 +906,21 @@ have direct replacement. Use sap.ui.vk.ContentConnector for scene loading events
 </blockquote>
 <p>Gets current value of property #getHotspotColorABGR hotspotColorABGR.</p>
 <p>Color used for highlighting Smart2D hotspots in the ABGR format.</p>
-<p>Default value is <code>0xc00000ff</code>.</p>
+<p>Default value is <code>0x590000BB</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>hotspotColorABGR</code></p>
+<hr>
+<h3>getHotspotsEnabled()</h3>
+<blockquote>
+<p><strong>getHotspotsEnabled</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getHotspotsEnabled hotspotsEnabled.</p>
+<p>Shows or hides showing of all hotspots toggle button</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hotspotsEnabled</code></p>
 <hr>
 <h3><del>getNativeViewport()</del></h3>
 <blockquote>
@@ -975,6 +1033,28 @@ Will not work when set at runtime.</p>
 <p><code>boolean</code></p>
 <p>Value of property <code>showDrawerToolbar</code></p>
 <hr>
+<h3>getShowElementsPanel()</h3>
+<blockquote>
+<p><strong>getShowElementsPanel</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowElementsPanel showElementsPanel.</p>
+<p>Shows or hides the ECAD elements panel control</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showElementsPanel</code></p>
+<hr>
+<h3>getShowLayersPanel()</h3>
+<blockquote>
+<p><strong>getShowLayersPanel</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowLayersPanel showLayersPanel.</p>
+<p>Shows or hides the ECAD layers panel control</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showLayersPanel</code></p>
+<hr>
 <h3>getShowMiniMap()</h3>
 <blockquote>
 <p><strong>getShowMiniMap</strong>(): <code>boolean</code></p>
@@ -985,6 +1065,17 @@ Will not work when set at runtime.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showMiniMap</code></p>
+<hr>
+<h3>getShowPageGallery()</h3>
+<blockquote>
+<p><strong>getShowPageGallery</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowPageGallery showPageGallery.</p>
+<p>Shows or hides the page gallery control</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showPageGallery</code></p>
 <hr>
 <h3>getShowSceneTree()</h3>
 <blockquote>
@@ -1179,6 +1270,38 @@ the contentResource is inserted at the last position</p>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
 <hr>
+<h3>setEnableElementsPanel()</h3>
+<blockquote>
+<p><strong>setEnableElementsPanel</strong>(<code>bEnableElementsPanel?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getEnableElementsPanel enableElementsPanel.</p>
+<p>Disables the ECAD elements panel control</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableElementsPanel?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableElementsPanel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setEnableLayersPanel()</h3>
+<blockquote>
+<p><strong>setEnableLayersPanel</strong>(<code>bEnableLayersPanel?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getEnableLayersPanel enableLayersPanel.</p>
+<p>Disables the ECAD layers panel control</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableLayersPanel?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableLayersPanel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
 <h3>setEnableMiniMap()</h3>
 <blockquote>
 <p><strong>setEnableMiniMap</strong>(<code>bEnableMiniMap?</code>): <code>this</code></p>
@@ -1207,6 +1330,22 @@ the contentResource is inserted at the last position</p>
 <h5>bEnableNotifications?</h5>
 <p><code>boolean</code></p>
 <p>New value for property <code>enableNotifications</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setEnablePageGallery()</h3>
+<blockquote>
+<p><strong>setEnablePageGallery</strong>(<code>bEnablePageGallery?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getEnablePageGallery enablePageGallery.</p>
+<p>Disables the page gallery control</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnablePageGallery?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enablePageGallery</code></p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -1297,7 +1436,7 @@ the contentResource is inserted at the last position</p>
 <p>Sets a new value for property #getHotspotColor hotspotColor.</p>
 <p>Color used for highlighting Smart2D hotspots in the CSS Color format.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;rgba(255, 0, 0, 0.7529411764705882)&quot;</code>.</p>
+<p>Default value is <code>&quot;rgba(89, 0, 0, 0.73)&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sHotspotColor?</h5>
 <p><code>string</code></p>
@@ -1313,11 +1452,27 @@ the contentResource is inserted at the last position</p>
 <p>Sets a new value for property #getHotspotColorABGR hotspotColorABGR.</p>
 <p>Color used for highlighting Smart2D hotspots in the ABGR format.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0xc00000ff</code>.</p>
+<p>Default value is <code>0x590000BB</code>.</p>
 <h4>Parameters</h4>
 <h5>iHotspotColorABGR?</h5>
 <p><code>number</code></p>
 <p>New value for property <code>hotspotColorABGR</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHotspotsEnabled()</h3>
+<blockquote>
+<p><strong>setHotspotsEnabled</strong>(<code>bHotspotsEnabled?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getHotspotsEnabled hotspotsEnabled.</p>
+<p>Shows or hides showing of all hotspots toggle button</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHotspotsEnabled?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hotspotsEnabled</code></p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -1423,6 +1578,38 @@ Will not work when set at runtime.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
+<h3>setShowElementsPanel()</h3>
+<blockquote>
+<p><strong>setShowElementsPanel</strong>(<code>bShowElementsPanel?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowElementsPanel showElementsPanel.</p>
+<p>Shows or hides the ECAD elements panel control</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowElementsPanel?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showElementsPanel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setShowLayersPanel()</h3>
+<blockquote>
+<p><strong>setShowLayersPanel</strong>(<code>bShowLayersPanel?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowLayersPanel showLayersPanel.</p>
+<p>Shows or hides the ECAD layers panel control</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowLayersPanel?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showLayersPanel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
 <h3>setShowMiniMap()</h3>
 <blockquote>
 <p><strong>setShowMiniMap</strong>(<code>bShowMiniMap?</code>): <code>this</code></p>
@@ -1435,6 +1622,22 @@ Will not work when set at runtime.</p>
 <h5>bShowMiniMap?</h5>
 <p><code>boolean</code></p>
 <p>New value for property <code>showMiniMap</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setShowPageGallery()</h3>
+<blockquote>
+<p><strong>setShowPageGallery</strong>(<code>bShowPageGallery?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowPageGallery showPageGallery.</p>
+<p>Shows or hides the page gallery control</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowPageGallery?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showPageGallery</code></p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -1580,6 +1783,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,9 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Abstract Class: ViewportBase — SAPUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: ViewportBase — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="description" content="Abstract Class: ViewportBase — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/ViewportBase/classes/ViewportBase.html">
+<meta property="og:title" content="Abstract Class: ViewportBase — SAPUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: ViewportBase — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/ViewportBase/classes/ViewportBase.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
 <style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
 pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
 code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -28,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/ViewportBase/README.html">ViewportBase</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ViewportBase</a> / ViewportBase</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ViewportBase</a> / ViewportBase</p>
 <h1>Abstract Class: ViewportBase</h1>
 <pre class="sig"><span class="kw">import</span> ViewportBase <span class="kw">from</span> <span class="str">"sap/ui/vk/ViewportBase"</span>;</pre>
 <p>Provides a rendering canvas for the 3D elements of a loaded scene.</p>
@@ -788,6 +793,36 @@ or <code>null</code>.</p>
 <p><code>number</code></p>
 <p>Value of property <code>hotspotColorABGR</code></p>
 <hr>
+<h3>getHotspotCustomTextHaloWidth()</h3>
+<blockquote>
+<p><strong>getHotspotCustomTextHaloWidth</strong>(): <code>number</code></p>
+</blockquote>
+<p>Gets current value of property #getHotspotCustomTextHaloWidth hotspotCustomTextHaloWidth.</p>
+<p>Default value is <code>10</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>hotspotCustomTextHaloWidth</code></p>
+<hr>
+<h3>getHotspotCustomTextOutlineColor()</h3>
+<blockquote>
+<p><strong>getHotspotCustomTextOutlineColor</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getHotspotCustomTextOutlineColor hotspotCustomTextOutlineColor.</p>
+<p>Default value is <code>&quot;white&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>hotspotCustomTextOutlineColor</code></p>
+<hr>
+<h3>getHotspotCustomTextOutlineWidth()</h3>
+<blockquote>
+<p><strong>getHotspotCustomTextOutlineWidth</strong>(): <code>number</code></p>
+</blockquote>
+<p>Gets current value of property #getHotspotCustomTextOutlineWidth hotspotCustomTextOutlineWidth.</p>
+<p>Default value is <code>1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>hotspotCustomTextOutlineWidth</code></p>
+<hr>
 <h3>getKeepOutputSize()</h3>
 <blockquote>
 <p><strong>getKeepOutputSize</strong>(): <code>boolean</code></p>
@@ -1283,6 +1318,51 @@ element instance may be given</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
+<h3>setHotspotCustomTextHaloWidth()</h3>
+<blockquote>
+<p><strong>setHotspotCustomTextHaloWidth</strong>(<code>fHotspotCustomTextHaloWidth?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getHotspotCustomTextHaloWidth hotspotCustomTextHaloWidth.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>10</code>.</p>
+<h4>Parameters</h4>
+<h5>fHotspotCustomTextHaloWidth?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>hotspotCustomTextHaloWidth</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHotspotCustomTextOutlineColor()</h3>
+<blockquote>
+<p><strong>setHotspotCustomTextOutlineColor</strong>(<code>sHotspotCustomTextOutlineColor?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getHotspotCustomTextOutlineColor hotspotCustomTextOutlineColor.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;white&quot;</code>.</p>
+<h4>Parameters</h4>
+<h5>sHotspotCustomTextOutlineColor?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>hotspotCustomTextOutlineColor</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHotspotCustomTextOutlineWidth()</h3>
+<blockquote>
+<p><strong>setHotspotCustomTextOutlineWidth</strong>(<code>fHotspotCustomTextOutlineWidth?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getHotspotCustomTextOutlineWidth hotspotCustomTextOutlineWidth.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
+<h4>Parameters</h4>
+<h5>fHotspotCustomTextOutlineWidth?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>hotspotCustomTextOutlineWidth</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
 <h3>setKeepOutputSize()</h3>
 <blockquote>
 <p><strong>setKeepOutputSize</strong>(<code>bKeepOutputSize?</code>): <code>this</code></p>
@@ -1550,6 +1630,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

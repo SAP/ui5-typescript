@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: Extension — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Extension — SAPUI5 TypeScript API Reference (1.136.10)">
+<title>~~Class: Extension~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Class: Extension~~ — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vtm/sap/ui/vtm/Extension/classes/Extension.html">
+<meta property="og:title" content="~~Class: Extension~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Class: Extension~~ — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vtm/sap/ui/vtm/Extension/classes/Extension.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
 <style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
 pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
 code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -28,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vtm/README.html">sap.ui.vtm</a> › sap › ui › vtm › <a href="../../../../../../sap.ui.vtm/sap/ui/vtm/Extension/README.html">Extension</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../README.html">sap.ui.vtm</a> / <a href="../README.html">sap/ui/vtm/Extension</a> / Extension</p>
-<h1>Class: Extension</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.ui.vtm</a> / <a href="../README.html">sap/ui/vtm/Extension</a> / Extension</p>
+<h1><del>Class: Extension</del></h1>
 <pre class="sig"><span class="kw">import</span> Extension <span class="kw">from</span> <span class="str">"sap/ui/vtm/Extension"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
 <p>A base class for extensions.</p>
@@ -44,7 +49,9 @@ to be as independent from one another as possible.</p>
 be found by interface calling sap.ui.vtm.Vtm#getExtensionByInterface getExtensionByInterface.
 Specific extensions can be found using sap.ui.vtm.Vtm#getExtensionByName getExtensionByName.
 Typically extensions are retrieved using these methods in order to get or set their <code>enabled</code> property.</p>
-<p> As of version 1.50.0. This class is experimental and might be modified or removed in future
+<h2>Deprecated</h2>
+<p>As of version 1.96.10. because it is part of the deprecated package sap.ui.vtm
+ As of version 1.50.0. This class is experimental and might be modified or removed in future
 versions.</p>
 <h2>Extends</h2>
 <ul>
@@ -86,7 +93,7 @@ of the syntax of the settings object.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
-<h3>applyPanelHandler()</h3>
+<h3><del>applyPanelHandler()</del></h3>
 <blockquote>
 <p><strong>applyPanelHandler</strong>(<code>panelHandler</code>): <code>void</code></p>
 </blockquote>
@@ -101,7 +108,7 @@ instance that owns this extension.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>attachEnabledChanged()</h3>
+<h3><del>attachEnabledChanged()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachEnabledChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -147,7 +154,7 @@ otherwise it will be bound to this <code>sap.ui.vtm.Extension</code> itself.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>attachInitialized()</h3>
+<h3><del>attachInitialized()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachInitialized</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -191,7 +198,7 @@ otherwise it will be bound to this <code>sap.ui.vtm.Extension</code> itself.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>bindEnabled()</h3>
+<h3><del>bindEnabled()</del></h3>
 <blockquote>
 <p><strong>bindEnabled</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
@@ -207,7 +214,7 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>detachEnabledChanged()</h3>
+<h3><del>detachEnabledChanged()</del></h3>
 <blockquote>
 <p><strong>detachEnabledChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
@@ -226,7 +233,7 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>detachInitialized()</h3>
+<h3><del>detachInitialized()</del></h3>
 <blockquote>
 <p><strong>detachInitialized</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
@@ -244,7 +251,7 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>fireEnabledChanged()</h3>
+<h3><del>fireEnabledChanged()</del></h3>
 <blockquote>
 <p><strong>fireEnabledChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
@@ -260,7 +267,7 @@ of the possible properties of <code>oBindingInfo</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
-<h3>fireInitialized()</h3>
+<h3><del>fireInitialized()</del></h3>
 <blockquote>
 <p><strong>fireInitialized</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
@@ -276,7 +283,7 @@ of the possible properties of <code>oBindingInfo</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
-<h3>getEnabled()</h3>
+<h3><del>getEnabled()</del></h3>
 <blockquote>
 <p><strong>getEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
@@ -288,7 +295,7 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p><code>boolean</code></p>
 <p>Value of property <code>enabled</code></p>
 <hr>
-<h3>getInitializedPromise()</h3>
+<h3><del>getInitializedPromise()</del></h3>
 <blockquote>
 <p><strong>getInitializedPromise</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
@@ -302,7 +309,7 @@ resolves.</p>
 <p>A Promise that is resolved after the #initialize initialize method has been
 called for the extension.</p>
 <hr>
-<h3>getVtmPromise()</h3>
+<h3><del>getVtmPromise()</del></h3>
 <blockquote>
 <p><strong>getVtmPromise</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
@@ -315,7 +322,7 @@ sap.ui.vtm.Vtm instance.</p>
 <p>A Promise that is resolved when the extension is added to the <code>extensions</code> aggregation
 of an sap.ui.vtm.Vtm instance.</p>
 <hr>
-<h3>initialize()</h3>
+<h3><del>initialize()</del></h3>
 <blockquote>
 <p><strong>initialize</strong>(<code>vtm</code>): <code>void</code></p>
 </blockquote>
@@ -328,7 +335,7 @@ of an sap.ui.vtm.Vtm instance.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>setEnabled()</h3>
+<h3><del>setEnabled()</del></h3>
 <blockquote>
 <p><strong>setEnabled</strong>(<code>bEnabled?</code>): <code>this</code></p>
 </blockquote>
@@ -345,7 +352,7 @@ of an sap.ui.vtm.Vtm instance.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>unbindEnabled()</h3>
+<h3><del>unbindEnabled()</del></h3>
 <blockquote>
 <p><strong>unbindEnabled</strong>(): <code>this</code></p>
 </blockquote>
@@ -355,7 +362,7 @@ of an sap.ui.vtm.Vtm instance.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>extend()</h3>
+<h3><del>extend()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
@@ -383,7 +390,7 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#extend"><code>extend</code></a></p>
 <hr>
-<h3>getMetadata()</h3>
+<h3><del>getMetadata()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
 </blockquote>
@@ -396,6 +403,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

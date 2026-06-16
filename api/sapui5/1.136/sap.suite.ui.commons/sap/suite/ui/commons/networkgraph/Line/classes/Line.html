@@ -3,9 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Line — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Line — SAPUI5 TypeScript API Reference (1.136.10)">
+<meta name="description" content="Class: Line — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Line/classes/Line.html">
+<meta property="og:title" content="Class: Line — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: Line — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Line/classes/Line.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
 <style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
 pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
 code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -28,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › networkgraph › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Line/README.html">Line</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.10)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.10)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Line</a> / Line</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Line</a> / Line</p>
 <h1>Class: Line</h1>
 <pre class="sig"><span class="kw">import</span> Line <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/networkgraph/Line"</span>;</pre>
 <p>Holds information about one connector line.</p>
@@ -317,6 +322,24 @@ This method doesn&#39;t call invalidate on the object.</p>
 <p><a href="../../Coordinate/classes/Coordinate.html"><code>Coordinate</code></a>[]</p>
 <p>Coordinates of the points shaping the line</p>
 <hr>
+<h3>getConnectionType()</h3>
+<blockquote>
+<p><strong>getConnectionType</strong>(): <code>any</code></p>
+</blockquote>
+<p>Gets current value of property #getConnectionType connectionType.</p>
+<p>Defines the connection type between the source and target nodes. Can be set to RightToLeft, LeftToRight,
+TopToBottom, or BottomToTop using sap.suite.ui.commons.networkgraph.ConnectionType ConnectionType
+enumeration. This property is used to determine how the line connects the source and target nodes. For
+example, if set to RightToLeft, the line starts from the right side of the source node and end at the
+left side of the target node. This property is valid only with the NoopLayout and drag and drop enabled
+network graph.</p>
+<p>Default value is <code>RightToLeft</code>.</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Value of property <code>connectionType</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>getCoordinates()</h3>
 <blockquote>
 <p><strong>getCoordinates</strong>(): <a href="../../Coordinate/classes/Coordinate.html"><code>Coordinate</code></a>[]</p>
@@ -346,6 +369,25 @@ of the line. The rest of the points making up the line are treated as break poin
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Node instance where the line starts</p>
+<hr>
+<h3>getLabelName()</h3>
+<blockquote>
+<p><strong>getLabelName</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getLabelName labelName.</p>
+<p>Defines the text label to be displayed on the line.</p>
+<p>When set, displays the label text in a rounded rectangle box positioned near the target arrow. The label
+is rendered only when all of the following conditions are met: - This property has a non-empty value</p>
+<ul>
+<li>The graph is using NoopLayout - The line&#39;s arrowPosition is set to &quot;Both&quot; - The line is long enough
+to accommodate the label If this property is empty or not set, no label is displayed on the line</li>
+</ul>
+<p>Default value is <code>empty string</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>labelName</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>getLineType()</h3>
 <blockquote>
@@ -562,6 +604,29 @@ is inserted at the last position</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
+<h3>setConnectionType()</h3>
+<blockquote>
+<p><strong>setConnectionType</strong>(<code>sConnectionType?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getConnectionType connectionType.</p>
+<p>Defines the connection type between the source and target nodes. Can be set to RightToLeft, LeftToRight,
+TopToBottom, or BottomToTop using sap.suite.ui.commons.networkgraph.ConnectionType ConnectionType
+enumeration. This property is used to determine how the line connects the source and target nodes. For
+example, if set to RightToLeft, the line starts from the right side of the source node and end at the
+left side of the target node. This property is valid only with the NoopLayout and drag and drop enabled
+network graph.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>RightToLeft</code>.</p>
+<h4>Parameters</h4>
+<h5>sConnectionType?</h5>
+<p><code>any</code></p>
+<p>New value for property <code>connectionType</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>setFrom()</h3>
 <blockquote>
 <p><strong>setFrom</strong>(<code>sFrom?</code>): <code>this</code></p>
@@ -584,6 +649,30 @@ is inserted at the last position</p>
 <p>Hides the line.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
+<hr>
+<h3>setLabelName()</h3>
+<blockquote>
+<p><strong>setLabelName</strong>(<code>sLabelName?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getLabelName labelName.</p>
+<p>Defines the text label to be displayed on the line.</p>
+<p>When set, displays the label text in a rounded rectangle box positioned near the target arrow. The label
+is rendered only when all of the following conditions are met: - This property has a non-empty value</p>
+<ul>
+<li>The graph is using NoopLayout - The line&#39;s arrowPosition is set to &quot;Both&quot; - The line is long enough
+to accommodate the label If this property is empty or not set, no label is displayed on the line</li>
+</ul>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
+<h4>Parameters</h4>
+<h5>sLabelName?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>labelName</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>setLineType()</h3>
 <blockquote>
@@ -714,6 +803,6 @@ used by this class</p>
 <p><a href="../../ElementBase/classes/ElementBase.html"><code>ElementBase</code></a>.<a href="../../ElementBase/classes/ElementBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.10</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>
