@@ -60,7 +60,7 @@ jobs:
 
             for OVERVIEW_URL in "https://sdk.openui5.org/versionoverview.json" "https://ui5.sap.com/versionoverview.json"; do
               # Get LTS versions + the latest (highest) maintenance version
-              # Filter: lts===true OR highest minor. Hard floor: minor >= 120.
+              # Filter: lts===true OR highest minor. Floor: types packages exist since 1.120.
               MAINT_LINES=$(curl -sf "$OVERVIEW_URL" | node -e "
                 const data = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
                 const maintained = data.versions.filter(v => v.support === 'Maintenance');
@@ -68,7 +68,10 @@ jobs:
                 const lines = maintained
                   .filter(v => v.lts === true || v === latest)
                   .map(v => v.version.replace('.*',''))
-                  .filter(v => parseInt(v.split('.')[1]) >= 120);
+                  .filter(v => {
+                    const [maj, min] = v.split('.').map(Number);
+                    return maj >= 2 || (maj === 1 && min >= 120);
+                  });
                 console.log(lines.join(' '));
               ")
 
