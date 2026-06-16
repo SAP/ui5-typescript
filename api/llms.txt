@@ -1,0 +1,28 @@
+# UI5 TypeScript API Reference
+
+> Complete TypeScript API documentation for the OpenUI5 and SAPUI5 UI frameworks, generated from @openui5/types and @sapui5/types npm packages.
+
+Each class page includes the TypeScript import statement, inheritance hierarchy, constructor signatures, properties, methods, events, and associations. All content is static HTML — no JavaScript required for reading.
+
+## Versions
+
+### OpenUI5
+- [OpenUI5 1.149](https://ui5.github.io/typescript/api/openui5/1.149/index.html): 1.149.0
+
+## Key Libraries (OpenUI5 1.149)
+
+- [sap.m](https://ui5.github.io/typescript/api/openui5/1.149/sap.m/README.html): Main UI controls — Button, Input, List, Table, Dialog, MessageBox
+- [sap.ui.core](https://ui5.github.io/typescript/api/openui5/1.149/sap.ui.core/README.html): Core framework — Control, Element, Component, Model, routing
+- [sap.f](https://ui5.github.io/typescript/api/openui5/1.149/sap.f/README.html): SAP Fiori controls — FlexibleColumnLayout, ShellBar, DynamicPage
+- [sap.ui.table](https://ui5.github.io/typescript/api/openui5/1.149/sap.ui.table/README.html): Analytical and tree tables
+- [sap.ui.layout](https://ui5.github.io/typescript/api/openui5/1.149/sap.ui.layout/README.html): Layout controls — Grid, Splitter, ResponsiveFlowLayout
+- [sap.uxap](https://ui5.github.io/typescript/api/openui5/1.149/sap.uxap/README.html): Object Page pattern
+- [sap.ui.integration](https://ui5.github.io/typescript/api/openui5/1.149/sap.ui.integration/README.html): Integration Cards
+- [sap.tnt](https://ui5.github.io/typescript/api/openui5/1.149/sap.tnt/README.html): Tool Page, InfoLabel, SideNavigation
+
+## Resources
+
+- [Sitemap Index](https://ui5.github.io/typescript/sitemap.xml): Machine-readable index of all per-version sitemaps
+- [UI5 & TypeScript Guide](https://ui5.github.io/typescript/): Getting started, FAQ, release notes
+- [npm: @openui5/types](https://www.npmjs.com/package/@openui5/types): OpenUI5 type definitions package
+- [npm: @sapui5/types](https://www.npmjs.com/package/@sapui5/types): SAPUI5 type definitions package
