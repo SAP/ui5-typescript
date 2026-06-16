@@ -406,13 +406,20 @@ function shouldExclude(relPath) {
     // Check against the definitive module list for this library
     const modules = libraryModules.get(lib);
     if (modules && modules.size > 0) {
-      // Find the declared module that matches this page's path (iterate Set directly)
+      // Derive the module path from afterLib by trying successive directory prefixes.
+      // E.g. "sap/f/Avatar/classes/Avatar.html" → try "sap/f/Avatar/classes/Avatar",
+      // "sap/f/Avatar/classes", "sap/f/Avatar" until a Set.has() hit (O(1) per check).
       let matchingModule;
-      for (const mod of modules) {
-        if (afterLib.startsWith(mod + "/")) {
-          matchingModule = mod;
+      const stripped = afterLib.replace(/\.html$/, "");
+      let candidate = stripped;
+      while (candidate) {
+        if (modules.has(candidate)) {
+          matchingModule = candidate;
           break;
         }
+        const lastSlash = candidate.lastIndexOf("/");
+        if (lastSlash < 0) break;
+        candidate = candidate.slice(0, lastSlash);
       }
       if (!matchingModule) return true; // no matching module → re-export/namespace artefact
       // Check if another library owns this module's namespace (= augmentation)
