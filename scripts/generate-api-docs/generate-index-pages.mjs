@@ -29,7 +29,7 @@ function getArg(name) {
 
 const API_DIR = getArg("api-dir");
 const SITE_ROOT = getArg("site-root");
-const BASE_URL = getArg("base-url");
+const BASE_URL = (getArg("base-url") || "").replace(/\/+$/, ""); // strip trailing slashes
 
 if (!API_DIR || !SITE_ROOT || !BASE_URL) {
   console.error("Usage: generate-index-pages.mjs --api-dir <path> --site-root <path> --base-url <url>");
