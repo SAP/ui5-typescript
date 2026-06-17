@@ -189,16 +189,20 @@ for (const file of dtsFiles) {
       if (otherLib !== libName && moduleNs.startsWith(otherNs)) {
         // This is an augmentation of another library's module — mark for removal
         const blockStart = match.index;
-        // Find the closing } of this declare module block
+        // Find the opening { of this declare module block
+        const openBrace = content.indexOf("{", blockStart);
+        if (openBrace < 0) break; // malformed — no opening brace, skip
+        // Find the closing } by counting brace depth
         let braceDepth = 0;
-        let blockEnd = blockStart;
-        for (let i = content.indexOf("{", blockStart); i < content.length; i++) {
+        let blockEnd = -1;
+        for (let i = openBrace; i < content.length; i++) {
           if (content[i] === "{") braceDepth++;
           else if (content[i] === "}") {
             braceDepth--;
             if (braceDepth === 0) { blockEnd = i + 1; break; }
           }
         }
+        if (blockEnd <= blockStart) break; // couldn't find matching close brace
         blocksToRemove.push([blockStart, blockEnd]);
         break;
       }
@@ -571,7 +575,8 @@ function renderDir(dir) {
       });
 
       // Remove TypeDoc "References" section (global namespace re-export artifacts)
-      htmlFixed = htmlFixed.replace(/<h2>References<\/h2>[\s\S]*?(?=<footer)/, "");
+      // This is the raw content before htmlTemplate wraps it, so strip to end of string
+      htmlFixed = htmlFixed.replace(/<h2>References<\/h2>[\s\S]*$/, "");
 
       // Add import hint for class/interface/type-alias pages
       // Path pattern: sap.m/sap/m/Button/classes/Button.html → module "sap/m/Button", class "Button"
