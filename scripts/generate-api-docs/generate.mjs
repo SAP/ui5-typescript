@@ -441,11 +441,14 @@ const EXCLUDE_PATTERNS = ["interfaces/JQuery", "interfaces/JQuery.", "/JQuerySta
 
 // Link patterns pointing to dead targets (jQuery, QUnit, pseudo-types)
 const DEAD_LINK_PATTERNS = [
-  /namespaces\/JQuery\//i,
-  /namespaces\/jQuery\//i,
+  /namespaces\/JQuery[./]/i,
+  /namespaces\/jQuery[./]/i,
+  /interfaces\/JQuery/,
+  /\/JQueryStatic/,
+  /JQueryPromise/,
   /type-aliases\/jQuery\.html/,
   /variables\/jQuery\.html/,
-  /namespaces\/QUnit\//,
+  /namespaces\/QUnit[./]/,
   /variables\/QUnit\.html/,
   /type-aliases\/(int|float)\.html/,
 ];
