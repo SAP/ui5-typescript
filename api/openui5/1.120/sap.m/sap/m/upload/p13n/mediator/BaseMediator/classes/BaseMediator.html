@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Class: BaseMediator — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: BaseMediator — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/upload/p13n/mediator/BaseMediator/classes/BaseMediator.html">
+<meta property="og:title" content="Class: BaseMediator — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: BaseMediator — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/upload/p13n/mediator/BaseMediator/classes/BaseMediator.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../../sap.m/README.html">sap.m</a> › sap › m › upload › p13n › mediator › <a href="../../../../../../../../sap.m/sap/m/upload/p13n/mediator/BaseMediator/README.html">BaseMediator</a> › classes</nav>
+<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<hr>
+<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/upload/p13n/mediator/BaseMediator</a> / BaseMediator</p>
+<h1>Class: BaseMediator</h1>
+<pre class="sig"><span class="kw">import</span> BaseMediator <span class="kw">from</span> <span class="str">"sap/m/upload/p13n/mediator/BaseMediator"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>The <code>BaseMediator</code> entity serves as a base class to create control-specific personalization implementations.</p>
+<h2>Since</h2>
+<p>1.120
+ (since 1.120)</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
+</ul>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new BaseMediator</strong>(<code>mSettings?</code>): <code>BaseMediator</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Constructor for a new <code>BaseMediator</code>.</p>
+<h4>Parameters</h4>
+<h5>mSettings?</h5>
+<p>Initial settings for the new control</p>
+<h6>control</h6>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The control instance that is personalized by this mediator</p>
+<h6>p13nMetadataTarget</h6>
+<p><code>string</code></p>
+<p>The name of the personalization metadata target that is now managed by this mediator</p>
+<h6>targetAggregation</h6>
+<p><code>string</code></p>
+<p>The name of the aggregation that is now managed by this mediator</p>
+<h4>Returns</h4>
+<p><code>BaseMediator</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html#constructor"><code>constructor</code></a></p>
+<h2>Methods</h2>
+<h3>applyStateToTable()</h3>
+<blockquote>
+<p><strong>applyStateToTable</strong>(): <code>void</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>An abstract method for applying changes to the upload set table. Essentially, these changes should be
+applied after the current data becomes available.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>createChange()</h3>
+<blockquote>
+<p><strong>createChange</strong>(<code>sChangeType</code>, <code>oContent</code>): <code>object</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a change that can later be handeled by the flexibility layer to apply and revert the change.</p>
+<h4>Parameters</h4>
+<h5>sChangeType</h5>
+<p><code>string</code></p>
+<p>expects the name of change which will be later handled in change handlers.</p>
+<h5>oContent</h5>
+<p><code>any</code></p>
+<p>expects the changed content which is delta for the specific panel.</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>returns the change object.</p>
+<hr>
+<h3>createPanel()</h3>
+<blockquote>
+<p><strong>createPanel</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Abstract method for constructing a panel and populating it with data specific to that panel.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>returns a promise with the resolved p13 panel.</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getChanges()</h3>
+<blockquote>
+<p><strong>getChanges</strong>(): <code>any</code>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Abstract method to obtain changes by comparing the old and current states.</p>
+<h4>Returns</h4>
+<p><code>any</code>[]</p>
+<p>returns array of delta changes</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getControl()</h3>
+<blockquote>
+<p><strong>getControl</strong>(): <a href="../../../../UploadSetwithTable/classes/UploadSetwithTable.html"><code>UploadSetwithTable</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Returns the control instance that has been set</p>
+<h4>Returns</h4>
+<p><a href="../../../../UploadSetwithTable/classes/UploadSetwithTable.html"><code>UploadSetwithTable</code></a></p>
+<p>returns the upload set table control</p>
+<hr>
+<h3>extend()</h3>
+<blockquote>
+<p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a new subclass of class sap.m.upload.p13n.mediator.BaseMediator with name <code>sClassName</code> and enriches
+it with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.Object.extend.</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>Name of the class being created</p>
+<h5>oClassInfo?</h5>
+<p><a href="../../../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>BaseMediator</code>&gt;</p>
+<p>Object literal with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+used by this class</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Created class / constructor function</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html#extend"><code>extend</code></a></p>
+<hr>
+<h3>getMetadata()</h3>
+<blockquote>
+<p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Returns a metadata object for class sap.m.upload.p13n.mediator.BaseMediator.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
+<p>Metadata object describing this class</p>
+<hr>
+
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Abstract Class: Container — OpenUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: Container — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/valuehelp/base/Container/classes/Container.html">
+<meta property="og:title" content="Abstract Class: Container — OpenUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: Container — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/valuehelp/base/Container/classes/Container.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › valuehelp › base › <a href="../../../../../../../../sap.ui.mdc/sap/ui/mdc/valuehelp/base/Container/README.html">Container</a> › classes</nav>
+<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<hr>
+<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/valuehelp/base/Container</a> / Container</p>
+<h1>Abstract Class: Container</h1>
+<pre class="sig"><span class="kw">import</span> Container <span class="kw">from</span> <span class="str">"sap/ui/mdc/valuehelp/base/Container"</span>;</pre>
+<p>Container for the sap.ui.mdc.ValueHelp ValueHelp element.</p>
+<h2>Since</h2>
+<p>1.95.0</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
+</ul>
+<h2>Extended by</h2>
+<ul>
+<li><a href="../../../Dialog/classes/Dialog.html"><code>Dialog</code></a></li>
+<li><a href="../../../Popover/classes/Popover.html"><code>Popover</code></a></li>
+</ul>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new Container</strong>(<code>mSettings?</code>): <code>Container</code></p>
+</blockquote>
+<p>Constructor for a new <code>Container</code>.</p>
+<p>This is the basis for various value help containers. It cannot be used directly.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.</p>
+<h4>Parameters</h4>
+<h5>mSettings?</h5>
+<p><a href="../interfaces/$ContainerSettings.html"><code>$ContainerSettings</code></a></p>
+<p>Initial settings for the new element</p>
+<h4>Returns</h4>
+<p><code>Container</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#constructor"><code>constructor</code></a></p>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new Container</strong>(<code>sId?</code>, <code>mSettings?</code>): <code>Container</code></p>
+</blockquote>
+<p>Constructor for a new <code>Container</code>.</p>
+<p>This is the basis for various value help containers. It cannot be used directly.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.</p>
+<h4>Parameters</h4>
+<h5>sId?</h5>
+<p><code>string</code></p>
+<p>ID for the new element, generated automatically if no ID is given</p>
+<h5>mSettings?</h5>
+<p><a href="../interfaces/$ContainerSettings.html"><code>$ContainerSettings</code></a></p>
+<p>Initial settings for the new element</p>
+<h4>Returns</h4>
+<p><code>Container</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#constructor"><code>constructor</code></a></p>
+<h2>Properties</h2>
+<h3>addContent()</h3>
+<blockquote>
+<p><strong>addContent</strong>(<code>oContent</code>): <code>this</code></p>
+</blockquote>
+<p>Adds some content to the aggregation #getContent content.</p>
+<h4>Parameters</h4>
+<h5>oContent</h5>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>The content to add; if empty, nothing is inserted</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachCancel()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachCancel</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:cancel cancel event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the change is cancelled.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachCancel</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:cancel cancel event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the change is cancelled.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachClosed()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachClosed</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:closed closed event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the value help is closed.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachClosed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:closed closed event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the value help is closed.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachConfirm()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachConfirm</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:confirm confirm event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if a change of the value help is confirmed.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachConfirm</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:confirm confirm event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if a change of the value help is confirmed.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachNavigated()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigated</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigated navigated event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if a navigation has been executed in the content of the container.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigated</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigated navigated event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if a navigation has been executed in the content of the container.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachOpened()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachOpened</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:opened opened event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the value help is opened.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachOpened</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:opened opened event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the value help is opened.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachRequestDelegateContent()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRequestDelegateContent</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:requestDelegateContent requestDelegateContent
+event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the container requests the delegate content.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRequestDelegateContent</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:requestDelegateContent requestDelegateContent
+event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the container requests the delegate content.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachRequestSwitchToDialog()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRequestSwitchToDialog</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:requestSwitchToDialog requestSwitchToDialog
+event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the value help should switch to dialog mode.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRequestSwitchToDialog</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:requestSwitchToDialog requestSwitchToDialog
+event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the value help should switch to dialog mode.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachSelect()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelect</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the selected condition has changed.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired if the selected condition has changed.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachTypeaheadSuggested()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTypeaheadSuggested</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:typeaheadSuggested typeaheadSuggested event
+of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired after a suggested item has been found for a type-ahead.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.120.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTypeaheadSuggested</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:typeaheadSuggested typeaheadSuggested event
+of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.valuehelp.base.Container</code> itself.</p>
+<p>This event is fired after a suggested item has been found for a type-ahead.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.valuehelp.base.Container</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.120.0</p>
+<hr>
+<h3>bindContentToContainer()</h3>
+<blockquote>
+<p><strong>bindContentToContainer</strong>(<code>oContent</code>): <code>void</code></p>
+</blockquote>
+<p>Binds the content to the container.</p>
+<h4>Parameters</h4>
+<h5>oContent</h5>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>content</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>closeContainer()</h3>
+<blockquote>
+<p><strong>closeContainer</strong>(): <code>void</code></p>
+</blockquote>
+<p>Closes the container control or element.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>destroyContent()</h3>
+<blockquote>
+<p><strong>destroyContent</strong>(): <code>this</code></p>
+</blockquote>
+<p>Destroys all the content in the aggregation #getContent content.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachCancel()</h3>
+<blockquote>
+<p><strong>detachCancel</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:cancel cancel event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachClosed()</h3>
+<blockquote>
+<p><strong>detachClosed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:closed closed event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachConfirm()</h3>
+<blockquote>
+<p><strong>detachConfirm</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:confirm confirm event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachNavigated()</h3>
+<blockquote>
+<p><strong>detachNavigated</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigated navigated event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachOpened()</h3>
+<blockquote>
+<p><strong>detachOpened</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:opened opened event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachRequestDelegateContent()</h3>
+<blockquote>
+<p><strong>detachRequestDelegateContent</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:requestDelegateContent requestDelegateContent
+event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachRequestSwitchToDialog()</h3>
+<blockquote>
+<p><strong>detachRequestSwitchToDialog</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:requestSwitchToDialog requestSwitchToDialog
+event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachSelect()</h3>
+<blockquote>
+<p><strong>detachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:select select event of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachTypeaheadSuggested()</h3>
+<blockquote>
+<p><strong>detachTypeaheadSuggested</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:typeaheadSuggested typeaheadSuggested event
+of this <code>sap.ui.mdc.valuehelp.base.Container</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.120.0</p>
+<hr>
+<h3>fireCancel()</h3>
+<blockquote>
+<p><strong>fireCancel</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:cancel cancel to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireClosed()</h3>
+<blockquote>
+<p><strong>fireClosed</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:closed closed to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireConfirm()</h3>
+<blockquote>
+<p><strong>fireConfirm</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:confirm confirm to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Container$ConfirmEventParameters.html"><code>Container$ConfirmEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireNavigated()</h3>
+<blockquote>
+<p><strong>fireNavigated</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:navigated navigated to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Container$NavigatedEventParameters.html"><code>Container$NavigatedEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireOpened()</h3>
+<blockquote>
+<p><strong>fireOpened</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:opened opened to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Container$OpenedEventParameters.html"><code>Container$OpenedEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireRequestDelegateContent()</h3>
+<blockquote>
+<p><strong>fireRequestDelegateContent</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:requestDelegateContent requestDelegateContent to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Container$RequestDelegateContentEventParameters.html"><code>Container$RequestDelegateContentEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireRequestSwitchToDialog()</h3>
+<blockquote>
+<p><strong>fireRequestSwitchToDialog</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:requestSwitchToDialog requestSwitchToDialog to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireSelect()</h3>
+<blockquote>
+<p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Container$SelectEventParameters.html"><code>Container$SelectEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireTypeaheadSuggested()</h3>
+<blockquote>
+<p><strong>fireTypeaheadSuggested</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:typeaheadSuggested typeaheadSuggested to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Container$TypeaheadSuggestedEventParameters.html"><code>Container$TypeaheadSuggestedEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.120.0</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getContainerConfig()</h3>
+<blockquote>
+<p><strong>getContainerConfig</strong>(<code>oContent</code>): <code>object</code></p>
+</blockquote>
+<p>Gets the configuration for a specific content.</p>
+<h4>Parameters</h4>
+<h5>oContent</h5>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>content</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>configuration</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getContainerControl()</h3>
+<blockquote>
+<p><strong>getContainerControl</strong>(): <code>void</code></p>
+</blockquote>
+<p>Returns the container control or element that is opened (for example, a popover or dialog).</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getContent()</h3>
+<blockquote>
+<p><strong>getContent</strong>(): <a href="../../Content/classes/Content.html"><code>Content</code></a>[]</p>
+</blockquote>
+<p>Gets content of aggregation #getContent content.</p>
+<p>Content of the container. This aggregation holds the actual controls enabling the user to select items
+or create conditions (for example, tables or condition panels).</p>
+<h4>Returns</h4>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a>[]</p>
+<hr>
+<h3>getControl()</h3>
+<blockquote>
+<p><strong>getControl</strong>(): <a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+</blockquote>
+<p>Returns control connected to value help.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>connected control</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getLocalFilterValue()</h3>
+<blockquote>
+<p><strong>getLocalFilterValue</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getLocalFilterValue localFilterValue.</p>
+<p>This property may be used by <code>FilterableListContents</code> to share basic search states in collective search
+scenarios.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>localFilterValue</code></p>
+<hr>
+<h3>getMaxConditions()</h3>
+<blockquote>
+<p><strong>getMaxConditions</strong>(): <code>number</code></p>
+</blockquote>
+<p>Returns the maximum allowed number of conditions, -1 if no limit is set.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>maximum allowed number of conditions</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getRetrieveDelegateContentPromise()</h3>
+<blockquote>
+<p><strong>getRetrieveDelegateContentPromise</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p>Returns the <code>Promise</code> for content creation.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p><code>Promise</code> for delegate content</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getSelectedContent()</h3>
+<blockquote>
+<p><strong>getSelectedContent</strong>(): <a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+</blockquote>
+<p>Returns the currently used content.</p>
+<h4>Returns</h4>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>currently used content</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getTitle()</h3>
+<blockquote>
+<p><strong>getTitle</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getTitle title.</p>
+<p>Title text that appears in the dialog or tab header.</p>
+<p>Default value is <code>empty string</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>title</code></p>
+<hr>
+<h3>getUIAreaForContent()</h3>
+<blockquote>
+<p><strong>getUIAreaForContent</strong>(): <a href="../../../../../../../../sap.ui.core/sap/ui/core/UIArea/classes/UIArea.html"><code>UIArea</code></a></p>
+</blockquote>
+<p>Returns the <code>UIArea</code> of the content.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/UIArea/classes/UIArea.html"><code>UIArea</code></a></p>
+<p>The UI area of the content or <code>null</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>handleCanceled()</h3>
+<blockquote>
+<p><strong>handleCanceled</strong>(<code>oEvent</code>): <code>void</code></p>
+</blockquote>
+<p>Handles the <code>cancelled</code> event of the content.</p>
+<p>Here the #event:cancel cancel event needs to be fired.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<p>event</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>handleClosed()</h3>
+<blockquote>
+<p><strong>handleClosed</strong>(<code>oEvent</code>): <code>void</code></p>
+</blockquote>
+<p>Handles the <code>closed</code> event of the container control or element.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<p>event</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>handleConfirmed()</h3>
+<blockquote>
+<p><strong>handleConfirmed</strong>(<code>oEvent</code>): <code>void</code></p>
+</blockquote>
+<p>Handles the <code>confirmed</code> event of the content.</p>
+<p>Here the #event:confirm confirm event needs to be fired.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<p>event</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>handleNavigated()</h3>
+<blockquote>
+<p><strong>handleNavigated</strong>(<code>oEvent</code>): <code>void</code></p>
+</blockquote>
+<p>Handles the <code>navigated</code> event of the content.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<p>event</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>handleOpened()</h3>
+<blockquote>
+<p><strong>handleOpened</strong>(<code>oEvent</code>): <code>void</code></p>
+</blockquote>
+<p>Handles the <code>opened</code> event of the container control or element.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<p>event</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>handleRequestSwitchToDialog()</h3>
+<blockquote>
+<p><strong>handleRequestSwitchToDialog</strong>(<code>oEvent</code>): <code>void</code></p>
+</blockquote>
+<p>Handles the <code>requestSwitchToDialog</code> event of the content.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<p>event</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>handleSelect()</h3>
+<blockquote>
+<p><strong>handleSelect</strong>(<code>oEvent</code>): <code>void</code></p>
+</blockquote>
+<p>Handles the <code>select</code> event of the content.</p>
+<p>Here the #event:select select event needs to be fired.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<p>event</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>handleTypeaheadSuggested()</h3>
+<blockquote>
+<p><strong>handleTypeaheadSuggested</strong>(<code>oEvent</code>): <code>void</code></p>
+</blockquote>
+<p>Handles the <code>typeaheadSuggested</code> event of the content.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<p>event</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>indexOfContent()</h3>
+<blockquote>
+<p><strong>indexOfContent</strong>(<code>oContent</code>): <code>number</code></p>
+</blockquote>
+<p>Checks for the provided <code>sap.ui.mdc.valuehelp.base.Content</code> in the aggregation #getContent content.
+and returns its index if found or -1 otherwise.</p>
+<h4>Parameters</h4>
+<h5>oContent</h5>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>The content whose index is looked for</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
+<hr>
+<h3>insertContent()</h3>
+<blockquote>
+<p><strong>insertContent</strong>(<code>oContent</code>, <code>iIndex</code>): <code>this</code></p>
+</blockquote>
+<p>Inserts a content into the aggregation #getContent content.</p>
+<h4>Parameters</h4>
+<h5>oContent</h5>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>The content to insert; if empty, nothing is inserted</p>
+<h5>iIndex</h5>
+<p><code>number</code></p>
+<p>The <code>0</code>-based index the content should be inserted at; for a negative value of <code>iIndex</code>, the content
+is inserted at position 0; for a value greater than the current size of the aggregation, the content
+is inserted at the last position</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>isSingleSelect()</h3>
+<blockquote>
+<p><strong>isSingleSelect</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Returns if the value help is used for single selection.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p><code>true</code> id single selection</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>navigateInContent()</h3>
+<blockquote>
+<p><strong>navigateInContent</strong>(<code>iStep</code>): <code>void</code></p>
+</blockquote>
+<p>Triggers navigation in the content of the container.</p>
+<h4>Parameters</h4>
+<h5>iStep</h5>
+<p><code>number</code></p>
+<p>Number of steps for navigation (e.g. 1 means next item, -1 means previous item)</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>observeChanges()</h3>
+<blockquote>
+<p><strong>observeChanges</strong>(<code>oChanges</code>): <code>void</code></p>
+</blockquote>
+<p>Observes property and aggregation changes.</p>
+<h4>Parameters</h4>
+<h5>oChanges</h5>
+<p><code>object</code></p>
+<p>Change</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>openContainer()</h3>
+<blockquote>
+<p><strong>openContainer</strong>(<code>oContainer</code>, <code>bTypeahead</code>): <code>void</code></p>
+</blockquote>
+<p>Opens the container control or element.</p>
+<h4>Parameters</h4>
+<h5>oContainer</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
+<p>container</p>
+<h5>bTypeahead</h5>
+<p><code>boolean</code></p>
+<p>if set, container is opened for typeahead</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>placeContent()</h3>
+<blockquote>
+<p><strong>placeContent</strong>(<code>oContainer</code>): <a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
+</blockquote>
+<p>Places the content into the container control or element.</p>
+<h4>Parameters</h4>
+<h5>oContainer</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
+<p>container</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
+<p>container</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>removeAllContent()</h3>
+<blockquote>
+<p><strong>removeAllContent</strong>(): <a href="../../Content/classes/Content.html"><code>Content</code></a>[]</p>
+</blockquote>
+<p>Removes all the controls from the aggregation #getContent content.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
+<h4>Returns</h4>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a>[]</p>
+<p>An array of the removed elements (might be empty)</p>
+<hr>
+<h3>removeContent()</h3>
+<blockquote>
+<p><strong>removeContent</strong>(<code>vContent</code>): <a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+</blockquote>
+<p>Removes a content from the aggregation #getContent content.</p>
+<h4>Parameters</h4>
+<h5>vContent</h5>
+<p><code>string</code> | <code>number</code> | <a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>The content to remove or its index or id</p>
+<h4>Returns</h4>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>The removed content or <code>null</code></p>
+<hr>
+<h3>setLocalFilterValue()</h3>
+<blockquote>
+<p><strong>setLocalFilterValue</strong>(<code>sLocalFilterValue</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getLocalFilterValue localFilterValue.</p>
+<p>This property may be used by <code>FilterableListContents</code> to share basic search states in collective search
+scenarios.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sLocalFilterValue</h5>
+<p><code>string</code></p>
+<p>New value for property <code>localFilterValue</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setTitle()</h3>
+<blockquote>
+<p><strong>setTitle</strong>(<code>sTitle?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getTitle title.</p>
+<p>Title text that appears in the dialog or tab header.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
+<h4>Parameters</h4>
+<h5>sTitle?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>title</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>unbindContentFromContainer()</h3>
+<blockquote>
+<p><strong>unbindContentFromContainer</strong>(<code>oContent</code>): <code>void</code></p>
+</blockquote>
+<p>Unbinds the content from the container.</p>
+<h4>Parameters</h4>
+<h5>oContent</h5>
+<p><a href="../../Content/classes/Content.html"><code>Content</code></a></p>
+<p>content</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>extend()</h3>
+<blockquote>
+<p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
+</blockquote>
+<p>Creates a new subclass of class sap.ui.mdc.valuehelp.base.Container with name <code>sClassName</code> and enriches
+it with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.Element.extend.</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>Name of the class being created</p>
+<h5>oClassInfo?</h5>
+<p><a href="../../../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Container</code>&gt;</p>
+<p>Object literal with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+used by this class</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Created class / constructor function</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#extend"><code>extend</code></a></p>
+<hr>
+<h3>getMetadata()</h3>
+<blockquote>
+<p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
+</blockquote>
+<p>Returns a metadata object for class sap.ui.mdc.valuehelp.base.Container.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
+<p>Metadata object describing this class</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
+<hr>
+
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+</body>
+</html>

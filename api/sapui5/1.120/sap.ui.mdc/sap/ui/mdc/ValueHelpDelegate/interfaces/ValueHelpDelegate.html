@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: ValueHelpDelegate — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: ValueHelpDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/ValueHelpDelegate/interfaces/ValueHelpDelegate.html">
+<meta property="og:title" content="Interface: ValueHelpDelegate — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: ValueHelpDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/ValueHelpDelegate/interfaces/ValueHelpDelegate.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/ValueHelpDelegate/README.html">ValueHelpDelegate</a> › interfaces</nav>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<hr>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/ValueHelpDelegate</a> / ValueHelpDelegate</p>
+<h1>Interface: ValueHelpDelegate</h1>
+<pre class="sig"><span class="kw">import</span> ValueHelpDelegate <span class="kw">from</span> <span class="str">"sap/ui/mdc/ValueHelpDelegate"</span>;</pre>
+<p>Delegate for sap.ui.mdc.ValueHelp ValueHelp.
+ <strong>Note:</strong> The class is experimental and the API/behavior is not finalized and hence this should not
+be used for productive usage.</p>
+<h2>Since</h2>
+<p>1.95.0</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../BaseDelegate/interfaces/BaseDelegate.html"><code>BaseDelegate</code></a></li>
+</ul>
+<h2>Methods</h2>
+<h3>checkListBindingPending()</h3>
+<blockquote>
+<p><strong>checkListBindingPending</strong>(<code>oValueHelp</code>, <code>oListBinding</code>, <code>iRequestedItems</code>): <code>boolean</code> | <code>Promise</code>&lt;<code>boolean</code>&gt;</p>
+</blockquote>
+<p>Checks if the <code>ListBinding</code> is waiting for an update. As long as the context has not been set for <code>ListBinding</code>,
+<code>ValueHelp</code> needs to wait.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oListBinding</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></p>
+<p><code>ListBinding</code> to check</p>
+<h5>iRequestedItems</h5>
+<p><code>number</code></p>
+<p>Number of requested items</p>
+<h4>Returns</h4>
+<p><code>boolean</code> | <code>Promise</code>&lt;<code>boolean</code>&gt;</p>
+<p><code>Promise</code> that is resolved once <code>ListBinding</code> has been updated</p>
+<hr>
+<h3>createConditionPayload()</h3>
+<blockquote>
+<p><strong>createConditionPayload</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>aValues</code>, <code>oContext?</code>): <code>object</code></p>
+</blockquote>
+<p>Provides the possibility to convey custom data in conditions. This enables an application to enhance
+conditions with data relevant for combined key or out parameter scenarios.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/FilterableListContent/classes/FilterableListContent.html"><code>FilterableListContent</code></a></p>
+<p><code>ValueHelp</code> content instance</p>
+<h5>aValues</h5>
+<p><code>any</code>[]</p>
+<p>Key and description pair for the condition that is created</p>
+<h5>oContext?</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
+<p>Optional additional context</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Optionally returns a serializable object to be stored in the condition payload field</p>
+<h4>Since</h4>
+<p>1.101.0</p>
+<hr>
+<h3>executeFilter()</h3>
+<blockquote>
+<p><strong>executeFilter</strong>(<code>oValueHelp</code>, <code>oListBinding</code>, <code>iRequestedItems</code>): <code>Promise</code>&lt;<a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>&gt;</p>
+</blockquote>
+<p>Executes a filter in a <code>ListBinding</code>.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oListBinding</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></p>
+<p>List binding</p>
+<h5>iRequestedItems</h5>
+<p><code>number</code></p>
+<p>Number of requested items</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>&gt;</p>
+<p><code>Promise</code> that is resolved if search is executed</p>
+<hr>
+<h3>findConditionsForContext()</h3>
+<blockquote>
+<p><strong>findConditionsForContext</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>oContext</code>, <code>aConditions</code>): <a href="../../condition/Condition/type-aliases/ConditionObject.html"><code>ConditionObject</code></a>[]</p>
+</blockquote>
+<p>Find all conditions, which are represented by the given context for &#39;Select from list&#39; scenarios. By
+default, only condition keys are considered. This may be extended with payload dependent filters.</p>
+<p>Note: this method replaces the former <code>isFilterableListItemSelected</code></p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/FilterableListContent/classes/FilterableListContent.html"><code>FilterableListContent</code></a></p>
+<p><code>ValueHelp</code> content instance</p>
+<h5>oContext</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
+<p>Entry of a given list</p>
+<h5>aConditions</h5>
+<p><a href="../../condition/Condition/type-aliases/ConditionObject.html"><code>ConditionObject</code></a>[]</p>
+<p>current conditions</p>
+<h4>Returns</h4>
+<p><a href="../../condition/Condition/type-aliases/ConditionObject.html"><code>ConditionObject</code></a>[]</p>
+<p>Conditions represented by the given context</p>
+<h4>Since</h4>
+<p>1.118.0</p>
+<hr>
+<h3>getFilterConditions()</h3>
+<blockquote>
+<p><strong>getFilterConditions</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>oConfig?</code>): <code>object</code> | <code>Promise</code>&lt;<code>object</code>&gt;</p>
+</blockquote>
+<p>Provides a map of conditions for the following situations:
+	 -  Initial set of conditions applied every time value help content is shown for the first time since
+    opening its container.
+	 -  Detailed set of conditions in <code>getItemForValue</code> scenarios that allow you to find a specific value
+    help item (indicated by oConfig availability).</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/FilterableListContent/classes/FilterableListContent.html"><code>FilterableListContent</code></a></p>
+<p><code>ValueHelp</code> content instance</p>
+<h5>oConfig?</h5>
+<p>Configuration</p>
+<h6>bindingContext?</h6>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
+<p><code>BindingContext</code> of the checked field. Inside a table, the <code>ValueHelp</code> element might be connected to
+a different row.</p>
+<h6>checkDescription</h6>
+<p><code>boolean</code></p>
+<p>If set, the value help checks only if there is an item with the given description. This is set to <code>false</code>
+if only the key is used in the field.</p>
+<h6>checkKey</h6>
+<p><code>boolean</code></p>
+<p>If set, the value help checks only if there is an item with the given key. This is set to <code>false</code> if
+the value cannot be a valid key because of type validation.</p>
+<h6>context?</h6>
+<p>{ <code>inParameter?</code>: <code>object</code>; <code>ouParameter?</code>: <code>object</code>; <code>payload?</code>: <code>object</code>; }</p>
+<p>Contextual information provided by condition payload or <code>inParameters</code>/<code>outParameters</code>. This is only
+filled if the description needs to be determined for an existing condition.</p>
+<h6>context.inParameter?</h6>
+<p><code>object</code></p>
+<p>In parameters of the current condition (<code>inParameter</code> are not used any longer, but it might be filled
+in older conditions stored in variants.)</p>
+<h6>context.ouParameter?</h6>
+<p><code>object</code></p>
+<p>Out parameters of the current condition (<code>outParameter</code> are not used any longer, but it might be filled
+in older conditions stored in variants.)</p>
+<h6>context.payload?</h6>
+<p><code>object</code></p>
+<p>Payload of the current condition</p>
+<h6>control</h6>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>Instance of the calling control</p>
+<h6>parsedValue?</h6>
+<p><code>any</code></p>
+<p>Value parsed by type to fit the data type of the key</p>
+<h6>value</h6>
+<p><code>any</code></p>
+<p>Value as entered by user</p>
+<h4>Returns</h4>
+<p><code>object</code> | <code>Promise</code>&lt;<code>object</code>&gt;</p>
+<p>Returns a map of conditions</p>
+<h4>Since</h4>
+<p>1.106.0</p>
+<hr>
+<h3>getFirstMatch()</h3>
+<blockquote>
+<p><strong>getFirstMatch</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>oConfig</code>): <a href="../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
+</blockquote>
+<p>Returns the content that is used for the autocomplete feature and for user input, if the entered text
+leads to more than one filter result.</p>
+<p>By default, this method searches and returns an entry from a set of relevant contexts of the given sap.ui.mdc.valuehelp.base.ListContent ListContent.</p>
+<p>To determine which columns are relevant for the search, the currently active displayMode sap.ui.mdc.enums.FieldDisplay Display
+of the connected control will be used. While a &#39;Value&#39; configuration will lead to a &#39;key&#39;-only search,
+&#39;DescriptionValue&#39; leads to searching &#39;description&#39; first and &#39;key&#39; afterwards. Other modes work accordingly.</p>
+<p>For each relevant column all items are searched for an exact match first and again with a startsWith
+filter afterwards, if necessary.</p>
+<p>If the caseSensitive property is disabled, the letter case of the user&#39;s input and the corresponding
+column value are completely ignored. Whichever entry comes first, wins.</p>
+<p>sap.ui.mdc.valuehelp.base.ListContent ListContent</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/ListContent/classes/ListContent.html"><code>ListContent</code></a></p>
+<p><code>ValueHelp</code> content instance</p>
+<h5>oConfig</h5>
+<p><a href="../../ValueHelp/type-aliases/ItemForValueConfiguration.html"><code>ItemForValueConfiguration</code></a></p>
+<p>Configuration</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
+<p>Promise resolving in the <code>Context</code> that&#39;s relevant&#39;</p>
+<h4>Since</h4>
+<p>1.120.0</p>
+<hr>
+<h3>getTypesForConditions()</h3>
+<blockquote>
+<p><strong>getTypesForConditions</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>oConditions</code>): <code>object</code></p>
+</blockquote>
+<p>Provides type information for list content filtering.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/FilterableListContent/classes/FilterableListContent.html"><code>FilterableListContent</code></a></p>
+<p><code>ValueHelp</code> content instance</p>
+<h5>oConditions</h5>
+<p><code>object</code></p>
+<p>Set of conditions to create filters for</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Returns a type map for property paths</p>
+<h4>Since</h4>
+<p>1.101.0</p>
+<hr>
+<h3><del>isFilterableListItemSelected()</del></h3>
+<blockquote>
+<p><strong>isFilterableListItemSelected</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>oItem</code>, <code>aConditions</code>): <code>boolean</code></p>
+</blockquote>
+<p>Provides the possibility to customize selections in &#39;Select from list&#39; scenarios. By default, only condition
+keys are taken into consideration. This might be extended with payload dependent filters.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/FilterableListContent/classes/FilterableListContent.html"><code>FilterableListContent</code></a></p>
+<p><code>ValueHelp</code> content instance</p>
+<h5>oItem</h5>
+<p>Entry of a given list</p>
+<h6>getBindingContext</h6>
+<p><code>Function</code></p>
+<p>Get the binding context of this object for the given model name.</p>
+<h5>aConditions</h5>
+<p><a href="../../condition/Condition/type-aliases/ConditionObject.html"><code>ConditionObject</code></a>[]</p>
+<p>current conditions</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p><code>true</code> if item is selected</p>
+<h4>Since</h4>
+<p>1.101.0</p>
+<h4>Deprecated</h4>
+<p>(since 1.118) - replaced by module:sap/ui/mdc/ValueHelpDelegate.findConditionsForContext findConditionsForContext.</p>
+<hr>
+<h3>isSearchSupported()</h3>
+<blockquote>
+<p><strong>isSearchSupported</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>oListBinding</code>): <code>boolean</code></p>
+</blockquote>
+<p>Checks if a <code>ListBinding</code> supports <code>$search</code>.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/Content/classes/Content.html"><code>Content</code></a></p>
+<p>Content element</p>
+<h5>oListBinding</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></p>
+<p><code>ListBinding</code></p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p><code>true</code> if <code>$search</code> is supported</p>
+<hr>
+<h3>modifySelectionBehaviour()</h3>
+<blockquote>
+<p><strong>modifySelectionBehaviour</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>oChange</code>): <code>object</code></p>
+</blockquote>
+<p>Provides the possibility to customize selection events in &#39;Select from list&#39; scenarios. This enables
+an application to reuse conditions in collective search scenarios, instead of always creating new ones.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/FilterableListContent/classes/FilterableListContent.html"><code>FilterableListContent</code></a></p>
+<p><code>ValueHelp</code> content instance</p>
+<h5>oChange</h5>
+<p>Selection event configuration</p>
+<h6>conditions</h6>
+<p><code>object</code>[]</p>
+<p>Array of changed conditions with structure sap.ui.mdc.condition.ConditionObject ConditionObject</p>
+<h6>type</h6>
+<p><code>any</code></p>
+<p>Type of the selection change (add, remove)</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>oRestult Selection event configuration object</p>
+<h4>Since</h4>
+<p>1.101.0</p>
+<hr>
+<h3>onConditionPropagation()</h3>
+<blockquote>
+<p><strong>onConditionPropagation</strong>(<code>oValueHelp</code>, <code>sReason</code>, <code>oConfig</code>): <code>void</code></p>
+</blockquote>
+<p>Callback invoked every time a sap.ui.mdc.ValueHelp ValueHelp fires a <code>select</code> event or the value
+of the corresponding field changes. This callback can be used to update external fields.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>sReason</h5>
+<p><code>&quot;Select&quot;</code> | <code>&quot;Info&quot;</code> | <a href="../../enums/ValueHelpPropagationReason/enumerations/ValueHelpPropagationReason.html"><code>ValueHelpPropagationReason</code></a> | <code>&quot;ControlChange&quot;</code></p>
+<p>Reason why the method was invoked</p>
+<h5>oConfig</h5>
+<p><code>object</code></p>
+<p>Current configuration provided by the calling control</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.101.0</p>
+<hr>
+<h3>retrieveContent()</h3>
+<blockquote>
+<p><strong>retrieveContent</strong>(<code>oValueHelp</code>, <code>oContainer</code>, <code>sContentId</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p>Requests the content of the value help.</p>
+<p>This function is called when the value help is opened or a key or description is requested.</p>
+<p>So depending on the value help content used, all content controls and data need to be assigned. Once
+they are assigned and the data is set, the returned <code>Promise</code> needs to be resolved. Only then does the
+value help continue opening or reading data.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContainer</h5>
+<p><a href="../../valuehelp/base/Container/classes/Container.html"><code>Container</code></a></p>
+<p>Container instance</p>
+<h5>sContentId</h5>
+<p><code>string</code></p>
+<p>ID of the content shown after this call to retrieve content</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p><code>Promise</code> that is resolved if all content is available</p>
+<hr>
+<h3>showTypeahead()</h3>
+<blockquote>
+<p><strong>showTypeahead</strong>(<code>oValueHelp</code>, <code>oContent</code>): <code>boolean</code> | <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p>Controls if a type-ahead is opened or closed.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/Content/classes/Content.html"><code>Content</code></a></p>
+<p><code>ValueHelp</code> Content requesting conditions configuration</p>
+<h4>Returns</h4>
+<p><code>boolean</code> | <code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>Boolean or <code>Promise</code> resolving into a boolean indicating the desired behavior</p>
+<h4>Since</h4>
+<p>1.110.0</p>
+<hr>
+<h3>updateBinding()</h3>
+<blockquote>
+<p><strong>updateBinding</strong>(<code>oValueHelp</code>, <code>oListBinding</code>, <code>oBindingInfo</code>, <code>oContent</code>): <code>void</code></p>
+</blockquote>
+<p>Executes a filter in a <code>ListBinding</code> and resumes it, if suspended.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oListBinding</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></p>
+<p>List binding</p>
+<h5>oBindingInfo</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
+<p>The binding info object that is be used to bind the list to the model</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/FilterableListContent/classes/FilterableListContent.html"><code>FilterableListContent</code></a></p>
+<p><code>ValueHelp</code> content requesting the binding update</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.110.0</p>
+<hr>
+<h3>updateBindingInfo()</h3>
+<blockquote>
+<p><strong>updateBindingInfo</strong>(<code>oValueHelp</code>, <code>oContent</code>, <code>oBindingInfo</code>): <code>void</code></p>
+</blockquote>
+<p>Adjustable filtering for list-based contents.</p>
+<h4>Parameters</h4>
+<h5>oValueHelp</h5>
+<p><a href="../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
+<p>The <code>ValueHelp</code> control instance</p>
+<h5>oContent</h5>
+<p><a href="../../valuehelp/base/FilterableListContent/classes/FilterableListContent.html"><code>FilterableListContent</code></a></p>
+<p><code>ValueHelp</code> content requesting conditions configuration</p>
+<h5>oBindingInfo</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
+<p>The binding info object to that is used to bind the list to the model</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.110.0</p>
+
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+</body>
+</html>

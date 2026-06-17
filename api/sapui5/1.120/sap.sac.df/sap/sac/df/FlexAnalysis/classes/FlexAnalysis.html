@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Class: FlexAnalysis — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: FlexAnalysis — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.sac.df/sap/sac/df/FlexAnalysis/classes/FlexAnalysis.html">
+<meta property="og:title" content="Class: FlexAnalysis — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: FlexAnalysis — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.sac.df/sap/sac/df/FlexAnalysis/classes/FlexAnalysis.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.sac.df/README.html">sap.sac.df</a> › sap › sac › df › <a href="../../../../../../sap.sac.df/sap/sac/df/FlexAnalysis/README.html">FlexAnalysis</a> › classes</nav>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<hr>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.sac.df</a> / <a href="../README.html">sap/sac/df/FlexAnalysis</a> / FlexAnalysis</p>
+<h1>Class: FlexAnalysis</h1>
+<pre class="sig"><span class="kw">import</span> FlexAnalysis <span class="kw">from</span> <span class="str">"sap/sac/df/FlexAnalysis"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Enables users to view, navigate and change multidimensional data exposed via InA.</p>
+<p>Overview:</p>
+<p>The user can view the data in a Table, navigate in the data via a context menu or builder panels The
+data source that the FlexAnalysis consumes or renders has to be provided as a property value.</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
+</ul>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new FlexAnalysis</strong>(<code>sId?</code>): <code>FlexAnalysis</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Constructor for a new <code>FlexAnalysis</code>.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.</p>
+<h4>Parameters</h4>
+<h5>sId?</h5>
+<p><code>string</code></p>
+<p>ID for the new control, generated automatically if no ID is given</p>
+<h4>Returns</h4>
+<p><code>FlexAnalysis</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#constructor"><code>constructor</code></a></p>
+<h2>Properties</h2>
+<h3>addCustomPanel()</h3>
+<blockquote>
+<p><strong>addCustomPanel</strong>(<code>oCustomPanel</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Adds some customPanel to the aggregation #getCustomPanels customPanels.</p>
+<h4>Parameters</h4>
+<h5>oCustomPanel</h5>
+<p><a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a></p>
+<p>The customPanel to add; if empty, nothing is inserted</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>bindDataProvider()</h3>
+<blockquote>
+<p><strong>bindDataProvider</strong>(<code>oBindingInfo</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Binds property #getDataProvider dataProvider to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindProperty ManagedObject.bindProperty for a detailed description
+of the possible properties of <code>oBindingInfo</code></p>
+<h4>Parameters</h4>
+<h5>oBindingInfo</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
+<p>The binding information</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroyCustomPanels()</h3>
+<blockquote>
+<p><strong>destroyCustomPanels</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys all the customPanels in the aggregation #getCustomPanels customPanels.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>getAutoUpdate()</h3>
+<blockquote>
+<p><strong>getAutoUpdate</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getAutoUpdate autoUpdate.</p>
+<p>Indicates if Flexible Analysis component automatically requests the ResultSet for the shown data source</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>autoUpdate</code></p>
+<hr>
+<h3>getClientIdentifier()</h3>
+<blockquote>
+<p><strong>getClientIdentifier</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getClientIdentifier clientIdentifier.</p>
+<p>Client Identifier to be used for underlying InA queries</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>clientIdentifier</code></p>
+<hr>
+<h3>getConfigId()</h3>
+<blockquote>
+<p><strong>getConfigId</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getConfigId configId.</p>
+<p>configuration Id</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>configId</code></p>
+<hr>
+<h3>getConfigObject()</h3>
+<blockquote>
+<p><strong>getConfigObject</strong>(): <code>object</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getConfigObject configObject.</p>
+<p>JSON object containing the configuration (alternative to configurationURI)</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>configObject</code></p>
+<hr>
+<h3>getConfigurationURI()</h3>
+<blockquote>
+<p><strong>getConfigurationURI</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getConfigurationURI configurationURI.</p>
+<p>URI of the advanced configuration to be fetched</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>configurationURI</code></p>
+<hr>
+<h3>getCustomPanels()</h3>
+<blockquote>
+<p><strong>getCustomPanels</strong>(): <a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getCustomPanels customPanels.</p>
+<p>Custom panels for the flexible analysis control</p>
+<h4>Returns</h4>
+<p><a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a>[]</p>
+<hr>
+<h3>getDataProvider()</h3>
+<blockquote>
+<p><strong>getDataProvider</strong>(): <code>any</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getDataProvider dataProvider.</p>
+<p>Name of the Data Provider from the corresponding MultiDimModel to be used</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Value of property <code>dataProvider</code></p>
+<hr>
+<h3>getDataSource()</h3>
+<blockquote>
+<p><strong>getDataSource</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getDataSource dataSource.</p>
+<p>Data source (Query name/ View, InA model etc) to be used to get the data from</p>
+<p>Default value is <code>&quot;$datasource&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>dataSource</code></p>
+<hr>
+<h3>getEnvironment()</h3>
+<blockquote>
+<p><strong>getEnvironment</strong>(): <code>string</code>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getEnvironment environment.</p>
+<p>Additional Flag to be passed to the control TODO: Document the possibilities</p>
+<p>Default value is <code>[]</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code>[]</p>
+<p>Value of property <code>environment</code></p>
+<hr>
+<h3>getHeight()</h3>
+<blockquote>
+<p><strong>getHeight</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeight height.</p>
+<p>Height of the component</p>
+<p>Default value is <code>&quot;100%&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>height</code></p>
+<hr>
+<h3>getHideDesignPanel()</h3>
+<blockquote>
+<p><strong>getHideDesignPanel</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHideDesignPanel hideDesignPanel.</p>
+<p>Sets if the Design Panel of FlexAnalysis is hidden</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideDesignPanel</code></p>
+<hr>
+<h3>getHideFilterLine()</h3>
+<blockquote>
+<p><strong>getHideFilterLine</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHideFilterLine hideFilterLine.</p>
+<p>Sets if the filter of FlexAnalysis is hidden</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideFilterLine</code></p>
+<hr>
+<h3>getHideLandingPage()</h3>
+<blockquote>
+<p><strong>getHideLandingPage</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHideLandingPage hideLandingPage.</p>
+<p>Sets if the landing page of FlexAnalysis is hidden</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideLandingPage</code></p>
+<hr>
+<h3>getHideMenuBar()</h3>
+<blockquote>
+<p><strong>getHideMenuBar</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHideMenuBar hideMenuBar.</p>
+<p>Sets if the menu bar of FlexAnalysis is hidden</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideMenuBar</code></p>
+<hr>
+<h3>getHideSideNavigation()</h3>
+<blockquote>
+<p><strong>getHideSideNavigation</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHideSideNavigation hideSideNavigation.</p>
+<p>Sets if the side navigation bar of FlexAnalysis is hidden</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideSideNavigation</code></p>
+<hr>
+<h3>getHideStatusBar()</h3>
+<blockquote>
+<p><strong>getHideStatusBar</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHideStatusBar hideStatusBar.</p>
+<p>Sets if the status bar of FlexAnalysis is hidden</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideStatusBar</code></p>
+<hr>
+<h3>getHideStylePanel()</h3>
+<blockquote>
+<p><strong>getHideStylePanel</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHideStylePanel hideStylePanel.</p>
+<p>Sets if the Style Panel of FlexAnalysis is hidden</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideStylePanel</code></p>
+<hr>
+<h3>getHideToolBar()</h3>
+<blockquote>
+<p><strong>getHideToolBar</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHideToolBar hideToolBar.</p>
+<p>Sets if the toolbar of FlexAnalysis is hidden</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideToolBar</code></p>
+<hr>
+<h3>getImplicitVariableHandling()</h3>
+<blockquote>
+<p><strong>getImplicitVariableHandling</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getImplicitVariableHandling implicitVariableHandling.</p>
+<p>Indicates if the variable are handled internal handling by FlexAnalysis. If set to false it is done via
+corresponding MultiDimModel</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>implicitVariableHandling</code></p>
+<hr>
+<h3>getKeepAliveInterval()</h3>
+<blockquote>
+<p><strong>getKeepAliveInterval</strong>(): <code>number</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getKeepAliveInterval keepAliveInterval.</p>
+<p>Interval to keep the InA session alive. values less than 1 deactivates the keep alive handling</p>
+<p>Default value is <code>0</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>keepAliveInterval</code></p>
+<hr>
+<h3>getMultiDimModelId()</h3>
+<blockquote>
+<p><strong>getMultiDimModelId</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getMultiDimModelId multiDimModelId.</p>
+<p>Id of the MultiDimModel to use</p>
+<p>Default value is <code>&quot;om&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>multiDimModelId</code></p>
+<hr>
+<h3>getShowTitle()</h3>
+<blockquote>
+<p><strong>getShowTitle</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getShowTitle showTitle.</p>
+<p>Indicates Flexible Analysis component should display the component title</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showTitle</code></p>
+<hr>
+<h3>getStyleTemplateName()</h3>
+<blockquote>
+<p><strong>getStyleTemplateName</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getStyleTemplateName styleTemplateName.</p>
+<p>Indicates if the variable are handled internal handling by FlexAnalysis. If set to false it is done via
+corresponding MultiDimModel</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>styleTemplateName</code></p>
+<hr>
+<h3>getSystemName()</h3>
+<blockquote>
+<p><strong>getSystemName</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getSystemName systemName.</p>
+<p>System to take data from. If not set or set to &quot;local&quot; current url will be used to determine the system</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>systemName</code></p>
+<hr>
+<h3>getSystemType()</h3>
+<blockquote>
+<p><strong>getSystemType</strong>(): <a href="../../types/SystemType/enumerations/SystemType.html"><code>SystemType</code></a> | <code>&quot;ABAP_MDS&quot;</code> | <code>&quot;BW&quot;</code> | <code>&quot;DWC&quot;</code> | <code>&quot;HANA&quot;</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getSystemType systemType.</p>
+<p>Type the system to connect to get data</p>
+<p>Default value is <code>BW</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../types/SystemType/enumerations/SystemType.html"><code>SystemType</code></a> | <code>&quot;ABAP_MDS&quot;</code> | <code>&quot;BW&quot;</code> | <code>&quot;DWC&quot;</code> | <code>&quot;HANA&quot;</code></p>
+<p>Value of property <code>systemType</code></p>
+<hr>
+<h3>getTitle()</h3>
+<blockquote>
+<p><strong>getTitle</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getTitle title.</p>
+<p>Sets title to be shown in the control. If not set the name of the corresponding back-end query is used</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>title</code></p>
+<hr>
+<h3>getWidth()</h3>
+<blockquote>
+<p><strong>getWidth</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getWidth width.</p>
+<p>Width of the component</p>
+<p>Default value is <code>&quot;100%&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>width</code></p>
+<hr>
+<h3>indexOfCustomPanel()</h3>
+<blockquote>
+<p><strong>indexOfCustomPanel</strong>(<code>oCustomPanel</code>): <code>number</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Checks for the provided <code>sap.sac.df.FlexAnalysisPanel</code> in the aggregation #getCustomPanels customPanels.
+and returns its index if found or -1 otherwise.</p>
+<h4>Parameters</h4>
+<h5>oCustomPanel</h5>
+<p><a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a></p>
+<p>The customPanel whose index is looked for</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
+<hr>
+<h3>insertCustomPanel()</h3>
+<blockquote>
+<p><strong>insertCustomPanel</strong>(<code>oCustomPanel</code>, <code>iIndex</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Inserts a customPanel into the aggregation #getCustomPanels customPanels.</p>
+<h4>Parameters</h4>
+<h5>oCustomPanel</h5>
+<p><a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a></p>
+<p>The customPanel to insert; if empty, nothing is inserted</p>
+<h5>iIndex</h5>
+<p><code>number</code></p>
+<p>The <code>0</code>-based index the customPanel should be inserted at; for a negative value of <code>iIndex</code>, the customPanel
+is inserted at position 0; for a value greater than the current size of the aggregation, the customPanel
+is inserted at the last position</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>removeAllCustomPanels()</h3>
+<blockquote>
+<p><strong>removeAllCustomPanels</strong>(): <a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Removes all the controls from the aggregation #getCustomPanels customPanels.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
+<h4>Returns</h4>
+<p><a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a>[]</p>
+<p>An array of the removed elements (might be empty)</p>
+<hr>
+<h3>removeCustomPanel()</h3>
+<blockquote>
+<p><strong>removeCustomPanel</strong>(<code>vCustomPanel</code>): <a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Removes a customPanel from the aggregation #getCustomPanels customPanels.</p>
+<h4>Parameters</h4>
+<h5>vCustomPanel</h5>
+<p><code>string</code> | <code>number</code> | <a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a></p>
+<p>The customPanel to remove or its index or id</p>
+<h4>Returns</h4>
+<p><a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a></p>
+<p>The removed customPanel or <code>null</code></p>
+<hr>
+<h3>setAutoUpdate()</h3>
+<blockquote>
+<p><strong>setAutoUpdate</strong>(<code>bAutoUpdate?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getAutoUpdate autoUpdate.</p>
+<p>Indicates if Flexible Analysis component automatically requests the ResultSet for the shown data source</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bAutoUpdate?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>autoUpdate</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setClientIdentifier()</h3>
+<blockquote>
+<p><strong>setClientIdentifier</strong>(<code>sClientIdentifier</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getClientIdentifier clientIdentifier.</p>
+<p>Client Identifier to be used for underlying InA queries</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sClientIdentifier</h5>
+<p><code>string</code></p>
+<p>New value for property <code>clientIdentifier</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setConfigId()</h3>
+<blockquote>
+<p><strong>setConfigId</strong>(<code>sConfigId</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getConfigId configId.</p>
+<p>configuration Id</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sConfigId</h5>
+<p><code>string</code></p>
+<p>New value for property <code>configId</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setConfigObject()</h3>
+<blockquote>
+<p><strong>setConfigObject</strong>(<code>oConfigObject</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getConfigObject configObject.</p>
+<p>JSON object containing the configuration (alternative to configurationURI)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>oConfigObject</h5>
+<p><code>object</code></p>
+<p>New value for property <code>configObject</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setConfigurationURI()</h3>
+<blockquote>
+<p><strong>setConfigurationURI</strong>(<code>sConfigurationURI</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getConfigurationURI configurationURI.</p>
+<p>URI of the advanced configuration to be fetched</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sConfigurationURI</h5>
+<p><code>string</code></p>
+<p>New value for property <code>configurationURI</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setDataProvider()</h3>
+<blockquote>
+<p><strong>setDataProvider</strong>(<code>oDataProvider</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getDataProvider dataProvider.</p>
+<p>Name of the Data Provider from the corresponding MultiDimModel to be used</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>oDataProvider</h5>
+<p><code>any</code></p>
+<p>New value for property <code>dataProvider</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setDataSource()</h3>
+<blockquote>
+<p><strong>setDataSource</strong>(<code>sDataSource?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getDataSource dataSource.</p>
+<p>Data source (Query name/ View, InA model etc) to be used to get the data from</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;$datasource&quot;</code>.</p>
+<h4>Parameters</h4>
+<h5>sDataSource?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>dataSource</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setEnvironment()</h3>
+<blockquote>
+<p><strong>setEnvironment</strong>(<code>sEnvironment?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getEnvironment environment.</p>
+<p>Additional Flag to be passed to the control TODO: Document the possibilities</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
+<h4>Parameters</h4>
+<h5>sEnvironment?</h5>
+<p><code>string</code>[]</p>
+<p>New value for property <code>environment</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHeight()</h3>
+<blockquote>
+<p><strong>setHeight</strong>(<code>sHeight?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeight height.</p>
+<p>Height of the component</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;100%&quot;</code>.</p>
+<h4>Parameters</h4>
+<h5>sHeight?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>height</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHideDesignPanel()</h3>
+<blockquote>
+<p><strong>setHideDesignPanel</strong>(<code>bHideDesignPanel?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHideDesignPanel hideDesignPanel.</p>
+<p>Sets if the Design Panel of FlexAnalysis is hidden</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHideDesignPanel?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideDesignPanel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHideFilterLine()</h3>
+<blockquote>
+<p><strong>setHideFilterLine</strong>(<code>bHideFilterLine?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHideFilterLine hideFilterLine.</p>
+<p>Sets if the filter of FlexAnalysis is hidden</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bHideFilterLine?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideFilterLine</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHideLandingPage()</h3>
+<blockquote>
+<p><strong>setHideLandingPage</strong>(<code>bHideLandingPage?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHideLandingPage hideLandingPage.</p>
+<p>Sets if the landing page of FlexAnalysis is hidden</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHideLandingPage?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideLandingPage</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHideMenuBar()</h3>
+<blockquote>
+<p><strong>setHideMenuBar</strong>(<code>bHideMenuBar?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHideMenuBar hideMenuBar.</p>
+<p>Sets if the menu bar of FlexAnalysis is hidden</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHideMenuBar?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideMenuBar</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHideSideNavigation()</h3>
+<blockquote>
+<p><strong>setHideSideNavigation</strong>(<code>bHideSideNavigation?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHideSideNavigation hideSideNavigation.</p>
+<p>Sets if the side navigation bar of FlexAnalysis is hidden</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bHideSideNavigation?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideSideNavigation</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHideStatusBar()</h3>
+<blockquote>
+<p><strong>setHideStatusBar</strong>(<code>bHideStatusBar?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHideStatusBar hideStatusBar.</p>
+<p>Sets if the status bar of FlexAnalysis is hidden</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHideStatusBar?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideStatusBar</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHideStylePanel()</h3>
+<blockquote>
+<p><strong>setHideStylePanel</strong>(<code>bHideStylePanel?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHideStylePanel hideStylePanel.</p>
+<p>Sets if the Style Panel of FlexAnalysis is hidden</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHideStylePanel?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideStylePanel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHideToolBar()</h3>
+<blockquote>
+<p><strong>setHideToolBar</strong>(<code>bHideToolBar?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHideToolBar hideToolBar.</p>
+<p>Sets if the toolbar of FlexAnalysis is hidden</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHideToolBar?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideToolBar</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setImplicitVariableHandling()</h3>
+<blockquote>
+<p><strong>setImplicitVariableHandling</strong>(<code>bImplicitVariableHandling?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getImplicitVariableHandling implicitVariableHandling.</p>
+<p>Indicates if the variable are handled internal handling by FlexAnalysis. If set to false it is done via
+corresponding MultiDimModel</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bImplicitVariableHandling?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>implicitVariableHandling</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setKeepAliveInterval()</h3>
+<blockquote>
+<p><strong>setKeepAliveInterval</strong>(<code>iKeepAliveInterval?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getKeepAliveInterval keepAliveInterval.</p>
+<p>Interval to keep the InA session alive. values less than 1 deactivates the keep alive handling</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
+<h4>Parameters</h4>
+<h5>iKeepAliveInterval?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>keepAliveInterval</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setMultiDimModelId()</h3>
+<blockquote>
+<p><strong>setMultiDimModelId</strong>(<code>sMultiDimModelId?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getMultiDimModelId multiDimModelId.</p>
+<p>Id of the MultiDimModel to use</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;om&quot;</code>.</p>
+<h4>Parameters</h4>
+<h5>sMultiDimModelId?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>multiDimModelId</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setShowTitle()</h3>
+<blockquote>
+<p><strong>setShowTitle</strong>(<code>bShowTitle?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getShowTitle showTitle.</p>
+<p>Indicates Flexible Analysis component should display the component title</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowTitle?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showTitle</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setStyleTemplateName()</h3>
+<blockquote>
+<p><strong>setStyleTemplateName</strong>(<code>sStyleTemplateName</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getStyleTemplateName styleTemplateName.</p>
+<p>Indicates if the variable are handled internal handling by FlexAnalysis. If set to false it is done via
+corresponding MultiDimModel</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sStyleTemplateName</h5>
+<p><code>string</code></p>
+<p>New value for property <code>styleTemplateName</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setSystemName()</h3>
+<blockquote>
+<p><strong>setSystemName</strong>(<code>sSystemName</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getSystemName systemName.</p>
+<p>System to take data from. If not set or set to &quot;local&quot; current url will be used to determine the system</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sSystemName</h5>
+<p><code>string</code></p>
+<p>New value for property <code>systemName</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setSystemType()</h3>
+<blockquote>
+<p><strong>setSystemType</strong>(<code>sSystemType?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getSystemType systemType.</p>
+<p>Type the system to connect to get data</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>BW</code>.</p>
+<h4>Parameters</h4>
+<h5>sSystemType?</h5>
+<p><a href="../../types/SystemType/enumerations/SystemType.html"><code>SystemType</code></a> | <code>&quot;ABAP_MDS&quot;</code> | <code>&quot;BW&quot;</code> | <code>&quot;DWC&quot;</code> | <code>&quot;HANA&quot;</code></p>
+<p>New value for property <code>systemType</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setTitle()</h3>
+<blockquote>
+<p><strong>setTitle</strong>(<code>sTitle</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getTitle title.</p>
+<p>Sets title to be shown in the control. If not set the name of the corresponding back-end query is used</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sTitle</h5>
+<p><code>string</code></p>
+<p>New value for property <code>title</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setWidth()</h3>
+<blockquote>
+<p><strong>setWidth</strong>(<code>sWidth?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getWidth width.</p>
+<p>Width of the component</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;100%&quot;</code>.</p>
+<h4>Parameters</h4>
+<h5>sWidth?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>width</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>unbindDataProvider()</h3>
+<blockquote>
+<p><strong>unbindDataProvider</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Unbinds property #getDataProvider dataProvider from model data.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>extend()</h3>
+<blockquote>
+<p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a new subclass of class sap.sac.df.FlexAnalysis with name <code>sClassName</code> and enriches it with the
+information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.Control.extend.</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>Name of the class being created</p>
+<h5>oClassInfo?</h5>
+<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>FlexAnalysis</code>&gt;</p>
+<p>Object literal with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+used by this class</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Created class / constructor function</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#extend"><code>extend</code></a></p>
+<hr>
+<h3>getMetadata()</h3>
+<blockquote>
+<p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Returns a metadata object for class sap.sac.df.FlexAnalysis.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
+<p>Metadata object describing this class</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
+<hr>
+
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+</body>
+</html>

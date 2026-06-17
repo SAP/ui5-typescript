@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Class: Table — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: Table — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/Table/classes/Table.html">
+<meta property="og:title" content="Class: Table — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: Table — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/Table/classes/Table.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/Table/README.html">Table</a> › classes</nav>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<hr>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Table</a> / Table</p>
+<h1>Class: Table</h1>
+<pre class="sig"><span class="kw">import</span> Table <span class="kw">from</span> <span class="str">"sap/ui/mdc/Table"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>A metadata-driven table to simplify the usage of existing tables, such as the <code>ResponsiveTable</code> and <code>GridTable</code>
+controls. The metadata needs to be provided via the module:sap/ui/mdc/TableDelegate TableDelegate
+implementation as sap.ui.mdc.table.PropertyInfo.</p>
+<h2>Since</h2>
+<p>1.58
+ (since 1.58.0)</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../Control/classes/Control.html"><code>Control</code></a></li>
+</ul>
+<h2>Implements</h2>
+<ul>
+<li><a href="../../library/interfaces/IFilterSource.html"><code>IFilterSource</code></a></li>
+<li><a href="../../library/interfaces/IxState.html"><code>IxState</code></a></li>
+</ul>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new Table</strong>(<code>mSettings?</code>): <code>Table</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Constructor for a new <code>MDCTable</code>.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.</p>
+<h4>Parameters</h4>
+<h5>mSettings?</h5>
+<p><a href="../interfaces/$TableSettings.html"><code>$TableSettings</code></a></p>
+<p>Object with initial settings for the new control</p>
+<h4>Returns</h4>
+<p><code>Table</code></p>
+<h4>Overrides</h4>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a>.<a href="../../Control/classes/Control.html#constructor"><code>constructor</code></a></p>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new Table</strong>(<code>sId?</code>, <code>mSettings?</code>): <code>Table</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Constructor for a new <code>MDCTable</code>.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.</p>
+<h4>Parameters</h4>
+<h5>sId?</h5>
+<p><code>string</code></p>
+<p>Optional ID for the new control; generated automatically if no non-empty ID is given <strong>Note:</strong> The optional
+ID can be omitted, no matter whether <code>mSettings</code> is given or not.</p>
+<h5>mSettings?</h5>
+<p><a href="../interfaces/$TableSettings.html"><code>$TableSettings</code></a></p>
+<p>Object with initial settings for the new control</p>
+<h4>Returns</h4>
+<p><code>Table</code></p>
+<h4>Overrides</h4>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a>.<a href="../../Control/classes/Control.html#constructor"><code>constructor</code></a></p>
+<h2>Properties</h2>
+<h3>__implements__sap_ui_mdc_IFilterSource</h3>
+<blockquote>
+<p><strong>__implements__sap_ui_mdc_IFilterSource</strong>: <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<h4>Implementation of</h4>
+<p><a href="../../library/interfaces/IFilterSource.html"><code>IFilterSource</code></a>.<a href="../../library/interfaces/IFilterSource.html#__implements__sap_ui_mdc_ifiltersource"><code>__implements__sap_ui_mdc_IFilterSource</code></a></p>
+<hr>
+<h3>__implements__sap_ui_mdc_IxState</h3>
+<blockquote>
+<p><strong>__implements__sap_ui_mdc_IxState</strong>: <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<h4>Implementation of</h4>
+<p><a href="../../library/interfaces/IxState.html"><code>IxState</code></a>.<a href="../../library/interfaces/IxState.html#__implements__sap_ui_mdc_ixstate"><code>__implements__sap_ui_mdc_IxState</code></a></p>
+<h2>Methods</h2>
+<h3>attachBeforeExport()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeExport</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeExport beforeExport event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired right before the export is triggered.</p>
+<p>For more information about the export settings, see sap.ui.export.Spreadsheet or <a href="https://ui5.sap.com/#/topic/7e12e6b9154a4607be9d6072c72d609c">Spreadsheet Export Configuration</a>.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.75</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeExport</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeExport beforeExport event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired right before the export is triggered.</p>
+<p>For more information about the export settings, see sap.ui.export.Spreadsheet or <a href="https://ui5.sap.com/#/topic/7e12e6b9154a4607be9d6072c72d609c">Spreadsheet Export Configuration</a>.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.75</p>
+<hr>
+<h3>attachBeforeOpenContextMenu()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeOpenContextMenu</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired when the user requests the context menu for the table.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.117</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired when the user requests the context menu for the table.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.117</p>
+<hr>
+<h3>attachPaste()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPaste</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:paste paste event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired when the user pastes content from the clipboard to the table.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPaste</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:paste paste event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired when the user pastes content from the clipboard to the table.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachRowPress()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowPress rowPress event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired when a row in the table is pressed.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowPress rowPress event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired when a row in the table is pressed.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachSelectionChange()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelectionChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
+<code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired when the selection in the table is changed.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
+<code>sap.ui.mdc.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.Table</code> itself.</p>
+<p>This event is fired when the selection in the table is changed.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.ui.mdc.Table</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>clearSelection()</h3>
+<blockquote>
+<p><strong>clearSelection</strong>(): <code>void</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Clears the selection.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3>destroyCellSelector()</h3>
+<blockquote>
+<p><strong>destroyCellSelector</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the cellSelector in the aggregation #getCellSelector cellSelector.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.119</p>
+<hr>
+<h3>destroyContextMenu()</h3>
+<blockquote>
+<p><strong>destroyContextMenu</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the contextMenu in the aggregation #getContextMenu contextMenu.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.118</p>
+<hr>
+<h3>destroyCopyProvider()</h3>
+<blockquote>
+<p><strong>destroyCopyProvider</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the copyProvider in the aggregation #getCopyProvider copyProvider.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.114</p>
+<hr>
+<h3>destroyCreationRow()</h3>
+<blockquote>
+<p><strong>destroyCreationRow</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the creationRow in the aggregation #getCreationRow creationRow.</p>
+<ul>
+<li>Do not use</li>
+</ul>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroyDataStateIndicator()</h3>
+<blockquote>
+<p><strong>destroyDataStateIndicator</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the dataStateIndicator in the aggregation #getDataStateIndicator dataStateIndicator.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.89</p>
+<hr>
+<h3>destroyNoData()</h3>
+<blockquote>
+<p><strong>destroyNoData</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the noData in the aggregation #getNoData noData.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.106</p>
+<hr>
+<h3>destroyQuickFilter()</h3>
+<blockquote>
+<p><strong>destroyQuickFilter</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the quickFilter in the aggregation #getQuickFilter quickFilter.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroyRowSettings()</h3>
+<blockquote>
+<p><strong>destroyRowSettings</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the rowSettings in the aggregation #getRowSettings rowSettings.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroyType()</h3>
+<blockquote>
+<p><strong>destroyType</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the type in the aggregation #getType type.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroyVariant()</h3>
+<blockquote>
+<p><strong>destroyVariant</strong>(): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Destroys the variant in the aggregation #getVariant variant.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachBeforeExport()</h3>
+<blockquote>
+<p><strong>detachBeforeExport</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeExport beforeExport event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.75</p>
+<hr>
+<h3>detachBeforeOpenContextMenu()</h3>
+<blockquote>
+<p><strong>detachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.117</p>
+<hr>
+<h3>detachPaste()</h3>
+<blockquote>
+<p><strong>detachPaste</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:paste paste event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachRowPress()</h3>
+<blockquote>
+<p><strong>detachRowPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:rowPress rowPress event of this <code>sap.ui.mdc.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachSelectionChange()</h3>
+<blockquote>
+<p><strong>detachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
+this <code>sap.ui.mdc.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>fireBeforeExport()</h3>
+<blockquote>
+<p><strong>fireBeforeExport</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:beforeExport beforeExport to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Table$BeforeExportEventParameters.html"><code>Table$BeforeExportEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.75</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireBeforeOpenContextMenu()</h3>
+<blockquote>
+<p><strong>fireBeforeOpenContextMenu</strong>(<code>mParameters?</code>): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:beforeOpenContextMenu beforeOpenContextMenu to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Table$BeforeOpenContextMenuEventParameters.html"><code>Table$BeforeOpenContextMenuEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Whether or not to prevent the default action</p>
+<h4>Since</h4>
+<p>1.117</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>firePaste()</h3>
+<blockquote>
+<p><strong>firePaste</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:paste paste to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Table$PasteEventParameters.html"><code>Table$PasteEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireRowPress()</h3>
+<blockquote>
+<p><strong>fireRowPress</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:rowPress rowPress to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Table$RowPressEventParameters.html"><code>Table$RowPressEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireSelectionChange()</h3>
+<blockquote>
+<p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Table$SelectionChangeEventParameters.html"><code>Table$SelectionChangeEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>focusRow()</h3>
+<blockquote>
+<p><strong>focusRow</strong>(<code>iIndex</code>, <code>bFirstInteractiveElement?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the focus on the row. If <code>bFirstInteractiveElement</code> is <code>true</code>, and there are interactive elements
+inside the row, sets the focus on the first interactive element. Otherwise sets the focus on the first
+data cell, if the type is <code>GridTableType</code>, and on the entire row, if the type is <code>ResponsiveTableType</code>.
+If the given index is not visible, the table scrolls to it automatically. In this case the same rules
+apply as in #scrollToIndex.</p>
+<h4>Parameters</h4>
+<h5>iIndex</h5>
+<p><code>number</code></p>
+<p>The index of the row that is to be focused</p>
+<h5>bFirstInteractiveElement?</h5>
+<p><code>boolean</code></p>
+<p>Indicates whether to set the focus on the first interactive element inside the row</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>A <code>Promise</code> that resolves after the focus has been set</p>
+<h4>Since</h4>
+<p>1.86</p>
+<hr>
+<h3>getActions()</h3>
+<blockquote>
+<p><strong>getActions</strong>(): <code>Control1</code>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getActions actions.</p>
+<p>Additional/external actions available for the table. <strong>Note:</strong> This aggregation is managed by the control,
+can only be populated during the definition in the XML view, and is not bindable. Any changes of the
+initial aggregation content might result in undesired effects. Changes of the aggregation have to be
+made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
+<h4>Returns</h4>
+<p><code>Control1</code>[]</p>
+<hr>
+<h3>getAutoBindOnInit()</h3>
+<blockquote>
+<p><strong>getAutoBindOnInit</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getAutoBindOnInit autoBindOnInit.</p>
+<p>Determines whether to bind the table automatically after the initial creation or re-creation of the table.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>autoBindOnInit</code></p>
+<hr>
+<h3>getBusyIndicatorDelay()</h3>
+<blockquote>
+<p><strong>getBusyIndicatorDelay</strong>(): <code>number</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getBusyIndicatorDelay busyIndicatorDelay.</p>
+<p>The delay in milliseconds after which the busy indicator is shown.</p>
+<p>Default value is <code>100</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>busyIndicatorDelay</code></p>
+<hr>
+<h3>getCellSelector()</h3>
+<blockquote>
+<p><strong>getCellSelector</strong>(): <a href="../../../../../../sap.m/sap/m/plugins/CellSelector/classes/CellSelector.html"><code>CellSelector</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getCellSelector cellSelector.</p>
+<p>Defines an aggregation for the <code>CellSelector</code> plugin that provides cell selection capabilities to the
+table.</p>
+<p><strong>Note:</strong> The <code>CellSelector</code> is currently only available in combination with the <code>GridTableType</code>. Please
+refer to sap.m.plugins.CellSelector see the addiditional restrictions.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.m/sap/m/plugins/CellSelector/classes/CellSelector.html"><code>CellSelector</code></a></p>
+<h4>Since</h4>
+<p>1.119</p>
+<hr>
+<h3>getColumns()</h3>
+<blockquote>
+<p><strong>getColumns</strong>(): <a href="../../table/Column/classes/Column.html"><code>Column</code></a>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getColumns columns.</p>
+<p>Columns of the table. <strong>Note:</strong> This aggregation is managed by the control, can only be populated during
+the definition in the XML view, and is not bindable. Any changes of the initial aggregation content might
+result in undesired effects. Changes of the aggregation have to be made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
+<h4>Returns</h4>
+<p><a href="../../table/Column/classes/Column.html"><code>Column</code></a>[]</p>
+<hr>
+<h3>getContextMenu()</h3>
+<blockquote>
+<p><strong>getContextMenu</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getContextMenu contextMenu.</p>
+<p>Defines the context menu for the table rows.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
+<h4>Since</h4>
+<p>1.118</p>
+<hr>
+<h3>getCopyProvider()</h3>
+<blockquote>
+<p><strong>getCopyProvider</strong>(): <a href="../../../../../../sap.m/sap/m/plugins/CopyProvider/classes/CopyProvider.html"><code>CopyProvider</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getCopyProvider copyProvider.</p>
+<p>Defines an aggregation for the <code>CopyProvider</code> plugin that provides copy to clipboard capabilities for
+the selected rows of the table and creates a Copy button for the toolbar of the table. To disable the
+copy function of the table, including the Copy button in the toolbar, the <code>enabled</code> property of the <code>CopyProvider</code>
+must be set to <code>false</code>. To hide the Copy button from the toolbar, the <code>visible</code> property of the <code>CopyProvider</code>
+must be set to <code>false</code>.</p>
+<p><strong>Note:</strong> The sap.m.plugins.CopyProvider#extractData extractData property of the <code>CopyProvider</code>
+must not be managed by the application. <strong>Note:</strong> The <code>CopyProvider</code> requires a secure context to access
+the clipboard API. If the context is not secure, the plugin will not be added, and the copy button will
+not be generated.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.m/sap/m/plugins/CopyProvider/classes/CopyProvider.html"><code>CopyProvider</code></a></p>
+<h4>Since</h4>
+<p>1.114</p>
+<hr>
+<h3>getCreationRow()</h3>
+<blockquote>
+<p><strong>getCreationRow</strong>(): <code>any</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getCreationRow creationRow.</p>
+<p>This row can be used for user input to create new data if sap.ui.mdc.enums.TableType TableType
+is &quot;<code>Table</code>&quot;. <strong>Note:</strong> Once the binding supports creating transient records, this aggregation will be
+removed.</p>
+<ul>
+<li>Do not use</li>
+</ul>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<hr>
+<h3>getDataStateIndicator()</h3>
+<blockquote>
+<p><strong>getDataStateIndicator</strong>(): <a href="../../../../../../sap.m/sap/m/plugins/DataStateIndicator/classes/DataStateIndicator.html"><code>DataStateIndicator</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getDataStateIndicator dataStateIndicator.</p>
+<p><code>DataStateIndicator</code> plugin that can be used to show binding-related messages.</p>
+<p><strong>Note:</strong> The message filtering is not yet supported for this control. Therefore the sap.m.plugins.DataStateIndicator#getEnableFiltering enableFiltering
+property of the <code>DataStateIndicator</code> plugin must not be set to <code>true</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.m/sap/m/plugins/DataStateIndicator/classes/DataStateIndicator.html"><code>DataStateIndicator</code></a></p>
+<h4>Since</h4>
+<p>1.89</p>
+<hr>
+<h3>getDelegate()</h3>
+<blockquote>
+<p><strong>getDelegate</strong>(): <code>object</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getDelegate delegate.</p>
+<p>Path to <code>TableDelegate</code> module that provides the required APIs to create table content.
+ <strong>Note:</strong> Ensure that the related file can be requested (any required library has to be loaded before
+that).
+ Do not bind or modify the module. Once the required module is associated, this property might not be
+needed any longer.</p>
+<p>Default value is <code>...see text or source</code>.</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>delegate</code></p>
+<hr>
+<h3>getEnableAutoColumnWidth()</h3>
+<blockquote>
+<p><strong>getEnableAutoColumnWidth</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getEnableAutoColumnWidth enableAutoColumnWidth.</p>
+<p>Enables automatic column width calculation based on metadata information if set to <code>true</code>. The column
+width calculation takes the type, column label, referenced properties, and many other metadata parameters
+into account. Providing a more precise <code>maxLength</code> value for the <code>String</code> type or <code>precision</code> value for
+numeric types can help this algorithm to produce better results. The calculated column widths can have
+a minimum of 3rem and a maximum of 20rem.</p>
+<p><strong>Note:</strong> To customize the automatic column width calculation, the <code>visualSettings.widthSettings</code> key
+of the <code>PropertyInfo</code> can be used. To avoid the heuristic column width calculation for a particular column,
+the <code>visualSettings.widthSettings</code> key of the <code>PropertyInfo</code> must be set to <code>null</code>. This feature has
+no effect if the <code>width</code> property of the column is bound or its value is set.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableAutoColumnWidth</code></p>
+<h4>Since</h4>
+<p>1.95</p>
+<hr>
+<h3>getEnableColumnResize()</h3>
+<blockquote>
+<p><strong>getEnableColumnResize</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getEnableColumnResize enableColumnResize.</p>
+<p>Determines whether column resizing is enabled.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableColumnResize</code></p>
+<h4>Since</h4>
+<p>1.90</p>
+<hr>
+<h3>getEnableExport()</h3>
+<blockquote>
+<p><strong>getEnableExport</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getEnableExport enableExport.</p>
+<p>Determines whether the table data export is enabled. To use the export functionality, the sap.ui.export
+library is required.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableExport</code></p>
+<h4>Since</h4>
+<p>1.75</p>
+<hr>
+<h3>getEnablePaste()</h3>
+<blockquote>
+<p><strong>getEnablePaste</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getEnablePaste enablePaste.</p>
+<p>Determines whether the Paste button is enabled.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enablePaste</code></p>
+<h4>Since</h4>
+<p>1.96</p>
+<hr>
+<h3>getFilter()</h3>
+<blockquote>
+<p><strong>getFilter</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>ID of the element which is the current target of the association #getFilter filter, or <code>null</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<hr>
+<h3>getHeader()</h3>
+<blockquote>
+<p><strong>getHeader</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeader header.</p>
+<p>Header text that is shown in the table.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>header</code></p>
+<hr>
+<h3>getHeaderLevel()</h3>
+<blockquote>
+<p><strong>getHeaderLevel</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeaderLevel headerLevel.</p>
+<p>Semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
+<p>Default value is <code>Auto</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+<p>Value of property <code>headerLevel</code></p>
+<h4>Since</h4>
+<p>1.84</p>
+<hr>
+<h3>getHeaderStyle()</h3>
+<blockquote>
+<p><strong>getHeaderStyle</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeaderStyle headerStyle.</p>
+<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
+<h4>Returns</h4>
+<p><code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+<p>Value of property <code>headerStyle</code></p>
+<h4>Since</h4>
+<p>1.116</p>
+<ul>
+<li>Internal use only</li>
+</ul>
+<hr>
+<h3>getHeaderVisible()</h3>
+<blockquote>
+<p><strong>getHeaderVisible</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeaderVisible headerVisible.</p>
+<p>Determines whether the header text is shown in the table. Regardless of its value, the given header text
+is used to label the table correctly for accessibility purposes.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>headerVisible</code></p>
+<h4>Since</h4>
+<p>1.63</p>
+<hr>
+<h3><del>getHeight()</del></h3>
+<blockquote>
+<p><strong>getHeight</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeight height.</p>
+<p>This property has no effect and will be removed soon.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>height</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.115) - the concept has been discarded.</p>
+<hr>
+<h3>getMultiSelectMode()</h3>
+<blockquote>
+<p><strong>getMultiSelectMode</strong>(): <code>any</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getMultiSelectMode multiSelectMode.</p>
+<p>Defines the multi-selection mode for the control. If this property is set to the <code>Default</code> value, the
+<code>ResponsiveTable</code> type control renders the Select All checkbox in the column header, otherwise the Deselect
+All icon is rendered.</p>
+<p>This property is used with the <code>selectionMode=&quot;Multi&quot;</code>.</p>
+<p><strong>Note:</strong> This property has currently no effect for table types other than <code>ResponsiveTable</code> type. This
+is subject to change in future.</p>
+<p>Default value is <code>Default</code>.</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Value of property <code>multiSelectMode</code></p>
+<h4>Since</h4>
+<p>1.93</p>
+<hr>
+<h3>getNoData()</h3>
+<blockquote>
+<p><strong>getNoData</strong>(): <code>any</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getNoData noData.</p>
+<p>Defines the custom visualization if there is no data to show in the table.</p>
+<p><strong>Note:</strong> If sap.m.IllustratedMessage control is set for the <code>noData</code> aggregation and its sap.m.IllustratedMessage#getTitle title
+property is not set then the table automatically offers a no data text with fitting sap.m.IllustratedMessage.IllustratedMessageType illustration.</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<h4>Since</h4>
+<p>1.106</p>
+<hr>
+<h3>getP13nMode()</h3>
+<blockquote>
+<p><strong>getP13nMode</strong>(): (<code>&quot;Group&quot;</code> | <code>&quot;Column&quot;</code> | <code>&quot;Aggregate&quot;</code> | <code>&quot;Filter&quot;</code> | <code>&quot;Sort&quot;</code> | <a href="../../enums/TableP13nMode/enumerations/TableP13nMode.html"><code>TableP13nMode</code></a>)[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getP13nMode p13nMode.</p>
+<p>Personalization options for the table.
+ <strong>Note:</strong> The order of the options does not influence the position on the UI.</p>
+<p>Default value is <code>[]</code>.</p>
+<h4>Returns</h4>
+<p>(<code>&quot;Group&quot;</code> | <code>&quot;Column&quot;</code> | <code>&quot;Aggregate&quot;</code> | <code>&quot;Filter&quot;</code> | <code>&quot;Sort&quot;</code> | <a href="../../enums/TableP13nMode/enumerations/TableP13nMode.html"><code>TableP13nMode</code></a>)[]</p>
+<p>Value of property <code>p13nMode</code></p>
+<h4>Since</h4>
+<p>1.62</p>
+<hr>
+<h3>getQuickFilter()</h3>
+<blockquote>
+<p><strong>getQuickFilter</strong>(): <code>Control1</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getQuickFilter quickFilter.</p>
+<p>Additional <code>Filter</code> for the table.</p>
+<h4>Returns</h4>
+<p><code>Control1</code></p>
+<hr>
+<h3>getRowSettings()</h3>
+<blockquote>
+<p><strong>getRowSettings</strong>(): <a href="../../table/RowSettings/classes/RowSettings.html"><code>RowSettings</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getRowSettings rowSettings.</p>
+<p>Settings for the table rows.</p>
+<p><strong>Note:</strong> Each time the properties of the settings are changed, they have to be applied again via <code>setRowSettings</code>
+for the changes to take effect.</p>
+<h4>Returns</h4>
+<p><a href="../../table/RowSettings/classes/RowSettings.html"><code>RowSettings</code></a></p>
+<hr>
+<h3>getSelectedContexts()</h3>
+<blockquote>
+<p><strong>getSelectedContexts</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets contexts that have been selected by the user.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a>[]</p>
+<p>The selected contexts</p>
+<hr>
+<h3>getSelectionMode()</h3>
+<blockquote>
+<p><strong>getSelectionMode</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Single&quot;</code> | <code>&quot;Multi&quot;</code> | <a href="../../enums/TableSelectionMode/enumerations/TableSelectionMode.html"><code>TableSelectionMode</code></a> | <code>&quot;SingleMaster&quot;</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getSelectionMode selectionMode.</p>
+<p>Selection mode of the table. Specifies whether single or multiple rows can be selected and how the selection
+can be extended. It may also influence the visual appearance.</p>
+<p>With the sap.ui.mdc.table.GridTableType GridTableType and server-side models, range selections,
+including Select All, only work properly if the count is known. Make sure the model/binding is configured
+to request the count from the service.</p>
+<p>Default value is <code>None</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <code>&quot;Single&quot;</code> | <code>&quot;Multi&quot;</code> | <a href="../../enums/TableSelectionMode/enumerations/TableSelectionMode.html"><code>TableSelectionMode</code></a> | <code>&quot;SingleMaster&quot;</code></p>
+<p>Value of property <code>selectionMode</code></p>
+<hr>
+<h3>getShowPasteButton()</h3>
+<blockquote>
+<p><strong>getShowPasteButton</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getShowPasteButton showPasteButton.</p>
+<p>Determines whether the Paste button is visible.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showPasteButton</code></p>
+<h4>Since</h4>
+<p>1.91</p>
+<hr>
+<h3>getShowRowCount()</h3>
+<blockquote>
+<p><strong>getShowRowCount</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getShowRowCount showRowCount.</p>
+<p>Determines whether the number of rows is shown along with the header text. If set to <code>false</code>, the number
+of rows is not shown on the user interface.
+ <strong>Note:</strong>
+ For better performance dedicated OData requests should not be sent. The count mode must be configured
+either in the model or in the binding of the table.
+ This property can only be used if the back-end service supports row count.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showRowCount</code></p>
+<hr>
+<h3>getThreshold()</h3>
+<blockquote>
+<p><strong>getThreshold</strong>(): <code>number</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getThreshold threshold.</p>
+<p>Number of records to be requested from the model. If the <code>type</code> property is set to <code>ResponsiveTable</code>,
+then it refers to the sap.m.ListBase#getGrowingThreshold growingThreshold property of <code>ResponsiveTable</code>.
+If the <code>type</code> property is set to <code>Table</code>, then it refers to the sap.ui.table.Table#getThreshold threshold
+property of <code>GridTable</code>.
+ <strong>Note:</strong> This property only takes effect if it is set to a positive integer value. Otherwise the table
+uses the default value of the corresponding table types.</p>
+<p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>threshold</code></p>
+<h4>Since</h4>
+<p>1.63</p>
+<hr>
+<h3>getType()</h3>
+<blockquote>
+<p><strong>getType</strong>(): <code>&quot;Table&quot;</code> | <code>&quot;ResponsiveTable&quot;</code> | <a href="../../table/TableTypeBase/classes/TableTypeBase.html"><code>TableTypeBase</code></a> | <a href="../../enums/TableType/enumerations/TableType.html"><code>TableType</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getType type.</p>
+<p>Type of the table.</p>
+<h4>Returns</h4>
+<p><code>&quot;Table&quot;</code> | <code>&quot;ResponsiveTable&quot;</code> | <a href="../../table/TableTypeBase/classes/TableTypeBase.html"><code>TableTypeBase</code></a> | <a href="../../enums/TableType/enumerations/TableType.html"><code>TableType</code></a></p>
+<hr>
+<h3>getUseColumnLabelsAsTooltips()</h3>
+<blockquote>
+<p><strong>getUseColumnLabelsAsTooltips</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getUseColumnLabelsAsTooltips useColumnLabelsAsTooltips.</p>
+<p>If no tooltip has been provided for a column, the column header text will automatically be applied as
+a tooltip for the column.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>useColumnLabelsAsTooltips</code></p>
+<h4>Since</h4>
+<p>1.115</p>
+<hr>
+<h3>getVariant()</h3>
+<blockquote>
+<p><strong>getVariant</strong>(): <a href="../../../../../../sap.ui.fl/sap/ui/fl/variants/VariantManagement/classes/VariantManagement.html"><code>VariantManagement</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getVariant variant.</p>
+<p>VariantManagement control for the table.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.fl/sap/ui/fl/variants/VariantManagement/classes/VariantManagement.html"><code>VariantManagement</code></a></p>
+<hr>
+<h3>getWidth()</h3>
+<blockquote>
+<p><strong>getWidth</strong>(): <code>string</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getWidth width.</p>
+<p>Width of the table.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>width</code></p>
+<hr>
+<h3>indexOfAction()</h3>
+<blockquote>
+<p><strong>indexOfAction</strong>(<code>oAction</code>): <code>number</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getActions actions. and returns
+its index if found or -1 otherwise.</p>
+<h4>Parameters</h4>
+<h5>oAction</h5>
+<p><code>Control1</code></p>
+<p>The action whose index is looked for</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
+<hr>
+<h3>indexOfColumn()</h3>
+<blockquote>
+<p><strong>indexOfColumn</strong>(<code>oColumn</code>): <code>number</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Checks for the provided <code>sap.ui.mdc.table.Column</code> in the aggregation #getColumns columns. and
+returns its index if found or -1 otherwise.</p>
+<h4>Parameters</h4>
+<h5>oColumn</h5>
+<p><a href="../../table/Column/classes/Column.html"><code>Column</code></a></p>
+<p>The column whose index is looked for</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
+<hr>
+<h3>initialized()</h3>
+<blockquote>
+<p><strong>initialized</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Returns a <code>Promise</code> that resolves once the table has been initialized after the creation and changing
+of its type.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>A <code>Promise</code> that resolves after the table has been initialized</p>
+<hr>
+<h3>isTableBound()</h3>
+<blockquote>
+<p><strong>isTableBound</strong>(): <code>boolean</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Checks whether the table is bound.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Whether the table is bound</p>
+<hr>
+<h3>rebind()</h3>
+<blockquote>
+<p><strong>rebind</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Executes a rebind considering the provided external and inbuilt filtering.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>A <code>Promise</code> that resolves after rebind is executed, and rejects if rebind cannot be executed,
+for example because there are invalid filters.</p>
+<h4>Since</h4>
+<p>1.98</p>
+<hr>
+<h3>scrollToIndex()</h3>
+<blockquote>
+<p><strong>scrollToIndex</strong>(<code>iIndex</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Scrolls the table to the row with the given index. Depending on the table type, this might cause additional
+requests. If the given index is -1, it will scroll to the end of the table based on the length of the
+underlying binding. If the length is not final, it will only scroll to the end of the current binding
+and might trigger a request for additional entries. This also applies in case of a responsive table with
+growing enabled.</p>
+<h4>Parameters</h4>
+<h5>iIndex</h5>
+<p><code>number</code></p>
+<p>The index of the row that should be scrolled into the visible area</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>A <code>Promise</code> that resolves after the table scrolls to the row with the given index</p>
+<h4>Since</h4>
+<p>1.76</p>
+<hr>
+<h3>setAutoBindOnInit()</h3>
+<blockquote>
+<p><strong>setAutoBindOnInit</strong>(<code>bAutoBindOnInit?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getAutoBindOnInit autoBindOnInit.</p>
+<p>Determines whether to bind the table automatically after the initial creation or re-creation of the table.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bAutoBindOnInit?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>autoBindOnInit</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setBusyIndicatorDelay()</h3>
+<blockquote>
+<p><strong>setBusyIndicatorDelay</strong>(<code>iBusyIndicatorDelay?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getBusyIndicatorDelay busyIndicatorDelay.</p>
+<p>The delay in milliseconds after which the busy indicator is shown.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>100</code>.</p>
+<h4>Parameters</h4>
+<h5>iBusyIndicatorDelay?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>busyIndicatorDelay</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setCellSelector()</h3>
+<blockquote>
+<p><strong>setCellSelector</strong>(<code>oCellSelector</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getCellSelector cellSelector.</p>
+<h4>Parameters</h4>
+<h5>oCellSelector</h5>
+<p><a href="../../../../../../sap.m/sap/m/plugins/CellSelector/classes/CellSelector.html"><code>CellSelector</code></a></p>
+<p>The cellSelector to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.119</p>
+<hr>
+<h3>setContextMenu()</h3>
+<blockquote>
+<p><strong>setContextMenu</strong>(<code>oContextMenu</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getContextMenu contextMenu.</p>
+<h4>Parameters</h4>
+<h5>oContextMenu</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
+<p>The contextMenu to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.118</p>
+<hr>
+<h3>setCopyProvider()</h3>
+<blockquote>
+<p><strong>setCopyProvider</strong>(<code>oCopyProvider</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getCopyProvider copyProvider.</p>
+<h4>Parameters</h4>
+<h5>oCopyProvider</h5>
+<p><a href="../../../../../../sap.m/sap/m/plugins/CopyProvider/classes/CopyProvider.html"><code>CopyProvider</code></a></p>
+<p>The copyProvider to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.114</p>
+<hr>
+<h3>setCreationRow()</h3>
+<blockquote>
+<p><strong>setCreationRow</strong>(<code>oCreationRow</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getCreationRow creationRow.</p>
+<ul>
+<li>Do not use</li>
+</ul>
+<h4>Parameters</h4>
+<h5>oCreationRow</h5>
+<p><code>any</code></p>
+<p>The creationRow to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setDataStateIndicator()</h3>
+<blockquote>
+<p><strong>setDataStateIndicator</strong>(<code>oDataStateIndicator</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getDataStateIndicator dataStateIndicator.</p>
+<h4>Parameters</h4>
+<h5>oDataStateIndicator</h5>
+<p><a href="../../../../../../sap.m/sap/m/plugins/DataStateIndicator/classes/DataStateIndicator.html"><code>DataStateIndicator</code></a></p>
+<p>The dataStateIndicator to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.89</p>
+<hr>
+<h3>setDelegate()</h3>
+<blockquote>
+<p><strong>setDelegate</strong>(<code>oDelegate?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getDelegate delegate.</p>
+<p>Path to <code>TableDelegate</code> module that provides the required APIs to create table content.
+ <strong>Note:</strong> Ensure that the related file can be requested (any required library has to be loaded before
+that).
+ Do not bind or modify the module. Once the required module is associated, this property might not be
+needed any longer.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>...see text or source</code>.</p>
+<h4>Parameters</h4>
+<h5>oDelegate?</h5>
+<p><code>object</code></p>
+<p>New value for property <code>delegate</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setEnableAutoColumnWidth()</h3>
+<blockquote>
+<p><strong>setEnableAutoColumnWidth</strong>(<code>bEnableAutoColumnWidth?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getEnableAutoColumnWidth enableAutoColumnWidth.</p>
+<p>Enables automatic column width calculation based on metadata information if set to <code>true</code>. The column
+width calculation takes the type, column label, referenced properties, and many other metadata parameters
+into account. Providing a more precise <code>maxLength</code> value for the <code>String</code> type or <code>precision</code> value for
+numeric types can help this algorithm to produce better results. The calculated column widths can have
+a minimum of 3rem and a maximum of 20rem.</p>
+<p><strong>Note:</strong> To customize the automatic column width calculation, the <code>visualSettings.widthSettings</code> key
+of the <code>PropertyInfo</code> can be used. To avoid the heuristic column width calculation for a particular column,
+the <code>visualSettings.widthSettings</code> key of the <code>PropertyInfo</code> must be set to <code>null</code>. This feature has
+no effect if the <code>width</code> property of the column is bound or its value is set.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableAutoColumnWidth?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableAutoColumnWidth</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.95</p>
+<hr>
+<h3>setEnableColumnResize()</h3>
+<blockquote>
+<p><strong>setEnableColumnResize</strong>(<code>bEnableColumnResize?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getEnableColumnResize enableColumnResize.</p>
+<p>Determines whether column resizing is enabled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableColumnResize?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableColumnResize</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.90</p>
+<hr>
+<h3>setEnableExport()</h3>
+<blockquote>
+<p><strong>setEnableExport</strong>(<code>bEnableExport?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getEnableExport enableExport.</p>
+<p>Determines whether the table data export is enabled. To use the export functionality, the sap.ui.export
+library is required.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableExport?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableExport</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.75</p>
+<hr>
+<h3>setEnablePaste()</h3>
+<blockquote>
+<p><strong>setEnablePaste</strong>(<code>bEnablePaste?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getEnablePaste enablePaste.</p>
+<p>Determines whether the Paste button is enabled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnablePaste?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enablePaste</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.96</p>
+<hr>
+<h3>setFilter()</h3>
+<blockquote>
+<p><strong>setFilter</strong>(<code>oFilter</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the associated #getFilter filter.</p>
+<h4>Parameters</h4>
+<h5>oFilter</h5>
+<p><code>string</code> | <a href="../../library/interfaces/IFilter.html"><code>IFilter</code></a></p>
+<p>ID of an element which becomes the new target of this filter association; alternatively, an element instance
+may be given</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHeader()</h3>
+<blockquote>
+<p><strong>setHeader</strong>(<code>sHeader?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeader header.</p>
+<p>Header text that is shown in the table.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sHeader?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>header</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHeaderLevel()</h3>
+<blockquote>
+<p><strong>setHeaderLevel</strong>(<code>sHeaderLevel?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeaderLevel headerLevel.</p>
+<p>Semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
+<h4>Parameters</h4>
+<h5>sHeaderLevel?</h5>
+<p><code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+<p>New value for property <code>headerLevel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.84</p>
+<hr>
+<h3>setHeaderStyle()</h3>
+<blockquote>
+<p><strong>setHeaderStyle</strong>(<code>sHeaderStyle</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeaderStyle headerStyle.</p>
+<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sHeaderStyle</h5>
+<p><code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+<p>New value for property <code>headerStyle</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.116</p>
+<ul>
+<li>Internal use only</li>
+</ul>
+<hr>
+<h3>setHeaderVisible()</h3>
+<blockquote>
+<p><strong>setHeaderVisible</strong>(<code>bHeaderVisible?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeaderVisible headerVisible.</p>
+<p>Determines whether the header text is shown in the table. Regardless of its value, the given header text
+is used to label the table correctly for accessibility purposes.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHeaderVisible?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>headerVisible</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.63</p>
+<hr>
+<h3><del>setHeight()</del></h3>
+<blockquote>
+<p><strong>setHeight</strong>(<code>sHeight?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeight height.</p>
+<p>This property has no effect and will be removed soon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sHeight?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>height</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.115) - the concept has been discarded.</p>
+<hr>
+<h3>setMultiSelectMode()</h3>
+<blockquote>
+<p><strong>setMultiSelectMode</strong>(<code>sMultiSelectMode?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getMultiSelectMode multiSelectMode.</p>
+<p>Defines the multi-selection mode for the control. If this property is set to the <code>Default</code> value, the
+<code>ResponsiveTable</code> type control renders the Select All checkbox in the column header, otherwise the Deselect
+All icon is rendered.</p>
+<p>This property is used with the <code>selectionMode=&quot;Multi&quot;</code>.</p>
+<p><strong>Note:</strong> This property has currently no effect for table types other than <code>ResponsiveTable</code> type. This
+is subject to change in future.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Default</code>.</p>
+<h4>Parameters</h4>
+<h5>sMultiSelectMode?</h5>
+<p><code>any</code></p>
+<p>New value for property <code>multiSelectMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.93</p>
+<hr>
+<h3>setNoData()</h3>
+<blockquote>
+<p><strong>setNoData</strong>(<code>vNoData</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getNoData noData.</p>
+<h4>Parameters</h4>
+<h5>vNoData</h5>
+<p><code>any</code></p>
+<p>The noData to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.106</p>
+<hr>
+<h3>setP13nMode()</h3>
+<blockquote>
+<p><strong>setP13nMode</strong>(<code>sP13nMode?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getP13nMode p13nMode.</p>
+<p>Personalization options for the table.
+ <strong>Note:</strong> The order of the options does not influence the position on the UI.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
+<h4>Parameters</h4>
+<h5>sP13nMode?</h5>
+<p>(<code>&quot;Group&quot;</code> | <code>&quot;Column&quot;</code> | <code>&quot;Aggregate&quot;</code> | <code>&quot;Filter&quot;</code> | <code>&quot;Sort&quot;</code> | <a href="../../enums/TableP13nMode/enumerations/TableP13nMode.html"><code>TableP13nMode</code></a>)[]</p>
+<p>New value for property <code>p13nMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.62</p>
+<hr>
+<h3>setQuickFilter()</h3>
+<blockquote>
+<p><strong>setQuickFilter</strong>(<code>oQuickFilter</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getQuickFilter quickFilter.</p>
+<h4>Parameters</h4>
+<h5>oQuickFilter</h5>
+<p><code>Control1</code></p>
+<p>The quickFilter to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setRowSettings()</h3>
+<blockquote>
+<p><strong>setRowSettings</strong>(<code>oRowSettings</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getRowSettings rowSettings.</p>
+<h4>Parameters</h4>
+<h5>oRowSettings</h5>
+<p><a href="../../table/RowSettings/classes/RowSettings.html"><code>RowSettings</code></a></p>
+<p>The rowSettings to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setSelectionMode()</h3>
+<blockquote>
+<p><strong>setSelectionMode</strong>(<code>sSelectionMode?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getSelectionMode selectionMode.</p>
+<p>Selection mode of the table. Specifies whether single or multiple rows can be selected and how the selection
+can be extended. It may also influence the visual appearance.</p>
+<p>With the sap.ui.mdc.table.GridTableType GridTableType and server-side models, range selections,
+including Select All, only work properly if the count is known. Make sure the model/binding is configured
+to request the count from the service.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
+<h4>Parameters</h4>
+<h5>sSelectionMode?</h5>
+<p><code>&quot;None&quot;</code> | <code>&quot;Single&quot;</code> | <code>&quot;Multi&quot;</code> | <a href="../../enums/TableSelectionMode/enumerations/TableSelectionMode.html"><code>TableSelectionMode</code></a> | <code>&quot;SingleMaster&quot;</code></p>
+<p>New value for property <code>selectionMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setShowPasteButton()</h3>
+<blockquote>
+<p><strong>setShowPasteButton</strong>(<code>bShowPasteButton?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getShowPasteButton showPasteButton.</p>
+<p>Determines whether the Paste button is visible.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowPasteButton?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showPasteButton</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.91</p>
+<hr>
+<h3>setShowRowCount()</h3>
+<blockquote>
+<p><strong>setShowRowCount</strong>(<code>bShowRowCount?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getShowRowCount showRowCount.</p>
+<p>Determines whether the number of rows is shown along with the header text. If set to <code>false</code>, the number
+of rows is not shown on the user interface.
+ <strong>Note:</strong>
+ For better performance dedicated OData requests should not be sent. The count mode must be configured
+either in the model or in the binding of the table.
+ This property can only be used if the back-end service supports row count.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowRowCount?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showRowCount</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setThreshold()</h3>
+<blockquote>
+<p><strong>setThreshold</strong>(<code>iThreshold?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getThreshold threshold.</p>
+<p>Number of records to be requested from the model. If the <code>type</code> property is set to <code>ResponsiveTable</code>,
+then it refers to the sap.m.ListBase#getGrowingThreshold growingThreshold property of <code>ResponsiveTable</code>.
+If the <code>type</code> property is set to <code>Table</code>, then it refers to the sap.ui.table.Table#getThreshold threshold
+property of <code>GridTable</code>.
+ <strong>Note:</strong> This property only takes effect if it is set to a positive integer value. Otherwise the table
+uses the default value of the corresponding table types.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>-1</code>.</p>
+<h4>Parameters</h4>
+<h5>iThreshold?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>threshold</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.63</p>
+<hr>
+<h3>setType()</h3>
+<blockquote>
+<p><strong>setType</strong>(<code>vType</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getType type.</p>
+<h4>Parameters</h4>
+<h5>vType</h5>
+<p><code>&quot;Table&quot;</code> | <code>&quot;ResponsiveTable&quot;</code> | <a href="../../table/TableTypeBase/classes/TableTypeBase.html"><code>TableTypeBase</code></a> | <a href="../../enums/TableType/enumerations/TableType.html"><code>TableType</code></a></p>
+<p>The type to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setUseColumnLabelsAsTooltips()</h3>
+<blockquote>
+<p><strong>setUseColumnLabelsAsTooltips</strong>(<code>bUseColumnLabelsAsTooltips?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getUseColumnLabelsAsTooltips useColumnLabelsAsTooltips.</p>
+<p>If no tooltip has been provided for a column, the column header text will automatically be applied as
+a tooltip for the column.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bUseColumnLabelsAsTooltips?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>useColumnLabelsAsTooltips</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.115</p>
+<hr>
+<h3>setVariant()</h3>
+<blockquote>
+<p><strong>setVariant</strong>(<code>oVariant</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getVariant variant.</p>
+<h4>Parameters</h4>
+<h5>oVariant</h5>
+<p><a href="../../../../../../sap.ui.fl/sap/ui/fl/variants/VariantManagement/classes/VariantManagement.html"><code>VariantManagement</code></a></p>
+<p>The variant to set</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setWidth()</h3>
+<blockquote>
+<p><strong>setWidth</strong>(<code>sWidth?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getWidth width.</p>
+<p>Width of the table.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sWidth?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>width</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>extend()</h3>
+<blockquote>
+<p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Creates a new subclass of class sap.ui.mdc.Table with name <code>sClassName</code> and enriches it with the information
+contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.mdc.Control.extend.</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>Name of the class being created</p>
+<h5>oClassInfo?</h5>
+<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Table</code>&gt;</p>
+<p>Object literal with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+used by this class</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Created class / constructor function</p>
+<h4>Overrides</h4>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a>.<a href="../../Control/classes/Control.html#extend"><code>extend</code></a></p>
+<hr>
+<h3>getMetadata()</h3>
+<blockquote>
+<p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Returns a metadata object for class sap.ui.mdc.Table.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
+<p>Metadata object describing this class</p>
+<h4>Overrides</h4>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a>.<a href="../../Control/classes/Control.html#getmetadata"><code>getMetadata</code></a></p>
+
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+</body>
+</html>

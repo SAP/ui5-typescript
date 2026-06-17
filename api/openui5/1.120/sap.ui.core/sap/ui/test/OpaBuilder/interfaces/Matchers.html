@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: Matchers — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: Matchers — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/test/OpaBuilder/interfaces/Matchers.html">
+<meta property="og:title" content="Interface: Matchers — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: Matchers — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/test/OpaBuilder/interfaces/Matchers.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › test › <a href="../../../../../../sap.ui.core/sap/ui/test/OpaBuilder/README.html">OpaBuilder</a> › interfaces</nav>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<hr>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/OpaBuilder</a> / Matchers</p>
+<h1>Interface: Matchers</h1>
+<pre class="sig"><span class="kw">import</span> { Matchers } <span class="kw">from</span> <span class="str">"sap/ui/test/OpaBuilder"</span>;</pre>
+<p>A collection of predefined matchers. See also sap.ui.test.matchers</p>
+<h2>Properties</h2>
+<h3>FALSE</h3>
+<blockquote>
+<p><strong>FALSE</strong>: () =&gt; <code>boolean</code></p>
+</blockquote>
+<p>A matcher function that always returns <code>false</code>.</p>
+<p>`</p>
+<pre><code class="language-javascript">var fnFalsyMatcher = OpaBuilder.Matchers.FALSE;```
+ `
+
+#### Returns
+
+`boolean`
+
+***
+
+### TRUE
+
+&gt; **TRUE**: () =&gt; `boolean`
+
+A matcher function that always returns `true`.
+
+`
+```javascript
+var fnTruthyMatcher = OpaBuilder.Matchers.TRUE;```
+ `
+
+#### Returns
+
+`boolean`
+
+## Methods
+
+### aggregation()
+
+&gt; **aggregation**(`sAggregationName`, `vMatchers?`): (`p1`) =&gt; [`UI5Element`](../../../core/Element/classes/UI5Element.html)[]
+
+Creates a matcher function that returns all aggregation items fulfilling given matcher(s). The result
+will always be an array, even if it is a non-multiple aggregation.
+
+#### Parameters
+
+##### sAggregationName
+
+`string`
+
+the aggregation name
+
+##### vMatchers?
+
+`any`
+
+the matchers to filter aggregation items
+
+#### Returns
+
+matcher function returning all matching aggregation items
+
+(`p1`) =&gt; [`UI5Element`](../../../core/Element/classes/UI5Element.html)[]
+
+***
+
+### aggregationAtIndex()
+
+&gt; **aggregationAtIndex**(`sAggregationName`, `iIndex`): (`p1`) =&gt; [`ManagedObject`](../../../base/ManagedObject/classes/ManagedObject.html)
+
+Creates a matcher function that returns an aggregation element of a control at a given index.
+
+#### Parameters
+
+##### sAggregationName
+
+`string`
+
+the name of the aggregation that is used for matching
+
+##### iIndex
+
+`number`
+
+the index within the aggregation
+
+#### Returns
+
+the matcher function returns the item at a certain index in the aggregation or `undefined` if
+index not in range
+
+(`p1`) =&gt; [`ManagedObject`](../../../base/ManagedObject/classes/ManagedObject.html)
+
+***
+
+### aggregationLength()
+
+&gt; **aggregationLength**(`sAggregationName`, `iLength`): `object`
+
+Creates a sap.ui.test.matchers.AggregationLengthEquals matcher.
+
+#### Parameters
+
+##### sAggregationName
+
+`string`
+
+the name of the aggregation that is used for matching
+
+##### iLength
+
+`number`
+
+the length that aggregation name should have
+
+#### Returns
+
+`object`
+
+a declarative matcher definition for sap.ui.test.matchers.AggregationLengthEquals
+
+##### aggregationLengthEquals
+
+&gt; **aggregationLengthEquals**: `object`
+
+###### aggregationLengthEquals.length
+
+&gt; **length**: `number`
+
+###### aggregationLengthEquals.name
+
+&gt; **name**: `string`
+
+***
+
+### aggregationMatcher()
+
+&gt; **aggregationMatcher**(`sAggregationName`, `vMatchers?`): (`p1`) =&gt; `boolean`
+
+Checks whether at least one aggregation item fulfills given matcher(s).
+
+#### Parameters
+
+##### sAggregationName
+
+`string`
+
+the aggregation name
+
+##### vMatchers?
+
+`any`
+
+the matchers to filter aggregation items
+
+#### Returns
+
+matcher function
+
+(`p1`) =&gt; `boolean`
+
+***
+
+### ancestor()
+
+&gt; **ancestor**(`vAncestor`, `bDirect?`): `object`
+
+Creates a declarative matcher definition for sap.ui.test.matchers.Ancestor.
+
+#### Parameters
+
+##### vAncestor
+
+`string` \| `object`
+
+the ancestor control to check, if undefined, validates every control to true. Can be a control or a control
+ID
+
+##### bDirect?
+
+`boolean`
+
+specifies if the ancestor should be a direct ancestor (parent)
+
+#### Returns
+
+`object`
+
+a declarative matcher definition for sap.ui.test.matchers.Ancestor
+
+##### ancestor
+
+&gt; **ancestor**: [`AncestorDefinition`](../type-aliases/AncestorDefinition.html)[]
+
+***
+
+### bindingPath()
+
+&gt; **bindingPath**(`sModelPropertyPath`, `sPropertyPath`): `object`
+
+Creates a sap.ui.test.matchers.BindingPath matcher.
+
+#### Parameters
+
+##### sModelPropertyPath
+
+`string`
+
+the binding context path (including the model name) that is used for matching
+
+##### sPropertyPath
+
+`string`
+
+the binding property path that is used for matching. If (context) path is also set, propertyPath will
+be assumed to be relative to the binding context path
+
+#### Returns
+
+`object`
+
+a declarative matcher definition for sap.ui.test.matchers.BindingPath
+
+##### bindingPath
+
+&gt; **bindingPath**: `object`
+
+###### bindingPath.modelName
+
+&gt; **modelName**: `string`
+
+###### bindingPath.path
+
+&gt; **path**: `any`
+
+###### bindingPath.propertyPath
+
+&gt; **propertyPath**: `any`
+
+***
+
+### bindingProperties()
+
+#### Call Signature
+
+&gt; **bindingProperties**(`sModelName`, `oProperties`): (`p1`) =&gt; `boolean`
+
+Creates a matcher that checks whether the bound context or model has the given properties.
+
+##### Parameters
+
+###### sModelName
+
+`string`
+
+the name of the model to get the binding context for
+
+###### oProperties
+
+`Record`\&lt;`string`, `any`\&gt;
+
+the property-path map with expected values
+
+##### Returns
+
+the matcher function checks all path in the properties object against the binding context
+
+(`p1`) =&gt; `boolean`
+
+#### Call Signature
+
+&gt; **bindingProperties**(`oProperties`): (`p1`) =&gt; `boolean`
+
+Creates a matcher that checks whether the bound context or model has the given properties.
+
+##### Parameters
+
+###### oProperties
+
+`Record`\&lt;`string`, `any`\&gt;
+
+the property-path map with expected values
+
+##### Returns
+
+the matcher function checks all path in the properties object against the binding context
+
+(`p1`) =&gt; `boolean`
+
+***
+
+### children()
+
+&gt; **children**(`vBuilderOrMatcher?`, `bDirect?`): (`p1`) =&gt; [`UI5Element`](../../../core/Element/classes/UI5Element.html)[]
+
+Creates a matcher function that returns all children fulfilling given matcher(s). The result will always
+be an array, even if only one child was found.
+
+#### Parameters
+
+##### vBuilderOrMatcher?
+
+`any`
+
+the matchers to filter child items
+
+##### bDirect?
+
+`boolean`
+
+specifies if the ancestor should be a direct ancestor (parent)
+
+#### Returns
+
+matcher function returning all matching children
+
+(`p1`) =&gt; [`UI5Element`](../../../core/Element/classes/UI5Element.html)[]
+
+***
+
+### childrenMatcher()
+
+&gt; **childrenMatcher**(`vBuilderOrMatcher?`, `bDirect?`): (`p1`) =&gt; `boolean`
+
+Creates a matcher function that checks whether one children fulfilling given matcher(s).
+
+#### Parameters
+
+##### vBuilderOrMatcher?
+
+`any`
+
+the matchers to filter child items
+
+##### bDirect?
+
+`boolean`
+
+specifies if the ancestor should be a direct ancestor (parent)
+
+#### Returns
+
+matcher function
+
+(`p1`) =&gt; `boolean`
+
+***
+
+### conditional()
+
+&gt; **conditional**(`vConditions`, `vSuccessMatcher`, `vElseMatcher?`): (`p1`) =&gt; `void`
+
+Creates a matcher that checks states for given conditions.
+
+#### Parameters
+
+##### vConditions
+
+`any`
+
+conditions to pre-check
+
+##### vSuccessMatcher
+
+`any`
+
+actual matcher that is executed if conditions are met
+
+##### vElseMatcher?
+
+`any`
+
+actual matcher that is executed if conditions are not met
+
+#### Returns
+
+a matcher function
+
+(`p1`) =&gt; `void`
+
+***
+
+### customData()
+
+&gt; **customData**(`oCustomData?`): (`p1`) =&gt; `boolean`
+
+Creates a matcher that checks whether a control has all given custom data.
+
+#### Parameters
+
+##### oCustomData?
+
+`Record`\&lt;`string`, `any`\&gt;
+
+the map of custom data keys and their values to check against
+
+#### Returns
+
+the matcher function checks for defined custom data
+
+(`p1`) =&gt; `boolean`
+
+***
+
+### descendant()
+
+&gt; **descendant**(`vDescendent`, `bDirect?`): `object`
+
+Creates a declarative matcher definition for sap.ui.test.matchers.Descendant.
+
+#### Parameters
+
+##### vDescendent
+
+`string` \| `object`
+
+the descendant control to check. If undefined, it validates every control to true. Can be a control or
+a control ID
+
+##### bDirect?
+
+`boolean`
+
+specifies if the descendant should be a direct child
+
+#### Returns
+
+`object`
+
+a declarative matcher definition for sap.ui.test.matchers.Descendant
+
+##### descendant
+
+&gt; **descendant**: [`DescendantDefinition`](../type-aliases/DescendantDefinition.html)[]
+
+***
+
+### filter()
+
+&gt; **filter**(`vMatchers?`): (`p1`) =&gt; [`UI5Element`](../../../core/Element/classes/UI5Element.html)[]
+
+Creates a matcher that checks all inputs against given matchers. The input can be an array or a single
+element. The result will always be an array. If the input is a single element, the result will be an
+array containing the given element (or empty if not matching the matchers).
+
+#### Parameters
+
+##### vMatchers?
+
+`any`
+
+the matchers to check all items against
+
+#### Returns
+
+the matcher function returns an array with all matching items
+
+(`p1`) =&gt; [`UI5Element`](../../../core/Element/classes/UI5Element.html)[]
+
+***
+
+### focused()
+
+&gt; **focused**(`bCheckChildren?`): (`p1`) =&gt; `boolean`
+
+Creates a matcher that checks whether a control has the focus.
+
+#### Parameters
+
+##### bCheckChildren?
+
+`boolean`
+
+set true to check additionally for the focus on any child element
+
+#### Returns
+
+a matcher function
+
+(`p1`) =&gt; `boolean`
+
+***
+
+### i18n()
+
+&gt; **i18n**(`sPropertyName`, `sModelTokenPath`, `aParameters?`): `object`
+
+Creates a sap.ui.test.matchers.I18NText matcher.
+
+#### Parameters
+
+##### sPropertyName
+
+`string`
+
+the name of the control property to match the I18N text with
+
+##### sModelTokenPath
+
+`string`
+
+the path to the I18N text. If model is omitted, `i18n` is used as model name.
+
+##### aParameters?
+
+`string`[]
+
+the values to be used instead of the placeholders
+
+#### Returns
+
+`object`
+
+a declarative matcher definition for sap.ui.test.matchers.I18NText
+
+##### i18NText
+
+&gt; **i18NText**: [`I18NTextDefinition`](../type-aliases/I18NTextDefinition.html)
+
+***
+
+### labelFor()
+
+#### Call Signature
+
+&gt; **labelFor**(`sPropertyName`, `bText`, `sModelTokenPathOrText`, `aParameters?`): `object`
+
+Creates a sap.ui.test.matchers.LabelFor matcher.
+
+##### Parameters
+
+###### sPropertyName
+
+`string`
+
+the name of the control property to match the I18N text with
+
+###### bText
+
+`boolean`
+
+define whether check is against plain text
+
+###### sModelTokenPathOrText
+
+`string`
+
+the path to the I18N text containing the model name. If `bText` set true, contains the plain text to
+check against
+
+###### aParameters?
+
+`any`[]
+
+the values to be used instead of the placeholders in case of I18N texts
+
+##### Returns
+
+`object`
+
+a declarative matcher definition for sap.ui.test.matchers.LabelFor
+
+###### labelFor
+
+&gt; **labelFor**: [`LabelForDefinition`](../type-aliases/LabelForDefinition.html)
+
+#### Call Signature
+
+&gt; **labelFor**(`sPropertyName`, `sModelTokenPathOrText`, `aParameters?`): `object`
+
+Creates a sap.ui.test.matchers.LabelFor matcher.
+
+##### Parameters
+
+###### sPropertyName
+
+`string`
+
+the name of the control property to match the I18N text with
+
+###### sModelTokenPathOrText
+
+`string`
+
+the path to the I18N text containing the model name. If `bText` set true, contains the plain text to
+check against
+
+###### aParameters?
+
+`any`[]
+
+the values to be used instead of the placeholders in case of I18N texts
+
+##### Returns
+
+`object`
+
+a declarative matcher definition for sap.ui.test.matchers.LabelFor
+
+###### labelFor
+
+&gt; **labelFor**: [`LabelForDefinition`](../type-aliases/LabelForDefinition.html)
+
+***
+
+### match()
+
+&gt; **match**(`vMatchers?`): (`p1`) =&gt; `boolean`
+
+Creates a matcher that checks a single input against all defined matchers.
+
+#### Parameters
+
+##### vMatchers?
+
+`any`
+
+the matchers to check all items against
+
+#### Returns
+
+the matcher function returns the result of the matcher chain
+
+(`p1`) =&gt; `boolean`
+
+***
+
+### not()
+
+&gt; **not**(`vMatchers?`): (`p1`) =&gt; `boolean`
+
+Creates a matcher function which is negating the result of provided matchers. The matcher function returns
+a boolean value but never a control.
+
+Example usage for only matching controls without a certain text:
+```javascript
+new OpaBuilder().hasType(&quot;sap.m.Text&quot;).has(
+             OpaBuilder.Matchers.not(
+                 OpaBuilder.Matchers.properties({ text: &quot;Ignore controls with this text&quot;})
+            )
+        );
+    ```
+
+#### Parameters
+
+##### vMatchers?
+
+`any`
+
+the matchers that will actually be executed
+
+#### Returns
+
+the matcher function returns the negated result of the matcher chain
+
+(`p1`) =&gt; `boolean`
+
+***
+
+### properties()
+
+&gt; **properties**(`oProperties`): `object`
+
+Creates a sap.ui.test.matchers.Properties matcher.
+
+#### Parameters
+
+##### oProperties
+
+`Record`\&lt;`string`, `any`\&gt;
+
+the object with the properties to be checked
+
+#### Returns
+
+`object`
+
+a declarative matcher definition for sap.ui.test.matchers.Properties
+
+##### properties
+
+&gt; **properties**: `Record`\&lt;`string`, `any`\&gt;
+
+***
+
+### resourceBundle()
+
+&gt; **resourceBundle**(`sPropertyName`, `sLibrary`, `sToken`, `aParameters?`): (`p1`) =&gt; `void`
+
+Creates a matcher that validates the given property against a token text of a library message bundle.
+
+#### Parameters
+
+##### sPropertyName
+
+`string`
+
+the name of the control property to match the I18N text with
+
+##### sLibrary
+
+`string`
+
+the name of the library to retrieve the resource bundle from
+
+##### sToken
+
+`string`
+
+the text token to validate against
+
+##### aParameters?
+
+`string`[]
+
+the values to be used instead of the placeholders
+
+#### Returns
+
+a matcher function
+
+(`p1`) =&gt; `void`
+
+***
+
+### some()
+
+&gt; **some**(`aMatchers?`): (`p1`) =&gt; `any`
+
+Creates a matcher that checks for at least one successful match from a group of matchers.
+
+#### Parameters
+
+##### aMatchers?
+
+`any`
+
+aMatchers list of matchers were one must be met
+
+#### Returns
+
+a matcher function
+
+(`p1`) =&gt; `any`
+</code></pre>
+
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+</body>
+</html>

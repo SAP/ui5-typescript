@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Class: PlanningCalendar — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: PlanningCalendar — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/PlanningCalendar/classes/PlanningCalendar.html">
+<meta property="og:title" content="Class: PlanningCalendar — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: PlanningCalendar — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/PlanningCalendar/classes/PlanningCalendar.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/PlanningCalendar/README.html">PlanningCalendar</a> › classes</nav>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<hr>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendar</a> / PlanningCalendar</p>
+<h1>Class: PlanningCalendar</h1>
+<pre class="sig"><span class="kw">import</span> PlanningCalendar <span class="kw">from</span> <span class="str">"sap/m/PlanningCalendar"</span>;</pre>
+<p>Displays rows with appointments for different entities (such as persons or teams) for the selected time
+interval.</p>
+<p>Overview:</p>
+<p>You can use the <code>PlanningCalendar</code> to represent a calendar containing multiple rows with appointments,
+where each row represents a different person.</p>
+<p>You can configure different time-interval views that the user can switch between, such as hours or days,
+and even a whole week/month. The available navigation allows the user to select a specific interval using
+a picker, or move to the previous/next interval using arrows.</p>
+<p><strong>Note:</strong> The application developer should add dependency to <code>sap.ui.unified</code> library on application
+level to ensure that the library is loaded before the module dependencies will be required. The <code>PlanningCalendar</code>
+uses parts of the <code>sap.ui.unified</code> library. This library will be loaded after the <code>PlanningCalendar</code>,
+if it wasn&#39;t loaded first. This could lead to CSP compliance issues and adds an additional waiting time
+when a <code>PlanningCalendar</code> is used for the first time. To prevent this, apps that use the <code>PlanningCalendar</code>
+should also load the <code>sap.ui.unified</code> library in advance.</p>
+<p>Usage:</p>
+<p>The <code>PlanningCalendar</code> has the following structure from top to bottom:</p>
+<pre><code> - A toolbar where you can add your own buttons or other controls using the `toolbarContent` aggregation.
+
+ - A header containing a drop-down menu for selecting the sap.m.PlanningCalendarView PlanningCalendarViews,
+and navigation for moving through the intervals using arrows or selecting a specific interval with a
+picker. Custom views can be configured using the `views` aggregation. If not configured, the following
+set of default built-in views is available - Hours, Days, 1 Week, 1 Month, and Months. Setting a custom
+view(s) replaces the built-in ones.
+ - The rows of the `PlanningCalendar` that contain the assigned appointments. They can be configured
+with the `rows` aggregation, which is of type sap.m.PlanningCalendarRow PlanningCalendarRow.
+</code></pre>
+<p>Since 1.48 the empty space in the cell that is below an appointment can be removed by adding the <code>sapUiCalendarAppFitVertically</code>
+CSS class to the <code>PlanningCalendar</code>. Please note that it should be used only for a <code>PlanningCalendar</code>
+with one appointment per day for a row that doesn&#39;t have interval headers set.</p>
+<p>Since 1.44 alternating row colors can be suppressed by adding the <code>sapMPlanCalSuppressAlternatingRowColors</code>
+CSS class to the <code>PlanningCalendar</code>.</p>
+<p>Responsive behavior:</p>
+<p>You can define the number of displayed intervals based on the size of the <code>PlanningCalendar</code> using the
+sap.m.PlanningCalendarView PlanningCalendarView&#39;s properties.</p>
+<h2>Since</h2>
+<p>1.34</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
+</ul>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new PlanningCalendar</strong>(<code>mSettings?</code>): <code>PlanningCalendar</code></p>
+</blockquote>
+<p>Constructor for a new <code>PlanningCalendar</code>.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.
+See:
+	fiori:<a href="https://experience.sap.com/fiori-design-web/planning-calendar/">https://experience.sap.com/fiori-design-web/planning-calendar/</a> Planning Calendar</p>
+<h4>Parameters</h4>
+<h5>mSettings?</h5>
+<p><a href="../interfaces/$PlanningCalendarSettings.html"><code>$PlanningCalendarSettings</code></a></p>
+<p>Initial settings for the new control</p>
+<h4>Returns</h4>
+<p><code>PlanningCalendar</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#constructor"><code>constructor</code></a></p>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new PlanningCalendar</strong>(<code>sID?</code>, <code>mSettings?</code>): <code>PlanningCalendar</code></p>
+</blockquote>
+<p>Constructor for a new <code>PlanningCalendar</code>.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.
+See:
+	fiori:<a href="https://experience.sap.com/fiori-design-web/planning-calendar/">https://experience.sap.com/fiori-design-web/planning-calendar/</a> Planning Calendar</p>
+<h4>Parameters</h4>
+<h5>sID?</h5>
+<p><code>string</code></p>
+<p>ID for the new control, generated automatically if no ID is given</p>
+<h5>mSettings?</h5>
+<p><a href="../interfaces/$PlanningCalendarSettings.html"><code>$PlanningCalendarSettings</code></a></p>
+<p>Initial settings for the new control</p>
+<h4>Returns</h4>
+<p><code>PlanningCalendar</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#constructor"><code>constructor</code></a></p>
+<h2>Properties</h2>
+<h3>addAriaLabelledBy()</h3>
+<blockquote>
+<p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
+</blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
+<h4>Parameters</h4>
+<h5>vAriaLabelledBy</h5>
+<p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The ariaLabelledBy to add; if empty, nothing is inserted</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.40.0</p>
+<hr>
+<h3>addRow()</h3>
+<blockquote>
+<p><strong>addRow</strong>(<code>oRow</code>): <code>this</code></p>
+</blockquote>
+<p>Adds some row to the aggregation #getRows rows.</p>
+<h4>Parameters</h4>
+<h5>oRow</h5>
+<p><a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a></p>
+<p>The row to add; if empty, nothing is inserted</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>addSpecialDate()</h3>
+<blockquote>
+<p><strong>addSpecialDate</strong>(<code>oSpecialDate</code>): <code>this</code></p>
+</blockquote>
+<p>Adds some specialDate to the aggregation #getSpecialDates specialDates.</p>
+<h4>Parameters</h4>
+<h5>oSpecialDate</h5>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
+<p>The specialDate to add; if empty, nothing is inserted</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>addToolbarContent()</h3>
+<blockquote>
+<p><strong>addToolbarContent</strong>(<code>oToolbarContent</code>): <code>this</code></p>
+</blockquote>
+<p>Adds some toolbarContent to the aggregation #getToolbarContent toolbarContent.</p>
+<h4>Parameters</h4>
+<h5>oToolbarContent</h5>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The toolbarContent to add; if empty, nothing is inserted</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>addView()</h3>
+<blockquote>
+<p><strong>addView</strong>(<code>oView</code>): <code>this</code></p>
+</blockquote>
+<p>Adds some view to the aggregation #getViews views.</p>
+<h4>Parameters</h4>
+<h5>oView</h5>
+<p><a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a></p>
+<p>The view to add; if empty, nothing is inserted</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachAppointmentSelect()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAppointmentSelect</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentSelect appointmentSelect event of
+this <code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fired if an appointment is selected.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAppointmentSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentSelect appointmentSelect event of
+this <code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fired if an appointment is selected.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachIntervalSelect()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachIntervalSelect</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:intervalSelect intervalSelect event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fired if an interval was selected in the calendar header or in the row.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachIntervalSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:intervalSelect intervalSelect event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fired if an interval was selected in the calendar header or in the row.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3><del>attachRowHeaderClick()</del></h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowHeaderClick</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowHeaderClick rowHeaderClick event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fires when a row header is clicked.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.46.0</p>
+<h5>Deprecated</h5>
+<p>(since 1.119)</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowHeaderClick</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowHeaderClick rowHeaderClick event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fires when a row header is clicked.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.46.0</p>
+<h5>Deprecated</h5>
+<p>(since 1.119)</p>
+<hr>
+<h3>attachRowHeaderPress()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowHeaderPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowHeaderPress rowHeaderPress event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fires when a row header press is triggered with mouse click, SPACE or ENTER press.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.119.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowHeaderPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowHeaderPress rowHeaderPress event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fires when a row header press is triggered with mouse click, SPACE or ENTER press.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.119.0</p>
+<hr>
+<h3>attachRowSelectionChange()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowSelectionChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowSelectionChange rowSelectionChange event
+of this <code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fires when row selection is changed.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowSelectionChange rowSelectionChange event
+of this <code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fires when row selection is changed.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachStartDateChange()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachStartDateChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:startDateChange startDateChange event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fired when the <code>startDate</code> property was changed while navigating in the <code>PlanningCalendar</code>. The new value
+can be obtained using the <code>sap.m.PlanningCalendar#getStartDate()</code> method. <strong>Note:</strong> This event is fired
+in case when the <code>viewKey</code> property is changed, and as a result of which the view requires a change in
+the <code>startDate</code> property.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachStartDateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:startDateChange startDateChange event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fired when the <code>startDate</code> property was changed while navigating in the <code>PlanningCalendar</code>. The new value
+can be obtained using the <code>sap.m.PlanningCalendar#getStartDate()</code> method. <strong>Note:</strong> This event is fired
+in case when the <code>viewKey</code> property is changed, and as a result of which the view requires a change in
+the <code>startDate</code> property.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachViewChange()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachViewChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:viewChange viewChange event of this <code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fired when the <code>viewKey</code> property was changed by user interaction.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachViewChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:viewChange viewChange event of this <code>sap.m.PlanningCalendar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendar</code> itself.</p>
+<p>Fired when the <code>viewKey</code> property was changed by user interaction.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.m.PlanningCalendar</code> itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroyRows()</h3>
+<blockquote>
+<p><strong>destroyRows</strong>(): <code>this</code></p>
+</blockquote>
+<p>Destroys all the rows in the aggregation #getRows rows.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroySpecialDates()</h3>
+<blockquote>
+<p><strong>destroySpecialDates</strong>(): <code>this</code></p>
+</blockquote>
+<p>Destroys all the specialDates in the aggregation #getSpecialDates specialDates.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroyToolbarContent()</h3>
+<blockquote>
+<p><strong>destroyToolbarContent</strong>(): <code>this</code></p>
+</blockquote>
+<p>Destroys all the toolbarContent in the aggregation #getToolbarContent toolbarContent.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>destroyViews()</h3>
+<blockquote>
+<p><strong>destroyViews</strong>(): <code>this</code></p>
+</blockquote>
+<p>Destroys all the views in the aggregation #getViews views.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachAppointmentSelect()</h3>
+<blockquote>
+<p><strong>detachAppointmentSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentSelect appointmentSelect event
+of this <code>sap.m.PlanningCalendar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachIntervalSelect()</h3>
+<blockquote>
+<p><strong>detachIntervalSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:intervalSelect intervalSelect event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3><del>detachRowHeaderClick()</del></h3>
+<blockquote>
+<p><strong>detachRowHeaderClick</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:rowHeaderClick rowHeaderClick event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.46.0</p>
+<h4>Deprecated</h4>
+<p>(since 1.119)</p>
+<hr>
+<h3>detachRowHeaderPress()</h3>
+<blockquote>
+<p><strong>detachRowHeaderPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:rowHeaderPress rowHeaderPress event of this
+<code>sap.m.PlanningCalendar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.119.0</p>
+<hr>
+<h3>detachRowSelectionChange()</h3>
+<blockquote>
+<p><strong>detachRowSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:rowSelectionChange rowSelectionChange event
+of this <code>sap.m.PlanningCalendar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachStartDateChange()</h3>
+<blockquote>
+<p><strong>detachStartDateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:startDateChange startDateChange event of
+this <code>sap.m.PlanningCalendar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachViewChange()</h3>
+<blockquote>
+<p><strong>detachViewChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:viewChange viewChange event of this <code>sap.m.PlanningCalendar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>fireAppointmentSelect()</h3>
+<blockquote>
+<p><strong>fireAppointmentSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:appointmentSelect appointmentSelect to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/PlanningCalendar$AppointmentSelectEventParameters.html"><code>PlanningCalendar$AppointmentSelectEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireIntervalSelect()</h3>
+<blockquote>
+<p><strong>fireIntervalSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:intervalSelect intervalSelect to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/PlanningCalendar$IntervalSelectEventParameters.html"><code>PlanningCalendar$IntervalSelectEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3><del>fireRowHeaderClick()</del></h3>
+<blockquote>
+<p><strong>fireRowHeaderClick</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:rowHeaderClick rowHeaderClick to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/PlanningCalendar$RowHeaderClickEventParameters.html"><code>PlanningCalendar$RowHeaderClickEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.46.0</p>
+<h4>Deprecated</h4>
+<p>(since 1.119)</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireRowHeaderPress()</h3>
+<blockquote>
+<p><strong>fireRowHeaderPress</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:rowHeaderPress rowHeaderPress to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/PlanningCalendar$RowHeaderPressEventParameters.html"><code>PlanningCalendar$RowHeaderPressEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.119.0</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireRowSelectionChange()</h3>
+<blockquote>
+<p><strong>fireRowSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:rowSelectionChange rowSelectionChange to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/PlanningCalendar$RowSelectionChangeEventParameters.html"><code>PlanningCalendar$RowSelectionChangeEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireStartDateChange()</h3>
+<blockquote>
+<p><strong>fireStartDateChange</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:startDateChange startDateChange to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireViewChange()</h3>
+<blockquote>
+<p><strong>fireViewChange</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:viewChange viewChange to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getAppointmentHeight()</h3>
+<blockquote>
+<p><strong>getAppointmentHeight</strong>(): <code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
+</blockquote>
+<p>Gets current value of property #getAppointmentHeight appointmentHeight.</p>
+<p>Determines the different possible sizes for appointments.</p>
+<p>Default value is <code>Regular</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
+<p>Value of property <code>appointmentHeight</code></p>
+<h4>Since</h4>
+<p>1.81.0</p>
+<hr>
+<h3>getAppointmentRoundWidth()</h3>
+<blockquote>
+<p><strong>getAppointmentRoundWidth</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentRoundWidth.html"><code>CalendarAppointmentRoundWidth</code></a> | <code>&quot;HalfColumn&quot;</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getAppointmentRoundWidth appointmentRoundWidth.</p>
+<p>Defines rounding of the width <code>CalendarAppoinment</code> <strong>Note:</strong> This property is applied, when the calendar
+interval type is day and the view shows more than 20 days</p>
+<p>Default value is <code>None</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentRoundWidth.html"><code>CalendarAppointmentRoundWidth</code></a> | <code>&quot;HalfColumn&quot;</code></p>
+<p>Value of property <code>appointmentRoundWidth</code></p>
+<h4>Since</h4>
+<p>1.81.0
+ (since 1.81.0)</p>
+<hr>
+<h3><del>getAppointmentsReducedHeight()</del></h3>
+<blockquote>
+<p><strong>getAppointmentsReducedHeight</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getAppointmentsReducedHeight appointmentsReducedHeight.</p>
+<p>Determines whether the appointments that have only title without text are rendered with smaller height.</p>
+<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
+to facilitate touching.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>appointmentsReducedHeight</code></p>
+<h4>Since</h4>
+<p>1.38.0</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - Please use the <code>appointmentHeight</code> with value &quot;Automatic&quot; property instead.</p>
+<hr>
+<h3>getAppointmentsVisualization()</h3>
+<blockquote>
+<p><strong>getAppointmentsVisualization</strong>(): <code>&quot;Standard&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentVisualization.html"><code>CalendarAppointmentVisualization</code></a> | <code>&quot;Filled&quot;</code></p>
+</blockquote>
+<p>Gets current value of property #getAppointmentsVisualization appointmentsVisualization.</p>
+<p>Determines how the appointments are visualized depending on the used theme.</p>
+<p>Default value is <code>Standard</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Standard&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentVisualization.html"><code>CalendarAppointmentVisualization</code></a> | <code>&quot;Filled&quot;</code></p>
+<p>Value of property <code>appointmentsVisualization</code></p>
+<h4>Since</h4>
+<p>1.40.0</p>
+<hr>
+<h3>getAriaLabelledBy()</h3>
+<blockquote>
+<p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
+</blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
+<h4>Returns</h4>
+<p><code>string</code>[]</p>
+<h4>Since</h4>
+<p>1.40.0</p>
+<hr>
+<h3>getBuiltInViews()</h3>
+<blockquote>
+<p><strong>getBuiltInViews</strong>(): <code>string</code>[]</p>
+</blockquote>
+<p>Gets current value of property #getBuiltInViews builtInViews.</p>
+<p>Defines the list of predefined views as an array. The views should be specified by their keys.</p>
+<p>The default predefined views and their keys are available at sap.m.PlanningCalendarBuiltInView.</p>
+<p><strong>Note:</strong> If set, all specified views will be displayed along with any custom views (if available). If
+not set and no custom views are available, all default views will be displayed. If not set and there
+are any custom views available, only the custom views will be displayed.</p>
+<p>Default value is <code>[]</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code>[]</p>
+<p>Value of property <code>builtInViews</code></p>
+<h4>Since</h4>
+<p>1.50</p>
+<hr>
+<h3>getCalendarWeekNumbering()</h3>
+<blockquote>
+<p><strong>getCalendarWeekNumbering</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
+</blockquote>
+<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
+<p>Value of property <code>calendarWeekNumbering</code></p>
+<h4>Since</h4>
+<p>1.110.0</p>
+<hr>
+<h3>getCustomAppointmentsSorterCallback()</h3>
+<blockquote>
+<p><strong>getCustomAppointmentsSorterCallback</strong>(): <a href="../type-aliases/appointmentsSorterCallback.html"><code>appointmentsSorterCallback</code></a></p>
+</blockquote>
+<p>Getter for custom appointments sorter (if any).</p>
+<h4>Returns</h4>
+<p><a href="../type-aliases/appointmentsSorterCallback.html"><code>appointmentsSorterCallback</code></a></p>
+<h4>Since</h4>
+<p>1.54</p>
+<hr>
+<h3>getEndDate()</h3>
+<blockquote>
+<p><strong>getEndDate</strong>(): <code>Date</code> | <a href="../../../../../sap.ui.core/sap/ui/core/date/UI5Date/classes/UI5Date.html"><code>UI5Date</code></a></p>
+</blockquote>
+<p>Getter for the end point in time of the shown interval</p>
+<h4>Returns</h4>
+<p><code>Date</code> | <a href="../../../../../sap.ui.core/sap/ui/core/date/UI5Date/classes/UI5Date.html"><code>UI5Date</code></a></p>
+<p>date instance with the end date</p>
+<h4>Since</h4>
+<p>1.87</p>
+<hr>
+<h3>getFirstDayOfWeek()</h3>
+<blockquote>
+<p><strong>getFirstDayOfWeek</strong>(): <code>number</code></p>
+</blockquote>
+<p>Gets current value of property #getFirstDayOfWeek firstDayOfWeek.</p>
+<p>If set, the first day of the displayed week is this day. Valid values are 0 to 6 starting on Sunday.
+If there is no valid value set, the default of the used locale is used.</p>
+<p>Note: this property will only have effect in the weekly – based views of the PlanningCalendar – Week
+view, and OneMonth view (on small devices).</p>
+<p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>firstDayOfWeek</code></p>
+<h4>Since</h4>
+<p>1.94</p>
+<hr>
+<h3>getGroupAppointmentsMode()</h3>
+<blockquote>
+<p><strong>getGroupAppointmentsMode</strong>(): <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/GroupAppointmentsMode.html"><code>GroupAppointmentsMode</code></a> | <code>&quot;Collapsed&quot;</code> | <code>&quot;Expanded&quot;</code></p>
+</blockquote>
+<p>Gets current value of property #getGroupAppointmentsMode groupAppointmentsMode.</p>
+<p>Defines the mode in which the overlapping appointments are displayed.</p>
+<p><strong>Note:</strong> This property takes effect, only if the <code>intervalType</code> of the current calendar view is set
+to <code>sap.ui.unified.CalendarIntervalType.Month</code>. On phone devices this property is ignored, and the default
+value is applied.</p>
+<p>Default value is <code>Collapsed</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/GroupAppointmentsMode.html"><code>GroupAppointmentsMode</code></a> | <code>&quot;Collapsed&quot;</code> | <code>&quot;Expanded&quot;</code></p>
+<p>Value of property <code>groupAppointmentsMode</code></p>
+<h4>Since</h4>
+<p>1.48.0</p>
+<hr>
+<h3>getHeight()</h3>
+<blockquote>
+<p><strong>getHeight</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getHeight height.</p>
+<p>Specifies the height of the <code>PlanningCalendar</code>. <strong>Note:</strong> If the set height is less than the displayed
+content, it will not be applied</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>height</code></p>
+<hr>
+<h3>getIconShape()</h3>
+<blockquote>
+<p><strong>getIconShape</strong>(): <a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
+</blockquote>
+<p>Gets current value of property #getIconShape iconShape.</p>
+<p>Defines the shape of the <code>Avatar</code>.</p>
+<p>Default value is <code>Circle</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
+<p>Value of property <code>iconShape</code></p>
+<hr>
+<h3>getLegend()</h3>
+<blockquote>
+<p><strong>getLegend</strong>(): <code>string</code></p>
+</blockquote>
+<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<h4>Since</h4>
+<p>1.40.0</p>
+<hr>
+<h3>getMaxDate()</h3>
+<blockquote>
+<p><strong>getMaxDate</strong>(): <code>object</code></p>
+</blockquote>
+<p>Gets current value of property #getMaxDate maxDate.</p>
+<p>Defines the maximum date that can be displayed and selected in the <code>PlanningCalendar</code>. This must be a
+UI5Date or JavaScript Date object.</p>
+<p><strong>Note:</strong> If the <code>maxDate</code> is set to be before the current <code>minDate</code>, the <code>minDate</code> is set to the first
+date of the month in which the <code>maxDate</code> belongs.</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>maxDate</code></p>
+<h4>Since</h4>
+<p>1.38.0</p>
+<hr>
+<h3>getMinDate()</h3>
+<blockquote>
+<p><strong>getMinDate</strong>(): <code>object</code></p>
+</blockquote>
+<p>Gets current value of property #getMinDate minDate.</p>
+<p>Defines the minimum date that can be displayed and selected in the <code>PlanningCalendar</code>. This must be a
+UI5Date or JavaScript Date object.</p>
+<p><strong>Note:</strong> If the <code>minDate</code> is set to be after the current <code>maxDate</code>, the <code>maxDate</code> is set to the last
+date of the month in which the <code>minDate</code> belongs.</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>minDate</code></p>
+<h4>Since</h4>
+<p>1.38.0</p>
+<hr>
+<h3>getMultipleAppointmentsSelection()</h3>
+<blockquote>
+<p><strong>getMultipleAppointmentsSelection</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getMultipleAppointmentsSelection multipleAppointmentsSelection.</p>
+<p>Determines whether the selection of multiple appointments is enabled.</p>
+<p>Note: selection of multiple appointments is possible using CTRL key regardless of the value of this property.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>multipleAppointmentsSelection</code></p>
+<h4>Since</h4>
+<p>1.97</p>
+<hr>
+<h3>getNoDataText()</h3>
+<blockquote>
+<p><strong>getNoDataText</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getNoDataText noDataText.</p>
+<p>Defines the text that is displayed when no sap.m.PlanningCalendarRow PlanningCalendarRows are
+assigned.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>noDataText</code></p>
+<hr>
+<h3>getPrimaryCalendarType()</h3>
+<blockquote>
+<p><strong>getPrimaryCalendarType</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
+</blockquote>
+<p>Gets current value of property #getPrimaryCalendarType primaryCalendarType.</p>
+<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
+is used.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
+<p>Value of property <code>primaryCalendarType</code></p>
+<h4>Since</h4>
+<p>1.108.0</p>
+<hr>
+<h3>getRows()</h3>
+<blockquote>
+<p><strong>getRows</strong>(): <a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a>[]</p>
+</blockquote>
+<p>Gets content of aggregation #getRows rows.</p>
+<p>Rows of the <code>PlanningCalendar</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a>[]</p>
+<hr>
+<h3>getSecondaryCalendarType()</h3>
+<blockquote>
+<p><strong>getSecondaryCalendarType</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
+</blockquote>
+<p>Gets current value of property #getSecondaryCalendarType secondaryCalendarType.</p>
+<p>If set, the days are also represented in this calendar type. If not set, the dates are only represented
+in the primary calendar type. Note: The second calendar type won&#39;t be represented in the DOM when this
+property is not set explicitly.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
+<p>Value of property <code>secondaryCalendarType</code></p>
+<h4>Since</h4>
+<p>1.109.0</p>
+<hr>
+<h3>getSelectedAppointments()</h3>
+<blockquote>
+<p><strong>getSelectedAppointments</strong>(): <a href="../../../../../sap.ui.unified/sap/ui/unified/CalendarAppointment/classes/CalendarAppointment.html"><code>CalendarAppointment</code></a>[]</p>
+</blockquote>
+<p>Holds the selected appointments. If no appointments are selected, an empty array is returned.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/CalendarAppointment/classes/CalendarAppointment.html"><code>CalendarAppointment</code></a>[]</p>
+<p>Array of IDs of selected appointments</p>
+<h4>Since</h4>
+<p>1.54</p>
+<hr>
+<h3>getSelectedRows()</h3>
+<blockquote>
+<p><strong>getSelectedRows</strong>(): <a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a>[]</p>
+</blockquote>
+<p>Returns an array containing the selected rows. If no row is selected, an empty array is returned.</p>
+<h4>Returns</h4>
+<p><a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a>[]</p>
+<p>selected rows</p>
+<hr>
+<h3>getShowDayNamesLine()</h3>
+<blockquote>
+<p><strong>getShowDayNamesLine</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowDayNamesLine showDayNamesLine.</p>
+<p>Determines whether the day names are displayed in a separate line or inside the single days.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showDayNamesLine</code></p>
+<h4>Since</h4>
+<p>1.50</p>
+<hr>
+<h3>getShowEmptyIntervalHeaders()</h3>
+<blockquote>
+<p><strong>getShowEmptyIntervalHeaders</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowEmptyIntervalHeaders showEmptyIntervalHeaders.</p>
+<p>Determines whether the space (at the top of the intervals), where the assigned interval headers appear,
+should remain visible even when no interval headers are present in the visible time frame. If set to
+<code>false</code>, this space would collapse/disappear when no interval headers are assigned.</p>
+<p><strong>Note:</strong> This property takes effect, only if <code>showIntervalHeaders</code> is also set to <code>true</code>.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showEmptyIntervalHeaders</code></p>
+<h4>Since</h4>
+<p>1.38.0</p>
+<hr>
+<h3>getShowIntervalHeaders()</h3>
+<blockquote>
+<p><strong>getShowIntervalHeaders</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowIntervalHeaders showIntervalHeaders.</p>
+<p>Determines whether the assigned interval headers are displayed. You can assign them using the <code>intervalHeaders</code>
+aggregation of the sap.m.PlanningCalendarRow PlanningCalendarRow.</p>
+<p><strong>Note:</strong> If you set both <code>showIntervalHeaders</code> and <code>showEmptyIntervalHeaders</code> properties to <code>true</code>,
+the space (at the top of the intervals) where the assigned interval headers appear, will remain visible
+even if no interval headers are assigned.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showIntervalHeaders</code></p>
+<hr>
+<h3>getShowRowHeaders()</h3>
+<blockquote>
+<p><strong>getShowRowHeaders</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowRowHeaders showRowHeaders.</p>
+<p>Determines whether the column containing the headers of the sap.m.PlanningCalendarRow PlanningCalendarRows
+is displayed.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showRowHeaders</code></p>
+<hr>
+<h3>getShowWeekNumbers()</h3>
+<blockquote>
+<p><strong>getShowWeekNumbers</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowWeekNumbers showWeekNumbers.</p>
+<p>Determines if the week numbers are displayed.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showWeekNumbers</code></p>
+<h4>Since</h4>
+<p>1.52</p>
+<hr>
+<h3>getSingleSelection()</h3>
+<blockquote>
+<p><strong>getSingleSelection</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getSingleSelection singleSelection.</p>
+<p>Determines whether only a single row can be selected.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>singleSelection</code></p>
+<hr>
+<h3>getSpecialDates()</h3>
+<blockquote>
+<p><strong>getSpecialDates</strong>(): <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
+</blockquote>
+<p>Gets content of aggregation #getSpecialDates specialDates.</p>
+<p>Special days in the header calendar visualized as date range with a type.</p>
+<p><strong>Note:</strong> If one day is assigned to more than one type, only the first type will be used.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
+<hr>
+<h3>getStartDate()</h3>
+<blockquote>
+<p><strong>getStartDate</strong>(): <code>object</code></p>
+</blockquote>
+<p>Gets current value of property #getStartDate startDate.</p>
+<p>Determines the start date of the row, as a UI5Date or JavaScript Date object. The current date is used
+as default.</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>startDate</code></p>
+<hr>
+<h3>getStickyHeader()</h3>
+<blockquote>
+<p><strong>getStickyHeader</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getStickyHeader stickyHeader.</p>
+<p>Determines whether the header area will remain visible (fixed on top) when the rest of the content is
+scrolled out of view.</p>
+<p>The sticky header behavior is automatically disabled on phones in landscape mode for better visibility
+of the content.</p>
+<p><strong>Note:</strong> There is limited browser support, hence the API is in experimental state. Browsers that currently
+support this feature are Chrome (desktop and mobile), Safari (desktop and mobile) and Edge 41.</p>
+<p>There are also some known issues with respect to the scrolling behavior and focus handling. A few are
+given below:</p>
+<p>When the PlanningCalendar is placed in certain layout containers, for example the <code>GridLayout</code> control,
+the column headers do not fix at the top of the viewport. Similar behavior is also observed with the
+<code>ObjectPage</code> control.</p>
+<p>This API should not be used in production environment.</p>
+<p><strong>Note:</strong> The <code>stickyHeader</code> of the <code>PlanningCalendar</code> uses the <code>sticky</code> property of <code>sap.m.Table</code>. Therefore,
+all features and restrictions of the property in <code>sap.m.Table</code> apply to the <code>PlanningCalendar</code> as well.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>stickyHeader</code></p>
+<h4>Since</h4>
+<p>1.54</p>
+<hr>
+<h3>getToolbarContent()</h3>
+<blockquote>
+<p><strong>getToolbarContent</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
+</blockquote>
+<p>Gets content of aggregation #getToolbarContent toolbarContent.</p>
+<p>The content of the toolbar.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
+<hr>
+<h3>getViewKey()</h3>
+<blockquote>
+<p><strong>getViewKey</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getViewKey viewKey.</p>
+<p>Defines the key of the <code>PlanningCalendarView</code> used for the output.</p>
+<p><strong>Note:</strong> The default value is set <code>Hour</code>. If you are using your own views, the keys of these views should
+be used instead.</p>
+<p>Default value is <code>CalendarIntervalType.Hour</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>viewKey</code></p>
+<hr>
+<h3>getViews()</h3>
+<blockquote>
+<p><strong>getViews</strong>(): <a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a>[]</p>
+</blockquote>
+<p>Gets content of aggregation #getViews views.</p>
+<p>Views of the <code>PlanningCalendar</code>.</p>
+<p><strong>Note:</strong> If not set, all the default views are available. Their keys are defined in sap.ui.unified.CalendarIntervalType.</p>
+<h4>Returns</h4>
+<p><a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a>[]</p>
+<hr>
+<h3>getVisibleIntervalsCount()</h3>
+<blockquote>
+<p><strong>getVisibleIntervalsCount</strong>(): <code>number</code></p>
+</blockquote>
+<p>Getter for how many intervals are currently displayed</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The number of displayed intervals</p>
+<hr>
+<h3>getWidth()</h3>
+<blockquote>
+<p><strong>getWidth</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getWidth width.</p>
+<p>Specifies the width of the <code>PlanningCalendar</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>width</code></p>
+<hr>
+<h3>indexOfRow()</h3>
+<blockquote>
+<p><strong>indexOfRow</strong>(<code>oRow</code>): <code>number</code></p>
+</blockquote>
+<p>Checks for the provided <code>sap.m.PlanningCalendarRow</code> in the aggregation #getRows rows. and returns
+its index if found or -1 otherwise.</p>
+<h4>Parameters</h4>
+<h5>oRow</h5>
+<p><a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a></p>
+<p>The row whose index is looked for</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
+<hr>
+<h3>indexOfSpecialDate()</h3>
+<blockquote>
+<p><strong>indexOfSpecialDate</strong>(<code>oSpecialDate</code>): <code>number</code></p>
+</blockquote>
+<p>Checks for the provided <code>sap.ui.unified.DateTypeRange</code> in the aggregation #getSpecialDates specialDates.
+and returns its index if found or -1 otherwise.</p>
+<h4>Parameters</h4>
+<h5>oSpecialDate</h5>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
+<p>The specialDate whose index is looked for</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
+<hr>
+<h3>indexOfToolbarContent()</h3>
+<blockquote>
+<p><strong>indexOfToolbarContent</strong>(<code>oToolbarContent</code>): <code>number</code></p>
+</blockquote>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getToolbarContent toolbarContent.
+and returns its index if found or -1 otherwise.</p>
+<h4>Parameters</h4>
+<h5>oToolbarContent</h5>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The toolbarContent whose index is looked for</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
+<hr>
+<h3>indexOfView()</h3>
+<blockquote>
+<p><strong>indexOfView</strong>(<code>oView</code>): <code>number</code></p>
+</blockquote>
+<p>Checks for the provided <code>sap.m.PlanningCalendarView</code> in the aggregation #getViews views. and
+returns its index if found or -1 otherwise.</p>
+<h4>Parameters</h4>
+<h5>oView</h5>
+<p><a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a></p>
+<p>The view whose index is looked for</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
+<hr>
+<h3>insertRow()</h3>
+<blockquote>
+<p><strong>insertRow</strong>(<code>oRow</code>, <code>iIndex</code>): <code>this</code></p>
+</blockquote>
+<p>Inserts a row into the aggregation #getRows rows.</p>
+<h4>Parameters</h4>
+<h5>oRow</h5>
+<p><a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a></p>
+<p>The row to insert; if empty, nothing is inserted</p>
+<h5>iIndex</h5>
+<p><code>number</code></p>
+<p>The <code>0</code>-based index the row should be inserted at; for a negative value of <code>iIndex</code>, the row is inserted
+at position 0; for a value greater than the current size of the aggregation, the row is inserted at the
+last position</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>insertSpecialDate()</h3>
+<blockquote>
+<p><strong>insertSpecialDate</strong>(<code>oSpecialDate</code>, <code>iIndex</code>): <code>this</code></p>
+</blockquote>
+<p>Inserts a specialDate into the aggregation #getSpecialDates specialDates.</p>
+<h4>Parameters</h4>
+<h5>oSpecialDate</h5>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
+<p>The specialDate to insert; if empty, nothing is inserted</p>
+<h5>iIndex</h5>
+<p><code>number</code></p>
+<p>The <code>0</code>-based index the specialDate should be inserted at; for a negative value of <code>iIndex</code>, the specialDate
+is inserted at position 0; for a value greater than the current size of the aggregation, the specialDate
+is inserted at the last position</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>insertToolbarContent()</h3>
+<blockquote>
+<p><strong>insertToolbarContent</strong>(<code>oToolbarContent</code>, <code>iIndex</code>): <code>this</code></p>
+</blockquote>
+<p>Inserts a toolbarContent into the aggregation #getToolbarContent toolbarContent.</p>
+<h4>Parameters</h4>
+<h5>oToolbarContent</h5>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The toolbarContent to insert; if empty, nothing is inserted</p>
+<h5>iIndex</h5>
+<p><code>number</code></p>
+<p>The <code>0</code>-based index the toolbarContent should be inserted at; for a negative value of <code>iIndex</code>, the toolbarContent
+is inserted at position 0; for a value greater than the current size of the aggregation, the toolbarContent
+is inserted at the last position</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>insertView()</h3>
+<blockquote>
+<p><strong>insertView</strong>(<code>oView</code>, <code>iIndex</code>): <code>this</code></p>
+</blockquote>
+<p>Inserts a view into the aggregation #getViews views.</p>
+<h4>Parameters</h4>
+<h5>oView</h5>
+<p><a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a></p>
+<p>The view to insert; if empty, nothing is inserted</p>
+<h5>iIndex</h5>
+<p><code>number</code></p>
+<p>The <code>0</code>-based index the view should be inserted at; for a negative value of <code>iIndex</code>, the view is inserted
+at position 0; for a value greater than the current size of the aggregation, the view is inserted at
+the last position</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>removeAllAriaLabelledBy()</h3>
+<blockquote>
+<p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
+</blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
+<h4>Returns</h4>
+<p><code>string</code>[]</p>
+<p>An array of the removed elements (might be empty)</p>
+<h4>Since</h4>
+<p>1.40.0</p>
+<hr>
+<h3>removeAllRows()</h3>
+<blockquote>
+<p><strong>removeAllRows</strong>(): <a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a>[]</p>
+</blockquote>
+<p>Removes all the controls from the aggregation #getRows rows.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
+<h4>Returns</h4>
+<p><a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a>[]</p>
+<p>An array of the removed elements (might be empty)</p>
+<hr>
+<h3>removeAllSpecialDates()</h3>
+<blockquote>
+<p><strong>removeAllSpecialDates</strong>(): <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
+</blockquote>
+<p>Removes all the controls from the aggregation #getSpecialDates specialDates.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
+<p>An array of the removed elements (might be empty)</p>
+<hr>
+<h3>removeAllToolbarContent()</h3>
+<blockquote>
+<p><strong>removeAllToolbarContent</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
+</blockquote>
+<p>Removes all the controls from the aggregation #getToolbarContent toolbarContent.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
+<p>An array of the removed elements (might be empty)</p>
+<hr>
+<h3>removeAllViews()</h3>
+<blockquote>
+<p><strong>removeAllViews</strong>(): <a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a>[]</p>
+</blockquote>
+<p>Removes all the controls from the aggregation #getViews views.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
+<h4>Returns</h4>
+<p><a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a>[]</p>
+<p>An array of the removed elements (might be empty)</p>
+<hr>
+<h3>removeAriaLabelledBy()</h3>
+<blockquote>
+<p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
+</blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
+<h4>Parameters</h4>
+<h5>vAriaLabelledBy</h5>
+<p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The ariaLabelledBy to be removed or its index or ID</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>The removed ariaLabelledBy or <code>null</code></p>
+<h4>Since</h4>
+<p>1.40.0</p>
+<hr>
+<h3>removeRow()</h3>
+<blockquote>
+<p><strong>removeRow</strong>(<code>vRow</code>): <a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a></p>
+</blockquote>
+<p>Removes a row from the aggregation #getRows rows.</p>
+<h4>Parameters</h4>
+<h5>vRow</h5>
+<p><code>string</code> | <code>number</code> | <a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a></p>
+<p>The row to remove or its index or id</p>
+<h4>Returns</h4>
+<p><a href="../../PlanningCalendarRow/classes/PlanningCalendarRow.html"><code>PlanningCalendarRow</code></a></p>
+<p>The removed row or <code>null</code></p>
+<hr>
+<h3>removeSpecialDate()</h3>
+<blockquote>
+<p><strong>removeSpecialDate</strong>(<code>vSpecialDate</code>): <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
+</blockquote>
+<p>Removes a specialDate from the aggregation #getSpecialDates specialDates.</p>
+<h4>Parameters</h4>
+<h5>vSpecialDate</h5>
+<p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
+<p>The specialDate to remove or its index or id</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
+<p>The removed specialDate or <code>null</code></p>
+<hr>
+<h3>removeToolbarContent()</h3>
+<blockquote>
+<p><strong>removeToolbarContent</strong>(<code>vToolbarContent</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+</blockquote>
+<p>Removes a toolbarContent from the aggregation #getToolbarContent toolbarContent.</p>
+<h4>Parameters</h4>
+<h5>vToolbarContent</h5>
+<p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The toolbarContent to remove or its index or id</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The removed toolbarContent or <code>null</code></p>
+<hr>
+<h3>removeView()</h3>
+<blockquote>
+<p><strong>removeView</strong>(<code>vView</code>): <a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a></p>
+</blockquote>
+<p>Removes a view from the aggregation #getViews views.</p>
+<h4>Parameters</h4>
+<h5>vView</h5>
+<p><code>string</code> | <code>number</code> | <a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a></p>
+<p>The view to remove or its index or id</p>
+<h4>Returns</h4>
+<p><a href="../../PlanningCalendarView/classes/PlanningCalendarView.html"><code>PlanningCalendarView</code></a></p>
+<p>The removed view or <code>null</code></p>
+<hr>
+<h3>selectAllRows()</h3>
+<blockquote>
+<p><strong>selectAllRows</strong>(<code>bSelect</code>): <code>this</code></p>
+</blockquote>
+<p>Selects or deselects all <code>PlanningCalendarRows</code>.</p>
+<p><strong>Note:</strong> Selection only works if <code>singleSelection</code> is set to <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bSelect</h5>
+<p><code>boolean</code></p>
+<p>Indicator showing whether <code>PlanningCalendarRows</code> should be selected or deselected</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p><code>this</code> to allow method chaining</p>
+<hr>
+<h3>setAppointmentHeight()</h3>
+<blockquote>
+<p><strong>setAppointmentHeight</strong>(<code>sAppointmentHeight?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getAppointmentHeight appointmentHeight.</p>
+<p>Determines the different possible sizes for appointments.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Regular</code>.</p>
+<h4>Parameters</h4>
+<h5>sAppointmentHeight?</h5>
+<p><code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
+<p>New value for property <code>appointmentHeight</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.81.0</p>
+<hr>
+<h3>setAppointmentRoundWidth()</h3>
+<blockquote>
+<p><strong>setAppointmentRoundWidth</strong>(<code>sAppointmentRoundWidth?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getAppointmentRoundWidth appointmentRoundWidth.</p>
+<p>Defines rounding of the width <code>CalendarAppoinment</code> <strong>Note:</strong> This property is applied, when the calendar
+interval type is day and the view shows more than 20 days</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
+<h4>Parameters</h4>
+<h5>sAppointmentRoundWidth?</h5>
+<p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentRoundWidth.html"><code>CalendarAppointmentRoundWidth</code></a> | <code>&quot;HalfColumn&quot;</code></p>
+<p>New value for property <code>appointmentRoundWidth</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.81.0
+ (since 1.81.0)</p>
+<hr>
+<h3><del>setAppointmentsReducedHeight()</del></h3>
+<blockquote>
+<p><strong>setAppointmentsReducedHeight</strong>(<code>bAppointmentsReducedHeight?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getAppointmentsReducedHeight appointmentsReducedHeight.</p>
+<p>Determines whether the appointments that have only title without text are rendered with smaller height.</p>
+<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
+to facilitate touching.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bAppointmentsReducedHeight?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>appointmentsReducedHeight</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.38.0</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - Please use the <code>appointmentHeight</code> with value &quot;Automatic&quot; property instead.</p>
+<hr>
+<h3>setAppointmentsVisualization()</h3>
+<blockquote>
+<p><strong>setAppointmentsVisualization</strong>(<code>sAppointmentsVisualization?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getAppointmentsVisualization appointmentsVisualization.</p>
+<p>Determines how the appointments are visualized depending on the used theme.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Standard</code>.</p>
+<h4>Parameters</h4>
+<h5>sAppointmentsVisualization?</h5>
+<p><code>&quot;Standard&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentVisualization.html"><code>CalendarAppointmentVisualization</code></a> | <code>&quot;Filled&quot;</code></p>
+<p>New value for property <code>appointmentsVisualization</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.40.0</p>
+<hr>
+<h3>setBuiltInViews()</h3>
+<blockquote>
+<p><strong>setBuiltInViews</strong>(<code>sBuiltInViews?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getBuiltInViews builtInViews.</p>
+<p>Defines the list of predefined views as an array. The views should be specified by their keys.</p>
+<p>The default predefined views and their keys are available at sap.m.PlanningCalendarBuiltInView.</p>
+<p><strong>Note:</strong> If set, all specified views will be displayed along with any custom views (if available). If
+not set and no custom views are available, all default views will be displayed. If not set and there
+are any custom views available, only the custom views will be displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
+<h4>Parameters</h4>
+<h5>sBuiltInViews?</h5>
+<p><code>string</code>[]</p>
+<p>New value for property <code>builtInViews</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.50</p>
+<hr>
+<h3>setCalendarWeekNumbering()</h3>
+<blockquote>
+<p><strong>setCalendarWeekNumbering</strong>(<code>sCalendarWeekNumbering?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sCalendarWeekNumbering?</h5>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
+<p>New value for property <code>calendarWeekNumbering</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.110.0</p>
+<hr>
+<h3>setCustomAppointmentsSorterCallback()</h3>
+<blockquote>
+<p><strong>setCustomAppointmentsSorterCallback</strong>(<code>fnSorter</code>): <code>this</code></p>
+</blockquote>
+<p>Setter for custom sorting of appointments. If not used, the appointments will be sorted according to
+their duration vertically. For example, the start time and order to the X axis won&#39;t change.</p>
+<h4>Parameters</h4>
+<h5>fnSorter</h5>
+<p><a href="../type-aliases/appointmentsSorterCallback.html"><code>appointmentsSorterCallback</code></a></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p><code>this</code> for chaining</p>
+<h4>Since</h4>
+<p>1.54</p>
+<hr>
+<h3>setFirstDayOfWeek()</h3>
+<blockquote>
+<p><strong>setFirstDayOfWeek</strong>(<code>iFirstDayOfWeek?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getFirstDayOfWeek firstDayOfWeek.</p>
+<p>If set, the first day of the displayed week is this day. Valid values are 0 to 6 starting on Sunday.
+If there is no valid value set, the default of the used locale is used.</p>
+<p>Note: this property will only have effect in the weekly – based views of the PlanningCalendar – Week
+view, and OneMonth view (on small devices).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>-1</code>.</p>
+<h4>Parameters</h4>
+<h5>iFirstDayOfWeek?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>firstDayOfWeek</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.94</p>
+<hr>
+<h3>setGroupAppointmentsMode()</h3>
+<blockquote>
+<p><strong>setGroupAppointmentsMode</strong>(<code>sGroupAppointmentsMode?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getGroupAppointmentsMode groupAppointmentsMode.</p>
+<p>Defines the mode in which the overlapping appointments are displayed.</p>
+<p><strong>Note:</strong> This property takes effect, only if the <code>intervalType</code> of the current calendar view is set
+to <code>sap.ui.unified.CalendarIntervalType.Month</code>. On phone devices this property is ignored, and the default
+value is applied.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Collapsed</code>.</p>
+<h4>Parameters</h4>
+<h5>sGroupAppointmentsMode?</h5>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/GroupAppointmentsMode.html"><code>GroupAppointmentsMode</code></a> | <code>&quot;Collapsed&quot;</code> | <code>&quot;Expanded&quot;</code></p>
+<p>New value for property <code>groupAppointmentsMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.48.0</p>
+<hr>
+<h3>setHeight()</h3>
+<blockquote>
+<p><strong>setHeight</strong>(<code>sHeight?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getHeight height.</p>
+<p>Specifies the height of the <code>PlanningCalendar</code>. <strong>Note:</strong> If the set height is less than the displayed
+content, it will not be applied</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sHeight?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>height</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setIconShape()</h3>
+<blockquote>
+<p><strong>setIconShape</strong>(<code>sIconShape?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getIconShape iconShape.</p>
+<p>Defines the shape of the <code>Avatar</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Circle</code>.</p>
+<h4>Parameters</h4>
+<h5>sIconShape?</h5>
+<p><a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
+<p>New value for property <code>iconShape</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setLegend()</h3>
+<blockquote>
+<p><strong>setLegend</strong>(<code>oLegend</code>): <code>this</code></p>
+</blockquote>
+<p>Sets the associated #getLegend legend.</p>
+<h4>Parameters</h4>
+<h5>oLegend</h5>
+<p><code>string</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/CalendarLegend/classes/CalendarLegend.html"><code>CalendarLegend</code></a></p>
+<p>ID of an element which becomes the new target of this legend association; alternatively, an element instance
+may be given</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.40.0</p>
+<hr>
+<h3>setMaxDate()</h3>
+<blockquote>
+<p><strong>setMaxDate</strong>(<code>oDate</code>): <code>this</code></p>
+</blockquote>
+<p>Set maximum date that can be shown and selected in the <code>PlanningCalendar</code>. This must be a UI5Date or
+JavaScript Date object.</p>
+<h4>Parameters</h4>
+<h5>oDate</h5>
+<p><code>Date</code> | <a href="../../../../../sap.ui.core/sap/ui/core/date/UI5Date/classes/UI5Date.html"><code>UI5Date</code></a></p>
+<p>A date instance</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> for method chaining</p>
+<hr>
+<h3>setMinDate()</h3>
+<blockquote>
+<p><strong>setMinDate</strong>(<code>oDate</code>): <code>this</code></p>
+</blockquote>
+<p>Set minimum date that can be shown and selected in the <code>PlanningCalendar</code>. This must be a UI5Date or
+JavaScript Date object.</p>
+<h4>Parameters</h4>
+<h5>oDate</h5>
+<p><code>Date</code> | <a href="../../../../../sap.ui.core/sap/ui/core/date/UI5Date/classes/UI5Date.html"><code>UI5Date</code></a></p>
+<p>A date instance</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> for method chaining</p>
+<hr>
+<h3>setMultipleAppointmentsSelection()</h3>
+<blockquote>
+<p><strong>setMultipleAppointmentsSelection</strong>(<code>bMultipleAppointmentsSelection?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getMultipleAppointmentsSelection multipleAppointmentsSelection.</p>
+<p>Determines whether the selection of multiple appointments is enabled.</p>
+<p>Note: selection of multiple appointments is possible using CTRL key regardless of the value of this property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bMultipleAppointmentsSelection?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>multipleAppointmentsSelection</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.97</p>
+<hr>
+<h3>setNoDataText()</h3>
+<blockquote>
+<p><strong>setNoDataText</strong>(<code>sNoDataText?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getNoDataText noDataText.</p>
+<p>Defines the text that is displayed when no sap.m.PlanningCalendarRow PlanningCalendarRows are
+assigned.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sNoDataText?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>noDataText</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setPrimaryCalendarType()</h3>
+<blockquote>
+<p><strong>setPrimaryCalendarType</strong>(<code>sPrimaryCalendarType</code>): <code>this</code></p>
+</blockquote>
+<p>Sets the primaryCalendarType. If not set, the calendar type of the global configuration is used.</p>
+<h4>Parameters</h4>
+<h5>sPrimaryCalendarType</h5>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
+<p>the <code>sap.ui.core.CalendarType</code> to set as <code>sap.m.PlanningCalendar</code> <code>primaryCalendarType</code>.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p><code>this</code> to allow method chaining</p>
+<hr>
+<h3>setSecondaryCalendarType()</h3>
+<blockquote>
+<p><strong>setSecondaryCalendarType</strong>(<code>sSecondaryCalendarType</code>): <code>this</code></p>
+</blockquote>
+<p>Sets the secondaryCalendarType.</p>
+<h4>Parameters</h4>
+<h5>sSecondaryCalendarType</h5>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
+<p>the <code>sap.ui.core.CalendarType</code> to set as <code>sap.m.PlanningCalendar</code> <code>secondaryCalendarType</code>.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p><code>this</code> to allow method chaining</p>
+<hr>
+<h3>setShowDayNamesLine()</h3>
+<blockquote>
+<p><strong>setShowDayNamesLine</strong>(<code>bShowDayNamesLine?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowDayNamesLine showDayNamesLine.</p>
+<p>Determines whether the day names are displayed in a separate line or inside the single days.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowDayNamesLine?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showDayNamesLine</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.50</p>
+<hr>
+<h3>setShowEmptyIntervalHeaders()</h3>
+<blockquote>
+<p><strong>setShowEmptyIntervalHeaders</strong>(<code>bShowEmptyIntervalHeaders?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowEmptyIntervalHeaders showEmptyIntervalHeaders.</p>
+<p>Determines whether the space (at the top of the intervals), where the assigned interval headers appear,
+should remain visible even when no interval headers are present in the visible time frame. If set to
+<code>false</code>, this space would collapse/disappear when no interval headers are assigned.</p>
+<p><strong>Note:</strong> This property takes effect, only if <code>showIntervalHeaders</code> is also set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowEmptyIntervalHeaders?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showEmptyIntervalHeaders</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.38.0</p>
+<hr>
+<h3>setShowIntervalHeaders()</h3>
+<blockquote>
+<p><strong>setShowIntervalHeaders</strong>(<code>bShowIntervalHeaders?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowIntervalHeaders showIntervalHeaders.</p>
+<p>Determines whether the assigned interval headers are displayed. You can assign them using the <code>intervalHeaders</code>
+aggregation of the sap.m.PlanningCalendarRow PlanningCalendarRow.</p>
+<p><strong>Note:</strong> If you set both <code>showIntervalHeaders</code> and <code>showEmptyIntervalHeaders</code> properties to <code>true</code>,
+the space (at the top of the intervals) where the assigned interval headers appear, will remain visible
+even if no interval headers are assigned.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowIntervalHeaders?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showIntervalHeaders</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setShowRowHeaders()</h3>
+<blockquote>
+<p><strong>setShowRowHeaders</strong>(<code>bShowRowHeaders?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowRowHeaders showRowHeaders.</p>
+<p>Determines whether the column containing the headers of the sap.m.PlanningCalendarRow PlanningCalendarRows
+is displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowRowHeaders?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showRowHeaders</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setShowWeekNumbers()</h3>
+<blockquote>
+<p><strong>setShowWeekNumbers</strong>(<code>bShowWeekNumbers?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowWeekNumbers showWeekNumbers.</p>
+<p>Determines if the week numbers are displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowWeekNumbers?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showWeekNumbers</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.52</p>
+<hr>
+<h3>setSingleSelection()</h3>
+<blockquote>
+<p><strong>setSingleSelection</strong>(<code>bSingleSelection?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getSingleSelection singleSelection.</p>
+<p>Determines whether only a single row can be selected.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bSingleSelection?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>singleSelection</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setStartDate()</h3>
+<blockquote>
+<p><strong>setStartDate</strong>(<code>oDate</code>): <code>this</code></p>
+</blockquote>
+<p>Sets the given date as start date. The current date is used as default. Depending on the current view
+the start date may be adjusted (for example, the week view shows always the first weekday of the same
+week as the given date).</p>
+<h4>Parameters</h4>
+<h5>oDate</h5>
+<p><code>Date</code></p>
+<p>the date to set as <code>sap.m.PlanningCalendar</code> <code>startDate</code>. May be changed(adjusted) if property <code>startDate</code>
+is adjusted. See remark about week view above.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p><code>this</code> to allow method chaining</p>
+<hr>
+<h3>setStickyHeader()</h3>
+<blockquote>
+<p><strong>setStickyHeader</strong>(<code>bStick</code>): <code>this</code></p>
+</blockquote>
+<p>Sets the stickyHeader property.</p>
+<h4>Parameters</h4>
+<h5>bStick</h5>
+<p><code>boolean</code></p>
+<p>Whether the header area will remain visible (fixed on top)</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>this pointer for chaining</p>
+<hr>
+<h3>setViewKey()</h3>
+<blockquote>
+<p><strong>setViewKey</strong>(<code>sViewKey?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getViewKey viewKey.</p>
+<p>Defines the key of the <code>PlanningCalendarView</code> used for the output.</p>
+<p><strong>Note:</strong> The default value is set <code>Hour</code>. If you are using your own views, the keys of these views should
+be used instead.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>CalendarIntervalType.Hour</code>.</p>
+<h4>Parameters</h4>
+<h5>sViewKey?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>viewKey</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setWidth()</h3>
+<blockquote>
+<p><strong>setWidth</strong>(<code>sWidth</code>): <code>this</code></p>
+</blockquote>
+<p>Sets the width property and ensures that the start date is in sync with each row timeline.</p>
+<h4>Parameters</h4>
+<h5>sWidth</h5>
+<p><code>string</code></p>
+<p>the width to be set to the PlanningCalendar</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>this for method chaining</p>
+<hr>
+<h3>extend()</h3>
+<blockquote>
+<p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
+</blockquote>
+<p>Creates a new subclass of class sap.m.PlanningCalendar with name <code>sClassName</code> and enriches it with the
+information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.Control.extend.</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>Name of the class being created</p>
+<h5>oClassInfo?</h5>
+<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>PlanningCalendar</code>&gt;</p>
+<p>Object literal with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>Constructor function for the metadata object; if not given, it defaults to the metadata implementation
+used by this class</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Created class / constructor function</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#extend"><code>extend</code></a></p>
+<hr>
+<h3>getMetadata()</h3>
+<blockquote>
+<p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
+</blockquote>
+<p>Returns a metadata object for class sap.m.PlanningCalendar.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
+<p>Metadata object describing this class</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
+<hr>
+
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+</body>
+</html>
