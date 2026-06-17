@@ -161,7 +161,66 @@ for (const file of dtsFiles) {
 }
 console.log(`  Found ${defaultExports.size} default exports`);
 
-// Second pass: rewrite the files
+// Precompute namespace prefixes for all libraries (used to detect augmentations)
+// e.g. "sap.f" → "sap/f/", "sap.ui.core" → "sap/ui/core/"
+const libNamespacePrefixes = new Map();
+for (const lib of libraryModules.keys()) {
+  libNamespacePrefixes.set(lib, lib.replace(/\./g, "/") + "/");
+}
+
+// Remove cross-library augmentation blocks from .d.ts files.
+// E.g. sap.f.d.ts augments "sap/tnt/library" — remove that block so TypeDoc
+// sees "sap/tnt/library" only in sap.tnt.d.ts, generating the full content there.
+let totalAugmentationsRemoved = 0;
+for (const file of dtsFiles) {
+  const libName = file.replace(/\.d\.ts$/, "");
+  const filePath = join(TYPES_DIR, file);
+  let content = readFileSync(filePath, "utf8");
+
+  const moduleRegex = /^declare module "([^"]+)"/gm;
+  const blocksToRemove = [];
+  let match;
+  while ((match = moduleRegex.exec(content)) !== null) {
+    const moduleName = match[1]; // e.g. "sap/tnt/library"
+    const moduleNs = moduleName + "/";
+
+    // Check if another library owns this module's namespace
+    for (const [otherLib, otherNs] of libNamespacePrefixes) {
+      if (otherLib !== libName && moduleNs.startsWith(otherNs)) {
+        // This is an augmentation of another library's module — mark for removal
+        const blockStart = match.index;
+        // Find the closing } of this declare module block
+        let braceDepth = 0;
+        let blockEnd = blockStart;
+        for (let i = content.indexOf("{", blockStart); i < content.length; i++) {
+          if (content[i] === "{") braceDepth++;
+          else if (content[i] === "}") {
+            braceDepth--;
+            if (braceDepth === 0) { blockEnd = i + 1; break; }
+          }
+        }
+        blocksToRemove.push([blockStart, blockEnd]);
+        break;
+      }
+    }
+  }
+
+  // Remove blocks in reverse order to preserve indices
+  for (const [start, end] of blocksToRemove.reverse()) {
+    content = content.slice(0, start) + content.slice(end);
+  }
+
+  if (blocksToRemove.length > 0) {
+    writeFileSync(filePath, content);
+    totalAugmentationsRemoved += blocksToRemove.length;
+    console.log(`  Removed ${blocksToRemove.length} cross-library augmentation(s) from ${file}`);
+  }
+}
+if (totalAugmentationsRemoved > 0) {
+  console.log(`  Total augmentations removed: ${totalAugmentationsRemoved}`);
+}
+
+// Rewrite pass: rename default exports to named exports
 for (const file of dtsFiles) {
   const filePath = join(TYPES_DIR, file);
   let content = readFileSync(filePath, "utf8");
@@ -376,12 +435,16 @@ let skippedCount = 0;
 // Directories/files to exclude from output (not UI5-specific)
 const EXCLUDE_PATTERNS = ["interfaces/JQuery", "interfaces/JQuery.", "/JQueryStatic", "JQueryPromise"];
 
-// Precompute namespace prefixes for all libraries (used to detect augmentations)
-// e.g. "sap.f" → "sap/f/", "sap.ui.core" → "sap/ui/core/"
-const libNamespacePrefixes = new Map();
-for (const lib of libraryModules.keys()) {
-  libNamespacePrefixes.set(lib, lib.replace(/\./g, "/") + "/");
-}
+// Link patterns pointing to dead targets (jQuery, QUnit, pseudo-types)
+const DEAD_LINK_PATTERNS = [
+  /namespaces\/JQuery\//i,
+  /namespaces\/jQuery\//i,
+  /type-aliases\/jQuery\.html/,
+  /variables\/jQuery\.html/,
+  /namespaces\/QUnit\//,
+  /variables\/QUnit\.html/,
+  /type-aliases\/(int|float)\.html/,
+];
 
 function shouldExclude(relPath) {
   // Exclude jQuery-related pages
@@ -493,6 +556,23 @@ function renderDir(dir) {
       htmlFixed = htmlFixed.replace(/<a href="[^"]*default\.html[^"]*">([^<]*)<\/a>/g, "$1");
       htmlFixed = htmlFixed.replace(/<a href="[^"]*default\.html[^"]*"><code>([^<]*)<\/code><\/a>/g, "<code>$1</code>");
 
+      // Strip links to ClassInfo (global type alias, no useful page)
+      htmlFixed = htmlFixed.replace(
+        /<a href="[^"]*\/type-aliases\/ClassInfo\.html(?:#[^"]*)?"[^>]*><code>([^<]+)<\/code><\/a>/g,
+        "<code>$1</code>"
+      );
+
+      // Strip links whose href points to dead targets (jQuery, QUnit, pseudo-types, nested namespaces)
+      htmlFixed = htmlFixed.replace(/<a href="([^"]*)"[^>]*>(<code>[^<]+<\/code>)<\/a>/g, (match, href, content) => {
+        if (DEAD_LINK_PATTERNS.some((p) => p.test(href))) return content;
+        // Links with nested namespaces/ segments are always dead TypeDoc artifacts
+        if ((href.match(/\/namespaces\//g) || []).length >= 2) return content;
+        return match;
+      });
+
+      // Remove TypeDoc "References" section (global namespace re-export artifacts)
+      htmlFixed = htmlFixed.replace(/<h2>References<\/h2>[\s\S]*?(?=<footer)/, "");
+
       // Add import hint for class/interface/type-alias pages
       // Path pattern: sap.m/sap/m/Button/classes/Button.html → module "sap/m/Button", class "Button"
       const classMatch = rel.match(/^[^/]+\/(.+)\/(classes|interfaces|type-aliases)\/([^/]+)\.html$/);
@@ -523,6 +603,32 @@ function renderDir(dir) {
 
 renderDir(MD_DIR);
 console.log(`  Rendered ${fileCount} HTML files (skipped ${skippedCount} jQuery-related)`);
+
+// Post-processing: prune README entries pointing to non-existent pages
+// This covers ambient globals (QUnit, global_Element) and ungenerated web component wrappers
+console.log("  Pruning README entries with dead links...");
+let prunedEntries = 0;
+function pruneReadmes(dir) {
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    const stat = statSync(full);
+    if (stat.isDirectory()) {
+      pruneReadmes(full);
+    } else if (entry === "README.html") {
+      let html = readFileSync(full, "utf8");
+      const original = html;
+      html = html.replace(/<li><a href="([^"]+)">[^<]+<\/a><\/li>\n?/g, (match, href) => {
+        const target = join(dirname(full), href.split("#")[0]);
+        if (existsSync(target)) return match;
+        prunedEntries++;
+        return "";
+      });
+      if (html !== original) writeFileSync(full, html);
+    }
+  }
+}
+pruneReadmes(OUT_DIR);
+if (prunedEntries > 0) console.log(`  Removed ${prunedEntries} dead README entries`);
 
 // --- Step 5: Generate sitemap ---
 console.log("\nStep 5: Generating sitemap...");
