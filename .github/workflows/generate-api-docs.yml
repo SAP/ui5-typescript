@@ -92,6 +92,7 @@ jobs:
           fi
 
       - name: Generate API docs
+        id: generate
         working-directory: main/scripts/generate-api-docs
         run: |
           IFS=',' read -ra ENTRIES <<< "${{ steps.versions.outputs.versions }}"
@@ -172,6 +173,11 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "docs: update TypeScript API reference"
+            GENERATED="${{ steps.generate.outputs.generated }}"
+            if [ -n "$GENERATED" ]; then
+              git commit -m "docs: update TypeScript API reference: ${GENERATED}"
+            else
+              git commit -m "docs: update TypeScript API reference"
+            fi
             git push
           fi
