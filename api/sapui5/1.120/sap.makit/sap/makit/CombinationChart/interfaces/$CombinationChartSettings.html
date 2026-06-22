@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $CombinationChartSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $CombinationChartSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $CombinationChartSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $CombinationChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.makit/sap/makit/CombinationChart/interfaces/$CombinationChartSettings.html">
-<meta property="og:title" content="~~Interface: $CombinationChartSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $CombinationChartSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $CombinationChartSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $CombinationChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.makit/sap/makit/CombinationChart/interfaces/$CombinationChartSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.makit/README.html">sap.makit</a> › sap › makit › <a href="../../../../../sap.makit/sap/makit/CombinationChart/README.html">CombinationChart</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.makit</a> / <a href="../README.html">sap/makit/CombinationChart</a> / $CombinationChartSettings</p>
-<h1><del>Interface: $CombinationChartSettings</del></h1>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.makit</a> / <a href="../README.html">sap/makit/CombinationChart</a> / $CombinationChartSettings</p>
+<h1>Interface: $CombinationChartSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $CombinationChartSettings } <span class="kw">from</span> <span class="str">"sap/makit/CombinationChart"</span>;</pre>
-<p>Describes the settings that can be provided to the CombinationChart constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
-will not be supported anymore from 1.38.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -51,21 +47,21 @@ will not be supported anymore from 1.38.</p>
 <blockquote>
 <p><code>optional</code> <strong>categoryAxis?</strong>: <a href="../../CategoryAxis/classes/CategoryAxis.html"><code>CategoryAxis</code></a></p>
 </blockquote>
-<p>Category Axis property of the Chart. Accepts only an instance of CategoryAxis element.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
+<p>Category Axis property of the Chart. Accepts only an instance of CategoryAxis element.</p>
 <hr>
 <h3><del>categoryRegions?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>categoryRegions?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../Category/classes/Category.html"><code>Category</code></a> | <a href="../../Category/classes/Category.html"><code>Category</code></a>[]</p>
 </blockquote>
-<p>Data region property of the chart&#39;s Categories</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
+<p>Data region property of the chart&#39;s Categories</p>
 <hr>
-<h3><del>doubletap?</del></h3>
+<h3>doubletap?</h3>
 <blockquote>
 <p><code>optional</code> <strong>doubletap?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -76,7 +72,7 @@ will not be supported anymore from 1.38.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>height?</del></h3>
+<h3>height?</h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
@@ -86,18 +82,18 @@ will not be supported anymore from 1.38.</p>
 <blockquote>
 <p><code>optional</code> <strong>layers?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../Layer/classes/Layer.html"><code>Layer</code></a> | <a href="../../Layer/classes/Layer.html"><code>Layer</code></a>[]</p>
 </blockquote>
-<p>The collection of charts</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
+<p>The collection of charts</p>
 <hr>
-<h3><del>legendPosition?</del></h3>
+<h3>legendPosition?</h3>
 <blockquote>
 <p><code>optional</code> <strong>legendPosition?</strong>: <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <a href="../../library/enumerations/LegendPosition.html"><code>LegendPosition</code></a></p>
 </blockquote>
 <p>Legend position for Pie /Donut chart only.</p>
 <hr>
-<h3><del>longpress?</del></h3>
+<h3>longpress?</h3>
 <blockquote>
 <p><code>optional</code> <strong>longpress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -108,14 +104,14 @@ will not be supported anymore from 1.38.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>numberOfVisibleCategories?</del></h3>
+<h3>numberOfVisibleCategories?</h3>
 <blockquote>
 <p><code>optional</code> <strong>numberOfVisibleCategories?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>The number of categories that will be visible on the chart at any time. The minimum value is 2. If not
 set, the number of visible categories will be automatically adjusted depending on the screen size</p>
 <hr>
-<h3><del>primaryColorPalette?</del></h3>
+<h3>primaryColorPalette?</h3>
 <blockquote>
 <p><code>optional</code> <strong>primaryColorPalette?</strong>: <code>any</code></p>
 </blockquote>
@@ -127,18 +123,18 @@ an array of color in string format or hex format. e.g. 0xff0000 &quot;red&quot; 
 <blockquote>
 <p><code>optional</code> <strong>primaryValueAxis?</strong>: <a href="../../ValueAxis/classes/ValueAxis.html"><code>ValueAxis</code></a></p>
 </blockquote>
-<p>Property of the Combination Chart&#39;s primary Value Axis. Accept only an instance of ValueAxis element.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
+<p>Property of the Combination Chart&#39;s primary Value Axis. Accept only an instance of ValueAxis element.</p>
 <hr>
-<h3><del>rangeSelectorStartPosition?</del></h3>
+<h3>rangeSelectorStartPosition?</h3>
 <blockquote>
 <p><code>optional</code> <strong>rangeSelectorStartPosition?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Specify the range selector start position, default value is 0.</p>
 <hr>
-<h3><del>secondaryColorPalette?</del></h3>
+<h3>secondaryColorPalette?</h3>
 <blockquote>
 <p><code>optional</code> <strong>secondaryColorPalette?</strong>: <code>any</code></p>
 </blockquote>
@@ -150,24 +146,24 @@ an array of color in string format or hex format. e.g. 0xff0000 &quot;red&quot; 
 <blockquote>
 <p><code>optional</code> <strong>secondaryValueAxis?</strong>: <a href="../../ValueAxis/classes/ValueAxis.html"><code>ValueAxis</code></a></p>
 </blockquote>
-<p>Property of the Combination Chart&#39;s secondary Value Axis. Accept only an instance of ValueAxis element.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
+<p>Property of the Combination Chart&#39;s secondary Value Axis. Accept only an instance of ValueAxis element.</p>
 <hr>
-<h3><del>showRangeSelector?</del></h3>
+<h3>showRangeSelector?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showRangeSelector?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Specify whether the range selector should be visible.</p>
 <hr>
-<h3><del>showTableValue?</del></h3>
+<h3>showTableValue?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showTableValue?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Toggle to display the table value on a Bar chart. Only applies to Bar chart.</p>
 <hr>
-<h3><del>tap?</del></h3>
+<h3>tap?</h3>
 <blockquote>
 <p><code>optional</code> <strong>tap?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -182,17 +178,17 @@ will not be supported anymore from 1.38.</p>
 <blockquote>
 <p><code>optional</code> <strong>valueBubble?</strong>: <a href="../../ValueBubble/classes/ValueBubble.html"><code>ValueBubble</code></a></p>
 </blockquote>
-<p>Value Bubble property of the Chart. Accept only an instance of ValueBubble element.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
+<p>Value Bubble property of the Chart. Accept only an instance of ValueBubble element.</p>
 <hr>
-<h3><del>width?</del></h3>
+<h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The width of the Chart</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

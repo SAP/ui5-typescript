@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $CalculationBuilderSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $CalculationBuilderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $CalculationBuilderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/CalculationBuilder/interfaces/$CalculationBuilderSettings.html">
 <meta property="og:title" content="Interface: $CalculationBuilderSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $CalculationBuilderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $CalculationBuilderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/CalculationBuilder/interfaces/$CalculationBuilderSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/CalculationBuilder/README.html">CalculationBuilder</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/CalculationBuilder</a> / $CalculationBuilderSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/CalculationBuilder</a> / $CalculationBuilderSettings</p>
 <h1>Interface: $CalculationBuilderSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $CalculationBuilderSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/CalculationBuilder"</span>;</pre>
-<p>Describes the settings that can be provided to the CalculationBuilder constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -71,20 +70,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>allowStringConstants?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines whether string constants are allowed.
- If set to <code>true</code>, the calculation builder doesn&#39;t validate custom strings as errors.</p>
 <h4>Deprecated</h4>
 <p>(since 1.77.0) - replaced by the <code>allowStringLiterals</code> property.</p>
+<p>Defines whether string constants are allowed.
+ If set to <code>true</code>, the calculation builder doesn&#39;t validate custom strings as errors.</p>
 <hr>
 <h3>allowStringLiterals?</h3>
 <blockquote>
 <p><code>optional</code> <strong>allowStringLiterals?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.77.0</p>
 <p>Defines whether string literals are allowed.
  If set to <code>true</code>, the calculation builder doesn&#39;t validate strings as errors.
  Number literals are also allowed regardless of this setting.</p>
-<h4>Since</h4>
-<p>1.77.0</p>
 <hr>
 <h3>allowSuggestions?</h3>
 <blockquote>
@@ -211,6 +210,6 @@ using sap.suite.ui.commons.CalculationBuilderValidationResult.</p>
 <p>Defines whether the expression should be wrapped inside the calculation builder field.
  If set to <code>false</code>, the expression is rearranged into a single scrollable row.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

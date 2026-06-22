@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Card — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Card — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Card — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.integration/sap/ui/integration/widgets/Card/classes/Card.html">
 <meta property="og:title" content="Class: Card — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Card — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Card — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.integration/sap/ui/integration/widgets/Card/classes/Card.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.integration/README.html">sap.ui.integration</a> › sap › ui › integration › widgets › <a href="../../../../../../../sap.ui.integration/sap/ui/integration/widgets/Card/README.html">Card</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.integration</a> / <a href="../README.html">sap/ui/integration/widgets/Card</a> / Card</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.integration</a> / <a href="../README.html">sap/ui/integration/widgets/Card</a> / Card</p>
 <h1>Class: Card</h1>
 <pre class="sig"><span class="kw">import</span> Card <span class="kw">from</span> <span class="str">"sap/ui/integration/widgets/Card"</span>;</pre>
+<h2>Since</h2>
+<p>1.62</p>
 <p>A control that represents a container with a header and content.</p>
 <p>Overview: Cards are small user interface elements which provide the most important information from an
 app, related to a specific role or task. The information is represented in a compact manner, allowing
@@ -68,8 +70,6 @@ in different systems.</p>
 <pre><code> - When you have to use an application model. For such cases, use: sap.f.Card sap.f.Card.
  - When you need complex behavior. For such cases, use: sap.f.Card sap.f.Card.
 </code></pre>
-<h2>Since</h2>
-<p>1.62</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.f/sap/f/CardBase/classes/CardBase.html"><code>CardBase</code></a></li>
@@ -120,7 +120,6 @@ See:
 <p><strong>addActionDefinition</strong>(<code>oActionDefinition</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Adds some actionDefinition to the aggregation #getActionDefinitions actionDefinitions.</p>
 <h4>Parameters</h4>
 <h5>oActionDefinition</h5>
 <p><a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a></p>
@@ -132,6 +131,7 @@ See:
 <p>1.85
  (since 1.85) - Disclaimer: this aggregation is in a beta state - incompatible API changes
 may be done before its official public release. Use at your own discretion.</p>
+<p>Adds some actionDefinition to the aggregation #getActionDefinitions actionDefinitions.</p>
 <hr>
 <h3>attachAction()</h3>
 <h4>Call Signature</h4>
@@ -139,6 +139,8 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>attachAction</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.64) - Disclaimer: this event is in a beta state - incompatible API changes may
+be done before its official public release. Use at your own discretion.</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:action action event of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.</p>
@@ -146,8 +148,6 @@ otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> 
 <p>When an action is triggered in the card it can be handled on several places by &quot;action&quot; event handlers.
 In consecutive order those places are: <code>Extension</code>, <code>Card</code>, <code>Host</code>. Each of them can prevent the next
 one to handle the action by calling <code>oEvent.preventDefault()</code>.</p>
-<p> (since 1.64) - Disclaimer: this event is in a beta state - incompatible API changes may
-be done before its official public release. Use at your own discretion.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -167,6 +167,8 @@ object when firing the event</p>
 <p><strong>attachAction</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.64) - Disclaimer: this event is in a beta state - incompatible API changes may
+be done before its official public release. Use at your own discretion.</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:action action event of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.</p>
@@ -174,8 +176,6 @@ otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> 
 <p>When an action is triggered in the card it can be handled on several places by &quot;action&quot; event handlers.
 In consecutive order those places are: <code>Extension</code>, <code>Card</code>, <code>Host</code>. Each of them can prevent the next
 one to handle the action by calling <code>oEvent.preventDefault()</code>.</p>
-<p> (since 1.64) - Disclaimer: this event is in a beta state - incompatible API changes may
-be done before its official public release. Use at your own discretion.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -193,13 +193,13 @@ be done before its official public release. Use at your own discretion.</p>
 <p><strong>attachConfigurationChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.96)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:configurationChange configurationChange event
 of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.</p>
 <p>Fired when some configuration settings are changed as a result of user interaction. For example - filter
 value is changed.</p>
-<p> (since 1.96)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -219,13 +219,13 @@ object when firing the event</p>
 <p><strong>attachConfigurationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.96)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:configurationChange configurationChange event
 of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.</p>
 <p>Fired when some configuration settings are changed as a result of user interaction. For example - filter
 value is changed.</p>
-<p> (since 1.96)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -291,11 +291,11 @@ and initialized.</p>
 <p><strong>attachManifestReady</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.72)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:manifestReady manifestReady event of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.</p>
 <p>Fired when the manifest is loaded.</p>
-<p> (since 1.72)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -315,11 +315,11 @@ object when firing the event</p>
 <p><strong>attachManifestReady</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.72)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:manifestReady manifestReady event of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.</p>
 <p>Fired when the manifest is loaded.</p>
-<p> (since 1.72)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -337,12 +337,12 @@ otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> 
 <p><strong>attachStateChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.107)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:stateChanged stateChanged event of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.</p>
 <p>Fired when the state of the card is changed. For example - the card is ready, new page is selected, a
 filter is changed or data is refreshed.</p>
-<p> (since 1.107)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -362,12 +362,12 @@ object when firing the event</p>
 <p><strong>attachStateChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.107)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:stateChanged stateChanged event of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.widgets.Card</code> itself.</p>
 <p>Fired when the state of the card is changed. For example - the card is ready, new page is selected, a
 filter is changed or data is refreshed.</p>
-<p> (since 1.107)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -384,7 +384,6 @@ filter is changed or data is refreshed.</p>
 <p><strong>destroyActionDefinitions</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Destroys all the actionDefinitions in the aggregation #getActionDefinitions actionDefinitions.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -392,16 +391,17 @@ filter is changed or data is refreshed.</p>
 <p>1.85
  (since 1.85) - Disclaimer: this aggregation is in a beta state - incompatible API changes
 may be done before its official public release. Use at your own discretion.</p>
+<p>Destroys all the actionDefinitions in the aggregation #getActionDefinitions actionDefinitions.</p>
 <hr>
 <h3>detachAction()</h3>
 <blockquote>
 <p><strong>detachAction</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.64) - Disclaimer: this event is in a beta state - incompatible API changes may
+be done before its official public release. Use at your own discretion.</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:action action event of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.64) - Disclaimer: this event is in a beta state - incompatible API changes may
-be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -418,10 +418,10 @@ be done before its official public release. Use at your own discretion.</p>
 <p><strong>detachConfigurationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.96)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:configurationChange configurationChange event
 of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.96)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -456,10 +456,10 @@ this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p><strong>detachManifestReady</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.72)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:manifestReady manifestReady event of this
 <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.72)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -476,9 +476,9 @@ this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p><strong>detachStateChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.107)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:stateChanged stateChanged event of this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.107)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -495,10 +495,7 @@ this <code>sap.ui.integration.widgets.Card</code>.</p>
 <p><strong>fireAction</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:action action to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
-<p> (since 1.64) - Disclaimer: this event is in a beta state - incompatible API changes may
+<p>(since 1.64) - Disclaimer: this event is in a beta state - incompatible API changes may
 be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
@@ -509,14 +506,16 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:action action to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireConfigurationChange()</h3>
 <blockquote>
 <p><strong>fireConfigurationChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:configurationChange configurationChange to attached listeners.</p>
-<p> (since 1.96)</p>
+<p>(since 1.96)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Card$ConfigurationChangeEventParameters.html"><code>Card$ConfigurationChangeEventParameters</code></a></p>
@@ -526,12 +525,12 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:configurationChange configurationChange to attached listeners.</p>
 <hr>
 <h3>fireManifestApplied()</h3>
 <blockquote>
 <p><strong>fireManifestApplied</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:manifestApplied manifestApplied to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -541,14 +540,14 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:manifestApplied manifestApplied to attached listeners.</p>
 <hr>
 <h3>fireManifestReady()</h3>
 <blockquote>
 <p><strong>fireManifestReady</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:manifestReady manifestReady to attached listeners.</p>
-<p> (since 1.72)</p>
+<p>(since 1.72)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -558,14 +557,14 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:manifestReady manifestReady to attached listeners.</p>
 <hr>
 <h3>fireStateChanged()</h3>
 <blockquote>
 <p><strong>fireStateChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:stateChanged stateChanged to attached listeners.</p>
-<p> (since 1.107)</p>
+<p>(since 1.107)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -575,44 +574,45 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:stateChanged stateChanged to attached listeners.</p>
 <hr>
 <h3>getActionDefinitions()</h3>
 <blockquote>
 <p><strong>getActionDefinitions</strong>(): <a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets content of aggregation #getActionDefinitions actionDefinitions.</p>
-<p>Actions definitions from which actions in the header menu of the card are created. <strong>Note</strong>: This aggregation
-is destroyed when the property <code>manifest</code> changes.</p>
 <h4>Returns</h4>
 <p><a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a>[]</p>
 <h4>Since</h4>
 <p>1.85
  (since 1.85) - Disclaimer: this aggregation is in a beta state - incompatible API changes
 may be done before its official public release. Use at your own discretion.</p>
+<p>Gets content of aggregation #getActionDefinitions actionDefinitions.</p>
+<p>Actions definitions from which actions in the header menu of the card are created. <strong>Note</strong>: This aggregation
+is destroyed when the property <code>manifest</code> changes.</p>
 <hr>
 <h3>getBaseUrl()</h3>
 <blockquote>
 <p><strong>getBaseUrl</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getBaseUrl baseUrl.</p>
-<p>Defines the base URL of the card manifest. It should be used when manifest property is an object instead
-of a URL. If both manifest URL and base URL are defined - the base URL will be used for loading dependencies.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>baseUrl</code></p>
 <h4>Since</h4>
 <p>1.70
  (since 1.70)</p>
+<p>Gets current value of property #getBaseUrl baseUrl.</p>
+<p>Defines the base URL of the card manifest. It should be used when manifest property is an object instead
+of a URL. If both manifest URL and base URL are defined - the base URL will be used for loading dependencies.</p>
 <hr>
 <h3>getBlockingMessage()</h3>
 <blockquote>
 <p><strong>getBlockingMessage</strong>(): <a href="../type-aliases/BlockingMessageSettings.html"><code>BlockingMessageSettings</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.114)</p>
 <p>Get information about the blocking message in the card.</p>
-<p> (since 1.114)</p>
 <h4>Returns</h4>
 <p><a href="../type-aliases/BlockingMessageSettings.html"><code>BlockingMessageSettings</code></a></p>
 <p>Information about the message or <code>null</code>, if such isn&#39;t shown.</p>
@@ -622,6 +622,7 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <p><strong>getCombinedParameters</strong>(): <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.77)</p>
 <p>Gets values of manifest parameters combined with the parameters from <code>parameters</code> property.</p>
 <p><strong>Notes</strong></p>
 <ul>
@@ -630,7 +631,6 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <li><p>Use when developing a Component card.</p>
 </li>
 </ul>
-<p> (since 1.77)</p>
 <h4>Returns</h4>
 <p><code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
 <p>Object containing parameters in format <code>{parameterKey: parameterValue}</code>.</p>
@@ -640,56 +640,56 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <p><strong>getDataMode</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;Active&quot;</code> | <code>&quot;Inactive&quot;</code> | <a href="../../../library/enumerations/CardDataMode.html"><code>CardDataMode</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getDataMode dataMode.</p>
-<p>Defines the state of the <code>Card</code>. When set to <code>Inactive</code>, the <code>Card</code> doesn&#39;t make requests.</p>
-<p>Default value is <code>Auto</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;Active&quot;</code> | <code>&quot;Inactive&quot;</code> | <a href="../../../library/enumerations/CardDataMode.html"><code>CardDataMode</code></a></p>
 <p>Value of property <code>dataMode</code></p>
 <h4>Since</h4>
 <p>1.65
  (since 1.65)</p>
+<p>Gets current value of property #getDataMode dataMode.</p>
+<p>Defines the state of the <code>Card</code>. When set to <code>Inactive</code>, the <code>Card</code> doesn&#39;t make requests.</p>
+<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>getDesign()</h3>
 <blockquote>
 <p><strong>getDesign</strong>(): <code>&quot;Solid&quot;</code> | <code>&quot;Transparent&quot;</code> | <a href="../../../library/enumerations/CardDesign.html"><code>CardDesign</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getDesign design.</p>
-<p>Defines the design of the <code>Card</code>.</p>
-<p>Default value is <code>Solid</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Solid&quot;</code> | <code>&quot;Transparent&quot;</code> | <a href="../../../library/enumerations/CardDesign.html"><code>CardDesign</code></a></p>
 <p>Value of property <code>design</code></p>
 <h4>Since</h4>
 <p>1.109
  (since 1.109)</p>
+<p>Gets current value of property #getDesign design.</p>
+<p>Defines the design of the <code>Card</code>.</p>
+<p>Default value is <code>Solid</code>.</p>
 <hr>
 <h3>getDisplayVariant()</h3>
 <blockquote>
 <p><strong>getDisplayVariant</strong>(): <code>&quot;Standard&quot;</code> | <a href="../../../library/enumerations/CardDisplayVariant.html"><code>CardDisplayVariant</code></a> | <code>&quot;TileFlat&quot;</code> | <code>&quot;TileFlatWide&quot;</code> | <code>&quot;TileStandard&quot;</code> | <code>&quot;TileStandardWide&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getDisplayVariant displayVariant.</p>
-<p>Defines the display variant for card rendering and behavior.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Standard&quot;</code> | <a href="../../../library/enumerations/CardDisplayVariant.html"><code>CardDisplayVariant</code></a> | <code>&quot;TileFlat&quot;</code> | <code>&quot;TileFlatWide&quot;</code> | <code>&quot;TileStandard&quot;</code> | <code>&quot;TileStandardWide&quot;</code></p>
 <p>Value of property <code>displayVariant</code></p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Gets current value of property #getDisplayVariant displayVariant.</p>
+<p>Defines the display variant for card rendering and behavior.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3>getFocusDomRef()</h3>
 <blockquote>
 <p><strong>getFocusDomRef</strong>(): <code>Element</code></p>
 </blockquote>
-<p>Returns the DOM Element that should get the focus.</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>Returns the DOM Element that should get the focus</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the DOM Element that should get the focus.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.f/sap/f/CardBase/classes/CardBase.html"><code>CardBase</code></a>.<a href="../../../../../../../sap.f/sap/f/CardBase/classes/CardBase.html#getfocusdomref"><code>getFocusDomRef</code></a></p>
 <hr>
@@ -706,8 +706,8 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <p><strong>getHostInstance</strong>(): <a href="../../../Host/classes/Host.html"><code>Host</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.77)</p>
 <p>Gets the instance of the <code>host</code> association.</p>
-<p> (since 1.77)</p>
 <h4>Returns</h4>
 <p><a href="../../../Host/classes/Host.html"><code>Host</code></a></p>
 <p>The host object associated with this card.</p>
@@ -726,6 +726,13 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <p><strong>getManifestChanges</strong>(): <code>object</code>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<h4>Returns</h4>
+<p><code>object</code>[]</p>
+<p>Value of property <code>manifestChanges</code></p>
+<h4>Since</h4>
+<p>1.76
+ (since 1.76) - This API might be removed when a permanent solution for flexibility changes
+is implemented.</p>
 <p>Gets current value of property #getManifestChanges manifestChanges.</p>
 <p>Defines a list of configuration settings, which will be merged into the original manifest.</p>
 <p>This can be a list of flexibility changes generated during designtime.</p>
@@ -757,22 +764,15 @@ last item will overwrite the previous items where the paths match.</p>
 	}
 ]
 </code></pre>
-<h4>Returns</h4>
-<p><code>object</code>[]</p>
-<p>Value of property <code>manifestChanges</code></p>
-<h4>Since</h4>
-<p>1.76
- (since 1.76) - This API might be removed when a permanent solution for flexibility changes
-is implemented.</p>
 <hr>
 <h3>getManifestEntry()</h3>
 <blockquote>
 <p><strong>getManifestEntry</strong>(<code>sPath</code>): <code>any</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.77)</p>
 <p>Returns a value from the Manifest based on the specified path.</p>
 <p><strong>Note</strong> Use this method when the manifest is ready. Check <code>manifestReady</code> event.</p>
-<p> (since 1.77)</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -786,6 +786,12 @@ is implemented.</p>
 <p><strong>getPreviewMode</strong>(): <code>&quot;Off&quot;</code> | <a href="../../../library/enumerations/CardPreviewMode.html"><code>CardPreviewMode</code></a> | <code>&quot;Abstract&quot;</code> | <code>&quot;MockData&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<h4>Returns</h4>
+<p><code>&quot;Off&quot;</code> | <a href="../../../library/enumerations/CardPreviewMode.html"><code>CardPreviewMode</code></a> | <code>&quot;Abstract&quot;</code> | <code>&quot;MockData&quot;</code></p>
+<p>Value of property <code>previewMode</code></p>
+<h4>Since</h4>
+<p>1.112
+ (since 1.112)</p>
 <p>Gets current value of property #getPreviewMode previewMode.</p>
 <p>Preview mode of the <code>Card</code>. Helpful in scenarios when the end user is choosing or configuring a card.</p>
 <pre><code> - When set to &quot;MockData&quot;, the card data is loaded, using a data request, as configured in the &quot;data/mockData&quot;
@@ -794,12 +800,6 @@ in the manifest. If such configuration is missing, then the Abstract mode will b
  - When set to &quot;Off&quot;, the card displays real data.
 </code></pre>
 <p>Default value is <code>Off</code>.</p>
-<h4>Returns</h4>
-<p><code>&quot;Off&quot;</code> | <a href="../../../library/enumerations/CardPreviewMode.html"><code>CardPreviewMode</code></a> | <code>&quot;Abstract&quot;</code> | <code>&quot;MockData&quot;</code></p>
-<p>Value of property <code>previewMode</code></p>
-<h4>Since</h4>
-<p>1.112
- (since 1.112)</p>
 <hr>
 <h3>getReferenceId()</h3>
 <blockquote>
@@ -818,9 +818,9 @@ cards. Does not affect the card behavior.</p>
 <p><strong>getTranslatedText</strong>(<code>sKey</code>, <code>aArgs?</code>, <code>bIgnoreKeyFallback?</code>): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.83) - The API might change.</p>
 <p>Gets translated text from the i18n properties files configured for this card.</p>
 <p>For more details see module:sap/base/i18n/ResourceBundle#getText.</p>
-<p> (since 1.83) - The API might change.</p>
 <h4>Parameters</h4>
 <h5>sKey</h5>
 <p><code>string</code></p>
@@ -845,8 +845,8 @@ on <code>bIgnoreKeyFallback</code>.</p>
 <p><strong>hideBlockingMessage</strong>(): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.114)</p>
 <p>Hide the blocking message that is shown in the card by <code>showBlockingMessage</code> call.</p>
-<p> (since 1.114)</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
@@ -868,8 +868,8 @@ Leave empty to hide loading placeholders on all areas of the card.</p>
 <p><strong>hideMessage</strong>(): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.117)</p>
 <p>Hides the message previously shown by showMessage.</p>
-<p> (since 1.117)</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
@@ -878,8 +878,6 @@ Leave empty to hide loading placeholders on all areas of the card.</p>
 <p><strong>indexOfActionDefinition</strong>(<code>oActionDefinition</code>): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Checks for the provided <code>sap.ui.integration.ActionDefinition</code> in the aggregation #getActionDefinitions actionDefinitions.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oActionDefinition</h5>
 <p><a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a></p>
@@ -891,13 +889,14 @@ and returns its index if found or -1 otherwise.</p>
 <p>1.85
  (since 1.85) - Disclaimer: this aggregation is in a beta state - incompatible API changes
 may be done before its official public release. Use at your own discretion.</p>
+<p>Checks for the provided <code>sap.ui.integration.ActionDefinition</code> in the aggregation #getActionDefinitions actionDefinitions.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertActionDefinition()</h3>
 <blockquote>
 <p><strong>insertActionDefinition</strong>(<code>oActionDefinition</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Inserts a actionDefinition into the aggregation #getActionDefinitions actionDefinitions.</p>
 <h4>Parameters</h4>
 <h5>oActionDefinition</h5>
 <p><a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a></p>
@@ -914,6 +913,7 @@ the actionDefinition is inserted at the last position</p>
 <p>1.85
  (since 1.85) - Disclaimer: this aggregation is in a beta state - incompatible API changes
 may be done before its official public release. Use at your own discretion.</p>
+<p>Inserts a actionDefinition into the aggregation #getActionDefinitions actionDefinitions.</p>
 <hr>
 <h3>isReady()</h3>
 <blockquote>
@@ -930,12 +930,12 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>loadDesigntime</strong>(): <code>Promise</code>&lt;<code>object</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.73)</p>
 <p>Loads the module designtime/Card.designtime or the module given in &quot;sap.card&quot;: { &quot;designtime&quot;: &quot;designtime/Own.designtime&quot;
 } This file should contain the designtime configuration for the card.</p>
 <p>Returns a promise that resolves with an object { designtime: the designtime modules response manifest:
 the complete manifest json } The promise is rejected if the module cannot be loaded with an object: {
 error: &quot;Card.designtime not found&quot; }</p>
-<p> (since 1.73)</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>object</code>&gt;</p>
 <p>Promise resolves after the designtime configuration is loaded.</p>
@@ -945,8 +945,8 @@ error: &quot;Card.designtime not found&quot; }</p>
 <p><strong>refresh</strong>(): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.65) - The API might change.</p>
 <p>Refreshes the card by re-applying the manifest settings and triggering all data requests.</p>
-<p> (since 1.65) - The API might change.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
@@ -954,18 +954,17 @@ error: &quot;Card.designtime not found&quot; }</p>
 <blockquote>
 <p><strong>refreshData</strong>(): <code>void</code></p>
 </blockquote>
-<p>Refreshes the card data by triggering all data requests.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.95</p>
+<p>Refreshes the card data by triggering all data requests.</p>
 <hr>
 <h3>removeActionDefinition()</h3>
 <blockquote>
 <p><strong>removeActionDefinition</strong>(<code>vActionDefinition</code>): <a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Removes a actionDefinition from the aggregation #getActionDefinitions actionDefinitions.</p>
 <h4>Parameters</h4>
 <h5>vActionDefinition</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a></p>
@@ -977,14 +976,13 @@ error: &quot;Card.designtime not found&quot; }</p>
 <p>1.85
  (since 1.85) - Disclaimer: this aggregation is in a beta state - incompatible API changes
 may be done before its official public release. Use at your own discretion.</p>
+<p>Removes a actionDefinition from the aggregation #getActionDefinitions actionDefinitions.</p>
 <hr>
 <h3>removeAllActionDefinitions()</h3>
 <blockquote>
 <p><strong>removeAllActionDefinitions</strong>(): <a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Removes all the controls from the aggregation #getActionDefinitions actionDefinitions.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../ActionDefinition/classes/ActionDefinition.html"><code>ActionDefinition</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
@@ -992,14 +990,16 @@ may be done before its official public release. Use at your own discretion.</p>
 <p>1.85
  (since 1.85) - Disclaimer: this aggregation is in a beta state - incompatible API changes
 may be done before its official public release. Use at your own discretion.</p>
+<p>Removes all the controls from the aggregation #getActionDefinitions actionDefinitions.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>request()</h3>
 <blockquote>
 <p><strong>request</strong>(<code>oConfiguration</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.79)</p>
 <p>Performs an HTTP request using the given configuration.</p>
-<p> (since 1.79)</p>
 <h4>Parameters</h4>
 <h5>oConfiguration</h5>
 <p>The configuration of the request.</p>
@@ -1047,10 +1047,6 @@ be put as key/value pairs into the body of the request.</p>
 <p><strong>setBaseUrl</strong>(<code>sBaseUrl?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getBaseUrl baseUrl.</p>
-<p>Defines the base URL of the card manifest. It should be used when manifest property is an object instead
-of a URL. If both manifest URL and base URL are defined - the base URL will be used for loading dependencies.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBaseUrl?</h5>
 <p><code>string</code></p>
@@ -1061,13 +1057,16 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <h4>Since</h4>
 <p>1.70
  (since 1.70)</p>
+<p>Sets a new value for property #getBaseUrl baseUrl.</p>
+<p>Defines the base URL of the card manifest. It should be used when manifest property is an object instead
+of a URL. If both manifest URL and base URL are defined - the base URL will be used for loading dependencies.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDataMode()</h3>
 <blockquote>
 <p><strong>setDataMode</strong>(<code>sMode</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for the <code>dataMode</code> property.</p>
 <h4>Parameters</h4>
 <h5>sMode</h5>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;Active&quot;</code> | <code>&quot;Inactive&quot;</code> | <a href="../../../library/enumerations/CardDataMode.html"><code>CardDataMode</code></a></p>
@@ -1078,16 +1077,13 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <h4>Since</h4>
 <p>1.65
  (since 1.65) - API might change.</p>
+<p>Sets a new value for the <code>dataMode</code> property.</p>
 <hr>
 <h3>setDesign()</h3>
 <blockquote>
 <p><strong>setDesign</strong>(<code>sDesign?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getDesign design.</p>
-<p>Defines the design of the <code>Card</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Solid</code>.</p>
 <h4>Parameters</h4>
 <h5>sDesign?</h5>
 <p><code>&quot;Solid&quot;</code> | <code>&quot;Transparent&quot;</code> | <a href="../../../library/enumerations/CardDesign.html"><code>CardDesign</code></a></p>
@@ -1098,16 +1094,16 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <h4>Since</h4>
 <p>1.109
  (since 1.109)</p>
+<p>Sets a new value for property #getDesign design.</p>
+<p>Defines the design of the <code>Card</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Solid</code>.</p>
 <hr>
 <h3>setDisplayVariant()</h3>
 <blockquote>
 <p><strong>setDisplayVariant</strong>(<code>sDisplayVariant?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getDisplayVariant displayVariant.</p>
-<p>Defines the display variant for card rendering and behavior.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Parameters</h4>
 <h5>sDisplayVariant?</h5>
 <p><code>&quot;Standard&quot;</code> | <a href="../../../library/enumerations/CardDisplayVariant.html"><code>CardDisplayVariant</code></a> | <code>&quot;TileFlat&quot;</code> | <code>&quot;TileFlatWide&quot;</code> | <code>&quot;TileStandard&quot;</code> | <code>&quot;TileStandardWide&quot;</code></p>
@@ -1118,6 +1114,10 @@ of a URL. If both manifest URL and base URL are defined - the base URL will be u
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Sets a new value for property #getDisplayVariant displayVariant.</p>
+<p>Defines the display variant for card rendering and behavior.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3>setHost()</h3>
 <blockquote>
@@ -1154,6 +1154,17 @@ may be given</p>
 <p><strong>setManifestChanges</strong>(<code>sManifestChanges</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<h4>Parameters</h4>
+<h5>sManifestChanges</h5>
+<p><code>object</code>[]</p>
+<p>New value for property <code>manifestChanges</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.76
+ (since 1.76) - This API might be removed when a permanent solution for flexibility changes
+is implemented.</p>
 <p>Sets a new value for property #getManifestChanges manifestChanges.</p>
 <p>Defines a list of configuration settings, which will be merged into the original manifest.</p>
 <p>This can be a list of flexibility changes generated during designtime.</p>
@@ -1186,32 +1197,12 @@ last item will overwrite the previous items where the paths match.</p>
 ]
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<h4>Parameters</h4>
-<h5>sManifestChanges</h5>
-<p><code>object</code>[]</p>
-<p>New value for property <code>manifestChanges</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.76
- (since 1.76) - This API might be removed when a permanent solution for flexibility changes
-is implemented.</p>
 <hr>
 <h3>setPreviewMode()</h3>
 <blockquote>
 <p><strong>setPreviewMode</strong>(<code>sPreviewMode?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getPreviewMode previewMode.</p>
-<p>Preview mode of the <code>Card</code>. Helpful in scenarios when the end user is choosing or configuring a card.</p>
-<pre><code> - When set to &quot;MockData&quot;, the card data is loaded, using a data request, as configured in the &quot;data/mockData&quot;
-in the manifest. If such configuration is missing, then the Abstract mode will be used instead.
- - When set to &quot;Abstract&quot;, the card shows abstract placeholder without loading data.
- - When set to &quot;Off&quot;, the card displays real data.
-</code></pre>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Off</code>.</p>
 <h4>Parameters</h4>
 <h5>sPreviewMode?</h5>
 <p><code>&quot;Off&quot;</code> | <a href="../../../library/enumerations/CardPreviewMode.html"><code>CardPreviewMode</code></a> | <code>&quot;Abstract&quot;</code> | <code>&quot;MockData&quot;</code></p>
@@ -1222,6 +1213,15 @@ in the manifest. If such configuration is missing, then the Abstract mode will b
 <h4>Since</h4>
 <p>1.112
  (since 1.112)</p>
+<p>Sets a new value for property #getPreviewMode previewMode.</p>
+<p>Preview mode of the <code>Card</code>. Helpful in scenarios when the end user is choosing or configuring a card.</p>
+<pre><code> - When set to &quot;MockData&quot;, the card data is loaded, using a data request, as configured in the &quot;data/mockData&quot;
+in the manifest. If such configuration is missing, then the Abstract mode will be used instead.
+ - When set to &quot;Abstract&quot;, the card shows abstract placeholder without loading data.
+ - When set to &quot;Off&quot;, the card displays real data.
+</code></pre>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>setReferenceId()</h3>
 <blockquote>
@@ -1245,9 +1245,9 @@ cards. Does not affect the card behavior.</p>
 <p><strong>showBlockingMessage</strong>(<code>oSettings</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.114)</p>
 <p>Show blocking message in the card&#39;s content area. Should be used after the <code>manifestApplied</code> event or
 after the <code>cardReady</code> lifecycle hook in Component cards and Extensions.</p>
-<p> (since 1.114)</p>
 <h4>Parameters</h4>
 <h5>oSettings</h5>
 <p><a href="../type-aliases/BlockingMessageSettings.html"><code>BlockingMessageSettings</code></a></p>
@@ -1274,10 +1274,10 @@ Leave empty to show loading placeholders on all areas of the card.</p>
 <p><strong>showMessage</strong>(<code>sMessage</code>, <code>sType</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.81)</p>
 <p>Displays a message strip above the content with the given text. There can be only 1 message displayed.
 If there is a previous message, it is removed. Can be used only after the <code>manifestApplied</code> event is
 fired.</p>
-<p> (since 1.81)</p>
 <h4>Parameters</h4>
 <h5>sMessage</h5>
 <p><code>string</code></p>
@@ -1293,6 +1293,7 @@ fired.</p>
 <p><strong>triggerAction</strong>(<code>oAction</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.84)</p>
 <p>Triggers an action inside the card.</p>
 <p>Use this method if you need to trigger an action programmatically from inside an <code>Extension</code> or from
 a Component card.</p>
@@ -1307,7 +1308,6 @@ oCard.triggerAction({
     }
 });
 </code></pre>
-<p> (since 1.84)</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p>The settings of the action.</p>
@@ -1345,7 +1345,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Card</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Card</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1369,6 +1369,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.f/sap/f/CardBase/classes/CardBase.html"><code>CardBase</code></a>.<a href="../../../../../../../sap.f/sap/f/CardBase/classes/CardBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

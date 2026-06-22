@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $GridContainerItemLayoutDataSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $GridContainerItemLayoutDataSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $GridContainerItemLayoutDataSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/GridContainerItemLayoutData/interfaces/$GridContainerItemLayoutDataSettings.html">
 <meta property="og:title" content="Interface: $GridContainerItemLayoutDataSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $GridContainerItemLayoutDataSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $GridContainerItemLayoutDataSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/GridContainerItemLayoutData/interfaces/$GridContainerItemLayoutDataSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/GridContainerItemLayoutData/README.html">GridContainerItemLayoutData</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/GridContainerItemLayoutData</a> / $GridContainerItemLayoutDataSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/GridContainerItemLayoutData</a> / $GridContainerItemLayoutDataSettings</p>
 <h1>Interface: $GridContainerItemLayoutDataSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $GridContainerItemLayoutDataSettings } <span class="kw">from</span> <span class="str">"sap/f/GridContainerItemLayoutData"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the GridContainerItemLayoutData constructor.</p>
-<p> (since 1.65) - This class is experimental. The API may change.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/LayoutData/interfaces/$LayoutDataSettings.html"><code>$LayoutDataSettings</code></a></li>
@@ -50,7 +47,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>columns?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Specifies the number of columns, which the item should take</p>
 <p><strong>Note:</strong> Make sure that the item does not have more columns than the total columns in the grid. Use
 sap.f.GridContainer#attachLayoutChange or a resize listener to handle when columns count is changed
@@ -61,7 +57,6 @@ grid columns. This is done to prevent broken layout (grid blowout) that affects 
 <blockquote>
 <p><code>optional</code> <strong>minRows?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Specifies the minimum number of rows, which the item should take.</p>
 <hr>
 <h3>rows?</h3>
@@ -69,10 +64,10 @@ grid columns. This is done to prevent broken layout (grid blowout) that affects 
 <p><code>optional</code> <strong>rows?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.65) - this property may soon be removed, use minRows instead</p>
 <p>Specifies the number of rows, which the item should take.</p>
-<p> (since 1.65) - this property may soon be removed, use minRows instead</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

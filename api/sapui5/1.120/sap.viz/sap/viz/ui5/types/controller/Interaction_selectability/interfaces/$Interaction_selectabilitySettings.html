@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $Interaction\_selectabilitySettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $Interaction\_selectabilitySettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $Interaction\_selectabilitySettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $Interaction\_selectabilitySettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/types/controller/Interaction_selectability/interfaces/$Interaction_selectabilitySettings.html">
-<meta property="og:title" content="~~Interface: $Interaction\_selectabilitySettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $Interaction\_selectabilitySettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $Interaction\_selectabilitySettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $Interaction\_selectabilitySettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/types/controller/Interaction_selectability/interfaces/$Interaction_selectabilitySettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,88 +33,69 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › types › controller › <a href="../../../../../../../../sap.viz/sap/viz/ui5/types/controller/Interaction_selectability/README.html">Interaction_selectability</a> › interfaces</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/types/controller/Interaction_selectability</a> / $Interaction_selectabilitySettings</p>
-<h1><del>Interface: $Interaction_selectabilitySettings</del></h1>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/types/controller/Interaction_selectability</a> / $Interaction_selectabilitySettings</p>
+<h1>Interface: $Interaction_selectabilitySettings</h1>
 <pre class="sig"><span class="kw">import</span> { $Interaction_selectabilitySettings } <span class="kw">from</span> <span class="str">"sap/viz/ui5/types/controller/Interaction_selectability"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the Interaction_selectability constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.32.0) - The chart controls in the <code>sap.viz.ui5</code> package (which were always marked
-as experimental) have been deprecated since 1.32.0. They are no longer actively developed and
-won&#39;t receive new features or improvements, only important bug fixes. They will only remain in the SAPUI5
-distribution for backward compatibility.</p>
-<p>**SAP strongly recommends that existing consumers of those controls migrate to the new sap.viz.ui5.controls.VizFrame VizFrame
-control to benefit from new charting enhancements and timely support. **</p>
-<p><strong>Note</strong>: As the feature set, design and API usage of VizFrame might differ from the old chart controls,
-make sure you evaluate it thoroughly before migration.
- (since 1.7.2) - Charting API is not finished yet and might change completely.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../core/BaseStructuredType/interfaces/$BaseStructuredTypeSettings.html"><code>$BaseStructuredTypeSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>axisLabelSelection?</del></h3>
+<h3>axisLabelSelection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>axisLabelSelection?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Set whether axis labels can be selected</p>
 <hr>
 <h3><del>dataPointsCacheable?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>dataPointsCacheable?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set whether data points can be cached. If it&#39;s true, data points might be cached by Interaction for better
-performance.</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set whether data points can be cached. If it&#39;s true, data points might be cached by Interaction for better
+performance.</p>
 <hr>
 <h3><del>lassoWithCtrlKey?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>lassoWithCtrlKey?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set whether the user must hold the ctrl key to use lasso selection</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set whether the user must hold the ctrl key to use lasso selection</p>
 <hr>
-<h3><del>legendSelection?</del></h3>
+<h3>legendSelection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>legendSelection?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Set whether the legend can be selected</p>
 <hr>
-<h3><del>mode?</del></h3>
+<h3>mode?</h3>
 <blockquote>
-<p><code>optional</code> <strong>mode?</strong>: <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;multiple&quot;</code> | <code>&quot;single&quot;</code> | <code>&quot;none&quot;</code> | <a href="../../../../../library/namespaces/ui5/namespaces/types/namespaces/controller/enumerations/Interaction_selectability_mode.html"><code>Interaction_selectability_mode</code></a> | <code>&quot;exclusive&quot;</code> | <code>&quot;inclusive&quot;</code></p>
+<p><code>optional</code> <strong>mode?</strong>: <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;multiple&quot;</code> | <code>&quot;single&quot;</code> | <code>&quot;none&quot;</code> | <code>Interaction_selectability_mode</code> | <code>&quot;exclusive&quot;</code> | <code>&quot;inclusive&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Set the selection mode. If this value is set to &#39;exclusive&#39; or &#39;single&#39;, only one set of data points
 can be selected at once. If this value is set to &#39;inclusive&#39; or &#39;multiple&#39;, multiple sets of data points
 can be selected at once. If this value is set to &#39;none&#39;, no sets of data points can be selected. The
 values &#39;single&#39; and &#39;multiple&#39; are deprecated; please remove them from your chart.</p>
 <hr>
-<h3><del>plotLassoSelection?</del></h3>
+<h3>plotLassoSelection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>plotLassoSelection?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Set whether lasso selection can be used in the plot area</p>
 <hr>
-<h3><del>plotStdSelection?</del></h3>
+<h3>plotStdSelection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>plotStdSelection?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Set whether selection can be done in the plot area by clicking and tapping</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

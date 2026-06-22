@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Table — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Table — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Table — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Table/classes/Table.html">
 <meta property="og:title" content="Class: Table — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Table — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Table — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Table/classes/Table.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Table/README.html">Table</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Table</a> / Table</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Table</a> / Table</p>
 <h1>Class: Table</h1>
 <pre class="sig"><span class="kw">import</span> Table <span class="kw">from</span> <span class="str">"sap/m/Table"</span>;</pre>
+<h2>Since</h2>
+<p>1.16</p>
 <p>The <code>sap.m.Table</code> control provides a set of sophisticated and easy-to-use functions for responsive table
 design.</p>
 <p>To render the <code>sap.m.Table</code> control properly, the order of the <code>columns</code> aggregation should match with
@@ -52,8 +54,6 @@ be used.</p>
 <p>See section &quot;<a href="https://ui5.sap.com/#/topic/5eb6f63e0cc547d0bdc934d3652fdc9b">Creating Tables</a>&quot; and
 &quot;<a href="https://ui5.sap.com/#/topic/38855e06486f4910bfa6f4485f7c2bac">Configuring Responsive Behavior of a Table</a>&quot;
 in the documentation for an introduction to <code>sap.m.Table</code> control.</p>
-<h2>Since</h2>
-<p>1.16</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a></li>
@@ -121,12 +121,6 @@ See:
 <blockquote>
 <p><strong>attachBeforeOpenContextMenu</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
-event of this <code>sap.m.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
-<p>Fired when the context menu is opened. When the context menu is opened, the binding context of the item
-is set to the given <code>contextMenu</code>.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -143,18 +137,18 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
-<h5>Overrides</h5>
-<p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#attachbeforeopencontextmenu"><code>attachBeforeOpenContextMenu</code></a></p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
 event of this <code>sap.m.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
 <p>Fired when the context menu is opened. When the context menu is opened, the binding context of the item
 is set to the given <code>contextMenu</code>.</p>
+<h5>Overrides</h5>
+<p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#attachbeforeopencontextmenu"><code>attachBeforeOpenContextMenu</code></a></p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -167,6 +161,12 @@ is set to the given <code>contextMenu</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.m.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
+<p>Fired when the context menu is opened. When the context menu is opened, the binding context of the item
+is set to the given <code>contextMenu</code>.</p>
 <h5>Overrides</h5>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#attachbeforeopencontextmenu"><code>attachBeforeOpenContextMenu</code></a></p>
 <hr>
@@ -175,11 +175,6 @@ is set to the given <code>contextMenu</code>.</p>
 <blockquote>
 <p><strong>attachPaste</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:paste paste event of this <code>sap.m.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
-<p>This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
-via the context menu or the standard paste keyboard shortcut, if the focus is inside the table.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -196,15 +191,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.60</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPaste</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:paste paste event of this <code>sap.m.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
 <p>This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
 via the context menu or the standard paste keyboard shortcut, if the focus is inside the table.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPaste</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -217,16 +212,17 @@ via the context menu or the standard paste keyboard shortcut, if the focus is in
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.60</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:paste paste event of this <code>sap.m.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
+<p>This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
+via the context menu or the standard paste keyboard shortcut, if the focus is inside the table.</p>
 <hr>
 <h3>attachPopinChanged()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPopinChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:popinChanged popinChanged event of this <code>sap.m.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
-<p>Fired when the table pop-in has changed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -243,14 +239,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.77</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPopinChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:popinChanged popinChanged event of this <code>sap.m.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
 <p>Fired when the table pop-in has changed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPopinChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -263,6 +259,10 @@ otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.77</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:popinChanged popinChanged event of this <code>sap.m.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
+<p>Fired when the table pop-in has changed.</p>
 <hr>
 <h3>destroyColumns()</h3>
 <blockquote>
@@ -277,9 +277,6 @@ otherwise it will be bound to this <code>sap.m.Table</code> itself.</p>
 <blockquote>
 <p><strong>detachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforeOpenContextMenu beforeOpenContextMenu
-event of this <code>sap.m.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -292,6 +289,9 @@ event of this <code>sap.m.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.m.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#detachbeforeopencontextmenu"><code>detachBeforeOpenContextMenu</code></a></p>
 <hr>
@@ -299,8 +299,6 @@ event of this <code>sap.m.Table</code>.</p>
 <blockquote>
 <p><strong>detachPaste</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:paste paste event of this <code>sap.m.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -313,13 +311,13 @@ event of this <code>sap.m.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:paste paste event of this <code>sap.m.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachPopinChanged()</h3>
 <blockquote>
 <p><strong>detachPopinChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:popinChanged popinChanged event of this <code>sap.m.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -332,13 +330,13 @@ event of this <code>sap.m.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:popinChanged popinChanged event of this <code>sap.m.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>enhanceAccessibilityState()</h3>
 <blockquote>
 <p><strong>enhanceAccessibilityState</strong>(<code>oElement</code>, <code>mAriaProps</code>): <code>void</code></p>
 </blockquote>
-<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
-It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -350,6 +348,8 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
+It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#enhanceaccessibilitystate"><code>enhanceAccessibilityState</code></a></p>
 <hr>
@@ -357,9 +357,6 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <blockquote>
 <p><strong>fireBeforeOpenContextMenu</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:beforeOpenContextMenu beforeOpenContextMenu to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$BeforeOpenContextMenuEventParameters.html"><code>Table$BeforeOpenContextMenuEventParameters</code></a></p>
@@ -371,6 +368,9 @@ event object. The return value of this method indicates whether the default acti
 <p>1.54</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforeOpenContextMenu beforeOpenContextMenu to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#firebeforeopencontextmenu"><code>fireBeforeOpenContextMenu</code></a></p>
 <hr>
@@ -378,9 +378,6 @@ event object. The return value of this method indicates whether the default acti
 <blockquote>
 <p><strong>firePaste</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:paste paste to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$PasteEventParameters.html"><code>Table$PasteEventParameters</code></a></p>
@@ -392,12 +389,14 @@ event object. The return value of this method indicates whether the default acti
 <p>1.60</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:paste paste to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>firePopinChanged()</h3>
 <blockquote>
 <p><strong>firePopinChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:popinChanged popinChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$PopinChangedEventParameters.html"><code>Table$PopinChangedEventParameters</code></a></p>
@@ -409,6 +408,7 @@ event object. The return value of this method indicates whether the default acti
 <p>1.77</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:popinChanged popinChanged to attached listeners.</p>
 <hr>
 <h3>focus()</h3>
 <blockquote>
@@ -438,20 +438,25 @@ visible before the focus is set</p>
 <blockquote>
 <p><strong>getAlternateRowColors</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAlternateRowColors alternateRowColors.</p>
-<p>Enables alternating table row colors. <strong>Note:</strong> This property can only be used with the Belize and Belize
-Deep themes. Alternate row coloring is not available for the High Contrast Black/White themes.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>alternateRowColors</code></p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Gets current value of property #getAlternateRowColors alternateRowColors.</p>
+<p>Enables alternating table row colors. <strong>Note:</strong> This property can only be used with the Belize and Belize
+Deep themes. Alternate row coloring is not available for the High Contrast Black/White themes.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getAutoPopinMode()</h3>
 <blockquote>
 <p><strong>getAutoPopinMode</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>autoPopinMode</code></p>
+<h4>Since</h4>
+<p>1.76</p>
 <p>Gets current value of property #getAutoPopinMode autoPopinMode.</p>
 <p>Enables the auto pop-in behavior for the table control.</p>
 <p>If this property is set to <code>true</code>, the table control overwrites the <code>demandPopin</code> and the <code>minScreenWidth</code>
@@ -466,11 +471,6 @@ following order:</p>
 and <code>minScreenWidth</code> properties of the <code>sap.m.Column</code> control by itself. There is no automatic mechanism
 that restores the old values if <code>autoPopinMode</code> was set from <code>false</code> to <code>true</code> before.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>autoPopinMode</code></p>
-<h4>Since</h4>
-<p>1.76</p>
 <hr>
 <h3>getBackgroundDesign()</h3>
 <blockquote>
@@ -501,6 +501,11 @@ from <code>Solid</code> to <code>Translucent</code> or to <code>Transparent</cod
 <blockquote>
 <p><strong>getContextualWidth</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>contextualWidth</code></p>
+<h4>Since</h4>
+<p>1.60</p>
 <p>Gets current value of property #getContextualWidth contextualWidth.</p>
 <p>Defines the contextual width for the <code>sap.m.Table</code> control. By defining this property the table adapts
 the pop-in behavior based on the container in which the table is placed or the configured contextual
@@ -513,16 +518,16 @@ width of the table. <strong>Note:</strong> Only &quot;Inherit&quot;, &quot;Auto&
 can be applied to the <code>contextualWidth</code> property. Due to the rendering cost, we recommend to use the
 valid value mentioned before except for &quot;Auto&quot;.</p>
 <p>Default value is <code>&quot;Inherit&quot;</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>contextualWidth</code></p>
-<h4>Since</h4>
-<p>1.60</p>
 <hr>
 <h3>getFixedLayout()</h3>
 <blockquote>
 <p><strong>getFixedLayout</strong>(): <code>any</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Value of property <code>fixedLayout</code></p>
+<h4>Since</h4>
+<p>1.22</p>
 <p>Gets current value of property #getFixedLayout fixedLayout.</p>
 <p>Defines the algorithm to be used to layout the table cells, rows, and columns. This property allows three
 possible values:
@@ -550,55 +555,50 @@ has a few columns in wide screens or within the horizontal scroll container (e.g
 overflow. In auto layout mode the <code>width</code> property of <code>sap.m.Column</code> is taken into account as a minimum
 width.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>any</code></p>
-<p>Value of property <code>fixedLayout</code></p>
-<h4>Since</h4>
-<p>1.22</p>
 <hr>
 <h3>getHiddenInPopin()</h3>
 <blockquote>
 <p><strong>getHiddenInPopin</strong>(): (<code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a>)[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p>(<code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a>)[]</p>
+<p>Value of property <code>hiddenInPopin</code></p>
+<h4>Since</h4>
+<p>1.77</p>
 <p>Gets current value of property #getHiddenInPopin hiddenInPopin.</p>
 <p>Defines which columns should be hidden instead of moved into the pop-in area depending on their importance.
 See sap.m.Column#getImportance</p>
 <p><strong>Note:</strong> To hide columns based on their importance, it&#39;s mandatory to set <code>demandPopin=&quot;true&quot;</code> for the
 <code>sap.m.Column</code> control or set <code>autoPopinMode=&quot;true&quot;</code> for the <code>sap.m.Table</code> control. See <a href="https://ui5.sap.com/#/topic/38855e06486f4910bfa6f4485f7c2bac">Configuring Responsive Behavior of a Table</a>
 and sap.m.Table#getAutoPopinMode.</p>
-<h4>Returns</h4>
-<p>(<code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a>)[]</p>
-<p>Value of property <code>hiddenInPopin</code></p>
-<h4>Since</h4>
-<p>1.77</p>
 <hr>
 <h3>getPopinLayout()</h3>
 <blockquote>
 <p><strong>getPopinLayout</strong>(): <code>&quot;Block&quot;</code> | <a href="../../library/enumerations/PopinLayout.html"><code>PopinLayout</code></a> | <code>&quot;GridLarge&quot;</code> | <code>&quot;GridSmall&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getPopinLayout popinLayout.</p>
-<p>Defines the layout in which the table pop-in rows are rendered. <strong>Note:</strong> The <code>demandPopin</code> and <code>minScreenWidth</code>
-properties of the <code>Column</code> control must be configured appropriately.</p>
-<p>Default value is <code>Block</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Block&quot;</code> | <a href="../../library/enumerations/PopinLayout.html"><code>PopinLayout</code></a> | <code>&quot;GridLarge&quot;</code> | <code>&quot;GridSmall&quot;</code></p>
 <p>Value of property <code>popinLayout</code></p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Gets current value of property #getPopinLayout popinLayout.</p>
+<p>Defines the layout in which the table pop-in rows are rendered. <strong>Note:</strong> The <code>demandPopin</code> and <code>minScreenWidth</code>
+properties of the <code>Column</code> control must be configured appropriately.</p>
+<p>Default value is <code>Block</code>.</p>
 <hr>
 <h3>getShowOverlay()</h3>
 <blockquote>
 <p><strong>getShowOverlay</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowOverlay showOverlay.</p>
-<p>Setting this property to <code>true</code> will show an overlay on top of the table content and prevents the user
-interaction with it.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showOverlay</code></p>
 <h4>Since</h4>
 <p>1.22.1</p>
+<p>Gets current value of property #getShowOverlay showOverlay.</p>
+<p>Setting this property to <code>true</code> will show an overlay on top of the table content and prevents the user
+interaction with it.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>indexOfColumn()</h3>
 <blockquote>
@@ -659,11 +659,6 @@ at the last position</p>
 <blockquote>
 <p><strong>setAlternateRowColors</strong>(<code>bAlternateRowColors?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAlternateRowColors alternateRowColors.</p>
-<p>Enables alternating table row colors. <strong>Note:</strong> This property can only be used with the Belize and Belize
-Deep themes. Alternate row coloring is not available for the High Contrast Black/White themes.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAlternateRowColors?</h5>
 <p><code>boolean</code></p>
@@ -673,11 +668,25 @@ Deep themes. Alternate row coloring is not available for the High Contrast Black
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets a new value for property #getAlternateRowColors alternateRowColors.</p>
+<p>Enables alternating table row colors. <strong>Note:</strong> This property can only be used with the Belize and Belize
+Deep themes. Alternate row coloring is not available for the High Contrast Black/White themes.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setAutoPopinMode()</h3>
 <blockquote>
 <p><strong>setAutoPopinMode</strong>(<code>bAutoPopinMode?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bAutoPopinMode?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>autoPopinMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.76</p>
 <p>Sets a new value for property #getAutoPopinMode autoPopinMode.</p>
 <p>Enables the auto pop-in behavior for the table control.</p>
 <p>If this property is set to <code>true</code>, the table control overwrites the <code>demandPopin</code> and the <code>minScreenWidth</code>
@@ -693,15 +702,6 @@ and <code>minScreenWidth</code> properties of the <code>sap.m.Column</code> cont
 that restores the old values if <code>autoPopinMode</code> was set from <code>false</code> to <code>true</code> before.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bAutoPopinMode?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>autoPopinMode</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.76</p>
 <hr>
 <h3>setBackgroundDesign()</h3>
 <blockquote>
@@ -724,6 +724,15 @@ from <code>Solid</code> to <code>Translucent</code> or to <code>Transparent</cod
 <blockquote>
 <p><strong>setContextualWidth</strong>(<code>sContextualWidth?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sContextualWidth?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>contextualWidth</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.60</p>
 <p>Sets a new value for property #getContextualWidth contextualWidth.</p>
 <p>Defines the contextual width for the <code>sap.m.Table</code> control. By defining this property the table adapts
 the pop-in behavior based on the container in which the table is placed or the configured contextual
@@ -737,20 +746,20 @@ can be applied to the <code>contextualWidth</code> property. Due to the renderin
 valid value mentioned before except for &quot;Auto&quot;.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>&quot;Inherit&quot;</code>.</p>
-<h4>Parameters</h4>
-<h5>sContextualWidth?</h5>
-<p><code>string</code></p>
-<p>New value for property <code>contextualWidth</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.60</p>
 <hr>
 <h3>setFixedLayout()</h3>
 <blockquote>
 <p><strong>setFixedLayout</strong>(<code>oFixedLayout?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>oFixedLayout?</h5>
+<p><code>any</code></p>
+<p>New value for property <code>fixedLayout</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.22</p>
 <p>Sets a new value for property #getFixedLayout fixedLayout.</p>
 <p>Defines the algorithm to be used to layout the table cells, rows, and columns. This property allows three
 possible values:
@@ -779,27 +788,11 @@ overflow. In auto layout mode the <code>width</code> property of <code>sap.m.Col
 width.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Parameters</h4>
-<h5>oFixedLayout?</h5>
-<p><code>any</code></p>
-<p>New value for property <code>fixedLayout</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.22</p>
 <hr>
 <h3>setHiddenInPopin()</h3>
 <blockquote>
 <p><strong>setHiddenInPopin</strong>(<code>sHiddenInPopin</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHiddenInPopin hiddenInPopin.</p>
-<p>Defines which columns should be hidden instead of moved into the pop-in area depending on their importance.
-See sap.m.Column#getImportance</p>
-<p><strong>Note:</strong> To hide columns based on their importance, it&#39;s mandatory to set <code>demandPopin=&quot;true&quot;</code> for the
-<code>sap.m.Column</code> control or set <code>autoPopinMode=&quot;true&quot;</code> for the <code>sap.m.Table</code> control. See <a href="https://ui5.sap.com/#/topic/38855e06486f4910bfa6f4485f7c2bac">Configuring Responsive Behavior of a Table</a>
-and sap.m.Table#getAutoPopinMode.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sHiddenInPopin</h5>
 <p>(<code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a>)[]</p>
@@ -809,16 +802,18 @@ and sap.m.Table#getAutoPopinMode.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Sets a new value for property #getHiddenInPopin hiddenInPopin.</p>
+<p>Defines which columns should be hidden instead of moved into the pop-in area depending on their importance.
+See sap.m.Column#getImportance</p>
+<p><strong>Note:</strong> To hide columns based on their importance, it&#39;s mandatory to set <code>demandPopin=&quot;true&quot;</code> for the
+<code>sap.m.Column</code> control or set <code>autoPopinMode=&quot;true&quot;</code> for the <code>sap.m.Table</code> control. See <a href="https://ui5.sap.com/#/topic/38855e06486f4910bfa6f4485f7c2bac">Configuring Responsive Behavior of a Table</a>
+and sap.m.Table#getAutoPopinMode.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setPopinLayout()</h3>
 <blockquote>
 <p><strong>setPopinLayout</strong>(<code>sPopinLayout?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPopinLayout popinLayout.</p>
-<p>Defines the layout in which the table pop-in rows are rendered. <strong>Note:</strong> The <code>demandPopin</code> and <code>minScreenWidth</code>
-properties of the <code>Column</code> control must be configured appropriately.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Block</code>.</p>
 <h4>Parameters</h4>
 <h5>sPopinLayout?</h5>
 <p><code>&quot;Block&quot;</code> | <a href="../../library/enumerations/PopinLayout.html"><code>PopinLayout</code></a> | <code>&quot;GridLarge&quot;</code> | <code>&quot;GridSmall&quot;</code></p>
@@ -828,16 +823,16 @@ properties of the <code>Column</code> control must be configured appropriately.<
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets a new value for property #getPopinLayout popinLayout.</p>
+<p>Defines the layout in which the table pop-in rows are rendered. <strong>Note:</strong> The <code>demandPopin</code> and <code>minScreenWidth</code>
+properties of the <code>Column</code> control must be configured appropriately.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Block</code>.</p>
 <hr>
 <h3>setShowOverlay()</h3>
 <blockquote>
 <p><strong>setShowOverlay</strong>(<code>bShowOverlay?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowOverlay showOverlay.</p>
-<p>Setting this property to <code>true</code> will show an overlay on top of the table content and prevents the user
-interaction with it.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowOverlay?</h5>
 <p><code>boolean</code></p>
@@ -847,6 +842,11 @@ interaction with it.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.22.1</p>
+<p>Sets a new value for property #getShowOverlay showOverlay.</p>
+<p>Setting this property to <code>true</code> will show an overlay on top of the table content and prevents the user
+interaction with it.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -863,7 +863,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Table</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Table</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -887,6 +887,6 @@ used by this class</p>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

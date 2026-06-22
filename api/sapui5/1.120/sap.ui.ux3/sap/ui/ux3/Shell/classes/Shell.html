@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Shell~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Shell~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="~~Class: Shell~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.ux3/sap/ui/ux3/Shell/classes/Shell.html">
 <meta property="og:title" content="~~Class: Shell~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Shell~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="~~Class: Shell~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.ux3/sap/ui/ux3/Shell/classes/Shell.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.ux3/README.html">sap.ui.ux3</a> › sap › ui › ux3 › <a href="../../../../../../sap.ui.ux3/sap/ui/ux3/Shell/README.html">Shell</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/Shell</a> / Shell</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/Shell</a> / Shell</p>
 <h1><del>Class: Shell</del></h1>
 <pre class="sig"><span class="kw">import</span> Shell <span class="kw">from</span> <span class="str">"sap/ui/ux3/Shell"</span>;</pre>
+<h2>Deprecated</h2>
+<p>(since 1.38) - replaced by sap.m.Shell</p>
 <p>The Ux3 GoldReflection Shell, which is an application frame with navigation capabilities. It is supposed
 to be added to a direct child of the BODY tag of a page and there should be no other parts of the page
 consuming space outside the Shell.</p>
-<h2>Deprecated</h2>
-<p>(since 1.38) - replaced by sap.m.Shell</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -297,11 +297,6 @@ with UI elements.</p>
 <blockquote>
 <p><strong>attachPaneClosed</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:paneClosed paneClosed event of this <code>sap.ui.ux3.Shell</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.ux3.Shell</code> itself.</p>
-<p>Fired after a side pane of the shell is closed. It is also fired, when an open pane is closed by calling
-setShowPane(false), if and only if the pane was opened before.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -318,15 +313,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.12.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPaneClosed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:paneClosed paneClosed event of this <code>sap.ui.ux3.Shell</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.ux3.Shell</code> itself.</p>
 <p>Fired after a side pane of the shell is closed. It is also fired, when an open pane is closed by calling
 setShowPane(false), if and only if the pane was opened before.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPaneClosed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -339,6 +334,11 @@ setShowPane(false), if and only if the pane was opened before.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.12.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:paneClosed paneClosed event of this <code>sap.ui.ux3.Shell</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.ux3.Shell</code> itself.</p>
+<p>Fired after a side pane of the shell is closed. It is also fired, when an open pane is closed by calling
+setShowPane(false), if and only if the pane was opened before.</p>
 <hr>
 <h3><del>attachSearch()</del></h3>
 <h4>Call Signature</h4>
@@ -463,12 +463,12 @@ The Shell will currently always mark the first sub-item as selected.</p>
 <blockquote>
 <p><strong>destroyNotificationBar</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the notificationBar in the aggregation #getNotificationBar notificationBar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.7.0</p>
+<p>Destroys the notificationBar in the aggregation #getNotificationBar notificationBar.</p>
 <hr>
 <h3><del>destroyPaneBarItems()</del></h3>
 <blockquote>
@@ -562,8 +562,6 @@ of this <code>sap.ui.ux3.Shell</code>.</p>
 <blockquote>
 <p><strong>detachPaneClosed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:paneClosed paneClosed event of this <code>sap.ui.ux3.Shell</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -576,6 +574,8 @@ of this <code>sap.ui.ux3.Shell</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:paneClosed paneClosed event of this <code>sap.ui.ux3.Shell</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachSearch()</del></h3>
 <blockquote>
@@ -616,7 +616,6 @@ of this <code>sap.ui.ux3.Shell</code>.</p>
 <blockquote>
 <p><strong>fireFeedSubmit</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:feedSubmit feedSubmit to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -626,12 +625,12 @@ of this <code>sap.ui.ux3.Shell</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:feedSubmit feedSubmit to attached listeners.</p>
 <hr>
 <h3><del>fireLogout()</del></h3>
 <blockquote>
 <p><strong>fireLogout</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:logout logout to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -641,12 +640,12 @@ of this <code>sap.ui.ux3.Shell</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:logout logout to attached listeners.</p>
 <hr>
 <h3><del>firePaneBarItemSelected()</del></h3>
 <blockquote>
 <p><strong>firePaneBarItemSelected</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:paneBarItemSelected paneBarItemSelected to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Shell$PaneBarItemSelectedEventParameters.html"><code>Shell$PaneBarItemSelectedEventParameters</code></a></p>
@@ -656,12 +655,12 @@ of this <code>sap.ui.ux3.Shell</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:paneBarItemSelected paneBarItemSelected to attached listeners.</p>
 <hr>
 <h3><del>firePaneClosed()</del></h3>
 <blockquote>
 <p><strong>firePaneClosed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:paneClosed paneClosed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Shell$PaneClosedEventParameters.html"><code>Shell$PaneClosedEventParameters</code></a></p>
@@ -673,12 +672,12 @@ of this <code>sap.ui.ux3.Shell</code>.</p>
 <p>1.12.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:paneClosed paneClosed to attached listeners.</p>
 <hr>
 <h3><del>fireSearch()</del></h3>
 <blockquote>
 <p><strong>fireSearch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:search search to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -688,14 +687,12 @@ of this <code>sap.ui.ux3.Shell</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:search search to attached listeners.</p>
 <hr>
 <h3><del>fireWorksetItemSelected()</del></h3>
 <blockquote>
 <p><strong>fireWorksetItemSelected</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:worksetItemSelected worksetItemSelected to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Shell$WorksetItemSelectedEventParameters.html"><code>Shell$WorksetItemSelectedEventParameters</code></a></p>
@@ -705,20 +702,23 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:worksetItemSelected worksetItemSelected to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>getAllowOverlayHeaderAccess()</del></h3>
 <blockquote>
 <p><strong>getAllowOverlayHeaderAccess</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAllowOverlayHeaderAccess allowOverlayHeaderAccess.</p>
-<p>Whether the Shell header (Title Area + Header Items) can be accessed when an Overlay, OverlayContainer
-or ThingInspector is open.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>allowOverlayHeaderAccess</code></p>
 <h4>Since</h4>
 <p>1.14.0</p>
+<p>Gets current value of property #getAllowOverlayHeaderAccess allowOverlayHeaderAccess.</p>
+<p>Whether the Shell header (Title Area + Header Items) can be accessed when an Overlay, OverlayContainer
+or ThingInspector is open.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getAppIcon()</del></h3>
 <blockquote>
@@ -747,14 +747,14 @@ set.</p>
 <blockquote>
 <p><strong>getApplyContentPadding</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getApplyContentPadding applyContentPadding.</p>
-<p>Whether the Shell content area should have a theme-dependent padding or not.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>applyContentPadding</code></p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Gets current value of property #getApplyContentPadding applyContentPadding.</p>
+<p>Whether the Shell content area should have a theme-dependent padding or not.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getAppTitle()</del></h3>
 <blockquote>
@@ -781,29 +781,29 @@ of the content area - but not to a re-rendering of the complete Shell.</p>
 <blockquote>
 <p><strong>getDesignType</strong>(): <code>&quot;Standard&quot;</code> | <code>&quot;Light&quot;</code> | <a href="../../library/enumerations/ShellDesignType.html"><code>ShellDesignType</code></a> | <code>&quot;Crystal&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getDesignType designType.</p>
-<p>Defines which design type is to be used.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Standard&quot;</code> | <code>&quot;Light&quot;</code> | <a href="../../library/enumerations/ShellDesignType.html"><code>ShellDesignType</code></a> | <code>&quot;Crystal&quot;</code></p>
 <p>Value of property <code>designType</code></p>
 <h4>Since</h4>
 <p>1.12.0</p>
+<p>Gets current value of property #getDesignType designType.</p>
+<p>Defines which design type is to be used.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3><del>getFullHeightContent()</del></h3>
 <blockquote>
 <p><strong>getFullHeightContent</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getFullHeightContent fullHeightContent.</p>
-<p>If set to true, the content area has a defined height. This means that any content put inside can use
-&quot;100%&quot; height in CSS and will then consume all available space. However, if content is larger, scrollbars
-will appear at the content area of the Shell and not on window level.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>fullHeightContent</code></p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Gets current value of property #getFullHeightContent fullHeightContent.</p>
+<p>If set to true, the content area has a defined height. This means that any content put inside can use
+&quot;100%&quot; height in CSS and will then consume all available space. However, if content is larger, scrollbars
+will appear at the content area of the Shell and not on window level.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getHeaderItems()</del></h3>
 <blockquote>
@@ -831,25 +831,25 @@ obsolete.</p>
 <blockquote>
 <p><strong>getLogoutButtonTooltip</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getLogoutButtonTooltip logoutButtonTooltip.</p>
-<p>The tooltip to be displayed for the Logout Button of the Shell. If not set, a text meaning &quot;Logout&quot; in
-the current language will be displayed.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>logoutButtonTooltip</code></p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Gets current value of property #getLogoutButtonTooltip logoutButtonTooltip.</p>
+<p>The tooltip to be displayed for the Logout Button of the Shell. If not set, a text meaning &quot;Logout&quot; in
+the current language will be displayed.</p>
 <hr>
 <h3><del>getNotificationBar()</del></h3>
 <blockquote>
 <p><strong>getNotificationBar</strong>(): <a href="../../NotificationBar/classes/NotificationBar.html"><code>NotificationBar</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getNotificationBar notificationBar.</p>
-<p>The NotificationBar which should be integrated into the Shell.</p>
 <h4>Returns</h4>
 <p><a href="../../NotificationBar/classes/NotificationBar.html"><code>NotificationBar</code></a></p>
 <h4>Since</h4>
 <p>1.7.0</p>
+<p>Gets content of aggregation #getNotificationBar notificationBar.</p>
+<p>The NotificationBar which should be integrated into the Shell.</p>
 <hr>
 <h3><del>getPaneBarItems()</del></h3>
 <blockquote>
@@ -913,9 +913,6 @@ or <code>null</code>.</p>
 <blockquote>
 <p><strong>getShowInspectorTool</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowInspectorTool showInspectorTool.</p>
-<p>Whether the &quot;Inspector&quot; tool should be displayed or not.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showInspectorTool</code></p>
@@ -923,6 +920,9 @@ or <code>null</code>.</p>
 <p>(since 1.7.2) - According to the current Ux designs, the ThingInspector should NOT be opened
 like this from the Tool Pane. And technically, the ThingInspector is not a ToolPopup. Instead trigger
 it from the respective elements in the Shell content.</p>
+<p>Gets current value of property #getShowInspectorTool showInspectorTool.</p>
+<p>Whether the &quot;Inspector&quot; tool should be displayed or not.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getShowLogoutButton()</del></h3>
 <blockquote>
@@ -1368,11 +1368,6 @@ effect as if the user switches between PaneBarItems.</p>
 <blockquote>
 <p><strong>setAllowOverlayHeaderAccess</strong>(<code>bAllowOverlayHeaderAccess?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAllowOverlayHeaderAccess allowOverlayHeaderAccess.</p>
-<p>Whether the Shell header (Title Area + Header Items) can be accessed when an Overlay, OverlayContainer
-or ThingInspector is open.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAllowOverlayHeaderAccess?</h5>
 <p><code>boolean</code></p>
@@ -1382,6 +1377,11 @@ or ThingInspector is open.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.14.0</p>
+<p>Sets a new value for property #getAllowOverlayHeaderAccess allowOverlayHeaderAccess.</p>
+<p>Whether the Shell header (Title Area + Header Items) can be accessed when an Overlay, OverlayContainer
+or ThingInspector is open.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setAppIcon()</del></h3>
 <blockquote>
@@ -1420,10 +1420,6 @@ set.</p>
 <blockquote>
 <p><strong>setApplyContentPadding</strong>(<code>bApplyContentPadding?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getApplyContentPadding applyContentPadding.</p>
-<p>Whether the Shell content area should have a theme-dependent padding or not.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bApplyContentPadding?</h5>
 <p><code>boolean</code></p>
@@ -1433,6 +1429,10 @@ set.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Sets a new value for property #getApplyContentPadding applyContentPadding.</p>
+<p>Whether the Shell content area should have a theme-dependent padding or not.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setAppTitle()</del></h3>
 <blockquote>
@@ -1476,10 +1476,6 @@ control (-trees) to the main content area of the Shell.</p>
 <blockquote>
 <p><strong>setDesignType</strong>(<code>sDesignType?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDesignType designType.</p>
-<p>Defines which design type is to be used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Parameters</h4>
 <h5>sDesignType?</h5>
 <p><code>&quot;Standard&quot;</code> | <code>&quot;Light&quot;</code> | <a href="../../library/enumerations/ShellDesignType.html"><code>ShellDesignType</code></a> | <code>&quot;Crystal&quot;</code></p>
@@ -1489,17 +1485,15 @@ control (-trees) to the main content area of the Shell.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.0</p>
+<p>Sets a new value for property #getDesignType designType.</p>
+<p>Defines which design type is to be used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3><del>setFullHeightContent()</del></h3>
 <blockquote>
 <p><strong>setFullHeightContent</strong>(<code>bFullHeightContent?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFullHeightContent fullHeightContent.</p>
-<p>If set to true, the content area has a defined height. This means that any content put inside can use
-&quot;100%&quot; height in CSS and will then consume all available space. However, if content is larger, scrollbars
-will appear at the content area of the Shell and not on window level.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bFullHeightContent?</h5>
 <p><code>boolean</code></p>
@@ -1509,6 +1503,12 @@ will appear at the content area of the Shell and not on window level.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Sets a new value for property #getFullHeightContent fullHeightContent.</p>
+<p>If set to true, the content area has a defined height. This means that any content put inside can use
+&quot;100%&quot; height in CSS and will then consume all available space. However, if content is larger, scrollbars
+will appear at the content area of the Shell and not on window level.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setHeaderType()</del></h3>
 <blockquote>
@@ -1531,10 +1531,6 @@ obsolete.</p>
 <blockquote>
 <p><strong>setLogoutButtonTooltip</strong>(<code>sLogoutButtonTooltip?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getLogoutButtonTooltip logoutButtonTooltip.</p>
-<p>The tooltip to be displayed for the Logout Button of the Shell. If not set, a text meaning &quot;Logout&quot; in
-the current language will be displayed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sLogoutButtonTooltip?</h5>
 <p><code>string</code></p>
@@ -1544,16 +1540,15 @@ the current language will be displayed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Sets a new value for property #getLogoutButtonTooltip logoutButtonTooltip.</p>
+<p>The tooltip to be displayed for the Logout Button of the Shell. If not set, a text meaning &quot;Logout&quot; in
+the current language will be displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setOffsetRight()</del></h3>
 <blockquote>
 <p><strong>setOffsetRight</strong>(<code>px</code>, <code>complete?</code>, <code>outerId?</code>): <code>void</code></p>
 </blockquote>
-<p>Moves the complete Shell away from the right window border by the given number of pixels (left border
-in RTL case).</p>
-<p>So there is space for a sidebar or so outside the Shell. The CSS class &#39;sapUiUx3ShellOuterSideBar&#39; provides
-the basic position capabilities for the sidebar DOM element.</p>
-<p>This feature is not public. The usage is only granted to special groups on request.</p>
 <h4>Parameters</h4>
 <h5>px</h5>
 <p><code>number</code></p>
@@ -1571,6 +1566,11 @@ animated.</p>
 <p>1.7.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Moves the complete Shell away from the right window border by the given number of pixels (left border
+in RTL case).</p>
+<p>So there is space for a sidebar or so outside the Shell. The CSS class &#39;sapUiUx3ShellOuterSideBar&#39; provides
+the basic position capabilities for the sidebar DOM element.</p>
+<p>This feature is not public. The usage is only granted to special groups on request.</p>
 <hr>
 <h3><del>setPaneContent()</del></h3>
 <blockquote>
@@ -1645,10 +1645,6 @@ an element instance may be given</p>
 <blockquote>
 <p><strong>setShowInspectorTool</strong>(<code>bShowInspectorTool?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowInspectorTool showInspectorTool.</p>
-<p>Whether the &quot;Inspector&quot; tool should be displayed or not.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowInspectorTool?</h5>
 <p><code>boolean</code></p>
@@ -1660,6 +1656,10 @@ an element instance may be given</p>
 <p>(since 1.7.2) - According to the current Ux designs, the ThingInspector should NOT be opened
 like this from the Tool Pane. And technically, the ThingInspector is not a ToolPopup. Instead trigger
 it from the respective elements in the Shell content.</p>
+<p>Sets a new value for property #getShowInspectorTool showInspectorTool.</p>
+<p>Whether the &quot;Inspector&quot; tool should be displayed or not.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setShowLogoutButton()</del></h3>
 <blockquote>
@@ -1740,7 +1740,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Shell</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Shell</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1764,6 +1764,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

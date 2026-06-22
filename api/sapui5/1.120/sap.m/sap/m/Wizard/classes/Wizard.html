@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Wizard — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Wizard — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Wizard — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Wizard/classes/Wizard.html">
 <meta property="og:title" content="Class: Wizard — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Wizard — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Wizard — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Wizard/classes/Wizard.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Wizard/README.html">Wizard</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Wizard</a> / Wizard</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Wizard</a> / Wizard</p>
 <h1>Class: Wizard</h1>
 <pre class="sig"><span class="kw">import</span> Wizard <span class="kw">from</span> <span class="str">"sap/m/Wizard"</span>;</pre>
+<h2>Since</h2>
+<p>1.30</p>
 <p>Enables users to accomplish a single goal which consists of multiple dependable sub-tasks. Overview:
 The sap.m.Wizard helps users complete a complex and unfamiliar task by dividing it into sections and
 guiding the user through it. The wizard has a mandatory title and two main areas - a navigation area
@@ -74,8 +76,6 @@ paths are:
 	 - A -&gt; B -&gt; C
 	 - A -&gt; B -&gt; D  Changing the <code>subsequentSteps</code> association of step C to point to step D (creating
     A -&gt; B -&gt; C -&gt; D path) is not supported.</p>
-<h2>Since</h2>
-<p>1.30</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -194,12 +194,6 @@ only available on the last step of the Wizard.</p>
 <blockquote>
 <p><strong>attachNavigationChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigationChange navigationChange event of
-this <code>sap.m.Wizard</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Wizard</code> itself.</p>
-<p>This event is fired when the the current visible step is changed by either taping on the <code>WizardProgressNavigator</code>
-or scrolling through the steps.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -216,16 +210,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.101</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavigationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navigationChange navigationChange event of
 this <code>sap.m.Wizard</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Wizard</code> itself.</p>
 <p>This event is fired when the the current visible step is changed by either taping on the <code>WizardProgressNavigator</code>
 or scrolling through the steps.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -238,6 +232,12 @@ or scrolling through the steps.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.101</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigationChange navigationChange event of
+this <code>sap.m.Wizard</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Wizard</code> itself.</p>
+<p>This event is fired when the the current visible step is changed by either taping on the <code>WizardProgressNavigator</code>
+or scrolling through the steps.</p>
 <hr>
 <h3>attachStepActivate()</h3>
 <h4>Call Signature</h4>
@@ -311,9 +311,6 @@ otherwise it will be bound to this <code>sap.m.Wizard</code> itself.</p>
 <blockquote>
 <p><strong>detachNavigationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigationChange navigationChange event of
-this <code>sap.m.Wizard</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -326,6 +323,9 @@ this <code>sap.m.Wizard</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.101</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigationChange navigationChange event of
+this <code>sap.m.Wizard</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachStepActivate()</h3>
 <blockquote>
@@ -365,7 +365,6 @@ the steps is returned to the initial provided.</p>
 <blockquote>
 <p><strong>fireComplete</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:complete complete to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -375,12 +374,12 @@ the steps is returned to the initial provided.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:complete complete to attached listeners.</p>
 <hr>
 <h3>fireNavigationChange()</h3>
 <blockquote>
 <p><strong>fireNavigationChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:navigationChange navigationChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Wizard$NavigationChangeEventParameters.html"><code>Wizard$NavigationChangeEventParameters</code></a></p>
@@ -392,12 +391,12 @@ the steps is returned to the initial provided.</p>
 <p>1.101</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navigationChange navigationChange to attached listeners.</p>
 <hr>
 <h3>fireStepActivate()</h3>
 <blockquote>
 <p><strong>fireStepActivate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:stepActivate stepActivate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Wizard$StepActivateEventParameters.html"><code>Wizard$StepActivateEventParameters</code></a></p>
@@ -407,6 +406,7 @@ the steps is returned to the initial provided.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:stepActivate stepActivate to attached listeners.</p>
 <hr>
 <h3>getBackgroundDesign()</h3>
 <blockquote>
@@ -424,17 +424,22 @@ default background color is used, if not specified.</p>
 <blockquote>
 <p><strong>getCurrentStep</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getCurrentStep currentStep,
-or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>ID of the element which is the current target of the association #getCurrentStep currentStep,
+or <code>null</code>.</p>
 <hr>
 <h3>getEnableBranching()</h3>
 <blockquote>
 <p><strong>getEnableBranching</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableBranching</code></p>
+<h4>Since</h4>
+<p>1.32</p>
 <p>Gets current value of property #getEnableBranching enableBranching.</p>
 <p>Enables the branching functionality of the Wizard. Branching gives the developer the ability to define
 multiple routes a user is able to take based on the input in the current step. It is up to the developer
@@ -442,11 +447,6 @@ to programmatically check for what is the input in the current step and set a co
 the available subsequent steps. Note: If this property is set to false, <code>next</code> and <code>subSequentSteps</code>
 associations of the WizardStep control are ignored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableBranching</code></p>
-<h4>Since</h4>
-<p>1.32</p>
 <hr>
 <h3>getFinishButtonText()</h3>
 <blockquote>
@@ -490,14 +490,14 @@ associations of the WizardStep control are ignored.</p>
 <blockquote>
 <p><strong>getRenderMode</strong>(): <code>&quot;Page&quot;</code> | <a href="../../library/enumerations/WizardRenderMode.html"><code>WizardRenderMode</code></a> | <code>&quot;Scroll&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getRenderMode renderMode.</p>
-<p>Defines how the steps of the Wizard would be visualized.</p>
-<p>Default value is <code>Scroll</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Page&quot;</code> | <a href="../../library/enumerations/WizardRenderMode.html"><code>WizardRenderMode</code></a> | <code>&quot;Scroll&quot;</code></p>
 <p>Value of property <code>renderMode</code></p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Gets current value of property #getRenderMode renderMode.</p>
+<p>Defines how the steps of the Wizard would be visualized.</p>
+<p>Default value is <code>Scroll</code>.</p>
 <hr>
 <h3>getShowNextButton()</h3>
 <blockquote>
@@ -525,14 +525,14 @@ and control it with <code>validateStep</code> or <code>invalidateStep</code> met
 <blockquote>
 <p><strong>getStepTitleLevel</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getStepTitleLevel stepTitleLevel.</p>
-<p>Defines the semantic level of the step title. When using &quot;Auto&quot; the default value is taken into account.</p>
-<p>Default value is <code>H3</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 <p>Value of property <code>stepTitleLevel</code></p>
 <h4>Since</h4>
 <p>1.115</p>
+<p>Gets current value of property #getStepTitleLevel stepTitleLevel.</p>
+<p>Defines the semantic level of the step title. When using &quot;Auto&quot; the default value is taken into account.</p>
+<p>Default value is <code>H3</code>.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -633,14 +633,6 @@ index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>setEnableBranching</strong>(<code>bEnableBranching?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableBranching enableBranching.</p>
-<p>Enables the branching functionality of the Wizard. Branching gives the developer the ability to define
-multiple routes a user is able to take based on the input in the current step. It is up to the developer
-to programmatically check for what is the input in the current step and set a concrete next step amongst
-the available subsequent steps. Note: If this property is set to false, <code>next</code> and <code>subSequentSteps</code>
-associations of the WizardStep control are ignored.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableBranching?</h5>
 <p><code>boolean</code></p>
@@ -650,6 +642,14 @@ associations of the WizardStep control are ignored.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Sets a new value for property #getEnableBranching enableBranching.</p>
+<p>Enables the branching functionality of the Wizard. Branching gives the developer the ability to define
+multiple routes a user is able to take based on the input in the current step. It is up to the developer
+to programmatically check for what is the input in the current step and set a concrete next step amongst
+the available subsequent steps. Note: If this property is set to false, <code>next</code> and <code>subSequentSteps</code>
+associations of the WizardStep control are ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setFinishButtonText()</h3>
 <blockquote>
@@ -688,10 +688,6 @@ is set to true. By default the text of the button is &quot;Review&quot;.</p>
 <blockquote>
 <p><strong>setRenderMode</strong>(<code>sRenderMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRenderMode renderMode.</p>
-<p>Defines how the steps of the Wizard would be visualized.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Scroll</code>.</p>
 <h4>Parameters</h4>
 <h5>sRenderMode?</h5>
 <p><code>&quot;Page&quot;</code> | <a href="../../library/enumerations/WizardRenderMode.html"><code>WizardRenderMode</code></a> | <code>&quot;Scroll&quot;</code></p>
@@ -701,6 +697,10 @@ is set to true. By default the text of the button is &quot;Review&quot;.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Sets a new value for property #getRenderMode renderMode.</p>
+<p>Defines how the steps of the Wizard would be visualized.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Scroll</code>.</p>
 <hr>
 <h3>setShowNextButton()</h3>
 <blockquote>
@@ -719,10 +719,6 @@ is set to true. By default the text of the button is &quot;Review&quot;.</p>
 <blockquote>
 <p><strong>setStepTitleLevel</strong>(<code>sStepTitleLevel?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getStepTitleLevel stepTitleLevel.</p>
-<p>Defines the semantic level of the step title. When using &quot;Auto&quot; the default value is taken into account.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>H3</code>.</p>
 <h4>Parameters</h4>
 <h5>sStepTitleLevel?</h5>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
@@ -732,6 +728,10 @@ is set to true. By default the text of the button is &quot;Review&quot;.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.115</p>
+<p>Sets a new value for property #getStepTitleLevel stepTitleLevel.</p>
+<p>Defines the semantic level of the step title. When using &quot;Auto&quot; the default value is taken into account.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>H3</code>.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -777,7 +777,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Wizard</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Wizard</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -801,6 +801,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

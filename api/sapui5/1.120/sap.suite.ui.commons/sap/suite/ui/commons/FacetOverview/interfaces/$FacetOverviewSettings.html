@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $FacetOverviewSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $FacetOverviewSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $FacetOverviewSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $FacetOverviewSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/FacetOverview/interfaces/$FacetOverviewSettings.html">
-<meta property="og:title" content="~~Interface: $FacetOverviewSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $FacetOverviewSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $FacetOverviewSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $FacetOverviewSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/FacetOverview/interfaces/$FacetOverviewSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,20 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/FacetOverview/README.html">FacetOverview</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/FacetOverview</a> / $FacetOverviewSettings</p>
-<h1><del>Interface: $FacetOverviewSettings</del></h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/FacetOverview</a> / $FacetOverviewSettings</p>
+<h1>Interface: $FacetOverviewSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FacetOverviewSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/FacetOverview"</span>;</pre>
-<p>Describes the settings that can be provided to the FacetOverview constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.32) - Deprecated. Object page should be used instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>content?</del></h3>
+<h3>content?</h3>
 <blockquote>
 <p><code>optional</code> <strong>content?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
@@ -56,12 +53,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines the height of the control only if the heightType prperty is set to None. Must be set in rems
-for the correct work in the UnifiedThingInspector.</p>
 <h4>Deprecated</h4>
 <p>(since 1.17.1) - This property was replaced by heightType property.</p>
+<p>Defines the height of the control only if the heightType prperty is set to None. Must be set in rems
+for the correct work in the UnifiedThingInspector.</p>
 <hr>
-<h3><del>heightChange?</del></h3>
+<h3>heightChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>heightChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -72,14 +69,14 @@ for the correct work in the UnifiedThingInspector.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>heightType?</del></h3>
+<h3>heightType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>heightType?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../library/enumerations/FacetOverviewHeight.html"><code>FacetOverviewHeight</code></a> | <code>&quot;XXL&quot;</code></p>
 </blockquote>
 <p>Indicates the height of the control in the predifened values. If set to None, then the height is defined
 by the depricated height property.</p>
 <hr>
-<h3><del>press?</del></h3>
+<h3>press?</h3>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -91,7 +88,7 @@ the chosen control.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>quantity?</del></h3>
+<h3>quantity?</h3>
 <blockquote>
 <p><code>optional</code> <strong>quantity?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -101,23 +98,23 @@ the chosen control.</p>
 <blockquote>
 <p><code>optional</code> <strong>rowSpan?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines the number of rows that the control represents in an external layout.</p>
 <h4>Deprecated</h4>
 <p>(since 1.17.1) - It is not used any more for the laoyut calculations in UnifiedThingInspector.</p>
+<p>Defines the number of rows that the control represents in an external layout.</p>
 <hr>
-<h3><del>title?</del></h3>
+<h3>title?</h3>
 <blockquote>
 <p><code>optional</code> <strong>title?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>This property is shown in the upper left part of control.</p>
 <hr>
-<h3><del>width?</del></h3>
+<h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Defines the width of the control. By default, the value is empty and the control inhertis the size from
 its content.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

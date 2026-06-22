@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: BaseHeader — SAPUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: BaseHeader — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: BaseHeader — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: BaseHeader — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/cards/BaseHeader/classes/BaseHeader.html">
-<meta property="og:title" content="Abstract Class: BaseHeader — SAPUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: BaseHeader — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: BaseHeader — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: BaseHeader — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/cards/BaseHeader/classes/BaseHeader.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.f/README.html">sap.f</a> › sap › f › cards › <a href="../../../../../../sap.f/sap/f/cards/BaseHeader/README.html">BaseHeader</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/cards/BaseHeader</a> / BaseHeader</p>
-<h1>Abstract Class: BaseHeader</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/cards/BaseHeader</a> / BaseHeader</p>
+<h1>Class: BaseHeader</h1>
 <pre class="sig"><span class="kw">import</span> BaseHeader <span class="kw">from</span> <span class="str">"sap/f/cards/BaseHeader"</span>;</pre>
+<h2>Since</h2>
+<p>1.86</p>
 <p>Provides basic functionality for header controls that can be used in sap.f.Card</p>
 <h2>Extends</h2>
 <ul>
@@ -90,7 +92,6 @@ of the syntax of the settings object.</p>
 <p><strong>addBannerLine</strong>(<code>oBannerLine</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Adds some bannerLine to the aggregation #getBannerLines bannerLines.</p>
 <h4>Parameters</h4>
 <h5>oBannerLine</h5>
 <p><a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a></p>
@@ -101,58 +102,59 @@ of the syntax of the settings object.</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Adds some bannerLine to the aggregation #getBannerLines bannerLines.</p>
 <hr>
 <h3>destroyBannerLines()</h3>
 <blockquote>
 <p><strong>destroyBannerLines</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Destroys all the bannerLines in the aggregation #getBannerLines bannerLines.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Destroys all the bannerLines in the aggregation #getBannerLines bannerLines.</p>
 <hr>
 <h3>destroyToolbar()</h3>
 <blockquote>
 <p><strong>destroyToolbar</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86
  (since 1.86)</p>
+<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <hr>
 <h3>getBannerLines()</h3>
 <blockquote>
 <p><strong>getBannerLines</strong>(): <a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets content of aggregation #getBannerLines bannerLines.</p>
-<p>Show as a banner in the header area. Use for example for system info and application shortcut.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a>[]</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Gets content of aggregation #getBannerLines bannerLines.</p>
+<p>Show as a banner in the header area. Use for example for system info and application shortcut.</p>
 <hr>
 <h3>getDataTimestamp()</h3>
 <blockquote>
 <p><strong>getDataTimestamp</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.89) - this feature is experimental and the API may change.</p>
 <p>Gets current value of property #getDataTimestamp dataTimestamp.</p>
 <p>Defines the timestamp of the oldest data in the card. Use this to show to the end user how fresh the
 information in the card is.</p>
 <p>Must be specified in ISO 8601 format.</p>
 <p>Will be shown as a relative time like &quot;5 minutes ago&quot;.</p>
 <p>Default value is <code>empty string</code>.</p>
-<p> (since 1.89) - this feature is experimental and the API may change.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>dataTimestamp</code></p>
@@ -162,10 +164,10 @@ information in the card is.</p>
 <p><strong>getStatusVisible</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.116) - this feature is experimental and the API may change.</p>
 <p>Gets current value of property #getStatusVisible statusVisible.</p>
 <p>Defines the status text visibility.</p>
 <p>Default value is <code>true</code>.</p>
-<p> (since 1.116) - this feature is experimental and the API may change.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>statusVisible</code></p>
@@ -175,21 +177,19 @@ information in the card is.</p>
 <p><strong>getToolbar</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets content of aggregation #getToolbar toolbar.</p>
-<p>Defines the toolbar.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.86
  (since 1.86)</p>
+<p>Gets content of aggregation #getToolbar toolbar.</p>
+<p>Defines the toolbar.</p>
 <hr>
 <h3>indexOfBannerLine()</h3>
 <blockquote>
 <p><strong>indexOfBannerLine</strong>(<code>oBannerLine</code>): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Checks for the provided <code>sap.m.Text</code> in the aggregation #getBannerLines bannerLines. and returns
-its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oBannerLine</h5>
 <p><a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a></p>
@@ -200,13 +200,14 @@ its index if found or -1 otherwise.</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Checks for the provided <code>sap.m.Text</code> in the aggregation #getBannerLines bannerLines. and returns
+its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertBannerLine()</h3>
 <blockquote>
 <p><strong>insertBannerLine</strong>(<code>oBannerLine</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Inserts a bannerLine into the aggregation #getBannerLines bannerLines.</p>
 <h4>Parameters</h4>
 <h5>oBannerLine</h5>
 <p><a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a></p>
@@ -222,27 +223,27 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Inserts a bannerLine into the aggregation #getBannerLines bannerLines.</p>
 <hr>
 <h3>removeAllBannerLines()</h3>
 <blockquote>
 <p><strong>removeAllBannerLines</strong>(): <a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Removes all the controls from the aggregation #getBannerLines bannerLines.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Removes all the controls from the aggregation #getBannerLines bannerLines.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeBannerLine()</h3>
 <blockquote>
 <p><strong>removeBannerLine</strong>(<code>vBannerLine</code>): <a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Removes a bannerLine from the aggregation #getBannerLines bannerLines.</p>
 <h4>Parameters</h4>
 <h5>vBannerLine</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../sap.m/sap/m/Text/classes/Text.html"><code>Text</code></a></p>
@@ -253,17 +254,18 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
+<p>Removes a bannerLine from the aggregation #getBannerLines bannerLines.</p>
 <hr>
 <h3>setStatusVisible()</h3>
 <blockquote>
 <p><strong>setStatusVisible</strong>(<code>bStatusVisible?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.116) - this feature is experimental and the API may change.</p>
 <p>Sets a new value for property #getStatusVisible statusVisible.</p>
 <p>Defines the status text visibility.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
-<p> (since 1.116) - this feature is experimental and the API may change.</p>
 <h4>Parameters</h4>
 <h5>bStatusVisible?</h5>
 <p><code>boolean</code></p>
@@ -277,7 +279,6 @@ is inserted at the last position</p>
 <p><strong>setToolbar</strong>(<code>oToolbar</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets the aggregated #getToolbar toolbar.</p>
 <h4>Parameters</h4>
 <h5>oToolbar</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -288,6 +289,7 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.86
  (since 1.86)</p>
+<p>Sets the aggregated #getToolbar toolbar.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -304,7 +306,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>BaseHeader</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>BaseHeader</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -328,6 +330,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

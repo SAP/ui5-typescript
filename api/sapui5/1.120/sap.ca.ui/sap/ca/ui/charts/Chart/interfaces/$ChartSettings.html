@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $ChartSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $ChartSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $ChartSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $ChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/charts/Chart/interfaces/$ChartSettings.html">
-<meta property="og:title" content="~~Interface: $ChartSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $ChartSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $ChartSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $ChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/charts/Chart/interfaces/$ChartSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ca.ui/README.html">sap.ca.ui</a> › sap › ca › ui › charts › <a href="../../../../../../../sap.ca.ui/sap/ca/ui/charts/Chart/README.html">Chart</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/charts/Chart</a> / $ChartSettings</p>
-<h1><del>Interface: $ChartSettings</del></h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/charts/Chart</a> / $ChartSettings</p>
+<h1>Interface: $ChartSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ChartSettings } <span class="kw">from</span> <span class="str">"sap/ca/ui/charts/Chart"</span>;</pre>
-<p>Describes the settings that can be provided to the Chart constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.24) - Sap.ca charts have been replaced with sap.viz and vizFrame in 1.24. The UI5
-control &quot;sap.viz.ui5.controls.VizFrame&quot; serves as a single point of entry for all the new charts. Now
-that 1.24 is available you are asked to use sap.viz charts and the VizFrame instead! This control will
-not be supported anymore from 1.24.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -59,19 +53,19 @@ not be supported anymore from 1.24.</p>
 <li><a href="../../VerticalBarChart/interfaces/$VerticalBarChartSettings.html"><code>$VerticalBarChartSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>advancedChartSettings?</del></h3>
+<h3>advancedChartSettings?</h3>
 <blockquote>
 <p><code>optional</code> <strong>advancedChartSettings?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>You can specify here any advanced viz chart settings that have not been exposed as a chart property.</p>
 <hr>
-<h3><del>chartPopOver?</del></h3>
+<h3>chartPopOver?</h3>
 <blockquote>
 <p><code>optional</code> <strong>chartPopOver?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Retrieve the chart popover instance to allow some operation on it.</p>
 <hr>
-<h3><del>chartSemanticColorFormatter?</del></h3>
+<h3>chartSemanticColorFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>chartSemanticColorFormatter?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -79,67 +73,67 @@ not be supported anymore from 1.24.</p>
 color should be use for each bar. The method should take the following parameter as input : - The data
 context of the current datashape And as output : - One of sap.ca.ui.charts.ChartSemanticColor type</p>
 <hr>
-<h3><del>chartType?</del></h3>
+<h3>chartType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>chartType?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Type of viz chart that will be displayed.</p>
 <hr>
-<h3><del>dataLabelFormatter?</del></h3>
+<h3>dataLabelFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>dataLabelFormatter?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Formatter for Data Label</p>
 <hr>
-<h3><del>dataset?</del></h3>
+<h3>dataset?</h3>
 <blockquote>
 <p><code>optional</code> <strong>dataset?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Viz Dataset that will hold the data to be displayed.</p>
 <hr>
-<h3><del>height?</del></h3>
+<h3>height?</h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Target height for the charting area</p>
 <hr>
-<h3><del>icon?</del></h3>
+<h3>icon?</h3>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Icon of the Chart</p>
 <hr>
-<h3><del>internalVizChart?</del></h3>
+<h3>internalVizChart?</h3>
 <blockquote>
 <p><code>optional</code> <strong>internalVizChart?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Retrieve the internal viz chart to allow some operation on it.</p>
 <hr>
-<h3><del>label?</del></h3>
+<h3>label?</h3>
 <blockquote>
 <p><code>optional</code> <strong>label?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>User friendly name for the current chart type</p>
 <hr>
-<h3><del>minShapeSize?</del></h3>
+<h3>minShapeSize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minShapeSize?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Minimum shape size for touch enabled actions, default and minimum to 48px !</p>
 <hr>
-<h3><del>noData?</del></h3>
+<h3>noData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noData?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Control tree to display when there is no data available</p>
 <hr>
-<h3><del>plotAreaAxisTooltipFormatter?</del></h3>
+<h3>plotAreaAxisTooltipFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>plotAreaAxisTooltipFormatter?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Formatter for plotArea Axis Tooltip in bubble charts</p>
 <hr>
-<h3><del>popoverAfterOpen?</del></h3>
+<h3>popoverAfterOpen?</h3>
 <blockquote>
 <p><code>optional</code> <strong>popoverAfterOpen?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -150,7 +144,7 @@ context of the current datashape And as output : - One of sap.ca.ui.charts.Chart
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>popoverBeforeOpen?</del></h3>
+<h3>popoverBeforeOpen?</h3>
 <blockquote>
 <p><code>optional</code> <strong>popoverBeforeOpen?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -161,37 +155,37 @@ context of the current datashape And as output : - One of sap.ca.ui.charts.Chart
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>popoverFooter?</del></h3>
+<h3>popoverFooter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>popoverFooter?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>custom footer for popover</p>
 <hr>
-<h3><del>popoverFormatter?</del></h3>
+<h3>popoverFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>popoverFormatter?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Formatter for popover</p>
 <hr>
-<h3><del>popoverGroupFormatter?</del></h3>
+<h3>popoverGroupFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>popoverGroupFormatter?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Formatter for group label in the popover</p>
 <hr>
-<h3><del>popoverSubHeader?</del></h3>
+<h3>popoverSubHeader?</h3>
 <blockquote>
 <p><code>optional</code> <strong>popoverSubHeader?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>custom subHeader for popover</p>
 <hr>
-<h3><del>secondAxisVisible?</del></h3>
+<h3>secondAxisVisible?</h3>
 <blockquote>
 <p><code>optional</code> <strong>secondAxisVisible?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Flag to show the second axis. Default is true</p>
 <hr>
-<h3><del>selectDataPoint?</del></h3>
+<h3>selectDataPoint?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectDataPoint?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -202,90 +196,90 @@ context of the current datashape And as output : - One of sap.ca.ui.charts.Chart
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>selectionMode?</del></h3>
+<h3>selectionMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionMode?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../library/namespaces/charts/enumerations/ChartSelectionMode.html"><code>ChartSelectionMode</code></a> | <code>&quot;Multiple&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Single&quot;</code></p>
 </blockquote>
 <p>Define the selection mode for the chart</p>
 <hr>
-<h3><del>showDataLabel?</del></h3>
+<h3>showDataLabel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showDataLabel?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Flag to display data values on the bar, default is set to true</p>
 <hr>
-<h3><del>showHoverBackground?</del></h3>
+<h3>showHoverBackground?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showHoverBackground?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Hide / Show the hover background</p>
 <hr>
-<h3><del>showLegend?</del></h3>
+<h3>showLegend?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showLegend?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Hide / Show the legend of the chart</p>
 <hr>
-<h3><del>showPopover?</del></h3>
+<h3>showPopover?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showPopover?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Hide / Show the sap.ca popover that gives information about what is available</p>
 <hr>
-<h3><del>showTooltip?</del></h3>
+<h3>showTooltip?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showTooltip?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Hide / Show the CVOM tooltip</p>
 <hr>
-<h3><del>stackedChartWidthEnhancer?</del></h3>
+<h3>stackedChartWidthEnhancer?</h3>
 <blockquote>
 <p><code>optional</code> <strong>stackedChartWidthEnhancer?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>You can use it if stacked bar width are to big. Disabled by default</p>
 <hr>
-<h3><del>title?</del></h3>
+<h3>title?</h3>
 <blockquote>
 <p><code>optional</code> <strong>title?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Title of the chart</p>
 <hr>
-<h3><del>tooltipFormatter?</del></h3>
+<h3>tooltipFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>tooltipFormatter?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Formatter for toolTip</p>
 <hr>
-<h3><del>width?</del></h3>
+<h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Target width for the charting area</p>
 <hr>
-<h3><del>xAxis2LabelFormatter?</del></h3>
+<h3>xAxis2LabelFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>xAxis2LabelFormatter?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Formatter for X Axis 2 Label</p>
 <hr>
-<h3><del>xAxisLabelFormatter?</del></h3>
+<h3>xAxisLabelFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>xAxisLabelFormatter?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Formatter for X Axis Label</p>
 <hr>
-<h3><del>yAxis2LabelFormatter?</del></h3>
+<h3>yAxis2LabelFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>yAxis2LabelFormatter?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Formatter for Y Axis 2 Label</p>
 <hr>
-<h3><del>yAxisLabelFormatter?</del></h3>
+<h3>yAxisLabelFormatter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>yAxisLabelFormatter?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Formatter for Y Axis Label</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

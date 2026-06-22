@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ControlConfiguration — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ControlConfiguration — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ControlConfiguration — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartfilterbar/ControlConfiguration/classes/ControlConfiguration.html">
 <meta property="og:title" content="Class: ControlConfiguration — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ControlConfiguration — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ControlConfiguration — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartfilterbar/ControlConfiguration/classes/ControlConfiguration.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartfilterbar › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartfilterbar/ControlConfiguration/README.html">ControlConfiguration</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartfilterbar/ControlConfiguration</a> / ControlConfiguration</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartfilterbar/ControlConfiguration</a> / ControlConfiguration</p>
 <h1>Class: ControlConfiguration</h1>
 <pre class="sig"><span class="kw">import</span> ControlConfiguration <span class="kw">from</span> <span class="str">"sap/ui/comp/smartfilterbar/ControlConfiguration"</span>;</pre>
 <p>ControlConfiguration can be used to add additional configuration for filter fields in the SmartFilterBar
@@ -178,7 +178,6 @@ itself</p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ControlConfiguration$ChangeEventParameters.html"><code>ControlConfiguration$ChangeEventParameters</code></a></p>
@@ -188,19 +187,20 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>getConditionPanelDefaultOperation()</h3>
 <blockquote>
 <p><strong>getConditionPanelDefaultOperation</strong>(): <code>&quot;BT&quot;</code> | <code>&quot;Contains&quot;</code> | <code>&quot;EndsWith&quot;</code> | <code>&quot;EQ&quot;</code> | <code>&quot;GE&quot;</code> | <code>&quot;GT&quot;</code> | <code>&quot;LE&quot;</code> | <code>&quot;LT&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../../library/namespaces/valuehelpdialog/enumerations/ValueHelpRangeOperation.html"><code>ValueHelpRangeOperation</code></a></p>
 </blockquote>
-<p>Gets current value of property #getConditionPanelDefaultOperation conditionPanelDefaultOperation.</p>
-<p>Sets default operation for Condition Panel of the Value Help dialog. In case the newly set default operation
-is not valid for the filter&#39;s EDM data type, then it is ignored.</p>
 <h4>Returns</h4>
 <p><code>&quot;BT&quot;</code> | <code>&quot;Contains&quot;</code> | <code>&quot;EndsWith&quot;</code> | <code>&quot;EQ&quot;</code> | <code>&quot;GE&quot;</code> | <code>&quot;GT&quot;</code> | <code>&quot;LE&quot;</code> | <code>&quot;LT&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../../library/namespaces/valuehelpdialog/enumerations/ValueHelpRangeOperation.html"><code>ValueHelpRangeOperation</code></a></p>
 <p>Value of property <code>conditionPanelDefaultOperation</code></p>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Gets current value of property #getConditionPanelDefaultOperation conditionPanelDefaultOperation.</p>
+<p>Sets default operation for Condition Panel of the Value Help dialog. In case the newly set default operation
+is not valid for the filter&#39;s EDM data type, then it is ignored.</p>
 <hr>
 <h3>getConditionType()</h3>
 <blockquote>
@@ -326,16 +326,16 @@ it does not work for DropDownListbox</p>
 <blockquote>
 <p><strong>getHistoryEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getHistoryEnabled historyEnabled.</p>
-<p>If set to <code>false</code> history values are disabled.</p>
-<p><strong>Note:</strong> For sap.m.ComboBox and sap.m.MultiComboBox the history values are disabled
-by default. To enable them for these controls, you need to set the <code>historyEnabled</code> property to <code>true</code>.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>historyEnabled</code></p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Gets current value of property #getHistoryEnabled historyEnabled.</p>
+<p>If set to <code>false</code> history values are disabled.</p>
+<p><strong>Note:</strong> For sap.m.ComboBox and sap.m.MultiComboBox the history values are disabled
+by default. To enable them for these controls, you need to set the <code>historyEnabled</code> property to <code>true</code>.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getIndex()</h3>
 <blockquote>
@@ -400,15 +400,15 @@ the default value has been changed from <code>true</code> to <code>false</code>.
 <blockquote>
 <p><strong>getTimezone</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getTimezone timezone.</p>
-<p>Sets time zone for filter of type Edm.DateTimeOffset</p>
-<p><strong>Note:</strong> The property is IANA timezone ID, e.g. &quot;America/New_York&quot;. An invalid IANA timezone ID will
-fall back to the UTC.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>timezone</code></p>
 <h4>Since</h4>
 <p>1.103</p>
+<p>Gets current value of property #getTimezone timezone.</p>
+<p>Sets time zone for filter of type Edm.DateTimeOffset</p>
+<p><strong>Note:</strong> The property is IANA timezone ID, e.g. &quot;America/New_York&quot;. An invalid IANA timezone ID will
+fall back to the UTC.</p>
 <hr>
 <h3>getVisible()</h3>
 <blockquote>
@@ -502,10 +502,6 @@ the defaultFilterValue is inserted at the last position</p>
 <blockquote>
 <p><strong>setConditionPanelDefaultOperation</strong>(<code>sConditionPanelDefaultOperation?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getConditionPanelDefaultOperation conditionPanelDefaultOperation.</p>
-<p>Sets default operation for Condition Panel of the Value Help dialog. In case the newly set default operation
-is not valid for the filter&#39;s EDM data type, then it is ignored.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sConditionPanelDefaultOperation?</h5>
 <p><code>&quot;BT&quot;</code> | <code>&quot;Contains&quot;</code> | <code>&quot;EndsWith&quot;</code> | <code>&quot;EQ&quot;</code> | <code>&quot;GE&quot;</code> | <code>&quot;GT&quot;</code> | <code>&quot;LE&quot;</code> | <code>&quot;LT&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../../library/namespaces/valuehelpdialog/enumerations/ValueHelpRangeOperation.html"><code>ValueHelpRangeOperation</code></a></p>
@@ -515,6 +511,10 @@ is not valid for the filter&#39;s EDM data type, then it is ignored.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Sets a new value for property #getConditionPanelDefaultOperation conditionPanelDefaultOperation.</p>
+<p>Sets default operation for Condition Panel of the Value Help dialog. In case the newly set default operation
+is not valid for the filter&#39;s EDM data type, then it is ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setConditionType()</h3>
 <blockquote>
@@ -666,12 +666,6 @@ it does not work for DropDownListbox</p>
 <blockquote>
 <p><strong>setHistoryEnabled</strong>(<code>bHistoryEnabled?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHistoryEnabled historyEnabled.</p>
-<p>If set to <code>false</code> history values are disabled.</p>
-<p><strong>Note:</strong> For sap.m.ComboBox and sap.m.MultiComboBox the history values are disabled
-by default. To enable them for these controls, you need to set the <code>historyEnabled</code> property to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bHistoryEnabled?</h5>
 <p><code>boolean</code></p>
@@ -681,6 +675,12 @@ by default. To enable them for these controls, you need to set the <code>history
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Sets a new value for property #getHistoryEnabled historyEnabled.</p>
+<p>If set to <code>false</code> history values are disabled.</p>
+<p><strong>Note:</strong> For sap.m.ComboBox and sap.m.MultiComboBox the history values are disabled
+by default. To enable them for these controls, you need to set the <code>historyEnabled</code> property to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setIndex()</h3>
 <blockquote>
@@ -770,11 +770,6 @@ the default value has been changed from <code>true</code> to <code>false</code>.
 <blockquote>
 <p><strong>setTimezone</strong>(<code>sTimezone?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTimezone timezone.</p>
-<p>Sets time zone for filter of type Edm.DateTimeOffset</p>
-<p><strong>Note:</strong> The property is IANA timezone ID, e.g. &quot;America/New_York&quot;. An invalid IANA timezone ID will
-fall back to the UTC.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sTimezone?</h5>
 <p><code>string</code></p>
@@ -784,6 +779,11 @@ fall back to the UTC.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.103</p>
+<p>Sets a new value for property #getTimezone timezone.</p>
+<p>Sets time zone for filter of type Edm.DateTimeOffset</p>
+<p><strong>Note:</strong> The property is IANA timezone ID, e.g. &quot;America/New_York&quot;. An invalid IANA timezone ID will
+fall back to the UTC.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setVisible()</h3>
 <blockquote>
@@ -848,7 +848,7 @@ and enriches it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ControlConfiguration</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ControlConfiguration</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -872,6 +872,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ThingViewer~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ThingViewer~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="~~Class: ThingViewer~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.ux3/sap/ui/ux3/ThingViewer/classes/ThingViewer.html">
 <meta property="og:title" content="~~Class: ThingViewer~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ThingViewer~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="~~Class: ThingViewer~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.ux3/sap/ui/ux3/ThingViewer/classes/ThingViewer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.ux3/README.html">sap.ui.ux3</a> › sap › ui › ux3 › <a href="../../../../../../sap.ui.ux3/sap/ui/ux3/ThingViewer/README.html">ThingViewer</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/ThingViewer</a> / ThingViewer</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/ThingViewer</a> / ThingViewer</p>
 <h1><del>Class: ThingViewer</del></h1>
 <pre class="sig"><span class="kw">import</span> ThingViewer <span class="kw">from</span> <span class="str">"sap/ui/ux3/ThingViewer"</span>;</pre>
-<p>ThingViewer: Same as ThingInspector but decoupled from the Overlay and the ActionBar. The control can
-be added to a Parent container that has a defined width. The ThingViewer fill the whole container. If
-the parent container has no width defined the control will not work properly.</p>
 <h2>Since</h2>
 <p>1.9.1</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - There is not an exact replacement.</p>
+<p>ThingViewer: Same as ThingInspector but decoupled from the Overlay and the ActionBar. The control can
+be added to a Parent container that has a defined width. The ThingViewer fill the whole container. If
+the parent container has no width defined the control will not work properly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -231,9 +231,6 @@ selected one. The ThingInspector will currently always mark the first facet as s
 <blockquote>
 <p><strong>fireFacetSelected</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:facetSelected facetSelected to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ThingViewer$FacetSelectedEventParameters.html"><code>ThingViewer$FacetSelectedEventParameters</code></a></p>
@@ -243,6 +240,9 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:facetSelected facetSelected to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>getActionBar()</del></h3>
 <blockquote>
@@ -284,14 +284,14 @@ event object. The return value of this method indicates whether the default acti
 <blockquote>
 <p><strong>getHeaderType</strong>(): <code>&quot;Standard&quot;</code> | <code>&quot;Horizontal&quot;</code> | <a href="../../library/enumerations/ThingViewerHeaderType.html"><code>ThingViewerHeaderType</code></a></p>
 </blockquote>
-<p>Gets current value of property #getHeaderType headerType.</p>
-<p>Defines which header type should be used.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Standard&quot;</code> | <code>&quot;Horizontal&quot;</code> | <a href="../../library/enumerations/ThingViewerHeaderType.html"><code>ThingViewerHeaderType</code></a></p>
 <p>Value of property <code>headerType</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Gets current value of property #getHeaderType headerType.</p>
+<p>Defines which header type should be used.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3><del>getHeight()</del></h3>
 <blockquote>
@@ -546,10 +546,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setHeaderType</strong>(<code>sHeaderType?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHeaderType headerType.</p>
-<p>Defines which header type should be used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeaderType?</h5>
 <p><code>&quot;Standard&quot;</code> | <code>&quot;Horizontal&quot;</code> | <a href="../../library/enumerations/ThingViewerHeaderType.html"><code>ThingViewerHeaderType</code></a></p>
@@ -559,6 +555,10 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Sets a new value for property #getHeaderType headerType.</p>
+<p>Defines which header type should be used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3><del>setHeight()</del></h3>
 <blockquote>
@@ -681,7 +681,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ThingViewer</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ThingViewer</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -705,6 +705,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FilterBar — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: FilterBar — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: FilterBar — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/filterbar/FilterBar/classes/FilterBar.html">
 <meta property="og:title" content="Class: FilterBar — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: FilterBar — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: FilterBar — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/filterbar/FilterBar/classes/FilterBar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › filterbar › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/filterbar/FilterBar/README.html">FilterBar</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/filterbar/FilterBar</a> / FilterBar</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/filterbar/FilterBar</a> / FilterBar</p>
 <h1>Class: FilterBar</h1>
 <pre class="sig"><span class="kw">import</span> FilterBar <span class="kw">from</span> <span class="str">"sap/ui/comp/filterbar/FilterBar"</span>;</pre>
 <p>The <code>FilterBar</code> displays filters in a user-friendly manner to populate values for a query. The <code>FilterBar</code>
@@ -101,7 +101,6 @@ See:
 <blockquote>
 <p><strong>_addParameter</strong>(<code>oParameter</code>): <code>this</code></p>
 </blockquote>
-<p>Adds a <code>FilterGroupItem</code> element to the aggregation <code>_parameters</code>.</p>
 <h4>Parameters</h4>
 <h5>oParameter</h5>
 <p><a href="../../FilterGroupItem/classes/FilterGroupItem.html"><code>FilterGroupItem</code></a></p>
@@ -111,34 +110,34 @@ See:
 <p>Reference to this in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Adds a <code>FilterGroupItem</code> element to the aggregation <code>_parameters</code>.</p>
 <hr>
 <h3>_isPhone()</h3>
 <blockquote>
 <p><strong>_isPhone</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Checks if running on phone.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p><code>True</code> if phone, <code>false</code> otherwise</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Checks if running on phone.</p>
 <hr>
 <h3>_isTablet()</h3>
 <blockquote>
 <p><strong>_isTablet</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Checks if running on tablet.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p><code>True</code> if tablet, <code>false</code> otherwise</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Checks if running on tablet.</p>
 <hr>
 <h3>_retrieveCurrentSelectionSet()</h3>
 <blockquote>
 <p><strong>_retrieveCurrentSelectionSet</strong>(<code>bWithName</code>, <code>bConsiderParameters</code>): <code>any</code>[]</p>
 </blockquote>
-<p>Retrieves the controls for all visible filters.</p>
 <h4>Parameters</h4>
 <h5>bWithName</h5>
 <p><code>boolean</code></p>
@@ -151,16 +150,17 @@ See:
 <p>all visible controls/filter name &amp; controls</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Retrieves the controls for all visible filters.</p>
 <hr>
 <h3>_updateToolbarText()</h3>
 <blockquote>
 <p><strong>_updateToolbarText</strong>(): <code>void</code></p>
 </blockquote>
-<p>Updates the &#39;Filters&#39;-button text with the count of filters with values</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Updates the &#39;Filters&#39;-button text with the count of filters with values</p>
 <hr>
 <h3>addAdaptFilterDialogCustomContent()</h3>
 <blockquote>
@@ -194,9 +194,6 @@ applications can achieve the ALP scenario in free style. Other usages are not en
 <blockquote>
 <p><strong>addFilterDialogContent</strong>(<code>oContent</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Enables to add application specific content to the filters dialog. If the content was not yet added it
-will be added. The content will be set to visible, all other filters dialog content will be set to invisible.
-Not implemented yet for the new Adapt Filters Dialog</p>
 <h4>Parameters</h4>
 <h5>oContent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -206,6 +203,9 @@ Not implemented yet for the new Adapt Filters Dialog</p>
 <p><code>oContent</code> added or <code>null</code> when filters dialog is not active</p>
 <h4>Deprecated</h4>
 <p>(since 1.84)</p>
+<p>Enables to add application specific content to the filters dialog. If the content was not yet added it
+will be added. The content will be set to visible, all other filters dialog content will be set to invisible.
+Not implemented yet for the new Adapt Filters Dialog</p>
 <hr>
 <h3>addFilterGroupItem()</h3>
 <blockquote>
@@ -224,7 +224,6 @@ Not implemented yet for the new Adapt Filters Dialog</p>
 <blockquote>
 <p><strong>addFilterItem</strong>(<code>oFilterItem</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some filterItem to the aggregation #getFilterItems filterItems.</p>
 <h4>Parameters</h4>
 <h5>oFilterItem</h5>
 <p><a href="../../FilterItem/classes/FilterItem.html"><code>FilterItem</code></a></p>
@@ -234,6 +233,7 @@ Not implemented yet for the new Adapt Filters Dialog</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - Use aggregation <code>filterGroupItems</code> instead.</p>
+<p>Adds some filterItem to the aggregation #getFilterItems filterItems.</p>
 <hr>
 <h3>applyVariant()</h3>
 <blockquote>
@@ -349,13 +349,6 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <blockquote>
 <p><strong>attachAssignedFiltersChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:assignedFiltersChanged assignedFiltersChanged
-event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
-<p>This event is fired when the filters information has changed. It indicates specifically that the count
-of assigned filters may be changed. One of the intended reaction to this event would be to call <code>retrieveFiltersWithValuesAsText</code>
-method.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -372,10 +365,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAssignedFiltersChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:assignedFiltersChanged assignedFiltersChanged
 event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -383,6 +372,10 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <p>This event is fired when the filters information has changed. It indicates specifically that the count
 of assigned filters may be changed. One of the intended reaction to this event would be to call <code>retrieveFiltersWithValuesAsText</code>
 method.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAssignedFiltersChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -395,17 +388,19 @@ method.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:assignedFiltersChanged assignedFiltersChanged
+event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
+<p>This event is fired when the filters information has changed. It indicates specifically that the count
+of assigned filters may be changed. One of the intended reaction to this event would be to call <code>retrieveFiltersWithValuesAsText</code>
+method.</p>
 <hr>
 <h3>attachBeforeVariantFetch()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachBeforeVariantFetch</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforeVariantFetch beforeVariantFetch event
-of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
-<p>This event is fired before a variant is fetched.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -422,15 +417,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.13</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforeVariantFetch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforeVariantFetch beforeVariantFetch event
 of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
 <p>This event is fired before a variant is fetched.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeVariantFetch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -443,6 +438,11 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.13</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeVariantFetch beforeVariantFetch event
+of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
+<p>This event is fired before a variant is fetched.</p>
 <hr>
 <h3>attachBeforeVariantSave()</h3>
 <h4>Call Signature</h4>
@@ -623,11 +623,6 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <blockquote>
 <p><strong>attachFiltersDialogBeforeOpen</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogBeforeOpen filtersDialogBeforeOpen
-event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
-<p>This event is fired after the filters dialog is opened.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -644,15 +639,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachFiltersDialogBeforeOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogBeforeOpen filtersDialogBeforeOpen
 event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
 <p>This event is fired after the filters dialog is opened.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachFiltersDialogBeforeOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -665,17 +660,17 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogBeforeOpen filtersDialogBeforeOpen
+event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
+<p>This event is fired after the filters dialog is opened.</p>
 <hr>
 <h3>attachFiltersDialogCancel()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachFiltersDialogCancel</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogCancel filtersDialogCancel event
-of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
-<p>This event is fired when the Cancel button on the filters dialog is pressed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -692,15 +687,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachFiltersDialogCancel</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogCancel filtersDialogCancel event
 of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
 <p>This event is fired when the Cancel button on the filters dialog is pressed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachFiltersDialogCancel</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -713,17 +708,17 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogCancel filtersDialogCancel event
+of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
+<p>This event is fired when the Cancel button on the filters dialog is pressed.</p>
 <hr>
 <h3>attachFiltersDialogClosed()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachFiltersDialogClosed</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogClosed filtersDialogClosed event
-of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
-<p>This event is fired after the filters dialog is closed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -740,15 +735,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.34.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachFiltersDialogClosed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogClosed filtersDialogClosed event
 of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
 <p>This event is fired after the filters dialog is closed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachFiltersDialogClosed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -761,17 +756,17 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.34.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogClosed filtersDialogClosed event
+of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
+<p>This event is fired after the filters dialog is closed.</p>
 <hr>
 <h3><del>attachFiltersDialogSearch()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachFiltersDialogSearch</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogSearch filtersDialogSearch event
-of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
-<p>This event is fired when the Go button on the filters dialog is pressed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -790,15 +785,15 @@ object when firing the event</p>
 <p>1.48.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.84)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachFiltersDialogSearch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogSearch filtersDialogSearch event
 of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
 <p>This event is fired when the Go button on the filters dialog is pressed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachFiltersDialogSearch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -813,17 +808,17 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <p>1.48.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.84)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogSearch filtersDialogSearch event
+of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
+<p>This event is fired when the Go button on the filters dialog is pressed.</p>
 <hr>
 <h3><del>attachFiltersDialogSearchForFilters()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachFiltersDialogSearchForFilters</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogSearchForFilters filtersDialogSearchForFilters
-event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
-<p>This event is fired when search field of the filter dialog is changed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -842,15 +837,15 @@ object when firing the event</p>
 <p>1.48.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.84)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachFiltersDialogSearchForFilters</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogSearchForFilters filtersDialogSearchForFilters
 event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
 <p>This event is fired when search field of the filter dialog is changed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachFiltersDialogSearchForFilters</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -865,6 +860,11 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <p>1.48.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.84)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:filtersDialogSearchForFilters filtersDialogSearchForFilters
+event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
+<p>This event is fired when search field of the filter dialog is changed.</p>
 <hr>
 <h3>attachInitialise()</h3>
 <h4>Call Signature</h4>
@@ -913,12 +913,6 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <blockquote>
 <p><strong>attachInitialized</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:initialized initialized event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
-<p>This event is fired after the <code>FilterBar</code> has been initialized, the user&#39;s default variant has been applied,
-and a stable filter state has been achieved. With this event all relevant filter information, for example,
-for navigation-related actions, is available via sap.ui.comp.filterbar.FilterBar#getUiState.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -935,16 +929,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachInitialized</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:initialized initialized event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
 <p>This event is fired after the <code>FilterBar</code> has been initialized, the user&#39;s default variant has been applied,
 and a stable filter state has been achieved. With this event all relevant filter information, for example,
 for navigation-related actions, is available via sap.ui.comp.filterbar.FilterBar#getUiState.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachInitialized</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -957,6 +951,12 @@ for navigation-related actions, is available via sap.ui.comp.filterbar.FilterBar
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:initialized initialized event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> itself.</p>
+<p>This event is fired after the <code>FilterBar</code> has been initialized, the user&#39;s default variant has been applied,
+and a stable filter state has been achieved. With this event all relevant filter information, for example,
+for navigation-related actions, is available via sap.ui.comp.filterbar.FilterBar#getUiState.</p>
 <hr>
 <h3>attachReset()</h3>
 <h4>Call Signature</h4>
@@ -1063,12 +1063,12 @@ otherwise it will be bound to this <code>sap.ui.comp.filterbar.FilterBar</code> 
 <blockquote>
 <p><strong>destroyFilterItems</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the filterItems in the aggregation #getFilterItems filterItems.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - Use aggregation <code>filterGroupItems</code> instead.</p>
+<p>Destroys all the filterItems in the aggregation #getFilterItems filterItems.</p>
 <hr>
 <h3>detachAfterVariantLoad()</h3>
 <blockquote>
@@ -1110,9 +1110,6 @@ this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <blockquote>
 <p><strong>detachAssignedFiltersChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:assignedFiltersChanged assignedFiltersChanged
-event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1125,14 +1122,14 @@ event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:assignedFiltersChanged assignedFiltersChanged
+event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachBeforeVariantFetch()</h3>
 <blockquote>
 <p><strong>detachBeforeVariantFetch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforeVariantFetch beforeVariantFetch event
-of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1145,6 +1142,9 @@ of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.13</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeVariantFetch beforeVariantFetch event
+of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachBeforeVariantSave()</h3>
 <blockquote>
@@ -1219,9 +1219,6 @@ of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <blockquote>
 <p><strong>detachFiltersDialogBeforeOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogBeforeOpen filtersDialogBeforeOpen
-event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1234,14 +1231,14 @@ event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogBeforeOpen filtersDialogBeforeOpen
+event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachFiltersDialogCancel()</h3>
 <blockquote>
 <p><strong>detachFiltersDialogCancel</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogCancel filtersDialogCancel event
-of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1254,14 +1251,14 @@ of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogCancel filtersDialogCancel event
+of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachFiltersDialogClosed()</h3>
 <blockquote>
 <p><strong>detachFiltersDialogClosed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogClosed filtersDialogClosed event
-of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1274,14 +1271,14 @@ of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogClosed filtersDialogClosed event
+of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachFiltersDialogSearch()</del></h3>
 <blockquote>
 <p><strong>detachFiltersDialogSearch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogSearch filtersDialogSearch event
-of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1296,14 +1293,14 @@ of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>1.48.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.84)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogSearch filtersDialogSearch event
+of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachFiltersDialogSearchForFilters()</del></h3>
 <blockquote>
 <p><strong>detachFiltersDialogSearchForFilters</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogSearchForFilters filtersDialogSearchForFilters
-event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1318,6 +1315,9 @@ event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>1.48.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.84)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:filtersDialogSearchForFilters filtersDialogSearchForFilters
+event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachInitialise()</h3>
 <blockquote>
@@ -1340,8 +1340,6 @@ event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <blockquote>
 <p><strong>detachInitialized</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:initialized initialized event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1354,6 +1352,8 @@ event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:initialized initialized event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachReset()</h3>
 <blockquote>
@@ -1494,8 +1494,6 @@ event of this <code>sap.ui.comp.filterbar.FilterBar</code>.</p>
 
 &gt; **fireAfterVariantSave**(`mParameters?`): `this`
 
-Fires event #event:afterVariantSave afterVariantSave to attached listeners.
-
 #### Parameters
 
 ##### mParameters?
@@ -1514,13 +1512,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:afterVariantSave afterVariantSave to attached listeners.
+
 ***
 
 ### fireAssignedFiltersChanged()
 
 &gt; **fireAssignedFiltersChanged**(`mParameters?`): `this`
-
-Fires event #event:assignedFiltersChanged assignedFiltersChanged to attached listeners.
 
 #### Parameters
 
@@ -1544,13 +1542,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:assignedFiltersChanged assignedFiltersChanged to attached listeners.
+
 ***
 
 ### fireBeforeVariantFetch()
 
 &gt; **fireBeforeVariantFetch**(`mParameters?`): `this`
-
-Fires event #event:beforeVariantFetch beforeVariantFetch to attached listeners.
 
 #### Parameters
 
@@ -1574,13 +1572,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:beforeVariantFetch beforeVariantFetch to attached listeners.
+
 ***
 
 ### fireCancel()
 
 &gt; **fireCancel**(`mParameters?`): `this`
-
-Fires event #event:cancel cancel to attached listeners.
 
 #### Parameters
 
@@ -1600,13 +1598,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:cancel cancel to attached listeners.
+
 ***
 
 ### fireClear()
 
 &gt; **fireClear**(`mParameters?`): `this`
-
-Fires event #event:clear clear to attached listeners.
 
 #### Parameters
 
@@ -1626,13 +1624,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:clear clear to attached listeners.
+
 ***
 
 ### fireFiltersDialogBeforeOpen()
 
 &gt; **fireFiltersDialogBeforeOpen**(`mParameters?`): `this`
-
-Fires event #event:filtersDialogBeforeOpen filtersDialogBeforeOpen to attached listeners.
 
 #### Parameters
 
@@ -1655,6 +1653,8 @@ Reference to `this` in order to allow method chaining
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+Fires event #event:filtersDialogBeforeOpen filtersDialogBeforeOpen to attached listeners.
 
 ***
 
@@ -1662,8 +1662,6 @@ Do not call from applications (only from related classes in the framework)
 
 &gt; **fireFiltersDialogCancel**(`mParameters?`): `this`
 
-Fires event #event:filtersDialogCancel filtersDialogCancel to attached listeners.
-
 #### Parameters
 
 ##### mParameters?
@@ -1686,13 +1684,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:filtersDialogCancel filtersDialogCancel to attached listeners.
+
 ***
 
 ### fireFiltersDialogClosed()
 
 &gt; **fireFiltersDialogClosed**(`mParameters?`): `this`
-
-Fires event #event:filtersDialogClosed filtersDialogClosed to attached listeners.
 
 #### Parameters
 
@@ -1716,13 +1714,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:filtersDialogClosed filtersDialogClosed to attached listeners.
+
 ***
 
 ### ~~fireFiltersDialogSearch()~~
 
 &gt; **fireFiltersDialogSearch**(`mParameters?`): `this`
-
-Fires event #event:filtersDialogSearch filtersDialogSearch to attached listeners.
 
 #### Parameters
 
@@ -1750,13 +1748,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:filtersDialogSearch filtersDialogSearch to attached listeners.
+
 ***
 
 ### ~~fireFiltersDialogSearchForFilters()~~
 
 &gt; **fireFiltersDialogSearchForFilters**(`mParameters?`): `this`
-
-Fires event #event:filtersDialogSearchForFilters filtersDialogSearchForFilters to attached listeners.
 
 #### Parameters
 
@@ -1784,13 +1782,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:filtersDialogSearchForFilters filtersDialogSearchForFilters to attached listeners.
+
 ***
 
 ### fireInitialise()
 
 &gt; **fireInitialise**(`mParameters?`): `this`
-
-Fires event #event:initialise initialise to attached listeners.
 
 #### Parameters
 
@@ -1810,13 +1808,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:initialise initialise to attached listeners.
+
 ***
 
 ### fireInitialized()
 
 &gt; **fireInitialized**(`mParameters?`): `this`
-
-Fires event #event:initialized initialized to attached listeners.
 
 #### Parameters
 
@@ -1840,13 +1838,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:initialized initialized to attached listeners.
+
 ***
 
 ### fireReset()
 
 &gt; **fireReset**(`mParameters?`): `this`
-
-Fires event #event:reset reset to attached listeners.
 
 #### Parameters
 
@@ -1866,13 +1864,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:reset reset to attached listeners.
+
 ***
 
 ### fireSearch()
 
 &gt; **fireSearch**(`mParameters?`): `this`
-
-Fires event #event:search search to attached listeners.
 
 #### Parameters
 
@@ -1891,6 +1889,8 @@ Reference to `this` in order to allow method chaining
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+Fires event #event:search search to attached listeners.
 
 ***
 
@@ -1939,9 +1939,6 @@ filters Of the current variant
 
 &gt; **getBasicSearch**(): `string`
 
-ID of the element which is the current target of the association #getBasicSearch basicSearch,
-or `null`.
-
 #### Returns
 
 `string`
@@ -1950,13 +1947,14 @@ or `null`.
 
 1.30.0
 
+ID of the element which is the current target of the association #getBasicSearch basicSearch,
+or `null`.
+
 ***
 
 ### getBasicSearchName()
 
 &gt; **getBasicSearchName**(): `string`
-
-Determine the internal basic search field name.
 
 #### Returns
 
@@ -1968,13 +1966,13 @@ name of the basic search field.
 
 Do not call from applications (only from related classes in the framework)
 
+Determine the internal basic search field name.
+
 ***
 
 ### getBasicSearchValue()
 
 &gt; **getBasicSearchValue**(): `string`
-
-Determine the value of the basic search.
 
 #### Returns
 
@@ -1986,17 +1984,13 @@ current value of the basic search field.
 
 Do not call from applications (only from related classes in the framework)
 
+Determine the value of the basic search.
+
 ***
 
 ### getConsiderGroupTitle()
 
 &gt; **getConsiderGroupTitle**(): `boolean`
-
-Gets current value of property #getConsiderGroupTitle considerGroupTitle.
-
-If this property is set, then the label for filters will be prefixed with the group title.
-
-Default value is `false`.
 
 #### Returns
 
@@ -2008,13 +2002,17 @@ Value of property `considerGroupTitle`
 
 1.28.0
 
+Gets current value of property #getConsiderGroupTitle considerGroupTitle.
+
+If this property is set, then the label for filters will be prefixed with the group title.
+
+Default value is `false`.
+
 ***
 
 ### getCurrentVariantId()
 
 &gt; **getCurrentVariantId**(): `string`
-
-Retrieves the current variant ID.
 
 #### Returns
 
@@ -2026,13 +2024,13 @@ ID of the current variant
 
 1.28.0
 
+Retrieves the current variant ID.
+
 ***
 
 ### ~~getDataSuiteFormat()~~
 
 &gt; **getDataSuiteFormat**(`bConsiderAllFilters`): `string`
-
-Retrieves the current variant as selection variant for UI navigation
 
 #### Parameters
 
@@ -2056,17 +2054,13 @@ JSON string representing the selection variant for UI navigation; `null` otherwi
 
 (since 1.48) - replaced by sap.ui.comp.filterbar.FilterBar#getUiState
 
+Retrieves the current variant as selection variant for UI navigation
+
 ***
 
 ### getDeltaVariantMode()
 
 &gt; **getDeltaVariantMode**(): `boolean`
-
-Gets current value of property #getDeltaVariantMode deltaVariantMode.
-
-Stores the delta as compared to the standard variant.
-
-Default value is `true`.
 
 #### Returns
 
@@ -2078,13 +2072,17 @@ Value of property `deltaVariantMode`
 
 1.34.0
 
+Gets current value of property #getDeltaVariantMode deltaVariantMode.
+
+Stores the delta as compared to the standard variant.
+
+Default value is `true`.
+
 ***
 
 ### getDescriptionForKeys()
 
 &gt; **getDescriptionForKeys**(`aFiltersWithValuesToBeRead`): `void`
-
-Reads the descriptions for given filters and value keys.
 
 #### Parameters
 
@@ -2106,20 +2104,13 @@ List of filters with value keys to be retrieved
 
 Do not call from applications (only from related classes in the framework)
 
+Reads the descriptions for given filters and value keys.
+
 ***
 
 ### getDisableSearchMatchesPatternWarning()
 
 &gt; **getDisableSearchMatchesPatternWarning**(): `boolean`
-
-Gets current value of property #getDisableSearchMatchesPatternWarning disableSearchMatchesPatternWarning.
-
-Disables the warning for special symbols.
-
-**Note:** Changing the values here after the SmartFilter is initialized (`initialise` event was fired)
-has no effect.
-
-Default value is `false`.
 
 #### Returns
 
@@ -2131,11 +2122,30 @@ Value of property `disableSearchMatchesPatternWarning`
 
 1.102
 
+Gets current value of property #getDisableSearchMatchesPatternWarning disableSearchMatchesPatternWarning.
+
+Disables the warning for special symbols.
+
+**Note:** Changing the values here after the SmartFilter is initialized (`initialise` event was fired)
+has no effect.
+
+Default value is `false`.
+
 ***
 
 ### getFilterBarExpanded()
 
 &gt; **getFilterBarExpanded**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+Value of property `filterBarExpanded`
+
+#### Since
+
+1.26.1
 
 Gets current value of property #getFilterBarExpanded filterBarExpanded.
 
@@ -2152,27 +2162,11 @@ The filter bar is initially expanded in the following cases:
 
 Default value is `true`.
 
-#### Returns
-
-`boolean`
-
-Value of property `filterBarExpanded`
-
-#### Since
-
-1.26.1
-
 ***
 
 ### getFilterContainerWidth()
 
 &gt; **getFilterContainerWidth**(): `string`
-
-Gets current value of property #getFilterContainerWidth filterContainerWidth.
-
-Sets the width of the filters container.
-
-Default value is `&quot;12rem&quot;`.
 
 #### Returns
 
@@ -2184,15 +2178,17 @@ Value of property `filterContainerWidth`
 
 1.34.0
 
+Gets current value of property #getFilterContainerWidth filterContainerWidth.
+
+Sets the width of the filters container.
+
+Default value is `&quot;12rem&quot;`.
+
 ***
 
 ### ~~getFilterDialogContent()~~
 
 &gt; **getFilterDialogContent**(): `any`[]
-
-Returns the filter dialog content. `Node:`The original content is a sap.ui.layout.form.Form Form.
-The form may be enhanced with a toolbar to enable the inner switch to an added custom content. Besides
-such operations, the original content should not be manipulated in any way.
 
 #### Returns
 
@@ -2203,6 +2199,10 @@ of filters dialog content.
 #### Deprecated
 
 (since 1.84)
+
+Returns the filter dialog content. `Node:`The original content is a sap.ui.layout.form.Form Form.
+The form may be enhanced with a toolbar to enable the inner switch to an added custom content. Besides
+such operations, the original content should not be manipulated in any way.
 
 ***
 
@@ -2231,10 +2231,6 @@ Contains all FilterBar filters.
 
 &gt; **getFilterItems**(): [`FilterItem`](../../FilterItem/classes/FilterItem.html)[]
 
-Gets content of aggregation #getFilterItems filterItems.
-
-Filters belonging to the basic group.
-
 #### Returns
 
 [`FilterItem`](../../FilterItem/classes/FilterItem.html)[]
@@ -2243,18 +2239,15 @@ Filters belonging to the basic group.
 
 (since 1.48.0) - Use aggregation `filterGroupItems` instead.
 
+Gets content of aggregation #getFilterItems filterItems.
+
+Filters belonging to the basic group.
+
 ***
 
 ### getHeader()
 
 &gt; **getHeader**(): `string`
-
-Gets current value of property #getHeader header.
-
-Specifies header text that is shown in the toolbar on the first position. This property is ignored, when
-`useToolbar` is set to `false`.
-
-Default value is `empty string`.
 
 #### Returns
 
@@ -2265,6 +2258,13 @@ Value of property `header`
 #### Since
 
 1.38.0
+
+Gets current value of property #getHeader header.
+
+Specifies header text that is shown in the toolbar on the first position. This property is ignored, when
+`useToolbar` is set to `false`.
+
+Default value is `empty string`.
 
 ***
 
@@ -2322,12 +2322,6 @@ Value of property `persistencyKey`
 
 &gt; **getSearchEnabled**(): `boolean`
 
-Gets current value of property #getSearchEnabled searchEnabled.
-
-Enables/disables the Search button.
-
-Default value is `true`.
-
 #### Returns
 
 `boolean`
@@ -2338,19 +2332,17 @@ Value of property `searchEnabled`
 
 (since 1.32.0)
 
+Gets current value of property #getSearchEnabled searchEnabled.
+
+Enables/disables the Search button.
+
+Default value is `true`.
+
 ***
 
 ### getShowAllFilters()
 
 &gt; **getShowAllFilters**(): `boolean`
-
-Gets current value of property #getShowAllFilters showAllFilters.
-
-If set to `true`, when the `FilterBar` is expanded it will show all filters, not only the first 7.
-
-**Note:** This is valid only when the `FilterBar` is used inside a `ValueHelpDialog`
-
-Default value is `false`.
 
 #### Returns
 
@@ -2362,17 +2354,19 @@ Value of property `showAllFilters`
 
 1.116.0
 
+Gets current value of property #getShowAllFilters showAllFilters.
+
+If set to `true`, when the `FilterBar` is expanded it will show all filters, not only the first 7.
+
+**Note:** This is valid only when the `FilterBar` is used inside a `ValueHelpDialog`
+
+Default value is `false`.
+
 ***
 
 ### ~~getShowClearButton()~~
 
 &gt; **getShowClearButton**(): `boolean`
-
-Gets current value of property #getShowClearButton showClearButton.
-
-Handles visibility of the Clear button on the Filters dialog.
-
-Default value is `false`.
 
 #### Returns
 
@@ -2384,17 +2378,17 @@ Value of property `showClearButton`
 
 (since 1.84)
 
+Gets current value of property #getShowClearButton showClearButton.
+
+Handles visibility of the Clear button on the Filters dialog.
+
+Default value is `false`.
+
 ***
 
 ### getShowClearOnFB()
 
 &gt; **getShowClearOnFB**(): `boolean`
-
-Gets current value of property #getShowClearOnFB showClearOnFB.
-
-Handles visibility of the Clear button on the FilterBar.
-
-Default value is `false`.
 
 #### Returns
 
@@ -2406,17 +2400,17 @@ Value of property `showClearOnFB`
 
 1.28.0
 
+Gets current value of property #getShowClearOnFB showClearOnFB.
+
+Handles visibility of the Clear button on the FilterBar.
+
+Default value is `false`.
+
 ***
 
 ### getShowFilterConfiguration()
 
 &gt; **getShowFilterConfiguration**(): `boolean`
-
-Gets current value of property #getShowFilterConfiguration showFilterConfiguration.
-
-Handles visibility of the Filters button on the FilterBar.
-
-Default value is `true`.
 
 #### Returns
 
@@ -2428,15 +2422,17 @@ Value of property `showFilterConfiguration`
 
 1.38.0
 
+Gets current value of property #getShowFilterConfiguration showFilterConfiguration.
+
+Handles visibility of the Filters button on the FilterBar.
+
+Default value is `true`.
+
 ***
 
 ### ~~getShowGoButton()~~
 
 &gt; **getShowGoButton**(): `boolean`
-
-Gets current value of property #getShowGoButton showGoButton.
-
-Handles visibility of the Go button on the FilterBar.
 
 #### Returns
 
@@ -2452,17 +2448,15 @@ Value of property `showGoButton`
 
 (since 1.28.0) - Replaced by property `showGoOnFB`
 
+Gets current value of property #getShowGoButton showGoButton.
+
+Handles visibility of the Go button on the FilterBar.
+
 ***
 
 ### getShowGoOnFB()
 
 &gt; **getShowGoOnFB**(): `boolean`
-
-Gets current value of property #getShowGoOnFB showGoOnFB.
-
-Handles visibility of the Go button on the FilterBar.
-
-Default value is `true`.
 
 #### Returns
 
@@ -2474,20 +2468,17 @@ Value of property `showGoOnFB`
 
 1.28.0
 
+Gets current value of property #getShowGoOnFB showGoOnFB.
+
+Handles visibility of the Go button on the FilterBar.
+
+Default value is `true`.
+
 ***
 
 ### getShowRestoreButton()
 
 &gt; **getShowRestoreButton**(): `boolean`
-
-Gets current value of property #getShowRestoreButton showRestoreButton.
-
-Handles visibility of the &quot;Restore&quot; button on the &quot;Filters&quot; dialog. **Note:** Restore works only automatically
-when a property `persistencyKey` is set and therefore Variant Management is used. In all other cases
-the &quot;restore&quot; behavior needs to be implemented by the app, based on the event `reset`. Since 1.84 the
-&quot;Restore&quot; button text is changed to &quot;Reset&quot;
-
-Default value is `true`.
 
 #### Returns
 
@@ -2499,17 +2490,20 @@ Value of property `showRestoreButton`
 
 1.26.1
 
+Gets current value of property #getShowRestoreButton showRestoreButton.
+
+Handles visibility of the &quot;Restore&quot; button on the &quot;Filters&quot; dialog. **Note:** Restore works only automatically
+when a property `persistencyKey` is set and therefore Variant Management is used. In all other cases
+the &quot;restore&quot; behavior needs to be implemented by the app, based on the event `reset`. Since 1.84 the
+&quot;Restore&quot; button text is changed to &quot;Reset&quot;
+
+Default value is `true`.
+
 ***
 
 ### getShowRestoreOnFB()
 
 &gt; **getShowRestoreOnFB**(): `boolean`
-
-Gets current value of property #getShowRestoreOnFB showRestoreOnFB.
-
-Handles visibility of the Restore button on the FilterBar.
-
-Default value is `false`.
 
 #### Returns
 
@@ -2521,14 +2515,17 @@ Value of property `showRestoreOnFB`
 
 1.28.0
 
+Gets current value of property #getShowRestoreOnFB showRestoreOnFB.
+
+Handles visibility of the Restore button on the FilterBar.
+
+Default value is `false`.
+
 ***
 
 ### getUiState()
 
 &gt; **getUiState**(`mProperties`): [`UIState`](../../../state/UIState/classes/UIState.html)
-
-Retrieves the current UI state of the `FilterBar` control.
- The current UI state represents the data suite format.
 
 #### Parameters
 
@@ -2552,11 +2549,24 @@ object representing the ui-state. Currently only the SelectionVariant part is co
 
 1.48
 
+Retrieves the current UI state of the `FilterBar` control.
+ The current UI state represents the data suite format.
+
 ***
 
 ### getUseSnapshot()
 
 &gt; **getUseSnapshot**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+Value of property `useSnapshot`
+
+#### Since
+
+1.44
 
 Gets current value of property #getUseSnapshot useSnapshot.
 
@@ -2569,30 +2579,11 @@ dialog is opened.
 	 - `false` defines that the snapshot will not be applied
 	 - `true`is not considered at all
 
-#### Returns
-
-`boolean`
-
-Value of property `useSnapshot`
-
-#### Since
-
-1.44
-
 ***
 
 ### getUseToolbar()
 
 &gt; **getUseToolbar**(): `boolean`
-
-Gets current value of property #getUseToolbar useToolbar.
-
-Determines what design is used. Default is the design with toolbar. If the property `useToolbar` is set
-to `false`, the property `filterBarExpanded` is set to `true` automatically. **Note:**
- If set to `false`, the `VariantManagement` control is not available at all. This scenario is only intended
-for the sap.ui.comp.smartfilterbar.SmartFilterBar.
-
-Default value is `true`.
 
 #### Returns
 
@@ -2604,16 +2595,20 @@ Value of property `useToolbar`
 
 1.38.0
 
+Gets current value of property #getUseToolbar useToolbar.
+
+Determines what design is used. Default is the design with toolbar. If the property `useToolbar` is set
+to `false`, the property `filterBarExpanded` is set to `true` automatically. **Note:**
+ If set to `false`, the `VariantManagement` control is not available at all. This scenario is only intended
+for the sap.ui.comp.smartfilterbar.SmartFilterBar.
+
+Default value is `true`.
+
 ***
 
 ### getVariantManagement()
 
 &gt; **getVariantManagement**(): [`VariantManagement`](../../../variants/VariantManagement/classes/VariantManagement.html)
-
-Returns the associated VariantManagement control. The returned VariantManagement instance should not
-be cached or manipulated in any ways. It should offer the application a convenient way to verify the
-dirty state and to check for page variant scenario. The method may return `null` or a disabled VariantManagement
-control.
 
 #### Returns
 
@@ -2625,13 +2620,16 @@ the associated VariantManagement control.
 
 1.44.0
 
+Returns the associated VariantManagement control. The returned VariantManagement instance should not
+be cached or manipulated in any ways. It should offer the application a convenient way to verify the
+dirty state and to check for page variant scenario. The method may return `null` or a disabled VariantManagement
+control.
+
 ***
 
 ### hideGoButton()
 
 &gt; **hideGoButton**(): `void`
-
-Hides the Go button on FilterBar. Allows to hide the Go-button for dedicated scenarios, like liveMode.
 
 #### Returns
 
@@ -2644,6 +2642,8 @@ Hides the Go button on FilterBar. Allows to hide the Go-button for dedicated sce
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+Hides the Go button on FilterBar. Allows to hide the Go-button for dedicated scenarios, like liveMode.
 
 ***
 
@@ -2674,9 +2674,6 @@ The index of the provided control in the aggregation if found, or -1 otherwise
 
 &gt; **indexOfFilterItem**(`oFilterItem`): `number`
 
-Checks for the provided `sap.ui.comp.filterbar.FilterItem` in the aggregation #getFilterItems filterItems.
-and returns its index if found or -1 otherwise.
-
 #### Parameters
 
 ##### oFilterItem
@@ -2694,6 +2691,9 @@ The index of the provided control in the aggregation if found, or -1 otherwise
 #### Deprecated
 
 (since 1.48.0) - Use aggregation `filterGroupItems` instead.
+
+Checks for the provided `sap.ui.comp.filterbar.FilterItem` in the aggregation #getFilterItems filterItems.
+and returns its index if found or -1 otherwise.
 
 ***
 
@@ -2715,8 +2715,6 @@ Flag &#39;executeOnSelect&#39; flag. If variant management is disabled `false` i
 
 &gt; **isCurrentVariantStandard**(): `boolean`
 
-Determines if the current variant is the standard variant
-
 #### Returns
 
 `boolean`
@@ -2728,13 +2726,13 @@ not exists, `undefined` is returned.
 
 1.44.0
 
+Determines if the current variant is the standard variant
+
 ***
 
 ### isDialogOpen()
 
 &gt; **isDialogOpen**(): `boolean`
-
-Determines if the filters dialog is opened.
 
 #### Returns
 
@@ -2745,6 +2743,8 @@ State of filters dialog
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+Determines if the filters dialog is opened.
 
 ***
 
@@ -2799,9 +2799,6 @@ Returns `this` to allow method chaining.
 
 &gt; **registerGetFiltersWithValues**(`fCallBack`): `this`
 
-Registration of a callback function. The provided callback function is executed to obtain the filters
-with values.
-
 #### Parameters
 
 ##### fCallBack
@@ -2819,6 +2816,9 @@ Reference to this in order to allow method chaining.
 #### Since
 
 1.26.1
+
+Registration of a callback function. The provided callback function is executed to obtain the filters
+with values.
 
 ***
 
@@ -2840,8 +2840,6 @@ An array of the removed elements (might be empty).
 
 &gt; **removeAllFilterItems**(): [`FilterItem`](../../FilterItem/classes/FilterItem.html)[]
 
-Removes all entries in the aggregation filterItems.
-
 #### Returns
 
 [`FilterItem`](../../FilterItem/classes/FilterItem.html)[]
@@ -2851,6 +2849,8 @@ An array of the removed elements (might be empty).
 #### Deprecated
 
 (since 1.48.0) - Use aggregation `filterGroupItems` instead.
+
+Removes all entries in the aggregation filterItems.
 
 ***
 
@@ -2892,8 +2892,6 @@ The removed filterGroupItem or `null`
 
 &gt; **removeFilterItem**(`vFilterItem`): [`FilterItem`](../../FilterItem/classes/FilterItem.html)
 
-Removes a filterItem from the aggregation #getFilterItems filterItems.
-
 #### Parameters
 
 ##### vFilterItem
@@ -2912,13 +2910,13 @@ The removed filterItem or `null`
 
 (since 1.48.0) - Use aggregation `filterGroupItems` instead.
 
+Removes a filterItem from the aggregation #getFilterItems filterItems.
+
 ***
 
 ### rerenderFilters()
 
 &gt; **rerenderFilters**(): `void`
-
-Adapts the visibility for all filter containers.
 
 #### Returns
 
@@ -2928,14 +2926,13 @@ Adapts the visibility for all filter containers.
 
 Do not call from applications (only from related classes in the framework)
 
+Adapts the visibility for all filter containers.
+
 ***
 
 ### restoreGoButton()
 
 &gt; **restoreGoButton**(): `void`
-
-Restores the visibility of the Go button on FilterBar. The visibility of the Go button will be set, according
-to the showGoOnFB property.
 
 #### Returns
 
@@ -2948,6 +2945,9 @@ to the showGoOnFB property.
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+Restores the visibility of the Go button on FilterBar. The visibility of the Go button will be set, according
+to the showGoOnFB property.
 
 ***
 
@@ -3049,8 +3049,6 @@ Reference to `this` in order to allow method chaining
 
 &gt; **setBasicSearch**(`oBasicSearch`): `this`
 
-Sets the associated #getBasicSearch basicSearch.
-
 #### Parameters
 
 ##### oBasicSearch
@@ -3070,19 +3068,13 @@ Reference to `this` in order to allow method chaining
 
 1.30.0
 
+Sets the associated #getBasicSearch basicSearch.
+
 ***
 
 ### setConsiderGroupTitle()
 
 &gt; **setConsiderGroupTitle**(`bConsiderGroupTitle?`): `this`
-
-Sets a new value for property #getConsiderGroupTitle considerGroupTitle.
-
-If this property is set, then the label for filters will be prefixed with the group title.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `false`.
 
 #### Parameters
 
@@ -3101,6 +3093,14 @@ Reference to `this` in order to allow method chaining
 #### Since
 
 1.28.0
+
+Sets a new value for property #getConsiderGroupTitle considerGroupTitle.
+
+If this property is set, then the label for filters will be prefixed with the group title.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `false`.
 
 ***
 
@@ -3148,8 +3148,6 @@ the content width of the filters dialog.
 
 &gt; **setCurrentVariantId**(`sVariantId`, `bDoNotApplyVariant`): `void`
 
-Sets the current variant ID.
-
 #### Parameters
 
 ##### sVariantId
@@ -3173,13 +3171,13 @@ before the initialise event has been executed.
 
 1.28.0
 
+Sets the current variant ID.
+
 ***
 
 ### ~~setDataSuiteFormat()~~
 
 &gt; **setDataSuiteFormat**(`sSuiteData`, `bReplace`): `void`
-
-Sets the selection variant for UI navigation to FilterBar.
 
 #### Parameters
 
@@ -3207,19 +3205,13 @@ Replaces existing filter data
 
 (since 1.48) - replaced by sap.ui.comp.filterbar.FilterBar#setUiState
 
+Sets the selection variant for UI navigation to FilterBar.
+
 ***
 
 ### setDeltaVariantMode()
 
 &gt; **setDeltaVariantMode**(`bDeltaVariantMode?`): `this`
-
-Sets a new value for property #getDeltaVariantMode deltaVariantMode.
-
-Stores the delta as compared to the standard variant.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `true`.
 
 #### Parameters
 
@@ -3239,22 +3231,19 @@ Reference to `this` in order to allow method chaining
 
 1.34.0
 
+Sets a new value for property #getDeltaVariantMode deltaVariantMode.
+
+Stores the delta as compared to the standard variant.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `true`.
+
 ***
 
 ### setDisableSearchMatchesPatternWarning()
 
 &gt; **setDisableSearchMatchesPatternWarning**(`bDisableSearchMatchesPatternWarning?`): `this`
-
-Sets a new value for property #getDisableSearchMatchesPatternWarning disableSearchMatchesPatternWarning.
-
-Disables the warning for special symbols.
-
-**Note:** Changing the values here after the SmartFilter is initialized (`initialise` event was fired)
-has no effect.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `false`.
 
 #### Parameters
 
@@ -3274,28 +3263,22 @@ Reference to `this` in order to allow method chaining
 
 1.102
 
+Sets a new value for property #getDisableSearchMatchesPatternWarning disableSearchMatchesPatternWarning.
+
+Disables the warning for special symbols.
+
+**Note:** Changing the values here after the SmartFilter is initialized (`initialise` event was fired)
+has no effect.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `false`.
+
 ***
 
 ### setFilterBarExpanded()
 
 &gt; **setFilterBarExpanded**(`bFilterBarExpanded?`): `this`
-
-Sets a new value for property #getFilterBarExpanded filterBarExpanded.
-
-Shows the filters area. When property `useToolbar` is set to `false`, `filterBarExpanded` is set to `true`
-automatically. **Note:** When `SmartFilterBar` is used inside a `ValueHelpDialog`, it is initially collapsed.
-The filter bar is initially expanded in the following cases:
-
-- When there is no basic search field.
-
-- When `preventInitialDataFetchInValueHelpDialog` is set to `true` or the `fetchValues` property of the
-    `valueList` annotation is set to `2`.
-
-- When there are mandatory fields, all fields are expanded (not only the first 7).
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `true`.
 
 #### Parameters
 
@@ -3315,20 +3298,28 @@ Reference to `this` in order to allow method chaining
 
 1.26.1
 
+Sets a new value for property #getFilterBarExpanded filterBarExpanded.
+
+Shows the filters area. When property `useToolbar` is set to `false`, `filterBarExpanded` is set to `true`
+automatically. **Note:** When `SmartFilterBar` is used inside a `ValueHelpDialog`, it is initially collapsed.
+The filter bar is initially expanded in the following cases:
+
+- When there is no basic search field.
+
+- When `preventInitialDataFetchInValueHelpDialog` is set to `true` or the `fetchValues` property of the
+    `valueList` annotation is set to `2`.
+
+- When there are mandatory fields, all fields are expanded (not only the first 7).
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `true`.
+
 ***
 
 ### setHeader()
 
 &gt; **setHeader**(`sHeader?`): `this`
-
-Sets a new value for property #getHeader header.
-
-Specifies header text that is shown in the toolbar on the first position. This property is ignored, when
-`useToolbar` is set to `false`.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `empty string`.
 
 #### Parameters
 
@@ -3347,6 +3338,15 @@ Reference to `this` in order to allow method chaining
 #### Since
 
 1.38.0
+
+Sets a new value for property #getHeader header.
+
+Specifies header text that is shown in the toolbar on the first position. This property is ignored, when
+`useToolbar` is set to `false`.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `empty string`.
 
 ***
 
@@ -3412,14 +3412,6 @@ Reference to `this` in order to allow method chaining
 
 &gt; **setSearchEnabled**(`bSearchEnabled?`): `this`
 
-Sets a new value for property #getSearchEnabled searchEnabled.
-
-Enables/disables the Search button.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `true`.
-
 #### Parameters
 
 ##### bSearchEnabled?
@@ -3438,21 +3430,19 @@ Reference to `this` in order to allow method chaining
 
 (since 1.32.0)
 
+Sets a new value for property #getSearchEnabled searchEnabled.
+
+Enables/disables the Search button.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `true`.
+
 ***
 
 ### setShowAllFilters()
 
 &gt; **setShowAllFilters**(`bShowAllFilters?`): `this`
-
-Sets a new value for property #getShowAllFilters showAllFilters.
-
-If set to `true`, when the `FilterBar` is expanded it will show all filters, not only the first 7.
-
-**Note:** This is valid only when the `FilterBar` is used inside a `ValueHelpDialog`
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `false`.
 
 #### Parameters
 
@@ -3472,19 +3462,21 @@ Reference to `this` in order to allow method chaining
 
 1.116.0
 
+Sets a new value for property #getShowAllFilters showAllFilters.
+
+If set to `true`, when the `FilterBar` is expanded it will show all filters, not only the first 7.
+
+**Note:** This is valid only when the `FilterBar` is used inside a `ValueHelpDialog`
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `false`.
+
 ***
 
 ### ~~setShowClearButton()~~
 
 &gt; **setShowClearButton**(`bShowClearButton?`): `this`
-
-Sets a new value for property #getShowClearButton showClearButton.
-
-Handles visibility of the Clear button on the Filters dialog.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `false`.
 
 #### Parameters
 
@@ -3504,19 +3496,19 @@ Reference to `this` in order to allow method chaining
 
 (since 1.84)
 
+Sets a new value for property #getShowClearButton showClearButton.
+
+Handles visibility of the Clear button on the Filters dialog.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `false`.
+
 ***
 
 ### setShowFilterConfiguration()
 
 &gt; **setShowFilterConfiguration**(`bShowFilterConfiguration?`): `this`
-
-Sets a new value for property #getShowFilterConfiguration showFilterConfiguration.
-
-Handles visibility of the Filters button on the FilterBar.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `true`.
 
 #### Parameters
 
@@ -3536,17 +3528,19 @@ Reference to `this` in order to allow method chaining
 
 1.38.0
 
+Sets a new value for property #getShowFilterConfiguration showFilterConfiguration.
+
+Handles visibility of the Filters button on the FilterBar.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `true`.
+
 ***
 
 ### ~~setShowGoButton()~~
 
 &gt; **setShowGoButton**(`bShowGoButton?`): `this`
-
-Sets a new value for property #getShowGoButton showGoButton.
-
-Handles visibility of the Go button on the FilterBar.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
 
 #### Parameters
 
@@ -3570,14 +3564,17 @@ Reference to `this` in order to allow method chaining
 
 (since 1.28.0) - Replaced by property `showGoOnFB`
 
+Sets a new value for property #getShowGoButton showGoButton.
+
+Handles visibility of the Go button on the FilterBar.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
 ***
 
 ### ~~setShowOldFilterDialog()~~
 
 &gt; **setShowOldFilterDialog**(): `void`
-
-Once set, the activation of the &#39;Adapt Filters&#39; button will open the &#39;old&#39; filters dialog. This method
-offers an intermediate solution for the visual filters scenario, which relies on the old filters dialog.
 
 #### Returns
 
@@ -3591,22 +3588,14 @@ offers an intermediate solution for the visual filters scenario, which relies on
 
 Do not call from applications (only from related classes in the framework)
 
+Once set, the activation of the &#39;Adapt Filters&#39; button will open the &#39;old&#39; filters dialog. This method
+offers an intermediate solution for the visual filters scenario, which relies on the old filters dialog.
+
 ***
 
 ### setShowRestoreButton()
 
 &gt; **setShowRestoreButton**(`bShowRestoreButton?`): `this`
-
-Sets a new value for property #getShowRestoreButton showRestoreButton.
-
-Handles visibility of the &quot;Restore&quot; button on the &quot;Filters&quot; dialog. **Note:** Restore works only automatically
-when a property `persistencyKey` is set and therefore Variant Management is used. In all other cases
-the &quot;restore&quot; behavior needs to be implemented by the app, based on the event `reset`. Since 1.84 the
-&quot;Restore&quot; button text is changed to &quot;Reset&quot;
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `true`.
 
 #### Parameters
 
@@ -3626,14 +3615,22 @@ Reference to `this` in order to allow method chaining
 
 1.26.1
 
+Sets a new value for property #getShowRestoreButton showRestoreButton.
+
+Handles visibility of the &quot;Restore&quot; button on the &quot;Filters&quot; dialog. **Note:** Restore works only automatically
+when a property `persistencyKey` is set and therefore Variant Management is used. In all other cases
+the &quot;restore&quot; behavior needs to be implemented by the app, based on the event `reset`. Since 1.84 the
+&quot;Restore&quot; button text is changed to &quot;Reset&quot;
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `true`.
+
 ***
 
 ### setUiState()
 
 &gt; **setUiState**(`oUiState`, `mProperties`): `void`
-
-Sets the current UI state of the `FilterBar` control.
- The current UI state represents the data suite format.
 
 #### Parameters
 
@@ -3673,14 +3670,14 @@ Determines filters and parameters based on the name.
 
 1.48
 
+Sets the current UI state of the `FilterBar` control.
+ The current UI state represents the data suite format.
+
 ***
 
 ### setUiStateAsVariant()
 
 &gt; **setUiStateAsVariant**(`oUiState`, `sContext`): `void`
-
-Apply the SelectionPresentationVariant annotated information as a variant. The current UI state represents
-the data suite format.
 
 #### Parameters
 
@@ -3705,24 +3702,14 @@ afterVariantLoad event
 
 1.54
 
+Apply the SelectionPresentationVariant annotated information as a variant. The current UI state represents
+the data suite format.
+
 ***
 
 ### setUseSnapshot()
 
 &gt; **setUseSnapshot**(`bUseSnapshot`): `this`
-
-Sets a new value for property #getUseSnapshot useSnapshot.
-
-Determines the behavior when `reset` is executed.
- **Note:** This property is only relevant if no variant management is used, and the filter bar is not
-used in the advanced mode. A snapshot shows the current state of the filter bar, just before the Filters
-dialog is opened.
-	 - `undefined` (default) defines the standard behavior: snapshot will be applied after `reset` was triggered
-
-	 - `false` defines that the snapshot will not be applied
-	 - `true`is not considered at all
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
 
 #### Parameters
 
@@ -3742,22 +3729,24 @@ Reference to `this` in order to allow method chaining
 
 1.44
 
+Sets a new value for property #getUseSnapshot useSnapshot.
+
+Determines the behavior when `reset` is executed.
+ **Note:** This property is only relevant if no variant management is used, and the filter bar is not
+used in the advanced mode. A snapshot shows the current state of the filter bar, just before the Filters
+dialog is opened.
+	 - `undefined` (default) defines the standard behavior: snapshot will be applied after `reset` was triggered
+
+	 - `false` defines that the snapshot will not be applied
+	 - `true`is not considered at all
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
 ***
 
 ### setUseToolbar()
 
 &gt; **setUseToolbar**(`bUseToolbar?`): `this`
-
-Sets a new value for property #getUseToolbar useToolbar.
-
-Determines what design is used. Default is the design with toolbar. If the property `useToolbar` is set
-to `false`, the property `filterBarExpanded` is set to `true` automatically. **Note:**
- If set to `false`, the `VariantManagement` control is not available at all. This scenario is only intended
-for the sap.ui.comp.smartfilterbar.SmartFilterBar.
-
-When called with a value of `null` or `undefined`, the default value of the property will be restored.
-
-Default value is `true`.
 
 #### Parameters
 
@@ -3777,6 +3766,17 @@ Reference to `this` in order to allow method chaining
 
 1.38.0
 
+Sets a new value for property #getUseToolbar useToolbar.
+
+Determines what design is used. Default is the design with toolbar. If the property `useToolbar` is set
+to `false`, the property `filterBarExpanded` is set to `true` automatically. **Note:**
+ If set to `false`, the `VariantManagement` control is not available at all. This scenario is only intended
+for the sap.ui.comp.smartfilterbar.SmartFilterBar.
+
+When called with a value of `null` or `undefined`, the default value of the property will be restored.
+
+Default value is `true`.
+
 ***
 
 ### showFilterDialog()
@@ -3795,9 +3795,6 @@ For backward compatibility. Creates adapt filters dialog
 
 &gt; **variantsInitialized**(): `void`
 
-This method will be called by the SmartVariantMangement and indicates, that the standard variant was
-obtained. It indicates, that the variant management is fully initialized.
-
 #### Returns
 
 `void`
@@ -3805,6 +3802,9 @@ obtained. It indicates, that the variant management is fully initialized.
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+This method will be called by the SmartVariantMangement and indicates, that the standard variant was
+obtained. It indicates, that the variant management is fully initialized.
 
 ***
 
@@ -3875,6 +3875,6 @@ Metadata object describing this class
 ***
 </code></pre>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TableSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $TableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/Table/interfaces/$TableSettings.html">
 <meta property="og:title" content="Interface: $TableSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $TableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/Table/interfaces/$TableSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/Table/README.html">Table</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Table</a> / $TableSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Table</a> / $TableSettings</p>
 <h1>Interface: $TableSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TableSettings } <span class="kw">from</span> <span class="str">"sap/ui/mdc/Table"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the Table constructor.</p>
-<p> (since 1.58.0)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -50,7 +47,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>actions?</strong>: <code>any</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Additional/external actions available for the table. <strong>Note:</strong> This aggregation is managed by the control,
 can only be populated during the definition in the XML view, and is not bindable. Any changes of the
 initial aggregation content might result in undesired effects. Changes of the aggregation have to be
@@ -60,27 +56,22 @@ made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <blockquote>
 <p><code>optional</code> <strong>aggregateConditions?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.87</p>
 <p>Defines the aggregate conditions.</p>
 <p><strong>Note</strong>: This property must not be bound.
  <strong>Note:</strong> This property is exclusively used for handling SAPUI5 flexibility changes. Do not use it otherwise.</p>
-<h4>Since</h4>
-<p>1.87</p>
 <hr>
 <h3>autoBindOnInit?</h3>
 <blockquote>
 <p><code>optional</code> <strong>autoBindOnInit?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Determines whether to bind the table automatically after the initial creation or re-creation of the table.</p>
 <hr>
 <h3>beforeExport?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeExport?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>This event is fired right before the export is triggered.</p>
-<p>For more information about the export settings, see sap.ui.export.Spreadsheet or <a href="https://ui5.sap.com/#/topic/7e12e6b9154a4607be9d6072c72d609c">Spreadsheet Export Configuration</a>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$BeforeExportEvent.html"><code>Table$BeforeExportEvent</code></a></p>
@@ -88,13 +79,13 @@ made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.75</p>
+<p>This event is fired right before the export is triggered.</p>
+<p>For more information about the export settings, see sap.ui.export.Spreadsheet or <a href="https://ui5.sap.com/#/topic/7e12e6b9154a4607be9d6072c72d609c">Spreadsheet Export Configuration</a>.</p>
 <hr>
 <h3>beforeOpenContextMenu?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeOpenContextMenu?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>This event is fired when the user requests the context menu for the table.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$BeforeOpenContextMenuEvent.html"><code>Table$BeforeOpenContextMenuEvent</code></a></p>
@@ -102,12 +93,12 @@ made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.117</p>
+<p>This event is fired when the user requests the context menu for the table.</p>
 <hr>
 <h3>busyIndicatorDelay?</h3>
 <blockquote>
 <p><code>optional</code> <strong>busyIndicatorDelay?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The delay in milliseconds after which the busy indicator is shown.</p>
 <h4>Overrides</h4>
 <p><a href="../../Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a>.<a href="../../Control/interfaces/$ControlSettings.html#busyindicatordelay"><code>busyIndicatorDelay</code></a></p>
@@ -116,19 +107,17 @@ made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <blockquote>
 <p><code>optional</code> <strong>cellSelector?</strong>: <a href="../../../../../../sap.m/sap/m/plugins/CellSelector/classes/CellSelector.html"><code>CellSelector</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.119</p>
 <p>Defines an aggregation for the <code>CellSelector</code> plugin that provides cell selection capabilities to the
 table.</p>
 <p><strong>Note:</strong> The <code>CellSelector</code> is currently only available in combination with the <code>GridTableType</code>. Please
 refer to sap.m.plugins.CellSelector see the addiditional restrictions.</p>
-<h4>Since</h4>
-<p>1.119</p>
 <hr>
 <h3>columns?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columns?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../table/Column/classes/Column.html"><code>Column</code></a> | <a href="../../table/Column/classes/Column.html"><code>Column</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Columns of the table. <strong>Note:</strong> This aggregation is managed by the control, can only be populated during
 the definition in the XML view, and is not bindable. Any changes of the initial aggregation content might
 result in undesired effects. Changes of the aggregation have to be made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
@@ -137,16 +126,16 @@ result in undesired effects. Changes of the aggregation have to be made with the
 <blockquote>
 <p><code>optional</code> <strong>contextMenu?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Defines the context menu for the table rows.</p>
 <h4>Since</h4>
 <p>1.118</p>
+<p>Defines the context menu for the table rows.</p>
 <hr>
 <h3>copyProvider?</h3>
 <blockquote>
 <p><code>optional</code> <strong>copyProvider?</strong>: <a href="../../../../../../sap.m/sap/m/plugins/CopyProvider/classes/CopyProvider.html"><code>CopyProvider</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.114</p>
 <p>Defines an aggregation for the <code>CopyProvider</code> plugin that provides copy to clipboard capabilities for
 the selected rows of the table and creates a Copy button for the toolbar of the table. To disable the
 copy function of the table, including the Copy button in the toolbar, the <code>enabled</code> property of the <code>CopyProvider</code>
@@ -156,31 +145,28 @@ must be set to <code>false</code>.</p>
 must not be managed by the application. <strong>Note:</strong> The <code>CopyProvider</code> requires a secure context to access
 the clipboard API. If the context is not secure, the plugin will not be added, and the copy button will
 not be generated.</p>
-<h4>Since</h4>
-<p>1.114</p>
 <hr>
 <h3>creationRow?</h3>
 <blockquote>
 <p><code>optional</code> <strong>creationRow?</strong>: <code>any</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>This row can be used for user input to create new data if sap.ui.mdc.enums.TableType TableType
-is &quot;<code>Table</code>&quot;. <strong>Note:</strong> Once the binding supports creating transient records, this aggregation will be
-removed.</p>
 <ul>
 <li>Do not use</li>
 </ul>
+<p>This row can be used for user input to create new data if sap.ui.mdc.enums.TableType TableType
+is &quot;<code>Table</code>&quot;. <strong>Note:</strong> Once the binding supports creating transient records, this aggregation will be
+removed.</p>
 <hr>
 <h3>dataStateIndicator?</h3>
 <blockquote>
 <p><code>optional</code> <strong>dataStateIndicator?</strong>: <a href="../../../../../../sap.m/sap/m/plugins/DataStateIndicator/classes/DataStateIndicator.html"><code>DataStateIndicator</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.89</p>
 <p><code>DataStateIndicator</code> plugin that can be used to show binding-related messages.</p>
 <p><strong>Note:</strong> The message filtering is not yet supported for this control. Therefore the sap.m.plugins.DataStateIndicator#getEnableFiltering enableFiltering
 property of the <code>DataStateIndicator</code> plugin must not be set to <code>true</code>.</p>
-<h4>Since</h4>
-<p>1.89</p>
 <hr>
 <h3>delegate?</h3>
 <blockquote>
@@ -199,7 +185,8 @@ needed any longer.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableAutoColumnWidth?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.95</p>
 <p>Enables automatic column width calculation based on metadata information if set to <code>true</code>. The column
 width calculation takes the type, column label, referenced properties, and many other metadata parameters
 into account. Providing a more precise <code>maxLength</code> value for the <code>String</code> type or <code>precision</code> value for
@@ -209,42 +196,36 @@ a minimum of 3rem and a maximum of 20rem.</p>
 of the <code>PropertyInfo</code> can be used. To avoid the heuristic column width calculation for a particular column,
 the <code>visualSettings.widthSettings</code> key of the <code>PropertyInfo</code> must be set to <code>null</code>. This feature has
 no effect if the <code>width</code> property of the column is bound or its value is set.</p>
-<h4>Since</h4>
-<p>1.95</p>
 <hr>
 <h3>enableColumnResize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableColumnResize?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Determines whether column resizing is enabled.</p>
 <h4>Since</h4>
 <p>1.90</p>
+<p>Determines whether column resizing is enabled.</p>
 <hr>
 <h3>enableExport?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableExport?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Determines whether the table data export is enabled. To use the export functionality, the sap.ui.export
-library is required.</p>
 <h4>Since</h4>
 <p>1.75</p>
+<p>Determines whether the table data export is enabled. To use the export functionality, the sap.ui.export
+library is required.</p>
 <hr>
 <h3>enablePaste?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enablePaste?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Determines whether the Paste button is enabled.</p>
 <h4>Since</h4>
 <p>1.96</p>
+<p>Determines whether the Paste button is enabled.</p>
 <hr>
 <h3>filter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>filter?</strong>: <code>string</code> | <a href="../../library/interfaces/IFilter.html"><code>IFilter</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Control or object that enables the table to do filtering, such as sap.ui.mdc.FilterBar. See also
 sap.ui.mdc.IFilter.</p>
 <p>Automatic filter generation only works in combination with a <code>sap.ui.mdc.FilterBar</code>.</p>
@@ -253,111 +234,103 @@ sap.ui.mdc.IFilter.</p>
 <blockquote>
 <p><code>optional</code> <strong>filterConditions?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.80.0</p>
 <p>Defines the filter conditions.</p>
 <p><strong>Note</strong>: This property must not be bound.
  <strong>Note:</strong> This property is used exclusively for handling SAPUI5 flexibility changes. Do not use it otherwise.</p>
-<h4>Since</h4>
-<p>1.80.0</p>
 <hr>
 <h3>groupConditions?</h3>
 <blockquote>
 <p><code>optional</code> <strong>groupConditions?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.87</p>
 <p>Defines the group conditions.</p>
 <p><strong>Note</strong>: This property must not be bound.
  <strong>Note:</strong> This property is used exclusively for handling SAPUI5 flexibility changes. Do not use it otherwise.</p>
-<h4>Since</h4>
-<p>1.87</p>
 <hr>
 <h3>header?</h3>
 <blockquote>
 <p><code>optional</code> <strong>header?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Header text that is shown in the table.</p>
 <hr>
 <h3>headerLevel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerLevel?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
 <hr>
 <h3>headerStyle?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerStyle?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
 <h4>Since</h4>
 <p>1.116</p>
 <ul>
 <li>Internal use only</li>
 </ul>
+<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
 <hr>
 <h3>headerVisible?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerVisible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Determines whether the header text is shown in the table. Regardless of its value, the given header text
-is used to label the table correctly for accessibility purposes.</p>
 <h4>Since</h4>
 <p>1.63</p>
+<p>Determines whether the header text is shown in the table. Regardless of its value, the given header text
+is used to label the table correctly for accessibility purposes.</p>
 <hr>
 <h3><del>height?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>This property has no effect and will be removed soon.</p>
 <h4>Deprecated</h4>
-<p>(since 1.115) - the concept has been discarded.</p>
+<ul>
+<li>Do not use.</li>
+</ul>
+<p>This property has no effect and will be rmoved soon.</p>
 <hr>
 <h3>multiSelectMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>multiSelectMode?</strong>: <code>any</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.93</p>
 <p>Defines the multi-selection mode for the control. If this property is set to the <code>Default</code> value, the
 <code>ResponsiveTable</code> type control renders the Select All checkbox in the column header, otherwise the Deselect
 All icon is rendered.</p>
 <p>This property is used with the <code>selectionMode=&quot;Multi&quot;</code>.</p>
 <p><strong>Note:</strong> This property has currently no effect for table types other than <code>ResponsiveTable</code> type. This
 is subject to change in future.</p>
-<h4>Since</h4>
-<p>1.93</p>
 <hr>
 <h3>noData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noData?</strong>: <code>any</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.106</p>
 <p>Defines the custom visualization if there is no data to show in the table.</p>
 <p><strong>Note:</strong> If sap.m.IllustratedMessage control is set for the <code>noData</code> aggregation and its sap.m.IllustratedMessage#getTitle title
 property is not set then the table automatically offers a no data text with fitting sap.m.IllustratedMessage.IllustratedMessageType illustration.</p>
-<h4>Since</h4>
-<p>1.106</p>
 <hr>
 <h3>p13nMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>p13nMode?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | (<code>&quot;Group&quot;</code> | <code>&quot;Column&quot;</code> | <code>&quot;Aggregate&quot;</code> | <code>&quot;Filter&quot;</code> | <code>&quot;Sort&quot;</code> | <a href="../../enums/TableP13nMode/enumerations/TableP13nMode.html"><code>TableP13nMode</code></a>)[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Personalization options for the table.
- <strong>Note:</strong> The order of the options does not influence the position on the UI.</p>
 <h4>Since</h4>
 <p>1.62</p>
+<p>Personalization options for the table.
+ <strong>Note:</strong> The order of the options does not influence the position on the UI.</p>
 <hr>
 <h3>paste?</h3>
 <blockquote>
 <p><code>optional</code> <strong>paste?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when the user pastes content from the clipboard to the table.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -367,9 +340,10 @@ property is not set then the table automatically offers a no data text with fitt
 <hr>
 <h3>propertyInfo?</h3>
 <blockquote>
-<p><code>optional</code> <strong>propertyInfo?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+<p><code>optional</code> <strong>propertyInfo?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>object</code>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.111</p>
 <p>Specifies the table metadata.</p>
 <p>Whenever the <code>TableDelegate</code> needs to wait for, for example, server-side information to provide the <code>PropertyInfo</code>
 objects, specifying an array of sap.ui.mdc.table.PropertyInfo PropertyInfo objects here enables
@@ -383,21 +357,17 @@ find the list of required attributes in the documentation of the <code>PropertyI
 no effect.</p>
 <p><strong>Note</strong>: This property must not be bound. <strong>Note</strong>: This property is used exclusively for SAPUI5 flexibility
 / Fiori Elements. Do not use it otherwise.</p>
-<h4>Since</h4>
-<p>1.111</p>
 <hr>
 <h3>quickFilter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>quickFilter?</strong>: <code>Control1</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Additional <code>Filter</code> for the table.</p>
 <hr>
 <h3>rowPress?</h3>
 <blockquote>
 <p><code>optional</code> <strong>rowPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when a row in the table is pressed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -409,7 +379,6 @@ no effect.</p>
 <blockquote>
 <p><code>optional</code> <strong>rowSettings?</strong>: <a href="../../table/RowSettings/classes/RowSettings.html"><code>RowSettings</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Settings for the table rows.</p>
 <p><strong>Note:</strong> Each time the properties of the settings are changed, they have to be applied again via <code>setRowSettings</code>
 for the changes to take effect.</p>
@@ -418,7 +387,6 @@ for the changes to take effect.</p>
 <blockquote>
 <p><code>optional</code> <strong>selectionChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when the selection in the table is changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -430,7 +398,6 @@ for the changes to take effect.</p>
 <blockquote>
 <p><code>optional</code> <strong>selectionMode?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Single&quot;</code> | <code>&quot;Multi&quot;</code> | <a href="../../enums/TableSelectionMode/enumerations/TableSelectionMode.html"><code>TableSelectionMode</code></a> | <code>&quot;SingleMaster&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Selection mode of the table. Specifies whether single or multiple rows can be selected and how the selection
 can be extended. It may also influence the visual appearance.</p>
 <p>With the sap.ui.mdc.table.GridTableType GridTableType and server-side models, range selections,
@@ -441,16 +408,14 @@ to request the count from the service.</p>
 <blockquote>
 <p><code>optional</code> <strong>showPasteButton?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Determines whether the Paste button is visible.</p>
 <h4>Since</h4>
 <p>1.91</p>
+<p>Determines whether the Paste button is visible.</p>
 <hr>
 <h3>showRowCount?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showRowCount?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Determines whether the number of rows is shown along with the header text. If set to <code>false</code>, the number
 of rows is not shown on the user interface.
  <strong>Note:</strong>
@@ -462,58 +427,52 @@ either in the model or in the binding of the table.
 <blockquote>
 <p><code>optional</code> <strong>sortConditions?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.73</p>
 <p>Defines the sort conditions.</p>
 <p><strong>Note</strong>: This property must not be bound.
  <strong>Note:</strong> This property is used exclusively for handling SAPUI5 flexibility changes. Do not use it otherwise.</p>
-<h4>Since</h4>
-<p>1.73</p>
 <hr>
 <h3>threshold?</h3>
 <blockquote>
 <p><code>optional</code> <strong>threshold?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.63</p>
 <p>Number of records to be requested from the model. If the <code>type</code> property is set to <code>ResponsiveTable</code>,
 then it refers to the sap.m.ListBase#getGrowingThreshold growingThreshold property of <code>ResponsiveTable</code>.
 If the <code>type</code> property is set to <code>Table</code>, then it refers to the sap.ui.table.Table#getThreshold threshold
 property of <code>GridTable</code>.
  <strong>Note:</strong> This property only takes effect if it is set to a positive integer value. Otherwise the table
 uses the default value of the corresponding table types.</p>
-<h4>Since</h4>
-<p>1.63</p>
 <hr>
 <h3>type?</h3>
 <blockquote>
 <p><code>optional</code> <strong>type?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Table&quot;</code> | <code>&quot;ResponsiveTable&quot;</code> | <a href="../../table/TableTypeBase/classes/TableTypeBase.html"><code>TableTypeBase</code></a> | <a href="../../enums/TableType/enumerations/TableType.html"><code>TableType</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Type of the table.</p>
 <hr>
 <h3>useColumnLabelsAsTooltips?</h3>
 <blockquote>
 <p><code>optional</code> <strong>useColumnLabelsAsTooltips?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>If no tooltip has been provided for a column, the column header text will automatically be applied as
-a tooltip for the column.</p>
 <h4>Since</h4>
 <p>1.115</p>
+<p>If no tooltip has been provided for a column, the column header text will automatically be applied as
+a tooltip for the column.</p>
 <hr>
 <h3>variant?</h3>
 <blockquote>
 <p><code>optional</code> <strong>variant?</strong>: <a href="../../../../../../sap.ui.fl/sap/ui/fl/variants/VariantManagement/classes/VariantManagement.html"><code>VariantManagement</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>VariantManagement control for the table.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Width of the table.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

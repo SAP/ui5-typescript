@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ODataListBinding — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ODataListBinding — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ODataListBinding — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v4/ODataListBinding/classes/ODataListBinding.html">
 <meta property="og:title" content="Class: ODataListBinding — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ODataListBinding — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ODataListBinding — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v4/ODataListBinding/classes/ODataListBinding.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › v4 › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/v4/ODataListBinding/README.html">ODataListBinding</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/ODataListBinding</a> / ODataListBinding</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/ODataListBinding</a> / ODataListBinding</p>
 <h1>Class: ODataListBinding</h1>
 <pre class="sig"><span class="kw">import</span> ODataListBinding <span class="kw">from</span> <span class="str">"sap/ui/model/odata/v4/ODataListBinding"</span>;</pre>
+<h2>Since</h2>
+<p>1.37.0</p>
 <p>List binding for an OData V4 model. An event handler can only be attached to this binding for the following
 events: &#39;AggregatedDataStateChange&#39;, &#39;change&#39;, &#39;createActivate&#39;, &#39;createCompleted&#39;, &#39;createSent&#39;, &#39;dataReceived&#39;,
 &#39;dataRequested&#39;, &#39;DataStateChange&#39;, &#39;patchCompleted&#39;, &#39;patchSent&#39;, and &#39;refresh&#39;. For other events, an
 error is thrown.</p>
-<h2>Since</h2>
-<p>1.37.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></li>
@@ -62,7 +62,6 @@ error is thrown.</p>
 <blockquote>
 <p><strong>attachCreateActivate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attach event handler <code>fnFunction</code> to the &#39;createActivate&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -75,12 +74,12 @@ error is thrown.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Attach event handler <code>fnFunction</code> to the &#39;createActivate&#39; event of this binding.</p>
 <hr>
 <h3>attachCreateCompleted()</h3>
 <blockquote>
 <p><strong>attachCreateCompleted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attach event handler <code>fnFunction</code> to the &#39;createCompleted&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -93,12 +92,12 @@ error is thrown.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.66.0</p>
+<p>Attach event handler <code>fnFunction</code> to the &#39;createCompleted&#39; event of this binding.</p>
 <hr>
 <h3>attachCreateSent()</h3>
 <blockquote>
 <p><strong>attachCreateSent</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attach event handler <code>fnFunction</code> to the &#39;createSent&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -111,14 +110,12 @@ error is thrown.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.66.0</p>
+<p>Attach event handler <code>fnFunction</code> to the &#39;createSent&#39; event of this binding.</p>
 <hr>
 <h3>attachEvent()</h3>
 <blockquote>
 <p><strong>attachEvent</strong>(<code>sEventId</code>, <code>_oData?</code>, <code>_fnFunction?</code>, <code>_oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>See sap.ui.base.EventProvider#attachEvent
-See:
-	sap.ui.base.EventProvider#attachEvent</p>
 <h4>Parameters</h4>
 <h5>sEventId</h5>
 <p><code>string</code></p>
@@ -134,6 +131,9 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>See sap.ui.base.EventProvider#attachEvent
+See:
+	sap.ui.base.EventProvider#attachEvent</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#attachevent"><code>attachEvent</code></a></p>
 <hr>
@@ -141,7 +141,6 @@ See:
 <blockquote>
 <p><strong>attachPatchCompleted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attach event handler <code>fnFunction</code> to the &#39;patchCompleted&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -154,12 +153,12 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.59.0</p>
+<p>Attach event handler <code>fnFunction</code> to the &#39;patchCompleted&#39; event of this binding.</p>
 <hr>
 <h3>attachPatchSent()</h3>
 <blockquote>
 <p><strong>attachPatchSent</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attach event handler <code>fnFunction</code> to the &#39;patchSent&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -172,20 +171,12 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.59.0</p>
+<p>Attach event handler <code>fnFunction</code> to the &#39;patchSent&#39; event of this binding.</p>
 <hr>
 <h3>changeParameters()</h3>
 <blockquote>
 <p><strong>changeParameters</strong>(<code>mParameters</code>): <code>void</code></p>
 </blockquote>
-<p>Changes this binding&#39;s parameters and refreshes the binding. Since 1.111.0, a list binding&#39;s header context
-is deselected, but (since 1.120.13) only if the binding parameter &#39;$$clearSelectionOnFilter&#39; is set and
-the &#39;$filter&#39; or &#39;$search&#39; parameter is changed.</p>
-<p>If there are pending changes that cannot be ignored, an error is thrown. Use #hasPendingChanges
-to check if there are such pending changes. If there are, call sap.ui.model.odata.v4.ODataModel#submitBatch
-to submit the changes or sap.ui.model.odata.v4.ODataModel#resetChanges to reset the changes before
-calling #changeParameters.</p>
-<p>The parameters are changed according to the given map of parameters: Parameters with an <code>undefined</code> value
-are removed, the other parameters are set, and missing parameters remain unchanged.</p>
 <h4>Parameters</h4>
 <h5>mParameters</h5>
 <p><code>object</code></p>
@@ -194,11 +185,49 @@ are removed, the other parameters are set, and missing parameters remain unchang
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.45.0</p>
+<p>Changes this binding&#39;s parameters and refreshes the binding. Since 1.111.0, a list binding&#39;s header context
+is deselected.</p>
+<p>If there are pending changes that cannot be ignored, an error is thrown. Use #hasPendingChanges
+to check if there are such pending changes. If there are, call sap.ui.model.odata.v4.ODataModel#submitBatch
+to submit the changes or sap.ui.model.odata.v4.ODataModel#resetChanges to reset the changes before
+calling #changeParameters.</p>
+<p>The parameters are changed according to the given map of parameters: Parameters with an <code>undefined</code> value
+are removed, the other parameters are set, and missing parameters remain unchanged.</p>
 <hr>
 <h3>create()</h3>
 <blockquote>
 <p><strong>create</strong>(<code>oInitialData?</code>, <code>bSkipRefresh?</code>, <code>bAtEnd?</code>, <code>bInactive?</code>): <a href="../../Context/classes/Context.html"><code>Context</code></a></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>oInitialData?</h5>
+<p><code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+<p>The initial data for the created entity</p>
+<h5>bSkipRefresh?</h5>
+<p><code>boolean</code></p>
+<p>Whether an automatic refresh of the created entity will be skipped.
+ <strong>Note:</strong> Do not use this parameter for a deep create. It leads to multiple single row requests if the
+POST response did not supply all properties of the nested list. If it is not set, the model checks whether
+all required properties and child entities are available on the client and requests only data that is
+missing.</p>
+<h5>bAtEnd?</h5>
+<p><code>boolean</code></p>
+<p>Whether the entity is inserted at the end of the list. Supported since 1.66.0. Since 1.99.0 the first
+insertion determines the overall position of created contexts within the binding&#39;s context list. Every
+succeeding insertion is relative to the created contexts within this list.</p>
+<h5>bInactive?</h5>
+<p><code>boolean</code></p>
+<p>Create an inactive context. Such a context will only be sent to the server after the first property update.
+From then on it behaves like any other created context. Supported since 1.97.0
+ Since 1.98.0, when the first property updates happens, the context is no longer sap.ui.model.odata.v4.Context#isInactive inactive
+and the sap.ui.model.odata.v4.ODataListBinding#event:createActivate &#39;createActivate&#39; event is
+fired. While inactive, it does not count as a #hasPendingChanges pending change and does not
+contribute to the #getCount count.</p>
+<h4>Returns</h4>
+<p><a href="../../Context/classes/Context.html"><code>Context</code></a></p>
+<p>The context object for the created entity; its method sap.ui.model.odata.v4.Context#created
+returns a promise that is resolved when the creation is finished</p>
+<h4>Since</h4>
+<p>1.43.0</p>
 <p>Creates a new entity and inserts it at the start or the end of the list.</p>
 <p>For creating the new entity, the binding&#39;s update group ID is used, see #getUpdateGroupId.</p>
 <p>You can call sap.ui.model.odata.v4.Context#delete to delete the created context again. As long
@@ -231,12 +260,12 @@ with the entity (so-called &quot;deep create&quot;), for example a list of items
 bind the list relative to a transient context. Calling this method then adds a transient entity to the
 parent&#39;s navigation property, which is sent with the payload of the parent entity. Such a nested context
 cannot be inactive.</p>
-<p><strong>Note:</strong> After a successful creation of the main entity the context returned for a nested entity is
-no longer valid. Do not use the sap.ui.model.odata.v4.Context#created created promise of such
-a context! New contexts are created for the nested collection because it is not possible to reliably
-assign the response entities to those of the request, especially if the count differs. For this reason,
-the <code>created</code> promises of all nested contexts are always rejected with an instance of <code>Error</code>, even if
-the deep create succeeds. This error always has the property <code>canceled</code> with the value <code>true</code>.</p>
+<p><strong>Note:</strong> After a succesful creation of the main entity the context returned for a nested entity is no
+longer valid. Do not use the sap.ui.model.odata.v4.Context#created created promise of such a
+context! New contexts are created for the nested collection because it is not possible to reliably assign
+the response entities to those of the request, especially if the count differs. For this reason, the
+<code>created</code> promises of all nested contexts are always rejected with an instance of <code>Error</code>, even if the
+deep create succeeds. This error always has the property <code>canceled</code> with the value <code>true</code>.</p>
 <p>Since 1.118.0 deep create also supports single-valued navigation properties; no API call is required
 in this case. Simply bind properties of the related entity relative to a transient context. An update
 to the property adds it to the POST request of the parent entity, and by this the create becomes deep.</p>
@@ -256,48 +285,18 @@ data). It can be <code>null</code> or absent when creating a new root node (@exp
 <code>bSkipRefresh</code> must be set, but both <code>bAtEnd</code> and <code>bInactive</code> must not be set. No other creation or sap.ui.model.odata.v4.Context#move move
 must be pending, and no other modification (including collapse of some ancestor node) must happen while
 this creation is pending!</p>
-<h4>Parameters</h4>
-<h5>oInitialData?</h5>
-<p><code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
-<p>The initial data for the created entity</p>
-<h5>bSkipRefresh?</h5>
-<p><code>boolean</code></p>
-<p>Whether an automatic refresh of the created entity will be skipped.
- <strong>Note:</strong> Do not use this parameter for a deep create. It leads to multiple single row requests if the
-POST response did not supply all properties of the nested list. If it is not set, the model checks whether
-all required properties and child entities are available on the client and requests only data that is
-missing.</p>
-<h5>bAtEnd?</h5>
-<p><code>boolean</code></p>
-<p>Whether the entity is inserted at the end of the list. Supported since 1.66.0. Since 1.99.0 the first
-insertion determines the overall position of created contexts within the binding&#39;s context list. Every
-succeeding insertion is relative to the created contexts within this list.</p>
-<h5>bInactive?</h5>
-<p><code>boolean</code></p>
-<p>Create an inactive context. Such a context will only be sent to the server after the first property update.
-From then on it behaves like any other created context. Supported since 1.97.0
- Since 1.98.0, when the first property updates happens, the context is no longer sap.ui.model.odata.v4.Context#isInactive inactive
-and the sap.ui.model.odata.v4.ODataListBinding#event:createActivate &#39;createActivate&#39; event is
-fired. While inactive, it does not count as a #hasPendingChanges pending change and does not
-contribute to the #getCount count.</p>
-<h4>Returns</h4>
-<p><a href="../../Context/classes/Context.html"><code>Context</code></a></p>
-<p>The context object for the created entity; its method sap.ui.model.odata.v4.Context#created
-returns a promise that is resolved when the creation is finished</p>
-<h4>Since</h4>
-<p>1.43.0</p>
 <hr>
 <h3>destroy()</h3>
 <blockquote>
 <p><strong>destroy</strong>(): <code>void</code></p>
 </blockquote>
-<p>Destroys the object. The object must not be used anymore after this function was called.
-See:
-	sap.ui.model.Binding#destroy</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.40.1</p>
+<p>Destroys the object. The object must not be used anymore after this function was called.
+See:
+	sap.ui.model.Binding#destroy</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#destroy"><code>destroy</code></a></p>
 <hr>
@@ -305,7 +304,6 @@ See:
 <blockquote>
 <p><strong>detachCreateActivate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detach event handler <code>fnFunction</code> from the &#39;createActivate&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>evt</code>) =&gt; <code>void</code></p>
@@ -318,12 +316,12 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Detach event handler <code>fnFunction</code> from the &#39;createActivate&#39; event of this binding.</p>
 <hr>
 <h3>detachCreateCompleted()</h3>
 <blockquote>
 <p><strong>detachCreateCompleted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detach event handler <code>fnFunction</code> from the &#39;createCompleted&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>evt</code>) =&gt; <code>void</code></p>
@@ -336,12 +334,12 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.66.0</p>
+<p>Detach event handler <code>fnFunction</code> from the &#39;createCompleted&#39; event of this binding.</p>
 <hr>
 <h3>detachCreateSent()</h3>
 <blockquote>
 <p><strong>detachCreateSent</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detach event handler <code>fnFunction</code> from the &#39;createSent&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>evt</code>) =&gt; <code>void</code></p>
@@ -354,12 +352,12 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.66.0</p>
+<p>Detach event handler <code>fnFunction</code> from the &#39;createSent&#39; event of this binding.</p>
 <hr>
 <h3>detachPatchCompleted()</h3>
 <blockquote>
 <p><strong>detachPatchCompleted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detach event handler <code>fnFunction</code> from the &#39;patchCompleted&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>evt</code>) =&gt; <code>void</code></p>
@@ -372,12 +370,12 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.59.0</p>
+<p>Detach event handler <code>fnFunction</code> from the &#39;patchCompleted&#39; event of this binding.</p>
 <hr>
 <h3>detachPatchSent()</h3>
 <blockquote>
 <p><strong>detachPatchSent</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detach event handler <code>fnFunction</code> from the &#39;patchSent&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -390,14 +388,30 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.59.0</p>
+<p>Detach event handler <code>fnFunction</code> from the &#39;patchSent&#39; event of this binding.</p>
 <hr>
 <h3>filter()</h3>
 <blockquote>
 <p><strong>filter</strong>(<code>vFilters?</code>, <code>sFilterType?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>vFilters?</h5>
+<p><a href="../../../../Filter/classes/Filter.html"><code>Filter</code></a> | <a href="../../../../Filter/classes/Filter.html"><code>Filter</code></a>[]</p>
+<p>The dynamic filters to be used; replaces the dynamic filters given in sap.ui.model.odata.v4.ODataModel#bindList.
+The filter executed on the list is created from the following parts, which are combined with a logical
+&#39;and&#39;:
+	 Dynamic filters of type sap.ui.model.FilterType.Application  Dynamic filters of type sap.ui.model.FilterType.Control
+ The static filters, as defined in the &#39;$filter&#39; binding parameter</p>
+<h5>sFilterType?</h5>
+<p><code>&quot;Application&quot;</code> | <a href="../../../../FilterType/enumerations/FilterType.html"><code>FilterType</code></a> | <code>&quot;Control&quot;</code></p>
+<p>The filter type to be used</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p><code>this</code> to facilitate method chaining</p>
+<h4>Since</h4>
+<p>1.39.0</p>
 <p>Filters the list with the given filters. Since 1.97.0, if filters are unchanged, no request is sent,
-regardless of pending changes. Since 1.111.0, all contexts (incl. the header context) are deselected,
-but (since 1.120.13) only if the binding parameter &#39;$$clearSelectionOnFilter&#39; is set.</p>
+regardless of pending changes. Since 1.111.0, the header context is deselected.</p>
 <p>If there are pending changes that cannot be ignored, an error is thrown. Use #hasPendingChanges
 to check if there are such pending changes. If there are, call sap.ui.model.odata.v4.ODataModel#submitBatch
 to submit the changes or sap.ui.model.odata.v4.ODataModel#resetChanges to reset the changes before
@@ -417,22 +431,6 @@ of both is not supported.
 See:
 	sap.ui.model.ListBinding#filter
 	#setAggregation</p>
-<h4>Parameters</h4>
-<h5>vFilters?</h5>
-<p><a href="../../../../Filter/classes/Filter.html"><code>Filter</code></a> | <a href="../../../../Filter/classes/Filter.html"><code>Filter</code></a>[]</p>
-<p>The dynamic filters to be used; replaces the dynamic filters given in sap.ui.model.odata.v4.ODataModel#bindList.
-The filter executed on the list is created from the following parts, which are combined with a logical
-&#39;and&#39;:
-	 Dynamic filters of type sap.ui.model.FilterType.Application  Dynamic filters of type sap.ui.model.FilterType.Control
- The static filters, as defined in the &#39;$filter&#39; binding parameter</p>
-<h5>sFilterType?</h5>
-<p><code>&quot;Application&quot;</code> | <a href="../../../../FilterType/enumerations/FilterType.html"><code>FilterType</code></a> | <code>&quot;Control&quot;</code></p>
-<p>The filter type to be used</p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p><code>this</code> to facilitate method chaining</p>
-<h4>Since</h4>
-<p>1.39.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#filter"><code>filter</code></a></p>
 <hr>
@@ -440,7 +438,6 @@ The filter executed on the list is created from the following parts, which are c
 <blockquote>
 <p><strong>getAggregation</strong>(<code>bVerbose?</code>): <code>object</code></p>
 </blockquote>
-<p>Returns the current object holding the information needed for data aggregation, see #setAggregation.</p>
 <h4>Parameters</h4>
 <h5>bVerbose?</h5>
 <p><code>boolean</code></p>
@@ -448,9 +445,9 @@ The filter executed on the list is created from the following parts, which are c
 back to the setter (@experimental as of version 1.111.0). They are retrieved from the pair of &quot;Org.OData.Aggregation.V1.RecursiveHierarchy&quot;
 and &quot;com.sap.vocabularies.Hierarchy.v1.RecursiveHierarchy&quot; annotations at this binding&#39;s entity type,
 identified via the <code>hierarchyQualifier</code> given to #setAggregation.
-	 &quot;$DistanceFromRoot&quot; holds the path to the property which provides the raw value for &quot;@$ui5.node.level&quot;
+	 &quot;$DistanceFromRootProperty&quot; holds the path to the property which provides the raw value for &quot;@$ui5.node.level&quot;
 (minus one) and should be used only to interpret the response retrieved via #getDownloadUrl.
- &quot;$DrillState&quot; holds the path to the property which provides the raw value for &quot;@$ui5.node.isExpanded&quot;
+ &quot;$DrillStateProperty&quot; holds the path to the property which provides the raw value for &quot;@$ui5.node.isExpanded&quot;
 and should be used only to interpret the response retrieved via #getDownloadUrl.  &quot;$NodeProperty&quot;
 holds the path to the property which provides the hierarchy node value. That property is always $select&#39;ed
 automatically and can be accessed as usual.</p>
@@ -460,22 +457,23 @@ automatically and can be accessed as usual.</p>
 data aggregation</p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Returns the current object holding the information needed for data aggregation, see #setAggregation.</p>
 <hr>
 <h3>getAllCurrentContexts()</h3>
 <blockquote>
 <p><strong>getAllCurrentContexts</strong>(): <a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
+<p>All current contexts of this list binding, in no special order</p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <p>Returns all current contexts of this list binding in no special order. Just like #getCurrentContexts,
 this method does not request any data from a back end and does not change the binding&#39;s state. In contrast
 to #getCurrentContexts, it does not only return those contexts that were last requested by a
 control, but all contexts that are currently available in the binding, including sap.ui.model.odata.v4.Context#isKeepAlive kept-alive
 contexts. To filter out kept-alive contexts that are not part of the list, you could check whether the
 index is <code>undefined</code>, as described in sap.ui.model.odata.v4.Context#getIndex.</p>
-<h4>Returns</h4>
-<p><a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
-<p>All current contexts of this list binding, in no special order</p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getallcurrentcontexts"><code>getAllCurrentContexts</code></a></p>
 <hr>
@@ -483,11 +481,6 @@ index is <code>undefined</code>, as described in sap.ui.model.odata.v4.Context#g
 <blockquote>
 <p><strong>getContexts</strong>(<code>iStart?</code>, <code>iLength?</code>, <code>iMaximumPrefetchSize?</code>, <code>bKeepCurrent?</code>): <a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
-<p>Returns already created binding contexts for all entities in this list binding for the range determined
-by the given start index <code>iStart</code> and <code>iLength</code>. If at least one of the entities in the given range has
-not yet been loaded, fires a #event:change &#39;change&#39; event on this list binding once these entities
-have been loaded <strong>asynchronously</strong>. A further call to this method in the &#39;change&#39; event handler with
-the same index range then yields the updated array of contexts.</p>
 <h4>Parameters</h4>
 <h5>iStart?</h5>
 <p><code>number</code></p>
@@ -512,6 +505,11 @@ paging.</p>
 <p>1.37.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns already created binding contexts for all entities in this list binding for the range determined
+by the given start index <code>iStart</code> and <code>iLength</code>. If at least one of the entities in the given range has
+not yet been loaded, fires a #event:change &#39;change&#39; event on this list binding once these entities
+have been loaded <strong>asynchronously</strong>. A further call to this method in the &#39;change&#39; event handler with
+the same index range then yields the updated array of contexts.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getcontexts"><code>getContexts</code></a></p>
 <hr>
@@ -519,6 +517,12 @@ paging.</p>
 <blockquote>
 <p><strong>getCount</strong>(): <code>number</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The count of elements (leaves, nodes) or <code>undefined</code> if the count or the header context is not
+available.</p>
+<h4>Since</h4>
+<p>1.91.0</p>
 <p>Returns the count of elements.</p>
 <p>If known, the value represents the sum of the element count of the collection on the server and the number
 of sap.ui.model.odata.v4.Context#isInactive active sap.ui.model.odata.v4.Context#isTransient transient
@@ -536,12 +540,6 @@ via <code>$expand</code>.</p>
 <p>The <code>$count</code> is unknown if the binding is relative but has no context.</p>
 <p>The count is bindable via the header context (see #getHeaderContext) and path <code>$count</code>.</p>
 <p>Use <code>getHeaderContext().requestProperty(&quot;$count&quot;)</code> if you want to wait for the value.</p>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>The count of elements (leaves, nodes) or <code>undefined</code> if the count or the header context is not
-available.</p>
-<h4>Since</h4>
-<p>1.91.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getcount"><code>getCount</code></a></p>
 <hr>
@@ -549,6 +547,11 @@ available.</p>
 <blockquote>
 <p><strong>getCurrentContexts</strong>(): <a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
+<p>The contexts</p>
+<h4>Since</h4>
+<p>1.39.0</p>
 <p>Returns the contexts that were requested by a control last time. Does not trigger a data request. In
 the time between the #event:dataRequested &#39;dataRequested&#39; event and the #event:dataReceived &#39;dataReceived&#39;
 event, the resulting array contains <code>undefined</code> at those indexes where the data is not yet available
@@ -556,11 +559,6 @@ or has been deleted.
 See:
 	sap.ui.model.ListBinding#getCurrentContexts
 	#getAllCurrentContexts</p>
-<h4>Returns</h4>
-<p><a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
-<p>The contexts</p>
-<h4>Since</h4>
-<p>1.39.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getcurrentcontexts"><code>getCurrentContexts</code></a></p>
 <hr>
@@ -568,9 +566,6 @@ See:
 <blockquote>
 <p><strong>getDistinctValues</strong>(<code>_sPath?</code>): <code>any</code>[]</p>
 </blockquote>
-<p>Method not supported
-See:
-	sap.ui.model.ListBinding#getDistinctValues</p>
 <h4>Parameters</h4>
 <h5>_sPath?</h5>
 <p><code>string</code></p>
@@ -578,6 +573,9 @@ See:
 <p><code>any</code>[]</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Method not supported
+See:
+	sap.ui.model.ListBinding#getDistinctValues</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getdistinctvalues"><code>getDistinctValues</code></a></p>
 <hr>
@@ -585,57 +583,52 @@ See:
 <blockquote>
 <p><strong>getDownloadUrl</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>The download URL</p>
+<h4>Since</h4>
+<p>1.74.0</p>
 <p>Returns a URL by which the complete content of the list can be downloaded in JSON format. The request
-delivers all entities considering the binding&#39;s query options (such as filters or sorters). Returns <code>null</code>
-if the binding&#39;s filter is sap.ui.filter.Filter.NONE. The returned URL does not specify <code>$skip</code>
-and <code>$top</code> and leaves it up to the server how many rows it delivers. Many servers tend to choose a small
-limit without <code>$skip</code> and <code>$top</code>, so it might be wise to add an appropriate value for <code>$top</code> at least.</p>
+delivers all entities considering the binding&#39;s query options (such as filters or sorters).</p>
+<p>The returned URL does not specify <code>$skip</code> and <code>$top</code> and leaves it up to the server how many rows it
+delivers. Many servers tend to choose a small limit without <code>$skip</code> and <code>$top</code>, so it might be wise to
+add an appropriate value for <code>$top</code> at least.</p>
 <p>Additionally, you must be aware of server-driven paging and be ready to send a follow-up request if the
 response contains <code>@odata.nextlink</code>.</p>
 <p>The URL cannot be determined synchronously in all cases; use #requestDownloadUrl to allow for
 asynchronous determination then.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>The download URL or <code>null</code></p>
-<h4>Since</h4>
-<p>1.74.0</p>
 <hr>
 <h3>getGroupId()</h3>
 <blockquote>
 <p><strong>getGroupId</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the group ID of the binding that is used for read requests. The group ID of the binding is alternatively
-defined by
-	 the <code>groupId</code> parameter of the OData model; see sap.ui.model.odata.v4.ODataModel#constructor,
- the <code>$$groupId</code> binding parameter; see sap.ui.model.odata.v4.ODataModel#bindList and sap.ui.model.odata.v4.ODataModel#bindContext.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The group ID</p>
 <h4>Since</h4>
 <p>1.81.0</p>
+<p>Returns the group ID of the binding that is used for read requests. The group ID of the binding is alternatively
+defined by
+	 the <code>groupId</code> parameter of the OData model; see sap.ui.model.odata.v4.ODataModel#constructor,
+ the <code>$$groupId</code> binding parameter; see sap.ui.model.odata.v4.ODataModel#bindList and sap.ui.model.odata.v4.ODataModel#bindContext.</p>
 <hr>
 <h3>getHeaderContext()</h3>
 <blockquote>
 <p><strong>getHeaderContext</strong>(): <a href="../../Context/classes/Context.html"><code>Context</code></a></p>
 </blockquote>
-<p>Returns the header context which allows binding to <code>$count</code>.
-See:
-	#getCount</p>
 <h4>Returns</h4>
 <p><a href="../../Context/classes/Context.html"><code>Context</code></a></p>
 <p>The header context or <code>null</code> if the binding is relative and has no context</p>
 <h4>Since</h4>
 <p>1.45.0</p>
+<p>Returns the header context which allows binding to <code>$count</code>.
+See:
+	#getCount</p>
 <hr>
 <h3>getKeepAliveContext()</h3>
 <blockquote>
 <p><strong>getKeepAliveContext</strong>(<code>sPath</code>, <code>bRequestMessages?</code>, <code>sGroupId?</code>): <a href="../../Context/classes/Context.html"><code>Context</code></a></p>
 </blockquote>
-<p>Calls sap.ui.model.odata.v4.Context#setKeepAlive at the context for the given path and returns
-it. Since 1.100.0 the function always returns such a context. If none exists yet, it is created without
-data and a request for its entity is sent.
-See:
-	sap.ui.model.odata.v4.Model#getKeepAliveContext</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -652,20 +645,25 @@ See:
 <p>The kept-alive context</p>
 <h4>Since</h4>
 <p>1.99.0</p>
+<p>Calls sap.ui.model.odata.v4.Context#setKeepAlive at the context for the given path and returns
+it. Since 1.100.0 the function always returns such a context. If none exists yet, it is created without
+data and a request for its entity is sent.
+See:
+	sap.ui.model.odata.v4.Model#getKeepAliveContext</p>
 <hr>
 <h3>getLength()</h3>
 <blockquote>
 <p><strong>getLength</strong>(): <code>number</code></p>
 </blockquote>
-<p>Returns the number of entries in the list. As long as the client does not know the size on the server,
-an estimated length is returned.
-See:
-	sap.ui.model.ListBinding#getLength</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>The number of entries in the list</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Returns the number of entries in the list. As long as the client does not know the size on the server,
+an estimated length is returned.
+See:
+	sap.ui.model.ListBinding#getLength</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getlength"><code>getLength</code></a></p>
 <hr>
@@ -673,7 +671,6 @@ See:
 <blockquote>
 <p><strong>getQueryOptions</strong>(<code>bWithSystemQueryOptions?</code>): <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
 </blockquote>
-<p>Returns the query options of the binding.</p>
 <h4>Parameters</h4>
 <h5>bWithSystemQueryOptions?</h5>
 <p><code>boolean</code></p>
@@ -686,46 +683,38 @@ and sap.ui.model.odata.v4.ODataContextBinding#changeParameters. System query opt
 be calculated, e.g. <code>$filter</code> can be calculated based on provided filter objects.</p>
 <h4>Since</h4>
 <p>1.66.0</p>
+<p>Returns the query options of the binding.</p>
 <hr>
 <h3>getRootBinding()</h3>
 <blockquote>
 <p><strong>getRootBinding</strong>(): <code>ODataListBinding</code> | <a href="../../ODataContextBinding/classes/ODataContextBinding.html"><code>ODataContextBinding</code></a> | <a href="../../ODataPropertyBinding/classes/ODataPropertyBinding.html"><code>ODataPropertyBinding</code></a></p>
 </blockquote>
-<p>Returns the root binding of this binding&#39;s hierarchy, see <a href="https://ui5.sap.com/#/topic/fccfb2eb41414f0792c165e69a878717">Initialization and Read Requests</a>.</p>
 <h4>Returns</h4>
 <p><code>ODataListBinding</code> | <a href="../../ODataContextBinding/classes/ODataContextBinding.html"><code>ODataContextBinding</code></a> | <a href="../../ODataPropertyBinding/classes/ODataPropertyBinding.html"><code>ODataPropertyBinding</code></a></p>
 <p>The root binding or <code>undefined</code> if this binding is unresolved (see sap.ui.model.Binding#isResolved).</p>
 <h4>Since</h4>
 <p>1.53.0</p>
+<p>Returns the root binding of this binding&#39;s hierarchy, see <a href="https://ui5.sap.com/#/topic/fccfb2eb41414f0792c165e69a878717">Initialization and Read Requests</a>.</p>
 <hr>
 <h3>getUpdateGroupId()</h3>
 <blockquote>
 <p><strong>getUpdateGroupId</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the group ID of the binding that is used for update requests. The update group ID of the binding
-is alternatively defined by
-	 the <code>updateGroupId</code> parameter of the OData model; see sap.ui.model.odata.v4.ODataModel#constructor,
- the <code>$$updateGroupId</code> binding parameter; see sap.ui.model.odata.v4.ODataModel#bindList and
-sap.ui.model.odata.v4.ODataModel#bindContext.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The update group ID</p>
 <h4>Since</h4>
 <p>1.81.0</p>
+<p>Returns the group ID of the binding that is used for update requests. The update group ID of the binding
+is alternatively defined by
+	 the <code>updateGroupId</code> parameter of the OData model; see sap.ui.model.odata.v4.ODataModel#constructor,
+ the <code>$$updateGroupId</code> binding parameter; see sap.ui.model.odata.v4.ODataModel#bindList and
+sap.ui.model.odata.v4.ODataModel#bindContext.</p>
 <hr>
 <h3>hasPendingChanges()</h3>
 <blockquote>
 <p><strong>hasPendingChanges</strong>(<code>bIgnoreKeptAlive?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Returns <code>true</code> if this binding or its dependent bindings have property changes, created entities, or
-entity deletions which have not been sent successfully to the server. This function does not take the
-execution of OData operations (see sap.ui.model.odata.v4.ODataContextBinding#execute) into account.
-Since 1.98.0, sap.ui.model.odata.v4.Context#isInactive inactive contexts are ignored, unless
-(since 1.100.0) their sap.ui.model.odata.v4.ODataListBinding#event:createActivate activation
-has been prevented and sap.ui.model.odata.v4.Context#isInactive therefore returns <code>1</code>.</p>
-<p>Note: If this binding is relative, its data is cached separately for each parent context path. This method
-returns <code>true</code> if there are pending changes for the current parent context path of this binding. If this
-binding is unresolved (see sap.ui.model.Binding#isResolved), it returns <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bIgnoreKeptAlive?</h5>
 <p><code>boolean</code></p>
@@ -742,22 +731,31 @@ parameter (see sap.ui.model.odata.v4.ODataModel#bindList).</p>
 <p><code>true</code> if the binding is resolved and has pending changes</p>
 <h4>Since</h4>
 <p>1.39.0</p>
+<p>Returns <code>true</code> if this binding or its dependent bindings have property changes, created entities, or
+entity deletions which have not been sent successfully to the server. This function does not take the
+execution of OData operations (see sap.ui.model.odata.v4.ODataContextBinding#execute) into account.
+Since 1.98.0, sap.ui.model.odata.v4.Context#isInactive inactive contexts are ignored, unless
+(since 1.100.0) their sap.ui.model.odata.v4.ODataListBinding#event:createActivate activation
+has been prevented and sap.ui.model.odata.v4.Context#isInactive therefore returns <code>1</code>.</p>
+<p>Note: If this binding is relative, its data is cached separately for each parent context path. This method
+returns <code>true</code> if there are pending changes for the current parent context path of this binding. If this
+binding is unresolved (see sap.ui.model.Binding#isResolved), it returns <code>false</code>.</p>
 <hr>
 <h3>initialize()</h3>
 <blockquote>
 <p><strong>initialize</strong>(): <code>void</code></p>
 </blockquote>
-<p>Initializes the OData list binding: Fires an event in case the binding has a resolved path and its root
-binding is not suspended. If the model&#39;s parameter <code>autoExpandSelect</code> is used (see sap.ui.model.odata.v4.ODataModel#constructor),
-it fires a &#39;change&#39; event, else it fires a &#39;refresh&#39; event (since 1.67.0).
-See:
-	#getRootBinding</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Initializes the OData list binding: Fires an event in case the binding has a resolved path and its root
+binding is not suspended. If the model&#39;s parameter <code>autoExpandSelect</code> is used (see sap.ui.model.odata.v4.ODataModel#constructor),
+it fires a &#39;change&#39; event, else it fires a &#39;refresh&#39; event (since 1.67.0).
+See:
+	#getRootBinding</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#initialize"><code>initialize</code></a></p>
 <hr>
@@ -765,24 +763,24 @@ See:
 <blockquote>
 <p><strong>isFirstCreateAtEnd</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns whether the overall position of created entries is at the end of the list; this is determined
-by the first call to #create.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the overall position of created contexts is at the end, or <code>undefined</code> if there are
 no created contexts</p>
 <h4>Since</h4>
 <p>1.99.0</p>
+<p>Returns whether the overall position of created entries is at the end of the list; this is determined
+by the first call to #create.</p>
 <hr>
 <h3>isInitial()</h3>
 <blockquote>
 <p><strong>isInitial</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Method not supported</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Method not supported</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#isinitial"><code>isInitial</code></a></p>
 <hr>
@@ -790,15 +788,15 @@ no created contexts</p>
 <blockquote>
 <p><strong>isLengthFinal</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns <code>true</code> if the length has been determined by the data returned from server. If the length is a
-client side estimation <code>false</code> is returned.
-See:
-	sap.ui.model.ListBinding#isLengthFinal</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>If <code>true</code> the length is determined by server side data</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Returns <code>true</code> if the length has been determined by the data returned from server. If the length is a
+client side estimation <code>false</code> is returned.
+See:
+	sap.ui.model.ListBinding#isLengthFinal</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#islengthfinal"><code>isLengthFinal</code></a></p>
 <hr>
@@ -806,6 +804,19 @@ See:
 <blockquote>
 <p><strong>refresh</strong>(<code>sGroupId?</code>): <code>void</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sGroupId?</h5>
+<p><code>string</code> | <code>boolean</code></p>
+<p>The group ID to be used for refresh; if not specified, the binding&#39;s group ID is used, see #getGroupId.
+For suspended bindings, only the binding&#39;s group ID is supported because #resume uses the binding&#39;s
+group ID. A value of type boolean is not accepted and an error will be thrown (a forced refresh is not
+supported).</p>
+<p>Valid values are <code>undefined</code>, &#39;$auto&#39;, &#39;$auto.*&#39;, &#39;$direct&#39; or application group IDs as specified in
+sap.ui.model.odata.v4.ODataModel.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.37.0</p>
 <p>Refreshes the binding. Prompts the model to retrieve data from the server using the given group ID and
 notifies the control that new data is available.</p>
 <p>Refresh is supported for bindings which are not relative to an sap.ui.model.odata.v4.Context.</p>
@@ -821,19 +832,6 @@ See:
 	sap.ui.model.Binding#refresh
 	#getRootBinding
 	#suspend</p>
-<h4>Parameters</h4>
-<h5>sGroupId?</h5>
-<p><code>string</code> | <code>boolean</code></p>
-<p>The group ID to be used for refresh; if not specified, the binding&#39;s group ID is used, see #getGroupId.
-For suspended bindings, only the binding&#39;s group ID is supported because #resume uses the binding&#39;s
-group ID. A value of type boolean is not accepted and an error will be thrown (a forced refresh is not
-supported).</p>
-<p>Valid values are <code>undefined</code>, &#39;$auto&#39;, &#39;$auto.*&#39;, &#39;$direct&#39; or application group IDs as specified in
-sap.ui.model.odata.v4.ODataModel.</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.37.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#refresh"><code>refresh</code></a></p>
 <hr>
@@ -841,8 +839,6 @@ sap.ui.model.odata.v4.ODataModel.</p>
 <blockquote>
 <p><strong>requestContexts</strong>(<code>iStart?</code>, <code>iLength?</code>, <code>sGroupId?</code>): <code>Promise</code>&lt;<a href="../../Context/classes/Context.html"><code>Context</code></a>[]&gt;</p>
 </blockquote>
-<p>Requests the entities for the given index range of the binding&#39;s collection and resolves with the corresponding
-contexts.</p>
 <h4>Parameters</h4>
 <h5>iStart?</h5>
 <p><code>number</code></p>
@@ -863,14 +859,20 @@ IDs as specified in sap.ui.model.odata.v4.ODataModel.</p>
 for <code>iStart</code>; it is rejected if <code>iStart</code> or <code>iLength</code> are less than 0 or when requesting the data fails</p>
 <h4>Since</h4>
 <p>1.70.0</p>
+<p>Requests the entities for the given index range of the binding&#39;s collection and resolves with the corresponding
+contexts.</p>
 <hr>
 <h3>requestDownloadUrl()</h3>
 <blockquote>
 <p><strong>requestDownloadUrl</strong>(): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<p>Resolves with a URL by which the complete content of the list can be downloaded in JSON format. The request
-delivers all entities considering the binding&#39;s query options (such as filters or sorters). Resolves
-with <code>null</code> if the binding&#39;s filter is sap.ui.filter.Filter.NONE.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
+<p>A promise that is resolved with the download URL</p>
+<h4>Since</h4>
+<p>1.74.0</p>
+<p>Returns a URL by which the complete content of the list can be downloaded in JSON format. The request
+delivers all entities considering the binding&#39;s query options (such as filters or sorters).</p>
 <p>The returned URL does not specify <code>$skip</code> and <code>$top</code> and leaves it up to the server how many rows it
 delivers. Many servers tend to choose a small limit without <code>$skip</code> and <code>$top</code>, so it might be wise to
 add an appropriate value for <code>$top</code> at least.</p>
@@ -878,26 +880,11 @@ add an appropriate value for <code>$top</code> at least.</p>
 response contains <code>@odata.nextlink</code>.
 See:
 	#getDownloadUrl</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
-<p>A promise that is resolved with the download URL or <code>null</code></p>
-<h4>Since</h4>
-<p>1.74.0</p>
 <hr>
 <h3>requestFilterForMessages()</h3>
 <blockquote>
 <p><strong>requestFilterForMessages</strong>(<code>fnFilter?</code>): <code>Promise</code>&lt;<a href="../../../../Filter/classes/Filter.html"><code>Filter</code></a>&gt;</p>
 </blockquote>
-<p>Requests an sap.ui.model.Filter object which can be used to filter the list binding by entries
-with model messages. With the filter callback, you can define if a message is considered when creating
-the filter for entries with messages.</p>
-<p>The resulting filter does not consider application or control filters specified for this list binding
-in its constructor or in its #filter method; add filters which you want to keep with the &quot;and&quot;
-conjunction to the resulting filter before calling #filter.</p>
-<p>If there are only messages for transient entries, the method returns sap.ui.model.Filter.NONE.
-Take care not to combine this filter with other filters.
-See:
-	sap.ui.model.ListBinding#requestFilterForMessages</p>
 <h4>Parameters</h4>
 <h5>fnFilter?</h5>
 <p>(<code>p1</code>) =&gt; <code>boolean</code></p>
@@ -911,6 +898,14 @@ it resolves with <code>null</code> if the binding is not resolved or if there is
 <p>1.86.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Requests an sap.ui.model.Filter object which can be used to filter the list binding by entries
+with model messages. With the filter callback, you can define if a message is considered when creating
+the filter for entries with messages.</p>
+<p>The resulting filter does not consider application or control filters specified for this list binding
+in its constructor or in its #filter method; add filters which you want to keep with the &quot;and&quot;
+conjunction to the resulting filter before calling #filter.
+See:
+	sap.ui.model.ListBinding#requestFilterForMessages</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#requestfilterformessages"><code>requestFilterForMessages</code></a></p>
 <hr>
@@ -918,8 +913,6 @@ it resolves with <code>null</code> if the binding is not resolved or if there is
 <blockquote>
 <p><strong>requestRefresh</strong>(<code>sGroupId?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Refreshes the binding and returns a promise to wait for it. See #refresh for details. Use #refresh
-if you do not need the promise.</p>
 <h4>Parameters</h4>
 <h5>sGroupId?</h5>
 <p><code>string</code></p>
@@ -930,34 +923,36 @@ if you do not need the promise.</p>
 with an error if the refresh failed</p>
 <h4>Since</h4>
 <p>1.87.0</p>
+<p>Refreshes the binding and returns a promise to wait for it. See #refresh for details. Use #refresh
+if you do not need the promise.</p>
 <hr>
 <h3>resetChanges()</h3>
 <blockquote>
 <p><strong>resetChanges</strong>(): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<p>Resets all pending changes of this binding, see #hasPendingChanges. Resets also invalid user
-input.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>&gt;</p>
 <p>A promise which is resolved without a defined result as soon as all changes in the binding itself
 and all dependent bindings are canceled (since 1.72.0)</p>
 <h4>Since</h4>
 <p>1.40.1</p>
+<p>Resets all pending changes of this binding, see #hasPendingChanges. Resets also invalid user
+input.</p>
 <hr>
 <h3>resume()</h3>
 <blockquote>
 <p><strong>resume</strong>(): <code>void</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.37.0</p>
 <p>Resumes this binding. The binding can then again fire change events and trigger data service requests.
 Before 1.53.0, this method was not supported and threw an error.
 See:
 	<a href="https://ui5.sap.com/#/topic/b0f5c531e5034a27952cc748954cbe39">Suspend and Resume</a>
 	sap.ui.model.Binding#resume
 	#suspend</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.37.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#resume"><code>resume</code></a></p>
 <hr>
@@ -965,9 +960,6 @@ See:
 <blockquote>
 <p><strong>setAggregation</strong>(<code>oAggregation?</code>): <code>void</code></p>
 </blockquote>
-<p>Sets a new data aggregation object and derives the system query option <code>$apply</code> implicitly from it.
-See:
-	#getAggregation</p>
 <h4>Parameters</h4>
 <h5>oAggregation?</h5>
 <p>An object holding the information needed for data aggregation; see also OData
@@ -1002,8 +994,8 @@ value of that unit in case there is only one, or <code>null</code> otherwise (&q
 <p>The number (as a positive integer) of different levels initially available without calling sap.ui.model.odata.v4.Context#expand
 (@experimental as of version 1.105.0; available for read-only hierarchies since 1.117.0), supported only
 if a <code>hierarchyQualifier</code> is given. Root nodes are on the first level. By default, only root nodes are
-available; they are not yet expanded. Since 1.120.0, <code>expandTo &gt;= Number.MAX_SAFE_INTEGER</code> can be used
-to expand all levels (<code>1E16</code> is recommended inside XML views for simplicity).</p>
+available; they are not yet expanded. Since 1.120.0, <code>Number.MAX_SAFE_INTEGER</code> can be used to expand
+all levels.</p>
 <h6>grandTotalAtBottomOnly?</h6>
 <p><code>boolean</code></p>
 <p>Tells whether the grand totals for aggregatable properties are displayed at the bottom only (since 1.86.0);
@@ -1036,9 +1028,7 @@ requests (since 1.108.0).</p>
 certain content will break the syntax of the system query option <code>$apply</code> and result in an invalid request.
 If the OData service supports the proposal ODATA-1452,
 then <code>ODataUtils.formatLiteral(sSearch, &quot;Edm.String&quot;);</code> should be used to encapsulate the whole search
-string beforehand (see sap.ui.model.odata.v4.ODataUtils.formatLiteral). Since 1.120.13, all contexts,
-including the header context are deselected if the &#39;$$clearSelectionOnFilter&#39; binding parameter is set
-and the search parameter is changed.</p>
+string beforehand (see sap.ui.model.odata.v4.ODataUtils.formatLiteral).</p>
 <h6>subtotalsAtBottomOnly?</h6>
 <p><code>boolean</code></p>
 <p>Tells whether subtotals for aggregatable properties are displayed at the bottom only, as a separate row
@@ -1048,11 +1038,25 @@ for top and bottom, the default is top only (that is, as part of the group level
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.55.0</p>
+<p>Sets a new data aggregation object and derives the system query option <code>$apply</code> implicitly from it.
+See:
+	#getAggregation</p>
 <hr>
 <h3>sort()</h3>
 <blockquote>
 <p><strong>sort</strong>(<code>vSorters?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>vSorters?</h5>
+<p><a href="../../../../Sorter/classes/Sorter.html"><code>Sorter</code></a> | <a href="../../../../Sorter/classes/Sorter.html"><code>Sorter</code></a>[]</p>
+<p>The dynamic sorters to be used; they replace the dynamic sorters given in sap.ui.model.odata.v4.ODataModel#bindList.
+Static sorters, as defined in the &#39;$orderby&#39; binding parameter, are always executed after the dynamic
+sorters.</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p><code>this</code> to facilitate method chaining</p>
+<h4>Since</h4>
+<p>1.39.0</p>
 <p>Sort the entries represented by this list binding according to the given sorters. The sorters are stored
 at this list binding and they are used for each following data request. Since 1.97.0, if sorters are
 unchanged, no request is sent, regardless of pending changes.</p>
@@ -1066,17 +1070,6 @@ to submit the changes or sap.ui.model.odata.v4.ODataModel#resetChanges to reset 
 calling #sort.
 See:
 	sap.ui.model.ListBinding#sort</p>
-<h4>Parameters</h4>
-<h5>vSorters?</h5>
-<p><a href="../../../../Sorter/classes/Sorter.html"><code>Sorter</code></a> | <a href="../../../../Sorter/classes/Sorter.html"><code>Sorter</code></a>[]</p>
-<p>The dynamic sorters to be used; they replace the dynamic sorters given in sap.ui.model.odata.v4.ODataModel#bindList.
-Static sorters, as defined in the &#39;$orderby&#39; binding parameter, are always executed after the dynamic
-sorters.</p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p><code>this</code> to facilitate method chaining</p>
-<h4>Since</h4>
-<p>1.39.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#sort"><code>sort</code></a></p>
 <hr>
@@ -1084,6 +1077,10 @@ sorters.</p>
 <blockquote>
 <p><strong>suspend</strong>(): <code>void</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.37.0</p>
 <p>Suspends this binding. A suspended binding does not fire change events nor does it trigger data service
 requests. Call #resume to resume the binding. Before 1.53.0, this method was not supported and
 threw an error. Since 1.97.0, pending changes are ignored if they relate to a sap.ui.model.odata.v4.Context#isKeepAlive kept-alive
@@ -1096,10 +1093,6 @@ See:
 	sap.ui.model.odata.v4.ODataContextBinding#hasPendingChanges
 	sap.ui.model.odata.v4.ODataListBinding#hasPendingChanges
 	#resume</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.37.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#suspend"><code>suspend</code></a></p>
 <hr>
@@ -1107,13 +1100,13 @@ See:
 <blockquote>
 <p><strong>toString</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns a string representation of this object including the binding path. If the binding is relative,
-the parent path is also given, separated by a &#39;|&#39;.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>A string description of this binding</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Returns a string representation of this object including the binding path. If the binding is relative,
+the parent path is also given, separated by a &#39;|&#39;.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#tostring"><code>toString</code></a></p>
 <hr>
@@ -1121,15 +1114,6 @@ the parent path is also given, separated by a &#39;|&#39;.</p>
 <blockquote>
 <p><strong>updateAnalyticalInfo</strong>(<code>aAggregation</code>): <code>object</code></p>
 </blockquote>
-<p>Updates the binding&#39;s system query option <code>$apply</code> based on the given data aggregation information. Its
-value is &quot;groupby((&lt;dimension_1,...,dimension_N,unit_or_text_1,...,unit_or_text_K&gt;), aggregate(
-with  as , ...))&quot; where the &quot;aggregate&quot; part is only present if measures are given
-and both &quot;with&quot; and &quot;as&quot; are optional. Since 1.93.0, a previous &quot;search before data aggregation&quot; is considered
-(see the <code>oAggregation.search</code> parameter of #setAggregation).
-See:
-	sap.ui.model.analytics.AnalyticalBinding#updateAnalyticalInfo
-	#changeParameters
-	#setAggregation</p>
 <h4>Parameters</h4>
 <h5>aAggregation</h5>
 <p><code>object</code>[]</p>
@@ -1152,6 +1136,15 @@ to their <code>aAggregation</code> argument. <code>undefined</code> is returned 
 <p>1.53.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Updates the binding&#39;s system query option <code>$apply</code> based on the given data aggregation information. Its
+value is &quot;groupby((&lt;dimension_1,...,dimension_N,unit_or_text_1,...,unit_or_text_K&gt;), aggregate(
+with  as , ...))&quot; where the &quot;aggregate&quot; part is only present if measures are given
+and both &quot;with&quot; and &quot;as&quot; are optional. Since 1.93.0, a previous &quot;search before data aggregation&quot; is considered
+(see the <code>oAggregation.search</code> parameter of #setAggregation).
+See:
+	sap.ui.model.analytics.AnalyticalBinding#updateAnalyticalInfo
+	#changeParameters
+	#setAggregation</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1168,7 +1161,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ODataListBinding</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ODataListBinding</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1192,6 +1185,6 @@ used by this class</p>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $GroupSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $GroupSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $GroupSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartform/Group/interfaces/$GroupSettings.html">
 <meta property="og:title" content="Interface: $GroupSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $GroupSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $GroupSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartform/Group/interfaces/$GroupSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartform › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartform/Group/README.html">Group</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartform/Group</a> / $GroupSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartform/Group</a> / $GroupSettings</p>
 <h1>Interface: $GroupSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $GroupSettings } <span class="kw">from</span> <span class="str">"sap/ui/comp/smartform/Group"</span>;</pre>
-<p>Describes the settings that can be provided to the Group constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/FormContainer/interfaces/$FormContainerSettings.html"><code>$FormContainerSettings</code></a></li>
@@ -54,34 +53,37 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>horizontalLayoutGroupElementMinWidth?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies the minimal size in pixels of all group elements of the form if horizontal Layout is used.</p>
-<p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
-control. So don&#39;t set it manually.</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please do not use this property as it does not have any effect on the current
 layout of the <code>SmartForm</code> control.</p>
+<p>Specifies the minimal size in pixels of all group elements of the form if horizontal Layout is used.</p>
+<p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
+control. So don&#39;t set it manually.</p>
 <hr>
 <h3><del>label?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>label?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Label for the group.</p>
 <h4>Deprecated</h4>
 <p>(since 1.88) - replaced by <code>title</code> aggregation.</p>
+<p>Label for the group.</p>
 <hr>
 <h3><del>layout?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>layout?</strong>: <a href="../../../../../../../sap.ui.layout/sap/ui/layout/GridData/classes/GridData.html"><code>GridData</code></a></p>
 </blockquote>
-<p>Layout to specify how the group shall be rendered (e.g. span and line-break)</p>
-<p><strong>Note:</strong> Do not use <code>layout</code> and <code>layoutData</code> aggregations combined.</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please use <code>layoutData</code> aggregation instead.</p>
+<p>Layout to specify how the group shall be rendered (e.g. span and line-break)</p>
+<p><strong>Note:</strong> Do not use <code>layout</code> and <code>layoutData</code> aggregations combined.</p>
 <hr>
 <h3><del>useHorizontalLayout?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>useHorizontalLayout?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Deprecated</h4>
+<p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
+<code>layout</code> aggregation of the <code>SmartForm</code> control.</p>
 <p>Specifies whether the groups are rendered in a <code>ResponsiveLayout</code> with label on top of the group element.
 Each group will be rendered in a new line.</p>
 <p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
@@ -89,11 +91,8 @@ control.</p>
 <p>So don&#39;t set it to a different value from the one in the <code>SmartForm</code> control. For performance reasons
 it might make sense to set it manually to the same value as the one in the <code>SmartForm</code> control when creating
 the <code>Group</code> element.</p>
-<h4>Deprecated</h4>
-<p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
-<code>layout</code> aggregation of the <code>SmartForm</code> control.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

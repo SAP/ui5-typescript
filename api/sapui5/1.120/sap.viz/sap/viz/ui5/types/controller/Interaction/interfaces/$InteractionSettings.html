@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $InteractionSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $InteractionSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $InteractionSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $InteractionSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/types/controller/Interaction/interfaces/$InteractionSettings.html">
-<meta property="og:title" content="~~Interface: $InteractionSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $InteractionSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $InteractionSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $InteractionSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/types/controller/Interaction/interfaces/$InteractionSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,33 +33,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › types › controller › <a href="../../../../../../../../sap.viz/sap/viz/ui5/types/controller/Interaction/README.html">Interaction</a> › interfaces</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/types/controller/Interaction</a> / $InteractionSettings</p>
-<h1><del>Interface: $InteractionSettings</del></h1>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/types/controller/Interaction</a> / $InteractionSettings</p>
+<h1>Interface: $InteractionSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $InteractionSettings } <span class="kw">from</span> <span class="str">"sap/viz/ui5/types/controller/Interaction"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the Interaction constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.32.0) - The chart controls in the <code>sap.viz.ui5</code> package (which were always marked
-as experimental) have been deprecated since 1.32.0. They are no longer actively developed and
-won&#39;t receive new features or improvements, only important bug fixes. They will only remain in the SAPUI5
-distribution for backward compatibility.</p>
-<p>**SAP strongly recommends that existing consumers of those controls migrate to the new sap.viz.ui5.controls.VizFrame VizFrame
-control to benefit from new charting enhancements and timely support. **</p>
-<p><strong>Note</strong>: As the feature set, design and API usage of VizFrame might differ from the old chart controls,
-make sure you evaluate it thoroughly before migration.
- (since 1.7.2) - Charting API is not finished yet and might change completely.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../core/BaseStructuredType/interfaces/$BaseStructuredTypeSettings.html"><code>$BaseStructuredTypeSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>decorations?</del></h3>
+<h3>decorations?</h3>
 <blockquote>
 <p><code>optional</code> <strong>decorations?</strong>: <code>any</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Set decorations relating to interaction. Each item that is an object of {name: &#39;decoration name&#39;, fn:
 &#39;decoration callback function&#39;} is a decoration. Currently two decorations are supported: showDetail
 and hideDetail. These two decorations can be used to create a user-defined tooltip.</p>
@@ -81,110 +68,99 @@ be hidden.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableMouseMove?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set whether mouse move is enabled</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set whether mouse move is enabled</p>
 <hr>
 <h3><del>enableMouseOut?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableMouseOut?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set whether mouse out is enabled</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set whether mouse out is enabled</p>
 <hr>
 <h3><del>enableMouseOver?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableMouseOver?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set whether mouse over is enabled</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set whether mouse over is enabled</p>
 <hr>
 <h3><del>handlers?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>handlers?</strong>: <code>any</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set handlers for behavior decration.</p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set handlers for behavior decration.</p>
 <hr>
 <h3><del>holdSelection?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>holdSelection?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set whether hold selection is enabled</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set whether hold selection is enabled</p>
 <hr>
 <h3><del>pan?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>pan?</strong>: <a href="../../Interaction_pan/classes/Interaction_pan.html"><code>Interaction_pan</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>add documentation for aggregation pan</p>
 <h4>Deprecated</h4>
 <p>(since 1.19) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>add documentation for aggregation pan</p>
 <hr>
 <h3><del>preserveSelectionWhenDragging?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>preserveSelectionWhenDragging?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set whether preserve selection when dragging is enabled</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set whether preserve selection when dragging is enabled</p>
 <hr>
-<h3><del>selectability?</del></h3>
+<h3>selectability?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectability?</strong>: <a href="../../Interaction_selectability/classes/Interaction_selectability.html"><code>Interaction_selectability</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Settings for selectability</p>
 <hr>
 <h3><del>supportedEventNames?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>supportedEventNames?</strong>: <code>string</code>[] | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set supported event names</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set supported event names</p>
 <hr>
 <h3><del>supportLassoEvent?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>supportLassoEvent?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set whether support lasso event is enabled</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set whether support lasso event is enabled</p>
 <hr>
 <h3><del>triggers?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>triggers?</strong>: <code>any</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Set triggers for behavior decration.</p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Set triggers for behavior decration.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

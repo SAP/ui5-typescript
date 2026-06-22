@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/GanttChartContainer/interfaces/$GanttChartContainerSettings.html">
 <meta property="og:title" content="Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/GanttChartContainer/interfaces/$GanttChartContainerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/GanttChartContainer/README.html">GanttChartContainer</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/GanttChartContainer</a> / $GanttChartContainerSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/GanttChartContainer</a> / $GanttChartContainerSettings</p>
 <h1>Interface: $GanttChartContainerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $GanttChartContainerSettings } <span class="kw">from</span> <span class="str">"sap/gantt/simple/GanttChartContainer"</span>;</pre>
-<p>Describes the settings that can be provided to the GanttChartContainer constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -49,10 +48,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>optional</code> <strong>customGanttSearchResult?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.106)</p>
 <p>The event is fired when the search results are being populated.</p>
 <p>This event enables the application to filter the search results that are shown on the toolbar and side
 panel</p>
-<p> (since 1.106)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/GanttChartContainer$CustomGanttSearchResultEvent.html"><code>GanttChartContainer$CustomGanttSearchResultEvent</code></a></p>
@@ -64,8 +63,8 @@ panel</p>
 <p><code>optional</code> <strong>customSearchResults?</strong>: <code>any</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.106)</p>
 <p>Array of search results displayed on the toolbar and side panel</p>
-<p> (since 1.106)</p>
 <hr>
 <h3>customSettingChange?</h3>
 <blockquote>
@@ -102,8 +101,8 @@ This event allows the application to handle these settings. Only check boxes are
 <p><code>optional</code> <strong>enableAutoSelectOnFind?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.111)</p>
 <p>This property enables the auto selection of a shape upon search and find.</p>
-<p> (since 1.111)</p>
 <hr>
 <h3>enableCursorLine?</h3>
 <blockquote>
@@ -116,19 +115,19 @@ This event allows the application to handle these settings. Only check boxes are
 <blockquote>
 <p><code>optional</code> <strong>enableDeltaLine?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Flag to enable and disable delta lines</p>
-<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Flag to enable and disable delta lines</p>
+<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
 <hr>
 <h3>enableNonWorkingTime?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableNonWorkingTime?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Flag to enable and disable non-working time</p>
-<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Flag to enable and disable non-working time</p>
+<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
 <hr>
 <h3>enableNowLine?</h3>
 <blockquote>
@@ -141,9 +140,9 @@ This event allows the application to handle these settings. Only check boxes are
 <blockquote>
 <p><code>optional</code> <strong>enableStatusBar?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Flag to enable and disable status bar.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Flag to enable and disable status bar.</p>
 <hr>
 <h3>enableTimeScrollSync?</h3>
 <blockquote>
@@ -155,9 +154,9 @@ This event allows the application to handle these settings. Only check boxes are
 <blockquote>
 <p><code>optional</code> <strong>enableVariantManagement?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Property to enable variant management</p>
 <h4>Since</h4>
 <p>1.95</p>
+<p>Property to enable variant management</p>
 <hr>
 <h3>enableVerticalLine?</h3>
 <blockquote>
@@ -177,10 +176,10 @@ This event allows the application to handle these settings. Only check boxes are
 <p><code>optional</code> <strong>ganttSearchSidePanelList?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.102)</p>
 <p>The event is fired when the list inside search side panel is being populated.</p>
 <p>This event enables the application to modify the list (i.e, change text, add icons, etc) which is shown
 on the search side panel.</p>
-<p> (since 1.102)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/GanttChartContainer$GanttSearchSidePanelListEvent.html"><code>GanttChartContainer$GanttSearchSidePanelListEvent</code></a></p>
@@ -199,9 +198,9 @@ container must be defined.</p>
 <blockquote>
 <p><code>optional</code> <strong>hideSettingsItem?</strong>: <code>string</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines the list of items to be hidden in Settings.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Defines the list of items to be hidden in Settings.</p>
 <hr>
 <h3>layoutOrientation?</h3>
 <blockquote>
@@ -215,16 +214,16 @@ container must be defined.</p>
 <p><code>optional</code> <strong>searchSidePanel?</strong>: <code>any</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.100)</p>
 <p>Side panel to display search results of Find and Select operation in the chart area</p>
-<p> (since 1.100)</p>
 <hr>
 <h3>searchSidePanelList?</h3>
 <blockquote>
 <p><code>optional</code> <strong>searchSidePanelList?</strong>: <code>any</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.102)</p>
 <p>List of search results displayed on the side panel of Find and Select operation</p>
-<p> (since 1.102)</p>
 <hr>
 <h3>statusBar?</h3>
 <blockquote>
@@ -236,25 +235,25 @@ container must be defined.</p>
 <blockquote>
 <p><code>optional</code> <strong>statusBarDatePattern?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Determines the date pattern set on the status bar.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Determines the date pattern set on the status bar.</p>
 <hr>
 <h3>statusBarTimePattern?</h3>
 <blockquote>
 <p><code>optional</code> <strong>statusBarTimePattern?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Determines the time pattern set on the status bar.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Determines the time pattern set on the status bar.</p>
 <hr>
 <h3>statusMessage?</h3>
 <blockquote>
 <p><code>optional</code> <strong>statusMessage?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines the message texts set on the status bar.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Defines the message texts set on the status bar.</p>
 <hr>
 <h3>svgDefs?</h3>
 <blockquote>
@@ -273,10 +272,6 @@ The generated SVG  will be reused in all gantt chart instances</p>
 <blockquote>
 <p><code>optional</code> <strong>variantApplied?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>The event is triggered when a variant is applied. Note that all changes are saved before the variant
-is applied.</p>
-<p>This event enables the application to update binding parameters of tables, and also updates the charts,
-if required, after applying the changes.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -284,14 +279,18 @@ if required, after applying the changes.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>The event is triggered when a variant is applied. Note that all changes are saved before the variant
+is applied.</p>
+<p>This event enables the application to update binding parameters of tables, and also updates the charts,
+if required, after applying the changes.</p>
 <hr>
 <h3>variantHandler?</h3>
 <blockquote>
 <p><code>optional</code> <strong>variantHandler?</strong>: <a href="../../CustomVariantHandler/classes/CustomVariantHandler.html"><code>CustomVariantHandler</code></a></p>
 </blockquote>
-<p>Custom variant handler of the container</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Custom variant handler of the container</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -301,6 +300,6 @@ if required, after applying the changes.</p>
 <p>Note that when a percentage is given, for the width to work as expected, the width of the surrounding
 container must be defined.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

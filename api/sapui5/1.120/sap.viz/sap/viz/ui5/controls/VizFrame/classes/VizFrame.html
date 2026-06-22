@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: VizFrame — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: VizFrame — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: VizFrame — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/controls/VizFrame/classes/VizFrame.html">
 <meta property="og:title" content="Class: VizFrame — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: VizFrame — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: VizFrame — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/controls/VizFrame/classes/VizFrame.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › controls › <a href="../../../../../../../sap.viz/sap/viz/ui5/controls/VizFrame/README.html">VizFrame</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/controls/VizFrame</a> / VizFrame</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/controls/VizFrame</a> / VizFrame</p>
 <h1>Class: VizFrame</h1>
 <pre class="sig"><span class="kw">import</span> VizFrame <span class="kw">from</span> <span class="str">"sap/viz/ui5/controls/VizFrame"</span>;</pre>
+<h2>Since</h2>
+<p>1.22.0</p>
 <p>VizFrame is a viz control that manages a visualization’s initialization, layout, feeding, customization
 and interactions.</p>
 <p>At the moment, the time series chart in VizFrame only accepts time inputs in UTC and system time, and
 does not have the capability to switch timezones dynamically. Additionally, the week representation in
 VizFrame adheres to the ISO week standard, and does not support other variations of week definitions.</p>
-<h2>Since</h2>
-<p>1.22.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../common/BaseControl/classes/BaseControl.html"><code>BaseControl</code></a></li>
@@ -333,7 +333,6 @@ to SVG before that will result in an empty SVG string.</p>
 <blockquote>
 <p><strong>fireDeselectData</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:deselectData deselectData to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -343,12 +342,12 @@ to SVG before that will result in an empty SVG string.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:deselectData deselectData to attached listeners.</p>
 <hr>
 <h3>fireRenderComplete()</h3>
 <blockquote>
 <p><strong>fireRenderComplete</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:renderComplete renderComplete to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -358,12 +357,12 @@ to SVG before that will result in an empty SVG string.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:renderComplete renderComplete to attached listeners.</p>
 <hr>
 <h3>fireSelectData()</h3>
 <blockquote>
 <p><strong>fireSelectData</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:selectData selectData to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -373,6 +372,7 @@ to SVG before that will result in an empty SVG string.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectData selectData to attached listeners.</p>
 <hr>
 <h3>getDataset()</h3>
 <blockquote>
@@ -396,23 +396,23 @@ to SVG before that will result in an empty SVG string.</p>
 <blockquote>
 <p><strong>getLegendVisible</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Return current legend group visibility.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>current legend group visibility</p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Return current legend group visibility.</p>
 <hr>
 <h3><del>getResponsiveLegend()</del></h3>
 <blockquote>
 <p><strong>getResponsiveLegend</strong>(): <code>void</code></p>
 </blockquote>
-<p>Get ResponsiveLegend Control. (For fiori application set only. It has been deprecated since 1.28.)</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.28) - This API has been deprecated. This interface will be removed from the SAPUI5
 delivery in one of the next releases.</p>
+<p>Get ResponsiveLegend Control. (For fiori application set only. It has been deprecated since 1.28.)</p>
 <hr>
 <h3>getVizCustomizations()</h3>
 <blockquote>
@@ -443,13 +443,13 @@ bubble.</p>
 <blockquote>
 <p><strong>getVizScales</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getVizScales vizScales.</p>
-<p>Chart scales, refer to chart property doc for more details.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>vizScales</code></p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Gets current value of property #getVizScales vizScales.</p>
+<p>Chart scales, refer to chart property doc for more details.</p>
 <hr>
 <h3>getVizType()</h3>
 <blockquote>
@@ -563,7 +563,6 @@ overlay.</p>
 <blockquote>
 <p><strong>setLegendVisible</strong>(<code>visibility</code>): <code>this</code></p>
 </blockquote>
-<p>Will respect the setting for all available legends.</p>
 <h4>Parameters</h4>
 <h5>visibility</h5>
 <p><code>boolean</code></p>
@@ -572,6 +571,7 @@ overlay.</p>
 <p><code>this</code></p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Will respect the setting for all available legends.</p>
 <hr>
 <h3>setUiConfig()</h3>
 <blockquote>
@@ -699,7 +699,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>VizFrame</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>VizFrame</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -723,6 +723,6 @@ used by this class</p>
 <p><a href="../../common/BaseControl/classes/BaseControl.html"><code>BaseControl</code></a>.<a href="../../common/BaseControl/classes/BaseControl.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

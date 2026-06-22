@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Spreadsheet — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Spreadsheet — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Spreadsheet — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.export/sap/ui/export/Spreadsheet/classes/Spreadsheet.html">
 <meta property="og:title" content="Class: Spreadsheet — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Spreadsheet — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Spreadsheet — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.export/sap/ui/export/Spreadsheet/classes/Spreadsheet.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.export/README.html">sap.ui.export</a> › sap › ui › export › <a href="../../../../../../sap.ui.export/sap/ui/export/Spreadsheet/README.html">Spreadsheet</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.export</a> / <a href="../README.html">sap/ui/export/Spreadsheet</a> / Spreadsheet</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.export</a> / <a href="../README.html">sap/ui/export/Spreadsheet</a> / Spreadsheet</p>
 <h1>Class: Spreadsheet</h1>
 <pre class="sig"><span class="kw">import</span> Spreadsheet <span class="kw">from</span> <span class="str">"sap/ui/export/Spreadsheet"</span>;</pre>
-<p>The <code>sap.ui.export.Spreadsheet</code> class allows you to export table data from a UI5 application to a spreadsheet
-file.</p>
 <h2>Since</h2>
 <p>1.50</p>
+<p>The <code>sap.ui.export.Spreadsheet</code> class allows you to export table data from a UI5 application to a spreadsheet
+file.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ExportBase/classes/ExportBase.html"><code>ExportBase</code></a></li>
@@ -300,11 +300,6 @@ worker. In this case, export runs in a main thread disregarding the <code>worker
 <blockquote>
 <p><strong>attachBeforeSave</strong>(<code>oData</code>, <code>fnHandler</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the sap.ui.export.Spreadsheet#event:beforeSave event of
-this <code>sap.ui.export.Spreadsheet</code>.
- When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.export.Spreadsheet</code> itself.
- This event is fired just before the generated file is saved to the file system.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -321,15 +316,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.61</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforeSave</strong>(<code>fnHandler</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the sap.ui.export.Spreadsheet#event:beforeSave event of
 this <code>sap.ui.export.Spreadsheet</code>.
  When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.export.Spreadsheet</code> itself.
  This event is fired just before the generated file is saved to the file system.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeSave</strong>(<code>fnHandler</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnHandler</h6>
 <p><code>Function</code></p>
@@ -342,12 +337,16 @@ otherwise it will be bound to this <code>sap.ui.export.Spreadsheet</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.61</p>
+<p>Attaches event handler <code>fnFunction</code> to the sap.ui.export.Spreadsheet#event:beforeSave event of
+this <code>sap.ui.export.Spreadsheet</code>.
+ When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.export.Spreadsheet</code> itself.
+ This event is fired just before the generated file is saved to the file system.</p>
 <hr>
 <h3>cancel()</h3>
 <blockquote>
 <p><strong>cancel</strong>(): <code>this</code></p>
 </blockquote>
-<p>Cancels a running export process. This method does nothing if no export is running.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <ul>
@@ -355,6 +354,7 @@ otherwise it will be bound to this <code>sap.ui.export.Spreadsheet</code> itself
 </ul>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Cancels a running export process. This method does nothing if no export is running.</p>
 <h4>Overrides</h4>
 <p><a href="../../ExportBase/classes/ExportBase.html"><code>ExportBase</code></a>.<a href="../../ExportBase/classes/ExportBase.html#cancel"><code>cancel</code></a></p>
 <hr>
@@ -362,9 +362,6 @@ otherwise it will be bound to this <code>sap.ui.export.Spreadsheet</code> itself
 <blockquote>
 <p><strong>detachBeforeSave</strong>(<code>fnHandler</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the sap.ui.export.Spreadsheet beforeSave event of this
-<code>sap.ui.export.Spreadsheet</code>.
- The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnHandler</h5>
 <p><code>Function</code></p>
@@ -377,17 +374,20 @@ otherwise it will be bound to this <code>sap.ui.export.Spreadsheet</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Detaches event handler <code>fnFunction</code> from the sap.ui.export.Spreadsheet beforeSave event of this
+<code>sap.ui.export.Spreadsheet</code>.
+ The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>getMimeType()</h3>
 <blockquote>
 <p><strong>getMimeType</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the specific MIME type</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>MIME type for Office Open XML Spreadsheet</p>
 <h4>Since</h4>
 <p>1.112</p>
+<p>Returns the specific MIME type</p>
 <h4>Overrides</h4>
 <p><a href="../../ExportBase/classes/ExportBase.html"><code>ExportBase</code></a>.<a href="../../ExportBase/classes/ExportBase.html#getmimetype"><code>getMimeType</code></a></p>
 <hr>
@@ -395,8 +395,6 @@ otherwise it will be bound to this <code>sap.ui.export.Spreadsheet</code> itself
 <blockquote>
 <p><strong>processDataSource</strong>(<code>oDataSource</code>): <code>object</code></p>
 </blockquote>
-<p>Sets the data source configuration that will be used for exporting the data. If the passed parameter
-is null, the call will be ignored.</p>
 <h4>Parameters</h4>
 <h5>oDataSource</h5>
 <p><code>string</code> | <code>Object</code> | <code>any</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html"><code>ListBinding</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/model/TreeBinding/classes/TreeBinding.html"><code>TreeBinding</code></a></p>
@@ -409,10 +407,12 @@ a data source configuration, a <code>sap.ui.model.ListBinding</code> or <code>sa
 </ul>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Sets the data source configuration that will be used for exporting the data. If the passed parameter
+is null, the call will be ignored.</p>
 <h4>Overrides</h4>
 <p><a href="../../ExportBase/classes/ExportBase.html"><code>ExportBase</code></a>.<a href="../../ExportBase/classes/ExportBase.html#processdatasource"><code>processDataSource</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

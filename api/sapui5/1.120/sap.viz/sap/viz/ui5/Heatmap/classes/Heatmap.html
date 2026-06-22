@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Heatmap~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Heatmap~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="~~Class: Heatmap~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/Heatmap/classes/Heatmap.html">
 <meta property="og:title" content="~~Class: Heatmap~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Heatmap~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="~~Class: Heatmap~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/Heatmap/classes/Heatmap.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › <a href="../../../../../../sap.viz/sap/viz/ui5/Heatmap/README.html">Heatmap</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/Heatmap</a> / Heatmap</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/Heatmap</a> / Heatmap</p>
 <h1><del>Class: Heatmap</del></h1>
 <pre class="sig"><span class="kw">import</span> Heatmap <span class="kw">from</span> <span class="str">"sap/viz/ui5/Heatmap"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<p>Chart sap.viz.ui5.Heatmap</p>
 <h2>Since</h2>
 <p>1.7.2</p>
 <h2>Deprecated</h2>
@@ -52,6 +51,7 @@ and timely support. **</p>
 <p><strong>Note</strong>: As the feature set, design and API usage of VizFrame might differ from the old chart controls,
 make sure you evaluate it thoroughly before migration.
  (since 1.7.2) - Charting API is not finished yet and might change completely.</p>
+<p>Chart sap.viz.ui5.Heatmap</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../core/BaseChart/classes/BaseChart.html"><code>BaseChart</code></a></li>
@@ -147,11 +147,6 @@ passed in accordance with the following format.{name: &quot;deselectData&quot;,d
 <p><strong>attachHideTooltip</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:hideTooltip hideTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.viz.ui5.Heatmap</code> itself.</p>
-<p>This event is deprecated, please use hideDetail decoration (refer to properties: interaction.decorations)
-instead. Event fires when the mouse hover out of the specific part of chart, no data is passed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -169,16 +164,16 @@ object when firing the event</p>
 <h5>Deprecated</h5>
 <p>(since 1.19) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachHideTooltip</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:hideTooltip hideTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.viz.ui5.Heatmap</code> itself.</p>
 <p>This event is deprecated, please use hideDetail decoration (refer to properties: interaction.decorations)
 instead. Event fires when the mouse hover out of the specific part of chart, no data is passed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachHideTooltip</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -192,6 +187,11 @@ instead. Event fires when the mouse hover out of the specific part of chart, no 
 <h5>Deprecated</h5>
 <p>(since 1.19) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:hideTooltip hideTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.viz.ui5.Heatmap</code> itself.</p>
+<p>This event is deprecated, please use hideDetail decoration (refer to properties: interaction.decorations)
+instead. Event fires when the mouse hover out of the specific part of chart, no data is passed.</p>
 <hr>
 <h3><del>attachInitialized()</del></h3>
 <h4>Call Signature</h4>
@@ -311,16 +311,6 @@ bubble, tagcloud and scatter, there will be more than one values in one selected
 <p><strong>attachShowTooltip</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:showTooltip showTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.viz.ui5.Heatmap</code> itself.</p>
-<p>This event is deprecated, please use showDetail decoration (refer to properties: interaction.decorations)
-instead. Event fires when the mouse hover onto the specific part of chart, data context of tooltip would
-be passed in accordance with the following format.{name:&quot;showTooltip&quot;,data:{body:[{ //All measures
-name:&quot;...&quot;,val:[{//measure value is an array containing only one item value:&quot;...&quot;}]},&quot;...&quot;],footer:[{label:&quot;...&quot;,value:&quot;...&quot;},&quot;...&quot;],plotArea:{
-//this object specifies the plot area of the chart height:&quot;...&quot;,width:&quot;...&quot;,x:&quot;...&quot;,y:&quot;...&quot;},point:{
-//this object specifies a point which affects the position of tooltip x:&quot;...&quot;,y:&quot;...&quot;},selectedValues:...//this
-number specify how many values are selected}}</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -338,11 +328,6 @@ object when firing the event</p>
 <h5>Deprecated</h5>
 <p>(since 1.19) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachShowTooltip</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:showTooltip showTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.viz.ui5.Heatmap</code> itself.</p>
@@ -353,6 +338,11 @@ name:&quot;...&quot;,val:[{//measure value is an array containing only one item 
 //this object specifies the plot area of the chart height:&quot;...&quot;,width:&quot;...&quot;,x:&quot;...&quot;,y:&quot;...&quot;},point:{
 //this object specifies a point which affects the position of tooltip x:&quot;...&quot;,y:&quot;...&quot;},selectedValues:...//this
 number specify how many values are selected}}</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachShowTooltip</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -366,6 +356,16 @@ number specify how many values are selected}}</p>
 <h5>Deprecated</h5>
 <p>(since 1.19) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:showTooltip showTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.viz.ui5.Heatmap</code> itself.</p>
+<p>This event is deprecated, please use showDetail decoration (refer to properties: interaction.decorations)
+instead. Event fires when the mouse hover onto the specific part of chart, data context of tooltip would
+be passed in accordance with the following format.{name:&quot;showTooltip&quot;,data:{body:[{ //All measures
+name:&quot;...&quot;,val:[{//measure value is an array containing only one item value:&quot;...&quot;}]},&quot;...&quot;],footer:[{label:&quot;...&quot;,value:&quot;...&quot;},&quot;...&quot;],plotArea:{
+//this object specifies the plot area of the chart height:&quot;...&quot;,width:&quot;...&quot;,x:&quot;...&quot;,y:&quot;...&quot;},point:{
+//this object specifies a point which affects the position of tooltip x:&quot;...&quot;,y:&quot;...&quot;},selectedValues:...//this
+number specify how many values are selected}}</p>
 <hr>
 <h3><del>destroyDataLabel()</del></h3>
 <blockquote>
@@ -500,8 +500,6 @@ SAPUI5 delivery in one of the next releases.</p>
 <p><strong>detachHideTooltip</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:hideTooltip hideTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -515,6 +513,8 @@ SAPUI5 delivery in one of the next releases.</p>
 <h4>Deprecated</h4>
 <p>(since 1.19) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:hideTooltip hideTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachInitialized()</del></h3>
 <blockquote>
@@ -557,8 +557,6 @@ SAPUI5 delivery in one of the next releases.</p>
 <p><strong>detachShowTooltip</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:showTooltip showTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -572,13 +570,14 @@ SAPUI5 delivery in one of the next releases.</p>
 <h4>Deprecated</h4>
 <p>(since 1.19) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:showTooltip showTooltip event of this <code>sap.viz.ui5.Heatmap</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireDeselectData()</del></h3>
 <blockquote>
 <p><strong>fireDeselectData</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:deselectData deselectData to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -588,13 +587,13 @@ SAPUI5 delivery in one of the next releases.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:deselectData deselectData to attached listeners.</p>
 <hr>
 <h3><del>fireHideTooltip()</del></h3>
 <blockquote>
 <p><strong>fireHideTooltip</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:hideTooltip hideTooltip to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -607,13 +606,13 @@ SAPUI5 delivery in one of the next releases.</p>
 SAPUI5 delivery in one of the next releases.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:hideTooltip hideTooltip to attached listeners.</p>
 <hr>
 <h3><del>fireInitialized()</del></h3>
 <blockquote>
 <p><strong>fireInitialized</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:initialized initialized to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -623,13 +622,13 @@ SAPUI5 delivery in one of the next releases.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:initialized initialized to attached listeners.</p>
 <hr>
 <h3><del>fireSelectData()</del></h3>
 <blockquote>
 <p><strong>fireSelectData</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:selectData selectData to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -639,13 +638,13 @@ SAPUI5 delivery in one of the next releases.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectData selectData to attached listeners.</p>
 <hr>
 <h3><del>fireShowTooltip()</del></h3>
 <blockquote>
 <p><strong>fireShowTooltip</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:showTooltip showTooltip to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -658,6 +657,7 @@ SAPUI5 delivery in one of the next releases.</p>
 SAPUI5 delivery in one of the next releases.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:showTooltip showTooltip to attached listeners.</p>
 <hr>
 <h3><del>getDataLabel()</del></h3>
 <blockquote>
@@ -939,7 +939,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Heatmap</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Heatmap</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -964,6 +964,6 @@ used by this class</p>
 <p><a href="../../core/BaseChart/classes/BaseChart.html"><code>BaseChart</code></a>.<a href="../../core/BaseChart/classes/BaseChart.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

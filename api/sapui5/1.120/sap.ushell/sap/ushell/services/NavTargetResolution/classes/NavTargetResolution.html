@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Class: NavTargetResolution~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: NavTargetResolution~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: NavTargetResolution — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: NavTargetResolution — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/NavTargetResolution/classes/NavTargetResolution.html">
-<meta property="og:title" content="~~Class: NavTargetResolution~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: NavTargetResolution~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: NavTargetResolution — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: NavTargetResolution — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/NavTargetResolution/classes/NavTargetResolution.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../sap.ushell/sap/ushell/services/NavTargetResolution/README.html">NavTargetResolution</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/NavTargetResolution</a> / NavTargetResolution</p>
-<h1><del>Class: NavTargetResolution</del></h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/NavTargetResolution</a> / NavTargetResolution</p>
+<h1>Class: NavTargetResolution</h1>
 <pre class="sig"><span class="kw">import</span> NavTargetResolution <span class="kw">from</span> <span class="str">"sap/ushell/services/NavTargetResolution"</span>;</pre>
+<h2>Since</h2>
+<p>1.15.0</p>
 <p>The Unified Shell&#39;s internal navigation target resolution service.</p>
 <p><strong>Note:</strong> To retrieve a valid instance of this service, it is necessary to call <code>sap.ushell.Container.getServiceAsync(&quot;NavTargetResolution&quot;)</code>.
 For details, see sap.ushell.services.Container#getServiceAsync.</p>
@@ -45,10 +47,6 @@ For details, see sap.ushell.services.Container#getServiceAsync.</p>
 <p>configurations: <code>config : { allowTestUrlComponentConfig : true }</code> allow to redefine the Test-url, Test-local1,
 Test-local2 applications via url parameters (sap-ushell-test-local1-url= / sap-ushell-test-local1-additionalInformation=
 ... )</p>
-<h2>Since</h2>
-<p>1.15.0</p>
-<h2>Deprecated</h2>
-<p>(since 1.120)</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -57,7 +55,7 @@ Test-local2 applications via url parameters (sap-ushell-test-local1-url= / sap-u
 <h4>Returns</h4>
 <p><code>NavTargetResolution</code></p>
 <h2>Methods</h2>
-<h3><del>expandCompactHash()</del></h3>
+<h3>expandCompactHash()</h3>
 <blockquote>
 <p><strong>expandCompactHash</strong>(<code>sHashFragment</code>): <code>string</code></p>
 </blockquote>
@@ -73,14 +71,10 @@ given in <code>location.hash</code>)</p>
 <p><code>string</code></p>
 <p>A jQuery.Promise. Its <code>done()</code> function gets an expanded shell hash (in internal format)</p>
 <hr>
-<h3><del>isNavigationSupported()</del></h3>
+<h3>isNavigationSupported()</h3>
 <blockquote>
 <p><strong>isNavigationSupported</strong>(<code>aIntents</code>): <code>object</code></p>
 </blockquote>
-<p>Tells whether the given navigation intent(s) are supported for the given parameters Supported&quot; means
-that a valid navigation target is configured for the user for the given device form factor.</p>
-<p>This is effectively a test function for toExternal/ hrefForExternal. It function accepts
-the same input as toExternal/ hrefForExternal.</p>
 <h4>Parameters</h4>
 <h5>aIntents</h5>
 <p><code>object</code>[]</p>
@@ -155,8 +149,12 @@ response:
 </code></pre>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Tells whether the given navigation intent(s) are supported for the given parameters Supported&quot; means
+that a valid navigation target is configured for the user for the given device form factor.</p>
+<p>This is effectively a test function for toExternal/ hrefForExternal. It function accepts
+the same input as toExternal/ hrefForExternal.</p>
 <hr>
-<h3><del>resolveHashFragment()</del></h3>
+<h3>resolveHashFragment()</h3>
 <blockquote>
 <p><strong>resolveHashFragment</strong>(<code>sHashFragment</code>): <code>object</code></p>
 </blockquote>
@@ -196,13 +194,10 @@ or <code>undefined</code> in case the hash fragment was empty. Typically it cont
 result using the logic in navigationMode#getNavigationMode if none of the resolvers in the chain
 added it.  No navigation should occur when the promise is resolved to <code>undefined</code>.</p>
 <hr>
-<h3><del>resolveTarget()</del></h3>
+<h3>resolveTarget()</h3>
 <blockquote>
-<p><strong>resolveTarget</strong>(<code>oArgs</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>resolveTarget</strong>(<code>oArgs</code>): <code>Promise</code></p>
 </blockquote>
-<p>Resolves a navigation target taking into account the sap-system</p>
-<p>This function should be used by the NWBC browser in order to get a resolved target corresponding to a
-certain configuration object describing the target. Do not use this function for developing Fiori applications.</p>
 <h4>Parameters</h4>
 <h5>oArgs</h5>
 <p><code>object</code></p>
@@ -221,7 +216,7 @@ certain configuration object describing the target. Do not use this function for
   }
 </code></pre>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>A jQuery.Promise. Its <code>done()</code> function gets an object. Typically it contains the following
 information:</p>
 <pre><code class="language-javascript">
@@ -233,7 +228,10 @@ information:</p>
 </code></pre>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Resolves a navigation target taking into account the sap-system</p>
+<p>This function should be used by the NWBC browser in order to get a resolved target corresponding to a
+certain configuration object describing the target. Do not use this function for developing Fiori applications.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

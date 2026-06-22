@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: AdhocDiamond — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: AdhocDiamond — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: AdhocDiamond — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/AdhocDiamond/classes/AdhocDiamond.html">
 <meta property="og:title" content="Class: AdhocDiamond — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: AdhocDiamond — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: AdhocDiamond — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/AdhocDiamond/classes/AdhocDiamond.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/AdhocDiamond/README.html">AdhocDiamond</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/AdhocDiamond</a> / AdhocDiamond</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/AdhocDiamond</a> / AdhocDiamond</p>
 <h1>Class: AdhocDiamond</h1>
 <pre class="sig"><span class="kw">import</span> AdhocDiamond <span class="kw">from</span> <span class="str">"sap/gantt/simple/AdhocDiamond"</span>;</pre>
-<p>The AdhocDiamond class contains properties to draw an AdhocDimond on the Gantt header for every AdhocLine
-present in the Gantt chart</p>
 <h2>Since</h2>
 <p>1.84</p>
+<p>The AdhocDiamond class contains properties to draw an AdhocDimond on the Gantt header for every AdhocLine
+present in the Gantt chart</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../BaseDiamond/classes/BaseDiamond.html"><code>BaseDiamond</code></a></li>
@@ -258,7 +258,6 @@ otherwise it will be bound to this <code>sap.gantt.simple.AdhocDiamond</code> it
 <blockquote>
 <p><strong>fireMouseEnter</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:mouseEnter mouseEnter to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -268,12 +267,12 @@ otherwise it will be bound to this <code>sap.gantt.simple.AdhocDiamond</code> it
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:mouseEnter mouseEnter to attached listeners.</p>
 <hr>
 <h3>fireMouseLeave()</h3>
 <blockquote>
 <p><strong>fireMouseLeave</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:mouseLeave mouseLeave to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -283,12 +282,12 @@ otherwise it will be bound to this <code>sap.gantt.simple.AdhocDiamond</code> it
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:mouseLeave mouseLeave to attached listeners.</p>
 <hr>
 <h3>firePress()</h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -298,6 +297,7 @@ otherwise it will be bound to this <code>sap.gantt.simple.AdhocDiamond</code> it
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -314,7 +314,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>AdhocDiamond</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>AdhocDiamond</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -338,6 +338,6 @@ used by this class</p>
 <p><a href="../../BaseDiamond/classes/BaseDiamond.html"><code>BaseDiamond</code></a>.<a href="../../BaseDiamond/classes/BaseDiamond.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

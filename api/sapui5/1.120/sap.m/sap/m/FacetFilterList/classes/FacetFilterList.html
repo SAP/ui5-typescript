@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FacetFilterList — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: FacetFilterList — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: FacetFilterList — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/FacetFilterList/classes/FacetFilterList.html">
 <meta property="og:title" content="Class: FacetFilterList — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: FacetFilterList — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: FacetFilterList — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/FacetFilterList/classes/FacetFilterList.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/FacetFilterList/README.html">FacetFilterList</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FacetFilterList</a> / FacetFilterList</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FacetFilterList</a> / FacetFilterList</p>
 <h1>Class: FacetFilterList</h1>
 <pre class="sig"><span class="kw">import</span> FacetFilterList <span class="kw">from</span> <span class="str">"sap/m/FacetFilterList"</span>;</pre>
 <p>Represents a list of values for the sap.m.FacetFilter control.</p>
@@ -188,15 +188,6 @@ filtering behavior has to be defined at application level inside the <code>listO
 <blockquote>
 <p><strong>attachSearch</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:search search event of this <code>sap.m.FacetFilterList</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.FacetFilterList</code> itself.</p>
-<p>Triggered after the Search button is pressed or by pressing Enter in search input field.</p>
-<p>The default filtering behavior of the control can be prevented by calling <code>sap.ui.base.Event.prototype.preventDefault</code>
-function in the <code>search</code> event handler function. Preventing the default behavior is useful in cases when
-items aggregation could be taking long time fetching from the OData model. As a result, no list items
-are loaded initially. If the default filtering behavior is prevented then filtering behavior has to be
-defined at application level inside the <code>search</code> event handler function.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -213,10 +204,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.76</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSearch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:search search event of this <code>sap.m.FacetFilterList</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.FacetFilterList</code> itself.</p>
@@ -226,6 +213,10 @@ function in the <code>search</code> event handler function. Preventing the defau
 items aggregation could be taking long time fetching from the OData model. As a result, no list items
 are loaded initially. If the default filtering behavior is prevented then filtering behavior has to be
 defined at application level inside the <code>search</code> event handler function.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSearch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -238,6 +229,15 @@ defined at application level inside the <code>search</code> event handler functi
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.76</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:search search event of this <code>sap.m.FacetFilterList</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.FacetFilterList</code> itself.</p>
+<p>Triggered after the Search button is pressed or by pressing Enter in search input field.</p>
+<p>The default filtering behavior of the control can be prevented by calling <code>sap.ui.base.Event.prototype.preventDefault</code>
+function in the <code>search</code> event handler function. Preventing the default behavior is useful in cases when
+items aggregation could be taking long time fetching from the OData model. As a result, no list items
+are loaded initially. If the default filtering behavior is prevented then filtering behavior has to be
+defined at application level inside the <code>search</code> event handler function.</p>
 <hr>
 <h3>detachListClose()</h3>
 <blockquote>
@@ -277,8 +277,6 @@ defined at application level inside the <code>search</code> event handler functi
 <blockquote>
 <p><strong>detachSearch</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:search search event of this <code>sap.m.FacetFilterList</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -291,12 +289,13 @@ defined at application level inside the <code>search</code> event handler functi
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.76</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:search search event of this <code>sap.m.FacetFilterList</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireListClose()</h3>
 <blockquote>
 <p><strong>fireListClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:listClose listClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FacetFilterList$ListCloseEventParameters.html"><code>FacetFilterList$ListCloseEventParameters</code></a></p>
@@ -306,14 +305,12 @@ defined at application level inside the <code>search</code> event handler functi
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:listClose listClose to attached listeners.</p>
 <hr>
 <h3>fireListOpen()</h3>
 <blockquote>
 <p><strong>fireListOpen</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:listOpen listOpen to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -323,14 +320,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:listOpen listOpen to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireSearch()</h3>
 <blockquote>
 <p><strong>fireSearch</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:search search to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FacetFilterList$SearchEventParameters.html"><code>FacetFilterList$SearchEventParameters</code></a></p>
@@ -342,6 +339,9 @@ event object. The return value of this method indicates whether the default acti
 <p>1.76</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:search search to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>getActive()</h3>
 <blockquote>
@@ -404,9 +404,6 @@ selected.</p>
 <blockquote>
 <p><strong>getMultiSelect</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getMultiSelect multiSelect.</p>
-<p>Specifies whether multiple or single selection is used.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>multiSelect</code></p>
@@ -414,31 +411,34 @@ selected.</p>
 <p>(since 1.20.0) - replaced by <code>setMode</code> method. <code>FacetFilterList</code> overrides the <code>setMode</code>
 method to restrict the possible modes to <code>MultiSelect</code> and <code>SingleSelectMaster</code>. All other modes are
 ignored and will not be set.</p>
+<p>Gets current value of property #getMultiSelect multiSelect.</p>
+<p>Specifies whether multiple or single selection is used.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getRetainListSequence()</h3>
 <blockquote>
 <p><strong>getRetainListSequence</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getRetainListSequence retainListSequence.</p>
-<p>Retains the list sequence if it is inactive and made active again.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>retainListSequence</code></p>
 <h4>Since</h4>
 <p>1.22.1</p>
+<p>Gets current value of property #getRetainListSequence retainListSequence.</p>
+<p>Retains the list sequence if it is inactive and made active again.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSelectedKeys()</h3>
 <blockquote>
 <p><strong>getSelectedKeys</strong>(): <code>Record</code>&lt;<code>string</code>, <code>string</code> | <code>null</code>&gt;</p>
 </blockquote>
-<p>Returns the keys of the selected elements as an associative array. An empty object is returned if no
-items are selected.</p>
 <h4>Returns</h4>
 <p><code>Record</code>&lt;<code>string</code>, <code>string</code> | <code>null</code>&gt;</p>
 <p>Object with the selected keys</p>
 <h4>Since</h4>
 <p>1.20.3</p>
+<p>Returns the keys of the selected elements as an associative array. An empty object is returned if no
+items are selected.</p>
 <hr>
 <h3>getSequence()</h3>
 <blockquote>
@@ -456,14 +456,14 @@ by ascending order of sequence.</p>
 <blockquote>
 <p><strong>getShowRemoveFacetIcon</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowRemoveFacetIcon showRemoveFacetIcon.</p>
-<p>Specifies whether remove icon for facet is visible or hidden.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showRemoveFacetIcon</code></p>
 <h4>Since</h4>
 <p>1.20.4</p>
+<p>Gets current value of property #getShowRemoveFacetIcon showRemoveFacetIcon.</p>
+<p>Specifies whether remove icon for facet is visible or hidden.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -491,7 +491,6 @@ type is set to <code>Simple</code>. It is also displayed as a list item in the f
 <blockquote>
 <p><strong>removeSelectedKey</strong>(<code>sKey</code>, <code>sText</code>): <code>void</code></p>
 </blockquote>
-<p>Removes the specified key from the selected keys cache and deselects the item.</p>
 <h4>Parameters</h4>
 <h5>sKey</h5>
 <p><code>string</code></p>
@@ -505,16 +504,17 @@ will be used as the key.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.20.4</p>
+<p>Removes the specified key from the selected keys cache and deselects the item.</p>
 <hr>
 <h3>removeSelectedKeys()</h3>
 <blockquote>
 <p><strong>removeSelectedKeys</strong>(): <code>void</code></p>
 </blockquote>
-<p>Removes all selected keys from the selected keys cache and deselects all items.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.20.4</p>
+<p>Removes all selected keys from the selected keys cache and deselects all items.</p>
 <hr>
 <h3>setActive()</h3>
 <blockquote>
@@ -618,10 +618,6 @@ the mode will not be changed.</p>
 <blockquote>
 <p><strong>setRetainListSequence</strong>(<code>bRetainListSequence?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRetainListSequence retainListSequence.</p>
-<p>Retains the list sequence if it is inactive and made active again.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bRetainListSequence?</h5>
 <p><code>boolean</code></p>
@@ -631,16 +627,15 @@ the mode will not be changed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.22.1</p>
+<p>Sets a new value for property #getRetainListSequence retainListSequence.</p>
+<p>Retains the list sequence if it is inactive and made active again.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSelectedKeys()</h3>
 <blockquote>
 <p><strong>setSelectedKeys</strong>(<code>oKeys</code>): <code>void</code></p>
 </blockquote>
-<p>Used to pre-select FacetFilterItems, such as when restoring FacetFilterList selections from a variant.
-Keys are cached separately from the actual FacetFilterItems so that they remain even when the physical
-items are removed by filtering or sorting. If oKeys is <code>undefined</code>, <code>null</code>, or {} (empty object) then
-all items will be deselected. After this method completes, only those items with matching keys will be
-selected. All other items in the list will be deselected.</p>
 <h4>Parameters</h4>
 <h5>oKeys</h5>
 <p><code>Record</code>&lt;<code>string</code>, <code>string</code> | <code>null</code>&gt;</p>
@@ -653,6 +648,11 @@ the text.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.20.3</p>
+<p>Used to pre-select FacetFilterItems, such as when restoring FacetFilterList selections from a variant.
+Keys are cached separately from the actual FacetFilterItems so that they remain even when the physical
+items are removed by filtering or sorting. If oKeys is <code>undefined</code>, <code>null</code>, or {} (empty object) then
+all items will be deselected. After this method completes, only those items with matching keys will be
+selected. All other items in the list will be deselected.</p>
 <hr>
 <h3>setSequence()</h3>
 <blockquote>
@@ -675,10 +675,6 @@ by ascending order of sequence.</p>
 <blockquote>
 <p><strong>setShowRemoveFacetIcon</strong>(<code>bShowRemoveFacetIcon?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowRemoveFacetIcon showRemoveFacetIcon.</p>
-<p>Specifies whether remove icon for facet is visible or hidden.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowRemoveFacetIcon?</h5>
 <p><code>boolean</code></p>
@@ -688,6 +684,10 @@ by ascending order of sequence.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.20.4</p>
+<p>Sets a new value for property #getShowRemoveFacetIcon showRemoveFacetIcon.</p>
+<p>Specifies whether remove icon for facet is visible or hidden.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -736,7 +736,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>FacetFilterList</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>FacetFilterList</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -760,6 +760,6 @@ used by this class</p>
 <p><a href="../../List/classes/List.html"><code>List</code></a>.<a href="../../List/classes/List.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

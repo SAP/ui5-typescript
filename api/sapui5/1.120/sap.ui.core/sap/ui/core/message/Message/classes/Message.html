@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Message — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Message — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Message — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/message/Message/classes/Message.html">
 <meta property="og:title" content="Class: Message — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Message — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Message — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/message/Message/classes/Message.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › message › <a href="../../../../../../../sap.ui.core/sap/ui/core/message/Message/README.html">Message</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/message/Message</a> / Message</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/message/Message</a> / Message</p>
 <h1>Class: Message</h1>
 <pre class="sig"><span class="kw">import</span> Message <span class="kw">from</span> <span class="str">"sap/ui/core/message/Message"</span>;</pre>
 <p>Base class for all SAPUI5 Objects.</p>
@@ -94,7 +94,7 @@ targets. The syntax is MessageProcessor dependent. Read the documentation of the
 <p><code>object</code></p>
 <p>An object containing technical details for a message</p>
 <h6>type?</h6>
-<p><code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code> | <a href="../../MessageType/enumerations/MessageType.html"><code>MessageType</code></a></p>
+<p><a href="../../../library/enumerations/MessageType.html"><code>MessageType</code></a></p>
 <p>The message type</p>
 <h4>Returns</h4>
 <p><code>Message</code></p>
@@ -213,23 +213,23 @@ by Date.now().</p>
 <blockquote>
 <p><strong>getTarget</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the message target or the first target if the message has multiple targets.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The message target</p>
 <h4>Deprecated</h4>
 <p>(since 1.79.0) - As a message may have multiple targets, use #getTargets instead</p>
+<p>Returns the message target or the first target if the message has multiple targets.</p>
 <hr>
 <h3>getTargets()</h3>
 <blockquote>
 <p><strong>getTargets</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns the targets of this message.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>The message targets; empty array if the message has no targets</p>
 <h4>Since</h4>
 <p>1.79</p>
+<p>Returns the targets of this message.</p>
 <hr>
 <h3>getTechnical()</h3>
 <blockquote>
@@ -251,11 +251,11 @@ by Date.now().</p>
 <hr>
 <h3>getType()</h3>
 <blockquote>
-<p><strong>getType</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code> | <a href="../../MessageType/enumerations/MessageType.html"><code>MessageType</code></a></p>
+<p><strong>getType</strong>(): <a href="../../../library/enumerations/MessageType.html"><code>MessageType</code></a></p>
 </blockquote>
 <p>Returns the message type</p>
 <h4>Returns</h4>
-<p><code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code> | <a href="../../MessageType/enumerations/MessageType.html"><code>MessageType</code></a></p>
+<p><a href="../../../library/enumerations/MessageType.html"><code>MessageType</code></a></p>
 <p>type</p>
 <hr>
 <h3>setAdditionalText()</h3>
@@ -359,8 +359,6 @@ Date.now().</p>
 <blockquote>
 <p><strong>setTarget</strong>(<code>sTarget</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the message target; in case the message has multiple targets, sets the first target of the message.
-The syntax is MessageProcessor dependent. See the documentation of the respective MessageProcessor.</p>
 <h4>Parameters</h4>
 <h5>sTarget</h5>
 <p><code>string</code></p>
@@ -369,12 +367,13 @@ The syntax is MessageProcessor dependent. See the documentation of the respectiv
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.79.0) - As a message may have multiple targets, use #setTargets instead</p>
+<p>Sets the message target; in case the message has multiple targets, sets the first target of the message.
+The syntax is MessageProcessor dependent. See the documentation of the respective MessageProcessor.</p>
 <hr>
 <h3>setTargets()</h3>
 <blockquote>
 <p><strong>setTargets</strong>(<code>aNewTargets</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the targets of this message.</p>
 <h4>Parameters</h4>
 <h5>aNewTargets</h5>
 <p><code>string</code>[]</p>
@@ -383,6 +382,7 @@ The syntax is MessageProcessor dependent. See the documentation of the respectiv
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.79</p>
+<p>Sets the targets of this message.</p>
 <hr>
 <h3>setTechnical()</h3>
 <blockquote>
@@ -415,7 +415,7 @@ The syntax is MessageProcessor dependent. See the documentation of the respectiv
 <p>Set message type</p>
 <h4>Parameters</h4>
 <h5>sType</h5>
-<p><code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code> | <a href="../../MessageType/enumerations/MessageType.html"><code>MessageType</code></a></p>
+<p><a href="../../../library/enumerations/MessageType.html"><code>MessageType</code></a></p>
 <p>The Message type</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
@@ -435,7 +435,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Message</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Message</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -457,6 +457,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

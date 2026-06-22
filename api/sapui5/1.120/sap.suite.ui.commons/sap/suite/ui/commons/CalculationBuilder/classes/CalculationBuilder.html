@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CalculationBuilder — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: CalculationBuilder — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: CalculationBuilder — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/CalculationBuilder/classes/CalculationBuilder.html">
 <meta property="og:title" content="Class: CalculationBuilder — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: CalculationBuilder — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: CalculationBuilder — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/CalculationBuilder/classes/CalculationBuilder.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/CalculationBuilder/README.html">CalculationBuilder</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/CalculationBuilder</a> / CalculationBuilder</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/CalculationBuilder</a> / CalculationBuilder</p>
 <h1>Class: CalculationBuilder</h1>
 <pre class="sig"><span class="kw">import</span> CalculationBuilder <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/CalculationBuilder"</span>;</pre>
+<h2>Since</h2>
+<p>1.56.0</p>
 <p>Calculation Builder allows you to perform arithmetic calculations on literals and variables using standard
 arithmetic operators as well as most common logical operators and functions.
  You can customize the sets of variables and functions that are visible in the calculation builder and
 introduce your own custom functions, as needed.
  Arithmetic expressions can be entered using a touch-friendly visual editor or a textual editor that
 provides autocomplete suggestions for variables and checks the expression syntax as you type.</p>
-<h2>Since</h2>
-<p>1.56.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -445,7 +445,6 @@ this <code>sap.suite.ui.commons.CalculationBuilder</code>.</p>
 <blockquote>
 <p><strong>fireAfterValidation</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterValidation afterValidation to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -455,12 +454,12 @@ this <code>sap.suite.ui.commons.CalculationBuilder</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterValidation afterValidation to attached listeners.</p>
 <hr>
 <h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -470,12 +469,12 @@ this <code>sap.suite.ui.commons.CalculationBuilder</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>fireValidateFunction()</h3>
 <blockquote>
 <p><strong>fireValidateFunction</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:validateFunction validateFunction to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/CalculationBuilder$ValidateFunctionEventParameters.html"><code>CalculationBuilder$ValidateFunctionEventParameters</code></a></p>
@@ -485,6 +484,7 @@ this <code>sap.suite.ui.commons.CalculationBuilder</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:validateFunction validateFunction to attached listeners.</p>
 <hr>
 <h3>getAllowComparisonOperators()</h3>
 <blockquote>
@@ -512,27 +512,27 @@ this <code>sap.suite.ui.commons.CalculationBuilder</code>.</p>
 <blockquote>
 <p><strong>getAllowStringConstants</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets the current value of property <code>allowStringConstants</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>allowStringConstants</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.77.0) - replaced by sap.suite.ui.commons.CalculationBuilder#getAllowStringLiterals.</p>
+<p>Gets the current value of property <code>allowStringConstants</code>.</p>
 <hr>
 <h3>getAllowStringLiterals()</h3>
 <blockquote>
 <p><strong>getAllowStringLiterals</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAllowStringLiterals allowStringLiterals.</p>
-<p>Defines whether string literals are allowed.
- If set to <code>true</code>, the calculation builder doesn&#39;t validate strings as errors.
- Number literals are also allowed regardless of this setting.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>allowStringLiterals</code></p>
 <h4>Since</h4>
 <p>1.77.0</p>
+<p>Gets current value of property #getAllowStringLiterals allowStringLiterals.</p>
+<p>Defines whether string literals are allowed.
+ If set to <code>true</code>, the calculation builder doesn&#39;t validate strings as errors.
+ Number literals are also allowed regardless of this setting.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getAllowSuggestions()</h3>
 <blockquote>
@@ -1035,7 +1035,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setAllowStringConstants</strong>(<code>bAllowStringConstants</code>): <code>CalculationBuilder</code></p>
 </blockquote>
-<p>Sets a new value for property <code>allowStringConstants</code>.</p>
 <h4>Parameters</h4>
 <h5>bAllowStringConstants</h5>
 <p><code>boolean</code></p>
@@ -1045,17 +1044,12 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.77.0) - replaced by sap.suite.ui.commons.CalculationBuilder#setAllowStringLiterals.</p>
+<p>Sets a new value for property <code>allowStringConstants</code>.</p>
 <hr>
 <h3>setAllowStringLiterals()</h3>
 <blockquote>
 <p><strong>setAllowStringLiterals</strong>(<code>bAllowStringLiterals?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAllowStringLiterals allowStringLiterals.</p>
-<p>Defines whether string literals are allowed.
- If set to <code>true</code>, the calculation builder doesn&#39;t validate strings as errors.
- Number literals are also allowed regardless of this setting.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAllowStringLiterals?</h5>
 <p><code>boolean</code></p>
@@ -1065,6 +1059,12 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.77.0</p>
+<p>Sets a new value for property #getAllowStringLiterals allowStringLiterals.</p>
+<p>Defines whether string literals are allowed.
+ If set to <code>true</code>, the calculation builder doesn&#39;t validate strings as errors.
+ Number literals are also allowed regardless of this setting.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setAllowSuggestions()</h3>
 <blockquote>
@@ -1296,7 +1296,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>CalculationBuilder</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>CalculationBuilder</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1320,6 +1320,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

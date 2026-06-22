@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ResponsiveGridLayoutSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ResponsiveGridLayoutSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $ResponsiveGridLayoutSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.layout/sap/ui/layout/form/ResponsiveGridLayout/interfaces/$ResponsiveGridLayoutSettings.html">
 <meta property="og:title" content="Interface: $ResponsiveGridLayoutSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ResponsiveGridLayoutSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $ResponsiveGridLayoutSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.layout/sap/ui/layout/form/ResponsiveGridLayout/interfaces/$ResponsiveGridLayoutSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.layout/README.html">sap.ui.layout</a> › sap › ui › layout › form › <a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/ResponsiveGridLayout/README.html">ResponsiveGridLayout</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/ResponsiveGridLayout</a> / $ResponsiveGridLayoutSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/ResponsiveGridLayout</a> / $ResponsiveGridLayoutSettings</p>
 <h1>Interface: $ResponsiveGridLayoutSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ResponsiveGridLayoutSettings } <span class="kw">from</span> <span class="str">"sap/ui/layout/form/ResponsiveGridLayout"</span>;</pre>
-<p>Describes the settings that can be provided to the ResponsiveGridLayout constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../FormLayout/interfaces/$FormLayoutSettings.html"><code>$FormLayoutSettings</code></a></li>
@@ -48,6 +47,8 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>adjustLabelSpan?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>If set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the number of sap.ui.layout.form.FormContainer FormContainers
 in one row. If only one sap.ui.layout.form.FormContainer FormContainer is displayed in one row,
 <code>labelSpanM</code> is used to define the size of the label. This is the same for medium and large <code>Forms</code>.
@@ -56,149 +57,147 @@ and multiple-column rows are used in the same sap.ui.layout.form.Form Form (beca
 has its own sap.ui.layout.Grid Grid inside).</p>
 <p>If not set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the sap.ui.layout.form.Form Form
 size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t matter in this case.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>breakpointL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>breakpointL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Breakpoint (in pixel) between Medium size and Large size.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Breakpoint (in pixel) between Medium size and Large size.</p>
 <hr>
 <h3>breakpointM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>breakpointM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Breakpoint (in pixel) between Small size and Medium size.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Breakpoint (in pixel) between Small size and Medium size.</p>
 <hr>
 <h3>breakpointXL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>breakpointXL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Breakpoint (in pixel) between large size and extra large (XL) size.</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Breakpoint (in pixel) between large size and extra large (XL) size.</p>
 <hr>
 <h3>columnsL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columnsL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Number of columns for large size.</p>
-<p>The number of columns for large size must not be smaller than the number of columns for medium size.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Number of columns for large size.</p>
+<p>The number of columns for large size must not be smaller than the number of columns for medium size.</p>
 <hr>
 <h3>columnsM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columnsM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Number of columns for medium size.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Number of columns for medium size.</p>
 <hr>
 <h3>columnsXL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columnsXL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Number of columns for extra large size.</p>
 <p>The number of columns for extra large size must not be smaller than the number of columns for large size.
 <strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>columnsL</code> value
 is used (from the backward compatibility reasons).</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>emptySpanL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>emptySpanL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Number of grid cells that are empty at the end of each line on large size.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Number of grid cells that are empty at the end of each line on large size.</p>
 <hr>
 <h3>emptySpanM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>emptySpanM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Number of grid cells that are empty at the end of each line on medium size.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Number of grid cells that are empty at the end of each line on medium size.</p>
 <hr>
 <h3>emptySpanS?</h3>
 <blockquote>
 <p><code>optional</code> <strong>emptySpanS?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Number of grid cells that are empty at the end of each line on small size.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Number of grid cells that are empty at the end of each line on small size.</p>
 <hr>
 <h3>emptySpanXL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>emptySpanXL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Number of grid cells that are empty at the end of each line on extra large size.</p>
 <p><strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value
 is used.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>labelSpanL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>labelSpanL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16.3</p>
 <p>Default span for labels in large size.</p>
 <p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is only used if more than 1 sap.ui.layout.form.FormContainer FormContainer
 is in one line. If only 1 sap.ui.layout.form.FormContainer FormContainer is in the line, then
 the <code>labelSpanM</code> value is used.</p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <hr>
 <h3>labelSpanM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>labelSpanM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16.3</p>
 <p>Default span for labels in medium size.</p>
 <p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set this property is used for full-size sap.ui.layout.form.FormContainer FormContainers.
 If more than one sap.ui.layout.form.FormContainer FormContainer is in one line, <code>labelSpanL</code>
 is used.</p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <hr>
 <h3>labelSpanS?</h3>
 <blockquote>
 <p><code>optional</code> <strong>labelSpanS?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Default span for labels in small size.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Default span for labels in small size.</p>
 <hr>
 <h3>labelSpanXL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>labelSpanXL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Default span for labels in extra large size.</p>
 <p><strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>labelSpanL</code> value
 is used.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>singleContainerFullSize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>singleContainerFullSize?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>If the sap.ui.layout.form.Form Form contains only one single sap.ui.layout.form.FormContainer FormContainer
 and this property is set, the sap.ui.layout.form.FormContainer FormContainer is displayed using
 the full size of the sap.ui.layout.form.Form Form. In this case the properties <code>columnsXL</code>, <code>columnsL</code>
 and <code>columnsM</code> are ignored.</p>
 <p>In all other cases the sap.ui.layout.form.FormContainer FormContainer is displayed in the size
 of one column.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

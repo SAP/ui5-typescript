@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NavigationPopoverHandler — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: NavigationPopoverHandler — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: NavigationPopoverHandler — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/navpopover/NavigationPopoverHandler/classes/NavigationPopoverHandler.html">
 <meta property="og:title" content="Class: NavigationPopoverHandler — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: NavigationPopoverHandler — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: NavigationPopoverHandler — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/navpopover/NavigationPopoverHandler/classes/NavigationPopoverHandler.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › navpopover › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/navpopover/NavigationPopoverHandler/README.html">NavigationPopoverHandler</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/navpopover/NavigationPopoverHandler</a> / NavigationPopoverHandler</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/navpopover/NavigationPopoverHandler</a> / NavigationPopoverHandler</p>
 <h1>Class: NavigationPopoverHandler</h1>
 <pre class="sig"><span class="kw">import</span> NavigationPopoverHandler <span class="kw">from</span> <span class="str">"sap/ui/comp/navpopover/NavigationPopoverHandler"</span>;</pre>
 <p>The NavigationPopoverHandler control determines navigation targets for a semantic object and shows them
@@ -88,13 +88,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachBeforePopoverOpens</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforePopoverOpens beforePopoverOpens event
-of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code> itself.</p>
-<p>Event is fired before the navigation popover opens and before navigation target links are getting retrieved.
-Event can be used to change the parameters used to retrieve the navigation targets. In case of NavigationPopoverHandler,
-the <code>beforePopoverOpens</code> is fired after the link has been clicked.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -112,10 +105,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforePopoverOpens</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforePopoverOpens beforePopoverOpens event
 of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -123,6 +112,10 @@ otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopove
 <p>Event is fired before the navigation popover opens and before navigation target links are getting retrieved.
 Event can be used to change the parameters used to retrieve the navigation targets. In case of NavigationPopoverHandler,
 the <code>beforePopoverOpens</code> is fired after the link has been clicked.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforePopoverOpens</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -136,18 +129,19 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforePopoverOpens beforePopoverOpens event
+of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code> itself.</p>
+<p>Event is fired before the navigation popover opens and before navigation target links are getting retrieved.
+Event can be used to change the parameters used to retrieve the navigation targets. In case of NavigationPopoverHandler,
+the <code>beforePopoverOpens</code> is fired after the link has been clicked.</p>
 <hr>
 <h3>attachInnerNavigate()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachInnerNavigate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:innerNavigate innerNavigate event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code> itself.</p>
-<p>This event is fired after a navigation link on the navigation popover has been clicked. This event is
-only fired, if the user left-clicks the link. Right-clicking the link and selecting &#39;Open in New Window&#39;
-etc. in the context menu does not fire the event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -165,16 +159,16 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachInnerNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:innerNavigate innerNavigate event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code> itself.</p>
 <p>This event is fired after a navigation link on the navigation popover has been clicked. This event is
 only fired, if the user left-clicks the link. Right-clicking the link and selecting &#39;Open in New Window&#39;
 etc. in the context menu does not fire the event.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachInnerNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -188,18 +182,18 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:innerNavigate innerNavigate event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code> itself.</p>
+<p>This event is fired after a navigation link on the navigation popover has been clicked. This event is
+only fired, if the user left-clicks the link. Right-clicking the link and selecting &#39;Open in New Window&#39;
+etc. in the context menu does not fire the event.</p>
 <hr>
 <h3>attachNavigationTargetsObtained()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigationTargetsObtained</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigationTargetsObtained navigationTargetsObtained
-event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code> itself.</p>
-<p>After the navigation targets are retrieved, <code>navigationTargetsObtained</code> is fired and provides the possibility
-to change the targets.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -217,16 +211,16 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavigationTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navigationTargetsObtained navigationTargetsObtained
 event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code> itself.</p>
 <p>After the navigation targets are retrieved, <code>navigationTargetsObtained</code> is fired and provides the possibility
 to change the targets.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigationTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -240,14 +234,17 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigationTargetsObtained navigationTargetsObtained
+event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code> itself.</p>
+<p>After the navigation targets are retrieved, <code>navigationTargetsObtained</code> is fired and provides the possibility
+to change the targets.</p>
 <hr>
 <h3>detachBeforePopoverOpens()</h3>
 <blockquote>
 <p><strong>detachBeforePopoverOpens</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforePopoverOpens beforePopoverOpens event
-of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -260,14 +257,14 @@ of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforePopoverOpens beforePopoverOpens event
+of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachInnerNavigate()</h3>
 <blockquote>
 <p><strong>detachInnerNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:innerNavigate innerNavigate event of this
-<code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -280,14 +277,14 @@ of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:innerNavigate innerNavigate event of this
+<code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachNavigationTargetsObtained()</h3>
 <blockquote>
 <p><strong>detachNavigationTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigationTargetsObtained navigationTargetsObtained
-event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -300,12 +297,14 @@ event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigationTargetsObtained navigationTargetsObtained
+event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireBeforePopoverOpens()</h3>
 <blockquote>
 <p><strong>fireBeforePopoverOpens</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:beforePopoverOpens beforePopoverOpens to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NavigationPopoverHandler$BeforePopoverOpensEventParameters.html"><code>NavigationPopoverHandler$BeforePopoverOpensEventParameters</code></a></p>
@@ -317,12 +316,12 @@ event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>1.36.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforePopoverOpens beforePopoverOpens to attached listeners.</p>
 <hr>
 <h3>fireInnerNavigate()</h3>
 <blockquote>
 <p><strong>fireInnerNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:innerNavigate innerNavigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NavigationPopoverHandler$InnerNavigateEventParameters.html"><code>NavigationPopoverHandler$InnerNavigateEventParameters</code></a></p>
@@ -334,12 +333,12 @@ event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>1.36.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:innerNavigate innerNavigate to attached listeners.</p>
 <hr>
 <h3>fireNavigationTargetsObtained()</h3>
 <blockquote>
 <p><strong>fireNavigationTargetsObtained</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:navigationTargetsObtained navigationTargetsObtained to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NavigationPopoverHandler$NavigationTargetsObtainedEventParameters.html"><code>NavigationPopoverHandler$NavigationTargetsObtainedEventParameters</code></a></p>
@@ -351,24 +350,30 @@ event of this <code>sap.ui.comp.navpopover.NavigationPopoverHandler</code>.</p>
 <p>1.36.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navigationTargetsObtained navigationTargetsObtained to attached listeners.</p>
 <hr>
 <h3>getAdditionalSemanticObjects()</h3>
 <blockquote>
 <p><strong>getAdditionalSemanticObjects</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Gets current value of property #getAdditionalSemanticObjects additionalSemanticObjects.</p>
-<p>Names of additional semantic objects which are used to determine target navigations.</p>
-<p>Default value is <code>[]</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>Value of property <code>additionalSemanticObjects</code></p>
 <h4>Since</h4>
 <p>1.42.0</p>
+<p>Gets current value of property #getAdditionalSemanticObjects additionalSemanticObjects.</p>
+<p>Names of additional semantic objects which are used to determine target navigations.</p>
+<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>getBeforeNavigationCallback()</h3>
 <blockquote>
 <p><strong>getBeforeNavigationCallback</strong>(): <code>Function</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Value of property <code>beforeNavigationCallback</code></p>
+<h4>Since</h4>
+<p>1.75.0</p>
 <p>Gets current value of property #getBeforeNavigationCallback beforeNavigationCallback.</p>
 <p>Function that is called before the actual navigation happens. This function has to return a promise resolving
 into a Boolean value for which the navigation will wait. If the Boolean value is <code>true</code>, the navigation
@@ -379,108 +384,101 @@ will be processed. The <code>beforeNavigationCallback(oNavigationInfo)</code> pa
  - {String} semanticObject: Name of the `SemanticObject` of the navigation intent
  - {Object} semanticAttributes: Object containing the `SemanticAttributes` of the navigation intent
 </code></pre>
-<h4>Returns</h4>
-<p><code>Function</code></p>
-<p>Value of property <code>beforeNavigationCallback</code></p>
-<h4>Since</h4>
-<p>1.75.0</p>
 <hr>
 <h3>getContactAnnotationPath()</h3>
 <blockquote>
 <p><strong>getContactAnnotationPath</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getContactAnnotationPath contactAnnotationPath.</p>
-<p>Navigation property that points from the current to the related entity type where the com.sap.vocabularies.Communication.v1.Contact
-annotation is defined, for example, <code>&#39;to_Supplier&#39;</code>. An empty string means that the related entity type
-is the current one.</p>
-<p>Default value is <code>undefined</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>contactAnnotationPath</code></p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Gets current value of property #getContactAnnotationPath contactAnnotationPath.</p>
+<p>Navigation property that points from the current to the related entity type where the com.sap.vocabularies.Communication.v1.Contact
+annotation is defined, for example, <code>&#39;to_Supplier&#39;</code>. An empty string means that the related entity type
+is the current one.</p>
+<p>Default value is <code>undefined</code>.</p>
 <hr>
 <h3>getControl()</h3>
 <blockquote>
 <p><strong>getControl</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getControl control, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>ID of the element which is the current target of the association #getControl control, or <code>null</code>.</p>
 <hr>
 <h3>getEnableAvailableActionsPersonalization()</h3>
 <blockquote>
 <p><strong>getEnableAvailableActionsPersonalization</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableAvailableActionsPersonalization enableAvailableActionsPersonalization.</p>
-<p>Determines whether the personalization link is shown inside the NavigationPopover control.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableAvailableActionsPersonalization</code></p>
 <h4>Since</h4>
 <p>1.44.0</p>
+<p>Gets current value of property #getEnableAvailableActionsPersonalization enableAvailableActionsPersonalization.</p>
+<p>Determines whether the personalization link is shown inside the NavigationPopover control.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getFieldName()</h3>
 <blockquote>
 <p><strong>getFieldName</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getFieldName fieldName.</p>
-<p>The metadata field name for this NavigationPopoverHandler control.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>fieldName</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Gets current value of property #getFieldName fieldName.</p>
+<p>The metadata field name for this NavigationPopoverHandler control.</p>
 <hr>
 <h3>getMapFieldToSemanticObject()</h3>
 <blockquote>
 <p><strong>getMapFieldToSemanticObject</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getMapFieldToSemanticObject mapFieldToSemanticObject.</p>
-<p>If set to <code>false</code>, the NavigationPopoverHandler control will not replace its field name with the according
-<code>semanticObject</code> property during the calculation of the semantic attributes. This enables the usage of
-several NavigationPopoverHandler on the same semantic object. *</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>mapFieldToSemanticObject</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Gets current value of property #getMapFieldToSemanticObject mapFieldToSemanticObject.</p>
+<p>If set to <code>false</code>, the NavigationPopoverHandler control will not replace its field name with the according
+<code>semanticObject</code> property during the calculation of the semantic attributes. This enables the usage of
+several NavigationPopoverHandler on the same semantic object. *</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getSemanticObject()</h3>
 <blockquote>
 <p><strong>getSemanticObject</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSemanticObject semanticObject.</p>
-<p>Name of semantic object which is used to determine target navigations.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>semanticObject</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Gets current value of property #getSemanticObject semanticObject.</p>
+<p>Name of semantic object which is used to determine target navigations.</p>
 <hr>
 <h3>getSemanticObjectController()</h3>
 <blockquote>
 <p><strong>getSemanticObjectController</strong>(): <code>any</code></p>
 </blockquote>
-<p>Gets current value of property #getSemanticObjectController semanticObjectController.</p>
-<p>The semantic object controller controls events for several NavigationPopoverHandler controls. If the
-controller is not set manually, it tries to find a SemanticObjectController in its parent hierarchy.</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>Value of property <code>semanticObjectController</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Gets current value of property #getSemanticObjectController semanticObjectController.</p>
+<p>The semantic object controller controls events for several NavigationPopoverHandler controls. If the
+controller is not set manually, it tries to find a SemanticObjectController in its parent hierarchy.</p>
 <hr>
 <h3><del>getSemanticObjectLabel()</del></h3>
 <blockquote>
 <p><strong>getSemanticObjectLabel</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSemanticObjectLabel semanticObjectLabel.</p>
-<p>Shown title of semantic object.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>semanticObjectLabel</code></p>
@@ -489,6 +487,8 @@ controller is not set manually, it tries to find a SemanticObjectController in i
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - Title section with <code>semanticObjectLabel</code> has been removed due to new UI
 design</p>
+<p>Gets current value of property #getSemanticObjectLabel semanticObjectLabel.</p>
+<p>Shown title of semantic object.</p>
 <hr>
 <h3>getSemanticObjectValue()</h3>
 <blockquote>
@@ -517,10 +517,6 @@ as DOM reference.</p>
 <blockquote>
 <p><strong>setAdditionalSemanticObjects</strong>(<code>sAdditionalSemanticObjects?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAdditionalSemanticObjects additionalSemanticObjects.</p>
-<p>Names of additional semantic objects which are used to determine target navigations.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>[]</code>.</p>
 <h4>Parameters</h4>
 <h5>sAdditionalSemanticObjects?</h5>
 <p><code>string</code>[]</p>
@@ -530,11 +526,24 @@ as DOM reference.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.42.0</p>
+<p>Sets a new value for property #getAdditionalSemanticObjects additionalSemanticObjects.</p>
+<p>Names of additional semantic objects which are used to determine target navigations.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>setBeforeNavigationCallback()</h3>
 <blockquote>
 <p><strong>setBeforeNavigationCallback</strong>(<code>fnBeforeNavigationCallback</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>fnBeforeNavigationCallback</h5>
+<p><code>Function</code></p>
+<p>New value for property <code>beforeNavigationCallback</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.75.0</p>
 <p>Sets a new value for property #getBeforeNavigationCallback beforeNavigationCallback.</p>
 <p>Function that is called before the actual navigation happens. This function has to return a promise resolving
 into a Boolean value for which the navigation will wait. If the Boolean value is <code>true</code>, the navigation
@@ -546,26 +555,11 @@ will be processed. The <code>beforeNavigationCallback(oNavigationInfo)</code> pa
  - {Object} semanticAttributes: Object containing the `SemanticAttributes` of the navigation intent
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<h4>Parameters</h4>
-<h5>fnBeforeNavigationCallback</h5>
-<p><code>Function</code></p>
-<p>New value for property <code>beforeNavigationCallback</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.75.0</p>
 <hr>
 <h3>setContactAnnotationPath()</h3>
 <blockquote>
 <p><strong>setContactAnnotationPath</strong>(<code>sContactAnnotationPath?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getContactAnnotationPath contactAnnotationPath.</p>
-<p>Navigation property that points from the current to the related entity type where the com.sap.vocabularies.Communication.v1.Contact
-annotation is defined, for example, <code>&#39;to_Supplier&#39;</code>. An empty string means that the related entity type
-is the current one.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>undefined</code>.</p>
 <h4>Parameters</h4>
 <h5>sContactAnnotationPath?</h5>
 <p><code>string</code></p>
@@ -575,12 +569,17 @@ is the current one.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Sets a new value for property #getContactAnnotationPath contactAnnotationPath.</p>
+<p>Navigation property that points from the current to the related entity type where the com.sap.vocabularies.Communication.v1.Contact
+annotation is defined, for example, <code>&#39;to_Supplier&#39;</code>. An empty string means that the related entity type
+is the current one.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>undefined</code>.</p>
 <hr>
 <h3>setControl()</h3>
 <blockquote>
 <p><strong>setControl</strong>(<code>oControl</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated #getControl control.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -591,15 +590,12 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Sets the associated #getControl control.</p>
 <hr>
 <h3>setEnableAvailableActionsPersonalization()</h3>
 <blockquote>
 <p><strong>setEnableAvailableActionsPersonalization</strong>(<code>bEnableAvailableActionsPersonalization?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableAvailableActionsPersonalization enableAvailableActionsPersonalization.</p>
-<p>Determines whether the personalization link is shown inside the NavigationPopover control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableAvailableActionsPersonalization?</h5>
 <p><code>boolean</code></p>
@@ -609,14 +605,15 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
+<p>Sets a new value for property #getEnableAvailableActionsPersonalization enableAvailableActionsPersonalization.</p>
+<p>Determines whether the personalization link is shown inside the NavigationPopover control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setFieldName()</h3>
 <blockquote>
 <p><strong>setFieldName</strong>(<code>sFieldName?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFieldName fieldName.</p>
-<p>The metadata field name for this NavigationPopoverHandler control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sFieldName?</h5>
 <p><code>string</code></p>
@@ -626,17 +623,14 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Sets a new value for property #getFieldName fieldName.</p>
+<p>The metadata field name for this NavigationPopoverHandler control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setMapFieldToSemanticObject()</h3>
 <blockquote>
 <p><strong>setMapFieldToSemanticObject</strong>(<code>bMapFieldToSemanticObject?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMapFieldToSemanticObject mapFieldToSemanticObject.</p>
-<p>If set to <code>false</code>, the NavigationPopoverHandler control will not replace its field name with the according
-<code>semanticObject</code> property during the calculation of the semantic attributes. This enables the usage of
-several NavigationPopoverHandler on the same semantic object. *</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bMapFieldToSemanticObject?</h5>
 <p><code>boolean</code></p>
@@ -646,14 +640,17 @@ several NavigationPopoverHandler on the same semantic object. *</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Sets a new value for property #getMapFieldToSemanticObject mapFieldToSemanticObject.</p>
+<p>If set to <code>false</code>, the NavigationPopoverHandler control will not replace its field name with the according
+<code>semanticObject</code> property during the calculation of the semantic attributes. This enables the usage of
+several NavigationPopoverHandler on the same semantic object. *</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setSemanticObject()</h3>
 <blockquote>
 <p><strong>setSemanticObject</strong>(<code>sSemanticObject?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSemanticObject semanticObject.</p>
-<p>Name of semantic object which is used to determine target navigations.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSemanticObject?</h5>
 <p><code>string</code></p>
@@ -663,15 +660,14 @@ several NavigationPopoverHandler on the same semantic object. *</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Sets a new value for property #getSemanticObject semanticObject.</p>
+<p>Name of semantic object which is used to determine target navigations.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSemanticObjectController()</h3>
 <blockquote>
 <p><strong>setSemanticObjectController</strong>(<code>oSemanticObjectController?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSemanticObjectController semanticObjectController.</p>
-<p>The semantic object controller controls events for several NavigationPopoverHandler controls. If the
-controller is not set manually, it tries to find a SemanticObjectController in its parent hierarchy.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oSemanticObjectController?</h5>
 <p><code>any</code></p>
@@ -681,14 +677,15 @@ controller is not set manually, it tries to find a SemanticObjectController in i
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Sets a new value for property #getSemanticObjectController semanticObjectController.</p>
+<p>The semantic object controller controls events for several NavigationPopoverHandler controls. If the
+controller is not set manually, it tries to find a SemanticObjectController in its parent hierarchy.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setSemanticObjectLabel()</del></h3>
 <blockquote>
 <p><strong>setSemanticObjectLabel</strong>(<code>sSemanticObjectLabel?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSemanticObjectLabel semanticObjectLabel.</p>
-<p>Shown title of semantic object.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSemanticObjectLabel?</h5>
 <p><code>string</code></p>
@@ -701,6 +698,9 @@ controller is not set manually, it tries to find a SemanticObjectController in i
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - Title section with <code>semanticObjectLabel</code> has been removed due to new UI
 design</p>
+<p>Sets a new value for property #getSemanticObjectLabel semanticObjectLabel.</p>
+<p>Shown title of semantic object.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -717,7 +717,7 @@ and enriches it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>NavigationPopoverHandler</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>NavigationPopoverHandler</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -741,6 +741,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

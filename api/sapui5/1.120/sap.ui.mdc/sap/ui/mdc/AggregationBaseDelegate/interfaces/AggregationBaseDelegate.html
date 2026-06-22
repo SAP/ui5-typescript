@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: AggregationBaseDelegate — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: AggregationBaseDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: AggregationBaseDelegate — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/AggregationBaseDelegate/interfaces/AggregationBaseDelegate.html">
 <meta property="og:title" content="Interface: AggregationBaseDelegate — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: AggregationBaseDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: AggregationBaseDelegate — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/AggregationBaseDelegate/interfaces/AggregationBaseDelegate.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/AggregationBaseDelegate/README.html">AggregationBaseDelegate</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/AggregationBaseDelegate</a> / AggregationBaseDelegate</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/AggregationBaseDelegate</a> / AggregationBaseDelegate</p>
 <h1>Interface: AggregationBaseDelegate</h1>
 <pre class="sig"><span class="kw">import</span> AggregationBaseDelegate <span class="kw">from</span> <span class="str">"sap/ui/mdc/AggregationBaseDelegate"</span>;</pre>
+<h2>Since</h2>
+<p>1.82.0</p>
 <p>Base delegate implementation for sap.ui.mdc.Control MDC Controls. This delegate serves as base
 implementation for aggregation-based controls, such as:</p>
 <pre><code> - `sap.ui.mdc.Chart`
@@ -48,8 +50,6 @@ implementation for aggregation-based controls, such as:</p>
 an array of PropertyInfo objects, which can be used during runtime for personalization through the according
 <code>addItem</code> and <code>removeItem</code> hooks. Additional hooks for cleanup and validation mechanisms can be implemented
 through this delegate.</p>
-<h2>Since</h2>
-<p>1.82.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../BaseDelegate/interfaces/BaseDelegate.html"><code>BaseDelegate</code></a></li>
@@ -57,7 +57,6 @@ through this delegate.</p>
 <h2>Extended by</h2>
 <ul>
 <li><a href="../../ChartDelegate/interfaces/ChartDelegate.html"><code>ChartDelegate</code></a></li>
-<li><a href="../../FilterBarDelegate/interfaces/FilterBarDelegate.html"><code>FilterBarDelegate</code></a></li>
 <li><a href="../../TableDelegate/interfaces/TableDelegate.html"><code>TableDelegate</code></a></li>
 </ul>
 <h2>Methods</h2>
@@ -71,7 +70,7 @@ the parameter <code>mPropertyBag</code> is only passed during preprocessing. In 
 a personalization dialog), this method might be called without the parameter <code>mPropertyBag</code>.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
-<p><code>Element</code> | <a href="../../Control/classes/Control.html"><code>Control</code></a></p>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a></p>
 <p>Instance of an <code>sap.ui.mdc.Control</code></p>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -85,6 +84,21 @@ a personalization dialog), this method might be called without the parameter <co
 default aggregation. <strong>Note:</strong> This method always requires a return value once it has been called. If
 an item for a given property <code>sPropertyName</code> has already been created, it is required to either return
 the existing instance or create a new instance.</p>
+<hr>
+<h3>determineValidationState()</h3>
+<blockquote>
+<p><strong>determineValidationState</strong>(<code>oControl</code>, <code>mValidation?</code>): <code>void</code></p>
+</blockquote>
+<p>A validator to evaluate the state of an MDC control.</p>
+<h4>Parameters</h4>
+<h5>oControl</h5>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a></p>
+<p>Instance of a MDC control</p>
+<h5>mValidation?</h5>
+<p><code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+<p>Object Describing the validation result</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
 <hr>
 <h3>fetchProperties()</h3>
 <blockquote>
@@ -107,8 +121,8 @@ the existing instance or create a new instance.</p>
 appliance process.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
-<p><code>Element</code></p>
-<p>XML node of a mdc control</p>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../Control/classes/Control.html"><code>Control</code></a>&gt;</p>
+<p>Instance of an MDC control</p>
 <h5>mPropertyBag</h5>
 <p><code>Object</code></p>
 <p>Property bag from SAPUI5 flexibility</p>
@@ -127,8 +141,8 @@ the parameter <code>mPropertyBag</code> is only passed during preprocessing. In 
 a personalization dialog), this method might be called without the parameter <code>mPropertyBag</code>.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
-<p><code>Element</code> | <a href="../../Control/classes/Control.html"><code>Control</code></a></p>
-<p>Instance of a <code>sap.ui.mdc.Control</code></p>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a></p>
+<p>Instance of an <code>sap.ui.mdc.Control</code></p>
 <h5>oItem</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
 <p>The control instance that was removed</p>
@@ -138,7 +152,38 @@ a personalization dialog), this method might be called without the parameter <co
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>Promise that resolves with <code>true</code>, <code>false</code> to allow/prevent default behavior of the change</p>
+<hr>
+<h3>validateState()</h3>
+<blockquote>
+<p><strong>validateState</strong>(<code>oControl</code>, <code>oState</code>): <code>Object</code></p>
+</blockquote>
+<p>A validator to evaluate the theoretical control state.</p>
+<h4>Parameters</h4>
+<h5>oControl</h5>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a></p>
+<p>Instance of an <code>sap.ui.mdc.Control</code></p>
+<h5>oState</h5>
+<p><code>Object</code></p>
+<p>The theoretical external state representation of an MDC control. The representation of this format is
+similar as processed by sap.ui.mdc.p13n.StateUtil StateUtil</p>
+<h4>Returns</h4>
+<p><code>Object</code></p>
+<p>An object that must contain at least the <code>validation</code> attribute sap.ui.core.MessageType MessageType.
+If <code>warning</code> or <code>error</code> state types have been provided, the <code>message</code> is shown in addition.</p>
+<hr>
+<h3>visualizeValidationState()</h3>
+<blockquote>
+<p><strong>visualizeValidationState</strong>(<code>oControl</code>): <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+</blockquote>
+<p>Visualizes the validation state of an MDC control.</p>
+<h4>Parameters</h4>
+<h5>oControl</h5>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../Control/classes/Control.html"><code>Control</code></a>&gt;</p>
+<p>Instance of a MDC control</p>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+<p>mValidation Describes the validation result.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

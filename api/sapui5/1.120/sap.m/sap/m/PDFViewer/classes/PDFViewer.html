@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: PDFViewer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: PDFViewer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: PDFViewer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/PDFViewer/classes/PDFViewer.html">
 <meta property="og:title" content="Class: PDFViewer — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: PDFViewer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: PDFViewer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/PDFViewer/classes/PDFViewer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/PDFViewer/README.html">PDFViewer</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PDFViewer</a> / PDFViewer</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PDFViewer</a> / PDFViewer</p>
 <h1>Class: PDFViewer</h1>
 <pre class="sig"><span class="kw">import</span> PDFViewer <span class="kw">from</span> <span class="str">"sap/m/PDFViewer"</span>;</pre>
+<h2>Since</h2>
+<p>1.48</p>
 <p>This control enables you to display PDF documents within your app. It can be embedded in your user
 interface layout, or you can set it to open in a popup dialog. Please note that the PDF Viewer
 control can be fully displayed on desktop devices only. On mobile devices, only the toolbar with a download
 button is visible.</p>
-<h2>Since</h2>
-<p>1.48</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -188,7 +188,7 @@ fired as often as defined by the browser&#39;s plugin. This may happen after a c
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>attachSourceValidationFailed()</del></h3>
+<h3>attachSourceValidationFailed()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSourceValidationFailed</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -201,9 +201,6 @@ otherwise it will be bound to this <code>sap.m.PDFViewer</code> itself.</p>
 configuration of the Mozilla Firefox browser may not allow checking the loaded content. This may also
 happen when the source PDF file is stored in a different domain. If you want no error message to be displayed
 when this event is fired, call the preventDefault() method inside the event handler.</p>
-<p>Modern browsers implement strict policies for validating external resources loaded within an iframe.
-PDFViewer cannot determine whether the resource inside the iframe is a valid PDF by itself. As the validation
-cannot be performed the sourceValidationFailed event cannot be triggered.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -218,8 +215,6 @@ object when firing the event</p>
 <h5>Returns</h5>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
-<h5>Deprecated</h5>
-<p>(since 1.120.36) - with no replacement.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSourceValidationFailed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -232,9 +227,6 @@ otherwise it will be bound to this <code>sap.m.PDFViewer</code> itself.</p>
 configuration of the Mozilla Firefox browser may not allow checking the loaded content. This may also
 happen when the source PDF file is stored in a different domain. If you want no error message to be displayed
 when this event is fired, call the preventDefault() method inside the event handler.</p>
-<p>Modern browsers implement strict policies for validating external resources loaded within an iframe.
-PDFViewer cannot determine whether the resource inside the iframe is a valid PDF by itself. As the validation
-cannot be performed the sourceValidationFailed event cannot be triggered.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -245,8 +237,6 @@ cannot be performed the sourceValidationFailed event cannot be triggered.</p>
 <h5>Returns</h5>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
-<h5>Deprecated</h5>
-<p>(since 1.120.36) - with no replacement.</p>
 <hr>
 <h3>destroyErrorPlaceholder()</h3>
 <blockquote>
@@ -300,7 +290,7 @@ cannot be performed the sourceValidationFailed event cannot be triggered.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>detachSourceValidationFailed()</del></h3>
+<h3>detachSourceValidationFailed()</h3>
 <blockquote>
 <p><strong>detachSourceValidationFailed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
@@ -317,8 +307,6 @@ event of this <code>sap.m.PDFViewer</code>.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.120.36) - with no replacement.</p>
 <hr>
 <h3>downloadPDF()</h3>
 <blockquote>
@@ -332,7 +320,6 @@ event of this <code>sap.m.PDFViewer</code>.</p>
 <blockquote>
 <p><strong>fireError</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:error error to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/PDFViewer$ErrorEventParameters.html"><code>PDFViewer$ErrorEventParameters</code></a></p>
@@ -342,12 +329,12 @@ event of this <code>sap.m.PDFViewer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:error error to attached listeners.</p>
 <hr>
 <h3>fireLoaded()</h3>
 <blockquote>
 <p><strong>fireLoaded</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:loaded loaded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -357,12 +344,12 @@ event of this <code>sap.m.PDFViewer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:loaded loaded to attached listeners.</p>
 <hr>
-<h3><del>fireSourceValidationFailed()</del></h3>
+<h3>fireSourceValidationFailed()</h3>
 <blockquote>
 <p><strong>fireSourceValidationFailed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:sourceValidationFailed sourceValidationFailed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -370,10 +357,9 @@ event of this <code>sap.m.PDFViewer</code>.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.120.36) - with no replacement.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:sourceValidationFailed sourceValidationFailed to attached listeners.</p>
 <hr>
 <h3>getDisplayType()</h3>
 <blockquote>
@@ -399,13 +385,13 @@ it.
 <blockquote>
 <p><strong>getErrorMessage</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getErrorMessage errorMessage.</p>
-<p>A custom error message that is displayed when the PDF file cannot be loaded.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>errorMessage</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.50.0) - replaced by sap.m.PDFViewer#getErrorPlaceholderMessage.</p>
+<p>Gets current value of property #getErrorMessage errorMessage.</p>
+<p>A custom error message that is displayed when the PDF file cannot be loaded.</p>
 <hr>
 <h3>getErrorPlaceholder()</h3>
 <blockquote>
@@ -439,24 +425,6 @@ set to a percent, pixel, or em value.</p>
 <p><code>string</code></p>
 <p>Value of property <code>height</code></p>
 <hr>
-<h3>getIsTrustedSource()</h3>
-<blockquote>
-<p><strong>getIsTrustedSource</strong>(): <code>boolean</code></p>
-</blockquote>
-<p>Gets current value of property #getIsTrustedSource isTrustedSource.</p>
-<p>Parameter to determine if the given PDF is from a trusted source. If the source is valid this property
-can be set to true. If isTrustedSource is set to true, the PDFViewer opens with the displayType set to
-&quot;Embedded&quot; on desktop devices. This means that the PDF content is directly shown within the PDFViewer.
-Set this property to true only when the PDF is generated by the application or the PDF is scanned for
-viruses. If isTrustedSource is set to false, the PDFViewer opens with the displayType set to &quot;Link&quot; on
-desktop devices. This means that any configuration that has been provided by the application for the
-property displayType is overridden. In this case, the user would need to download the PDF to view its
-content.</p>
-<p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>isTrustedSource</code></p>
-<hr>
 <h3>getPopupButtons()</h3>
 <blockquote>
 <p><strong>getPopupButtons</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
@@ -471,14 +439,14 @@ the PDF viewer is set to open in a popup dialog.</p>
 <blockquote>
 <p><strong>getPopupHeaderTitle</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getPopupHeaderTitle popupHeaderTitle.</p>
-<p>A custom title for the PDF viewer popup dialog. Works only if the PDF viewer is set to open in a popup
-dialog.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>popupHeaderTitle</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.50.0) - replaced by sap.m.PDFViewer#getTitle.</p>
+<p>Gets current value of property #getPopupHeaderTitle popupHeaderTitle.</p>
+<p>A custom title for the PDF viewer popup dialog. Works only if the PDF viewer is set to open in a popup
+dialog.</p>
 <hr>
 <h3>getShowDownloadButton()</h3>
 <blockquote>
@@ -500,10 +468,6 @@ dialog.</p>
  Optionally, this property can also be set to a data URI path or a blob URL in all major web browsers
 except Internet Explorer and Microsoft Edge, provided that this data URI or blob URL is allowed in advance.
 For more information about URL filtering, see <a href="https://ui5.sap.com/#/topic/91f3768f6f4d1014b6dd926db0e91070">URLList Validator Filtering</a>.</p>
-<p>Source Validation: When the source is set, the PDFViewer automatically validates the resource using a
-GET request to ensure it exists and is accessible. This validation:
-	 - Prevents loading invalid or non-existent PDF files
-	 - If validation fails, error content is displayed instead of attempting PDF load</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>source</code></p>
@@ -636,9 +600,6 @@ it.
 <blockquote>
 <p><strong>setErrorMessage</strong>(<code>sErrorMessage?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getErrorMessage errorMessage.</p>
-<p>A custom error message that is displayed when the PDF file cannot be loaded.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sErrorMessage?</h5>
 <p><code>string</code></p>
@@ -648,6 +609,9 @@ it.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.0) - replaced by sap.m.PDFViewer#getErrorPlaceholderMessage.</p>
+<p>Sets a new value for property #getErrorMessage errorMessage.</p>
+<p>A custom error message that is displayed when the PDF file cannot be loaded.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setErrorPlaceholder()</h3>
 <blockquote>
@@ -694,37 +658,10 @@ set to a percent, pixel, or em value.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setIsTrustedSource()</h3>
-<blockquote>
-<p><strong>setIsTrustedSource</strong>(<code>bIsTrustedSource?</code>): <code>this</code></p>
-</blockquote>
-<p>Sets a new value for property #getIsTrustedSource isTrustedSource.</p>
-<p>Parameter to determine if the given PDF is from a trusted source. If the source is valid this property
-can be set to true. If isTrustedSource is set to true, the PDFViewer opens with the displayType set to
-&quot;Embedded&quot; on desktop devices. This means that the PDF content is directly shown within the PDFViewer.
-Set this property to true only when the PDF is generated by the application or the PDF is scanned for
-viruses. If isTrustedSource is set to false, the PDFViewer opens with the displayType set to &quot;Link&quot; on
-desktop devices. This means that any configuration that has been provided by the application for the
-property displayType is overridden. In this case, the user would need to download the PDF to view its
-content.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bIsTrustedSource?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>isTrustedSource</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<hr>
 <h3><del>setPopupHeaderTitle()</del></h3>
 <blockquote>
 <p><strong>setPopupHeaderTitle</strong>(<code>sPopupHeaderTitle?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPopupHeaderTitle popupHeaderTitle.</p>
-<p>A custom title for the PDF viewer popup dialog. Works only if the PDF viewer is set to open in a popup
-dialog.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sPopupHeaderTitle?</h5>
 <p><code>string</code></p>
@@ -734,6 +671,10 @@ dialog.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.0) - replaced by sap.m.PDFViewer#getTitle.</p>
+<p>Sets a new value for property #getPopupHeaderTitle popupHeaderTitle.</p>
+<p>A custom title for the PDF viewer popup dialog. Works only if the PDF viewer is set to open in a popup
+dialog.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setShowDownloadButton()</h3>
 <blockquote>
@@ -760,10 +701,6 @@ dialog.</p>
  Optionally, this property can also be set to a data URI path or a blob URL in all major web browsers
 except Internet Explorer and Microsoft Edge, provided that this data URI or blob URL is allowed in advance.
 For more information about URL filtering, see <a href="https://ui5.sap.com/#/topic/91f3768f6f4d1014b6dd926db0e91070">URLList Validator Filtering</a>.</p>
-<p>Source Validation: When the source is set, the PDFViewer automatically validates the resource using a
-GET request to ensure it exists and is accessible. This validation:
-	 - Prevents loading invalid or non-existent PDF files
-	 - If validation fails, error content is displayed instead of attempting PDF load</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSource?</h5>
@@ -820,7 +757,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>PDFViewer</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>PDFViewer</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -844,6 +781,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

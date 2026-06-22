@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: ContentManager — SAPUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: ContentManager — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: ContentManager — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: ContentManager — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/ContentManager/classes/ContentManager.html">
-<meta property="og:title" content="Abstract Class: ContentManager — SAPUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: ContentManager — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: ContentManager — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: ContentManager — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/ContentManager/classes/ContentManager.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/ContentManager/README.html">ContentManager</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ContentManager</a> / ContentManager</p>
-<h1>Abstract Class: ContentManager</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ContentManager</a> / ContentManager</p>
+<h1>Class: ContentManager</h1>
 <pre class="sig"><span class="kw">import</span> ContentManager <span class="kw">from</span> <span class="str">"sap/ui/vk/ContentManager"</span>;</pre>
-<p>Provides a base loader interface.</p>
-<p>To load content a concrete loader class is to be used.</p>
 <h2>Since</h2>
 <p>1.50.0</p>
 <h2>Ui5-protected</h2>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
+<p>Provides a base loader interface.</p>
+<p>To load content a concrete loader class is to be used.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></li>
@@ -52,17 +52,52 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <ul>
 <li><a href="../../ImageContentManager/classes/ImageContentManager.html"><code>ImageContentManager</code></a></li>
 </ul>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new ContentManager</strong>(<code>mSettings?</code>): <code>ContentManager</code></p>
+</blockquote>
+<h4>Parameters</h4>
+<h5>mSettings?</h5>
+<p><a href="../interfaces/$ContentManagerSettings.html"><code>$ContentManagerSettings</code></a></p>
+<p>Initial settings for the new ContentManager object.</p>
+<h4>Returns</h4>
+<p><code>ContentManager</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<p>Constructor for a new ContentManager.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html#constructor"><code>constructor</code></a></p>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new ContentManager</strong>(<code>sId?</code>, <code>mSettings?</code>): <code>ContentManager</code></p>
+</blockquote>
+<h4>Parameters</h4>
+<h5>sId?</h5>
+<p><code>string</code></p>
+<p>ID for the new ContentManager object. Generated automatically if no ID is given.</p>
+<h5>mSettings?</h5>
+<p><a href="../interfaces/$ContentManagerSettings.html"><code>$ContentManagerSettings</code></a></p>
+<p>Initial settings for the new ContentManager object.</p>
+<h4>Returns</h4>
+<p><code>ContentManager</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<p>Constructor for a new ContentManager.</p>
+<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
+objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
+of the syntax of the settings object.</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html#constructor"><code>constructor</code></a></p>
 <h2>Methods</h2>
 <h3>attachContentChangesFinished()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachContentChangesFinished</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesFinished contentChangesFinished
-event of this <code>sap.ui.vk.ContentManager</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
-<p>This event will be fired when content resources have been loaded successfully or with a failure.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -79,15 +114,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachContentChangesFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesFinished contentChangesFinished
 event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
 <p>This event will be fired when content resources have been loaded successfully or with a failure.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachContentChangesFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -100,17 +135,17 @@ otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesFinished contentChangesFinished
+event of this <code>sap.ui.vk.ContentManager</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
+<p>This event will be fired when content resources have been loaded successfully or with a failure.</p>
 <hr>
 <h3>attachContentChangesProgress()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachContentChangesProgress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesProgress contentChangesProgress
-event of this <code>sap.ui.vk.ContentManager</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
-<p>This event will be fired to report the progress of content changes.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -127,15 +162,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachContentChangesProgress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesProgress contentChangesProgress
 event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
 <p>This event will be fired to report the progress of content changes.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachContentChangesProgress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -148,17 +183,17 @@ otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesProgress contentChangesProgress
+event of this <code>sap.ui.vk.ContentManager</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
+<p>This event will be fired to report the progress of content changes.</p>
 <hr>
 <h3>attachContentChangesStarted()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachContentChangesStarted</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesStarted contentChangesStarted
-event of this <code>sap.ui.vk.ContentManager</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
-<p>This event will be fired when content resources are about to be loaded.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -175,15 +210,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachContentChangesStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesStarted contentChangesStarted
 event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
 <p>This event will be fired when content resources are about to be loaded.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachContentChangesStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -196,17 +231,17 @@ otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:contentChangesStarted contentChangesStarted
+event of this <code>sap.ui.vk.ContentManager</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
+<p>This event will be fired when content resources are about to be loaded.</p>
 <hr>
 <h3>attachContentLoadingFinished()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachContentLoadingFinished</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:contentLoadingFinished contentLoadingFinished
-event of this <code>sap.ui.vk.ContentManager</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
-<p>This event will be fired when content loading is finished.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -223,15 +258,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachContentLoadingFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:contentLoadingFinished contentLoadingFinished
 event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
 <p>This event will be fired when content loading is finished.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachContentLoadingFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -244,45 +279,49 @@ otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:contentLoadingFinished contentLoadingFinished
+event of this <code>sap.ui.vk.ContentManager</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.</p>
+<p>This event will be fired when content loading is finished.</p>
 <hr>
 <h3>collectGarbage()</h3>
 <blockquote>
 <p><strong>collectGarbage</strong>(): <code>this</code></p>
 </blockquote>
-<p>Collects and destroys unused objects and resources.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Collects and destroys unused objects and resources.</p>
 <hr>
 <h3>createOrthographicCamera()</h3>
 <blockquote>
 <p><strong>createOrthographicCamera</strong>(): <a href="../../OrthographicCamera/classes/OrthographicCamera.html"><code>OrthographicCamera</code></a></p>
 </blockquote>
-<p>Creates a Perspective camera</p>
 <h4>Returns</h4>
 <p><a href="../../OrthographicCamera/classes/OrthographicCamera.html"><code>OrthographicCamera</code></a></p>
 <p>Created Camera.</p>
 <h4>Since</h4>
 <p>1.52.0</p>
+<p>Creates a Perspective camera</p>
 <hr>
 <h3>createPerspectiveCamera()</h3>
 <blockquote>
 <p><strong>createPerspectiveCamera</strong>(): <a href="../../PerspectiveCamera/classes/PerspectiveCamera.html"><code>PerspectiveCamera</code></a></p>
 </blockquote>
-<p>Creates a Orthographic camera</p>
 <h4>Returns</h4>
 <p><a href="../../PerspectiveCamera/classes/PerspectiveCamera.html"><code>PerspectiveCamera</code></a></p>
 <p>Created Camera.</p>
 <h4>Since</h4>
 <p>1.52.0</p>
+<p>Creates a Orthographic camera</p>
 <hr>
 <h3>destroyCamera()</h3>
 <blockquote>
 <p><strong>destroyCamera</strong>(<code>camera</code>): <code>this</code></p>
 </blockquote>
-<p>Destroys a camera for the content type</p>
 <h4>Parameters</h4>
 <h5>camera</h5>
 <p><code>any</code></p>
@@ -292,12 +331,12 @@ otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.52.0</p>
+<p>Destroys a camera for the content type</p>
 <hr>
 <h3>destroyContent()</h3>
 <blockquote>
 <p><strong>destroyContent</strong>(<code>content</code>): <code>this</code></p>
 </blockquote>
-<p>Destroys the content.</p>
 <h4>Parameters</h4>
 <h5>content</h5>
 <p><code>any</code></p>
@@ -307,14 +346,12 @@ otherwise it will be bound to this <code>sap.ui.vk.ContentManager</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Destroys the content.</p>
 <hr>
 <h3>detachContentChangesFinished()</h3>
 <blockquote>
 <p><strong>detachContentChangesFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:contentChangesFinished contentChangesFinished
-event of this <code>sap.ui.vk.ContentManager</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -327,14 +364,14 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:contentChangesFinished contentChangesFinished
+event of this <code>sap.ui.vk.ContentManager</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachContentChangesProgress()</h3>
 <blockquote>
 <p><strong>detachContentChangesProgress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:contentChangesProgress contentChangesProgress
-event of this <code>sap.ui.vk.ContentManager</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -347,14 +384,14 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:contentChangesProgress contentChangesProgress
+event of this <code>sap.ui.vk.ContentManager</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachContentChangesStarted()</h3>
 <blockquote>
 <p><strong>detachContentChangesStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:contentChangesStarted contentChangesStarted
-event of this <code>sap.ui.vk.ContentManager</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -367,14 +404,14 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:contentChangesStarted contentChangesStarted
+event of this <code>sap.ui.vk.ContentManager</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachContentLoadingFinished()</h3>
 <blockquote>
 <p><strong>detachContentLoadingFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:contentLoadingFinished contentLoadingFinished
-event of this <code>sap.ui.vk.ContentManager</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -387,12 +424,14 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:contentLoadingFinished contentLoadingFinished
+event of this <code>sap.ui.vk.ContentManager</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireContentChangesFinished()</h3>
 <blockquote>
 <p><strong>fireContentChangesFinished</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:contentChangesFinished contentChangesFinished to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ContentManager$ContentChangesFinishedEventParameters.html"><code>ContentManager$ContentChangesFinishedEventParameters</code></a></p>
@@ -402,12 +441,12 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:contentChangesFinished contentChangesFinished to attached listeners.</p>
 <hr>
 <h3>fireContentChangesProgress()</h3>
 <blockquote>
 <p><strong>fireContentChangesProgress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:contentChangesProgress contentChangesProgress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ContentManager$ContentChangesProgressEventParameters.html"><code>ContentManager$ContentChangesProgressEventParameters</code></a></p>
@@ -417,12 +456,12 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:contentChangesProgress contentChangesProgress to attached listeners.</p>
 <hr>
 <h3>fireContentChangesStarted()</h3>
 <blockquote>
 <p><strong>fireContentChangesStarted</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:contentChangesStarted contentChangesStarted to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -432,12 +471,12 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:contentChangesStarted contentChangesStarted to attached listeners.</p>
 <hr>
 <h3>fireContentLoadingFinished()</h3>
 <blockquote>
 <p><strong>fireContentLoadingFinished</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:contentLoadingFinished contentLoadingFinished to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ContentManager$ContentLoadingFinishedEventParameters.html"><code>ContentManager$ContentLoadingFinishedEventParameters</code></a></p>
@@ -447,13 +486,12 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:contentLoadingFinished contentLoadingFinished to attached listeners.</p>
 <hr>
 <h3>loadContent()</h3>
 <blockquote>
 <p><strong>loadContent</strong>(<code>content</code>, <code>contentResources</code>): <code>this</code></p>
 </blockquote>
-<p>Starts downloading and building or updating the content from the content resources.</p>
-<p>This method is asynchronous.</p>
 <h4>Parameters</h4>
 <h5>content</h5>
 <p><code>any</code></p>
@@ -466,13 +504,13 @@ event of this <code>sap.ui.vk.ContentManager</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Starts downloading and building or updating the content from the content resources.</p>
+<p>This method is asynchronous.</p>
 <hr>
 <h3>setConsumptionScenario()</h3>
 <blockquote>
 <p><strong>setConsumptionScenario</strong>(<code>consumptionScenario</code>): <code>this</code></p>
 </blockquote>
-<p>Set the consumption scenario for metering differention. This value is passed in SAP-ConsumptionScenario
-HTTP headers in requests made to the EPD Visualization backend when viewing.</p>
 <h4>Parameters</h4>
 <h5>consumptionScenario</h5>
 <p><code>any</code></p>
@@ -482,15 +520,13 @@ HTTP headers in requests made to the EPD Visualization backend when viewing.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.114.0</p>
+<p>Set the consumption scenario for metering differention. This value is passed in SAP-ConsumptionScenario
+HTTP headers in requests made to the EPD Visualization backend when viewing.</p>
 <hr>
 <h3>setRetryCount()</h3>
 <blockquote>
 <p><strong>setRetryCount</strong>(<code>retryCount</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the maximum number of retry attempts for a download operation if the initial request to retrieve
-a model from a remote server could not be fulfilled and the error with which the request failed is considered
-recoverable.</p>
-<p>See sap.ui.vk.ContentConnector#setRetryCount for details.</p>
 <h4>Parameters</h4>
 <h5>retryCount</h5>
 <p><code>number</code></p>
@@ -502,14 +538,15 @@ any retry attempts.</p>
 <p>Reference to <code>this</code> in order to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.95.0</p>
+<p>Sets the maximum number of retry attempts for a download operation if the initial request to retrieve
+a model from a remote server could not be fulfilled and the error with which the request failed is considered
+recoverable.</p>
+<p>See sap.ui.vk.ContentConnector#setRetryCount for details.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
-<p>Creates a new subclass of class sap.ui.vk.ContentManager with name <code>sClassName</code> and enriches it with
-the information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.ManagedObject.extend.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
@@ -518,7 +555,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ContentManager</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ContentManager</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -529,6 +566,9 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates a new subclass of class sap.ui.vk.ContentManager with name <code>sClassName</code> and enriches it with
+the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.ManagedObject.extend.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html#extend"><code>extend</code></a></p>
 <hr>
@@ -536,16 +576,16 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObjectMetadata/classes/ManagedObjectMetadata.html"><code>ManagedObjectMetadata</code></a></p>
 </blockquote>
-<p>Returns a metadata object for class sap.ui.vk.ContentManager.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObjectMetadata/classes/ManagedObjectMetadata.html"><code>ManagedObjectMetadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns a metadata object for class sap.ui.vk.ContentManager.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

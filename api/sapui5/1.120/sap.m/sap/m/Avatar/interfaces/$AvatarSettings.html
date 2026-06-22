@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $AvatarSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $AvatarSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $AvatarSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Avatar/interfaces/$AvatarSettings.html">
 <meta property="og:title" content="Interface: $AvatarSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $AvatarSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $AvatarSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Avatar/interfaces/$AvatarSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Avatar/README.html">Avatar</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Avatar</a> / $AvatarSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Avatar</a> / $AvatarSettings</p>
 <h1>Interface: $AvatarSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $AvatarSettings } <span class="kw">from</span> <span class="str">"sap/m/Avatar"</span>;</pre>
-<p>Describes the settings that can be provided to the Avatar constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -52,11 +51,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>active?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.120.0</p>
 <p>Determines whether the <code>Avatar</code> is active/toggled (default is set to <code>false</code>). Active state is meant
 to be toggled when user clicks on the <code>Avatar</code>. The Active state is only applied, when the <code>Avatar</code> has
 <code>press</code> listeners.</p>
-<h4>Since</h4>
-<p>1.120.0</p>
 <hr>
 <h3>ariaDescribedBy?</h3>
 <blockquote>
@@ -68,6 +67,8 @@ to be toggled when user clicks on the <code>Avatar</code>. The Active state is o
 <blockquote>
 <p><code>optional</code> <strong>ariaHasPopup?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.99.0</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
 value.</p>
@@ -76,8 +77,6 @@ to the main/root role of the popup - e.g. dialog, menu or list (examples: if you
 if you have menu -&gt; menu; if you have list -&gt; list; if you have dialog containing a list -&gt; dialog).
 Do not use it, if you open a standard sap.m.Dialog, MessageBox or other type of dialogs displayed as
 on overlay over the application.</p>
-<h4>Since</h4>
-<p>1.99.0</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
@@ -95,32 +94,32 @@ on overlay over the application.</p>
 <blockquote>
 <p><code>optional</code> <strong>badgeIcon?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.77</p>
 <p>Defines what type of icon is displayed as visual affordance. It can be predefined or custom.</p>
 <p>The predefined icons are recommended for:
 	 - Suggesting a zooming action: <code>sap-icon://zoom-in</code>
 	 - Suggesting an image change: <code>sap-icon://camera</code>
 	 - Suggesting an editing action: <code>sap-icon://edit</code></p>
-<h4>Since</h4>
-<p>1.77</p>
 <hr>
 <h3>badgeTooltip?</h3>
 <blockquote>
 <p><code>optional</code> <strong>badgeTooltip?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.77</p>
 <p>Defines a custom tooltip for the <code>badgeIcon</code>. If set, it overrides the available default values.</p>
 <p>If not set, default tooltips are used as follows:
 	 - Specific default tooltips are displayed for each of the predefined <code>badgeIcons</code>.
 	 - For any other icons, the displayed tooltip is the same as the main control tooltip.</p>
-<h4>Since</h4>
-<p>1.77</p>
 <hr>
 <h3>badgeValueState?</h3>
 <blockquote>
 <p><code>optional</code> <strong>badgeValueState?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
-<p>Visualizes the validation state of the badge, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
 <h4>Since</h4>
 <p>1.116.0</p>
+<p>Visualizes the validation state of the badge, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
 <hr>
 <h3>customDisplaySize?</h3>
 <blockquote>
@@ -140,10 +139,10 @@ on overlay over the application.</p>
 <blockquote>
 <p><code>optional</code> <strong>decorative?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines whether the <code>sap.m.Avatar</code> is used for decorative purposes and is ignored by accessibility tools.</p>
-<p><strong>Note:</strong> This property doesn&#39;t take effect if <code>sap.m.Avatar</code> has a <code>press</code> handler.</p>
 <h4>Since</h4>
 <p>1.97</p>
+<p>Defines whether the <code>sap.m.Avatar</code> is used for decorative purposes and is ignored by accessibility tools.</p>
+<p><strong>Note:</strong> This property doesn&#39;t take effect if <code>sap.m.Avatar</code> has a <code>press</code> handler.</p>
 <hr>
 <h3>detailBox?</h3>
 <blockquote>
@@ -169,10 +168,10 @@ control.</p>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines whether the <code>Avatar</code> is enabled (default is set to <code>true</code>). A disabled <code>Button</code> has different
-colors depending on the sap.m.AvatarColor AvatarColor.</p>
 <h4>Since</h4>
 <p>1.117.0</p>
+<p>Determines whether the <code>Avatar</code> is enabled (default is set to <code>true</code>). A disabled <code>Button</code> has different
+colors depending on the sap.m.AvatarColor AvatarColor.</p>
 <hr>
 <h3>fallbackIcon?</h3>
 <blockquote>
@@ -219,6 +218,6 @@ colors depending on the sap.m.AvatarColor AvatarColor.</p>
 <p>Determines the path to the desired image or icon.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

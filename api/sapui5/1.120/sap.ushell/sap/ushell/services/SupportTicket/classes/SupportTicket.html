@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SupportTicket — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SupportTicket — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: SupportTicket — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/SupportTicket/classes/SupportTicket.html">
 <meta property="og:title" content="Class: SupportTicket — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SupportTicket — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: SupportTicket — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/SupportTicket/classes/SupportTicket.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../sap.ushell/sap/ushell/services/SupportTicket/README.html">SupportTicket</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/SupportTicket</a> / SupportTicket</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/SupportTicket</a> / SupportTicket</p>
 <h1>Class: SupportTicket</h1>
 <pre class="sig"><span class="kw">import</span> SupportTicket <span class="kw">from</span> <span class="str">"sap/ushell/services/SupportTicket"</span>;</pre>
+<h2>Since</h2>
+<p>1.19.1</p>
 <p>The Unified Shell&#39;s SupportTicket service.</p>
 <p><strong>Note:</strong> To retrieve a valid instance of this service, it is necessary to call <code>sap.ushell.Container.getServiceAsync(&quot;SupportTicket&quot;)</code>.
 For details, see sap.ushell.services.Container#getServiceAsync.</p>
-<h2>Since</h2>
-<p>1.19.1</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -55,7 +55,6 @@ For details, see sap.ushell.services.Container#getServiceAsync.</p>
 <blockquote>
 <p><strong>createTicket</strong>(<code>oSupportTicketData</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<p>Creates a Support Ticket. Forwards the given data (JSON object) to the associated adapter.</p>
 <h4>Parameters</h4>
 <h5>oSupportTicketData</h5>
 <p>JSON object containing the input fields required for the support ticket.</p>
@@ -73,19 +72,20 @@ For details, see sap.ushell.services.Container#getServiceAsync.</p>
 <p>Promise, that returns the ID of the generated message</p>
 <h4>Since</h4>
 <p>1.20.0</p>
+<p>Creates a Support Ticket. Forwards the given data (JSON object) to the associated adapter.</p>
 <hr>
 <h3>isEnabled()</h3>
 <blockquote>
 <p><strong>isEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Checks if the service is enabled.  The service enablement depends on the configuration in the back-end
-system and the bootstrap configuration.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p><code>true</code> if the service is enabled; <code>false</code> otherwise</p>
 <h4>Since</h4>
 <p>1.20.0</p>
+<p>Checks if the service is enabled.  The service enablement depends on the configuration in the back-end
+system and the bootstrap configuration.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ListBase — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ListBase — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ListBase — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ListBase/classes/ListBase.html">
 <meta property="og:title" content="Class: ListBase — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ListBase — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ListBase — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ListBase/classes/ListBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ListBase/README.html">ListBase</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ListBase</a> / ListBase</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ListBase</a> / ListBase</p>
 <h1>Class: ListBase</h1>
 <pre class="sig"><span class="kw">import</span> ListBase <span class="kw">from</span> <span class="str">"sap/m/ListBase"</span>;</pre>
+<h2>Since</h2>
+<p>1.16</p>
 <p>The <code>sap.m.ListBase</code> control provides a base functionality of the <code>sap.m.List</code> and <code>sap.m.Table</code> controls.
 Selection, deletion, unread states and inset style are also maintained in <code>sap.m.ListBase</code>.</p>
 <p>See section &quot;<a href="https://ui5.sap.com/#/topic/295e44b2d0144318bcb7bdd56bfa5189">List, List Item, and Table</a>&quot;
@@ -48,8 +50,6 @@ is also available in the documentation.</p>
 bound model is changed. Due to the limited hardware resources of mobile devices this can lead to longer
 delays for lists that contain many items. As such the usage of a list is not recommended for these use
 cases.</p>
-<h2>Since</h2>
-<p>1.16</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -103,7 +103,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -113,6 +112,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addItem()</h3>
 <blockquote>
@@ -132,12 +132,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachBeforeOpenContextMenu</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
-event of this <code>sap.m.ListBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
-<p>Fired when the context menu is opened. When the context menu is opened, the binding context of the item
-is set to the given <code>contextMenu</code>.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -154,16 +148,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
 event of this <code>sap.m.ListBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Fired when the context menu is opened. When the context menu is opened, the binding context of the item
 is set to the given <code>contextMenu</code>.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -176,6 +170,12 @@ is set to the given <code>contextMenu</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.m.ListBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
+<p>Fired when the context menu is opened. When the context menu is opened, the binding context of the item
+is set to the given <code>contextMenu</code>.</p>
 <hr>
 <h3>attachDelete()</h3>
 <h4>Call Signature</h4>
@@ -224,11 +224,6 @@ otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <blockquote>
 <p><strong>attachGrowingFinished</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:growingFinished growingFinished event of this
-<code>sap.m.ListBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
-<p>Fires after the new growing chunk has been fetched from the model and processed by the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -247,15 +242,15 @@ object when firing the event</p>
 <p>1.16</p>
 <h5>Deprecated</h5>
 <p>(since 1.16.3) - Instead, use &quot;updateFinished&quot; event.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachGrowingFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:growingFinished growingFinished event of this
 <code>sap.m.ListBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Fires after the new growing chunk has been fetched from the model and processed by the control.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachGrowingFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -270,17 +265,17 @@ otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>1.16</p>
 <h5>Deprecated</h5>
 <p>(since 1.16.3) - Instead, use &quot;updateFinished&quot; event.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:growingFinished growingFinished event of this
+<code>sap.m.ListBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
+<p>Fires after the new growing chunk has been fetched from the model and processed by the control.</p>
 <hr>
 <h3><del>attachGrowingStarted()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachGrowingStarted</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:growingStarted growingStarted event of this
-<code>sap.m.ListBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
-<p>Fires before the new growing chunk is requested from the model.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -299,15 +294,15 @@ object when firing the event</p>
 <p>1.16</p>
 <h5>Deprecated</h5>
 <p>(since 1.16.3) - Instead, use <code>updateStarted</code> event with listening <code>changeReason</code>.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachGrowingStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:growingStarted growingStarted event of this
 <code>sap.m.ListBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Fires before the new growing chunk is requested from the model.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachGrowingStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -322,16 +317,17 @@ otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>1.16</p>
 <h5>Deprecated</h5>
 <p>(since 1.16.3) - Instead, use <code>updateStarted</code> event with listening <code>changeReason</code>.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:growingStarted growingStarted event of this
+<code>sap.m.ListBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
+<p>Fires before the new growing chunk is requested from the model.</p>
 <hr>
 <h3>attachItemPress()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachItemPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:itemPress itemPress event of this <code>sap.m.ListBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
-<p>Fires when an item is pressed unless the item&#39;s <code>type</code> property is <code>Inactive</code>.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -348,14 +344,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.20</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachItemPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:itemPress itemPress event of this <code>sap.m.ListBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Fires when an item is pressed unless the item&#39;s <code>type</code> property is <code>Inactive</code>.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachItemPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -368,17 +364,16 @@ otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.20</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:itemPress itemPress event of this <code>sap.m.ListBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
+<p>Fires when an item is pressed unless the item&#39;s <code>type</code> property is <code>Inactive</code>.</p>
 <hr>
 <h3><del>attachSelect()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSelect</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.m.ListBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
-<p>Fires when selection is changed via user interaction. In <code>MultiSelect</code> mode, this event is also fired
-on deselection.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -395,15 +390,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.16) - Use the <code>selectionChange</code> event instead.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.m.ListBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Fires when selection is changed via user interaction. In <code>MultiSelect</code> mode, this event is also fired
 on deselection.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -416,17 +411,17 @@ on deselection.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.16) - Use the <code>selectionChange</code> event instead.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.m.ListBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
+<p>Fires when selection is changed via user interaction. In <code>MultiSelect</code> mode, this event is also fired
+on deselection.</p>
 <hr>
 <h3>attachSelectionChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSelectionChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
-<code>sap.m.ListBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
-<p>Fires when selection is changed via user interaction inside the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -443,15 +438,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
 <code>sap.m.ListBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Fires when selection is changed via user interaction inside the control.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -464,6 +459,11 @@ otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
+<code>sap.m.ListBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
+<p>Fires when selection is changed via user interaction inside the control.</p>
 <hr>
 <h3>attachSwipe()</h3>
 <h4>Call Signature</h4>
@@ -520,11 +520,6 @@ this functionality must provide an accessible alternative UI to perform the same
 <blockquote>
 <p><strong>attachUpdateFinished</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:updateFinished updateFinished event of this
-<code>sap.m.ListBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
-<p>Fires after <code>items</code> binding is updated and processed by the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -541,15 +536,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16.3</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachUpdateFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:updateFinished updateFinished event of this
 <code>sap.m.ListBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Fires after <code>items</code> binding is updated and processed by the control.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachUpdateFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -562,17 +557,17 @@ otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16.3</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:updateFinished updateFinished event of this
+<code>sap.m.ListBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
+<p>Fires after <code>items</code> binding is updated and processed by the control.</p>
 <hr>
 <h3>attachUpdateStarted()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachUpdateStarted</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:updateStarted updateStarted event of this <code>sap.m.ListBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
-<p>Fires before <code>items</code> binding is updated (e.g. sorting, filtering)</p>
-<p><strong>Note:</strong> Event handler should not invalidate the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -589,15 +584,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16.3</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachUpdateStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:updateStarted updateStarted event of this <code>sap.m.ListBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Fires before <code>items</code> binding is updated (e.g. sorting, filtering)</p>
 <p><strong>Note:</strong> Event handler should not invalidate the control.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachUpdateStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -610,6 +605,11 @@ otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16.3</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:updateStarted updateStarted event of this <code>sap.m.ListBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListBase</code> itself.</p>
+<p>Fires before <code>items</code> binding is updated (e.g. sorting, filtering)</p>
+<p><strong>Note:</strong> Event handler should not invalidate the control.</p>
 <hr>
 <h3>bindItems()</h3>
 <blockquote>
@@ -630,34 +630,34 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyContextMenu</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the contextMenu in the aggregation #getContextMenu contextMenu.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Destroys the contextMenu in the aggregation #getContextMenu contextMenu.</p>
 <hr>
 <h3>destroyHeaderToolbar()</h3>
 <blockquote>
 <p><strong>destroyHeaderToolbar</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the headerToolbar in the aggregation #getHeaderToolbar headerToolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Destroys the headerToolbar in the aggregation #getHeaderToolbar headerToolbar.</p>
 <hr>
 <h3>destroyInfoToolbar()</h3>
 <blockquote>
 <p><strong>destroyInfoToolbar</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the infoToolbar in the aggregation #getInfoToolbar infoToolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Destroys the infoToolbar in the aggregation #getInfoToolbar infoToolbar.</p>
 <hr>
 <h3>destroyItems()</h3>
 <blockquote>
@@ -672,12 +672,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyNoData</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the noData in the aggregation #getNoData noData.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.101</p>
+<p>Destroys the noData in the aggregation #getNoData noData.</p>
 <hr>
 <h3>destroySwipeContent()</h3>
 <blockquote>
@@ -692,9 +692,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>detachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforeOpenContextMenu beforeOpenContextMenu
-event of this <code>sap.m.ListBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -707,6 +704,9 @@ event of this <code>sap.m.ListBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.m.ListBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachDelete()</h3>
 <blockquote>
@@ -729,9 +729,6 @@ event of this <code>sap.m.ListBase</code>.</p>
 <blockquote>
 <p><strong>detachGrowingFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:growingFinished growingFinished event of
-this <code>sap.m.ListBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -746,14 +743,14 @@ this <code>sap.m.ListBase</code>.</p>
 <p>1.16</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.3) - Instead, use &quot;updateFinished&quot; event.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:growingFinished growingFinished event of
+this <code>sap.m.ListBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachGrowingStarted()</del></h3>
 <blockquote>
 <p><strong>detachGrowingStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:growingStarted growingStarted event of this
-<code>sap.m.ListBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -768,13 +765,14 @@ this <code>sap.m.ListBase</code>.</p>
 <p>1.16</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.3) - Instead, use <code>updateStarted</code> event with listening <code>changeReason</code>.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:growingStarted growingStarted event of this
+<code>sap.m.ListBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachItemPress()</h3>
 <blockquote>
 <p><strong>detachItemPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:itemPress itemPress event of this <code>sap.m.ListBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -787,13 +785,13 @@ this <code>sap.m.ListBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.20</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:itemPress itemPress event of this <code>sap.m.ListBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachSelect()</del></h3>
 <blockquote>
 <p><strong>detachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:select select event of this <code>sap.m.ListBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -806,14 +804,13 @@ this <code>sap.m.ListBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16) - Use the <code>selectionChange</code> event instead.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:select select event of this <code>sap.m.ListBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSelectionChange()</h3>
 <blockquote>
 <p><strong>detachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
-this <code>sap.m.ListBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -826,6 +823,9 @@ this <code>sap.m.ListBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
+this <code>sap.m.ListBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSwipe()</h3>
 <blockquote>
@@ -848,9 +848,6 @@ this <code>sap.m.ListBase</code>.</p>
 <blockquote>
 <p><strong>detachUpdateFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:updateFinished updateFinished event of this
-<code>sap.m.ListBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -863,14 +860,14 @@ this <code>sap.m.ListBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:updateFinished updateFinished event of this
+<code>sap.m.ListBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachUpdateStarted()</h3>
 <blockquote>
 <p><strong>detachUpdateStarted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:updateStarted updateStarted event of this
-<code>sap.m.ListBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -883,14 +880,14 @@ this <code>sap.m.ListBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:updateStarted updateStarted event of this
+<code>sap.m.ListBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireBeforeOpenContextMenu()</h3>
 <blockquote>
 <p><strong>fireBeforeOpenContextMenu</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:beforeOpenContextMenu beforeOpenContextMenu to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$BeforeOpenContextMenuEventParameters.html"><code>ListBase$BeforeOpenContextMenuEventParameters</code></a></p>
@@ -902,12 +899,14 @@ event object. The return value of this method indicates whether the default acti
 <p>1.54</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforeOpenContextMenu beforeOpenContextMenu to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireDelete()</h3>
 <blockquote>
 <p><strong>fireDelete</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:delete delete to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$DeleteEventParameters.html"><code>ListBase$DeleteEventParameters</code></a></p>
@@ -917,12 +916,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:delete delete to attached listeners.</p>
 <hr>
 <h3><del>fireGrowingFinished()</del></h3>
 <blockquote>
 <p><strong>fireGrowingFinished</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:growingFinished growingFinished to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$GrowingFinishedEventParameters.html"><code>ListBase$GrowingFinishedEventParameters</code></a></p>
@@ -936,12 +935,12 @@ event object. The return value of this method indicates whether the default acti
 <p>(since 1.16.3) - Instead, use &quot;updateFinished&quot; event.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:growingFinished growingFinished to attached listeners.</p>
 <hr>
 <h3><del>fireGrowingStarted()</del></h3>
 <blockquote>
 <p><strong>fireGrowingStarted</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:growingStarted growingStarted to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$GrowingStartedEventParameters.html"><code>ListBase$GrowingStartedEventParameters</code></a></p>
@@ -955,12 +954,12 @@ event object. The return value of this method indicates whether the default acti
 <p>(since 1.16.3) - Instead, use <code>updateStarted</code> event with listening <code>changeReason</code>.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:growingStarted growingStarted to attached listeners.</p>
 <hr>
 <h3>fireItemPress()</h3>
 <blockquote>
 <p><strong>fireItemPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:itemPress itemPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$ItemPressEventParameters.html"><code>ListBase$ItemPressEventParameters</code></a></p>
@@ -972,12 +971,12 @@ event object. The return value of this method indicates whether the default acti
 <p>1.20</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:itemPress itemPress to attached listeners.</p>
 <hr>
 <h3><del>fireSelect()</del></h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$SelectEventParameters.html"><code>ListBase$SelectEventParameters</code></a></p>
@@ -989,12 +988,12 @@ event object. The return value of this method indicates whether the default acti
 <p>(since 1.16) - Use the <code>selectionChange</code> event instead.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>fireSelectionChange()</h3>
 <blockquote>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$SelectionChangeEventParameters.html"><code>ListBase$SelectionChangeEventParameters</code></a></p>
@@ -1006,14 +1005,12 @@ event object. The return value of this method indicates whether the default acti
 <p>1.16</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3>fireSwipe()</h3>
 <blockquote>
 <p><strong>fireSwipe</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:swipe swipe to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$SwipeEventParameters.html"><code>ListBase$SwipeEventParameters</code></a></p>
@@ -1023,12 +1020,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:swipe swipe to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireUpdateFinished()</h3>
 <blockquote>
 <p><strong>fireUpdateFinished</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:updateFinished updateFinished to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$UpdateFinishedEventParameters.html"><code>ListBase$UpdateFinishedEventParameters</code></a></p>
@@ -1040,12 +1039,12 @@ event object. The return value of this method indicates whether the default acti
 <p>1.16.3</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:updateFinished updateFinished to attached listeners.</p>
 <hr>
 <h3>fireUpdateStarted()</h3>
 <blockquote>
 <p><strong>fireUpdateStarted</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:updateStarted updateStarted to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBase$UpdateStartedEventParameters.html"><code>ListBase$UpdateStartedEventParameters</code></a></p>
@@ -1057,43 +1056,44 @@ event object. The return value of this method indicates whether the default acti
 <p>1.16.3</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:updateStarted updateStarted to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getContextMenu()</h3>
 <blockquote>
 <p><strong>getContextMenu</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getContextMenu contextMenu.</p>
-<p>Defines the context menu of the items.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Gets content of aggregation #getContextMenu contextMenu.</p>
+<p>Defines the context menu of the items.</p>
 <hr>
 <h3>getEnableBusyIndicator()</h3>
 <blockquote>
 <p><strong>getEnableBusyIndicator</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableBusyIndicator</code></p>
+<h4>Since</h4>
+<p>1.20.2</p>
 <p>Gets current value of property #getEnableBusyIndicator enableBusyIndicator.</p>
 <p>When this property is set to <code>true</code>, the control will automatically display a busy indicator when it
 detects that data is being loaded. This busy indicator blocks the interaction with the items until data
 loading is finished. By default, the busy indicator will be shown after one second. This behavior can
 be customized by setting the <code>busyIndicatorDelay</code> property.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableBusyIndicator</code></p>
-<h4>Since</h4>
-<p>1.20.2</p>
 <hr>
 <h3>getFooterText()</h3>
 <blockquote>
@@ -1109,38 +1109,36 @@ be customized by setting the <code>busyIndicatorDelay</code> property.</p>
 <blockquote>
 <p><strong>getGrowing</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getGrowing growing.</p>
-<p>If set to <code>true</code>, enables the growing feature of the control to load more items by requesting from the
-model. <strong>Note:</strong>: This feature only works when an <code>items</code> aggregation is bound. Growing must not be used
-together with two-way binding.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>growing</code></p>
 <h4>Since</h4>
 <p>1.16.0</p>
+<p>Gets current value of property #getGrowing growing.</p>
+<p>If set to <code>true</code>, enables the growing feature of the control to load more items by requesting from the
+model. <strong>Note:</strong>: This feature only works when an <code>items</code> aggregation is bound. Growing must not be used
+together with two-way binding.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getGrowingDirection()</h3>
 <blockquote>
 <p><strong>getGrowingDirection</strong>(): <a href="../../library/enumerations/ListGrowingDirection.html"><code>ListGrowingDirection</code></a> | <code>&quot;Downwards&quot;</code> | <code>&quot;Upwards&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getGrowingDirection growingDirection.</p>
-<p>Defines the direction of the growing feature. If set to <code>Downwards</code> the user has to scroll down to load
-more items or the growing button is displayed at the bottom. If set to <code>Upwards</code> the user has to scroll
-up to load more items or the growing button is displayed at the top.</p>
-<p>Default value is <code>Downwards</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/enumerations/ListGrowingDirection.html"><code>ListGrowingDirection</code></a> | <code>&quot;Downwards&quot;</code> | <code>&quot;Upwards&quot;</code></p>
 <p>Value of property <code>growingDirection</code></p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Gets current value of property #getGrowingDirection growingDirection.</p>
+<p>Defines the direction of the growing feature. If set to <code>Downwards</code> the user has to scroll down to load
+more items or the growing button is displayed at the bottom. If set to <code>Upwards</code> the user has to scroll
+up to load more items or the growing button is displayed at the top.</p>
+<p>Default value is <code>Downwards</code>.</p>
 <hr>
 <h3>getGrowingInfo()</h3>
 <blockquote>
 <p><strong>getGrowingInfo</strong>(): <code>object</code></p>
 </blockquote>
-<p>Returns growing information as object with &quot;actual&quot; and &quot;total&quot; keys. Note: This function returns &quot;null&quot;
-if &quot;growing&quot; feature is disabled.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <h5>actual</h5>
@@ -1153,57 +1151,56 @@ if &quot;growing&quot; feature is disabled.</p>
 </blockquote>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Returns growing information as object with &quot;actual&quot; and &quot;total&quot; keys. Note: This function returns &quot;null&quot;
+if &quot;growing&quot; feature is disabled.</p>
 <hr>
 <h3>getGrowingScrollToLoad()</h3>
 <blockquote>
 <p><strong>getGrowingScrollToLoad</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>growingScrollToLoad</code></p>
+<h4>Since</h4>
+<p>1.16.0</p>
 <p>Gets current value of property #getGrowingScrollToLoad growingScrollToLoad.</p>
 <p>If set to true, the user can scroll down/up to load more items. Otherwise a growing button is displayed
 at the bottom/top of the control. <strong>Note:</strong> This property can only be used if the <code>growing</code> property
 is set to <code>true</code> and only if there is one instance of <code>sap.m.List</code> or <code>sap.m.Table</code> inside the scrollable
 scroll container (e.g <code>sap.m.Page</code>).</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>growingScrollToLoad</code></p>
-<h4>Since</h4>
-<p>1.16.0</p>
 <hr>
 <h3>getGrowingThreshold()</h3>
 <blockquote>
 <p><strong>getGrowingThreshold</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getGrowingThreshold growingThreshold.</p>
-<p>Defines the number of items to be requested from the model for each grow. This property can only be used
-if the <code>growing</code> property is set to <code>true</code>.</p>
-<p>Default value is <code>20</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>growingThreshold</code></p>
 <h4>Since</h4>
 <p>1.16.0</p>
+<p>Gets current value of property #getGrowingThreshold growingThreshold.</p>
+<p>Defines the number of items to be requested from the model for each grow. This property can only be used
+if the <code>growing</code> property is set to <code>true</code>.</p>
+<p>Default value is <code>20</code>.</p>
 <hr>
 <h3>getGrowingTriggerText()</h3>
 <blockquote>
 <p><strong>getGrowingTriggerText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getGrowingTriggerText growingTriggerText.</p>
-<p>Defines the text displayed on the growing button. The default is a translated text (&quot;More&quot;) coming from
-the message bundle. This property can only be used if the <code>growing</code> property is set to <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>growingTriggerText</code></p>
 <h4>Since</h4>
 <p>1.16.0</p>
+<p>Gets current value of property #getGrowingTriggerText growingTriggerText.</p>
+<p>Defines the text displayed on the growing button. The default is a translated text (&quot;More&quot;) coming from
+the message bundle. This property can only be used if the <code>growing</code> property is set to <code>true</code>.</p>
 <hr>
 <h3><del>getHeaderDesign()</del></h3>
 <blockquote>
 <p><strong>getHeaderDesign</strong>(): <code>&quot;Standard&quot;</code> | <a href="../../library/enumerations/ListHeaderDesign.html"><code>ListHeaderDesign</code></a> | <code>&quot;Plain&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getHeaderDesign headerDesign.</p>
-<p>Defines the header style of the control. Possible values are <code>Standard</code> and <code>Plain</code>.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Standard&quot;</code> | <a href="../../library/enumerations/ListHeaderDesign.html"><code>ListHeaderDesign</code></a> | <code>&quot;Plain&quot;</code></p>
 <p>Value of property <code>headerDesign</code></p>
@@ -1211,11 +1208,19 @@ the message bundle. This property can only be used if the <code>growing</code> p
 <p>1.14</p>
 <h4>Deprecated</h4>
 <p>(since 1.16) - No longer has any functionality.</p>
+<p>Gets current value of property #getHeaderDesign headerDesign.</p>
+<p>Defines the header style of the control. Possible values are <code>Standard</code> and <code>Plain</code>.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3>getHeaderLevel()</h3>
 <blockquote>
 <p><strong>getHeaderLevel</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+<p>Value of property <code>headerLevel</code></p>
+<h4>Since</h4>
+<p>1.117.0</p>
 <p>Gets current value of property #getHeaderLevel headerLevel.</p>
 <p>Defines the semantic header level of the header text (see #getHeaderText headerText property}).
 This information is, for example, used by assistive technologies, such as screenreaders, to create a
@@ -1224,11 +1229,6 @@ an HTML h1-h6 element is used or, when using the <code>Auto</code> level, no exp
 <p><strong>Note:</strong> If the <code>headerToolbar</code> aggregation is set, then this property is ignored. If this is the case,
 use, for example, a <code>sap.m.Title</code> control in the toolbar to define a header.</p>
 <p>Default value is <code>Auto</code>.</p>
-<h4>Returns</h4>
-<p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
-<p>Value of property <code>headerLevel</code></p>
-<h4>Since</h4>
-<p>1.117.0</p>
 <hr>
 <h3>getHeaderText()</h3>
 <blockquote>
@@ -1246,13 +1246,13 @@ the toolbar to define a header.</p>
 <blockquote>
 <p><strong>getHeaderToolbar</strong>(): <a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getHeaderToolbar headerToolbar.</p>
-<p>The header area can be used as a toolbar to add extra controls for user interactions. <strong>Note:</strong> When
-set, this overwrites the <code>headerText</code> property.</p>
 <h4>Returns</h4>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets content of aggregation #getHeaderToolbar headerToolbar.</p>
+<p>The header area can be used as a toolbar to add extra controls for user interactions. <strong>Note:</strong> When
+set, this overwrites the <code>headerText</code> property.</p>
 <hr>
 <h3>getIncludeItemInSelection()</h3>
 <blockquote>
@@ -1271,12 +1271,12 @@ by default.</p>
 <blockquote>
 <p><strong>getInfoToolbar</strong>(): <a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getInfoToolbar infoToolbar.</p>
-<p>A toolbar that is placed below the header to show extra information to the user.</p>
 <h4>Returns</h4>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets content of aggregation #getInfoToolbar infoToolbar.</p>
+<p>A toolbar that is placed below the header to show extra information to the user.</p>
 <hr>
 <h3>getInset()</h3>
 <blockquote>
@@ -1293,13 +1293,13 @@ by default.</p>
 <blockquote>
 <p><strong>getItemNavigation</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/delegate/ItemNavigation/classes/ItemNavigation.html"><code>ItemNavigation</code></a></p>
 </blockquote>
-<p>Returns the ItemNavigation delegate of the list</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/delegate/ItemNavigation/classes/ItemNavigation.html"><code>ItemNavigation</code></a></p>
 <h4>Since</h4>
 <p>1.16.5</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the ItemNavigation delegate of the list</p>
 <hr>
 <h3>getItems()</h3>
 <blockquote>
@@ -1314,25 +1314,25 @@ by default.</p>
 <blockquote>
 <p><strong>getKeyboardMode</strong>(): <code>&quot;Navigation&quot;</code> | <a href="../../library/enumerations/ListKeyboardMode.html"><code>ListKeyboardMode</code></a> | <code>&quot;Edit&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getKeyboardMode keyboardMode.</p>
-<p>Defines keyboard handling behavior of the control.</p>
-<p>Default value is <code>&quot;Navigation&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Navigation&quot;</code> | <a href="../../library/enumerations/ListKeyboardMode.html"><code>ListKeyboardMode</code></a> | <code>&quot;Edit&quot;</code></p>
 <p>Value of property <code>keyboardMode</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Gets current value of property #getKeyboardMode keyboardMode.</p>
+<p>Defines keyboard handling behavior of the control.</p>
+<p>Default value is <code>&quot;Navigation&quot;</code>.</p>
 <hr>
 <h3>getLastMode()</h3>
 <blockquote>
 <p><strong>getLastMode</strong>(): <code>void</code></p>
 </blockquote>
-<p>Returns the last list mode, the mode that is rendered This can be used to detect mode changes during
-rendering</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the last list mode, the mode that is rendered This can be used to detect mode changes during
+rendering</p>
 <hr>
 <h3>getMode()</h3>
 <blockquote>
@@ -1360,6 +1360,11 @@ rendering</p>
 <blockquote>
 <p><strong>getMultiSelectMode</strong>(): <a href="../../library/enumerations/MultiSelectMode.html"><code>MultiSelectMode</code></a> | <code>&quot;ClearAll&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;SelectAll&quot;</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../library/enumerations/MultiSelectMode.html"><code>MultiSelectMode</code></a> | <code>&quot;ClearAll&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;SelectAll&quot;</code></p>
+<p>Value of property <code>multiSelectMode</code></p>
+<h4>Since</h4>
+<p>1.93</p>
 <p>Gets current value of property #getMultiSelectMode multiSelectMode.</p>
 <p>Defines the multi-selection mode for the control.</p>
 <p>If the property is set to <code>ClearAll</code>, then selecting items via the keyboard shortcut CTRL + A
@@ -1371,24 +1376,19 @@ column header, otherwise a Select All checkbox is shown. The Select All checkbox
 all the items in the control, and the Deselect All icon deselects the items.</p>
 <p><strong>Note:</strong> This property must be used with the <code>MultiSelect</code> mode.</p>
 <p>Default value is <code>Default</code>.</p>
-<h4>Returns</h4>
-<p><a href="../../library/enumerations/MultiSelectMode.html"><code>MultiSelectMode</code></a> | <code>&quot;ClearAll&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;SelectAll&quot;</code></p>
-<p>Value of property <code>multiSelectMode</code></p>
-<h4>Since</h4>
-<p>1.93</p>
 <hr>
 <h3>getNoData()</h3>
 <blockquote>
 <p><strong>getNoData</strong>(): <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getNoData noData.</p>
-<p>Defines the custom visualization if there is no data available. <strong>Note:</strong> If both a <code>noDataText</code> property
-and a <code>noData</code> aggregation are provided, the <code>noData</code> aggregation takes priority. If the <code>noData</code> aggregation
-is undefined or set to null, the <code>noDataText</code> property is used instead.</p>
 <h4>Returns</h4>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.101</p>
+<p>Gets content of aggregation #getNoData noData.</p>
+<p>Defines the custom visualization if there is no data available. <strong>Note:</strong> If both a <code>noDataText</code> property
+and a <code>noData</code> aggregation are provided, the <code>noData</code> aggregation takes priority. If the <code>noData</code> aggregation
+is undefined or set to null, the <code>noDataText</code> property is used instead.</p>
 <hr>
 <h3>getNoDataText()</h3>
 <blockquote>
@@ -1406,6 +1406,11 @@ is undefined or set to null, the <code>noDataText</code> property is used instea
 <blockquote>
 <p><strong>getRememberSelections</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>rememberSelections</code></p>
+<h4>Since</h4>
+<p>1.16.6</p>
 <p>Gets current value of property #getRememberSelections rememberSelections.</p>
 <p>If set to true, this control remembers and retains the selection of the items after a binding update
 has been performed (e.g. sorting, filtering). <strong>Note:</strong> This feature works only if two-way data binding
@@ -1417,18 +1422,11 @@ apply in this context as well. For more details, see the sap.ui.model.odata.v4.C
 the sap.ui.model.odata.v4.ODataModel#bindList bindList, and the sap.ui.model.odata.v4.ODataMetaModel#requestValueListInfo requestValueListInfo
 API documentation. Do not enable this feature when <code>$$SharedRequests</code> is active.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>rememberSelections</code></p>
-<h4>Since</h4>
-<p>1.16.6</p>
 <hr>
 <h3>getSelectedContexts()</h3>
 <blockquote>
 <p><strong>getSelectedContexts</strong>(<code>bAll?</code>): <a href="../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
-<p>Returns the binding contexts of the selected items. Note: This method returns an empty array if no databinding
-is used.</p>
 <h4>Parameters</h4>
 <h5>bAll?</h5>
 <p><code>boolean</code></p>
@@ -1438,6 +1436,8 @@ In single selection modes, only the last selected item&#39;s binding context is 
 <p><a href="../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a>[]</p>
 <h4>Since</h4>
 <p>1.18.6</p>
+<p>Returns the binding contexts of the selected items. Note: This method returns an empty array if no databinding
+is used.</p>
 <hr>
 <h3>getSelectedItem()</h3>
 <blockquote>
@@ -1493,6 +1493,11 @@ and multiple items are selected, only the up-most selected item is returned.</p>
 <blockquote>
 <p><strong>getSticky</strong>(): (<a href="../../library/enumerations/Sticky.html"><code>Sticky</code></a> | <code>&quot;ColumnHeaders&quot;</code> | <code>&quot;HeaderToolbar&quot;</code> | <code>&quot;InfoToolbar&quot;</code>)[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p>(<a href="../../library/enumerations/Sticky.html"><code>Sticky</code></a> | <code>&quot;ColumnHeaders&quot;</code> | <code>&quot;HeaderToolbar&quot;</code> | <code>&quot;InfoToolbar&quot;</code>)[]</p>
+<p>Value of property <code>sticky</code></p>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Gets current value of property #getSticky sticky.</p>
 <p>Defines the section of the control that remains fixed at the top of the page during vertical scrolling
 as long as the control is in the viewport.</p>
@@ -1506,11 +1511,6 @@ as long as the control is in the viewport.</p>
 	 - A transparent toolbar design is not supported for sticky bars. The toolbar will automatically get
     an intransparent background color.
 	 - This feature supports only the default height of the toolbar control.</p>
-<h4>Returns</h4>
-<p>(<a href="../../library/enumerations/Sticky.html"><code>Sticky</code></a> | <code>&quot;ColumnHeaders&quot;</code> | <code>&quot;HeaderToolbar&quot;</code> | <code>&quot;InfoToolbar&quot;</code>)[]</p>
-<p>Value of property <code>sticky</code></p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>getSwipeContent()</h3>
 <blockquote>
@@ -1591,12 +1591,12 @@ the last position</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllItems()</h3>
 <blockquote>
@@ -1612,7 +1612,6 @@ the last position</p>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1622,6 +1621,7 @@ the last position</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeItem()</h3>
 <blockquote>
@@ -1653,10 +1653,6 @@ to remove all selections.</p>
 <blockquote>
 <p><strong>requestItems</strong>(<code>iItems?</code>): <code>void</code></p>
 </blockquote>
-<p>Requests a specified number of items from the back end to load more data in the list. If the number of
-items are not specified, the <code>growingThreshold</code> value is used to request more data.</p>
-<p><strong>Note:</strong> To use this method, the <code>growing</code> feature must be enabled.</p>
-<p>See #getGrowing growing and #getGrowingThreshold growingThreshold for more information.</p>
 <h4>Parameters</h4>
 <h5>iItems?</h5>
 <p><code>number</code></p>
@@ -1665,19 +1661,15 @@ items are not specified, the <code>growingThreshold</code> value is used to requ
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Requests a specified number of items from the back end to load more data in the list. If the number of
+items are not specified, the <code>growingThreshold</code> value is used to request more data.</p>
+<p><strong>Note:</strong> To use this method, the <code>growing</code> feature must be enabled.</p>
+<p>See #getGrowing growing and #getGrowingThreshold growingThreshold for more information.</p>
 <hr>
 <h3>scrollToIndex()</h3>
 <blockquote>
 <p><strong>scrollToIndex</strong>(<code>iIndex</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
-<p>Scrolls the list so that the item with the given index is in the viewport. If the index is -1, it scrolls
-to the bottom of the list. If the growing feature is enabled, the list is scrolled to the last available
-item.</p>
-<p>Growing in combination with <code>growingScrollToLoad=true</code> can result in loading of new items when scrolling
-to the bottom of the list.
- <strong>Note:</strong> This method only works if the control is placed inside a scrollable container (for example,
-<code>sap.m.Page</code>). Calling this method if the <code>ListBase</code> control is placed outside the container, will reject
-the <code>Promise</code> by throwing an error.</p>
 <h4>Parameters</h4>
 <h5>iIndex</h5>
 <p><code>number</code></p>
@@ -1687,24 +1679,31 @@ the <code>Promise</code> by throwing an error.</p>
 <p>A <code>Promise</code> that resolves after the table scrolls to the row with the given index.</p>
 <h4>Since</h4>
 <p>1.76</p>
+<p>Scrolls the list so that the item with the given index is in the viewport. If the index is -1, it scrolls
+to the bottom of the list. If the growing feature is enabled, the list is scrolled to the last available
+item.</p>
+<p>Growing in combination with <code>growingScrollToLoad=true</code> can result in loading of new items when scrolling
+to the bottom of the list.
+ <strong>Note:</strong> This method only works if the control is placed inside a scrollable container (for example,
+<code>sap.m.Page</code>). Calling this method if the <code>ListBase</code> control is placed outside the container, will reject
+the <code>Promise</code> by throwing an error.</p>
 <hr>
 <h3>selectAll()</h3>
 <blockquote>
 <p><strong>selectAll</strong>(): <code>this</code></p>
 </blockquote>
-<p>Selects all items in the <code>MultiSelection</code> mode.</p>
-<p><strong>Note:</strong> If <code>growing</code> is enabled, only the visible items in the list are selected. Since version 1.93,
-the items are not selected if <code>getMultiSelectMode=ClearAll</code>.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Selects all items in the <code>MultiSelection</code> mode.</p>
+<p><strong>Note:</strong> If <code>growing</code> is enabled, only the visible items in the list are selected. Since version 1.93,
+the items are not selected if <code>getMultiSelectMode=ClearAll</code>.</p>
 <hr>
 <h3>setContextMenu()</h3>
 <blockquote>
 <p><strong>setContextMenu</strong>(<code>oContextMenu</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getContextMenu contextMenu.</p>
 <h4>Parameters</h4>
 <h5>oContextMenu</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
@@ -1714,18 +1713,12 @@ the items are not selected if <code>getMultiSelectMode=ClearAll</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets the aggregated #getContextMenu contextMenu.</p>
 <hr>
 <h3>setEnableBusyIndicator()</h3>
 <blockquote>
 <p><strong>setEnableBusyIndicator</strong>(<code>bEnableBusyIndicator?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableBusyIndicator enableBusyIndicator.</p>
-<p>When this property is set to <code>true</code>, the control will automatically display a busy indicator when it
-detects that data is being loaded. This busy indicator blocks the interaction with the items until data
-loading is finished. By default, the busy indicator will be shown after one second. This behavior can
-be customized by setting the <code>busyIndicatorDelay</code> property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableBusyIndicator?</h5>
 <p><code>boolean</code></p>
@@ -1735,6 +1728,13 @@ be customized by setting the <code>busyIndicatorDelay</code> property.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.20.2</p>
+<p>Sets a new value for property #getEnableBusyIndicator enableBusyIndicator.</p>
+<p>When this property is set to <code>true</code>, the control will automatically display a busy indicator when it
+detects that data is being loaded. This busy indicator blocks the interaction with the items until data
+loading is finished. By default, the busy indicator will be shown after one second. This behavior can
+be customized by setting the <code>busyIndicatorDelay</code> property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setFooterText()</h3>
 <blockquote>
@@ -1755,12 +1755,6 @@ be customized by setting the <code>busyIndicatorDelay</code> property.</p>
 <blockquote>
 <p><strong>setGrowing</strong>(<code>bGrowing?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getGrowing growing.</p>
-<p>If set to <code>true</code>, enables the growing feature of the control to load more items by requesting from the
-model. <strong>Note:</strong>: This feature only works when an <code>items</code> aggregation is bound. Growing must not be used
-together with two-way binding.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bGrowing?</h5>
 <p><code>boolean</code></p>
@@ -1770,17 +1764,17 @@ together with two-way binding.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
+<p>Sets a new value for property #getGrowing growing.</p>
+<p>If set to <code>true</code>, enables the growing feature of the control to load more items by requesting from the
+model. <strong>Note:</strong>: This feature only works when an <code>items</code> aggregation is bound. Growing must not be used
+together with two-way binding.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setGrowingDirection()</h3>
 <blockquote>
 <p><strong>setGrowingDirection</strong>(<code>sGrowingDirection?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getGrowingDirection growingDirection.</p>
-<p>Defines the direction of the growing feature. If set to <code>Downwards</code> the user has to scroll down to load
-more items or the growing button is displayed at the bottom. If set to <code>Upwards</code> the user has to scroll
-up to load more items or the growing button is displayed at the top.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Downwards</code>.</p>
 <h4>Parameters</h4>
 <h5>sGrowingDirection?</h5>
 <p><a href="../../library/enumerations/ListGrowingDirection.html"><code>ListGrowingDirection</code></a> | <code>&quot;Downwards&quot;</code> | <code>&quot;Upwards&quot;</code></p>
@@ -1790,18 +1784,17 @@ up to load more items or the growing button is displayed at the top.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Sets a new value for property #getGrowingDirection growingDirection.</p>
+<p>Defines the direction of the growing feature. If set to <code>Downwards</code> the user has to scroll down to load
+more items or the growing button is displayed at the bottom. If set to <code>Upwards</code> the user has to scroll
+up to load more items or the growing button is displayed at the top.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Downwards</code>.</p>
 <hr>
 <h3>setGrowingScrollToLoad()</h3>
 <blockquote>
 <p><strong>setGrowingScrollToLoad</strong>(<code>bGrowingScrollToLoad?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getGrowingScrollToLoad growingScrollToLoad.</p>
-<p>If set to true, the user can scroll down/up to load more items. Otherwise a growing button is displayed
-at the bottom/top of the control. <strong>Note:</strong> This property can only be used if the <code>growing</code> property
-is set to <code>true</code> and only if there is one instance of <code>sap.m.List</code> or <code>sap.m.Table</code> inside the scrollable
-scroll container (e.g <code>sap.m.Page</code>).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bGrowingScrollToLoad?</h5>
 <p><code>boolean</code></p>
@@ -1811,16 +1804,18 @@ scroll container (e.g <code>sap.m.Page</code>).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
+<p>Sets a new value for property #getGrowingScrollToLoad growingScrollToLoad.</p>
+<p>If set to true, the user can scroll down/up to load more items. Otherwise a growing button is displayed
+at the bottom/top of the control. <strong>Note:</strong> This property can only be used if the <code>growing</code> property
+is set to <code>true</code> and only if there is one instance of <code>sap.m.List</code> or <code>sap.m.Table</code> inside the scrollable
+scroll container (e.g <code>sap.m.Page</code>).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setGrowingThreshold()</h3>
 <blockquote>
 <p><strong>setGrowingThreshold</strong>(<code>iGrowingThreshold?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getGrowingThreshold growingThreshold.</p>
-<p>Defines the number of items to be requested from the model for each grow. This property can only be used
-if the <code>growing</code> property is set to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>20</code>.</p>
 <h4>Parameters</h4>
 <h5>iGrowingThreshold?</h5>
 <p><code>number</code></p>
@@ -1830,15 +1825,16 @@ if the <code>growing</code> property is set to <code>true</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
+<p>Sets a new value for property #getGrowingThreshold growingThreshold.</p>
+<p>Defines the number of items to be requested from the model for each grow. This property can only be used
+if the <code>growing</code> property is set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>20</code>.</p>
 <hr>
 <h3>setGrowingTriggerText()</h3>
 <blockquote>
 <p><strong>setGrowingTriggerText</strong>(<code>sGrowingTriggerText?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getGrowingTriggerText growingTriggerText.</p>
-<p>Defines the text displayed on the growing button. The default is a translated text (&quot;More&quot;) coming from
-the message bundle. This property can only be used if the <code>growing</code> property is set to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sGrowingTriggerText?</h5>
 <p><code>string</code></p>
@@ -1848,15 +1844,15 @@ the message bundle. This property can only be used if the <code>growing</code> p
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
+<p>Sets a new value for property #getGrowingTriggerText growingTriggerText.</p>
+<p>Defines the text displayed on the growing button. The default is a translated text (&quot;More&quot;) coming from
+the message bundle. This property can only be used if the <code>growing</code> property is set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setHeaderDesign()</del></h3>
 <blockquote>
 <p><strong>setHeaderDesign</strong>(<code>sHeaderDesign?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHeaderDesign headerDesign.</p>
-<p>Defines the header style of the control. Possible values are <code>Standard</code> and <code>Plain</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeaderDesign?</h5>
 <p><code>&quot;Standard&quot;</code> | <a href="../../library/enumerations/ListHeaderDesign.html"><code>ListHeaderDesign</code></a> | <code>&quot;Plain&quot;</code></p>
@@ -1868,20 +1864,15 @@ the message bundle. This property can only be used if the <code>growing</code> p
 <p>1.14</p>
 <h4>Deprecated</h4>
 <p>(since 1.16) - No longer has any functionality.</p>
+<p>Sets a new value for property #getHeaderDesign headerDesign.</p>
+<p>Defines the header style of the control. Possible values are <code>Standard</code> and <code>Plain</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3>setHeaderLevel()</h3>
 <blockquote>
 <p><strong>setHeaderLevel</strong>(<code>sHeaderLevel?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHeaderLevel headerLevel.</p>
-<p>Defines the semantic header level of the header text (see #getHeaderText headerText property}).
-This information is, for example, used by assistive technologies, such as screenreaders, to create a
-hierarchical site map for faster navigation. Depending on this setting, either the ARIA equivalent of
-an HTML h1-h6 element is used or, when using the <code>Auto</code> level, no explicit level information is used.</p>
-<p><strong>Note:</strong> If the <code>headerToolbar</code> aggregation is set, then this property is ignored. If this is the case,
-use, for example, a <code>sap.m.Title</code> control in the toolbar to define a header.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeaderLevel?</h5>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
@@ -1891,6 +1882,15 @@ use, for example, a <code>sap.m.Title</code> control in the toolbar to define a 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.117.0</p>
+<p>Sets a new value for property #getHeaderLevel headerLevel.</p>
+<p>Defines the semantic header level of the header text (see #getHeaderText headerText property}).
+This information is, for example, used by assistive technologies, such as screenreaders, to create a
+hierarchical site map for faster navigation. Depending on this setting, either the ARIA equivalent of
+an HTML h1-h6 element is used or, when using the <code>Auto</code> level, no explicit level information is used.</p>
+<p><strong>Note:</strong> If the <code>headerToolbar</code> aggregation is set, then this property is ignored. If this is the case,
+use, for example, a <code>sap.m.Title</code> control in the toolbar to define a header.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>setHeaderText()</h3>
 <blockquote>
@@ -1913,7 +1913,6 @@ the toolbar to define a header.</p>
 <blockquote>
 <p><strong>setHeaderToolbar</strong>(<code>oHeaderToolbar</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getHeaderToolbar headerToolbar.</p>
 <h4>Parameters</h4>
 <h5>oHeaderToolbar</h5>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
@@ -1923,6 +1922,7 @@ the toolbar to define a header.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Sets the aggregated #getHeaderToolbar headerToolbar.</p>
 <hr>
 <h3>setIncludeItemInSelection()</h3>
 <blockquote>
@@ -1946,7 +1946,6 @@ by default.</p>
 <blockquote>
 <p><strong>setInfoToolbar</strong>(<code>oInfoToolbar</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getInfoToolbar infoToolbar.</p>
 <h4>Parameters</h4>
 <h5>oInfoToolbar</h5>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
@@ -1956,6 +1955,7 @@ by default.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Sets the aggregated #getInfoToolbar infoToolbar.</p>
 <hr>
 <h3>setInset()</h3>
 <blockquote>
@@ -1977,10 +1977,6 @@ by default.</p>
 <blockquote>
 <p><strong>setKeyboardMode</strong>(<code>sKeyboardMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getKeyboardMode keyboardMode.</p>
-<p>Defines keyboard handling behavior of the control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Navigation&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sKeyboardMode?</h5>
 <p><code>&quot;Navigation&quot;</code> | <a href="../../library/enumerations/ListKeyboardMode.html"><code>ListKeyboardMode</code></a> | <code>&quot;Edit&quot;</code></p>
@@ -1990,6 +1986,10 @@ by default.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Sets a new value for property #getKeyboardMode keyboardMode.</p>
+<p>Defines keyboard handling behavior of the control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Navigation&quot;</code>.</p>
 <hr>
 <h3>setMode()</h3>
 <blockquote>
@@ -2027,6 +2027,15 @@ by default.</p>
 <blockquote>
 <p><strong>setMultiSelectMode</strong>(<code>sMultiSelectMode?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sMultiSelectMode?</h5>
+<p><a href="../../library/enumerations/MultiSelectMode.html"><code>MultiSelectMode</code></a> | <code>&quot;ClearAll&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;SelectAll&quot;</code></p>
+<p>New value for property <code>multiSelectMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.93</p>
 <p>Sets a new value for property #getMultiSelectMode multiSelectMode.</p>
 <p>Defines the multi-selection mode for the control.</p>
 <p>If the property is set to <code>ClearAll</code>, then selecting items via the keyboard shortcut CTRL + A
@@ -2039,21 +2048,11 @@ all the items in the control, and the Deselect All icon deselects the items.</p>
 <p><strong>Note:</strong> This property must be used with the <code>MultiSelect</code> mode.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>Default</code>.</p>
-<h4>Parameters</h4>
-<h5>sMultiSelectMode?</h5>
-<p><a href="../../library/enumerations/MultiSelectMode.html"><code>MultiSelectMode</code></a> | <code>&quot;ClearAll&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;SelectAll&quot;</code></p>
-<p>New value for property <code>multiSelectMode</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.93</p>
 <hr>
 <h3>setNoData()</h3>
 <blockquote>
 <p><strong>setNoData</strong>(<code>vNoData</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getNoData noData.</p>
 <h4>Parameters</h4>
 <h5>vNoData</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -2063,6 +2062,7 @@ all the items in the control, and the Deselect All icon deselects the items.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.101</p>
+<p>Sets the aggregated #getNoData noData.</p>
 <hr>
 <h3>setNoDataText()</h3>
 <blockquote>
@@ -2085,6 +2085,15 @@ is undefined or set to null, the <code>noDataText</code> property is used instea
 <blockquote>
 <p><strong>setRememberSelections</strong>(<code>bRememberSelections?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bRememberSelections?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>rememberSelections</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.16.6</p>
 <p>Sets a new value for property #getRememberSelections rememberSelections.</p>
 <p>If set to true, this control remembers and retains the selection of the items after a binding update
 has been performed (e.g. sorting, filtering). <strong>Note:</strong> This feature works only if two-way data binding
@@ -2097,15 +2106,6 @@ the sap.ui.model.odata.v4.ODataModel#bindList bindList, and the sap.ui.model.oda
 API documentation. Do not enable this feature when <code>$$SharedRequests</code> is active.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Parameters</h4>
-<h5>bRememberSelections?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>rememberSelections</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.16.6</p>
 <hr>
 <h3>setSelectedItem()</h3>
 <blockquote>
@@ -2189,6 +2189,15 @@ API documentation. Do not enable this feature when <code>$$SharedRequests</code>
 <blockquote>
 <p><strong>setSticky</strong>(<code>sSticky</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sSticky</h5>
+<p>(<a href="../../library/enumerations/Sticky.html"><code>Sticky</code></a> | <code>&quot;ColumnHeaders&quot;</code> | <code>&quot;HeaderToolbar&quot;</code> | <code>&quot;InfoToolbar&quot;</code>)[]</p>
+<p>New value for property <code>sticky</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Sets a new value for property #getSticky sticky.</p>
 <p>Defines the section of the control that remains fixed at the top of the page during vertical scrolling
 as long as the control is in the viewport.</p>
@@ -2203,15 +2212,6 @@ as long as the control is in the viewport.</p>
     an intransparent background color.
 	 - This feature supports only the default height of the toolbar control.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<h4>Parameters</h4>
-<h5>sSticky</h5>
-<p>(<a href="../../library/enumerations/Sticky.html"><code>Sticky</code></a> | <code>&quot;ColumnHeaders&quot;</code> | <code>&quot;HeaderToolbar&quot;</code> | <code>&quot;InfoToolbar&quot;</code>)[]</p>
-<p>New value for property <code>sticky</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>setSwipeContent()</h3>
 <blockquote>
@@ -2298,7 +2298,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ListBase</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ListBase</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -2322,6 +2322,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

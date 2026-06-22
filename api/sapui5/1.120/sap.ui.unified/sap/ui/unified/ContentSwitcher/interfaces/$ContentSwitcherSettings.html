@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $ContentSwitcherSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $ContentSwitcherSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $ContentSwitcherSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $ContentSwitcherSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/ContentSwitcher/interfaces/$ContentSwitcherSettings.html">
-<meta property="og:title" content="~~Interface: $ContentSwitcherSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $ContentSwitcherSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $ContentSwitcherSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $ContentSwitcherSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/ContentSwitcher/interfaces/$ContentSwitcherSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,33 +33,26 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/ContentSwitcher/README.html">ContentSwitcher</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/ContentSwitcher</a> / $ContentSwitcherSettings</p>
-<h1><del>Interface: $ContentSwitcherSettings</del></h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/ContentSwitcher</a> / $ContentSwitcherSettings</p>
+<h1>Interface: $ContentSwitcherSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ContentSwitcherSettings } <span class="kw">from</span> <span class="str">"sap/ui/unified/ContentSwitcher"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the ContentSwitcher constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.44.0)
- (since 1.16.0) - API is not yet finished and might change completely</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>activeContent?</del></h3>
+<h3>activeContent?</h3>
 <blockquote>
 <p><code>optional</code> <strong>activeContent?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The number of the currently active content (1 or 2).</p>
 <hr>
-<h3><del>animation?</del></h3>
+<h3>animation?</h3>
 <blockquote>
 <p><code>optional</code> <strong>animation?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Set the used animation when changing content. This just sets a CSS-class named &quot;sapUiUnifiedACSwitcherAnimation&quot;</p>
 <ul>
 <li>this value on the root element of the control. The animation has to be implemented in CSS. This also
@@ -67,21 +60,19 @@ enables applications to implement their own animations via CSS by reacting to th
 types sap.ui.unified.ContentSwitcherAnimation for default implementations.</li>
 </ul>
 <hr>
-<h3><del>content1?</del></h3>
+<h3>content1?</h3>
 <blockquote>
 <p><code>optional</code> <strong>content1?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The controls that should be shown in the first content</p>
 <hr>
-<h3><del>content2?</del></h3>
+<h3>content2?</h3>
 <blockquote>
 <p><code>optional</code> <strong>content2?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The controls that should be shown in the second content</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

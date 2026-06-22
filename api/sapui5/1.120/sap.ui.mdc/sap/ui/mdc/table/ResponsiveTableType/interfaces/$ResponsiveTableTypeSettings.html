@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ResponsiveTableTypeSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ResponsiveTableTypeSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $ResponsiveTableTypeSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/table/ResponsiveTableType/interfaces/$ResponsiveTableTypeSettings.html">
 <meta property="og:title" content="Interface: $ResponsiveTableTypeSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ResponsiveTableTypeSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $ResponsiveTableTypeSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/table/ResponsiveTableType/interfaces/$ResponsiveTableTypeSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › table › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/table/ResponsiveTableType/README.html">ResponsiveTableType</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/table/ResponsiveTableType</a> / $ResponsiveTableTypeSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/table/ResponsiveTableType</a> / $ResponsiveTableTypeSettings</p>
 <h1>Interface: $ResponsiveTableTypeSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ResponsiveTableTypeSettings } <span class="kw">from</span> <span class="str">"sap/ui/mdc/table/ResponsiveTableType"</span>;</pre>
-<p>Describes the settings that can be provided to the ResponsiveTableType constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../TableTypeBase/interfaces/$TableTypeBaseSettings.html"><code>$TableTypeBaseSettings</code></a></li>
@@ -48,6 +47,8 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>detailsButtonSetting?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | (<code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a>)[]</p>
 </blockquote>
+<h4>Since</h4>
+<p>1.86</p>
 <p>Defines which columns are hidden instead of moved into the pop-in area depending on their importance.
 See sap.m.Column#getImportance and sap.m.Table#getHiddenInPopin for more details.</p>
 <p><strong>Note:</strong> To hide columns based on their importance, it&#39;s mandatory to set <code>showDetailsButton=&quot;true&quot;</code>.
@@ -55,8 +56,6 @@ See sap.m.Column#getImportance and sap.m.Table#getHiddenInPopin for more details
 is used.
  If this property is changed after the <code>Table</code> has been initialized, the new changes take effect only
 when the Show / Hide Details button is pressed a second time.</p>
-<h4>Since</h4>
-<p>1.86</p>
 <hr>
 <h3>growingMode?</h3>
 <blockquote>
@@ -68,24 +67,24 @@ when the Show / Hide Details button is pressed a second time.</p>
 <blockquote>
 <p><code>optional</code> <strong>popinLayout?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Block&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/PopinLayout.html"><code>PopinLayout</code></a> | <code>&quot;GridLarge&quot;</code> | <code>&quot;GridSmall&quot;</code></p>
 </blockquote>
-<p>Defines the layout in which the table pop-in rows are rendered.</p>
 <h4>Since</h4>
 <p>1.96</p>
+<p>Defines the layout in which the table pop-in rows are rendered.</p>
 <hr>
 <h3>showDetailsButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showDetailsButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.79</p>
 <p>Specifies whether the Show / Hide Details button for the <code>ResponsiveTable</code> scenario is shown.</p>
 <p>If the available screen space gets too narrow, the columns configured with <code>High</code> and <code>Medium</code> importance
 move to the pop-in area, while the columns with <code>Low</code> importance are hidden.
  On mobile phones, the columns with <code>Medium</code> importance are also hidden.
  As soon as the first column is hidden, this button appears in the table toolbar and gives the user the
 possibility to toggle the visibility of the hidden columns in the pop-in area.</p>
-<h4>Since</h4>
-<p>1.79</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

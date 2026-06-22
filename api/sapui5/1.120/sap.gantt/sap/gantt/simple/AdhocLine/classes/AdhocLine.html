@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: AdhocLine — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: AdhocLine — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: AdhocLine — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/AdhocLine/classes/AdhocLine.html">
 <meta property="og:title" content="Class: AdhocLine — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: AdhocLine — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: AdhocLine — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/AdhocLine/classes/AdhocLine.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/AdhocLine/README.html">AdhocLine</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/AdhocLine</a> / AdhocLine</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/AdhocLine</a> / AdhocLine</p>
 <h1>Class: AdhocLine</h1>
 <pre class="sig"><span class="kw">import</span> AdhocLine <span class="kw">from</span> <span class="str">"sap/gantt/simple/AdhocLine"</span>;</pre>
+<h2>Since</h2>
+<p>1.84</p>
 <p>The AdhocLine class contains properties to draw an additional vertical line at specific time points in
 the chart area. You can use this line to mark milestones, such as the start of a project start, and special
 events, such as holidays.</p>
-<h2>Since</h2>
-<p>1.84</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -89,10 +89,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachAdhoclineDrop</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:adhoclineDrop adhoclineDrop event of this <code>sap.gantt.simple.AdhocLine</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.gantt.simple.AdhocLine</code> itself.</p>
-<p>Fires during drag and drop of the adhoc line.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -109,14 +105,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.88</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAdhoclineDrop</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:adhoclineDrop adhoclineDrop event of this <code>sap.gantt.simple.AdhocLine</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.gantt.simple.AdhocLine</code> itself.</p>
 <p>Fires during drag and drop of the adhoc line.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAdhoclineDrop</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -129,6 +125,10 @@ otherwise it will be bound to this <code>sap.gantt.simple.AdhocLine</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.88</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:adhoclineDrop adhoclineDrop event of this <code>sap.gantt.simple.AdhocLine</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.gantt.simple.AdhocLine</code> itself.</p>
+<p>Fires during drag and drop of the adhoc line.</p>
 <hr>
 <h3>attachMarkerMouseEnter()</h3>
 <h4>Call Signature</h4>
@@ -264,9 +264,6 @@ otherwise it will be bound to this <code>sap.gantt.simple.AdhocLine</code> itsel
 <blockquote>
 <p><strong>detachAdhoclineDrop</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:adhoclineDrop adhoclineDrop event of this
-<code>sap.gantt.simple.AdhocLine</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -279,6 +276,9 @@ otherwise it will be bound to this <code>sap.gantt.simple.AdhocLine</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:adhoclineDrop adhoclineDrop event of this
+<code>sap.gantt.simple.AdhocLine</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachMarkerMouseEnter()</h3>
 <blockquote>
@@ -337,7 +337,6 @@ this <code>sap.gantt.simple.AdhocLine</code>.</p>
 <blockquote>
 <p><strong>fireAdhoclineDrop</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:adhoclineDrop adhoclineDrop to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/AdhocLine$AdhoclineDropEventParameters.html"><code>AdhocLine$AdhoclineDropEventParameters</code></a></p>
@@ -349,12 +348,12 @@ this <code>sap.gantt.simple.AdhocLine</code>.</p>
 <p>1.88</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:adhoclineDrop adhoclineDrop to attached listeners.</p>
 <hr>
 <h3>fireMarkerMouseEnter()</h3>
 <blockquote>
 <p><strong>fireMarkerMouseEnter</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:markerMouseEnter markerMouseEnter to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -364,12 +363,12 @@ this <code>sap.gantt.simple.AdhocLine</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:markerMouseEnter markerMouseEnter to attached listeners.</p>
 <hr>
 <h3>fireMarkerMouseLeave()</h3>
 <blockquote>
 <p><strong>fireMarkerMouseLeave</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:markerMouseLeave markerMouseLeave to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -379,12 +378,12 @@ this <code>sap.gantt.simple.AdhocLine</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:markerMouseLeave markerMouseLeave to attached listeners.</p>
 <hr>
 <h3>fireMarkerPress()</h3>
 <blockquote>
 <p><strong>fireMarkerPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:markerPress markerPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -394,6 +393,7 @@ this <code>sap.gantt.simple.AdhocLine</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:markerPress markerPress to attached listeners.</p>
 <hr>
 <h3>getDescription()</h3>
 <blockquote>
@@ -409,27 +409,27 @@ this <code>sap.gantt.simple.AdhocLine</code>.</p>
 <blockquote>
 <p><strong>getDraggable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getDraggable draggable.</p>
-<p>Specifies whether the adhoc line is draggable.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>draggable</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getDraggable draggable.</p>
+<p>Specifies whether the adhoc line is draggable.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getMarkerPopoverDelay()</del></h3>
 <blockquote>
 <p><strong>getMarkerPopoverDelay</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getMarkerPopoverDelay markerPopoverDelay.</p>
-<p>Delay in milliseconds for the marker popover to show up</p>
-<p>Default value is <code>300</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>markerPopoverDelay</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.97) - **Note:**With the new implementation, this property won&#39;t have any effect.</p>
+<p>Gets current value of property #getMarkerPopoverDelay markerPopoverDelay.</p>
+<p>Delay in milliseconds for the marker popover to show up</p>
+<p>Default value is <code>300</code>.</p>
 <hr>
 <h3>getMarkerType()</h3>
 <blockquote>
@@ -515,10 +515,6 @@ sap.gantt.simple.GanttChartWithTable.</p>
 <blockquote>
 <p><strong>setDraggable</strong>(<code>bDraggable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDraggable draggable.</p>
-<p>Specifies whether the adhoc line is draggable.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bDraggable?</h5>
 <p><code>boolean</code></p>
@@ -528,15 +524,15 @@ sap.gantt.simple.GanttChartWithTable.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getDraggable draggable.</p>
+<p>Specifies whether the adhoc line is draggable.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setMarkerPopoverDelay()</del></h3>
 <blockquote>
 <p><strong>setMarkerPopoverDelay</strong>(<code>iMarkerPopoverDelay?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMarkerPopoverDelay markerPopoverDelay.</p>
-<p>Delay in milliseconds for the marker popover to show up</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>300</code>.</p>
 <h4>Parameters</h4>
 <h5>iMarkerPopoverDelay?</h5>
 <p><code>number</code></p>
@@ -546,6 +542,10 @@ sap.gantt.simple.GanttChartWithTable.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.97) - **Note:**With the new implementation, this property won&#39;t have any effect.</p>
+<p>Sets a new value for property #getMarkerPopoverDelay markerPopoverDelay.</p>
+<p>Delay in milliseconds for the marker popover to show up</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>300</code>.</p>
 <hr>
 <h3>setMarkerType()</h3>
 <blockquote>
@@ -657,7 +657,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>AdhocLine</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>AdhocLine</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -681,6 +681,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

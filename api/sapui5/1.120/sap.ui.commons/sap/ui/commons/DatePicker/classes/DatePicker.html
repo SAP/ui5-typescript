@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: DatePicker~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: DatePicker~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="~~Class: DatePicker~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/DatePicker/classes/DatePicker.html">
 <meta property="og:title" content="~~Class: DatePicker~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: DatePicker~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="~~Class: DatePicker~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/DatePicker/classes/DatePicker.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/DatePicker/README.html">DatePicker</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/DatePicker</a> / DatePicker</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/DatePicker</a> / DatePicker</p>
 <h1><del>Class: DatePicker</del></h1>
 <pre class="sig"><span class="kw">import</span> DatePicker <span class="kw">from</span> <span class="str">"sap/ui/commons/DatePicker"</span>;</pre>
+<h2>Deprecated</h2>
+<p>(since 1.38) - replaced by sap.m.DatePicker</p>
 <p>Allows end users to interact with dates. Entries can directly be written in, or selected from a calendar
 pad. Note: Dates can always be manually entered in the fix YYYYMMDD format, on top of the flexible &quot;locale&quot;
 format. If the value is provided via data binding, using a Date.type the formatter of the Date.type is
 used. Since version 1.22 the unified.Calendar is used inside the datePicker. So applications using the
 DatePicker should load the unified library. Otherwise it will be loaded the first time a DatePicker is
 opened.</p>
-<h2>Deprecated</h2>
-<p>(since 1.38) - replaced by sap.m.DatePicker</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../TextField/classes/TextField.html"><code>TextField</code></a></li>
@@ -91,11 +91,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>, <code>bInvalidValue?</code>): <code>this</code></p>
 </blockquote>
-<p>Fire event change to attached listeners.</p>
-<p>Provides the following event parameters:
-	 - &#39;newValue&#39; of type <code>string</code> The new / changed value of the DatePicker.
-	 - &#39;newYyyymmdd&#39; of type <code>string</code> The new / changed Yyyymmdd of the DatePicker.
-	 - &#39;invalidValue&#39; of type <code>boolean</code> The new / changed value of the DatePicker is not a valid date.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -108,6 +103,11 @@ of the syntax of the settings object.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fire event change to attached listeners.</p>
+<p>Provides the following event parameters:
+	 - &#39;newValue&#39; of type <code>string</code> The new / changed value of the DatePicker.
+	 - &#39;newYyyymmdd&#39; of type <code>string</code> The new / changed Yyyymmdd of the DatePicker.
+	 - &#39;invalidValue&#39; of type <code>boolean</code> The new / changed value of the DatePicker is not a valid date.</p>
 <h4>Overrides</h4>
 <p><a href="../../TextField/classes/TextField.html"><code>TextField</code></a>.<a href="../../TextField/classes/TextField.html#firechange"><code>fireChange</code></a></p>
 <hr>
@@ -115,13 +115,13 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../TextField/classes/TextField.html"><code>TextField</code></a>.<a href="../../TextField/classes/TextField.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -196,7 +196,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>DatePicker</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>DatePicker</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -220,6 +220,6 @@ used by this class</p>
 <p><a href="../../TextField/classes/TextField.html"><code>TextField</code></a>.<a href="../../TextField/classes/TextField.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Column — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Column — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Column — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/table/Column/classes/Column.html">
 <meta property="og:title" content="Class: Column — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Column — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Column — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/table/Column/classes/Column.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › table › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/table/Column/README.html">Column</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/table/Column</a> / Column</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/table/Column</a> / Column</p>
 <h1>Class: Column</h1>
 <pre class="sig"><span class="kw">import</span> Column <span class="kw">from</span> <span class="str">"sap/ui/mdc/table/Column"</span>;</pre>
-<p>The column for the metadata-driven table with the template, which is shown if the rows have data.</p>
 <h2>Since</h2>
 <p>1.58</p>
+<p>The column for the metadata-driven table with the template, which is shown if the rows have data.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -87,10 +87,10 @@ of the syntax of the settings object.</p>
 <p><strong>destroyCreationTemplate</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Destroys the creationTemplate in the aggregation #getCreationTemplate creationTemplate.</p>
 <ul>
 <li>Do not use</li>
 </ul>
+<p>Destroys the creationTemplate in the aggregation #getCreationTemplate creationTemplate.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -99,12 +99,12 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>destroyExtendedSettings</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the extendedSettings in the aggregation #getExtendedSettings extendedSettings.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110</p>
+<p>Destroys the extendedSettings in the aggregation #getExtendedSettings extendedSettings.</p>
 <hr>
 <h3>destroyTemplate()</h3>
 <blockquote>
@@ -120,12 +120,12 @@ of the syntax of the settings object.</p>
 <p><strong>getCreationTemplate</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets content of aggregation #getCreationTemplate creationTemplate.</p>
-<p><code>CreationRow</code> template.</p>
-<p><strong>Note:</strong> Once the binding supports creating transient records, this aggregation will be removed.</p>
 <ul>
 <li>Do not use</li>
 </ul>
+<p>Gets content of aggregation #getCreationTemplate creationTemplate.</p>
+<p><code>CreationRow</code> template.</p>
+<p><strong>Note:</strong> Once the binding supports creating transient records, this aggregation will be removed.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <hr>
@@ -133,8 +133,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getDataProperty</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getDataProperty dataProperty.</p>
-<p>Defines data property related to the column.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>dataProperty</code></p>
@@ -142,68 +140,64 @@ of the syntax of the settings object.</p>
 <p>1.84</p>
 <h4>Deprecated</h4>
 <p>(since 1.115) - Please use <code>propertyKey</code> instead.</p>
+<p>Gets current value of property #getDataProperty dataProperty.</p>
+<p>Defines data property related to the column.</p>
 <hr>
 <h3>getExtendedSettings()</h3>
 <blockquote>
 <p><strong>getExtendedSettings</strong>(): <a href="../../ColumnSettings/classes/ColumnSettings.html"><code>ColumnSettings</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getExtendedSettings extendedSettings.</p>
-<p>Defines type-specific column settings based on the used sap.ui.mdc.table.TableTypeBase.</p>
-<p><strong>Note:</strong> Once <code>sap.ui.mdc.table.ColumnSettings</code> are defined, all properties provided by the <code>ColumnSettings</code>
-are automatically assigned to the column.</p>
 <h4>Returns</h4>
 <p><a href="../../ColumnSettings/classes/ColumnSettings.html"><code>ColumnSettings</code></a></p>
 <h4>Since</h4>
 <p>1.110</p>
+<p>Gets content of aggregation #getExtendedSettings extendedSettings.</p>
+<p>Defines type-specific column settings based on the used sap.ui.mdc.table.TableTypeBase.</p>
+<p><strong>Note:</strong> Once <code>sap.ui.mdc.table.ColumnSettings</code> are defined, all properties provided by the <code>ColumnSettings</code>
+are automatically assigned to the column.</p>
 <hr>
 <h3>getHAlign()</h3>
 <blockquote>
 <p><strong>getHAlign</strong>(): <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/HorizontalAlign.html"><code>HorizontalAlign</code></a></p>
 </blockquote>
-<p>Gets current value of property #getHAlign hAlign.</p>
-<p>Defines the horizontal alignment of the column content.</p>
-<p>Default value is <code>&quot;Begin&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/HorizontalAlign.html"><code>HorizontalAlign</code></a></p>
 <p>Value of property <code>hAlign</code></p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Gets current value of property #getHAlign hAlign.</p>
+<p>Defines the horizontal alignment of the column content.</p>
+<p>Default value is <code>&quot;Begin&quot;</code>.</p>
 <hr>
 <h3>getHeader()</h3>
 <blockquote>
 <p><strong>getHeader</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getHeader header.</p>
-<p>Defines the column header text.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>header</code></p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Gets current value of property #getHeader header.</p>
+<p>Defines the column header text.</p>
 <hr>
 <h3>getHeaderVisible()</h3>
 <blockquote>
 <p><strong>getHeaderVisible</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getHeaderVisible headerVisible.</p>
-<p>Defines whether the column header is visible.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>headerVisible</code></p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Gets current value of property #getHeaderVisible headerVisible.</p>
+<p>Defines whether the column header is visible.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getImportance()</del></h3>
 <blockquote>
 <p><strong>getImportance</strong>(): <code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
 </blockquote>
-<p>Gets current value of property #getImportance importance.</p>
-<p>Defines the column importance.</p>
-<p>The column importance is taken into consideration for calculating the <code>minScreenWidth</code> property and for
-setting the <code>demandPopin</code> property of the column. See sap.m.Table#getAutoPopinMode for more details,
-which is automatically set to <code>true</code>.</p>
-<p>Default value is <code>&quot;None&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
 <p>Value of property <code>importance</code></p>
@@ -211,31 +205,37 @@ which is automatically set to <code>true</code>.</p>
 <p>(since 1.110) - replaced with sap.ui.mdc.table.ResponsiveColumnSettings#importance</p>
 <p> This property will be ignored whenever the sap.ui.mdc.table.ResponsiveColumnSettings are applied
 to the column.</p>
+<p>Gets current value of property #getImportance importance.</p>
+<p>Defines the column importance.</p>
+<p>The column importance is taken into consideration for calculating the <code>minScreenWidth</code> property and for
+setting the <code>demandPopin</code> property of the column. See sap.m.Table#getAutoPopinMode for more details,
+which is automatically set to <code>true</code>.</p>
+<p>Default value is <code>&quot;None&quot;</code>.</p>
 <hr>
 <h3>getMinWidth()</h3>
 <blockquote>
 <p><strong>getMinWidth</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getMinWidth minWidth.</p>
-<p>Defines the minimum width of the column.</p>
-<p>Default value is <code>8</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>minWidth</code></p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Gets current value of property #getMinWidth minWidth.</p>
+<p>Defines the minimum width of the column.</p>
+<p>Default value is <code>8</code>.</p>
 <hr>
 <h3>getPropertyKey()</h3>
 <blockquote>
 <p><strong>getPropertyKey</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getPropertyKey propertyKey.</p>
-<p>Defines data property related to the column.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>propertyKey</code></p>
 <h4>Since</h4>
 <p>1.115</p>
+<p>Gets current value of property #getPropertyKey propertyKey.</p>
+<p>Defines data property related to the column.</p>
 <hr>
 <h3>getRequired()</h3>
 <blockquote>
@@ -264,23 +264,23 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getWidth width.</p>
-<p>Defines the width of the column.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Gets current value of property #getWidth width.</p>
+<p>Defines the width of the column.</p>
 <hr>
 <h3>setCreationTemplate()</h3>
 <blockquote>
 <p><strong>setCreationTemplate</strong>(<code>oCreationTemplate</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets the aggregated #getCreationTemplate creationTemplate.</p>
 <ul>
 <li>Do not use</li>
 </ul>
+<p>Sets the aggregated #getCreationTemplate creationTemplate.</p>
 <h4>Parameters</h4>
 <h5>oCreationTemplate</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -293,9 +293,6 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <blockquote>
 <p><strong>setDataProperty</strong>(<code>sDataProperty</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDataProperty dataProperty.</p>
-<p>Defines data property related to the column.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sDataProperty</h5>
 <p><code>string</code></p>
@@ -307,12 +304,14 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <p>1.84</p>
 <h4>Deprecated</h4>
 <p>(since 1.115) - Please use <code>propertyKey</code> instead.</p>
+<p>Sets a new value for property #getDataProperty dataProperty.</p>
+<p>Defines data property related to the column.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setExtendedSettings()</h3>
 <blockquote>
 <p><strong>setExtendedSettings</strong>(<code>oExtendedSettings</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getExtendedSettings extendedSettings.</p>
 <h4>Parameters</h4>
 <h5>oExtendedSettings</h5>
 <p><a href="../../ColumnSettings/classes/ColumnSettings.html"><code>ColumnSettings</code></a></p>
@@ -322,15 +321,12 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110</p>
+<p>Sets the aggregated #getExtendedSettings extendedSettings.</p>
 <hr>
 <h3>setHAlign()</h3>
 <blockquote>
 <p><strong>setHAlign</strong>(<code>sHAlign?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHAlign hAlign.</p>
-<p>Defines the horizontal alignment of the column content.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Begin&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sHAlign?</h5>
 <p><code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/HorizontalAlign.html"><code>HorizontalAlign</code></a></p>
@@ -340,14 +336,15 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Sets a new value for property #getHAlign hAlign.</p>
+<p>Defines the horizontal alignment of the column content.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Begin&quot;</code>.</p>
 <hr>
 <h3>setHeader()</h3>
 <blockquote>
 <p><strong>setHeader</strong>(<code>sHeader</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHeader header.</p>
-<p>Defines the column header text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sHeader</h5>
 <p><code>string</code></p>
@@ -357,15 +354,14 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Sets a new value for property #getHeader header.</p>
+<p>Defines the column header text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setHeaderVisible()</h3>
 <blockquote>
 <p><strong>setHeaderVisible</strong>(<code>bHeaderVisible?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHeaderVisible headerVisible.</p>
-<p>Defines whether the column header is visible.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bHeaderVisible?</h5>
 <p><code>boolean</code></p>
@@ -375,18 +371,15 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Sets a new value for property #getHeaderVisible headerVisible.</p>
+<p>Defines whether the column header is visible.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setImportance()</del></h3>
 <blockquote>
 <p><strong>setImportance</strong>(<code>sImportance?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getImportance importance.</p>
-<p>Defines the column importance.</p>
-<p>The column importance is taken into consideration for calculating the <code>minScreenWidth</code> property and for
-setting the <code>demandPopin</code> property of the column. See sap.m.Table#getAutoPopinMode for more details,
-which is automatically set to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;None&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sImportance?</h5>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
@@ -398,15 +391,18 @@ which is automatically set to <code>true</code>.</p>
 <p>(since 1.110) - replaced with sap.ui.mdc.table.ResponsiveColumnSettings#importance</p>
 <p> This property will be ignored whenever the sap.ui.mdc.table.ResponsiveColumnSettings are applied
 to the column.</p>
+<p>Sets a new value for property #getImportance importance.</p>
+<p>Defines the column importance.</p>
+<p>The column importance is taken into consideration for calculating the <code>minScreenWidth</code> property and for
+setting the <code>demandPopin</code> property of the column. See sap.m.Table#getAutoPopinMode for more details,
+which is automatically set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;None&quot;</code>.</p>
 <hr>
 <h3>setMinWidth()</h3>
 <blockquote>
 <p><strong>setMinWidth</strong>(<code>fMinWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMinWidth minWidth.</p>
-<p>Defines the minimum width of the column.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>8</code>.</p>
 <h4>Parameters</h4>
 <h5>fMinWidth?</h5>
 <p><code>number</code></p>
@@ -416,14 +412,15 @@ to the column.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Sets a new value for property #getMinWidth minWidth.</p>
+<p>Defines the minimum width of the column.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>8</code>.</p>
 <hr>
 <h3>setPropertyKey()</h3>
 <blockquote>
 <p><strong>setPropertyKey</strong>(<code>sPropertyKey</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPropertyKey propertyKey.</p>
-<p>Defines data property related to the column.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sPropertyKey</h5>
 <p><code>string</code></p>
@@ -433,6 +430,9 @@ to the column.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.115</p>
+<p>Sets a new value for property #getPropertyKey propertyKey.</p>
+<p>Defines data property related to the column.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setRequired()</h3>
 <blockquote>
@@ -487,9 +487,6 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getWidth width.</p>
-<p>Defines the width of the column.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sWidth?</h5>
 <p><code>string</code></p>
@@ -499,6 +496,9 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.80</p>
+<p>Sets a new value for property #getWidth width.</p>
+<p>Defines the width of the column.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -515,7 +515,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Column</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Column</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -539,6 +539,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

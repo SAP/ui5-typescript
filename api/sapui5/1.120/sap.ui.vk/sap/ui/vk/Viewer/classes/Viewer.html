@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Viewer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Viewer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Viewer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/Viewer/classes/Viewer.html">
 <meta property="og:title" content="Class: Viewer — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Viewer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Viewer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/Viewer/classes/Viewer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/Viewer/README.html">Viewer</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/Viewer</a> / Viewer</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/Viewer</a> / Viewer</p>
 <h1>Class: Viewer</h1>
 <pre class="sig"><span class="kw">import</span> Viewer <span class="kw">from</span> <span class="str">"sap/ui/vk/Viewer"</span>;</pre>
-<p>Provides simple 3D visualization capability by connecting, configuring and presenting the essential Visualization
-Toolkit controls a single composite control.</p>
 <h2>Since</h2>
 <p>1.32.0</p>
+<p>Provides simple 3D visualization capability by connecting, configuring and presenting the essential Visualization
+Toolkit controls a single composite control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -85,9 +85,13 @@ of the syntax of the settings object.</p>
 <h2>Properties</h2>
 <h3>activateFullScreenMode()</h3>
 <blockquote>
-<p><strong>activateFullScreenMode</strong>(): <code>this</code></p>
+<p><strong>activateFullScreenMode</strong>(<code>value</code>): <code>this</code></p>
 </blockquote>
 <p>It activates or deactivates full screen mode.</p>
+<h4>Parameters</h4>
+<h5>value</h5>
+<p><code>boolean</code></p>
+<p>Parameter which specifies whether to activate or deactivate full screen mode.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
@@ -96,7 +100,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>activateRedlineDesign</strong>(<code>redlineElements</code>): <code>this</code></p>
 </blockquote>
-<p>Activates the redline design control.</p>
 <h4>Parameters</h4>
 <h5>redlineElements</h5>
 <p><a href="../../RedlineElement/classes/RedlineElement.html"><code>RedlineElement</code></a> | <a href="../../RedlineElement/classes/RedlineElement.html"><code>RedlineElement</code></a>[]</p>
@@ -106,6 +109,7 @@ of the syntax of the settings object.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Deprecated</h4>
 <p>(since 1.77.0) - Use sap.ui.vk.tools.RedlineTool instead</p>
+<p>Activates the redline design control.</p>
 <hr>
 <h3>addContentResource()</h3>
 <blockquote>
@@ -490,12 +494,12 @@ otherwise it will be bound to this <code>sap.ui.vk.Viewer</code> itself.</p>
 <blockquote>
 <p><strong>destroyRedlineDesign</strong>(): <code>this</code></p>
 </blockquote>
-<p>It destroys the current instance of {sap.ui.vk.RedlineDesign}.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Deprecated</h4>
 <p>(since 1.77.0) - Use sap.ui.vk.tools.RedlineTool instead</p>
+<p>It destroys the current instance of {sap.ui.vk.RedlineDesign}.</p>
 <hr>
 <h3>detachContentResourceChangesProcessed()</h3>
 <blockquote>
@@ -642,8 +646,6 @@ this <code>sap.ui.vk.Viewer</code>.</p>
 <blockquote>
 <p><strong>fireContentResourceChangesProcessed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:contentResourceChangesProcessed contentResourceChangesProcessed to attached
-listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -653,12 +655,13 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:contentResourceChangesProcessed contentResourceChangesProcessed to attached
+listeners.</p>
 <hr>
 <h3>fireFullScreen()</h3>
 <blockquote>
 <p><strong>fireFullScreen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:fullScreen fullScreen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Viewer$FullScreenEventParameters.html"><code>Viewer$FullScreenEventParameters</code></a></p>
@@ -668,12 +671,12 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:fullScreen fullScreen to attached listeners.</p>
 <hr>
 <h3>fireNodeClicked()</h3>
 <blockquote>
 <p><strong>fireNodeClicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:nodeClicked nodeClicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Viewer$NodeClickedEventParameters.html"><code>Viewer$NodeClickedEventParameters</code></a></p>
@@ -683,12 +686,12 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:nodeClicked nodeClicked to attached listeners.</p>
 <hr>
 <h3>fireSceneDestroying()</h3>
 <blockquote>
 <p><strong>fireSceneDestroying</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:sceneDestroying sceneDestroying to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Viewer$SceneDestroyingEventParameters.html"><code>Viewer$SceneDestroyingEventParameters</code></a></p>
@@ -698,12 +701,12 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:sceneDestroying sceneDestroying to attached listeners.</p>
 <hr>
 <h3>fireSceneLoadingFailed()</h3>
 <blockquote>
 <p><strong>fireSceneLoadingFailed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:sceneLoadingFailed sceneLoadingFailed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Viewer$SceneLoadingFailedEventParameters.html"><code>Viewer$SceneLoadingFailedEventParameters</code></a></p>
@@ -713,12 +716,12 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:sceneLoadingFailed sceneLoadingFailed to attached listeners.</p>
 <hr>
 <h3>fireSceneLoadingSucceeded()</h3>
 <blockquote>
 <p><strong>fireSceneLoadingSucceeded</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:sceneLoadingSucceeded sceneLoadingSucceeded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Viewer$SceneLoadingSucceededEventParameters.html"><code>Viewer$SceneLoadingSucceededEventParameters</code></a></p>
@@ -728,12 +731,12 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:sceneLoadingSucceeded sceneLoadingSucceeded to attached listeners.</p>
 <hr>
 <h3>fireSelectionChanged()</h3>
 <blockquote>
 <p><strong>fireSelectionChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:selectionChanged selectionChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Viewer$SelectionChangedEventParameters.html"><code>Viewer$SelectionChangedEventParameters</code></a></p>
@@ -743,12 +746,12 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectionChanged selectionChanged to attached listeners.</p>
 <hr>
 <h3>fireUrlClicked()</h3>
 <blockquote>
 <p><strong>fireUrlClicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:urlClicked urlClicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Viewer$UrlClickedEventParameters.html"><code>Viewer$UrlClickedEventParameters</code></a></p>
@@ -758,6 +761,7 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:urlClicked urlClicked to attached listeners.</p>
 <hr>
 <h3>getContentResources()</h3>
 <blockquote>
@@ -838,12 +842,12 @@ listeners.</p>
 <blockquote>
 <p><strong>getGraphicsCore</strong>(): <a href="../../dvl/GraphicsCore/classes/GraphicsCore.html"><code>GraphicsCore</code></a></p>
 </blockquote>
-<p>Gets the GraphicsCore object if the currently loaded content is a 3D model.</p>
 <h4>Returns</h4>
 <p><a href="../../dvl/GraphicsCore/classes/GraphicsCore.html"><code>GraphicsCore</code></a></p>
 <p>The GraphicsCore object. If there is no 3D scene loaded then <code>null</code> is returned.</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.0)</p>
+<p>Gets the GraphicsCore object if the currently loaded content is a 3D model.</p>
 <hr>
 <h3>getHeight()</h3>
 <blockquote>
@@ -881,12 +885,12 @@ listeners.</p>
 <blockquote>
 <p><strong>getNativeViewport</strong>(): <a href="../../NativeViewport/classes/NativeViewport.html"><code>NativeViewport</code></a></p>
 </blockquote>
-<p>Gets the 2D viewport used for displaying format natively supported by the browser - 2D images etc.</p>
 <h4>Returns</h4>
 <p><a href="../../NativeViewport/classes/NativeViewport.html"><code>NativeViewport</code></a></p>
 <p>The 2D viewport.</p>
 <h4>Deprecated</h4>
 <p>(since 1.96.0)</p>
+<p>Gets the 2D viewport used for displaying format natively supported by the browser - 2D images etc.</p>
 <hr>
 <h3>getOverlay()</h3>
 <blockquote>
@@ -923,12 +927,12 @@ Will not work when set at runtime.</p>
 <blockquote>
 <p><strong>getRedlineDesign</strong>(): <a href="../../RedlineDesign/classes/RedlineDesign.html"><code>RedlineDesign</code></a></p>
 </blockquote>
-<p>Gets the RedlineDesign instance used for creating redlining shapes.</p>
 <h4>Returns</h4>
 <p><a href="../../RedlineDesign/classes/RedlineDesign.html"><code>RedlineDesign</code></a></p>
 <p>The RedlineDesign instance.</p>
 <h4>Deprecated</h4>
 <p>(since 1.77.0) - Use sap.ui.vk.tools.RedlineTool instead</p>
+<p>Gets the RedlineDesign instance used for creating redlining shapes.</p>
 <hr>
 <h3>getRuntimeSettings()</h3>
 <blockquote>
@@ -1563,7 +1567,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Viewer</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Viewer</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1587,6 +1591,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

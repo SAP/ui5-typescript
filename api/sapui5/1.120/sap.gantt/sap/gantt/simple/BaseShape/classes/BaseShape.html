@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: BaseShape — SAPUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: BaseShape — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: BaseShape — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: BaseShape — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/BaseShape/classes/BaseShape.html">
-<meta property="og:title" content="Abstract Class: BaseShape — SAPUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: BaseShape — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: BaseShape — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: BaseShape — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/BaseShape/classes/BaseShape.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/BaseShape/README.html">BaseShape</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/BaseShape</a> / BaseShape</p>
-<h1>Abstract Class: BaseShape</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/BaseShape</a> / BaseShape</p>
+<h1>Class: BaseShape</h1>
 <pre class="sig"><span class="kw">import</span> BaseShape <span class="kw">from</span> <span class="str">"sap/gantt/simple/BaseShape"</span>;</pre>
 <p>BaseShape is an abstract class. All other shapes must extend this class and provide implementation of
 method renderElement. It enables application developers to define it&#39;s own shapes.</p>
@@ -97,7 +97,7 @@ of the syntax of the settings object.</p>
 <h2>Properties</h2>
 <h3>getAlignShape()</h3>
 <blockquote>
-<p><strong>getAlignShape</strong>(): <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../library/namespaces/simple/namespaces/shapes/enumerations/ShapeAlignment.html"><code>ShapeAlignment</code></a></p>
+<p><strong>getAlignShape</strong>(): <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <code>ShapeAlignment</code></p>
 </blockquote>
 <p>Gets current value of property #getAlignShape alignShape.</p>
 <p>Enables alignment of the shape. The shape can be aligned to the top, middle or bottom. By default, this
@@ -105,13 +105,18 @@ property is set to Middle. <strong>Note:</strong> Alignment is not possible for 
 set to BaseChevron, BaseRectangle, BaseCursor BaseDiamond, BaseText, BaseTriangle and BaseGroup.</p>
 <p>Default value is <code>Middle</code>.</p>
 <h4>Returns</h4>
-<p><code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../library/namespaces/simple/namespaces/shapes/enumerations/ShapeAlignment.html"><code>ShapeAlignment</code></a></p>
+<p><code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <code>ShapeAlignment</code></p>
 <p>Value of property <code>alignShape</code></p>
 <hr>
 <h3>getAnimationSettings()</h3>
 <blockquote>
 <p><strong>getAnimationSettings</strong>(): <code>object</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>animationSettings</code></p>
+<h4>Since</h4>
+<p>1.88</p>
 <p>Gets current value of property #getAnimationSettings animationSettings.</p>
 <p><code>animationSettings</code> - A JSON object used to apply animation to the color of the specified shape.</p>
 <pre><code> - `&quot;values&quot;: null` - A list of values defining the sequence of colors appearing during animation.
@@ -130,11 +135,6 @@ Refer to an example below:
 	  &quot;repeatCount&quot;: &quot;indefinite&quot;
 }
 </code></pre>
-<h4>Returns</h4>
-<p><code>object</code></p>
-<p>Value of property <code>animationSettings</code></p>
-<h4>Since</h4>
-<p>1.88</p>
 <hr>
 <h3>getAxisTime()</h3>
 <blockquote>
@@ -190,28 +190,28 @@ well.</p>
 <blockquote>
 <p><strong>getDragHighlightRows</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Gets current value of property #getDragHighlightRows dragHighlightRows.</p>
-<p>Comma-separated value of row IDs for the rows that are highlighted when the shape is being dragged. The
-highlighted rows are the ones where the shape drop is allowed.</p>
-<p>Default value is <code>[]</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>Value of property <code>dragHighlightRows</code></p>
 <h4>Since</h4>
 <p>1.108</p>
+<p>Gets current value of property #getDragHighlightRows dragHighlightRows.</p>
+<p>Comma-separated value of row IDs for the rows that are highlighted when the shape is being dragged. The
+highlighted rows are the ones where the shape drop is allowed.</p>
+<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>getEnableChainSelection()</h3>
 <blockquote>
 <p><strong>getEnableChainSelection</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableChainSelection enableChainSelection.</p>
-<p>Enables selection of all shapes that are part of a shape chain in a Gantt chart</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableChainSelection</code></p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Gets current value of property #getEnableChainSelection enableChainSelection.</p>
+<p>Enables selection of all shapes that are part of a shape chain in a Gantt chart</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEndTime()</h3>
 <blockquote>
@@ -275,79 +275,79 @@ to its element</p>
 <blockquote>
 <p><strong>getFontFamily</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getFontFamily fontFamily.</p>
-<p>This property indicates the font family that gets used to render the text in the shape.</p>
-<p>Default value is <code>&quot;Arial&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>fontFamily</code></p>
 <h4>Since</h4>
 <p>1.94</p>
+<p>Gets current value of property #getFontFamily fontFamily.</p>
+<p>This property indicates the font family that gets used to render the text in the shape.</p>
+<p>Default value is <code>&quot;Arial&quot;</code>.</p>
 <hr>
 <h3>getFontSize()</h3>
 <blockquote>
 <p><strong>getFontSize</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getFontSize fontSize.</p>
-<p>The fontSize property refers to the size of the font</p>
-<p>Default value is <code>13</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>fontSize</code></p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Gets current value of property #getFontSize fontSize.</p>
+<p>The fontSize property refers to the size of the font</p>
+<p>Default value is <code>13</code>.</p>
 <hr>
 <h3>getFontWeight()</h3>
 <blockquote>
 <p><strong>getFontWeight</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getFontWeight fontWeight.</p>
-<p>The fontWeight property refers to the font weight that gets used to render the text in the shape.</p>
-<p>Default value is <code>&quot;normal&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>fontWeight</code></p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Gets current value of property #getFontWeight fontWeight.</p>
+<p>The fontWeight property refers to the font weight that gets used to render the text in the shape.</p>
+<p>Default value is <code>&quot;normal&quot;</code>.</p>
 <hr>
 <h3>getHighlightable()</h3>
 <blockquote>
 <p><strong>getHighlightable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getHighlightable highlightable.</p>
-<p>Whether the shape is highlightable</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>highlightable</code></p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Gets current value of property #getHighlightable highlightable.</p>
+<p>Whether the shape is highlightable</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getHighlighted()</h3>
 <blockquote>
 <p><strong>getHighlighted</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getHighlighted highlighted.</p>
-<p>Whether the shape is highlighted</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>highlighted</code></p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Gets current value of property #getHighlighted highlighted.</p>
+<p>Whether the shape is highlighted</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getHorizontalTextAlignment()</h3>
 <blockquote>
 <p><strong>getHorizontalTextAlignment</strong>(): <code>&quot;End&quot;</code> | <code>&quot;Start&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../library/namespaces/simple/enumerations/horizontalTextAlignment.html"><code>horizontalTextAlignment</code></a> | <code>&quot;Dynamic&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getHorizontalTextAlignment horizontalTextAlignment.</p>
-<p>Horizontal alignment for the title of the Shape.</p>
-<p>Default value is <code>Start</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;End&quot;</code> | <code>&quot;Start&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../library/namespaces/simple/enumerations/horizontalTextAlignment.html"><code>horizontalTextAlignment</code></a> | <code>&quot;Dynamic&quot;</code></p>
 <p>Value of property <code>horizontalTextAlignment</code></p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Gets current value of property #getHorizontalTextAlignment horizontalTextAlignment.</p>
+<p>Horizontal alignment for the title of the Shape.</p>
+<p>Default value is <code>Start</code>.</p>
 <hr>
 <h3>getHoverable()</h3>
 <blockquote>
@@ -423,15 +423,15 @@ in <code>sap.gantt.simple.ShapeScheme</code></p>
 <blockquote>
 <p><strong>getSelectableInChainSelection</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectableInChainSelection selectableInChainSelection.</p>
-<p>Enables selection of a shape when it is part of the shape chain. By default, this property is set as
-True.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>selectableInChainSelection</code></p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Gets current value of property #getSelectableInChainSelection selectableInChainSelection.</p>
+<p>Enables selection of a shape when it is part of the shape chain. By default, this property is set as
+True.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getSelected()</h3>
 <blockquote>
@@ -448,27 +448,27 @@ True.</p>
 <blockquote>
 <p><strong>getSelectedFill</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectedFill selectedFill.</p>
-<p>The selectedFill property defines the color (or any SVG paint servers like gradients or patterns) of
-the shape when it is selected.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>selectedFill</code></p>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Gets current value of property #getSelectedFill selectedFill.</p>
+<p>The selectedFill property defines the color (or any SVG paint servers like gradients or patterns) of
+the shape when it is selected.</p>
 <hr>
 <h3>getSelectedTitleColor()</h3>
 <blockquote>
 <p><strong>getSelectedTitleColor</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectedTitleColor selectedTitleColor.</p>
-<p>The selectedTitleColor property defines the color (or any SVG paint servers like gradients or patterns)
-of the shape&#39;s title when it is selected.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>selectedTitleColor</code></p>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Gets current value of property #getSelectedTitleColor selectedTitleColor.</p>
+<p>The selectedTitleColor property defines the color (or any SVG paint servers like gradients or patterns)
+of the shape&#39;s title when it is selected.</p>
 <hr>
 <h3>getShapeId()</h3>
 <blockquote>
@@ -485,14 +485,14 @@ shall be bound to a property during initialization, it requires an unique non-em
 <blockquote>
 <p><strong>getShowAnimation</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowAnimation showAnimation.</p>
-<p>Flag to show or hide animation of an active shape.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showAnimation</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getShowAnimation showAnimation.</p>
+<p>Flag to show or hide animation of an active shape.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowTitle()</h3>
 <blockquote>
@@ -554,12 +554,12 @@ the shape.</p>
 <blockquote>
 <p><strong>getStyle</strong>(): <code>string</code></p>
 </blockquote>
-<p>Get the shape style string</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>shape styles</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Get the shape style string</p>
 <hr>
 <h3>getTime()</h3>
 <blockquote>
@@ -587,27 +587,27 @@ the shape is not visible.</p>
 <blockquote>
 <p><strong>getTitleColor</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getTitleColor titleColor.</p>
-<p>The titleColor property defines the color (or any SVG paint servers like gradients or patterns) of the
-shape title;</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>titleColor</code></p>
 <h4>Since</h4>
 <p>1.90</p>
+<p>Gets current value of property #getTitleColor titleColor.</p>
+<p>The titleColor property defines the color (or any SVG paint servers like gradients or patterns) of the
+shape title;</p>
 <hr>
 <h3>getTitleSpacing()</h3>
 <blockquote>
 <p><strong>getTitleSpacing</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getTitleSpacing titleSpacing.</p>
-<p>The titleSpacing property defines the space between the start of the shape and the shape title in pixels</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>titleSpacing</code></p>
 <h4>Since</h4>
 <p>1.96</p>
+<p>Gets current value of property #getTitleSpacing titleSpacing.</p>
+<p>The titleSpacing property defines the space between the start of the shape and the shape title in pixels</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getTransform()</h3>
 <blockquote>
@@ -626,14 +626,14 @@ update xBias and yBias if translate the corresponding axis is matched.</p>
 <blockquote>
 <p><strong>getVerticalTextAlignment</strong>(): <code>&quot;Center&quot;</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <a href="../../../library/namespaces/simple/enumerations/verticalTextAlignment.html"><code>verticalTextAlignment</code></a></p>
 </blockquote>
-<p>Gets current value of property #getVerticalTextAlignment verticalTextAlignment.</p>
-<p>Vertical alignment for the title of the Shape.</p>
-<p>Default value is <code>Center</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Center&quot;</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <a href="../../../library/namespaces/simple/enumerations/verticalTextAlignment.html"><code>verticalTextAlignment</code></a></p>
 <p>Value of property <code>verticalTextAlignment</code></p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Gets current value of property #getVerticalTextAlignment verticalTextAlignment.</p>
+<p>Vertical alignment for the title of the Shape.</p>
+<p>Default value is <code>Center</code>.</p>
 <hr>
 <h3>getVisible()</h3>
 <blockquote>
@@ -674,8 +674,6 @@ the bottom in pixel unit. If the value is negative, the logic is inverted.</p>
 <blockquote>
 <p><strong>renderElement</strong>(<code>oRm</code>, <code>oElement</code>): <code>void</code></p>
 </blockquote>
-<p>Render the shape. Write the shape DOM into render manager buffer.</p>
-<p>All customized shape need to overwrite this method to provide it&#39;s own rendering logic</p>
 <h4>Parameters</h4>
 <h5>oRm</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/RenderManager/classes/RenderManager.html"><code>RenderManager</code></a></p>
@@ -687,6 +685,8 @@ the bottom in pixel unit. If the value is negative, the logic is inverted.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Render the shape. Write the shape DOM into render manager buffer.</p>
+<p>All customized shape need to overwrite this method to provide it&#39;s own rendering logic</p>
 <hr>
 <h3>setAlignShape()</h3>
 <blockquote>
@@ -700,7 +700,7 @@ set to BaseChevron, BaseRectangle, BaseCursor BaseDiamond, BaseText, BaseTriangl
 <p>Default value is <code>Middle</code>.</p>
 <h4>Parameters</h4>
 <h5>sAlignShape?</h5>
-<p><code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../library/namespaces/simple/namespaces/shapes/enumerations/ShapeAlignment.html"><code>ShapeAlignment</code></a></p>
+<p><code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <code>ShapeAlignment</code></p>
 <p>New value for property <code>alignShape</code></p>
 <h4>Returns</h4>
 <p><code>this</code></p>
@@ -710,6 +710,15 @@ set to BaseChevron, BaseRectangle, BaseCursor BaseDiamond, BaseText, BaseTriangl
 <blockquote>
 <p><strong>setAnimationSettings</strong>(<code>oAnimationSettings?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>oAnimationSettings?</h5>
+<p><code>object</code></p>
+<p>New value for property <code>animationSettings</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.88</p>
 <p>Sets a new value for property #getAnimationSettings animationSettings.</p>
 <p><code>animationSettings</code> - A JSON object used to apply animation to the color of the specified shape.</p>
 <pre><code> - `&quot;values&quot;: null` - A list of values defining the sequence of colors appearing during animation.
@@ -729,15 +738,6 @@ Refer to an example below:
 }
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<h4>Parameters</h4>
-<h5>oAnimationSettings?</h5>
-<p><code>object</code></p>
-<p>New value for property <code>animationSettings</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.88</p>
 <hr>
 <h3>setConnectable()</h3>
 <blockquote>
@@ -795,11 +795,6 @@ well.</p>
 <blockquote>
 <p><strong>setDragHighlightRows</strong>(<code>sDragHighlightRows?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDragHighlightRows dragHighlightRows.</p>
-<p>Comma-separated value of row IDs for the rows that are highlighted when the shape is being dragged. The
-highlighted rows are the ones where the shape drop is allowed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>[]</code>.</p>
 <h4>Parameters</h4>
 <h5>sDragHighlightRows?</h5>
 <p><code>string</code>[]</p>
@@ -809,15 +804,16 @@ highlighted rows are the ones where the shape drop is allowed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.108</p>
+<p>Sets a new value for property #getDragHighlightRows dragHighlightRows.</p>
+<p>Comma-separated value of row IDs for the rows that are highlighted when the shape is being dragged. The
+highlighted rows are the ones where the shape drop is allowed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>setEnableChainSelection()</h3>
 <blockquote>
 <p><strong>setEnableChainSelection</strong>(<code>bEnableChainSelection?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableChainSelection enableChainSelection.</p>
-<p>Enables selection of all shapes that are part of a shape chain in a Gantt chart</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableChainSelection?</h5>
 <p><code>boolean</code></p>
@@ -827,6 +823,10 @@ highlighted rows are the ones where the shape drop is allowed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Sets a new value for property #getEnableChainSelection enableChainSelection.</p>
+<p>Enables selection of all shapes that are part of a shape chain in a Gantt chart</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEndTime()</h3>
 <blockquote>
@@ -915,10 +915,6 @@ to its element</p>
 <blockquote>
 <p><strong>setFontFamily</strong>(<code>sFontFamily?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFontFamily fontFamily.</p>
-<p>This property indicates the font family that gets used to render the text in the shape.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Arial&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sFontFamily?</h5>
 <p><code>string</code></p>
@@ -928,15 +924,15 @@ to its element</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.94</p>
+<p>Sets a new value for property #getFontFamily fontFamily.</p>
+<p>This property indicates the font family that gets used to render the text in the shape.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Arial&quot;</code>.</p>
 <hr>
 <h3>setFontSize()</h3>
 <blockquote>
 <p><strong>setFontSize</strong>(<code>iFontSize?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFontSize fontSize.</p>
-<p>The fontSize property refers to the size of the font</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>13</code>.</p>
 <h4>Parameters</h4>
 <h5>iFontSize?</h5>
 <p><code>number</code></p>
@@ -946,15 +942,15 @@ to its element</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Sets a new value for property #getFontSize fontSize.</p>
+<p>The fontSize property refers to the size of the font</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>13</code>.</p>
 <hr>
 <h3>setFontWeight()</h3>
 <blockquote>
 <p><strong>setFontWeight</strong>(<code>sFontWeight?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFontWeight fontWeight.</p>
-<p>The fontWeight property refers to the font weight that gets used to render the text in the shape.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;normal&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sFontWeight?</h5>
 <p><code>string</code></p>
@@ -964,15 +960,15 @@ to its element</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Sets a new value for property #getFontWeight fontWeight.</p>
+<p>The fontWeight property refers to the font weight that gets used to render the text in the shape.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;normal&quot;</code>.</p>
 <hr>
 <h3>setHighlightable()</h3>
 <blockquote>
 <p><strong>setHighlightable</strong>(<code>bHighlightable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHighlightable highlightable.</p>
-<p>Whether the shape is highlightable</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bHighlightable?</h5>
 <p><code>boolean</code></p>
@@ -982,12 +978,15 @@ to its element</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Sets a new value for property #getHighlightable highlightable.</p>
+<p>Whether the shape is highlightable</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setHighlighted()</h3>
 <blockquote>
 <p><strong>setHighlighted</strong>(<code>bHighlighted</code>, <code>bSuppressInvalidate</code>): <code>void</code></p>
 </blockquote>
-<p>Set highlight property and mark the shape highlighted in Highlight Model</p>
 <h4>Parameters</h4>
 <h5>bHighlighted</h5>
 <p><code>Boolean</code></p>
@@ -999,15 +998,12 @@ to its element</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Set highlight property and mark the shape highlighted in Highlight Model</p>
 <hr>
 <h3>setHorizontalTextAlignment()</h3>
 <blockquote>
 <p><strong>setHorizontalTextAlignment</strong>(<code>sHorizontalTextAlignment?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHorizontalTextAlignment horizontalTextAlignment.</p>
-<p>Horizontal alignment for the title of the Shape.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Start</code>.</p>
 <h4>Parameters</h4>
 <h5>sHorizontalTextAlignment?</h5>
 <p><code>&quot;End&quot;</code> | <code>&quot;Start&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../library/namespaces/simple/enumerations/horizontalTextAlignment.html"><code>horizontalTextAlignment</code></a> | <code>&quot;Dynamic&quot;</code></p>
@@ -1017,6 +1013,10 @@ to its element</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Sets a new value for property #getHorizontalTextAlignment horizontalTextAlignment.</p>
+<p>Horizontal alignment for the title of the Shape.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Start</code>.</p>
 <hr>
 <h3>setHoverable()</h3>
 <blockquote>
@@ -1122,11 +1122,6 @@ in <code>sap.gantt.simple.ShapeScheme</code></p>
 <blockquote>
 <p><strong>setSelectableInChainSelection</strong>(<code>bSelectableInChainSelection?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSelectableInChainSelection selectableInChainSelection.</p>
-<p>Enables selection of a shape when it is part of the shape chain. By default, this property is set as
-True.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bSelectableInChainSelection?</h5>
 <p><code>boolean</code></p>
@@ -1136,6 +1131,11 @@ True.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Sets a new value for property #getSelectableInChainSelection selectableInChainSelection.</p>
+<p>Enables selection of a shape when it is part of the shape chain. By default, this property is set as
+True.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setSelected()</h3>
 <blockquote>
@@ -1157,10 +1157,6 @@ True.</p>
 <blockquote>
 <p><strong>setSelectedFill</strong>(<code>sSelectedFill</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSelectedFill selectedFill.</p>
-<p>The selectedFill property defines the color (or any SVG paint servers like gradients or patterns) of
-the shape when it is selected.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSelectedFill</h5>
 <p><code>string</code></p>
@@ -1170,15 +1166,15 @@ the shape when it is selected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Sets a new value for property #getSelectedFill selectedFill.</p>
+<p>The selectedFill property defines the color (or any SVG paint servers like gradients or patterns) of
+the shape when it is selected.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSelectedTitleColor()</h3>
 <blockquote>
 <p><strong>setSelectedTitleColor</strong>(<code>sSelectedTitleColor</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSelectedTitleColor selectedTitleColor.</p>
-<p>The selectedTitleColor property defines the color (or any SVG paint servers like gradients or patterns)
-of the shape&#39;s title when it is selected.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSelectedTitleColor</h5>
 <p><code>string</code></p>
@@ -1188,6 +1184,10 @@ of the shape&#39;s title when it is selected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Sets a new value for property #getSelectedTitleColor selectedTitleColor.</p>
+<p>The selectedTitleColor property defines the color (or any SVG paint servers like gradients or patterns)
+of the shape&#39;s title when it is selected.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setShapeId()</h3>
 <blockquote>
@@ -1209,10 +1209,6 @@ shall be bound to a property during initialization, it requires an unique non-em
 <blockquote>
 <p><strong>setShowAnimation</strong>(<code>bShowAnimation?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowAnimation showAnimation.</p>
-<p>Flag to show or hide animation of an active shape.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowAnimation?</h5>
 <p><code>boolean</code></p>
@@ -1222,6 +1218,10 @@ shall be bound to a property during initialization, it requires an unique non-em
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getShowAnimation showAnimation.</p>
+<p>Flag to show or hide animation of an active shape.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowTitle()</h3>
 <blockquote>
@@ -1340,10 +1340,6 @@ the shape is not visible.</p>
 <blockquote>
 <p><strong>setTitleColor</strong>(<code>sTitleColor</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTitleColor titleColor.</p>
-<p>The titleColor property defines the color (or any SVG paint servers like gradients or patterns) of the
-shape title;</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sTitleColor</h5>
 <p><code>string</code></p>
@@ -1353,15 +1349,15 @@ shape title;</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.90</p>
+<p>Sets a new value for property #getTitleColor titleColor.</p>
+<p>The titleColor property defines the color (or any SVG paint servers like gradients or patterns) of the
+shape title;</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setTitleSpacing()</h3>
 <blockquote>
 <p><strong>setTitleSpacing</strong>(<code>iTitleSpacing?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTitleSpacing titleSpacing.</p>
-<p>The titleSpacing property defines the space between the start of the shape and the shape title in pixels</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iTitleSpacing?</h5>
 <p><code>number</code></p>
@@ -1371,6 +1367,10 @@ shape title;</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.96</p>
+<p>Sets a new value for property #getTitleSpacing titleSpacing.</p>
+<p>The titleSpacing property defines the space between the start of the shape and the shape title in pixels</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setTransform()</h3>
 <blockquote>
@@ -1394,10 +1394,6 @@ update xBias and yBias if translate the corresponding axis is matched.</p>
 <blockquote>
 <p><strong>setVerticalTextAlignment</strong>(<code>sVerticalTextAlignment?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getVerticalTextAlignment verticalTextAlignment.</p>
-<p>Vertical alignment for the title of the Shape.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Center</code>.</p>
 <h4>Parameters</h4>
 <h5>sVerticalTextAlignment?</h5>
 <p><code>&quot;Center&quot;</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <a href="../../../library/namespaces/simple/enumerations/verticalTextAlignment.html"><code>verticalTextAlignment</code></a></p>
@@ -1407,6 +1403,10 @@ update xBias and yBias if translate the corresponding axis is matched.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Sets a new value for property #getVerticalTextAlignment verticalTextAlignment.</p>
+<p>Vertical alignment for the title of the Shape.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Center</code>.</p>
 <hr>
 <h3>setVisible()</h3>
 <blockquote>
@@ -1473,7 +1473,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>BaseShape</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>BaseShape</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1497,6 +1497,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

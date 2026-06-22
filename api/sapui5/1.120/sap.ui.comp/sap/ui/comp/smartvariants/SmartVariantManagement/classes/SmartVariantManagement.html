@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SmartVariantManagement — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SmartVariantManagement — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: SmartVariantManagement — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartvariants/SmartVariantManagement/classes/SmartVariantManagement.html">
 <meta property="og:title" content="Class: SmartVariantManagement — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SmartVariantManagement — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: SmartVariantManagement — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartvariants/SmartVariantManagement/classes/SmartVariantManagement.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartvariants › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartvariants/SmartVariantManagement/README.html">SmartVariantManagement</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartvariants/SmartVariantManagement</a> / SmartVariantManagement</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartvariants/SmartVariantManagement</a> / SmartVariantManagement</p>
 <h1>Class: SmartVariantManagement</h1>
 <pre class="sig"><span class="kw">import</span> SmartVariantManagement <span class="kw">from</span> <span class="str">"sap/ui/comp/smartvariants/SmartVariantManagement"</span>;</pre>
 <p>Overview: The <code>SmartVariantManagement</code> control communicates with the flexibility library that offers
@@ -178,10 +178,6 @@ itself</p>
 <blockquote>
 <p><strong>attachInitialise</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:initialise initialise event of this <code>sap.ui.comp.smartvariants.SmartVariantManagement</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartvariants.SmartVariantManagement</code> itself.</p>
-<p>This event is fired when the SmartVariantManagement control is initialized.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -200,14 +196,14 @@ itself</p>
 <h5>Deprecated</h5>
 <p>(since 1.38.0) - Replaced by providing the personalizable control and the callback via the
 <code>initialise</code>-method.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachInitialise</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:initialise initialise event of this <code>sap.ui.comp.smartvariants.SmartVariantManagement</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.smartvariants.SmartVariantManagement</code> itself.</p>
 <p>This event is fired when the SmartVariantManagement control is initialized.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachInitialise</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -222,6 +218,10 @@ itself</p>
 <h5>Deprecated</h5>
 <p>(since 1.38.0) - Replaced by providing the personalizable control and the callback via the
 <code>initialise</code>-method.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:initialise initialise event of this <code>sap.ui.comp.smartvariants.SmartVariantManagement</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartvariants.SmartVariantManagement</code> itself.</p>
+<p>This event is fired when the SmartVariantManagement control is initialized.</p>
 <hr>
 <h3>attachSave()</h3>
 <h4>Call Signature</h4>
@@ -275,11 +275,11 @@ itself</p>
 <blockquote>
 <p><strong>clearVariantSelection</strong>(): <code>void</code></p>
 </blockquote>
-<p>Removes the current variant selection and resets to default value.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.22.0</p>
+<p>Removes the current variant selection and resets to default value.</p>
 <hr>
 <h3>currentVariantSetModified()</h3>
 <blockquote>
@@ -325,8 +325,6 @@ itself</p>
 <blockquote>
 <p><strong>detachInitialise</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:initialise initialise event of this <code>sap.ui.comp.smartvariants.SmartVariantManagement</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -340,6 +338,8 @@ itself</p>
 <h4>Deprecated</h4>
 <p>(since 1.38.0) - Replaced by providing the personalizable control and the callback via the
 <code>initialise</code>-method.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:initialise initialise event of this <code>sap.ui.comp.smartvariants.SmartVariantManagement</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSave()</h3>
 <blockquote>
@@ -364,7 +364,6 @@ itself</p>
 <blockquote>
 <p><strong>fireAfterSave</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterSave afterSave to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -374,12 +373,12 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterSave afterSave to attached listeners.</p>
 <hr>
 <h3><del>fireInitialise()</del></h3>
 <blockquote>
 <p><strong>fireInitialise</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:initialise initialise to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -392,17 +391,18 @@ itself</p>
 <code>initialise</code>-method.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:initialise initialise to attached listeners.</p>
 <hr>
 <h3>getCurrentVariantId()</h3>
 <blockquote>
 <p><strong>getCurrentVariantId</strong>(): <code>string</code></p>
 </blockquote>
-<p>Retrieves the current variant ID. For a standard variant, an empty string is returned.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Current variant ID</p>
 <h4>Since</h4>
 <p>1.28.1</p>
+<p>Retrieves the current variant ID. For a standard variant, an empty string is returned.</p>
 <hr>
 <h3>getEntitySet()</h3>
 <blockquote>
@@ -557,7 +557,6 @@ aggregation, the personalizableControl is inserted at the last position</p>
 <blockquote>
 <p><strong>setCurrentVariantId</strong>(<code>sVariantId</code>, <code>bDoNotApplyVariant</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the current variant ID.</p>
 <h4>Parameters</h4>
 <h5>sVariantId</h5>
 <p><code>string</code></p>
@@ -569,6 +568,7 @@ aggregation, the personalizableControl is inserted at the last position</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28.1</p>
+<p>Sets the current variant ID.</p>
 <hr>
 <h3>setEntitySet()</h3>
 <blockquote>
@@ -613,7 +613,7 @@ and enriches it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SmartVariantManagement</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SmartVariantManagement</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -637,6 +637,6 @@ used by this class</p>
 <p><a href="../../SmartVariantManagementBase/classes/SmartVariantManagementBase.html"><code>SmartVariantManagementBase</code></a>.<a href="../../SmartVariantManagementBase/classes/SmartVariantManagementBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

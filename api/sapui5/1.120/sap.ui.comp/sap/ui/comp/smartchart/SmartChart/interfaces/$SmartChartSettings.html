@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SmartChartSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SmartChartSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $SmartChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartchart/SmartChart/interfaces/$SmartChartSettings.html">
 <meta property="og:title" content="Interface: $SmartChartSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SmartChartSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $SmartChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartchart/SmartChart/interfaces/$SmartChartSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartchart › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartchart/SmartChart/README.html">SmartChart</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartchart/SmartChart</a> / $SmartChartSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartchart/SmartChart</a> / $SmartChartSettings</p>
 <h1>Interface: $SmartChartSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SmartChartSettings } <span class="kw">from</span> <span class="str">"sap/ui/comp/smartchart/SmartChart"</span>;</pre>
-<p>Describes the settings that can be provided to the SmartChart constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.m/sap/m/VBox/interfaces/$VBoxSettings.html"><code>$VBoxSettings</code></a></li>
@@ -48,11 +47,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>activateTimeSeries?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.84</p>
 <p>Enables the use of timeseries on the inner chart when corresponding annotation is given</p>
 <p><strong>Note:</strong> This timeseries is only supported for the following sap.chart.TimeUnitType TimeUnitTypes
 and the following chart types sap.viz.ui5.controls.VizFrame#getVizType.</p>
-<h4>Since</h4>
-<p>1.84</p>
 <hr>
 <h3>afterVariantApply?</h3>
 <blockquote>
@@ -138,8 +137,6 @@ or drill operations.
 <blockquote>
 <p><code>optional</code> <strong>dataReceived?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired when data is received after binding. This event is fired if the binding for the chart
-is done by the SmartChart control itself.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -147,6 +144,8 @@ is done by the SmartChart control itself.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.56) - Use <code>beforeRebindChart</code> event to attach/listen to the binding &quot;events&quot; directly</p>
+<p>This event is fired when data is received after binding. This event is fired if the binding for the chart
+is done by the SmartChart control itself.</p>
 <hr>
 <h3>enableAutoBinding?</h3>
 <blockquote>
@@ -166,7 +165,6 @@ or entitySet property. This happens right after the <code>initialise</code> even
 <blockquote>
 <p><code>optional</code> <strong>fullScreenToggled?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired right after the full screen mode of the SmartChart control has been changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartChart$FullScreenToggledEvent.html"><code>SmartChart$FullScreenToggledEvent</code></a></p>
@@ -174,6 +172,7 @@ or entitySet property. This happens right after the <code>initialise</code> even
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.46</p>
+<p>This event is fired right after the full screen mode of the SmartChart control has been changed.</p>
 <hr>
 <h3>header?</h3>
 <blockquote>
@@ -185,19 +184,19 @@ or entitySet property. This happens right after the <code>initialise</code> even
 <blockquote>
 <p><code>optional</code> <strong>headerLevel?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<p>Semantic level of the header.
- For more information, see sap.m.Title#setLevel.</p>
 <h4>Since</h4>
 <p>1.118</p>
+<p>Semantic level of the header.
+ For more information, see sap.m.Title#setLevel.</p>
 <hr>
 <h3>headerStyle?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerStyle?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<p>Defines style of the header.
- For more information, see sap.m.Title#setTitle.</p>
 <h4>Since</h4>
 <p>1.119</p>
+<p>Defines style of the header.
+ For more information, see sap.m.Title#setTitle.</p>
 <hr>
 <h3>ignoredChartTypes?</h3>
 <blockquote>
@@ -224,9 +223,6 @@ or entitySet property. This happens right after the <code>initialise</code> even
 <blockquote>
 <p><code>optional</code> <strong>initialise?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired once the control has been initialized. <strong>Note:</strong> For compatibility reasons the sap.chart
-library is loaded synchroniously as soon as a event handler for the <code>initialise</code> event has been attached.
-Since this event does not fulfill CSP requirements, please use event <code>initialized</code> instead.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -234,6 +230,9 @@ Since this event does not fulfill CSP requirements, please use event <code>initi
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.65)</p>
+<p>This event is fired once the control has been initialized. <strong>Note:</strong> For compatibility reasons the sap.chart
+library is loaded synchroniously as soon as a event handler for the <code>initialise</code> event has been attached.
+Since this event does not fulfill CSP requirements, please use event <code>initialized</code> instead.</p>
 <hr>
 <h3>initialized?</h3>
 <blockquote>
@@ -250,27 +249,27 @@ Since this event does not fulfill CSP requirements, please use event <code>initi
 <blockquote>
 <p><code>optional</code> <strong>legendVisible?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Set chart&#39;s legend properties.</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Set chart&#39;s legend properties.</p>
 <hr>
 <h3>noData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noData?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines the custom text that will be displayed in case no data is found for the current binding.</p>
 <h4>Since</h4>
 <p>1.46</p>
+<p>Defines the custom text that will be displayed in case no data is found for the current binding.</p>
 <hr>
 <h3>notAssignedText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>notAssignedText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.106</p>
 <p>Text that is shown for values of an empty string. <strong>Note:</strong> The property does not change the behavior
 for charts of type <code>timeseries</code>. <strong>Note:</strong> Can only be changed in the XML/JS view. It cannot be changed
 once the control has been initialized.</p>
-<h4>Since</h4>
-<p>1.106</p>
 <hr>
 <h3>persistencyKey?</h3>
 <blockquote>
@@ -295,15 +294,14 @@ history.</p>
 <p><code>optional</code> <strong>selectionDetailsActionGroups?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.48)</p>
 <p>Actions on group level which can be specified for the selection details popover.</p>
-<p> (since 1.48)</p>
 <hr>
 <h3>selectionDetailsActionPress?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionDetailsActionPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>This event is fired when any action in the selection details popover is pressed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartChart$SelectionDetailsActionPressEvent.html"><code>SmartChart$SelectionDetailsActionPressEvent</code></a></p>
@@ -312,93 +310,94 @@ history.</p>
 <h4>Since</h4>
 <p>1.48
  (since 1.48)</p>
+<p>This event is fired when any action in the selection details popover is pressed.</p>
 <hr>
 <h3>selectionDetailsActions?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionDetailsActions?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.48)</p>
 <p>Actions on footer level which can be specified for the selection details popover.</p>
-<p> (since 1.48)</p>
 <hr>
 <h3>selectionDetailsItemActions?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionDetailsItemActions?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.48)</p>
 <p>Actions on item level which can be specified for the selection details popover.</p>
-<p> (since 1.48)</p>
 <hr>
 <h3>selectionMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionMode?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../library/namespaces/smartchart/enumerations/SelectionMode.html"><code>SelectionMode</code></a></p>
 </blockquote>
-<p>Chart selection mode. Supported values are sap.ui.comp.smartchart.SelectionMode.Single or sap.ui.comp.smartchart.SelectionMode.Multi,
-case insensitive, always return in upper case. Unsupported values will be ignored.</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Chart selection mode. Supported values are sap.ui.comp.smartchart.SelectionMode.Single or sap.ui.comp.smartchart.SelectionMode.Multi,
+case insensitive, always return in upper case. Unsupported values will be ignored.</p>
 <hr>
 <h3>semanticObjectController?</h3>
 <blockquote>
 <p><code>optional</code> <strong>semanticObjectController?</strong>: <a href="../../../navpopover/SemanticObjectController/classes/SemanticObjectController.html"><code>SemanticObjectController</code></a></p>
 </blockquote>
-<p>The Semantic Object Controller allows the user to specify and overwrite functionality for semantic object
-navigation.</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>The Semantic Object Controller allows the user to specify and overwrite functionality for semantic object
+navigation.</p>
 <hr>
 <h3>showChartTooltip?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showChartTooltip?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the chart tooltip. If set to <code>true </code>, an instance of sap.viz.ui5.controls.VizTooltip
-will be created and shown when hovering over a data point.</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Controls the visibility of the chart tooltip. If set to <code>true </code>, an instance of sap.viz.ui5.controls.VizTooltip
+will be created and shown when hovering over a data point.</p>
 <hr>
 <h3>showChartTypeSelectionButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showChartTypeSelectionButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the chart type selection button.</p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Controls the visibility of the chart type selection button.</p>
 <hr>
 <h3>showDetailsButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showDetailsButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.38</p>
 <p>Controls the visibility of the Details button. If set to <code>true</code>, the datapoint tooltip will be disabled
 as the information of selected datapoints will be found in the details popover. This will also set the
 drill-down button to invisible.</p>
-<h4>Since</h4>
-<p>1.38</p>
 <hr>
 <h3>showDimensionsTitle?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showDimensionsTitle?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the title in the dimension area of the chart.</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Controls the visibility of the title in the dimension area of the chart.</p>
 <hr>
 <h3>showDownloadButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showDownloadButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the chart download button.</p>
 <h4>Since</h4>
 <p>1.39</p>
+<p>Controls the visibility of the chart download button.</p>
 <hr>
 <h3>showDrillBreadcrumbs?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showDrillBreadcrumbs?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.38</p>
 <p>Controls the visibility of the Breadcrumbs control for drilling up within the visible dimensions. If
 set to <code>true</code>, the toolbar header will be replaced by the Breadcrumbs control. This will also set the
 drill-up button to invisible.</p>
-<h4>Since</h4>
-<p>1.38</p>
 <hr>
 <h3>showDrillButtons?</h3>
 <blockquote>
@@ -410,25 +409,25 @@ drill-up button to invisible.</p>
 <blockquote>
 <p><code>optional</code> <strong>showFullScreenButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the FullScreen button.</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Controls the visibility of the FullScreen button.</p>
 <hr>
 <h3>showLegendButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showLegendButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the Navigation button</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Controls the visibility of the Navigation button</p>
 <hr>
 <h3>showMeasuresTitle?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showMeasuresTitle?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the title in the measure area of the chart.</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Controls the visibility of the title in the measure area of the chart.</p>
 <hr>
 <h3>showOverlay?</h3>
 <blockquote>
@@ -445,33 +444,33 @@ drill-up button to invisible.</p>
 <blockquote>
 <p><code>optional</code> <strong>showSemanticNavigationButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the Navigation button</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Controls the visibility of the Navigation button</p>
 <hr>
 <h3>showToolbar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showToolbar?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the toolbar.</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Controls the visibility of the toolbar.</p>
 <hr>
 <h3>showVariantManagement?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showVariantManagement?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the Variant Management.</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Controls the visibility of the Variant Management.</p>
 <hr>
 <h3>showZoomButtons?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showZoomButtons?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the Zoom In and Zoom Out buttons.</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Controls the visibility of the Zoom In and Zoom Out buttons.</p>
 <hr>
 <h3>smartFilterId?</h3>
 <blockquote>
@@ -485,10 +484,10 @@ to fetch data, show overlay etc.</p>
 <blockquote>
 <p><code>optional</code> <strong>smartVariant?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Identifies the SmartVariant control which should be used for the personalization. Will be ignored if
-the advanced mode is set.</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Identifies the SmartVariant control which should be used for the personalization. Will be ignored if
+the advanced mode is set.</p>
 <hr>
 <h3>toolbar?</h3>
 <blockquote>
@@ -503,16 +502,14 @@ added at the left-hand side of the toolbar.</p>
 <blockquote>
 <p><code>optional</code> <strong>toolbarStyle?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Standard&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/ToolbarStyle.html"><code>ToolbarStyle</code></a> | <code>&quot;Clear&quot;</code></p>
 </blockquote>
-<p>Defines the visual style of the smart charts <code>Toolbar</code>. <strong>Note:</strong> The visual styles are theme-dependent.</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Defines the visual style of the smart charts <code>Toolbar</code>. <strong>Note:</strong> The visual styles are theme-dependent.</p>
 <hr>
 <h3>uiStateChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>uiStateChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired when the UI state changes either via the sap.ui.comp.smartchart.SmartChart#setUiState
-method or the chart personalization.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -520,6 +517,8 @@ method or the chart personalization.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.96.15</p>
+<p>This event is fired when the UI state changes either via the sap.ui.comp.smartchart.SmartChart#setUiState
+method or the chart personalization.</p>
 <hr>
 <h3>useChartPersonalisation?</h3>
 <blockquote>
@@ -532,24 +531,24 @@ you need to specify the persistencyKey property.</p>
 <blockquote>
 <p><code>optional</code> <strong>useListForChartTypeSelection?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visualization for chart type selection. If set to <code>true</code>, the list of available chart types
-will be displayed. If set to <code>false</code> and there are three or fewer available chart types, the chart types
-will be displayed as separate buttons in the toolbar. If there are more than three chart types, a list
-will be shown.</p>
 <h4>Since</h4>
 <p>1.38</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - Setting the property to <code>false</code> will have no effect on the visualization
 of chart type selection. <code>SmartChart</code> will always show a list of chart types.</p>
+<p>Controls the visualization for chart type selection. If set to <code>true</code>, the list of available chart types
+will be displayed. If set to <code>false</code> and there are three or fewer available chart types, the chart types
+will be displayed as separate buttons in the toolbar. If there are more than three chart types, a list
+will be shown.</p>
 <hr>
 <h3>useTooltip?</h3>
 <blockquote>
 <p><code>optional</code> <strong>useTooltip?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies weather an instance of sap.viz.ui5.controls.VizTooltip or sap.viz.ui5.controls.Popover
-is used. If set to <code>true</code>, a tooltip will be displayed, a popover otherwise.</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Specifies weather an instance of sap.viz.ui5.controls.VizTooltip or sap.viz.ui5.controls.Popover
+is used. If set to <code>true</code>, a tooltip will be displayed, a popover otherwise.</p>
 <hr>
 <h3>useVariantManagement?</h3>
 <blockquote>
@@ -558,6 +557,6 @@ is used. If set to <code>true</code>, a tooltip will be displayed, a popover oth
 <p>If set to <code>true</code>, variants are used. As a prerequisite, you need to specify the persistencyKey property.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

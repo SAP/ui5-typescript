@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: TimelineItem — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: TimelineItem — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: TimelineItem — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/TimelineItem/classes/TimelineItem.html">
 <meta property="og:title" content="Class: TimelineItem — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: TimelineItem — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: TimelineItem — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/TimelineItem/classes/TimelineItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/TimelineItem/README.html">TimelineItem</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/TimelineItem</a> / TimelineItem</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/TimelineItem</a> / TimelineItem</p>
 <h1>Class: TimelineItem</h1>
 <pre class="sig"><span class="kw">import</span> TimelineItem <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/TimelineItem"</span>;</pre>
 <p>An entry posted on the timeline.</p>
@@ -110,7 +110,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addSuggestionItem</strong>(<code>oSuggestionItem</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some suggestionItem to the aggregation #getSuggestionItems suggestionItems.</p>
 <h4>Parameters</h4>
 <h5>oSuggestionItem</h5>
 <p><a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a></p>
@@ -120,6 +119,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Adds some suggestionItem to the aggregation #getSuggestionItems suggestionItems.</p>
 <hr>
 <h3>attachCustomActionClicked()</h3>
 <h4>Call Signature</h4>
@@ -170,11 +170,6 @@ otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code
 <blockquote>
 <p><strong>attachPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
-<p>This event is fired when the embedded control link is clicked of the timeline post. triggers the click
-event of the content.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -191,15 +186,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.95</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
 <p>This event is fired when the embedded control link is clicked of the timeline post. triggers the click
 event of the content.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -212,6 +207,11 @@ event of the content.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.95</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
+<p>This event is fired when the embedded control link is clicked of the timeline post. triggers the click
+event of the content.</p>
 <hr>
 <h3>attachReplyListOpen()</h3>
 <h4>Call Signature</h4>
@@ -302,11 +302,6 @@ otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code
 <blockquote>
 <p><strong>attachSelect</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
-<p>This event is fired when a non-interactive content or white space(where no content is available) inside
-an timeline post is clicked, triggers the click event of the item.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -323,15 +318,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.95</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
 <p>This event is fired when a non-interactive content or white space(where no content is available) inside
 an timeline post is clicked, triggers the click event of the item.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -344,18 +339,17 @@ an timeline post is clicked, triggers the click event of the item.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.95</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
+<p>This event is fired when a non-interactive content or white space(where no content is available) inside
+an timeline post is clicked, triggers the click event of the item.</p>
 <hr>
 <h3><del>attachSuggest()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSuggest</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:suggest suggest event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
-<p>This event is fired when the user types text into the search field and showSuggestion is set to true.
-Changing the suggestItems aggregation will show the suggestions inside a popup.
- As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -374,16 +368,16 @@ object when firing the event</p>
 <p>1.28.1</p>
 <h5>Deprecated</h5>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSuggest</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:suggest suggest event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
 <p>This event is fired when the user types text into the search field and showSuggestion is set to true.
 Changing the suggestItems aggregation will show the suggestions inside a popup.
  As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSuggest</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -398,20 +392,18 @@ Changing the suggestItems aggregation will show the suggestions inside a popup.
 <p>1.28.1</p>
 <h5>Deprecated</h5>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:suggest suggest event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
+<p>This event is fired when the user types text into the search field and showSuggestion is set to true.
+Changing the suggestItems aggregation will show the suggestions inside a popup.
+ As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <hr>
 <h3><del>attachSuggestionItemSelected()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSuggestionItemSelected</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:suggestionItemSelected suggestionItemSelected
-event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
-<p>This event is fired when a suggested post is selected in the search suggestions popup. This event is
-fired only when the showSuggestion propery is set to <code>true</code> and there are suggested posts shown in the
-suggestions popup.
- As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -430,10 +422,6 @@ object when firing the event</p>
 <p>1.28.1</p>
 <h5>Deprecated</h5>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSuggestionItemSelected</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:suggestionItemSelected suggestionItemSelected
 event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -442,6 +430,10 @@ otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code
 fired only when the showSuggestion propery is set to <code>true</code> and there are suggested posts shown in the
 suggestions popup.
  As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSuggestionItemSelected</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -456,6 +448,14 @@ suggestions popup.
 <p>1.28.1</p>
 <h5>Deprecated</h5>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:suggestionItemSelected suggestionItemSelected
+event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code> itself.</p>
+<p>This event is fired when a suggested post is selected in the search suggestions popup. This event is
+fired only when the showSuggestion propery is set to <code>true</code> and there are suggested posts shown in the
+suggestions popup.
+ As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <hr>
 <h3>attachUserNameClicked()</h3>
 <h4>Call Signature</h4>
@@ -541,12 +541,12 @@ otherwise it will be bound to this <code>sap.suite.ui.commons.TimelineItem</code
 <blockquote>
 <p><strong>destroySuggestionItems</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the suggestionItems in the aggregation #getSuggestionItems suggestionItems.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Destroys all the suggestionItems in the aggregation #getSuggestionItems suggestionItems.</p>
 <hr>
 <h3>detachCustomActionClicked()</h3>
 <blockquote>
@@ -570,8 +570,6 @@ of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <blockquote>
 <p><strong>detachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -584,6 +582,8 @@ of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.95</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachReplyListOpen()</h3>
 <blockquote>
@@ -624,8 +624,6 @@ of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <blockquote>
 <p><strong>detachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:select select event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -638,13 +636,13 @@ of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.95</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:select select event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachSuggest()</del></h3>
 <blockquote>
 <p><strong>detachSuggest</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:suggest suggest event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -659,14 +657,13 @@ of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>1.28.1</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:suggest suggest event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachSuggestionItemSelected()</del></h3>
 <blockquote>
 <p><strong>detachSuggestionItemSelected</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:suggestionItemSelected suggestionItemSelected
-event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -681,6 +678,9 @@ event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>1.28.1</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:suggestionItemSelected suggestionItemSelected
+event of this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachUserNameClicked()</h3>
 <blockquote>
@@ -704,7 +704,6 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <blockquote>
 <p><strong>fireCustomActionClicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:customActionClicked customActionClicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimelineItem$CustomActionClickedEventParameters.html"><code>TimelineItem$CustomActionClickedEventParameters</code></a></p>
@@ -714,12 +713,12 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:customActionClicked customActionClicked to attached listeners.</p>
 <hr>
 <h3>firePress()</h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -731,12 +730,12 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>1.95</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>fireReplyListOpen()</h3>
 <blockquote>
 <p><strong>fireReplyListOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:replyListOpen replyListOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -746,12 +745,12 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:replyListOpen replyListOpen to attached listeners.</p>
 <hr>
 <h3>fireReplyPost()</h3>
 <blockquote>
 <p><strong>fireReplyPost</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:replyPost replyPost to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimelineItem$ReplyPostEventParameters.html"><code>TimelineItem$ReplyPostEventParameters</code></a></p>
@@ -761,12 +760,12 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:replyPost replyPost to attached listeners.</p>
 <hr>
 <h3>fireSelect()</h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -778,12 +777,12 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>1.95</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3><del>fireSuggest()</del></h3>
 <blockquote>
 <p><strong>fireSuggest</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:suggest suggest to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimelineItem$SuggestEventParameters.html"><code>TimelineItem$SuggestEventParameters</code></a></p>
@@ -797,12 +796,12 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:suggest suggest to attached listeners.</p>
 <hr>
 <h3><del>fireSuggestionItemSelected()</del></h3>
 <blockquote>
 <p><strong>fireSuggestionItemSelected</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:suggestionItemSelected suggestionItemSelected to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimelineItem$SuggestionItemSelectedEventParameters.html"><code>TimelineItem$SuggestionItemSelectedEventParameters</code></a></p>
@@ -816,12 +815,12 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:suggestionItemSelected suggestionItemSelected to attached listeners.</p>
 <hr>
 <h3>fireUserNameClicked()</h3>
 <blockquote>
 <p><strong>fireUserNameClicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:userNameClicked userNameClicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimelineItem$UserNameClickedEventParameters.html"><code>TimelineItem$UserNameClickedEventParameters</code></a></p>
@@ -831,6 +830,7 @@ this <code>sap.suite.ui.commons.TimelineItem</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:userNameClicked userNameClicked to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
@@ -914,40 +914,40 @@ be displayed in chronological or reverse chronological order.</p>
 <blockquote>
 <p><strong>getIconDisplayShape</strong>(): <a href="../../../../../../../sap.m/sap/m/AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getIconDisplayShape iconDisplayShape.</p>
-<p>Defines the shape of the icon.</p>
-<p>Default value is <code>Circle</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.m/sap/m/AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 <p>Value of property <code>iconDisplayShape</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getIconDisplayShape iconDisplayShape.</p>
+<p>Defines the shape of the icon.</p>
+<p>Default value is <code>Circle</code>.</p>
 <hr>
 <h3>getIconInitials()</h3>
 <blockquote>
 <p><strong>getIconInitials</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getIconInitials iconInitials.</p>
-<p>Defines the initials of the icon.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>iconInitials</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getIconInitials iconInitials.</p>
+<p>Defines the initials of the icon.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getIconSize()</h3>
 <blockquote>
 <p><strong>getIconSize</strong>(): <a href="../../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getIconSize iconSize.</p>
-<p>Defines the size of the icon.</p>
-<p>Default value is <code>XS</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 <p>Value of property <code>iconSize</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getIconSize iconSize.</p>
+<p>Defines the size of the icon.</p>
+<p>Default value is <code>XS</code>.</p>
 <hr>
 <h3>getIconTooltip()</h3>
 <blockquote>
@@ -1010,13 +1010,13 @@ can set the value according to its needs.</p>
 <blockquote>
 <p><strong>getSuggestionItems</strong>(): <a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a>[]</p>
 </blockquote>
-<p>Gets content of aggregation #getSuggestionItems suggestionItems.</p>
-<p>Suggested posts.
- As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Gets content of aggregation #getSuggestionItems suggestionItems.</p>
+<p>Suggested posts.
+ As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <hr>
 <h3>getText()</h3>
 <blockquote>
@@ -1098,8 +1098,6 @@ and returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfSuggestionItem</strong>(<code>oSuggestionItem</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.m.StandardListItem</code> in the aggregation #getSuggestionItems suggestionItems.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oSuggestionItem</h5>
 <p><a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a></p>
@@ -1109,6 +1107,8 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Checks for the provided <code>sap.m.StandardListItem</code> in the aggregation #getSuggestionItems suggestionItems.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertCustomAction()</h3>
 <blockquote>
@@ -1132,7 +1132,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>insertSuggestionItem</strong>(<code>oSuggestionItem</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a suggestionItem into the aggregation #getSuggestionItems suggestionItems.</p>
 <h4>Parameters</h4>
 <h5>oSuggestionItem</h5>
 <p><a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a></p>
@@ -1147,6 +1146,7 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Inserts a suggestionItem into the aggregation #getSuggestionItems suggestionItems.</p>
 <hr>
 <h3>removeAllAriaLabelledBy()</h3>
 <blockquote>
@@ -1171,13 +1171,13 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllSuggestionItems</strong>(): <a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getSuggestionItems suggestionItems.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Removes all the controls from the aggregation #getSuggestionItems suggestionItems.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
@@ -1209,7 +1209,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeSuggestionItem</strong>(<code>vSuggestionItem</code>): <a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a></p>
 </blockquote>
-<p>Removes a suggestionItem from the aggregation #getSuggestionItems suggestionItems.</p>
 <h4>Parameters</h4>
 <h5>vSuggestionItem</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a></p>
@@ -1219,6 +1218,7 @@ is inserted at the last position</p>
 <p>The removed suggestionItem or <code>null</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
+<p>Removes a suggestionItem from the aggregation #getSuggestionItems suggestionItems.</p>
 <hr>
 <h3>setCustomReply()</h3>
 <blockquote>
@@ -1304,10 +1304,6 @@ be displayed in chronological or reverse chronological order.</p>
 <blockquote>
 <p><strong>setIconDisplayShape</strong>(<code>sIconDisplayShape?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIconDisplayShape iconDisplayShape.</p>
-<p>Defines the shape of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Circle</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconDisplayShape?</h5>
 <p><a href="../../../../../../../sap.m/sap/m/AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
@@ -1317,15 +1313,15 @@ be displayed in chronological or reverse chronological order.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getIconDisplayShape iconDisplayShape.</p>
+<p>Defines the shape of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Circle</code>.</p>
 <hr>
 <h3>setIconInitials()</h3>
 <blockquote>
 <p><strong>setIconInitials</strong>(<code>sIconInitials?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIconInitials iconInitials.</p>
-<p>Defines the initials of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconInitials?</h5>
 <p><code>string</code></p>
@@ -1335,15 +1331,15 @@ be displayed in chronological or reverse chronological order.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getIconInitials iconInitials.</p>
+<p>Defines the initials of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setIconSize()</h3>
 <blockquote>
 <p><strong>setIconSize</strong>(<code>sIconSize?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIconSize iconSize.</p>
-<p>Defines the size of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>XS</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconSize?</h5>
 <p><a href="../../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
@@ -1353,6 +1349,10 @@ be displayed in chronological or reverse chronological order.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getIconSize iconSize.</p>
+<p>Defines the size of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>XS</code>.</p>
 <hr>
 <h3>setIconTooltip()</h3>
 <blockquote>
@@ -1542,7 +1542,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>TimelineItem</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>TimelineItem</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1566,6 +1566,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

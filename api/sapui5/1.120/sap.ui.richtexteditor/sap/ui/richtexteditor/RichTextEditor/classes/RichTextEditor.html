@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: RichTextEditor — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: RichTextEditor — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: RichTextEditor — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/classes/RichTextEditor.html">
 <meta property="og:title" content="Class: RichTextEditor — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: RichTextEditor — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: RichTextEditor — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/classes/RichTextEditor.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.richtexteditor/README.html">sap.ui.richtexteditor</a> › sap › ui › richtexteditor › <a href="../../../../../../sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/README.html">RichTextEditor</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.richtexteditor</a> / <a href="../README.html">sap/ui/richtexteditor/RichTextEditor</a> / RichTextEditor</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.richtexteditor</a> / <a href="../README.html">sap/ui/richtexteditor/RichTextEditor</a> / RichTextEditor</p>
 <h1>Class: RichTextEditor</h1>
 <pre class="sig"><span class="kw">import</span> RichTextEditor <span class="kw">from</span> <span class="str">"sap/ui/richtexteditor/RichTextEditor"</span>;</pre>
 <p>The RichTextEditor-Control is used to enter formatted text. It uses the third-party component called
@@ -48,10 +48,7 @@ a wrapper to the native toolbar and takes care of synchronizing the state of its
 the current state of the selection in the editor (bold, italics, font styles etc.).</p>
 <p>Restrictions:</p>
 <p>**Note: The <code>RichTextEditor</code> uses a third-party component and therefore some additional restrictions
-apply for its proper usage and support. Use the native third-party API cautiously. Ensure you migrate
-to newer versions within 12 months of deprecation. Unsupported third-party versions, once deprecated
-by us, may be removed without notice if critical vulnerabilities or other serious issues are discovered
-in their code. For more information see the Preamble section in <a href="https://ui5.sap.com/#/topic/d4f3f1598373452bb73f2120930c133c">sap.ui.richtexteditor</a>.
+apply for its proper usage and support. For more information see the Preamble section in <a href="https://ui5.sap.com/#/topic/d4f3f1598373452bb73f2120930c133c">sap.ui.richtexteditor</a>.
 **</p>
 <p>Guidelines:
 	 -  The <code>RichTextEditor</code> should be used for desktop apps only. However, if it is essential for your
@@ -87,15 +84,16 @@ This is possible in few ways:
 <p>Below is a list of supported groups and buttons, which can be specified in the configuration objects
 (format is &lt;&gt;: &lt;&gt;):
 	 - font-style: bold, italic, underline, strikethrough
-	 - font: fontfamily, fontsize, forecolor, backcolor
-	 - clipboard: cut, copy, paste
-	 - structure: bullist, numlist, outdent, indent
-	 - undo: undo, redo
-	 - insert: image, emoticons
-	 - link: link, unlink
-	 - text-align: alignleft, aligncenter, alignright, alignjustify  Additional supported groups, which
-    can be added only after the editor is loaded (they can not be specified in the above mentioned configuration):</p>
-<pre><code> - table: table
+	 - font: fontfamily (fontselect in TinyMCE5), fontsize (fontsizeselect in TinyMCE5), forecolor, backcolor</p>
+<pre><code> - clipboard: cut, copy, paste
+ - structure: bullist, numlist, outdent, indent
+ - undo: undo, redo
+ - insert: image, emoticons
+ - link: link, unlink
+ - text-align: alignleft, aligncenter, alignright, alignjustify  Additional supported groups, which
+can be added only after the editor is loaded (they can not be specified in the above mentioned configuration):
+
+ - table: table
  - styleselect: styleselect  **Note!** Adding configuration for &quot;text-align&quot; group with any buttons
 will still render a menu button with all available options inside. Removing/hiding the group can be achieved
 by invoking `removeButtonGroup` or `setShowGroupTextAlign(false)` depending on the desired result.
@@ -158,7 +156,6 @@ See:
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -168,6 +165,7 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.76.0</p>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addButtonGroup()</h3>
 <blockquote>
@@ -212,7 +210,6 @@ has a predefined <code>customToolbarPriority</code>. Lower priorities are added 
 <blockquote>
 <p><strong>addCustomButton</strong>(<code>oCustomButton</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some customButton to the aggregation #getCustomButtons customButtons.</p>
 <h4>Parameters</h4>
 <h5>oCustomButton</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -222,6 +219,7 @@ has a predefined <code>customToolbarPriority</code>. Lower priorities are added 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Adds some customButton to the aggregation #getCustomButtons customButtons.</p>
 <hr>
 <h3>addPlugin()</h3>
 <blockquote>
@@ -434,12 +432,12 @@ itself</p>
 <blockquote>
 <p><strong>destroyCustomButtons</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the customButtons in the aggregation #getCustomButtons customButtons.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Destroys all the customButtons in the aggregation #getCustomButtons customButtons.</p>
 <hr>
 <h3>detachBeforeEditorInit()</h3>
 <blockquote>
@@ -515,7 +513,6 @@ this <code>sap.ui.richtexteditor.RichTextEditor</code>.</p>
 <blockquote>
 <p><strong>fireBeforeEditorInit</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:beforeEditorInit beforeEditorInit to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -525,12 +522,12 @@ this <code>sap.ui.richtexteditor.RichTextEditor</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforeEditorInit beforeEditorInit to attached listeners.</p>
 <hr>
 <h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/RichTextEditor$ChangeEventParameters.html"><code>RichTextEditor$ChangeEventParameters</code></a></p>
@@ -540,12 +537,12 @@ this <code>sap.ui.richtexteditor.RichTextEditor</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>fireReady()</h3>
 <blockquote>
 <p><strong>fireReady</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:ready ready to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -555,12 +552,12 @@ this <code>sap.ui.richtexteditor.RichTextEditor</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:ready ready to attached listeners.</p>
 <hr>
 <h3>fireReadyRecurring()</h3>
 <blockquote>
 <p><strong>fireReadyRecurring</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:readyRecurring readyRecurring to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -570,16 +567,17 @@ this <code>sap.ui.richtexteditor.RichTextEditor</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:readyRecurring readyRecurring to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.76.0</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getButtonGroups()</h3>
 <blockquote>
@@ -603,30 +601,30 @@ own <code>sap.m.Button</code>(s) with the desired functionality.</p>
 <blockquote>
 <p><strong>getCustomButtons</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p>Gets content of aggregation #getCustomButtons customButtons.</p>
-<p>Custom buttons are meant to extend the <code>RichTextEditor</code>&#39;s custom toolbar. Though type is set to sap.ui.Control,
-only sap.m.Button is allowed. <strong>Note:</strong> customButtons are available only when the customToolbar is enabled
-and all the requirements are fulfilled.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Gets content of aggregation #getCustomButtons customButtons.</p>
+<p>Custom buttons are meant to extend the <code>RichTextEditor</code>&#39;s custom toolbar. Though type is set to sap.ui.Control,
+only sap.m.Button is allowed. <strong>Note:</strong> customButtons are available only when the customToolbar is enabled
+and all the requirements are fulfilled.</p>
 <hr>
 <h3>getCustomToolbar()</h3>
 <blockquote>
 <p><strong>getCustomToolbar</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getCustomToolbar customToolbar.</p>
-<p>Determines whether a Fiori Toolbar is used instead of the TinyMCE default toolbar one. It is applied
-only when the EditorType is TinyMCE6 or TinyMCE7 and sap.m library is loaded. <strong>Note:</strong> The <code>customToolbar</code>
-property will have effect only on initial loading. Changing it during runtime will not affect the initially
-loaded toolbar.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>customToolbar</code></p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Gets current value of property #getCustomToolbar customToolbar.</p>
+<p>Determines whether a Fiori Toolbar is used instead of the TinyMCE default toolbar one. It is applied
+only when the EditorType is TinyMCE5 or TinyMCE6 and sap.m library is loaded. <strong>Note:</strong> The <code>customToolbar</code>
+property will have effect only on initial loading. Changing it during runtime will not affect the initially
+loaded toolbar.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEditable()</h3>
 <blockquote>
@@ -644,15 +642,15 @@ be any editor toolbar.</p>
 <blockquote>
 <p><strong>getEditorLocation</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getEditorLocation editorLocation.</p>
-<p>Relative or absolute URL where the editor is available. Must be on the same server. <strong>Note:</strong> Any attempts
-to set this property after the first rendering will not have any effect.</p>
-<p>Default value is <code>&#39;js/tiny_mce7/tinymce.js&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>editorLocation</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.25.0) - The editorLocation is set implicitly when choosing the editorType.</p>
+<p>Gets current value of property #getEditorLocation editorLocation.</p>
+<p>Relative or absolute URL where the editor is available. Must be on the same server. <strong>Note:</strong> Any attempts
+to set this property after the first rendering will not have any effect.</p>
+<p>Default value is <code>&#39;js/tiny_mce6/tinymce.js&#39;</code>.</p>
 <hr>
 <h3>getEditorType()</h3>
 <blockquote>
@@ -663,19 +661,17 @@ to set this property after the first rendering will not have any effect.</p>
 <p>Valid values are the ones found under sap.ui.richtexteditor.EditorType and any other editor identifier
 that may be introduced by other groups (hence this is not an enumeration).</p>
 <p><strong>Notes:</strong>
-	 - Do not use TinyMCE versions that are no longer supported. We may remove such versions without notice
-    in future releases if critical vulnerabilities or other serious issues are discovered in their code.</p>
-<pre><code> - Setting the property to `TinyMCE` loads the latest TinyMCE available.
- - Any attempts to set this property after the first rendering will not have any effect.
- - The default value of the property will always resolve to the recommended version by UI5. Due to the
-different support cycles, we will be constantly getting newer TinyMCE versions and update the default
-value accordingly.
- - Usage of internal TinyMCE APIs is not recommended, since it might lead to issues upon TinyMCE version
-update.
- - Have in mind when choosing a specific TinyMCE version that there might be differences in the support
-rules compared to UI5, therefore we might be forced to remove any TinyMCE version.
- - TinyMCE 6 will be removed in future releases.
-</code></pre>
+	 - TinyMCE version 3 and 4 are no longer supported and cannot be used. If you set the property to TinyMCE,
+    it will load TinyMCE version 6.
+	 - Any attempts to set this property after the first rendering will not have any effect.
+	 - The default value of the property will always resolve to the recommended version by UI5. Due to the
+    different support cycles, we will be constantly getting newer TinyMCE versions and update the default
+    value accordingly.
+	 - Usage of internal TinyMCE APIs is not recommended, since it might lead to issues upon TinyMCE version
+    update.
+	 - Have in mind when choosing a specific TinyMCE version that there might be differences in the support
+    rules compared to UI5, therefore we might be forced to remove any TinyMCE version.
+	 - TinyMCE 5 will be removed in future releases.</p>
 <p>Default value is <code>&#39;TinyMCE&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
@@ -700,9 +696,6 @@ is used, the height property is not taken into account.</p>
 <p>Returns the current editor&#39;s instance. CAUTION: using the native editor introduces a dependency to that
 editor and breaks the wrapping character of the RichTextEditor control, so it should only be done in
 justified cases.</p>
-<p><strong>Note: Use the native third-party API cautiously. Ensure you migrate to newer versions within 12 months
-of deprecation. Unsupported third-party versions, once deprecated by us, may be removed without notice
-if critical vulnerabilities or other serious issues are discovered in their code.</strong></p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>The native editor object (here: The TinyMCE editor instance)</p>
@@ -869,17 +862,17 @@ on a later stage.</p>
 <blockquote>
 <p><strong>getUseLegacyTheme</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>useLegacyTheme</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.97.0) - This property became obsolete after the deprecation of TinyMCE v3.</p>
 <p>Gets current value of property #getUseLegacyTheme useLegacyTheme.</p>
 <p>Determines whether or not to use the legacy theme for the toolbar buttons. If this is set to false, the
 default theme for the editor will be used (which might change slightly with every update). The legacy
 theme has the disadvantage that not all functionality has its own icon, so using non default buttons
 might lead to invisible buttons with the legacy theme - use the default editor theme in this case.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>useLegacyTheme</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.97.0) - This property became obsolete after the deprecation of TinyMCE v3.</p>
 <hr>
 <h3>getValue()</h3>
 <blockquote>
@@ -921,8 +914,6 @@ representation in the control.</p>
 <blockquote>
 <p><strong>indexOfCustomButton</strong>(<code>oCustomButton</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getCustomButtons customButtons.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oCustomButton</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -932,12 +923,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getCustomButtons customButtons.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertCustomButton()</h3>
 <blockquote>
 <p><strong>insertCustomButton</strong>(<code>oCustomButton</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a customButton into the aggregation #getCustomButtons customButtons.</p>
 <h4>Parameters</h4>
 <h5>oCustomButton</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -952,35 +944,35 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Inserts a customButton into the aggregation #getCustomButtons customButtons.</p>
 <hr>
 <h3>removeAllAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.76.0</p>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllCustomButtons()</h3>
 <blockquote>
 <p><strong>removeAllCustomButtons</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getCustomButtons customButtons.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Removes all the controls from the aggregation #getCustomButtons customButtons.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -990,6 +982,7 @@ is inserted at the last position</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.76.0</p>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeButtonGroup()</h3>
 <blockquote>
@@ -1008,7 +1001,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeCustomButton</strong>(<code>vCustomButton</code>): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Removes a customButton from the aggregation #getCustomButtons customButtons.</p>
 <h4>Parameters</h4>
 <h5>vCustomButton</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1018,6 +1010,7 @@ is inserted at the last position</p>
 <p>The removed customButton or <code>null</code></p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Removes a customButton from the aggregation #getCustomButtons customButtons.</p>
 <hr>
 <h3>removePlugin()</h3>
 <blockquote>
@@ -1049,13 +1042,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setCustomToolbar</strong>(<code>bCustomToolbar?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getCustomToolbar customToolbar.</p>
-<p>Determines whether a Fiori Toolbar is used instead of the TinyMCE default toolbar one. It is applied
-only when the EditorType is TinyMCE6 or TinyMCE7 and sap.m library is loaded. <strong>Note:</strong> The <code>customToolbar</code>
-property will have effect only on initial loading. Changing it during runtime will not affect the initially
-loaded toolbar.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bCustomToolbar?</h5>
 <p><code>boolean</code></p>
@@ -1065,6 +1051,13 @@ loaded toolbar.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48</p>
+<p>Sets a new value for property #getCustomToolbar customToolbar.</p>
+<p>Determines whether a Fiori Toolbar is used instead of the TinyMCE default toolbar one. It is applied
+only when the EditorType is TinyMCE5 or TinyMCE6 and sap.m library is loaded. <strong>Note:</strong> The <code>customToolbar</code>
+property will have effect only on initial loading. Changing it during runtime will not affect the initially
+loaded toolbar.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEditable()</h3>
 <blockquote>
@@ -1087,11 +1080,6 @@ be any editor toolbar.</p>
 <blockquote>
 <p><strong>setEditorLocation</strong>(<code>sEditorLocation?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEditorLocation editorLocation.</p>
-<p>Relative or absolute URL where the editor is available. Must be on the same server. <strong>Note:</strong> Any attempts
-to set this property after the first rendering will not have any effect.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;js/tiny_mce7/tinymce.js&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sEditorLocation?</h5>
 <p><code>string</code></p>
@@ -1101,6 +1089,11 @@ to set this property after the first rendering will not have any effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.25.0) - The editorLocation is set implicitly when choosing the editorType.</p>
+<p>Sets a new value for property #getEditorLocation editorLocation.</p>
+<p>Relative or absolute URL where the editor is available. Must be on the same server. <strong>Note:</strong> Any attempts
+to set this property after the first rendering will not have any effect.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;js/tiny_mce6/tinymce.js&#39;</code>.</p>
 <hr>
 <h3>setEditorType()</h3>
 <blockquote>
@@ -1111,7 +1104,7 @@ should be set after this has been invoked</p>
 <h4>Parameters</h4>
 <h5>sEditorType?</h5>
 <p><code>string</code></p>
-<p>Which editor type to be used (currently only 6 and 7)</p>
+<p>Which editor type to be used (currently only 5 and 6)</p>
 <h4>Returns</h4>
 <p><code>RichTextEditor</code></p>
 <p>Control instance (for method chaining)</p>
@@ -1351,13 +1344,6 @@ on a later stage.</p>
 <blockquote>
 <p><strong>setUseLegacyTheme</strong>(<code>bUseLegacyTheme?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getUseLegacyTheme useLegacyTheme.</p>
-<p>Determines whether or not to use the legacy theme for the toolbar buttons. If this is set to false, the
-default theme for the editor will be used (which might change slightly with every update). The legacy
-theme has the disadvantage that not all functionality has its own icon, so using non default buttons
-might lead to invisible buttons with the legacy theme - use the default editor theme in this case.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bUseLegacyTheme?</h5>
 <p><code>boolean</code></p>
@@ -1367,6 +1353,13 @@ might lead to invisible buttons with the legacy theme - use the default editor t
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.97.0) - This property became obsolete after the deprecation of TinyMCE v3.</p>
+<p>Sets a new value for property #getUseLegacyTheme useLegacyTheme.</p>
+<p>Determines whether or not to use the legacy theme for the toolbar buttons. If this is set to false, the
+default theme for the editor will be used (which might change slightly with every update). The legacy
+theme has the disadvantage that not all functionality has its own icon, so using non default buttons
+might lead to invisible buttons with the legacy theme - use the default editor theme in this case.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setValue()</h3>
 <blockquote>
@@ -1434,7 +1427,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>RichTextEditor</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>RichTextEditor</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1458,6 +1451,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

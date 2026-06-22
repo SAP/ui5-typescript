@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: QuickViewBase — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: QuickViewBase — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: QuickViewBase — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/QuickViewBase/classes/QuickViewBase.html">
 <meta property="og:title" content="Class: QuickViewBase — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: QuickViewBase — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: QuickViewBase — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/QuickViewBase/classes/QuickViewBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/QuickViewBase/README.html">QuickViewBase</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/QuickViewBase</a> / QuickViewBase</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/QuickViewBase</a> / QuickViewBase</p>
 <h1>Class: QuickViewBase</h1>
 <pre class="sig"><span class="kw">import</span> QuickViewBase <span class="kw">from</span> <span class="str">"sap/m/QuickViewBase"</span>;</pre>
-<p>QuickViewBase class provides base functionality for QuickView and QuickViewCard. Do not use it directly.</p>
 <h2>Since</h2>
 <p>1.28.11</p>
+<p>QuickViewBase class provides base functionality for QuickView and QuickViewCard. Do not use it directly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -251,7 +251,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>fireAfterNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterNavigate afterNavigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/QuickViewBase$AfterNavigateEventParameters.html"><code>QuickViewBase$AfterNavigateEventParameters</code></a></p>
@@ -261,14 +260,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterNavigate afterNavigate to attached listeners.</p>
 <hr>
 <h3>fireNavigate()</h3>
 <blockquote>
 <p><strong>fireNavigate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:navigate navigate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/QuickViewBase$NavigateEventParameters.html"><code>QuickViewBase$NavigateEventParameters</code></a></p>
@@ -278,6 +275,9 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navigate navigate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>getPages()</h3>
 <blockquote>
@@ -376,7 +376,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>QuickViewBase</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>QuickViewBase</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -400,6 +400,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

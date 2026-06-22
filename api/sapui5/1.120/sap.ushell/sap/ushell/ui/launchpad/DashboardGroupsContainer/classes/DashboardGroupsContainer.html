@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Class: DashboardGroupsContainer~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: DashboardGroupsContainer~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: DashboardGroupsContainer — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: DashboardGroupsContainer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/ui/launchpad/DashboardGroupsContainer/classes/DashboardGroupsContainer.html">
-<meta property="og:title" content="~~Class: DashboardGroupsContainer~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: DashboardGroupsContainer~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: DashboardGroupsContainer — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: DashboardGroupsContainer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/ui/launchpad/DashboardGroupsContainer/classes/DashboardGroupsContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,36 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › ui › launchpad › <a href="../../../../../../../sap.ushell/sap/ushell/ui/launchpad/DashboardGroupsContainer/README.html">DashboardGroupsContainer</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/ui/launchpad/DashboardGroupsContainer</a> / DashboardGroupsContainer</p>
-<h1><del>Class: DashboardGroupsContainer</del></h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/ui/launchpad/DashboardGroupsContainer</a> / DashboardGroupsContainer</p>
+<h1>Class: DashboardGroupsContainer</h1>
 <pre class="sig"><span class="kw">import</span> DashboardGroupsContainer <span class="kw">from</span> <span class="str">"sap/ushell/ui/launchpad/DashboardGroupsContainer"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.120)</p>
+<p>Base Class for Controls.</p>
+<p>Controls provide the following features:
+	 - <strong>Rendering</strong>: the <code>RenderManager</code> only expects instances of class <code>Control</code> in its sap.ui.core.RenderManager#renderControl renderControl
+    method. By convention, each control class has an associated static class that takes care of rendering
+    the control (its &#39;Renderer&#39;).
+	 - <strong>show / hide</strong>: a control can be hidden, although it is still part of the control tree, see property
+    #getVisible visible
+	 - <strong>local busy indicator</strong>: marks a control visually as &#39;busy&#39;, see properties #getBusy busy
+    and #getBusyIndicatorDelay busyIndicatorDelay
+	 - <strong>field groups</strong>: by assigning the same group ID to a set of editable controls, they form a group
+    which can be validated together. See property #getFieldGroupIds fieldGroupIds and event #event:validateFieldGroup validateFieldGroup.
+    The term field was chosen as most often this feature will be used to group editable fields in
+    a form. See the documentation for <a href="https://ui5.sap.com/#/topic/5b0775397e394b1fb973fa207554003e">Field Groups</a>
+    for more details.
+	 - <strong>custom style classes</strong>: all controls allow to add custom CSS classes to their rendered DOM without
+    modifying their renderer code. See methods #addStyleClass addStyleClass, #removeStyleClass removeStyleClass,
+    #toggleStyleClass toggleStyleClass and #hasStyleClass hasStyleClass.
+ The necessary implementation is encapsulated in sap.ui.core.CustomStyleClassSupport CustomStyleClassSupport
+and can be applied to selected element classes as well.
+	 - <strong>browser events</strong>: by calling the methods #attachBrowserEvent attachBrowserEvent and #detachBrowserEvent detachBrowserEvent,
+    consumers can let the control class take care of registering / de-registering a given set of event listeners
+    to the control&#39;s root DOM node. The framework will adapt the registration whenever the DOM node changes
+    (e.g. before or after rendering or when the control is destroyed).</p>
+<p>See section &quot;<a href="https://ui5.sap.com/#/topic/8dcab0011d274051808f959800cabf9f">Developing Controls</a>&quot;
+in the documentation for an introduction to control development.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -81,7 +104,7 @@ of the syntax of the settings object.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
-<h3><del>addGroup()</del></h3>
+<h3>addGroup()</h3>
 <blockquote>
 <p><strong>addGroup</strong>(<code>oGroup</code>): <code>this</code></p>
 </blockquote>
@@ -94,7 +117,7 @@ of the syntax of the settings object.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>attachAfterRendering()</del></h3>
+<h3>attachAfterRendering()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAfterRendering</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -138,7 +161,7 @@ itself</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>destroyGroups()</del></h3>
+<h3>destroyGroups()</h3>
 <blockquote>
 <p><strong>destroyGroups</strong>(): <code>this</code></p>
 </blockquote>
@@ -147,7 +170,7 @@ itself</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>detachAfterRendering()</del></h3>
+<h3>detachAfterRendering()</h3>
 <blockquote>
 <p><strong>detachAfterRendering</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
@@ -165,11 +188,10 @@ itself</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>fireAfterRendering()</del></h3>
+<h3>fireAfterRendering()</h3>
 <blockquote>
 <p><strong>fireAfterRendering</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterRendering afterRendering to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -179,8 +201,9 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterRendering afterRendering to attached listeners.</p>
 <hr>
-<h3><del>getAccessibilityLabel()</del></h3>
+<h3>getAccessibilityLabel()</h3>
 <blockquote>
 <p><strong>getAccessibilityLabel</strong>(): <code>string</code></p>
 </blockquote>
@@ -190,7 +213,7 @@ itself</p>
 <p><code>string</code></p>
 <p>Value of property <code>accessibilityLabel</code></p>
 <hr>
-<h3><del>getDisplayMode()</del></h3>
+<h3>getDisplayMode()</h3>
 <blockquote>
 <p><strong>getDisplayMode</strong>(): <code>string</code></p>
 </blockquote>
@@ -199,7 +222,7 @@ itself</p>
 <p><code>string</code></p>
 <p>Value of property <code>displayMode</code></p>
 <hr>
-<h3><del>getGroups()</del></h3>
+<h3>getGroups()</h3>
 <blockquote>
 <p><strong>getGroups</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
@@ -207,7 +230,7 @@ itself</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <hr>
-<h3><del>indexOfGroup()</del></h3>
+<h3>indexOfGroup()</h3>
 <blockquote>
 <p><strong>indexOfGroup</strong>(<code>oGroup</code>): <code>number</code></p>
 </blockquote>
@@ -221,7 +244,7 @@ its index if found or -1 otherwise.</p>
 <p><code>number</code></p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <hr>
-<h3><del>insertGroup()</del></h3>
+<h3>insertGroup()</h3>
 <blockquote>
 <p><strong>insertGroup</strong>(<code>oGroup</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
@@ -239,7 +262,7 @@ the last position</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>removeAllGroups()</del></h3>
+<h3>removeAllGroups()</h3>
 <blockquote>
 <p><strong>removeAllGroups</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
@@ -249,7 +272,7 @@ the last position</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <hr>
-<h3><del>removeGroup()</del></h3>
+<h3>removeGroup()</h3>
 <blockquote>
 <p><strong>removeGroup</strong>(<code>vGroup</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
@@ -262,7 +285,7 @@ the last position</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <p>The removed group or <code>null</code></p>
 <hr>
-<h3><del>setAccessibilityLabel()</del></h3>
+<h3>setAccessibilityLabel()</h3>
 <blockquote>
 <p><strong>setAccessibilityLabel</strong>(<code>sAccessibilityLabel?</code>): <code>this</code></p>
 </blockquote>
@@ -277,7 +300,7 @@ the last position</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setDisplayMode()</del></h3>
+<h3>setDisplayMode()</h3>
 <blockquote>
 <p><strong>setDisplayMode</strong>(<code>sDisplayMode?</code>): <code>this</code></p>
 </blockquote>
@@ -291,7 +314,7 @@ the last position</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>extend()</del></h3>
+<h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
@@ -306,7 +329,7 @@ and enriches it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>DashboardGroupsContainer</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>DashboardGroupsContainer</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -318,7 +341,7 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#extend"><code>extend</code></a></p>
 <hr>
-<h3><del>getMetadata()</del></h3>
+<h3>getMetadata()</h3>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
 </blockquote>
@@ -330,6 +353,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

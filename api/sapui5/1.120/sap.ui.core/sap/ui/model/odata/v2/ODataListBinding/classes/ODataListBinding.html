@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ODataListBinding — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ODataListBinding — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ODataListBinding — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v2/ODataListBinding/classes/ODataListBinding.html">
 <meta property="og:title" content="Class: ODataListBinding — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ODataListBinding — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ODataListBinding — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v2/ODataListBinding/classes/ODataListBinding.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › v2 › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/v2/ODataListBinding/README.html">ODataListBinding</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v2/ODataListBinding</a> / ODataListBinding</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v2/ODataListBinding</a> / ODataListBinding</p>
 <h1>Class: ODataListBinding</h1>
 <pre class="sig"><span class="kw">import</span> ODataListBinding <span class="kw">from</span> <span class="str">"sap/ui/model/odata/v2/ODataListBinding"</span>;</pre>
 <p>List binding for an OData V2 model.</p>
@@ -123,7 +123,6 @@ bindings into fewer $batch requests. For more information, see <a href="https://
 <blockquote>
 <p><strong>attachCreateActivate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
-<p>Attach event handler <code>fnFunction</code> to the &#39;createActivate&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -135,19 +134,12 @@ bindings into fewer $batch requests. For more information, see <a href="https://
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Attach event handler <code>fnFunction</code> to the &#39;createActivate&#39; event of this binding.</p>
 <hr>
 <h3>create()</h3>
 <blockquote>
 <p><strong>create</strong>(<code>oInitialData?</code>, <code>bAtEnd?</code>, <code>mParameters?</code>): <code>Context1</code></p>
 </blockquote>
-<p>Creates a new entity for this binding&#39;s collection via sap.ui.model.odata.v2.ODataModel#createEntry
-using the parameters given in <code>mParameters</code> and inserts it at the list position specified by the <code>bAtEnd</code>
-parameter. See <a href="https://ui5.sap.com/#/topic/6c47b2b39db9404582994070ec3d57a2#loio4c4cd99af9b14e08bb72470cc7cabff4">Creating Entities documentation</a>
-for comprehensive information on the topic.</p>
-<p>Note: This method requires that the model metadata has been loaded; see sap.ui.model.odata.v2.ODataModel#metadataLoaded.</p>
-<p>Since 1.108.0, this method supports deep create, which means it may be called if this binding&#39;s context
-is transient. The restrictions specified for sap.ui.model.odata.v2.ODataModel#createEntry regarding
-deep create apply.</p>
 <h4>Parameters</h4>
 <h5>oInitialData?</h5>
 <p><code>object</code></p>
@@ -191,12 +183,19 @@ and does not contribute to the #getCount count.</p>
 <p>The context representing the created entity</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Creates a new entity for this binding&#39;s collection via sap.ui.model.odata.v2.ODataModel#createEntry
+using the parameters given in <code>mParameters</code> and inserts it at the list position specified by the <code>bAtEnd</code>
+parameter. See <a href="https://ui5.sap.com/#/topic/6c47b2b39db9404582994070ec3d57a2#loio4c4cd99af9b14e08bb72470cc7cabff4">Creating Entities documentation</a>
+for comprehensive information on the topic.</p>
+<p>Note: This method requires that the model metadata has been loaded; see sap.ui.model.odata.v2.ODataModel#metadataLoaded.</p>
+<p>Since 1.108.0, this method supports deep create, which means it may be called if this binding&#39;s context
+is transient. The restrictions specified for sap.ui.model.odata.v2.ODataModel#createEntry regarding
+deep create apply.</p>
 <hr>
 <h3>detachCreateActivate()</h3>
 <blockquote>
 <p><strong>detachCreateActivate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
-<p>Detach event handler <code>fnFunction</code> from the &#39;createActivate&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -208,6 +207,7 @@ and does not contribute to the #getCount count.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Detach event handler <code>fnFunction</code> from the &#39;createActivate&#39; event of this binding.</p>
 <hr>
 <h3>filter()</h3>
 <blockquote>
@@ -241,15 +241,15 @@ rows area and inserted at the right position based on the current filters and so
 <blockquote>
 <p><strong>getAllCurrentContexts</strong>(): <code>Context1</code>[]</p>
 </blockquote>
-<p>Returns all current contexts of this list binding in no special order. Just like #getCurrentContexts,
-this method does not request any data from a back end and does not change the binding&#39;s state. In contrast
-to #getCurrentContexts, it does not only return those contexts that were last requested by a
-control, but all contexts that are currently available in the binding.</p>
 <h4>Returns</h4>
 <p><code>Context1</code>[]</p>
 <p>All current contexts of this list binding, in no special order</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Returns all current contexts of this list binding in no special order. Just like #getCurrentContexts,
+this method does not request any data from a back end and does not change the binding&#39;s state. In contrast
+to #getCurrentContexts, it does not only return those contexts that were last requested by a
+control, but all contexts that are currently available in the binding.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getallcurrentcontexts"><code>getAllCurrentContexts</code></a></p>
 <hr>
@@ -257,7 +257,6 @@ control, but all contexts that are currently available in the binding.</p>
 <blockquote>
 <p><strong>getContexts</strong>(<code>iStartIndex?</code>, <code>iLength?</code>, <code>iMaximumPrefetchSize?</code>, <code>bKeepCurrent?</code>): <code>Context1</code>[]</p>
 </blockquote>
-<p>Return contexts for the list.</p>
 <h4>Parameters</h4>
 <h5>iStartIndex?</h5>
 <p><code>number</code></p>
@@ -278,6 +277,7 @@ data that is likely to be needed soon, e.g. when scrolling down in a table</p>
 <p>The array of already available contexts with the first entry containing the context for <code>iStartIndex</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Return contexts for the list.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getcontexts"><code>getContexts</code></a></p>
 <hr>
@@ -285,6 +285,11 @@ data that is likely to be needed soon, e.g. when scrolling down in a table</p>
 <blockquote>
 <p><strong>getCount</strong>(): <code>number</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The count of entries</p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <p>Returns the count of active entries in the list if the list length is final, otherwise <code>undefined</code>. Contrary
 to {#getLength}, this method does not consider inactive entries which are created via {#create}.
 See:
@@ -292,11 +297,6 @@ See:
 	#getLength
 	#isLengthFinal
 	sap.ui.model.odata.v2.Context#isInactive</p>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>The count of entries</p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getcount"><code>getCount</code></a></p>
 <hr>
@@ -304,7 +304,6 @@ See:
 <blockquote>
 <p><strong>getDownloadUrl</strong>(<code>sFormat</code>): <code>string</code></p>
 </blockquote>
-<p>Get a download URL with the specified format considering the sort/filter/custom parameters.</p>
 <h4>Parameters</h4>
 <h5>sFormat</h5>
 <p><code>string</code></p>
@@ -314,6 +313,7 @@ See:
 <p>URL which can be used for downloading; <code>null</code> if this binding uses sap.ui.model.Filter.NONE</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Get a download URL with the specified format considering the sort/filter/custom parameters.</p>
 <hr>
 <h3>getLength()</h3>
 <blockquote>
@@ -345,14 +345,14 @@ do nothing, method will be called again when metadata is loaded.</p>
 <blockquote>
 <p><strong>isFirstCreateAtEnd</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns whether the overall position of created entries is at the end of the list; this is determined
-by the first call to sap.ui.model.odata.v2.ODataListBinding#create.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the overall position of created contexts is at the end, or <code>undefined</code> if there are
 no created contexts</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Returns whether the overall position of created entries is at the end of the list; this is determined
+by the first call to sap.ui.model.odata.v2.ODataListBinding#create.</p>
 <hr>
 <h3>refresh()</h3>
 <h4>Call Signature</h4>
@@ -397,12 +397,6 @@ rows area and inserted at the right position based on the current filters and so
 <blockquote>
 <p><strong>requestFilterForMessages</strong>(<code>fnFilter?</code>): <code>Promise</code>&lt;<a href="../../../../Filter/classes/Filter.html"><code>Filter</code></a>&gt;</p>
 </blockquote>
-<p>Requests a sap.ui.model.Filter object which can be used to filter the list binding by entries
-with model messages. With the filter callback, you can define if a message is considered when creating
-the filter for entries with messages.</p>
-<p>The resulting filter does not consider application or control filters specified for this list binding
-in its constructor or in its #filter method; add filters which you want to keep with the &quot;and&quot;
-conjunction to the resulting filter before calling #filter.</p>
 <h4>Parameters</h4>
 <h5>fnFilter?</h5>
 <p>(<code>p1</code>) =&gt; <code>boolean</code></p>
@@ -418,6 +412,12 @@ the binding is not resolved or if there is no message for any entry, it resolves
 <p>1.77.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Requests a sap.ui.model.Filter object which can be used to filter the list binding by entries
+with model messages. With the filter callback, you can define if a message is considered when creating
+the filter for entries with messages.</p>
+<p>The resulting filter does not consider application or control filters specified for this list binding
+in its constructor or in its #filter method; add filters which you want to keep with the &quot;and&quot;
+conjunction to the resulting filter before calling #filter.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#requestfilterformessages"><code>requestFilterForMessages</code></a></p>
 <hr>
@@ -456,7 +456,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ODataListBinding</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ODataListBinding</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -480,6 +480,6 @@ used by this class</p>
 <p><a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../../ListBinding/classes/ListBinding.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

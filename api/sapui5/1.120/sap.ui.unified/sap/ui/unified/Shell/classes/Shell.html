@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Shell~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Shell~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="~~Class: Shell~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/Shell/classes/Shell.html">
 <meta property="og:title" content="~~Class: Shell~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Shell~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="~~Class: Shell~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/Shell/classes/Shell.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/Shell/README.html">Shell</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/Shell</a> / Shell</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/Shell</a> / Shell</p>
 <h1><del>Class: Shell</del></h1>
 <pre class="sig"><span class="kw">import</span> Shell <span class="kw">from</span> <span class="str">"sap/ui/unified/Shell"</span>;</pre>
-<p>The shell control is meant as root control (full-screen) of an application. It was build as root control
-of the Fiori Launchpad application and provides the basic capabilities for this purpose. Do not use this
-control within applications which run inside the Fiori Lauchpad and do not use it for other scenarios
-than the root control usecase.</p>
 <h2>Since</h2>
 <p>1.15.1</p>
 <h2>Deprecated</h2>
 <p>(since 1.44.0)</p>
+<p>The shell control is meant as root control (full-screen) of an application. It was build as root control
+of the Fiori Launchpad application and provides the basic capabilities for this purpose. Do not use this
+control within applications which run inside the Fiori Lauchpad and do not use it for other scenarios
+than the root control usecase.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ShellLayout/classes/ShellLayout.html"><code>ShellLayout</code></a></li>
@@ -200,12 +200,12 @@ header can not be destroyed.</p>
 <blockquote>
 <p><strong>destroyUser</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the user in the aggregation #getUser user.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.22.0</p>
+<p>Destroys the user in the aggregation #getUser user.</p>
 <hr>
 <h3><del>getCurtainContent()</del></h3>
 <blockquote>
@@ -269,51 +269,51 @@ in the shell header. If a custom header is set this aggregation has no effect.</
 <blockquote>
 <p><strong>getSearchVisible</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSearchVisible searchVisible.</p>
-<p>If set to false, the search area (aggregation &#39;search&#39;) is hidden. If a custom header is set this property
-has no effect.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>searchVisible</code></p>
 <h4>Since</h4>
 <p>1.18</p>
+<p>Gets current value of property #getSearchVisible searchVisible.</p>
+<p>If set to false, the search area (aggregation &#39;search&#39;) is hidden. If a custom header is set this property
+has no effect.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getShowCurtain()</del></h3>
 <blockquote>
 <p><strong>getShowCurtain</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowCurtain showCurtain.</p>
-<p>Shows / Hides the curtain.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showCurtain</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.</p>
+<p>Gets current value of property #getShowCurtain showCurtain.</p>
+<p>Shows / Hides the curtain.</p>
 <hr>
 <h3><del>getShowCurtainPane()</del></h3>
 <blockquote>
 <p><strong>getShowCurtainPane</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowCurtainPane showCurtainPane.</p>
-<p>Shows / Hides the side pane on the curtain.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showCurtainPane</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.</p>
+<p>Gets current value of property #getShowCurtainPane showCurtainPane.</p>
+<p>Shows / Hides the side pane on the curtain.</p>
 <hr>
 <h3><del>getUser()</del></h3>
 <blockquote>
 <p><strong>getUser</strong>(): <a href="../../ShellHeadUserItem/classes/ShellHeadUserItem.html"><code>ShellHeadUserItem</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getUser user.</p>
-<p>The user item which is rendered in the shell header beside the items. If a custom header is set this
-aggregation has no effect.</p>
 <h4>Returns</h4>
 <p><a href="../../ShellHeadUserItem/classes/ShellHeadUserItem.html"><code>ShellHeadUserItem</code></a></p>
 <h4>Since</h4>
 <p>1.22.0</p>
+<p>Gets content of aggregation #getUser user.</p>
+<p>The user item which is rendered in the shell header beside the items. If a custom header is set this
+aggregation has no effect.</p>
 <hr>
 <h3><del>indexOfCurtainContent()</del></h3>
 <blockquote>
@@ -582,11 +582,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setSearchVisible</strong>(<code>bSearchVisible?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSearchVisible searchVisible.</p>
-<p>If set to false, the search area (aggregation &#39;search&#39;) is hidden. If a custom header is set this property
-has no effect.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bSearchVisible?</h5>
 <p><code>boolean</code></p>
@@ -596,14 +591,16 @@ has no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.18</p>
+<p>Sets a new value for property #getSearchVisible searchVisible.</p>
+<p>If set to false, the search area (aggregation &#39;search&#39;) is hidden. If a custom header is set this property
+has no effect.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setShowCurtain()</del></h3>
 <blockquote>
 <p><strong>setShowCurtain</strong>(<code>bShowCurtain?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowCurtain showCurtain.</p>
-<p>Shows / Hides the curtain.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bShowCurtain?</h5>
 <p><code>boolean</code></p>
@@ -613,14 +610,14 @@ has no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.</p>
+<p>Sets a new value for property #getShowCurtain showCurtain.</p>
+<p>Shows / Hides the curtain.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setShowCurtainPane()</del></h3>
 <blockquote>
 <p><strong>setShowCurtainPane</strong>(<code>bShowCurtainPane?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowCurtainPane showCurtainPane.</p>
-<p>Shows / Hides the side pane on the curtain.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bShowCurtainPane?</h5>
 <p><code>boolean</code></p>
@@ -630,12 +627,14 @@ has no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.3) - Curtain is deprecated and replaced by ShellOverlay mechanism.</p>
+<p>Sets a new value for property #getShowCurtainPane showCurtainPane.</p>
+<p>Shows / Hides the side pane on the curtain.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setUser()</del></h3>
 <blockquote>
 <p><strong>setUser</strong>(<code>oUser</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getUser user.</p>
 <h4>Parameters</h4>
 <h5>oUser</h5>
 <p><a href="../../ShellHeadUserItem/classes/ShellHeadUserItem.html"><code>ShellHeadUserItem</code></a></p>
@@ -645,6 +644,7 @@ has no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.22.0</p>
+<p>Sets the aggregated #getUser user.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -661,7 +661,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Shell</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Shell</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -685,6 +685,6 @@ used by this class</p>
 <p><a href="../../ShellLayout/classes/ShellLayout.html"><code>ShellLayout</code></a>.<a href="../../ShellLayout/classes/ShellLayout.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

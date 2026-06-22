@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Select — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Select — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Select — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Select/classes/Select.html">
 <meta property="og:title" content="Class: Select — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Select — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Select — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Select/classes/Select.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Select/README.html">Select</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Select</a> / Select</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Select</a> / Select</p>
 <h1>Class: Select</h1>
 <pre class="sig"><span class="kw">import</span> Select <span class="kw">from</span> <span class="str">"sap/m/Select"</span>;</pre>
 <p>The <code>sap.m.Select</code> control provides a list of items that allows users to select an item.</p>
@@ -124,11 +124,6 @@ See:
 <h4>Implementation of</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IFormContent.html"><code>IFormContent</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IFormContent.html#__implements__sap_ui_core_iformcontent"><code>__implements__sap_ui_core_IFormContent</code></a></p>
 <hr>
-<h3>__implements__sap_ui_core_ILabelable</h3>
-<blockquote>
-<p><strong>__implements__sap_ui_core_ILabelable</strong>: <code>boolean</code></p>
-</blockquote>
-<hr>
 <h3>__implements__sap_ui_core_ISemanticFormContent</h3>
 <blockquote>
 <p><strong>__implements__sap_ui_core_ISemanticFormContent</strong>: <code>boolean</code></p>
@@ -140,7 +135,6 @@ See:
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -150,6 +144,7 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addItem()</h3>
 <blockquote>
@@ -219,14 +214,6 @@ actions:
 <blockquote>
 <p><strong>attachLiveChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.Select</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Select</code> itself.</p>
-<p>Fires when the user navigates through the <code>Select</code> items. It&#39;s also fired on revert of the currently
-selected item.</p>
-<p><strong>Note:</strong> Revert occurs in some of the following actions:
-	 - The user clicks outside of the <code>Select</code>
-	 - The Escape key is pressed</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -243,10 +230,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.100</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.Select</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Select</code> itself.</p>
@@ -255,6 +238,10 @@ selected item.</p>
 <p><strong>Note:</strong> Revert occurs in some of the following actions:
 	 - The user clicks outside of the <code>Select</code>
 	 - The Escape key is pressed</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -267,6 +254,14 @@ selected item.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.100</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.Select</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Select</code> itself.</p>
+<p>Fires when the user navigates through the <code>Select</code> items. It&#39;s also fired on revert of the currently
+selected item.</p>
+<p><strong>Note:</strong> Revert occurs in some of the following actions:
+	 - The user clicks outside of the <code>Select</code>
+	 - The Escape key is pressed</p>
 <hr>
 <h3>bindItems()</h3>
 <blockquote>
@@ -287,18 +282,17 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>close</strong>(): <code>this</code></p>
 </blockquote>
-<p>Closes the control&#39;s picker popup.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Closes the control&#39;s picker popup.</p>
 <hr>
 <h3>createPicker()</h3>
 <blockquote>
 <p><strong>createPicker</strong>(<code>sPickerType</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Creates a picker popup container where the selection should take place.</p>
 <h4>Parameters</h4>
 <h5>sPickerType</h5>
 <p><code>string</code></p>
@@ -308,6 +302,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>The <code>sap.m.Popover</code> or <code>sap.m.Dialog</code> instance</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates a picker popup container where the selection should take place.</p>
 <hr>
 <h3>destroyItems()</h3>
 <blockquote>
@@ -339,8 +334,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>detachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.m.Select</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -353,12 +346,13 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.m.Select</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Select$ChangeEventParameters.html"><code>Select$ChangeEventParameters</code></a></p>
@@ -368,12 +362,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>fireLiveChange()</h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Select$LiveChangeEventParameters.html"><code>Select$LiveChangeEventParameters</code></a></p>
@@ -385,19 +379,20 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>1.100</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>Returns the <code>sap.m.Select</code> accessibility information.
-See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>The object contains the accessibility information for <code>sap.m.Select</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the <code>sap.m.Select</code> accessibility information.
+See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -405,54 +400,54 @@ See:
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getAutoAdjustWidth()</h3>
 <blockquote>
 <p><strong>getAutoAdjustWidth</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAutoAdjustWidth autoAdjustWidth.</p>
-<p>Indicates whether the width of the input field is determined by the selected item&#39;s content.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>autoAdjustWidth</code></p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets current value of property #getAutoAdjustWidth autoAdjustWidth.</p>
+<p>Indicates whether the width of the input field is determined by the selected item&#39;s content.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getColumnRatio()</h3>
 <blockquote>
 <p><strong>getColumnRatio</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getColumnRatio columnRatio.</p>
-<p>Determines the ratio between the first and the second column when secondary values are displayed.</p>
-<p><strong>Note:</strong> This property takes effect only when the <code>showSecondaryValues</code> property is set to <code>true</code>.</p>
-<p>Default value is <code>&quot;3:2&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>columnRatio</code></p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Gets current value of property #getColumnRatio columnRatio.</p>
+<p>Determines the ratio between the first and the second column when secondary values are displayed.</p>
+<p><strong>Note:</strong> This property takes effect only when the <code>showSecondaryValues</code> property is set to <code>true</code>.</p>
+<p>Default value is <code>&quot;3:2&quot;</code>.</p>
 <hr>
 <h3>getEditable()</h3>
 <blockquote>
 <p><strong>getEditable</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>editable</code></p>
+<h4>Since</h4>
+<p>1.66.0</p>
 <p>Gets current value of property #getEditable editable.</p>
 <p>Determines whether the user can modify the selected item. When the property is set to <code>false</code>, the control
 appears as disabled but CAN still be focused.</p>
 <p><strong>Note:</strong> When both <code>enabled</code> and <code>editable</code> properties are set to <code>false</code>, <code>enabled</code> has priority over
 <code>editable</code>.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>editable</code></p>
-<h4>Since</h4>
-<p>1.66.0</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -472,7 +467,6 @@ appears as disabled and CANNOT be focused.</p>
 <blockquote>
 <p><strong>getEnabledItems</strong>(<code>aItems?</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
-<p>Gets the enabled items from the aggregation named <code>items</code>.</p>
 <h4>Parameters</h4>
 <h5>aItems?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
@@ -482,28 +476,29 @@ appears as disabled and CANNOT be focused.</p>
 <p>An array containing the enabled items.</p>
 <h4>Since</h4>
 <p>1.22.0</p>
+<p>Gets the enabled items from the aggregation named <code>items</code>.</p>
 <hr>
 <h3>getFirstItem()</h3>
 <blockquote>
 <p><strong>getFirstItem</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 </blockquote>
-<p>Gets the first item from the aggregation named <code>items</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 <p>The first item, or <code>null</code> if there are no items.</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets the first item from the aggregation named <code>items</code>.</p>
 <hr>
 <h3>getFocusDomRef()</h3>
 <blockquote>
 <p><strong>getFocusDomRef</strong>(): <code>Element</code></p>
 </blockquote>
-<p>Returns the DOM Element that should get the focus.</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>Returns the DOM Element that should get the focus</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the DOM Element that should get the focus.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getfocusdomref"><code>getFocusDomRef</code></a></p>
 <hr>
@@ -511,35 +506,46 @@ appears as disabled and CANNOT be focused.</p>
 <blockquote>
 <p><strong>getForceSelection</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getForceSelection forceSelection.</p>
-<p>Indicates whether the selection is restricted to one of the items in the list. <strong>Note:</strong> We strongly
-recommend that you always set this property to <code>false</code> and bind the <code>selectedKey</code> property to the desired
-value for better interoperability with data binding.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>forceSelection</code></p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Gets current value of property #getForceSelection forceSelection.</p>
+<p>Indicates whether the selection is restricted to one of the items in the list. <strong>Note:</strong> We strongly
+recommend that you always set this property to <code>false</code> and bind the <code>selectedKey</code> property to the desired
+value for better interoperability with data binding.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
 <p><strong>getIcon</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getIcon icon.</p>
-<p>The URI to the icon that will be displayed only when using the <code>IconOnly</code> type.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>icon</code></p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets current value of property #getIcon icon.</p>
+<p>The URI to the icon that will be displayed only when using the <code>IconOnly</code> type.</p>
+<p>Default value is <code>empty string</code>.</p>
+<hr>
+<h3>getIdForLabel()</h3>
+<blockquote>
+<p><strong>getIdForLabel</strong>(): <code>string</code></p>
+</blockquote>
+<p>Returns the DOMNode Id to be used for the &quot;labelFor&quot; attribute of the label.</p>
+<p>By default, this is the Id of the control itself.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Id to be used for the <code>labelFor</code></p>
+<h4>Overrides</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getidforlabel"><code>getIdForLabel</code></a></p>
 <hr>
 <h3>getItemAt()</h3>
 <blockquote>
 <p><strong>getItemAt</strong>(<code>iIndex</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 </blockquote>
-<p>Gets the item from the aggregation named <code>items</code> at the given 0-based index.</p>
 <h4>Parameters</h4>
 <h5>iIndex</h5>
 <p><code>number</code></p>
@@ -549,13 +555,12 @@ value for better interoperability with data binding.</p>
 <p>Item at the given index, or <code>null</code> if none.</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets the item from the aggregation named <code>items</code> at the given 0-based index.</p>
 <hr>
 <h3>getItemByKey()</h3>
 <blockquote>
 <p><strong>getItemByKey</strong>(<code>sKey</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 </blockquote>
-<p>Gets the item with the given key from the aggregation named <code>items</code>.</p>
-<p>**Note: ** If duplicate keys exist, the first item matching the key is returned.</p>
 <h4>Parameters</h4>
 <h5>sKey</h5>
 <p><code>string</code></p>
@@ -565,6 +570,8 @@ value for better interoperability with data binding.</p>
 <p>The <code>sap.ui.core.Item</code> instance or <code>null</code> if there is no such item</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets the item with the given key from the aggregation named <code>items</code>.</p>
+<p>**Note: ** If duplicate keys exist, the first item matching the key is returned.</p>
 <hr>
 <h3>getItems()</h3>
 <blockquote>
@@ -580,12 +587,12 @@ value for better interoperability with data binding.</p>
 <blockquote>
 <p><strong>getLastItem</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 </blockquote>
-<p>Gets the last item from the aggregation named <code>items</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 <p>The last item, or <code>null</code> if there are no items.</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets the last item from the aggregation named <code>items</code>.</p>
 <hr>
 <h3>getMaxWidth()</h3>
 <blockquote>
@@ -624,30 +631,30 @@ interface.</p>
 <blockquote>
 <p><strong>getRequired</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getRequired required.</p>
-<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
-single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
-be established (e.g. one label should label multiple fields).</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>required</code></p>
 <h4>Since</h4>
 <p>1.74</p>
+<p>Gets current value of property #getRequired required.</p>
+<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
+single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
+be established (e.g. one label should label multiple fields).</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getResetOnMissingKey()</h3>
 <blockquote>
 <p><strong>getResetOnMissingKey</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getResetOnMissingKey resetOnMissingKey.</p>
-<p>Modifies the behavior of the <code>setSelectedKey</code> method so that the selected item is cleared when a provided
-selected key is missing.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>resetOnMissingKey</code></p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Gets current value of property #getResetOnMissingKey resetOnMissingKey.</p>
+<p>Modifies the behavior of the <code>setSelectedKey</code> method so that the selected item is cleared when a provided
+selected key is missing.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSelectedItem()</h3>
 <blockquote>
@@ -662,19 +669,24 @@ selected key is missing.</p>
 <blockquote>
 <p><strong>getSelectedItemId</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectedItemId selectedItemId.</p>
-<p>ID of the selected item.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>selectedItemId</code></p>
 <h4>Since</h4>
 <p>1.12</p>
+<p>Gets current value of property #getSelectedItemId selectedItemId.</p>
+<p>ID of the selected item.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getSelectedKey()</h3>
 <blockquote>
 <p><strong>getSelectedKey</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>selectedKey</code></p>
+<h4>Since</h4>
+<p>1.11</p>
 <p>Gets current value of property #getSelectedKey selectedKey.</p>
 <p>Key of the selected item.</p>
 <p><strong>Notes:</strong>
@@ -685,92 +697,87 @@ selected key is missing.</p>
 	 -  If an item with the default key exists and we try to select it, it happens only if the <code>forceSelection</code>
     property is set to <code>true</code>.</p>
 <p>Default value is <code>empty string</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>selectedKey</code></p>
-<h4>Since</h4>
-<p>1.11</p>
 <hr>
 <h3>getShowSecondaryValues()</h3>
 <blockquote>
 <p><strong>getShowSecondaryValues</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowSecondaryValues showSecondaryValues.</p>
-<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
-are shown.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showSecondaryValues</code></p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Gets current value of property #getShowSecondaryValues showSecondaryValues.</p>
+<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
+are shown.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getTextAlign()</h3>
 <blockquote>
 <p><strong>getTextAlign</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getTextAlign textAlign.</p>
-<p>Sets the horizontal alignment of the text within the input field.</p>
-<p>Default value is <code>Initial</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code></p>
 <p>Value of property <code>textAlign</code></p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Gets current value of property #getTextAlign textAlign.</p>
+<p>Sets the horizontal alignment of the text within the input field.</p>
+<p>Default value is <code>Initial</code>.</p>
 <hr>
 <h3>getTextDirection()</h3>
 <blockquote>
 <p><strong>getTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getTextDirection textDirection.</p>
-<p>Specifies the direction of the text within the input field with enumerated options. By default, the control
-inherits text direction from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>textDirection</code></p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Gets current value of property #getTextDirection textDirection.</p>
+<p>Specifies the direction of the text within the input field with enumerated options. By default, the control
+inherits text direction from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>getType()</h3>
 <blockquote>
 <p><strong>getType</strong>(): <code>&quot;Default&quot;</code> | <a href="../../library/enumerations/SelectType.html"><code>SelectType</code></a> | <code>&quot;IconOnly&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getType type.</p>
-<p>Type of a select. Possible values <code>Default</code>, <code>IconOnly</code>.</p>
-<p>Default value is <code>Default</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Default&quot;</code> | <a href="../../library/enumerations/SelectType.html"><code>SelectType</code></a> | <code>&quot;IconOnly&quot;</code></p>
 <p>Value of property <code>type</code></p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Gets current value of property #getType type.</p>
+<p>Type of a select. Possible values <code>Default</code>, <code>IconOnly</code>.</p>
+<p>Default value is <code>Default</code>.</p>
 <hr>
 <h3>getValueState()</h3>
 <blockquote>
 <p><strong>getValueState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getValueState valueState.</p>
-<p>Visualizes the validation state of the control, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
-<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>valueState</code></p>
 <h4>Since</h4>
 <p>1.40.2</p>
+<p>Gets current value of property #getValueState valueState.</p>
+<p>Visualizes the validation state of the control, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
+<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getValueStateText()</h3>
 <blockquote>
 <p><strong>getValueStateText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getValueStateText valueStateText.</p>
-<p>Defines the text of the value state message popup. If this is not specified, a default text is shown
-from the resource bundle.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>valueStateText</code></p>
 <h4>Since</h4>
 <p>1.40.5</p>
+<p>Gets current value of property #getValueStateText valueStateText.</p>
+<p>Defines the text of the value state message popup. If this is not specified, a default text is shown
+from the resource bundle.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -793,25 +800,16 @@ same as the viewport.</p>
 <blockquote>
 <p><strong>getWrapItemsText</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getWrapItemsText wrapItemsText.</p>
-<p>Determines whether the text in the items wraps on multiple lines when the available width is not enough.
-When the text is truncated (<code>wrapItemsText</code> property is set to <code>false</code>), the max width of the <code>SelectList</code>
-is 600px. When <code>wrapItemsText</code> is set to <code>true</code>, <code>SelectList</code> takes all of the available width.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>wrapItemsText</code></p>
 <h4>Since</h4>
 <p>1.69</p>
-<hr>
-<h3>hasLabelableHTMLElement()</h3>
-<blockquote>
-<p><strong>hasLabelableHTMLElement</strong>(): <code>string</code></p>
-</blockquote>
-<p>Returns the DOMNode Id of the labelable HTML element for the <code>sap.m.Select</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Id of the labelable HTML element</p>
+<p>Gets current value of property #getWrapItemsText wrapItemsText.</p>
+<p>Determines whether the text in the items wraps on multiple lines when the available width is not enough.
+When the text is truncated (<code>wrapItemsText</code> property is set to <code>false</code>), the max width of the <code>SelectList</code>
+is 600px. When <code>wrapItemsText</code> is set to <code>true</code>, <code>SelectList</code> takes all of the available width.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>indexOfItem()</h3>
 <blockquote>
@@ -849,18 +847,17 @@ the last position.</p>
 <blockquote>
 <p><strong>isOpen</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Indicates whether the control&#39;s picker popup is opened.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Indicates whether the picker popup is currently open (this includes opening and closing animations).</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Indicates whether the control&#39;s picker popup is opened.</p>
 <hr>
 <h3>open()</h3>
 <blockquote>
 <p><strong>open</strong>(): <code>this</code></p>
 </blockquote>
-<p>Open the control&#39;s picker popup.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
@@ -868,17 +865,18 @@ the last position.</p>
 <p>1.16</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Open the control&#39;s picker popup.</p>
 <hr>
 <h3>removeAllAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllItems()</h3>
 <blockquote>
@@ -894,7 +892,6 @@ UIArea.</p>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -904,6 +901,7 @@ UIArea.</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeItem()</h3>
 <blockquote>
@@ -918,23 +916,10 @@ UIArea.</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 <p>The removed item or <code>null</code>.</p>
 <hr>
-<h3>selectNextSelectableItem()</h3>
-<blockquote>
-<p><strong>selectNextSelectableItem</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
-</blockquote>
-<p>Select next selectable item in the select list</p>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
-<p>item to be selected</p>
-<hr>
 <h3>setAutoAdjustWidth()</h3>
 <blockquote>
 <p><strong>setAutoAdjustWidth</strong>(<code>bAutoAdjustWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAutoAdjustWidth autoAdjustWidth.</p>
-<p>Indicates whether the width of the input field is determined by the selected item&#39;s content.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAutoAdjustWidth?</h5>
 <p><code>boolean</code></p>
@@ -944,16 +929,15 @@ UIArea.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Sets a new value for property #getAutoAdjustWidth autoAdjustWidth.</p>
+<p>Indicates whether the width of the input field is determined by the selected item&#39;s content.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setColumnRatio()</h3>
 <blockquote>
 <p><strong>setColumnRatio</strong>(<code>sColumnRatio?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getColumnRatio columnRatio.</p>
-<p>Determines the ratio between the first and the second column when secondary values are displayed.</p>
-<p><strong>Note:</strong> This property takes effect only when the <code>showSecondaryValues</code> property is set to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;3:2&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sColumnRatio?</h5>
 <p><code>string</code></p>
@@ -963,18 +947,16 @@ UIArea.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Sets a new value for property #getColumnRatio columnRatio.</p>
+<p>Determines the ratio between the first and the second column when secondary values are displayed.</p>
+<p><strong>Note:</strong> This property takes effect only when the <code>showSecondaryValues</code> property is set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;3:2&quot;</code>.</p>
 <hr>
 <h3>setEditable()</h3>
 <blockquote>
 <p><strong>setEditable</strong>(<code>bEditable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEditable editable.</p>
-<p>Determines whether the user can modify the selected item. When the property is set to <code>false</code>, the control
-appears as disabled but CAN still be focused.</p>
-<p><strong>Note:</strong> When both <code>enabled</code> and <code>editable</code> properties are set to <code>false</code>, <code>enabled</code> has priority over
-<code>editable</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEditable?</h5>
 <p><code>boolean</code></p>
@@ -984,6 +966,13 @@ appears as disabled but CAN still be focused.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.66.0</p>
+<p>Sets a new value for property #getEditable editable.</p>
+<p>Determines whether the user can modify the selected item. When the property is set to <code>false</code>, the control
+appears as disabled but CAN still be focused.</p>
+<p><strong>Note:</strong> When both <code>enabled</code> and <code>editable</code> properties are set to <code>false</code>, <code>enabled</code> has priority over
+<code>editable</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
@@ -1008,12 +997,6 @@ appears as disabled and CANNOT be focused.</p>
 <blockquote>
 <p><strong>setForceSelection</strong>(<code>bForceSelection?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getForceSelection forceSelection.</p>
-<p>Indicates whether the selection is restricted to one of the items in the list. <strong>Note:</strong> We strongly
-recommend that you always set this property to <code>false</code> and bind the <code>selectedKey</code> property to the desired
-value for better interoperability with data binding.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bForceSelection?</h5>
 <p><code>boolean</code></p>
@@ -1023,15 +1006,17 @@ value for better interoperability with data binding.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Sets a new value for property #getForceSelection forceSelection.</p>
+<p>Indicates whether the selection is restricted to one of the items in the list. <strong>Note:</strong> We strongly
+recommend that you always set this property to <code>false</code> and bind the <code>selectedKey</code> property to the desired
+value for better interoperability with data binding.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
 <p><strong>setIcon</strong>(<code>sIcon?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIcon icon.</p>
-<p>The URI to the icon that will be displayed only when using the <code>IconOnly</code> type.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIcon?</h5>
 <p><code>string</code></p>
@@ -1041,6 +1026,10 @@ value for better interoperability with data binding.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Sets a new value for property #getIcon icon.</p>
+<p>The URI to the icon that will be displayed only when using the <code>IconOnly</code> type.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setMaxWidth()</h3>
 <blockquote>
@@ -1079,12 +1068,6 @@ value for better interoperability with data binding.</p>
 <blockquote>
 <p><strong>setRequired</strong>(<code>bRequired?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRequired required.</p>
-<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
-single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
-be established (e.g. one label should label multiple fields).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bRequired?</h5>
 <p><code>boolean</code></p>
@@ -1094,16 +1077,17 @@ be established (e.g. one label should label multiple fields).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
+<p>Sets a new value for property #getRequired required.</p>
+<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
+single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
+be established (e.g. one label should label multiple fields).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setResetOnMissingKey()</h3>
 <blockquote>
 <p><strong>setResetOnMissingKey</strong>(<code>bResetOnMissingKey?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getResetOnMissingKey resetOnMissingKey.</p>
-<p>Modifies the behavior of the <code>setSelectedKey</code> method so that the selected item is cleared when a provided
-selected key is missing.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bResetOnMissingKey?</h5>
 <p><code>boolean</code></p>
@@ -1113,6 +1097,11 @@ selected key is missing.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Sets a new value for property #getResetOnMissingKey resetOnMissingKey.</p>
+<p>Modifies the behavior of the <code>setSelectedKey</code> method so that the selected item is cleared when a provided
+selected key is missing.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSelectedItem()</h3>
 <blockquote>
@@ -1135,8 +1124,6 @@ exist).</p>
 <blockquote>
 <p><strong>setSelectedItemId</strong>(<code>vItem?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the <code>selectedItemId</code> property.</p>
-<p>Default value is an empty string <code>&quot;&quot;</code> or <code>undefined</code>.</p>
 <h4>Parameters</h4>
 <h5>vItem?</h5>
 <p><code>string</code></p>
@@ -1147,13 +1134,13 @@ item will be selected (if any items exist).</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.12</p>
+<p>Sets the <code>selectedItemId</code> property.</p>
+<p>Default value is an empty string <code>&quot;&quot;</code> or <code>undefined</code>.</p>
 <hr>
 <h3>setSelectedKey()</h3>
 <blockquote>
 <p><strong>setSelectedKey</strong>(<code>sKey</code>): <code>this</code></p>
 </blockquote>
-<p>Sets property <code>selectedKey</code>.</p>
-<p>Default value is an empty string <code>&quot;&quot;</code> or <code>undefined</code>.</p>
 <h4>Parameters</h4>
 <h5>sKey</h5>
 <p><code>string</code></p>
@@ -1167,16 +1154,13 @@ property is set to <code>true</code>. If duplicate keys exist, the first item ma
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.11</p>
+<p>Sets property <code>selectedKey</code>.</p>
+<p>Default value is an empty string <code>&quot;&quot;</code> or <code>undefined</code>.</p>
 <hr>
 <h3>setShowSecondaryValues()</h3>
 <blockquote>
 <p><strong>setShowSecondaryValues</strong>(<code>bShowSecondaryValues?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowSecondaryValues showSecondaryValues.</p>
-<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
-are shown.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowSecondaryValues?</h5>
 <p><code>boolean</code></p>
@@ -1186,15 +1170,16 @@ are shown.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Sets a new value for property #getShowSecondaryValues showSecondaryValues.</p>
+<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
+are shown.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setTextAlign()</h3>
 <blockquote>
 <p><strong>setTextAlign</strong>(<code>sTextAlign?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTextAlign textAlign.</p>
-<p>Sets the horizontal alignment of the text within the input field.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Initial</code>.</p>
 <h4>Parameters</h4>
 <h5>sTextAlign?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code></p>
@@ -1204,16 +1189,15 @@ are shown.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Sets a new value for property #getTextAlign textAlign.</p>
+<p>Sets the horizontal alignment of the text within the input field.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Initial</code>.</p>
 <hr>
 <h3>setTextDirection()</h3>
 <blockquote>
 <p><strong>setTextDirection</strong>(<code>sTextDirection?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTextDirection textDirection.</p>
-<p>Specifies the direction of the text within the input field with enumerated options. By default, the control
-inherits text direction from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -1223,15 +1207,16 @@ inherits text direction from the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Sets a new value for property #getTextDirection textDirection.</p>
+<p>Specifies the direction of the text within the input field with enumerated options. By default, the control
+inherits text direction from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>setType()</h3>
 <blockquote>
 <p><strong>setType</strong>(<code>sType?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getType type.</p>
-<p>Type of a select. Possible values <code>Default</code>, <code>IconOnly</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Default</code>.</p>
 <h4>Parameters</h4>
 <h5>sType?</h5>
 <p><code>&quot;Default&quot;</code> | <a href="../../library/enumerations/SelectType.html"><code>SelectType</code></a> | <code>&quot;IconOnly&quot;</code></p>
@@ -1241,15 +1226,15 @@ inherits text direction from the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Sets a new value for property #getType type.</p>
+<p>Type of a select. Possible values <code>Default</code>, <code>IconOnly</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Default</code>.</p>
 <hr>
 <h3>setValueState()</h3>
 <blockquote>
 <p><strong>setValueState</strong>(<code>sValueState?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getValueState valueState.</p>
-<p>Visualizes the validation state of the control, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sValueState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -1259,16 +1244,15 @@ inherits text direction from the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.2</p>
+<p>Sets a new value for property #getValueState valueState.</p>
+<p>Visualizes the validation state of the control, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setValueStateText()</h3>
 <blockquote>
 <p><strong>setValueStateText</strong>(<code>sValueStateText?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getValueStateText valueStateText.</p>
-<p>Defines the text of the value state message popup. If this is not specified, a default text is shown
-from the resource bundle.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sValueStateText?</h5>
 <p><code>string</code></p>
@@ -1278,6 +1262,11 @@ from the resource bundle.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.5</p>
+<p>Sets a new value for property #getValueStateText valueStateText.</p>
+<p>Defines the text of the value state message popup. If this is not specified, a default text is shown
+from the resource bundle.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -1305,7 +1294,6 @@ same as the viewport.</p>
 <blockquote>
 <p><strong>setWrapItemsText</strong>(<code>bWrap</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the <code>wrapItemsText</code> property.</p>
 <h4>Parameters</h4>
 <h5>bWrap</h5>
 <p><code>boolean</code></p>
@@ -1314,6 +1302,7 @@ same as the viewport.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.69</p>
+<p>Sets the <code>wrapItemsText</code> property.</p>
 <hr>
 <h3>unbindItems()</h3>
 <blockquote>
@@ -1339,7 +1328,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Select</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Select</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1363,6 +1352,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: ViewStateManagerBase — SAPUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: ViewStateManagerBase — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: ViewStateManagerBase — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: ViewStateManagerBase — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/ViewStateManagerBase/classes/ViewStateManagerBase.html">
-<meta property="og:title" content="Abstract Class: ViewStateManagerBase — SAPUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: ViewStateManagerBase — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: ViewStateManagerBase — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: ViewStateManagerBase — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/ViewStateManagerBase/classes/ViewStateManagerBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/ViewStateManagerBase/README.html">ViewStateManagerBase</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ViewStateManagerBase</a> / ViewStateManagerBase</p>
-<h1>Abstract Class: ViewStateManagerBase</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ViewStateManagerBase</a> / ViewStateManagerBase</p>
+<h1>Class: ViewStateManagerBase</h1>
 <pre class="sig"><span class="kw">import</span> ViewStateManagerBase <span class="kw">from</span> <span class="str">"sap/ui/vk/ViewStateManagerBase"</span>;</pre>
-<p>Manages the visibility and selection states of nodes in the scene.</p>
 <h2>Since</h2>
 <p>1.32.0</p>
+<p>Manages the visibility and selection states of nodes in the scene.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -93,8 +93,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_setContent</strong>(<code>content</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a scene obtained as content from the associated content connector.</p>
-<p>This method should be overridden in derived classes.</p>
 <h4>Parameters</h4>
 <h5>content</h5>
 <p><a href="../../Scene/classes/Scene.html"><code>Scene</code></a></p>
@@ -104,6 +102,8 @@ of the syntax of the settings object.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets a scene obtained as content from the associated content connector.</p>
+<p>This method should be overridden in derived classes.</p>
 <hr>
 <h3>attachHighlightColorChanged()</h3>
 <h4>Call Signature</h4>
@@ -941,7 +941,6 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <blockquote>
 <p><strong>fireHighlightColorChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:highlightColorChanged highlightColorChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$HighlightColorChangedEventParameters.html"><code>ViewStateManagerBase$HighlightColorChangedEventParameters</code></a></p>
@@ -951,12 +950,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:highlightColorChanged highlightColorChanged to attached listeners.</p>
 <hr>
 <h3>fireNodeHierarchyReplaced()</h3>
 <blockquote>
 <p><strong>fireNodeHierarchyReplaced</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:nodeHierarchyReplaced nodeHierarchyReplaced to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$NodeHierarchyReplacedEventParameters.html"><code>ViewStateManagerBase$NodeHierarchyReplacedEventParameters</code></a></p>
@@ -966,12 +965,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:nodeHierarchyReplaced nodeHierarchyReplaced to attached listeners.</p>
 <hr>
 <h3>fireOpacityChanged()</h3>
 <blockquote>
 <p><strong>fireOpacityChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:opacityChanged opacityChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$OpacityChangedEventParameters.html"><code>ViewStateManagerBase$OpacityChangedEventParameters</code></a></p>
@@ -981,12 +980,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:opacityChanged opacityChanged to attached listeners.</p>
 <hr>
 <h3>fireOutlineColorChanged()</h3>
 <blockquote>
 <p><strong>fireOutlineColorChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:outlineColorChanged outlineColorChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$OutlineColorChangedEventParameters.html"><code>ViewStateManagerBase$OutlineColorChangedEventParameters</code></a></p>
@@ -996,12 +995,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:outlineColorChanged outlineColorChanged to attached listeners.</p>
 <hr>
 <h3>fireOutlineWidthChanged()</h3>
 <blockquote>
 <p><strong>fireOutlineWidthChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:outlineWidthChanged outlineWidthChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$OutlineWidthChangedEventParameters.html"><code>ViewStateManagerBase$OutlineWidthChangedEventParameters</code></a></p>
@@ -1011,12 +1010,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:outlineWidthChanged outlineWidthChanged to attached listeners.</p>
 <hr>
 <h3>fireOutliningChanged()</h3>
 <blockquote>
 <p><strong>fireOutliningChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:outliningChanged outliningChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$OutliningChangedEventParameters.html"><code>ViewStateManagerBase$OutliningChangedEventParameters</code></a></p>
@@ -1026,12 +1025,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:outliningChanged outliningChanged to attached listeners.</p>
 <hr>
 <h3>fireReadyForAnimation()</h3>
 <blockquote>
 <p><strong>fireReadyForAnimation</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:readyForAnimation readyForAnimation to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$ReadyForAnimationEventParameters.html"><code>ViewStateManagerBase$ReadyForAnimationEventParameters</code></a></p>
@@ -1041,12 +1040,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:readyForAnimation readyForAnimation to attached listeners.</p>
 <hr>
 <h3>fireSelectionChanged()</h3>
 <blockquote>
 <p><strong>fireSelectionChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:selectionChanged selectionChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$SelectionChangedEventParameters.html"><code>ViewStateManagerBase$SelectionChangedEventParameters</code></a></p>
@@ -1056,12 +1055,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectionChanged selectionChanged to attached listeners.</p>
 <hr>
 <h3>fireTintColorChanged()</h3>
 <blockquote>
 <p><strong>fireTintColorChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:tintColorChanged tintColorChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$TintColorChangedEventParameters.html"><code>ViewStateManagerBase$TintColorChangedEventParameters</code></a></p>
@@ -1071,12 +1070,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:tintColorChanged tintColorChanged to attached listeners.</p>
 <hr>
 <h3>fireTransformationChanged()</h3>
 <blockquote>
 <p><strong>fireTransformationChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:transformationChanged transformationChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$TransformationChangedEventParameters.html"><code>ViewStateManagerBase$TransformationChangedEventParameters</code></a></p>
@@ -1086,12 +1085,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:transformationChanged transformationChanged to attached listeners.</p>
 <hr>
 <h3>fireViewStateApplied()</h3>
 <blockquote>
 <p><strong>fireViewStateApplied</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:viewStateApplied viewStateApplied to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$ViewStateAppliedEventParameters.html"><code>ViewStateManagerBase$ViewStateAppliedEventParameters</code></a></p>
@@ -1101,12 +1100,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:viewStateApplied viewStateApplied to attached listeners.</p>
 <hr>
 <h3>fireViewStateApplying()</h3>
 <blockquote>
 <p><strong>fireViewStateApplying</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:viewStateApplying viewStateApplying to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$ViewStateApplyingEventParameters.html"><code>ViewStateManagerBase$ViewStateApplyingEventParameters</code></a></p>
@@ -1116,12 +1115,12 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:viewStateApplying viewStateApplying to attached listeners.</p>
 <hr>
 <h3>fireVisibilityChanged()</h3>
 <blockquote>
 <p><strong>fireVisibilityChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:visibilityChanged visibilityChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewStateManagerBase$VisibilityChangedEventParameters.html"><code>ViewStateManagerBase$VisibilityChangedEventParameters</code></a></p>
@@ -1131,6 +1130,7 @@ of this <code>sap.ui.vk.ViewStateManagerBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:visibilityChanged visibilityChanged to attached listeners.</p>
 <hr>
 <h3>getContentConnector()</h3>
 <blockquote>
@@ -1270,14 +1270,14 @@ otherwise.</p>
 <p><strong>getSelectable</strong>(<code>nodeRefs</code>): <code>number</code> | <code>number</code>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.111.0) - This method is experimental and might be modified or removed in future
+versions.</p>
 <p>Gets the <code>selectable</code> property of the nodes.</p>
 <p><em><strong>Selectable</strong></em> nodes can be selected in the viewport by mouse click or by using a selection tool. This
 property does not affect rendering.</p>
 <p>By default nodes are <em><strong>selectable</strong></em>.</p>
 <p>If a single node reference is passed to the method then a single value is returned.
  If an array of node references is passed to the method then an array of values is returned.</p>
-<p> (since 1.111.0) - This method is experimental and might be modified or removed in future
-versions.</p>
 <h4>Parameters</h4>
 <h5>nodeRefs</h5>
 <p><code>any</code></p>
@@ -1563,6 +1563,8 @@ be used.</p>
 <p><strong>setSelectable</strong>(<code>nodeRefs</code>, <code>selectable</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.111.0) - This method is experimental and might be modified or removed in future
+versions.</p>
 <p>Sets the <code>selectable</code> property of the nodes.</p>
 <p><em><strong>Selectable</strong></em> nodes can be selected in the viewport by mouse click or by using a selection tool. This
 property does not affect rendering.</p>
@@ -1570,8 +1572,6 @@ property does not affect rendering.</p>
 <p>If a grouping node is <em><strong>unselectable</strong></em> then all its descendant nodes are <em><strong>unselectable</strong></em> too. If
 a grouping node is <em><strong>selectable</strong></em> then its descendants can be either <em><strong>selectable</strong></em> or <em><strong>unselectable</strong></em>
 based on their <code>selectable</code> property.</p>
-<p> (since 1.111.0) - This method is experimental and might be modified or removed in future
-versions.</p>
 <h4>Parameters</h4>
 <h5>nodeRefs</h5>
 <p><code>any</code></p>
@@ -1588,7 +1588,6 @@ and the value of the node&#39;s own <code>selectable</code> property is in use.<
 <blockquote>
 <p><strong>setSelectionState</strong>(<code>nodeRefs</code>, <code>selected</code>, <code>recursive</code>, <code>blockNotification</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the selection state of the nodes.</p>
 <h4>Parameters</h4>
 <h5>nodeRefs</h5>
 <p><code>any</code></p>
@@ -1607,6 +1606,7 @@ and the value of the node&#39;s own <code>selectable</code> property is in use.<
 <p><code>this</code> to allow method chaining.</p>
 <h4>Deprecated</h4>
 <p>(since 1.56.3)</p>
+<p>Sets the selection state of the nodes.</p>
 <hr>
 <h3>setSelectionStates()</h3>
 <blockquote>
@@ -1751,7 +1751,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ViewStateManagerBase</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ViewStateManagerBase</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1775,6 +1775,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

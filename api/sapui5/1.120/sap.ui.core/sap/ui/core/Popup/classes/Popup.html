@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Popup — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Popup — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Popup — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/Popup/classes/Popup.html">
 <meta property="og:title" content="Class: Popup — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Popup — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Popup — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/Popup/classes/Popup.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/Popup/README.html">Popup</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Popup</a> / Popup</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Popup</a> / Popup</p>
 <h1>Class: Popup</h1>
 <pre class="sig"><span class="kw">import</span> Popup <span class="kw">from</span> <span class="str">"sap/ui/core/Popup"</span>;</pre>
 <p>Popup Class is a helper class for controls that want themselves or parts of themselves or even other
@@ -255,7 +255,6 @@ memory leaks.</p>
 <blockquote>
 <p><strong>fireClosed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:closed closed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -265,12 +264,12 @@ memory leaks.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:closed closed to attached listeners.</p>
 <hr>
 <h3>fireOpened()</h3>
 <blockquote>
 <p><strong>fireOpened</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:opened opened to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -280,17 +279,18 @@ memory leaks.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:opened opened to attached listeners.</p>
 <hr>
 <h3>getAutoClose()</h3>
 <blockquote>
 <p><strong>getAutoClose</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Determines whether the Popup should auto closes or not.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p><code>true</code> if auto close is enabled, <code>false</code> if no auto close is configured for this popup instance</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Determines whether the Popup should auto closes or not.</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
@@ -305,13 +305,13 @@ memory leaks.</p>
 <blockquote>
 <p><strong>getFollowOf</strong>(): <code>boolean</code> | ((<code>p1</code>) =&gt; <code>void</code>)</p>
 </blockquote>
-<p>This returns true/false if the default followOf method should be used. If a separate followOf-handler
-was previously added the corresponding function is returned.</p>
 <h4>Returns</h4>
 <p><code>boolean</code> | ((<code>p1</code>) =&gt; <code>void</code>)</p>
 <p>if a function was set it is returned otherwise a boolean value whether the follow of is activated</p>
 <h4>Since</h4>
 <p>1.13.0</p>
+<p>This returns true/false if the default followOf method should be used. If a separate followOf-handler
+was previously added the corresponding function is returned.</p>
 <hr>
 <h3>getLastZIndex()</h3>
 <blockquote>
@@ -381,7 +381,7 @@ the call is ignored.</p>
 <p><a href="../enumerations/Dock.html"><code>Dock</code></a></p>
 <p>the &quot;of&quot; element&#39;s reference point for docking to</p>
 <h6>of?</h6>
-<p><code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <a href="../../../../../namespaces/JQuery/interfaces/Event.html"><code>Event</code></a> | <a href="../../../../../type-aliases/jQuery.html"><code>jQuery</code></a>&lt;<code>HTMLElement</code>&gt;</p>
+<p><code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <code>Event</code> | <code>jQuery</code>&lt;<code>HTMLElement</code>&gt;</p>
 <p>specifies the reference element to which the given content should dock to</p>
 <h6>offset?</h6>
 <p><code>string</code></p>
@@ -418,7 +418,7 @@ the call is ignored.</p>
 <p><a href="../enumerations/Dock.html"><code>Dock</code></a></p>
 <p>the &quot;of&quot; element&#39;s reference point for docking to</p>
 <h6>of?</h6>
-<p><code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <a href="../../../../../namespaces/JQuery/interfaces/Event.html"><code>Event</code></a> | <a href="../../../../../type-aliases/jQuery.html"><code>jQuery</code></a>&lt;<code>HTMLElement</code>&gt;</p>
+<p><code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <code>Event</code> | <code>jQuery</code>&lt;<code>HTMLElement</code>&gt;</p>
 <p>specifies the reference element to which the given content should dock to</p>
 <h6>offset?</h6>
 <p><code>string</code></p>
@@ -518,11 +518,6 @@ of 0 means no animation.</p>
 <blockquote>
 <p><strong>setExtraContent</strong>(<code>aContent</code>): <code>this</code></p>
 </blockquote>
-<p>Sets additional content that are considered part of the Popup.</p>
-<p>A popup with autoclose #setAutoClose enabled allows the focus to be moved into the extra content
-without closing itself.</p>
-<p>A popup with modal #setModal enabled allows the focus to be shifted into the extra content without
-taking it back to the previous focused element in the popup.</p>
 <h4>Parameters</h4>
 <h5>aContent</h5>
 <p><code>string</code>[] | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a>[] | <code>Element</code>[]</p>
@@ -533,13 +528,16 @@ Popup; a value of null removes all previous content</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.75</p>
+<p>Sets additional content that are considered part of the Popup.</p>
+<p>A popup with autoclose #setAutoClose enabled allows the focus to be moved into the extra content
+without closing itself.</p>
+<p>A popup with modal #setModal enabled allows the focus to be shifted into the extra content without
+taking it back to the previous focused element in the popup.</p>
 <hr>
 <h3>setFollowOf()</h3>
 <blockquote>
 <p><strong>setFollowOf</strong>(<code>followOf</code>): <code>void</code></p>
 </blockquote>
-<p>This enabled/disables the Popup to follow its opening reference. If the Popup is open and a followOf
-should be set the corresponding listener will be attached.</p>
 <h4>Parameters</h4>
 <h5>followOf</h5>
 <p><code>boolean</code> | ((<code>p1</code>) =&gt; <code>void</code>)</p>
@@ -549,6 +547,8 @@ null deletes all followOf settings.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.13.0</p>
+<p>This enabled/disables the Popup to follow its opening reference. If the Popup is open and a followOf
+should be set the corresponding listener will be attached.</p>
 <hr>
 <h3>setInitialFocusId()</h3>
 <blockquote>
@@ -598,7 +598,7 @@ parameters are omitted as well.</p>
 <p><a href="../enumerations/Dock.html"><code>Dock</code></a> | { <code>left</code>: <code>string</code>; <code>top</code>: <code>string</code>; }</p>
 <p>specifies the point of the reference element to which the given Content should be aligned</p>
 <h5>of?</h5>
-<p><code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <a href="../../../../../namespaces/JQuery/interfaces/Event.html"><code>Event</code></a> | <a href="../../../../../type-aliases/jQuery.html"><code>jQuery</code></a>&lt;<code>HTMLElement</code>&gt;</p>
+<p><code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <code>Event</code> | <code>jQuery</code>&lt;<code>HTMLElement</code>&gt;</p>
 <p>specifies the reference element to which the given content should be aligned as specified in the other
 parameters</p>
 <h5>offset?</h5>
@@ -635,12 +635,6 @@ open popup.</p>
 <blockquote>
 <p><code>static</code> <strong>addExternalContent</strong>(<code>vSelectors</code>, <code>bMarkAsSelectable?</code>): <code>void</code></p>
 </blockquote>
-<p>Adds a DOM query selector for determining additional external popup content.</p>
-<p>When the browser focus is switched from the main popup content (which is set by calling #setContent)
-to another DOM element, this DOM element is tested against the selector to determine:</p>
-<pre><code> - Autoclose popup: whether the popup should be kept open
- - Modal popup: whether the focus is allowed to be taken away
-</code></pre>
 <h4>Parameters</h4>
 <h5>vSelectors</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -654,6 +648,12 @@ be set to <code>true</code> to make the external content user selectable.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.75</p>
+<p>Adds a DOM query selector for determining additional external popup content.</p>
+<p>When the browser focus is switched from the main popup content (which is set by calling #setContent)
+to another DOM element, this DOM element is tested against the selector to determine:</p>
+<pre><code> - Autoclose popup: whether the popup should be kept open
+ - Modal popup: whether the focus is allowed to be taken away
+</code></pre>
 <hr>
 <h3>attachBlockLayerStateChange()</h3>
 <h4>Call Signature</h4>
@@ -729,7 +729,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Popup</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Popup</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -775,55 +775,53 @@ z-index counter and the returned z-index.</p>
 <blockquote>
 <p><code>static</code> <strong>getWithinArea</strong>(): <code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <code>Window</code></p>
 </blockquote>
-<p>Returns the value that has been set by sap.ui.core.Popup.setWithinArea. When a DOM element that
-represents the within area is needed, use sap.ui.core.Popup.getWithinAreaDomRef instead.</p>
-<p>If no within area is specified, <code>undefined</code> is returned.</p>
 <h4>Returns</h4>
 <p><code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <code>Window</code></p>
 <p>The specfied within area</p>
 <h4>Since</h4>
 <p>1.89.0</p>
+<p>Returns the value that has been set by sap.ui.core.Popup.setWithinArea. When a DOM element that
+represents the within area is needed, use sap.ui.core.Popup.getWithinAreaDomRef instead.</p>
+<p>If no within area is specified, <code>undefined</code> is returned.</p>
 <hr>
 <h3>getWithinAreaDomRef()</h3>
 <blockquote>
 <p><code>static</code> <strong>getWithinAreaDomRef</strong>(): <code>Element</code> | <code>Window</code></p>
 </blockquote>
-<p>Returns the actual DOM element of the value that has been set by sap.ui.core.Popup.setWithinArea.
-It returns <code>window</code> by default when no within area has been set using sap.ui.core.Popup.setWithinArea.</p>
-<p>When an sap.ui.core.Element is set as a within area, <code>document.documentElement</code> is returned before
-element is rendered.</p>
 <h4>Returns</h4>
 <p><code>Element</code> | <code>Window</code></p>
 <p>The DOM Element or the window object</p>
 <h4>Since</h4>
 <p>1.89.0</p>
+<p>Returns the actual DOM element of the value that has been set by sap.ui.core.Popup.setWithinArea.
+It returns <code>window</code> by default when no within area has been set using sap.ui.core.Popup.setWithinArea.</p>
+<p>When an sap.ui.core.Element is set as a within area, <code>document.documentElement</code> is returned before
+element is rendered.</p>
 <hr>
 <h3>markExternalContentAsNotSelectable()</h3>
 <blockquote>
 <p><code>static</code> <strong>markExternalContentAsNotSelectable</strong>(): <code>void</code></p>
 </blockquote>
-<p>Marks the external content as not user selectable</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Marks the external content as not user selectable</p>
 <hr>
 <h3>markExternalContentAsSelectable()</h3>
 <blockquote>
 <p><code>static</code> <strong>markExternalContentAsSelectable</strong>(): <code>void</code></p>
 </blockquote>
-<p>Marks the external content as user selectable</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Marks the external content as user selectable</p>
 <hr>
 <h3>removeExternalContent()</h3>
 <blockquote>
 <p><code>static</code> <strong>removeExternalContent</strong>(<code>vSelectors</code>, <code>bMarkAsNotSelectable?</code>): <code>void</code></p>
 </blockquote>
-<p>Removes a DOM query selector which has been added by sap.ui.core.Popup.addExternalContent.</p>
-<p>The default query selector <code>[data-sap-ui-integration-popup-content]</code> can&#39;t be deleted.</p>
 <h4>Parameters</h4>
 <h5>vSelectors</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -837,13 +835,13 @@ not user selectable.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.75</p>
+<p>Removes a DOM query selector which has been added by sap.ui.core.Popup.addExternalContent.</p>
+<p>The default query selector <code>[data-sap-ui-integration-popup-content]</code> can&#39;t be deleted.</p>
 <hr>
 <h3>setInitialZIndex()</h3>
 <blockquote>
 <p><code>static</code> <strong>setInitialZIndex</strong>(<code>iInitialZIndex</code>): <code>void</code></p>
 </blockquote>
-<p>Set an initial z-index that should be used by all Popup so all Popups start at least with the set z-index.
-If the given z-index is lower than any current available z-index the highest z-index will be used.</p>
 <h4>Parameters</h4>
 <h5>iInitialZIndex</h5>
 <p><code>number</code></p>
@@ -852,18 +850,13 @@ If the given z-index is lower than any current available z-index the highest z-i
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Set an initial z-index that should be used by all Popup so all Popups start at least with the set z-index.
+If the given z-index is lower than any current available z-index the highest z-index will be used.</p>
 <hr>
 <h3>setWithinArea()</h3>
 <blockquote>
 <p><code>static</code> <strong>setWithinArea</strong>(<code>vValue</code>): <code>void</code></p>
 </blockquote>
-<p>Sets a within area that is used as the area available for positioning the popup. It mainly affects the
-collision detection. The position of the popup can then be further adapted depending on the &quot;collision&quot;
-parameter that is set with sap.ui.core.Popup#open or sap.ui.core.Popup#setPosition when
-the popup overflows the within area.</p>
-<p>If no within area is specified, all popups use the <code>window</code> as within area.</p>
-<p>When an sap.ui.core.Element is set as the within area, make sure that the control is rendered
-when the popup opens, otherwise the <code>window</code> is used as the within area.</p>
 <h4>Parameters</h4>
 <h5>vValue</h5>
 <p><code>string</code> | <a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>Element</code> | <code>Window</code></p>
@@ -872,7 +865,14 @@ when the popup opens, otherwise the <code>window</code> is used as the within ar
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.89.0</p>
+<p>Sets a within area that is used as the area available for positioning the popup. It mainly affects the
+collision detection. The position of the popup can then be further adapted depending on the &quot;collision&quot;
+parameter that is set with sap.ui.core.Popup#open or sap.ui.core.Popup#setPosition when
+the popup overflows the within area.</p>
+<p>If no within area is specified, all popups use the <code>window</code> as within area.</p>
+<p>When an sap.ui.core.Element is set as the within area, make sure that the control is rendered
+when the popup opens, otherwise the <code>window</code> is used as the within area.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

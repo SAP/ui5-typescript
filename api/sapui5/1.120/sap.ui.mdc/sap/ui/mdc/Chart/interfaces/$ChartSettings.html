@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ChartSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ChartSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $ChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/Chart/interfaces/$ChartSettings.html">
 <meta property="og:title" content="Interface: $ChartSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ChartSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $ChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/Chart/interfaces/$ChartSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/Chart/README.html">Chart</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Chart</a> / $ChartSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Chart</a> / $ChartSettings</p>
 <h1>Interface: $ChartSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ChartSettings } <span class="kw">from</span> <span class="str">"sap/ui/mdc/Chart"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the Chart constructor.</p>
-<p> (since 1.88)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -50,7 +47,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>actions?</strong>: <code>any</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>This aggregation describes actions that are added to the chart toolbar.
  For more information, see sap.ui.mdc.actiontoolbar.ActionToolbarAction. <strong>Note:</strong> This aggregation
 is managed by the control, can only be populated during the definition in the XML view, and is not bindable.
@@ -61,7 +57,6 @@ have to be made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <blockquote>
 <p><code>optional</code> <strong>autoBindOnInit?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>If set to <code>true</code>, the chart is automatically bound after initialization.
  If set to <code>false</code>, the chart is bound after the first call to <code>rebind</code>.</p>
 <hr>
@@ -69,14 +64,12 @@ have to be made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <blockquote>
 <p><code>optional</code> <strong>chartType?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Specifies the type of chart to be created by the <code>Chart</code> control.</p>
 <hr>
 <h3>delegate?</h3>
 <blockquote>
 <p><code>optional</code> <strong>delegate?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the module path of the metadata delegate.</p>
 <h4>Overrides</h4>
 <p><a href="../../Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a>.<a href="../../Control/interfaces/$ControlSettings.html#delegate"><code>delegate</code></a></p>
@@ -85,81 +78,72 @@ have to be made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <blockquote>
 <p><code>optional</code> <strong>filter?</strong>: <code>string</code> | <a href="../../library/interfaces/IFilter.html"><code>IFilter</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Control or object that enables the chart to do filtering, such as sap.ui.mdc.FilterBar. Also
-see sap.ui.mdc.IFilter.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Control or object that enables the chart to do filtering, such as sap.ui.mdc.FilterBar. Also
+see sap.ui.mdc.IFilter.</p>
 <hr>
 <h3>filterConditions?</h3>
 <blockquote>
 <p><code>optional</code> <strong>filterConditions?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.99</p>
 <p>Defines the filter conditions.
  <strong>Note:</strong> This property must not be bound.
  <strong>Note:</strong> This property is exclusively used for handling SAPUI5 flexibility changes. Do not use it for
 anything else.</p>
-<h4>Since</h4>
-<p>1.99</p>
 <hr>
 <h3>header?</h3>
 <blockquote>
 <p><code>optional</code> <strong>header?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Specifies header text that is shown in the chart.</p>
 <hr>
 <h3>headerLevel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerLevel?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Semantic level of the header.
- For more information, see sap.m.Title#setLevel.</p>
 <h4>Since</h4>
 <p>1.104</p>
+<p>Semantic level of the header.
+ For more information, see sap.m.Title#setLevel.</p>
 <hr>
 <h3>headerStyle?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerStyle?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
 <hr>
 <h3>headerVisible?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerVisible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Determines whether the header text is shown in the chart. Regardless of its value, the given header text
-is used to label the chart correctly for accessibility purposes.</p>
 <h4>Since</h4>
 <p>1.111</p>
+<p>Determines whether the header text is shown in the chart. Regardless of its value, the given header text
+is used to label the chart correctly for accessibility purposes.</p>
 <hr>
 <h3>height?</h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the height of the chart.</p>
 <hr>
 <h3>ignoreToolbarActions?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ignoreToolbarActions?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | (<a href="../../enums/ChartToolbarActionType/enumerations/ChartToolbarActionType.html"><code>ChartToolbarActionType</code></a> | <code>&quot;DrillDownUp&quot;</code> | <code>&quot;FullScreen&quot;</code> | <code>&quot;Legend&quot;</code> | <code>&quot;ZoomInOut&quot;</code>)[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Specifies which actions must not be available in the chart&#39;s toolbar.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Specifies which actions must not be available in the chart&#39;s toolbar.</p>
 <hr>
 <h3>items?</h3>
 <blockquote>
 <p><code>optional</code> <strong>items?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../chart/Item/classes/Item.html"><code>Item</code></a> | <a href="../../chart/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>This property describes the measures and dimensions visible in the chart. Changes in the personalization
 are also reflected here. <strong>Note:</strong> This aggregation is managed by the control, can only be populated
 during the definition in the XML view, and is not bindable. Any changes of the initial aggregation content
@@ -169,74 +153,66 @@ might result in undesired effects. Changes of the aggregation have to be made wi
 <blockquote>
 <p><code>optional</code> <strong>legendVisible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Enables the legend of the chart. <strong>Note:</strong> The setter calls <code>setLegendVisible</code> of the delegate class.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Enables the legend of the chart. <strong>Note:</strong> The setter calls <code>setLegendVisible</code> of the delegate class.</p>
 <hr>
 <h3>minHeight?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minHeight?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the minimum height.</p>
 <hr>
 <h3>minWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minWidth?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the minimum width.</p>
 <hr>
 <h3>noData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noData?</strong>: <code>Control1</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.107</p>
 <p>Defines the custom visualization if there is no data available.
  This control will be displayed on top of the chart when no data is visible inside the chart.
  <strong>Note:</strong> If both a <code>noDataText</code> property and a <code>noData</code> aggregation are provided, the <code>noData</code> aggregation
 takes priority.
  If the <code>noData</code> aggregation is undefined or set to null, the <code>noDataText</code> property is used instead.</p>
-<h4>Since</h4>
-<p>1.107</p>
 <hr>
 <h3>noDataText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noDataText?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Defines the no data text shown in the chart.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Defines the no data text shown in the chart.</p>
 <hr>
 <h3>p13nMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>p13nMode?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | (<code>&quot;Item&quot;</code> | <code>&quot;Filter&quot;</code> | <code>&quot;Sort&quot;</code> | <code>&quot;Type&quot;</code> | <a href="../../enums/ChartP13nMode/enumerations/ChartP13nMode.html"><code>ChartP13nMode</code></a>)[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Specifies the personalization options available for the chart.
- <strong>Note:</strong> The order of the provided options does not influence the arrangement of the icons on the UI.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Specifies the personalization options available for the chart.
+ <strong>Note:</strong> The order of the provided options does not influence the arrangement of the icons on the UI.</p>
 <hr>
 <h3>propertyInfo?</h3>
 <blockquote>
 <p><code>optional</code> <strong>propertyInfo?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.99</p>
 <p>Specifies the chart metadata.
  <strong>Note:</strong> This property must not be bound.
  <strong>Note:</strong> This property is exclusively used for handling SAPUI5 flexibility changes. Do not use it otherwise.</p>
 <p><strong>Note</strong>: For more information about the supported inner elements, see sap.ui.mdc.chart.PropertyInfo PropertyInfo.</p>
-<h4>Since</h4>
-<p>1.99</p>
 <hr>
 <h3>selectionDetailsActionPressed?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionDetailsActionPressed?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when a <code>SelectionDetailsAction</code> is pressed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -248,7 +224,6 @@ takes priority.
 <blockquote>
 <p><code>optional</code> <strong>selectionDetailsActions?</strong>: <a href="../../chart/SelectionDetailsActions/classes/SelectionDetailsActions.html"><code>SelectionDetailsActions</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Feeds details actions for data point selection in the mdc chart.
  For more information, see sap.ui.mdc.chart.SelectionDetailsActions SelectionDetailsActions.</p>
 <hr>
@@ -256,45 +231,40 @@ takes priority.
 <blockquote>
 <p><code>optional</code> <strong>showChartTooltip?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Controls the visibility of the chart tooltip. If set to <code>true</code>, a call of the <code>delegate.setChartTooltipVisibility</code>
-will be triggered and can be used to make the <code>Chart</code> tooltip visible.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Controls the visibility of the chart tooltip. If set to <code>true</code>, a call of the <code>delegate.setChartTooltipVisibility</code>
+will be triggered and can be used to make the <code>Chart</code> tooltip visible.</p>
 <hr>
 <h3>showSelectionDetails?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showSelectionDetails?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Enables the Details button in the chart toolbar.</p>
 <hr>
 <h3>sortConditions?</h3>
 <blockquote>
 <p><code>optional</code> <strong>sortConditions?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.88</p>
 <p>Defines the sort conditions.
  <strong>Note:</strong> This property must not be bound.
  <strong>Note:</strong> This property is exclusively used for handling SAPUI5 flexibility changes. Do not use it for
 anything else.</p>
-<h4>Since</h4>
-<p>1.88</p>
 <hr>
 <h3>variant?</h3>
 <blockquote>
 <p><code>optional</code> <strong>variant?</strong>: <a href="../../../../../../sap.ui.fl/sap/ui/fl/variants/VariantManagement/classes/VariantManagement.html"><code>VariantManagement</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Reference to a sap.ui.fl.variants.VariantManagement control for the chart.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the width of the chart.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

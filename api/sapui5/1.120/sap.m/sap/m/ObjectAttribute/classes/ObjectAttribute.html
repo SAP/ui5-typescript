@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectAttribute — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectAttribute — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ObjectAttribute — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ObjectAttribute/classes/ObjectAttribute.html">
 <meta property="og:title" content="Class: ObjectAttribute — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectAttribute — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ObjectAttribute — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ObjectAttribute/classes/ObjectAttribute.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ObjectAttribute/README.html">ObjectAttribute</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectAttribute</a> / ObjectAttribute</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectAttribute</a> / ObjectAttribute</p>
 <h1>Class: ObjectAttribute</h1>
 <pre class="sig"><span class="kw">import</span> ObjectAttribute <span class="kw">from</span> <span class="str">"sap/m/ObjectAttribute"</span>;</pre>
+<h2>Since</h2>
+<p>1.12</p>
 <p>The <code>ObjectAttribute</code> control displays a text field that can be normal or active. The <code>ObjectAttribute</code>
 fires a <code>press</code> event when the user chooses the active text.</p>
 <p><strong>Note:</strong> If property <code>active</code> is set to <code>true</code>, only the value of the <code>text</code> property is styled and
 acts as a link. In this case the <code>text</code> property must also be set, as otherwise there will be no link
 displayed for the user.</p>
-<h2>Since</h2>
-<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -158,7 +158,6 @@ otherwise it will be bound to this <code>sap.m.ObjectAttribute</code> itself.</p
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectAttribute$PressEventParameters.html"><code>ObjectAttribute$PressEventParameters</code></a></p>
@@ -168,6 +167,7 @@ otherwise it will be bound to this <code>sap.m.ObjectAttribute</code> itself.</p
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getActive()</h3>
 <blockquote>
@@ -188,6 +188,11 @@ the <code>textDirection</code> property should be set to ensure correct display.
 <blockquote>
 <p><strong>getAriaHasPopup</strong>(): <code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
+<p>Value of property <code>ariaHasPopup</code></p>
+<h4>Since</h4>
+<p>1.97.0</p>
 <p>Gets current value of property #getAriaHasPopup ariaHasPopup.</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
@@ -198,11 +203,6 @@ if you have dialog -&gt; dialog, if you have menu -&gt; menu; if you have list -
 containing a list -&gt; dialog). Do not use it, if you open a standard sap.m.Dialog, MessageBox or other
 type of modal dialogs.</p>
 <p>Default value is <code>None</code>.</p>
-<h4>Returns</h4>
-<p><code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
-<p>Value of property <code>ariaHasPopup</code></p>
-<h4>Since</h4>
-<p>1.97.0</p>
 <hr>
 <h3>getCustomContent()</h3>
 <blockquote>
@@ -219,13 +219,13 @@ ignores the press event. The provided control is displayed as an active link in 
 <blockquote>
 <p><strong>getFocusDomRef</strong>(): <code>Element</code></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Element.prototype.getFocusDomRef</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>Returns the DOM Element that should get the focus or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Element.prototype.getFocusDomRef</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getfocusdomref"><code>getFocusDomRef</code></a></p>
 <hr>
@@ -233,12 +233,12 @@ ignores the press event. The provided control is displayed as an active link in 
 <blockquote>
 <p><strong>getPopupAnchorDomRef</strong>(): <code>Element</code></p>
 </blockquote>
-<p>Defines to which DOM reference the Popup should be docked.</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>The DOM reference that Popup should dock to</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Defines to which DOM reference the Popup should be docked.</p>
 <hr>
 <h3>getText()</h3>
 <blockquote>
@@ -296,6 +296,15 @@ the <code>textDirection</code> property should be set to ensure correct display.
 <blockquote>
 <p><strong>setAriaHasPopup</strong>(<code>sAriaHasPopup?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sAriaHasPopup?</h5>
+<p><code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
+<p>New value for property <code>ariaHasPopup</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.97.0</p>
 <p>Sets a new value for property #getAriaHasPopup ariaHasPopup.</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
@@ -307,15 +316,6 @@ containing a list -&gt; dialog). Do not use it, if you open a standard sap.m.Dia
 type of modal dialogs.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>None</code>.</p>
-<h4>Parameters</h4>
-<h5>sAriaHasPopup?</h5>
-<p><code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
-<p>New value for property <code>ariaHasPopup</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.97.0</p>
 <hr>
 <h3>setCustomContent()</h3>
 <blockquote>
@@ -392,7 +392,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ObjectAttribute</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ObjectAttribute</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -416,6 +416,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

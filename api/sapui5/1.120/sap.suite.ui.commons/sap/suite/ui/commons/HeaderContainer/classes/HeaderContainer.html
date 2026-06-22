@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: HeaderContainer~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: HeaderContainer~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="~~Class: HeaderContainer~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/HeaderContainer/classes/HeaderContainer.html">
 <meta property="og:title" content="~~Class: HeaderContainer~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: HeaderContainer~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="~~Class: HeaderContainer~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/HeaderContainer/classes/HeaderContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/HeaderContainer/README.html">HeaderContainer</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/HeaderContainer</a> / HeaderContainer</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/HeaderContainer</a> / HeaderContainer</p>
 <h1><del>Class: HeaderContainer</del></h1>
 <pre class="sig"><span class="kw">import</span> HeaderContainer <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/HeaderContainer"</span>;</pre>
+<h2>Deprecated</h2>
+<p>(since 1.44) - This control is deprecated in this library since 1.44 and moved to sap.m library
+that is also part of openUI5.</p>
 <p>The container that provides a horizontal layout. It provides a horizontal scroll on the tablet and phone.
 On the desktop, it provides scroll left and scroll right buttons. This control supports keyboard navigation.
 You can use left and right arrow keys to navigate through the inner content. The Home key puts focus
 on the first control and the End key puts focus on the last control. Use Enter or Space to choose the
 control.</p>
-<h2>Deprecated</h2>
-<p>(since 1.44) - This control is deprecated in this library since 1.44 and moved to sap.m library
-that is also part of openUI5.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -124,15 +124,15 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getBackgroundDesign</strong>(): <a href="../../../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
-<p>Specifies the background color of the content. The visualization of the different options depends on
-the used theme.</p>
-<p>Default value is <code>&quot;Transparent&quot;</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 <p>Value of property <code>backgroundDesign</code></p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
+<p>Specifies the background color of the content. The visualization of the different options depends on
+the used theme.</p>
+<p>Default value is <code>&quot;Transparent&quot;</code>.</p>
 <hr>
 <h3><del>getItems()</del></h3>
 <blockquote>
@@ -169,29 +169,29 @@ the used theme.</p>
 <blockquote>
 <p><strong>getShowDividers</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowDividers showDividers.</p>
-<p>If set to true, shows dividers between scrollable items.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showDividers</code></p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Gets current value of property #getShowDividers showDividers.</p>
+<p>If set to true, shows dividers between scrollable items.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getView()</del></h3>
 <blockquote>
 <p><strong>getView</strong>(): <code>&quot;Horizontal&quot;</code> | <code>&quot;Vertical&quot;</code> | <a href="../../library/enumerations/HeaderContainerView.html"><code>HeaderContainerView</code></a></p>
 </blockquote>
-<p>Gets current value of property #getView view.</p>
-<p>The view of the HeaderContainer. There are two view modes: horizontal and vertical. In horizontal mode
-the content controls are displayed next to each other, in vertical mode the content controls are displayed
-on top of each other.</p>
-<p>Default value is <code>&quot;Horizontal&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Horizontal&quot;</code> | <code>&quot;Vertical&quot;</code> | <a href="../../library/enumerations/HeaderContainerView.html"><code>HeaderContainerView</code></a></p>
 <p>Value of property <code>view</code></p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Gets current value of property #getView view.</p>
+<p>The view of the HeaderContainer. There are two view modes: horizontal and vertical. In horizontal mode
+the content controls are displayed next to each other, in vertical mode the content controls are displayed
+on top of each other.</p>
+<p>Default value is <code>&quot;Horizontal&quot;</code>.</p>
 <hr>
 <h3><del>indexOfItem()</del></h3>
 <blockquote>
@@ -252,11 +252,6 @@ the last position</p>
 <blockquote>
 <p><strong>setBackgroundDesign</strong>(<code>sBackgroundDesign?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
-<p>Specifies the background color of the content. The visualization of the different options depends on
-the used theme.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Transparent&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundDesign?</h5>
 <p><a href="../../../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
@@ -266,6 +261,11 @@ the used theme.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
+<p>Specifies the background color of the content. The visualization of the different options depends on
+the used theme.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Transparent&quot;</code>.</p>
 <hr>
 <h3><del>setScrollStep()</del></h3>
 <blockquote>
@@ -303,10 +303,6 @@ the used theme.</p>
 <blockquote>
 <p><strong>setShowDividers</strong>(<code>bShowDividers?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowDividers showDividers.</p>
-<p>If set to true, shows dividers between scrollable items.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowDividers?</h5>
 <p><code>boolean</code></p>
@@ -316,17 +312,15 @@ the used theme.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Sets a new value for property #getShowDividers showDividers.</p>
+<p>If set to true, shows dividers between scrollable items.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setView()</del></h3>
 <blockquote>
 <p><strong>setView</strong>(<code>sView?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getView view.</p>
-<p>The view of the HeaderContainer. There are two view modes: horizontal and vertical. In horizontal mode
-the content controls are displayed next to each other, in vertical mode the content controls are displayed
-on top of each other.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Horizontal&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sView?</h5>
 <p><code>&quot;Horizontal&quot;</code> | <code>&quot;Vertical&quot;</code> | <a href="../../library/enumerations/HeaderContainerView.html"><code>HeaderContainerView</code></a></p>
@@ -336,6 +330,12 @@ on top of each other.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Sets a new value for property #getView view.</p>
+<p>The view of the HeaderContainer. There are two view modes: horizontal and vertical. In horizontal mode
+the content controls are displayed next to each other, in vertical mode the content controls are displayed
+on top of each other.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Horizontal&quot;</code>.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -352,7 +352,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>HeaderContainer</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>HeaderContainer</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -376,6 +376,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

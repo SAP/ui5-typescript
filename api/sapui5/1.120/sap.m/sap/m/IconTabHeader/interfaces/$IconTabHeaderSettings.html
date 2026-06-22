@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $IconTabHeaderSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $IconTabHeaderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $IconTabHeaderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/IconTabHeader/interfaces/$IconTabHeaderSettings.html">
 <meta property="og:title" content="Interface: $IconTabHeaderSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $IconTabHeaderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $IconTabHeaderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/IconTabHeader/interfaces/$IconTabHeaderSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/IconTabHeader/README.html">IconTabHeader</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/IconTabHeader</a> / $IconTabHeaderSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/IconTabHeader</a> / $IconTabHeaderSettings</p>
 <h1>Interface: $IconTabHeaderSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $IconTabHeaderSettings } <span class="kw">from</span> <span class="str">"sap/m/IconTabHeader"</span>;</pre>
-<p>Describes the settings that can be provided to the IconTabHeader constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -48,32 +47,32 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaTexts?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.80</p>
 <p>Specifies optional texts for the screen reader.</p>
 <p>The given object can contain the following keys: <code>headerLabel</code> - text to serve as a label for the header,
 <code>headerDescription</code> - text to serve as a description for the header.</p>
-<h4>Since</h4>
-<p>1.80</p>
 <hr>
 <h3>backgroundDesign?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundDesign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.44</p>
 <p>Specifies the background color of the header.</p>
 <p>Depending on the theme, you can change the state of the background color to &quot;Solid&quot;, &quot;Translucent&quot;, or
 &quot;Transparent&quot;. <strong>Note:</strong> In SAP Belize Deep (sap_belize_plus) theme this property should be set to &quot;Solid&quot;.</p>
-<h4>Since</h4>
-<p>1.44</p>
 <hr>
 <h3>enableTabReordering?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableTabReordering?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.46</p>
 <p>Specifies whether tab reordering is enabled. Relevant only for desktop devices. The sap.m.IconTabSeparator sap.m.IconTabSeparator
 cannot be dragged and dropped Items can be moved around sap.m.IconTabSeparator sap.m.IconTabSeparator
 Reordering is enabled via keyboard using <code>Ctrl</code> + arrow keys (Windows) and <code>Control</code> + arrow keys (Mac
 OS)</p>
-<h4>Since</h4>
-<p>1.46</p>
 <hr>
 <h3>items?</h3>
 <blockquote>
@@ -85,19 +84,19 @@ OS)</p>
 <blockquote>
 <p><code>optional</code> <strong>maxNestingLevel?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.79</p>
 <p>Specifies the allowed level of tabs nesting within one another using drag and drop. Default value is
 0 which means nesting via interaction is not allowed. Maximum value is 100. This property allows nesting
 via user interaction only, and does not restrict adding items to the <code>items</code> aggregation of sap.m.IconTabFilter sap.m.IconTabFilter.</p>
-<h4>Since</h4>
-<p>1.79</p>
 <hr>
 <h3>mode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>mode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Standard&quot;</code> | <code>&quot;Inline&quot;</code> | <a href="../../library/enumerations/IconTabHeaderMode.html"><code>IconTabHeaderMode</code></a></p>
 </blockquote>
-<p>Specifies the header mode.</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Specifies the header mode.</p>
 <hr>
 <h3>select?</h3>
 <blockquote>
@@ -114,62 +113,62 @@ via user interaction only, and does not restrict adding items to the <code>items
 <blockquote>
 <p><code>optional</code> <strong>selectedKey?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.15.0</p>
 <p>Key of the selected item.</p>
 <p>If the key has no corresponding aggregated item, no changes will apply. If duplicate keys exists the
 first item matching, the key is used.</p>
-<h4>Since</h4>
-<p>1.15.0</p>
 <hr>
 <h3><del>showOverflowSelectList?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showOverflowSelectList?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Deprecated</h4>
+<p>(since 1.75)</p>
 <p>Specifies if the overflow select list is displayed.</p>
 <p>The overflow select list represents a list, where all tab filters are displayed, so the user can select
 specific tab filter easier.</p>
-<h4>Deprecated</h4>
-<p>(since 1.75)</p>
 <hr>
 <h3><del>showSelection?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showSelection?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines whether the current selection is visualized.</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.0) - Regarding to changes of this control this property is not needed anymore.</p>
+<p>Defines whether the current selection is visualized.</p>
 <hr>
 <h3>tabDensityMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>tabDensityMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Inherit&quot;</code> | <a href="../../library/enumerations/IconTabDensityMode.html"><code>IconTabDensityMode</code></a> | <code>&quot;Compact&quot;</code> | <code>&quot;Cozy&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.56</p>
 <p>Specifies the visual density mode of the tabs.</p>
 <p>The values that can be applied are <code>Cozy</code>, <code>Compact</code> and <code>Inherit</code>. <code>Cozy</code> and <code>Compact</code> render the control
 in one of these modes independent of the global density settings. The <code>Inherit</code> value follows the global
 density settings which are applied. For compatibility reasons, the default value is <code>Cozy</code>.</p>
-<h4>Since</h4>
-<p>1.56</p>
 <hr>
 <h3>tabsOverflowMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>tabsOverflowMode?</strong>: <code>&quot;End&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/TabsOverflowMode.html"><code>TabsOverflowMode</code></a> | <code>&quot;StartAndEnd&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.90</p>
 <p>Specifies the overflow mode of the header.</p>
 <p>The default <code>End</code> mode shows as many tabs that can fit on the screen, then shows one overflow at the
 end containing the remaining items. The <code>StartAndEnd</code> is used to keep the order of tabs intact and offers
 overflow tabs on both ends of the bar.</p>
-<h4>Since</h4>
-<p>1.90</p>
 <hr>
 <h3>visible?</h3>
 <blockquote>
 <p><code>optional</code> <strong>visible?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies whether the control is rendered.</p>
 <h4>Since</h4>
 <p>1.15.0</p>
+<p>Specifies whether the control is rendered.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html#visible"><code>visible</code></a></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

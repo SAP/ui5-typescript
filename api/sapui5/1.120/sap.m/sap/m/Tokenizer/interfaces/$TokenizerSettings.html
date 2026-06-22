@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TokenizerSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TokenizerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $TokenizerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Tokenizer/interfaces/$TokenizerSettings.html">
 <meta property="og:title" content="Interface: $TokenizerSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TokenizerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $TokenizerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Tokenizer/interfaces/$TokenizerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Tokenizer/README.html">Tokenizer</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Tokenizer</a> / $TokenizerSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Tokenizer</a> / $TokenizerSettings</p>
 <h1>Interface: $TokenizerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TokenizerSettings } <span class="kw">from</span> <span class="str">"sap/m/Tokenizer"</span>;</pre>
-<p>Describes the settings that can be provided to the Tokenizer constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -81,7 +80,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>tokenChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Tokenizer$TokenChangeEvent.html"><code>Tokenizer$TokenChangeEvent</code></a></p>
@@ -89,13 +87,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
+<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <hr>
 <h3>tokenDelete?</h3>
 <blockquote>
 <p><code>optional</code> <strong>tokenDelete?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when a token is deleted by clicking icon, pressing backspace or delete button.  Once the
-event is fired, application is responsible for removing / destroying the token from the aggregation.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Tokenizer$TokenDeleteEvent.html"><code>Tokenizer$TokenDeleteEvent</code></a></p>
@@ -103,6 +100,8 @@ event is fired, application is responsible for removing / destroying the token f
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.82</p>
+<p>Fired when a token is deleted by clicking icon, pressing backspace or delete button.  Once the
+event is fired, application is responsible for removing / destroying the token from the aggregation.</p>
 <hr>
 <h3>tokens?</h3>
 <blockquote>
@@ -114,7 +113,6 @@ event is fired, application is responsible for removing / destroying the token f
 <blockquote>
 <p><code>optional</code> <strong>tokenUpdate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Tokenizer$TokenUpdateEvent.html"><code>Tokenizer$TokenUpdateEvent</code></a></p>
@@ -124,6 +122,7 @@ event is fired, application is responsible for removing / destroying the token f
 <p>1.46</p>
 <h4>Deprecated</h4>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
+<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -131,6 +130,6 @@ event is fired, application is responsible for removing / destroying the token f
 </blockquote>
 <p>Defines the width of the Tokenizer.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

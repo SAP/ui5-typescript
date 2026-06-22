@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SideNavigation — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SideNavigation — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: SideNavigation — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.tnt/sap/tnt/SideNavigation/classes/SideNavigation.html">
 <meta property="og:title" content="Class: SideNavigation — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SideNavigation — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: SideNavigation — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.tnt/sap/tnt/SideNavigation/classes/SideNavigation.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.tnt/README.html">sap.tnt</a> › sap › tnt › <a href="../../../../../sap.tnt/sap/tnt/SideNavigation/README.html">SideNavigation</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.tnt</a> / <a href="../README.html">sap/tnt/SideNavigation</a> / SideNavigation</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.tnt</a> / <a href="../README.html">sap/tnt/SideNavigation</a> / SideNavigation</p>
 <h1>Class: SideNavigation</h1>
 <pre class="sig"><span class="kw">import</span> SideNavigation <span class="kw">from</span> <span class="str">"sap/tnt/SideNavigation"</span>;</pre>
+<h2>Since</h2>
+<p>1.34</p>
 <p>The SideNavigation control is a container, which consists of flexible and fixed parts on top of each
 other. Responsive Behavior:
 	 - The flexible part adapts its size to the fixed one.
 	 - The flexible part has a scrollbar when the content is larger than the available space.  <strong>Note:</strong>
     In order for the SideNavigation to stretch properly, its parent layout control should only be the sap.tnt.ToolPage.</p>
-<h2>Since</h2>
-<p>1.34</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -152,7 +152,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>destroyFooter()</del></h3>
+<h3>destroyFooter()</h3>
 <blockquote>
 <p><strong>destroyFooter</strong>(): <code>this</code></p>
 </blockquote>
@@ -160,8 +160,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.120) - Use the aggregation <code>fixedItem</code> instead.</p>
 <hr>
 <h3>destroyItem()</h3>
 <blockquote>
@@ -193,7 +191,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>fireItemSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:itemSelect itemSelect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SideNavigation$ItemSelectEventParameters.html"><code>SideNavigation$ItemSelectEventParameters</code></a></p>
@@ -203,18 +200,19 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:itemSelect itemSelect to attached listeners.</p>
 <hr>
 <h3>getAriaLabel()</h3>
 <blockquote>
 <p><strong>getAriaLabel</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getAriaLabel ariaLabel.</p>
-<p>Specifies an optional aria-label that can be used by the screen readers.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>ariaLabel</code></p>
 <h4>Since</h4>
 <p>1.98</p>
+<p>Gets current value of property #getAriaLabel ariaLabel.</p>
+<p>Specifies an optional aria-label that can be used by the screen readers.</p>
 <hr>
 <h3>getExpanded()</h3>
 <blockquote>
@@ -236,7 +234,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../NavigationList/classes/NavigationList.html"><code>NavigationList</code></a></p>
 <hr>
-<h3><del>getFooter()</del></h3>
+<h3>getFooter()</h3>
 <blockquote>
 <p><strong>getFooter</strong>(): <a href="../../NavigationList/classes/NavigationList.html"><code>NavigationList</code></a></p>
 </blockquote>
@@ -244,8 +242,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Defines the content inside the footer.</p>
 <h4>Returns</h4>
 <p><a href="../../NavigationList/classes/NavigationList.html"><code>NavigationList</code></a></p>
-<h4>Deprecated</h4>
-<p>(since 1.120) - Use the aggregation <code>fixedItem</code> instead.</p>
 <hr>
 <h3>getItem()</h3>
 <blockquote>
@@ -260,46 +256,43 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>getSelectedItem</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getSelectedItem selectedItem,
-or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.52.0</p>
+<p>ID of the element which is the current target of the association #getSelectedItem selectedItem,
+or <code>null</code>.</p>
 <hr>
 <h3>getSelectedKey()</h3>
 <blockquote>
 <p><strong>getSelectedKey</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectedKey selectedKey.</p>
-<p>Specifies the currently selected key.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>selectedKey</code></p>
 <h4>Since</h4>
 <p>1.62.0</p>
+<p>Gets current value of property #getSelectedKey selectedKey.</p>
+<p>Specifies the currently selected key.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getWidth width.</p>
-<p>Specifies the width of the control.</p>
-<p> Depending on the theme, there is a minimum width set (16rem for Horizon theme). This property
-can be used to set a bigger width.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Gets current value of property #getWidth width.</p>
+<p>Specifies the width of the control.</p>
+<p> Depending on the theme, there is a minimum width set (16rem for Horizon theme). This property
+can be used to set a bigger width.</p>
 <hr>
 <h3>setAriaLabel()</h3>
 <blockquote>
 <p><strong>setAriaLabel</strong>(<code>sAriaLabel?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAriaLabel ariaLabel.</p>
-<p>Specifies an optional aria-label that can be used by the screen readers.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAriaLabel?</h5>
 <p><code>string</code></p>
@@ -309,6 +302,9 @@ can be used to set a bigger width.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98</p>
+<p>Sets a new value for property #getAriaLabel ariaLabel.</p>
+<p>Specifies an optional aria-label that can be used by the screen readers.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setExpanded()</h3>
 <blockquote>
@@ -336,7 +332,7 @@ can be used to set a bigger width.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setFooter()</del></h3>
+<h3>setFooter()</h3>
 <blockquote>
 <p><strong>setFooter</strong>(<code>oFooter</code>): <code>this</code></p>
 </blockquote>
@@ -348,8 +344,6 @@ can be used to set a bigger width.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.120) - Use the aggregation <code>fixedItem</code> instead.</p>
 <hr>
 <h3>setItem()</h3>
 <blockquote>
@@ -394,11 +388,6 @@ can be used to set a bigger width.</p>
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getWidth width.</p>
-<p>Specifies the width of the control.</p>
-<p> Depending on the theme, there is a minimum width set (16rem for Horizon theme). This property
-can be used to set a bigger width.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sWidth</h5>
 <p><code>string</code></p>
@@ -408,6 +397,11 @@ can be used to set a bigger width.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Sets a new value for property #getWidth width.</p>
+<p>Specifies the width of the control.</p>
+<p> Depending on the theme, there is a minimum width set (16rem for Horizon theme). This property
+can be used to set a bigger width.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>unbindItem()</h3>
 <blockquote>
@@ -433,7 +427,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SideNavigation</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SideNavigation</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -457,6 +451,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

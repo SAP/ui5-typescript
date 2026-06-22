@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $GridContainerSettingsSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $GridContainerSettingsSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $GridContainerSettingsSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/GridContainerSettings/interfaces/$GridContainerSettingsSettings.html">
 <meta property="og:title" content="Interface: $GridContainerSettingsSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $GridContainerSettingsSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $GridContainerSettingsSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/GridContainerSettings/interfaces/$GridContainerSettingsSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/GridContainerSettings/README.html">GridContainerSettings</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/GridContainerSettings</a> / $GridContainerSettingsSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/GridContainerSettings</a> / $GridContainerSettingsSettings</p>
 <h1>Interface: $GridContainerSettingsSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $GridContainerSettingsSettings } <span class="kw">from</span> <span class="str">"sap/f/GridContainerSettings"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the GridContainerSettings constructor.</p>
-<p> (since 1.65) - This class is experimental. The API may change.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/interfaces/$ManagedObjectSettings.html"><code>$ManagedObjectSettings</code></a></li>
@@ -50,7 +47,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>columns?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>How many columns to have on a row.</p>
 <p>If not defined, <code>sap.f.GridContainer</code> will position as many columns as they can fit in the container.</p>
 <hr>
@@ -58,14 +54,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>columnSize?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The width of the columns. <strong>Note:</strong> Use only &#39;px&#39; or &#39;rem&#39;. Some features may not work as expected otherwise.</p>
 <hr>
 <h3>gap?</h3>
 <blockquote>
 <p><code>optional</code> <strong>gap?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The size of the gap between columns and rows.</p>
 <p><strong>Note:</strong> Use only &#39;px&#39; or &#39;rem&#39;. Some features may not work as expected otherwise.</p>
 <hr>
@@ -73,7 +67,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>maxColumnSize?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Sets the maximum width of the columns. Setting this together with <code>minColumnSize</code> will allow the columns
 to breath between those two values.</p>
 <p><strong>Note:</strong> Will not work in combination with <code>columnSize</code>.</p>
@@ -82,7 +75,6 @@ to breath between those two values.</p>
 <blockquote>
 <p><code>optional</code> <strong>minColumnSize?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Sets the minimum width of the columns. Setting this together with <code>maxColumnSize</code> will allow the columns
 to breath between those two values.</p>
 <p><strong>Note:</strong> Will not work in combination with <code>columnSize</code>.</p>
@@ -91,11 +83,10 @@ to breath between those two values.</p>
 <blockquote>
 <p><code>optional</code> <strong>rowSize?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The height of the rows.</p>
 <p><strong>Note:</strong> Use only &#39;px&#39; or &#39;rem&#39;. Some features may not work as expected otherwise.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

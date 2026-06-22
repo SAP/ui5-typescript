@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: NodeHierarchy — SAPUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: NodeHierarchy — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: NodeHierarchy — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: NodeHierarchy — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/NodeHierarchy/classes/NodeHierarchy.html">
-<meta property="og:title" content="Abstract Class: NodeHierarchy — SAPUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: NodeHierarchy — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: NodeHierarchy — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: NodeHierarchy — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/NodeHierarchy/classes/NodeHierarchy.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/NodeHierarchy/README.html">NodeHierarchy</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/NodeHierarchy</a> / NodeHierarchy</p>
-<h1>Abstract Class: NodeHierarchy</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/NodeHierarchy</a> / NodeHierarchy</p>
+<h1>Class: NodeHierarchy</h1>
 <pre class="sig"><span class="kw">import</span> NodeHierarchy <span class="kw">from</span> <span class="str">"sap/ui/vk/NodeHierarchy"</span>;</pre>
 <p>Provides the ability to explore a Scene object&#39;s node structure.</p>
 <p>The objects of this class should not be created directly, and should only be created via a call to sap.ui.vk.Scene#getDefaultNodeHierarchy sap.ui.vk.Scene.getDefaultNodeHierarchy.</p>
@@ -269,8 +269,6 @@ otherwise it will be bound to this <code>sap.ui.vk.NodeHierarchy</code> itself.<
 <blockquote>
 <p><strong>createLayerProxy</strong>(<code>layerId</code>): <a href="../../LayerProxy/classes/LayerProxy.html"><code>LayerProxy</code></a></p>
 </blockquote>
-<p>Creates a layer proxy object.</p>
-<p>The layer proxy object must be destroyed with the #destroyLayerProxy destroyLayerProxy method.</p>
 <h4>Parameters</h4>
 <h5>layerId</h5>
 <p><code>string</code></p>
@@ -280,12 +278,13 @@ otherwise it will be bound to this <code>sap.ui.vk.NodeHierarchy</code> itself.<
 <p>The proxy object.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Creates a layer proxy object.</p>
+<p>The layer proxy object must be destroyed with the #destroyLayerProxy destroyLayerProxy method.</p>
 <hr>
 <h3>createNode()</h3>
 <blockquote>
 <p><strong>createNode</strong>(<code>parentNode</code>, <code>name</code>, <code>insertBeforeNode</code>, <code>nodeContentType?</code>, <code>content?</code>): <code>any</code></p>
 </blockquote>
-<p>Creates a new node.</p>
 <h4>Parameters</h4>
 <h5>parentNode</h5>
 <p><code>any</code></p>
@@ -299,7 +298,7 @@ created node is a top level node.</p>
 <p>The created node is added before this specified node. If equals <code>null</code> the newly created node is added
 at the end of the parent&#39;s list of nodes.</p>
 <h5>nodeContentType?</h5>
-<p><code>&quot;Background&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../NodeContentType/enumerations/NodeContentType.html"><code>NodeContentType</code></a> | <code>&quot;Annotation&quot;</code> | <code>&quot;Hotspot&quot;</code> | <code>&quot;PMI&quot;</code> | <code>&quot;PointCloudGroup&quot;</code> | <code>&quot;Reference&quot;</code> | <code>&quot;Symbol&quot;</code></p>
+<p><code>&quot;Background&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../NodeContentType/enumerations/NodeContentType.html"><code>NodeContentType</code></a> | <code>&quot;Annotation&quot;</code> | <code>&quot;Hotspot&quot;</code> | <code>&quot;PointCloudGroup&quot;</code> | <code>&quot;Reference&quot;</code> | <code>&quot;Symbol&quot;</code></p>
 <p>The created node content type.</p>
 <h5>content?</h5>
 <p><code>object</code></p>
@@ -309,12 +308,12 @@ at the end of the parent&#39;s list of nodes.</p>
 <p>The reference object of the newly created node.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Creates a new node.</p>
 <hr>
 <h3>createNodeCopy()</h3>
 <blockquote>
 <p><strong>createNodeCopy</strong>(<code>nodeToCopy</code>, <code>parentNode</code>, <code>name</code>, <code>insertBeforeNode</code>): <code>any</code></p>
 </blockquote>
-<p>Creates a copy of an existing node.</p>
 <h4>Parameters</h4>
 <h5>nodeToCopy</h5>
 <p><code>any</code></p>
@@ -335,13 +334,12 @@ at the end of the parent&#39;s list of nodes.</p>
 <p>The reference object of the newly created node.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Creates a copy of an existing node.</p>
 <hr>
 <h3>createNodeProxy()</h3>
 <blockquote>
 <p><strong>createNodeProxy</strong>(<code>nodeRef</code>): <a href="../../NodeProxy/classes/NodeProxy.html"><code>NodeProxy</code></a></p>
 </blockquote>
-<p>Creates a node proxy object.</p>
-<p>The node proxy object must be destroyed with the #destroyNodeProxy destroyNodeProxy method.</p>
 <h4>Parameters</h4>
 <h5>nodeRef</h5>
 <p><code>any</code></p>
@@ -351,12 +349,13 @@ at the end of the parent&#39;s list of nodes.</p>
 <p>The proxy object.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Creates a node proxy object.</p>
+<p>The node proxy object must be destroyed with the #destroyNodeProxy destroyNodeProxy method.</p>
 <hr>
 <h3>destroyLayerProxy()</h3>
 <blockquote>
 <p><strong>destroyLayerProxy</strong>(<code>layerProxy</code>): <code>this</code></p>
 </blockquote>
-<p>Destroys the layer proxy object.</p>
 <h4>Parameters</h4>
 <h5>layerProxy</h5>
 <p><a href="../../LayerProxy/classes/LayerProxy.html"><code>LayerProxy</code></a></p>
@@ -366,12 +365,12 @@ at the end of the parent&#39;s list of nodes.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Destroys the layer proxy object.</p>
 <hr>
 <h3>destroyNodeProxy()</h3>
 <blockquote>
 <p><strong>destroyNodeProxy</strong>(<code>nodeProxy</code>): <code>this</code></p>
 </blockquote>
-<p>Destroys the node proxy object.</p>
 <h4>Parameters</h4>
 <h5>nodeProxy</h5>
 <p><a href="../../NodeProxy/classes/NodeProxy.html"><code>NodeProxy</code></a></p>
@@ -381,6 +380,7 @@ at the end of the parent&#39;s list of nodes.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Destroys the node proxy object.</p>
 <hr>
 <h3>detachChanged()</h3>
 <blockquote>
@@ -471,12 +471,6 @@ at the end of the parent&#39;s list of nodes.</p>
 <blockquote>
 <p><strong>enumerateAncestors</strong>(<code>nodeRef</code>, <code>callback</code>, <code>passNodeRef?</code>): <code>this</code></p>
 </blockquote>
-<p>Enumerates the ancestor nodes of a particular node in the Scene object.</p>
-<p>This method enumerates the ancestor nodes of a particular node, and then calls the <code>callback</code> function,
-to which it passes the ancestor nodes to one by one.
- The BaseNodeProxy objects passed to <code>callback</code> are temporary objects, they are reset after each call
-to the <code>callback</code> function.
- The ancestor nodes are enumerated starting from the top level node, and progresses down the node hierarchy.</p>
 <h4>Parameters</h4>
 <h5>nodeRef</h5>
 <p><code>any</code></p>
@@ -496,17 +490,18 @@ or string if parameter <code>passNodeRef</code> parameter is <code>true</code>.<
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Enumerates the ancestor nodes of a particular node in the Scene object.</p>
+<p>This method enumerates the ancestor nodes of a particular node, and then calls the <code>callback</code> function,
+to which it passes the ancestor nodes to one by one.
+ The BaseNodeProxy objects passed to <code>callback</code> are temporary objects, they are reset after each call
+to the <code>callback</code> function.
+ The ancestor nodes are enumerated starting from the top level node, and progresses down the node hierarchy.</p>
 <hr>
 <h3>enumerateChildren()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>enumerateChildren</strong>(<code>nodeRef</code>, <code>callback</code>, <code>stepIntoClosedNodes?</code>, <code>passNodeRef?</code>): <code>this</code></p>
 </blockquote>
-<p>Enumerates the child nodes of a particular node in the Scene object.</p>
-<p>This method gets the child nodes of a particular node, and then calls the <code>callback</code> function to which
-it passes the child nodes to one by one.
- The <code>BaseNodeProxy</code> objects passed to the <code>callback</code> function are temporary objects, which are reset
-after each call to the <code>callback</code> function.</p>
 <h5>Parameters</h5>
 <h6>nodeRef</h6>
 <p><code>any</code></p>
@@ -534,15 +529,15 @@ function.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h5>Since</h5>
 <p>1.50.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>enumerateChildren</strong>(<code>callback</code>, <code>stepIntoClosedNodes?</code>, <code>passNodeRef?</code>): <code>this</code></p>
-</blockquote>
 <p>Enumerates the child nodes of a particular node in the Scene object.</p>
 <p>This method gets the child nodes of a particular node, and then calls the <code>callback</code> function to which
 it passes the child nodes to one by one.
  The <code>BaseNodeProxy</code> objects passed to the <code>callback</code> function are temporary objects, which are reset
 after each call to the <code>callback</code> function.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>enumerateChildren</strong>(<code>callback</code>, <code>stepIntoClosedNodes?</code>, <code>passNodeRef?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>callback</h6>
 <p><code>Function</code></p>
@@ -565,13 +560,16 @@ function.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h5>Since</h5>
 <p>1.50.0</p>
+<p>Enumerates the child nodes of a particular node in the Scene object.</p>
+<p>This method gets the child nodes of a particular node, and then calls the <code>callback</code> function to which
+it passes the child nodes to one by one.
+ The <code>BaseNodeProxy</code> objects passed to the <code>callback</code> function are temporary objects, which are reset
+after each call to the <code>callback</code> function.</p>
 <hr>
 <h3>findNodesById()</h3>
 <blockquote>
 <p><strong>findNodesById</strong>(<code>query</code>): <code>any</code>[]</p>
 </blockquote>
-<p>Searches for VE IDs, and returns a list of reference objects of nodes with VE IDs matching the search.
-The query is run specifically against VE ID structures, which are strictly related to VDS4 models.</p>
 <h4>Parameters</h4>
 <h5>query</h5>
 <p><code>object</code></p>
@@ -619,13 +617,14 @@ A list of reference objects belonging to nodes that matched the VE IDs search cr
 
 1.50.0
 
+Searches for VE IDs, and returns a list of reference objects of nodes with VE IDs matching the search.
+The query is run specifically against VE ID structures, which are strictly related to VDS4 models.
+
 ***
 
 ### findNodesByMetadata()
 
 &gt; **findNodesByMetadata**(`query`): `any`[]
-
-Finds nodes in a scene via metadata information.
 
 #### Parameters
 
@@ -694,13 +693,13 @@ A list of reference objects belonging to nodes that matched the search criteria.
 
 1.50.0
 
+Finds nodes in a scene via metadata information.
+
 ***
 
 ### findNodesByName()
 
 &gt; **findNodesByName**(`query`): `any`[]
-
-Finds nodes in a scene via node name.
 
 #### Parameters
 
@@ -754,13 +753,13 @@ A list of reference objects belonging to nodes that matched the search criteria.
 
 1.50.0
 
+Finds nodes in a scene via node name.
+
 ***
 
 ### fireChanged()
 
 &gt; **fireChanged**(`mParameters?`): `this`
-
-Fires event #event:changed changed to attached listeners.
 
 #### Parameters
 
@@ -780,13 +779,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:changed changed to attached listeners.
+
 ***
 
 ### fireNodeCreated()
 
 &gt; **fireNodeCreated**(`mParameters?`): `this`
-
-Fires event #event:nodeCreated nodeCreated to attached listeners.
 
 #### Parameters
 
@@ -806,13 +805,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:nodeCreated nodeCreated to attached listeners.
+
 ***
 
 ### fireNodeRemoving()
 
 &gt; **fireNodeRemoving**(`mParameters?`): `this`
-
-Fires event #event:nodeRemoving nodeRemoving to attached listeners.
 
 #### Parameters
 
@@ -832,13 +831,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:nodeRemoving nodeRemoving to attached listeners.
+
 ***
 
 ### fireNodeReplaced()
 
 &gt; **fireNodeReplaced**(`mParameters?`): `this`
-
-Fires event #event:nodeReplaced nodeReplaced to attached listeners.
 
 #### Parameters
 
@@ -858,13 +857,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:nodeReplaced nodeReplaced to attached listeners.
+
 ***
 
 ### fireNodeUpdated()
 
 &gt; **fireNodeUpdated**(`mParameters?`): `this`
-
-Fires event #event:nodeUpdated nodeUpdated to attached listeners.
 
 #### Parameters
 
@@ -884,13 +883,13 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
+Fires event #event:nodeUpdated nodeUpdated to attached listeners.
+
 ***
 
 ### getAncestors()
 
 &gt; **getAncestors**(`nodeRef`): `any`[]
-
-Returns a list of reference objects belonging to the ancestors of a particular node.
 
 #### Parameters
 
@@ -910,13 +909,13 @@ A list of reference objects belonging to the ancestors of `nodeRef`.
 
 1.50.0
 
+Returns a list of reference objects belonging to the ancestors of a particular node.
+
 ***
 
 ### getChildren()
 
 &gt; **getChildren**(`nodeRef`, `stepIntoClosedNodes?`): `any`[]
-
-Returns a list of reference objects belonging to the children of a particular node.
 
 #### Parameters
 
@@ -945,13 +944,13 @@ A list of reference objects belonging to the children of `nodeRef`.
 
 1.50.0
 
+Returns a list of reference objects belonging to the children of a particular node.
+
 ***
 
 ### getHotspotNodeIds()
 
 &gt; **getHotspotNodeIds**(): `string`[]
-
-Returns a list of hotspot IDs.
 
 #### Returns
 
@@ -963,13 +962,13 @@ A list of hotspot IDs.
 
 1.50.0
 
+Returns a list of hotspot IDs.
+
 ***
 
 ### getLayers()
 
 &gt; **getLayers**(): `string`[]
-
-Returns a list of layer IDs.
 
 #### Returns
 
@@ -981,13 +980,13 @@ A list of layer IDs.
 
 1.50.0
 
+Returns a list of layer IDs.
+
 ***
 
 ### getNodeContentType()
 
-&gt; **getNodeContentType**(`nodeRef`): `&quot;Background&quot;` \| `&quot;Regular&quot;` \| [`NodeContentType`](../../NodeContentType/enumerations/NodeContentType.html) \| `&quot;Annotation&quot;` \| `&quot;Hotspot&quot;` \| `&quot;PMI&quot;` \| `&quot;PointCloudGroup&quot;` \| `&quot;Reference&quot;` \| `&quot;Symbol&quot;`
-
-Get node content type
+&gt; **getNodeContentType**(`nodeRef`): `&quot;Background&quot;` \| `&quot;Regular&quot;` \| [`NodeContentType`](../../NodeContentType/enumerations/NodeContentType.html) \| `&quot;Annotation&quot;` \| `&quot;Hotspot&quot;` \| `&quot;PointCloudGroup&quot;` \| `&quot;Reference&quot;` \| `&quot;Symbol&quot;`
 
 #### Parameters
 
@@ -999,7 +998,7 @@ The node reference
 
 #### Returns
 
-`&quot;Background&quot;` \| `&quot;Regular&quot;` \| [`NodeContentType`](../../NodeContentType/enumerations/NodeContentType.html) \| `&quot;Annotation&quot;` \| `&quot;Hotspot&quot;` \| `&quot;PMI&quot;` \| `&quot;PointCloudGroup&quot;` \| `&quot;Reference&quot;` \| `&quot;Symbol&quot;`
+`&quot;Background&quot;` \| `&quot;Regular&quot;` \| [`NodeContentType`](../../NodeContentType/enumerations/NodeContentType.html) \| `&quot;Annotation&quot;` \| `&quot;Hotspot&quot;` \| `&quot;PointCloudGroup&quot;` \| `&quot;Reference&quot;` \| `&quot;Symbol&quot;`
 
 Node content type
 
@@ -1007,13 +1006,13 @@ Node content type
 
 1.73.0
 
+Get node content type
+
 ***
 
 ### getScene()
 
 &gt; **getScene**(): [`Scene`](../../Scene/classes/Scene.html)
-
-Gets the Scene object the node hierarchy belongs to.
 
 #### Returns
 
@@ -1024,6 +1023,8 @@ The Scene object the node hierarchy belongs to.
 #### Since
 
 1.50.0
+
+Gets the Scene object the node hierarchy belongs to.
 
 ***
 
@@ -1045,8 +1046,6 @@ The scene reference that this NodeHierarchy object wraps.
 
 &gt; **removeNode**(`nodeRef`): `this`
 
-Deletes a node and destroys it.
-
 #### Parameters
 
 ##### nodeRef
@@ -1064,6 +1063,8 @@ The reference object of the node to destroy.
 #### Since
 
 1.50.0
+
+Deletes a node and destroys it.
 
 ***
 
@@ -1134,6 +1135,6 @@ Metadata object describing this class
 ***
 </code></pre>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

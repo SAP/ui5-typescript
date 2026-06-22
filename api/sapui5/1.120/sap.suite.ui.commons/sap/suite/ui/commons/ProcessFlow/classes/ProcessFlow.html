@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ProcessFlow — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ProcessFlow — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ProcessFlow — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlow/classes/ProcessFlow.html">
 <meta property="og:title" content="Class: ProcessFlow — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ProcessFlow — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ProcessFlow — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlow/classes/ProcessFlow.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlow/README.html">ProcessFlow</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/ProcessFlow</a> / ProcessFlow</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/ProcessFlow</a> / ProcessFlow</p>
 <h1>Class: ProcessFlow</h1>
 <pre class="sig"><span class="kw">import</span> ProcessFlow <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/ProcessFlow"</span>;</pre>
 <p>Complex control that enables you to display documents or other items in their flow.</p>
@@ -235,12 +235,6 @@ otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlow</code>
 <blockquote>
 <p><strong>attachNodeTitlePress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:nodeTitlePress nodeTitlePress event of this
-<code>sap.suite.ui.commons.ProcessFlow</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlow</code> itself.</p>
-<p>This event is fired when a process flow node title was clicked. The user can access the clicked process
-flow node control object which is the only argument of the event handler.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -258,16 +252,16 @@ object when firing the event</p>
 <h5>Deprecated</h5>
 <p>(since 1.26) - Should not be used any longer, use nodePress event instead ( click on the
 node)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNodeTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:nodeTitlePress nodeTitlePress event of this
 <code>sap.suite.ui.commons.ProcessFlow</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlow</code> itself.</p>
 <p>This event is fired when a process flow node title was clicked. The user can access the clicked process
 flow node control object which is the only argument of the event handler.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNodeTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -281,6 +275,12 @@ flow node control object which is the only argument of the event handler.</p>
 <h5>Deprecated</h5>
 <p>(since 1.26) - Should not be used any longer, use nodePress event instead ( click on the
 node)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:nodeTitlePress nodeTitlePress event of this
+<code>sap.suite.ui.commons.ProcessFlow</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlow</code> itself.</p>
+<p>This event is fired when a process flow node title was clicked. The user can access the clicked process
+flow node control object which is the only argument of the event handler.</p>
 <hr>
 <h3>attachOnError()</h3>
 <h4>Call Signature</h4>
@@ -407,9 +407,6 @@ issue with the data. The console contains the detailed error description with th
 <blockquote>
 <p><strong>detachNodeTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:nodeTitlePress nodeTitlePress event of this
-<code>sap.suite.ui.commons.ProcessFlow</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -423,6 +420,9 @@ issue with the data. The console contains the detailed error description with th
 <h4>Deprecated</h4>
 <p>(since 1.26) - Should not be used any longer, use nodePress event instead ( click on the
 node)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:nodeTitlePress nodeTitlePress event of this
+<code>sap.suite.ui.commons.ProcessFlow</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachOnError()</h3>
 <blockquote>
@@ -445,7 +445,6 @@ node)</p>
 <blockquote>
 <p><strong>fireHeaderPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:headerPress headerPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ProcessFlow$HeaderPressEventParameters.html"><code>ProcessFlow$HeaderPressEventParameters</code></a></p>
@@ -455,12 +454,12 @@ node)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:headerPress headerPress to attached listeners.</p>
 <hr>
 <h3>fireLabelPress()</h3>
 <blockquote>
 <p><strong>fireLabelPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:labelPress labelPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ProcessFlow$LabelPressEventParameters.html"><code>ProcessFlow$LabelPressEventParameters</code></a></p>
@@ -470,12 +469,12 @@ node)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:labelPress labelPress to attached listeners.</p>
 <hr>
 <h3>fireNodePress()</h3>
 <blockquote>
 <p><strong>fireNodePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:nodePress nodePress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ProcessFlow$NodePressEventParameters.html"><code>ProcessFlow$NodePressEventParameters</code></a></p>
@@ -485,12 +484,12 @@ node)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:nodePress nodePress to attached listeners.</p>
 <hr>
 <h3><del>fireNodeTitlePress()</del></h3>
 <blockquote>
 <p><strong>fireNodeTitlePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:nodeTitlePress nodeTitlePress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ProcessFlow$NodeTitlePressEventParameters.html"><code>ProcessFlow$NodeTitlePressEventParameters</code></a></p>
@@ -503,12 +502,12 @@ node)</p>
 node)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:nodeTitlePress nodeTitlePress to attached listeners.</p>
 <hr>
 <h3>fireOnError()</h3>
 <blockquote>
 <p><strong>fireOnError</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:onError onError to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ProcessFlow$OnErrorEventParameters.html"><code>ProcessFlow$OnErrorEventParameters</code></a></p>
@@ -518,6 +517,7 @@ node)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:onError onError to attached listeners.</p>
 <hr>
 <h3>getAriaProperties()</h3>
 <blockquote>
@@ -553,7 +553,6 @@ means folded corner - false/null/undefined: means normal corner</p>
 <blockquote>
 <p><strong>getLane</strong>(<code>sLaneId</code>): <a href="../../ProcessFlowLaneHeader/classes/ProcessFlowLaneHeader.html"><code>ProcessFlowLaneHeader</code></a></p>
 </blockquote>
-<p>Returns a lane from the aggregation named &#39;lanes&#39; by comparing the laneId property of lane.</p>
 <h4>Parameters</h4>
 <h5>sLaneId</h5>
 <p><code>string</code></p>
@@ -563,6 +562,7 @@ means folded corner - false/null/undefined: means normal corner</p>
 <p>the requested lane or null</p>
 <h4>Since</h4>
 <p>1.46.0</p>
+<p>Returns a lane from the aggregation named &#39;lanes&#39; by comparing the laneId property of lane.</p>
 <hr>
 <h3>getLanes()</h3>
 <blockquote>
@@ -577,7 +577,6 @@ means folded corner - false/null/undefined: means normal corner</p>
 <blockquote>
 <p><strong>getNode</strong>(<code>sNodeId</code>): <a href="../../ProcessFlowNode/classes/ProcessFlowNode.html"><code>ProcessFlowNode</code></a></p>
 </blockquote>
-<p>Returns a node from the aggregation named &#39;nodes&#39; by comparing the nodeId property of node.</p>
 <h4>Parameters</h4>
 <h5>sNodeId</h5>
 <p><code>string</code></p>
@@ -587,6 +586,7 @@ means folded corner - false/null/undefined: means normal corner</p>
 <p>the requested node or null</p>
 <h4>Since</h4>
 <p>1.46.0</p>
+<p>Returns a node from the aggregation named &#39;nodes&#39; by comparing the nodeId property of node.</p>
 <hr>
 <h3>getNodes()</h3>
 <blockquote>
@@ -713,8 +713,6 @@ the last position</p>
 <blockquote>
 <p><strong>optimizeLayout</strong>(<code>isOptimized</code>): <code>ProcessFlow</code></p>
 </blockquote>
-<p>Optimizes the layout and updates the model. To be used carefully because of its possible side effects
-on the performance.</p>
 <h4>Parameters</h4>
 <h5>isOptimized</h5>
 <p><code>boolean</code></p>
@@ -724,6 +722,8 @@ on the performance.</p>
 <p>this to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44</p>
+<p>Optimizes the layout and updates the model. To be used carefully because of its possible side effects
+on the performance.</p>
 <hr>
 <h3>removeAllLanes()</h3>
 <blockquote>
@@ -787,7 +787,6 @@ them from the hosting UIArea.</p>
 <blockquote>
 <p><strong>setFocusToLabel</strong>(<code>label</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the focus to the given Label</p>
 <h4>Parameters</h4>
 <h5>label</h5>
 <p><a href="../../ProcessFlowConnectionLabel/classes/ProcessFlowConnectionLabel.html"><code>ProcessFlowConnectionLabel</code></a></p>
@@ -796,6 +795,7 @@ them from the hosting UIArea.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Sets the focus to the given Label</p>
 <hr>
 <h3>setFoldedCorners()</h3>
 <blockquote>
@@ -840,8 +840,6 @@ could not be scrolled, as the control body size matches the control container si
 <blockquote>
 <p><strong>setSelectedPath</strong>(<code>sourceNodeId</code>, <code>targetNodeId</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the path between source and target node to selected status and rerenders the control. If parameters
-are null, sets all nodes to normal status.</p>
 <h4>Parameters</h4>
 <h5>sourceNodeId</h5>
 <p><code>string</code></p>
@@ -853,6 +851,8 @@ are null, sets all nodes to normal status.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Sets the path between source and target node to selected status and rerenders the control. If parameters
+are null, sets all nodes to normal status.</p>
 <hr>
 <h3>setShowLabels()</h3>
 <blockquote>
@@ -944,7 +944,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ProcessFlow</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ProcessFlow</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -968,6 +968,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

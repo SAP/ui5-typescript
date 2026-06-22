@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: GanttChartContainer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: GanttChartContainer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: GanttChartContainer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/GanttChartContainer/classes/GanttChartContainer.html">
 <meta property="og:title" content="Class: GanttChartContainer — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: GanttChartContainer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: GanttChartContainer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/GanttChartContainer/classes/GanttChartContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/GanttChartContainer/README.html">GanttChartContainer</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/GanttChartContainer</a> / GanttChartContainer</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/GanttChartContainer</a> / GanttChartContainer</p>
 <h1>Class: GanttChartContainer</h1>
 <pre class="sig"><span class="kw">import</span> GanttChartContainer <span class="kw">from</span> <span class="str">"sap/gantt/simple/GanttChartContainer"</span>;</pre>
 <p>A container that holds one or more <code>sap.gantt.simple.GanttChartWithTable</code> instances.</p>
@@ -99,6 +99,7 @@ of the syntax of the settings object.</p>
 <p><strong>attachCustomGanttSearchResult</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.106)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:customGanttSearchResult customGanttSearchResult
 event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -106,7 +107,6 @@ otherwise it will be bound to this <code>sap.gantt.simple.GanttChartContainer</c
 <p>The event is fired when the search results are being populated.</p>
 <p>This event enables the application to filter the search results that are shown on the toolbar and side
 panel</p>
-<p> (since 1.106)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -127,6 +127,7 @@ itself</p>
 <p><strong>attachCustomGanttSearchResult</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.106)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:customGanttSearchResult customGanttSearchResult
 event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -134,7 +135,6 @@ otherwise it will be bound to this <code>sap.gantt.simple.GanttChartContainer</c
 <p>The event is fired when the search results are being populated.</p>
 <p>This event enables the application to filter the search results that are shown on the toolbar and side
 panel</p>
-<p> (since 1.106)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -203,6 +203,7 @@ itself</p>
 <p><strong>attachGanttSearchSidePanelList</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.102)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:ganttSearchSidePanelList ganttSearchSidePanelList
 event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -210,7 +211,6 @@ otherwise it will be bound to this <code>sap.gantt.simple.GanttChartContainer</c
 <p>The event is fired when the list inside search side panel is being populated.</p>
 <p>This event enables the application to modify the list (i.e, change text, add icons, etc) which is shown
 on the search side panel.</p>
-<p> (since 1.102)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -231,6 +231,7 @@ itself</p>
 <p><strong>attachGanttSearchSidePanelList</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.102)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:ganttSearchSidePanelList ganttSearchSidePanelList
 event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -238,7 +239,6 @@ otherwise it will be bound to this <code>sap.gantt.simple.GanttChartContainer</c
 <p>The event is fired when the list inside search side panel is being populated.</p>
 <p>This event enables the application to modify the list (i.e, change text, add icons, etc) which is shown
 on the search side panel.</p>
-<p> (since 1.102)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -256,14 +256,6 @@ itself</p>
 <blockquote>
 <p><strong>attachVariantApplied</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:variantApplied variantApplied event of this
-<code>sap.gantt.simple.GanttChartContainer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.gantt.simple.GanttChartContainer</code> itself.</p>
-<p>The event is triggered when a variant is applied. Note that all changes are saved before the variant
-is applied.</p>
-<p>This event enables the application to update binding parameters of tables, and also updates the charts,
-if required, after applying the changes.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -281,10 +273,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.88</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachVariantApplied</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:variantApplied variantApplied event of this
 <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -293,6 +281,10 @@ otherwise it will be bound to this <code>sap.gantt.simple.GanttChartContainer</c
 is applied.</p>
 <p>This event enables the application to update binding parameters of tables, and also updates the charts,
 if required, after applying the changes.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachVariantApplied</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -306,6 +298,14 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.88</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:variantApplied variantApplied event of this
+<code>sap.gantt.simple.GanttChartContainer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.gantt.simple.GanttChartContainer</code> itself.</p>
+<p>The event is triggered when a variant is applied. Note that all changes are saved before the variant
+is applied.</p>
+<p>This event enables the application to update binding parameters of tables, and also updates the charts,
+if required, after applying the changes.</p>
 <hr>
 <h3>destroyGanttCharts()</h3>
 <blockquote>
@@ -321,8 +321,8 @@ itself</p>
 <p><strong>destroySearchSidePanel</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.100)</p>
 <p>Destroys the searchSidePanel in the aggregation #getSearchSidePanel searchSidePanel.</p>
-<p> (since 1.100)</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -332,8 +332,8 @@ itself</p>
 <p><strong>destroySearchSidePanelList</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.102)</p>
 <p>Destroys the searchSidePanelList in the aggregation #getSearchSidePanelList searchSidePanelList.</p>
-<p> (since 1.102)</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -369,22 +369,22 @@ itself</p>
 <blockquote>
 <p><strong>destroyVariantHandler</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the variantHandler in the aggregation #getVariantHandler variantHandler.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Destroys the variantHandler in the aggregation #getVariantHandler variantHandler.</p>
 <hr>
 <h3>detachCustomGanttSearchResult()</h3>
 <blockquote>
 <p><strong>detachCustomGanttSearchResult</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.106)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:customGanttSearchResult customGanttSearchResult
 event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.106)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -419,10 +419,10 @@ of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p><strong>detachGanttSearchSidePanelList</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.102)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:ganttSearchSidePanelList ganttSearchSidePanelList
 event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.102)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -438,9 +438,6 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <blockquote>
 <p><strong>detachVariantApplied</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:variantApplied variantApplied event of this
-<code>sap.gantt.simple.GanttChartContainer</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -453,14 +450,16 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:variantApplied variantApplied event of this
+<code>sap.gantt.simple.GanttChartContainer</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireCustomGanttSearchResult()</h3>
 <blockquote>
 <p><strong>fireCustomGanttSearchResult</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:customGanttSearchResult customGanttSearchResult to attached listeners.</p>
-<p> (since 1.106)</p>
+<p>(since 1.106)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartContainer$CustomGanttSearchResultEventParameters.html"><code>GanttChartContainer$CustomGanttSearchResultEventParameters</code></a></p>
@@ -470,12 +469,12 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:customGanttSearchResult customGanttSearchResult to attached listeners.</p>
 <hr>
 <h3>fireCustomSettingChange()</h3>
 <blockquote>
 <p><strong>fireCustomSettingChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:customSettingChange customSettingChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartContainer$CustomSettingChangeEventParameters.html"><code>GanttChartContainer$CustomSettingChangeEventParameters</code></a></p>
@@ -485,14 +484,14 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:customSettingChange customSettingChange to attached listeners.</p>
 <hr>
 <h3>fireGanttSearchSidePanelList()</h3>
 <blockquote>
 <p><strong>fireGanttSearchSidePanelList</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:ganttSearchSidePanelList ganttSearchSidePanelList to attached listeners.</p>
-<p> (since 1.102)</p>
+<p>(since 1.102)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartContainer$GanttSearchSidePanelListEventParameters.html"><code>GanttChartContainer$GanttSearchSidePanelListEventParameters</code></a></p>
@@ -502,12 +501,12 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:ganttSearchSidePanelList ganttSearchSidePanelList to attached listeners.</p>
 <hr>
 <h3>fireVariantApplied()</h3>
 <blockquote>
 <p><strong>fireVariantApplied</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:variantApplied variantApplied to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -519,16 +518,17 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p>1.88</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:variantApplied variantApplied to attached listeners.</p>
 <hr>
 <h3>getCustomSearchResults()</h3>
 <blockquote>
 <p><strong>getCustomSearchResults</strong>(): <code>any</code>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.106)</p>
 <p>Gets current value of property #getCustomSearchResults customSearchResults.</p>
 <p>Array of search results displayed on the toolbar and side panel</p>
 <p>Default value is <code>[]</code>.</p>
-<p> (since 1.106)</p>
 <h4>Returns</h4>
 <p><code>any</code>[]</p>
 <p>Value of property <code>customSearchResults</code></p>
@@ -565,10 +565,10 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <p><strong>getEnableAutoSelectOnFind</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.111)</p>
 <p>Gets current value of property #getEnableAutoSelectOnFind enableAutoSelectOnFind.</p>
 <p>This property enables the auto selection of a shape upon search and find.</p>
 <p>Default value is <code>true</code>.</p>
-<p> (since 1.111)</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableAutoSelectOnFind</code></p>
@@ -589,29 +589,29 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <blockquote>
 <p><strong>getEnableDeltaLine</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableDeltaLine enableDeltaLine.</p>
-<p>Flag to enable and disable delta lines</p>
-<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableDeltaLine</code></p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Gets current value of property #getEnableDeltaLine enableDeltaLine.</p>
+<p>Flag to enable and disable delta lines</p>
+<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getEnableNonWorkingTime()</h3>
 <blockquote>
 <p><strong>getEnableNonWorkingTime</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableNonWorkingTime enableNonWorkingTime.</p>
-<p>Flag to enable and disable non-working time</p>
-<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableNonWorkingTime</code></p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Gets current value of property #getEnableNonWorkingTime enableNonWorkingTime.</p>
+<p>Flag to enable and disable non-working time</p>
+<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getEnableNowLine()</h3>
 <blockquote>
@@ -629,14 +629,14 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <blockquote>
 <p><strong>getEnableStatusBar</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableStatusBar enableStatusBar.</p>
-<p>Flag to enable and disable status bar.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableStatusBar</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getEnableStatusBar enableStatusBar.</p>
+<p>Flag to enable and disable status bar.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEnableTimeScrollSync()</h3>
 <blockquote>
@@ -653,14 +653,14 @@ event of this <code>sap.gantt.simple.GanttChartContainer</code>.</p>
 <blockquote>
 <p><strong>getEnableVariantManagement</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableVariantManagement enableVariantManagement.</p>
-<p>Property to enable variant management</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableVariantManagement</code></p>
 <h4>Since</h4>
 <p>1.95</p>
+<p>Gets current value of property #getEnableVariantManagement enableVariantManagement.</p>
+<p>Property to enable variant management</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEnableVerticalLine()</h3>
 <blockquote>
@@ -700,14 +700,14 @@ container must be defined.</p>
 <blockquote>
 <p><strong>getHideSettingsItem</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Gets current value of property #getHideSettingsItem hideSettingsItem.</p>
-<p>Defines the list of items to be hidden in Settings.</p>
-<p>Default value is <code>[]</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>Value of property <code>hideSettingsItem</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getHideSettingsItem hideSettingsItem.</p>
+<p>Defines the list of items to be hidden in Settings.</p>
+<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>getLayoutOrientation()</h3>
 <blockquote>
@@ -726,9 +726,9 @@ container must be defined.</p>
 <p><strong>getSearchSidePanel</strong>(): <code>any</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.100)</p>
 <p>Gets content of aggregation #getSearchSidePanel searchSidePanel.</p>
 <p>Side panel to display search results of Find and Select operation in the chart area</p>
-<p> (since 1.100)</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <hr>
@@ -737,9 +737,9 @@ container must be defined.</p>
 <p><strong>getSearchSidePanelList</strong>(): <code>any</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.102)</p>
 <p>Gets content of aggregation #getSearchSidePanelList searchSidePanelList.</p>
 <p>List of search results displayed on the side panel of Find and Select operation</p>
-<p> (since 1.102)</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <hr>
@@ -756,40 +756,40 @@ container must be defined.</p>
 <blockquote>
 <p><strong>getStatusBarDatePattern</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getStatusBarDatePattern statusBarDatePattern.</p>
-<p>Determines the date pattern set on the status bar.</p>
-<p>Default value is <code>&#39;EEEE, MMMM d, yyyy&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>statusBarDatePattern</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getStatusBarDatePattern statusBarDatePattern.</p>
+<p>Determines the date pattern set on the status bar.</p>
+<p>Default value is <code>&#39;EEEE, MMMM d, yyyy&#39;</code>.</p>
 <hr>
 <h3>getStatusBarTimePattern()</h3>
 <blockquote>
 <p><strong>getStatusBarTimePattern</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getStatusBarTimePattern statusBarTimePattern.</p>
-<p>Determines the time pattern set on the status bar.</p>
-<p>Default value is <code>&#39;hh:mm:ss a&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>statusBarTimePattern</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getStatusBarTimePattern statusBarTimePattern.</p>
+<p>Determines the time pattern set on the status bar.</p>
+<p>Default value is <code>&#39;hh:mm:ss a&#39;</code>.</p>
 <hr>
 <h3>getStatusMessage()</h3>
 <blockquote>
 <p><strong>getStatusMessage</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getStatusMessage statusMessage.</p>
-<p>Defines the message texts set on the status bar.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>statusMessage</code></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets current value of property #getStatusMessage statusMessage.</p>
+<p>Defines the message texts set on the status bar.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getSvgDefs()</h3>
 <blockquote>
@@ -814,12 +814,12 @@ The generated SVG  will be reused in all gantt chart instances</p>
 <blockquote>
 <p><strong>getVariantHandler</strong>(): <a href="../../CustomVariantHandler/classes/CustomVariantHandler.html"><code>CustomVariantHandler</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getVariantHandler variantHandler.</p>
-<p>Custom variant handler of the container</p>
 <h4>Returns</h4>
 <p><a href="../../CustomVariantHandler/classes/CustomVariantHandler.html"><code>CustomVariantHandler</code></a></p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Gets content of aggregation #getVariantHandler variantHandler.</p>
+<p>Custom variant handler of the container</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -894,11 +894,11 @@ is inserted at the last position</p>
 <p><strong>setCustomSearchResults</strong>(<code>sCustomSearchResults?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.106)</p>
 <p>Sets a new value for property #getCustomSearchResults customSearchResults.</p>
 <p>Array of search results displayed on the toolbar and side panel</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>[]</code>.</p>
-<p> (since 1.106)</p>
 <h4>Parameters</h4>
 <h5>sCustomSearchResults?</h5>
 <p><code>any</code>[]</p>
@@ -949,11 +949,11 @@ is inserted at the last position</p>
 <p><strong>setEnableAutoSelectOnFind</strong>(<code>bEnableAutoSelectOnFind?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.111)</p>
 <p>Sets a new value for property #getEnableAutoSelectOnFind enableAutoSelectOnFind.</p>
 <p>This property enables the auto selection of a shape upon search and find.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
-<p> (since 1.111)</p>
 <h4>Parameters</h4>
 <h5>bEnableAutoSelectOnFind?</h5>
 <p><code>boolean</code></p>
@@ -983,11 +983,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setEnableDeltaLine</strong>(<code>bEnableDeltaLine?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableDeltaLine enableDeltaLine.</p>
-<p>Flag to enable and disable delta lines</p>
-<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableDeltaLine?</h5>
 <p><code>boolean</code></p>
@@ -997,16 +992,16 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Sets a new value for property #getEnableDeltaLine enableDeltaLine.</p>
+<p>Flag to enable and disable delta lines</p>
+<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEnableNonWorkingTime()</h3>
 <blockquote>
 <p><strong>setEnableNonWorkingTime</strong>(<code>bEnableNonWorkingTime?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableNonWorkingTime enableNonWorkingTime.</p>
-<p>Flag to enable and disable non-working time</p>
-<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableNonWorkingTime?</h5>
 <p><code>boolean</code></p>
@@ -1016,6 +1011,11 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Sets a new value for property #getEnableNonWorkingTime enableNonWorkingTime.</p>
+<p>Flag to enable and disable non-working time</p>
+<p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEnableNowLine()</h3>
 <blockquote>
@@ -1038,10 +1038,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setEnableStatusBar</strong>(<code>bEnableStatusBar?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableStatusBar enableStatusBar.</p>
-<p>Flag to enable and disable status bar.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableStatusBar?</h5>
 <p><code>boolean</code></p>
@@ -1051,6 +1047,10 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getEnableStatusBar enableStatusBar.</p>
+<p>Flag to enable and disable status bar.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnableTimeScrollSync()</h3>
 <blockquote>
@@ -1072,10 +1072,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setEnableVariantManagement</strong>(<code>bEnableVariantManagement?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableVariantManagement enableVariantManagement.</p>
-<p>Property to enable variant management</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableVariantManagement?</h5>
 <p><code>boolean</code></p>
@@ -1085,6 +1081,10 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.95</p>
+<p>Sets a new value for property #getEnableVariantManagement enableVariantManagement.</p>
+<p>Property to enable variant management</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnableVerticalLine()</h3>
 <blockquote>
@@ -1125,10 +1125,6 @@ container must be defined.</p>
 <blockquote>
 <p><strong>setHideSettingsItem</strong>(<code>sHideSettingsItem?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHideSettingsItem hideSettingsItem.</p>
-<p>Defines the list of items to be hidden in Settings.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>[]</code>.</p>
 <h4>Parameters</h4>
 <h5>sHideSettingsItem?</h5>
 <p><code>string</code>[]</p>
@@ -1138,6 +1134,10 @@ container must be defined.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getHideSettingsItem hideSettingsItem.</p>
+<p>Defines the list of items to be hidden in Settings.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>setLayoutOrientation()</h3>
 <blockquote>
@@ -1161,8 +1161,8 @@ container must be defined.</p>
 <p><strong>setSearchSidePanel</strong>(<code>oSearchSidePanel</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.100)</p>
 <p>Sets the aggregated #getSearchSidePanel searchSidePanel.</p>
-<p> (since 1.100)</p>
 <h4>Parameters</h4>
 <h5>oSearchSidePanel</h5>
 <p><code>any</code></p>
@@ -1176,8 +1176,8 @@ container must be defined.</p>
 <p><strong>setSearchSidePanelList</strong>(<code>oSearchSidePanelList</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.102)</p>
 <p>Sets the aggregated #getSearchSidePanelList searchSidePanelList.</p>
-<p> (since 1.102)</p>
 <h4>Parameters</h4>
 <h5>oSearchSidePanelList</h5>
 <p><code>any</code></p>
@@ -1203,10 +1203,6 @@ container must be defined.</p>
 <blockquote>
 <p><strong>setStatusBarDatePattern</strong>(<code>sStatusBarDatePattern?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getStatusBarDatePattern statusBarDatePattern.</p>
-<p>Determines the date pattern set on the status bar.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;EEEE, MMMM d, yyyy&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sStatusBarDatePattern?</h5>
 <p><code>string</code></p>
@@ -1216,15 +1212,15 @@ container must be defined.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getStatusBarDatePattern statusBarDatePattern.</p>
+<p>Determines the date pattern set on the status bar.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;EEEE, MMMM d, yyyy&#39;</code>.</p>
 <hr>
 <h3>setStatusBarTimePattern()</h3>
 <blockquote>
 <p><strong>setStatusBarTimePattern</strong>(<code>sStatusBarTimePattern?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getStatusBarTimePattern statusBarTimePattern.</p>
-<p>Determines the time pattern set on the status bar.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;hh:mm:ss a&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sStatusBarTimePattern?</h5>
 <p><code>string</code></p>
@@ -1234,15 +1230,15 @@ container must be defined.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getStatusBarTimePattern statusBarTimePattern.</p>
+<p>Determines the time pattern set on the status bar.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;hh:mm:ss a&#39;</code>.</p>
 <hr>
 <h3>setStatusMessage()</h3>
 <blockquote>
 <p><strong>setStatusMessage</strong>(<code>sStatusMessage?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getStatusMessage statusMessage.</p>
-<p>Defines the message texts set on the status bar.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sStatusMessage?</h5>
 <p><code>string</code></p>
@@ -1252,6 +1248,10 @@ container must be defined.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets a new value for property #getStatusMessage statusMessage.</p>
+<p>Defines the message texts set on the status bar.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setSvgDefs()</h3>
 <blockquote>
@@ -1283,7 +1283,6 @@ container must be defined.</p>
 <blockquote>
 <p><strong>setVariantHandler</strong>(<code>oVariantHandler</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getVariantHandler variantHandler.</p>
 <h4>Parameters</h4>
 <h5>oVariantHandler</h5>
 <p><a href="../../CustomVariantHandler/classes/CustomVariantHandler.html"><code>CustomVariantHandler</code></a></p>
@@ -1293,6 +1292,7 @@ container must be defined.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Sets the aggregated #getVariantHandler variantHandler.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -1327,7 +1327,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>GanttChartContainer</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>GanttChartContainer</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1351,6 +1351,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

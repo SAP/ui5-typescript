@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Measure — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Measure — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Measure — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.chart/sap/chart/data/Measure/classes/Measure.html">
 <meta property="og:title" content="Class: Measure — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Measure — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Measure — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.chart/sap/chart/data/Measure/classes/Measure.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.chart/README.html">sap.chart</a> › sap › chart › data › <a href="../../../../../../sap.chart/sap/chart/data/Measure/README.html">Measure</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.chart</a> / <a href="../README.html">sap/chart/data/Measure</a> / Measure</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.chart</a> / <a href="../README.html">sap/chart/data/Measure</a> / Measure</p>
 <h1>Class: Measure</h1>
 <pre class="sig"><span class="kw">import</span> Measure <span class="kw">from</span> <span class="str">"sap/chart/data/Measure"</span>;</pre>
+<h2>Since</h2>
+<p>1.32.0</p>
 <p>Definition of a single measure in a chart</p>
 <p>  chartType binding rules   pie, donut The
 measure is assigned to feed uid “size”.   scatter The first measure with role
@@ -53,8 +55,6 @@ role “axis1”, or (if not exists) the first measure with role “axis2” or 
 is assigned to the feed uid “color”. The other measure is assigned to feed uid “weight”.
 ..dual.. At least one measure is assigned to each of the feed uids “valueAxis” and “valueAxis2”,
 according to the general rule.</p>
-<h2>Since</h2>
-<p>1.32.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -101,13 +101,13 @@ of the syntax of the settings object.</p>
 <p><strong>getAnalyticalInfo</strong>(): <code>object</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getAnalyticalInfo analyticalInfo.</p>
-<p>The analytical extra information</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>analyticalInfo</code></p>
 <h4>Since</h4>
 <p>1.63</p>
+<p>Gets current value of property #getAnalyticalInfo analyticalInfo.</p>
+<p>The analytical extra information</p>
 <hr>
 <h3>getLabel()</h3>
 <blockquote>
@@ -200,8 +200,6 @@ chart, and only one unit value exists for any visible dimension value combinatio
 <blockquote>
 <p><strong>getValueFormat</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getValueFormat valueFormat.</p>
-<p>A (core UI5) format pattern to be used by the formatter to format the measure value.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>valueFormat</code></p>
@@ -209,15 +207,14 @@ chart, and only one unit value exists for any visible dimension value combinatio
 <ul>
 <li>Please use sap.chart.Chart#setVizProperties to set related formatStrings instead.</li>
 </ul>
+<p>Gets current value of property #getValueFormat valueFormat.</p>
+<p>A (core UI5) format pattern to be used by the formatter to format the measure value.</p>
 <hr>
 <h3>setAnalyticalInfo()</h3>
 <blockquote>
 <p><strong>setAnalyticalInfo</strong>(<code>oAnalyticalInfo?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getAnalyticalInfo analyticalInfo.</p>
-<p>The analytical extra information</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oAnalyticalInfo?</h5>
 <p><code>object</code></p>
@@ -227,6 +224,9 @@ chart, and only one unit value exists for any visible dimension value combinatio
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.63</p>
+<p>Sets a new value for property #getAnalyticalInfo analyticalInfo.</p>
+<p>The analytical extra information</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setLabel()</h3>
 <blockquote>
@@ -349,9 +349,6 @@ chart, and only one unit value exists for any visible dimension value combinatio
 <blockquote>
 <p><strong>setValueFormat</strong>(<code>sValueFormat?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getValueFormat valueFormat.</p>
-<p>A (core UI5) format pattern to be used by the formatter to format the measure value.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sValueFormat?</h5>
 <p><code>string</code></p>
@@ -363,6 +360,9 @@ chart, and only one unit value exists for any visible dimension value combinatio
 <ul>
 <li>Please use sap.chart.Chart#setVizProperties to set related formatStrings instead.</li>
 </ul>
+<p>Sets a new value for property #getValueFormat valueFormat.</p>
+<p>A (core UI5) format pattern to be used by the formatter to format the measure value.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -379,7 +379,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Measure</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Measure</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -403,6 +403,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $MonthSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $MonthSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $MonthSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/Month/interfaces/$MonthSettings.html">
 <meta property="og:title" content="Interface: $MonthSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $MonthSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $MonthSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/Month/interfaces/$MonthSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › calendar › <a href="../../../../../../../sap.ui.unified/sap/ui/unified/calendar/Month/README.html">Month</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/Month</a> / $MonthSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/Month</a> / $MonthSettings</p>
 <h1>Interface: $MonthSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $MonthSettings } <span class="kw">from</span> <span class="str">"sap/ui/unified/calendar/Month"</span>;</pre>
-<p>Describes the settings that can be provided to the Month constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -58,10 +57,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>calendarWeekNumbering?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 </blockquote>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used. Note: This property should not be used with firstDayOfWeek property.</p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used. Note: This property should not be used with firstDayOfWeek property.</p>
 <hr>
 <h3>date?</h3>
 <blockquote>
@@ -74,19 +73,19 @@ is focused initially (if no other focus is set).</p>
 <blockquote>
 <p><code>optional</code> <strong>disabledDates?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a> | <a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a>[]</p>
 </blockquote>
-<p>Date Ranges for disabled dates</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Date Ranges for disabled dates</p>
 <hr>
 <h3>firstDayOfWeek?</h3>
 <blockquote>
 <p><code>optional</code> <strong>firstDayOfWeek?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.28.9</p>
 <p>If the property is set, this day marks the start of the displayed week. Valid values are 0 to 6. If no
 valid property is set, the current locale&#39;s default is applied. Note: This property should not be used
 with the calendarWeekNumbering property.</p>
-<h4>Since</h4>
-<p>1.28.9</p>
 <hr>
 <h3>focus?</h3>
 <blockquote>
@@ -109,37 +108,37 @@ with the calendarWeekNumbering property.</p>
 <blockquote>
 <p><code>optional</code> <strong>legend?</strong>: <code>string</code> | <a href="../../../CalendarLegend/classes/CalendarLegend.html"><code>CalendarLegend</code></a></p>
 </blockquote>
-<p>Association to the <code>CalendarLegend</code> explaining the colors of the <code>specialDates</code>.</p>
-<p><strong>Note</strong> The legend does not have to be rendered but must exist, and all required types must be assigned.</p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Association to the <code>CalendarLegend</code> explaining the colors of the <code>specialDates</code>.</p>
+<p><strong>Note</strong> The legend does not have to be rendered but must exist, and all required types must be assigned.</p>
 <hr>
 <h3>nonWorkingDays?</h3>
 <blockquote>
 <p><code>optional</code> <strong>nonWorkingDays?</strong>: <code>number</code>[] | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>If set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0
-to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.</p>
 <h4>Since</h4>
 <p>1.28.9</p>
+<p>If set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0
+to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.</p>
 <hr>
 <h3>primaryCalendarType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>primaryCalendarType?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
-<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
-is used.</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
+is used.</p>
 <hr>
 <h3>secondaryCalendarType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>secondaryCalendarType?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
-<p>If set, the days are also displayed in this calendar type If not set, the dates are only displayed in
-the primary calendar type</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>If set, the days are also displayed in this calendar type If not set, the dates are only displayed in
+the primary calendar type</p>
 <hr>
 <h3>select?</h3>
 <blockquote>
@@ -168,11 +167,11 @@ the primary calendar type</p>
 <blockquote>
 <p><code>optional</code> <strong>showWeekNumbers?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.48</p>
 <p>Determines whether the week numbers in the months are displayed.</p>
 <p><strong>Note:</strong> For Islamic calendars, the week numbers are not displayed regardless of what is set to this
 property.</p>
-<h4>Since</h4>
-<p>1.48</p>
 <hr>
 <h3>singleSelection?</h3>
 <blockquote>
@@ -193,10 +192,6 @@ other type. For example, you can have <code>NonWorking</code> + <code>Type01</co
 <blockquote>
 <p><code>optional</code> <strong>weekNumberSelect?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when a week number selection is changed. By default, choosing the week number will select the corresponding
-week. If the week has already been selected, choosing the week number will deselect it.</p>
-<p>The default behavior can be prevented using the <code>preventDefault</code> method.</p>
-<p><strong>Note:</strong> Works for Gregorian calendars only and when <code>intervalSelection</code> is set to <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Month$WeekNumberSelectEvent.html"><code>Month$WeekNumberSelectEvent</code></a></p>
@@ -204,15 +199,19 @@ week. If the week has already been selected, choosing the week number will desel
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.60</p>
+<p>Fired when a week number selection is changed. By default, choosing the week number will select the corresponding
+week. If the week has already been selected, choosing the week number will deselect it.</p>
+<p>The default behavior can be prevented using the <code>preventDefault</code> method.</p>
+<p><strong>Note:</strong> Works for Gregorian calendars only and when <code>intervalSelection</code> is set to <code>true</code>.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Width of Month</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Width of Month</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectPageSection — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectPageSection — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ObjectPageSection — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/ObjectPageSection/classes/ObjectPageSection.html">
 <meta property="og:title" content="Class: ObjectPageSection — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectPageSection — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ObjectPageSection — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/ObjectPageSection/classes/ObjectPageSection.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/ObjectPageSection/README.html">ObjectPageSection</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageSection</a> / ObjectPageSection</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageSection</a> / ObjectPageSection</p>
 <h1>Class: ObjectPageSection</h1>
 <pre class="sig"><span class="kw">import</span> ObjectPageSection <span class="kw">from</span> <span class="str">"sap/uxap/ObjectPageSection"</span>;</pre>
+<h2>Since</h2>
+<p>1.26</p>
 <p>Top-level information container of an sap.uxap.ObjectPageLayout.</p>
 <p>The <code>ObjectPageSection</code>&#39;s purpose is to aggregate subsections.</p>
 <p><strong>Note:</strong> This control is intended to be used only as part of the <code>ObjectPageLayout</code>.</p>
-<h2>Since</h2>
-<p>1.26</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ObjectPageSectionBase/classes/ObjectPageSectionBase.html"><code>ObjectPageSectionBase</code></a></li>
@@ -101,12 +101,12 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>destroyHeading</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the heading in the aggregation #getHeading heading.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.106</p>
+<p>Destroys the heading in the aggregation #getHeading heading.</p>
 <hr>
 <h3>destroySubSections()</h3>
 <blockquote>
@@ -121,13 +121,13 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getHeading</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getHeading heading.</p>
-<p>Section heading content.</p>
-<p>Note: For some accessibility concerns we encourage you to use non-focusable elements.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.106</p>
+<p>Gets content of aggregation #getHeading heading.</p>
+<p>Section heading content.</p>
+<p>Note: For some accessibility concerns we encourage you to use non-focusable elements.</p>
 <hr>
 <h3>getSelectedSubSection()</h3>
 <blockquote>
@@ -155,8 +155,6 @@ or <code>null</code>.</p>
 </blockquote>
 <p>Gets content of aggregation #getSubSections subSections.</p>
 <p>The list of Subsections.</p>
-<p>Note: If multiple subsections are used, it is highly recommended to set a title for the section for accessibility
-reasons.</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectPageSubSection/classes/ObjectPageSubSection.html"><code>ObjectPageSubSection</code></a>[]</p>
 <hr>
@@ -241,7 +239,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setHeading</strong>(<code>oHeading</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getHeading heading.</p>
 <h4>Parameters</h4>
 <h5>oHeading</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -251,6 +248,7 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.106</p>
+<p>Sets the aggregated #getHeading heading.</p>
 <hr>
 <h3>setSelectedSubSection()</h3>
 <blockquote>
@@ -329,7 +327,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ObjectPageSection</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ObjectPageSection</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -353,6 +351,6 @@ used by this class</p>
 <p><a href="../../ObjectPageSectionBase/classes/ObjectPageSectionBase.html"><code>ObjectPageSectionBase</code></a>.<a href="../../ObjectPageSectionBase/classes/ObjectPageSectionBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

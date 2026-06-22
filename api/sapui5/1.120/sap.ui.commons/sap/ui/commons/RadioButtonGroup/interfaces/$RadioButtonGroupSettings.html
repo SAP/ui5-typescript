@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $RadioButtonGroupSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $RadioButtonGroupSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $RadioButtonGroupSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $RadioButtonGroupSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/RadioButtonGroup/interfaces/$RadioButtonGroupSettings.html">
-<meta property="og:title" content="~~Interface: $RadioButtonGroupSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $RadioButtonGroupSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $RadioButtonGroupSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $RadioButtonGroupSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/RadioButtonGroup/interfaces/$RadioButtonGroupSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,38 +33,35 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/RadioButtonGroup/README.html">RadioButtonGroup</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/RadioButtonGroup</a> / $RadioButtonGroupSettings</p>
-<h1><del>Interface: $RadioButtonGroupSettings</del></h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/RadioButtonGroup</a> / $RadioButtonGroupSettings</p>
+<h1>Interface: $RadioButtonGroupSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $RadioButtonGroupSettings } <span class="kw">from</span> <span class="str">"sap/ui/commons/RadioButtonGroup"</span>;</pre>
-<p>Describes the settings that can be provided to the RadioButtonGroup constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.38) - Instead, use the <code>sap.m.RadioButtonGroup</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>ariaDescribedBy?</del></h3>
+<h3>ariaDescribedBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaDescribedBy?</strong>: (<code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
 <p>Association to controls / IDs, which describe this control (see WAI-ARIA attribute aria-describedby).</p>
 <hr>
-<h3><del>ariaLabelledBy?</del></h3>
+<h3>ariaLabelledBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
 <p>Association to controls / IDs, which label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <hr>
-<h3><del>columns?</del></h3>
+<h3>columns?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columns?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Determines the maximum number of RadioButtons displayed in one line.</p>
 <hr>
-<h3><del>editable?</del></h3>
+<h3>editable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>editable?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -72,23 +69,23 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 set to false, the control obtains visual styles different from its visual styles for the normal and the
 disabled state. Additionally the control is no longer interactive, but can receive focus.</p>
 <hr>
-<h3><del>enabled?</del></h3>
+<h3>enabled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.10.3</p>
 <p>Enables/disables the RadioButtonGroup. If it is disabled all RadioButtons will be displayed as disabled.
 The enabled property of the Item will not be used in this case. If the RadioButtonGroup is enabled, the
 enabled property of the Item will define if a RadioButton is enabled or not.</p>
-<h4>Since</h4>
-<p>1.10.3</p>
 <hr>
-<h3><del>items?</del></h3>
+<h3>items?</h3>
 <blockquote>
 <p><code>optional</code> <strong>items?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
 <p>The RadioButtons of this RadioButtonGroup.</p>
 <hr>
-<h3><del>select?</del></h3>
+<h3>select?</h3>
 <blockquote>
 <p><code>optional</code> <strong>select?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -99,13 +96,13 @@ enabled property of the Item will define if a RadioButton is enabled or not.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>selectedIndex?</del></h3>
+<h3>selectedIndex?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectedIndex?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>The index of the selected/checked RadioButton.</p>
 <hr>
-<h3><del>valueState?</del></h3>
+<h3>valueState?</h3>
 <blockquote>
 <p><code>optional</code> <strong>valueState?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
@@ -114,12 +111,12 @@ sap.ui.core.ValueState.Warning, sap.ui.core.ValueState.Success and sap.ui.core.V
 Setting this attribute to sap.ui.core.ValueState.Error when the accessibility feature is enabled, sets
 the value of the invalid property for the whole RadioButtonGroup to true.</p>
 <hr>
-<h3><del>width?</del></h3>
+<h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Defines the width of the RadioButtonGroup.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

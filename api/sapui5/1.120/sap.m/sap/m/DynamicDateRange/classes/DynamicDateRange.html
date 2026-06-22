@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DynamicDateRange — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: DynamicDateRange — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: DynamicDateRange — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/DynamicDateRange/classes/DynamicDateRange.html">
 <meta property="og:title" content="Class: DynamicDateRange — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: DynamicDateRange — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: DynamicDateRange — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/DynamicDateRange/classes/DynamicDateRange.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/DynamicDateRange/README.html">DynamicDateRange</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/DynamicDateRange</a> / DynamicDateRange</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/DynamicDateRange</a> / DynamicDateRange</p>
 <h1>Class: DynamicDateRange</h1>
 <pre class="sig"><span class="kw">import</span> DynamicDateRange <span class="kw">from</span> <span class="str">"sap/m/DynamicDateRange"</span>;</pre>
+<h2>Since</h2>
+<p>1.92.0</p>
 <p>A control base type.</p>
 <p>Overview:</p>
 <p>The dynamic date range is a control that offers a choice of absolute and relative dates, using different
@@ -56,8 +58,6 @@ added by default.</p>
 <p>Responsive behavior:</p>
 <p>On mobile devices, when user taps on the <code>DynamicDateRange</code> input icon a full screen dialog is opened.
 The dialog is closed via a date time period value selection or by pressing the &quot;Cancel&quot; button.</p>
-<h2>Since</h2>
-<p>1.92.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -103,7 +103,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaDescribedBy</strong>(<code>vAriaDescribedBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaDescribedBy into the association #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaDescribedBy</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -113,12 +112,12 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Adds some ariaDescribedBy into the association #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>addAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -128,6 +127,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addCustomOption()</h3>
 <blockquote>
@@ -146,7 +146,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addGroup</strong>(<code>sGroupName</code>, <code>sGroupHeader</code>): <code>void</code></p>
 </blockquote>
-<p>Adds a group to the enumeration containing the current groups in <code>sap.m.DynamicDateRange</code></p>
 <h4>Parameters</h4>
 <h5>sGroupName</h5>
 <p><code>string</code></p>
@@ -158,12 +157,12 @@ of the syntax of the settings object.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.118</p>
+<p>Adds a group to the enumeration containing the current groups in <code>sap.m.DynamicDateRange</code></p>
 <hr>
 <h3>addStandardOption()</h3>
 <blockquote>
 <p><strong>addStandardOption</strong>(<code>sKey</code>): <code>void</code></p>
 </blockquote>
-<p>Appends an option key, identifying an additional standard option to be used by the control.</p>
 <h4>Parameters</h4>
 <h5>sKey</h5>
 <p><code>string</code></p>
@@ -172,6 +171,7 @@ of the syntax of the settings object.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Appends an option key, identifying an additional standard option to be used by the control.</p>
 <hr>
 <h3>attachChange()</h3>
 <h4>Call Signature</h4>
@@ -247,7 +247,6 @@ key is pressed.</p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/DynamicDateRange$ChangeEventParameters.html"><code>DynamicDateRange$ChangeEventParameters</code></a></p>
@@ -257,39 +256,40 @@ key is pressed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
 <p><strong>getAriaDescribedBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getCalendarWeekNumbering()</h3>
 <blockquote>
 <p><strong>getCalendarWeekNumbering</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 </blockquote>
-<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 <p>Value of property <code>calendarWeekNumbering</code></p>
 <h4>Since</h4>
 <p>1.111.0</p>
+<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used.</p>
 <hr>
 <h3>getCustomOptions()</h3>
 <blockquote>
@@ -304,58 +304,63 @@ global configuration is used.</p>
 <blockquote>
 <p><strong>getEditable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEditable editable.</p>
-<p>Defines whether the control can be modified by the user or not. <strong>Note:</strong> A user can tab to the non-editable
-control, highlight it, and copy the text from it.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>editable</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getEditable editable.</p>
+<p>Defines whether the control can be modified by the user or not. <strong>Note:</strong> A user can tab to the non-editable
+control, highlight it, and copy the text from it.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
 <p><strong>getEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnabled enabled.</p>
-<p>Indicates whether the user can interact with the control or not. <strong>Note:</strong> Disabled controls cannot be
-focused and they are out of the tab-chain.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enabled</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getEnabled enabled.</p>
+<p>Indicates whether the user can interact with the control or not. <strong>Note:</strong> Disabled controls cannot be
+focused and they are out of the tab-chain.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getEnableGroupHeaders()</h3>
 <blockquote>
 <p><strong>getEnableGroupHeaders</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableGroupHeaders enableGroupHeaders.</p>
-<p>Disable list group headers.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableGroupHeaders</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getEnableGroupHeaders enableGroupHeaders.</p>
+<p>Disable list group headers.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getGroupHeader()</h3>
 <blockquote>
 <p><strong>getGroupHeader</strong>(): <code>string</code></p>
 </blockquote>
-<p>Provides the option&#39;s group header text.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>A group header</p>
 <h4>Since</h4>
 <p>1.118</p>
+<p>Provides the option&#39;s group header text.</p>
 <hr>
 <h3>getHideInput()</h3>
 <blockquote>
 <p><strong>getHideInput</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideInput</code></p>
+<h4>Since</h4>
+<p>1.105</p>
 <p>Gets current value of property #getHideInput hideInput.</p>
 <p>Determines whether the input field of the control is hidden or visible. When set to <code>true</code>, the input
 field becomes invisible and there is no way to open the value help popover. In that case it can be opened
@@ -366,11 +371,6 @@ opens its popover, those attributes should be added by the application developer
 to be added to the opening control: a text or tooltip that describes the action (example: &quot;Open Dynamic
 Date Range&quot;), and also aria-haspopup attribute with value of <code>true</code>.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>hideInput</code></p>
-<h4>Since</h4>
-<p>1.105</p>
 <hr>
 <h3>getIdForLabel()</h3>
 <blockquote>
@@ -388,13 +388,13 @@ Date Range&quot;), and also aria-haspopup attribute with value of <code>true</co
 <blockquote>
 <p><strong>getName</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getName name.</p>
-<p>Defines the name of the control for the purposes of form submission.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>name</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getName name.</p>
+<p>Defines the name of the control for the purposes of form submission.</p>
 <hr>
 <h3>getOption()</h3>
 <blockquote>
@@ -413,93 +413,93 @@ Date Range&quot;), and also aria-haspopup attribute with value of <code>true</co
 <blockquote>
 <p><strong>getPlaceholder</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getPlaceholder placeholder.</p>
-<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>placeholder</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getPlaceholder placeholder.</p>
+<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
 <hr>
 <h3>getRequired()</h3>
 <blockquote>
 <p><strong>getRequired</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getRequired required.</p>
-<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
-single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
-be established (e.g. one label should label multiple fields).</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>required</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getRequired required.</p>
+<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
+single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
+be established (e.g. one label should label multiple fields).</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowClearIcon()</h3>
 <blockquote>
 <p><strong>getShowClearIcon</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowClearIcon showClearIcon.</p>
-<p>Specifies whether clear icon is shown. Pressing the icon will clear input&#39;s value and fire the liveChange
-event.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showClearIcon</code></p>
 <h4>Since</h4>
 <p>1.117</p>
+<p>Gets current value of property #getShowClearIcon showClearIcon.</p>
+<p>Specifies whether clear icon is shown. Pressing the icon will clear input&#39;s value and fire the liveChange
+event.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getStandardOptions()</h3>
 <blockquote>
 <p><strong>getStandardOptions</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Gets current value of property #getStandardOptions standardOptions.</p>
-<p>Array of standard option keys</p>
-<p>Default value is <code>[&quot;DATE&quot;, &quot;TODAY&quot;, &quot;YESTERDAY&quot;, &quot;TOMORROW&quot;, &quot;FIRSTDAYWEEK&quot;, &quot;LASTDAYWEEK&quot;, &quot;FIRSTDAYMONTH&quot;, &quot;LASTDAYMONTH&quot;, &quot;FIRSTDAYQUARTER&quot;, &quot;LASTDAYQUARTER&quot;, &quot;FIRSTDAYYEAR&quot;, &quot;LASTDAYYEAR&quot;, &quot;DATERANGE&quot;, &quot;DATETIMERANGE&quot;, &quot;FROM&quot;, &quot;TO&quot;, &quot;FROMDATETIME&quot;, &quot;TODATETIME&quot;, &quot;YEARTODATE&quot;, &quot;DATETOYEAR&quot;, &quot;LASTMINUTES&quot;, &quot;LASTHOURS&quot;, &quot;LASTDAYS&quot;, &quot;LASTWEEKS&quot;, &quot;LASTMONTHS&quot;, &quot;LASTQUARTERS&quot;, &quot;LASTYEARS&quot;, &quot;NEXTMINUTES&quot;, &quot;NEXTHOURS&quot;, &quot;NEXTDAYS&quot;, &quot;NEXTWEEKS&quot;, &quot;NEXTMONTHS&quot;, &quot;NEXTQUARTERS&quot;, &quot;NEXTYEARS&quot;, &quot;TODAYFROMTO&quot;, &quot;THISWEEK&quot;, &quot;LASTWEEK&quot;, &quot;NEXTWEEK&quot;, &quot;SPECIFICMONTH&quot;, &quot;SPECIFICMONTHINYEAR&quot;, &quot;THISMONTH&quot;, &quot;LASTMONTH&quot;, &quot;NEXTMONTH&quot;, &quot;THISQUARTER&quot;, &quot;LASTQUARTER&quot;, &quot;NEXTQUARTER&quot;, &quot;QUARTER1&quot;, &quot;QUARTER2&quot;, &quot;QUARTER3&quot;, &quot;QUARTER4&quot;, &quot;THISYEAR&quot;, &quot;LASTYEAR&quot;, &quot;NEXTYEAR&quot;, &quot;DATETIME&quot;]</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>Value of property <code>standardOptions</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getStandardOptions standardOptions.</p>
+<p>Array of standard option keys</p>
+<p>Default value is <code>[&quot;DATE&quot;, &quot;TODAY&quot;, &quot;YESTERDAY&quot;, &quot;TOMORROW&quot;, &quot;FIRSTDAYWEEK&quot;, &quot;LASTDAYWEEK&quot;, &quot;FIRSTDAYMONTH&quot;, &quot;LASTDAYMONTH&quot;, &quot;FIRSTDAYQUARTER&quot;, &quot;LASTDAYQUARTER&quot;, &quot;FIRSTDAYYEAR&quot;, &quot;LASTDAYYEAR&quot;, &quot;DATERANGE&quot;, &quot;DATETIMERANGE&quot;, &quot;FROM&quot;, &quot;TO&quot;, &quot;FROMDATETIME&quot;, &quot;TODATETIME&quot;, &quot;YEARTODATE&quot;, &quot;DATETOYEAR&quot;, &quot;LASTMINUTES&quot;, &quot;LASTHOURS&quot;, &quot;LASTDAYS&quot;, &quot;LASTWEEKS&quot;, &quot;LASTMONTHS&quot;, &quot;LASTQUARTERS&quot;, &quot;LASTYEARS&quot;, &quot;NEXTMINUTES&quot;, &quot;NEXTHOURS&quot;, &quot;NEXTDAYS&quot;, &quot;NEXTWEEKS&quot;, &quot;NEXTMONTHS&quot;, &quot;NEXTQUARTERS&quot;, &quot;NEXTYEARS&quot;, &quot;TODAYFROMTO&quot;, &quot;THISWEEK&quot;, &quot;LASTWEEK&quot;, &quot;NEXTWEEK&quot;, &quot;SPECIFICMONTH&quot;, &quot;SPECIFICMONTHINYEAR&quot;, &quot;THISMONTH&quot;, &quot;LASTMONTH&quot;, &quot;NEXTMONTH&quot;, &quot;THISQUARTER&quot;, &quot;LASTQUARTER&quot;, &quot;NEXTQUARTER&quot;, &quot;QUARTER1&quot;, &quot;QUARTER2&quot;, &quot;QUARTER3&quot;, &quot;QUARTER4&quot;, &quot;THISYEAR&quot;, &quot;LASTYEAR&quot;, &quot;NEXTYEAR&quot;, &quot;DATETIME&quot;]</code>.</p>
 <hr>
 <h3>getValueState()</h3>
 <blockquote>
 <p><strong>getValueState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getValueState valueState.</p>
-<p>Accepts the core enumeration ValueState.type that supports <code>None</code>, <code>Error</code>, <code>Warning</code> and <code>Success</code>.
-ValueState is managed internally only when validation is triggered by user interaction.</p>
-<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>valueState</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getValueState valueState.</p>
+<p>Accepts the core enumeration ValueState.type that supports <code>None</code>, <code>Error</code>, <code>Warning</code> and <code>Success</code>.
+ValueState is managed internally only when validation is triggered by user interaction.</p>
+<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getValueStateText()</h3>
 <blockquote>
 <p><strong>getValueStateText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getValueStateText valueStateText.</p>
-<p>Defines the text that appears in the value state message popup.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>valueStateText</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getValueStateText valueStateText.</p>
+<p>Defines the text that appears in the value state message popup.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getWidth width.</p>
-<p>Defines the width of the control.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets current value of property #getWidth width.</p>
+<p>Defines the width of the control.</p>
 <hr>
 <h3>indexOfCustomOption()</h3>
 <blockquote>
@@ -537,7 +537,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>open</strong>(<code>oDomRef</code>): <code>void</code></p>
 </blockquote>
-<p>Opens the value help dialog.</p>
 <h4>Parameters</h4>
 <h5>oDomRef</h5>
 <p><code>HTMLElement</code></p>
@@ -547,20 +546,12 @@ control.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Opens the value help dialog.</p>
 <hr>
 <h3>openBy()</h3>
 <blockquote>
 <p><strong>openBy</strong>(<code>oDomRef</code>): <code>void</code></p>
 </blockquote>
-<p>Opens the value help popover. The popover is positioned relatively to the control given as <code>oDomRef</code>
-parameter on tablet or desktop and is full screen on phone. Therefore the control parameter is only used
-on tablet or desktop and is ignored on phone.</p>
-<p>Note: use this method to open the value help popover only when the <code>hideInput</code> property is set to <code>true</code>.
-Please consider opening of the value help popover by another control only in scenarios that comply with
-Fiori guidelines. For example, opening the value help popover by another popover is not recommended.
-The application developer should implement the following accessibility attributes to the opening control:
-a text or tooltip that describes the action (example: &quot;Open Dynamic Date Range&quot;), and aria-haspopup attribute
-with value of <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>oDomRef</h5>
 <p><code>HTMLElement</code></p>
@@ -570,28 +561,37 @@ control.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.105</p>
+<p>Opens the value help popover. The popover is positioned relatively to the control given as <code>oDomRef</code>
+parameter on tablet or desktop and is full screen on phone. Therefore the control parameter is only used
+on tablet or desktop and is ignored on phone.</p>
+<p>Note: use this method to open the value help popover only when the <code>hideInput</code> property is set to <code>true</code>.
+Please consider opening of the value help popover by another control only in scenarios that comply with
+Fiori guidelines. For example, opening the value help popover by another popover is not recommended.
+The application developer should implement the following accessibility attributes to the opening control:
+a text or tooltip that describes the action (example: &quot;Open Dynamic Date Range&quot;), and aria-haspopup attribute
+with value of <code>true</code>.</p>
 <hr>
 <h3>removeAllAriaDescribedBy()</h3>
 <blockquote>
 <p><strong>removeAllAriaDescribedBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Removes all the controls in the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>removeAllAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllCustomOptions()</h3>
 <blockquote>
@@ -607,7 +607,6 @@ control.</p>
 <blockquote>
 <p><strong>removeAriaDescribedBy</strong>(<code>vAriaDescribedBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaDescribedBy from the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaDescribedBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -617,12 +616,12 @@ control.</p>
 <p>The removed ariaDescribedBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Removes an ariaDescribedBy from the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -632,6 +631,7 @@ control.</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeCustomGroups()</h3>
 <blockquote>
@@ -658,10 +658,6 @@ control.</p>
 <blockquote>
 <p><strong>setCalendarWeekNumbering</strong>(<code>sCalendarWeekNumbering?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sCalendarWeekNumbering?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
@@ -671,16 +667,15 @@ global configuration is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.111.0</p>
+<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setEditable()</h3>
 <blockquote>
 <p><strong>setEditable</strong>(<code>bEditable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEditable editable.</p>
-<p>Defines whether the control can be modified by the user or not. <strong>Note:</strong> A user can tab to the non-editable
-control, highlight it, and copy the text from it.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEditable?</h5>
 <p><code>boolean</code></p>
@@ -690,16 +685,16 @@ control, highlight it, and copy the text from it.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getEditable editable.</p>
+<p>Defines whether the control can be modified by the user or not. <strong>Note:</strong> A user can tab to the non-editable
+control, highlight it, and copy the text from it.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
 <p><strong>setEnabled</strong>(<code>bEnabled?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnabled enabled.</p>
-<p>Indicates whether the user can interact with the control or not. <strong>Note:</strong> Disabled controls cannot be
-focused and they are out of the tab-chain.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnabled?</h5>
 <p><code>boolean</code></p>
@@ -709,15 +704,16 @@ focused and they are out of the tab-chain.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getEnabled enabled.</p>
+<p>Indicates whether the user can interact with the control or not. <strong>Note:</strong> Disabled controls cannot be
+focused and they are out of the tab-chain.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEnableGroupHeaders()</h3>
 <blockquote>
 <p><strong>setEnableGroupHeaders</strong>(<code>bEnableGroupHeaders?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableGroupHeaders enableGroupHeaders.</p>
-<p>Disable list group headers.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableGroupHeaders?</h5>
 <p><code>boolean</code></p>
@@ -727,6 +723,10 @@ focused and they are out of the tab-chain.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getEnableGroupHeaders enableGroupHeaders.</p>
+<p>Disable list group headers.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setGroupHeader()</h3>
 <blockquote>
@@ -747,6 +747,15 @@ focused and they are out of the tab-chain.</p>
 <blockquote>
 <p><strong>setHideInput</strong>(<code>bHideInput?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bHideInput?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideInput</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.105</p>
 <p>Sets a new value for property #getHideInput hideInput.</p>
 <p>Determines whether the input field of the control is hidden or visible. When set to <code>true</code>, the input
 field becomes invisible and there is no way to open the value help popover. In that case it can be opened
@@ -758,23 +767,11 @@ to be added to the opening control: a text or tooltip that describes the action 
 Date Range&quot;), and also aria-haspopup attribute with value of <code>true</code>.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bHideInput?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>hideInput</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.105</p>
 <hr>
 <h3>setName()</h3>
 <blockquote>
 <p><strong>setName</strong>(<code>sName?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getName name.</p>
-<p>Defines the name of the control for the purposes of form submission.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sName?</h5>
 <p><code>string</code></p>
@@ -784,14 +781,14 @@ Date Range&quot;), and also aria-haspopup attribute with value of <code>true</co
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getName name.</p>
+<p>Defines the name of the control for the purposes of form submission.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setPlaceholder()</h3>
 <blockquote>
 <p><strong>setPlaceholder</strong>(<code>sPlaceholder?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPlaceholder placeholder.</p>
-<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sPlaceholder?</h5>
 <p><code>string</code></p>
@@ -801,17 +798,14 @@ Date Range&quot;), and also aria-haspopup attribute with value of <code>true</co
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getPlaceholder placeholder.</p>
+<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setRequired()</h3>
 <blockquote>
 <p><strong>setRequired</strong>(<code>bRequired?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRequired required.</p>
-<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
-single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
-be established (e.g. one label should label multiple fields).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bRequired?</h5>
 <p><code>boolean</code></p>
@@ -821,6 +815,12 @@ be established (e.g. one label should label multiple fields).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getRequired required.</p>
+<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
+single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
+be established (e.g. one label should label multiple fields).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowClearIcon()</h3>
 <blockquote>
@@ -839,10 +839,6 @@ be established (e.g. one label should label multiple fields).</p>
 <blockquote>
 <p><strong>setStandardOptions</strong>(<code>sStandardOptions?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getStandardOptions standardOptions.</p>
-<p>Array of standard option keys</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>[&quot;DATE&quot;, &quot;TODAY&quot;, &quot;YESTERDAY&quot;, &quot;TOMORROW&quot;, &quot;FIRSTDAYWEEK&quot;, &quot;LASTDAYWEEK&quot;, &quot;FIRSTDAYMONTH&quot;, &quot;LASTDAYMONTH&quot;, &quot;FIRSTDAYQUARTER&quot;, &quot;LASTDAYQUARTER&quot;, &quot;FIRSTDAYYEAR&quot;, &quot;LASTDAYYEAR&quot;, &quot;DATERANGE&quot;, &quot;DATETIMERANGE&quot;, &quot;FROM&quot;, &quot;TO&quot;, &quot;FROMDATETIME&quot;, &quot;TODATETIME&quot;, &quot;YEARTODATE&quot;, &quot;DATETOYEAR&quot;, &quot;LASTMINUTES&quot;, &quot;LASTHOURS&quot;, &quot;LASTDAYS&quot;, &quot;LASTWEEKS&quot;, &quot;LASTMONTHS&quot;, &quot;LASTQUARTERS&quot;, &quot;LASTYEARS&quot;, &quot;NEXTMINUTES&quot;, &quot;NEXTHOURS&quot;, &quot;NEXTDAYS&quot;, &quot;NEXTWEEKS&quot;, &quot;NEXTMONTHS&quot;, &quot;NEXTQUARTERS&quot;, &quot;NEXTYEARS&quot;, &quot;TODAYFROMTO&quot;, &quot;THISWEEK&quot;, &quot;LASTWEEK&quot;, &quot;NEXTWEEK&quot;, &quot;SPECIFICMONTH&quot;, &quot;SPECIFICMONTHINYEAR&quot;, &quot;THISMONTH&quot;, &quot;LASTMONTH&quot;, &quot;NEXTMONTH&quot;, &quot;THISQUARTER&quot;, &quot;LASTQUARTER&quot;, &quot;NEXTQUARTER&quot;, &quot;QUARTER1&quot;, &quot;QUARTER2&quot;, &quot;QUARTER3&quot;, &quot;QUARTER4&quot;, &quot;THISYEAR&quot;, &quot;LASTYEAR&quot;, &quot;NEXTYEAR&quot;, &quot;DATETIME&quot;]</code>.</p>
 <h4>Parameters</h4>
 <h5>sStandardOptions?</h5>
 <p><code>string</code>[]</p>
@@ -852,6 +848,10 @@ be established (e.g. one label should label multiple fields).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getStandardOptions standardOptions.</p>
+<p>Array of standard option keys</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[&quot;DATE&quot;, &quot;TODAY&quot;, &quot;YESTERDAY&quot;, &quot;TOMORROW&quot;, &quot;FIRSTDAYWEEK&quot;, &quot;LASTDAYWEEK&quot;, &quot;FIRSTDAYMONTH&quot;, &quot;LASTDAYMONTH&quot;, &quot;FIRSTDAYQUARTER&quot;, &quot;LASTDAYQUARTER&quot;, &quot;FIRSTDAYYEAR&quot;, &quot;LASTDAYYEAR&quot;, &quot;DATERANGE&quot;, &quot;DATETIMERANGE&quot;, &quot;FROM&quot;, &quot;TO&quot;, &quot;FROMDATETIME&quot;, &quot;TODATETIME&quot;, &quot;YEARTODATE&quot;, &quot;DATETOYEAR&quot;, &quot;LASTMINUTES&quot;, &quot;LASTHOURS&quot;, &quot;LASTDAYS&quot;, &quot;LASTWEEKS&quot;, &quot;LASTMONTHS&quot;, &quot;LASTQUARTERS&quot;, &quot;LASTYEARS&quot;, &quot;NEXTMINUTES&quot;, &quot;NEXTHOURS&quot;, &quot;NEXTDAYS&quot;, &quot;NEXTWEEKS&quot;, &quot;NEXTMONTHS&quot;, &quot;NEXTQUARTERS&quot;, &quot;NEXTYEARS&quot;, &quot;TODAYFROMTO&quot;, &quot;THISWEEK&quot;, &quot;LASTWEEK&quot;, &quot;NEXTWEEK&quot;, &quot;SPECIFICMONTH&quot;, &quot;SPECIFICMONTHINYEAR&quot;, &quot;THISMONTH&quot;, &quot;LASTMONTH&quot;, &quot;NEXTMONTH&quot;, &quot;THISQUARTER&quot;, &quot;LASTQUARTER&quot;, &quot;NEXTQUARTER&quot;, &quot;QUARTER1&quot;, &quot;QUARTER2&quot;, &quot;QUARTER3&quot;, &quot;QUARTER4&quot;, &quot;THISYEAR&quot;, &quot;LASTYEAR&quot;, &quot;NEXTYEAR&quot;, &quot;DATETIME&quot;]</code>.</p>
 <hr>
 <h3>setTooltip()</h3>
 <blockquote>
@@ -872,11 +872,6 @@ be established (e.g. one label should label multiple fields).</p>
 <blockquote>
 <p><strong>setValueState</strong>(<code>sValueState?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getValueState valueState.</p>
-<p>Accepts the core enumeration ValueState.type that supports <code>None</code>, <code>Error</code>, <code>Warning</code> and <code>Success</code>.
-ValueState is managed internally only when validation is triggered by user interaction.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sValueState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -886,14 +881,16 @@ ValueState is managed internally only when validation is triggered by user inter
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getValueState valueState.</p>
+<p>Accepts the core enumeration ValueState.type that supports <code>None</code>, <code>Error</code>, <code>Warning</code> and <code>Success</code>.
+ValueState is managed internally only when validation is triggered by user interaction.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setValueStateText()</h3>
 <blockquote>
 <p><strong>setValueStateText</strong>(<code>sValueStateText?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getValueStateText valueStateText.</p>
-<p>Defines the text that appears in the value state message popup.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sValueStateText?</h5>
 <p><code>string</code></p>
@@ -903,14 +900,14 @@ ValueState is managed internally only when validation is triggered by user inter
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getValueStateText valueStateText.</p>
+<p>Defines the text that appears in the value state message popup.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getWidth width.</p>
-<p>Defines the width of the control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sWidth?</h5>
 <p><code>string</code></p>
@@ -920,6 +917,9 @@ ValueState is managed internally only when validation is triggered by user inter
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets a new value for property #getWidth width.</p>
+<p>Defines the width of the control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>toDates()</h3>
 <blockquote>
@@ -949,7 +949,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>DynamicDateRange</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>DynamicDateRange</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -988,6 +988,6 @@ used by this class</p>
 <p><code>Date</code>[]</p>
 <p>An array of two date objects - start and end date</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

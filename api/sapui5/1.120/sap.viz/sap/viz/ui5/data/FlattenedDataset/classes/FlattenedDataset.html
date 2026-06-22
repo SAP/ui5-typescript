@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FlattenedDataset — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: FlattenedDataset — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: FlattenedDataset — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/data/FlattenedDataset/classes/FlattenedDataset.html">
 <meta property="og:title" content="Class: FlattenedDataset — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: FlattenedDataset — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: FlattenedDataset — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/data/FlattenedDataset/classes/FlattenedDataset.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › data › <a href="../../../../../../../sap.viz/sap/viz/ui5/data/FlattenedDataset/README.html">FlattenedDataset</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/data/FlattenedDataset</a> / FlattenedDataset</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/data/FlattenedDataset</a> / FlattenedDataset</p>
 <h1>Class: FlattenedDataset</h1>
 <pre class="sig"><span class="kw">import</span> FlattenedDataset <span class="kw">from</span> <span class="str">"sap/viz/ui5/data/FlattenedDataset"</span>;</pre>
-<p>A dataset for flattened (redundant) data using a tabular format.</p>
 <h2>Since</h2>
 <p>1.7.2</p>
+<p>A dataset for flattened (redundant) data using a tabular format.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Dataset/classes/Dataset.html"><code>Dataset</code></a></li>
@@ -345,6 +345,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p><strong>findContext</strong>(<code>oCriteria</code>): <a href="../../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.16.6) - Might later be integrated into the selectData event.</p>
 <p>Find the model context for a given &#39;criteria&#39; into chart data.</p>
 <p>The native sap.viz library provides data objects with the <code>selectData</code> event. Applications can call this
 method for each data in a selectData event to find the corresponding UI5 model context.</p>
@@ -364,7 +365,6 @@ selectData: function(oEvent) {
   var oContext = this.getDataset().findContext(aSelectData[0].data);
 }
 </code></pre>
-<p> (since 1.16.6) - Might later be integrated into the selectData event.</p>
 <h4>Parameters</h4>
 <h5>oCriteria</h5>
 <p><code>object</code></p>
@@ -377,7 +377,6 @@ selectData: function(oEvent) {
 <blockquote>
 <p><strong>fireDataChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:dataChange dataChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -387,12 +386,12 @@ selectData: function(oEvent) {
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:dataChange dataChange to attached listeners.</p>
 <hr>
 <h3>fireDataError()</h3>
 <blockquote>
 <p><strong>fireDataError</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:dataError dataError to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -402,12 +401,12 @@ selectData: function(oEvent) {
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:dataError dataError to attached listeners.</p>
 <hr>
 <h3>fireDataRefresh()</h3>
 <blockquote>
 <p><strong>fireDataRefresh</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:dataRefresh dataRefresh to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -417,6 +416,7 @@ selectData: function(oEvent) {
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:dataRefresh dataRefresh to attached listeners.</p>
 <hr>
 <h3>getContext()</h3>
 <blockquote>
@@ -653,7 +653,6 @@ or string of array.</p>
 <blockquote>
 <p><strong>setDefaultSelection</strong>(<code>selectionInfos</code>): <code>void</code></p>
 </blockquote>
-<p>Set chart&#39;s default selection. This api will do nothing when use VizFrame.</p>
 <h4>Parameters</h4>
 <h5>selectionInfos</h5>
 <p><code>object</code>[]</p>
@@ -662,6 +661,7 @@ or string of array.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.19) - Please use selection API sap.viz.ui5.core.BaseChart.prototype.selection.</p>
+<p>Set chart&#39;s default selection. This api will do nothing when use VizFrame.</p>
 <hr>
 <h3>unbindData()</h3>
 <blockquote>
@@ -687,7 +687,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>FlattenedDataset</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>FlattenedDataset</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -711,6 +711,6 @@ used by this class</p>
 <p><a href="../../Dataset/classes/Dataset.html"><code>Dataset</code></a>.<a href="../../Dataset/classes/Dataset.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

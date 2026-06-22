@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: AddBookmarkButton — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: AddBookmarkButton — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: AddBookmarkButton — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/ui/footerbar/AddBookmarkButton/classes/AddBookmarkButton.html">
 <meta property="og:title" content="Class: AddBookmarkButton — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: AddBookmarkButton — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: AddBookmarkButton — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/ui/footerbar/AddBookmarkButton/classes/AddBookmarkButton.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › ui › footerbar › <a href="../../../../../../../sap.ushell/sap/ushell/ui/footerbar/AddBookmarkButton/README.html">AddBookmarkButton</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/ui/footerbar/AddBookmarkButton</a> / AddBookmarkButton</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/ui/footerbar/AddBookmarkButton</a> / AddBookmarkButton</p>
 <h1>Class: AddBookmarkButton</h1>
 <pre class="sig"><span class="kw">import</span> AddBookmarkButton <span class="kw">from</span> <span class="str">"sap/ushell/ui/footerbar/AddBookmarkButton"</span>;</pre>
 <p>Enables users to save bookmark tiles in the Fiori launchpad. Clicking the button opens a dialog box for
@@ -93,14 +93,14 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getAppData</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getAppData appData.</p>
-<p>An object containing properties with information about the app, e.g. serviceUrl, numberUnit, ... .</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>appData</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - Use dedicated properties like afterPressHandler, beforePresshandler, customUrl,
 ... of the AddBookmarkButton instead.</p>
+<p>Gets current value of property #getAppData appData.</p>
+<p>An object containing properties with information about the app, e.g. serviceUrl, numberUnit, ... .</p>
 <hr>
 <h3>getBeforePressHandler()</h3>
 <blockquote>
@@ -255,9 +255,6 @@ for details</p>
 <blockquote>
 <p><strong>setAppData</strong>(<code>oAppData?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAppData appData.</p>
-<p>An object containing properties with information about the app, e.g. serviceUrl, numberUnit, ... .</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oAppData?</h5>
 <p><code>object</code></p>
@@ -268,6 +265,9 @@ for details</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - Use dedicated properties like afterPressHandler, beforePresshandler, customUrl,
 ... of the AddBookmarkButton instead.</p>
+<p>Sets a new value for property #getAppData appData.</p>
+<p>An object containing properties with information about the app, e.g. serviceUrl, numberUnit, ... .</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBeforePressHandler()</h3>
 <blockquote>
@@ -483,7 +483,7 @@ enriches it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>AddBookmarkButton</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>AddBookmarkButton</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -507,6 +507,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>.<a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Menu — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Menu — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Menu — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/Menu/classes/Menu.html">
 <meta property="og:title" content="Class: Menu — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Menu — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Menu — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/Menu/classes/Menu.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/Menu/README.html">Menu</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/Menu</a> / Menu</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/Menu</a> / Menu</p>
 <h1>Class: Menu</h1>
 <pre class="sig"><span class="kw">import</span> Menu <span class="kw">from</span> <span class="str">"sap/ui/unified/Menu"</span>;</pre>
+<h2>Since</h2>
+<p>1.21.0</p>
 <p>A menu is an interactive element which provides a choice of different actions to the user. These actions
 (items) can also be organized in submenus. Like other dialog-like controls, the menu is not rendered
 within the control hierarchy. Instead it can be opened at a specified position via a function call.</p>
-<h2>Since</h2>
-<p>1.21.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -103,7 +103,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -113,6 +112,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26.3</p>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addItem()</h3>
 <blockquote>
@@ -211,7 +211,6 @@ menu item. This event and the event of the menu items are redundant.</p>
 <blockquote>
 <p><strong>fireItemSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:itemSelect itemSelect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Menu$ItemSelectEventParameters.html"><code>Menu$ItemSelectEventParameters</code></a></p>
@@ -221,28 +220,29 @@ menu item. This event and the event of the menu items are redundant.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:itemSelect itemSelect to attached listeners.</p>
 <hr>
 <h3><del>getAriaDescription()</del></h3>
 <blockquote>
 <p><strong>getAriaDescription</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getAriaDescription ariaDescription.</p>
-<p>Accessible label / description of the menu for assistive technologies like screenreaders.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>ariaDescription</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.27.0) - replaced by <code>ariaLabelledBy</code> association</p>
+<p>Gets current value of property #getAriaDescription ariaDescription.</p>
+<p>Accessible label / description of the menu for assistive technologies like screenreaders.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.26.3</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -283,6 +283,11 @@ number of visible items is not yet reached.</p>
 <blockquote>
 <p><strong>getPageSize</strong>(): <code>number</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>pageSize</code></p>
+<h4>Since</h4>
+<p>1.25.0</p>
 <p>Gets current value of property #getPageSize pageSize.</p>
 <p>The keyboard can be used to navigate through the items of a menu. Beside the arrow keys for single steps
 and the Home / End keys for jumping to the first / last item, the Page Up / Page
@@ -291,11 +296,6 @@ via the <code>pageSize</code> property. For values smaller than 1, paging behave
 the Home / End keys. If the value equals 1, the paging behavior is similar to that of the
 arrow keys.</p>
 <p>Default value is <code>5</code>.</p>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>pageSize</code></p>
-<h4>Since</h4>
-<p>1.25.0</p>
 <hr>
 <h3>indexOfItem()</h3>
 <blockquote>
@@ -380,7 +380,7 @@ in some direction</p>
 <p>Opens the menu as a context menu.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
-<p><code>object</code> | <a href="../../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>object</code> | <code>Event</code></p>
 <p>The event object or an object containing offsetX, offsetY values and left, top values of the element&#39;s
 position</p>
 <h5>oOpenerRef</h5>
@@ -395,12 +395,12 @@ position</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.26.3</p>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllItems()</h3>
 <blockquote>
@@ -416,7 +416,6 @@ position</p>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -426,6 +425,7 @@ position</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.26.3</p>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeItem()</h3>
 <blockquote>
@@ -444,9 +444,6 @@ position</p>
 <blockquote>
 <p><strong>setAriaDescription</strong>(<code>sAriaDescription?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAriaDescription ariaDescription.</p>
-<p>Accessible label / description of the menu for assistive technologies like screenreaders.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAriaDescription?</h5>
 <p><code>string</code></p>
@@ -456,6 +453,9 @@ position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.27.0) - replaced by <code>ariaLabelledBy</code> association</p>
+<p>Sets a new value for property #getAriaDescription ariaDescription.</p>
+<p>Accessible label / description of the menu for assistive technologies like screenreaders.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
@@ -497,15 +497,6 @@ number of visible items is not yet reached.</p>
 <blockquote>
 <p><strong>setPageSize</strong>(<code>iPageSize?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPageSize pageSize.</p>
-<p>The keyboard can be used to navigate through the items of a menu. Beside the arrow keys for single steps
-and the Home / End keys for jumping to the first / last item, the Page Up / Page
-Down keys can be used to jump an arbitrary number of items up or down. This number can be defined
-via the <code>pageSize</code> property. For values smaller than 1, paging behaves in a similar way to when using
-the Home / End keys. If the value equals 1, the paging behavior is similar to that of the
-arrow keys.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>5</code>.</p>
 <h4>Parameters</h4>
 <h5>iPageSize?</h5>
 <p><code>number</code></p>
@@ -515,6 +506,15 @@ arrow keys.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.25.0</p>
+<p>Sets a new value for property #getPageSize pageSize.</p>
+<p>The keyboard can be used to navigate through the items of a menu. Beside the arrow keys for single steps
+and the Home / End keys for jumping to the first / last item, the Page Up / Page
+Down keys can be used to jump an arbitrary number of items up or down. This number can be defined
+via the <code>pageSize</code> property. For values smaller than 1, paging behaves in a similar way to when using
+the Home / End keys. If the value equals 1, the paging behavior is similar to that of the
+arrow keys.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>5</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -531,7 +531,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Menu</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Menu</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -555,6 +555,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

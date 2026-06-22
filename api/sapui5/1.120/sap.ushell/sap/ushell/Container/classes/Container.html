@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Container — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Container — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Container — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/Container/classes/Container.html">
 <meta property="og:title" content="Class: Container — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Container — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Container — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/Container/classes/Container.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › <a href="../../../../../sap.ushell/sap/ushell/Container/README.html">Container</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/Container</a> / Container</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/Container</a> / Container</p>
 <h1>Class: Container</h1>
 <pre class="sig"><span class="kw">import</span> Container <span class="kw">from</span> <span class="str">"sap/ushell/Container"</span>;</pre>
-<p>The Unified Shell&#39;s container. Manages renderers, services, and adapters. The container is designed to
-be a singleton, therefore instead of creating an instance, access the central one via <code>sap.ushell.Container</code>.</p>
 <h2>Since</h2>
 <p>1.15.0</p>
+<p>The Unified Shell&#39;s container. Manages renderers, services, and adapters. The container is designed to
+be a singleton, therefore instead of creating an instance, access the central one via <code>sap.ushell.Container</code>.</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -54,16 +54,14 @@ be a singleton, therefore instead of creating an instance, access the central on
 <blockquote>
 <p><strong>DirtyState</strong>: <a href="../type-aliases/DirtyState.html"><code>DirtyState</code></a></p>
 </blockquote>
-<p>An enumeration for the application work protect mode state.</p>
 <h4>Since</h4>
 <p>1.21.1</p>
+<p>An enumeration for the application work protect mode state.</p>
 <h2>Methods</h2>
 <h3>addRemoteSystem()</h3>
 <blockquote>
 <p><strong>addRemoteSystem</strong>(<code>oRemoteSystem</code>): <code>void</code></p>
 </blockquote>
-<p>Adds a system to the list of remote systems currently in use. On logout this list is processed and performs
-a logout for each system via the ContainerAdapter specific for its platform.</p>
 <h4>Parameters</h4>
 <h5>oRemoteSystem</h5>
 <p><a href="../../System/classes/System.html"><code>System</code></a></p>
@@ -72,13 +70,13 @@ a logout for each system via the ContainerAdapter specific for its platform.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.15.0</p>
+<p>Adds a system to the list of remote systems currently in use. On logout this list is processed and performs
+a logout for each system via the ContainerAdapter specific for its platform.</p>
 <hr>
 <h3>attachLogoutEvent()</h3>
 <blockquote>
 <p><strong>attachLogoutEvent</strong>(<code>fnFunction</code>, <code>bAsyncFunction</code>): <code>void</code></p>
 </blockquote>
-<p>Attaches a listener to the logout event. In case the bAsyncFunction parameter is true, the fnFunction
-must return a promise. FLP will wait for the promise to be resolved before doing the actual logout.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -90,12 +88,13 @@ must return a promise. FLP will wait for the promise to be resolved before doing
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.19.1</p>
+<p>Attaches a listener to the logout event. In case the bAsyncFunction parameter is true, the fnFunction
+must return a promise. FLP will wait for the promise to be resolved before doing the actual logout.</p>
 <hr>
-<h3><del>attachRendererCreatedEvent()</del></h3>
+<h3>attachRendererCreatedEvent()</h3>
 <blockquote>
 <p><strong>attachRendererCreatedEvent</strong>(<code>fnFunction</code>): <code>void</code></p>
 </blockquote>
-<p>Attaches a listener to the rendererCreated event.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -107,43 +106,27 @@ returns the component instance, i.e. it unwraps the renderer component from its 
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.34.1</p>
-<h4>Deprecated</h4>
-<p>(since 1.120)</p>
+<p>Attaches a listener to the rendererCreated event.</p>
 <hr>
-<h3><del>cancelLogon()</del></h3>
+<h3>cancelLogon()</h3>
 <blockquote>
 <p><strong>cancelLogon</strong>(): <code>void</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.21.2</p>
 <p>Cancels the logon procedure in the current frame, if any. This MUST be used by the logon frame provider
 in case the user wants to close the logon frame for good. It will report &quot;Authentication cancelled&quot; and
 let all pending requests for the current realm fail. As a side-effect, it also calls <code>destroy</code> on the
 logon frame provider.
 See:
 	sap.ushell.services.Container#setLogonFrameProvider</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.21.2</p>
-<h4>Deprecated</h4>
-<p>(since 1.120)</p>
 <hr>
 <h3><del>createRenderer()</del></h3>
 <blockquote>
 <p><strong>createRenderer</strong>(<code>sRendererName?</code>, <code>bAsync?</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <code>Promise</code>&lt;<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>&gt; | <a href="../../../../../sap.ui.core/sap/ui/core/ComponentContainer/classes/ComponentContainer.html"><code>ComponentContainer</code></a> | <code>Promise</code>&lt;<a href="../../../../../sap.ui.core/sap/ui/core/ComponentContainer/classes/ComponentContainer.html"><code>ComponentContainer</code></a>&gt;</p>
 </blockquote>
-<p>Creates a new renderer instance for the given renderer name.</p>
-<p>Names without a dot are interpreted as package names within the default naming convention and will be
-expanded to <code>&quot;sap.ushell.renderers.&quot; + sRendererName + &quot;.Renderer&quot;</code>. Names containing a dot are used
-&quot;as is&quot;.</p>
-<p>The resulting name must point to a SAPUI5 object which is first required and then instantiated (without
-arguments). The object is expected to be a UI component (i.e. extend <code>sap.ui.core.UIComponent</code>), which
-is then automatically wrapped into a <code>sap.ui.core.ComponentContainer</code> control by this method. The <code>sap.ui.core.ComponentContainer</code>
-is created with <code>height</code> and <code>width</code> set to &quot;100%&quot; to accommodate the complete available space. Besides
-UIComponents a control (i.e. extend <code>sap.ui.core.Control</code>) is accepted, too.</p>
-<p>The returned renderer is supposed to be added to a direct child (for example <code>div</code>) of the <code>body</code> of
-the page and there should be no other parts of the page consuming space outside the renderer. Use CSS
-class <code>sapUShellFullHeight</code> at <code>html</code>, <code>body</code> and at the element to which the renderer is added to allow
-the renderer to use 100% height.</p>
 <h4>Parameters</h4>
 <h5>sRendererName?</h5>
 <p><code>string</code></p>
@@ -159,13 +142,24 @@ property <code>defaultRenderer</code> if not given here.</p>
 <p>1.15.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
+<p>Creates a new renderer instance for the given renderer name.</p>
+<p>Names without a dot are interpreted as package names within the default naming convention and will be
+expanded to <code>&quot;sap.ushell.renderers.&quot; + sRendererName + &quot;.Renderer&quot;</code>. Names containing a dot are used
+&quot;as is&quot;.</p>
+<p>The resulting name must point to a SAPUI5 object which is first required and then instantiated (without
+arguments). The object is expected to be a UI component (i.e. extend <code>sap.ui.core.UIComponent</code>), which
+is then automatically wrapped into a <code>sap.ui.core.ComponentContainer</code> control by this method. The <code>sap.ui.core.ComponentContainer</code>
+is created with <code>height</code> and <code>width</code> set to &quot;100%&quot; to accommodate the complete available space. Besides
+UIComponents a control (i.e. extend <code>sap.ui.core.Control</code>) is accepted, too.</p>
+<p>The returned renderer is supposed to be added to a direct child (for example <code>div</code>) of the <code>body</code> of
+the page and there should be no other parts of the page consuming space outside the renderer. Use CSS
+class <code>sapUShellFullHeight</code> at <code>html</code>, <code>body</code> and at the element to which the renderer is added to allow
+the renderer to use 100% height.</p>
 <hr>
 <h3>deregisterDirtyStateProvider()</h3>
 <blockquote>
 <p><strong>deregisterDirtyStateProvider</strong>(<code>fnDirty</code>): <code>void</code></p>
 </blockquote>
-<p>Deregister the work protection dirty callback function. See registerDirtyStateProvider for more information.
-Only the last registered function will be deregistered (in case it was registered multiple times).</p>
 <h4>Parameters</h4>
 <h5>fnDirty</h5>
 <p>() =&gt; <code>boolean</code></p>
@@ -174,12 +168,13 @@ Only the last registered function will be deregistered (in case it was registere
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.67.0</p>
+<p>Deregister the work protection dirty callback function. See registerDirtyStateProvider for more information.
+Only the last registered function will be deregistered (in case it was registered multiple times).</p>
 <hr>
 <h3>detachLogoutEvent()</h3>
 <blockquote>
 <p><strong>detachLogoutEvent</strong>(<code>fnFunction</code>): <code>void</code></p>
 </blockquote>
-<p>Detaches a listener from the logout event.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -188,12 +183,12 @@ Only the last registered function will be deregistered (in case it was registere
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.19.1</p>
+<p>Detaches a listener from the logout event.</p>
 <hr>
-<h3><del>detachRendererCreatedEvent()</del></h3>
+<h3>detachRendererCreatedEvent()</h3>
 <blockquote>
 <p><strong>detachRendererCreatedEvent</strong>(<code>fnFunction</code>): <code>void</code></p>
 </blockquote>
-<p>Detaches a listener from the rendererCreated event.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -202,44 +197,38 @@ Only the last registered function will be deregistered (in case it was registere
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.34.1</p>
-<h4>Deprecated</h4>
-<p>(since 1.120)</p>
+<p>Detaches a listener from the rendererCreated event.</p>
 <hr>
-<h3><del>getDirtyFlag()</del></h3>
+<h3>getDirtyFlag()</h3>
 <blockquote>
 <p><strong>getDirtyFlag</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>If the dirty state was set to &#39;false&#39; using &#39;setDirtyFlag&#39; the registered dirty state provider methods
-get called to determine the actual dirty state. The determined dirty state is then returned.</p>
-<p>However, if the dirty state was previously set to &#39;true&#39; using &#39;setDirtyFlag&#39; the registered dirty state
-provider methods are ignored and the function simply returns &#39;true&#39;.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>The value of the dirty flag or the determined dirty state returned by the dirty state providers.</p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<h4>Deprecated</h4>
-<p>(since 1.120)</p>
+<p>If the dirty state was set to &#39;false&#39; using &#39;setDirtyFlag&#39; the registered dirty state provider methods
+get called to determine the actual dirty state. The determined dirty state is then returned.</p>
+<p>However, if the dirty state was previously set to &#39;true&#39; using &#39;setDirtyFlag&#39; the registered dirty state
+provider methods are ignored and the function simply returns &#39;true&#39;.</p>
 <hr>
-<h3><del>getGlobalDirty()</del></h3>
+<h3>getGlobalDirty()</h3>
 <blockquote>
-<p><strong>getGlobalDirty</strong>(): <a href="../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Deferred.html"><code>Deferred</code></a></p>
+<p><strong>getGlobalDirty</strong>(): <code>Deferred</code></p>
 </blockquote>
-<p>Returns the global dirty state.</p>
-<p>All open UShell browser windows for the same origin are asked about their global dirty state.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Deferred.html"><code>Deferred</code></a></p>
+<p><code>Deferred</code></p>
 <p>A <code>jQuery.Deferred</code> object&#39;s promise receiving the dirty state (see sap.ushell.Container.DirtyState).</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<h4>Deprecated</h4>
-<p>(since 1.120)</p>
+<p>Returns the global dirty state.</p>
+<p>All open UShell browser windows for the same origin are asked about their global dirty state.</p>
 <hr>
 <h3><del>getRenderer()</del></h3>
 <blockquote>
 <p><strong>getRenderer</strong>(<code>sRendererName?</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../sap.ui.core/sap/ui/core/Component/classes/Component.html"><code>Component</code></a></p>
 </blockquote>
-<p>Gets a renderer instance for the given renderer name, that was created by the createRenderer method.</p>
 <h4>Parameters</h4>
 <h5>sRendererName?</h5>
 <p><code>string</code></p>
@@ -255,11 +244,29 @@ instance has been created, this single instance is returned.</p>
 <p>1.30.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
+<p>Gets a renderer instance for the given renderer name, that was created by the createRenderer method.</p>
 <hr>
 <h3><del>getService()</del></h3>
 <blockquote>
 <p><strong>getService</strong>(<code>sServiceName</code>, <code>sParameter?</code>, <code>bAsync?</code>): <code>object</code> | <code>Promise</code>&lt;<code>object</code>&gt;</p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sServiceName</h5>
+<p><code>string</code></p>
+<p>The service name, such as &quot;Menu&quot;</p>
+<h5>sParameter?</h5>
+<p><code>string</code></p>
+<p>A parameter which is passed to the service constructor and every adapter constructor. (since 1.15.0)</p>
+<h5>bAsync?</h5>
+<p><code>boolean</code></p>
+<p>if true, the adapter is loaded asynchronously and a Promise is returned. (since 1.55.0)</p>
+<h4>Returns</h4>
+<p><code>object</code> | <code>Promise</code>&lt;<code>object</code>&gt;</p>
+<p>the service or, in asynchronous mode, a Promise that returns the service</p>
+<h4>Since</h4>
+<p>1.15.0</p>
+<h4>Deprecated</h4>
+<p>(since 1.77) - Please use #getServiceAsync instead.</p>
 <p>Returns a service with the given name, creating it if necessary. Services are singleton objects identified
 by their (resulting) name.</p>
 <p>Names without a dot are interpreted as service names within the default naming convention and will be
@@ -306,28 +313,23 @@ constructed with the parameters logon system, &quot;runtimeConfig&quot; and <cod
 reflect a service available.
 See:
 	sap.ushell.services.ContainerInterface</p>
+<hr>
+<h3>getServiceAsync()</h3>
+<blockquote>
+<p><strong>getServiceAsync</strong>(<code>sServiceName</code>, <code>sParameter?</code>): <code>Promise</code>&lt;<code>object</code>&gt;</p>
+</blockquote>
 <h4>Parameters</h4>
 <h5>sServiceName</h5>
 <p><code>string</code></p>
 <p>The service name, such as &quot;Menu&quot;</p>
 <h5>sParameter?</h5>
 <p><code>string</code></p>
-<p>A parameter which is passed to the service constructor and every adapter constructor. (since 1.15.0)</p>
-<h5>bAsync?</h5>
-<p><code>boolean</code></p>
-<p>if true, the adapter is loaded asynchronously and a Promise is returned. (since 1.55.0)</p>
+<p>A parameter which is passed to the service constructor and every adapter constructor.</p>
 <h4>Returns</h4>
-<p><code>object</code> | <code>Promise</code>&lt;<code>object</code>&gt;</p>
-<p>the service or, in asynchronous mode, a Promise that returns the service</p>
+<p><code>Promise</code>&lt;<code>object</code>&gt;</p>
+<p>a Promise that returns the requested service</p>
 <h4>Since</h4>
-<p>1.15.0</p>
-<h4>Deprecated</h4>
-<p>(since 1.77) - Please use #getServiceAsync instead.</p>
-<hr>
-<h3>getServiceAsync()</h3>
-<blockquote>
-<p><strong>getServiceAsync</strong>(<code>sServiceName</code>, <code>sParameter?</code>): <code>Promise</code>&lt;<code>object</code>&gt;</p>
-</blockquote>
+<p>1.55.0</p>
 <p>Returns a Promise that resolves a service with the given name, creating it if necessary. Services are
 singleton objects identified by their (resulting) name.</p>
 <p>Names without a dot are interpreted as service names within the default naming convention and will be
@@ -373,42 +375,24 @@ adapter is an instance of <code>my.own.FooAdapter</code> constructed with the pa
 and <code>{config: {foo: &quot;bar&quot;}}</code>.
 See:
 	sap.ushell.services.ContainerInterface</p>
-<h4>Parameters</h4>
-<h5>sServiceName</h5>
-<p><code>string</code></p>
-<p>The service name, such as &quot;Menu&quot;</p>
-<h5>sParameter?</h5>
-<p><code>string</code></p>
-<p>A parameter which is passed to the service constructor and every adapter constructor.</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>object</code>&gt;</p>
-<p>a Promise that returns the requested service</p>
-<h4>Since</h4>
-<p>1.55.0</p>
 <hr>
-<h3><del>logout()</del></h3>
+<h3>logout()</h3>
 <blockquote>
-<p><strong>logout</strong>(): <a href="../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Deferred.html"><code>Deferred</code></a></p>
+<p><strong>logout</strong>(): <code>Deferred</code></p>
 </blockquote>
-<p>Logs out the current user from all relevant back-end systems, including the logon system itself. This
-member represents the default native implementation of logout. If SessionHandler was created, we register
-the alternate logout function using registerLogout function.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Deferred.html"><code>Deferred</code></a></p>
+<p><code>Deferred</code></p>
 <p>A <code>jQuery.promise</code> to be resolved when logout is finished, even when it fails.</p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<h4>Deprecated</h4>
-<p>(since 1.120)</p>
+<p>Logs out the current user from all relevant back-end systems, including the logon system itself. This
+member represents the default native implementation of logout. If SessionHandler was created, we register
+the alternate logout function using registerLogout function.</p>
 <hr>
 <h3>registerDirtyStateProvider()</h3>
 <blockquote>
 <p><strong>registerDirtyStateProvider</strong>(<code>fnDirty</code>): <code>void</code></p>
 </blockquote>
-<p>Register the work protection dirty callback function. In the work protect mechanism, each platform can
-register their own method in order to check if data was changed during the session, and notify the container
-about the change. Registering multiple times the same function is allowed.</p>
-<p>Use <code>Function.prototype.bind()</code> to determine the callback&#39;s <code>this</code> or some of its arguments.</p>
 <h4>Parameters</h4>
 <h5>fnDirty</h5>
 <p>() =&gt; <code>boolean</code></p>
@@ -428,13 +412,15 @@ can be used to determine the dirty state:</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.31.0</p>
+<p>Register the work protection dirty callback function. In the work protect mechanism, each platform can
+register their own method in order to check if data was changed during the session, and notify the container
+about the change. Registering multiple times the same function is allowed.</p>
+<p>Use <code>Function.prototype.bind()</code> to determine the callback&#39;s <code>this</code> or some of its arguments.</p>
 <hr>
 <h3>setDirtyFlag()</h3>
 <blockquote>
 <p><strong>setDirtyFlag</strong>(<code>bIsDirty?</code>): <code>void</code></p>
 </blockquote>
-<p>Setter for the isDirty flag value.</p>
-<p>Default value is false</p>
 <h4>Parameters</h4>
 <h5>bIsDirty?</h5>
 <p><code>boolean</code></p>
@@ -443,7 +429,9 @@ can be used to determine the dirty state:</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Setter for the isDirty flag value.</p>
+<p>Default value is false</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

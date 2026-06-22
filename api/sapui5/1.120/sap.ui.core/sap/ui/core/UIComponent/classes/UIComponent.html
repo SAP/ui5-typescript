@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: UIComponent — SAPUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: UIComponent — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: UIComponent — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: UIComponent — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/UIComponent/classes/UIComponent.html">
-<meta property="og:title" content="Abstract Class: UIComponent — SAPUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: UIComponent — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: UIComponent — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: UIComponent — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/UIComponent/classes/UIComponent.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/UIComponent/README.html">UIComponent</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/UIComponent</a> / UIComponent</p>
-<h1>Abstract Class: UIComponent</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/UIComponent</a> / UIComponent</p>
+<h1>Class: UIComponent</h1>
 <pre class="sig"><span class="kw">import</span> UIComponent <span class="kw">from</span> <span class="str">"sap/ui/core/UIComponent"</span>;</pre>
+<h2>Since</h2>
+<p>1.9.2</p>
 <p>Base Class for UIComponent.</p>
 <p>If you are extending a UIComponent make sure you read the #.extend documentation since the metadata
 is special.</p>
-<h2>Since</h2>
-<p>1.9.2</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Component/classes/Component.html"><code>Component</code></a></li>
@@ -124,7 +124,7 @@ be omitted, no matter whether <code>mSettings</code> will be given or not</p>
 <p>The default implementation in this class reads the name (and optionally type) of a root view from the
 descriptor for this component (path <code>/sap.ui5/rootView</code>) or, for backward compatibility, just the name
 from static component metadata (property <code>rootView</code>). When no type is specified, it defaults to XML.
-The method then calls the <a href="../../../../../../sap.apf/namespaces/sap/namespaces/ui/functions/view.html">view factory</a> to instantiate the root view and returns the
+The method then calls the view factory to instantiate the root view and returns the
 result.</p>
 <p>When there is no root view configuration, <code>null</code> will be returned.</p>
 <p>This method can be overwritten by subclasses if the default implementation doesn&#39;t fit their needs. Subclasses
@@ -160,11 +160,6 @@ ID.</p>
 <blockquote>
 <p><strong>getAutoPrefixId</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>A method to be implemented by UIComponents, returning the flag whether to prefix the IDs of controls
-automatically or not if the controls are created inside the sap.ui.core.UIComponent#createContent
-function. By default this feature is not activated.</p>
-<p>You can overwrite this function and return <code>true</code> to activate the automatic prefixing. In addition the
-default behavior can be configured in the manifest by specifying the entry <code>sap.ui5/autoPrefixId</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>true, if the Controls IDs should be prefixed automatically</p>
@@ -172,20 +167,25 @@ default behavior can be configured in the manifest by specifying the entry <code
 <p>1.15.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>A method to be implemented by UIComponents, returning the flag whether to prefix the IDs of controls
+automatically or not if the controls are created inside the sap.ui.core.UIComponent#createContent
+function. By default this feature is not activated.</p>
+<p>You can overwrite this function and return <code>true</code> to activate the automatic prefixing. In addition the
+default behavior can be configured in the manifest by specifying the entry <code>sap.ui5/autoPrefixId</code>.</p>
 <hr>
 <h3>getEventingParent()</h3>
 <blockquote>
 <p><strong>getEventingParent</strong>(): <a href="../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a></p>
 </blockquote>
-<p>Returns the parent in the eventing hierarchy of this object which will be the UIArea of the containing
-ComponentContainer or null.
-See:
-	sap.ui.base.EventProvider#getEventingParent</p>
 <h4>Returns</h4>
 <p><a href="../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a></p>
 <p>The parent event provider</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the parent in the eventing hierarchy of this object which will be the UIArea of the containing
+ComponentContainer or null.
+See:
+	sap.ui.base.EventProvider#getEventingParent</p>
 <h4>Overrides</h4>
 <p><a href="../../Component/classes/Component.html"><code>Component</code></a>.<a href="../../Component/classes/Component.html#geteventingparent"><code>getEventingParent</code></a></p>
 <hr>
@@ -193,8 +193,6 @@ See:
 <blockquote>
 <p><strong>getLocalId</strong>(<code>sId</code>): <code>string</code></p>
 </blockquote>
-<p>Returns the local ID of an element by removing the component ID prefix or <code>null</code> if the ID does not contain
-a prefix.</p>
 <h4>Parameters</h4>
 <h5>sId</h5>
 <p><code>string</code></p>
@@ -204,11 +202,20 @@ a prefix.</p>
 <p>ID without prefix or <code>null</code></p>
 <h4>Since</h4>
 <p>1.39.0</p>
+<p>Returns the local ID of an element by removing the component ID prefix or <code>null</code> if the ID does not contain
+a prefix.</p>
 <hr>
 <h3>getRootControl()</h3>
 <blockquote>
 <p><strong>getRootControl</strong>(): <a href="../../Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a></p>
+<p>the control created by sap.ui.core.UIComponent#createContent</p>
+<h4>Since</h4>
+<p>1.44.0</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Returns the content of sap.ui.core.UIComponent#createContent. If you specified a <code>rootView</code> in
 your metadata or in the descriptor file (manifest.json), you will get the instance of the root view.
 This getter will only return something if the sap.ui.core.UIComponent#init function was invoked.
@@ -226,28 +233,11 @@ If <code>createContent</code> is not implemented, and there is no root view, it 
          });
     ```
 
-#### Returns
-
-[`Control`](../../Control/classes/Control.html)
-
-the control created by sap.ui.core.UIComponent#createContent
-
-#### Since
-
-1.44.0
-
-#### Ui5-protected
-
-Do not call from applications (only from related classes in the framework)
-
 ***
 
 ### getRouter()
 
 &gt; **getRouter**(): [`Router`](../../routing/Router/classes/Router.html)
-
-Returns the reference to the router instance which has been created by the UIComponent once the routes
-in the routing metadata has been defined.
 
 #### Returns
 
@@ -259,15 +249,14 @@ the router instance
 
 1.16.1
 
+Returns the reference to the router instance which has been created by the UIComponent once the routes
+in the routing metadata has been defined.
+
 ***
 
 ### getTargets()
 
 &gt; **getTargets**(): [`Targets`](../../routing/Targets/classes/Targets.html)
-
-Returns the reference to the Targets instance which has been created by the UIComponent once the targets
-in the routing metadata has been defined. If routes have been defined, it will be the Targets instance
-created and used by the router.
 
 #### Returns
 
@@ -278,6 +267,10 @@ the targets instance
 #### Since
 
 1.28
+
+Returns the reference to the Targets instance which has been created by the UIComponent once the targets
+in the routing metadata has been defined. If routes have been defined, it will be the Targets instance
+created and used by the router.
 
 ***
 
@@ -299,14 +292,6 @@ reference to the UIArea of the container
 
 &gt; **init**(): `void`
 
-Initializes the component instance after creation.
-
-Applications must not call this hook method directly, it is called by the framework while the constructor
-of a Component is executed.
-
-Subclasses of `UIComponent` should override this hook to implement any necessary initialization. **When
-overriding this function make sure to invoke the `init` function of the `UIComponent` as well!**
-
 #### Returns
 
 `void`
@@ -314,6 +299,14 @@ overriding this function make sure to invoke the `init` function of the `UICompo
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+Initializes the component instance after creation.
+
+Applications must not call this hook method directly, it is called by the framework while the constructor
+of a Component is executed.
+
+Subclasses of `UIComponent` should override this hook to implement any necessary initialization. **When
+overriding this function make sure to invoke the `init` function of the `UIComponent` as well!**
 
 #### Overrides
 
@@ -325,12 +318,6 @@ Do not call from applications (only from related classes in the framework)
 
 &gt; **onAfterRendering**(): `void`
 
-Function is called when the rendering of the ComponentContainer is completed.
-
-Applications must not call this hook method directly, it is called from ComponentContainer.
-
-Subclasses of UIComponent override this hook to implement any necessary actions after the rendering.
-
 #### Returns
 
 `void`
@@ -338,6 +325,12 @@ Subclasses of UIComponent override this hook to implement any necessary actions 
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+Function is called when the rendering of the ComponentContainer is completed.
+
+Applications must not call this hook method directly, it is called from ComponentContainer.
+
+Subclasses of UIComponent override this hook to implement any necessary actions after the rendering.
 
 ***
 
@@ -345,12 +338,6 @@ Do not call from applications (only from related classes in the framework)
 
 &gt; **onBeforeRendering**(): `void`
 
-Function is called when the rendering of the ComponentContainer is started.
-
-Applications must not call this hook method directly, it is called from ComponentContainer.
-
-Subclasses of UIComponent override this hook to implement any necessary actions before the rendering.
-
 #### Returns
 
 `void`
@@ -358,6 +345,12 @@ Subclasses of UIComponent override this hook to implement any necessary actions 
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
+
+Function is called when the rendering of the ComponentContainer is started.
+
+Applications must not call this hook method directly, it is called from ComponentContainer.
+
+Subclasses of UIComponent override this hook to implement any necessary actions before the rendering.
 
 ***
 
@@ -385,6 +378,17 @@ a RenderManager instance
 
 &gt; **rootControlLoaded**(): `Promise`\&lt;[`Control`](../../Control/classes/Control.html)\&gt;
 
+#### Returns
+
+`Promise`\&lt;[`Control`](../../Control/classes/Control.html)\&gt;
+
+resolves with the created root control or null if none was created, rejects with any thrown
+error
+
+#### Since
+
+1.90.0
+
 Returns a Promise representing the loading state of the root control.
 
 For UIComponents implementing the sap.ui.core.IAsyncContentCreation interface, there are two
@@ -397,17 +401,6 @@ possible cases:
 
 For synchronous root control creation the Promise resolves immediately with the root control instance
 or null if none was created.
-
-#### Returns
-
-`Promise`\&lt;[`Control`](../../Control/classes/Control.html)\&gt;
-
-resolves with the created root control or null if none was created, rejects with any thrown
-error
-
-#### Since
-
-1.90.0
 
 ***
 
@@ -502,6 +495,24 @@ Metadata object describing this class
 
 &gt; `static` **getRouterFor**(`oControllerOrView`): [`Router`](../../routing/Router/classes/Router.html)
 
+#### Parameters
+
+##### oControllerOrView
+
+[`View`](../../mvc/View/classes/View.html) \| [`Controller`](../../mvc/Controller/classes/Controller.html)
+
+either a view or controller
+
+#### Returns
+
+[`Router`](../../routing/Router/classes/Router.html)
+
+the router instance
+
+#### Since
+
+1.16.1
+
 Returns the reference to the router instance.
 
 The passed controller or view has to be created in the context of a UIComponent to return the router
@@ -518,17 +529,8 @@ routing: {
 }
 ...
 </code></pre>
-<h4>Parameters</h4>
-<h5>oControllerOrView</h5>
-<p><a href="../../mvc/View/classes/View.html"><code>View</code></a> | <a href="../../mvc/Controller/classes/Controller.html"><code>Controller</code></a></p>
-<p>either a view or controller</p>
-<h4>Returns</h4>
-<p><a href="../../routing/Router/classes/Router.html"><code>Router</code></a></p>
-<p>the router instance</p>
-<h4>Since</h4>
-<p>1.16.1</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

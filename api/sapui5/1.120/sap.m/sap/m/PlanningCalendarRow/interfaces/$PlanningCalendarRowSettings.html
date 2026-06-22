@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $PlanningCalendarRowSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $PlanningCalendarRowSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $PlanningCalendarRowSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/PlanningCalendarRow/interfaces/$PlanningCalendarRowSettings.html">
 <meta property="og:title" content="Interface: $PlanningCalendarRowSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $PlanningCalendarRowSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $PlanningCalendarRowSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/PlanningCalendarRow/interfaces/$PlanningCalendarRowSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/PlanningCalendarRow/README.html">PlanningCalendarRow</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendarRow</a> / $PlanningCalendarRowSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendarRow</a> / $PlanningCalendarRowSettings</p>
 <h1>Interface: $PlanningCalendarRowSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $PlanningCalendarRowSettings } <span class="kw">from</span> <span class="str">"sap/m/PlanningCalendarRow"</span>;</pre>
-<p>Describes the settings that can be provided to the PlanningCalendarRow constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -48,7 +47,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>appointmentCreate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired if an appointment is created.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/PlanningCalendarRow$AppointmentCreateEvent.html"><code>PlanningCalendarRow$AppointmentCreateEvent</code></a></p>
@@ -56,18 +54,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>Fired if an appointment is created.</p>
 <hr>
 <h3>appointmentDragEnter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentDragEnter?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired if an appointment is dropped.</p>
-<p>When this event handler is attached, the default behavior of the <code>enableAppointmentsDragAndDrop</code> property
-to move appointments only within their original calendar row is no longer valid. You can move the appointment
-around all rows for which <code>enableAppointmentsDragAndDrop</code> is set to true. In this case, the drop target
-area is indicated by a placeholder. In the event handler you can call the <code>preventDefault</code> method of
-the event to prevent this default behavior. In this case, the placeholder will no longer be available
-and it will not be possible to drop the appointment in the row.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/PlanningCalendarRow$AppointmentDragEnterEvent.html"><code>PlanningCalendarRow$AppointmentDragEnterEvent</code></a></p>
@@ -75,12 +67,18 @@ and it will not be possible to drop the appointment in the row.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>Fired if an appointment is dropped.</p>
+<p>When this event handler is attached, the default behavior of the <code>enableAppointmentsDragAndDrop</code> property
+to move appointments only within their original calendar row is no longer valid. You can move the appointment
+around all rows for which <code>enableAppointmentsDragAndDrop</code> is set to true. In this case, the drop target
+area is indicated by a placeholder. In the event handler you can call the <code>preventDefault</code> method of
+the event to prevent this default behavior. In this case, the placeholder will no longer be available
+and it will not be possible to drop the appointment in the row.</p>
 <hr>
 <h3>appointmentDrop?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentDrop?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired if an appointment is dropped.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/PlanningCalendarRow$AppointmentDropEvent.html"><code>PlanningCalendarRow$AppointmentDropEvent</code></a></p>
@@ -88,12 +86,12 @@ and it will not be possible to drop the appointment in the row.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Fired if an appointment is dropped.</p>
 <hr>
 <h3>appointmentResize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentResize?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired if an appointment is resized.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/PlanningCalendarRow$AppointmentResizeEvent.html"><code>PlanningCalendarRow$AppointmentResizeEvent</code></a></p>
@@ -101,6 +99,7 @@ and it will not be possible to drop the appointment in the row.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>Fired if an appointment is resized.</p>
 <hr>
 <h3>appointments?</h3>
 <blockquote>
@@ -114,18 +113,20 @@ rendered.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableAppointmentsCreate?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.56</p>
 <p>Determines whether the appointments can be created by dragging on empty cells.</p>
 <p>See #property:enableAppointmentsResize enableAppointmentsResize for the specific points for events
 snapping</p>
 <p><strong>Notes:</strong> In &quot;One month&quot; view, the appointments cannot be created on small screen (as there they are
 displayed as a list below the dates).</p>
-<h4>Since</h4>
-<p>1.56</p>
 <hr>
 <h3>enableAppointmentsDragAndDrop?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableAppointmentsDragAndDrop?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Determines whether the appointments in the row are draggable.</p>
 <p>The drag and drop interaction is visualized by a placeholder highlighting the area where the appointment
 can be dropped by the user.</p>
@@ -154,13 +155,13 @@ new start and end UI5Date or JavaScript Date objects with changed month but the 
 is preserved.</p>
 <p><strong>Note:</strong> In &quot;One month&quot; view, the appointments are not draggable on small screen (as there they are
 displayed as a list below the dates). Group appointments are also not draggable.</p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>enableAppointmentsResize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableAppointmentsResize?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.56</p>
 <p>Determines whether the appointments in the row are resizable.</p>
 <p>The resize interaction is visualized by making the appointment transparent.</p>
 <p>Specifics based on the intervals (hours, days or months) displayed in the <code>PlanningCalendar</code> views:</p>
@@ -175,21 +176,19 @@ event is fired, containing the new start and end UI5Date or JavaScript Date obje
 set to the 00:00:00 and first day of the following month.</p>
 <p><strong>Notes:</strong> In &quot;One month&quot; view, the appointments are not resizable on small screen (as there they are
 displayed as a list below the dates). Group appointments are also not resizable</p>
-<h4>Since</h4>
-<p>1.56</p>
 <hr>
 <h3>headerContent?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerContent?</strong>: <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Holds the header content of the row.</p>
-<p><strong>Note:</strong> If the <code>headerContent</code> aggregation is added, then the set icon, description, title and tooltip
-are ignored.</p>
 <h4>Since</h4>
 <p>1.67
  (since 1.67) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
+<p>Holds the header content of the row.</p>
+<p><strong>Note:</strong> If the <code>headerContent</code> aggregation is added, then the set icon, description, title and tooltip
+are ignored.</p>
 <hr>
 <h3>icon?</h3>
 <blockquote>
@@ -251,12 +250,12 @@ have more than one selected row in your binding.</p>
 <blockquote>
 <p><code>optional</code> <strong>specialDates?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a> | <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
 </blockquote>
+<h4>Since</h4>
+<p>1.56</p>
 <p>Holds the special dates in the context of a row. A single date or a date range can be set.</p>
 <p><strong>Note</strong> Only date or date ranges of type <code>sap.ui.unified.CalendarDayType.NonWorking</code> will be visualized
 in the <code>PlanningCalendarRow</code>. If the aggregation is set as another type, the date or date range will
 be ignored and will not be displayed in the control.</p>
-<h4>Since</h4>
-<p>1.56</p>
 <hr>
 <h3>text?</h3>
 <blockquote>
@@ -271,6 +270,6 @@ be ignored and will not be displayed in the control.</p>
 <p>Defines the title of the header (for example, the name of the person).</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

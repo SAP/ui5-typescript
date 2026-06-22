@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SelectionController — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SelectionController — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: SelectionController — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/p13n/SelectionController/classes/SelectionController.html">
 <meta property="og:title" content="Class: SelectionController — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SelectionController — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: SelectionController — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/p13n/SelectionController/classes/SelectionController.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.m/README.html">sap.m</a> › sap › m › p13n › <a href="../../../../../../sap.m/sap/m/p13n/SelectionController/README.html">SelectionController</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/p13n/SelectionController</a> / SelectionController</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/p13n/SelectionController</a> / SelectionController</p>
 <h1>Class: SelectionController</h1>
 <pre class="sig"><span class="kw">import</span> SelectionController <span class="kw">from</span> <span class="str">"sap/m/p13n/SelectionController"</span>;</pre>
 <p>The <code>SelectionController</code> entity serves as a base class to create control-specific personalization implementations.</p>
@@ -51,12 +51,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
-<p><strong>new SelectionController</strong>(<code>mSettings</code>): <code>SelectionController</code></p>
+<p><strong>new SelectionController</strong>(<code>sId?</code>, <code>mSettings?</code>): <code>SelectionController</code></p>
 </blockquote>
 <p>Constructor for a new <code>SelectionController</code>.</p>
 <h4>Parameters</h4>
-<h5>mSettings</h5>
-<p>Initial settings for the new controller</p>
+<h5>sId?</h5>
+<p><code>string</code></p>
+<p>ID for the new control, generated automatically if no ID is given</p>
+<h5>mSettings?</h5>
+<p>Initial settings for the new control</p>
 <h6>control</h6>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <p>The control instance that is personalized by this controller</p>
@@ -89,7 +92,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SelectionController</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SelectionController</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -111,6 +114,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

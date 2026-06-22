@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NavContainer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: NavContainer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: NavContainer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/NavContainer/classes/NavContainer.html">
 <meta property="og:title" content="Class: NavContainer — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: NavContainer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: NavContainer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/NavContainer/classes/NavContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/NavContainer/README.html">NavContainer</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/NavContainer</a> / NavContainer</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/NavContainer</a> / NavContainer</p>
 <h1>Class: NavContainer</h1>
 <pre class="sig"><span class="kw">import</span> NavContainer <span class="kw">from</span> <span class="str">"sap/m/NavContainer"</span>;</pre>
 <p>Handles hierarchical navigation between Pages or other fullscreen controls.</p>
@@ -175,13 +175,6 @@ within the animation function.</p>
 <blockquote>
 <p><strong>attachAfterNavigate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:afterNavigate afterNavigate event of this <code>sap.m.NavContainer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
-<p>The event is fired when navigation between two pages has completed (once all events to the child controls
-have been fired). In case of animated transitions this event is fired with some delay after the &quot;navigate&quot;
-event. This event is only fired if the DOM ref of the <code>NavContainer</code> is available. If the DOM ref is
-not available, the <code>navigationFinished</code> event should be used instead.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -198,10 +191,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.7.1</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAfterNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:afterNavigate afterNavigate event of this <code>sap.m.NavContainer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
@@ -209,6 +198,10 @@ otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
 have been fired). In case of animated transitions this event is fired with some delay after the &quot;navigate&quot;
 event. This event is only fired if the DOM ref of the <code>NavContainer</code> is available. If the DOM ref is
 not available, the <code>navigationFinished</code> event should be used instead.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAfterNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -221,18 +214,19 @@ not available, the <code>navigationFinished</code> event should be used instead.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.7.1</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:afterNavigate afterNavigate event of this <code>sap.m.NavContainer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
+<p>The event is fired when navigation between two pages has completed (once all events to the child controls
+have been fired). In case of animated transitions this event is fired with some delay after the &quot;navigate&quot;
+event. This event is only fired if the DOM ref of the <code>NavContainer</code> is available. If the DOM ref is
+not available, the <code>navigationFinished</code> event should be used instead.</p>
 <hr>
 <h3>attachNavigate()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.m.NavContainer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
-<p>The event is fired when navigation between two pages has been triggered (before any events to the child
-controls are fired). The transition (if any) to the new page has not started yet. This event can be aborted
-by the application with preventDefault(), which means that there will be no navigation.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -249,16 +243,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.7.1</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.m.NavContainer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
 <p>The event is fired when navigation between two pages has been triggered (before any events to the child
 controls are fired). The transition (if any) to the new page has not started yet. This event can be aborted
 by the application with preventDefault(), which means that there will be no navigation.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -271,19 +265,18 @@ by the application with preventDefault(), which means that there will be no navi
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.7.1</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.m.NavContainer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
+<p>The event is fired when navigation between two pages has been triggered (before any events to the child
+controls are fired). The transition (if any) to the new page has not started yet. This event can be aborted
+by the application with preventDefault(), which means that there will be no navigation.</p>
 <hr>
 <h3>attachNavigationFinished()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigationFinished</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigationFinished navigationFinished event
-of this <code>sap.m.NavContainer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
-<p>The event is fired when navigation between two pages has completed regardless of whether the DOM is ready
-or not. This event is useful when performing navigation without/before rendering of the <code>NavContainer</code>.
-Keep in mind that the DOM is not guaranteed to be ready when this event is fired.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -300,10 +293,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.111.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavigationFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navigationFinished navigationFinished event
 of this <code>sap.m.NavContainer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -311,6 +300,10 @@ otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
 <p>The event is fired when navigation between two pages has completed regardless of whether the DOM is ready
 or not. This event is useful when performing navigation without/before rendering of the <code>NavContainer</code>.
 Keep in mind that the DOM is not guaranteed to be ready when this event is fired.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigationFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -323,6 +316,13 @@ Keep in mind that the DOM is not guaranteed to be ready when this event is fired
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.111.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigationFinished navigationFinished event
+of this <code>sap.m.NavContainer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.NavContainer</code> itself.</p>
+<p>The event is fired when navigation between two pages has completed regardless of whether the DOM is ready
+or not. This event is useful when performing navigation without/before rendering of the <code>NavContainer</code>.
+Keep in mind that the DOM is not guaranteed to be ready when this event is fired.</p>
 <hr>
 <h3>back()</h3>
 <blockquote>
@@ -365,15 +365,6 @@ are actually used to influence the transition.</p>
 <blockquote>
 <p><strong>backToPage</strong>(<code>pageId</code>, <code>backData?</code>, <code>oTransitionParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Navigates back to the nearest previous page in the NavContainer history with the given ID. If there is
-no such page among the previous pages, nothing happens. The transition effect which had been used to
-get to the current page is inverted and used for this navigation.</p>
-<p>Calling this navigation method triggers first the (cancelable) &quot;navigate&quot; event on the NavContainer,
-then the &quot;BeforeHide&quot; pseudo event on the source page and &quot;BeforeFirstShow&quot; (if applicable) and&quot;BeforeShow&quot;
-on the target page. Later - after the transition has completed - the &quot;AfterShow&quot; pseudo event is triggered
-on the target page and &quot;AfterHide&quot; on the page which has been left. The given backData object is available
-in the &quot;BeforeFirstShow&quot;, &quot;BeforeShow&quot; and &quot;AfterShow&quot; event object as &quot;data&quot; property. The original
-&quot;data&quot; object from the &quot;to&quot; navigation is also available in these event objects.</p>
 <h4>Parameters</h4>
 <h5>pageId</h5>
 <p><code>string</code></p>
@@ -400,19 +391,20 @@ are actually used to influence the transition.</p>
 <p>The <code>sap.m.NavContainer</code> instance</p>
 <h4>Since</h4>
 <p>1.7.2</p>
+<p>Navigates back to the nearest previous page in the NavContainer history with the given ID. If there is
+no such page among the previous pages, nothing happens. The transition effect which had been used to
+get to the current page is inverted and used for this navigation.</p>
+<p>Calling this navigation method triggers first the (cancelable) &quot;navigate&quot; event on the NavContainer,
+then the &quot;BeforeHide&quot; pseudo event on the source page and &quot;BeforeFirstShow&quot; (if applicable) and&quot;BeforeShow&quot;
+on the target page. Later - after the transition has completed - the &quot;AfterShow&quot; pseudo event is triggered
+on the target page and &quot;AfterHide&quot; on the page which has been left. The given backData object is available
+in the &quot;BeforeFirstShow&quot;, &quot;BeforeShow&quot; and &quot;AfterShow&quot; event object as &quot;data&quot; property. The original
+&quot;data&quot; object from the &quot;to&quot; navigation is also available in these event objects.</p>
 <hr>
 <h3>backToTop()</h3>
 <blockquote>
 <p><strong>backToTop</strong>(<code>backData?</code>, <code>oTransitionParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Navigates back to the initial/top level (this is the element aggregated as &quot;initialPage&quot;, or the first
-added element). If already on the initial page, nothing happens. The transition effect which had been
-used to get to the current page is inverted and used for this navigation.</p>
-<p>Calling this navigation method triggers first the (cancelable) &quot;navigate&quot; event on the NavContainer,
-then the &quot;BeforeHide&quot; pseudo event on the source page and &quot;BeforeFirstShow&quot; (if applicable) and &quot;BeforeShow&quot;
-on the target page. Later - after the transition has completed - the &quot;AfterShow&quot; pseudo event is triggered
-on the target page and &quot;AfterHide&quot; on the page which has been left. The given backData object is available
-in the &quot;BeforeFirstShow&quot;, &quot;BeforeShow&quot; and &quot;AfterShow&quot; event object as &quot;data&quot; property.</p>
 <h4>Parameters</h4>
 <h5>backData?</h5>
 <p><code>object</code></p>
@@ -434,6 +426,14 @@ are actually used to influence the transition.</p>
 <p><code>this</code></p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Navigates back to the initial/top level (this is the element aggregated as &quot;initialPage&quot;, or the first
+added element). If already on the initial page, nothing happens. The transition effect which had been
+used to get to the current page is inverted and used for this navigation.</p>
+<p>Calling this navigation method triggers first the (cancelable) &quot;navigate&quot; event on the NavContainer,
+then the &quot;BeforeHide&quot; pseudo event on the source page and &quot;BeforeFirstShow&quot; (if applicable) and &quot;BeforeShow&quot;
+on the target page. Later - after the transition has completed - the &quot;AfterShow&quot; pseudo event is triggered
+on the target page and &quot;AfterHide&quot; on the page which has been left. The given backData object is available
+in the &quot;BeforeFirstShow&quot;, &quot;BeforeShow&quot; and &quot;AfterShow&quot; event object as &quot;data&quot; property.</p>
 <hr>
 <h3>currentPageIsTopPage()</h3>
 <blockquote>
@@ -459,9 +459,6 @@ displayed again, but logically one is not at the top level, so this method retur
 <blockquote>
 <p><strong>detachAfterNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:afterNavigate afterNavigate event of this
-<code>sap.m.NavContainer</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -474,13 +471,14 @@ displayed again, but logically one is not at the top level, so this method retur
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:afterNavigate afterNavigate event of this
+<code>sap.m.NavContainer</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachNavigate()</h3>
 <blockquote>
 <p><strong>detachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.m.NavContainer</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -493,14 +491,13 @@ displayed again, but logically one is not at the top level, so this method retur
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.m.NavContainer</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachNavigationFinished()</h3>
 <blockquote>
 <p><strong>detachNavigationFinished</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigationFinished navigationFinished event
-of this <code>sap.m.NavContainer</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -513,12 +510,14 @@ of this <code>sap.m.NavContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.111.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigationFinished navigationFinished event
+of this <code>sap.m.NavContainer</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireAfterNavigate()</h3>
 <blockquote>
 <p><strong>fireAfterNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterNavigate afterNavigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NavContainer$AfterNavigateEventParameters.html"><code>NavContainer$AfterNavigateEventParameters</code></a></p>
@@ -530,14 +529,12 @@ of this <code>sap.m.NavContainer</code>.</p>
 <p>1.7.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterNavigate afterNavigate to attached listeners.</p>
 <hr>
 <h3>fireNavigate()</h3>
 <blockquote>
 <p><strong>fireNavigate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:navigate navigate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NavContainer$NavigateEventParameters.html"><code>NavContainer$NavigateEventParameters</code></a></p>
@@ -549,12 +546,14 @@ event object. The return value of this method indicates whether the default acti
 <p>1.7.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navigate navigate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireNavigationFinished()</h3>
 <blockquote>
 <p><strong>fireNavigationFinished</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:navigationFinished navigationFinished to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NavContainer$NavigationFinishedEventParameters.html"><code>NavContainer$NavigationFinishedEventParameters</code></a></p>
@@ -566,11 +565,17 @@ event object. The return value of this method indicates whether the default acti
 <p>1.111.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navigationFinished navigationFinished to attached listeners.</p>
 <hr>
 <h3>getAutoFocus()</h3>
 <blockquote>
 <p><strong>getAutoFocus</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>autoFocus</code></p>
+<h4>Since</h4>
+<p>1.30</p>
 <p>Gets current value of property #getAutoFocus autoFocus.</p>
 <p>Determines whether the initial focus is set automatically on first rendering and after navigating to
 a new page. This is useful when on touch devices the keyboard pops out due to the focus being automatically
@@ -586,11 +591,6 @@ a new page:
 	 - If the <code>autoFocus</code> is set to <code>false</code> and at the same time another wrapping control has its own logic
     for focus restoring upon rerendering, the focus will still appear.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>autoFocus</code></p>
-<h4>Since</h4>
-<p>1.30</p>
 <hr>
 <h3>getCurrentPage()</h3>
 <blockquote>
@@ -607,16 +607,16 @@ a new page:
 <blockquote>
 <p><strong>getDefaultTransitionName</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getDefaultTransitionName defaultTransitionName.</p>
-<p>The type of the transition/animation to apply when &quot;to()&quot; is called without defining a transition type
-to use. The default is &quot;slide&quot;. Other options are: &quot;baseSlide&quot;, &quot;fade&quot;, &quot;flip&quot; and &quot;show&quot; - and the names
-of any registered custom transitions.</p>
-<p>Default value is <code>&quot;slide&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>defaultTransitionName</code></p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Gets current value of property #getDefaultTransitionName defaultTransitionName.</p>
+<p>The type of the transition/animation to apply when &quot;to()&quot; is called without defining a transition type
+to use. The default is &quot;slide&quot;. Other options are: &quot;baseSlide&quot;, &quot;fade&quot;, &quot;flip&quot; and &quot;show&quot; - and the names
+of any registered custom transitions.</p>
+<p>Default value is <code>&quot;slide&quot;</code>.</p>
 <hr>
 <h3>getHeight()</h3>
 <blockquote>
@@ -668,14 +668,14 @@ they are documented in the pseudo interface sap.m.NavContainerChild sap.m.NavCon
 <blockquote>
 <p><strong>getPreviousPage</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Returns the previous page (the page from which the user drilled down to the current page with &quot;to()&quot;).</p>
-<p><strong>Note:</strong> this is not the page which the user has seen before, but the page which is the target of the
-next &quot;back()&quot; navigation. If there is no previous page, <code>undefined</code> is returned.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <p>The previous page</p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Returns the previous page (the page from which the user drilled down to the current page with &quot;to()&quot;).</p>
+<p><strong>Note:</strong> this is not the page which the user has seen before, but the page which is the target of the
+next &quot;back()&quot; navigation. If there is no previous page, <code>undefined</code> is returned.</p>
 <hr>
 <h3>getVisible()</h3>
 <blockquote>
@@ -739,10 +739,6 @@ the last position</p>
 <blockquote>
 <p><strong>insertPreviousPage</strong>(<code>pageId</code>, <code>transitionName</code>, <code>data</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts the page/control with the specified ID into the navigation history stack of the NavContainer.</p>
-<p>This can be used for deep-linking when the user directly reached a drilldown detail page using a bookmark
-and then wants to navigate up in the drilldown hierarchy. Normally such a back navigation would not be
-possible because there is no previous page in the NavContainer&#39;s history stack.</p>
 <h5>Parameters</h5>
 <h6>pageId</h6>
 <p><code>string</code></p>
@@ -763,14 +759,14 @@ page if the user would have done a normal forward navigation to it.</p>
 <p>The <code>sap.m.NavContainer</code> instance</p>
 <h5>Since</h5>
 <p>1.16.1</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>insertPreviousPage</strong>(<code>pageId</code>, <code>data</code>): <code>this</code></p>
-</blockquote>
 <p>Inserts the page/control with the specified ID into the navigation history stack of the NavContainer.</p>
 <p>This can be used for deep-linking when the user directly reached a drilldown detail page using a bookmark
 and then wants to navigate up in the drilldown hierarchy. Normally such a back navigation would not be
 possible because there is no previous page in the NavContainer&#39;s history stack.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>insertPreviousPage</strong>(<code>pageId</code>, <code>data</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>pageId</h6>
 <p><code>string</code></p>
@@ -785,6 +781,10 @@ page if the user would have done a normal forward navigation to it.</p>
 <p>The <code>sap.m.NavContainer</code> instance</p>
 <h5>Since</h5>
 <p>1.16.1</p>
+<p>Inserts the page/control with the specified ID into the navigation history stack of the NavContainer.</p>
+<p>This can be used for deep-linking when the user directly reached a drilldown detail page using a bookmark
+and then wants to navigate up in the drilldown hierarchy. Normally such a back navigation would not be
+possible because there is no previous page in the NavContainer&#39;s history stack.</p>
 <hr>
 <h3>removeAllPages()</h3>
 <blockquote>
@@ -800,7 +800,6 @@ page if the user would have done a normal forward navigation to it.</p>
 <blockquote>
 <p><strong>removePage</strong>(<code>vPage</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Removes a page.</p>
 <h4>Parameters</h4>
 <h5>vPage</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -811,11 +810,21 @@ a negative value or a value greater or equal than the current size of the aggreg
 <p>the removed page or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Removes a page.</p>
 <hr>
 <h3>setAutoFocus()</h3>
 <blockquote>
 <p><strong>setAutoFocus</strong>(<code>bAutoFocus?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bAutoFocus?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>autoFocus</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.30</p>
 <p>Sets a new value for property #getAutoFocus autoFocus.</p>
 <p>Determines whether the initial focus is set automatically on first rendering and after navigating to
 a new page. This is useful when on touch devices the keyboard pops out due to the focus being automatically
@@ -832,26 +841,11 @@ a new page:
     for focus restoring upon rerendering, the focus will still appear.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Parameters</h4>
-<h5>bAutoFocus?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>autoFocus</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.30</p>
 <hr>
 <h3>setDefaultTransitionName()</h3>
 <blockquote>
 <p><strong>setDefaultTransitionName</strong>(<code>sDefaultTransitionName?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDefaultTransitionName defaultTransitionName.</p>
-<p>The type of the transition/animation to apply when &quot;to()&quot; is called without defining a transition type
-to use. The default is &quot;slide&quot;. Other options are: &quot;baseSlide&quot;, &quot;fade&quot;, &quot;flip&quot; and &quot;show&quot; - and the names
-of any registered custom transitions.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;slide&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sDefaultTransitionName?</h5>
 <p><code>string</code></p>
@@ -861,6 +855,12 @@ of any registered custom transitions.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Sets a new value for property #getDefaultTransitionName defaultTransitionName.</p>
+<p>The type of the transition/animation to apply when &quot;to()&quot; is called without defining a transition type
+to use. The default is &quot;slide&quot;. Other options are: &quot;baseSlide&quot;, &quot;fade&quot;, &quot;flip&quot; and &quot;show&quot; - and the names
+of any registered custom transitions.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;slide&quot;</code>.</p>
 <hr>
 <h3>setHeight()</h3>
 <blockquote>
@@ -990,7 +990,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>NavContainer</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>NavContainer</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1014,6 +1014,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

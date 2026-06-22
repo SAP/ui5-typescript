@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $MenuItemSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $MenuItemSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $MenuItemSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $MenuItemSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/MenuItem/interfaces/$MenuItemSettings.html">
-<meta property="og:title" content="~~Interface: $MenuItemSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $MenuItemSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $MenuItemSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $MenuItemSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/MenuItem/interfaces/$MenuItemSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,43 +33,33 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/MenuItem/README.html">MenuItem</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/MenuItem</a> / $MenuItemSettings</p>
-<h1><del>Interface: $MenuItemSettings</del></h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/MenuItem</a> / $MenuItemSettings</p>
+<h1>Interface: $MenuItemSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $MenuItemSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/MenuItem"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the MenuItem constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.102.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>accessibleName?</del></h3>
+<h3>accessibleName?</h3>
 <blockquote>
 <p><code>optional</code> <strong>accessibleName?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the accessible ARIA name of the component.</p>
 <hr>
-<h3><del>additionalText?</del></h3>
+<h3>additionalText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>additionalText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the <code>additionalText</code>, displayed in the end of the menu item. <strong>Note:</strong> The additional text would
 not be displayed if the item has a submenu.</p>
 <hr>
-<h3><del>busy?</del></h3>
+<h3>busy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>busy?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the delay in milliseconds, after which the busy indicator will be displayed inside the corresponding
 ui5-menu popover.</p>
 <p>Note: If set to <code>true</code> a <code>sap.ui.webc.main.BusyIndicator</code> component will be displayed into the related
@@ -77,53 +67,47 @@ one to the current <code>sap.ui.webc.main.MenuItem</code> sub-menu popover.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html#busy"><code>busy</code></a></p>
 <hr>
-<h3><del>busyDelay?</del></h3>
+<h3>busyDelay?</h3>
 <blockquote>
 <p><code>optional</code> <strong>busyDelay?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the delay in milliseconds, after which the busy indicator will be displayed inside the corresponding
 ui5-menu popover.</p>
 <hr>
-<h3><del>enabled?</del></h3>
+<h3>enabled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the control is enabled. A disabled control can&#39;t be interacted with, and it is not in
 the tab chain.</p>
 <hr>
-<h3><del>icon?</del></h3>
+<h3>icon?</h3>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the icon to be displayed as graphical element within the component. The SAP-icons font provides
 numerous options.</p>
 <p> *** Example:** See all the available icons in the demo:sap/m/demokit/iconExplorer/webapp/index.html Icon Explorer.</p>
 <hr>
-<h3><del>items?</del></h3>
+<h3>items?</h3>
 <blockquote>
 <p><code>optional</code> <strong>items?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/interfaces/IMenuItem.html"><code>IMenuItem</code></a> | <a href="../../library/interfaces/IMenuItem.html"><code>IMenuItem</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the items of this component.</p>
 <hr>
-<h3><del>startsSection?</del></h3>
+<h3>startsSection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>startsSection?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether a visual separator should be rendered before the item.</p>
 <hr>
-<h3><del>text?</del></h3>
+<h3>text?</h3>
 <blockquote>
 <p><code>optional</code> <strong>text?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the text of the tree item.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

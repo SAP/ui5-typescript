@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SmartList — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SmartList — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: SmartList — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartlist/SmartList/classes/SmartList.html">
 <meta property="og:title" content="Class: SmartList — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SmartList — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: SmartList — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartlist/SmartList/classes/SmartList.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartlist › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartlist/SmartList/README.html">SmartList</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartlist/SmartList</a> / SmartList</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartlist/SmartList</a> / SmartList</p>
 <h1>Class: SmartList</h1>
 <pre class="sig"><span class="kw">import</span> SmartList <span class="kw">from</span> <span class="str">"sap/ui/comp/smartlist/SmartList"</span>;</pre>
+<h2>Since</h2>
+<p>1.48</p>
 <p>A smart control to simplify using the <code>sap.m.List</code> and <code>sap.m.Tree</code> controls in list patterns. Overview:
 The <code>SmartList</code> control creates a list or tree based on the configuration specified. There is, however,
 a difference to other smart controls: This control does not use annotations to automatically create its
@@ -51,8 +53,6 @@ consists of the following elements:
  The <code>listItemTemplate</code> aggregation must also be specified with the required item template, such as <code>StandardListItem/StandardTreeItem</code>,
 which will be used during binding. <strong>Note:</strong>: Most of the attributes/properties are not dynamic and cannot
 be changed once the control has been initialized.</p>
-<h2>Since</h2>
-<p>1.48</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html"><code>VBox</code></a></li>
@@ -99,11 +99,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachBeforeRebindList</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforeRebindList beforeRebindList event of
-this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
-<p>Event fired right before the binding is being done.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -120,15 +115,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforeRebindList</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforeRebindList beforeRebindList event of
 this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
 <p>Event fired right before the binding is being done.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeRebindList</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -141,17 +136,17 @@ otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeRebindList beforeRebindList event of
+this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
+<p>Event fired right before the binding is being done.</p>
 <hr>
 <h3>attachDataReceived()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachDataReceived</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:dataReceived dataReceived event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
-<p>Event fired when data is received after binding. The event is usually only fired if the binding for the
-list is done by the <code>SmartList</code> control itself.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -168,15 +163,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachDataReceived</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:dataReceived dataReceived event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
 <p>Event fired when data is received after binding. The event is usually only fired if the binding for the
 list is done by the <code>SmartList</code> control itself.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachDataReceived</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -189,16 +184,17 @@ list is done by the <code>SmartList</code> control itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:dataReceived dataReceived event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
+<p>Event fired when data is received after binding. The event is usually only fired if the binding for the
+list is done by the <code>SmartList</code> control itself.</p>
 <hr>
 <h3>attachInitialise()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachInitialise</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:initialise initialise event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
-<p>Event fired once the control has been initialized.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -215,14 +211,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachInitialise</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:initialise initialise event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
 <p>Event fired once the control has been initialized.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachInitialise</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -235,25 +231,26 @@ otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:initialise initialise event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartlist.SmartList</code> itself.</p>
+<p>Event fired once the control has been initialized.</p>
 <hr>
 <h3>destroyListItemTemplate()</h3>
 <blockquote>
 <p><strong>destroyListItemTemplate</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the listItemTemplate in the aggregation #getListItemTemplate listItemTemplate.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Destroys the listItemTemplate in the aggregation #getListItemTemplate listItemTemplate.</p>
 <hr>
 <h3>detachBeforeRebindList()</h3>
 <blockquote>
 <p><strong>detachBeforeRebindList</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforeRebindList beforeRebindList event of
-this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -266,13 +263,14 @@ this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeRebindList beforeRebindList event of
+this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachDataReceived()</h3>
 <blockquote>
 <p><strong>detachDataReceived</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:dataReceived dataReceived event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -285,13 +283,13 @@ this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:dataReceived dataReceived event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachInitialise()</h3>
 <blockquote>
 <p><strong>detachInitialise</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:initialise initialise event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -304,16 +302,18 @@ this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:initialise initialise event of this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>exit()</h3>
 <blockquote>
 <p><strong>exit</strong>(): <code>void</code></p>
 </blockquote>
-<p>Cleans up the control</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Cleans up the control</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html"><code>VBox</code></a>.<a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html#exit"><code>exit</code></a></p>
 <hr>
@@ -321,7 +321,6 @@ this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <blockquote>
 <p><strong>fireBeforeRebindList</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:beforeRebindList beforeRebindList to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -333,12 +332,12 @@ this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>1.48.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforeRebindList beforeRebindList to attached listeners.</p>
 <hr>
 <h3>fireDataReceived()</h3>
 <blockquote>
 <p><strong>fireDataReceived</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:dataReceived dataReceived to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -350,12 +349,12 @@ this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>1.48.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:dataReceived dataReceived to attached listeners.</p>
 <hr>
 <h3>fireInitialise()</h3>
 <blockquote>
 <p><strong>fireInitialise</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:initialise initialise to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -367,61 +366,62 @@ this <code>sap.ui.comp.smartlist.SmartList</code>.</p>
 <p>1.48.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:initialise initialise to attached listeners.</p>
 <hr>
 <h3>getEnableAutoBinding()</h3>
 <blockquote>
 <p><strong>getEnableAutoBinding</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableAutoBinding enableAutoBinding.</p>
-<p>When set to <code>true</code>, this enables automatic binding of the list using the <code>listBindingPath</code> (if it exists)
-or <code>entitySet</code> property. This happens right after the <code>initialise</code> event has been fired.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableAutoBinding</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current value of property #getEnableAutoBinding enableAutoBinding.</p>
+<p>When set to <code>true</code>, this enables automatic binding of the list using the <code>listBindingPath</code> (if it exists)
+or <code>entitySet</code> property. This happens right after the <code>initialise</code> event has been fired.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEntitySet()</h3>
 <blockquote>
 <p><strong>getEntitySet</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getEntitySet entitySet.</p>
-<p>The entity set name from which to fetch data.
- Note:
- This is not a dynamic UI5 property.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>entitySet</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current value of property #getEntitySet entitySet.</p>
+<p>The entity set name from which to fetch data.
+ Note:
+ This is not a dynamic UI5 property.</p>
 <hr>
 <h3>getExpandFields()</h3>
 <blockquote>
 <p><strong>getExpandFields</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getExpandFields expandFields.</p>
-<p>CSV of fields that must be expanded when request is sent to the backend.
- Note:
- No validation is done. Please ensure that you do not add spaces or special characters.
- This property is only needed when used together with an <code>ODataModel</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>expandFields</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current value of property #getExpandFields expandFields.</p>
+<p>CSV of fields that must be expanded when request is sent to the backend.
+ Note:
+ No validation is done. Please ensure that you do not add spaces or special characters.
+ This property is only needed when used together with an <code>ODataModel</code>.</p>
 <hr>
 <h3>getHeader()</h3>
 <blockquote>
 <p><strong>getHeader</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getHeader header.</p>
-<p>Specifies header text that is shown in list.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>header</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current value of property #getHeader header.</p>
+<p>Specifies header text that is shown in list.</p>
 <hr>
 <h3>getList()</h3>
 <blockquote>
@@ -436,76 +436,81 @@ or <code>entitySet</code> property. This happens right after the <code>initialis
 <blockquote>
 <p><strong>getListBindingPath</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getListBindingPath listBindingPath.</p>
-<p>Specifies the path that is used during the binding of the list. If not specified, the <code>entitySet</code> property
-is used instead. (used only if binding is done automatically or when using <code>rebindList</code>)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>listBindingPath</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current value of property #getListBindingPath listBindingPath.</p>
+<p>Specifies the path that is used during the binding of the list. If not specified, the <code>entitySet</code> property
+is used instead. (used only if binding is done automatically or when using <code>rebindList</code>)</p>
 <hr>
 <h3>getListItemTemplate()</h3>
 <blockquote>
 <p><strong>getListItemTemplate</strong>(): <a href="../../../../../../../sap.m/sap/m/ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.m/sap/m/ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a></p>
+<h4>Since</h4>
+<p>1.48.0</p>
 <p>Gets content of aggregation #getListItemTemplate listItemTemplate.</p>
 <p>Specifies the template that is used for the inner <code>List</code> or <code>Tree</code> control.
  <strong>Note:</strong>
  This template is used when binding the <code>items</code> of <code>sap.m.List</code> or <code>sap.m.Tree</code> control, and will not
 be available in the <code>SmartList</code> control once the binding has been done.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../../sap.m/sap/m/ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a></p>
-<h4>Since</h4>
-<p>1.48.0</p>
 <hr>
 <h3>getListType()</h3>
 <blockquote>
 <p><strong>getListType</strong>(): <code>&quot;List&quot;</code> | <code>&quot;Tree&quot;</code> | <a href="../../../library/namespaces/smartlist/enumerations/ListType.html"><code>ListType</code></a></p>
 </blockquote>
-<p>Gets current value of property #getListType listType.</p>
-<p>Specifies the type of list to be created in the <code>SmartList</code> control.
- Note:
- If you add a <code>List</code> or <code>Tree</code> to the content of the <code>SmartList</code> control in the view, this property has
-no effect.</p>
 <h4>Returns</h4>
 <p><code>&quot;List&quot;</code> | <code>&quot;Tree&quot;</code> | <a href="../../../library/namespaces/smartlist/enumerations/ListType.html"><code>ListType</code></a></p>
 <p>Value of property <code>listType</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current value of property #getListType listType.</p>
+<p>Specifies the type of list to be created in the <code>SmartList</code> control.
+ Note:
+ If you add a <code>List</code> or <code>Tree</code> to the content of the <code>SmartList</code> control in the view, this property has
+no effect.</p>
 <hr>
 <h3>getSelectFields()</h3>
 <blockquote>
 <p><strong>getSelectFields</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectFields selectFields.</p>
-<p>CSV of fields that must be selected when request is sent to the backend.
- Note:
- No validation is done. Please ensure that you do not add spaces or special characters.
- This property is only needed when used together with an <code>ODataModel</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>selectFields</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current value of property #getSelectFields selectFields.</p>
+<p>CSV of fields that must be selected when request is sent to the backend.
+ Note:
+ No validation is done. Please ensure that you do not add spaces or special characters.
+ This property is only needed when used together with an <code>ODataModel</code>.</p>
 <hr>
 <h3>getShowFullScreenButton()</h3>
 <blockquote>
 <p><strong>getShowFullScreenButton</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowFullScreenButton showFullScreenButton.</p>
-<p>Controls the visibility of the full screen button.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showFullScreenButton</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current value of property #getShowFullScreenButton showFullScreenButton.</p>
+<p>Controls the visibility of the full screen button.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowRowCount()</h3>
 <blockquote>
 <p><strong>getShowRowCount</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showRowCount</code></p>
+<h4>Since</h4>
+<p>1.48.0</p>
 <p>Gets current value of property #getShowRowCount showRowCount.</p>
 <p>The number of rows is shown along with the header text if the property <code>showRowCount</code> is set to <code>true</code>.</p>
 <p><strong>Note:</strong>
@@ -514,39 +519,33 @@ no effect.</p>
 	 - If no stable overall count can be retrieved from the binding, the count will not be displayed. This
     is currently the case for TreeBinding or if no count is requested by the binding.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>showRowCount</code></p>
-<h4>Since</h4>
-<p>1.48.0</p>
 <hr>
 <h3>getSmartFilter()</h3>
 <blockquote>
 <p><strong>getSmartFilter</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getSmartFilter smartFilter,
-or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>ID of the element which is the current target of the association #getSmartFilter smartFilter,
+or <code>null</code>.</p>
 <hr>
 <h3>isInitialised()</h3>
 <blockquote>
 <p><strong>isInitialised</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Checks whether the control is initialized.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>returns whether control has already been initialized</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Checks whether the control is initialized.</p>
 <hr>
 <h3>rebindList()</h3>
 <blockquote>
 <p><strong>rebindList</strong>(<code>bForceRebind</code>): <code>void</code></p>
 </blockquote>
-<p>This can be used to trigger binding on the list used in the SmartList</p>
 <h4>Parameters</h4>
 <h5>bForceRebind</h5>
 <p><code>boolean</code></p>
@@ -555,16 +554,12 @@ or <code>null</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This can be used to trigger binding on the list used in the SmartList</p>
 <hr>
 <h3>setEnableAutoBinding()</h3>
 <blockquote>
 <p><strong>setEnableAutoBinding</strong>(<code>bEnableAutoBinding?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableAutoBinding enableAutoBinding.</p>
-<p>When set to <code>true</code>, this enables automatic binding of the list using the <code>listBindingPath</code> (if it exists)
-or <code>entitySet</code> property. This happens right after the <code>initialise</code> event has been fired.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableAutoBinding?</h5>
 <p><code>boolean</code></p>
@@ -574,16 +569,16 @@ or <code>entitySet</code> property. This happens right after the <code>initialis
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getEnableAutoBinding enableAutoBinding.</p>
+<p>When set to <code>true</code>, this enables automatic binding of the list using the <code>listBindingPath</code> (if it exists)
+or <code>entitySet</code> property. This happens right after the <code>initialise</code> event has been fired.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEntitySet()</h3>
 <blockquote>
 <p><strong>setEntitySet</strong>(<code>sEntitySet?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEntitySet entitySet.</p>
-<p>The entity set name from which to fetch data.
- Note:
- This is not a dynamic UI5 property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sEntitySet?</h5>
 <p><code>string</code></p>
@@ -593,17 +588,16 @@ or <code>entitySet</code> property. This happens right after the <code>initialis
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getEntitySet entitySet.</p>
+<p>The entity set name from which to fetch data.
+ Note:
+ This is not a dynamic UI5 property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setExpandFields()</h3>
 <blockquote>
 <p><strong>setExpandFields</strong>(<code>sExpandFields?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getExpandFields expandFields.</p>
-<p>CSV of fields that must be expanded when request is sent to the backend.
- Note:
- No validation is done. Please ensure that you do not add spaces or special characters.
- This property is only needed when used together with an <code>ODataModel</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sExpandFields?</h5>
 <p><code>string</code></p>
@@ -613,14 +607,17 @@ or <code>entitySet</code> property. This happens right after the <code>initialis
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getExpandFields expandFields.</p>
+<p>CSV of fields that must be expanded when request is sent to the backend.
+ Note:
+ No validation is done. Please ensure that you do not add spaces or special characters.
+ This property is only needed when used together with an <code>ODataModel</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setHeader()</h3>
 <blockquote>
 <p><strong>setHeader</strong>(<code>sHeader?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHeader header.</p>
-<p>Specifies header text that is shown in list.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sHeader?</h5>
 <p><code>string</code></p>
@@ -630,15 +627,14 @@ or <code>entitySet</code> property. This happens right after the <code>initialis
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getHeader header.</p>
+<p>Specifies header text that is shown in list.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setListBindingPath()</h3>
 <blockquote>
 <p><strong>setListBindingPath</strong>(<code>sListBindingPath?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getListBindingPath listBindingPath.</p>
-<p>Specifies the path that is used during the binding of the list. If not specified, the <code>entitySet</code> property
-is used instead. (used only if binding is done automatically or when using <code>rebindList</code>)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sListBindingPath?</h5>
 <p><code>string</code></p>
@@ -648,12 +644,15 @@ is used instead. (used only if binding is done automatically or when using <code
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getListBindingPath listBindingPath.</p>
+<p>Specifies the path that is used during the binding of the list. If not specified, the <code>entitySet</code> property
+is used instead. (used only if binding is done automatically or when using <code>rebindList</code>)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setListItemTemplate()</h3>
 <blockquote>
 <p><strong>setListItemTemplate</strong>(<code>oListItemTemplate</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getListItemTemplate listItemTemplate.</p>
 <h4>Parameters</h4>
 <h5>oListItemTemplate</h5>
 <p><a href="../../../../../../../sap.m/sap/m/ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a></p>
@@ -663,17 +662,12 @@ is used instead. (used only if binding is done automatically or when using <code
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets the aggregated #getListItemTemplate listItemTemplate.</p>
 <hr>
 <h3>setListType()</h3>
 <blockquote>
 <p><strong>setListType</strong>(<code>sListType?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getListType listType.</p>
-<p>Specifies the type of list to be created in the <code>SmartList</code> control.
- Note:
- If you add a <code>List</code> or <code>Tree</code> to the content of the <code>SmartList</code> control in the view, this property has
-no effect.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sListType?</h5>
 <p><code>&quot;List&quot;</code> | <code>&quot;Tree&quot;</code> | <a href="../../../library/namespaces/smartlist/enumerations/ListType.html"><code>ListType</code></a></p>
@@ -683,17 +677,17 @@ no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getListType listType.</p>
+<p>Specifies the type of list to be created in the <code>SmartList</code> control.
+ Note:
+ If you add a <code>List</code> or <code>Tree</code> to the content of the <code>SmartList</code> control in the view, this property has
+no effect.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSelectFields()</h3>
 <blockquote>
 <p><strong>setSelectFields</strong>(<code>sSelectFields?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSelectFields selectFields.</p>
-<p>CSV of fields that must be selected when request is sent to the backend.
- Note:
- No validation is done. Please ensure that you do not add spaces or special characters.
- This property is only needed when used together with an <code>ODataModel</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSelectFields?</h5>
 <p><code>string</code></p>
@@ -703,15 +697,17 @@ no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getSelectFields selectFields.</p>
+<p>CSV of fields that must be selected when request is sent to the backend.
+ Note:
+ No validation is done. Please ensure that you do not add spaces or special characters.
+ This property is only needed when used together with an <code>ODataModel</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setShowFullScreenButton()</h3>
 <blockquote>
 <p><strong>setShowFullScreenButton</strong>(<code>bShowFullScreenButton?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowFullScreenButton showFullScreenButton.</p>
-<p>Controls the visibility of the full screen button.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowFullScreenButton?</h5>
 <p><code>boolean</code></p>
@@ -721,20 +717,15 @@ no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getShowFullScreenButton showFullScreenButton.</p>
+<p>Controls the visibility of the full screen button.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowRowCount()</h3>
 <blockquote>
 <p><strong>setShowRowCount</strong>(<code>bShowRowCount?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowRowCount showRowCount.</p>
-<p>The number of rows is shown along with the header text if the property <code>showRowCount</code> is set to <code>true</code>.</p>
-<p><strong>Note:</strong>
-	 - To improve your application&#39;s performance, activate the inline count for OData bindings to avoid
-    sending dedicated OData requests.
-	 - If no stable overall count can be retrieved from the binding, the count will not be displayed. This
-    is currently the case for TreeBinding or if no count is requested by the binding.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowRowCount?</h5>
 <p><code>boolean</code></p>
@@ -744,12 +735,20 @@ no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getShowRowCount showRowCount.</p>
+<p>The number of rows is shown along with the header text if the property <code>showRowCount</code> is set to <code>true</code>.</p>
+<p><strong>Note:</strong>
+	 - To improve your application&#39;s performance, activate the inline count for OData bindings to avoid
+    sending dedicated OData requests.
+	 - If no stable overall count can be retrieved from the binding, the count will not be displayed. This
+    is currently the case for TreeBinding or if no count is requested by the binding.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setSmartFilter()</h3>
 <blockquote>
 <p><strong>setSmartFilter</strong>(<code>oSmartFilter</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated #getSmartFilter smartFilter.</p>
 <h4>Parameters</h4>
 <h5>oSmartFilter</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -760,6 +759,7 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets the associated #getSmartFilter smartFilter.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -776,7 +776,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SmartList</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SmartList</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -800,6 +800,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html"><code>VBox</code></a>.<a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

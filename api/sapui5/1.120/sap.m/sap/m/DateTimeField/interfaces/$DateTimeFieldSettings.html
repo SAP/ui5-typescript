@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $DateTimeFieldSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $DateTimeFieldSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $DateTimeFieldSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/DateTimeField/interfaces/$DateTimeFieldSettings.html">
 <meta property="og:title" content="Interface: $DateTimeFieldSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $DateTimeFieldSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $DateTimeFieldSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/DateTimeField/interfaces/$DateTimeFieldSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/DateTimeField/README.html">DateTimeField</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/DateTimeField</a> / $DateTimeFieldSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/DateTimeField</a> / $DateTimeFieldSettings</p>
 <h1>Interface: $DateTimeFieldSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $DateTimeFieldSettings } <span class="kw">from</span> <span class="str">"sap/m/DateTimeField"</span>;</pre>
-<p>Describes the settings that can be provided to the DateTimeField constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../InputBase/interfaces/$InputBaseSettings.html"><code>$InputBaseSettings</code></a></li>
@@ -69,6 +68,8 @@ to bind it, the recommendation is not to do it. When binding is needed, use <cod
 <blockquote>
 <p><code>optional</code> <strong>initialFocusedDateValue?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Holds a reference to a UI5Date or JavaScript Date object to define the initially focused date/time when
 the picker popup is opened.</p>
 <p><strong>Notes:</strong>
@@ -76,16 +77,11 @@ the picker popup is opened.</p>
 	 - Depending on the context this property is used in (sap.m.TimePicker, sap.m.DatePicker
     or sap.m.DateTimePicker), it takes into account only the time part, only the date part or both
     parts of the UI5Date or JavaScript Date object.</p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>liveChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>liveChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when the value of the <code>DateTimeField</code> is changed by user interaction - each keystroke, delete,
-paste, etc.</p>
-<p><strong>Note:</strong> Browsing autocomplete suggestions doesn&#39;t fire the event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/DateTimeField$LiveChangeEvent.html"><code>DateTimeField$LiveChangeEvent</code></a></p>
@@ -93,6 +89,9 @@ paste, etc.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.104.0</p>
+<p>Fired when the value of the <code>DateTimeField</code> is changed by user interaction - each keystroke, delete,
+paste, etc.</p>
+<p><strong>Note:</strong> Browsing autocomplete suggestions doesn&#39;t fire the event.</p>
 <hr>
 <h3>valueFormat?</h3>
 <blockquote>
@@ -101,6 +100,6 @@ paste, etc.</p>
 <p>Determines the format of the value property.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

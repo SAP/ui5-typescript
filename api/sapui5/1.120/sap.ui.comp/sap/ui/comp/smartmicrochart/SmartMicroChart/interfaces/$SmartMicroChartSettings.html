@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SmartMicroChartSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SmartMicroChartSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $SmartMicroChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartmicrochart/SmartMicroChart/interfaces/$SmartMicroChartSettings.html">
 <meta property="og:title" content="Interface: $SmartMicroChartSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SmartMicroChartSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $SmartMicroChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartmicrochart/SmartMicroChart/interfaces/$SmartMicroChartSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartmicrochart › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartmicrochart/SmartMicroChart/README.html">SmartMicroChart</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartmicrochart/SmartMicroChart</a> / $SmartMicroChartSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartmicrochart/SmartMicroChart</a> / $SmartMicroChartSettings</p>
 <h1>Interface: $SmartMicroChartSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SmartMicroChartSettings } <span class="kw">from</span> <span class="str">"sap/ui/comp/smartmicrochart/SmartMicroChart"</span>;</pre>
-<p>Describes the settings that can be provided to the SmartMicroChart constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -48,9 +47,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
-<p>Controls or IDs that label this control. Can be used by screen reader software.</p>
 <h4>Since</h4>
 <p>1.60.0</p>
+<p>Controls or IDs that label this control. Can be used by screen reader software.</p>
 <hr>
 <h3>chartBindingPath?</h3>
 <blockquote>
@@ -98,11 +97,11 @@ not a dynamic UI5 property.</p>
 <blockquote>
 <p><code>optional</code> <strong>freeText?</strong>: <code>string</code> | <a href="../../../../../../../sap.m/sap/m/Label/classes/Label.html"><code>Label</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.42.0</p>
 <p>If the associated control is provided, its <code>text</code> property is set to the free text provided by annotations.
 The Value property of the DataPoint annotation should be annotated with this free text. As of 1.42.0,
 this association is only available for chart type &#39;Donut&#39;.</p>
-<h4>Since</h4>
-<p>1.42.0</p>
 <hr>
 <h3>height?</h3>
 <blockquote>
@@ -125,10 +124,10 @@ this association is only available for chart type &#39;Donut&#39;.</p>
 <blockquote>
 <p><code>optional</code> <strong>isResponsive?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>If this set to true, width and height of the control are determined by the width and height of the container
-in which the control is placed or by the width and height property.</p>
 <h4>Deprecated</h4>
 <p>(since 1.62)</p>
+<p>If this set to true, width and height of the control are determined by the width and height of the container
+in which the control is placed or by the width and height property.</p>
 <hr>
 <h3>showLabel?</h3>
 <blockquote>
@@ -140,10 +139,10 @@ in which the control is placed or by the width and height property.</p>
 <blockquote>
 <p><code>optional</code> <strong>size?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
 </blockquote>
-<p>The size of the microchart. If not set, the default size is applied based on the size of the device tile.
-Responsive size takes width and height of the parent container where the micro chart is included.</p>
 <h4>Since</h4>
 <p>1.62</p>
+<p>The size of the microchart. If not set, the default size is applied based on the size of the device tile.
+Responsive size takes width and height of the parent container where the micro chart is included.</p>
 <hr>
 <h3>unitOfMeasure?</h3>
 <blockquote>
@@ -159,6 +158,6 @@ or Unit from the OData Measures annotations.</p>
 </blockquote>
 <p>The width of the chart. Overrides the width specified in the <code>size</code> property.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

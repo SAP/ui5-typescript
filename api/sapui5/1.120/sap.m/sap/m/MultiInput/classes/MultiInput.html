@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: MultiInput — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: MultiInput — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: MultiInput — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/MultiInput/classes/MultiInput.html">
 <meta property="og:title" content="Class: MultiInput — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: MultiInput — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: MultiInput — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/MultiInput/classes/MultiInput.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MultiInput/README.html">MultiInput</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MultiInput</a> / MultiInput</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MultiInput</a> / MultiInput</p>
 <h1>Class: MultiInput</h1>
 <pre class="sig"><span class="kw">import</span> MultiInput <span class="kw">from</span> <span class="str">"sap/m/MultiInput"</span>;</pre>
 <p>Overview: A multi-input field allows the user to enter multiple values, which are displayed as sap.m.Token tokens.
@@ -186,10 +186,6 @@ See:
 <blockquote>
 <p><strong>attachTokenChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tokenChange tokenChange event of this <code>sap.m.MultiInput</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
-<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -206,14 +202,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.46) - Please use the new event tokenUpdate.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTokenChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:tokenChange tokenChange event of this <code>sap.m.MultiInput</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <p>Fired when the tokens aggregation changed (add / remove token)</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTokenChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -226,16 +222,16 @@ otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.46) - Please use the new event tokenUpdate.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tokenChange tokenChange event of this <code>sap.m.MultiInput</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
+<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <hr>
 <h3>attachTokenUpdate()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTokenUpdate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tokenUpdate tokenUpdate event of this <code>sap.m.MultiInput</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
-<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -252,14 +248,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.46</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTokenUpdate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:tokenUpdate tokenUpdate event of this <code>sap.m.MultiInput</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTokenUpdate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -272,6 +268,10 @@ otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.46</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tokenUpdate tokenUpdate event of this <code>sap.m.MultiInput</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
+<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <hr>
 <h3>clone()</h3>
 <blockquote>
@@ -288,13 +288,13 @@ otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <blockquote>
 <p><strong>closeMultiLine</strong>(): <code>void</code></p>
 </blockquote>
-<p>Close multi-line MultiInput in multi-line mode</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28</p>
 <h4>Deprecated</h4>
 <p>(since 1.58)</p>
+<p>Close multi-line MultiInput in multi-line mode</p>
 <hr>
 <h3>destroyTokens()</h3>
 <blockquote>
@@ -309,8 +309,6 @@ otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <blockquote>
 <p><strong>detachTokenChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tokenChange tokenChange event of this <code>sap.m.MultiInput</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -323,13 +321,13 @@ otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46) - Please use the new event tokenUpdate.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tokenChange tokenChange event of this <code>sap.m.MultiInput</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachTokenUpdate()</h3>
 <blockquote>
 <p><strong>detachTokenUpdate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tokenUpdate tokenUpdate event of this <code>sap.m.MultiInput</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -342,12 +340,13 @@ otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tokenUpdate tokenUpdate event of this <code>sap.m.MultiInput</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireTokenChange()</del></h3>
 <blockquote>
 <p><strong>fireTokenChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:tokenChange tokenChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MultiInput$TokenChangeEventParameters.html"><code>MultiInput$TokenChangeEventParameters</code></a></p>
@@ -359,14 +358,12 @@ otherwise it will be bound to this <code>sap.m.MultiInput</code> itself.</p>
 <p>(since 1.46) - Please use the new event tokenUpdate.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:tokenChange tokenChange to attached listeners.</p>
 <hr>
 <h3>fireTokenUpdate()</h3>
 <blockquote>
 <p><strong>fireTokenUpdate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:tokenUpdate tokenUpdate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MultiInput$TokenUpdateEventParameters.html"><code>MultiInput$TokenUpdateEventParameters</code></a></p>
@@ -378,18 +375,21 @@ event object. The return value of this method indicates whether the default acti
 <p>1.46</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:tokenUpdate tokenUpdate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>The accessibility object</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../Input/classes/Input.html"><code>Input</code></a>.<a href="../../Input/classes/Input.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -397,23 +397,23 @@ event object. The return value of this method indicates whether the default acti
 <blockquote>
 <p><strong>getDialogTitle</strong>(): <a href="../../Title/classes/Title.html"><code>Title</code></a></p>
 </blockquote>
-<p>Gets the picker header title.</p>
 <h4>Returns</h4>
 <p><a href="../../Title/classes/Title.html"><code>Title</code></a></p>
 <p>The title instance of the Picker</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the picker header title.</p>
 <hr>
 <h3>getDomRefForValueStateMessage()</h3>
 <blockquote>
 <p><strong>getDomRefForValueStateMessage</strong>(): <code>Element</code></p>
 </blockquote>
-<p>Get the reference element which the message popup should dock to</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>DOM Element which the message popup should dock to</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Get the reference element which the message popup should dock to</p>
 <h4>Overrides</h4>
 <p><a href="../../Input/classes/Input.html"><code>Input</code></a>.<a href="../../Input/classes/Input.html#getdomrefforvaluestatemessage"><code>getDomRefForValueStateMessage</code></a></p>
 <hr>
@@ -421,12 +421,6 @@ event object. The return value of this method indicates whether the default acti
 <blockquote>
 <p><strong>getEnableMultiLineMode</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableMultiLineMode enableMultiLineMode.</p>
-<p>If set to true, the MultiInput will be displayed in multi-line display mode. In multi-line display mode,
-all tokens can be fully viewed and easily edited in the MultiInput. The default value is false. <strong>Note:</strong>
-This property does not take effect on smartphones or when the editable property is set to false. <strong>Caution:</strong>
-Do not enable multi-line mode in tables and forms.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableMultiLineMode</code></p>
@@ -434,18 +428,24 @@ Do not enable multi-line mode in tables and forms.</p>
 <p>1.28</p>
 <h4>Deprecated</h4>
 <p>(since 1.58) - Replaced with N-more/N-items labels, which work in all cases.</p>
+<p>Gets current value of property #getEnableMultiLineMode enableMultiLineMode.</p>
+<p>If set to true, the MultiInput will be displayed in multi-line display mode. In multi-line display mode,
+all tokens can be fully viewed and easily edited in the MultiInput. The default value is false. <strong>Note:</strong>
+This property does not take effect on smartphones or when the editable property is set to false. <strong>Caution:</strong>
+Do not enable multi-line mode in tables and forms.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getMaxTokens()</h3>
 <blockquote>
 <p><strong>getMaxTokens</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getMaxTokens maxTokens.</p>
-<p>The max number of tokens that is allowed in MultiInput.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>maxTokens</code></p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Gets current value of property #getMaxTokens maxTokens.</p>
+<p>The max number of tokens that is allowed in MultiInput.</p>
 <hr>
 <h3>getPopupAnchorDomRef()</h3>
 <blockquote>
@@ -534,7 +534,6 @@ the last position</p>
 <blockquote>
 <p><strong>isValueHelpOnlyOpener</strong>(<code>oTarget</code>): <code>boolean</code></p>
 </blockquote>
-<p>Gets the supported openers for the valueHelpOnly.</p>
 <h4>Parameters</h4>
 <h5>oTarget</h5>
 <p><code>HTMLElement</code></p>
@@ -546,6 +545,7 @@ the last position</p>
 <p>(since 1.119) - the property valueHelpOnly should not be used anymore</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the supported openers for the valueHelpOnly.</p>
 <h4>Overrides</h4>
 <p><a href="../../Input/classes/Input.html"><code>Input</code></a>.<a href="../../Input/classes/Input.html#isvaluehelponlyopener"><code>isValueHelpOnlyOpener</code></a></p>
 <hr>
@@ -554,11 +554,9 @@ the last position</p>
 <blockquote>
 <p><strong>onChange</strong>(<code>oEvent</code>, <code>mParameters</code>, <code>sNewValue</code>): <code>boolean</code></p>
 </blockquote>
-<p>Overwrites the change event handler of the sap.m.InputBase. In case of added token it will not
-reset the value.</p>
 <h5>Parameters</h5>
 <h6>oEvent</h6>
-<p><a href="../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>Event object</p>
 <h6>mParameters</h6>
 <p><code>object</code></p>
@@ -571,17 +569,17 @@ reset the value.</p>
 <p>true when change event is fired</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Overwrites the change event handler of the sap.m.InputBase. In case of added token it will not
+reset the value.</p>
 <h5>Overrides</h5>
 <p><a href="../../Input/classes/Input.html"><code>Input</code></a>.<a href="../../Input/classes/Input.html#onchange-1"><code>onChange</code></a></p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>onChange</strong>(<code>oEvent</code>, <code>sNewValue</code>): <code>boolean</code></p>
 </blockquote>
-<p>Overwrites the change event handler of the sap.m.InputBase. In case of added token it will not
-reset the value.</p>
 <h5>Parameters</h5>
 <h6>oEvent</h6>
-<p><a href="../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>Event object</p>
 <h6>sNewValue</h6>
 <p><code>string</code></p>
@@ -591,6 +589,8 @@ reset the value.</p>
 <p>true when change event is fired</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Overwrites the change event handler of the sap.m.InputBase. In case of added token it will not
+reset the value.</p>
 <h5>Overrides</h5>
 <p><a href="../../Input/classes/Input.html"><code>Input</code></a>.<a href="../../Input/classes/Input.html#onchange-1"><code>onChange</code></a></p>
 <hr>
@@ -601,7 +601,7 @@ reset the value.</p>
 <p>Focus is on MultiInput</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
-<p><a href="../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>The event object</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
@@ -615,7 +615,7 @@ reset the value.</p>
 <p>When press ESC, deselect all tokens and all texts</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
-<p><a href="../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>The event object</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
@@ -629,7 +629,7 @@ reset the value.</p>
 <p>When tap on text field, deselect all tokens</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
-<p><a href="../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>The event object</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
@@ -640,13 +640,13 @@ reset the value.</p>
 <blockquote>
 <p><strong>openMultiLine</strong>(): <code>void</code></p>
 </blockquote>
-<p>Expand multi-line MultiInput in multi-line mode</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28</p>
 <h4>Deprecated</h4>
 <p>(since 1.58)</p>
+<p>Expand multi-line MultiInput in multi-line mode</p>
 <hr>
 <h3>removeAllTokens()</h3>
 <blockquote>
@@ -695,13 +695,6 @@ reset the value.</p>
 <blockquote>
 <p><strong>setEnableMultiLineMode</strong>(<code>bEnableMultiLineMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableMultiLineMode enableMultiLineMode.</p>
-<p>If set to true, the MultiInput will be displayed in multi-line display mode. In multi-line display mode,
-all tokens can be fully viewed and easily edited in the MultiInput. The default value is false. <strong>Note:</strong>
-This property does not take effect on smartphones or when the editable property is set to false. <strong>Caution:</strong>
-Do not enable multi-line mode in tables and forms.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableMultiLineMode?</h5>
 <p><code>boolean</code></p>
@@ -713,14 +706,18 @@ Do not enable multi-line mode in tables and forms.</p>
 <p>1.28</p>
 <h4>Deprecated</h4>
 <p>(since 1.58) - Replaced with N-more/N-items labels, which work in all cases.</p>
+<p>Sets a new value for property #getEnableMultiLineMode enableMultiLineMode.</p>
+<p>If set to true, the MultiInput will be displayed in multi-line display mode. In multi-line display mode,
+all tokens can be fully viewed and easily edited in the MultiInput. The default value is false. <strong>Note:</strong>
+This property does not take effect on smartphones or when the editable property is set to false. <strong>Caution:</strong>
+Do not enable multi-line mode in tables and forms.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setMaxTokens()</h3>
 <blockquote>
 <p><strong>setMaxTokens</strong>(<code>iMaxTokens</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMaxTokens maxTokens.</p>
-<p>The max number of tokens that is allowed in MultiInput.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>iMaxTokens</h5>
 <p><code>number</code></p>
@@ -730,6 +727,9 @@ Do not enable multi-line mode in tables and forms.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Sets a new value for property #getMaxTokens maxTokens.</p>
+<p>The max number of tokens that is allowed in MultiInput.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setShowSuggestion()</h3>
 <blockquote>
@@ -769,11 +769,11 @@ are shown in a popup next to the input. <strong>Note:</strong> Default value for
 <blockquote>
 <p><strong>updateInputField</strong>(): <code>void</code></p>
 </blockquote>
-<p>Updates the inner input field.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Updates the inner input field.</p>
 <h4>Overrides</h4>
 <p><a href="../../Input/classes/Input.html"><code>Input</code></a>.<a href="../../Input/classes/Input.html#updateinputfield"><code>updateInputField</code></a></p>
 <hr>
@@ -792,7 +792,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>MultiInput</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>MultiInput</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -816,6 +816,6 @@ used by this class</p>
 <p><a href="../../Input/classes/Input.html"><code>Input</code></a>.<a href="../../Input/classes/Input.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

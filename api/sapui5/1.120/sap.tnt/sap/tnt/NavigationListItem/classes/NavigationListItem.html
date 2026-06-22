@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NavigationListItem — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: NavigationListItem — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: NavigationListItem — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.tnt/sap/tnt/NavigationListItem/classes/NavigationListItem.html">
 <meta property="og:title" content="Class: NavigationListItem — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: NavigationListItem — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: NavigationListItem — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.tnt/sap/tnt/NavigationListItem/classes/NavigationListItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.tnt/README.html">sap.tnt</a> › sap › tnt › <a href="../../../../../sap.tnt/sap/tnt/NavigationListItem/README.html">NavigationListItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.tnt</a> / <a href="../README.html">sap/tnt/NavigationListItem</a> / NavigationListItem</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.tnt</a> / <a href="../README.html">sap/tnt/NavigationListItem</a> / NavigationListItem</p>
 <h1>Class: NavigationListItem</h1>
 <pre class="sig"><span class="kw">import</span> NavigationListItem <span class="kw">from</span> <span class="str">"sap/tnt/NavigationListItem"</span>;</pre>
-<p>The NavigationListItem control represents an action, which can be selected by the user. It can provide
-sub items.</p>
 <h2>Since</h2>
 <p>1.34</p>
+<p>The NavigationListItem control represents an action, which can be selected by the user. It can provide
+sub items.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></li>
@@ -168,7 +168,6 @@ otherwise it will be bound to this <code>sap.tnt.NavigationListItem</code> itsel
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NavigationListItem$SelectEventParameters.html"><code>NavigationListItem$SelectEventParameters</code></a></p>
@@ -178,6 +177,7 @@ otherwise it will be bound to this <code>sap.tnt.NavigationListItem</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>getExpanded()</h3>
 <blockquote>
@@ -194,12 +194,12 @@ otherwise it will be bound to this <code>sap.tnt.NavigationListItem</code> itsel
 <blockquote>
 <p><strong>getFocusDomRef</strong>(): <code>Element</code></p>
 </blockquote>
-<p>Returns the DOM Element that should get the focus.</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>Returns the DOM Element that should get the focus</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the DOM Element that should get the focus.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html#getfocusdomref"><code>getFocusDomRef</code></a></p>
 <hr>
@@ -250,9 +250,6 @@ this should not be set, but instead an event handler for the <code>select</code>
 <p><strong>getSelectable</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getSelectable selectable.</p>
-<p>Specifies if the item can be selected.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>selectable</code></p>
@@ -260,6 +257,9 @@ this should not be set, but instead an event handler for the <code>select</code>
 <p>1.116
  (since 1.116) - Disclaimer: this property is in a beta state - incompatible API changes
 may be done before its official public release.</p>
+<p>Gets current value of property #getSelectable selectable.</p>
+<p>Specifies if the item can be selected.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getTarget()</h3>
 <blockquote>
@@ -278,14 +278,14 @@ is set.</p>
 <blockquote>
 <p><strong>getVisible</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getVisible visible.</p>
-<p>Specifies if the item should be shown.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>visible</code></p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Gets current value of property #getVisible visible.</p>
+<p>Specifies if the item should be shown.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>indexOfItem()</h3>
 <blockquote>
@@ -411,10 +411,6 @@ this should not be set, but instead an event handler for the <code>select</code>
 <p><strong>setSelectable</strong>(<code>bSelectable?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getSelectable selectable.</p>
-<p>Specifies if the item can be selected.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bSelectable?</h5>
 <p><code>boolean</code></p>
@@ -426,6 +422,10 @@ this should not be set, but instead an event handler for the <code>select</code>
 <p>1.116
  (since 1.116) - Disclaimer: this property is in a beta state - incompatible API changes
 may be done before its official public release.</p>
+<p>Sets a new value for property #getSelectable selectable.</p>
+<p>Specifies if the item can be selected.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setTarget()</h3>
 <blockquote>
@@ -449,10 +449,6 @@ is set.</p>
 <blockquote>
 <p><strong>setVisible</strong>(<code>bVisible?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getVisible visible.</p>
-<p>Specifies if the item should be shown.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bVisible?</h5>
 <p><code>boolean</code></p>
@@ -462,6 +458,10 @@ is set.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets a new value for property #getVisible visible.</p>
+<p>Specifies if the item should be shown.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -478,7 +478,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>NavigationListItem</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>NavigationListItem</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -502,6 +502,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

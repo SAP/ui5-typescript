@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DatePicker — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: DatePicker — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: DatePicker — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/DatePicker/classes/DatePicker.html">
 <meta property="og:title" content="Class: DatePicker — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: DatePicker — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: DatePicker — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/DatePicker/classes/DatePicker.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/DatePicker/README.html">DatePicker</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/DatePicker</a> / DatePicker</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/DatePicker</a> / DatePicker</p>
 <h1>Class: DatePicker</h1>
 <pre class="sig"><span class="kw">import</span> DatePicker <span class="kw">from</span> <span class="str">"sap/m/DatePicker"</span>;</pre>
+<h2>Since</h2>
+<p>1.22.0</p>
 <p>Enables the users to select a localized date between 0001-01-01 and 9999-12-31.</p>
 <p>Overview:</p>
 <p>The <code>DatePicker</code> lets the users select a localized date using touch, mouse, or keyboard input. It consists
@@ -58,8 +60,6 @@ property or as a UI5Date or JavaScript Date object to the <code>dateValue</code>
 should be used at a time):</p>
 <pre><code> - Use the `value` property if you want to bind the `DatePicker` to a model using the `sap.ui.model.type.Date`
 </code></pre>
-<h2>Since</h2>
-<p>1.22.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a></li>
@@ -114,7 +114,6 @@ See:
 <blockquote>
 <p><strong>addSpecialDate</strong>(<code>oSpecialDate</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some <code>specialDate</code> to the aggregation <code>specialDates</code>.</p>
 <h4>Parameters</h4>
 <h5>oSpecialDate</h5>
 <p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
@@ -124,17 +123,13 @@ See:
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Adds some <code>specialDate</code> to the aggregation <code>specialDates</code>.</p>
 <hr>
 <h3>attachAfterValueHelpClose()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAfterValueHelpClose</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpClose afterValueHelpClose event
-of this <code>sap.m.DatePicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
-<p>Fired when <code>value help</code> dialog closes.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -151,15 +146,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAfterValueHelpClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpClose afterValueHelpClose event
 of this <code>sap.m.DatePicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
 <p>Fired when <code>value help</code> dialog closes.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAfterValueHelpClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -172,17 +167,17 @@ otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpClose afterValueHelpClose event
+of this <code>sap.m.DatePicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
+<p>Fired when <code>value help</code> dialog closes.</p>
 <hr>
 <h3>attachAfterValueHelpOpen()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAfterValueHelpOpen</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpOpen afterValueHelpOpen event
-of this <code>sap.m.DatePicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
-<p>Fired when <code>value help</code> dialog opens.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -199,15 +194,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAfterValueHelpOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpOpen afterValueHelpOpen event
 of this <code>sap.m.DatePicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
 <p>Fired when <code>value help</code> dialog opens.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAfterValueHelpOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -220,16 +215,17 @@ otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpOpen afterValueHelpOpen event
+of this <code>sap.m.DatePicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
+<p>Fired when <code>value help</code> dialog opens.</p>
 <hr>
 <h3>attachNavigate()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.m.DatePicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
-<p>Fired when navigating in <code>Calendar</code> popup.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -246,14 +242,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.46.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.m.DatePicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
 <p>Fired when navigating in <code>Calendar</code> popup.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -266,25 +262,26 @@ otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.46.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.m.DatePicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.DatePicker</code> itself.</p>
+<p>Fired when navigating in <code>Calendar</code> popup.</p>
 <hr>
 <h3>destroySpecialDates()</h3>
 <blockquote>
 <p><strong>destroySpecialDates</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the specialDates in the aggregation #getSpecialDates specialDates.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Destroys all the specialDates in the aggregation #getSpecialDates specialDates.</p>
 <hr>
 <h3>detachAfterValueHelpClose()</h3>
 <blockquote>
 <p><strong>detachAfterValueHelpClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:afterValueHelpClose afterValueHelpClose event
-of this <code>sap.m.DatePicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -297,14 +294,14 @@ of this <code>sap.m.DatePicker</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.102.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:afterValueHelpClose afterValueHelpClose event
+of this <code>sap.m.DatePicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachAfterValueHelpOpen()</h3>
 <blockquote>
 <p><strong>detachAfterValueHelpOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:afterValueHelpOpen afterValueHelpOpen event
-of this <code>sap.m.DatePicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -317,13 +314,14 @@ of this <code>sap.m.DatePicker</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.102.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:afterValueHelpOpen afterValueHelpOpen event
+of this <code>sap.m.DatePicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachNavigate()</h3>
 <blockquote>
 <p><strong>detachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.m.DatePicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -336,12 +334,13 @@ of this <code>sap.m.DatePicker</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.m.DatePicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireAfterValueHelpClose()</h3>
 <blockquote>
 <p><strong>fireAfterValueHelpClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterValueHelpClose afterValueHelpClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -353,12 +352,12 @@ of this <code>sap.m.DatePicker</code>.</p>
 <p>1.102.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterValueHelpClose afterValueHelpClose to attached listeners.</p>
 <hr>
 <h3>fireAfterValueHelpOpen()</h3>
 <blockquote>
 <p><strong>fireAfterValueHelpOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterValueHelpOpen afterValueHelpOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -370,15 +369,12 @@ of this <code>sap.m.DatePicker</code>.</p>
 <p>1.102.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterValueHelpOpen afterValueHelpOpen to attached listeners.</p>
 <hr>
 <h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mArguments?</code>): <code>this</code></p>
 </blockquote>
-<p>Fire event change to attached listeners.</p>
-<p>Expects following event parameters:
-	 - &#39;value&#39; of type <code>string</code> The new value of the <code>sap.m.DatePicker</code>.
-	 - &#39;valid&#39; of type <code>boolean</code> Indicator for a valid date.</p>
 <h4>Parameters</h4>
 <h5>mArguments?</h5>
 <p><code>object</code></p>
@@ -388,6 +384,10 @@ of this <code>sap.m.DatePicker</code>.</p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fire event change to attached listeners.</p>
+<p>Expects following event parameters:
+	 - &#39;value&#39; of type <code>string</code> The new value of the <code>sap.m.DatePicker</code>.
+	 - &#39;valid&#39; of type <code>boolean</code> Indicator for a valid date.</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#firechange"><code>fireChange</code></a></p>
 <hr>
@@ -395,7 +395,6 @@ of this <code>sap.m.DatePicker</code>.</p>
 <blockquote>
 <p><strong>fireNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:navigate navigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/DatePicker$NavigateEventParameters.html"><code>DatePicker$NavigateEventParameters</code></a></p>
@@ -407,18 +406,19 @@ of this <code>sap.m.DatePicker</code>.</p>
 <p>1.46.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navigate navigate to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -426,14 +426,14 @@ of this <code>sap.m.DatePicker</code>.</p>
 <blockquote>
 <p><strong>getCalendarWeekNumbering</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 </blockquote>
-<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 <p>Value of property <code>calendarWeekNumbering</code></p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used.</p>
 <hr>
 <h3>getDateValue()</h3>
 <blockquote>
@@ -466,22 +466,27 @@ will be ignored. The format defined in the binding will be used.</p>
 <blockquote>
 <p><strong>getDisplayFormatType</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>displayFormatType</code></p>
+<h4>Since</h4>
+<p>1.28.6</p>
 <p>Gets current value of property #getDisplayFormatType displayFormatType.</p>
 <p>Displays date in this given type in input field. Default value is taken from locale settings. Accepted
 are values of <code>sap.ui.core.CalendarType</code> or an empty string. If no type is set, the default type of the
 configuration is used. <strong>Note:</strong> If data binding on <code>value</code> property with type <code>sap.ui.model.type.Date</code>
 is used, this property will be ignored.</p>
 <p>Default value is <code>empty string</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>displayFormatType</code></p>
-<h4>Since</h4>
-<p>1.28.6</p>
 <hr>
 <h3>getHideInput()</h3>
 <blockquote>
 <p><strong>getHideInput</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideInput</code></p>
+<h4>Since</h4>
+<p>1.97</p>
 <p>Gets current value of property #getHideInput hideInput.</p>
 <p>Determines whether the input field of the picker is hidden or visible. When set to <code>true</code>, the input
 field becomes invisible and there is no way to open the picker popover. In that case it can be opened
@@ -492,97 +497,96 @@ popover, those attributes should be added by the application developer. The foll
 to be added to the opening control: a text or tooltip that describes the action (example: &quot;Open Date
 Picker&quot;), and also aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>hideInput</code></p>
-<h4>Since</h4>
-<p>1.97</p>
 <hr>
 <h3>getLegend()</h3>
 <blockquote>
 <p><strong>getLegend</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
 <hr>
 <h3>getMaxDate()</h3>
 <blockquote>
 <p><strong>getMaxDate</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getMaxDate maxDate.</p>
-<p>Maximum date that can be shown and selected in the <code>DatePicker</code>. This must be a UI5Date or JavaScript
-Date object.</p>
-<p><strong>Note:</strong> If the <code>maxDate</code> is set to be before the <code>minDate</code>, the <code>maxDate</code> and the <code>minDate</code> are switched
-before rendering.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>maxDate</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Gets current value of property #getMaxDate maxDate.</p>
+<p>Maximum date that can be shown and selected in the <code>DatePicker</code>. This must be a UI5Date or JavaScript
+Date object.</p>
+<p><strong>Note:</strong> If the <code>maxDate</code> is set to be before the <code>minDate</code>, the <code>maxDate</code> and the <code>minDate</code> are switched
+before rendering.</p>
 <hr>
 <h3>getMinDate()</h3>
 <blockquote>
 <p><strong>getMinDate</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getMinDate minDate.</p>
-<p>Minimum date that can be shown and selected in the <code>DatePicker</code>. This must be a UI5Date or JavaScript
-Date object.</p>
-<p><strong>Note:</strong> If the <code>minDate</code> is set to be after the <code>maxDate</code>, the <code>maxDate</code> and the <code>minDate</code> are switched
-before rendering.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>minDate</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Gets current value of property #getMinDate minDate.</p>
+<p>Minimum date that can be shown and selected in the <code>DatePicker</code>. This must be a UI5Date or JavaScript
+Date object.</p>
+<p><strong>Note:</strong> If the <code>minDate</code> is set to be after the <code>maxDate</code>, the <code>maxDate</code> and the <code>minDate</code> are switched
+before rendering.</p>
 <hr>
 <h3>getSecondaryCalendarType()</h3>
 <blockquote>
 <p><strong>getSecondaryCalendarType</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
-<p>Gets current value of property #getSecondaryCalendarType secondaryCalendarType.</p>
-<p>If set, the days in the calendar popup are also displayed in this calendar type If not set, the dates
-are only displayed in the primary calendar type</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 <p>Value of property <code>secondaryCalendarType</code></p>
 <h4>Since</h4>
 <p>1.34.1</p>
+<p>Gets current value of property #getSecondaryCalendarType secondaryCalendarType.</p>
+<p>If set, the days in the calendar popup are also displayed in this calendar type If not set, the dates
+are only displayed in the primary calendar type</p>
 <hr>
 <h3>getShowCurrentDateButton()</h3>
 <blockquote>
 <p><strong>getShowCurrentDateButton</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowCurrentDateButton showCurrentDateButton.</p>
-<p>Determines whether there is a shortcut navigation to Today. When used in Month, Year or Year-range picker
-view, the calendar navigates to Day picker view.</p>
-<p>Note: The Current date button appears if the <code>displayFormat</code> property allows entering day.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showCurrentDateButton</code></p>
 <h4>Since</h4>
 <p>1.95</p>
+<p>Gets current value of property #getShowCurrentDateButton showCurrentDateButton.</p>
+<p>Determines whether there is a shortcut navigation to Today. When used in Month, Year or Year-range picker
+view, the calendar navigates to Day picker view.</p>
+<p>Note: The Current date button appears if the <code>displayFormat</code> property allows entering day.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowFooter()</h3>
 <blockquote>
 <p><strong>getShowFooter</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowFooter showFooter.</p>
-<p>Hides or shows the popover&#39;s footer.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showFooter</code></p>
 <h4>Since</h4>
 <p>1.70</p>
+<p>Gets current value of property #getShowFooter showFooter.</p>
+<p>Hides or shows the popover&#39;s footer.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSpecialDates()</h3>
 <blockquote>
 <p><strong>getSpecialDates</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>[]</p>
+<h4>Since</h4>
+<p>1.38.5</p>
 <p>Gets content of aggregation #getSpecialDates specialDates.</p>
 <p>Date Range with type to visualize special days in the Calendar. If one day is assigned to more than one
 Type, only the first one will be used.</p>
@@ -590,10 +594,6 @@ Type, only the first one will be used.</p>
 class.</p>
 <p><strong>Note:</strong> Since 1.48 you could set a non-working day via the sap.ui.unified.CalendarDayType.NonWorking
 enum type just as any other special date type using sap.ui.unified.DateRangeType.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>[]</p>
-<h4>Since</h4>
-<p>1.38.5</p>
 <hr>
 <h3>getValue()</h3>
 <blockquote>
@@ -630,8 +630,6 @@ will be ignored. The format defined in the binding will be used.</p>
 <blockquote>
 <p><strong>indexOfSpecialDate</strong>(<code>oSpecialDate</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.ui.core.Element</code> in the aggregation #getSpecialDates specialDates.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oSpecialDate</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
@@ -641,12 +639,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Checks for the provided <code>sap.ui.core.Element</code> in the aggregation #getSpecialDates specialDates.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertSpecialDate()</h3>
 <blockquote>
 <p><strong>insertSpecialDate</strong>(<code>oSpecialDate</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a <code>specialDate</code> to the aggregation <code>specialDates</code>.</p>
 <h4>Parameters</h4>
 <h5>oSpecialDate</h5>
 <p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
@@ -661,39 +660,32 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Inserts a <code>specialDate</code> to the aggregation <code>specialDates</code>.</p>
 <hr>
 <h3>isOpen()</h3>
 <blockquote>
 <p><strong>isOpen</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Checks if the picker is open</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Checks if the picker is open</p>
 <hr>
 <h3>isValidValue()</h3>
 <blockquote>
 <p><strong>isValidValue</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns if the last entered value is valid.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Since</h4>
 <p>1.64</p>
+<p>Returns if the last entered value is valid.</p>
 <hr>
 <h3>openBy()</h3>
 <blockquote>
 <p><strong>openBy</strong>(<code>oDomRef</code>): <code>void</code></p>
 </blockquote>
-<p>Opens the picker popover. The popover is positioned relatively to the control given as <code>oDomRef</code> parameter
-on tablet or desktop and is full screen on phone. Therefore the control parameter is only used on tablet
-or desktop and is ignored on phone.</p>
-<p>Note: use this method to open the picker popover only when the <code>hideInput</code> property is set to <code>true</code>.
-Please consider opening of the picker popover by another control only in scenarios that comply with Fiori
-guidelines. For example, opening the picker popover by another popover is not recommended. The application
-developer should implement the following accessibility attributes to the opening control: a text or tooltip
-that describes the action (example: &quot;Open Date Picker&quot;), and aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
 <h4>Parameters</h4>
 <h5>oDomRef</h5>
 <p><code>HTMLElement</code></p>
@@ -703,24 +695,31 @@ control.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.97</p>
+<p>Opens the picker popover. The popover is positioned relatively to the control given as <code>oDomRef</code> parameter
+on tablet or desktop and is full screen on phone. Therefore the control parameter is only used on tablet
+or desktop and is ignored on phone.</p>
+<p>Note: use this method to open the picker popover only when the <code>hideInput</code> property is set to <code>true</code>.
+Please consider opening of the picker popover by another control only in scenarios that comply with Fiori
+guidelines. For example, opening the picker popover by another popover is not recommended. The application
+developer should implement the following accessibility attributes to the opening control: a text or tooltip
+that describes the action (example: &quot;Open Date Picker&quot;), and aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
 <hr>
 <h3>removeAllSpecialDates()</h3>
 <blockquote>
 <p><strong>removeAllSpecialDates</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getSpecialDates specialDates.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Removes all the controls from the aggregation #getSpecialDates specialDates.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeSpecialDate()</h3>
 <blockquote>
 <p><strong>removeSpecialDate</strong>(<code>oSpecialDate</code>): <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
 </blockquote>
-<p>Removes a <code>specialDate</code> from the aggregation <code>specialDates</code>.</p>
 <h4>Parameters</h4>
 <h5>oSpecialDate</h5>
 <p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
@@ -730,15 +729,12 @@ control.</p>
 <p>The removed <code>specialDate</code> or <code>null</code></p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Removes a <code>specialDate</code> from the aggregation <code>specialDates</code>.</p>
 <hr>
 <h3>setCalendarWeekNumbering()</h3>
 <blockquote>
 <p><strong>setCalendarWeekNumbering</strong>(<code>sCalendarWeekNumbering?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sCalendarWeekNumbering?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
@@ -748,6 +744,10 @@ global configuration is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDisplayFormat()</h3>
 <blockquote>
@@ -768,13 +768,6 @@ global configuration is used.</p>
 <blockquote>
 <p><strong>setDisplayFormatType</strong>(<code>sDisplayFormatType?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDisplayFormatType displayFormatType.</p>
-<p>Displays date in this given type in input field. Default value is taken from locale settings. Accepted
-are values of <code>sap.ui.core.CalendarType</code> or an empty string. If no type is set, the default type of the
-configuration is used. <strong>Note:</strong> If data binding on <code>value</code> property with type <code>sap.ui.model.type.Date</code>
-is used, this property will be ignored.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sDisplayFormatType?</h5>
 <p><code>string</code></p>
@@ -784,11 +777,27 @@ is used, this property will be ignored.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.6</p>
+<p>Sets a new value for property #getDisplayFormatType displayFormatType.</p>
+<p>Displays date in this given type in input field. Default value is taken from locale settings. Accepted
+are values of <code>sap.ui.core.CalendarType</code> or an empty string. If no type is set, the default type of the
+configuration is used. <strong>Note:</strong> If data binding on <code>value</code> property with type <code>sap.ui.model.type.Date</code>
+is used, this property will be ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setHideInput()</h3>
 <blockquote>
 <p><strong>setHideInput</strong>(<code>bHideInput?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bHideInput?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideInput</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.97</p>
 <p>Sets a new value for property #getHideInput hideInput.</p>
 <p>Determines whether the input field of the picker is hidden or visible. When set to <code>true</code>, the input
 field becomes invisible and there is no way to open the picker popover. In that case it can be opened
@@ -800,21 +809,11 @@ to be added to the opening control: a text or tooltip that describes the action 
 Picker&quot;), and also aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bHideInput?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>hideInput</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.97</p>
 <hr>
 <h3>setLegend()</h3>
 <blockquote>
 <p><strong>setLegend</strong>(<code>oLegend</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated legend.</p>
 <h4>Parameters</h4>
 <h5>oLegend</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/CalendarLegend/classes/CalendarLegend.html"><code>CalendarLegend</code></a></p>
@@ -825,6 +824,7 @@ instance may be given</p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Sets the associated legend.</p>
 <hr>
 <h3>setMaxDate()</h3>
 <blockquote>
@@ -856,10 +856,6 @@ instance may be given</p>
 <blockquote>
 <p><strong>setSecondaryCalendarType</strong>(<code>sSecondaryCalendarType</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSecondaryCalendarType secondaryCalendarType.</p>
-<p>If set, the days in the calendar popup are also displayed in this calendar type If not set, the dates
-are only displayed in the primary calendar type</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSecondaryCalendarType</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
@@ -869,17 +865,15 @@ are only displayed in the primary calendar type</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.1</p>
+<p>Sets a new value for property #getSecondaryCalendarType secondaryCalendarType.</p>
+<p>If set, the days in the calendar popup are also displayed in this calendar type If not set, the dates
+are only displayed in the primary calendar type</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setShowCurrentDateButton()</h3>
 <blockquote>
 <p><strong>setShowCurrentDateButton</strong>(<code>bShowCurrentDateButton?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowCurrentDateButton showCurrentDateButton.</p>
-<p>Determines whether there is a shortcut navigation to Today. When used in Month, Year or Year-range picker
-view, the calendar navigates to Day picker view.</p>
-<p>Note: The Current date button appears if the <code>displayFormat</code> property allows entering day.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowCurrentDateButton?</h5>
 <p><code>boolean</code></p>
@@ -889,12 +883,17 @@ view, the calendar navigates to Day picker view.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.95</p>
+<p>Sets a new value for property #getShowCurrentDateButton showCurrentDateButton.</p>
+<p>Determines whether there is a shortcut navigation to Today. When used in Month, Year or Year-range picker
+view, the calendar navigates to Day picker view.</p>
+<p>Note: The Current date button appears if the <code>displayFormat</code> property allows entering day.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowFooter()</h3>
 <blockquote>
 <p><strong>setShowFooter</strong>(<code>bFlag</code>): <code>void</code></p>
 </blockquote>
-<p>Sets <code>showFooter</code> property to the given boolean value</p>
 <h4>Parameters</h4>
 <h5>bFlag</h5>
 <p><code>undefined</code></p>
@@ -903,6 +902,7 @@ view, the calendar navigates to Day picker view.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.70</p>
+<p>Sets <code>showFooter</code> property to the given boolean value</p>
 <hr>
 <h3>setValue()</h3>
 <blockquote>
@@ -955,7 +955,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>DatePicker</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>DatePicker</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -979,6 +979,6 @@ used by this class</p>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

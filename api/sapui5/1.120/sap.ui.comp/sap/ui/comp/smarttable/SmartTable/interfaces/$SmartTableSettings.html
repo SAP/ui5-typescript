@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SmartTableSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SmartTableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $SmartTableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smarttable/SmartTable/interfaces/$SmartTableSettings.html">
 <meta property="og:title" content="Interface: $SmartTableSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SmartTableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $SmartTableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smarttable/SmartTable/interfaces/$SmartTableSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smarttable › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smarttable/SmartTable/README.html">SmartTable</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smarttable/SmartTable</a> / $SmartTableSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smarttable/SmartTable</a> / $SmartTableSettings</p>
 <h1>Interface: $SmartTableSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SmartTableSettings } <span class="kw">from</span> <span class="str">"sap/ui/comp/smarttable/SmartTable"</span>;</pre>
-<p>Describes the settings that can be provided to the SmartTable constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.m/sap/m/VBox/interfaces/$VBoxSettings.html"><code>$VBoxSettings</code></a></li>
@@ -48,7 +47,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>afterVariantApply?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired after a variant has been applied.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartTable$AfterVariantApplyEvent.html"><code>SmartTable$AfterVariantApplyEvent</code></a></p>
@@ -56,12 +54,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>This event is fired after a variant has been applied.</p>
 <hr>
 <h3>afterVariantInitialise?</h3>
 <blockquote>
 <p><code>optional</code> <strong>afterVariantInitialise?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired after variant management in the SmartTable has been initialized.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -69,13 +67,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>This event is fired after variant management in the SmartTable has been initialized.</p>
 <hr>
 <h3>afterVariantSave?</h3>
 <blockquote>
 <p><code>optional</code> <strong>afterVariantSave?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired after a variant has been saved. This event can be used to retrieve the ID of the
-saved variant.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartTable$AfterVariantSaveEvent.html"><code>SmartTable$AfterVariantSaveEvent</code></a></p>
@@ -83,12 +80,13 @@ saved variant.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>This event is fired after a variant has been saved. This event can be used to retrieve the ID of the
+saved variant.</p>
 <hr>
 <h3>beforeExport?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeExport?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired just before export is triggered.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartTable$BeforeExportEvent.html"><code>SmartTable$BeforeExportEvent</code></a></p>
@@ -96,14 +94,13 @@ saved variant.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>This event is fired just before export is triggered.</p>
 <hr>
 <h3>beforePaste?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforePaste?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>This event is fired just before the paste event is triggered and can be used to prevent the default paste
-behavior.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartTable$BeforePasteEvent.html"><code>SmartTable$BeforePasteEvent</code></a></p>
@@ -112,12 +109,13 @@ behavior.</p>
 <h4>Since</h4>
 <p>1.64
  (since 1.64) - This API is experimental and subject to change</p>
+<p>This event is fired just before the paste event is triggered and can be used to prevent the default paste
+behavior.</p>
 <hr>
 <h3>beforeRebindTable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeRebindTable?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired just before the binding is being done.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartTable$BeforeRebindTableEvent.html"><code>SmartTable$BeforeRebindTableEvent</code></a></p>
@@ -125,11 +123,14 @@ behavior.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.26.0</p>
+<p>This event is fired just before the binding is being done.</p>
 <hr>
 <h3>copyProvider?</h3>
 <blockquote>
 <p><code>optional</code> <strong>copyProvider?</strong>: <a href="../../../../../../../sap.m/sap/m/plugins/CopyProvider/classes/CopyProvider.html"><code>CopyProvider</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.114</p>
 <p>Defines an aggregation for the <code>CopyProvider</code> plugin that provides copy to clipboard capabilities for
 the selected rows of the table and creates a Copy button for the toolbar of the table. To disable the
 copy function of the table, including the Copy button in the toolbar, the <code>enabled</code> property of the <code>CopyProvider</code>
@@ -139,21 +140,21 @@ must be set to <code>false</code>.</p>
 must not be managed by the application. <strong>Note:</strong> The <code>CopyProvider</code> requires a secure context to access
 the clipboard API. If the context is not secure, the plugin will not be added, and the copy button will
 not be generated.</p>
-<h4>Since</h4>
-<p>1.114</p>
 <hr>
 <h3>currentVariantId?</h3>
 <blockquote>
 <p><code>optional</code> <strong>currentVariantId?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Retrieves or sets the current variant.</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Retrieves or sets the current variant.</p>
 <hr>
 <h3>customizeConfig?</h3>
 <blockquote>
 <p><code>optional</code> <strong>customizeConfig?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.97.0</p>
 <p>Provides customization to the columns/cell templates generated by the <code>SmartTable</code> control.</p>
 <p>List of supported settings for the <code>customizeConfig</code> property:
 	 - <code>textInEditModeSource</code>: For more information, see sap.ui.comp.smartfield.SmartField#setTextInEditModeSource</p>
@@ -180,26 +181,22 @@ others to ValueList  --&gt;
 &lt;!-- Sets the `autoColumnWidth` property of all the columns --&gt;
 &lt;SmartTable customizeConfig=&quot;{&#39;autoColumnWidth&#39;: {&#39;*&#39;: {&#39;min&#39;: 5, &#39;max&#39;: 10, &#39;gap&#39;: 2, &#39;truncateLabel&#39;: false}}}&quot; &gt;
 </code></pre>
-<h4>Since</h4>
-<p>1.97.0</p>
 <hr>
 <h3>customToolbar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>customToolbar?</strong>: <a href="../../../../../../../sap.m/sap/m/Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
 <p>A toolbar that can be added by the user to define their own custom buttons, icons, etc. If this is specified,
 the SmartTable control does not create an additional toolbar, but makes use of this one.
  <strong>Note:</strong>
  The CSS class sapMTBHeader-CTX is applied on the given toolbar.</p>
-<h4>Since</h4>
-<p>1.26.0</p>
 <hr>
 <h3><del>dataReceived?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>dataReceived?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired when data is received after binding. The event is fired if the binding for the table
-is done by the SmartTable itself.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -209,13 +206,13 @@ is done by the SmartTable itself.</p>
 <p>1.28.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.56) - Use <code>beforeRebindTable</code> event to attach/listen to the binding &quot;events&quot; directly</p>
+<p>This event is fired when data is received after binding. The event is fired if the binding for the table
+is done by the SmartTable itself.</p>
 <hr>
 <h3><del>dataRequested?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>dataRequested?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired when data is requested after binding. The event is fired if the binding for the table
-is done by the SmartTable itself.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -225,11 +222,15 @@ is done by the SmartTable itself.</p>
 <p>1.52.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.56) - Use <code>beforeRebindTable</code> event to attach/listen to the binding &quot;events&quot; directly</p>
+<p>This event is fired when data is requested after binding. The event is fired if the binding for the table
+is done by the SmartTable itself.</p>
 <hr>
 <h3>dataStateIndicator?</h3>
 <blockquote>
 <p><code>optional</code> <strong>dataStateIndicator?</strong>: <a href="../../../../../../../sap.m/sap/m/plugins/DataStateIndicator/classes/DataStateIndicator.html"><code>DataStateIndicator</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.89</p>
 <p>Defines an aggregation for the <code>DataStateIndicator</code> plugin that can be used to show binding-related messages.
 If the sap.m.plugins.DataStateIndicator#getEnableFiltering enableFiltering property of the <code>DataStateIndicator</code>
 is set to <code>true</code>, the <code>SmartTable</code> control prevents the original behavior of the <code>DataStateIndicator</code>
@@ -240,54 +241,51 @@ messages have been filtered by the user, all the existing filters, for example, 
 are only taken into account once the message filter has been cleared again. Therefore the message filtering
 should not be used in combination with a <code>SmartFilterBar</code>. Required additional filters must be added
 by applications in the #event:beforeRebindTable beforeRebindTable event.</p>
-<h4>Since</h4>
-<p>1.89</p>
 <hr>
 <h3>demandPopin?</h3>
 <blockquote>
 <p><code>optional</code> <strong>demandPopin?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>The demandPopin attribute can be set to true or false depending on whether you want to display columns
-as popins on the responsive table</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>The demandPopin attribute can be set to true or false depending on whether you want to display columns
+as popins on the responsive table</p>
 <hr>
 <h3>detailsButtonSetting?</h3>
 <blockquote>
 <p><code>optional</code> <strong>detailsButtonSetting?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | (<code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a>)[]</p>
 </blockquote>
+<h4>Since</h4>
+<p>1.86</p>
 <p>Defines which columns should be hidden instead of moved into the pop-in area depending on their importance.
 See sap.m.Column#getImportance and sap.m.Table#getHiddenInPopin for more details.</p>
 <p><strong>Note:</strong> To hide columns based on their importance, it&#39;s mandatory to set <code>showDetailsButton=&quot;true&quot;</code>.
 If no priority is given, the default configuration of sap.ui.comp.smarttable.SmartTable#getShowDetailsButton
 is used. If this property is changed after the <code>SmartTable</code> has been initialized, the new changes take
 effect only when the Show / Hide Details button is pressed a second time.</p>
-<h4>Since</h4>
-<p>1.86</p>
 <hr>
 <h3>editable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>editable?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>This attribute can be used to specify if the controls created by the SmartTable control are editable.
-(The automatic toggle of controls works only for the SmartField/SmartToggle scenario)</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>This attribute can be used to specify if the controls created by the SmartTable control are editable.
+(The automatic toggle of controls works only for the SmartField/SmartToggle scenario)</p>
 <hr>
 <h3>editTogglable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>editTogglable?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies whether the editable property can be toggled via a button on the toolbar. (The automatic toggle
-of controls works only for the SmartField/SmartToggle scenario)</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Specifies whether the editable property can be toggled via a button on the toolbar. (The automatic toggle
+of controls works only for the SmartField/SmartToggle scenario)</p>
 <hr>
 <h3>editToggled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>editToggled?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired when display/edit button is clicked.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -295,22 +293,25 @@ of controls works only for the SmartField/SmartToggle scenario)</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>This event is fired when display/edit button is clicked.</p>
 <hr>
 <h3>enableAutoBinding?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableAutoBinding?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.28.0</p>
 <p>When set to true, this enables automatic binding of the table using the tableBindingPath (if it exists)
 or entitySet property. This happens just after the <code>initialise</code> event has been fired.</p>
 <p><strong>Note:</strong>
  This is not a dynamic property and cannot be changed once the control has been initialized.</p>
-<h4>Since</h4>
-<p>1.28.0</p>
 <hr>
 <h3>enableAutoColumnWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableAutoColumnWidth?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.86</p>
 <p>Enables heuristic column width calculation for all supported table types based on metadata information
 when set to <code>true</code>. The column width calculation takes OData type, column label, text arrangement, possible
 cell templates, additional fields and many other metadata parameters into account. Providing more precise
@@ -358,16 +359,11 @@ prerequisite for all other <code>p13nData</code> properties, including the <code
 <p><strong>Note:</strong>
  The <code>enableAutoColumnWidth</code> is not a dynamic property and cannot be changed once the control has been
 initialized.</p>
-<h4>Since</h4>
-<p>1.86</p>
 <hr>
 <h3><del>enableCustomFilter?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableCustomFilter?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Can be used to override the filter behavior. If set to true (default), instead of the filter input box
-a button is rendered. When pressing this button, the SmartTable control opens the filter panel directly
-in the table personalization dialog.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
@@ -375,30 +371,35 @@ in the table personalization dialog.</p>
 <code>enableCustomFilter</code> does not make sense. When setting the property to <code>false</code>, the entered custom filter
 value will not be shown in personalization dialog and will also not be persisted in variant management.
 The custom filter will also be overwritten when rebindTable is called on the SmartTable.</p>
+<p>Can be used to override the filter behavior. If set to true (default), instead of the filter input box
+a button is rendered. When pressing this button, the SmartTable control opens the filter panel directly
+in the table personalization dialog.</p>
 <hr>
 <h3>enableExport?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableExport?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.100.0</p>
 <p>Enables the export of data from the <code>SmartTable</code> control to another file, for example, a spreadsheet.
 If <code>exportType</code> is <code>sap.ui.comp.smarttable.ExportType.GW</code>, any <code>$expand</code> parameters are removed when
 sending the request to generate the file.
  To use the export functionality, the sap.ui.export library is required.</p>
-<h4>Since</h4>
-<p>1.100.0</p>
 <hr>
 <h3>enablePaste?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enablePaste?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines whether the Paste button is enabled.</p>
 <h4>Since</h4>
 <p>1.96</p>
+<p>Determines whether the Paste button is enabled.</p>
 <hr>
 <h3>entitySet?</h3>
 <blockquote>
 <p><code>optional</code> <strong>entitySet?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
 <p>The entity set name from which to fetch data and generate the columns. Note that this is not a dynamic
 UI5 property.</p>
 <p><strong>Note:</strong> It is not allowed to have one of the following strings as field names for your OData entity:</p>
@@ -415,22 +416,19 @@ UI5 property.</p>
  - `variant`
 </code></pre>
 <p>This is not a dynamic property and cannot be changed once the control has been initialized.</p>
-<h4>Since</h4>
-<p>1.26.0</p>
 <hr>
 <h3>exportType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>exportType?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../library/namespaces/smarttable/enumerations/ExportType.html"><code>ExportType</code></a> | <code>&quot;GW&quot;</code> | <code>&quot;UI5Client&quot;</code> | <code>&quot;UI5ClientPDF&quot;</code></p>
 </blockquote>
-<p>Specifies the type of export to be used in the <code>SmartTable</code> control.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Specifies the type of export to be used in the <code>SmartTable</code> control.</p>
 <hr>
 <h3>fieldChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fieldChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired when an editable field, created internally by the SmartTable control, is changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -438,12 +436,12 @@ UI5 property.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>This event is fired when an editable field, created internally by the SmartTable control, is changed.</p>
 <hr>
 <h3>fullScreenToggled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fullScreenToggled?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired right after the full screen mode of the SmartTable control has been changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartTable$FullScreenToggledEvent.html"><code>SmartTable$FullScreenToggledEvent</code></a></p>
@@ -451,39 +449,42 @@ UI5 property.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.46</p>
+<p>This event is fired right after the full screen mode of the SmartTable control has been changed.</p>
 <hr>
 <h3>header?</h3>
 <blockquote>
 <p><code>optional</code> <strong>header?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Specifies header text that is shown in table</p>
 <h4>Since</h4>
 <p>1.26.0</p>
+<p>Specifies header text that is shown in table</p>
 <hr>
 <h3>headerLevel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerLevel?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<p>Defines the semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
 <h4>Since</h4>
 <p>1.84</p>
+<p>Defines the semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
 <hr>
 <h3>headerStyle?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerStyle?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Defines style of the header. For more information, see sap.m.Title#setTitle.</p>
 <h4>Since</h4>
 <p>1.116</p>
 <ul>
 <li>Internal use only</li>
 </ul>
+<p>Defines style of the header. For more information, see sap.m.Title#setTitle.</p>
 <hr>
 <h3>ignoredFields?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ignoredFields?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
 <p>Comma-separated value of fields that must be ignored in the OData metadata by the <code>SmartTable</code> control.
  The <code>SmartTable</code> control will not create built-in columns for the fields defined by this property and
 will not offer these fields in table personalization.</p>
@@ -492,13 +493,13 @@ will not offer these fields in table personalization.</p>
 property.
  - This is not a dynamic property and cannot be changed once the control has been initialized.
 </code></pre>
-<h4>Since</h4>
-<p>1.26.0</p>
 <hr>
 <h3>ignoreFromPersonalisation?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ignoreFromPersonalisation?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.32.0</p>
 <p>Comma-separated value of fields that is not shown in the personalization dialog.
  This property must only be used for use cases where a technical field/column is required to fetch some
 data from the backend but is hidden in the table personalization and on the UI.</p>
@@ -509,14 +510,11 @@ property.
 control.
  - This is not a dynamic property and cannot be changed once the control has been initialized.
 </code></pre>
-<h4>Since</h4>
-<p>1.32.0</p>
 <hr>
 <h3>initialise?</h3>
 <blockquote>
 <p><code>optional</code> <strong>initialise?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired once the control has been initialized.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -524,11 +522,14 @@ control.
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.26.0</p>
+<p>This event is fired once the control has been initialized.</p>
 <hr>
 <h3>initiallyVisibleFields?</h3>
 <blockquote>
 <p><code>optional</code> <strong>initiallyVisibleFields?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.32.0</p>
 <p>Comma-separated value of fields that must be shown initially in the SmartTable as visible columns and
 in the order specified.
  This property is mainly meant to be used when no LineItem annotation exists.
@@ -541,39 +542,37 @@ to be as mentioned here.
 property.
  - This is not a dynamic property and cannot be changed once the control has been initialized.
 </code></pre>
-<h4>Since</h4>
-<p>1.32.0</p>
 <hr>
 <h3>initialNoDataText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>initialNoDataText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.58</p>
 <p>The text shown initially before the control is bound and initialized. The special values <code>$FILTERBAR</code>
 or <code>$NO_FILTERBAR</code> can be specified to make the <code>SmartTable</code> control show the initial text as if the
 <code>SmartFilterBar</code> control were associated with it. If nothing is specified, the default behavior is to
 show the initial text based on whether the <code>SmartFilterBar</code> control is actually associated with the <code>SmartTable</code>
 control.</p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>noData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noData?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.32.0</p>
 <p>The value for the noData aggregation can be either a string value or a control instance.
  The control is shown, in case there is no data for the Table available. In case of a string value this
 will simply replace the no data text.
  Currently the Responsive Table only supports string values.</p>
-<h4>Since</h4>
-<p>1.32.0</p>
 <hr>
 <h3>paste?</h3>
 <blockquote>
 <p><code>optional</code> <strong>paste?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.64) - This API is experimental and subject to change</p>
 <p>This event is fired when paste is triggered.</p>
-<p> (since 1.64) - This API is experimental and subject to change</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartTable$PasteEvent.html"><code>SmartTable$PasteEvent</code></a></p>
@@ -584,25 +583,27 @@ will simply replace the no data text.
 <blockquote>
 <p><code>optional</code> <strong>persistencyKey?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
 <p>Key used to access personalization data.</p>
 <p><strong>Note:</strong>
  This is not a dynamic property and cannot be changed once the control has been initialized.</p>
-<h4>Since</h4>
-<p>1.26.0</p>
 <hr>
 <h3>placeToolbarInTable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>placeToolbarInTable?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies whether the <code>Toolbar</code> control of the <code>SmartTable</code> is placed inside the corresponding aggregation
-of the inner UI5 table control.</p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>Specifies whether the <code>Toolbar</code> control of the <code>SmartTable</code> is placed inside the corresponding aggregation
+of the inner UI5 table control.</p>
 <hr>
 <h3>requestAtLeastFields?</h3>
 <blockquote>
 <p><code>optional</code> <strong>requestAtLeastFields?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.32.0</p>
 <p>Comma-separated value of fields that must be always requested from the backend
  This property is mainly meant to be used when there is no PresentationVariant annotation.
  If both this property and the PresentationVariant annotation exist, the select request sent to the backend
@@ -613,33 +614,33 @@ would be a combination of both.
 	 - The property name(s) must not point to a navigationProperty/association path, as this might not supported
     by analytical services.  Please ensure that you do not add spaces or special characters as no validation
     is done for this property.</p>
-<h4>Since</h4>
-<p>1.32.0</p>
 <hr>
 <h3>semanticKeyAdditionalControl?</h3>
 <blockquote>
 <p><code>optional</code> <strong>semanticKeyAdditionalControl?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.38.0</p>
 <p>Allows users to specify an additional control that will be added to a VBox for the first semantic key
 field.
  <strong>Note:</strong>
  This property is not meant for public use.</p>
-<h4>Since</h4>
-<p>1.38.0</p>
 <hr>
 <h3>semanticObjectController?</h3>
 <blockquote>
 <p><code>optional</code> <strong>semanticObjectController?</strong>: <a href="../../../navpopover/SemanticObjectController/classes/SemanticObjectController.html"><code>SemanticObjectController</code></a></p>
 </blockquote>
-<p>The Semantic Object Controller allows the user to specify and overwrite functionality for semantic object
-navigation.</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>The Semantic Object Controller allows the user to specify and overwrite functionality for semantic object
+navigation.</p>
 <hr>
 <h3>showDetailsButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showDetailsButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.79</p>
 <p>Controls the visibility of the Show / Hide Details button for the <code>ResponsiveTable</code> scenario.</p>
 <p>If the available screen space gets too narrow, the columns configured with <code>High</code> and <code>Medium</code> importance
 move to the pop-in area while the columns with <code>Low</code> importance are hidden. On mobile phones, the columns
@@ -648,22 +649,19 @@ in the table toolbar and gives the user the possibility to toggle the visibility
 in the pop-in area.</p>
 <p><strong>Note:</strong>
  This is not a dynamic property and cannot be changed once the control has been initialized.</p>
-<h4>Since</h4>
-<p>1.79</p>
 <hr>
 <h3>showFullScreenButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showFullScreenButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the FullScreen button.</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Controls the visibility of the FullScreen button.</p>
 <hr>
 <h3>showOverlay?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showOverlay?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired just before the overlay is being shown.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartTable$ShowOverlayEvent.html"><code>SmartTable$ShowOverlayEvent</code></a></p>
@@ -671,19 +669,22 @@ in the pop-in area.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
+<p>This event is fired just before the overlay is being shown.</p>
 <hr>
 <h3>showPasteButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showPasteButton?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Controls the visibility of the Paste button.</p>
 <h4>Since</h4>
 <p>1.91</p>
+<p>Controls the visibility of the Paste button.</p>
 <hr>
 <h3>showRowCount?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showRowCount?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
 <p>The number of rows is shown along with the header text if the property <code>showRowCount</code> is set to <code>true</code>.</p>
 <p><strong>Note:</strong></p>
 <pre><code> - To improve your application&#39;s performance, activate the inline count for OData bindings to avoid
@@ -691,84 +692,80 @@ sending dedicated OData requests.
  - If no stable overall count can be retrieved from the binding, the count will not be displayed. This
 is currently the case for TreeBinding or if no count is requested by the binding.
 </code></pre>
-<h4>Since</h4>
-<p>1.26.0</p>
 <hr>
 <h3>showTablePersonalisation?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showTablePersonalisation?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>The showTablePersonalisation attribute can be set to true or false for controlling the visibility of
-the TablePersonalisation button.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>The showTablePersonalisation attribute can be set to true or false for controlling the visibility of
+the TablePersonalisation button.</p>
 <hr>
 <h3>showVariantManagement?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showVariantManagement?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>The showVariantManagement attribute can be set to true or false for controlling the visibility of VariantManagement
-button.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>The showVariantManagement attribute can be set to true or false for controlling the visibility of VariantManagement
+button.</p>
 <hr>
 <h3>smartFilterId?</h3>
 <blockquote>
 <p><code>optional</code> <strong>smartFilterId?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
 <p>ID of the corresponding SmartFilter control; When specified, the SmartTable searches for the SmartFilter
 (also in the closest parent View) and attaches to the relevant events of the SmartFilter; to fetch data,
 show overlay etc.</p>
 <p><strong>Note:</strong>
  This is not a dynamic property and cannot be changed once the control has been initialized.</p>
-<h4>Since</h4>
-<p>1.26.0</p>
 <hr>
 <h3>smartVariant?</h3>
 <blockquote>
 <p><code>optional</code> <strong>smartVariant?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Identifies the SmartVariant control which should be used for the personalization. Will be ignored if
-the advanced mode is set.</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Identifies the SmartVariant control which should be used for the personalization. Will be ignored if
+the advanced mode is set.</p>
 <hr>
 <h3>tableBindingPath?</h3>
 <blockquote>
 <p><code>optional</code> <strong>tableBindingPath?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.28.0</p>
 <p>This attribute can be used to specify the path that is used during the binding of the table. If not specified,
 the entitySet attribute is used instead. (used only if binding is established after setting this property:
 initially due to enableAutoBinding -or- by subsequently calling rebindTable)</p>
-<h4>Since</h4>
-<p>1.28.0</p>
 <hr>
 <h3>tableType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>tableType?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Table&quot;</code> | <a href="../../../library/namespaces/smarttable/enumerations/TableType.html"><code>TableType</code></a> | <code>&quot;AnalyticalTable&quot;</code> | <code>&quot;ResponsiveTable&quot;</code> | <code>&quot;TreeTable&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
 <p>Specifies the type of table to be created in the SmartTable control.
  <strong>Note:</strong></p>
 <pre><code> - If you add a table to the content of the SmartTable in the view, this property has no effect.
  - This is not a dynamic property and cannot be changed once the control has been initialized.
 </code></pre>
-<h4>Since</h4>
-<p>1.26.0</p>
 <hr>
 <h3>toolbarStyleClass?</h3>
 <blockquote>
 <p><code>optional</code> <strong>toolbarStyleClass?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>A style class which is defined for the toolbar of the table.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
+<p>A style class which is defined for the toolbar of the table.</p>
 <hr>
 <h3>uiStateChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>uiStateChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>This event is fired when the UI state changes either via the sap.ui.comp.smarttable.SmartTable#setUiState
-method or the table personalization.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -776,11 +773,15 @@ method or the table personalization.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.96.15</p>
+<p>This event is fired when the UI state changes either via the sap.ui.comp.smarttable.SmartTable#setUiState
+method or the table personalization.</p>
 <hr>
 <h3>useColumnLabelsAsTooltips?</h3>
 <blockquote>
 <p><code>optional</code> <strong>useColumnLabelsAsTooltips?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.114.0</p>
 <p>If no tooltips have been provided, neither by the <code>QuickInfo</code> annotation nor for custom columns directly
 via property, the column label will automatically be applied as a tooltip for the column.</p>
 <p>To enable this mechanism for custom columns, a <code>sap.m.Label</code> or <code>sap.m.Text</code> must be used as header label.
@@ -788,13 +789,15 @@ Custom tooltips are not affected by this functionality when they are provided on
 for tables of type <code>ResponsiveTable</code> and on the column for other table types.</p>
 <p><strong>Note:</strong>
  This is not a dynamic property and cannot be changed once the control has been initialized.</p>
-<h4>Since</h4>
-<p>1.114.0</p>
 <hr>
 <h3><del>useExportToExcel?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>useExportToExcel?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
+<h4>Deprecated</h4>
+<p>(since 1.100) - replaced by <code>enableExport</code> property.</p>
 <p>Can be set to true or false depending on whether you want to export data to a spreadsheet application,
 for example Microsoft Excel.
  <strong>Note:</strong>
@@ -803,15 +806,13 @@ the request to generate the spreadsheet.
  As of UI5 version 1.56: If <code>exportType</code> is <code>sap.ui.comp.smarttable.ExportType.UI5Client</code> and <code>TreeTable</code>
 is used, the <code>worksheet.hierarchyLevel</code> property (see sap.ui.export.Spreadsheet) is filled from
 the binding, if the relevant information is available there for exporting hierarchical data in the spreadsheet.</p>
-<h4>Since</h4>
-<p>1.26.0</p>
-<h4>Deprecated</h4>
-<p>(since 1.100) - replaced by <code>enableExport</code> property.</p>
 <hr>
 <h3>useInfoToolbar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>useInfoToolbar?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;On&quot;</code> | <code>&quot;Off&quot;</code> | <a href="../../../library/namespaces/smarttable/enumerations/InfoToolbarBehavior.html"><code>InfoToolbarBehavior</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.70</p>
 <p>Shows an info toolbar.
  Filters that are applied using the table personalization dialog are shown in the info toolbar.
  <strong>Note:</strong></p>
@@ -825,42 +826,40 @@ only once.
  - In case there is a custom info toolbar used for the responsive table control, then the property must
 be set to `Off`. Otherwise, an error is logged in the browser console.
 </code></pre>
-<h4>Since</h4>
-<p>1.70</p>
 <hr>
 <h3><del>useOnlyOneSolidToolbar?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>useOnlyOneSolidToolbar?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>If set to true, the standard toolbar and custom toolbar will be merged into one toolbar. The combined
-toolbar will have a solid style.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.29) - This property has no effect</p>
+<p>If set to true, the standard toolbar and custom toolbar will be merged into one toolbar. The combined
+toolbar will have a solid style.</p>
 <hr>
 <h3>useTablePersonalisation?</h3>
 <blockquote>
 <p><code>optional</code> <strong>useTablePersonalisation?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.26.0</p>
 <p>The <code>useTablePersonalisation</code> attribute can be set to true or false depending on whether you want to
 define personalized table settings. If you want to persist the table personalization, you need to specify
 the persistencyKey property.</p>
 <p><strong>Note:</strong>
  This is not a dynamic property and cannot be changed once the control has been initialized.</p>
-<h4>Since</h4>
-<p>1.26.0</p>
 <hr>
 <h3>useVariantManagement?</h3>
 <blockquote>
 <p><code>optional</code> <strong>useVariantManagement?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>The useVariantManagement attribute can be set to true or false depending on whether you want to use variants.
-As a prerequisite you need to specify the persistencyKey property.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
+<p>The useVariantManagement attribute can be set to true or false depending on whether you want to use variants.
+As a prerequisite you need to specify the persistencyKey property.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

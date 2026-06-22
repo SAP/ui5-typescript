@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CopyProvider — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: CopyProvider — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: CopyProvider — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/plugins/CopyProvider/classes/CopyProvider.html">
 <meta property="og:title" content="Class: CopyProvider — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: CopyProvider — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: CopyProvider — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/plugins/CopyProvider/classes/CopyProvider.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.m/README.html">sap.m</a> › sap › m › plugins › <a href="../../../../../../sap.m/sap/m/plugins/CopyProvider/README.html">CopyProvider</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/plugins/CopyProvider</a> / CopyProvider</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/plugins/CopyProvider</a> / CopyProvider</p>
 <h1>Class: CopyProvider</h1>
 <pre class="sig"><span class="kw">import</span> CopyProvider <span class="kw">from</span> <span class="str">"sap/m/plugins/CopyProvider"</span>;</pre>
+<h2>Since</h2>
+<p>1.110</p>
 <p>Provides copy to clipboard capabilities for the selected rows of the table. This plugin can copy individual
 cells if the sap.m.plugins.CellSelector CellSelector plugin is also enabled for that table.</p>
 <p><strong>Note:</strong> If a <code>sap.ui.table.Table</code> control is used together with server-side models, the sap.ui.table.plugins.MultiSelectionPlugin MultiSelectionPlugin
@@ -47,8 +49,6 @@ property of the <code>MultiSelectionPlugin</code>.
 clipboard API. For more information, see <a href="https://w3c.github.io/webappsec-secure-contexts/">https://w3c.github.io/webappsec-secure-contexts/</a>. It
 is recommended to check whether the application executes in a secure context before adding the <code>CopyProvider</code>
 plugin and related functionality, such as the #sap.m.plugins.CellSelector.</p>
-<h2>Since</h2>
-<p>1.110</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -177,9 +177,6 @@ This plugin requires a secure context in order to access the browser&#39;s clipb
 <blockquote>
 <p><strong>fireCopy</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:copy copy to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/CopyProvider$CopyEventParameters.html"><code>CopyProvider$CopyEventParameters</code></a></p>
@@ -189,15 +186,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:copy copy to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>getCopyButton()</h3>
 <blockquote>
 <p><strong>getCopyButton</strong>(<code>mSettings?</code>): <a href="../../../OverflowToolbarButton/classes/OverflowToolbarButton.html"><code>OverflowToolbarButton</code></a></p>
 </blockquote>
-<p>Creates and returns a Copy button that can be used to trigger a copy action, for example, from the table
-toolbar.</p>
-<p><strong>Note:</strong> The <code>visible</code> and <code>enabled</code> properties of the Copy button must be managed through this plugin&#39;s
-own <code>visible</code> and <code>enabled</code> properties.</p>
 <h4>Parameters</h4>
 <h5>mSettings?</h5>
 <p><code>object</code></p>
@@ -207,22 +203,24 @@ own <code>visible</code> and <code>enabled</code> properties.</p>
 <p>The button instance</p>
 <h4>Since</h4>
 <p>1.114</p>
+<p>Creates and returns a Copy button that can be used to trigger a copy action, for example, from the table
+toolbar.</p>
 <hr>
 <h3>getCopyPreference()</h3>
 <blockquote>
 <p><strong>getCopyPreference</strong>(): <code>&quot;Full&quot;</code> | <a href="../../../library/namespaces/plugins/enumerations/CopyPreference.html"><code>CopyPreference</code></a> | <code>&quot;Cells&quot;</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>&quot;Full&quot;</code> | <a href="../../../library/namespaces/plugins/enumerations/CopyPreference.html"><code>CopyPreference</code></a> | <code>&quot;Cells&quot;</code></p>
+<p>Value of property <code>copyPreference</code></p>
+<h4>Since</h4>
+<p>1.119</p>
 <p>Gets current value of property #getCopyPreference copyPreference.</p>
 <p>This property determines the copy preference when performing a copy operation.</p>
 <p>If the property is set to <code>Full</code>, all selected content is copied. This includes selected rows and cells.</p>
 <p>If the property is set to <code>Cells</code>, cell selection takes precedence during copying. If cells are selected
 along with rows, only the cell selection is copied. If no cells are selected, the row selection is copied.</p>
 <p>Default value is <code>Cells</code>.</p>
-<h4>Returns</h4>
-<p><code>&quot;Full&quot;</code> | <a href="../../../library/namespaces/plugins/enumerations/CopyPreference.html"><code>CopyPreference</code></a> | <code>&quot;Cells&quot;</code></p>
-<p>Value of property <code>copyPreference</code></p>
-<h4>Since</h4>
-<p>1.119</p>
 <hr>
 <h3>getCopySparse()</h3>
 <blockquote>
@@ -265,7 +263,7 @@ row in case of a range selection, for example the context of grouping or sub-tot
  For the <code>sap.m.Table</code> control, if the <code>items</code> aggregation of the table is not bound then the callback
 function gets called with the row instance instead of the binding context.
  The callback function must return the cell data that is then stringified and copied to the clipboard.
- If an array is returned from the callback function, then each array value will be copied as a separate
+ If an array is returned from the callback function, then each array values will be copied as a separate
 cell into the clipboard.
  If a column should not be copied to the clipboard, then the callback function must return <code>undefined</code>
 or <code>null</code> for each cell of the same column.</p>
@@ -290,26 +288,19 @@ if the sap.m.plugins.CellSelector CellSelector plugin is also enabled for the ta
 <blockquote>
 <p><strong>getVisible</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getVisible visible.</p>
-<p>Defines the visibility of the Copy button created with the #getCopyButton API.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>visible</code></p>
 <h4>Since</h4>
 <p>1.114</p>
+<p>Gets current value of property #getVisible visible.</p>
+<p>Defines the visibility of the Copy button created with the #getCopyButton API.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setCopyPreference()</h3>
 <blockquote>
 <p><strong>setCopyPreference</strong>(<code>sCopyPreference?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getCopyPreference copyPreference.</p>
-<p>This property determines the copy preference when performing a copy operation.</p>
-<p>If the property is set to <code>Full</code>, all selected content is copied. This includes selected rows and cells.</p>
-<p>If the property is set to <code>Cells</code>, cell selection takes precedence during copying. If cells are selected
-along with rows, only the cell selection is copied. If no cells are selected, the row selection is copied.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Cells</code>.</p>
 <h4>Parameters</h4>
 <h5>sCopyPreference?</h5>
 <p><code>&quot;Full&quot;</code> | <a href="../../../library/namespaces/plugins/enumerations/CopyPreference.html"><code>CopyPreference</code></a> | <code>&quot;Cells&quot;</code></p>
@@ -319,6 +310,13 @@ along with rows, only the cell selection is copied. If no cells are selected, th
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.119</p>
+<p>Sets a new value for property #getCopyPreference copyPreference.</p>
+<p>This property determines the copy preference when performing a copy operation.</p>
+<p>If the property is set to <code>Full</code>, all selected content is copied. This includes selected rows and cells.</p>
+<p>If the property is set to <code>Cells</code>, cell selection takes precedence during copying. If cells are selected
+along with rows, only the cell selection is copied. If no cells are selected, the row selection is copied.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Cells</code>.</p>
 <hr>
 <h3>setCopySparse()</h3>
 <blockquote>
@@ -371,7 +369,7 @@ row in case of a range selection, for example the context of grouping or sub-tot
  For the <code>sap.m.Table</code> control, if the <code>items</code> aggregation of the table is not bound then the callback
 function gets called with the row instance instead of the binding context.
  The callback function must return the cell data that is then stringified and copied to the clipboard.
- If an array is returned from the callback function, then each array value will be copied as a separate
+ If an array is returned from the callback function, then each array values will be copied as a separate
 cell into the clipboard.
  If a column should not be copied to the clipboard, then the callback function must return <code>undefined</code>
 or <code>null</code> for each cell of the same column.</p>
@@ -390,10 +388,6 @@ constructor.</p>
 <blockquote>
 <p><strong>setVisible</strong>(<code>bVisible?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getVisible visible.</p>
-<p>Defines the visibility of the Copy button created with the #getCopyButton API.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bVisible?</h5>
 <p><code>boolean</code></p>
@@ -403,6 +397,10 @@ constructor.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.114</p>
+<p>Sets a new value for property #getVisible visible.</p>
+<p>Defines the visibility of the Copy button created with the #getCopyButton API.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -419,7 +417,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>CopyProvider</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>CopyProvider</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -443,6 +441,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

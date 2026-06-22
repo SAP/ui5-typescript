@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Abstract Class: GanttChartBase~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Abstract Class: GanttChartBase~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>~~Class: GanttChartBase~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Class: GanttChartBase~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/GanttChartBase/classes/GanttChartBase.html">
-<meta property="og:title" content="~~Abstract Class: GanttChartBase~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Abstract Class: GanttChartBase~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="~~Class: GanttChartBase~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Class: GanttChartBase~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/GanttChartBase/classes/GanttChartBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › <a href="../../../../../sap.gantt/sap/gantt/GanttChartBase/README.html">GanttChartBase</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/GanttChartBase</a> / GanttChartBase</p>
-<h1><del>Abstract Class: GanttChartBase</del></h1>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/GanttChartBase</a> / GanttChartBase</p>
+<h1><del>Class: GanttChartBase</del></h1>
 <pre class="sig"><span class="kw">import</span> GanttChartBase <span class="kw">from</span> <span class="str">"sap/gantt/GanttChartBase"</span>;</pre>
+<h2>Deprecated</h2>
+<p>(since 1.64)</p>
 <p>Base class for all Gantt charts.</p>
 <p>This base class defines:
 	 - Basic properties and aggregations.
@@ -64,8 +66,6 @@ or shape UID as the input to identify the objects to select or retrieve.</p>
     PATH:row_id|SCHEME:chart_scheme_key[index]|DATA:shape_data_name[shape_id]</p>
 <p>Note that you do not need to specify the UID for a shape or row. Gantt Chart automatically forms the
 UIDs for shapes or rows.</p>
-<h2>Deprecated</h2>
-<p>(since 1.64)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -458,13 +458,6 @@ otherwise it will be bound to this <code>sap.gantt.GanttChartBase</code> itself.
 <blockquote>
 <p><strong>attachHorizontalScroll</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:horizontalScroll horizontalScroll event of
-this <code>sap.gantt.GanttChartBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.gantt.GanttChartBase</code> itself.</p>
-<p>Horizontal (time axis) scroll.</p>
-<p>If the horizontal scroll bar exists and synchronization is needed with other Gantt charts in the container,
-use this event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -481,10 +474,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.44)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachHorizontalScroll</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:horizontalScroll horizontalScroll event of
 this <code>sap.gantt.GanttChartBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -492,6 +481,10 @@ otherwise it will be bound to this <code>sap.gantt.GanttChartBase</code> itself.
 <p>Horizontal (time axis) scroll.</p>
 <p>If the horizontal scroll bar exists and synchronization is needed with other Gantt charts in the container,
 use this event.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachHorizontalScroll</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -504,6 +497,13 @@ use this event.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.44)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:horizontalScroll horizontalScroll event of
+this <code>sap.gantt.GanttChartBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.gantt.GanttChartBase</code> itself.</p>
+<p>Horizontal (time axis) scroll.</p>
+<p>If the horizontal scroll bar exists and synchronization is needed with other Gantt charts in the container,
+use this event.</p>
 <hr>
 <h3><del>attachRelationshipSelectionChange()</del></h3>
 <h4>Call Signature</h4>
@@ -912,13 +912,6 @@ otherwise it will be bound to this <code>sap.gantt.GanttChartBase</code> itself.
 <blockquote>
 <p><strong>attachVerticalScroll</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:verticalScroll verticalScroll event of this
-<code>sap.gantt.GanttChartBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.gantt.GanttChartBase</code> itself.</p>
-<p>Vertical (row axis) scroll.</p>
-<p>If the vertical scroll bar exists and synchronization is needed with other Gantt charts in the container,
-use this event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -935,10 +928,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.44)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachVerticalScroll</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:verticalScroll verticalScroll event of this
 <code>sap.gantt.GanttChartBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -946,6 +935,10 @@ otherwise it will be bound to this <code>sap.gantt.GanttChartBase</code> itself.
 <p>Vertical (row axis) scroll.</p>
 <p>If the vertical scroll bar exists and synchronization is needed with other Gantt charts in the container,
 use this event.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachVerticalScroll</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -958,6 +951,13 @@ use this event.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.44)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:verticalScroll verticalScroll event of this
+<code>sap.gantt.GanttChartBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.gantt.GanttChartBase</code> itself.</p>
+<p>Vertical (row axis) scroll.</p>
+<p>If the vertical scroll bar exists and synchronization is needed with other Gantt charts in the container,
+use this event.</p>
 <hr>
 <h3><del>bindAdhocLines()</del></h3>
 <blockquote>
@@ -1247,9 +1247,6 @@ event of this <code>sap.gantt.GanttChartBase</code>.</p>
 <blockquote>
 <p><strong>detachHorizontalScroll</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:horizontalScroll horizontalScroll event of
-this <code>sap.gantt.GanttChartBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1262,6 +1259,9 @@ this <code>sap.gantt.GanttChartBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.44)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:horizontalScroll horizontalScroll event of
+this <code>sap.gantt.GanttChartBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachRelationshipSelectionChange()</del></h3>
 <blockquote>
@@ -1428,9 +1428,6 @@ event of this <code>sap.gantt.GanttChartBase</code>.</p>
 <blockquote>
 <p><strong>detachVerticalScroll</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:verticalScroll verticalScroll event of this
-<code>sap.gantt.GanttChartBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1443,6 +1440,9 @@ event of this <code>sap.gantt.GanttChartBase</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.44)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:verticalScroll verticalScroll event of this
+<code>sap.gantt.GanttChartBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>expandToLevel()</del></h3>
 <blockquote>
@@ -1463,7 +1463,6 @@ See:
 <blockquote>
 <p><strong>fireChartClick</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:chartClick chartClick to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ChartClickEventParameters.html"><code>GanttChartBase$ChartClickEventParameters</code></a></p>
@@ -1473,12 +1472,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:chartClick chartClick to attached listeners.</p>
 <hr>
 <h3><del>fireChartDoubleClick()</del></h3>
 <blockquote>
 <p><strong>fireChartDoubleClick</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:chartDoubleClick chartDoubleClick to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ChartDoubleClickEventParameters.html"><code>GanttChartBase$ChartDoubleClickEventParameters</code></a></p>
@@ -1488,12 +1487,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:chartDoubleClick chartDoubleClick to attached listeners.</p>
 <hr>
 <h3><del>fireChartDragEnter()</del></h3>
 <blockquote>
 <p><strong>fireChartDragEnter</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:chartDragEnter chartDragEnter to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ChartDragEnterEventParameters.html"><code>GanttChartBase$ChartDragEnterEventParameters</code></a></p>
@@ -1503,12 +1502,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:chartDragEnter chartDragEnter to attached listeners.</p>
 <hr>
 <h3><del>fireChartDragLeave()</del></h3>
 <blockquote>
 <p><strong>fireChartDragLeave</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:chartDragLeave chartDragLeave to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ChartDragLeaveEventParameters.html"><code>GanttChartBase$ChartDragLeaveEventParameters</code></a></p>
@@ -1518,12 +1517,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:chartDragLeave chartDragLeave to attached listeners.</p>
 <hr>
 <h3><del>fireChartMouseOver()</del></h3>
 <blockquote>
 <p><strong>fireChartMouseOver</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:chartMouseOver chartMouseOver to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ChartMouseOverEventParameters.html"><code>GanttChartBase$ChartMouseOverEventParameters</code></a></p>
@@ -1533,12 +1532,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:chartMouseOver chartMouseOver to attached listeners.</p>
 <hr>
 <h3><del>fireChartRightClick()</del></h3>
 <blockquote>
 <p><strong>fireChartRightClick</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:chartRightClick chartRightClick to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ChartRightClickEventParameters.html"><code>GanttChartBase$ChartRightClickEventParameters</code></a></p>
@@ -1548,12 +1547,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:chartRightClick chartRightClick to attached listeners.</p>
 <hr>
 <h3><del>fireGanttChartSwitchRequested()</del></h3>
 <blockquote>
 <p><strong>fireGanttChartSwitchRequested</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:ganttChartSwitchRequested ganttChartSwitchRequested to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$GanttChartSwitchRequestedEventParameters.html"><code>GanttChartBase$GanttChartSwitchRequestedEventParameters</code></a></p>
@@ -1563,12 +1562,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:ganttChartSwitchRequested ganttChartSwitchRequested to attached listeners.</p>
 <hr>
 <h3><del>fireHorizontalScroll()</del></h3>
 <blockquote>
 <p><strong>fireHorizontalScroll</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:horizontalScroll horizontalScroll to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$HorizontalScrollEventParameters.html"><code>GanttChartBase$HorizontalScrollEventParameters</code></a></p>
@@ -1580,12 +1579,12 @@ See:
 <p>(since 1.44)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:horizontalScroll horizontalScroll to attached listeners.</p>
 <hr>
 <h3><del>fireRelationshipSelectionChange()</del></h3>
 <blockquote>
 <p><strong>fireRelationshipSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:relationshipSelectionChange relationshipSelectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$RelationshipSelectionChangeEventParameters.html"><code>GanttChartBase$RelationshipSelectionChangeEventParameters</code></a></p>
@@ -1595,12 +1594,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:relationshipSelectionChange relationshipSelectionChange to attached listeners.</p>
 <hr>
 <h3><del>fireRowSelectionChange()</del></h3>
 <blockquote>
 <p><strong>fireRowSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:rowSelectionChange rowSelectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$RowSelectionChangeEventParameters.html"><code>GanttChartBase$RowSelectionChangeEventParameters</code></a></p>
@@ -1610,12 +1609,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:rowSelectionChange rowSelectionChange to attached listeners.</p>
 <hr>
 <h3><del>fireShapeDragEnd()</del></h3>
 <blockquote>
 <p><strong>fireShapeDragEnd</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:shapeDragEnd shapeDragEnd to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ShapeDragEndEventParameters.html"><code>GanttChartBase$ShapeDragEndEventParameters</code></a></p>
@@ -1625,12 +1624,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:shapeDragEnd shapeDragEnd to attached listeners.</p>
 <hr>
 <h3><del>fireShapeMouseEnter()</del></h3>
 <blockquote>
 <p><strong>fireShapeMouseEnter</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:shapeMouseEnter shapeMouseEnter to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ShapeMouseEnterEventParameters.html"><code>GanttChartBase$ShapeMouseEnterEventParameters</code></a></p>
@@ -1640,12 +1639,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:shapeMouseEnter shapeMouseEnter to attached listeners.</p>
 <hr>
 <h3><del>fireShapeMouseLeave()</del></h3>
 <blockquote>
 <p><strong>fireShapeMouseLeave</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:shapeMouseLeave shapeMouseLeave to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ShapeMouseLeaveEventParameters.html"><code>GanttChartBase$ShapeMouseLeaveEventParameters</code></a></p>
@@ -1655,12 +1654,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:shapeMouseLeave shapeMouseLeave to attached listeners.</p>
 <hr>
 <h3><del>fireShapeResizeEnd()</del></h3>
 <blockquote>
 <p><strong>fireShapeResizeEnd</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:shapeResizeEnd shapeResizeEnd to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ShapeResizeEndEventParameters.html"><code>GanttChartBase$ShapeResizeEndEventParameters</code></a></p>
@@ -1670,12 +1669,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:shapeResizeEnd shapeResizeEnd to attached listeners.</p>
 <hr>
 <h3><del>fireShapeSelectionChange()</del></h3>
 <blockquote>
 <p><strong>fireShapeSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:shapeSelectionChange shapeSelectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$ShapeSelectionChangeEventParameters.html"><code>GanttChartBase$ShapeSelectionChangeEventParameters</code></a></p>
@@ -1685,12 +1684,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:shapeSelectionChange shapeSelectionChange to attached listeners.</p>
 <hr>
 <h3><del>fireSplitterResize()</del></h3>
 <blockquote>
 <p><strong>fireSplitterResize</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:splitterResize splitterResize to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$SplitterResizeEventParameters.html"><code>GanttChartBase$SplitterResizeEventParameters</code></a></p>
@@ -1700,12 +1699,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:splitterResize splitterResize to attached listeners.</p>
 <hr>
 <h3><del>fireTreeTableToggleEvent()</del></h3>
 <blockquote>
 <p><strong>fireTreeTableToggleEvent</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:treeTableToggleEvent treeTableToggleEvent to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$TreeTableToggleEventEventParameters.html"><code>GanttChartBase$TreeTableToggleEventEventParameters</code></a></p>
@@ -1715,12 +1714,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:treeTableToggleEvent treeTableToggleEvent to attached listeners.</p>
 <hr>
 <h3><del>fireVerticalScroll()</del></h3>
 <blockquote>
 <p><strong>fireVerticalScroll</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:verticalScroll verticalScroll to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GanttChartBase$VerticalScrollEventParameters.html"><code>GanttChartBase$VerticalScrollEventParameters</code></a></p>
@@ -1732,6 +1731,7 @@ See:
 <p>(since 1.44)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:verticalScroll verticalScroll to attached listeners.</p>
 <hr>
 <h3><del>getAdhocLineLayer()</del></h3>
 <blockquote>
@@ -1987,14 +1987,14 @@ provided, a default configuration is provided. We recommend that you set the typ
 <blockquote>
 <p><strong>getNowLineInUTC</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getNowLineInUTC nowLineInUTC.</p>
-<p>Flag whether to show the <code>nowLine</code> in UTC or in local time.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>nowLineInUTC</code></p>
 <h4>Since</h4>
 <p>1.68</p>
+<p>Gets current value of property #getNowLineInUTC nowLineInUTC.</p>
+<p>Flag whether to show the <code>nowLine</code> in UTC or in local time.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getObjectTypes()</del></h3>
 <blockquote>
@@ -2079,12 +2079,6 @@ oShapeData2, ...] &quot;shapeDataName2&quot;: [oShapeData3, oShapeData3, ...] ..
 <blockquote>
 <p><strong>getSelectionMode</strong>(): <code>&quot;Multiple&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Single&quot;</code> | <a href="../../library/enumerations/SelectionMode.html"><code>SelectionMode</code></a> | <code>&quot;MultipleWithLasso&quot;</code> | <code>&quot;MultiWithKeyboard&quot;</code> | <code>&quot;MultiWithKeyboardAndLasso&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectionMode selectionMode.</p>
-<p>Selection mode for GanttChart</p>
-<p>This property controls whether multiToggle or multi-selection mode is enabled for the tree table and
-for shapes. It may also affect the visual appearance, such as whether check boxes are available for selection.
-From version 1.40 to upper versions, multi is replaced by multiToggle selection mode in tree table</p>
-<p>Default value is <code>MultiWithKeyboard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Multiple&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Single&quot;</code> | <a href="../../library/enumerations/SelectionMode.html"><code>SelectionMode</code></a> | <code>&quot;MultipleWithLasso&quot;</code> | <code>&quot;MultiWithKeyboard&quot;</code> | <code>&quot;MultiWithKeyboardAndLasso&quot;</code></p>
 <p>Value of property <code>selectionMode</code></p>
@@ -2092,6 +2086,12 @@ From version 1.40 to upper versions, multi is replaced by multiToggle selection 
 <p>(since 1.50.7) - Please use <code>tableProperties</code>(e.g. <code>setTableproperties({selectionMode: &quot;None&quot;})</code>)
 to control table selection mode, and <code>shapeSelectionMode</code>(e.g. <code>setShapeSelectionMode(&quot;None&quot;)</code>) to control
 shape selection mode.</p>
+<p>Gets current value of property #getSelectionMode selectionMode.</p>
+<p>Selection mode for GanttChart</p>
+<p>This property controls whether multiToggle or multi-selection mode is enabled for the tree table and
+for shapes. It may also affect the visual appearance, such as whether check boxes are available for selection.
+From version 1.40 to upper versions, multi is replaced by multiToggle selection mode in tree table</p>
+<p>Default value is <code>MultiWithKeyboard</code>.</p>
 <hr>
 <h3><del>getSelectionPanelSize()</del></h3>
 <blockquote>
@@ -2179,9 +2179,6 @@ function properly.</p>
 <blockquote>
 <p><strong>getTimeAxis</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getTimeAxis timeAxis.</p>
-<p>Configuration of the time axis.</p>
-<p>Default value is <code>library.config.DEFAULT_TIME_AXIS</code>.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>timeAxis</code></p>
@@ -2191,21 +2188,24 @@ and zoom level can be configured with this property. If not provided, a default 
 We recommend that you set the type of this argument to <code>sap.gantt.config.TimeAxis</code>. Otherwise some properties
 you set may not function properly.</p>
 <p>Restriction: It is defined as a property, and hence cannot be used in an XML view.</p>
+<p>Gets current value of property #getTimeAxis timeAxis.</p>
+<p>Configuration of the time axis.</p>
+<p>Default value is <code>library.config.DEFAULT_TIME_AXIS</code>.</p>
 <hr>
 <h3><del>getTimeZoomRate()</del></h3>
 <blockquote>
 <p><strong>getTimeZoomRate</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getTimeZoomRate timeZoomRate.</p>
-<p>Zoom level in float.</p>
-<p>This property allows application developers to control the zoom level. When GanttChart is embedded in
-<code>sap.gantt.GanttChartContainer</code>, you do not have to manage this property.</p>
-<p>Default value is <code>1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>timeZoomRate</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - please use sap.gantt.axistime.AxisTimeStrategy to change the zoom rate</p>
+<p>Gets current value of property #getTimeZoomRate timeZoomRate.</p>
+<p>Zoom level in float.</p>
+<p>This property allows application developers to control the zoom level. When GanttChart is embedded in
+<code>sap.gantt.GanttChartContainer</code>, you do not have to manage this property.</p>
+<p>Default value is <code>1</code>.</p>
 <hr>
 <h3><del>getToolbarSchemes()</del></h3>
 <blockquote>
@@ -2237,7 +2237,6 @@ you set may not function properly.</p>
 <blockquote>
 <p><strong>handleExpandChartChange</strong>(<code>bExpanded</code>, <code>aChartSchemes</code>, <code>aSelectedIndices</code>): <code>void</code></p>
 </blockquote>
-<p>Default event handler for the internal event expandChartChange from global TOOLBAR.</p>
 <h4>Parameters</h4>
 <h5>bExpanded</h5>
 <p><code>boolean</code></p>
@@ -2252,6 +2251,7 @@ you set may not function properly.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Default event handler for the internal event expandChartChange from global TOOLBAR.</p>
 <hr>
 <h3><del>indexOfAdhocLine()</del></h3>
 <blockquote>
@@ -2299,11 +2299,11 @@ index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>init</strong>(): <code>void</code></p>
 </blockquote>
-<p>Initializes the GanttChart instance after creation.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Initializes the GanttChart instance after creation.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#init"><code>init</code></a></p>
 <hr>
@@ -2381,11 +2381,11 @@ where the two values determine the start time and end time of the visible horizo
 <blockquote>
 <p><strong>notifySourceChange</strong>(): <code>void</code></p>
 </blockquote>
-<p>Notifies that the data source has changed.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Notifies that the data source has changed.</p>
 <hr>
 <h3><del>removeAdhocLine()</del></h3>
 <blockquote>
@@ -2828,10 +2828,6 @@ provided, a default configuration is provided. We recommend that you set the typ
 <blockquote>
 <p><strong>setNowLineInUTC</strong>(<code>bNowLineInUTC?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getNowLineInUTC nowLineInUTC.</p>
-<p>Flag whether to show the <code>nowLine</code> in UTC or in local time.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bNowLineInUTC?</h5>
 <p><code>boolean</code></p>
@@ -2841,6 +2837,10 @@ provided, a default configuration is provided. We recommend that you set the typ
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.68</p>
+<p>Sets a new value for property #getNowLineInUTC nowLineInUTC.</p>
+<p>Flag whether to show the <code>nowLine</code> in UTC or in local time.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setObjectTypes()</del></h3>
 <blockquote>
@@ -2866,13 +2866,6 @@ may not function properly.</p>
 <blockquote>
 <p><strong>setSelectionMode</strong>(<code>sSelectionMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSelectionMode selectionMode.</p>
-<p>Selection mode for GanttChart</p>
-<p>This property controls whether multiToggle or multi-selection mode is enabled for the tree table and
-for shapes. It may also affect the visual appearance, such as whether check boxes are available for selection.
-From version 1.40 to upper versions, multi is replaced by multiToggle selection mode in tree table</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>MultiWithKeyboard</code>.</p>
 <h4>Parameters</h4>
 <h5>sSelectionMode?</h5>
 <p><code>&quot;Multiple&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Single&quot;</code> | <a href="../../library/enumerations/SelectionMode.html"><code>SelectionMode</code></a> | <code>&quot;MultipleWithLasso&quot;</code> | <code>&quot;MultiWithKeyboard&quot;</code> | <code>&quot;MultiWithKeyboardAndLasso&quot;</code></p>
@@ -2884,6 +2877,13 @@ From version 1.40 to upper versions, multi is replaced by multiToggle selection 
 <p>(since 1.50.7) - Please use <code>tableProperties</code>(e.g. <code>setTableproperties({selectionMode: &quot;None&quot;})</code>)
 to control table selection mode, and <code>shapeSelectionMode</code>(e.g. <code>setShapeSelectionMode(&quot;None&quot;)</code>) to control
 shape selection mode.</p>
+<p>Sets a new value for property #getSelectionMode selectionMode.</p>
+<p>Selection mode for GanttChart</p>
+<p>This property controls whether multiToggle or multi-selection mode is enabled for the tree table and
+for shapes. It may also affect the visual appearance, such as whether check boxes are available for selection.
+From version 1.40 to upper versions, multi is replaced by multiToggle selection mode in tree table</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>MultiWithKeyboard</code>.</p>
 <hr>
 <h3><del>setSelectionPanelSize()</del></h3>
 <blockquote>
@@ -3000,10 +3000,6 @@ function properly.</p>
 <blockquote>
 <p><strong>setTimeAxis</strong>(<code>oTimeAxis?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTimeAxis timeAxis.</p>
-<p>Configuration of the time axis.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>library.config.DEFAULT_TIME_AXIS</code>.</p>
 <h4>Parameters</h4>
 <h5>oTimeAxis?</h5>
 <p><code>object</code></p>
@@ -3017,17 +3013,15 @@ and zoom level can be configured with this property. If not provided, a default 
 We recommend that you set the type of this argument to <code>sap.gantt.config.TimeAxis</code>. Otherwise some properties
 you set may not function properly.</p>
 <p>Restriction: It is defined as a property, and hence cannot be used in an XML view.</p>
+<p>Sets a new value for property #getTimeAxis timeAxis.</p>
+<p>Configuration of the time axis.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>library.config.DEFAULT_TIME_AXIS</code>.</p>
 <hr>
 <h3><del>setTimeZoomRate()</del></h3>
 <blockquote>
 <p><strong>setTimeZoomRate</strong>(<code>fTimeZoomRate?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTimeZoomRate timeZoomRate.</p>
-<p>Zoom level in float.</p>
-<p>This property allows application developers to control the zoom level. When GanttChart is embedded in
-<code>sap.gantt.GanttChartContainer</code>, you do not have to manage this property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1</code>.</p>
 <h4>Parameters</h4>
 <h5>fTimeZoomRate?</h5>
 <p><code>number</code></p>
@@ -3037,6 +3031,12 @@ you set may not function properly.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - please use sap.gantt.axistime.AxisTimeStrategy to change the zoom rate</p>
+<p>Sets a new value for property #getTimeZoomRate timeZoomRate.</p>
+<p>Zoom level in float.</p>
+<p>This property allows application developers to control the zoom level. When GanttChart is embedded in
+<code>sap.gantt.GanttChartContainer</code>, you do not have to manage this property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
 <hr>
 <h3><del>setToolbarSchemes()</del></h3>
 <blockquote>
@@ -3134,7 +3134,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>GanttChartBase</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>GanttChartBase</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -3158,6 +3158,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

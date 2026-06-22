@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Currency — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Currency — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Currency — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/Currency/classes/Currency.html">
 <meta property="og:title" content="Class: Currency — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Currency — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Currency — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/Currency/classes/Currency.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/Currency/README.html">Currency</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/Currency</a> / Currency</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/Currency</a> / Currency</p>
 <h1>Class: Currency</h1>
 <pre class="sig"><span class="kw">import</span> Currency <span class="kw">from</span> <span class="str">"sap/ui/unified/Currency"</span>;</pre>
+<h2>Since</h2>
+<p>1.21.1</p>
 <p>A text view which displays currency values and aligns them at the decimal point.</p>
 <p>Overview:</p>
 <p>The currency control consists of an amount, which is formatted automatically according to the user’s
@@ -58,8 +60,6 @@ instead.
 <p>The control supports amounts smaller than 100 trillion, which still fit on a phone screen in portrait
 mode. For larger amounts, the unit of measurement wraps to the next line, which makes it difficult to
 compare the amounts.</p>
-<h2>Since</h2>
-<p>1.21.1</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -105,13 +105,13 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -139,14 +139,14 @@ ignoring the <code>value</code> property.</p>
 <blockquote>
 <p><strong>getEmptyIndicatorMode</strong>(): <code>any</code></p>
 </blockquote>
-<p>Gets current value of property #getEmptyIndicatorMode emptyIndicatorMode.</p>
-<p>Specifies if an empty indicator should be displayed when there is no text.</p>
-<p>Default value is <code>Off</code>.</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>Value of property <code>emptyIndicatorMode</code></p>
 <h4>Since</h4>
 <p>1.89</p>
+<p>Gets current value of property #getEmptyIndicatorMode emptyIndicatorMode.</p>
+<p>Specifies if an empty indicator should be displayed when there is no text.</p>
+<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>getFormattedValue()</h3>
 <blockquote>
@@ -171,17 +171,17 @@ ignoring the <code>value</code> property.</p>
 <blockquote>
 <p><strong>getStringValue</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>stringValue</code></p>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Gets current value of property #getStringValue stringValue.</p>
 <p>Determines the currency value as a string.</p>
 <p>String value is useful if you want to store really big values. If there are more than 21 digits before
 the decimal point or if the number starts with “0.” followed by more than five zeros, it is represented
 in exponential form. In these cases use the <code>stringValue</code> property to keep the number in decimal format.</p>
 <p><strong>Note:</strong> If set, it will take precedence over the <code>value</code> property.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>stringValue</code></p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>getUseSymbol()</h3>
 <blockquote>
@@ -219,10 +219,6 @@ in exponential form. In these cases use the <code>stringValue</code> property to
 <blockquote>
 <p><strong>setEmptyIndicatorMode</strong>(<code>sEmptyIndicatorMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEmptyIndicatorMode emptyIndicatorMode.</p>
-<p>Specifies if an empty indicator should be displayed when there is no text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Off</code>.</p>
 <h4>Parameters</h4>
 <h5>sEmptyIndicatorMode?</h5>
 <p><code>any</code></p>
@@ -232,18 +228,15 @@ in exponential form. In these cases use the <code>stringValue</code> property to
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.89</p>
+<p>Sets a new value for property #getEmptyIndicatorMode emptyIndicatorMode.</p>
+<p>Specifies if an empty indicator should be displayed when there is no text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>setStringValue()</h3>
 <blockquote>
 <p><strong>setStringValue</strong>(<code>sStringValue?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getStringValue stringValue.</p>
-<p>Determines the currency value as a string.</p>
-<p>String value is useful if you want to store really big values. If there are more than 21 digits before
-the decimal point or if the number starts with “0.” followed by more than five zeros, it is represented
-in exponential form. In these cases use the <code>stringValue</code> property to keep the number in decimal format.</p>
-<p><strong>Note:</strong> If set, it will take precedence over the <code>value</code> property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sStringValue?</h5>
 <p><code>string</code></p>
@@ -253,6 +246,13 @@ in exponential form. In these cases use the <code>stringValue</code> property to
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets a new value for property #getStringValue stringValue.</p>
+<p>Determines the currency value as a string.</p>
+<p>String value is useful if you want to store really big values. If there are more than 21 digits before
+the decimal point or if the number starts with “0.” followed by more than five zeros, it is represented
+in exponential form. In these cases use the <code>stringValue</code> property to keep the number in decimal format.</p>
+<p><strong>Note:</strong> If set, it will take precedence over the <code>value</code> property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -269,7 +269,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Currency</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Currency</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -293,6 +293,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

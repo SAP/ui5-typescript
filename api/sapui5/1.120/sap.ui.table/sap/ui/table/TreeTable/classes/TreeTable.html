@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: TreeTable — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: TreeTable — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: TreeTable — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/TreeTable/classes/TreeTable.html">
 <meta property="og:title" content="Class: TreeTable — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: TreeTable — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: TreeTable — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/TreeTable/classes/TreeTable.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › <a href="../../../../../../sap.ui.table/sap/ui/table/TreeTable/README.html">TreeTable</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/TreeTable</a> / TreeTable</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/TreeTable</a> / TreeTable</p>
 <h1>Class: TreeTable</h1>
 <pre class="sig"><span class="kw">import</span> TreeTable <span class="kw">from</span> <span class="str">"sap/ui/table/TreeTable"</span>;</pre>
 <p>The TreeTable control provides a comprehensive set of features to display hierarchical data.</p>
@@ -226,7 +226,6 @@ e.g. if you are using a <code>sap.ui.model.json.JSONModel</code>.</p>
 <blockquote>
 <p><strong>fireToggleOpenState</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:toggleOpenState toggleOpenState to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TreeTable$ToggleOpenStateEventParameters.html"><code>TreeTable$ToggleOpenStateEventParameters</code></a></p>
@@ -236,11 +235,18 @@ e.g. if you are using a <code>sap.ui.model.json.JSONModel</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:toggleOpenState toggleOpenState to attached listeners.</p>
 <hr>
 <h3><del>getCollapseRecursive()</del></h3>
 <blockquote>
 <p><strong>getCollapseRecursive</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>collapseRecursive</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter. May not work with all
+bindings.</p>
 <p>Gets current value of property #getCollapseRecursive collapseRecursive.</p>
 <p>Setting collapseRecursive to true means, that when collapsing a node all subsequent child nodes will
 also be collapsed. This property is only supported with sap.ui.model.odata.v2.ODataModel. <strong>Note:</strong> collapseRecursive
@@ -257,22 +263,16 @@ hierarchy annotations, please see the <strong>SAP Annotations for OData Version 
   });
 </code></pre>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>collapseRecursive</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter. May not work with all
-bindings.</p>
 <hr>
 <h3><del>getEnableGrouping()</del></h3>
 <blockquote>
 <p><strong>getEnableGrouping</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>The property <code>enableGrouping</code> is not supported by the <code>TreeTable</code> control.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.28)</p>
+<p>The property <code>enableGrouping</code> is not supported by the <code>TreeTable</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#getenablegrouping"><code>getEnableGrouping</code></a></p>
 <hr>
@@ -280,6 +280,12 @@ bindings.</p>
 <blockquote>
 <p><strong>getExpandFirstLevel</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>expandFirstLevel</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.46.3) - replaced by the <code>numberOfExpandedLevels</code> binding parameter. May not work
+with all bindings.</p>
 <p>Gets current value of property #getExpandFirstLevel expandFirstLevel.</p>
 <p>Specifies whether the first level is expanded.</p>
 <p>The value of the property is only taken into account if no parameter <code>numberOfExpandedLevels</code> is given
@@ -295,22 +301,16 @@ unless an explicit (re-)bind of the <code>rows</code> aggregation is done.</p>
   });
 </code></pre>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>expandFirstLevel</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.46.3) - replaced by the <code>numberOfExpandedLevels</code> binding parameter. May not work
-with all bindings.</p>
 <hr>
 <h3><del>getGroupBy()</del></h3>
 <blockquote>
 <p><strong>getGroupBy</strong>(): <code>string</code></p>
 </blockquote>
-<p>The <code>groupBy</code> association is not supported by the <code>TreeTable</code> control.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.28)</p>
+<p>The <code>groupBy</code> association is not supported by the <code>TreeTable</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#getgroupby"><code>getGroupBy</code></a></p>
 <hr>
@@ -328,6 +328,11 @@ with all bindings.</p>
 <blockquote>
 <p><strong>getRootLevel</strong>(): <code>number</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>rootLevel</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.76) - replaced by the <code>rootLevel</code> binding parameter. May not work with all bindings.</p>
 <p>Gets current value of property #getRootLevel rootLevel.</p>
 <p>The root level is the level of the topmost tree nodes, which will be used as an entry point for OData
 services. This property is only supported when the TreeTable uses an underlying odata services with hierarchy
@@ -343,11 +348,6 @@ may also be provided locally as a parameter for the ODataTreeBinding.</p>
   });
 </code></pre>
 <p>Default value is <code>0</code>.</p>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>rootLevel</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.76) - replaced by the <code>rootLevel</code> binding parameter. May not work with all bindings.</p>
 <hr>
 <h3>getSelectedIndices()</h3>
 <blockquote>
@@ -426,6 +426,16 @@ from the back end in order to improve performance and reduce the network traffic
 <blockquote>
 <p><strong>setCollapseRecursive</strong>(<code>bCollapseRecursive?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bCollapseRecursive?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>collapseRecursive</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter. May not work with all
+bindings.</p>
 <p>Sets a new value for property #getCollapseRecursive collapseRecursive.</p>
 <p>Setting collapseRecursive to true means, that when collapsing a node all subsequent child nodes will
 also be collapsed. This property is only supported with sap.ui.model.odata.v2.ODataModel. <strong>Note:</strong> collapseRecursive
@@ -443,24 +453,11 @@ hierarchy annotations, please see the <strong>SAP Annotations for OData Version 
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Parameters</h4>
-<h5>bCollapseRecursive?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>collapseRecursive</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter. May not work with all
-bindings.</p>
 <hr>
 <h3><del>setEnableGrouping()</del></h3>
 <blockquote>
 <p><strong>setEnableGrouping</strong>(<code>bValue</code>): <code>this</code></p>
 </blockquote>
-<p>The property <code>enableGrouping</code> is not supported by the <code>TreeTable</code> control.
-See:
-	sap.ui.table.TreeTable#setUseGroupMode</p>
 <h4>Parameters</h4>
 <h5>bValue</h5>
 <p><code>boolean</code></p>
@@ -469,6 +466,9 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.28) - To get a group-like visualization the <code>useGroupMode</code> property can be used.</p>
+<p>The property <code>enableGrouping</code> is not supported by the <code>TreeTable</code> control.
+See:
+	sap.ui.table.TreeTable#setUseGroupMode</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#setenablegrouping"><code>setEnableGrouping</code></a></p>
 <hr>
@@ -476,6 +476,16 @@ See:
 <blockquote>
 <p><strong>setExpandFirstLevel</strong>(<code>bExpandFirstLevel?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bExpandFirstLevel?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>expandFirstLevel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.46.3) - replaced by the <code>numberOfExpandedLevels</code> binding parameter. May not work
+with all bindings.</p>
 <p>Sets a new value for property #getExpandFirstLevel expandFirstLevel.</p>
 <p>Specifies whether the first level is expanded.</p>
 <p>The value of the property is only taken into account if no parameter <code>numberOfExpandedLevels</code> is given
@@ -492,16 +502,6 @@ unless an explicit (re-)bind of the <code>rows</code> aggregation is done.</p>
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bExpandFirstLevel?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>expandFirstLevel</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.46.3) - replaced by the <code>numberOfExpandedLevels</code> binding parameter. May not work
-with all bindings.</p>
 <hr>
 <h3>setFixedRowCount()</h3>
 <blockquote>
@@ -524,7 +524,6 @@ with all bindings.</p>
 <blockquote>
 <p><strong>setGroupBy</strong>(<code>oColumn</code>): <code>this</code></p>
 </blockquote>
-<p>The <code>groupBy</code> association is not supported by the <code>TreeTable</code> control.</p>
 <h4>Parameters</h4>
 <h5>oColumn</h5>
 <p><code>string</code> | <a href="../../Column/classes/Column.html"><code>Column</code></a></p>
@@ -533,6 +532,7 @@ with all bindings.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.28)</p>
+<p>The <code>groupBy</code> association is not supported by the <code>TreeTable</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#setgroupby"><code>setGroupBy</code></a></p>
 <hr>
@@ -555,6 +555,15 @@ with all bindings.</p>
 <blockquote>
 <p><strong>setRootLevel</strong>(<code>iRootLevel?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>iRootLevel?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>rootLevel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.76) - replaced by the <code>rootLevel</code> binding parameter. May not work with all bindings.</p>
 <p>Sets a new value for property #getRootLevel rootLevel.</p>
 <p>The root level is the level of the topmost tree nodes, which will be used as an entry point for OData
 services. This property is only supported when the TreeTable uses an underlying odata services with hierarchy
@@ -571,15 +580,6 @@ may also be provided locally as a parameter for the ODataTreeBinding.</p>
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>0</code>.</p>
-<h4>Parameters</h4>
-<h5>iRootLevel?</h5>
-<p><code>number</code></p>
-<p>New value for property <code>rootLevel</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.76) - replaced by the <code>rootLevel</code> binding parameter. May not work with all bindings.</p>
 <hr>
 <h3>setSelectedIndex()</h3>
 <blockquote>
@@ -622,13 +622,6 @@ Please be aware, that the absolute row index only applies to the tree which is v
 <blockquote>
 <p><strong>setUseFlatMode</strong>(<code>bFlat</code>): <code>this</code></p>
 </blockquote>
-<p>Allows to hide the tree structure (tree icons, indentation) in tree mode (property <code>useGroupMode</code> is
-set to <code>false</code>).</p>
-<p>This option might be useful in some scenarios when actually a tree table must be used but under certain
-conditions the data is not hierarchical, because it contains leafs only.</p>
-<p><strong>Note:</strong> In flat mode the user of the table cannot expand or collapse certain nodes and the hierarchy
-is not visible to the user. The caller of this function has to ensure to use this option only with non-hierarchical
-data.</p>
 <h4>Parameters</h4>
 <h5>bFlat</h5>
 <p><code>boolean</code></p>
@@ -638,6 +631,13 @@ data.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Allows to hide the tree structure (tree icons, indentation) in tree mode (property <code>useGroupMode</code> is
+set to <code>false</code>).</p>
+<p>This option might be useful in some scenarios when actually a tree table must be used but under certain
+conditions the data is not hierarchical, because it contains leafs only.</p>
+<p><strong>Note:</strong> In flat mode the user of the table cannot expand or collapse certain nodes and the hierarchy
+is not visible to the user. The caller of this function has to ensure to use this option only with non-hierarchical
+data.</p>
 <hr>
 <h3>setUseGroupMode()</h3>
 <blockquote>
@@ -671,7 +671,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>TreeTable</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>TreeTable</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -695,6 +695,6 @@ used by this class</p>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

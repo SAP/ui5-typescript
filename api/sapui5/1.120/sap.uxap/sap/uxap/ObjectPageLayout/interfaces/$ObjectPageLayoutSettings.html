@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ObjectPageLayoutSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ObjectPageLayoutSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $ObjectPageLayoutSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/ObjectPageLayout/interfaces/$ObjectPageLayoutSettings.html">
 <meta property="og:title" content="Interface: $ObjectPageLayoutSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ObjectPageLayoutSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $ObjectPageLayoutSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/ObjectPageLayout/interfaces/$ObjectPageLayoutSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/ObjectPageLayout/README.html">ObjectPageLayout</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageLayout</a> / $ObjectPageLayoutSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageLayout</a> / $ObjectPageLayoutSettings</p>
 <h1>Interface: $ObjectPageLayoutSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ObjectPageLayoutSettings } <span class="kw">from</span> <span class="str">"sap/uxap/ObjectPageLayout"</span>;</pre>
-<p>Describes the settings that can be provided to the ObjectPageLayout constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -48,28 +47,26 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>alwaysShowContentHeader?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Determines whether Header Content will always be expanded on desktop.</p>
 <p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
 for the <code>headerTitle</code> aggregation.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>backgroundDesignAnchorBar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundDesignAnchorBar?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Determines the background color of the <code>AnchorBar</code>.</p>
 <p><strong>Note:</strong> The default value of <code>backgroundDesignAnchorBar</code> property is null. If the property is not set,
 the color of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>beforeNavigate?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeNavigate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>The event is fired before the selected section is changed using the navigation. This event can be aborted
-by the application with preventDefault(), which means that there will be no navigation.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ObjectPageLayout$BeforeNavigateEvent.html"><code>ObjectPageLayout$BeforeNavigateEvent</code></a></p>
@@ -77,6 +74,8 @@ by the application with preventDefault(), which means that there will be no navi
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.118</p>
+<p>The event is fired before the selected section is changed using the navigation. This event can be aborted
+by the application with preventDefault(), which means that there will be no navigation.</p>
 <hr>
 <h3>editHeaderButtonPress?</h3>
 <blockquote>
@@ -99,18 +98,18 @@ by the application with preventDefault(), which means that there will be no navi
 <blockquote>
 <p><code>optional</code> <strong>flexEnabled?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies whether the object page enables flexibility features, such as hiding and adding sections.
- For more information about SAPUI5 flexibility, refer to the Developer Guide.</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Specifies whether the object page enables flexibility features, such as hiding and adding sections.
+ For more information about SAPUI5 flexibility, refer to the Developer Guide.</p>
 <hr>
 <h3>footer?</h3>
 <blockquote>
 <p><code>optional</code> <strong>footer?</strong>: <a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 </blockquote>
-<p>Object page floating footer.</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Object page floating footer.</p>
 <hr>
 <h3>headerContent?</h3>
 <blockquote>
@@ -122,18 +121,20 @@ by the application with preventDefault(), which means that there will be no navi
 <blockquote>
 <p><code>optional</code> <strong>headerContentPinnable?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Determines whether the Header Content area can be pinned.</p>
 <p>When set to <code>true</code>, a pin button is displayed within the Header Content area. The pin button allows the
 user to make the Header Content always visible at the top of the page above any scrollable content.</p>
 <p><strong>Note:</strong> This property is only taken into account if an instance of <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
 is used for the <code>headerTitle</code> aggregation.</p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>headerContentPinned?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerContentPinned?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.93</p>
 <p>Determines whether the <code>sap.uxap.ObjectPageDynamicHeaderContent</code> is pinned.</p>
 <p>The property can be changed explicitly with its setter or in the occurrence of the following user interactions:</p>
 <pre><code> - Toggling the pin/unpin button of `sap.uxap.ObjectPageDynamicHeaderContent`
@@ -145,14 +146,11 @@ is used for the <code>headerTitle</code> aggregation.</p>
  - The `sap.uxap.ObjectPageDynamicHeaderContent` is expanded
  - The `preserveHeaderStateOnScroll` property or the rules for it to work are `false`
 </code></pre>
-<h4>Since</h4>
-<p>1.93</p>
 <hr>
 <h3>headerContentPinnedStateChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerContentPinnedStateChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>The event is fired when the <code>headerContentPinned</code> property is changed via user interaction.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ObjectPageLayout$HeaderContentPinnedStateChangeEvent.html"><code>ObjectPageLayout$HeaderContentPinnedStateChangeEvent</code></a></p>
@@ -160,6 +158,7 @@ is used for the <code>headerTitle</code> aggregation.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.93</p>
+<p>The event is fired when the <code>headerContentPinned</code> property is changed via user interaction.</p>
 <hr>
 <h3>headerTitle?</h3>
 <blockquote>
@@ -177,27 +176,26 @@ is used for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><code>optional</code> <strong>isChildPage?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Determines whether the page is a child page and renders it with a different design. Child pages have
 an additional (darker/lighter) stripe on the left side of their header content area.</p>
 <p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
 for the <code>headerTitle</code> aggregation.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>landmarkInfo?</h3>
 <blockquote>
 <p><code>optional</code> <strong>landmarkInfo?</strong>: <a href="../../ObjectPageAccessibleLandmarkInfo/classes/ObjectPageAccessibleLandmarkInfo.html"><code>ObjectPageAccessibleLandmarkInfo</code></a></p>
 </blockquote>
-<p>Accessible landmark settings to be applied on the containers of the <code>sap.uxap.ObjectPageLayout</code> control.</p>
-<p>If not set, no landmarks will be written.</p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Accessible landmark settings to be applied on the containers of the <code>sap.uxap.ObjectPageLayout</code> control.</p>
+<p>If not set, no landmarks will be written.</p>
 <hr>
 <h3>navigate?</h3>
 <blockquote>
 <p><code>optional</code> <strong>navigate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>The event is fired when the selected section is changed using the navigation.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ObjectPageLayout$NavigateEvent.html"><code>ObjectPageLayout$NavigateEvent</code></a></p>
@@ -205,11 +203,14 @@ for the <code>headerTitle</code> aggregation.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>The event is fired when the selected section is changed using the navigation.</p>
 <hr>
 <h3>preserveHeaderStateOnScroll?</h3>
 <blockquote>
 <p><code>optional</code> <strong>preserveHeaderStateOnScroll?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Preserves the current header state when scrolling. For example, if the user expands the header by clicking
 on the title and then scrolls down the page, the header will remain expanded.</p>
 <p><strong>Notes:</strong>
@@ -218,14 +219,11 @@ on the title and then scrolls down the page, the header will remain expanded.</p
 	 - Based on internal rules, the value of the property is not always taken into account - for example,
     when the control is rendered on tablet or mobile and the control`s title and header are with height larger
     than the given threshold.</p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>sectionChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>sectionChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when the current section is changed by scrolling.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ObjectPageLayout$SectionChangeEvent.html"><code>ObjectPageLayout$SectionChangeEvent</code></a></p>
@@ -233,6 +231,7 @@ on the title and then scrolls down the page, the header will remain expanded.</p
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Fired when the current section is changed by scrolling.</p>
 <hr>
 <h3>sections?</h3>
 <blockquote>
@@ -244,6 +243,8 @@ on the title and then scrolls down the page, the header will remain expanded.</p
 <blockquote>
 <p><code>optional</code> <strong>sectionTitleLevel?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.44.0</p>
 <p>Determines the ARIA level of the <code>ObjectPageSection</code> and <code>ObjectPageSubSection</code> titles. The ARIA level
 is used by assisting technologies, such as screen readers, to create a hierarchical site map for faster
 navigation.</p>
@@ -257,16 +258,14 @@ title.
  -  It is possible to define a `titleLevel` on `ObjectPageSection` or `ObjectPageSubSection` level.
 In this case the value of this property will be ignored.
 </code></pre>
-<h4>Since</h4>
-<p>1.44.0</p>
 <hr>
 <h3>selectedSection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectedSection?</strong>: <code>string</code> | <a href="../../ObjectPageSection/classes/ObjectPageSection.html"><code>ObjectPageSection</code></a></p>
 </blockquote>
-<p>The section that is selected by default on load.</p>
 <h4>Since</h4>
 <p>1.44.0</p>
+<p>The section that is selected by default on load.</p>
 <hr>
 <h3>showAnchorBar?</h3>
 <blockquote>
@@ -285,19 +284,19 @@ bar.</p>
 <blockquote>
 <p><code>optional</code> <strong>showEditHeaderButton?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Determines whether an Edit button will be displayed in Header Content.</p>
 <p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
 for the <code>headerTitle</code> aggregation.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>showFooter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showFooter?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines whether the footer is visible.</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Determines whether the footer is visible.</p>
 <hr>
 <h3>showHeaderContent?</h3>
 <blockquote>
@@ -309,9 +308,9 @@ for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><code>optional</code> <strong>showOnlyHighImportance?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines whether sections and subsections with importance Low and Medium are hidden even on large screens.</p>
 <h4>Since</h4>
 <p>1.32.0</p>
+<p>Determines whether sections and subsections with importance Low and Medium are hidden even on large screens.</p>
 <hr>
 <h3>showTitleInHeaderContent?</h3>
 <blockquote>
@@ -331,7 +330,6 @@ for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><code>optional</code> <strong>subSectionVisibilityChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when the visibility of subsections is changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ObjectPageLayout$SubSectionVisibilityChangeEvent.html"><code>ObjectPageLayout$SubSectionVisibilityChangeEvent</code></a></p>
@@ -339,6 +337,7 @@ for the <code>headerTitle</code> aggregation.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Fired when the visibility of subsections is changed.</p>
 <hr>
 <h3>toggleAnchorBar?</h3>
 <blockquote>
@@ -355,14 +354,14 @@ for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><code>optional</code> <strong>toggleHeaderOnTitleClick?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Determines whether the user can switch between the expanded/collapsed states of the <code>sap.uxap.ObjectPageDynamicHeaderContent</code>
 by clicking on the <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>. If set to <code>false</code>, the <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
 is not clickable and the application must provide other means for expanding/collapsing the <code>sap.uxap.ObjectPageDynamicHeaderContent</code>,
 if necessary.</p>
 <p><strong>Note:</strong> This property is only taken into account if an instance of <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
 is used for the <code>headerTitle</code> aggregation.</p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>upperCaseAnchorBar?</h3>
 <blockquote>
@@ -385,6 +384,6 @@ sections are displayed separately on each tab rather than having all of them vis
 <p>Determines whether the to use two column layout for the L screen size.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

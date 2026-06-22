@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ColumnSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Column/interfaces/$ColumnSettings.html">
 <meta property="og:title" content="Interface: $ColumnSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Column/interfaces/$ColumnSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Column/README.html">Column</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Column</a> / $ColumnSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Column</a> / $ColumnSettings</p>
 <h1>Interface: $ColumnSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ColumnSettings } <span class="kw">from</span> <span class="str">"sap/m/Column"</span>;</pre>
-<p>Describes the settings that can be provided to the Column constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -52,13 +51,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>autoPopinWidth?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.76</p>
 <p>Defines the auto pop-in width for the column.</p>
 <p>If the <code>sap.m.Table</code> control is configured with <code>autoPopinMode=true</code>, then the <code>autoPopinWidth</code> property
 is used to calculate the <code>minScreenWidth</code> property of the column in case a fixed width is not set for
 the column. See sap.m.Column#getWidth and sap.m.Table#getAutoPopinMode. <strong>Note:</strong> A float
 value is set for the <code>autoPopinWidth</code> property which is internally treated as a rem value.</p>
-<h4>Since</h4>
-<p>1.76</p>
 <hr>
 <h3>demandPopin?</h3>
 <blockquote>
@@ -91,26 +90,28 @@ overwritten if the <code>sap.m.Table</code> control is configured with <code>aut
 <blockquote>
 <p><code>optional</code> <strong>headerMenu?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IColumnHeaderMenu.html"><code>IColumnHeaderMenu</code></a></p>
 </blockquote>
-<p>Provides a menu that is used by the column. The given menu has to follow the same pattern as the <code>sap.ui.core.IColumnHeaderMenu</code>
-interface.</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Provides a menu that is used by the column. The given menu has to follow the same pattern as the <code>sap.ui.core.IColumnHeaderMenu</code>
+interface.</p>
 <hr>
 <h3>importance?</h3>
 <blockquote>
 <p><code>optional</code> <strong>importance?</strong>: <code>&quot;Medium&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.76</p>
 <p>Defines the column importance.</p>
 <p>If the <code>sap.m.Table</code> control is configured with <code>autoPopinMode=true</code>, then the column importance is taken
 into consideration for calculating the <code>minScreenWidth</code> property and for setting the <code>demandPopin</code> property
 of the column. See sap.m.Table#getAutoPopinMode</p>
-<h4>Since</h4>
-<p>1.76</p>
 <hr>
 <h3>mergeDuplicates?</h3>
 <blockquote>
 <p><code>optional</code> <strong>mergeDuplicates?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16</p>
 <p>Set <code>true</code> to merge repeating/duplicate cells into one cell block. See <code>mergeFunctionName</code> property to
 customize.</p>
 <p><strong>Note:</strong> Merging only happens when rendering the <code>sap.m.Table</code> control, subsequent changes on the cell
@@ -118,20 +119,18 @@ or item do not have any effect on the merged state of the cells, therefore this 
 used together with two-way binding. This property is ignored if any column is configured to be shown
 as a pop-in. Don&#39;t set this property for cells for which the content provides a user interaction, such
 as <code>sap.m.Link</code>.</p>
-<h4>Since</h4>
-<p>1.16</p>
 <hr>
 <h3>mergeFunctionName?</h3>
 <blockquote>
 <p><code>optional</code> <strong>mergeFunctionName?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16</p>
 <p>Defines the control serialization function if <code>mergeDuplicates</code> property is set to <code>true</code>. The control
 itself uses this function to compare values of two repeating cells. Default value &quot;getText&quot; is suitable
 for <code>sap.m.Label</code> and <code>sap.m.Text</code> controls but for the <code>sap.ui.core.Icon</code> control &quot;getSrc&quot; function
 should be used to merge icons. <strong>Note:</strong> You can pass one string parameter to given function after &quot;#&quot;
 sign. e.g. &quot;data#myparameter&quot;</p>
-<h4>Since</h4>
-<p>1.16</p>
 <hr>
 <h3>minScreenWidth?</h3>
 <blockquote>
@@ -149,28 +148,28 @@ control is configured with <code>autoPopinMode=true</code>. See sap.m.Table#getA
 <blockquote>
 <p><code>optional</code> <strong>popinDisplay?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/PopinDisplay.html"><code>PopinDisplay</code></a> | <code>&quot;Block&quot;</code> | <code>&quot;Inline&quot;</code> | <code>&quot;WithoutHeader&quot;</code></p>
 </blockquote>
-<p>Defines enumerated display options for the pop-in.</p>
 <h4>Since</h4>
 <p>1.13.2</p>
+<p>Defines enumerated display options for the pop-in.</p>
 <hr>
 <h3><del>popinHAlign?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>popinHAlign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Deprecated</h4>
+<p>(since 1.14) - Use popinDisplay property instead.</p>
 <p>Horizontal alignment of the pop-in content. Available alignment settings are &quot;Begin&quot;, &quot;Center&quot;, &quot;End&quot;,
 &quot;Left&quot;, and &quot;Right&quot;.</p>
 <p><strong>Note:</strong> Controls with a text align do not inherit the horizontal alignment.</p>
-<h4>Deprecated</h4>
-<p>(since 1.14) - Use popinDisplay property instead.</p>
 <hr>
 <h3>sortIndicator?</h3>
 <blockquote>
 <p><code>optional</code> <strong>sortIndicator?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/SortOrder.html"><code>SortOrder</code></a> | <code>&quot;Ascending&quot;</code> | <code>&quot;Descending&quot;</code></p>
 </blockquote>
-<p>Defines if a column is sorted by setting the sort indicator for this column.</p>
-<p><strong>Note:</strong> Defining this property does not trigger the sorting.</p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Defines if a column is sorted by setting the sort indicator for this column.</p>
+<p><strong>Note:</strong> Defining this property does not trigger the sorting.</p>
 <hr>
 <h3>styleClass?</h3>
 <blockquote>
@@ -204,6 +203,6 @@ has a fixed width, then this width is used to calculate the <code>minScreenWidth
 If a column has a flexible width, such as % or auto, the <code>autoPopinWidth</code> property is used to calculate
 the <code>minScreenWidth</code>.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

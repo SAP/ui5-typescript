@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Function: denormalizeScrollLeftRTL() — SAPUI5 TypeScript API</title>
-<meta name="description" content="Function: denormalizeScrollLeftRTL() — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Function: denormalizeScrollLeftRTL() — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/dom/denormalizeScrollLeftRTL/functions/denormalizeScrollLeftRTL.html">
 <meta property="og:title" content="Function: denormalizeScrollLeftRTL() — SAPUI5 TypeScript API">
-<meta property="og:description" content="Function: denormalizeScrollLeftRTL() — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Function: denormalizeScrollLeftRTL() — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/dom/denormalizeScrollLeftRTL/functions/denormalizeScrollLeftRTL.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,21 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › dom › <a href="../../../../../../sap.ui.core/sap/ui/dom/denormalizeScrollLeftRTL/README.html">denormalizeScrollLeftRTL</a> › functions</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/dom/denormalizeScrollLeftRTL</a> / denormalizeScrollLeftRTL</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/dom/denormalizeScrollLeftRTL</a> / denormalizeScrollLeftRTL</p>
 <h1>Function: denormalizeScrollLeftRTL()</h1>
 <blockquote>
 <p><strong>denormalizeScrollLeftRTL</strong>(<code>iNormalizedScrollLeft</code>, <code>oDomRef</code>): <code>number</code></p>
 </blockquote>
-<p>For the given scrollLeft value this method returns the scrollLeft value as understood by the current
-browser in RTL mode. This value is specific to the given DOM element, as the computation may involve
-its dimensions.</p>
-<p>So when oDomRef should be scrolled 2px from the leftmost position, the number &quot;2&quot; must be given as <code>iNormalizedScrollLeft</code>
-and the result of this method (which may be a large or even negative number, depending on the browser)
-can then be set as <code>oDomRef.scrollLeft</code> to achieve the desired (cross-browser-consistent) scrolling position.</p>
-<p>This method does no scrolling on its own, it only calculates the value to set (so it can also be used
-for animations).</p>
 <h2>Parameters</h2>
 <h3>iNormalizedScrollLeft</h3>
 <p><code>number</code></p>
@@ -60,7 +52,15 @@ for animations).</p>
 <p>The scroll position that must be set for the DOM element</p>
 <h2>Since</h2>
 <p>1.58</p>
+<p>For the given scrollLeft value this method returns the scrollLeft value as understood by the current
+browser in RTL mode. This value is specific to the given DOM element, as the computation may involve
+its dimensions.</p>
+<p>So when oDomRef should be scrolled 2px from the leftmost position, the number &quot;2&quot; must be given as <code>iNormalizedScrollLeft</code>
+and the result of this method (which may be a large or even negative number, depending on the browser)
+can then be set as <code>oDomRef.scrollLeft</code> to achieve the desired (cross-browser-consistent) scrolling position.</p>
+<p>This method does no scrolling on its own, it only calculates the value to set (so it can also be used
+for animations).</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

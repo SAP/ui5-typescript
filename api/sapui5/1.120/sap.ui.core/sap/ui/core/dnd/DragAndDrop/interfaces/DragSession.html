@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: DragSession — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: DragSession — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: DragSession — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/dnd/DragAndDrop/interfaces/DragSession.html">
 <meta property="og:title" content="Interface: DragSession — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: DragSession — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: DragSession — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/dnd/DragAndDrop/interfaces/DragSession.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › dnd › <a href="../../../../../../../sap.ui.core/sap/ui/core/dnd/DragAndDrop/README.html">DragAndDrop</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/dnd/DragAndDrop</a> / DragSession</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/dnd/DragAndDrop</a> / DragSession</p>
 <h1>Interface: DragSession</h1>
 <pre class="sig"><span class="kw">import</span> { DragSession } <span class="kw">from</span> <span class="str">"sap/ui/core/dnd/DragAndDrop"</span>;</pre>
 <p>When a user requests to drag some controls that can be dragged, a drag session is started. The drag session
@@ -81,63 +81,63 @@ it with additional methods in future versions will be regarded as a compatible c
 <blockquote>
 <p><strong>getDragControl</strong>(): <a href="../../../Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
 </blockquote>
-<p>Returns the dragged control, if available within the same UI5 application frame.</p>
 <h4>Returns</h4>
 <p><a href="../../../Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the dragged control, if available within the same UI5 application frame.</p>
 <hr>
 <h3>getDropControl()</h3>
 <blockquote>
 <p><strong>getDropControl</strong>(): <a href="../../../Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
 </blockquote>
-<p>The valid drop target underneath the dragged control.</p>
 <h4>Returns</h4>
 <p><a href="../../../Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>The valid drop target underneath the dragged control.</p>
 <hr>
 <h3>getDropInfo()</h3>
 <blockquote>
 <p><strong>getDropInfo</strong>(): <a href="../../DropInfo/classes/DropInfo.html"><code>DropInfo</code></a></p>
 </blockquote>
-<p>Returns the drop configuration corresponding to the drop control.</p>
 <h4>Returns</h4>
 <p><a href="../../DropInfo/classes/DropInfo.html"><code>DropInfo</code></a></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the drop configuration corresponding to the drop control.</p>
 <hr>
 <h3>getDropPosition()</h3>
 <blockquote>
 <p><strong>getDropPosition</strong>(): <code>&quot;On&quot;</code> | <a href="../../../library/namespaces/dnd/enumerations/RelativeDropPosition.html"><code>RelativeDropPosition</code></a> | <code>&quot;After&quot;</code> | <code>&quot;Before&quot;</code></p>
 </blockquote>
-<p>Returns the calculated position of the drop action relative to the valid dropped control.</p>
 <h4>Returns</h4>
 <p><code>&quot;On&quot;</code> | <a href="../../../library/namespaces/dnd/enumerations/RelativeDropPosition.html"><code>RelativeDropPosition</code></a> | <code>&quot;After&quot;</code> | <code>&quot;Before&quot;</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the calculated position of the drop action relative to the valid dropped control.</p>
 <hr>
 <h3>getIndicator()</h3>
 <blockquote>
 <p><strong>getIndicator</strong>(): <code>HTMLElement</code></p>
 </blockquote>
-<p>Returns the drop indicator.</p>
 <h4>Returns</h4>
 <p><code>HTMLElement</code></p>
 <p>Drop indicator&#39;s DOM reference</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the drop indicator.</p>
 <hr>
 <h3>getIndicatorConfig()</h3>
 <blockquote>
 <p><strong>getIndicatorConfig</strong>(): <code>object</code></p>
 </blockquote>
-<p>Returns the visual configuration of the drop indicator.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Drop indicator configuration</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the visual configuration of the drop indicator.</p>
 <hr>
 <h3>getTextData()</h3>
 <blockquote>
@@ -183,17 +183,16 @@ This works only within a UI5 application within the same window/frame.</p>
 <blockquote>
 <p><strong>setDropControl</strong>(): <code>void</code></p>
 </blockquote>
-<p>Set the valid drop control.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Set the valid drop control.</p>
 <hr>
 <h3>setIndicatorConfig()</h3>
 <blockquote>
 <p><strong>setIndicatorConfig</strong>(<code>mConfig</code>): <code>void</code></p>
 </blockquote>
-<p>Defines the visual configuration of the drop indicator for the current <code>DropInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>mConfig</h5>
 <p><code>object</code></p>
@@ -202,6 +201,7 @@ This works only within a UI5 application within the same window/frame.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Defines the visual configuration of the drop indicator for the current <code>DropInfo</code>.</p>
 <hr>
 <h3>setTextData()</h3>
 <blockquote>
@@ -215,6 +215,6 @@ This works only within a UI5 application within the same window/frame.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

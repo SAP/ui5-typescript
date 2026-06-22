@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: DateTimeWithTimezone — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: DateTimeWithTimezone — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: DateTimeWithTimezone — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/format/DateFormat/interfaces/DateTimeWithTimezone.html">
 <meta property="og:title" content="Interface: DateTimeWithTimezone — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: DateTimeWithTimezone — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: DateTimeWithTimezone — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/format/DateFormat/interfaces/DateTimeWithTimezone.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › format › <a href="../../../../../../../sap.ui.core/sap/ui/core/format/DateFormat/README.html">DateFormat</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/format/DateFormat</a> / DateTimeWithTimezone</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/format/DateFormat</a> / DateTimeWithTimezone</p>
 <h1>Interface: DateTimeWithTimezone</h1>
 <pre class="sig"><span class="kw">import</span> { DateTimeWithTimezone } <span class="kw">from</span> <span class="str">"sap/ui/core/format/DateFormat"</span>;</pre>
+<h2>Since</h2>
+<p>1.99</p>
 <p>Interface for a timezone-specific DateFormat, which is able to format and parse a date based on a given
 timezone. The timezone is used to convert the given date, and also for timezone-related pattern symbols.
 The timezone is an IANA timezone ID, e.g. &quot;America/New_York&quot;.
 See:
 	sap.ui.core.format.DateFormat</p>
-<h2>Since</h2>
-<p>1.99</p>
 <h2>Properties</h2>
 <h3>__implements__sap_ui_core_format_DateFormat_DateTimeWithTimezone</h3>
 <blockquote>
@@ -55,7 +55,6 @@ See:
 <blockquote>
 <p><strong>format</strong>(<code>oJSDate</code>, <code>sTimezone?</code>): <code>string</code></p>
 </blockquote>
-<p>Format a date object to a string according to the given timezone and format options.</p>
 <h4>Parameters</h4>
 <h5>oJSDate</h5>
 <p><code>Date</code></p>
@@ -70,13 +69,12 @@ For an invalid IANA timezone ID, an empty string will be returned.</p>
 <p>the formatted output value. If an invalid date or timezone is given, an empty string is returned.</p>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Format a date object to a string according to the given timezone and format options.</p>
 <hr>
 <h3>parse()</h3>
 <blockquote>
 <p><strong>parse</strong>(<code>sValue</code>, <code>sTimezone?</code>, <code>bStrict?</code>): [<code>any</code>, <code>string</code>]</p>
 </blockquote>
-<p>Parse a string which is formatted according to the given format options to an array containing a date
-object and the timezone.</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><code>string</code></p>
@@ -102,7 +100,9 @@ and a value range of [1-12] <code>strict</code> ensures that the value is within
 </code></pre>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Parse a string which is formatted according to the given format options to an array containing a date
+object and the timezone.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

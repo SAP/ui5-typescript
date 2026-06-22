@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectPageLayout — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectPageLayout — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ObjectPageLayout — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/ObjectPageLayout/classes/ObjectPageLayout.html">
 <meta property="og:title" content="Class: ObjectPageLayout — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectPageLayout — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ObjectPageLayout — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/ObjectPageLayout/classes/ObjectPageLayout.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/ObjectPageLayout/README.html">ObjectPageLayout</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageLayout</a> / ObjectPageLayout</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageLayout</a> / ObjectPageLayout</p>
 <h1>Class: ObjectPageLayout</h1>
 <pre class="sig"><span class="kw">import</span> ObjectPageLayout <span class="kw">from</span> <span class="str">"sap/uxap/ObjectPageLayout"</span>;</pre>
+<h2>Since</h2>
+<p>1.26</p>
 <p>A layout that allows apps to easily display information related to a business object.</p>
 <p>Overview:</p>
 <p>The <code>ObjectPageLayout</code> layout is composed of a header (title and content), an optional anchor bar and
@@ -62,8 +64,6 @@ blocks structured into sections and subsections.</p>
 	 - Users need to get an overview of an object and interact with different parts of the object.</p>
 <p>Responsive behavior:</p>
 <p>The <code>ObjectPageLayout</code> is responsive and adapts to all screen sizes.</p>
-<h2>Since</h2>
-<p>1.26</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -154,12 +154,6 @@ See:
 <blockquote>
 <p><strong>attachBeforeNavigate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforeNavigate beforeNavigate event of this
-<code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
-<p>The event is fired before the selected section is changed using the navigation. This event can be aborted
-by the application with preventDefault(), which means that there will be no navigation.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -176,16 +170,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.118</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforeNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforeNavigate beforeNavigate event of this
 <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
 <p>The event is fired before the selected section is changed using the navigation. This event can be aborted
 by the application with preventDefault(), which means that there will be no navigation.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -198,6 +192,12 @@ by the application with preventDefault(), which means that there will be no navi
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.118</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeNavigate beforeNavigate event of this
+<code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
+<p>The event is fired before the selected section is changed using the navigation. This event can be aborted
+by the application with preventDefault(), which means that there will be no navigation.</p>
 <hr>
 <h3>attachEditHeaderButtonPress()</h3>
 <h4>Call Signature</h4>
@@ -248,11 +248,6 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <blockquote>
 <p><strong>attachHeaderContentPinnedStateChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:headerContentPinnedStateChange headerContentPinnedStateChange
-event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
-<p>The event is fired when the <code>headerContentPinned</code> property is changed via user interaction.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -269,15 +264,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.93</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachHeaderContentPinnedStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:headerContentPinnedStateChange headerContentPinnedStateChange
 event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
 <p>The event is fired when the <code>headerContentPinned</code> property is changed via user interaction.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachHeaderContentPinnedStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -290,16 +285,17 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.93</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:headerContentPinnedStateChange headerContentPinnedStateChange
+event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
+<p>The event is fired when the <code>headerContentPinned</code> property is changed via user interaction.</p>
 <hr>
 <h3>attachNavigate()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
-<p>The event is fired when the selected section is changed using the navigation.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -316,14 +312,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.40</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
 <p>The event is fired when the selected section is changed using the navigation.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -336,16 +332,16 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.40</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
+<p>The event is fired when the selected section is changed using the navigation.</p>
 <hr>
 <h3>attachSectionChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSectionChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:sectionChange sectionChange event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
-<p>Fired when the current section is changed by scrolling.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -362,14 +358,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.73</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:sectionChange sectionChange event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
 <p>Fired when the current section is changed by scrolling.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -382,17 +378,16 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.73</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:sectionChange sectionChange event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
+<p>Fired when the current section is changed by scrolling.</p>
 <hr>
 <h3>attachSubSectionVisibilityChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSubSectionVisibilityChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:subSectionVisibilityChange subSectionVisibilityChange
-event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
-<p>Fired when the visibility of subsections is changed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -409,15 +404,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.77</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSubSectionVisibilityChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:subSectionVisibilityChange subSectionVisibilityChange
 event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
 <p>Fired when the visibility of subsections is changed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSubSectionVisibilityChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -430,6 +425,11 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.77</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:subSectionVisibilityChange subSectionVisibilityChange
+event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself.</p>
+<p>Fired when the visibility of subsections is changed.</p>
 <hr>
 <h3>attachToggleAnchorBar()</h3>
 <h4>Call Signature</h4>
@@ -479,12 +479,12 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <blockquote>
 <p><strong>destroyFooter</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the footer in the aggregation #getFooter footer.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Destroys the footer in the aggregation #getFooter footer.</p>
 <hr>
 <h3>destroyHeaderContent()</h3>
 <blockquote>
@@ -508,12 +508,12 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <blockquote>
 <p><strong>destroyLandmarkInfo</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the landmarkInfo in the aggregation #getLandmarkInfo landmarkInfo.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Destroys the landmarkInfo in the aggregation #getLandmarkInfo landmarkInfo.</p>
 <hr>
 <h3>destroySections()</h3>
 <blockquote>
@@ -528,9 +528,6 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <blockquote>
 <p><strong>detachBeforeNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforeNavigate beforeNavigate event of this
-<code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -543,6 +540,9 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageLayout</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.118</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeNavigate beforeNavigate event of this
+<code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachEditHeaderButtonPress()</h3>
 <blockquote>
@@ -566,9 +566,6 @@ event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <blockquote>
 <p><strong>detachHeaderContentPinnedStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:headerContentPinnedStateChange headerContentPinnedStateChange
-event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -581,13 +578,14 @@ event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.93</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:headerContentPinnedStateChange headerContentPinnedStateChange
+event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachNavigate()</h3>
 <blockquote>
 <p><strong>detachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -600,14 +598,13 @@ event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSectionChange()</h3>
 <blockquote>
 <p><strong>detachSectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:sectionChange sectionChange event of this
-<code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -620,14 +617,14 @@ event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:sectionChange sectionChange event of this
+<code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSubSectionVisibilityChange()</h3>
 <blockquote>
 <p><strong>detachSubSectionVisibilityChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:subSectionVisibilityChange subSectionVisibilityChange
-event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -640,6 +637,9 @@ event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:subSectionVisibilityChange subSectionVisibilityChange
+event of this <code>sap.uxap.ObjectPageLayout</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachToggleAnchorBar()</h3>
 <blockquote>
@@ -663,9 +663,6 @@ this <code>sap.uxap.ObjectPageLayout</code>.</p>
 <blockquote>
 <p><strong>fireBeforeNavigate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:beforeNavigate beforeNavigate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageLayout$BeforeNavigateEventParameters.html"><code>ObjectPageLayout$BeforeNavigateEventParameters</code></a></p>
@@ -677,12 +674,14 @@ event object. The return value of this method indicates whether the default acti
 <p>1.118</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforeNavigate beforeNavigate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireEditHeaderButtonPress()</h3>
 <blockquote>
 <p><strong>fireEditHeaderButtonPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:editHeaderButtonPress editHeaderButtonPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -692,13 +691,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:editHeaderButtonPress editHeaderButtonPress to attached listeners.</p>
 <hr>
 <h3>fireHeaderContentPinnedStateChange()</h3>
 <blockquote>
 <p><strong>fireHeaderContentPinnedStateChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:headerContentPinnedStateChange headerContentPinnedStateChange to attached
-listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageLayout$HeaderContentPinnedStateChangeEventParameters.html"><code>ObjectPageLayout$HeaderContentPinnedStateChangeEventParameters</code></a></p>
@@ -710,12 +708,13 @@ listeners.</p>
 <p>1.93</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:headerContentPinnedStateChange headerContentPinnedStateChange to attached
+listeners.</p>
 <hr>
 <h3>fireNavigate()</h3>
 <blockquote>
 <p><strong>fireNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:navigate navigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageLayout$NavigateEventParameters.html"><code>ObjectPageLayout$NavigateEventParameters</code></a></p>
@@ -727,12 +726,12 @@ listeners.</p>
 <p>1.40</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navigate navigate to attached listeners.</p>
 <hr>
 <h3>fireSectionChange()</h3>
 <blockquote>
 <p><strong>fireSectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:sectionChange sectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageLayout$SectionChangeEventParameters.html"><code>ObjectPageLayout$SectionChangeEventParameters</code></a></p>
@@ -744,12 +743,12 @@ listeners.</p>
 <p>1.73</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:sectionChange sectionChange to attached listeners.</p>
 <hr>
 <h3>fireSubSectionVisibilityChange()</h3>
 <blockquote>
 <p><strong>fireSubSectionVisibilityChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:subSectionVisibilityChange subSectionVisibilityChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageLayout$SubSectionVisibilityChangeEventParameters.html"><code>ObjectPageLayout$SubSectionVisibilityChangeEventParameters</code></a></p>
@@ -761,12 +760,12 @@ listeners.</p>
 <p>1.77</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:subSectionVisibilityChange subSectionVisibilityChange to attached listeners.</p>
 <hr>
 <h3>fireToggleAnchorBar()</h3>
 <blockquote>
 <p><strong>fireToggleAnchorBar</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:toggleAnchorBar toggleAnchorBar to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageLayout$ToggleAnchorBarEventParameters.html"><code>ObjectPageLayout$ToggleAnchorBarEventParameters</code></a></p>
@@ -776,35 +775,36 @@ listeners.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:toggleAnchorBar toggleAnchorBar to attached listeners.</p>
 <hr>
 <h3>getAlwaysShowContentHeader()</h3>
 <blockquote>
 <p><strong>getAlwaysShowContentHeader</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAlwaysShowContentHeader alwaysShowContentHeader.</p>
-<p>Determines whether Header Content will always be expanded on desktop.</p>
-<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
-for the <code>headerTitle</code> aggregation.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>alwaysShowContentHeader</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Gets current value of property #getAlwaysShowContentHeader alwaysShowContentHeader.</p>
+<p>Determines whether Header Content will always be expanded on desktop.</p>
+<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
+for the <code>headerTitle</code> aggregation.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getBackgroundDesignAnchorBar()</h3>
 <blockquote>
 <p><strong>getBackgroundDesignAnchorBar</strong>(): <a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getBackgroundDesignAnchorBar backgroundDesignAnchorBar.</p>
-<p>Determines the background color of the <code>AnchorBar</code>.</p>
-<p><strong>Note:</strong> The default value of <code>backgroundDesignAnchorBar</code> property is null. If the property is not set,
-the color of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 <p>Value of property <code>backgroundDesignAnchorBar</code></p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Gets current value of property #getBackgroundDesignAnchorBar backgroundDesignAnchorBar.</p>
+<p>Determines the background color of the <code>AnchorBar</code>.</p>
+<p><strong>Note:</strong> The default value of <code>backgroundDesignAnchorBar</code> property is null. If the property is not set,
+the color of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
 <hr>
 <h3>getEnableLazyLoading()</h3>
 <blockquote>
@@ -821,26 +821,26 @@ the color of the background is <code>@sapUiObjectHeaderBackground</code>, which 
 <blockquote>
 <p><strong>getFlexEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getFlexEnabled flexEnabled.</p>
-<p>Specifies whether the object page enables flexibility features, such as hiding and adding sections.
- For more information about SAPUI5 flexibility, refer to the Developer Guide.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>flexEnabled</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Gets current value of property #getFlexEnabled flexEnabled.</p>
+<p>Specifies whether the object page enables flexibility features, such as hiding and adding sections.
+ For more information about SAPUI5 flexibility, refer to the Developer Guide.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getFooter()</h3>
 <blockquote>
 <p><strong>getFooter</strong>(): <a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getFooter footer.</p>
-<p>Object page floating footer.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Gets content of aggregation #getFooter footer.</p>
+<p>Object page floating footer.</p>
 <hr>
 <h3>getHeaderContent()</h3>
 <blockquote>
@@ -855,6 +855,11 @@ the color of the background is <code>@sapUiObjectHeaderBackground</code>, which 
 <blockquote>
 <p><strong>getHeaderContentPinnable</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>headerContentPinnable</code></p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets current value of property #getHeaderContentPinnable headerContentPinnable.</p>
 <p>Determines whether the Header Content area can be pinned.</p>
 <p>When set to <code>true</code>, a pin button is displayed within the Header Content area. The pin button allows the
@@ -862,16 +867,16 @@ user to make the Header Content always visible at the top of the page above any 
 <p><strong>Note:</strong> This property is only taken into account if an instance of <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
 is used for the <code>headerTitle</code> aggregation.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>headerContentPinnable</code></p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>getHeaderContentPinned()</h3>
 <blockquote>
 <p><strong>getHeaderContentPinned</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>headerContentPinned</code></p>
+<h4>Since</h4>
+<p>1.93</p>
 <p>Gets current value of property #getHeaderContentPinned headerContentPinned.</p>
 <p>Determines whether the <code>sap.uxap.ObjectPageDynamicHeaderContent</code> is pinned.</p>
 <p>The property can be changed explicitly with its setter or in the occurrence of the following user interactions:</p>
@@ -885,11 +890,6 @@ is used for the <code>headerTitle</code> aggregation.</p>
  - The `preserveHeaderStateOnScroll` property or the rules for it to work are `false`
 </code></pre>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>headerContentPinned</code></p>
-<h4>Since</h4>
-<p>1.93</p>
 <hr>
 <h3>getHeaderTitle()</h3>
 <blockquote>
@@ -915,34 +915,39 @@ is used for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><strong>getIsChildPage</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>isChildPage</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Gets current value of property #getIsChildPage isChildPage.</p>
 <p>Determines whether the page is a child page and renders it with a different design. Child pages have
 an additional (darker/lighter) stripe on the left side of their header content area.</p>
 <p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
 for the <code>headerTitle</code> aggregation.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>isChildPage</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>getLandmarkInfo()</h3>
 <blockquote>
 <p><strong>getLandmarkInfo</strong>(): <a href="../../ObjectPageAccessibleLandmarkInfo/classes/ObjectPageAccessibleLandmarkInfo.html"><code>ObjectPageAccessibleLandmarkInfo</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getLandmarkInfo landmarkInfo.</p>
-<p>Accessible landmark settings to be applied on the containers of the <code>sap.uxap.ObjectPageLayout</code> control.</p>
-<p>If not set, no landmarks will be written.</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectPageAccessibleLandmarkInfo/classes/ObjectPageAccessibleLandmarkInfo.html"><code>ObjectPageAccessibleLandmarkInfo</code></a></p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Gets content of aggregation #getLandmarkInfo landmarkInfo.</p>
+<p>Accessible landmark settings to be applied on the containers of the <code>sap.uxap.ObjectPageLayout</code> control.</p>
+<p>If not set, no landmarks will be written.</p>
 <hr>
 <h3>getPreserveHeaderStateOnScroll()</h3>
 <blockquote>
 <p><strong>getPreserveHeaderStateOnScroll</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>preserveHeaderStateOnScroll</code></p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets current value of property #getPreserveHeaderStateOnScroll preserveHeaderStateOnScroll.</p>
 <p>Preserves the current header state when scrolling. For example, if the user expands the header by clicking
 on the title and then scrolls down the page, the header will remain expanded.</p>
@@ -953,11 +958,6 @@ on the title and then scrolls down the page, the header will remain expanded.</p
     when the control is rendered on tablet or mobile and the control`s title and header are with height larger
     than the given threshold.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>preserveHeaderStateOnScroll</code></p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>getScrollDelegate()</h3>
 <blockquote>
@@ -989,6 +989,11 @@ on the title and then scrolls down the page, the header will remain expanded.</p
 <blockquote>
 <p><strong>getSectionTitleLevel</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+<p>Value of property <code>sectionTitleLevel</code></p>
+<h4>Since</h4>
+<p>1.44.0</p>
 <p>Gets current value of property #getSectionTitleLevel sectionTitleLevel.</p>
 <p>Determines the ARIA level of the <code>ObjectPageSection</code> and <code>ObjectPageSubSection</code> titles. The ARIA level
 is used by assisting technologies, such as screen readers, to create a hierarchical site map for faster
@@ -1004,22 +1009,17 @@ title.
 In this case the value of this property will be ignored.
 </code></pre>
 <p>Default value is <code>Auto</code>.</p>
-<h4>Returns</h4>
-<p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
-<p>Value of property <code>sectionTitleLevel</code></p>
-<h4>Since</h4>
-<p>1.44.0</p>
 <hr>
 <h3>getSelectedSection()</h3>
 <blockquote>
 <p><strong>getSelectedSection</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getSelectedSection selectedSection,
-or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.44.0</p>
+<p>ID of the element which is the current target of the association #getSelectedSection selectedSection,
+or <code>null</code>.</p>
 <hr>
 <h3>getShowAnchorBar()</h3>
 <blockquote>
@@ -1048,29 +1048,29 @@ bar.</p>
 <blockquote>
 <p><strong>getShowEditHeaderButton</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowEditHeaderButton showEditHeaderButton.</p>
-<p>Determines whether an Edit button will be displayed in Header Content.</p>
-<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
-for the <code>headerTitle</code> aggregation.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showEditHeaderButton</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Gets current value of property #getShowEditHeaderButton showEditHeaderButton.</p>
+<p>Determines whether an Edit button will be displayed in Header Content.</p>
+<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
+for the <code>headerTitle</code> aggregation.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowFooter()</h3>
 <blockquote>
 <p><strong>getShowFooter</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowFooter showFooter.</p>
-<p>Determines whether the footer is visible.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showFooter</code></p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Gets current value of property #getShowFooter showFooter.</p>
+<p>Determines whether the footer is visible.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowHeaderContent()</h3>
 <blockquote>
@@ -1087,14 +1087,14 @@ for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><strong>getShowOnlyHighImportance</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowOnlyHighImportance showOnlyHighImportance.</p>
-<p>Determines whether sections and subsections with importance Low and Medium are hidden even on large screens.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showOnlyHighImportance</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
+<p>Gets current value of property #getShowOnlyHighImportance showOnlyHighImportance.</p>
+<p>Determines whether sections and subsections with importance Low and Medium are hidden even on large screens.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowTitleInHeaderContent()</h3>
 <blockquote>
@@ -1124,6 +1124,11 @@ for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><strong>getToggleHeaderOnTitleClick</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>toggleHeaderOnTitleClick</code></p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets current value of property #getToggleHeaderOnTitleClick toggleHeaderOnTitleClick.</p>
 <p>Determines whether the user can switch between the expanded/collapsed states of the <code>sap.uxap.ObjectPageDynamicHeaderContent</code>
 by clicking on the <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>. If set to <code>false</code>, the <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
@@ -1132,11 +1137,6 @@ if necessary.</p>
 <p><strong>Note:</strong> This property is only taken into account if an instance of <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
 is used for the <code>headerTitle</code> aggregation.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>toggleHeaderOnTitleClick</code></p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>getUpperCaseAnchorBar()</h3>
 <blockquote>
@@ -1241,7 +1241,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>invalidate</strong>(<code>oOrigin?</code>): <code>void</code></p>
 </blockquote>
-<p>This triggers rerendering of itself and its children.</p>
 <h4>Parameters</h4>
 <h5>oOrigin?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></p>
@@ -1252,6 +1251,7 @@ invalidation will be suppressed (in iconTabBar mode)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This triggers rerendering of itself and its children.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#invalidate"><code>invalidate</code></a></p>
 <hr>
@@ -1323,12 +1323,6 @@ invalidation will be suppressed (in iconTabBar mode)</p>
 <blockquote>
 <p><strong>setAlwaysShowContentHeader</strong>(<code>bAlwaysShowContentHeader?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAlwaysShowContentHeader alwaysShowContentHeader.</p>
-<p>Determines whether Header Content will always be expanded on desktop.</p>
-<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
-for the <code>headerTitle</code> aggregation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAlwaysShowContentHeader?</h5>
 <p><code>boolean</code></p>
@@ -1338,12 +1332,17 @@ for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Sets a new value for property #getAlwaysShowContentHeader alwaysShowContentHeader.</p>
+<p>Determines whether Header Content will always be expanded on desktop.</p>
+<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
+for the <code>headerTitle</code> aggregation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setBackgroundDesignAnchorBar()</h3>
 <blockquote>
 <p><strong>setBackgroundDesignAnchorBar</strong>(<code>sBackgroundDesignAnchorBar</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the value of the <code>backgroundDesignAnchorBar</code> property.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundDesignAnchorBar</h5>
 <p><a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
@@ -1353,6 +1352,7 @@ for the <code>headerTitle</code> aggregation.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Sets the value of the <code>backgroundDesignAnchorBar</code> property.</p>
 <hr>
 <h3>setEnableLazyLoading()</h3>
 <blockquote>
@@ -1374,11 +1374,6 @@ for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><strong>setFlexEnabled</strong>(<code>bFlexEnabled?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFlexEnabled flexEnabled.</p>
-<p>Specifies whether the object page enables flexibility features, such as hiding and adding sections.
- For more information about SAPUI5 flexibility, refer to the Developer Guide.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bFlexEnabled?</h5>
 <p><code>boolean</code></p>
@@ -1388,12 +1383,16 @@ for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Sets a new value for property #getFlexEnabled flexEnabled.</p>
+<p>Specifies whether the object page enables flexibility features, such as hiding and adding sections.
+ For more information about SAPUI5 flexibility, refer to the Developer Guide.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setFooter()</h3>
 <blockquote>
 <p><strong>setFooter</strong>(<code>oFooter</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getFooter footer.</p>
 <h4>Parameters</h4>
 <h5>oFooter</h5>
 <p><a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
@@ -1403,19 +1402,12 @@ for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Sets the aggregated #getFooter footer.</p>
 <hr>
 <h3>setHeaderContentPinnable()</h3>
 <blockquote>
 <p><strong>setHeaderContentPinnable</strong>(<code>bHeaderContentPinnable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHeaderContentPinnable headerContentPinnable.</p>
-<p>Determines whether the Header Content area can be pinned.</p>
-<p>When set to <code>true</code>, a pin button is displayed within the Header Content area. The pin button allows the
-user to make the Header Content always visible at the top of the page above any scrollable content.</p>
-<p><strong>Note:</strong> This property is only taken into account if an instance of <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
-is used for the <code>headerTitle</code> aggregation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bHeaderContentPinnable?</h5>
 <p><code>boolean</code></p>
@@ -1425,11 +1417,28 @@ is used for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets a new value for property #getHeaderContentPinnable headerContentPinnable.</p>
+<p>Determines whether the Header Content area can be pinned.</p>
+<p>When set to <code>true</code>, a pin button is displayed within the Header Content area. The pin button allows the
+user to make the Header Content always visible at the top of the page above any scrollable content.</p>
+<p><strong>Note:</strong> This property is only taken into account if an instance of <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
+is used for the <code>headerTitle</code> aggregation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setHeaderContentPinned()</h3>
 <blockquote>
 <p><strong>setHeaderContentPinned</strong>(<code>bHeaderContentPinned?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bHeaderContentPinned?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>headerContentPinned</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.93</p>
 <p>Sets a new value for property #getHeaderContentPinned headerContentPinned.</p>
 <p>Determines whether the <code>sap.uxap.ObjectPageDynamicHeaderContent</code> is pinned.</p>
 <p>The property can be changed explicitly with its setter or in the occurrence of the following user interactions:</p>
@@ -1444,15 +1453,6 @@ is used for the <code>headerTitle</code> aggregation.</p>
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bHeaderContentPinned?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>headerContentPinned</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.93</p>
 <hr>
 <h3>setHeaderTitle()</h3>
 <blockquote>
@@ -1487,13 +1487,6 @@ is used for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><strong>setIsChildPage</strong>(<code>bIsChildPage?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIsChildPage isChildPage.</p>
-<p>Determines whether the page is a child page and renders it with a different design. Child pages have
-an additional (darker/lighter) stripe on the left side of their header content area.</p>
-<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
-for the <code>headerTitle</code> aggregation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bIsChildPage?</h5>
 <p><code>boolean</code></p>
@@ -1503,12 +1496,18 @@ for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Sets a new value for property #getIsChildPage isChildPage.</p>
+<p>Determines whether the page is a child page and renders it with a different design. Child pages have
+an additional (darker/lighter) stripe on the left side of their header content area.</p>
+<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
+for the <code>headerTitle</code> aggregation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setLandmarkInfo()</h3>
 <blockquote>
 <p><strong>setLandmarkInfo</strong>(<code>oLandmarkInfo</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getLandmarkInfo landmarkInfo.</p>
 <h4>Parameters</h4>
 <h5>oLandmarkInfo</h5>
 <p><a href="../../ObjectPageAccessibleLandmarkInfo/classes/ObjectPageAccessibleLandmarkInfo.html"><code>ObjectPageAccessibleLandmarkInfo</code></a></p>
@@ -1518,11 +1517,21 @@ for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Sets the aggregated #getLandmarkInfo landmarkInfo.</p>
 <hr>
 <h3>setPreserveHeaderStateOnScroll()</h3>
 <blockquote>
 <p><strong>setPreserveHeaderStateOnScroll</strong>(<code>bPreserveHeaderStateOnScroll?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bPreserveHeaderStateOnScroll?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>preserveHeaderStateOnScroll</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Sets a new value for property #getPreserveHeaderStateOnScroll preserveHeaderStateOnScroll.</p>
 <p>Preserves the current header state when scrolling. For example, if the user expands the header by clicking
 on the title and then scrolls down the page, the header will remain expanded.</p>
@@ -1534,20 +1543,20 @@ on the title and then scrolls down the page, the header will remain expanded.</p
     than the given threshold.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bPreserveHeaderStateOnScroll?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>preserveHeaderStateOnScroll</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>setSectionTitleLevel()</h3>
 <blockquote>
 <p><strong>setSectionTitleLevel</strong>(<code>sSectionTitleLevel?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sSectionTitleLevel?</h5>
+<p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+<p>New value for property <code>sectionTitleLevel</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.44.0</p>
 <p>Sets a new value for property #getSectionTitleLevel sectionTitleLevel.</p>
 <p>Determines the ARIA level of the <code>ObjectPageSection</code> and <code>ObjectPageSubSection</code> titles. The ARIA level
 is used by assisting technologies, such as screen readers, to create a hierarchical site map for faster
@@ -1564,15 +1573,6 @@ In this case the value of this property will be ignored.
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>Auto</code>.</p>
-<h4>Parameters</h4>
-<h5>sSectionTitleLevel?</h5>
-<p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
-<p>New value for property <code>sectionTitleLevel</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.44.0</p>
 <hr>
 <h3>setSelectedSection()</h3>
 <blockquote>
@@ -1630,12 +1630,6 @@ bar.</p>
 <blockquote>
 <p><strong>setShowEditHeaderButton</strong>(<code>bShowEditHeaderButton?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowEditHeaderButton showEditHeaderButton.</p>
-<p>Determines whether an Edit button will be displayed in Header Content.</p>
-<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
-for the <code>headerTitle</code> aggregation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowEditHeaderButton?</h5>
 <p><code>boolean</code></p>
@@ -1645,15 +1639,17 @@ for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Sets a new value for property #getShowEditHeaderButton showEditHeaderButton.</p>
+<p>Determines whether an Edit button will be displayed in Header Content.</p>
+<p><strong>Note</strong>: This property is only taken into account if an instance of <code>sap.uxap.ObjectPageHeader</code> is used
+for the <code>headerTitle</code> aggregation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowFooter()</h3>
 <blockquote>
 <p><strong>setShowFooter</strong>(<code>bShowFooter?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowFooter showFooter.</p>
-<p>Determines whether the footer is visible.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowFooter?</h5>
 <p><code>boolean</code></p>
@@ -1663,6 +1659,10 @@ for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Sets a new value for property #getShowFooter showFooter.</p>
+<p>Determines whether the footer is visible.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowHeaderContent()</h3>
 <blockquote>
@@ -1684,10 +1684,6 @@ for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><strong>setShowOnlyHighImportance</strong>(<code>bShowOnlyHighImportance?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowOnlyHighImportance showOnlyHighImportance.</p>
-<p>Determines whether sections and subsections with importance Low and Medium are hidden even on large screens.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowOnlyHighImportance?</h5>
 <p><code>boolean</code></p>
@@ -1697,6 +1693,10 @@ for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
+<p>Sets a new value for property #getShowOnlyHighImportance showOnlyHighImportance.</p>
+<p>Determines whether sections and subsections with importance Low and Medium are hidden even on large screens.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowTitleInHeaderContent()</h3>
 <blockquote>
@@ -1736,15 +1736,6 @@ for the <code>headerTitle</code> aggregation.</p>
 <blockquote>
 <p><strong>setToggleHeaderOnTitleClick</strong>(<code>bToggleHeaderOnTitleClick?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getToggleHeaderOnTitleClick toggleHeaderOnTitleClick.</p>
-<p>Determines whether the user can switch between the expanded/collapsed states of the <code>sap.uxap.ObjectPageDynamicHeaderContent</code>
-by clicking on the <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>. If set to <code>false</code>, the <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
-is not clickable and the application must provide other means for expanding/collapsing the <code>sap.uxap.ObjectPageDynamicHeaderContent</code>,
-if necessary.</p>
-<p><strong>Note:</strong> This property is only taken into account if an instance of <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
-is used for the <code>headerTitle</code> aggregation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bToggleHeaderOnTitleClick?</h5>
 <p><code>boolean</code></p>
@@ -1754,6 +1745,15 @@ is used for the <code>headerTitle</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets a new value for property #getToggleHeaderOnTitleClick toggleHeaderOnTitleClick.</p>
+<p>Determines whether the user can switch between the expanded/collapsed states of the <code>sap.uxap.ObjectPageDynamicHeaderContent</code>
+by clicking on the <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>. If set to <code>false</code>, the <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
+is not clickable and the application must provide other means for expanding/collapsing the <code>sap.uxap.ObjectPageDynamicHeaderContent</code>,
+if necessary.</p>
+<p><strong>Note:</strong> This property is only taken into account if an instance of <code>sap.uxap.ObjectPageDynamicHeaderTitle</code>
+is used for the <code>headerTitle</code> aggregation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setUpperCaseAnchorBar()</h3>
 <blockquote>
@@ -1820,7 +1820,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ObjectPageLayout</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ObjectPageLayout</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1844,6 +1844,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $PopoverSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $PopoverSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $PopoverSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Popover/interfaces/$PopoverSettings.html">
 <meta property="og:title" content="Interface: $PopoverSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $PopoverSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $PopoverSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Popover/interfaces/$PopoverSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Popover/README.html">Popover</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Popover</a> / $PopoverSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Popover</a> / $PopoverSettings</p>
 <h1>Interface: $PopoverSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $PopoverSettings } <span class="kw">from</span> <span class="str">"sap/m/Popover"</span>;</pre>
-<p>Describes the settings that can be provided to the Popover constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -108,20 +107,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>beginButton?</strong>: <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>BeginButton is shown at the left side (right side in RTL mode) inside the header. When showHeader is
-set to false, the property is ignored.</p>
 <h4>Since</h4>
 <p>1.15.1</p>
+<p>BeginButton is shown at the left side (right side in RTL mode) inside the header. When showHeader is
+set to false, the property is ignored.</p>
 <hr>
 <h3><del>bounce?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>bounce?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Whether bouncing is enabled.</p>
 <h4>Since</h4>
 <p>1.16.5</p>
 <h4>Deprecated</h4>
 <p>(since 1.42) - This parameter is obsolete and has no effect.</p>
+<p>Whether bouncing is enabled.</p>
 <hr>
 <h3>content?</h3>
 <blockquote>
@@ -133,35 +132,35 @@ set to false, the property is ignored.</p>
 <blockquote>
 <p><code>optional</code> <strong>contentHeight?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.9.0</p>
 <p>Set the height of the content area inside Popover. When controls which adapt their size to the parent
 control are added directly into Popover, for example sap.m.Page control, a size needs to be specified
 to the content area of the Popover. Otherwise, Popover control isn&#39;t able to display the content in the
 right way. This values isn&#39;t necessary for controls added to Popover directly which can decide their
 size by themselves, for exmaple sap.m.List, sap.m.Image etc., only needed for controls that adapt their
 size to the parent control.</p>
-<h4>Since</h4>
-<p>1.9.0</p>
 <hr>
 <h3>contentMinWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>contentMinWidth?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Sets the minimum width of the content area inside popover.</p>
 <h4>Since</h4>
 <p>1.36</p>
+<p>Sets the minimum width of the content area inside popover.</p>
 <hr>
 <h3>contentWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>contentWidth?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.9.0</p>
 <p>Set the width of the content area inside Popover. When controls which adapt their size to the parent
 control are added directly into Popover, for example sap.m.Page control, a size needs to be specified
 to the content area of the Popover. Otherwise, Popover control isn&#39;t able to display the content in the
 right way. This values isn&#39;t necessary for controls added to Popover directly which can decide their
 size by themselves, for exmaple sap.m.List, sap.m.Image etc., only needed for controls that adapt their
 size to the parent control.</p>
-<h4>Since</h4>
-<p>1.9.0</p>
 <hr>
 <h3>customHeader?</h3>
 <blockquote>
@@ -174,19 +173,19 @@ is ignored, and only this customHeader is shown on the top of popover.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableScrolling?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>This property is deprecated. Please use properties verticalScrolling and horizontalScrolling instead.
-If you still use this property it will be mapped on the new properties verticalScrolling and horizontalScrolling.</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.0)</p>
+<p>This property is deprecated. Please use properties verticalScrolling and horizontalScrolling instead.
+If you still use this property it will be mapped on the new properties verticalScrolling and horizontalScrolling.</p>
 <hr>
 <h3>endButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>endButton?</strong>: <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>EndButton is always shown at the right side (left side in RTL mode) inside the header. When showHeader
-is set to false, the property is ignored.</p>
 <h4>Since</h4>
 <p>1.15.1</p>
+<p>EndButton is always shown at the right side (left side in RTL mode) inside the header. When showHeader
+is set to false, the property is ignored.</p>
 <hr>
 <h3>footer?</h3>
 <blockquote>
@@ -198,35 +197,35 @@ is set to false, the property is ignored.</p>
 <blockquote>
 <p><code>optional</code> <strong>horizontalScrolling?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.15.0</p>
 <p>This property indicates if user can scroll horizontally inside popover when the content is bigger than
 the content area. However, when scrollable control (sap.m.ScrollContainer, sap.m.Page) is in the popover,
 this property needs to be set to false to disable the scrolling in popover in order to make the scrolling
 in the child control work properly. Popover detects if there&#39;s sap.m.NavContainer, sap.m.Page, or sap.m.ScrollContainer
 as direct child added to Popover. If there is, Popover will turn off scrolling by setting this property
 to false automatically ignoring the existing value of this property.</p>
-<h4>Since</h4>
-<p>1.15.0</p>
 <hr>
 <h3>initialFocus?</h3>
 <blockquote>
 <p><code>optional</code> <strong>initialFocus?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.15.0</p>
 <p>Focus on the popover is set in the sequence of <code>beginButton</code> and <code>endButton</code>, when available. But if
 a control other than these two buttons needs to get the focus, set the <code>initialFocus</code> with the control
 which should be focused on.</p>
-<h4>Since</h4>
-<p>1.15.0</p>
 <hr>
 <h3><del>leftButton?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>leftButton?</strong>: <code>string</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
-<p>LeftButton is shown at the left edge of the bar in iOS, and at the right side of the bar for the other
-platforms. Please set this to null if you want to remove the left button from the bar. And the button
-is only removed from the bar, not destroyed. When showHeader is set to false, this property will be ignored.</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - This property has been deprecated since 1.15.1. Please use the beginButton
 instead.</p>
+<p>LeftButton is shown at the left edge of the bar in iOS, and at the right side of the bar for the other
+platforms. Please set this to null if you want to remove the left button from the bar. And the button
+is only removed from the bar, not destroyed. When showHeader is set to false, this property will be ignored.</p>
 <hr>
 <h3>modal?</h3>
 <blockquote>
@@ -263,29 +262,29 @@ any rerendering of the popover, but it will take effect when it&#39;s opened aga
 <p><code>optional</code> <strong>resizable?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Whether resize option is enabled. <em>Note:</em> This property is effective only on Desktop</p>
 <h4>Since</h4>
 <p>1.36.4
  (since 1.36.4) - Do not use directly on Popover while in experimental mode!</p>
+<p>Whether resize option is enabled. <em>Note:</em> This property is effective only on Desktop</p>
 <hr>
 <h3><del>rightButton?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>rightButton?</strong>: <code>string</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
-<p>RightButton is always shown at the right edge of the bar. Please set this to null if you want to remove
-the right button from the bar. And the button is only removed from the bar, not destroyed. When showHeader
-is set to false, this property will be ignored.</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - This property has been deprecated since 1.15.1. Please use the endButton
 instead.</p>
+<p>RightButton is always shown at the right edge of the bar. Please set this to null if you want to remove
+the right button from the bar. And the button is only removed from the bar, not destroyed. When showHeader
+is set to false, this property will be ignored.</p>
 <hr>
 <h3>showArrow?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showArrow?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Whether Popover arrow should be visible</p>
 <h4>Since</h4>
 <p>1.31</p>
+<p>Whether Popover arrow should be visible</p>
 <hr>
 <h3>showHeader?</h3>
 <blockquote>
@@ -298,11 +297,11 @@ Headings in the popover content should start with H2 heading level.</p>
 <blockquote>
 <p><code>optional</code> <strong>subHeader?</strong>: <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.15.1</p>
 <p>When subHeader is assigned to Popover, it&#39;s rendered directly after the main header if there is, or at
 the beginning of Popover when there&#39;s no main header. SubHeader is out of the content area and won&#39;t
 be scrolled when content&#39;s size is bigger than the content area&#39;s size.</p>
-<h4>Since</h4>
-<p>1.15.1</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -316,26 +315,26 @@ property to <code>true</code>.</p>
 <blockquote>
 <p><code>optional</code> <strong>titleAlignment?</strong>: <code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.72</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
 as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
 (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<h4>Since</h4>
-<p>1.72</p>
 <hr>
 <h3>verticalScrolling?</h3>
 <blockquote>
 <p><code>optional</code> <strong>verticalScrolling?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.15.0</p>
 <p>This property indicates if user can scroll vertically inside popover when the content is bigger than
 the content area. However, when scrollable control (sap.m.ScrollContainer, sap.m.Page) is in the popover,
 this property needs to be set to false to disable the scrolling in popover in order to make the scrolling
 in the child control work properly. Popover detects if there&#39;s sap.m.NavContainer, sap.m.Page, or sap.m.ScrollContainer
 as direct child added to Popover. If there is, Popover will turn off scrolling by setting this property
 to false automatically ignoring the existing value of this property.</p>
-<h4>Since</h4>
-<p>1.15.0</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

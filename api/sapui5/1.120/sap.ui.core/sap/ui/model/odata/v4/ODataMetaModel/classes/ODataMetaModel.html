@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ODataMetaModel — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ODataMetaModel — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ODataMetaModel — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v4/ODataMetaModel/classes/ODataMetaModel.html">
 <meta property="og:title" content="Class: ODataMetaModel — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ODataMetaModel — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ODataMetaModel — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v4/ODataMetaModel/classes/ODataMetaModel.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › v4 › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/v4/ODataMetaModel/README.html">ODataMetaModel</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/ODataMetaModel</a> / ODataMetaModel</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/ODataMetaModel</a> / ODataMetaModel</p>
 <h1>Class: ODataMetaModel</h1>
 <pre class="sig"><span class="kw">import</span> ODataMetaModel <span class="kw">from</span> <span class="str">"sap/ui/model/odata/v4/ODataMetaModel"</span>;</pre>
+<h2>Since</h2>
+<p>1.37.0</p>
 <p>Implementation of an OData metadata model which offers access to OData V4 metadata. The meta model does
 not support any public events; attaching an event handler leads to an error.</p>
 <p>This model is read-only.</p>
 <p>This model is not prepared to be inherited from.</p>
-<h2>Since</h2>
-<p>1.37.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a></li>
@@ -62,9 +62,6 @@ not support any public events; attaching an event handler leads to an error.</p>
 <blockquote>
 <p><strong>attachEvent</strong>(<code>sEventId</code>, <code>_oData?</code>, <code>_fnFunction?</code>, <code>_oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>See sap.ui.base.EventProvider#attachEvent
-See:
-	sap.ui.base.EventProvider#attachEvent</p>
 <h4>Parameters</h4>
 <h5>sEventId</h5>
 <p><code>string</code></p>
@@ -80,6 +77,9 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>See sap.ui.base.EventProvider#attachEvent
+See:
+	sap.ui.base.EventProvider#attachEvent</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#attachevent"><code>attachEvent</code></a></p>
 <hr>
@@ -87,9 +87,6 @@ See:
 <blockquote>
 <p><strong>bindContext</strong>(<code>sPath</code>, <code>oContext?</code>): <a href="../../../../ContextBinding/classes/ContextBinding.html"><code>ContextBinding</code></a></p>
 </blockquote>
-<p>See <code>sap.ui.model.Model#bindContext</code>
-See:
-	sap.ui.model.Model#bindContext</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -99,6 +96,9 @@ See:
 <p><a href="../../../../ContextBinding/classes/ContextBinding.html"><code>ContextBinding</code></a></p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>See <code>sap.ui.model.Model#bindContext</code>
+See:
+	sap.ui.model.Model#bindContext</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#bindcontext"><code>bindContext</code></a></p>
 <hr>
@@ -106,16 +106,6 @@ See:
 <blockquote>
 <p><strong>bindList</strong>(<code>sPath</code>, <code>oContext?</code>, <code>aSorters?</code>, <code>aFilters?</code>): <a href="../../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></p>
 </blockquote>
-<p>Creates a list binding for this metadata model which iterates content from the given path (relative to
-the given context), sorted and filtered as indicated.</p>
-<p>By default, OData names are iterated and a trailing slash is implicitly added to the path (see #requestObject
-for the effects this has); technical properties and inline annotations are filtered out.</p>
-<p>A path which ends with an &quot;@&quot; segment can be used to iterate all inline or external targeting annotations;
-no trailing slash is added implicitly; technical properties and OData names are filtered out.
-See:
-	sap.ui.model.Model#bindList
-	#requestObject
-	sap.ui.model.FilterOperator</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -135,6 +125,16 @@ See:
 <p>A list binding for this metadata model</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Creates a list binding for this metadata model which iterates content from the given path (relative to
+the given context), sorted and filtered as indicated.</p>
+<p>By default, OData names are iterated and a trailing slash is implicitly added to the path (see #requestObject
+for the effects this has); technical properties and inline annotations are filtered out.</p>
+<p>A path which ends with an &quot;@&quot; segment can be used to iterate all inline or external targeting annotations;
+no trailing slash is added implicitly; technical properties and OData names are filtered out.
+See:
+	sap.ui.model.Model#bindList
+	#requestObject
+	sap.ui.model.FilterOperator</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#bindlist"><code>bindList</code></a></p>
 <hr>
@@ -142,10 +142,6 @@ See:
 <blockquote>
 <p><strong>bindProperty</strong>(<code>sPath</code>, <code>oContext?</code>, <code>mParameters?</code>): <a href="../../../../PropertyBinding/classes/PropertyBinding.html"><code>PropertyBinding</code></a></p>
 </blockquote>
-<p>Creates a property binding for this metadata model which refers to the content from the given path (relative
-to the given context).
-See:
-	sap.ui.model.Model#bindProperty</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -168,6 +164,10 @@ they are given, <code>oContext</code> cannot be omitted</p>
 <p>A property binding for this metadata model</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Creates a property binding for this metadata model which refers to the content from the given path (relative
+to the given context).
+See:
+	sap.ui.model.Model#bindProperty</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#bindproperty"><code>bindProperty</code></a></p>
 <hr>
@@ -175,9 +175,6 @@ they are given, <code>oContext</code> cannot be omitted</p>
 <blockquote>
 <p><strong>bindTree</strong>(<code>_sPath</code>, <code>_oContext?</code>, <code>_aFilters?</code>, <code>_mParameters?</code>, <code>_aSorters?</code>): <a href="../../../../TreeBinding/classes/TreeBinding.html"><code>TreeBinding</code></a></p>
 </blockquote>
-<p>Method not supported
-See:
-	sap.ui.model.Model#bindTree</p>
 <h4>Parameters</h4>
 <h5>_sPath</h5>
 <p><code>string</code></p>
@@ -193,6 +190,9 @@ See:
 <p><a href="../../../../TreeBinding/classes/TreeBinding.html"><code>TreeBinding</code></a></p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Method not supported
+See:
+	sap.ui.model.Model#bindTree</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#bindtree"><code>bindTree</code></a></p>
 <hr>
@@ -200,21 +200,20 @@ See:
 <blockquote>
 <p><strong>getData</strong>(): <code>object</code></p>
 </blockquote>
-<p>Returns a snapshot of each $metadata or annotation file loaded so far, combined into a single &quot;JSON&quot;
-object according to the streamlined OData V4 Metadata JSON Format.
-See:
-	#requestData</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>The OData metadata as a &quot;JSON&quot; object, if it is already available, or <code>undefined</code>.</p>
 <h4>Since</h4>
 <p>1.59.0</p>
+<p>Returns a snapshot of each $metadata or annotation file loaded so far, combined into a single &quot;JSON&quot;
+object according to the streamlined OData V4 Metadata JSON Format.
+See:
+	#requestData</p>
 <hr>
 <h3>getETags()</h3>
 <blockquote>
 <p><strong>getETags</strong>(): <code>Record</code>&lt;<code>string</code>, <code>string</code> | <code>null</code>&gt;</p>
 </blockquote>
-<p>Returns a map of entity tags for each $metadata or annotation file loaded so far.</p>
 <h4>Returns</h4>
 <p><code>Record</code>&lt;<code>string</code>, <code>string</code> | <code>null</code>&gt;</p>
 <p>A map which contains one entry for each $metadata or annotation file loaded so far: the key
@@ -225,12 +224,12 @@ header is sent at all. Note that this map may change due to load-on-demand of &q
 (see parameter <code>supportReferences</code> of sap.ui.model.odata.v4.ODataModel#constructor).</p>
 <h4>Since</h4>
 <p>1.51.0</p>
+<p>Returns a map of entity tags for each $metadata or annotation file loaded so far.</p>
 <hr>
 <h3><del>getLastModified()</del></h3>
 <blockquote>
 <p><strong>getLastModified</strong>(): <code>Date</code></p>
 </blockquote>
-<p>Returns the maximum value of all &quot;Last-Modified&quot; response headers seen so far.</p>
 <h4>Returns</h4>
 <p><code>Date</code></p>
 <p>The maximum value of all &quot;Last-Modified&quot; (or, as a fallback, &quot;Date&quot;) response headers seen so
@@ -243,12 +242,12 @@ of sap.ui.model.odata.v4.ODataModel#constructor).</p>
 <h4>Deprecated</h4>
 <p>(since 1.51.0) - use #getETags instead because modifications to old files may be
 shadowed by a new file in certain scenarios.</p>
+<p>Returns the maximum value of all &quot;Last-Modified&quot; response headers seen so far.</p>
 <hr>
 <h3>getMetaContext()</h3>
 <blockquote>
 <p><strong>getMetaContext</strong>(<code>sPath</code>): <a href="../../../../Context/classes/Context.html"><code>Context</code></a></p>
 </blockquote>
-<p>Returns the OData metadata model context corresponding to the given OData data model path.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -259,12 +258,12 @@ shadowed by a new file in certain scenarios.</p>
 path &quot;/EMPLOYEES/ENTRYDATE&quot;</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Returns the OData metadata model context corresponding to the given OData data model path.</p>
 <hr>
 <h3>getMetaPath()</h3>
 <blockquote>
 <p><strong>getMetaPath</strong>(<code>sPath</code>): <code>string</code></p>
 </blockquote>
-<p>Returns the OData metadata model path corresponding to the given OData data model path.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -274,16 +273,12 @@ path &quot;/EMPLOYEES/ENTRYDATE&quot;</p>
 <p>The corresponding metadata path within the OData metadata model, for example &quot;/EMPLOYEES/ENTRYDATE&quot;</p>
 <h4>Since</h4>
 <p>1.81.0</p>
+<p>Returns the OData metadata model path corresponding to the given OData data model path.</p>
 <hr>
 <h3>getObject()</h3>
 <blockquote>
 <p><strong>getObject</strong>(<code>sPath</code>, <code>oContext?</code>, <code>mParameters?</code>): <code>any</code></p>
 </blockquote>
-<p>Returns the metadata object for the given path relative to the given context. Returns <code>undefined</code> in
-case the metadata is not (yet) available. Use #requestObject for asynchronous access.
-See:
-	sap.ui.model.Model#getObject
-	#requestObject</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -301,6 +296,11 @@ See:
 <p>The requested metadata object if it is already available, or <code>undefined</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Returns the metadata object for the given path relative to the given context. Returns <code>undefined</code> in
+case the metadata is not (yet) available. Use #requestObject for asynchronous access.
+See:
+	sap.ui.model.Model#getObject
+	#requestObject</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#getobject"><code>getObject</code></a></p>
 <hr>
@@ -308,11 +308,11 @@ See:
 <blockquote>
 <p><strong>getOriginalProperty</strong>(): <code>void</code></p>
 </blockquote>
-<p>Method not supported</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Method not supported</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#getoriginalproperty"><code>getOriginalProperty</code></a></p>
 <hr>
@@ -320,13 +320,13 @@ See:
 <blockquote>
 <p><strong>getProperty</strong>(): <code>void</code></p>
 </blockquote>
-<p>Use #getObject.
-See:
-	sap.ui.model.Model#getProperty</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Use #getObject.
+See:
+	sap.ui.model.Model#getProperty</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#getproperty"><code>getProperty</code></a></p>
 <hr>
@@ -334,11 +334,6 @@ See:
 <blockquote>
 <p><strong>getUI5Type</strong>(<code>sPath</code>, <code>mFormatOptions?</code>): <a href="../../../type/ODataType/classes/ODataType.html"><code>ODataType</code></a></p>
 </blockquote>
-<p>Returns the UI5 type for the given property path that formats and parses corresponding to the property&#39;s
-EDM type and constraints. The property&#39;s type must be a primitive type. Use #requestUI5Type for
-asynchronous access.
-See:
-	#requestUI5Type</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -355,14 +350,16 @@ calculate this type is already available; if no specific type can be determined,
 and sap.ui.model.odata.type.Raw is used</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Returns the UI5 type for the given property path that formats and parses corresponding to the property&#39;s
+EDM type and constraints. The property&#39;s type must be a primitive type. Use #requestUI5Type for
+asynchronous access.
+See:
+	#requestUI5Type</p>
 <hr>
 <h3>getValueListType()</h3>
 <blockquote>
 <p><strong>getValueListType</strong>(<code>sPropertyPath</code>): <code>&quot;None&quot;</code> | <code>&quot;Standard&quot;</code> | <a href="../../ValueListType/enumerations/ValueListType.html"><code>ValueListType</code></a> | <code>&quot;Fixed&quot;</code></p>
 </blockquote>
-<p>Determines which type of value list exists for the given property.
-See:
-	#requestValueListType</p>
 <h4>Parameters</h4>
 <h5>sPropertyPath</h5>
 <p><code>string</code></p>
@@ -372,18 +369,21 @@ See:
 <p>The type of the value list</p>
 <h4>Since</h4>
 <p>1.45.0</p>
+<p>Determines which type of value list exists for the given property.
+See:
+	#requestValueListType</p>
 <hr>
 <h3>refresh()</h3>
 <blockquote>
 <p><strong>refresh</strong>(): <code>void</code></p>
 </blockquote>
-<p>Method not supported
-See:
-	sap.ui.model.Model#refresh</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Method not supported
+See:
+	sap.ui.model.Model#refresh</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#refresh"><code>refresh</code></a></p>
 <hr>
@@ -391,11 +391,6 @@ See:
 <blockquote>
 <p><strong>requestCurrencyCodes</strong>(<code>vRawValue?</code>, <code>oDetails?</code>): <code>Promise</code>&lt;<code>Record</code>&lt;<code>string</code>, { <code>StandardCode</code>: <code>string</code>; <code>Text</code>: <code>string</code>; <code>UnitSpecificScale</code>: <code>string</code>; }&gt;&gt;</p>
 </blockquote>
-<p>Request currency customizing based on the code list reference given in the entity container&#39;s <code>com.sap.vocabularies.CodeList.v1.CurrencyCodes</code>
-annotation. The corresponding HTTP request uses the HTTP headers obtained via sap.ui.model.odata.v4.ODataModel#getHttpHeaders
-from this meta model&#39;s data model.
-See:
-	#requestUnitsOfMeasure</p>
 <h4>Parameters</h4>
 <h5>vRawValue?</h5>
 <p><code>any</code></p>
@@ -419,11 +414,21 @@ annotation is found. It is rejected, if there is not exactly one currency key, o
 cannot be loaded.</p>
 <h4>Since</h4>
 <p>1.63.0</p>
+<p>Request currency customizing based on the code list reference given in the entity container&#39;s <code>com.sap.vocabularies.CodeList.v1.CurrencyCodes</code>
+annotation. The corresponding HTTP request uses the HTTP headers obtained via sap.ui.model.odata.v4.ODataModel#getHttpHeaders
+from this meta model&#39;s data model.
+See:
+	#requestUnitsOfMeasure</p>
 <hr>
 <h3>requestData()</h3>
 <blockquote>
 <p><strong>requestData</strong>(): <code>Promise</code>&lt;<code>object</code>&gt;</p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>object</code>&gt;</p>
+<p>A promise which is resolved with the OData metadata as a &quot;JSON&quot; object as soon as it is available.</p>
+<h4>Since</h4>
+<p>1.59.0</p>
 <p>Requests a snapshot of each $metadata or annotation file loaded so far, combined into a single &quot;JSON&quot;
 object according to the streamlined OData V4 Metadata JSON Format. It is a map from all currently known
 qualified names to their values, with the special key &quot;$EntityContainer&quot; mapped to the root entity container&#39;s
@@ -432,16 +437,29 @@ qualified name as a starting point. See <a href="https://ui5.sap.com/#/topic/87a
 <code>supportReferences</code> of sap.ui.model.odata.v4.ODataModel#constructor).
 See:
 	#getData</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>object</code>&gt;</p>
-<p>A promise which is resolved with the OData metadata as a &quot;JSON&quot; object as soon as it is available.</p>
-<h4>Since</h4>
-<p>1.59.0</p>
 <hr>
 <h3>requestObject()</h3>
 <blockquote>
 <p><strong>requestObject</strong>(<code>sPath</code>, <code>oContext?</code>, <code>mParameters?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sPath</h5>
+<p><code>string</code></p>
+<p>A relative or absolute path within the metadata model</p>
+<h5>oContext?</h5>
+<p><a href="../../../../Context/classes/Context.html"><code>Context</code></a></p>
+<p>The context to be used as a starting point in case of a relative path</p>
+<h5>mParameters?</h5>
+<p>Optional (binding) parameters; if they are given, <code>oContext</code> cannot be omitted</p>
+<h6>scope?</h6>
+<p><code>object</code></p>
+<p>Optional scope for lookup of aliases for computed annotations (since 1.43.0)</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>A promise which is resolved with the requested metadata value as soon as it is available; it
+is rejected if the requested metadata cannot be loaded</p>
+<h4>Since</h4>
+<p>1.37.0</p>
 <p>Requests the metadata value for the given path relative to the given context. Returns a <code>Promise</code> which
 is resolved with the requested metadata value or rejected with an error (only in case metadata cannot
 be loaded). An invalid path leads to an <code>undefined</code> result and a warning is logged. Use #getObject
@@ -517,12 +535,11 @@ Common Schema Definition Language&quot;).</p>
 &quot;@@.AH.isMultiple&quot; or &quot;@@.isMultiple&quot;, represent computed annotations. Their name without the &quot;@@&quot; prefix
 must refer to a function in <code>mParameters.scope</code> in case of a relative name starting with a dot, which
 is stripped before lookup; see the <code>&lt;template:alias&gt;</code> instruction for XML Templating. In case of an
-absolute name, it is searched in <code>mParameters.scope</code> first and then in the global namespace. (Using the
-global namespace is deprecated as of version 1.120.3). The names &quot;requestCurrencyCodes&quot; and &quot;requestUnitsOfMeasure&quot;
-default to #requestCurrencyCodes and #requestUnitsOfMeasure resp. if not present in <code>mParameters.scope</code>.
-This function is called with the current object (or primitive value) and additional details and returns
-the result of this #requestObject call. The additional details are given as an object with the
-following properties:
+absolute name, it is searched in <code>mParameters.scope</code> first and then in the global namespace. The names
+&quot;requestCurrencyCodes&quot; and &quot;requestUnitsOfMeasure&quot; default to #requestCurrencyCodes and #requestUnitsOfMeasure
+resp. if not present in <code>mParameters.scope</code>. This function is called with the current object (or primitive
+value) and additional details and returns the result of this #requestObject call. The additional
+details are given as an object with the following properties:
 	 <code>{boolean} $$valueAsPromise</code> Whether the computed annotation may return a <code>Promise</code> resolving with
 its value (since 1.57.0)  <code>{@link sap.ui.model.Context} context</code> Points to the current object
 <code>{object} overload</code> In case of annotations of an operation or a parameter, if filtering by binding parameter
@@ -596,35 +613,11 @@ Segments which themselves represent a path, such as the keys for the &quot;$Refe
 maps, need to use URL encoding for the slash character (&quot;%2F&quot;), for example &quot;/TEAMS/$NavigationPropertyBinding/Address%2FCountries/...&quot;.
 See:
 	#getObject</p>
-<h4>Parameters</h4>
-<h5>sPath</h5>
-<p><code>string</code></p>
-<p>A relative or absolute path within the metadata model</p>
-<h5>oContext?</h5>
-<p><a href="../../../../Context/classes/Context.html"><code>Context</code></a></p>
-<p>The context to be used as a starting point in case of a relative path</p>
-<h5>mParameters?</h5>
-<p>Optional (binding) parameters; if they are given, <code>oContext</code> cannot be omitted</p>
-<h6>scope?</h6>
-<p><code>object</code></p>
-<p>Scope for lookup of aliases for computed annotations (since 1.43.0). Since 1.120.3 looking up a computed
-annotation via its global name is deprecated; always use this scope instead.</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
-<p>A promise which is resolved with the requested metadata value as soon as it is available; it
-is rejected if the requested metadata cannot be loaded</p>
-<h4>Since</h4>
-<p>1.37.0</p>
 <hr>
 <h3>requestUI5Type()</h3>
 <blockquote>
 <p><strong>requestUI5Type</strong>(<code>sPath</code>, <code>mFormatOptions?</code>): <code>Promise</code>&lt;<a href="../../../type/ODataType/classes/ODataType.html"><code>ODataType</code></a>&gt;</p>
 </blockquote>
-<p>Requests the UI5 type for the given property path that formats and parses corresponding to the property&#39;s
-EDM type and constraints. The property&#39;s type must be a primitive type. Use #getUI5Type for synchronous
-access.
-See:
-	#getUI5Type</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -641,16 +634,16 @@ if no specific type can be determined, a warning is logged and sap.ui.model.odat
 used</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Requests the UI5 type for the given property path that formats and parses corresponding to the property&#39;s
+EDM type and constraints. The property&#39;s type must be a primitive type. Use #getUI5Type for synchronous
+access.
+See:
+	#getUI5Type</p>
 <hr>
 <h3>requestUnitsOfMeasure()</h3>
 <blockquote>
 <p><strong>requestUnitsOfMeasure</strong>(<code>vRawValue?</code>, <code>oDetails?</code>): <code>Promise</code>&lt;<code>Record</code>&lt;<code>string</code>, { <code>StandardCode</code>: <code>string</code>; <code>Text</code>: <code>string</code>; <code>UnitSpecificScale</code>: <code>string</code>; }&gt;&gt;</p>
 </blockquote>
-<p>Request unit customizing based on the code list reference given in the entity container&#39;s <code>com.sap.vocabularies.CodeList.v1.UnitOfMeasure</code>
-annotation. The corresponding HTTP request uses the HTTP headers obtained via sap.ui.model.odata.v4.ODataModel#getHttpHeaders
-from this meta model&#39;s data model.
-See:
-	#requestCurrencyCodes</p>
 <h4>Parameters</h4>
 <h5>vRawValue?</h5>
 <p><code>any</code></p>
@@ -673,12 +666,16 @@ annotation on the unit&#39;s key; entries where this would be <code>null</code> 
 It is rejected, if there is not exactly one unit key, or if the unit customizing cannot be loaded.</p>
 <h4>Since</h4>
 <p>1.63.0</p>
+<p>Request unit customizing based on the code list reference given in the entity container&#39;s <code>com.sap.vocabularies.CodeList.v1.UnitOfMeasure</code>
+annotation. The corresponding HTTP request uses the HTTP headers obtained via sap.ui.model.odata.v4.ODataModel#getHttpHeaders
+from this meta model&#39;s data model.
+See:
+	#requestCurrencyCodes</p>
 <hr>
 <h3>requestValueListInfo()</h3>
 <blockquote>
 <p><strong>requestValueListInfo</strong>(<code>sPropertyPath</code>, <code>bAutoExpandSelect?</code>, <code>oContext?</code>): <code>Promise</code>&lt;<code>Record</code>&lt;<code>string</code>, <code>object</code>&gt;&gt;</p>
 </blockquote>
-<p>Requests information to retrieve a value list for the property given by <code>sPropertyPath</code>.</p>
 <h4>Parameters</h4>
 <h5>sPropertyPath</h5>
 <p><code>string</code></p>
@@ -720,14 +717,12 @@ for the property.  Two different referenced services contain a mapping using the
 annotation in a referenced service has the property <code>CollectionRoot</code> or <code>SearchSupported</code>.</p>
 <h4>Since</h4>
 <p>1.45.0</p>
+<p>Requests information to retrieve a value list for the property given by <code>sPropertyPath</code>.</p>
 <hr>
 <h3>requestValueListType()</h3>
 <blockquote>
 <p><strong>requestValueListType</strong>(<code>sPropertyPath</code>): <code>Promise</code>&lt;<code>&quot;None&quot;</code> | <code>&quot;Standard&quot;</code> | <a href="../../ValueListType/enumerations/ValueListType.html"><code>ValueListType</code></a> | <code>&quot;Fixed&quot;</code>&gt;</p>
 </blockquote>
-<p>Determines which type of value list exists for the given property.
-See:
-	#getValueListType</p>
 <h4>Parameters</h4>
 <h5>sPropertyPath</h5>
 <p><code>string</code></p>
@@ -738,16 +733,19 @@ See:
 The promise is rejected if the property cannot be found in the metadata.</p>
 <h4>Since</h4>
 <p>1.47.0</p>
+<p>Determines which type of value list exists for the given property.
+See:
+	#getValueListType</p>
 <hr>
 <h3>setLegacySyntax()</h3>
 <blockquote>
 <p><strong>setLegacySyntax</strong>(): <code>void</code></p>
 </blockquote>
-<p>Method not supported</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Method not supported</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#setlegacysyntax"><code>setLegacySyntax</code></a></p>
 <hr>
@@ -755,12 +753,12 @@ The promise is rejected if the property cannot be found in the metadata.</p>
 <blockquote>
 <p><strong>toString</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns a string representation of this object including the URL to the $metadata document of the service.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>A string description of this model</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Returns a string representation of this object including the URL to the $metadata document of the service.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#tostring"><code>toString</code></a></p>
 <hr>
@@ -779,7 +777,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ODataMetaModel</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ODataMetaModel</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -803,6 +801,6 @@ used by this class</p>
 <p><a href="../../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../../MetaModel/classes/MetaModel.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

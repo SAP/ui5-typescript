@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ManagedObjectMetadata — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ManagedObjectMetadata — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ManagedObjectMetadata — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/base/ManagedObjectMetadata/classes/ManagedObjectMetadata.html">
 <meta property="og:title" content="Class: ManagedObjectMetadata — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ManagedObjectMetadata — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ManagedObjectMetadata — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/base/ManagedObjectMetadata/classes/ManagedObjectMetadata.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › base › <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObjectMetadata/README.html">ManagedObjectMetadata</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/ManagedObjectMetadata</a> / ManagedObjectMetadata</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/ManagedObjectMetadata</a> / ManagedObjectMetadata</p>
 <h1>Class: ManagedObjectMetadata</h1>
 <pre class="sig"><span class="kw">import</span> ManagedObjectMetadata <span class="kw">from</span> <span class="str">"sap/ui/base/ManagedObjectMetadata"</span>;</pre>
+<h2>Since</h2>
+<p>0.8.6</p>
 <p><strong>Note about Info Objects</strong></p>
 <p>Several methods in this class return info objects that describe a property, aggregation, association
 or event of the class described by this metadata object. The type, structure and behavior of these info
@@ -54,8 +56,6 @@ derived properties like &#39;_iKind&#39;.</p>
  - the period of validity of info objects is not defined. They should be referenced only for a short
 time and not be kept as members of long living objects or closures.
 </code></pre>
-<h2>Since</h2>
-<p>0.8.6</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Metadata/classes/Metadata.html"><code>Metadata</code></a></li>
@@ -94,15 +94,6 @@ as the described class.</p>
 <blockquote>
 <p><strong>getAggregation</strong>(<code>sName?</code>): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Aggregation.html"><code>Aggregation</code></a></p>
 </blockquote>
-<p>Returns an info object for the named public aggregation of the described class no matter whether the
-aggregation was defined by the class itself or by one of its ancestor classes.</p>
-<p>If neither the class nor its ancestor classes define a public aggregation with the given name, <code>undefined</code>
-is returned.</p>
-<p>If the name is not given (or has a falsy value), then it is substituted by the name of the default aggregation
-of the &#39;described class&#39; (if any).</p>
-<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
-not part of the API. See the #constructor Notes about Info objects in the constructor documentation
-of this class.</p>
 <h4>Parameters</h4>
 <h5>sName?</h5>
 <p><code>string</code></p>
@@ -112,6 +103,15 @@ of this class.</p>
 <p>An info object describing the aggregation or <code>undefined</code></p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Returns an info object for the named public aggregation of the described class no matter whether the
+aggregation was defined by the class itself or by one of its ancestor classes.</p>
+<p>If neither the class nor its ancestor classes define a public aggregation with the given name, <code>undefined</code>
+is returned.</p>
+<p>If the name is not given (or has a falsy value), then it is substituted by the name of the default aggregation
+of the &#39;described class&#39; (if any).</p>
+<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
+not part of the API. See the #constructor Notes about Info objects in the constructor documentation
+of this class.</p>
 <hr>
 <h3>getAggregations()</h3>
 <blockquote>
@@ -176,6 +176,11 @@ of this class.</p>
 <blockquote>
 <p><strong>getAllPrivateAggregations</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Aggregation.html"><code>Aggregation</code></a>&gt;</p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Aggregation.html"><code>Aggregation</code></a>&gt;</p>
+<p>Map of aggregation info objects keyed by aggregation names</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Returns a map of info objects for all private (hidden) aggregations of the described class, including
 private aggregations from the ancestor classes.</p>
 <p>The returned map contains aggregation info objects keyed by the aggregation name. In case of 0..1 aggregations
@@ -183,16 +188,16 @@ this is the singular name, otherwise it is the plural name.</p>
 <p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
 not part of the API. See the #constructor Notes about Info objects in the constructor documentation
 of this class.</p>
-<h4>Returns</h4>
-<p><code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Aggregation.html"><code>Aggregation</code></a>&gt;</p>
-<p>Map of aggregation info objects keyed by aggregation names</p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>getAllPrivateAssociations()</h3>
 <blockquote>
 <p><strong>getAllPrivateAssociations</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Association.html"><code>Association</code></a>&gt;</p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Association.html"><code>Association</code></a>&gt;</p>
+<p>Map of association info objects keyed by association names</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Returns a map of info objects for all private (hidden) associations of the described class, including
 private associations from the ancestor classes.</p>
 <p>The returned map contains association info objects keyed by the association name. In case of 0..1 associations
@@ -200,27 +205,22 @@ this is the singular name, otherwise it is the plural name.</p>
 <p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
 not part of the API. See the #constructor Notes about Info objects in the constructor documentation
 of this class.</p>
-<h4>Returns</h4>
-<p><code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Association.html"><code>Association</code></a>&gt;</p>
-<p>Map of association info objects keyed by association names</p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>getAllPrivateProperties()</h3>
 <blockquote>
 <p><strong>getAllPrivateProperties</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Property.html"><code>Property</code></a>&gt;</p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Property.html"><code>Property</code></a>&gt;</p>
+<p>Map of property info objects keyed by property names</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Returns a map of info objects for all private (hidden) properties of the described class, including private
 properties from the ancestor classes.</p>
 <p>The returned map contains property info objects keyed by the property name.</p>
 <p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
 not part of the API. See the #constructor Notes about Info objects in the constructor documentation
 of this class.</p>
-<h4>Returns</h4>
-<p><code>Record</code>&lt;<code>string</code>, <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Property.html"><code>Property</code></a>&gt;</p>
-<p>Map of property info objects keyed by property names</p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>getAllProperties()</h3>
 <blockquote>
@@ -240,13 +240,6 @@ of this class.</p>
 <blockquote>
 <p><strong>getAssociation</strong>(<code>sName</code>): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Association.html"><code>Association</code></a></p>
 </blockquote>
-<p>Returns an info object for the named public association of the described class, no matter whether the
-association was defined by the class itself or by one of its ancestor classes.</p>
-<p>If neither the described class nor its ancestor classes define an association with the given name, <code>undefined</code>
-is returned.</p>
-<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
-not part of the API. See the #constructor Notes about Info objects in the constructor documentation
-of this class.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -256,6 +249,13 @@ of this class.</p>
 <p>An info object describing the association or <code>undefined</code></p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Returns an info object for the named public association of the described class, no matter whether the
+association was defined by the class itself or by one of its ancestor classes.</p>
+<p>If neither the described class nor its ancestor classes define an association with the given name, <code>undefined</code>
+is returned.</p>
+<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
+not part of the API. See the #constructor Notes about Info objects in the constructor documentation
+of this class.</p>
 <hr>
 <h3>getAssociations()</h3>
 <blockquote>
@@ -276,39 +276,32 @@ of this class.</p>
 <blockquote>
 <p><strong>getDefaultAggregation</strong>(): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Aggregation.html"><code>Aggregation</code></a></p>
 </blockquote>
-<p>Returns an info object for the default aggregation of the described class.</p>
-<p>If the class itself does not define a default aggregation, then the info object for the default aggregation
-of the parent class is returned.</p>
 <h4>Returns</h4>
 <p><a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Aggregation.html"><code>Aggregation</code></a></p>
 <p>An info object for the default aggregation</p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Returns an info object for the default aggregation of the described class.</p>
+<p>If the class itself does not define a default aggregation, then the info object for the default aggregation
+of the parent class is returned.</p>
 <hr>
 <h3>getDefaultAggregationName()</h3>
 <blockquote>
 <p><strong>getDefaultAggregationName</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the name of the default aggregation of the described class.</p>
-<p>If the class itself does not define a default aggregation, then the default aggregation of the parent
-is returned. If no class in the hierarchy defines a default aggregation, <code>undefined</code> is returned.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Name of the default aggregation</p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Returns the name of the default aggregation of the described class.</p>
+<p>If the class itself does not define a default aggregation, then the default aggregation of the parent
+is returned. If no class in the hierarchy defines a default aggregation, <code>undefined</code> is returned.</p>
 <hr>
 <h3>getEvent()</h3>
 <blockquote>
 <p><strong>getEvent</strong>(<code>sName</code>): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Event.html"><code>Event</code></a></p>
 </blockquote>
-<p>Returns an info object for the named public event of the described class, no matter whether the event
-was defined by the class itself or by one of its ancestor classes.</p>
-<p>If neither the described class nor its ancestor classes define an event with the given name, <code>undefined</code>
-is returned.</p>
-<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
-not part of the API. See the #constructor Notes about Info objects in the constructor documentation
-of this class.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -318,6 +311,13 @@ of this class.</p>
 <p>An info object describing the event or <code>undefined</code></p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Returns an info object for the named public event of the described class, no matter whether the event
+was defined by the class itself or by one of its ancestor classes.</p>
+<p>If neither the described class nor its ancestor classes define an event with the given name, <code>undefined</code>
+is returned.</p>
+<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
+not part of the API. See the #constructor Notes about Info objects in the constructor documentation
+of this class.</p>
 <hr>
 <h3>getEvents()</h3>
 <blockquote>
@@ -346,13 +346,6 @@ of this class.</p>
 <blockquote>
 <p><strong>getManagedAggregation</strong>(<code>sAggregationName</code>): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Aggregation.html"><code>Aggregation</code></a></p>
 </blockquote>
-<p>Returns the info object for the named public or private aggregation declared by the described class or
-by any of its ancestors.</p>
-<p>If the name is not given (or has a falsy value), then it is substituted by the name of the default aggregation
-of the described class (if it is defined).</p>
-<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
-not part of the API. See the #constructor Notes about Info objects in the constructor documentation
-of this class.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -362,16 +355,18 @@ of this class.</p>
 <p>aggregation info object or <code>undefined</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the info object for the named public or private aggregation declared by the described class or
+by any of its ancestors.</p>
+<p>If the name is not given (or has a falsy value), then it is substituted by the name of the default aggregation
+of the described class (if it is defined).</p>
+<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
+not part of the API. See the #constructor Notes about Info objects in the constructor documentation
+of this class.</p>
 <hr>
 <h3>getManagedAssociation()</h3>
 <blockquote>
 <p><strong>getManagedAssociation</strong>(<code>sName</code>): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Association.html"><code>Association</code></a></p>
 </blockquote>
-<p>Returns the info object for the named public or private association declared by the described class or
-by any of its ancestors.</p>
-<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
-not part of the API. See the #constructor Notes about Info objects in the constructor documentation
-of this class.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -381,18 +376,16 @@ of this class.</p>
 <p>association info object or <code>undefined</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the info object for the named public or private association declared by the described class or
+by any of its ancestors.</p>
+<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
+not part of the API. See the #constructor Notes about Info objects in the constructor documentation
+of this class.</p>
 <hr>
 <h3>getManagedProperty()</h3>
 <blockquote>
 <p><strong>getManagedProperty</strong>(<code>sName</code>): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Property.html"><code>Property</code></a></p>
 </blockquote>
-<p>Returns the info object for the named public or private property declared by the described class or by
-any of its ancestors.</p>
-<p>If the name is not given (or has a falsy value), then it is substituted by the name of the default property
-of the described class (if it is defined).</p>
-<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
-not part of the API. See the #constructor Notes about Info objects in the constructor documentation
-of this class.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -402,6 +395,13 @@ of this class.</p>
 <p>property info object or <code>undefined</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the info object for the named public or private property declared by the described class or by
+any of its ancestors.</p>
+<p>If the name is not given (or has a falsy value), then it is substituted by the name of the default property
+of the described class (if it is defined).</p>
+<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
+not part of the API. See the #constructor Notes about Info objects in the constructor documentation
+of this class.</p>
 <hr>
 <h3>getProperties()</h3>
 <blockquote>
@@ -421,13 +421,6 @@ of this class.</p>
 <blockquote>
 <p><strong>getProperty</strong>(<code>sName</code>): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Property.html"><code>Property</code></a></p>
 </blockquote>
-<p>Returns an info object for the named public property of the described class, no matter whether the property
-was defined by the class itself or by one of its ancestor classes.</p>
-<p>If neither the described class nor its ancestor classes define a property with the given name, <code>undefined</code>
-is returned.</p>
-<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
-not part of the API. See the #constructor Notes about Info objects in the constructor documentation
-of this class.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -437,6 +430,13 @@ of this class.</p>
 <p>An info object describing the property or <code>undefined</code></p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Returns an info object for the named public property of the described class, no matter whether the property
+was defined by the class itself or by one of its ancestor classes.</p>
+<p>If neither the described class nor its ancestor classes define a property with the given name, <code>undefined</code>
+is returned.</p>
+<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
+not part of the API. See the #constructor Notes about Info objects in the constructor documentation
+of this class.</p>
 <hr>
 <h3>getPropertyDefaults()</h3>
 <blockquote>
@@ -452,14 +452,6 @@ keyed by the property name.</p>
 <blockquote>
 <p><strong>getPropertyLikeSetting</strong>(<code>sName</code>): <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Property.html"><code>Property</code></a> | <a href="../../ManagedObject/namespaces/MetadataOptions/type-aliases/Aggregation.html"><code>Aggregation</code></a></p>
 </blockquote>
-<p>Returns an info object for a public setting with the given name that either is a public property or a
-public aggregation of cardinality 0..1 and with at least one simple alternative type. The setting can
-be defined by the class itself or by one of its ancestor classes.</p>
-<p>If neither the described class nor its ancestor classes define a suitable setting with the given name,
-<code>undefined</code> is returned.</p>
-<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
-not part of the API. See the #constructor Notes about Info objects in the constructor documentation
-of this class.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -469,6 +461,14 @@ of this class.</p>
 <p>An info object describing the property or aggregation or <code>undefined</code></p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Returns an info object for a public setting with the given name that either is a public property or a
+public aggregation of cardinality 0..1 and with at least one simple alternative type. The setting can
+be defined by the class itself or by one of its ancestor classes.</p>
+<p>If neither the described class nor its ancestor classes define a suitable setting with the given name,
+<code>undefined</code> is returned.</p>
+<p><strong>Warning:</strong> Type, structure and behavior of the returned info objects is not documented and therefore
+not part of the API. See the #constructor Notes about Info objects in the constructor documentation
+of this class.</p>
 <hr>
 <h3>hasAggregation()</h3>
 <blockquote>
@@ -537,12 +537,6 @@ be. It might even be empty when the class name consists of invalid characters on
 <blockquote>
 <p><code>static</code> <strong>addAPIParentInfoBegin</strong>(<code>oAggregatedObject</code>, <code>oParent</code>, <code>sAggregationName</code>): <code>void</code></p>
 </blockquote>
-<p>Adds information to the given oAggregatedObject about its original API parent (or a subsequent API parent
-in case of multiple forwarding). MUST be called before an element is forwarded to another internal aggregation
-(in case forwarding is done explicitly/manually without using the declarative mechanism introduced in
-UI5 1.56).</p>
-<p>CAUTION: ManagedObjectMetadata.addAPIParentInfoEnd(...) MUST be called AFTER the element has been forwarded
-(set to an aggregation of an internal control). These two calls must wrap the forwarding.</p>
 <h4>Parameters</h4>
 <h5>oAggregatedObject</h5>
 <p><a href="../../ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></p>
@@ -557,14 +551,17 @@ UI5 1.56).</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Adds information to the given oAggregatedObject about its original API parent (or a subsequent API parent
+in case of multiple forwarding). MUST be called before an element is forwarded to another internal aggregation
+(in case forwarding is done explicitly/manually without using the declarative mechanism introduced in
+UI5 1.56).</p>
+<p>CAUTION: ManagedObjectMetadata.addAPIParentInfoEnd(...) MUST be called AFTER the element has been forwarded
+(set to an aggregation of an internal control). These two calls must wrap the forwarding.</p>
 <hr>
 <h3>addAPIParentInfoEnd()</h3>
 <blockquote>
 <p><code>static</code> <strong>addAPIParentInfoEnd</strong>(<code>oAggregatedObject</code>): <code>void</code></p>
 </blockquote>
-<p>Completes the information about the original API parent of the given element. MUST be called after an
-element is forwarded to another internal aggregation. For every call to ManagedObjectMetadata.addAPIParentInfoBegin(...)
-this method here must be called as well.</p>
 <h4>Parameters</h4>
 <h5>oAggregatedObject</h5>
 <p><a href="../../ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></p>
@@ -573,17 +570,20 @@ this method here must be called as well.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Completes the information about the original API parent of the given element. MUST be called after an
+element is forwarded to another internal aggregation. For every call to ManagedObjectMetadata.addAPIParentInfoBegin(...)
+this method here must be called as well.</p>
 <hr>
 <h3>getUIDPrefix()</h3>
 <blockquote>
 <p><code>static</code> <strong>getUIDPrefix</strong>(): <code>string</code></p>
 </blockquote>
-<p>Get the prefix used for the generated IDs from configuration</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The prefix for the generated IDs</p>
 <h4>Since</h4>
 <p>1.119.0</p>
+<p>Get the prefix used for the generated IDs from configuration</p>
 <hr>
 <h3>isGeneratedId()</h3>
 <blockquote>
@@ -626,6 +626,6 @@ False for:
 <p><code>string</code></p>
 <p>A (hopefully unique) control id</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

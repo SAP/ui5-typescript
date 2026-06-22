@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $MenuSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $MenuSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $MenuSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/Menu/interfaces/$MenuSettings.html">
 <meta property="og:title" content="Interface: $MenuSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $MenuSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $MenuSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/Menu/interfaces/$MenuSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/Menu/README.html">Menu</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/Menu</a> / $MenuSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/Menu</a> / $MenuSettings</p>
 <h1>Interface: $MenuSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $MenuSettings } <span class="kw">from</span> <span class="str">"sap/ui/unified/Menu"</span>;</pre>
-<p>Describes the settings that can be provided to the Menu constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -53,18 +52,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaDescription?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Accessible label / description of the menu for assistive technologies like screenreaders.</p>
 <h4>Deprecated</h4>
 <p>(since 1.27.0) - replaced by <code>ariaLabelledBy</code> association</p>
+<p>Accessible label / description of the menu for assistive technologies like screenreaders.</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
-<p>Reference to accessible labels (ids of existing DOM elements or controls) for assistive technologies
-like screenreaders.</p>
 <h4>Since</h4>
 <p>1.26.3</p>
+<p>Reference to accessible labels (ids of existing DOM elements or controls) for assistive technologies
+like screenreaders.</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
@@ -105,16 +104,16 @@ number of visible items is not yet reached.</p>
 <blockquote>
 <p><code>optional</code> <strong>pageSize?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.25.0</p>
 <p>The keyboard can be used to navigate through the items of a menu. Beside the arrow keys for single steps
 and the Home / End keys for jumping to the first / last item, the Page Up / Page
 Down keys can be used to jump an arbitrary number of items up or down. This number can be defined
 via the <code>pageSize</code> property. For values smaller than 1, paging behaves in a similar way to when using
 the Home / End keys. If the value equals 1, the paging behavior is similar to that of the
 arrow keys.</p>
-<h4>Since</h4>
-<p>1.25.0</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

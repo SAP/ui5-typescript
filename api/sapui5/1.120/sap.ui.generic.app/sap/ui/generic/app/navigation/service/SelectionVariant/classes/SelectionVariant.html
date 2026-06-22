@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: SelectionVariant~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: SelectionVariant~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="~~Class: SelectionVariant~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.generic.app/sap/ui/generic/app/navigation/service/SelectionVariant/classes/SelectionVariant.html">
 <meta property="og:title" content="~~Class: SelectionVariant~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: SelectionVariant~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="~~Class: SelectionVariant~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.generic.app/sap/ui/generic/app/navigation/service/SelectionVariant/classes/SelectionVariant.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../../sap.ui.generic.app/README.html">sap.ui.generic.app</a> › sap › ui › generic › app › navigation › service › <a href="../../../../../../../../../sap.ui.generic.app/sap/ui/generic/app/navigation/service/SelectionVariant/README.html">SelectionVariant</a> › classes</nav>
-<p><a href="../../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../../README.html">sap.ui.generic.app</a> / <a href="../README.html">sap/ui/generic/app/navigation/service/SelectionVariant</a> / SelectionVariant</p>
+<p><a href="../../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../../README.html">sap.ui.generic.app</a> / <a href="../README.html">sap/ui/generic/app/navigation/service/SelectionVariant</a> / SelectionVariant</p>
 <h1><del>Class: SelectionVariant</del></h1>
 <pre class="sig"><span class="kw">import</span> SelectionVariant <span class="kw">from</span> <span class="str">"sap/ui/generic/app/navigation/service/SelectionVariant"</span>;</pre>
+<h2>Deprecated</h2>
+<p>(since 1.83.0) - Please use sap.fe.navigation.SelectionVariant instead.</p>
 <p>Creates a new instance of a SelectionVariant class. If no parameter is passed, an new empty instance
 is created whose ID has been set to <code>&quot;&quot;</code>. Passing a JSON-serialized string complying to the Selection
 Variant Specification will parse it, and the newly created instance will contain the same information.</p>
-<h2>Deprecated</h2>
-<p>(since 1.83.0) - Please use sap.fe.navigation.SelectionVariant instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><code>unknown</code></li>
@@ -66,8 +66,6 @@ a selection variant</p>
 <blockquote>
 <p><code>static</code> <strong>addParameter</strong>(<code>sName</code>, <code>sValue</code>): <code>object</code></p>
 </blockquote>
-<p>Sets the value of a parameter called <code>sName</code> to the new value <code>sValue</code>. If the parameter has already
-been set before, its value is overwritten.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -80,12 +78,13 @@ been set before, its value is overwritten.</p>
 <p>This instance to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Sets the value of a parameter called <code>sName</code> to the new value <code>sValue</code>. If the parameter has already
+been set before, its value is overwritten.</p>
 <hr>
 <h3><del>addSelectOption()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>addSelectOption</strong>(<code>sPropertyName</code>, <code>sSign</code>, <code>sOption</code>, <code>sLow</code>, <code>sHigh?</code>): <code>object</code></p>
 </blockquote>
-<p>Adds a new range to the list of select options for a given parameter.</p>
 <h4>Parameters</h4>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -111,6 +110,7 @@ other cases</p>
 <p>This instance to allow method chaining.</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Adds a new range to the list of select options for a given parameter.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -127,7 +127,7 @@ and enriches it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SelectionVariant</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SelectionVariant</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -141,23 +141,23 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>getFilterContextUrl</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets the current context URL intended for the filters.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The current context URL for the filters</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Gets the current context URL intended for the filters.</p>
 <hr>
 <h3><del>getID()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getID</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the identification of the selection variant.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The identification of the selection variant as made available during construction</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns the identification of the selection variant.</p>
 <hr>
 <h3><del>getMetadata()</del></h3>
 <blockquote>
@@ -172,8 +172,6 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>getParameter</strong>(<code>sName</code>): <code>string</code></p>
 </blockquote>
-<p>Returns the value of the parameter called <code>sName</code> if it has been set. If the parameter has never been
-set or has been removed, <code>undefined</code> is returned.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -183,45 +181,46 @@ set or has been removed, <code>undefined</code> is returned.</p>
 <p>The value of parameter <code>sName</code>; returning the value <code>null</code> not possible</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns the value of the parameter called <code>sName</code> if it has been set. If the parameter has never been
+set or has been removed, <code>undefined</code> is returned.</p>
 <hr>
 <h3><del>getParameterContextUrl()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getParameterContextUrl</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets the current context URL intended for the parameters.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The current context URL for the parameters</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Gets the current context URL intended for the parameters.</p>
 <hr>
 <h3><del>getParameterNames()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getParameterNames</strong>(): <code>any</code>[]</p>
 </blockquote>
-<p>Returns the set of parameter names available in this selection variant</p>
 <h4>Returns</h4>
 <p><code>any</code>[]</p>
 <p>the list of parameter names which are valid</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns the set of parameter names available in this selection variant</p>
 <hr>
 <h3><del>getPropertyNames()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getPropertyNames</strong>(): <code>any</code>[]</p>
 </blockquote>
-<p>Returns the names of the parameter and select option properties available for this instance.</p>
 <h4>Returns</h4>
 <p><code>any</code>[]</p>
 <p>The list of parameter and select option property names available for this instance</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns the names of the parameter and select option properties available for this instance.</p>
 <hr>
 <h3><del>getSelectOption()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getSelectOption</strong>(<code>sPropertyName</code>): <code>any</code>[]</p>
 </blockquote>
-<p>Returns the set of select options/ranges available for a given property name.</p>
 <h4>Parameters</h4>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -238,38 +237,34 @@ properties:
     information about the meaning of the attributes, refer to method <code>addSelectOption</code>.</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns the set of select options/ranges available for a given property name.</p>
 <hr>
 <h3><del>getSelectOptionsPropertyNames()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getSelectOptionsPropertyNames</strong>(): <code>any</code>[]</p>
 </blockquote>
-<p>Returns the names of the properties available for this instance.</p>
 <h4>Returns</h4>
 <p><code>any</code>[]</p>
 <p>The list of property names available for this instance</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns the names of the properties available for this instance.</p>
 <hr>
 <h3><del>getText()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the current text / description of this selection variant.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>the current description of this selection variant.</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns the current text / description of this selection variant.</p>
 <hr>
 <h3><del>getValue()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getValue</strong>(<code>sName</code>): <code>any</code>[]</p>
 </blockquote>
-<p>First tries to retrieve the set of select options/ranges available for <code>sName</code> as property name. If successful,
-this array of selections is being returned. If it fails, an attempt to find a parameter, whose name is
-<code>sName</code>, is made. If the latter succeeds, the single value is converted to fit into an array of selections
-to make it type compatible with ranges. This array is then returned.  If neither a select option
-nor a parameter could be found, <code>undefined</code> is returned.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -286,24 +281,28 @@ have the format:
     For further information on the meaning of the attributes, refer to method #.addSelectOption addSelectOption.</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>First tries to retrieve the set of select options/ranges available for <code>sName</code> as property name. If successful,
+this array of selections is being returned. If it fails, an attempt to find a parameter, whose name is
+<code>sName</code>, is made. If the latter succeeds, the single value is converted to fit into an array of selections
+to make it type compatible with ranges. This array is then returned.  If neither a select option
+nor a parameter could be found, <code>undefined</code> is returned.</p>
 <hr>
 <h3><del>isEmpty()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>isEmpty</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns <code>true</code> if the selection variant does neither contain parameters nor ranges.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>If set to <code>true</code> there are no parameters and no select options available in the selection variant;
 <code>false</code> otherwise.</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns <code>true</code> if the selection variant does neither contain parameters nor ranges.</p>
 <hr>
 <h3><del>massAddSelectOption()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>massAddSelectOption</strong>(<code>sPropertyName</code>, <code>aSelectOptions</code>): <code>object</code></p>
 </blockquote>
-<p>Adds a set of select options to the list of select options for a given parameter.</p>
 <h4>Parameters</h4>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -316,12 +315,12 @@ have the format:
 <p>This instance to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Adds a set of select options to the list of select options for a given parameter.</p>
 <hr>
 <h3><del>removeParameter()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>removeParameter</strong>(<code>sName</code>): <code>object</code></p>
 </blockquote>
-<p>Removes a parameter called <code>sName</code> from the selection variant.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -331,12 +330,12 @@ have the format:
 <p>This instance to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Removes a parameter called <code>sName</code> from the selection variant.</p>
 <hr>
 <h3><del>removeSelectOption()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>removeSelectOption</strong>(<code>sName</code>): <code>object</code></p>
 </blockquote>
-<p>Removes a select option called <code>sName</code> from the selection variant.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -346,14 +345,12 @@ have the format:
 <p>This instance to allow method chaining.</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Removes a select option called <code>sName</code> from the selection variant.</p>
 <hr>
 <h3><del>renameParameter()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>renameParameter</strong>(<code>sNameOld</code>, <code>sNameNew</code>): <code>object</code></p>
 </blockquote>
-<p>Renames a parameter called <code>sNameOld</code> to <code>sNameNew</code>. If a parameter or a select option with the name
-<code>sNameNew</code> already exist, an error is thrown. If a parameter with the name <code>sNameOld</code> does not exist,
-nothing is changed.</p>
 <h4>Parameters</h4>
 <h5>sNameOld</h5>
 <p><code>string</code></p>
@@ -366,14 +363,14 @@ nothing is changed.</p>
 <p>This instance to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Renames a parameter called <code>sNameOld</code> to <code>sNameNew</code>. If a parameter or a select option with the name
+<code>sNameNew</code> already exist, an error is thrown. If a parameter with the name <code>sNameOld</code> does not exist,
+nothing is changed.</p>
 <hr>
 <h3><del>renameSelectOption()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>renameSelectOption</strong>(<code>sNameOld</code>, <code>sNameNew</code>): <code>object</code></p>
 </blockquote>
-<p>Renames a select option called <code>sNameOld</code> to <code>sNameNew</code>. If a select option or a parameter with the name
-<code>sNameNew</code> already exist, an error is thrown. If a select option with the name <code>sNameOld</code> does not exist,
-nothing is changed.</p>
 <h4>Parameters</h4>
 <h5>sNameOld</h5>
 <p><code>string</code></p>
@@ -386,12 +383,14 @@ nothing is changed.</p>
 <p>This instance to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Renames a select option called <code>sNameOld</code> to <code>sNameNew</code>. If a select option or a parameter with the name
+<code>sNameNew</code> already exist, an error is thrown. If a select option with the name <code>sNameOld</code> does not exist,
+nothing is changed.</p>
 <hr>
 <h3><del>setFilterContextUrl()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>setFilterContextUrl</strong>(<code>sURL</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the context URL intended for the filters.</p>
 <h4>Parameters</h4>
 <h5>sURL</h5>
 <p><code>string</code></p>
@@ -400,12 +399,12 @@ nothing is changed.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Sets the context URL intended for the filters.</p>
 <hr>
 <h3><del>setID()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>setID</strong>(<code>sId</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the identification of the selection variant.</p>
 <h4>Parameters</h4>
 <h5>sId</h5>
 <p><code>string</code></p>
@@ -414,12 +413,12 @@ nothing is changed.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Sets the identification of the selection variant.</p>
 <hr>
 <h3><del>setParameterContextUrl()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>setParameterContextUrl</strong>(<code>sURL</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the context URL intended for the parameters.</p>
 <h4>Parameters</h4>
 <h5>sURL</h5>
 <p><code>string</code></p>
@@ -428,12 +427,12 @@ nothing is changed.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Sets the context URL intended for the parameters.</p>
 <hr>
 <h3><del>setText()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>setText</strong>(<code>sNewText</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the text / description of the selection variant.</p>
 <h4>Parameters</h4>
 <h5>sNewText</h5>
 <p><code>string</code></p>
@@ -442,29 +441,30 @@ nothing is changed.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Sets the text / description of the selection variant.</p>
 <hr>
 <h3><del>toJSONObject()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>toJSONObject</strong>(): <code>object</code></p>
 </blockquote>
-<p>Returns the external representation of the selection variant as JSON object.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>The external representation of this instance as a JSON object</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Returns the external representation of the selection variant as JSON object.</p>
 <hr>
 <h3><del>toJSONString()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>toJSONString</strong>(): <code>string</code></p>
 </blockquote>
-<p>Serializes this instance into a JSON-formatted string</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The JSON-formatted representation of this instance in stringified format</p>
 <h4>Deprecated</h4>
 <p>(since 1.83.0)</p>
+<p>Serializes this instance into a JSON-formatted string</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

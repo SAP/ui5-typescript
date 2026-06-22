@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ValueHelpDialog~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ValueHelpDialog~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="~~Class: ValueHelpDialog~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.zen.dsh/sap/zen/dsh/widgets/ValueHelpDialog/classes/ValueHelpDialog.html">
 <meta property="og:title" content="~~Class: ValueHelpDialog~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ValueHelpDialog~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="~~Class: ValueHelpDialog~~ — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.zen.dsh/sap/zen/dsh/widgets/ValueHelpDialog/classes/ValueHelpDialog.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.zen.dsh/README.html">sap.zen.dsh</a> › sap › zen › dsh › widgets › <a href="../../../../../../../sap.zen.dsh/sap/zen/dsh/widgets/ValueHelpDialog/README.html">ValueHelpDialog</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.zen.dsh</a> / <a href="../README.html">sap/zen/dsh/widgets/ValueHelpDialog</a> / ValueHelpDialog</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.zen.dsh</a> / <a href="../README.html">sap/zen/dsh/widgets/ValueHelpDialog</a> / ValueHelpDialog</p>
 <h1><del>Class: ValueHelpDialog</del></h1>
 <pre class="sig"><span class="kw">import</span> ValueHelpDialog <span class="kw">from</span> <span class="str">"sap/zen/dsh/widgets/ValueHelpDialog"</span>;</pre>
-<p>The ValueHelpDialog control can be used to implement a value help for an input field.</p>
 <h2>Deprecated</h2>
-<p>(since 1.89) - this library is deprecated and has been replaced by Web Dynpro-based apps
-in S/4HANA.</p>
+<p>(since 1.89)</p>
+<p>The ValueHelpDialog control can be used to implement a value help for an input field.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.m/sap/m/Dialog/classes/Dialog.html"><code>Dialog</code></a></li>
@@ -88,10 +87,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachCancel</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:cancel cancel event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
-<p>This event is fired when the Cancel button is pressed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -108,14 +103,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachCancel</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cancel cancel event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
 <p>This event is fired when the Cancel button is pressed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachCancel</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -128,16 +123,16 @@ otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:cancel cancel event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
+<p>This event is fired when the Cancel button is pressed.</p>
 <hr>
 <h3><del>attachOk()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachOk</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:ok ok event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
-<p>This event is fired when the OK button is pressed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -154,14 +149,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachOk</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:ok ok event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
 <p>This event is fired when the OK button is pressed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachOk</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -174,18 +169,16 @@ otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:ok ok event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
+<p>This event is fired when the OK button is pressed.</p>
 <hr>
 <h3><del>attachSelectionChange()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSelectionChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
-<code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
-<p>This event is fired when the user selects an item in the items table.</p>
-<p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -202,16 +195,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
 <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
 <p>This event is fired when the user selects an item in the items table.</p>
 <p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -224,17 +217,18 @@ otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
+<code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
+<p>This event is fired when the user selects an item in the items table.</p>
+<p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
 <hr>
 <h3><del>attachTokenRemove()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTokenRemove</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tokenRemove tokenRemove event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
-<p>This event is fired when the user removes one or multiple existing token(s) from the dialog.</p>
-<p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -251,15 +245,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTokenRemove</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:tokenRemove tokenRemove event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
 <p>This event is fired when the user removes one or multiple existing token(s) from the dialog.</p>
 <p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTokenRemove</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -272,18 +266,17 @@ otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tokenRemove tokenRemove event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
+<p>This event is fired when the user removes one or multiple existing token(s) from the dialog.</p>
+<p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
 <hr>
 <h3><del>attachUpdateSelection()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachUpdateSelection</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:updateSelection updateSelection event of this
-<code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
-<p>This event is fired when the table gets an update and all existing tokens must be selected in the table.</p>
-<p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -300,16 +293,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachUpdateSelection</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:updateSelection updateSelection event of this
 <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
 <p>This event is fired when the table gets an update and all existing tokens must be selected in the table.</p>
 <p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachUpdateSelection</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -322,6 +315,12 @@ otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:updateSelection updateSelection event of this
+<code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itself.</p>
+<p>This event is fired when the table gets an update and all existing tokens must be selected in the table.</p>
+<p><strong>Note:</strong> The event will only be raised when the dialog gets a table instance from outside via <code>setTable</code>.</p>
 <hr>
 <h3><del>destroyFilterBar()</del></h3>
 <blockquote>
@@ -336,8 +335,6 @@ otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itse
 <blockquote>
 <p><strong>detachCancel</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:cancel cancel event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -350,13 +347,13 @@ otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:cancel cancel event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachOk()</del></h3>
 <blockquote>
 <p><strong>detachOk</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:ok ok event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -369,14 +366,13 @@ otherwise it will be bound to this <code>sap.zen.dsh.ValueHelpDialog</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:ok ok event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachSelectionChange()</del></h3>
 <blockquote>
 <p><strong>detachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
-this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -389,13 +385,14 @@ this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
+this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachTokenRemove()</del></h3>
 <blockquote>
 <p><strong>detachTokenRemove</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tokenRemove tokenRemove event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -408,14 +405,13 @@ this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tokenRemove tokenRemove event of this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachUpdateSelection()</del></h3>
 <blockquote>
 <p><strong>detachUpdateSelection</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:updateSelection updateSelection event of
-this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -428,12 +424,14 @@ this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:updateSelection updateSelection event of
+this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireCancel()</del></h3>
 <blockquote>
 <p><strong>fireCancel</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:cancel cancel to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -445,12 +443,12 @@ this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>1.24</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:cancel cancel to attached listeners.</p>
 <hr>
 <h3><del>fireOk()</del></h3>
 <blockquote>
 <p><strong>fireOk</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:ok ok to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelpDialog$OkEventParameters.html"><code>ValueHelpDialog$OkEventParameters</code></a></p>
@@ -462,12 +460,12 @@ this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>1.24</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:ok ok to attached listeners.</p>
 <hr>
 <h3><del>fireSelectionChange()</del></h3>
 <blockquote>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelpDialog$SelectionChangeEventParameters.html"><code>ValueHelpDialog$SelectionChangeEventParameters</code></a></p>
@@ -479,12 +477,12 @@ this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>1.32</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3><del>fireTokenRemove()</del></h3>
 <blockquote>
 <p><strong>fireTokenRemove</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:tokenRemove tokenRemove to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelpDialog$TokenRemoveEventParameters.html"><code>ValueHelpDialog$TokenRemoveEventParameters</code></a></p>
@@ -496,12 +494,12 @@ this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>1.32</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:tokenRemove tokenRemove to attached listeners.</p>
 <hr>
 <h3><del>fireUpdateSelection()</del></h3>
 <blockquote>
 <p><strong>fireUpdateSelection</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:updateSelection updateSelection to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelpDialog$UpdateSelectionEventParameters.html"><code>ValueHelpDialog$UpdateSelectionEventParameters</code></a></p>
@@ -513,185 +511,182 @@ this <code>sap.zen.dsh.ValueHelpDialog</code>.</p>
 <p>1.32</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:updateSelection updateSelection to attached listeners.</p>
 <hr>
 <h3><del>getBasicSearchText()</del></h3>
 <blockquote>
 <p><strong>getBasicSearchText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getBasicSearchText basicSearchText.</p>
-<p>Defines the value for the basic search field. The value is set into the basic search field of the filter
-bar used.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>basicSearchText</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getBasicSearchText basicSearchText.</p>
+<p>Defines the value for the basic search field. The value is set into the basic search field of the filter
+bar used.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>getDescriptionKey()</del></h3>
 <blockquote>
 <p><strong>getDescriptionKey</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getDescriptionKey descriptionKey.</p>
-<p>Defines the key of the column used for the token text.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>descriptionKey</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getDescriptionKey descriptionKey.</p>
+<p>Defines the key of the column used for the token text.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>getDisplayFormat()</del></h3>
 <blockquote>
 <p><strong>getDisplayFormat</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getDisplayFormat displayFormat.</p>
-<p>Represents the display format of the range values. With the <code>displayFormat</code> value UpperCase, the entered
-value of the range (condition) is converted to uppercase letters.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>displayFormat</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getDisplayFormat displayFormat.</p>
+<p>Represents the display format of the range values. With the <code>displayFormat</code> value UpperCase, the entered
+value of the range (condition) is converted to uppercase letters.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>getFilterMode()</del></h3>
 <blockquote>
 <p><strong>getFilterMode</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getFilterMode filterMode.</p>
-<p>Sets the dialog into a filter mode, which only shows ranges (conditions) and hides the tokens.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>filterMode</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getFilterMode filterMode.</p>
+<p>Sets the dialog into a filter mode, which only shows ranges (conditions) and hides the tokens.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getKey()</del></h3>
 <blockquote>
 <p><strong>getKey</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getKey key.</p>
-<p>Defines the key of the column used for the internal key handling. The value of the column is used for
-the token key and also to identify the row in the table.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>key</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getKey key.</p>
+<p>Defines the key of the column used for the internal key handling. The value of the column is used for
+the token key and also to identify the row in the table.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>getKeys()</del></h3>
 <blockquote>
 <p><strong>getKeys</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Gets current value of property #getKeys keys.</p>
-<p>Defines the list of additional keys of the column used for the internal key handling.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>Value of property <code>keys</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getKeys keys.</p>
+<p>Defines the list of additional keys of the column used for the internal key handling.</p>
 <hr>
 <h3><del>getMaxExcludeRanges()</del></h3>
 <blockquote>
 <p><strong>getMaxExcludeRanges</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getMaxExcludeRanges maxExcludeRanges.</p>
-<p>Defines the maximum number of exclude ranges.</p>
-<p>Default value is <code>&quot;-1&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>maxExcludeRanges</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getMaxExcludeRanges maxExcludeRanges.</p>
+<p>Defines the maximum number of exclude ranges.</p>
+<p>Default value is <code>&quot;-1&quot;</code>.</p>
 <hr>
 <h3><del>getMaxIncludeRanges()</del></h3>
 <blockquote>
 <p><strong>getMaxIncludeRanges</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getMaxIncludeRanges maxIncludeRanges.</p>
-<p>Defines the maximum number of include ranges.</p>
-<p>Default value is <code>&quot;-1&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>maxIncludeRanges</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getMaxIncludeRanges maxIncludeRanges.</p>
+<p>Defines the maximum number of include ranges.</p>
+<p>Default value is <code>&quot;-1&quot;</code>.</p>
 <hr>
 <h3><del>getSupportMultiselect()</del></h3>
 <blockquote>
 <p><strong>getSupportMultiselect</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSupportMultiselect supportMultiselect.</p>
-<p>Enables multi-selection in the table used.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>supportMultiselect</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getSupportMultiselect supportMultiselect.</p>
+<p>Enables multi-selection in the table used.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getSupportRanges()</del></h3>
 <blockquote>
 <p><strong>getSupportRanges</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSupportRanges supportRanges.</p>
-<p>Enables the ranges (conditions) feature in the dialog.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>supportRanges</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getSupportRanges supportRanges.</p>
+<p>Enables the ranges (conditions) feature in the dialog.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getSupportRangesOnly()</del></h3>
 <blockquote>
 <p><strong>getSupportRangesOnly</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSupportRangesOnly supportRangesOnly.</p>
-<p>If this property is set to <code>true</code>, the value help dialog only supports the ranges (conditions) feature.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>supportRangesOnly</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getSupportRangesOnly supportRangesOnly.</p>
+<p>If this property is set to <code>true</code>, the value help dialog only supports the ranges (conditions) feature.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getTable()</del></h3>
 <blockquote>
 <p><strong>getTable</strong>(): <code>object</code></p>
 </blockquote>
-<p>getTable Gives access to the internal table instance.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>the used table instance</p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>getTable Gives access to the internal table instance.</p>
 <hr>
 <h3><del>getTokenDisplayBehaviour()</del></h3>
 <blockquote>
 <p><strong>getTokenDisplayBehaviour</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getTokenDisplayBehaviour tokenDisplayBehaviour.</p>
-<p>Represents how the item token text should be displayed in ValueHelpDialog. Use one of the valid <code>sap.ui.comp.smartfilterbar.DisplayBehaviour</code>
-values.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>tokenDisplayBehaviour</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Gets current value of property #getTokenDisplayBehaviour tokenDisplayBehaviour.</p>
+<p>Represents how the item token text should be displayed in ValueHelpDialog. Use one of the valid <code>sap.ui.comp.smartfilterbar.DisplayBehaviour</code>
+values.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>setDescriptionKey()</del></h3>
 <blockquote>
 <p><strong>setDescriptionKey</strong>(<code>sDescriptionKey?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDescriptionKey descriptionKey.</p>
-<p>Defines the key of the column used for the token text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sDescriptionKey?</h5>
 <p><code>string</code></p>
@@ -701,16 +696,15 @@ values.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets a new value for property #getDescriptionKey descriptionKey.</p>
+<p>Defines the key of the column used for the token text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>setDisplayFormat()</del></h3>
 <blockquote>
 <p><strong>setDisplayFormat</strong>(<code>sDisplayFormat?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDisplayFormat displayFormat.</p>
-<p>Represents the display format of the range values. With the <code>displayFormat</code> value UpperCase, the entered
-value of the range (condition) is converted to uppercase letters.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sDisplayFormat?</h5>
 <p><code>string</code></p>
@@ -720,12 +714,16 @@ value of the range (condition) is converted to uppercase letters.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets a new value for property #getDisplayFormat displayFormat.</p>
+<p>Represents the display format of the range values. With the <code>displayFormat</code> value UpperCase, the entered
+value of the range (condition) is converted to uppercase letters.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>setExcludeRangeOperations()</del></h3>
 <blockquote>
 <p><strong>setExcludeRangeOperations</strong>(<code>aOperation</code>, <code>sType</code>): <code>void</code></p>
 </blockquote>
-<p>setExcludeRangeOperations Sets the array for the supported exclude range operations.</p>
 <h4>Parameters</h4>
 <h5>aOperation</h5>
 <p>(<code>&quot;BT&quot;</code> | <code>&quot;Contains&quot;</code> | <code>&quot;EndsWith&quot;</code> | <code>&quot;EQ&quot;</code> | <code>&quot;GE&quot;</code> | <code>&quot;GT&quot;</code> | <code>&quot;LE&quot;</code> | <code>&quot;LT&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../../ValueHelpRangeOperation/enumerations/ValueHelpRangeOperation.html"><code>ValueHelpRangeOperation</code></a>)[]</p>
@@ -737,15 +735,12 @@ value of the range (condition) is converted to uppercase letters.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>setExcludeRangeOperations Sets the array for the supported exclude range operations.</p>
 <hr>
 <h3><del>setFilterMode()</del></h3>
 <blockquote>
 <p><strong>setFilterMode</strong>(<code>bFilterMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFilterMode filterMode.</p>
-<p>Sets the dialog into a filter mode, which only shows ranges (conditions) and hides the tokens.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bFilterMode?</h5>
 <p><code>boolean</code></p>
@@ -755,12 +750,15 @@ value of the range (condition) is converted to uppercase letters.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets a new value for property #getFilterMode filterMode.</p>
+<p>Sets the dialog into a filter mode, which only shows ranges (conditions) and hides the tokens.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setIncludeRangeOperations()</del></h3>
 <blockquote>
 <p><strong>setIncludeRangeOperations</strong>(<code>aOperation</code>, <code>sType</code>): <code>void</code></p>
 </blockquote>
-<p>setIncludeRangeOperations Sets the array for the supported include range operations.</p>
 <h4>Parameters</h4>
 <h5>aOperation</h5>
 <p>(<code>&quot;BT&quot;</code> | <code>&quot;Contains&quot;</code> | <code>&quot;EndsWith&quot;</code> | <code>&quot;EQ&quot;</code> | <code>&quot;GE&quot;</code> | <code>&quot;GT&quot;</code> | <code>&quot;LE&quot;</code> | <code>&quot;LT&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../../ValueHelpRangeOperation/enumerations/ValueHelpRangeOperation.html"><code>ValueHelpRangeOperation</code></a>)[]</p>
@@ -772,16 +770,12 @@ value of the range (condition) is converted to uppercase letters.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>setIncludeRangeOperations Sets the array for the supported include range operations.</p>
 <hr>
 <h3><del>setKey()</del></h3>
 <blockquote>
 <p><strong>setKey</strong>(<code>sKey?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getKey key.</p>
-<p>Defines the key of the column used for the internal key handling. The value of the column is used for
-the token key and also to identify the row in the table.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sKey?</h5>
 <p><code>string</code></p>
@@ -791,14 +785,16 @@ the token key and also to identify the row in the table.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets a new value for property #getKey key.</p>
+<p>Defines the key of the column used for the internal key handling. The value of the column is used for
+the token key and also to identify the row in the table.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>setKeys()</del></h3>
 <blockquote>
 <p><strong>setKeys</strong>(<code>sKeys?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getKeys keys.</p>
-<p>Defines the list of additional keys of the column used for the internal key handling.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sKeys?</h5>
 <p><code>string</code>[]</p>
@@ -808,15 +804,14 @@ the token key and also to identify the row in the table.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets a new value for property #getKeys keys.</p>
+<p>Defines the list of additional keys of the column used for the internal key handling.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setMaxExcludeRanges()</del></h3>
 <blockquote>
 <p><strong>setMaxExcludeRanges</strong>(<code>sMaxExcludeRanges?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMaxExcludeRanges maxExcludeRanges.</p>
-<p>Defines the maximum number of exclude ranges.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;-1&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sMaxExcludeRanges?</h5>
 <p><code>string</code></p>
@@ -826,15 +821,15 @@ the token key and also to identify the row in the table.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets a new value for property #getMaxExcludeRanges maxExcludeRanges.</p>
+<p>Defines the maximum number of exclude ranges.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;-1&quot;</code>.</p>
 <hr>
 <h3><del>setMaxIncludeRanges()</del></h3>
 <blockquote>
 <p><strong>setMaxIncludeRanges</strong>(<code>sMaxIncludeRanges?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMaxIncludeRanges maxIncludeRanges.</p>
-<p>Defines the maximum number of include ranges.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;-1&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sMaxIncludeRanges?</h5>
 <p><code>string</code></p>
@@ -844,13 +839,15 @@ the token key and also to identify the row in the table.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets a new value for property #getMaxIncludeRanges maxIncludeRanges.</p>
+<p>Defines the maximum number of include ranges.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;-1&quot;</code>.</p>
 <hr>
 <h3><del>setRangeKeyFields()</del></h3>
 <blockquote>
 <p><strong>setRangeKeyFields</strong>(<code>aRangeKeyFields</code>): <code>void</code></p>
 </blockquote>
-<p>setRangeKeyFields Sets a RangeKeyFields array. This method allows you to specify the KeyFields for the
-ranges. You can set an array of objects with Key and Label properties to define the key fields.</p>
 <h4>Parameters</h4>
 <h5>aRangeKeyFields</h5>
 <p><code>object</code>[]</p>
@@ -859,13 +856,13 @@ ranges. You can set an array of objects with Key and Label properties to define 
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>setRangeKeyFields Sets a RangeKeyFields array. This method allows you to specify the KeyFields for the
+ranges. You can set an array of objects with Key and Label properties to define the key fields.</p>
 <hr>
 <h3><del>setTable()</del></h3>
 <blockquote>
 <p><strong>setTable</strong>(<code>oTable</code>): <code>void</code></p>
 </blockquote>
-<p>setTable Sets the table used in the value help dialog. If not used, the dialog creates a sap.ui.table.Table
-or sap.m.Table instance internally.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><code>object</code></p>
@@ -874,16 +871,13 @@ or sap.m.Table instance internally.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>setTable Sets the table used in the value help dialog. If not used, the dialog creates a sap.ui.table.Table
+or sap.m.Table instance internally.</p>
 <hr>
 <h3><del>setTokenDisplayBehaviour()</del></h3>
 <blockquote>
 <p><strong>setTokenDisplayBehaviour</strong>(<code>sTokenDisplayBehaviour?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTokenDisplayBehaviour tokenDisplayBehaviour.</p>
-<p>Represents how the item token text should be displayed in ValueHelpDialog. Use one of the valid <code>sap.ui.comp.smartfilterbar.DisplayBehaviour</code>
-values.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sTokenDisplayBehaviour?</h5>
 <p><code>string</code></p>
@@ -893,15 +887,16 @@ values.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets a new value for property #getTokenDisplayBehaviour tokenDisplayBehaviour.</p>
+<p>Represents how the item token text should be displayed in ValueHelpDialog. Use one of the valid <code>sap.ui.comp.smartfilterbar.DisplayBehaviour</code>
+values.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>setTokens()</del></h3>
 <blockquote>
 <p><strong>setTokens</strong>(<code>aTokens</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the array of tokens. The <code>sap.m.Tokens</code> are added to the dialog tokenizer Selected Items or Excluded
-Items. Normal tokens are added to the Selected Items tokenizer only and are selected in the table. <code>new sap.m.Token({key: &quot;0001&quot;, text:&quot;SAP A.G. (0001)&quot;});</code> Tokens with the extra data with value &#39;range&#39;
-are handled as range tokens or exclude range tokens. <code>new sap.m.Token({key: &quot;i1&quot;, text: &quot;ID: a..z&quot;}).data(&quot;range&quot;, { &quot;exclude&quot;: false, &quot;operation&quot;: sap.ui.comp.valuehelpdialog.ValueHelpRangeOperation.BT, &quot;keyField&quot;: &quot;CompanyCode&quot;, &quot;value1&quot;: &quot;a&quot;, &quot;value2&quot;: &quot;z&quot;});</code> The selected items or range tokens are returned in the
-event parameters of the Ok event.</p>
 <h4>Parameters</h4>
 <h5>aTokens</h5>
 <p><a href="../../../../../../../sap.m/sap/m/Token/classes/Token.html"><code>Token</code></a>[]</p>
@@ -910,18 +905,22 @@ event parameters of the Ok event.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Sets the array of tokens. The <code>sap.m.Tokens</code> are added to the dialog tokenizer Selected Items or Excluded
+Items. Normal tokens are added to the Selected Items tokenizer only and are selected in the table. <code>new sap.m.Token({key: &quot;0001&quot;, text:&quot;SAP A.G. (0001)&quot;});</code> Tokens with the extra data with value &#39;range&#39;
+are handled as range tokens or exclude range tokens. <code>new sap.m.Token({key: &quot;i1&quot;, text: &quot;ID: a..z&quot;}).data(&quot;range&quot;, { &quot;exclude&quot;: false, &quot;operation&quot;: sap.ui.comp.valuehelpdialog.ValueHelpRangeOperation.BT, &quot;keyField&quot;: &quot;CompanyCode&quot;, &quot;value1&quot;: &quot;a&quot;, &quot;value2&quot;: &quot;z&quot;});</code> The selected items or range tokens are returned in the
+event parameters of the Ok event.</p>
 <hr>
 <h3><del>update()</del></h3>
 <blockquote>
 <p><strong>update</strong>(): <code>void</code></p>
 </blockquote>
-<p>Update the Control</p>
-<p>Updates the selection of rows in the table. This function must be called after a first binding or binding
-update of the table. It will set a table row as selected if a token for this row exists.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.24</p>
+<p>Update the Control</p>
+<p>Updates the selection of rows in the table. This function must be called after a first binding or binding
+update of the table. It will set a table row as selected if a token for this row exists.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -938,7 +937,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ValueHelpDialog</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ValueHelpDialog</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -962,6 +961,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.m/sap/m/Dialog/classes/Dialog.html"><code>Dialog</code></a>.<a href="../../../../../../../sap.m/sap/m/Dialog/classes/Dialog.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

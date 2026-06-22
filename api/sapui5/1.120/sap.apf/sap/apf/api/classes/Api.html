@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Api — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Api — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: Api — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.apf/sap/apf/api/classes/Api.html">
 <meta property="og:title" content="Class: Api — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Api — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: Api — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.apf/sap/apf/api/classes/Api.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.apf/README.html">sap.apf</a> › sap › apf › <a href="../../../../../sap.apf/sap/apf/api/README.html">api</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.apf</a> / <a href="../README.html">sap/apf/api</a> / Api</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.apf</a> / <a href="../README.html">sap/apf/api</a> / Api</p>
 <h1>Class: Api</h1>
 <pre class="sig"><span class="kw">import</span> Api <span class="kw">from</span> <span class="str">"sap/apf/api"</span>;</pre>
 <p>Official API for Analysis Path Framework (APF)
@@ -50,7 +50,7 @@ as experimental.
  Furthermore there is no need to instantiate required entities directly by applying the JavaScript &#39;new&#39;-operator
 on their respective constructors. Instead they should be created by consumers using a create method available
 on API-level, such as e.g. sap.apf.Api#createMessageObject for sap.apf.core.MessageObject
-or sap.apf.Api#createFilter for <a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html">sap.apf.utils.Filter</a>.</p>
+or sap.apf.Api#createFilter for sap.apf.utils.Filter.</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -80,11 +80,11 @@ or sap.apf.Api#createFilter for <a href="../../../../namespaces/sap/namespaces/a
 <p><strong>activateOnErrorHandling</strong>(<code>bHandling</code>): <code>undefined</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>The handling of the window.onerror by the message handler is either switched on or off. Per default the
-handling is deactivated.</p>
 <ul>
 <li>NOT FOR PRODUCTION USE</li>
 </ul>
+<p>The handling of the window.onerror by the message handler is either switched on or off. Per default the
+handling is deactivated.</p>
 <h4>Parameters</h4>
 <h5>bHandling</h5>
 <p><code>boolean</code></p>
@@ -98,7 +98,6 @@ handling is deactivated.</p>
 <p><strong>addMasterFooterContent</strong>(<code>oControl</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Adds an element to the footer area.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><code>object</code></p>
@@ -110,6 +109,7 @@ handling is deactivated.</p>
 <ul>
 <li>NOT FOR PRODUCTION USE</li>
 </ul>
+<p>Adds an element to the footer area.</p>
 <hr>
 <h3>addPathFilter()</h3>
 <blockquote>
@@ -121,18 +121,18 @@ is supported. Restriction: Only the operators EQ, LE (less equal than) and GE (g
 supported.</p>
 <h4>Parameters</h4>
 <h5>filter</h5>
-<p><a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><code>Filter</code></p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>ID to be provided for later updates of the same filter via method updatePathFilter.</p>
 <hr>
 <h3>createFilter()</h3>
 <blockquote>
-<p><strong>createFilter</strong>(): <a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><strong>createFilter</strong>(): <code>Filter</code></p>
 </blockquote>
 <p>Creates an empty filter object. Its methods can be used to create a logical filter expression.</p>
 <h4>Returns</h4>
-<p><a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><code>Filter</code></p>
 <hr>
 <h3>createMessageObject()</h3>
 <blockquote>
@@ -189,7 +189,7 @@ configuration is directly passed as an object oRequestConfiguration.</p>
 <hr>
 <h3>getPathFilter()</h3>
 <blockquote>
-<p><strong>getPathFilter</strong>(<code>id</code>): <a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><strong>getPathFilter</strong>(<code>id</code>): <code>Filter</code></p>
 </blockquote>
 <p>Gets a path filter fragment for the given identifier by fully replacing the existing one.</p>
 <h4>Parameters</h4>
@@ -197,7 +197,7 @@ configuration is directly passed as an object oRequestConfiguration.</p>
 <p><code>string</code> | <code>number</code></p>
 <p>Identifier of the path filter fragment as it was returned by addPathFilter method.</p>
 <h4>Returns</h4>
-<p><a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><code>Filter</code></p>
 <p>filter for id</p>
 <hr>
 <h3>getTextHtmlEncoded()</h3>
@@ -235,8 +235,6 @@ configuration is directly passed as an object oRequestConfiguration.</p>
 <p><strong>loadApplicationConfig</strong>(<code>sFilePath</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Loads a new application configuration in JSON format. When called many times, the file is loaded only
-the first time.</p>
 <h4>Parameters</h4>
 <h5>sFilePath</h5>
 <p><code>string</code></p>
@@ -249,6 +247,8 @@ path.</p>
 <ul>
 <li>NOT FOR PRODUCTION USE</li>
 </ul>
+<p>Loads a new application configuration in JSON format. When called many times, the file is loaded only
+the first time.</p>
 <hr>
 <h3>putMessage()</h3>
 <blockquote>
@@ -269,12 +269,12 @@ path.</p>
 <p><strong>selectionChanged</strong>(<code>bRefreshAllSteps</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Calls the sap.apf.core.instance#updatePath (also see sap.apf.core.Path#update) with proper callback
-for UI. It also refreshes the steps either from the active step or all the steps depending on the boolean
-value passed.</p>
 <ul>
 <li>NOT FOR PRODUCTION USE</li>
 </ul>
+<p>Calls the sap.apf.core.instance#updatePath (also see sap.apf.core.Path#update) with proper callback
+for UI. It also refreshes the steps either from the active step or all the steps depending on the boolean
+value passed.</p>
 <h4>Parameters</h4>
 <h5>bRefreshAllSteps</h5>
 <p><code>boolean</code></p>
@@ -312,11 +312,11 @@ as parameter and &#39;this&#39; set to the Component instance.</p>
 <p><strong>setEventCallback</strong>(<code>sEventType</code>, <code>fnCallback</code>): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Register the function callback to be executed on the given event type. fnCallback will be executed under
-a context and will be passed with arguments depending on the event type.</p>
 <ul>
 <li>NOT FOR PRODUCTION USE</li>
 </ul>
+<p>Register the function callback to be executed on the given event type. fnCallback will be executed under
+a context and will be passed with arguments depending on the event type.</p>
 <h4>Parameters</h4>
 <h5>sEventType</h5>
 <p><code>any</code></p>
@@ -353,10 +353,10 @@ than) and GE (greater equal than) are supported.</p>
 <p>Identifier of the path filter as it was returned by addPathFilter method. When using an ID of type string
 the caller must ensure that it is unique.</p>
 <h5>filter</h5>
-<p><a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><code>Filter</code></p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

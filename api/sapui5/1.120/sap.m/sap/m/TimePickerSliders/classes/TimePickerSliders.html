@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: TimePickerSliders — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: TimePickerSliders — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: TimePickerSliders — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/TimePickerSliders/classes/TimePickerSliders.html">
 <meta property="og:title" content="Class: TimePickerSliders — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: TimePickerSliders — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: TimePickerSliders — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/TimePickerSliders/classes/TimePickerSliders.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/TimePickerSliders/README.html">TimePickerSliders</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TimePickerSliders</a> / TimePickerSliders</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TimePickerSliders</a> / TimePickerSliders</p>
 <h1>Class: TimePickerSliders</h1>
 <pre class="sig"><span class="kw">import</span> TimePickerSliders <span class="kw">from</span> <span class="str">"sap/m/TimePickerSliders"</span>;</pre>
-<p>A picker list container control used inside the sap.m.TimePicker or standalone to hold all the
-sliders.</p>
 <h2>Since</h2>
 <p>1.54</p>
+<p>A picker list container control used inside the sap.m.TimePicker or standalone to hold all the
+sliders.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -155,7 +155,6 @@ otherwise it will be bound to this <code>sap.m.TimePickerSliders</code> itself.<
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimePickerSliders$ChangeEventParameters.html"><code>TimePickerSliders$ChangeEventParameters</code></a></p>
@@ -165,6 +164,7 @@ otherwise it will be bound to this <code>sap.m.TimePickerSliders</code> itself.<
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>getDisplayFormat()</h3>
 <blockquote>
@@ -241,15 +241,15 @@ seconds slider is populated only by multiples of the step.</p>
 <blockquote>
 <p><strong>getSupport2400</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSupport2400 support2400.</p>
-<p>Allows to set a value of 24:00, used to indicate the end of the day. Works only with HH or H formats.
-Don&#39;t use it together with am/pm.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>support2400</code></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Gets current value of property #getSupport2400 support2400.</p>
+<p>Allows to set a value of 24:00, used to indicate the end of the day. Works only with HH or H formats.
+Don&#39;t use it together with am/pm.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getTimeValues()</h3>
 <blockquote>
@@ -453,7 +453,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>TimePickerSliders</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>TimePickerSliders</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -477,6 +477,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

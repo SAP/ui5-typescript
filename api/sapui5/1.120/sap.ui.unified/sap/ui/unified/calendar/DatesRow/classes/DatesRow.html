@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DatesRow — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: DatesRow — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: DatesRow — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/DatesRow/classes/DatesRow.html">
 <meta property="og:title" content="Class: DatesRow — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: DatesRow — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: DatesRow — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/DatesRow/classes/DatesRow.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › calendar › <a href="../../../../../../../sap.ui.unified/sap/ui/unified/calendar/DatesRow/README.html">DatesRow</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/DatesRow</a> / DatesRow</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/DatesRow</a> / DatesRow</p>
 <h1>Class: DatesRow</h1>
 <pre class="sig"><span class="kw">import</span> DatesRow <span class="kw">from</span> <span class="str">"sap/ui/unified/calendar/DatesRow"</span>;</pre>
+<h2>Since</h2>
+<p>1.30.0</p>
 <p>renders a row of days with ItemNavigation This is used inside the calendar. Not for stand alone usage
 If used inside the calendar the properties and aggregation are directly taken from the parent (To not
 duplicate and sync DateRanges and so on...)</p>
-<h2>Since</h2>
-<p>1.30.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Month/classes/Month.html"><code>Month</code></a></li>
@@ -105,15 +105,15 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getCalendarWeekNumbering</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 </blockquote>
-<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used. Note: This property should not be used with <code>Month.prototype.firstDayOfWeek</code>
-property.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 <p>Value of property <code>calendarWeekNumbering</code></p>
 <h4>Since</h4>
 <p>1.110.0</p>
+<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used. Note: This property should not be used with <code>Month.prototype.firstDayOfWeek</code>
+property.</p>
 <h4>Overrides</h4>
 <p><a href="../../Month/classes/Month.html"><code>Month</code></a>.<a href="../../Month/classes/Month.html#getcalendarweeknumbering"><code>getCalendarWeekNumbering</code></a></p>
 <hr>
@@ -132,15 +132,15 @@ property.</p>
 <blockquote>
 <p><strong>getShowDayNamesLine</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowDayNamesLine showDayNamesLine.</p>
-<p>If set the day names are shown in a separate line. If not set the day names are shown inside the single
-days.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showDayNamesLine</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Gets current value of property #getShowDayNamesLine showDayNamesLine.</p>
+<p>If set the day names are shown in a separate line. If not set the day names are shown inside the single
+days.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getStartDate()</h3>
 <blockquote>
@@ -158,11 +158,6 @@ the start date</p>
 <blockquote>
 <p><strong>setCalendarWeekNumbering</strong>(<code>sCalendarWeekNumbering?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used. Note: This property should not be used with <code>Month.prototype.firstDayOfWeek</code>
-property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sCalendarWeekNumbering?</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
@@ -172,6 +167,11 @@ property.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110.0</p>
+<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used. Note: This property should not be used with <code>Month.prototype.firstDayOfWeek</code>
+property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Overrides</h4>
 <p><a href="../../Month/classes/Month.html"><code>Month</code></a>.<a href="../../Month/classes/Month.html#setcalendarweeknumbering"><code>setCalendarWeekNumbering</code></a></p>
 <hr>
@@ -212,11 +212,6 @@ property.</p>
 <blockquote>
 <p><strong>setShowDayNamesLine</strong>(<code>bShowDayNamesLine?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowDayNamesLine showDayNamesLine.</p>
-<p>If set the day names are shown in a separate line. If not set the day names are shown inside the single
-days.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowDayNamesLine?</h5>
 <p><code>boolean</code></p>
@@ -226,6 +221,11 @@ days.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Sets a new value for property #getShowDayNamesLine showDayNamesLine.</p>
+<p>If set the day names are shown in a separate line. If not set the day names are shown inside the single
+days.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setStartDate()</h3>
 <blockquote>
@@ -255,7 +255,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>DatesRow</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>DatesRow</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -279,6 +279,6 @@ used by this class</p>
 <p><a href="../../Month/classes/Month.html"><code>Month</code></a>.<a href="../../Month/classes/Month.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

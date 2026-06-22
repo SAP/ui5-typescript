@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $NotificationListItemSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $NotificationListItemSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $NotificationListItemSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $NotificationListItemSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.fiori/sap/ui/webc/fiori/NotificationListItem/interfaces/$NotificationListItemSettings.html">
-<meta property="og:title" content="~~Interface: $NotificationListItemSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $NotificationListItemSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $NotificationListItemSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $NotificationListItemSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.fiori/sap/ui/webc/fiori/NotificationListItem/interfaces/$NotificationListItemSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,63 +33,51 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.webc.fiori/README.html">sap.ui.webc.fiori</a> › sap › ui › webc › fiori › <a href="../../../../../../../sap.ui.webc.fiori/sap/ui/webc/fiori/NotificationListItem/README.html">NotificationListItem</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.webc.fiori</a> / <a href="../README.html">sap/ui/webc/fiori/NotificationListItem</a> / $NotificationListItemSettings</p>
-<h1><del>Interface: $NotificationListItemSettings</del></h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.fiori</a> / <a href="../README.html">sap/ui/webc/fiori/NotificationListItem</a> / $NotificationListItemSettings</p>
+<h1>Interface: $NotificationListItemSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $NotificationListItemSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/fiori/NotificationListItem"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the NotificationListItem constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>actions?</del></h3>
+<h3>actions?</h3>
 <blockquote>
 <p><code>optional</code> <strong>actions?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/interfaces/INotificationAction.html"><code>INotificationAction</code></a> | <a href="../../library/interfaces/INotificationAction.html"><code>INotificationAction</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the actions, displayed in the top-right area.</p>
 <p> <strong>Note:</strong> use the <code>sap.ui.webc.fiori.NotificationAction</code> component.</p>
 <hr>
-<h3><del>avatar?</del></h3>
+<h3>avatar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>avatar?</strong>: <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/library/interfaces/IAvatar.html"><code>IAvatar</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the avatar, displayed in the <code>sap.ui.webc.fiori.NotificationListItem</code>.</p>
 <p> <strong>Note:</strong> Consider using the <code>sap.ui.webc.main.Avatar</code> to display icons, initials or images.
  **Note:**In order to be complaint with the UX guidlines and for best experience, we recommend using
 avatars with 2rem X 2rem in size (32px X 32px). In case you are using the <code>sap.ui.webc.main.Avatar</code> you
 can set its <code>size</code> property to <code>XS</code> to get the required size - <code>&lt;ui5-avatar size=&quot;XS&quot;&gt;&lt;/ui5-avatar&gt;</code>.</p>
 <hr>
-<h3><del>busy?</del></h3>
+<h3>busy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>busy?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines if a busy indicator would be displayed over the item.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html#busy"><code>busy</code></a></p>
 <hr>
-<h3><del>busyDelay?</del></h3>
+<h3>busyDelay?</h3>
 <blockquote>
 <p><code>optional</code> <strong>busyDelay?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the delay in milliseconds, after which the busy indicator will show up for this component.</p>
 <hr>
-<h3><del>close?</del></h3>
+<h3>close?</h3>
 <blockquote>
 <p><code>optional</code> <strong>close?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the <code>Close</code> button is pressed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -97,64 +85,56 @@ can set its <code>size</code> property to <code>XS</code> to get the required si
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>description?</del></h3>
+<h3>description?</h3>
 <blockquote>
 <p><code>optional</code> <strong>description?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the content of the control</p>
 <hr>
-<h3><del>footnotes?</del></h3>
+<h3>footnotes?</h3>
 <blockquote>
 <p><code>optional</code> <strong>footnotes?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the elements, displayed in the footer of the of the component.</p>
 <hr>
-<h3><del>priority?</del></h3>
+<h3>priority?</h3>
 <blockquote>
 <p><code>optional</code> <strong>priority?</strong>: <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/library/enumerations/Priority.html"><code>Priority</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the <code>priority</code> of the item.</p>
 <hr>
-<h3><del>read?</del></h3>
+<h3>read?</h3>
 <blockquote>
 <p><code>optional</code> <strong>read?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines if the <code>notification</code> is new or has been already read.</p>
 <p> <strong>Note:</strong> if set to <code>false</code> the <code>titleText</code> has bold font, if set to true - it has a normal font.</p>
 <hr>
-<h3><del>selected?</del></h3>
+<h3>selected?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selected?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the selected state of the <code>ListItem</code>.</p>
 <hr>
-<h3><del>showClose?</del></h3>
+<h3>showClose?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showClose?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines if the <code>close</code> button would be displayed.</p>
 <hr>
-<h3><del>titleText?</del></h3>
+<h3>titleText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>titleText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the <code>titleText</code> of the item.</p>
 <hr>
-<h3><del>wrappingType?</del></h3>
+<h3>wrappingType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>wrappingType?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Normal&quot;</code> | <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/library/enumerations/WrappingType.html"><code>WrappingType</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines if the <code>titleText</code> and <code>description</code> should wrap, they truncate by default.</p>
 <p> <strong>Note:</strong> by default the <code>titleText</code> and <code>description</code>, and a <code>ShowMore/Less</code> button would be displayed.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

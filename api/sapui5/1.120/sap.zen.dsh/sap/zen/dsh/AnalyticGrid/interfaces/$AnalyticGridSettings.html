@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $AnalyticGridSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $AnalyticGridSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $AnalyticGridSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $AnalyticGridSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.zen.dsh/sap/zen/dsh/AnalyticGrid/interfaces/$AnalyticGridSettings.html">
-<meta property="og:title" content="~~Interface: $AnalyticGridSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $AnalyticGridSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $AnalyticGridSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $AnalyticGridSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.zen.dsh/sap/zen/dsh/AnalyticGrid/interfaces/$AnalyticGridSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,50 +33,40 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.zen.dsh/README.html">sap.zen.dsh</a> › sap › zen › dsh › <a href="../../../../../../sap.zen.dsh/sap/zen/dsh/AnalyticGrid/README.html">AnalyticGrid</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.zen.dsh</a> / <a href="../README.html">sap/zen/dsh/AnalyticGrid</a> / $AnalyticGridSettings</p>
-<h1><del>Interface: $AnalyticGridSettings</del></h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.zen.dsh</a> / <a href="../README.html">sap/zen/dsh/AnalyticGrid</a> / $AnalyticGridSettings</p>
+<h1>Interface: $AnalyticGridSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $AnalyticGridSettings } <span class="kw">from</span> <span class="str">"sap/zen/dsh/AnalyticGrid"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the AnalyticGrid constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.89) - this library is deprecated and has been replaced by Web Dynpro-based apps
-in S/4HANA.
- (since 1.46) - API is incomplete and may change incompatibly</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>height?</del></h3>
+<h3>height?</h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Desired width of the AnalyticGrid control</p>
 <hr>
-<h3><del>queryName?</del></h3>
+<h3>queryName?</h3>
 <blockquote>
 <p><code>optional</code> <strong>queryName?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Name of the Query to bind the AnalyticGrid to.</p>
 <hr>
-<h3><del>selection?</del></h3>
+<h3>selection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selection?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>A SelectionVariant specifying the initial selection state used by the AnalyticGrid. Depending on the
 specific query and selection variant state, this will result in setting one or more variables&#39; values
 and setting one or more filters on the datasource.</p>
 <hr>
-<h3><del>selectionChange?</del></h3>
+<h3>selectionChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Event is triggered when the selection is changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -84,20 +74,18 @@ and setting one or more filters on the datasource.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>state?</del></h3>
+<h3>state?</h3>
 <blockquote>
 <p><code>optional</code> <strong>state?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>A string representing the current state of the analytic grid, including data selection and navigation
 state. Intended to be used for saving and recreating inner application state in navigation scenarios,
 for example.</p>
 <hr>
-<h3><del>stateChange?</del></h3>
+<h3>stateChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>stateChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Event is triggered when the state of the AnalyticGrid is changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -105,20 +93,18 @@ for example.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>systemAlias?</del></h3>
+<h3>systemAlias?</h3>
 <blockquote>
 <p><code>optional</code> <strong>systemAlias?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Target System alias for data connectivity</p>
 <hr>
-<h3><del>width?</del></h3>
+<h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Desired width of the AnalyticGrid control</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

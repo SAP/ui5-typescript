@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: TypeMap — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: TypeMap — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: TypeMap — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/util/TypeMap/interfaces/TypeMap.html">
 <meta property="og:title" content="Interface: TypeMap — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: TypeMap — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: TypeMap — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/util/TypeMap/interfaces/TypeMap.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › util › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/util/TypeMap/README.html">TypeMap</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/util/TypeMap</a> / TypeMap</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/util/TypeMap</a> / TypeMap</p>
 <h1>Interface: TypeMap</h1>
 <pre class="sig"><span class="kw">import</span> TypeMap <span class="kw">from</span> <span class="str">"sap/ui/mdc/util/TypeMap"</span>;</pre>
+<h2>Since</h2>
+<p>1.114.0</p>
 <p>Configuration class for type-handling in MDC delegates. Allows mapping of model-types to sap.ui.mdc.enums.BaseType
 and enables model-specific type configuration.</p>
 <p><strong>Note:</strong> This utility is experimental and the API/behavior is not finalized. Hence, it should not be
 used for productive usage.</p>
-<p><strong>Note:</strong> The modules of all data types registered in a <code>TypeMap</code> must be loaded in advance.</p>
-<h2>Since</h2>
-<p>1.114.0</p>
 <h2>Extended by</h2>
 <ul>
 <li><a href="../../../DefaultTypeMap/interfaces/DefaultTypeMap.html"><code>DefaultTypeMap</code></a></li>
@@ -131,6 +130,7 @@ a <code>number</code>, or another sap.ui.mdc.enums.BaseType BaseType.</p>
 <p><strong>getDataTypeClass</strong>(<code>sDataType</code>): (<code>p1</code>) =&gt; <code>void</code></p>
 </blockquote>
 <p>Gets a data type class based on a given name.</p>
+<p><strong>Note:</strong> The module of the data type needs to be loaded before.</p>
 <h4>Parameters</h4>
 <h5>sDataType</h5>
 <p><code>string</code></p>
@@ -266,6 +266,6 @@ for examples.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: FilterableListContent — SAPUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: FilterableListContent — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Class: FilterableListContent — SAPUI5 TypeScript API</title>
+<meta name="description" content="Class: FilterableListContent — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/valuehelp/base/FilterableListContent/classes/FilterableListContent.html">
-<meta property="og:title" content="Abstract Class: FilterableListContent — SAPUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: FilterableListContent — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Class: FilterableListContent — SAPUI5 TypeScript API">
+<meta property="og:description" content="Class: FilterableListContent — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/valuehelp/base/FilterableListContent/classes/FilterableListContent.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › valuehelp › base › <a href="../../../../../../../../sap.ui.mdc/sap/ui/mdc/valuehelp/base/FilterableListContent/README.html">FilterableListContent</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/valuehelp/base/FilterableListContent</a> / FilterableListContent</p>
-<h1>Abstract Class: FilterableListContent</h1>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/valuehelp/base/FilterableListContent</a> / FilterableListContent</p>
+<h1>Class: FilterableListContent</h1>
 <pre class="sig"><span class="kw">import</span> FilterableListContent <span class="kw">from</span> <span class="str">"sap/ui/mdc/valuehelp/base/FilterableListContent"</span>;</pre>
-<p>Content for the sap.ui.mdc.valuehelp.base.Container Container element.</p>
 <h2>Since</h2>
 <p>1.95.0</p>
+<p>Content for the sap.ui.mdc.valuehelp.base.Container Container element.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListContent/classes/ListContent.html"><code>ListContent</code></a></li>
@@ -95,17 +95,16 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>applyFilters</strong>(): <code>void</code></p>
 </blockquote>
-<p>Applies the filter to the content control.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Applies the filter to the content control.</p>
 <hr>
 <h3>createConditionPayload()</h3>
 <blockquote>
 <p><strong>createConditionPayload</strong>(<code>aValues</code>, <code>vContext</code>): <code>object</code></p>
 </blockquote>
-<p>Creates a payload for a value.</p>
 <h4>Parameters</h4>
 <h5>aValues</h5>
 <p><code>any</code>[]</p>
@@ -118,6 +117,7 @@ of the syntax of the settings object.</p>
 <p>payload</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates a payload for a value.</p>
 <hr>
 <h3>destroyFilterBar()</h3>
 <blockquote>
@@ -149,7 +149,7 @@ binding path of the description of the items.</p>
 <h4>Returns</h4>
 <p><a href="../../../../filterbar/vh/FilterBar/classes/FilterBar.html"><code>FilterBar</code></a></p>
 <hr>
-<h3><del>getFilterFields()</del></h3>
+<h3>getFilterFields()</h3>
 <blockquote>
 <p><strong>getFilterFields</strong>(): <code>string</code></p>
 </blockquote>
@@ -166,8 +166,6 @@ characters. (<code>&quot;*Property1,Property2*&quot;</code>)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>filterFields</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.120.2) - replaced in future version by sap.ui.mdc.ValueHelpDelegate.isSearchSupported isSearchSupported</p>
 <hr>
 <h3>getGroup()</h3>
 <blockquote>
@@ -185,7 +183,6 @@ characters. (<code>&quot;*Property1,Property2*&quot;</code>)</p>
 <blockquote>
 <p><strong>getItemFromContext</strong>(<code>oBindingContext</code>, <code>oOptions?</code>): <code>object</code></p>
 </blockquote>
-<p>Gets an item for a <code>BindingContext</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingContext</h5>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
@@ -198,6 +195,7 @@ characters. (<code>&quot;*Property1,Property2*&quot;</code>)</p>
 <p>Item object containing <code>key</code>, <code>description</code>, and <code>payload</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets an item for a <code>BindingContext</code>.</p>
 <hr>
 <h3>getKeyPath()</h3>
 <blockquote>
@@ -215,24 +213,24 @@ path of the key of the items.</p>
 <blockquote>
 <p><strong>getListBindingInfo</strong>(): <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
 </blockquote>
-<p>Gets the <code>BindingInfo</code> of the content.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
 <p><code>ListBindingInfo</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the <code>BindingInfo</code> of the content.</p>
 <hr>
 <h3>getSelectableConditions()</h3>
 <blockquote>
 <p><strong>getSelectableConditions</strong>(): <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
 </blockquote>
-<p>Gets the conditions that are selectable from list content.</p>
-<p>These are validated conditions as other conditions are shown in the sap.ui.mdc.valuehelp.content.Conditions Conditions.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
 <p>ListBindingInfo</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the conditions that are selectable from list content.</p>
+<p>These are validated conditions as other conditions are shown in the sap.ui.mdc.valuehelp.content.Conditions Conditions.</p>
 <hr>
 <h3>setDescriptionPath()</h3>
 <blockquote>
@@ -264,7 +262,7 @@ binding path of the description of the items.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setFilterFields()</del></h3>
+<h3>setFilterFields()</h3>
 <blockquote>
 <p><strong>setFilterFields</strong>(<code>sFilterFields?</code>): <code>this</code></p>
 </blockquote>
@@ -286,8 +284,6 @@ characters. (<code>&quot;*Property1,Property2*&quot;</code>)</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.120.2) - replaced in future version by sap.ui.mdc.ValueHelpDelegate.isSearchSupported isSearchSupported</p>
 <hr>
 <h3>setGroup()</h3>
 <blockquote>
@@ -338,7 +334,7 @@ and enriches it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>FilterableListContent</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>FilterableListContent</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -362,6 +358,6 @@ used by this class</p>
 <p><a href="../../ListContent/classes/ListContent.html"><code>ListContent</code></a>.<a href="../../ListContent/classes/ListContent.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

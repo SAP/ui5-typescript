@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ViewSettingsDialogSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ViewSettingsDialogSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $ViewSettingsDialogSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ViewSettingsDialog/interfaces/$ViewSettingsDialogSettings.html">
 <meta property="og:title" content="Interface: $ViewSettingsDialogSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ViewSettingsDialogSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $ViewSettingsDialogSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ViewSettingsDialog/interfaces/$ViewSettingsDialogSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ViewSettingsDialog/README.html">ViewSettingsDialog</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ViewSettingsDialog</a> / $ViewSettingsDialogSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ViewSettingsDialog</a> / $ViewSettingsDialogSettings</p>
 <h1>Interface: $ViewSettingsDialogSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ViewSettingsDialogSettings } <span class="kw">from</span> <span class="str">"sap/m/ViewSettingsDialog"</span>;</pre>
-<p>Describes the settings that can be provided to the ViewSettingsDialog constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -73,9 +72,9 @@ to read the state of your controls inside the callback of this event.</p>
 <blockquote>
 <p><code>optional</code> <strong>customTabs?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a> | <a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a>[]</p>
 </blockquote>
-<p>The list of all the custom tabs.</p>
 <h4>Since</h4>
 <p>1.30</p>
+<p>The list of all the custom tabs.</p>
 <hr>
 <h3>filterDetailPageOpened?</h3>
 <blockquote>
@@ -92,21 +91,21 @@ to read the state of your controls inside the callback of this event.</p>
 <blockquote>
 <p><code>optional</code> <strong>filterItems?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16</p>
 <p>The list of items with key and value that can be filtered on (for example, a list of columns for a table).
 A filterItem is associated with one or more detail filters.</p>
 <p><strong>Note:</strong> It is recommended to use the <code>sap.m.ViewSettingsFilterItem</code> as it fits best at the filter page.</p>
-<h4>Since</h4>
-<p>1.16</p>
 <hr>
 <h3>filterSearchOperator?</h3>
 <blockquote>
 <p><code>optional</code> <strong>filterSearchOperator?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Contains&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../library/enumerations/StringFilterOperator.html"><code>StringFilterOperator</code></a> | <code>&quot;AnyWordStartsWith&quot;</code> | <code>&quot;Equals&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.42</p>
 <p>Provides a string filter operator which is used when the user searches items in filter details page.
 Possible operators are: <code>AnyWordStartsWith</code>, <code>Contains</code>, <code>StartsWith</code>, <code>Equals</code>. This property will be
 ignored if a custom callback is provided through <code>setFilterSearchCallback</code> method.</p>
-<h4>Since</h4>
-<p>1.42</p>
 <hr>
 <h3>groupDescending?</h3>
 <blockquote>
@@ -118,18 +117,18 @@ ignored if a custom callback is provided through <code>setFilterSearchCallback</
 <blockquote>
 <p><code>optional</code> <strong>groupItems?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
-<p>The list of items with key and value that can be grouped on (for example, a list of columns for a table).</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>The list of items with key and value that can be grouped on (for example, a list of columns for a table).</p>
 <hr>
 <h3>presetFilterItems?</h3>
 <blockquote>
 <p><code>optional</code> <strong>presetFilterItems?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
-<p>The list of preset filter items with key and value that allows the selection of more complex or custom
-filters. These entries are displayed at the top of the filter tab.</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>The list of preset filter items with key and value that allows the selection of more complex or custom
+filters. These entries are displayed at the top of the filter tab.</p>
 <hr>
 <h3>reset?</h3>
 <blockquote>
@@ -186,9 +185,9 @@ setSelectedSortItem.</p>
 <blockquote>
 <p><code>optional</code> <strong>sortItems?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
-<p>The list of items with key and value that can be sorted over (for example, a list of columns for a table).</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>The list of items with key and value that can be sorted over (for example, a list of columns for a table).</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -201,14 +200,14 @@ setSelectedSortItem.</p>
 <blockquote>
 <p><code>optional</code> <strong>titleAlignment?</strong>: <code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.72</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.None</code>, the automatic title
 alignment depending on the theme settings will be disabled. If set to <code>TitleAlignment.Auto</code>, the Title
 will be aligned as it is set in the theme (if not set, the default value is <code>center</code>); Other possible
 values are <code>TitleAlignment.Start</code> (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<h4>Since</h4>
-<p>1.72</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

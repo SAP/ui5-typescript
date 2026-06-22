@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FormContainer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: FormContainer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: FormContainer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.layout/sap/ui/layout/form/FormContainer/classes/FormContainer.html">
 <meta property="og:title" content="Class: FormContainer — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: FormContainer — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: FormContainer — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.layout/sap/ui/layout/form/FormContainer/classes/FormContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.layout/README.html">sap.ui.layout</a> › sap › ui › layout › form › <a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/FormContainer/README.html">FormContainer</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/FormContainer</a> / FormContainer</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/FormContainer</a> / FormContainer</p>
 <h1>Class: FormContainer</h1>
 <pre class="sig"><span class="kw">import</span> FormContainer <span class="kw">from</span> <span class="str">"sap/ui/layout/form/FormContainer"</span>;</pre>
-<p>A <code>FormContainer</code> represents a group inside a <code>Form</code>. It consists of <code>FormElements</code>. The rendering of
-the <code>FormContainer</code> is done by the <code>FormLayout</code> assigned to the <code>Form</code>.</p>
 <h2>Since</h2>
 <p>1.16.0</p>
+<p>A <code>FormContainer</code> represents a group inside a <code>Form</code>. It consists of <code>FormElements</code>. The rendering of
+the <code>FormContainer</code> is done by the <code>FormLayout</code> assigned to the <code>Form</code>.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -91,9 +91,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_setEditable</strong>(<code>bEditable</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the editable state of the <code>FormContainer</code>.</p>
-<p>This must only be called from the <code>Form</code>.</p>
-<p>Labels inside of a <code>Form</code> must be invalidated if <code>editable</code> changed on <code>Form</code>.</p>
 <h4>Parameters</h4>
 <h5>bEditable</h5>
 <p><code>boolean</code></p>
@@ -104,12 +101,14 @@ of the syntax of the settings object.</p>
 <p>1.74.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets the editable state of the <code>FormContainer</code>.</p>
+<p>This must only be called from the <code>Form</code>.</p>
+<p>Labels inside of a <code>Form</code> must be invalidated if <code>editable</code> changed on <code>Form</code>.</p>
 <hr>
 <h3>addAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -119,6 +118,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addFormElement()</h3>
 <blockquote>
@@ -155,22 +155,22 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>destroyToolbar</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getExpandable()</h3>
 <blockquote>
@@ -224,15 +224,15 @@ to the needed value.</p>
 <blockquote>
 <p><strong>getToolbar</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
+<h4>Since</h4>
+<p>1.36.0</p>
 <p>Gets content of aggregation #getToolbar toolbar.</p>
 <p>Toolbar of the <code>FormContainer</code>.</p>
 <p><strong>Note:</strong> If a <code>Toolbar</code> is used, the <code>Title</code> is ignored. If a title is needed inside the <code>Toolbar</code> it
 must be added at content to the <code>Toolbar</code>. In this case add the <code>Title</code> to the <code>ariaLabelledBy</code> association.
 Use the right title level to meet the visual requirements. This might be theme-dependent.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
-<h4>Since</h4>
-<p>1.36.0</p>
 <hr>
 <h3>getVisible()</h3>
 <blockquote>
@@ -292,12 +292,12 @@ property. But this might be overwritten by inherited elements.</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllFormElements()</h3>
 <blockquote>
@@ -313,7 +313,6 @@ property. But this might be overwritten by inherited elements.</p>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -323,6 +322,7 @@ property. But this might be overwritten by inherited elements.</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeFormElement()</h3>
 <blockquote>
@@ -388,7 +388,6 @@ property. But this might be overwritten by inherited elements.</p>
 <blockquote>
 <p><strong>setToolbar</strong>(<code>oToolbar</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getToolbar toolbar.</p>
 <h4>Parameters</h4>
 <h5>oToolbar</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
@@ -398,6 +397,7 @@ property. But this might be overwritten by inherited elements.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Sets the aggregated #getToolbar toolbar.</p>
 <hr>
 <h3>setVisible()</h3>
 <blockquote>
@@ -430,7 +430,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>FormContainer</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>FormContainer</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -454,6 +454,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

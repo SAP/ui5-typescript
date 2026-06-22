@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ComboBox — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ComboBox — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: ComboBox — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ComboBox/classes/ComboBox.html">
 <meta property="og:title" content="Class: ComboBox — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ComboBox — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: ComboBox — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ComboBox/classes/ComboBox.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ComboBox/README.html">ComboBox</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ComboBox</a> / ComboBox</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ComboBox</a> / ComboBox</p>
 <h1>Class: ComboBox</h1>
 <pre class="sig"><span class="kw">import</span> ComboBox <span class="kw">from</span> <span class="str">"sap/m/ComboBox"</span>;</pre>
+<h2>Since</h2>
+<p>1.22</p>
 <p>A drop-down list for selecting and filtering values. Overview: The control represents a drop-down menu
 with a list of the available options and a text input field to narrow down the options. Structure: The
 combo-box consists of the following elements:
@@ -84,8 +86,6 @@ drop-down arrow.
 truncated.
  - On phone devices the combo box option list opens a dialog.
 </code></pre>
-<h2>Since</h2>
-<p>1.22</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a></li>
@@ -144,7 +144,6 @@ See:
 <blockquote>
 <p><strong>_configureList</strong>(<code>oList</code>): <code>void</code></p>
 </blockquote>
-<p>Configures the SuggestionsPopover&#39;s list.</p>
 <h4>Parameters</h4>
 <h5>oList</h5>
 <p><a href="../../List/classes/List.html"><code>List</code></a></p>
@@ -153,6 +152,7 @@ See:
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Configures the SuggestionsPopover&#39;s list.</p>
 <hr>
 <h3>attachChange()</h3>
 <h4>Call Signature</h4>
@@ -260,11 +260,11 @@ when the user presses on a list item, or when navigating via keyboard.</p>
 <blockquote>
 <p><strong>clearSelection</strong>(): <code>void</code></p>
 </blockquote>
-<p>Clears the selection.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Clears the selection.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#clearselection"><code>clearSelection</code></a></p>
 <hr>
@@ -272,7 +272,6 @@ when the user presses on a list item, or when navigating via keyboard.</p>
 <blockquote>
 <p><strong>clone</strong>(<code>sIdSuffix?</code>): <code>this</code></p>
 </blockquote>
-<p>Clones the <code>sap.m.ComboBox</code> control.</p>
 <h4>Parameters</h4>
 <h5>sIdSuffix?</h5>
 <p><code>string</code></p>
@@ -282,6 +281,7 @@ when the user presses on a list item, or when navigating via keyboard.</p>
 <p>The cloned <code>sap.m.ComboBox</code> control.</p>
 <h4>Since</h4>
 <p>1.22.1</p>
+<p>Clones the <code>sap.m.ComboBox</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#clone"><code>clone</code></a></p>
 <hr>
@@ -289,7 +289,6 @@ when the user presses on a list item, or when navigating via keyboard.</p>
 <blockquote>
 <p><strong>configPicker</strong>(<code>oPicker</code>): <code>void</code></p>
 </blockquote>
-<p><code>ComboBox</code> picker configuration</p>
 <h4>Parameters</h4>
 <h5>oPicker</h5>
 <p><a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a> | <a href="../../Popover/classes/Popover.html"><code>Popover</code></a></p>
@@ -298,6 +297,7 @@ when the user presses on a list item, or when navigating via keyboard.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p><code>ComboBox</code> picker configuration</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#configpicker"><code>configPicker</code></a></p>
 <hr>
@@ -342,11 +342,11 @@ this <code>sap.m.ComboBox</code>.</p>
 <blockquote>
 <p><strong>exit</strong>(): <code>void</code></p>
 </blockquote>
-<p>This method will be called when the ComboBox is being destroyed.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This method will be called when the ComboBox is being destroyed.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#exit"><code>exit</code></a></p>
 <hr>
@@ -354,7 +354,6 @@ this <code>sap.m.ComboBox</code>.</p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ComboBox$ChangeEventParameters.html"><code>ComboBox$ChangeEventParameters</code></a></p>
@@ -364,6 +363,7 @@ this <code>sap.m.ComboBox</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#firechange"><code>fireChange</code></a></p>
 <hr>
@@ -371,7 +371,6 @@ this <code>sap.m.ComboBox</code>.</p>
 <blockquote>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ComboBox$SelectionChangeEventParameters.html"><code>ComboBox$SelectionChangeEventParameters</code></a></p>
@@ -381,31 +380,32 @@ this <code>sap.m.ComboBox</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3>getDefaultSelectedItem()</h3>
 <blockquote>
 <p><strong>getDefaultSelectedItem</strong>(): <code>null</code></p>
 </blockquote>
-<p>Gets the default selected item from the aggregation named <code>items</code>.</p>
 <h4>Returns</h4>
 <p><code>null</code></p>
 <p>Null, as there is no default selected item</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the default selected item from the aggregation named <code>items</code>.</p>
 <hr>
 <h3>getFilterSecondaryValues()</h3>
 <blockquote>
 <p><strong>getFilterSecondaryValues</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getFilterSecondaryValues filterSecondaryValues.</p>
-<p>Indicates whether the filter should check in both the <code>text</code> and the <code>additionalText</code> property of the
-sap.ui.core.ListItem for the suggestion.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>filterSecondaryValues</code></p>
 <h4>Since</h4>
 <p>1.46</p>
+<p>Gets current value of property #getFilterSecondaryValues filterSecondaryValues.</p>
+<p>Indicates whether the filter should check in both the <code>text</code> and the <code>additionalText</code> property of the
+sap.ui.core.ListItem for the suggestion.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSelectedItem()</h3>
 <blockquote>
@@ -443,11 +443,11 @@ sap.ui.core.ListItem for the suggestion.</p>
 <blockquote>
 <p><strong>init</strong>(): <code>void</code></p>
 </blockquote>
-<p>This method will be called when the ComboBox is initially created.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This method will be called when the ComboBox is initially created.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#init"><code>init</code></a></p>
 <hr>
@@ -455,41 +455,41 @@ sap.ui.core.ListItem for the suggestion.</p>
 <blockquote>
 <p><strong>onAfterRenderingList</strong>(): <code>void</code></p>
 </blockquote>
-<p>This event handler will be called after the ComboBox Picker&#39;s List is rendered.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This event handler will be called after the ComboBox Picker&#39;s List is rendered.</p>
 <hr>
 <h3>onAfterRenderingPicker()</h3>
 <blockquote>
 <p><strong>onAfterRenderingPicker</strong>(): <code>void</code></p>
 </blockquote>
-<p>This event handler will be called after the ComboBox&#39;s Picker is rendered.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This event handler will be called after the ComboBox&#39;s Picker is rendered.</p>
 <hr>
 <h3>onBeforeOpen()</h3>
 <blockquote>
 <p><strong>onBeforeOpen</strong>(): <code>void</code></p>
 </blockquote>
-<p>This event handler is called before the picker popup is opened.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This event handler is called before the picker popup is opened.</p>
 <hr>
 <h3>onBeforeRendering()</h3>
 <blockquote>
 <p><strong>onBeforeRendering</strong>(): <code>void</code></p>
 </blockquote>
-<p>This event handler will be called before the ComboBox is rendered.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This event handler will be called before the ComboBox is rendered.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#onbeforerendering"><code>onBeforeRendering</code></a></p>
 <hr>
@@ -497,31 +497,31 @@ sap.ui.core.ListItem for the suggestion.</p>
 <blockquote>
 <p><strong>onBeforeRenderingDropdown</strong>(): <code>void</code></p>
 </blockquote>
-<p>This event handler will be called before the ComboBox&#39; Picker of type <code>sap.m.Popover</code> is rendered.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This event handler will be called before the ComboBox&#39; Picker of type <code>sap.m.Popover</code> is rendered.</p>
 <hr>
 <h3>onBeforeRenderingList()</h3>
 <blockquote>
 <p><strong>onBeforeRenderingList</strong>(): <code>void</code></p>
 </blockquote>
-<p>This event handler will be called before the ComboBox Picker&#39;s List is rendered.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This event handler will be called before the ComboBox Picker&#39;s List is rendered.</p>
 <hr>
 <h3>onBeforeRenderingPicker()</h3>
 <blockquote>
 <p><strong>onBeforeRenderingPicker</strong>(): <code>void</code></p>
 </blockquote>
-<p>This event handler will be called before the ComboBox&#39;s Picker is rendered.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This event handler will be called before the ComboBox&#39;s Picker is rendered.</p>
 <hr>
 <h3>ontap()</h3>
 <blockquote>
@@ -530,7 +530,7 @@ sap.ui.core.ListItem for the suggestion.</p>
 <p>Called when the <code>ComboBox</code> is clicked or tapped.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
-<p><a href="../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>The event object.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
@@ -539,12 +539,12 @@ sap.ui.core.ListItem for the suggestion.</p>
 <blockquote>
 <p><strong>open</strong>(): <code>this</code></p>
 </blockquote>
-<p>Opens the control&#39;s picker popup.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Opens the control&#39;s picker popup.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#open"><code>open</code></a></p>
 <hr>
@@ -552,7 +552,6 @@ sap.ui.core.ListItem for the suggestion.</p>
 <blockquote>
 <p><strong>selectText</strong>(<code>iSelectionStart</code>, <code>iSelectionEnd</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the start and end positions of the current text selection.</p>
 <h4>Parameters</h4>
 <h5>iSelectionStart</h5>
 <p><code>number</code></p>
@@ -567,6 +566,7 @@ sap.ui.core.ListItem for the suggestion.</p>
 <p>1.22.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets the start and end positions of the current text selection.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#selecttext"><code>selectText</code></a></p>
 <hr>
@@ -574,11 +574,6 @@ sap.ui.core.ListItem for the suggestion.</p>
 <blockquote>
 <p><strong>setFilterSecondaryValues</strong>(<code>bFilterSecondaryValues?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFilterSecondaryValues filterSecondaryValues.</p>
-<p>Indicates whether the filter should check in both the <code>text</code> and the <code>additionalText</code> property of the
-sap.ui.core.ListItem for the suggestion.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bFilterSecondaryValues?</h5>
 <p><code>boolean</code></p>
@@ -588,6 +583,11 @@ sap.ui.core.ListItem for the suggestion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46</p>
+<p>Sets a new value for property #getFilterSecondaryValues filterSecondaryValues.</p>
+<p>Indicates whether the filter should check in both the <code>text</code> and the <code>additionalText</code> property of the
+sap.ui.core.ListItem for the suggestion.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSelectedItem()</h3>
 <blockquote>
@@ -640,21 +640,21 @@ key is set and no item exists with that key, the visual selection remains the sa
 <blockquote>
 <p><strong>synchronizeSelection</strong>(): <code>void</code></p>
 </blockquote>
-<p>Synchronizes the <code>selectedItem</code> association and the <code>selectedItemId</code> property.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Synchronizes the <code>selectedItem</code> association and the <code>selectedItemId</code> property.</p>
 <hr>
 <h3>syncPickerContent()</h3>
 <blockquote>
 <p><strong>syncPickerContent</strong>(): <a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a> | <a href="../../Popover/classes/Popover.html"><code>Popover</code></a></p>
 </blockquote>
-<p>Creates picker if doesn&#39;t exist yet and sync with Control items</p>
 <h4>Returns</h4>
 <p><a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a> | <a href="../../Popover/classes/Popover.html"><code>Popover</code></a></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates picker if doesn&#39;t exist yet and sync with Control items</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#syncpickercontent"><code>syncPickerContent</code></a></p>
 <hr>
@@ -673,7 +673,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ComboBox</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ComboBox</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -697,6 +697,6 @@ used by this class</p>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

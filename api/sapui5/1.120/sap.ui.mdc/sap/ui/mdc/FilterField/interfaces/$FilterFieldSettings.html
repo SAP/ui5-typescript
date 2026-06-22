@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $FilterFieldSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FilterFieldSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $FilterFieldSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterField/interfaces/$FilterFieldSettings.html">
 <meta property="og:title" content="Interface: $FilterFieldSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FilterFieldSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $FilterFieldSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterField/interfaces/$FilterFieldSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/FilterField/README.html">FilterField</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/FilterField</a> / $FilterFieldSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/FilterField</a> / $FilterFieldSettings</p>
 <h1>Interface: $FilterFieldSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FilterFieldSettings } <span class="kw">from</span> <span class="str">"sap/ui/mdc/FilterField"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the FilterField constructor.</p>
-<p> (since 1.48.0)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../field/FieldBase/interfaces/$FieldBaseSettings.html"><code>$FieldBaseSettings</code></a></li>
@@ -50,18 +47,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>additionalDataType?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.118.0</p>
 <p>The type of data for the description part of an &quot;equal to&quot; condition. This type is used to parse, format,
 and validate the value.</p>
 <p>Here a data type instance can be provided or an object containing <code>name</code>, <code>formatOptions</code>, and <code>constraints</code>.</p>
-<h4>Since</h4>
-<p>1.118.0</p>
 <hr>
 <h3>change?</h3>
 <blockquote>
 <p><code>optional</code> <strong>change?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when the <code>value</code> property of the field is changed.</p>
 <p><strong>Note</strong> This event is only triggered if the used content control has a change event.</p>
 <h4>Parameters</h4>
@@ -74,35 +69,32 @@ and validate the value.</p>
 <blockquote>
 <p><code>optional</code> <strong>defaultOperator?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.88.0</p>
 <p>Default operator name for conditions. If empty, the relevant default operator depending on the data type
 used is taken.</p>
 <p><strong>Note</strong>: <code>defaultOperator</code> can be the name of an sap.ui.mdc.condition.Operator Operator or the
 instance itself.</p>
-<h4>Since</h4>
-<p>1.88.0</p>
 <hr>
 <h3>operators?</h3>
 <blockquote>
 <p><code>optional</code> <strong>operators?</strong>: <code>string</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.73.0</p>
 <p>Supported operator names for conditions.</p>
 <p>If empty, default operators depending on used data type are taken. The standard operators are mentioned
 in sap.ui.mdc.enums.OperatorName OperatorName.</p>
-<h4>Since</h4>
-<p>1.73.0</p>
 <hr>
 <h3>propertyKey?</h3>
 <blockquote>
 <p><code>optional</code> <strong>propertyKey?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>Key of the property the <code>FilterField</code> represents.</p>
 <h4>Since</h4>
 <p>1.115.0</p>
+<p>Key of the property the <code>FilterField</code> represents.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

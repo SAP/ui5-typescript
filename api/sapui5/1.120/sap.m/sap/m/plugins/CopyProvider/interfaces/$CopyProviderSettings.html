@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $CopyProviderSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $CopyProviderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: $CopyProviderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/plugins/CopyProvider/interfaces/$CopyProviderSettings.html">
 <meta property="og:title" content="Interface: $CopyProviderSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $CopyProviderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: $CopyProviderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/plugins/CopyProvider/interfaces/$CopyProviderSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.m/README.html">sap.m</a> › sap › m › plugins › <a href="../../../../../../sap.m/sap/m/plugins/CopyProvider/README.html">CopyProvider</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/plugins/CopyProvider</a> / $CopyProviderSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/plugins/CopyProvider</a> / $CopyProviderSettings</p>
 <h1>Interface: $CopyProviderSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $CopyProviderSettings } <span class="kw">from</span> <span class="str">"sap/m/plugins/CopyProvider"</span>;</pre>
-<p>Describes the settings that can be provided to the CopyProvider constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -63,12 +62,12 @@ fired. To avoid writing the selection to the clipboard, call <code>preventDefaul
 <blockquote>
 <p><code>optional</code> <strong>copyPreference?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Full&quot;</code> | <a href="../../../library/namespaces/plugins/enumerations/CopyPreference.html"><code>CopyPreference</code></a> | <code>&quot;Cells&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.119</p>
 <p>This property determines the copy preference when performing a copy operation.</p>
 <p>If the property is set to <code>Full</code>, all selected content is copied. This includes selected rows and cells.</p>
 <p>If the property is set to <code>Cells</code>, cell selection takes precedence during copying. If cells are selected
 along with rows, only the cell selection is copied. If no cells are selected, the row selection is copied.</p>
-<h4>Since</h4>
-<p>1.119</p>
 <hr>
 <h3>copySparse?</h3>
 <blockquote>
@@ -101,7 +100,7 @@ row in case of a range selection, for example the context of grouping or sub-tot
  For the <code>sap.m.Table</code> control, if the <code>items</code> aggregation of the table is not bound then the callback
 function gets called with the row instance instead of the binding context.
  The callback function must return the cell data that is then stringified and copied to the clipboard.
- If an array is returned from the callback function, then each array value will be copied as a separate
+ If an array is returned from the callback function, then each array values will be copied as a separate
 cell into the clipboard.
  If a column should not be copied to the clipboard, then the callback function must return <code>undefined</code>
 or <code>null</code> for each cell of the same column.</p>
@@ -112,10 +111,10 @@ constructor.</p>
 <blockquote>
 <p><code>optional</code> <strong>visible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines the visibility of the Copy button created with the #getCopyButton API.</p>
 <h4>Since</h4>
 <p>1.114</p>
+<p>Defines the visibility of the Copy button created with the #getCopyButton API.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

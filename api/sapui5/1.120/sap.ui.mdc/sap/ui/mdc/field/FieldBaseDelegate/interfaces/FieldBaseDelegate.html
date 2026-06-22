@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: FieldBaseDelegate — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: FieldBaseDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: FieldBaseDelegate — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/field/FieldBaseDelegate/interfaces/FieldBaseDelegate.html">
 <meta property="og:title" content="Interface: FieldBaseDelegate — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: FieldBaseDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: FieldBaseDelegate — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/field/FieldBaseDelegate/interfaces/FieldBaseDelegate.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › field › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/field/FieldBaseDelegate/README.html">FieldBaseDelegate</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/field/FieldBaseDelegate</a> / FieldBaseDelegate</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/field/FieldBaseDelegate</a> / FieldBaseDelegate</p>
 <h1>Interface: FieldBaseDelegate</h1>
 <pre class="sig"><span class="kw">import</span> FieldBaseDelegate <span class="kw">from</span> <span class="str">"sap/ui/mdc/field/FieldBaseDelegate"</span>;</pre>
+<h2>Since</h2>
+<p>1.72.0</p>
 <p>Delegate for sap.ui.mdc.field.FieldBase FieldBase.
  <strong>Note:</strong> The class is experimental and the API/behavior is not finalized and hence this should not
 be used for productive usage.</p>
-<h2>Since</h2>
-<p>1.72.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../BaseDelegate/interfaces/BaseDelegate.html"><code>BaseDelegate</code></a></li>
@@ -53,14 +53,6 @@ be used for productive usage.</p>
 <blockquote>
 <p><strong>createCondition</strong>(<code>oField</code>, <code>oControl</code>, <code>aValues</code>, <code>oCurrentCondition</code>): <a href="../../../condition/Condition/type-aliases/ConditionObject.html"><code>ConditionObject</code></a></p>
 </blockquote>
-<p>Enables applications to control condition updates based on sap.ui.mdc.Field#getValue value /
-sap.ui.mdc.Field#getAdditionalValue additionalValue property changes of a sap.ui.mdc.Field Field
-or sap.ui.mdc.field.MultiValueFieldItem#getKey key / sap.ui.mdc.field.MultiValueFieldItem#getDescription description
-property changes of a sap.ui.mdc.MultiValueField MultiValueField.
-By default, this method returns a condition with an <code>EQ</code> operator.</p>
-<p><strong>Note:</strong> Custom implementations of this method may lead to intransparency as a field&#39;s condition may
-then differ from the state of the <code>value</code> / <code>additionalvalue</code> properties. Avoid expensive operations,
-as this can delay the rendering of the output.</p>
 <h5>Parameters</h5>
 <h6>oField</h6>
 <p><a href="../../FieldBase/classes/FieldBase.html"><code>FieldBase</code></a></p>
@@ -79,18 +71,14 @@ as this can delay the rendering of the output.</p>
 <p>Returns a condition object that is set on the control</p>
 <h5>Since</h5>
 <p>1.107.0</p>
+<p>Enables applications to control condition updates based on <code>value</code> / <code>additionalvalue</code> property changes.</p>
+<p><strong>Note:</strong> Custom implementations of this method may lead to intransparency as a field&#39;s condition may
+then differ from the state of the <code>value</code> / <code>additionalvalue</code> properties. Avoid expensive operations,
+as this can delay the rendering of the output.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>createCondition</strong>(<code>oField</code>, <code>aValues</code>, <code>oCurrentCondition</code>): <a href="../../../condition/Condition/type-aliases/ConditionObject.html"><code>ConditionObject</code></a></p>
 </blockquote>
-<p>Enables applications to control condition updates based on sap.ui.mdc.Field#getValue value /
-sap.ui.mdc.Field#getAdditionalValue additionalValue property changes of a sap.ui.mdc.Field Field
-or sap.ui.mdc.field.MultiValueFieldItem#getKey key / sap.ui.mdc.field.MultiValueFieldItem#getDescription description
-property changes of a sap.ui.mdc.MultiValueField MultiValueField.
-By default, this method returns a condition with an <code>EQ</code> operator.</p>
-<p><strong>Note:</strong> Custom implementations of this method may lead to intransparency as a field&#39;s condition may
-then differ from the state of the <code>value</code> / <code>additionalvalue</code> properties. Avoid expensive operations,
-as this can delay the rendering of the output.</p>
 <h5>Parameters</h5>
 <h6>oField</h6>
 <p><a href="../../FieldBase/classes/FieldBase.html"><code>FieldBase</code></a></p>
@@ -106,14 +94,16 @@ as this can delay the rendering of the output.</p>
 <p>Returns a condition object that is set on the control</p>
 <h5>Since</h5>
 <p>1.107.0</p>
+<p>Enables applications to control condition updates based on <code>value</code> / <code>additionalvalue</code> property changes.</p>
+<p><strong>Note:</strong> Custom implementations of this method may lead to intransparency as a field&#39;s condition may
+then differ from the state of the <code>value</code> / <code>additionalvalue</code> properties. Avoid expensive operations,
+as this can delay the rendering of the output.</p>
 <hr>
 <h3>createConditionPayload()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>createConditionPayload</strong>(<code>oField</code>, <code>oControl</code>, <code>aValues</code>): <code>object</code></p>
 </blockquote>
-<p>Provides the possibility to convey custom data in conditions. This enables an application to enhance
-conditions with data relevant for combined key or out parameter scenarios.</p>
 <h5>Parameters</h5>
 <h6>oField</h6>
 <p><a href="../../FieldBase/classes/FieldBase.html"><code>FieldBase</code></a></p>
@@ -129,12 +119,12 @@ conditions with data relevant for combined key or out parameter scenarios.</p>
 <p>Optionally returns a serializeable object to be stored in the condition payload field.</p>
 <h5>Since</h5>
 <p>1.107.0</p>
+<p>Provides the possibility to convey custom data in conditions. This enables an application to enhance
+conditions with data relevant for combined key or out parameter scenarios.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>createConditionPayload</strong>(<code>oField</code>, <code>aValues</code>): <code>object</code></p>
 </blockquote>
-<p>Provides the possibility to convey custom data in conditions. This enables an application to enhance
-conditions with data relevant for combined key or out parameter scenarios.</p>
 <h5>Parameters</h5>
 <h6>oField</h6>
 <p><a href="../../FieldBase/classes/FieldBase.html"><code>FieldBase</code></a></p>
@@ -147,6 +137,8 @@ conditions with data relevant for combined key or out parameter scenarios.</p>
 <p>Optionally returns a serializeable object to be stored in the condition payload field.</p>
 <h5>Since</h5>
 <p>1.107.0</p>
+<p>Provides the possibility to convey custom data in conditions. This enables an application to enhance
+conditions with data relevant for combined key or out parameter scenarios.</p>
 <hr>
 <h3>getDescription()</h3>
 <h4>Call Signature</h4>
@@ -362,6 +354,6 @@ control</p>
 a <code>Promise</code> is returned.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

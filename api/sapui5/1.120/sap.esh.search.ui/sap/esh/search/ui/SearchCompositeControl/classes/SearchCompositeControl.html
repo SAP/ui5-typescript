@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SearchCompositeControl — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SearchCompositeControl — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Class: SearchCompositeControl — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.esh.search.ui/sap/esh/search/ui/SearchCompositeControl/classes/SearchCompositeControl.html">
 <meta property="og:title" content="Class: SearchCompositeControl — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SearchCompositeControl — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Class: SearchCompositeControl — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.esh.search.ui/sap/esh/search/ui/SearchCompositeControl/classes/SearchCompositeControl.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.esh.search.ui/README.html">sap.esh.search.ui</a> › sap › esh › search › ui › <a href="../../../../../../../sap.esh.search.ui/sap/esh/search/ui/SearchCompositeControl/README.html">SearchCompositeControl</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.esh.search.ui</a> / <a href="../README.html">sap/esh/search/ui/SearchCompositeControl</a> / SearchCompositeControl</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.esh.search.ui</a> / <a href="../README.html">sap/esh/search/ui/SearchCompositeControl</a> / SearchCompositeControl</p>
 <h1>Class: SearchCompositeControl</h1>
 <pre class="sig"><span class="kw">import</span> SearchCompositeControl <span class="kw">from</span> <span class="str">"sap/esh/search/ui/SearchCompositeControl"</span>;</pre>
+<h2>Since</h2>
+<p>1.93.0</p>
 <p>This is the SAPUI5 composite control by the Enterprise Search Team which helps to make full use of the
 Enterprise Search Engine features built into ABAP and HANA. It includes a search input box including
 a suggestion dropdown, a result list which can have different styles including tiles and table, result
 facets and more. This control is ready to use with an enterprise search backend service but also allows
 deep modifications to match requirements of adopting applications.</p>
-<h2>Since</h2>
-<p>1.93.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -238,7 +238,6 @@ itself</p>
 <blockquote>
 <p><strong>fireSearchFinished</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:searchFinished searchFinished to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -248,12 +247,12 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:searchFinished searchFinished to attached listeners.</p>
 <hr>
 <h3>fireSearchStarted()</h3>
 <blockquote>
 <p><strong>fireSearchStarted</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:searchStarted searchStarted to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -263,46 +262,47 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:searchStarted searchStarted to attached listeners.</p>
 <hr>
 <h3>getApplicationComponent()</h3>
 <blockquote>
 <p><strong>getApplicationComponent</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getApplicationComponent applicationComponent.</p>
-<p>Relevant for SAP partners and SAP, the &quot;Application Component&quot; you expect customers to create incidents.</p>
-<p>Default value is <code>&quot;HAN-AS-INA-UI&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>applicationComponent</code></p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>Gets current value of property #getApplicationComponent applicationComponent.</p>
+<p>Relevant for SAP partners and SAP, the &quot;Application Component&quot; you expect customers to create incidents.</p>
+<p>Default value is <code>&quot;HAN-AS-INA-UI&quot;</code>.</p>
 <hr>
 <h3>getAutoAdjustResultViewTypeInFolderMode()</h3>
 <blockquote>
 <p><strong>getAutoAdjustResultViewTypeInFolderMode</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAutoAdjustResultViewTypeInFolderMode autoAdjustResultViewTypeInFolderMode.</p>
-<p>In case folder mode is active: Automatically switch result view type to list in search mode and to table
-in folder mode.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>autoAdjustResultViewTypeInFolderMode</code></p>
 <h4>Since</h4>
 <p>1.106.0</p>
+<p>Gets current value of property #getAutoAdjustResultViewTypeInFolderMode autoAdjustResultViewTypeInFolderMode.</p>
+<p>In case folder mode is active: Automatically switch result view type to list in search mode and to table
+in folder mode.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getBoSuggestions()</h3>
 <blockquote>
 <p><strong>getBoSuggestions</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getBoSuggestions boSuggestions.</p>
-<p>A boolean for enabling (business) object suggestions.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>boSuggestions</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getBoSuggestions boSuggestions.</p>
+<p>A boolean for enabling (business) object suggestions.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
@@ -317,166 +317,171 @@ in folder mode.</p>
 <blockquote>
 <p><strong>getCssClass</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getCssClass cssClass.</p>
-<p>An additional CSS class to add to this control</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>cssClass</code></p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Gets current value of property #getCssClass cssClass.</p>
+<p>An additional CSS class to add to this control</p>
 <hr>
 <h3>getDataSource()</h3>
 <blockquote>
 <p><strong>getDataSource</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getDataSource dataSource.</p>
-<p>The id of the data source in which it will search right after initialization.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>dataSource</code></p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Gets current value of property #getDataSource dataSource.</p>
+<p>The id of the data source in which it will search right after initialization.</p>
 <hr>
 <h3>getDefaultDataSource()</h3>
 <blockquote>
 <p><strong>getDefaultDataSource</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getDefaultDataSource defaultDataSource.</p>
-<p>Data source id which is set when the UI is loaded or filter is reset. If dataSource is also set, dataSource
-will be used during UI load and this parameter will used only after filter is reset.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>defaultDataSource</code></p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Gets current value of property #getDefaultDataSource defaultDataSource.</p>
+<p>Data source id which is set when the UI is loaded or filter is reset. If dataSource is also set, dataSource
+will be used during UI load and this parameter will used only after filter is reset.</p>
 <hr>
 <h3>getDisplayFacetPanelInCaseOfNoResults()</h3>
 <blockquote>
 <p><strong>getDisplayFacetPanelInCaseOfNoResults</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getDisplayFacetPanelInCaseOfNoResults displayFacetPanelInCaseOfNoResults.</p>
-<p>When set to true the facet panel is displayed also in case there are no search results.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>displayFacetPanelInCaseOfNoResults</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getDisplayFacetPanelInCaseOfNoResults displayFacetPanelInCaseOfNoResults.</p>
+<p>When set to true the facet panel is displayed also in case there are no search results.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEnableMultiSelectionResultItems()</h3>
 <blockquote>
 <p><strong>getEnableMultiSelectionResultItems</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableMultiSelectionResultItems enableMultiSelectionResultItems.</p>
-<p>Enables the multiselection mode of search result items. A checkbox is provided for each result item if
-the value is true.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableMultiSelectionResultItems</code></p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Gets current value of property #getEnableMultiSelectionResultItems enableMultiSelectionResultItems.</p>
+<p>Enables the multiselection mode of search result items. A checkbox is provided for each result item if
+the value is true.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEnableQueryLanguage()</h3>
 <blockquote>
 <p><strong>getEnableQueryLanguage</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableQueryLanguage enableQueryLanguage.</p>
-<p>Enables the query language for the hana_odata provider. With query language it is possible for the end
-user to enter complex search queries with logical operators.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableQueryLanguage</code></p>
 <h4>Since</h4>
 <p>1.107.0</p>
+<p>Gets current value of property #getEnableQueryLanguage enableQueryLanguage.</p>
+<p>Enables the query language for the hana_odata provider. With query language it is possible for the end
+user to enter complex search queries with logical operators.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEventConsumers()</h3>
 <blockquote>
 <p><strong>getEventConsumers</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getEventConsumers eventConsumers.</p>
-<p>Adds a callback function which is called whenever there is a user triggered event.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>eventConsumers</code></p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Gets current value of property #getEventConsumers eventConsumers.</p>
+<p>Adds a callback function which is called whenever there is a user triggered event.</p>
 <hr>
 <h3>getFacetPanelResizable()</h3>
 <blockquote>
 <p><strong>getFacetPanelResizable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getFacetPanelResizable facetPanelResizable.</p>
-<p>Display a splitter bar to resize the left hand panel, containing all facets and filter criteria.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>facetPanelResizable</code></p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>Gets current value of property #getFacetPanelResizable facetPanelResizable.</p>
+<p>Display a splitter bar to resize the left hand panel, containing all facets and filter criteria.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getFacetPanelWidthInPercent()</h3>
 <blockquote>
 <p><strong>getFacetPanelWidthInPercent</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getFacetPanelWidthInPercent facetPanelWidthInPercent.</p>
-<p>Default size (percent) of the left hand panel, containing all facets and filter criteria. If &quot;facetPanelResizable&quot;
-is true, the width of the facet panel can be changed by the user.</p>
-<p>Default value is <code>25</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>facetPanelWidthInPercent</code></p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>Gets current value of property #getFacetPanelWidthInPercent facetPanelWidthInPercent.</p>
+<p>Default size (percent) of the left hand panel, containing all facets and filter criteria. If &quot;facetPanelResizable&quot;
+is true, the width of the facet panel can be changed by the user.</p>
+<p>Default value is <code>25</code>.</p>
 <hr>
 <h3>getFacetVisibility()</h3>
 <blockquote>
 <p><strong>getFacetVisibility</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getFacetVisibility facetVisibility.</p>
-<p>A boolean which indicates whether the facet panel is initially openend or closed. This affects only the
-initial state of the facet panel. When not setting facetVisibility the initial state of the facet panel
-typically is taken from the user personalization storage.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>facetVisibility</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getFacetVisibility facetVisibility.</p>
+<p>A boolean which indicates whether the facet panel is initially openend or closed. This affects only the
+initial state of the facet panel. When not setting facetVisibility the initial state of the facet panel
+typically is taken from the user personalization storage.</p>
 <hr>
 <h3>getFilterDataSources()</h3>
 <blockquote>
 <p><strong>getFilterDataSources</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getFilterDataSources filterDataSources.</p>
-<p>Callback for filtering the datasources displayed in the datasource dropdown listbox. The callback gets
-a list of datsources and returns the filtered list of datasources.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>filterDataSources</code></p>
 <h4>Since</h4>
 <p>1.112.0</p>
+<p>Gets current value of property #getFilterDataSources filterDataSources.</p>
+<p>Callback for filtering the datasources displayed in the datasource dropdown listbox. The callback gets
+a list of datsources and returns the filtered list of datasources.</p>
 <hr>
 <h3>getFilterRootCondition()</h3>
 <blockquote>
 <p><strong>getFilterRootCondition</strong>(): <code>object</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>filterRootCondition</code></p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <p>Gets current value of property #getFilterRootCondition filterRootCondition.</p>
 <p>Defines the filter root condition of a filter tree which shall be applied to the search request. This
 control only allows filter trees which have a the following structure: complex condition (root level)
 \ complex condition (attribute level) \ simple condition (attribute value level) Filter root conditions
 which do not follow this structure won&#39;t be accepted and an error will be thrown. Please see the below
 for a more in-depth example.</p>
-<h4>Returns</h4>
-<p><code>object</code></p>
-<p>Value of property <code>filterRootCondition</code></p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <hr>
 <h3>getFolderMode()</h3>
 <blockquote>
 <p><strong>getFolderMode</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>folderMode</code></p>
+<h4>Since</h4>
+<p>1.106.0</p>
 <p>Gets current value of property #getFolderMode folderMode.</p>
 <p>Activates the folder mode. Precondition for folder mode is 1) Search model: In the search model for the
 current datasource a hierarchy attribute (representing the folders) is defined 1.1) the hierarchy attribute
@@ -489,50 +494,45 @@ are set.</p>
 In contrast the counts in the facets are calculated by counting direct and not direct children. In case
 the folder mode is not active the UI uses the search mode: The result list shows direct and not direct
 children of a folder.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>folderMode</code></p>
-<h4>Since</h4>
-<p>1.106.0</p>
 <hr>
 <h3>getFolderModeForInitialSearch()</h3>
 <blockquote>
 <p><strong>getFolderModeForInitialSearch</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getFolderModeForInitialSearch folderModeForInitialSearch.</p>
-<p>In case folderMode is set to true this boolean indicates whether for the initial search the folder mode
-is enabled.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>folderModeForInitialSearch</code></p>
 <h4>Since</h4>
 <p>1.114.0</p>
+<p>Gets current value of property #getFolderModeForInitialSearch folderModeForInitialSearch.</p>
+<p>In case folderMode is set to true this boolean indicates whether for the initial search the folder mode
+is enabled.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getFormatFilterBarText()</h3>
 <blockquote>
 <p><strong>getFormatFilterBarText</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getFormatFilterBarText formatFilterBarText.</p>
-<p>Callback for formatting the filter string to be displayed in the filter bar (for closed facet panel).</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>formatFilterBarText</code></p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Gets current value of property #getFormatFilterBarText formatFilterBarText.</p>
+<p>Callback for formatting the filter string to be displayed in the filter bar (for closed facet panel).</p>
 <hr>
 <h3>getGetCustomNoResultScreen()</h3>
 <blockquote>
 <p><strong>getGetCustomNoResultScreen</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getGetCustomNoResultScreen getCustomNoResultScreen.</p>
-<p>Whenever a search has no results, a &#39;No Results Page&#39; is displayed. You can provide a custom page to
-be more specific and add some hints, links, buttons or other content.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>getCustomNoResultScreen</code></p>
 <h4>Since</h4>
 <p>1.94.0</p>
+<p>Gets current value of property #getGetCustomNoResultScreen getCustomNoResultScreen.</p>
+<p>Whenever a search has no results, a &#39;No Results Page&#39; is displayed. You can provide a custom page to
+be more specific and add some hints, links, buttons or other content.</p>
 <hr>
 <h3>getGetSearchInputPlaceholderLabel()</h3>
 <blockquote>
@@ -549,121 +549,126 @@ term. The placeholder text (en) will be &quot;Search In: &quot;.</p>
 <blockquote>
 <p><strong>getInitAsync</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getInitAsync initAsync.</p>
-<p>A callback which is called after the initialization of the search composite control.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>initAsync</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getInitAsync initAsync.</p>
+<p>A callback which is called after the initialization of the search composite control.</p>
 <hr>
 <h3>getIsFilterBarVisible()</h3>
 <blockquote>
 <p><strong>getIsFilterBarVisible</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getIsFilterBarVisible isFilterBarVisible.</p>
-<p>Callback for checking whether the filter bar is visible.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>isFilterBarVisible</code></p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Gets current value of property #getIsFilterBarVisible isFilterBarVisible.</p>
+<p>Callback for checking whether the filter bar is visible.</p>
 <hr>
 <h3>getIsSearchUrl()</h3>
 <blockquote>
 <p><strong>getIsSearchUrl</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getIsSearchUrl isSearchUrl.</p>
-<p>A callback for checking whether a URL is a search URL. The callback receives a URL and returns true in
-case the URL is a search URL. Typically you need to register this callback in case updateUrl=true.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>isSearchUrl</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getIsSearchUrl isSearchUrl.</p>
+<p>A callback for checking whether a URL is a search URL. The callback receives a URL and returns true in
+case the URL is a search URL. Typically you need to register this callback in case updateUrl=true.</p>
 <hr>
 <h3>getOptimizeForValueHelp()</h3>
 <blockquote>
 <p><strong>getOptimizeForValueHelp</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getOptimizeForValueHelp optimizeForValueHelp.</p>
-<p>The layout is optimized for object selection / value help (narrow view w/o facet panel).</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>optimizeForValueHelp</code></p>
 <h4>Since</h4>
 <p>1.111.0</p>
+<p>Gets current value of property #getOptimizeForValueHelp optimizeForValueHelp.</p>
+<p>The layout is optimized for object selection / value help (narrow view w/o facet panel).</p>
 <hr>
 <h3>getOverwriteBrowserTitle()</h3>
 <blockquote>
 <p><strong>getOverwriteBrowserTitle</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getOverwriteBrowserTitle overwriteBrowserTitle.</p>
-<p>Shall the window title be overwritten by this control? If true, the control will set the current search
-condition as window title. If false, it will not set or update the window title.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>overwriteBrowserTitle</code></p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Gets current value of property #getOverwriteBrowserTitle overwriteBrowserTitle.</p>
+<p>Shall the window title be overwritten by this control? If true, the control will set the current search
+condition as window title. If false, it will not set or update the window title.</p>
 <hr>
 <h3>getPageSize()</h3>
 <blockquote>
 <p><strong>getPageSize</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getPageSize pageSize.</p>
-<p>The maximal count of search result items displayed on a page after a search. By clicking Show More button,
-another page of result items of the same count (if available) will be displayed.</p>
-<p>Default value is <code>10</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>pageSize</code></p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Gets current value of property #getPageSize pageSize.</p>
+<p>The maximal count of search result items displayed on a page after a search. By clicking Show More button,
+another page of result items of the same count (if available) will be displayed.</p>
+<p>Default value is <code>10</code>.</p>
 <hr>
 <h3>getParseSearchUrlParameters()</h3>
 <blockquote>
 <p><strong>getParseSearchUrlParameters</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getParseSearchUrlParameters parseSearchUrlParameters.</p>
-<p>A callback for parsing URL parameters. The callback receices URL parameters and returns modified URL
-parameters. This is an optional callback. Also in case you set updateUrl=true typcically this callback
-is not needed.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>parseSearchUrlParameters</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getParseSearchUrlParameters parseSearchUrlParameters.</p>
+<p>A callback for parsing URL parameters. The callback receices URL parameters and returns modified URL
+parameters. This is an optional callback. Also in case you set updateUrl=true typcically this callback
+is not needed.</p>
 <hr>
 <h3>getQuickSelectDataSources()</h3>
 <blockquote>
 <p><strong>getQuickSelectDataSources</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getQuickSelectDataSources quickSelectDataSources.</p>
-<p>A list of datasources to be displayed in the facet panel in the collection area.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>quickSelectDataSources</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getQuickSelectDataSources quickSelectDataSources.</p>
+<p>A list of datasources to be displayed in the facet panel in the collection area.</p>
 <hr>
 <h3>getRenderSearchUrl()</h3>
 <blockquote>
 <p><strong>getRenderSearchUrl</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getRenderSearchUrl renderSearchUrl.</p>
-<p>A callback for rendering the search URL. The callback gets a list of url encoded parameters and returns
-the URL string. Typically you need to register this callback in case updateUrl=true.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>renderSearchUrl</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getRenderSearchUrl renderSearchUrl.</p>
+<p>A callback for rendering the search URL. The callback gets a list of url encoded parameters and returns
+the URL string. Typically you need to register this callback in case updateUrl=true.</p>
 <hr>
 <h3>getResultViewSettings()</h3>
 <blockquote>
 <p><strong>getResultViewSettings</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>resultViewSettings</code></p>
+<h4>Since</h4>
+<p>1.100.0</p>
 <p>Gets current value of property #getResultViewSettings resultViewSettings.</p>
 <p>Defines a pair of search result view settings. The value is an object of properties <code>resultViewTypes</code>
 and <code>resultViewType</code>. An example: <code>{resultViewTypes: [&quot;searchResultList&quot;, &quot;searchResultTable&quot;], resultViewType: &quot;searchResultList&quot;}</code> Find more detail in the definition of each child property. The value can be set/get
@@ -671,16 +676,16 @@ in attached event &quot;searchFinished&quot;. Function <code>setResultViewSettin
 execution of functions <code>setResultViewTypes</code> and <code>setResultViewType</code>. Note: The value of <code>resultViewTypes</code>
 and <code>resultViewType</code> must be compatible to each other.</p>
 <p>Default value is <code>...see text or source</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>resultViewSettings</code></p>
-<h4>Since</h4>
-<p>1.100.0</p>
 <hr>
 <h3>getResultViewType()</h3>
 <blockquote>
 <p><strong>getResultViewType</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>resultViewType</code></p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <p>Gets current value of property #getResultViewType resultViewType.</p>
 <p>Defines active search result view type. The value can be set/get in attach event &quot;searchFinished&quot;, and
 it must be contained in resultViewTypes. Case 1, Search in Apps: result is displayed in a mandatory view
@@ -691,16 +696,16 @@ mandatory view type <code>&quot;searchResultList&quot;</code>. Case 3, Search in
 different view types. Possible value is <code>&quot;searchResultList&quot;</code>, <code>&quot;searchResultTable&quot;</code> or <code>&quot;searchResultGrid&quot;</code>.
 Note: The value of <code>resultViewTypes</code> and <code>resultViewType</code> must be compatible to each other.</p>
 <p>Default value is <code>&quot;searchResultList&quot;</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>resultViewType</code></p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <hr>
 <h3>getResultViewTypes()</h3>
 <blockquote>
 <p><strong>getResultViewTypes</strong>(): <code>string</code>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code>[]</p>
+<p>Value of property <code>resultViewTypes</code></p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <p>Gets current value of property #getResultViewTypes resultViewTypes.</p>
 <p>Defines selectable search result view types. The value can be set/get in attach event &quot;searchFinished&quot;.
 Case 1: Search in Apps: result is displayed in a mandatory view type <code>[&quot;appSearchResult&quot;]</code>, and it is
@@ -710,89 +715,84 @@ Search in Business Object: result is switchable between different view types. Po
 array items are <code>&quot;searchResultList&quot;</code>, <code>&quot;searchResultTable&quot;</code> and <code>&quot;searchResultGrid&quot;</code>. Note: The value
 of <code>resultViewTypes</code> and <code>resultViewType</code> must be compatible to each other.</p>
 <p>Default value is <code>[&quot;searchResultList&quot;, &quot;searchResultTable&quot;]</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code>[]</p>
-<p>Value of property <code>resultViewTypes</code></p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <hr>
 <h3>getSearchOnStart()</h3>
 <blockquote>
 <p><strong>getSearchOnStart</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSearchOnStart searchOnStart.</p>
-<p>Defines if the search composite control will send a search request after loading for the given term,
-data source and filter root condition settings.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>searchOnStart</code></p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Gets current value of property #getSearchOnStart searchOnStart.</p>
+<p>Defines if the search composite control will send a search request after loading for the given term,
+data source and filter root condition settings.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getSearchTerm()</h3>
 <blockquote>
 <p><strong>getSearchTerm</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSearchTerm searchTerm.</p>
-<p>Defines the initial search term for the search input.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>searchTerm</code></p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Gets current value of property #getSearchTerm searchTerm.</p>
+<p>Defines the initial search term for the search input.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getSelectionChange()</h3>
 <blockquote>
 <p><strong>getSelectionChange</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectionChange selectionChange.</p>
-<p>A callback which is called whenever the selection of result list items changes.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>selectionChange</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getSelectionChange selectionChange.</p>
+<p>A callback which is called whenever the selection of result list items changes.</p>
 <hr>
 <h3>getSinaConfiguration()</h3>
 <blockquote>
 <p><strong>getSinaConfiguration</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getSinaConfiguration sinaConfiguration.</p>
-<p>Configuration for the Enterprise Search Client API.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>sinaConfiguration</code></p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Gets current value of property #getSinaConfiguration sinaConfiguration.</p>
+<p>Configuration for the Enterprise Search Client API.</p>
 <hr>
 <h3>getTabStripsFormatter()</h3>
 <blockquote>
 <p><strong>getTabStripsFormatter</strong>(): <code>Function</code></p>
 </blockquote>
-<p>Gets current value of property #getTabStripsFormatter tabStripsFormatter.</p>
-<p>Function callback for formatting the datasource tabstrips in the top toolbar. To the callback function
-a list of datasources is passed. The callback functions return a modified list of datasources to be displayed
-in the tabstrips.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>Value of property <code>tabStripsFormatter</code></p>
 <h4>Since</h4>
 <p>1.103.0</p>
+<p>Gets current value of property #getTabStripsFormatter tabStripsFormatter.</p>
+<p>Function callback for formatting the datasource tabstrips in the top toolbar. To the callback function
+a list of datasources is passed. The callback functions return a modified list of datasources to be displayed
+in the tabstrips.</p>
 <hr>
 <h3>getUpdateUrl()</h3>
 <blockquote>
 <p><strong>getUpdateUrl</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getUpdateUrl updateUrl.</p>
-<p>A boolean indicating that the search state is written to the URL.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>updateUrl</code></p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Gets current value of property #getUpdateUrl updateUrl.</p>
+<p>A boolean indicating that the search state is written to the URL.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -853,10 +853,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setApplicationComponent</strong>(<code>sApplicationComponent?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getApplicationComponent applicationComponent.</p>
-<p>Relevant for SAP partners and SAP, the &quot;Application Component&quot; you expect customers to create incidents.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;HAN-AS-INA-UI&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sApplicationComponent?</h5>
 <p><code>string</code></p>
@@ -866,16 +862,15 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>Sets a new value for property #getApplicationComponent applicationComponent.</p>
+<p>Relevant for SAP partners and SAP, the &quot;Application Component&quot; you expect customers to create incidents.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;HAN-AS-INA-UI&quot;</code>.</p>
 <hr>
 <h3>setAutoAdjustResultViewTypeInFolderMode()</h3>
 <blockquote>
 <p><strong>setAutoAdjustResultViewTypeInFolderMode</strong>(<code>bAutoAdjustResultViewTypeInFolderMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAutoAdjustResultViewTypeInFolderMode autoAdjustResultViewTypeInFolderMode.</p>
-<p>In case folder mode is active: Automatically switch result view type to list in search mode and to table
-in folder mode.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAutoAdjustResultViewTypeInFolderMode?</h5>
 <p><code>boolean</code></p>
@@ -885,15 +880,16 @@ in folder mode.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.106.0</p>
+<p>Sets a new value for property #getAutoAdjustResultViewTypeInFolderMode autoAdjustResultViewTypeInFolderMode.</p>
+<p>In case folder mode is active: Automatically switch result view type to list in search mode and to table
+in folder mode.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setBoSuggestions()</h3>
 <blockquote>
 <p><strong>setBoSuggestions</strong>(<code>bBoSuggestions?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getBoSuggestions boSuggestions.</p>
-<p>A boolean for enabling (business) object suggestions.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bBoSuggestions?</h5>
 <p><code>boolean</code></p>
@@ -903,14 +899,15 @@ in folder mode.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getBoSuggestions boSuggestions.</p>
+<p>A boolean for enabling (business) object suggestions.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setCssClass()</h3>
 <blockquote>
 <p><strong>setCssClass</strong>(<code>sCssClass</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getCssClass cssClass.</p>
-<p>An additional CSS class to add to this control</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sCssClass</h5>
 <p><code>string</code></p>
@@ -920,14 +917,14 @@ in folder mode.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Sets a new value for property #getCssClass cssClass.</p>
+<p>An additional CSS class to add to this control</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDataSource()</h3>
 <blockquote>
 <p><strong>setDataSource</strong>(<code>sDataSource</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDataSource dataSource.</p>
-<p>The id of the data source in which it will search right after initialization.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sDataSource</h5>
 <p><code>string</code></p>
@@ -937,15 +934,14 @@ in folder mode.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Sets a new value for property #getDataSource dataSource.</p>
+<p>The id of the data source in which it will search right after initialization.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDefaultDataSource()</h3>
 <blockquote>
 <p><strong>setDefaultDataSource</strong>(<code>sDefaultDataSource</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDefaultDataSource defaultDataSource.</p>
-<p>Data source id which is set when the UI is loaded or filter is reset. If dataSource is also set, dataSource
-will be used during UI load and this parameter will used only after filter is reset.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sDefaultDataSource</h5>
 <p><code>string</code></p>
@@ -955,15 +951,15 @@ will be used during UI load and this parameter will used only after filter is re
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Sets a new value for property #getDefaultDataSource defaultDataSource.</p>
+<p>Data source id which is set when the UI is loaded or filter is reset. If dataSource is also set, dataSource
+will be used during UI load and this parameter will used only after filter is reset.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDisplayFacetPanelInCaseOfNoResults()</h3>
 <blockquote>
 <p><strong>setDisplayFacetPanelInCaseOfNoResults</strong>(<code>bDisplayFacetPanelInCaseOfNoResults?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDisplayFacetPanelInCaseOfNoResults displayFacetPanelInCaseOfNoResults.</p>
-<p>When set to true the facet panel is displayed also in case there are no search results.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bDisplayFacetPanelInCaseOfNoResults?</h5>
 <p><code>boolean</code></p>
@@ -973,16 +969,15 @@ will be used during UI load and this parameter will used only after filter is re
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getDisplayFacetPanelInCaseOfNoResults displayFacetPanelInCaseOfNoResults.</p>
+<p>When set to true the facet panel is displayed also in case there are no search results.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnableMultiSelectionResultItems()</h3>
 <blockquote>
 <p><strong>setEnableMultiSelectionResultItems</strong>(<code>bEnableMultiSelectionResultItems?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableMultiSelectionResultItems enableMultiSelectionResultItems.</p>
-<p>Enables the multiselection mode of search result items. A checkbox is provided for each result item if
-the value is true.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableMultiSelectionResultItems?</h5>
 <p><code>boolean</code></p>
@@ -992,16 +987,16 @@ the value is true.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Sets a new value for property #getEnableMultiSelectionResultItems enableMultiSelectionResultItems.</p>
+<p>Enables the multiselection mode of search result items. A checkbox is provided for each result item if
+the value is true.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnableQueryLanguage()</h3>
 <blockquote>
 <p><strong>setEnableQueryLanguage</strong>(<code>bEnableQueryLanguage?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableQueryLanguage enableQueryLanguage.</p>
-<p>Enables the query language for the hana_odata provider. With query language it is possible for the end
-user to enter complex search queries with logical operators.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableQueryLanguage?</h5>
 <p><code>boolean</code></p>
@@ -1011,14 +1006,16 @@ user to enter complex search queries with logical operators.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.107.0</p>
+<p>Sets a new value for property #getEnableQueryLanguage enableQueryLanguage.</p>
+<p>Enables the query language for the hana_odata provider. With query language it is possible for the end
+user to enter complex search queries with logical operators.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEventConsumers()</h3>
 <blockquote>
 <p><strong>setEventConsumers</strong>(<code>sEventConsumers</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEventConsumers eventConsumers.</p>
-<p>Adds a callback function which is called whenever there is a user triggered event.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sEventConsumers</h5>
 <p><code>string</code></p>
@@ -1028,15 +1025,14 @@ user to enter complex search queries with logical operators.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Sets a new value for property #getEventConsumers eventConsumers.</p>
+<p>Adds a callback function which is called whenever there is a user triggered event.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setFacetPanelResizable()</h3>
 <blockquote>
 <p><strong>setFacetPanelResizable</strong>(<code>bFacetPanelResizable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFacetPanelResizable facetPanelResizable.</p>
-<p>Display a splitter bar to resize the left hand panel, containing all facets and filter criteria.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bFacetPanelResizable?</h5>
 <p><code>boolean</code></p>
@@ -1046,16 +1042,15 @@ user to enter complex search queries with logical operators.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>Sets a new value for property #getFacetPanelResizable facetPanelResizable.</p>
+<p>Display a splitter bar to resize the left hand panel, containing all facets and filter criteria.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setFacetPanelWidthInPercent()</h3>
 <blockquote>
 <p><strong>setFacetPanelWidthInPercent</strong>(<code>fFacetPanelWidthInPercent?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFacetPanelWidthInPercent facetPanelWidthInPercent.</p>
-<p>Default size (percent) of the left hand panel, containing all facets and filter criteria. If &quot;facetPanelResizable&quot;
-is true, the width of the facet panel can be changed by the user.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>25</code>.</p>
 <h4>Parameters</h4>
 <h5>fFacetPanelWidthInPercent?</h5>
 <p><code>number</code></p>
@@ -1065,16 +1060,16 @@ is true, the width of the facet panel can be changed by the user.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.108.0</p>
+<p>Sets a new value for property #getFacetPanelWidthInPercent facetPanelWidthInPercent.</p>
+<p>Default size (percent) of the left hand panel, containing all facets and filter criteria. If &quot;facetPanelResizable&quot;
+is true, the width of the facet panel can be changed by the user.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>25</code>.</p>
 <hr>
 <h3>setFacetVisibility()</h3>
 <blockquote>
 <p><strong>setFacetVisibility</strong>(<code>bFacetVisibility</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFacetVisibility facetVisibility.</p>
-<p>A boolean which indicates whether the facet panel is initially openend or closed. This affects only the
-initial state of the facet panel. When not setting facetVisibility the initial state of the facet panel
-typically is taken from the user personalization storage.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bFacetVisibility</h5>
 <p><code>boolean</code></p>
@@ -1084,15 +1079,16 @@ typically is taken from the user personalization storage.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getFacetVisibility facetVisibility.</p>
+<p>A boolean which indicates whether the facet panel is initially openend or closed. This affects only the
+initial state of the facet panel. When not setting facetVisibility the initial state of the facet panel
+typically is taken from the user personalization storage.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setFilterDataSources()</h3>
 <blockquote>
 <p><strong>setFilterDataSources</strong>(<code>fnFilterDataSources</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFilterDataSources filterDataSources.</p>
-<p>Callback for filtering the datasources displayed in the datasource dropdown listbox. The callback gets
-a list of datsources and returns the filtered list of datasources.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnFilterDataSources</h5>
 <p><code>Function</code></p>
@@ -1102,18 +1098,15 @@ a list of datsources and returns the filtered list of datasources.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.112.0</p>
+<p>Sets a new value for property #getFilterDataSources filterDataSources.</p>
+<p>Callback for filtering the datasources displayed in the datasource dropdown listbox. The callback gets
+a list of datsources and returns the filtered list of datasources.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setFilterRootCondition()</h3>
 <blockquote>
 <p><strong>setFilterRootCondition</strong>(<code>oFilterRootCondition</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFilterRootCondition filterRootCondition.</p>
-<p>Defines the filter root condition of a filter tree which shall be applied to the search request. This
-control only allows filter trees which have a the following structure: complex condition (root level)
-\ complex condition (attribute level) \ simple condition (attribute value level) Filter root conditions
-which do not follow this structure won&#39;t be accepted and an error will be thrown. Please see the below
-for a more in-depth example.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oFilterRootCondition</h5>
 <p><code>object</code></p>
@@ -1123,11 +1116,27 @@ for a more in-depth example.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Sets a new value for property #getFilterRootCondition filterRootCondition.</p>
+<p>Defines the filter root condition of a filter tree which shall be applied to the search request. This
+control only allows filter trees which have a the following structure: complex condition (root level)
+\ complex condition (attribute level) \ simple condition (attribute value level) Filter root conditions
+which do not follow this structure won&#39;t be accepted and an error will be thrown. Please see the below
+for a more in-depth example.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setFolderMode()</h3>
 <blockquote>
 <p><strong>setFolderMode</strong>(<code>bFolderMode?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bFolderMode?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>folderMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.106.0</p>
 <p>Sets a new value for property #getFolderMode folderMode.</p>
 <p>Activates the folder mode. Precondition for folder mode is 1) Search model: In the search model for the
 current datasource a hierarchy attribute (representing the folders) is defined 1.1) the hierarchy attribute
@@ -1140,25 +1149,11 @@ are set.</p>
 In contrast the counts in the facets are calculated by counting direct and not direct children. In case
 the folder mode is not active the UI uses the search mode: The result list shows direct and not direct
 children of a folder.</p>
-<h4>Parameters</h4>
-<h5>bFolderMode?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>folderMode</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.106.0</p>
 <hr>
 <h3>setFolderModeForInitialSearch()</h3>
 <blockquote>
 <p><strong>setFolderModeForInitialSearch</strong>(<code>bFolderModeForInitialSearch?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFolderModeForInitialSearch folderModeForInitialSearch.</p>
-<p>In case folderMode is set to true this boolean indicates whether for the initial search the folder mode
-is enabled.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bFolderModeForInitialSearch?</h5>
 <p><code>boolean</code></p>
@@ -1168,14 +1163,16 @@ is enabled.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.114.0</p>
+<p>Sets a new value for property #getFolderModeForInitialSearch folderModeForInitialSearch.</p>
+<p>In case folderMode is set to true this boolean indicates whether for the initial search the folder mode
+is enabled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setFormatFilterBarText()</h3>
 <blockquote>
 <p><strong>setFormatFilterBarText</strong>(<code>fnFormatFilterBarText</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFormatFilterBarText formatFilterBarText.</p>
-<p>Callback for formatting the filter string to be displayed in the filter bar (for closed facet panel).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnFormatFilterBarText</h5>
 <p><code>Function</code></p>
@@ -1185,15 +1182,14 @@ is enabled.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Sets a new value for property #getFormatFilterBarText formatFilterBarText.</p>
+<p>Callback for formatting the filter string to be displayed in the filter bar (for closed facet panel).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setGetCustomNoResultScreen()</h3>
 <blockquote>
 <p><strong>setGetCustomNoResultScreen</strong>(<code>fnGetCustomNoResultScreen</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getGetCustomNoResultScreen getCustomNoResultScreen.</p>
-<p>Whenever a search has no results, a &#39;No Results Page&#39; is displayed. You can provide a custom page to
-be more specific and add some hints, links, buttons or other content.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnGetCustomNoResultScreen</h5>
 <p><code>Function</code></p>
@@ -1203,6 +1199,10 @@ be more specific and add some hints, links, buttons or other content.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.94.0</p>
+<p>Sets a new value for property #getGetCustomNoResultScreen getCustomNoResultScreen.</p>
+<p>Whenever a search has no results, a &#39;No Results Page&#39; is displayed. You can provide a custom page to
+be more specific and add some hints, links, buttons or other content.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setGetSearchInputPlaceholderLabel()</h3>
 <blockquote>
@@ -1224,9 +1224,6 @@ term. The placeholder text (en) will be &quot;Search In: &quot;.</p>
 <blockquote>
 <p><strong>setInitAsync</strong>(<code>fnInitAsync</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getInitAsync initAsync.</p>
-<p>A callback which is called after the initialization of the search composite control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnInitAsync</h5>
 <p><code>Function</code></p>
@@ -1236,14 +1233,14 @@ term. The placeholder text (en) will be &quot;Search In: &quot;.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getInitAsync initAsync.</p>
+<p>A callback which is called after the initialization of the search composite control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setIsFilterBarVisible()</h3>
 <blockquote>
 <p><strong>setIsFilterBarVisible</strong>(<code>fnIsFilterBarVisible</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIsFilterBarVisible isFilterBarVisible.</p>
-<p>Callback for checking whether the filter bar is visible.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnIsFilterBarVisible</h5>
 <p><code>Function</code></p>
@@ -1253,15 +1250,14 @@ term. The placeholder text (en) will be &quot;Search In: &quot;.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120</p>
+<p>Sets a new value for property #getIsFilterBarVisible isFilterBarVisible.</p>
+<p>Callback for checking whether the filter bar is visible.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setIsSearchUrl()</h3>
 <blockquote>
 <p><strong>setIsSearchUrl</strong>(<code>fnIsSearchUrl</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIsSearchUrl isSearchUrl.</p>
-<p>A callback for checking whether a URL is a search URL. The callback receives a URL and returns true in
-case the URL is a search URL. Typically you need to register this callback in case updateUrl=true.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnIsSearchUrl</h5>
 <p><code>Function</code></p>
@@ -1271,14 +1267,15 @@ case the URL is a search URL. Typically you need to register this callback in ca
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getIsSearchUrl isSearchUrl.</p>
+<p>A callback for checking whether a URL is a search URL. The callback receives a URL and returns true in
+case the URL is a search URL. Typically you need to register this callback in case updateUrl=true.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setOptimizeForValueHelp()</h3>
 <blockquote>
 <p><strong>setOptimizeForValueHelp</strong>(<code>bOptimizeForValueHelp</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getOptimizeForValueHelp optimizeForValueHelp.</p>
-<p>The layout is optimized for object selection / value help (narrow view w/o facet panel).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bOptimizeForValueHelp</h5>
 <p><code>boolean</code></p>
@@ -1288,15 +1285,14 @@ case the URL is a search URL. Typically you need to register this callback in ca
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.111.0</p>
+<p>Sets a new value for property #getOptimizeForValueHelp optimizeForValueHelp.</p>
+<p>The layout is optimized for object selection / value help (narrow view w/o facet panel).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setOverwriteBrowserTitle()</h3>
 <blockquote>
 <p><strong>setOverwriteBrowserTitle</strong>(<code>bOverwriteBrowserTitle</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getOverwriteBrowserTitle overwriteBrowserTitle.</p>
-<p>Shall the window title be overwritten by this control? If true, the control will set the current search
-condition as window title. If false, it will not set or update the window title.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bOverwriteBrowserTitle</h5>
 <p><code>boolean</code></p>
@@ -1306,16 +1302,15 @@ condition as window title. If false, it will not set or update the window title.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Sets a new value for property #getOverwriteBrowserTitle overwriteBrowserTitle.</p>
+<p>Shall the window title be overwritten by this control? If true, the control will set the current search
+condition as window title. If false, it will not set or update the window title.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setPageSize()</h3>
 <blockquote>
 <p><strong>setPageSize</strong>(<code>iPageSize?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPageSize pageSize.</p>
-<p>The maximal count of search result items displayed on a page after a search. By clicking Show More button,
-another page of result items of the same count (if available) will be displayed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>10</code>.</p>
 <h4>Parameters</h4>
 <h5>iPageSize?</h5>
 <p><code>number</code></p>
@@ -1325,16 +1320,16 @@ another page of result items of the same count (if available) will be displayed.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Sets a new value for property #getPageSize pageSize.</p>
+<p>The maximal count of search result items displayed on a page after a search. By clicking Show More button,
+another page of result items of the same count (if available) will be displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>10</code>.</p>
 <hr>
 <h3>setParseSearchUrlParameters()</h3>
 <blockquote>
 <p><strong>setParseSearchUrlParameters</strong>(<code>fnParseSearchUrlParameters</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getParseSearchUrlParameters parseSearchUrlParameters.</p>
-<p>A callback for parsing URL parameters. The callback receices URL parameters and returns modified URL
-parameters. This is an optional callback. Also in case you set updateUrl=true typcically this callback
-is not needed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnParseSearchUrlParameters</h5>
 <p><code>Function</code></p>
@@ -1344,14 +1339,16 @@ is not needed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getParseSearchUrlParameters parseSearchUrlParameters.</p>
+<p>A callback for parsing URL parameters. The callback receices URL parameters and returns modified URL
+parameters. This is an optional callback. Also in case you set updateUrl=true typcically this callback
+is not needed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setQuickSelectDataSources()</h3>
 <blockquote>
 <p><strong>setQuickSelectDataSources</strong>(<code>oQuickSelectDataSources</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getQuickSelectDataSources quickSelectDataSources.</p>
-<p>A list of datasources to be displayed in the facet panel in the collection area.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oQuickSelectDataSources</h5>
 <p><code>object</code></p>
@@ -1361,15 +1358,14 @@ is not needed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getQuickSelectDataSources quickSelectDataSources.</p>
+<p>A list of datasources to be displayed in the facet panel in the collection area.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setRenderSearchUrl()</h3>
 <blockquote>
 <p><strong>setRenderSearchUrl</strong>(<code>fnRenderSearchUrl</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRenderSearchUrl renderSearchUrl.</p>
-<p>A callback for rendering the search URL. The callback gets a list of url encoded parameters and returns
-the URL string. Typically you need to register this callback in case updateUrl=true.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnRenderSearchUrl</h5>
 <p><code>Function</code></p>
@@ -1379,19 +1375,15 @@ the URL string. Typically you need to register this callback in case updateUrl=t
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getRenderSearchUrl renderSearchUrl.</p>
+<p>A callback for rendering the search URL. The callback gets a list of url encoded parameters and returns
+the URL string. Typically you need to register this callback in case updateUrl=true.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setResultViewSettings()</h3>
 <blockquote>
 <p><strong>setResultViewSettings</strong>(<code>sResultViewSettings?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getResultViewSettings resultViewSettings.</p>
-<p>Defines a pair of search result view settings. The value is an object of properties <code>resultViewTypes</code>
-and <code>resultViewType</code>. An example: <code>{resultViewTypes: [&quot;searchResultList&quot;, &quot;searchResultTable&quot;], resultViewType: &quot;searchResultList&quot;}</code> Find more detail in the definition of each child property. The value can be set/get
-in attached event &quot;searchFinished&quot;. Function <code>setResultViewSettings</code> prevents incompatibility of sequential
-execution of functions <code>setResultViewTypes</code> and <code>setResultViewType</code>. Note: The value of <code>resultViewTypes</code>
-and <code>resultViewType</code> must be compatible to each other.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>...see text or source</code>.</p>
 <h4>Parameters</h4>
 <h5>sResultViewSettings?</h5>
 <p><code>string</code></p>
@@ -1401,11 +1393,28 @@ and <code>resultViewType</code> must be compatible to each other.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.100.0</p>
+<p>Sets a new value for property #getResultViewSettings resultViewSettings.</p>
+<p>Defines a pair of search result view settings. The value is an object of properties <code>resultViewTypes</code>
+and <code>resultViewType</code>. An example: <code>{resultViewTypes: [&quot;searchResultList&quot;, &quot;searchResultTable&quot;], resultViewType: &quot;searchResultList&quot;}</code> Find more detail in the definition of each child property. The value can be set/get
+in attached event &quot;searchFinished&quot;. Function <code>setResultViewSettings</code> prevents incompatibility of sequential
+execution of functions <code>setResultViewTypes</code> and <code>setResultViewType</code>. Note: The value of <code>resultViewTypes</code>
+and <code>resultViewType</code> must be compatible to each other.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>...see text or source</code>.</p>
 <hr>
 <h3>setResultViewType()</h3>
 <blockquote>
 <p><strong>setResultViewType</strong>(<code>sResultViewType?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sResultViewType?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>resultViewType</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <p>Sets a new value for property #getResultViewType resultViewType.</p>
 <p>Defines active search result view type. The value can be set/get in attach event &quot;searchFinished&quot;, and
 it must be contained in resultViewTypes. Case 1, Search in Apps: result is displayed in a mandatory view
@@ -1417,20 +1426,20 @@ different view types. Possible value is <code>&quot;searchResultList&quot;</code
 Note: The value of <code>resultViewTypes</code> and <code>resultViewType</code> must be compatible to each other.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>&quot;searchResultList&quot;</code>.</p>
-<h4>Parameters</h4>
-<h5>sResultViewType?</h5>
-<p><code>string</code></p>
-<p>New value for property <code>resultViewType</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <hr>
 <h3>setResultViewTypes()</h3>
 <blockquote>
 <p><strong>setResultViewTypes</strong>(<code>sResultViewTypes?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sResultViewTypes?</h5>
+<p><code>string</code>[]</p>
+<p>New value for property <code>resultViewTypes</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <p>Sets a new value for property #getResultViewTypes resultViewTypes.</p>
 <p>Defines selectable search result view types. The value can be set/get in attach event &quot;searchFinished&quot;.
 Case 1: Search in Apps: result is displayed in a mandatory view type <code>[&quot;appSearchResult&quot;]</code>, and it is
@@ -1441,25 +1450,11 @@ array items are <code>&quot;searchResultList&quot;</code>, <code>&quot;searchRes
 of <code>resultViewTypes</code> and <code>resultViewType</code> must be compatible to each other.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>[&quot;searchResultList&quot;, &quot;searchResultTable&quot;]</code>.</p>
-<h4>Parameters</h4>
-<h5>sResultViewTypes?</h5>
-<p><code>string</code>[]</p>
-<p>New value for property <code>resultViewTypes</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <hr>
 <h3>setSearchOnStart()</h3>
 <blockquote>
 <p><strong>setSearchOnStart</strong>(<code>bSearchOnStart?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSearchOnStart searchOnStart.</p>
-<p>Defines if the search composite control will send a search request after loading for the given term,
-data source and filter root condition settings.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bSearchOnStart?</h5>
 <p><code>boolean</code></p>
@@ -1469,15 +1464,16 @@ data source and filter root condition settings.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Sets a new value for property #getSearchOnStart searchOnStart.</p>
+<p>Defines if the search composite control will send a search request after loading for the given term,
+data source and filter root condition settings.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setSearchTerm()</h3>
 <blockquote>
 <p><strong>setSearchTerm</strong>(<code>sSearchTerm?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSearchTerm searchTerm.</p>
-<p>Defines the initial search term for the search input.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sSearchTerm?</h5>
 <p><code>string</code></p>
@@ -1487,14 +1483,15 @@ data source and filter root condition settings.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Sets a new value for property #getSearchTerm searchTerm.</p>
+<p>Defines the initial search term for the search input.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setSelectionChange()</h3>
 <blockquote>
 <p><strong>setSelectionChange</strong>(<code>fnSelectionChange</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSelectionChange selectionChange.</p>
-<p>A callback which is called whenever the selection of result list items changes.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnSelectionChange</h5>
 <p><code>Function</code></p>
@@ -1504,14 +1501,14 @@ data source and filter root condition settings.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getSelectionChange selectionChange.</p>
+<p>A callback which is called whenever the selection of result list items changes.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSinaConfiguration()</h3>
 <blockquote>
 <p><strong>setSinaConfiguration</strong>(<code>oSinaConfiguration</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSinaConfiguration sinaConfiguration.</p>
-<p>Configuration for the Enterprise Search Client API.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oSinaConfiguration</h5>
 <p><code>object</code></p>
@@ -1521,16 +1518,14 @@ data source and filter root condition settings.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.93.0</p>
+<p>Sets a new value for property #getSinaConfiguration sinaConfiguration.</p>
+<p>Configuration for the Enterprise Search Client API.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setTabStripsFormatter()</h3>
 <blockquote>
 <p><strong>setTabStripsFormatter</strong>(<code>fnTabStripsFormatter</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTabStripsFormatter tabStripsFormatter.</p>
-<p>Function callback for formatting the datasource tabstrips in the top toolbar. To the callback function
-a list of datasources is passed. The callback functions return a modified list of datasources to be displayed
-in the tabstrips.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fnTabStripsFormatter</h5>
 <p><code>Function</code></p>
@@ -1540,15 +1535,16 @@ in the tabstrips.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.103.0</p>
+<p>Sets a new value for property #getTabStripsFormatter tabStripsFormatter.</p>
+<p>Function callback for formatting the datasource tabstrips in the top toolbar. To the callback function
+a list of datasources is passed. The callback functions return a modified list of datasources to be displayed
+in the tabstrips.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setUpdateUrl()</h3>
 <blockquote>
 <p><strong>setUpdateUrl</strong>(<code>bUpdateUrl?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getUpdateUrl updateUrl.</p>
-<p>A boolean indicating that the search state is written to the URL.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bUpdateUrl?</h5>
 <p><code>boolean</code></p>
@@ -1558,6 +1554,10 @@ in the tabstrips.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.113.0</p>
+<p>Sets a new value for property #getUpdateUrl updateUrl.</p>
+<p>A boolean indicating that the search state is written to the URL.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1574,7 +1574,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SearchCompositeControl</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SearchCompositeControl</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1598,6 +1598,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

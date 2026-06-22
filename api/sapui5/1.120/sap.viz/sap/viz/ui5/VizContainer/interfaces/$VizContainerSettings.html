@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $VizContainerSettings~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $VizContainerSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<title>Interface: $VizContainerSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $VizContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/VizContainer/interfaces/$VizContainerSettings.html">
-<meta property="og:title" content="~~Interface: $VizContainerSettings~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $VizContainerSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:title" content="Interface: $VizContainerSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $VizContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/VizContainer/interfaces/$VizContainerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,40 +33,26 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › <a href="../../../../../../sap.viz/sap/viz/ui5/VizContainer/README.html">VizContainer</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/VizContainer</a> / $VizContainerSettings</p>
-<h1><del>Interface: $VizContainerSettings</del></h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/VizContainer</a> / $VizContainerSettings</p>
+<h1>Interface: $VizContainerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $VizContainerSettings } <span class="kw">from</span> <span class="str">"sap/viz/ui5/VizContainer"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the VizContainer constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.32.0) - The chart controls in the <code>sap.viz.ui5</code> package (which were always marked
-as experimental) have been deprecated since 1.32.0. They are no longer actively developed and
-won&#39;t receive new features or improvements, only important bug fixes. They will only remain in the SAPUI5
-distribution for backward compatibility.</p>
-<p>**SAP strongly recommends that existing consumers of those controls migrate to the new sap.viz.ui5.controls.VizFrame VizFrame
-control to benefit from new charting enhancements and timely support. **</p>
-<p><strong>Note</strong>: As the feature set, design and API usage of VizFrame might differ from the old chart controls,
-make sure you evaluate it thoroughly before migration.
- (since 1.19.0) - API is not finished yet and might change completely</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../controls/common/BaseControl/interfaces/$BaseControlSettings.html"><code>$BaseControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>analysisObjectsForPicker?</del></h3>
+<h3>analysisObjectsForPicker?</h3>
 <blockquote>
 <p><code>optional</code> <strong>analysisObjectsForPicker?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../controls/common/feeds/AnalysisObject/classes/AnalysisObject.html"><code>AnalysisObject</code></a> | <a href="../../controls/common/feeds/AnalysisObject/classes/AnalysisObject.html"><code>AnalysisObject</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Available sap.viz.ui5.controls.common.feeds.AnalysisObject for object picker popup UI</p>
 <hr>
-<h3><del>deselectData?</del></h3>
+<h3>deselectData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>deselectData?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Event fires when certain data point(s) is(are) deselected, data context of deselected item(s) would be
 passed in accordance with the following format.{name: &quot;deselectData&quot;,data:[&quot;---the same as selectedData---&quot;]}</p>
 <h4>Parameters</h4>
@@ -75,25 +61,22 @@ passed in accordance with the following format.{name: &quot;deselectData&quot;,d
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>enableMorphing?</del></h3>
+<h3>enableMorphing?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableMorphing?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Enable morphing for visualization.</p>
 <hr>
-<h3><del>feeds?</del></h3>
+<h3>feeds?</h3>
 <blockquote>
 <p><code>optional</code> <strong>feeds?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../controls/common/feeds/FeedItem/classes/FeedItem.html"><code>FeedItem</code></a> | <a href="../../controls/common/feeds/FeedItem/classes/FeedItem.html"><code>FeedItem</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>All feeds for chart.</p>
 <hr>
-<h3><del>feedsChanged?</del></h3>
+<h3>feedsChanged?</h3>
 <blockquote>
 <p><code>optional</code> <strong>feedsChanged?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Dispatches &quot;feedsChanged&quot; event when the feeding changes due to add/remove/change feeding items on feeding
 panel, drag and drop object onto VizFrame, or switch chart type by UI operation. Application should listen
 to &quot;feedsChanged&quot; event to get the corresponding data and set it back to VizFrame to to update the visualization
@@ -104,11 +87,10 @@ with the new data.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>hideTooltip?</del></h3>
+<h3>hideTooltip?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideTooltip?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Event fires when the mouse hover out of the specific part of chart, no data is passed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -116,11 +98,10 @@ with the new data.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>initialized?</del></h3>
+<h3>initialized?</h3>
 <blockquote>
 <p><code>optional</code> <strong>initialized?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Event fires when the loading ends. To use the event listener when creating charts, you must use an event
 that is passed by the events option. For more information on events options, see the usrOptions section
 of the createViz function in the API document.</p>
@@ -130,11 +111,10 @@ of the createViz function in the API document.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>selectData?</del></h3>
+<h3>selectData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectData?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Event fires when certain data point(s) is(are) selected, data context of selected item(s) would be passed
 in accordance with the following format.{name: &quot;selectData&quot;,data:[{ //selected element&#39;s detail
 target:&quot;Dom Element&quot;,//an object pointed to corresponding dom element data:[{val: &quot;...&quot;,//value of this
@@ -152,11 +132,10 @@ bubble, tagcloud and scatter, there will be more than one values in one selected
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>showTooltip?</del></h3>
+<h3>showTooltip?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showTooltip?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Event fires when the mouse hover onto the specific part of chart, data context of tooltip would be passed
 in accordance with the following format.{name:&quot;showTooltip&quot;,data:{body:[{ //data of one group name:&quot;...&quot;,val:[{
 //data of one row color:&quot;...&quot;,label:&quot;...&quot;,shape:&quot;...&quot;,value:&quot;...&quot;},&quot;...&quot;]},&quot;...&quot;],footer:[{label:&quot;...&quot;,value:&quot;...&quot;},&quot;...&quot;],plotArea:{
@@ -168,25 +147,22 @@ in accordance with the following format.{name:&quot;showTooltip&quot;,data:{body
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>vizCss?</del></h3>
+<h3>vizCss?</h3>
 <blockquote>
 <p><code>optional</code> <strong>vizCss?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Css for visualization.</p>
 <hr>
-<h3><del>vizData?</del></h3>
+<h3>vizData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>vizData?</strong>: <a href="../../data/Dataset/classes/Dataset.html"><code>Dataset</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Dataset for chart.</p>
 <hr>
-<h3><del>vizDefinitionChanged?</del></h3>
+<h3>vizDefinitionChanged?</h3>
 <blockquote>
 <p><code>optional</code> <strong>vizDefinitionChanged?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Dispatches &quot;vizDefinitionChanged&quot; event when viz definition was changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -194,25 +170,22 @@ in accordance with the following format.{name:&quot;showTooltip&quot;,data:{body
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>vizProperties?</del></h3>
+<h3>vizProperties?</h3>
 <blockquote>
 <p><code>optional</code> <strong>vizProperties?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Properties for visualization.</p>
 <hr>
-<h3><del>vizType?</del></h3>
+<h3>vizType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>vizType?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Type for visualization.</p>
 <hr>
-<h3><del>vizTypeChanged?</del></h3>
+<h3>vizTypeChanged?</h3>
 <blockquote>
 <p><code>optional</code> <strong>vizTypeChanged?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Dispatches &quot;vizTypeChanged&quot; event when viz type was changed</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -221,6 +194,6 @@ in accordance with the following format.{name:&quot;showTooltip&quot;,data:{body
 <p><code>void</code></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

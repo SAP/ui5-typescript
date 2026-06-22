@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: ChartDelegate — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: ChartDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta name="description" content="Interface: ChartDelegate — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/ChartDelegate/interfaces/ChartDelegate.html">
 <meta property="og:title" content="Interface: ChartDelegate — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: ChartDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
+<meta property="og:description" content="Interface: ChartDelegate — SAPUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/ChartDelegate/interfaces/ChartDelegate.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/ChartDelegate/README.html">ChartDelegate</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/ChartDelegate</a> / ChartDelegate</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/ChartDelegate</a> / ChartDelegate</p>
 <h1>Interface: ChartDelegate</h1>
 <pre class="sig"><span class="kw">import</span> ChartDelegate <span class="kw">from</span> <span class="str">"sap/ui/mdc/ChartDelegate"</span>;</pre>
+<h2>Since</h2>
+<p>1.88</p>
 <p>Base Delegate for sap.ui.mdc.Chart Chart. Extend this object in your project to use all functionalities
 of the sap.ui.mdc.Chart Chart.
  This class provides method calls, that are called by the <code>Chart</code> for specific operations and overwrite
 the internal behavior.</p>
-<h2>Since</h2>
-<p>1.88</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../AggregationBaseDelegate/interfaces/AggregationBaseDelegate.html"><code>AggregationBaseDelegate</code></a></li>
@@ -212,9 +212,6 @@ be chart types that do not support certain layout options (for example, &quot;Ax
 <blockquote>
 <p><strong>getFilterDelegate</strong>(): <code>object</code></p>
 </blockquote>
-<p>Returns the filter delegate of the chart that provides basic filter functionality, such as adding filter
-fields. <strong>Note:</strong> The functionality provided in this delegate acts as a subset of a <code>FilterBarDelegate</code>
-to enable the chart for inbuilt filtering.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Object for the chart filter personalization</p>
@@ -231,6 +228,9 @@ to enable the chart for inbuilt filtering.</p>
 <p><code>Promise</code>&lt;<a href="../../FilterField/classes/FilterField.html"><code>FilterField</code></a>&gt;</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the filter delegate of the chart that provides basic filter functionality, such as adding filter
+fields. <strong>Note:</strong> The functionality provided in this delegate acts as a subset of a <code>FilterBarDelegate</code>
+to enable the chart for inbuilt filtering.</p>
 <hr>
 <h3>getInnerChart()</h3>
 <blockquote>
@@ -546,6 +546,6 @@ call it directly but use sap.ui.mdc.Chart#setLegendVisible LegendVisible instead
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>
