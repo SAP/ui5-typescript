@@ -2598,12 +2598,10 @@
   dependencies:
     "@types/sizzle" "*"
 
-"@types/jquery@3.5.32":
-  version "3.5.32"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.32.tgz#3eb0da20611b92c7c49ebed6163b52a4fdc57def"
-  integrity sha512-b9Xbf4CkMqS02YH8zACqN1xzdxc3cO735Qe5AbSUFmyOiaWAbcpqh9Wna+Uk0vgACvoQHpWDg2rGdHkYPLmCiQ==
-  dependencies:
-    "@types/sizzle" "*"
+"@types/jquery@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-4.0.1.tgz#7c08ca6492876b70e11e4724af35b347069038cd"
+  integrity sha512-9a59A/tycXgYuPABcp6/3spSShn0NT2UOM4EfHvMumjYi4lJWTsK5SZWjhx3yRm9IHGCeWXdV2YfNsrWrft/CA==
 
 "@types/jquery@~3.5.13":
   version "3.5.34"
