@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Opa — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Opa — SAPUI5 TypeScript API Reference (1.148.1)">
+<meta name="description" content="Class: Opa — SAPUI5 TypeScript API Reference (1.148.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.148/sap.ui.core/sap/ui/test/Opa/classes/Opa.html">
 <meta property="og:title" content="Class: Opa — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Opa — SAPUI5 TypeScript API Reference (1.148.1)">
+<meta property="og:description" content="Class: Opa — SAPUI5 TypeScript API Reference (1.148.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.148/sap.ui.core/sap/ui/test/Opa/classes/Opa.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › test › <a href="../../../../../../sap.ui.core/sap/ui/test/Opa/README.html">Opa</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.148.1)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.148.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.148.1)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/Opa</a> / Opa</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.148.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/Opa</a> / Opa</p>
 <h1>Class: Opa</h1>
 <pre class="sig"><span class="kw">import</span> Opa <span class="kw">from</span> <span class="str">"sap/ui/test/Opa"</span>;</pre>
 <p>One Page Acceptance testing.</p>
@@ -115,17 +115,17 @@ it will never be destroyed. That means you can use it to save values you need in
 <hr>
 <h3>iWaitForPromise()</h3>
 <blockquote>
-<p><strong>iWaitForPromise</strong>(<code>oPromise</code>): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>iWaitForPromise</strong>(<code>oPromise</code>): <code>Promise</code></p>
 </blockquote>
 <p>Schedule a promise on the OPA queue.The promise will be executed in order with all waitFors - any subsequent
 waitFor will be executed after the promise is done. The promise is not directly chained, but instead
 its result is awaited in a new waitFor statement. This means that any &quot;thenable&quot; should be acceptable.</p>
 <h4>Parameters</h4>
 <h5>oPromise</h5>
-<p><code>Promise</code>&lt;<code>any</code>&gt; | <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>any</code>&gt;</p>
+<p><code>Promise</code>&lt;<code>any</code>&gt; | <code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>promise to schedule on the OPA queue</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>promise which is the result of a sap.ui.test.Opa#waitFor</p>
 <hr>
 <h3>waitFor()</h3>
@@ -151,11 +151,11 @@ case, options.errorMessage will contain a detailed error message containing the 
 <hr>
 <h3>emptyQueue()</h3>
 <blockquote>
-<p><code>static</code> <strong>emptyQueue</strong>(): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>static</code> <strong>emptyQueue</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Waits until all waitFor calls are done.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>If the waiting was successful, the promise will be resolved. If not it will be rejected</p>
 <hr>
 <h3>extendConfig()</h3>
@@ -245,6 +245,6 @@ the success function of this waitFor will not be called.</p>
 <h4>Since</h4>
 <p>1.40.1</p>
 
-<footer>Generated from <code>@sapui5/types@1.148.1</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.148/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.148.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.148/">Back to index</a>.</footer>
 </body>
 </html>

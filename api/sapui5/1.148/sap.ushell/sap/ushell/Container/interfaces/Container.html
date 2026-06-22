@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: Container — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: Container — SAPUI5 TypeScript API Reference (1.148.1)">
+<meta name="description" content="Interface: Container — SAPUI5 TypeScript API Reference (1.148.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.148/sap.ushell/sap/ushell/Container/interfaces/Container.html">
 <meta property="og:title" content="Interface: Container — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: Container — SAPUI5 TypeScript API Reference (1.148.1)">
+<meta property="og:description" content="Interface: Container — SAPUI5 TypeScript API Reference (1.148.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.148/sap.ushell/sap/ushell/Container/interfaces/Container.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › <a href="../../../../../sap.ushell/sap/ushell/Container/README.html">Container</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.148.1)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.148.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.148.1)</a> / <a href="../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/Container</a> / Container</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.148.0)</a> / <a href="../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/Container</a> / Container</p>
 <h1>Interface: Container</h1>
 <pre class="sig"><span class="kw">import</span> Container <span class="kw">from</span> <span class="str">"sap/ushell/Container"</span>;</pre>
 <p>The Unified Shell&#39;s container. Manages renderers, services, and adapters. The container is designed to
@@ -225,12 +225,12 @@ provider methods are ignored and the function simply returns &#39;true&#39;.</p>
 <hr>
 <h3><del>getGlobalDirty()</del></h3>
 <blockquote>
-<p><strong>getGlobalDirty</strong>(): <a href="../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getGlobalDirty</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Returns the global dirty state.</p>
 <p>All open UShell browser windows for the same origin are asked about their global dirty state.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the dirty state (see sap.ushell.Container.DirtyState).</p>
 <h4>Since</h4>
 <p>1.21.1</p>
@@ -311,7 +311,7 @@ See:
 	sap.ushell.services.ContainerInterface</p>
 <h4>Type Parameters</h4>
 <h5>ServiceType</h5>
-<p><code>ServiceType</code> <em>extends</em> <a href="../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/classes/Service.html"><code>Service</code></a></p>
+<p><code>ServiceType</code> <em>extends</em> <code>Service</code></p>
 <h4>Parameters</h4>
 <h5>sServiceName</h5>
 <p><code>string</code></p>
@@ -381,7 +381,7 @@ See:
 	sap.ushell.services.ContainerInterface</p>
 <h4>Type Parameters</h4>
 <h5>ServiceType</h5>
-<p><code>ServiceType</code> <em>extends</em> <a href="../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/classes/Service.html"><code>Service</code></a></p>
+<p><code>ServiceType</code> <em>extends</em> <code>Service</code></p>
 <h4>Parameters</h4>
 <h5>sServiceName</h5>
 <p><code>string</code></p>
@@ -397,13 +397,13 @@ See:
 <hr>
 <h3><del>logout()</del></h3>
 <blockquote>
-<p><strong>logout</strong>(): <a href="../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>logout</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Logs out the current user from all relevant back-end systems, including the logon system itself. This
 member represents the default native implementation of logout. If SessionHandler was created, we register
 the alternate logout function using registerLogout function.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves when logout is finished, even when it fails.</p>
 <h4>Since</h4>
 <p>1.15.0</p>
@@ -456,6 +456,6 @@ can be used to determine the dirty state:</p>
 <h4>Deprecated</h4>
 <p>As of version 1.146. replaced by sap.ushell.navigation.DirtyState#setDirtyFlag.</p>
 
-<footer>Generated from <code>@sapui5/types@1.148.1</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.148/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.148.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.148/">Back to index</a>.</footer>
 </body>
 </html>

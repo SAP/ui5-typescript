@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Api~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Api~~ — SAPUI5 TypeScript API Reference (1.148.1)">
+<meta name="description" content="~~Class: Api~~ — SAPUI5 TypeScript API Reference (1.148.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.148/sap.apf/sap/apf/api/classes/Api.html">
 <meta property="og:title" content="~~Class: Api~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Api~~ — SAPUI5 TypeScript API Reference (1.148.1)">
+<meta property="og:description" content="~~Class: Api~~ — SAPUI5 TypeScript API Reference (1.148.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.148/sap.apf/sap/apf/api/classes/Api.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.apf/README.html">sap.apf</a> › sap › apf › <a href="../../../../../sap.apf/sap/apf/api/README.html">api</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.148.1)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.148.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.148.1)</a> / <a href="../../../../README.html">sap.apf</a> / <a href="../README.html">sap/apf/api</a> / Api</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.148.0)</a> / <a href="../../../../README.html">sap.apf</a> / <a href="../README.html">sap/apf/api</a> / Api</p>
 <h1><del>Class: Api</del></h1>
 <pre class="sig"><span class="kw">import</span> Api <span class="kw">from</span> <span class="str">"sap/apf/api"</span>;</pre>
 <p>Official API for Analysis Path Framework (APF)
@@ -50,7 +50,7 @@ as experimental.
  Furthermore there is no need to instantiate required entities directly by applying the JavaScript &#39;new&#39;-operator
 on their respective constructors. Instead they should be created by consumers using a create method available
 on API-level, such as e.g. sap.apf.Api#createMessageObject for sap.apf.core.MessageObject
-or sap.apf.Api#createFilter for <a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html">sap.apf.utils.Filter</a>.</p>
+or sap.apf.Api#createFilter for sap.apf.utils.Filter.</p>
 <h2>Deprecated</h2>
 <p>As of version 1.136. this library is deprecated and will not be available in future major
 releases.</p>
@@ -121,18 +121,18 @@ is supported. Restriction: Only the operators EQ, LE (less equal than) and GE (g
 supported.</p>
 <h4>Parameters</h4>
 <h5>filter</h5>
-<p><a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><code>Filter</code></p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>ID to be provided for later updates of the same filter via method updatePathFilter.</p>
 <hr>
 <h3><del>createFilter()</del></h3>
 <blockquote>
-<p><strong>createFilter</strong>(): <a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><strong>createFilter</strong>(): <code>Filter</code></p>
 </blockquote>
 <p>Creates an empty filter object. Its methods can be used to create a logical filter expression.</p>
 <h4>Returns</h4>
-<p><a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><code>Filter</code></p>
 <hr>
 <h3><del>createMessageObject()</del></h3>
 <blockquote>
@@ -189,7 +189,7 @@ configuration is directly passed as an object oRequestConfiguration.</p>
 <hr>
 <h3><del>getPathFilter()</del></h3>
 <blockquote>
-<p><strong>getPathFilter</strong>(<code>id</code>): <a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><strong>getPathFilter</strong>(<code>id</code>): <code>Filter</code></p>
 </blockquote>
 <p>Gets a path filter fragment for the given identifier by fully replacing the existing one.</p>
 <h4>Parameters</h4>
@@ -197,7 +197,7 @@ configuration is directly passed as an object oRequestConfiguration.</p>
 <p><code>string</code> | <code>number</code></p>
 <p>Identifier of the path filter fragment as it was returned by addPathFilter method.</p>
 <h4>Returns</h4>
-<p><a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><code>Filter</code></p>
 <p>filter for id</p>
 <hr>
 <h3><del>getTextHtmlEncoded()</del></h3>
@@ -347,10 +347,10 @@ than) and GE (greater equal than) are supported.</p>
 <p>Identifier of the path filter as it was returned by addPathFilter method. When using an ID of type string
 the caller must ensure that it is unique.</p>
 <h5>filter</h5>
-<p><a href="../../../../namespaces/sap/namespaces/apf/namespaces/utils/classes/Filter.html"><code>Filter</code></a></p>
+<p><code>Filter</code></p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.148.1</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.148/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.148.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.148/">Back to index</a>.</footer>
 </body>
 </html>
