@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CrossSectionTool — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: CrossSectionTool — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="Class: CrossSectionTool — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/tools/CrossSectionTool/classes/CrossSectionTool.html">
 <meta property="og:title" content="Class: CrossSectionTool — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: CrossSectionTool — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="Class: CrossSectionTool — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/tools/CrossSectionTool/classes/CrossSectionTool.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › tools › <a href="../../../../../../../sap.ui.vk/sap/ui/vk/tools/CrossSectionTool/README.html">CrossSectionTool</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/tools/CrossSectionTool</a> / CrossSectionTool</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/tools/CrossSectionTool</a> / CrossSectionTool</p>
 <h1>Class: CrossSectionTool</h1>
 <pre class="sig"><span class="kw">import</span> CrossSectionTool <span class="kw">from</span> <span class="str">"sap/ui/vk/tools/CrossSectionTool"</span>;</pre>
 <p>The CrossSection tool can be used to cut all 3D objects along one of three spatial axis to expose their
@@ -93,18 +93,6 @@ can be omitted, regardless of whether <code>mSettings</code> will be provided or
 <p><code>boolean</code></p>
 <p>Value of property <code>showEditingUI</code></p>
 <hr>
-<h3>getState()</h3>
-<blockquote>
-<p><strong>getState</strong>(): <code>object</code></p>
-</blockquote>
-<p>Gets information about the current state.</p>
-<h4>Returns</h4>
-<p><code>object</code></p>
-<p>JSON-like object which holds the current state information. See sap.ui.vk.tools.CrossSectionTool#setState setState
-for details.</p>
-<h4>Since</h4>
-<p>1.145.0</p>
-<hr>
 <h3>queueCommand()</h3>
 <blockquote>
 <p><strong>queueCommand</strong>(<code>command</code>): <a href="../../../Viewport/classes/Viewport.html"><code>Viewport</code></a></p>
@@ -161,35 +149,6 @@ be called using this method.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setState()</h3>
-<blockquote>
-<p><strong>setState</strong>(<code>state?</code>, <code>viewport?</code>): <code>this</code></p>
-</blockquote>
-<p>Sets the current state.</p>
-<h4>Parameters</h4>
-<h5>state?</h5>
-<p>JSON-like object which holds the state information. See below for details.</p>
-<h6>axis?</h6>
-<p><code>number</code></p>
-<p>Axis index from 0 to 2: 0 - X, 1 - Y, 2 - Z.</p>
-<h6>enabled?</h6>
-<p><code>boolean</code></p>
-<p>Specifies whether the cross section tool should be activated.</p>
-<h6>flip?</h6>
-<p><code>boolean</code></p>
-<p>If set to <code>true</code>, the clipping plane will be flipped.</p>
-<h6>position?</h6>
-<p><code>number</code>[]</p>
-<p>The position of the clipping planes defined as [x, y, z].</p>
-<h5>viewport?</h5>
-<p><a href="../../../Viewport/classes/Viewport.html"><code>Viewport</code></a></p>
-<p>The viewport where the tool is used.</p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p><code>this</code> to allow method chaining.</p>
-<h4>Since</h4>
-<p>1.145.0</p>
-<hr>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
@@ -205,7 +164,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>CrossSectionTool</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>CrossSectionTool</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -229,6 +188,6 @@ used by this class</p>
 <p><a href="../../Tool/classes/Tool.html"><code>Tool</code></a>.<a href="../../Tool/classes/Tool.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

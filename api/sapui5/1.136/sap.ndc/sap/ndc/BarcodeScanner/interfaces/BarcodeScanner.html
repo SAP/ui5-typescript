@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: BarcodeScanner — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: BarcodeScanner — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="Interface: BarcodeScanner — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ndc/sap/ndc/BarcodeScanner/interfaces/BarcodeScanner.html">
 <meta property="og:title" content="Interface: BarcodeScanner — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: BarcodeScanner — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="Interface: BarcodeScanner — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ndc/sap/ndc/BarcodeScanner/interfaces/BarcodeScanner.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.ndc/README.html">sap.ndc</a> › sap › ndc › <a href="../../../../../sap.ndc/sap/ndc/BarcodeScanner/README.html">BarcodeScanner</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../README.html">sap.ndc</a> / <a href="../README.html">sap/ndc/BarcodeScanner</a> / BarcodeScanner</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../README.html">sap.ndc</a> / <a href="../README.html">sap/ndc/BarcodeScanner</a> / BarcodeScanner</p>
 <h1>Interface: BarcodeScanner</h1>
 <pre class="sig"><span class="kw">import</span> BarcodeScanner <span class="kw">from</span> <span class="str">"sap/ndc/BarcodeScanner"</span>;</pre>
 <p>Please refer to SAP
@@ -168,7 +168,7 @@ Barcode Scanner.</p>
 <hr>
 <h3>scan()</h3>
 <blockquote>
-<p><strong>scan</strong>(<code>fnSuccess?</code>, <code>fnFail?</code>, <code>fnLiveUpdate?</code>, <code>dialogTitle?</code>, <code>preferFrontCamera?</code>, <code>frameRate?</code>, <code>zoom?</code>, <code>keepCameraScan?</code>, <code>disableBarcodeInputDialog?</code>, <code>customInput?</code>): <code>void</code></p>
+<p><strong>scan</strong>(<code>fnSuccess?</code>, <code>fnFail?</code>, <code>fnLiveUpdate?</code>, <code>dialogTitle?</code>, <code>preferFrontCamera?</code>, <code>frameRate?</code>, <code>zoom?</code>, <code>keepCameraScan?</code>, <code>disableBarcodeInputDialog?</code>): <code>void</code></p>
 </blockquote>
 <p>Starts the barcode scanning process either showing the live input from the camera or displaying a dialog
 to enter the value directly if the barcode scanning feature is unavailable.</p>
@@ -231,10 +231,6 @@ sap.ui.require([&quot;sap/ndc/BarcodeScanner&quot;], function(BarcodeScanner) {
 <h5>disableBarcodeInputDialog?</h5>
 <p><code>boolean</code></p>
 <p>Flag, which defines whether the Barcode input dialog should be shown.</p>
-<h5>customInput?</h5>
-<p><code>Function</code></p>
-<p>Function to be called when either the cancel button in the scan dialog is pressed, or no scanning library
-is available. If unset, the default input dialog will be used.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
@@ -252,7 +248,6 @@ is available. If unset, the default input dialog will be used.</p>
 {
     &quot;enableGS1Header&quot;: true,  //If set to true, add the symbology identifier (GS1 specification 5.4.3.7. and 5.4.6.4.) as prefix into the result text.
     &quot;deviceId&quot;: &quot;string&quot; // The specific camera id to scan the Barcode. If set to &quot;&quot;, Barcode Scanner will use default camera. This option is not working for iOS devices since do not support to get all the cameras.
-    &quot;textMode&quot;: &quot;string&quot; // Defines how the decoded byte content of a barcode should be transcoded to text in ZXingcpp. Value can be &quot;Plain&quot;, &quot;ECI&quot;, &quot;HRI&quot;, &quot;Escaped&quot;, &quot;Hex&quot;, or &quot;HexECI&quot;. Default value is &quot;HRI&quot;.
     &quot;multiScan&quot;: {
         &quot;enabled&quot;: false, // If set to true, will support scan multi barcodes, and the max number of the barcodes in each scanning is 10. Default value is false. Only working for ZXingCPP.
         &quot;showPauseButton&quot;: false, // If set to true, will show a button so that can pause/restart the scan in the scan dialog.
@@ -310,6 +305,6 @@ default, Barcode Scanner will select the scanner API(Available) with priority: Z
 <p><code>boolean</code></p>
 <p>Return True if set success.</p>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

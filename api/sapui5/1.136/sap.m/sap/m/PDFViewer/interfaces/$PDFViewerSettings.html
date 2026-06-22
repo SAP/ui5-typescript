@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $PDFViewerSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $PDFViewerSettings — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="Interface: $PDFViewerSettings — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.m/sap/m/PDFViewer/interfaces/$PDFViewerSettings.html">
 <meta property="og:title" content="Interface: $PDFViewerSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $PDFViewerSettings — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="Interface: $PDFViewerSettings — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.m/sap/m/PDFViewer/interfaces/$PDFViewerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/PDFViewer/README.html">PDFViewer</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PDFViewer</a> / $PDFViewerSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PDFViewer</a> / $PDFViewerSettings</p>
 <h1>Interface: $PDFViewerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $PDFViewerSettings } <span class="kw">from</span> <span class="str">"sap/m/PDFViewer"</span>;</pre>
 <p>Describes the settings that can be provided to the PDFViewer constructor.</p>
@@ -153,12 +153,8 @@ dialog.</p>
  Optionally, this property can also be set to a data URI path or a blob URL in all major web browsers
 except Internet Explorer and Microsoft Edge, provided that this data URI or blob URL is allowed in advance.
 For more information about URL filtering, see <a href="https://ui5.sap.com/#/topic/91f3768f6f4d1014b6dd926db0e91070">URLList Validator Filtering</a>.</p>
-<p>Source Validation: When the source is set, the PDFViewer automatically validates the resource using a
-GET request to ensure it exists and is accessible. This validation:
-	 - Prevents loading invalid or non-existent PDF files
-	 - If validation fails, error content is displayed instead of attempting PDF load</p>
 <hr>
-<h3><del>sourceValidationFailed?</del></h3>
+<h3>sourceValidationFailed?</h3>
 <blockquote>
 <p><code>optional</code> <strong>sourceValidationFailed?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -166,16 +162,11 @@ GET request to ensure it exists and is accessible. This validation:
 configuration of the Mozilla Firefox browser may not allow checking the loaded content. This may also
 happen when the source PDF file is stored in a different domain. If you want no error message to be displayed
 when this event is fired, call the preventDefault() method inside the event handler.</p>
-<p>Modern browsers implement strict policies for validating external resources loaded within an iframe.
-PDFViewer cannot determine whether the resource inside the iframe is a valid PDF by itself. As the validation
-cannot be performed the sourceValidationFailed event cannot be triggered.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
 <h4>Returns</h4>
 <p><code>void</code></p>
-<h4>Deprecated</h4>
-<p>As of version 1.136.9. with no replacement.</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -190,6 +181,6 @@ cannot be performed the sourceValidationFailed event cannot be triggered.</p>
 <p>Defines the width of the PDF viewer control, respective to the width of the parent container. Can be
 set to a percent, pixel, or em value.</p>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

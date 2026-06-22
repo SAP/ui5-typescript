@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ushell/sap/ushell/services/CrossApplicationNavigation/classes/CrossApplicationNavigation.html">
 <meta property="og:title" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ushell/sap/ushell/services/CrossApplicationNavigation/classes/CrossApplicationNavigation.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../sap.ushell/sap/ushell/services/CrossApplicationNavigation/README.html">CrossApplicationNavigation</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/CrossApplicationNavigation</a> / CrossApplicationNavigation</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/CrossApplicationNavigation</a> / CrossApplicationNavigation</p>
 <h1><del>Class: CrossApplicationNavigation</del></h1>
 <pre class="sig"><span class="kw">import</span> CrossApplicationNavigation <span class="kw">from</span> <span class="str">"sap/ushell/services/CrossApplicationNavigation"</span>;</pre>
 <p>The Unified Shell&#39;s CrossApplicationNavigation service. Allows navigating to &quot;external&quot; targets outside
@@ -85,7 +85,7 @@ prolonged time, the actual data is persisted under a key accessible to any User 
 <p>As of version 1.120. Please use sap.ushell.services.Navigation instead.</p>
 <h2>Extends</h2>
 <ul>
-<li><a href="../../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/classes/Service.html"><code>Service</code></a></li>
+<li><code>Service</code></li>
 </ul>
 <h2>Methods</h2>
 <h3><del>backToPreviousApp()</del></h3>
@@ -104,7 +104,7 @@ the history!</p>
 <hr>
 <h3><del>expandCompactHash()</del></h3>
 <blockquote>
-<p><strong>expandCompactHash</strong>(<code>sHashFragment</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>expandCompactHash</strong>(<code>sHashFragment</code>): <code>Promise</code></p>
 </blockquote>
 <p>if sHashFragment is a compacted hash (sap-intent-param is present), in a hash, this function replaces
 it into a long url with all parameters expanded</p>
@@ -113,16 +113,16 @@ it into a long url with all parameters expanded</p>
 <p><code>string</code></p>
 <p>an (internal format) shell hash</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the expanded shell hash as first argument.</p>
 <hr>
 <h3><del>getDistinctSemanticObjects()</del></h3>
 <blockquote>
-<p><strong>getDistinctSemanticObjects</strong>(): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getDistinctSemanticObjects</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Returns a list of semantic objects of the intents the current user can navigate to.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with an array of strings representing the semantic objects of the intents the current
 user can navigate to, or rejects with an error message. The returned array will not contain duplicates.
 NOTE: the caller should not rely on the specific order the semantic objects appear in the returned
@@ -132,7 +132,7 @@ array.</p>
 <hr>
 <h3><del>getLinks()</del></h3>
 <blockquote>
-<p><strong>getLinks</strong>(<code>vArgs?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getLinks</strong>(<code>vArgs?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Resolves the given semantic object (and action) and business parameters to a list of links available
 to the user.</p>
@@ -322,7 +322,7 @@ from &#39;params&#39;.</p>
 <hr>
 <p><code>object</code>[]</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with an array of link objects containing (at least) the following properties:</p>
 <pre><code class="language-javascript">
   {
@@ -419,7 +419,7 @@ Resolves to an object of the following form when a relevant link object exists:
 <hr>
 <h3><del>getSemanticObjectLinks()</del></h3>
 <blockquote>
-<p><strong>getSemanticObjectLinks</strong>(<code>sSemanticObject</code>, <code>mParameters?</code>, <code>bIgnoreFormFactor?</code>, <code>oComponent?</code>, <code>sAppStateKey?</code>, <code>bCompactIntents?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getSemanticObjectLinks</strong>(<code>sSemanticObject</code>, <code>mParameters?</code>, <code>bIgnoreFormFactor?</code>, <code>oComponent?</code>, <code>sAppStateKey?</code>, <code>bCompactIntents?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Resolves a given semantic object and business parameters to a list of links, taking into account the
 form factor of the current device.</p>
@@ -449,7 +449,7 @@ form factor of the current device.</p>
 <p><code>boolean</code></p>
 <p>whether the returned intents should be returned in compact format. Defaults to false.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with an array of link objects containing (at least) the following properties:</p>
 <pre><code class="language-javascript">
   {
@@ -800,7 +800,7 @@ home, or another target that adds an entry in the browser history.</p>
 <hr>
 <h3><del>isIntentSupported()</del></h3>
 <blockquote>
-<p><strong>isIntentSupported</strong>(<code>aIntents</code>, <code>oComponent?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>isIntentSupported</strong>(<code>aIntents</code>, <code>oComponent?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Tells whether the given intent(s) are supported, taking into account the form factor of the current device.
 &quot;Supported&quot; means that navigation to the intent is possible. Note that the intents are assumed to be
@@ -813,7 +813,7 @@ in internal format and expanded.</p>
 <p><code>object</code></p>
 <p>the root component of the application</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with a map containing the intents from <code>aIntents</code> as keys. The map values are objects
 with a property <code>supported</code> of type <code>boolean</code>.
  Example:</p>
@@ -849,7 +849,7 @@ a slightly different response format.</p>
 <hr>
 <h3><del>isNavigationSupported()</del></h3>
 <blockquote>
-<p><strong>isNavigationSupported</strong>(<code>aIntents</code>, <code>oComponent?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>isNavigationSupported</strong>(<code>aIntents</code>, <code>oComponent?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Tells whether the given navigation intents are supported for the given parameters, form factor etc. .
 &quot;Supported&quot; means that a valid navigation target is configured for the user and for the given device.</p>
@@ -897,7 +897,7 @@ or <code>hrefForExternal</code> methods, e.g.</p>
 <p><code>object</code></p>
 <p>The root component of the application</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves to an array of objects indicating whether the intent is supported or not. Each object
 has a property <code>supported</code> of type <code>boolean</code>.</p>
 <p>Example:</p>
@@ -950,7 +950,7 @@ has a property <code>supported</code> of type <code>boolean</code>.</p>
 <hr>
 <h3><del>resolveIntent()</del></h3>
 <blockquote>
-<p><strong>resolveIntent</strong>(<code>sHashFragment</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>resolveIntent</strong>(<code>sHashFragment</code>): <code>Promise</code></p>
 </blockquote>
 <p>Resolves the URL hash fragment.</p>
 <p>This function gets the hash part of the URL and returns the URL of the target application.</p>
@@ -961,7 +961,7 @@ has a property <code>supported</code> of type <code>boolean</code>.</p>
 <p>The formatted URL hash fragment in internal format (as obtained by the SAPUI5 hasher service) not as
 given in <code>location.hash</code>)! Example: <code>#SemanticObject-action?P1=V1&amp;P2=A%20B%20C</code></p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the intent.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
@@ -1057,6 +1057,6 @@ or resolve when an error occurs during the navigation.</p>
 <h4>Since</h4>
 <p>1.15.0</p>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

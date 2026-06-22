@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: JourneyRunner — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: JourneyRunner — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="Class: JourneyRunner — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.fe.test/sap/fe/test/JourneyRunner/classes/JourneyRunner.html">
 <meta property="og:title" content="Class: JourneyRunner — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: JourneyRunner — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="Class: JourneyRunner — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.fe.test/sap/fe/test/JourneyRunner/classes/JourneyRunner.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.fe.test/README.html">sap.fe.test</a> › sap › fe › test › <a href="../../../../../../sap.fe.test/sap/fe/test/JourneyRunner/README.html">JourneyRunner</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.fe.test</a> / <a href="../README.html">sap/fe/test/JourneyRunner</a> / JourneyRunner</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../README.html">sap.fe.test</a> / <a href="../README.html">sap/fe/test/JourneyRunner</a> / JourneyRunner</p>
 <h1>Class: JourneyRunner</h1>
 <pre class="sig"><span class="kw">import</span> JourneyRunner <span class="kw">from</span> <span class="str">"sap/fe/test/JourneyRunner"</span>;</pre>
 <p>A JourneyRunner for executing integration tests with given settings.</p>
@@ -147,7 +147,7 @@ overridden by a custom JourneyRunner implementation to provide custom base asser
 <p><code>Record</code>&lt;<code>string</code>, <a href="../../ListReport/classes/ListReport.html"><code>ListReport</code></a> | <a href="../../ObjectPage/classes/ObjectPage.html"><code>ObjectPage</code></a>&gt;</p>
 <p>The available Opa pages</p>
 <h6>_vJourneys</h6>
-<p><code>string</code>[] | <code>Function</code>[]</p>
+<p><code>string</code>[] | () =&gt; <code>void</code>[]</p>
 <p>The journeys to be executed. If a journey is represented as a string, it will be interpreted as a module
 path to the file that should be loaded. Else it is expected to be a function. Alternatively, instead
 of being wrapped in an array, the journeys can also be given as separate parameters:</p>
@@ -171,7 +171,7 @@ The settings provided as first parameter are merged into the base settings of th
 
 ###### \_vJourneys
 
-`string`[] \| `Function`[]
+`string`[] \| () =&gt; `void`[]
 
 The journeys to be executed. If a journey is represented as a string, it will be interpreted as a module
 path to the file that should be loaded. Else it is expected to be a function. Alternatively, instead
@@ -297,6 +297,6 @@ Defines the global default sap.fe.test.JourneyRunner instance
 `void`
 </code></pre>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

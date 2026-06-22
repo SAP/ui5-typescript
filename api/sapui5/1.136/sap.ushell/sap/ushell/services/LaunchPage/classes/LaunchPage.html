@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: LaunchPage~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: LaunchPage~~ — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="~~Class: LaunchPage~~ — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ushell/sap/ushell/services/LaunchPage/classes/LaunchPage.html">
 <meta property="og:title" content="~~Class: LaunchPage~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: LaunchPage~~ — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="~~Class: LaunchPage~~ — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ushell/sap/ushell/services/LaunchPage/classes/LaunchPage.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../sap.ushell/sap/ushell/services/LaunchPage/README.html">LaunchPage</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/LaunchPage</a> / LaunchPage</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/LaunchPage</a> / LaunchPage</p>
 <h1><del>Class: LaunchPage</del></h1>
 <pre class="sig"><span class="kw">import</span> LaunchPage <span class="kw">from</span> <span class="str">"sap/ushell/services/LaunchPage"</span>;</pre>
 <p>A service for handling groups, tiles and catalogs.</p>
@@ -58,12 +58,12 @@ with the field &quot;contentProvider&quot;.</p>
 <p>As of version 1.99. Deprecated together with the classic homepage.</p>
 <h2>Extends</h2>
 <ul>
-<li><a href="../../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/classes/Service.html"><code>Service</code></a></li>
+<li><code>Service</code></li>
 </ul>
 <h2>Methods</h2>
 <h3><del>addGroup()</del></h3>
 <blockquote>
-<p><strong>addGroup</strong>(<code>sTitle</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addGroup</strong>(<code>sTitle</code>): <code>Promise</code></p>
 </blockquote>
 <p>Adds a new group.</p>
 <p>Intention: the page builder adds this group to the end of the home screen.</p>
@@ -73,12 +73,12 @@ with the field &quot;contentProvider&quot;.</p>
 <p><code>string</code></p>
 <p>The title of the new group</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the group was added.</p>
 <hr>
 <h3><del>addGroupAt()</del></h3>
 <blockquote>
-<p><strong>addGroupAt</strong>(<code>sTitle</code>, <code>iIndex</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addGroupAt</strong>(<code>sTitle</code>, <code>iIndex</code>): <code>Promise</code></p>
 </blockquote>
 <p>Adds a new group at a specific location.</p>
 <p>Intention: the page builder adds this group to the specific location on the home screen.</p>
@@ -91,12 +91,12 @@ with the field &quot;contentProvider&quot;.</p>
 <p><code>number</code></p>
 <p>the location of the new group</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the group.</p>
 <hr>
 <h3><del>addTile()</del></h3>
 <blockquote>
-<p><strong>addTile</strong>(<code>oCatalogTile</code>, <code>oGroup?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addTile</strong>(<code>oCatalogTile</code>, <code>oGroup?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Adds a tile to a group.</p>
 <p>If no group is provided then the tile is added to the default group.</p>
@@ -110,7 +110,7 @@ it gets the consistent (i.e. persisted) backend state of the default group.</p>
 <p><code>object</code></p>
 <p>The target group</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the tile was added.</p>
 <hr>
 <h3><del>getAppBoxPressHandler()</del></h3>
@@ -176,7 +176,7 @@ The technical error message is not translated!</p>
 <hr>
 <h3><del>getCatalogs()</del></h3>
 <blockquote>
-<p><strong>getCatalogs</strong>(): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getCatalogs</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Returns the catalogs of the user.  Only severe failures make the overall operation fail. If loading
 of a remote catalog fails, this is handled gracefully by providing a &quot;dummy&quot; empty catalog (with ID instead
@@ -184,7 +184,7 @@ of title). Use <a href="#getcatalogerror">getCatalogError</a> to check if a (rem
  Progress notifications are sent for each single catalog, i.e. attaching a <code>progress</code> handler gives
 you the same possibilities as attaching a <code>done</code> handler, but with the advantage of improved responsiveness.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves an array of black-box catalog objects is provided (which might be empty). In case of
 failure, an error message is passed. Progress notifications are sent for each single catalog, providing
 a single black-box catalog object each time.</p>
@@ -296,7 +296,7 @@ contract</p>
 <hr>
 <h3><del>getCatalogTiles()</del></h3>
 <blockquote>
-<p><strong>getCatalogTiles</strong>(<code>oCatalog</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getCatalogTiles</strong>(<code>oCatalog</code>): <code>Promise</code></p>
 </blockquote>
 <p>Returns the tiles of a catalog.</p>
 <h4>Parameters</h4>
@@ -304,7 +304,7 @@ contract</p>
 <p><code>object</code></p>
 <p>The catalog</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolve the catalog tiles.</p>
 <hr>
 <h3><del>getCatalogTileSize()</del></h3>
@@ -395,7 +395,7 @@ implementation</p>
 <hr>
 <h3><del>getCatalogTileViewControl()</del></h3>
 <blockquote>
-<p><strong>getCatalogTileViewControl</strong>(<code>oCatalogTile</code>, <code>bPreview?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getCatalogTileViewControl</strong>(<code>oCatalogTile</code>, <code>bPreview?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Returns the UI5 view or control of a catalog tile</p>
 <h4>Parameters</h4>
@@ -406,7 +406,7 @@ implementation</p>
 <p><code>boolean</code></p>
 <p>SAP-internal: Whether the tile should be displayed in preview mode</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the Catalog Tile View</p>
 <hr>
 <h3><del>getCatalogTitle()</del></h3>
@@ -424,11 +424,11 @@ implementation</p>
 <hr>
 <h3><del>getDefaultGroup()</del></h3>
 <blockquote>
-<p><strong>getDefaultGroup</strong>(): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getDefaultGroup</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Returns the default group of the user.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the default group.</p>
 <hr>
 <h3><del>getGroupId()</del></h3>
@@ -446,12 +446,12 @@ implementation</p>
 <hr>
 <h3><del>getGroups()</del></h3>
 <blockquote>
-<p><strong>getGroups</strong>(): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>object</code>&gt;</p>
+<p><strong>getGroups</strong>(): <code>Promise</code>&lt;<code>object</code>&gt;</p>
 </blockquote>
 <p>Returns the groups of the user. The order of the array is the order in which the groups will be displayed
 to the user.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>object</code>&gt;</p>
+<p><code>Promise</code>&lt;<code>object</code>&gt;</p>
 <p>A promise that resolves to the list of groups</p>
 <h4>Deprecated</h4>
 <p>As of version 1.99. Alternative for use with sap.ushell.services.Bookmark is sap.ushell.services.Bookmark#getContentNodes.</p>
@@ -566,7 +566,7 @@ that eventually opens the application represented by the tile.</p>
 <hr>
 <h3><del>getTileView()</del></h3>
 <blockquote>
-<p><strong>getTileView</strong>(<code>oTile</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getTileView</strong>(<code>oTile</code>): <code>Promise</code></p>
 </blockquote>
 <p>Returns UI5 view or control of the tile.</p>
 <h4>Parameters</h4>
@@ -574,7 +574,7 @@ that eventually opens the application represented by the tile.</p>
 <p><code>object</code></p>
 <p>The tile</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the UI5 view or control of the tile.</p>
 <hr>
 <h3><del>isCatalogsValid()</del></h3>
@@ -641,7 +641,7 @@ if the group can only be reset.</p>
 <hr>
 <h3><del>moveGroup()</del></h3>
 <blockquote>
-<p><strong>moveGroup</strong>(<code>oGroup</code>, <code>iNewIndex</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>moveGroup</strong>(<code>oGroup</code>, <code>iNewIndex</code>): <code>Promise</code></p>
 </blockquote>
 <p>Moves a group to a new index (i.e. location).</p>
 <p>Intention: the page builder already moved the page (visible to the user) and if successful - nothing
@@ -654,12 +654,12 @@ needs to be done. In case of failure it gets the consistent (i.e. persisted) bac
 <p><code>number</code></p>
 <p>The new index for the group</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the group was moved.</p>
 <hr>
 <h3><del>moveTile()</del></h3>
 <blockquote>
-<p><strong>moveTile</strong>(<code>oTile</code>, <code>iSourceIndex</code>, <code>iTargetIndex</code>, <code>oSourceGroup</code>, <code>oTargetGroup?</code>, <code>sNewTileType?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>moveTile</strong>(<code>oTile</code>, <code>iSourceIndex</code>, <code>iTargetIndex</code>, <code>oSourceGroup</code>, <code>oTargetGroup?</code>, <code>sNewTileType?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Moves a tile within a group or between different groups.</p>
 <p>Intention: the page builder already moved the tile.</p>
@@ -689,7 +689,7 @@ the source group</p>
 <p><code>string</code></p>
 <p>(added with 1.46) The new type of the tile</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the tile was moved.</p>
 <h4>See</h4>
 <p>sap.ushell.services.LaunchPage.getGroupTiles</p>
@@ -731,7 +731,7 @@ in rendering the action list in the browser.</p>
 <hr>
 <h3><del>removeGroup()</del></h3>
 <blockquote>
-<p><strong>removeGroup</strong>(<code>oGroup</code>, <code>iIndex</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>removeGroup</strong>(<code>oGroup</code>, <code>iIndex</code>): <code>Promise</code></p>
 </blockquote>
 <p>Removes a group.</p>
 <p>Intention: the page builder already removed the page (or hid it from the user) and if successful - nothing
@@ -745,12 +745,12 @@ needs to be done.</p>
 <p><code>number</code></p>
 <p>The index of the group to be removed</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the group was removed.</p>
 <hr>
 <h3><del>removeTile()</del></h3>
 <blockquote>
-<p><strong>removeTile</strong>(<code>oGroup</code>, <code>oTile</code>, <code>iIndex</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>removeTile</strong>(<code>oGroup</code>, <code>oTile</code>, <code>iIndex</code>): <code>Promise</code></p>
 </blockquote>
 <p>Removes a tile from a group.</p>
 <p>Intention: the page builder has already &#39;hidden&#39; (or removed) the tile.</p>
@@ -766,12 +766,12 @@ needs to be done.</p>
 <p><code>number</code></p>
 <p>The tile index</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the tile was removed.</p>
 <hr>
 <h3><del>resetGroup()</del></h3>
 <blockquote>
-<p><strong>resetGroup</strong>(<code>oGroup</code>, <code>iIndex</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>resetGroup</strong>(<code>oGroup</code>, <code>iIndex</code>): <code>Promise</code></p>
 </blockquote>
 <p>Resets a group.</p>
 <p>The reset action is relevant for a group that was assigned to the user by an administrator. The reset
@@ -788,14 +788,14 @@ one returned by</p>
 <p><code>number</code></p>
 <p>The index of the group to be reset</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the group was reset.</p>
 <h4>See</h4>
 <p>sap.ushell.services.LaunchPage.getGroups</p>
 <hr>
 <h3><del>setGroupTitle()</del></h3>
 <blockquote>
-<p><strong>setGroupTitle</strong>(<code>oGroup</code>, <code>sTitle</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>setGroupTitle</strong>(<code>oGroup</code>, <code>sTitle</code>): <code>Promise</code></p>
 </blockquote>
 <p>Sets the title of an existing group.</p>
 <p>Intention: the page builder knows the new title, and if successful nothing needs to be done, as the title
@@ -809,7 +809,7 @@ of the group title, in most cases the old title.</p>
 <p><code>string</code></p>
 <p>The new title of the group</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the group title was set.</p>
 <hr>
 <h3><del>setTileVisible()</del></h3>
@@ -827,6 +827,6 @@ of the group title, in most cases the old title.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NodeHierarchy — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: NodeHierarchy — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="Class: NodeHierarchy — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/svg/NodeHierarchy/classes/NodeHierarchy.html">
 <meta property="og:title" content="Class: NodeHierarchy — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: NodeHierarchy — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="Class: NodeHierarchy — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/svg/NodeHierarchy/classes/NodeHierarchy.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › svg › <a href="../../../../../../../sap.ui.vk/sap/ui/vk/svg/NodeHierarchy/README.html">NodeHierarchy</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/svg/NodeHierarchy</a> / NodeHierarchy</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/svg/NodeHierarchy</a> / NodeHierarchy</p>
 <h1>Class: NodeHierarchy</h1>
 <pre class="sig"><span class="kw">import</span> NodeHierarchy <span class="kw">from</span> <span class="str">"sap/ui/vk/svg/NodeHierarchy"</span>;</pre>
 <p>Provides the ability to explore a Scene object&#39;s node structure.</p>
@@ -474,105 +474,6 @@ The reference object of a node or an array of nodes to destroy.
 
 ***
 
-### setCustomText()
-
-&gt; **setCustomText**(`nodeRefs`, `options?`): `this`
-
-**`Experimental`**
-
-Attaches a custom text to this elements.
-
-#### Parameters
-
-##### nodeRefs
-
-`any`
-
-The node or array of nodes to set the custom text to.
-
-##### options?
-
-The custom text options. If not specified, the existing custom text will be removed.
-
-###### anchor?
-
-`number`[]
-
-The anchor point of the text, relative to the bounding box of the node to which the custom text is attached.
-Default is `[0.5, 0.5]` (center of node). `[0, 0]` is top-left, `[1, 1]` is bottom-right.
-
-###### fill?
-
-`string`
-
-The fill color of the text in CSS format. Default is &quot;black&quot;.
-
-###### fontFamily?
-
-`string`
-
-The font family of the text. Default is `&quot;Arial&quot;`.
-
-###### fontStyle?
-
-`string`
-
-The font style of the text (normal | italic | oblique). Default is undefined (&quot;normal&quot;).
-
-###### fontWeight?
-
-`string`
-
-The font weight of the text (normal | bold | bolder | lighter | ). Default is undefined (&quot;normal&quot;).
-
-###### htmlText?
-
-`string`
-
-The HTML text to display, it&#39;s mutually exclusive with `text` option. Line breaks are supported using
-paragraphs: `&quot;&lt;p&gt;Line 1&lt;/p&gt;&lt;p&gt;Line 2&lt;/p&gt;&quot;`.
-
-###### pivot?
-
-`number`[]
-
-The pivot point of the custom text, relative to the text bounding box. The pivot point is used together
-with the anchor point to position the text. Default is `[0.5, 0.5]` (middle of the custom text). `[0,
-0]` is top-left, `[1, 1]` is bottom-right.
-
-###### size?
-
-`number`
-
-The font size of the text in scene coordinate units. If not specified then the size will be automatically
-determined based on the median text size in the scene or computed from the bounding box of the scene,
-but better to specify it explicitly to avoid unexpected results.
-
-###### text?
-
-`string`
-
-The text to display, it&#39;s mutually exclusive with `htmlText` option. Line breaks are not supported, use
-`htmlText` option for multi-line text.
-
-###### textDecoration?
-
-`string`
-
-The text decoration of the text (none | underline | line-through, etc). Default is undefined (&quot;none&quot;).
-
-#### Returns
-
-`this`
-
-`this` to allow method chaining.
-
-#### Since
-
-1.120.0
-
-***
-
 ### extend()
 
 &gt; `static` **extend**\&lt;`T`\&gt;(`sClassName`, `oClassInfo?`, `FNMetaImpl?`): `Function`
@@ -630,6 +531,6 @@ Returns a metadata object for class sap.ui.vk.svg.NodeHierarchy.
 Metadata object describing this class
 </code></pre>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

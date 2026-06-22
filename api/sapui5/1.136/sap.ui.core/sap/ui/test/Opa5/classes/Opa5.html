@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Opa5 — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Opa5 — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="Class: Opa5 — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.core/sap/ui/test/Opa5/classes/Opa5.html">
 <meta property="og:title" content="Class: Opa5 — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Opa5 — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="Class: Opa5 — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.core/sap/ui/test/Opa5/classes/Opa5.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › test › <a href="../../../../../../sap.ui.core/sap/ui/test/Opa5/README.html">Opa5</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/Opa5</a> / Opa5</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/Opa5</a> / Opa5</p>
 <h1>Class: Opa5</h1>
 <pre class="sig"><span class="kw">import</span> Opa5 <span class="kw">from</span> <span class="str">"sap/ui/test/Opa5"</span>;</pre>
 <p>UI5 extension of the OPA framework.</p>
@@ -124,7 +124,7 @@ define custom OPA5 assertions in the extensions section of sap.ui.test.Opa5.exte
 <hr>
 <h3>iStartMyAppInAFrame()</h3>
 <blockquote>
-<p><strong>iStartMyAppInAFrame</strong>(<code>vSourceOrOptions</code>, <code>iTimeout?</code>, <code>autoWait?</code>, <code>width?</code>, <code>height?</code>): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>iStartMyAppInAFrame</strong>(<code>vSourceOrOptions</code>, <code>iTimeout?</code>, <code>autoWait?</code>, <code>width?</code>, <code>height?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Starts an app in an iframe. Only works reliably if running on the same server.</p>
 <h4>Parameters</h4>
@@ -174,14 +174,14 @@ of the global autoWait value, to prevent issues in existing tests.</p>
 applications on screens of varying sizes. By default, the iframe dimensions are 60% of the outer window
 dimensions.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>A promise that gets resolved on success</p>
 <h4>Since</h4>
 <p>1.48</p>
 <hr>
 <h3>iStartMyUIComponent()</h3>
 <blockquote>
-<p><strong>iStartMyUIComponent</strong>(<code>oOptions</code>): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>iStartMyUIComponent</strong>(<code>oOptions</code>): <code>Promise</code></p>
 </blockquote>
 <p>Starts a UIComponent.</p>
 <h4>Parameters</h4>
@@ -203,46 +203,46 @@ omitted, the hash will always be reset to the empty hash - &quot;&quot;.</p>
 <p><code>number</code></p>
 <p>The timeout for loading the UIComponent in seconds - sap.ui.test.Opa5#waitFor.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>A promise that gets resolved on success.</p>
 <h4>Since</h4>
 <p>1.48</p>
 <hr>
 <h3>iTeardownMyApp()</h3>
 <blockquote>
-<p><strong>iTeardownMyApp</strong>(): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>iTeardownMyApp</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Tears down the started application regardless of how it was started. Removes the iframe launched by sap.ui.test.Opa5#iStartMyAppInAFrame
 or destroys the UIComponent launched by sap.ui.test.Opa5#iStartMyUIComponent. This function is
 designed to make the test&#39;s teardown independent of the startup. Use sap.ui.test.Opa5#hasAppStarted
 to ensure that the application has been started and teardown can be safely performed.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>A promise that gets resolved on success. If nothing has been started or an error occurs, the
 promise is rejected with the options object. A detailed error message containing the stack trace and
 Opa logs is available in options.errorMessage.</p>
 <hr>
 <h3>iTeardownMyAppFrame()</h3>
 <blockquote>
-<p><strong>iTeardownMyAppFrame</strong>(): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>iTeardownMyAppFrame</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Removes the iframe from the DOM and removes all the references to its objects Use sap.ui.test.Opa5#hasAppStartedInAFrame
 to ensure that an iframe has been started and teardown can be safely performed.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>A promise that gets resolved on success. If no iframe has been created or an error occurs, the
 promise is rejected with the options object. A detailed error message containing the stack trace and
 Opa logs is available in options.errorMessage.</p>
 <hr>
 <h3>iTeardownMyUIComponent()</h3>
 <blockquote>
-<p><strong>iTeardownMyUIComponent</strong>(): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>iTeardownMyUIComponent</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Destroys the UIComponent and removes the div from the dom like all the references on its objects. Use
 sap.ui.test.Opa5#hasUIComponentStarted to ensure that a UIComponent has been started and teardown
 can be safely performed.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>a promise that gets resolved on success. If no UIComponent has been started or an error occurs,
 the promise is rejected with the options object. A detailed error message containing the stack trace
 and Opa logs is available in options.errorMessage.</p>
@@ -251,17 +251,17 @@ and Opa logs is available in options.errorMessage.</p>
 <hr>
 <h3>iWaitForPromise()</h3>
 <blockquote>
-<p><strong>iWaitForPromise</strong>(<code>oPromise</code>): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>iWaitForPromise</strong>(<code>oPromise</code>): <code>Promise</code></p>
 </blockquote>
 <p>Schedule a promise on the OPA5 queue.The promise will be executed in order with all waitFors - any subsequent
 waitFor will be executed after the promise is done. The promise is not directly chained, but instead
 its result is awaited in a new waitFor statement. This means that any &quot;thenable&quot; should be acceptable.</p>
 <h4>Parameters</h4>
 <h5>oPromise</h5>
-<p><code>Promise</code>&lt;<code>any</code>&gt; | <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>any</code>&gt;</p>
+<p><code>Promise</code>&lt;<code>any</code>&gt; | <code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>promise to schedule on the Opa5 queue</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>promise which is the result of a sap.ui.test.Opa5#waitFor</p>
 <hr>
 <h3>waitFor()</h3>
@@ -306,11 +306,11 @@ avoid name clashes and to structure your tests.</p>
 <hr>
 <h3>emptyQueue()</h3>
 <blockquote>
-<p><code>static</code> <strong>emptyQueue</strong>(): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>static</code> <strong>emptyQueue</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Waits until all waitFor calls are done See sap.ui.test.Opa.emptyQueue for the description</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>If the waiting was successful, the promise will be resolved. If not it will be rejected</p>
 <hr>
 <h3>extendConfig()</h3>
@@ -395,12 +395,12 @@ HashChanger.</p>
 <hr>
 <h3>getJQuery()</h3>
 <blockquote>
-<p><code>static</code> <strong>getJQuery</strong>(): <a href="../../../../../type-aliases/jQuery.html"><code>jQuery</code></a></p>
+<p><code>static</code> <strong>getJQuery</strong>(): <code>jQuery</code></p>
 </blockquote>
 <p>Returns the jQuery object in the current context. If an iframe is launched, it will return the iframe&#39;s
 jQuery object.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../type-aliases/jQuery.html"><code>jQuery</code></a></p>
+<p><code>jQuery</code></p>
 <p>The jQuery object</p>
 <hr>
 <h3>getPlugin()</h3>
@@ -451,7 +451,7 @@ window.</p>
 <hr>
 <h3>iStartMyAppInAFrame()</h3>
 <blockquote>
-<p><code>static</code> <strong>iStartMyAppInAFrame</strong>(<code>vSourceOrOptions</code>, <code>iTimeout?</code>, <code>autoWait?</code>, <code>width?</code>, <code>height?</code>): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>static</code> <strong>iStartMyAppInAFrame</strong>(<code>vSourceOrOptions</code>, <code>iTimeout?</code>, <code>autoWait?</code>, <code>width?</code>, <code>height?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Starts an app in an iframe. Only works reliably if running on the same server.</p>
 <h4>Parameters</h4>
@@ -501,19 +501,19 @@ of the global autoWait value, to prevent issues in existing tests.</p>
 applications on screens of varying sizes. By default, the iframe dimensions are 60% of the outer window
 dimensions.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>A promise that gets resolved on success</p>
 <h4>Since</h4>
 <p>1.48</p>
 <hr>
 <h3>iTeardownMyAppFrame()</h3>
 <blockquote>
-<p><code>static</code> <strong>iTeardownMyAppFrame</strong>(): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>static</code> <strong>iTeardownMyAppFrame</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Removes the iframe from the DOM and removes all the references to its objects. Use sap.ui.test.Opa5#hasAppStartedInAFrame
 to ensure that an iframe has been started and teardown can be safely performed.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>A promise that gets resolved on success. If no iframe has been created or an error occurs, the
 promise is rejected with the options object. A detailed error message containing the stack trace and
 Opa logs is available in options.errorMessage.</p>
@@ -553,6 +553,6 @@ the success function of this waitFor will not be called.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

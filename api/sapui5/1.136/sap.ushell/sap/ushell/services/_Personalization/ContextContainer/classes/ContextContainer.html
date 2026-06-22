@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ContextContainer~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ContextContainer~~ — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="~~Class: ContextContainer~~ — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ushell/sap/ushell/services/_Personalization/ContextContainer/classes/ContextContainer.html">
 <meta property="og:title" content="~~Class: ContextContainer~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ContextContainer~~ — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="~~Class: ContextContainer~~ — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ushell/sap/ushell/services/_Personalization/ContextContainer/classes/ContextContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › _Personalization › <a href="../../../../../../../sap.ushell/sap/ushell/services/_Personalization/ContextContainer/README.html">ContextContainer</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/_Personalization/ContextContainer</a> / ContextContainer</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/_Personalization/ContextContainer</a> / ContextContainer</p>
 <h1><del>Class: ContextContainer</del></h1>
 <pre class="sig"><span class="kw">import</span> ContextContainer <span class="kw">from</span> <span class="str">"sap/ushell/services/_Personalization/ContextContainer"</span>;</pre>
 <p>The container is the anchor object of the unified shell personalization in container mode.</p>
@@ -100,11 +100,11 @@ instead.</p>
 <hr>
 <h3><del>flush()</del></h3>
 <blockquote>
-<p><strong>flush</strong>(): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>flush</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>flush all pending request; The result of the promise may reflect the last pending operation in the queue</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the requests were flushed.</p>
 <h4>Since</h4>
 <p>1.22.0</p>
@@ -173,7 +173,7 @@ It will permit all read accesses to the container, but block all modifying acces
 <hr>
 <h3><del>load()</del></h3>
 <blockquote>
-<p><strong>load</strong>(): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>load</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>(Re)loads the current container data from the underlying storage asynchronously. The current local data
 is discarded.</p>
@@ -181,19 +181,19 @@ is discarded.</p>
 operation may fail! (wait for the other promise).</p>
 <p>Synchronous read and write operations before the load is done have undefined effects.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the context container is loaded.</p>
 <h4>Since</h4>
 <p>1.22.0</p>
 <hr>
 <h3><del>save()</del></h3>
 <blockquote>
-<p><strong>save</strong>(): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>save</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Attempts to save the current container data at the underlying storage asynchronously. The current state
 is serialized.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the container is saved.</p>
 <p>If another save/load/delete operation is not completed, the operation may fail! (wait for the other promise).</p>
 <h4>Since</h4>
@@ -204,12 +204,12 @@ instead.</p>
 <hr>
 <h3><del>saveDeferred()</del></h3>
 <blockquote>
-<p><strong>saveDeferred</strong>(): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>saveDeferred</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Save the current container data at the underlying storage asynchronously at the earlies nDelayInMilliseconds
 seconds before. The current state is serialized.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the container is saved.</p>
 <p>The operation may wait for completion of another pending operation.</p>
 <h4>Since</h4>
@@ -234,6 +234,6 @@ set</p>
 <h4>Since</h4>
 <p>1.22.0</p>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

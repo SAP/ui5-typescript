@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $LineSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $LineSettings — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta name="description" content="Interface: $LineSettings — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Line/interfaces/$LineSettings.html">
 <meta property="og:title" content="Interface: $LineSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $LineSettings — SAPUI5 TypeScript API Reference (1.136.19)">
+<meta property="og:description" content="Interface: $LineSettings — SAPUI5 TypeScript API Reference (1.136.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Line/interfaces/$LineSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › networkgraph › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Line/README.html">Line</a> › interfaces</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Line</a> / $LineSettings</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Line</a> / $LineSettings</p>
 <h1>Interface: $LineSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $LineSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/networkgraph/Line"</span>;</pre>
 <p>Describes the settings that can be provided to the Line constructor.</p>
@@ -62,19 +62,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </blockquote>
 <p>Position of the arrow on the line. Can be set to End, Middle, or Start.</p>
 <hr>
-<h3>connectionType?</h3>
-<blockquote>
-<p><code>optional</code> <strong>connectionType?</strong>: <code>any</code></p>
-</blockquote>
-<p>Defines the connection type between the source and target nodes. Can be set to RightToLeft, LeftToRight,
-TopToBottom, or BottomToTop using sap.suite.ui.commons.networkgraph.ConnectionType ConnectionType
-enumeration. This property is used to determine how the line connects the source and target nodes. For
-example, if set to RightToLeft, the line starts from the right side of the source node and end at the
-left side of the target node. This property is valid only with the NoopLayout and drag and drop enabled
-network graph.</p>
-<h4>Since</h4>
-<p>1.136.19</p>
-<hr>
 <h3>coordinates?</h3>
 <blockquote>
 <p><code>optional</code> <strong>coordinates?</strong>: <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../Coordinate/classes/Coordinate.html"><code>Coordinate</code></a> | <a href="../../Coordinate/classes/Coordinate.html"><code>Coordinate</code></a>[]</p>
@@ -99,20 +86,6 @@ of the line. The rest of the points making up the line are treated as break poin
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
 <h4>Returns</h4>
 <p><code>void</code></p>
-<hr>
-<h3>labelName?</h3>
-<blockquote>
-<p><code>optional</code> <strong>labelName?</strong>: <code>string</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
-</blockquote>
-<p>Defines the text label to be displayed on the line.</p>
-<p>When set, displays the label text in a rounded rectangle box positioned near the target arrow. The label
-is rendered only when all of the following conditions are met: - This property has a non-empty value</p>
-<ul>
-<li>The graph is using NoopLayout - The line&#39;s arrowPosition is set to &quot;Both&quot; - The line is long enough
-to accommodate the label If this property is empty or not set, no label is displayed on the line</li>
-</ul>
-<h4>Since</h4>
-<p>1.136.19</p>
 <hr>
 <h3>lineType?</h3>
 <blockquote>
@@ -153,6 +126,6 @@ even when a fancy shape is used.
 <p>Key of the node the line leads to.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>
