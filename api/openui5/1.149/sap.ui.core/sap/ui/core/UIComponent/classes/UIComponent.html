@@ -118,7 +118,7 @@ be omitted, no matter whether <code>mSettings</code> will be given or not</p>
 <p>The default implementation in this class reads the name (and optionally type) of a root view from the
 descriptor for this component (path <code>/sap.ui5/rootView</code>) or, for backward compatibility, just the name
 from static component metadata (property <code>rootView</code>). When no type is specified, it defaults to XML.
-The method then calls the <a href="../../../../../../sap.f/namespaces/sap/namespaces/ui/functions/view.html">view factory</a> to instantiate the root view and returns the
+The method then calls the view factory to instantiate the root view and returns the
 result.</p>
 <p>When there is no root view configuration, <code>null</code> will be returned.</p>
 <p>This method can be overwritten by subclasses if the default implementation doesn&#39;t fit their needs. Subclasses
