@@ -50,15 +50,15 @@ operations.</p>
 <h2>Since</h2>
 <p>1.15.0</p>
 <h2>Deprecated</h2>
-<p>As of version 1.120. Please use <a href="../../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/namespaces/PersonalizationV2/README.html">sap.ushell.services.PersonalizationV2</a> instead.</p>
+<p>As of version 1.120. Please use sap.ushell.services.PersonalizationV2 instead.</p>
 <h2>Extends</h2>
 <ul>
-<li><a href="../../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/classes/Service.html"><code>Service</code></a></li>
+<li><code>Service</code></li>
 </ul>
 <h2>Methods</h2>
 <h3><del>createEmptyContainer()</del></h3>
 <blockquote>
-<p><strong>createEmptyContainer</strong>(<code>sContainerKey</code>, <code>oScope</code>, <code>oComponent</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>createEmptyContainer</strong>(<code>sContainerKey</code>, <code>oScope</code>, <code>oComponent</code>): <code>Promise</code></p>
 </blockquote>
 <p>Factory method to obtain an empty Data Context object. When data present in a prior context is not relevant
 (e.g. when using a &quot;uniquely&quot; generated key and planning to overwrite any colliding front-end server
@@ -83,7 +83,7 @@ per user, ignored if older than nn minutes)</p>
 <p>Since 1.27.0. SAPUI5 component which uses the container. This allows to associate the stored data with
 the application.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves a sap.ushell.services.Personalization.ContextContainer object as parameter.
 The personalization container provides two different interfaces to synchronously operate on personalization
 data. In the item mode the container contains items as name value pairs for personalization data. In
@@ -96,7 +96,7 @@ instead.</p>
 <hr>
 <h3><del>delContainer()</del></h3>
 <blockquote>
-<p><strong>delContainer</strong>(<code>sContainerKey</code>, <code>oScope</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>delContainer</strong>(<code>sContainerKey</code>, <code>oScope</code>): <code>Promise</code></p>
 </blockquote>
 <p>Asynchronously starts a deletion request for the given container identified by sContainerKey. Can be
 called without having ever called getContainer with the corresponding key</p>
@@ -112,7 +112,7 @@ of a container for the given key <em>after</em> the promise has returned.</p>
 <p><code>object</code></p>
 <p>scope object</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the container was deleted.</p>
 <h4>Since</h4>
 <p>1.22.0</p>
@@ -122,7 +122,7 @@ instead.</p>
 <hr>
 <h3><del>delPersonalizationContainer()</del></h3>
 <blockquote>
-<p><strong>delPersonalizationContainer</strong>(<code>sContainerKey</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>delPersonalizationContainer</strong>(<code>sContainerKey</code>): <code>Promise</code></p>
 </blockquote>
 <p>Asynchronously starts a deletion request for the given container identified by sContainerKey. Can be
 called without having ever created a personalization container.</p>
@@ -135,7 +135,7 @@ a new instance of PersonalizationContainer for the given key <em>after</em> the 
 <p><code>string</code></p>
 <p>identifies the container</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the container was deleted.</p>
 <h4>Since</h4>
 <p>1.18.0</p>
@@ -144,7 +144,7 @@ a new instance of PersonalizationContainer for the given key <em>after</em> the 
 <hr>
 <h3><del>getContainer()</del></h3>
 <blockquote>
-<p><strong>getContainer</strong>(<code>sContainerKey</code>, <code>oScope</code>, <code>oComponent</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getContainer</strong>(<code>sContainerKey</code>, <code>oScope</code>, <code>oComponent</code>): <code>Promise</code></p>
 </blockquote>
 <p>Factory method to obtain a Data Context object, which is a local copy of the persistence layer data.
 The Container data is asynchronously read on creation if present, otherwise an initial object is created.
@@ -211,7 +211,7 @@ indicate that this container is intended to be shared by several applications</p
 <p>Since 1.27.0. SAPUI5 component which uses the container. This allows to associate the stored data with
 the application.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves a sap.ushell.services.Personalization.ContextContainer object as parameter.
 The container provides setItemValue / getItemValue methods to synchronously operate on personalization
 data. By wrapping it in a VariantSetAdapter, an alternate interface to maintain variants can be obtained.</p>
@@ -239,7 +239,7 @@ instead.</p>
 <hr>
 <h3><del>getPersonalizationContainer()</del></h3>
 <blockquote>
-<p><strong>getPersonalizationContainer</strong>(<code>sContainerKey</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getPersonalizationContainer</strong>(<code>sContainerKey</code>): <code>Promise</code></p>
 </blockquote>
 <p>This interface is deprecated since 1.22, please use getContainer / delContainer.</p>
 <p>Note: the underlying storage model for Objects stored with getContainer / getPersonalizationContainer
@@ -275,7 +275,7 @@ example you would have 2 variant sets, one for each variant type.</p>
 <p><code>string</code></p>
 <p>identifies the container</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves a sap.ushell.services.PersonalizationContainer object as parameter. The personalization
 container provides two different interfaces to synchronously operate on personalization data. In the
 item mode the container contains items as name-value pairs for personalization data. In the variant mode

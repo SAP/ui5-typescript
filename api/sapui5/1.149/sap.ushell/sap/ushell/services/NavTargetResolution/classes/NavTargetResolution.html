@@ -56,12 +56,12 @@ Test-local2 applications via url parameters (sap-ushell-test-local1-url= / sap-u
 <p>As of version 1.120. Use sap.ushell.services.Navigation for Navigation instead.</p>
 <h2>Extends</h2>
 <ul>
-<li><a href="../../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/classes/Service.html"><code>Service</code></a></li>
+<li><code>Service</code></li>
 </ul>
 <h2>Methods</h2>
 <h3><del>expandCompactHash()</del></h3>
 <blockquote>
-<p><strong>expandCompactHash</strong>(<code>sHashFragment</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>expandCompactHash</strong>(<code>sHashFragment</code>): <code>Promise</code></p>
 </blockquote>
 <p>expands a URL hash fragment</p>
 <p>This function gets the hash part of the URL and expands a sap-intent-param if present and retrievable</p>
@@ -72,14 +72,14 @@ Test-local2 applications via url parameters (sap-ushell-test-local1-url= / sap-u
 <p>The formatted URL hash fragment in internal format (as obtained by the SAPUI5 hasher service, not as
 given in <code>location.hash</code>)</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves expanded shell hash (in internal format).</p>
 <h4>Deprecated</h4>
 <p>As of version 1.120. Deprecated without successor.</p>
 <hr>
 <h3><del>isNavigationSupported()</del></h3>
 <blockquote>
-<p><strong>isNavigationSupported</strong>(<code>aIntents</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>isNavigationSupported</strong>(<code>aIntents</code>): <code>Promise</code></p>
 </blockquote>
 <p>Tells whether the given navigation intent(s) are supported for the given parameters Supported&quot; means
 that a valid navigation target is configured for the user for the given device form factor.</p>
@@ -105,7 +105,7 @@ object of toExternal, hrefForExternal etc. e.g.</p>
 </code></pre>
 <p> or <code>{ target : { shellHash : &quot;AnObject-action?A=B&amp;c=e&quot; } }</code></p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves an array of objects representing whether the intent is supported or not objects with
 a property <code>supported</code> of type <code>boolean</code>.
  Example:</p>
@@ -165,7 +165,7 @@ instead.</p>
 <hr>
 <h3><del>resolveHashFragment()</del></h3>
 <blockquote>
-<p><strong>resolveHashFragment</strong>(<code>sHashFragment</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>resolveHashFragment</strong>(<code>sHashFragment</code>): <code>Promise</code></p>
 </blockquote>
 <p>Resolves the URL hash fragment.</p>
 <p>This function should be used by a custom renderer in order to implement custom navigation. Do not use
@@ -187,7 +187,7 @@ this function for developing Fiori applications.</p>
 <p>The formatted URL hash fragment in internal format (as obtained by the SAPUI5 hasher service) not as
 given in <code>location.hash</code>)! Example: <code>#SemanticObject-action?P1=V1&amp;P2=A%20B%20C</code></p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves an object that you can use to create a sap.ushell.components.container.ApplicationContainer
 or <code>undefined</code> in case the hash fragment was empty. Typically it contains the following information:</p>
 <pre><code class="language-javascript">
@@ -207,7 +207,7 @@ added it.  No navigation should occur when the promise is resolved to <code>unde
 <hr>
 <h3><del>resolveTarget()</del></h3>
 <blockquote>
-<p><strong>resolveTarget</strong>(<code>oArgs</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>resolveTarget</strong>(<code>oArgs</code>): <code>Promise</code></p>
 </blockquote>
 <p>Resolves a navigation target taking into account the sap-system</p>
 <p>This function should be used by the NWBC browser in order to get a resolved target corresponding to a
@@ -230,7 +230,7 @@ certain configuration object describing the target. Do not use this function for
   }
 </code></pre>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves an object. Typically it contains the following information:</p>
 <pre><code class="language-javascript">
   {

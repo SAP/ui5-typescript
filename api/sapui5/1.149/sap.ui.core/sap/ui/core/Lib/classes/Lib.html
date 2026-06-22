@@ -64,7 +64,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.apf/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Lib</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Lib</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -132,7 +132,7 @@ this function fires #event:LibraryChanged event with operation &#39;add&#39; for
 <pre><code> - If the object contains a list of `interfaces`, they will be registered with the sap.ui.base.DataType
 class to make them available as aggregation types in managed objects.
 </code></pre>
-<p>If the object contains a list of <code>controls</code> or <code>elements</code>, <a href="../../../../../../sap.apf/namespaces/sap/namespaces/ui/functions/lazyRequire.html">lazy stubs</a>
+<p>If the object contains a list of <code>controls</code> or <code>elements</code>, lazy stubs
 will be created for their constructor as well as for their static <code>extend</code> and <code>getMetadata</code> methods.</p>
 <p><strong>Note:</strong> Future versions of UI5 will abandon the concept of lazy stubs as it requires synchronous XMLHttpRequests
 which have been deprecated (see <a href="http://xhr.spec.whatwg.org">http://xhr.spec.whatwg.org</a>). To be on the safe side, productive

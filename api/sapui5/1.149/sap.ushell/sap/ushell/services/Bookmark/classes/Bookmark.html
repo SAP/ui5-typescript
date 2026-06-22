@@ -52,12 +52,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>As of version 1.119. Please use sap.ushell.services.BookmarkV2 instead.</p>
 <h2>Extends</h2>
 <ul>
-<li><a href="../../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/classes/Service.html"><code>Service</code></a></li>
+<li><code>Service</code></li>
 </ul>
 <h2>Methods</h2>
 <h3><del>addBookmark()</del></h3>
 <blockquote>
-<p><strong>addBookmark</strong>(<code>oParameters</code>, <code>vContainer?</code>, <code>sContentProviderId?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addBookmark</strong>(<code>oParameters</code>, <code>vContainer?</code>, <code>sContentProviderId?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Adds a bookmark tile to one of the user&#39;s classic home page groups or to multiple provided content nodes.
 See:
@@ -138,7 +138,7 @@ default page if spaces mode is active.</p>
 <p><code>string</code></p>
 <p>The contentProviderId or undefined outside the cFLP</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves on success, but rejects with a reason-message on failure to add the bookmark to the
 specified or implied group. The promise gets resolved if personalization is disabled.</p>
 <h4>Since</h4>
@@ -148,7 +148,7 @@ specified or implied group. The promise gets resolved if personalization is disa
 <hr>
 <h3><del>addCatalogTileToGroup()</del></h3>
 <blockquote>
-<p><strong>addCatalogTileToGroup</strong>(<code>sCatalogTileId</code>, <code>sGroupId?</code>, <code>oCatalogData?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addCatalogTileToGroup</strong>(<code>sCatalogTileId</code>, <code>sGroupId?</code>, <code>oCatalogData?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Adds the catalog tile with the given ID to given group. The catalog tile is looked up in the legacy SAP
 HANA catalog unless data to look up a remote catalog is provided.</p>
@@ -168,7 +168,7 @@ HANA catalog unless data to look up a remote catalog is provided.</p>
 <p><code>string</code></p>
 <p>The remote catalog&#39;s id on the remote system such as &quot;HANA_CATALOG&quot;</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves if successful. In case of failure, an error message is passed. In launchpad spaces
 mode the promise gets rejected.</p>
 <h4>Since</h4>
@@ -178,7 +178,7 @@ mode the promise gets rejected.</p>
 <hr>
 <h3><del>countBookmarks()</del></h3>
 <blockquote>
-<p><strong>countBookmarks</strong>(<code>sUrl</code>, <code>sContentProviderId</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>countBookmarks</strong>(<code>sUrl</code>, <code>sContentProviderId</code>): <code>Promise</code></p>
 </blockquote>
 <p>Counts <strong>all</strong> bookmarks pointing to the given URL from all of the user&#39;s pages. You can use this method
 to check if a bookmark already exists.  This is a potentially asynchronous operation in case the user&#39;s
@@ -193,7 +193,7 @@ See:
 <p><code>string</code></p>
 <p>The Content Provider ID.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the count of existing bookmarks is provided (which might be zero). In case of failure,
 an error message is passed.</p>
 <h4>Since</h4>
@@ -203,7 +203,7 @@ an error message is passed.</p>
 <hr>
 <h3><del>deleteBookmarks()</del></h3>
 <blockquote>
-<p><strong>deleteBookmarks</strong>(<code>sUrl</code>, <code>sContentProviderId?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>deleteBookmarks</strong>(<code>sUrl</code>, <code>sContentProviderId?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Deletes <strong>all</strong> bookmarks pointing to the given URL from all of the user&#39;s pages.
 See:
@@ -217,7 +217,7 @@ See:
 <p><code>string</code></p>
 <p>The contentProviderId or undefined outside the cFLP</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the number of deleted bookmarks is provided (which might be zero). In case of failure,
 an error message is passed.</p>
 <h4>Since</h4>
@@ -251,7 +251,7 @@ an error message is passed.</p>
 <hr>
 <h3><del>updateBookmarks()</del></h3>
 <blockquote>
-<p><strong>updateBookmarks</strong>(<code>sUrl</code>, <code>oParameters</code>, <code>sContentProviderId?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>updateBookmarks</strong>(<code>sUrl</code>, <code>oParameters</code>, <code>sContentProviderId?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Updates <strong>all</strong> bookmarks pointing to the given URL on all of the user&#39;s pages with the given new parameters.
 Parameters which are omitted are not changed in the existing bookmarks.
@@ -310,7 +310,7 @@ URL has to be a valid intent, i.e. in the format like <code>&quot;#SO-Action?P1=
 <p><code>string</code></p>
 <p>The contentProviderId or undefined outside the cFLP</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves the number of updated bookmarks is provided (which might be zero). In case of failure,
 an error message is passed.</p>
 <h4>Since</h4>

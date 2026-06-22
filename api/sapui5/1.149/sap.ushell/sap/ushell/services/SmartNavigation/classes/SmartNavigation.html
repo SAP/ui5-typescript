@@ -58,12 +58,12 @@ will cause an increment of the frequency count, regardless of whether or not the
 <p>As of version 1.112. Please use the CrossApplicationNavigation service instead.</p>
 <h2>Extends</h2>
 <ul>
-<li><a href="../../../../../../sap.apf/namespaces/sap/namespaces/ushell/namespaces/services/classes/Service.html"><code>Service</code></a></li>
+<li><code>Service</code></li>
 </ul>
 <h2>Methods</h2>
 <h3><del>getLinks()</del></h3>
 <blockquote>
-<p><strong>getLinks</strong>(<code>oArgs?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getLinks</strong>(<code>oArgs?</code>): <code>Promise</code></p>
 </blockquote>
 <p>Resolves the given semantic object (or action) and business parameters to a list of links available to
 the user, sorted according their relevance to the calling application.</p>
@@ -78,7 +78,7 @@ See:
 <p><code>object</code> | <code>object</code>[][]</p>
 <p>An object containing nominal arguments for the method.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with an array of link objects sorted according to their relevance to the calling application.</p>
 <h4>Since</h4>
 <p>1.44.0</p>
@@ -87,14 +87,14 @@ See:
 <hr>
 <h3><del>getPrimaryIntent()</del></h3>
 <blockquote>
-<p><strong>getPrimaryIntent</strong>(): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>getPrimaryIntent</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Completely delegates to sap.ushell.services.CrossApplicationNavigation#getPrimaryIntent, and
 either may be used in place of the other with exactly the same outcome.
 See:
 	sap.ushell.services.CrossApplicationNavigation#getPrimaryIntent</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves to an object when a relevant link object exists.</p>
 <h4>Since</h4>
 <p>1.48.0</p>
@@ -155,7 +155,7 @@ See:
 <hr>
 <h3><del>trackNavigation()</del></h3>
 <blockquote>
-<p><strong>trackNavigation</strong>(<code>oArgs</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>trackNavigation</strong>(<code>oArgs</code>): <code>Promise</code></p>
 </blockquote>
 <p>Tracks a navigation to a valid intent if provided via arguments but does not perform the navigation itself.
 If no valid intent was provided tracking will be prevented. The intent has to consist of SemanticObject
@@ -175,7 +175,7 @@ was triggered via clicking a link on the UI.</p>
   }
 </code></pre>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves once the navigation was tracked.</p>
 <h4>Since</h4>
 <p>1.46.0</p>

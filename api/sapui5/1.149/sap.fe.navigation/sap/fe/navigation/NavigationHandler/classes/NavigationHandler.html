@@ -206,7 +206,7 @@ provided the selectionVariant will be constructed based on the vNavigationParame
 <hr>
 <h3>parseNavigation()</h3>
 <blockquote>
-<p><strong>parseNavigation</strong>(): <a href="../../../../../../sap.ui.core/namespaces/JQuery/interfaces/Promise.html"><code>Promise</code></a>&lt;<code>any</code>&gt;</p>
+<p><strong>parseNavigation</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p>Parses the incoming URL and returns a Promise. If this method detects a back navigation, the inner app
 state is returned in the resolved
@@ -214,7 +214,7 @@ Promise. Otherwise startup parameters will be merged into the app state provided
 and a combined app state will be
 returned. The conflict resolution can be influenced with sParamHandlingMode defined in the constructor.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/JQuery/interfaces/Promise.html"><code>Promise</code></a>&lt;<code>any</code>&gt;</p>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>A Promise object to monitor when all the actions of the function have been executed. If the
 execution is successful, the
 extracted app state, the startup parameters, and the type of navigation are returned, see also the example
@@ -254,7 +254,7 @@ and the type of navigation are returned.</p>
 <hr>
 <h3>processBeforeSmartLinkPopoverOpens()</h3>
 <blockquote>
-<p><strong>processBeforeSmartLinkPopoverOpens</strong>(<code>oTableEventParameters</code>, <code>sSelectionVariant</code>, <code>mInnerAppData?</code>, <code>oExternalAppData?</code>): <a href="../../../../../../sap.ui.core/namespaces/JQuery/interfaces/Promise.html"><code>Promise</code></a>&lt;<code>string</code>[], <code>any</code>, <code>any</code>&gt;</p>
+<p><strong>processBeforeSmartLinkPopoverOpens</strong>(<code>oTableEventParameters</code>, <code>sSelectionVariant</code>, <code>mInnerAppData?</code>, <code>oExternalAppData?</code>): <code>Promise</code>&lt;<code>string</code>[], <code>any</code>, <code>any</code>&gt;</p>
 </blockquote>
 <p>Processes navigation-related tasks related to beforePopoverOpens event handling for the SmartLink control
 and returns a Promise object. In
@@ -304,7 +304,7 @@ set the sSelectionVariant will be used.</p>
 <p><code>object</code></p>
 <p>Object containing value descriptions, which will be passed to the target screen</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/JQuery/interfaces/Promise.html"><code>Promise</code></a>&lt;<code>string</code>[], <code>any</code>, <code>any</code>&gt;</p>
+<p><code>Promise</code>&lt;<code>string</code>[], <code>any</code>, <code>any</code>&gt;</p>
 <p>A Promise object to monitor when all actions of the function have been executed; if the execution
 is successful, the
 modified oTableEventParameters is returned; if an error occurs, an error object of type
@@ -360,7 +360,7 @@ application. As a default the following values are considered as technical param
 <hr>
 <h3><del>storeInnerAppState()</del></h3>
 <blockquote>
-<p><strong>storeInnerAppState</strong>(<code>mInnerAppData</code>, <code>bImmediateHashReplace?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>string</code>&gt;</p>
+<p><strong>storeInnerAppState</strong>(<code>mInnerAppData</code>, <code>bImmediateHashReplace?</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
 <p>Changes the URL according to the current app state and stores the app state for later retrieval.</p>
 <h4>Parameters</h4>
@@ -373,7 +373,7 @@ application. As a default the following values are considered as technical param
 set to false if you cannot react to the resolution of the Promise, for example, when calling the beforeLinkPressed
 event</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>string</code>&gt;</p>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
 <p>A Promise object to monitor when all the actions of the function have been executed; if the
 execution is successful, the
 app state key is returned; if an error occurs, an object of type sap.fe.navigation.NavError is
@@ -384,7 +384,7 @@ instead.</p>
 <hr>
 <h3>storeInnerAppStateAsync()</h3>
 <blockquote>
-<p><strong>storeInnerAppStateAsync</strong>(<code>mInnerAppData</code>, <code>bImmediateHashReplace?</code>, <code>bSkipHashReplace?</code>): <a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>string</code>&gt;</p>
+<p><strong>storeInnerAppStateAsync</strong>(<code>mInnerAppData</code>, <code>bImmediateHashReplace?</code>, <code>bSkipHashReplace?</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
 <p>Changes the URL according to the current app state and stores the app state for later retrieval.</p>
 <h4>Parameters</h4>
@@ -401,7 +401,7 @@ event</p>
 <p>If set to true, the inner app hash will not be replaced in the storeInnerAppStateAsync. Also the bImmediateHashReplace
 will be ignored.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>string</code>&gt;</p>
+<p><code>Promise</code>&lt;<code>string</code>&gt;</p>
 <p>A Promise object to monitor when all the actions of the function have been executed; if the
 execution is successful, the
 app state key is returned; if an error occurs, an object of type sap.fe.navigation.NavError is

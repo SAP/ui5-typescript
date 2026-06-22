@@ -178,7 +178,7 @@ in which to add the control.</p>
 <hr>
 <h3><del>addFloatingButton()</del></h3>
 <blockquote>
-<p><strong>addFloatingButton</strong>(<code>oParameters</code>): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addFloatingButton</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
 <p>Creates a FloatingActionButton in Fiori launchpad, in the given launchpad states.
  The FloatingActionButton is rendered in the bottom right corner of the shell.</p>
@@ -209,7 +209,7 @@ sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addFloatingActionButton(&qu
 in which to add the control.</li>
 </ul>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with the newly created control</p>
 <h4>Since</h4>
 <p>1.48</p>
@@ -449,7 +449,7 @@ in which to add the control.</p>
 <hr>
 <h3><del>addShellSubHeader()</del></h3>
 <blockquote>
-<p><strong>addShellSubHeader</strong>(<code>oParameters</code>): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addShellSubHeader</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
 <p>Creates and displays a sub header control in Fiori launchpad, in the given launchpad states.
  The new control is displayed in FLP UI according to the given display parameters.
@@ -495,7 +495,7 @@ another app or back to the Home page, this control will be removed.</p>
 <p><code>object</code></p>
 <p>The properties that will be passed to the created control.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with the newly created control</p>
 <h4>Since</h4>
 <p>1.48</p>
@@ -505,7 +505,7 @@ instead.</p>
 <hr>
 <h3><del>addSidePaneContent()</del></h3>
 <blockquote>
-<p><strong>addSidePaneContent</strong>(<code>oParameters</code>): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addSidePaneContent</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
 <p>Creates the Left Pane content in Fiori launchpad, in the given launchpad states.</p>
 <p><strong>Example:</strong></p>
@@ -547,7 +547,7 @@ another app or back to the Home page, this control will be removed.</p>
 <p><code>object</code></p>
 <p>The properties that will be passed to the created control.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with the newly created control</p>
 <h4>Since</h4>
 <p>1.48</p>
@@ -662,7 +662,7 @@ instead.</p>
 <hr>
 <h3><del>addUserAction()</del></h3>
 <blockquote>
-<p><strong>addUserAction</strong>(<code>oParameters</code>): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>addUserAction</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
 <p>Creates an Action Button in Fiori launchpad, in the given launchpad states.
  The button will be displayed in the user actions menu, that is opened from the user button in the shell
@@ -708,7 +708,7 @@ another app or back to the Home page, this control will be removed.</p>
 <p><code>object</code></p>
 <p>The properties that will be passed to the created control.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with the newly created control</p>
 <h4>Since</h4>
 <p>1.48</p>
@@ -744,7 +744,7 @@ oRenderer.addUserPreferencesEntry(oEntry);
 <p>The data of the new added User Preference entry.</p>
 <h6>content</h6>
 <p><code>Function</code></p>
-<p>A function to be called that returns a <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html">jQuery.Promise</a> object which consists of a {sap.ui.core.Control }
+<p>A function to be called that returns a jQuery.Promise object which consists of a {sap.ui.core.Control }
 to be displayed in a follow-on dialog box. A SAPUI5 view instance can also be returned. The function
 is called on each time the user opens the User Preferences dialog box.</p>
 <h6>entryHelpID</h6>
@@ -755,8 +755,8 @@ is called on each time the user opens the User Preferences dialog box.</p>
 <p>A function to be called that closes the User Preferences dialog box without saving any changes.</p>
 <h6>onSave</h6>
 <p><code>Function</code></p>
-<p>A function to be called which returns a <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html">jQuery.Promise</a> object when the user clicks &quot;save&quot; in
-the User Preferences dialog box. If an error occurs, pass the error message via the <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html">jQuery.Promise</a>
+<p>A function to be called which returns a jQuery.Promise object when the user clicks &quot;save&quot; in
+the User Preferences dialog box. If an error occurs, pass the error message via the jQuery.Promise
 object. Errors are displayed in the log.</p>
 <h6>provideEmptyWrapper</h6>
 <p><code>boolean</code></p>
@@ -767,7 +767,7 @@ object. Errors are displayed in the log.</p>
 a string from the translation bundle.</p>
 <h5>value</h5>
 <p><code>string</code> | <code>Function</code></p>
-<p>A string to be presented as the value of the entry OR a function to be called which returns a <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html">jQuery.Promise</a>
+<p>A string to be presented as the value of the entry OR a function to be called which returns a jQuery.Promise
 object.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
@@ -1163,7 +1163,7 @@ instead.</p>
 <hr>
 <h3><del>setShellFooter()</del></h3>
 <blockquote>
-<p><strong>setShellFooter</strong>(<code>oParameters</code>): <a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>setShellFooter</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
 <p>Creates and displays an SAPUI5 control as the footer of the Fiori launchpad shell.
  The footer will be displayed in all states.
@@ -1195,7 +1195,7 @@ oRenderer.setShellFooter(oFooterControlProperties);
 <p><code>object</code></p>
 <p>The properties that will be passed to the created control, for example: <code>{id: &quot;testBar&quot;}</code></p>
 <h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>Resolves with the newly created control</p>
 <h4>Since</h4>
 <p>1.48</p>
