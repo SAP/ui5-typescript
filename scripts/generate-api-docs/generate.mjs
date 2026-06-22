@@ -593,10 +593,12 @@ function renderDir(dir) {
       );
 
       // Strip links whose href points to dead targets (jQuery, QUnit, pseudo-types, nested namespaces)
-      htmlFixed = htmlFixed.replace(/<a href="([^"]*)"[^>]*>(<code>[^<]+<\/code>)<\/a>/g, (match, href, content) => {
+      htmlFixed = htmlFixed.replace(/<a href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/g, (match, href, content) => {
         if (DEAD_LINK_PATTERNS.some((p) => p.test(href))) return content;
         // Links with nested namespaces/ segments are always dead TypeDoc artifacts
         if ((href.match(/\/namespaces\//g) || []).length >= 2) return content;
+        // Single namespaces/sap/README.html — the global namespace index that doesn't exist
+        if (/\/namespaces\/sap\/README\.html$/.test(href)) return content;
         return match;
       });
 
