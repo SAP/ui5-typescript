@@ -192,12 +192,35 @@ for (const file of dtsFiles) {
         // Find the opening { of this declare module block
         const openBrace = content.indexOf("{", blockStart);
         if (openBrace < 0) break; // malformed — no opening brace, skip
-        // Find the closing } by counting brace depth
+        // Find the closing } by counting brace depth (skip braces inside comments and strings)
         let braceDepth = 0;
         let blockEnd = -1;
         for (let i = openBrace; i < content.length; i++) {
-          if (content[i] === "{") braceDepth++;
-          else if (content[i] === "}") {
+          const ch = content[i];
+          // Skip single-line comments
+          if (ch === "/" && content[i + 1] === "/") {
+            i = content.indexOf("\n", i);
+            if (i < 0) break;
+            continue;
+          }
+          // Skip block comments (including JSDoc)
+          if (ch === "/" && content[i + 1] === "*") {
+            i = content.indexOf("*/", i + 2);
+            if (i < 0) break;
+            i += 1; // will be incremented by for-loop to skip past '*/'
+            continue;
+          }
+          // Skip string literals (double-quoted)
+          if (ch === '"') {
+            i++;
+            while (i < content.length && content[i] !== '"') {
+              if (content[i] === "\\") i++;
+              i++;
+            }
+            continue;
+          }
+          if (ch === "{") braceDepth++;
+          else if (ch === "}") {
             braceDepth--;
             if (braceDepth === 0) { blockEnd = i + 1; break; }
           }
