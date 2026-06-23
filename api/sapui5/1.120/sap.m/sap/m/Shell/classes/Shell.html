@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Shell — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Shell — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Shell — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Shell/classes/Shell.html">
 <meta property="og:title" content="Class: Shell — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Shell — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Shell — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Shell/classes/Shell.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Shell/README.html">Shell</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Shell</a> / Shell</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Shell</a> / Shell</p>
 <h1>Class: Shell</h1>
 <pre class="sig"><span class="kw">import</span> Shell <span class="kw">from</span> <span class="str">"sap/m/Shell"</span>;</pre>
-<h2>Since</h2>
-<p>1.12</p>
 <p>The Shell control can be used as root element of applications. It can contain an App or a <code>SplitApp</code>
 control. The Shell provides some overarching functionality for the overall application and takes care
 of visual adaptation, such as a frame around the App, on desktop browser platforms.</p>
+<h2>Since</h2>
+<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -156,6 +156,7 @@ otherwise it will be bound to this <code>sap.m.Shell</code> itself.</p>
 <blockquote>
 <p><strong>fireLogout</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:logout logout to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -165,7 +166,6 @@ otherwise it will be bound to this <code>sap.m.Shell</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:logout logout to attached listeners.</p>
 <hr>
 <h3>getApp()</h3>
 <blockquote>
@@ -192,62 +192,62 @@ full screen width.</p>
 <blockquote>
 <p><strong>getBackgroundColor</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundColor</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Gets current value of property #getBackgroundColor backgroundColor.</p>
 <p>Defines the background color of the Shell. If set, this color will override the default background defined
 by the theme. This should only be set when really required. Any configured background image will be placed
 above this colored background. Use the backgroundRepeat property to define whether this image should
 be stretched to cover the complete Shell or whether it should be tiled.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundColor</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>getBackgroundImage()</h3>
 <blockquote>
 <p><strong>getBackgroundImage</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundImage</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Gets current value of property #getBackgroundImage backgroundImage.</p>
 <p>Defines the background image of the Shell. If set, this image will override the default background defined
 by the theme. This should only be set when really required. This background image will be placed above
 any color set for the background. Use the backgroundRepeat property to define whether this image should
 be stretched to cover the complete Shell or whether it should be tiled.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundImage</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>getBackgroundOpacity()</h3>
 <blockquote>
 <p><strong>getBackgroundOpacity</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>backgroundOpacity</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Gets current value of property #getBackgroundOpacity backgroundOpacity.</p>
 <p>Defines the opacity of the background image. The opacity can be set between 0 (fully transparent) and
 1 (fully opaque). This can be used to improve readability of the Shell content by making the background
 image partly transparent.</p>
 <p>Default value is <code>1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>backgroundOpacity</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>getBackgroundRepeat()</h3>
 <blockquote>
 <p><strong>getBackgroundRepeat</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>backgroundRepeat</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Gets current value of property #getBackgroundRepeat backgroundRepeat.</p>
 <p>Determines whether the background image (if configured) should be proportionally stretched to cover the
 whole Shell (false, default) or whether it should be tiled (true). Note: the image will not be displayed
 when the <code>sap.m.Shell</code> content is fully overlapping the <code>sap.m.Shell</code> background (e.g. when &quot;appWidthLimited&quot;
 is set to &quot;false&quot;).</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>backgroundRepeat</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>getHeaderRightText()</h3>
 <blockquote>
@@ -362,6 +362,12 @@ full screen width.</p>
 <blockquote>
 <p><strong>setBackgroundColor</strong>(<code>sBackgroundColor?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundColor backgroundColor.</p>
+<p>Defines the background color of the Shell. If set, this color will override the default background defined
+by the theme. This should only be set when really required. Any configured background image will be placed
+above this colored background. Use the backgroundRepeat property to define whether this image should
+be stretched to cover the complete Shell or whether it should be tiled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundColor?</h5>
 <p><code>string</code></p>
@@ -371,17 +377,17 @@ full screen width.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getBackgroundColor backgroundColor.</p>
-<p>Defines the background color of the Shell. If set, this color will override the default background defined
-by the theme. This should only be set when really required. Any configured background image will be placed
-above this colored background. Use the backgroundRepeat property to define whether this image should
-be stretched to cover the complete Shell or whether it should be tiled.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBackgroundImage()</h3>
 <blockquote>
 <p><strong>setBackgroundImage</strong>(<code>sBackgroundImage?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundImage backgroundImage.</p>
+<p>Defines the background image of the Shell. If set, this image will override the default background defined
+by the theme. This should only be set when really required. This background image will be placed above
+any color set for the background. Use the backgroundRepeat property to define whether this image should
+be stretched to cover the complete Shell or whether it should be tiled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundImage?</h5>
 <p><code>string</code></p>
@@ -391,17 +397,17 @@ be stretched to cover the complete Shell or whether it should be tiled.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getBackgroundImage backgroundImage.</p>
-<p>Defines the background image of the Shell. If set, this image will override the default background defined
-by the theme. This should only be set when really required. This background image will be placed above
-any color set for the background. Use the backgroundRepeat property to define whether this image should
-be stretched to cover the complete Shell or whether it should be tiled.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBackgroundOpacity()</h3>
 <blockquote>
 <p><strong>setBackgroundOpacity</strong>(<code>fBackgroundOpacity?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundOpacity backgroundOpacity.</p>
+<p>Defines the opacity of the background image. The opacity can be set between 0 (fully transparent) and
+1 (fully opaque). This can be used to improve readability of the Shell content by making the background
+image partly transparent.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Parameters</h4>
 <h5>fBackgroundOpacity?</h5>
 <p><code>number</code></p>
@@ -411,17 +417,18 @@ be stretched to cover the complete Shell or whether it should be tiled.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getBackgroundOpacity backgroundOpacity.</p>
-<p>Defines the opacity of the background image. The opacity can be set between 0 (fully transparent) and
-1 (fully opaque). This can be used to improve readability of the Shell content by making the background
-image partly transparent.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>setBackgroundRepeat()</h3>
 <blockquote>
 <p><strong>setBackgroundRepeat</strong>(<code>bBackgroundRepeat?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundRepeat backgroundRepeat.</p>
+<p>Determines whether the background image (if configured) should be proportionally stretched to cover the
+whole Shell (false, default) or whether it should be tiled (true). Note: the image will not be displayed
+when the <code>sap.m.Shell</code> content is fully overlapping the <code>sap.m.Shell</code> background (e.g. when &quot;appWidthLimited&quot;
+is set to &quot;false&quot;).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bBackgroundRepeat?</h5>
 <p><code>boolean</code></p>
@@ -431,13 +438,6 @@ image partly transparent.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getBackgroundRepeat backgroundRepeat.</p>
-<p>Determines whether the background image (if configured) should be proportionally stretched to cover the
-whole Shell (false, default) or whether it should be tiled (true). Note: the image will not be displayed
-when the <code>sap.m.Shell</code> content is fully overlapping the <code>sap.m.Shell</code> background (e.g. when &quot;appWidthLimited&quot;
-is set to &quot;false&quot;).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setHeaderRightText()</h3>
 <blockquote>
@@ -563,6 +563,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

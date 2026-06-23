@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $RichTextEditorSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $RichTextEditorSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $RichTextEditorSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/interfaces/$RichTextEditorSettings.html">
 <meta property="og:title" content="Interface: $RichTextEditorSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $RichTextEditorSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $RichTextEditorSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/interfaces/$RichTextEditorSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.richtexteditor/README.html">sap.ui.richtexteditor</a> › sap › ui › richtexteditor › <a href="../../../../../../sap.ui.richtexteditor/sap/ui/richtexteditor/RichTextEditor/README.html">RichTextEditor</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.richtexteditor</a> / <a href="../README.html">sap/ui/richtexteditor/RichTextEditor</a> / $RichTextEditorSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.richtexteditor</a> / <a href="../README.html">sap/ui/richtexteditor/RichTextEditor</a> / $RichTextEditorSettings</p>
 <h1>Interface: $RichTextEditorSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $RichTextEditorSettings } <span class="kw">from</span> <span class="str">"sap/ui/richtexteditor/RichTextEditor"</span>;</pre>
+<p>Describes the settings that can be provided to the RichTextEditor constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,9 +48,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <h4>Since</h4>
 <p>1.76.0</p>
-<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <hr>
 <h3>beforeEditorInit?</h3>
 <blockquote>
@@ -96,22 +97,22 @@ key is pressed.</p>
 <blockquote>
 <p><code>optional</code> <strong>customButtons?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48</p>
 <p>Custom buttons are meant to extend the <code>RichTextEditor</code>&#39;s custom toolbar. Though type is set to sap.ui.Control,
 only sap.m.Button is allowed. <strong>Note:</strong> customButtons are available only when the customToolbar is enabled
 and all the requirements are fulfilled.</p>
+<h4>Since</h4>
+<p>1.48</p>
 <hr>
 <h3>customToolbar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>customToolbar?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48</p>
 <p>Determines whether a Fiori Toolbar is used instead of the TinyMCE default toolbar one. It is applied
-only when the EditorType is TinyMCE5 or TinyMCE6 and sap.m library is loaded. <strong>Note:</strong> The <code>customToolbar</code>
+only when the EditorType is TinyMCE6 or TinyMCE7 and sap.m library is loaded. <strong>Note:</strong> The <code>customToolbar</code>
 property will have effect only on initial loading. Changing it during runtime will not affect the initially
 loaded toolbar.</p>
+<h4>Since</h4>
+<p>1.48</p>
 <hr>
 <h3>editable?</h3>
 <blockquote>
@@ -124,10 +125,10 @@ be any editor toolbar.</p>
 <blockquote>
 <p><code>optional</code> <strong>editorLocation?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.25.0) - The editorLocation is set implicitly when choosing the editorType.</p>
 <p>Relative or absolute URL where the editor is available. Must be on the same server. <strong>Note:</strong> Any attempts
 to set this property after the first rendering will not have any effect.</p>
+<h4>Deprecated</h4>
+<p>(since 1.25.0) - The editorLocation is set implicitly when choosing the editorType.</p>
 <hr>
 <h3>editorType?</h3>
 <blockquote>
@@ -137,17 +138,19 @@ to set this property after the first rendering will not have any effect.</p>
 <p>Valid values are the ones found under sap.ui.richtexteditor.EditorType and any other editor identifier
 that may be introduced by other groups (hence this is not an enumeration).</p>
 <p><strong>Notes:</strong>
-	 - TinyMCE version 3 and 4 are no longer supported and cannot be used. If you set the property to TinyMCE,
-    it will load TinyMCE version 6.
-	 - Any attempts to set this property after the first rendering will not have any effect.
-	 - The default value of the property will always resolve to the recommended version by UI5. Due to the
-    different support cycles, we will be constantly getting newer TinyMCE versions and update the default
-    value accordingly.
-	 - Usage of internal TinyMCE APIs is not recommended, since it might lead to issues upon TinyMCE version
-    update.
-	 - Have in mind when choosing a specific TinyMCE version that there might be differences in the support
-    rules compared to UI5, therefore we might be forced to remove any TinyMCE version.
-	 - TinyMCE 5 will be removed in future releases.</p>
+	 - Do not use TinyMCE versions that are no longer supported. We may remove such versions without notice
+    in future releases if critical vulnerabilities or other serious issues are discovered in their code.</p>
+<pre><code> - Setting the property to `TinyMCE` loads the latest TinyMCE available.
+ - Any attempts to set this property after the first rendering will not have any effect.
+ - The default value of the property will always resolve to the recommended version by UI5. Due to the
+different support cycles, we will be constantly getting newer TinyMCE versions and update the default
+value accordingly.
+ - Usage of internal TinyMCE APIs is not recommended, since it might lead to issues upon TinyMCE version
+update.
+ - Have in mind when choosing a specific TinyMCE version that there might be differences in the support
+rules compared to UI5, therefore we might be forced to remove any TinyMCE version.
+ - TinyMCE 6 will be removed in future releases.
+</code></pre>
 <hr>
 <h3>height?</h3>
 <blockquote>
@@ -282,12 +285,12 @@ on a later stage.</p>
 <blockquote>
 <p><code>optional</code> <strong>useLegacyTheme?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.97.0) - This property became obsolete after the deprecation of TinyMCE v3.</p>
 <p>Determines whether or not to use the legacy theme for the toolbar buttons. If this is set to false, the
 default theme for the editor will be used (which might change slightly with every update). The legacy
 theme has the disadvantage that not all functionality has its own icon, so using non default buttons
 might lead to invisible buttons with the legacy theme - use the default editor theme in this case.</p>
+<h4>Deprecated</h4>
+<p>(since 1.97.0) - This property became obsolete after the deprecation of TinyMCE v3.</p>
 <hr>
 <h3>value?</h3>
 <blockquote>
@@ -311,6 +314,6 @@ initial state.</p>
 <p>Determines whether the text in the editor is wrapped. This does not affect the editor&#39;s value, only the
 representation in the control.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

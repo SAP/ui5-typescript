@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FileUploader — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: FileUploader — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: FileUploader — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/FileUploader/classes/FileUploader.html">
 <meta property="og:title" content="Class: FileUploader — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: FileUploader — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: FileUploader — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/FileUploader/classes/FileUploader.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/FileUploader/README.html">FileUploader</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/FileUploader</a> / FileUploader</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/FileUploader</a> / FileUploader</p>
 <h1>Class: FileUploader</h1>
 <pre class="sig"><span class="kw">import</span> FileUploader <span class="kw">from</span> <span class="str">"sap/ui/unified/FileUploader"</span>;</pre>
 <p>The framework generates an input field and a button with text &quot;Browse ...&quot;. The API supports features
@@ -110,6 +110,7 @@ See:
 <blockquote>
 <p><strong>abort</strong>(<code>sHeaderParameterName</code>, <code>sHeaderParameterValue</code>): <code>void</code></p>
 </blockquote>
+<p>Aborts the currently running upload.</p>
 <h4>Parameters</h4>
 <h5>sHeaderParameterName</h5>
 <p><code>string</code></p>
@@ -125,7 +126,6 @@ taken into account if the sHeaderParameterName parameter is provided too.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.24.0</p>
-<p>Aborts the currently running upload.</p>
 <hr>
 <h3>addAriaDescribedBy()</h3>
 <blockquote>
@@ -170,6 +170,7 @@ taken into account if the sHeaderParameterName parameter is provided too.</p>
 <blockquote>
 <p><strong>addParameter</strong>(<code>oParameter</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some parameter to the aggregation #getParameters parameters.</p>
 <h4>Parameters</h4>
 <h5>oParameter</h5>
 <p><a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a></p>
@@ -179,13 +180,17 @@ taken into account if the sHeaderParameterName parameter is provided too.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Adds some parameter to the aggregation #getParameters parameters.</p>
 <hr>
 <h3>attachAfterDialogClose()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAfterDialogClose</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:afterDialogClose afterDialogClose event of
+this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
+<p>Fired after select file dialog closes.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -202,15 +207,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAfterDialogClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:afterDialogClose afterDialogClose event of
 this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
 <p>Fired after select file dialog closes.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAfterDialogClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -223,17 +228,17 @@ otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:afterDialogClose afterDialogClose event of
-this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
-<p>Fired after select file dialog closes.</p>
 <hr>
 <h3>attachBeforeDialogOpen()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachBeforeDialogOpen</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeDialogOpen beforeDialogOpen event of
+this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
+<p>Fired before select file dialog opens.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -250,15 +255,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeDialogOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforeDialogOpen beforeDialogOpen event of
 this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
 <p>Fired before select file dialog opens.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforeDialogOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -271,11 +276,6 @@ otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforeDialogOpen beforeDialogOpen event of
-this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
-<p>Fired before select file dialog opens.</p>
 <hr>
 <h3>attachChange()</h3>
 <h4>Call Signature</h4>
@@ -412,6 +412,12 @@ otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itse
 <blockquote>
 <p><strong>attachFilenameLengthExceed</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:filenameLengthExceed filenameLengthExceed event
+of this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
+<p>Event is fired, if the filename of a chosen file is longer than the value specified with the <code>maximumFilenameLength</code>
+property.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -428,16 +434,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachFilenameLengthExceed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:filenameLengthExceed filenameLengthExceed event
 of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
 <p>Event is fired, if the filename of a chosen file is longer than the value specified with the <code>maximumFilenameLength</code>
 property.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachFilenameLengthExceed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -450,12 +456,6 @@ property.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:filenameLengthExceed filenameLengthExceed event
-of this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
-<p>Event is fired, if the filename of a chosen file is longer than the value specified with the <code>maximumFilenameLength</code>
-property.</p>
 <hr>
 <h3>attachFileSizeExceed()</h3>
 <h4>Call Signature</h4>
@@ -550,6 +550,12 @@ otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itse
 <blockquote>
 <p><strong>attachUploadAborted</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:uploadAborted uploadAborted event of this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
+<p>Event is fired after the current upload has been aborted.</p>
+<p>This event is only supported with property <code>sendXHR</code> set to true, i.e. the event is not supported in
+Internet Explorer 9.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -566,16 +572,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachUploadAborted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:uploadAborted uploadAborted event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
 <p>Event is fired after the current upload has been aborted.</p>
 <p>This event is only supported with property <code>sendXHR</code> set to true, i.e. the event is not supported in
 Internet Explorer 9.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachUploadAborted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -588,12 +594,6 @@ Internet Explorer 9.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:uploadAborted uploadAborted event of this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
-<p>Event is fired after the current upload has been aborted.</p>
-<p>This event is only supported with property <code>sendXHR</code> set to true, i.e. the event is not supported in
-Internet Explorer 9.</p>
 <hr>
 <h3>attachUploadComplete()</h3>
 <h4>Call Signature</h4>
@@ -650,6 +650,15 @@ only the client side of the upload process and does not give any success status 
 <blockquote>
 <p><strong>attachUploadProgress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:uploadProgress uploadProgress event of this
+<code>sap.ui.unified.FileUploader</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
+<p>Event is fired after the upload has started and before the upload is completed.</p>
+<p>It contains progress information related to the running upload. Depending on file size, band width and
+used browser the event is fired once or multiple times.</p>
+<p>This event is only supported with property <code>sendXHR</code> set to true, i.e. the event is not supported in
+Internet Explorer 9.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -666,6 +675,10 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachUploadProgress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:uploadProgress uploadProgress event of this
 <code>sap.ui.unified.FileUploader</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -675,10 +688,6 @@ otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itse
 used browser the event is fired once or multiple times.</p>
 <p>This event is only supported with property <code>sendXHR</code> set to true, i.e. the event is not supported in
 Internet Explorer 9.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachUploadProgress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -691,21 +700,16 @@ Internet Explorer 9.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.24.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:uploadProgress uploadProgress event of this
-<code>sap.ui.unified.FileUploader</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
-<p>Event is fired after the upload has started and before the upload is completed.</p>
-<p>It contains progress information related to the running upload. Depending on file size, band width and
-used browser the event is fired once or multiple times.</p>
-<p>This event is only supported with property <code>sendXHR</code> set to true, i.e. the event is not supported in
-Internet Explorer 9.</p>
 <hr>
 <h3>attachUploadStart()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachUploadStart</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:uploadStart uploadStart event of this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
+<p>Event is fired before an upload is started.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -722,14 +726,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.30.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:uploadStart uploadStart event of this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
-<p>Event is fired before an upload is started.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachUploadStart</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:uploadStart uploadStart event of this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
+<p>Event is fired before an upload is started.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -742,10 +746,6 @@ otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.30.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:uploadStart uploadStart event of this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.FileUploader</code> itself.</p>
-<p>Event is fired before an upload is started.</p>
 <hr>
 <h3>checkFileReadable()</h3>
 <blockquote>
@@ -761,13 +761,13 @@ message if it cannot</p>
 <blockquote>
 <p><strong>clear</strong>(): <code>this</code></p>
 </blockquote>
+<p>Clears the content of the <code>FileUploader</code>.</p>
+<p><strong>Note:</strong> The attached additional data however is retained.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Since</h4>
 <p>1.25.0</p>
-<p>Clears the content of the <code>FileUploader</code>.</p>
-<p><strong>Note:</strong> The attached additional data however is retained.</p>
 <hr>
 <h3>destroyHeaderParameters()</h3>
 <blockquote>
@@ -782,28 +782,31 @@ message if it cannot</p>
 <blockquote>
 <p><strong>destroyParameters</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the parameters in the aggregation #getParameters parameters.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Destroys all the parameters in the aggregation #getParameters parameters.</p>
 <hr>
 <h3>destroyXhrSettings()</h3>
 <blockquote>
 <p><strong>destroyXhrSettings</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the xhrSettings in the aggregation #getXhrSettings xhrSettings.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Destroys the xhrSettings in the aggregation #getXhrSettings xhrSettings.</p>
 <hr>
 <h3>detachAfterDialogClose()</h3>
 <blockquote>
 <p><strong>detachAfterDialogClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:afterDialogClose afterDialogClose event of
+this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -816,14 +819,14 @@ message if it cannot</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.102.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:afterDialogClose afterDialogClose event of
-this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachBeforeDialogOpen()</h3>
 <blockquote>
 <p><strong>detachBeforeDialogOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeDialogOpen beforeDialogOpen event of
+this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -836,9 +839,6 @@ this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.102.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforeDialogOpen beforeDialogOpen event of
-this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachChange()</h3>
 <blockquote>
@@ -895,6 +895,9 @@ this <code>sap.ui.unified.FileUploader</code>.</p>
 <blockquote>
 <p><strong>detachFilenameLengthExceed</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:filenameLengthExceed filenameLengthExceed
+event of this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -907,9 +910,6 @@ this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:filenameLengthExceed filenameLengthExceed
-event of this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachFileSizeExceed()</h3>
 <blockquote>
@@ -951,6 +951,9 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <blockquote>
 <p><strong>detachUploadAborted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:uploadAborted uploadAborted event of this
+<code>sap.ui.unified.FileUploader</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -963,9 +966,6 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:uploadAborted uploadAborted event of this
-<code>sap.ui.unified.FileUploader</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachUploadComplete()</h3>
 <blockquote>
@@ -989,6 +989,9 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <blockquote>
 <p><strong>detachUploadProgress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:uploadProgress uploadProgress event of this
+<code>sap.ui.unified.FileUploader</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1001,14 +1004,13 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:uploadProgress uploadProgress event of this
-<code>sap.ui.unified.FileUploader</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachUploadStart()</h3>
 <blockquote>
 <p><strong>detachUploadStart</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:uploadStart uploadStart event of this <code>sap.ui.unified.FileUploader</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1021,13 +1023,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:uploadStart uploadStart event of this <code>sap.ui.unified.FileUploader</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireAfterDialogClose()</h3>
 <blockquote>
 <p><strong>fireAfterDialogClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterDialogClose afterDialogClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1039,12 +1040,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>1.102.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterDialogClose afterDialogClose to attached listeners.</p>
 <hr>
 <h3>fireBeforeDialogOpen()</h3>
 <blockquote>
 <p><strong>fireBeforeDialogOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeDialogOpen beforeDialogOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1056,12 +1057,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>1.102.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeDialogOpen beforeDialogOpen to attached listeners.</p>
 <hr>
 <h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$ChangeEventParameters.html"><code>FileUploader$ChangeEventParameters</code></a></p>
@@ -1071,12 +1072,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>fireFileAllowed()</h3>
 <blockquote>
 <p><strong>fireFileAllowed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:fileAllowed fileAllowed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1086,12 +1087,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileAllowed fileAllowed to attached listeners.</p>
 <hr>
 <h3>fireFileEmpty()</h3>
 <blockquote>
 <p><strong>fireFileEmpty</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:fileEmpty fileEmpty to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$FileEmptyEventParameters.html"><code>FileUploader$FileEmptyEventParameters</code></a></p>
@@ -1101,12 +1102,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileEmpty fileEmpty to attached listeners.</p>
 <hr>
 <h3>fireFilenameLengthExceed()</h3>
 <blockquote>
 <p><strong>fireFilenameLengthExceed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:filenameLengthExceed filenameLengthExceed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$FilenameLengthExceedEventParameters.html"><code>FileUploader$FilenameLengthExceedEventParameters</code></a></p>
@@ -1118,12 +1119,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>1.24.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:filenameLengthExceed filenameLengthExceed to attached listeners.</p>
 <hr>
 <h3>fireFileSizeExceed()</h3>
 <blockquote>
 <p><strong>fireFileSizeExceed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:fileSizeExceed fileSizeExceed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$FileSizeExceedEventParameters.html"><code>FileUploader$FileSizeExceedEventParameters</code></a></p>
@@ -1133,12 +1134,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileSizeExceed fileSizeExceed to attached listeners.</p>
 <hr>
 <h3>fireTypeMissmatch()</h3>
 <blockquote>
 <p><strong>fireTypeMissmatch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:typeMissmatch typeMissmatch to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$TypeMissmatchEventParameters.html"><code>FileUploader$TypeMissmatchEventParameters</code></a></p>
@@ -1148,12 +1149,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:typeMissmatch typeMissmatch to attached listeners.</p>
 <hr>
 <h3>fireUploadAborted()</h3>
 <blockquote>
 <p><strong>fireUploadAborted</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:uploadAborted uploadAborted to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$UploadAbortedEventParameters.html"><code>FileUploader$UploadAbortedEventParameters</code></a></p>
@@ -1165,12 +1166,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>1.24.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:uploadAborted uploadAborted to attached listeners.</p>
 <hr>
 <h3>fireUploadComplete()</h3>
 <blockquote>
 <p><strong>fireUploadComplete</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:uploadComplete uploadComplete to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$UploadCompleteEventParameters.html"><code>FileUploader$UploadCompleteEventParameters</code></a></p>
@@ -1180,12 +1181,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:uploadComplete uploadComplete to attached listeners.</p>
 <hr>
 <h3>fireUploadProgress()</h3>
 <blockquote>
 <p><strong>fireUploadProgress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:uploadProgress uploadProgress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$UploadProgressEventParameters.html"><code>FileUploader$UploadProgressEventParameters</code></a></p>
@@ -1197,12 +1198,12 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>1.24.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:uploadProgress uploadProgress to attached listeners.</p>
 <hr>
 <h3>fireUploadStart()</h3>
 <blockquote>
 <p><strong>fireUploadStart</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:uploadStart uploadStart to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FileUploader$UploadStartEventParameters.html"><code>FileUploader$UploadStartEventParameters</code></a></p>
@@ -1214,7 +1215,6 @@ event of this <code>sap.ui.unified.FileUploader</code>.</p>
 <p>1.30.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:uploadStart uploadStart to attached listeners.</p>
 <hr>
 <h3>getAdditionalData()</h3>
 <blockquote>
@@ -1269,14 +1269,14 @@ with suffix &quot;-data&quot;.</p>
 <blockquote>
 <p><strong>getDirectory</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getDirectory directory.</p>
+<p>Allows users to upload all files from a given directory and its corresponding subdirectories.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>directory</code></p>
 <h4>Since</h4>
 <p>1.105.0</p>
-<p>Gets current value of property #getDirectory directory.</p>
-<p>Allows users to upload all files from a given directory and its corresponding subdirectories.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -1316,97 +1316,97 @@ are not supported by Internet Explorer 9.</p>
 <blockquote>
 <p><strong>getHttpRequestMethod</strong>(): <a href="../../FileUploaderHttpRequestMethod/enumerations/FileUploaderHttpRequestMethod.html"><code>FileUploaderHttpRequestMethod</code></a></p>
 </blockquote>
+<p>Gets current value of property #getHttpRequestMethod httpRequestMethod.</p>
+<p>Chosen HTTP request method for file upload.</p>
+<p>Default value is <code>Post</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../FileUploaderHttpRequestMethod/enumerations/FileUploaderHttpRequestMethod.html"><code>FileUploaderHttpRequestMethod</code></a></p>
 <p>Value of property <code>httpRequestMethod</code></p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Gets current value of property #getHttpRequestMethod httpRequestMethod.</p>
-<p>Chosen HTTP request method for file upload.</p>
-<p>Default value is <code>Post</code>.</p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
 <p><strong>getIcon</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getIcon icon.</p>
+<p>Icon to be displayed as graphical element within the button.</p>
+<p>This can be a URI to an image or an icon font URI.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>icon</code></p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Gets current value of property #getIcon icon.</p>
-<p>Icon to be displayed as graphical element within the button.</p>
-<p>This can be a URI to an image or an icon font URI.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getIconFirst()</h3>
 <blockquote>
 <p><strong>getIconFirst</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getIconFirst iconFirst.</p>
+<p>If set to true (default), the display sequence is 1. icon 2. control text.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>iconFirst</code></p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Gets current value of property #getIconFirst iconFirst.</p>
-<p>If set to true (default), the display sequence is 1. icon 2. control text.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getIconHovered()</h3>
 <blockquote>
 <p><strong>getIconHovered</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>iconHovered</code></p>
-<h4>Since</h4>
-<p>1.26.0</p>
 <p>Gets current value of property #getIconHovered iconHovered.</p>
 <p>Icon to be displayed as graphical element within the button when it is hovered (only if also a base icon
 was specified).</p>
 <p>If not specified, the base icon is used. If an icon font icon is used, this property is ignored.</p>
 <p>Default value is <code>empty string</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>iconHovered</code></p>
+<h4>Since</h4>
+<p>1.26.0</p>
 <hr>
 <h3>getIconOnly()</h3>
 <blockquote>
 <p><strong>getIconOnly</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getIconOnly iconOnly.</p>
+<p>If set to true, the button is displayed without any text.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>iconOnly</code></p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Gets current value of property #getIconOnly iconOnly.</p>
-<p>If set to true, the button is displayed without any text.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getIconSelected()</h3>
 <blockquote>
 <p><strong>getIconSelected</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>iconSelected</code></p>
-<h4>Since</h4>
-<p>1.26.0</p>
 <p>Gets current value of property #getIconSelected iconSelected.</p>
 <p>Icon to be displayed as graphical element within the button when it is selected (only if also a base
 icon was specified).</p>
 <p>If not specified, the base or hovered icon is used. If an icon font icon is used, this property is ignored.</p>
 <p>Default value is <code>empty string</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>iconSelected</code></p>
+<h4>Since</h4>
+<p>1.26.0</p>
 <hr>
 <h3>getMaximumFilenameLength()</h3>
 <blockquote>
 <p><strong>getMaximumFilenameLength</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getMaximumFilenameLength maximumFilenameLength.</p>
+<p>The maximum length of a filename which the <code>FileUploader</code> will accept.</p>
+<p>If the maximum filename length is exceeded, the corresponding event <code>filenameLengthExceed</code> is fired.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>maximumFilenameLength</code></p>
 <h4>Since</h4>
 <p>1.24.0</p>
-<p>Gets current value of property #getMaximumFilenameLength maximumFilenameLength.</p>
-<p>The maximum length of a filename which the <code>FileUploader</code> will accept.</p>
-<p>If the maximum filename length is exceeded, the corresponding event <code>filenameLengthExceed</code> is fired.</p>
 <hr>
 <h3>getMaximumFileSize()</h3>
 <blockquote>
@@ -1464,12 +1464,12 @@ the property so that fewer upload functions may be available in some cases.</p>
 <blockquote>
 <p><strong>getParameters</strong>(): <a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getParameters parameters.</p>
+<p>The parameters for the <code>FileUploader</code> which are rendered as a hidden input field.</p>
 <h4>Returns</h4>
 <p><a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a>[]</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Gets content of aggregation #getParameters parameters.</p>
-<p>The parameters for the <code>FileUploader</code> which are rendered as a hidden input field.</p>
 <hr>
 <h3>getPlaceholder()</h3>
 <blockquote>
@@ -1485,6 +1485,13 @@ the property so that fewer upload functions may be available in some cases.</p>
 <blockquote>
 <p><strong>getProcessedBlobsFromArray</strong>(<code>aBlobs</code>): <code>Promise</code>&lt;<code>Blob</code>[]&gt;</p>
 </blockquote>
+<p>Allows to process Blobs before they get uploaded. This API can be used to create custom Blobs and upload
+these custom Blobs instead of the received/initials Blobs in the parameter <code>aBlobs</code>. One use case could
+be to create and upload zip archives based on the passed Blobs. The default implementation of this API
+should simply resolve with the received Blobs (parameter <code>aBlobs</code>).</p>
+<p>This API is only supported in case <code>sendXHR</code> is <code>true</code>. This means only IE10+ is supported, while IE9
+and below is not.</p>
+<p>This is a default implementation of the interface <code>sap.ui.unified.IProcessableBlobs</code>.</p>
 <h4>Parameters</h4>
 <h5>aBlobs</h5>
 <p><code>Blob</code>[]</p>
@@ -1494,13 +1501,6 @@ the property so that fewer upload functions may be available in some cases.</p>
 <p>A Promise that resolves with an array of Blobs which is used for the final uploading.</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Allows to process Blobs before they get uploaded. This API can be used to create custom Blobs and upload
-these custom Blobs instead of the received/initials Blobs in the parameter <code>aBlobs</code>. One use case could
-be to create and upload zip archives based on the passed Blobs. The default implementation of this API
-should simply resolve with the received Blobs (parameter <code>aBlobs</code>).</p>
-<p>This API is only supported in case <code>sendXHR</code> is <code>true</code>. This means only IE10+ is supported, while IE9
-and below is not.</p>
-<p>This is a default implementation of the interface <code>sap.ui.unified.IProcessableBlobs</code>.</p>
 <h4>Implementation of</h4>
 <p><a href="../../library/interfaces/IProcessableBlobs.html"><code>IProcessableBlobs</code></a>.<a href="../../library/interfaces/IProcessableBlobs.html#getprocessedblobsfromarray"><code>getProcessedBlobsFromArray</code></a></p>
 <hr>
@@ -1592,28 +1592,28 @@ set the property <code>sendXHR</code> to &quot;true&quot;. This property is not 
 <blockquote>
 <p><strong>getValueState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getValueState valueState.</p>
+<p>Visualizes warnings or errors related to the text field.</p>
+<p>Possible values: Warning, Error, Success, None.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>valueState</code></p>
 <h4>Since</h4>
 <p>1.24.0</p>
-<p>Gets current value of property #getValueState valueState.</p>
-<p>Visualizes warnings or errors related to the text field.</p>
-<p>Possible values: Warning, Error, Success, None.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getValueStateText()</h3>
 <blockquote>
 <p><strong>getValueStateText</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getValueStateText valueStateText.</p>
+<p>Custom text for the value state message pop-up.</p>
+<p><strong>Note:</strong> If not specified, a default text, based on the value state type, will be used instead.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>valueStateText</code></p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Gets current value of property #getValueStateText valueStateText.</p>
-<p>Custom text for the value state message pop-up.</p>
-<p><strong>Note:</strong> If not specified, a default text, based on the value state type, will be used instead.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -1630,13 +1630,13 @@ set the property <code>sendXHR</code> to &quot;true&quot;. This property is not 
 <blockquote>
 <p><strong>getXhrSettings</strong>(): <a href="../../FileUploaderXHRSettings/classes/FileUploaderXHRSettings.html"><code>FileUploaderXHRSettings</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getXhrSettings xhrSettings.</p>
+<p>Settings for the <code>XMLHttpRequest</code> object. <strong>Note:</strong> This aggregation is only used when the <code>sendXHR</code>
+property is set to <code>true</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../FileUploaderXHRSettings/classes/FileUploaderXHRSettings.html"><code>FileUploaderXHRSettings</code></a></p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Gets content of aggregation #getXhrSettings xhrSettings.</p>
-<p>Settings for the <code>XMLHttpRequest</code> object. <strong>Note:</strong> This aggregation is only used when the <code>sendXHR</code>
-property is set to <code>true</code>.</p>
 <hr>
 <h3>indexOfHeaderParameter()</h3>
 <blockquote>
@@ -1656,6 +1656,8 @@ and returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfParameter</strong>(<code>oParameter</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.unified.FileUploaderParameter</code> in the aggregation #getParameters parameters.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oParameter</h5>
 <p><a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a></p>
@@ -1665,8 +1667,6 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Checks for the provided <code>sap.ui.unified.FileUploaderParameter</code> in the aggregation #getParameters parameters.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertHeaderParameter()</h3>
 <blockquote>
@@ -1690,6 +1690,7 @@ the headerParameter is inserted at the last position</p>
 <blockquote>
 <p><strong>insertParameter</strong>(<code>oParameter</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a parameter into the aggregation #getParameters parameters.</p>
 <h4>Parameters</h4>
 <h5>oParameter</h5>
 <p><a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a></p>
@@ -1704,7 +1705,6 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Inserts a parameter into the aggregation #getParameters parameters.</p>
 <hr>
 <h3>removeAllAriaDescribedBy()</h3>
 <blockquote>
@@ -1738,13 +1738,13 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllParameters</strong>(): <a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getParameters parameters.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Removes all the controls from the aggregation #getParameters parameters.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAriaDescribedBy()</h3>
 <blockquote>
@@ -1789,6 +1789,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeParameter</strong>(<code>vParameter</code>): <a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a></p>
 </blockquote>
+<p>Removes a parameter from the aggregation #getParameters parameters.</p>
 <h4>Parameters</h4>
 <h5>vParameter</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../FileUploaderParameter/classes/FileUploaderParameter.html"><code>FileUploaderParameter</code></a></p>
@@ -1798,7 +1799,6 @@ is inserted at the last position</p>
 <p>The removed parameter or <code>null</code></p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Removes a parameter from the aggregation #getParameters parameters.</p>
 <hr>
 <h3>setAdditionalData()</h3>
 <blockquote>
@@ -1852,6 +1852,10 @@ with suffix &quot;-data&quot;.</p>
 <blockquote>
 <p><strong>setDirectory</strong>(<code>bDirectory?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDirectory directory.</p>
+<p>Allows users to upload all files from a given directory and its corresponding subdirectories.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bDirectory?</h5>
 <p><code>boolean</code></p>
@@ -1861,10 +1865,6 @@ with suffix &quot;-data&quot;.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.105.0</p>
-<p>Sets a new value for property #getDirectory directory.</p>
-<p>Allows users to upload all files from a given directory and its corresponding subdirectories.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
@@ -1904,6 +1904,10 @@ property is not supported by Microsoft Edge.</p>
 <blockquote>
 <p><strong>setHttpRequestMethod</strong>(<code>sHttpRequestMethod?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHttpRequestMethod httpRequestMethod.</p>
+<p>Chosen HTTP request method for file upload.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Post</code>.</p>
 <h4>Parameters</h4>
 <h5>sHttpRequestMethod?</h5>
 <p><a href="../../FileUploaderHttpRequestMethod/enumerations/FileUploaderHttpRequestMethod.html"><code>FileUploaderHttpRequestMethod</code></a></p>
@@ -1913,15 +1917,16 @@ property is not supported by Microsoft Edge.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Sets a new value for property #getHttpRequestMethod httpRequestMethod.</p>
-<p>Chosen HTTP request method for file upload.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Post</code>.</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
 <p><strong>setIcon</strong>(<code>sIcon?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIcon icon.</p>
+<p>Icon to be displayed as graphical element within the button.</p>
+<p>This can be a URI to an image or an icon font URI.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIcon?</h5>
 <p><code>string</code></p>
@@ -1931,16 +1936,15 @@ property is not supported by Microsoft Edge.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Sets a new value for property #getIcon icon.</p>
-<p>Icon to be displayed as graphical element within the button.</p>
-<p>This can be a URI to an image or an icon font URI.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setIconFirst()</h3>
 <blockquote>
 <p><strong>setIconFirst</strong>(<code>bIconFirst?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconFirst iconFirst.</p>
+<p>If set to true (default), the display sequence is 1. icon 2. control text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bIconFirst?</h5>
 <p><code>boolean</code></p>
@@ -1950,15 +1954,17 @@ property is not supported by Microsoft Edge.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Sets a new value for property #getIconFirst iconFirst.</p>
-<p>If set to true (default), the display sequence is 1. icon 2. control text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setIconHovered()</h3>
 <blockquote>
 <p><strong>setIconHovered</strong>(<code>sIconHovered?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconHovered iconHovered.</p>
+<p>Icon to be displayed as graphical element within the button when it is hovered (only if also a base icon
+was specified).</p>
+<p>If not specified, the base icon is used. If an icon font icon is used, this property is ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconHovered?</h5>
 <p><code>string</code></p>
@@ -1968,17 +1974,15 @@ property is not supported by Microsoft Edge.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Sets a new value for property #getIconHovered iconHovered.</p>
-<p>Icon to be displayed as graphical element within the button when it is hovered (only if also a base icon
-was specified).</p>
-<p>If not specified, the base icon is used. If an icon font icon is used, this property is ignored.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setIconOnly()</h3>
 <blockquote>
 <p><strong>setIconOnly</strong>(<code>bIconOnly?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconOnly iconOnly.</p>
+<p>If set to true, the button is displayed without any text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bIconOnly?</h5>
 <p><code>boolean</code></p>
@@ -1988,15 +1992,17 @@ was specified).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Sets a new value for property #getIconOnly iconOnly.</p>
-<p>If set to true, the button is displayed without any text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setIconSelected()</h3>
 <blockquote>
 <p><strong>setIconSelected</strong>(<code>sIconSelected?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconSelected iconSelected.</p>
+<p>Icon to be displayed as graphical element within the button when it is selected (only if also a base
+icon was specified).</p>
+<p>If not specified, the base or hovered icon is used. If an icon font icon is used, this property is ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconSelected?</h5>
 <p><code>string</code></p>
@@ -2006,17 +2012,15 @@ was specified).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Sets a new value for property #getIconSelected iconSelected.</p>
-<p>Icon to be displayed as graphical element within the button when it is selected (only if also a base
-icon was specified).</p>
-<p>If not specified, the base or hovered icon is used. If an icon font icon is used, this property is ignored.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setMaximumFilenameLength()</h3>
 <blockquote>
 <p><strong>setMaximumFilenameLength</strong>(<code>iMaximumFilenameLength?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMaximumFilenameLength maximumFilenameLength.</p>
+<p>The maximum length of a filename which the <code>FileUploader</code> will accept.</p>
+<p>If the maximum filename length is exceeded, the corresponding event <code>filenameLengthExceed</code> is fired.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>iMaximumFilenameLength?</h5>
 <p><code>number</code></p>
@@ -2026,10 +2030,6 @@ icon was specified).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24.0</p>
-<p>Sets a new value for property #getMaximumFilenameLength maximumFilenameLength.</p>
-<p>The maximum length of a filename which the <code>FileUploader</code> will accept.</p>
-<p>If the maximum filename length is exceeded, the corresponding event <code>filenameLengthExceed</code> is fired.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setMaximumFileSize()</h3>
 <blockquote>
@@ -2241,6 +2241,11 @@ set the property <code>sendXHR</code> to &quot;true&quot;. This property is not 
 <blockquote>
 <p><strong>setValueState</strong>(<code>sValueState?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getValueState valueState.</p>
+<p>Visualizes warnings or errors related to the text field.</p>
+<p>Possible values: Warning, Error, Success, None.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sValueState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -2250,16 +2255,15 @@ set the property <code>sendXHR</code> to &quot;true&quot;. This property is not 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.24.0</p>
-<p>Sets a new value for property #getValueState valueState.</p>
-<p>Visualizes warnings or errors related to the text field.</p>
-<p>Possible values: Warning, Error, Success, None.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setValueStateText()</h3>
 <blockquote>
 <p><strong>setValueStateText</strong>(<code>sValueStateText?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getValueStateText valueStateText.</p>
+<p>Custom text for the value state message pop-up.</p>
+<p><strong>Note:</strong> If not specified, a default text, based on the value state type, will be used instead.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sValueStateText?</h5>
 <p><code>string</code></p>
@@ -2269,10 +2273,6 @@ set the property <code>sendXHR</code> to &quot;true&quot;. This property is not 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Sets a new value for property #getValueStateText valueStateText.</p>
-<p>Custom text for the value state message pop-up.</p>
-<p><strong>Note:</strong> If not specified, a default text, based on the value state type, will be used instead.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -2294,6 +2294,7 @@ set the property <code>sendXHR</code> to &quot;true&quot;. This property is not 
 <blockquote>
 <p><strong>setXhrSettings</strong>(<code>oXhrSettings</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getXhrSettings xhrSettings.</p>
 <h4>Parameters</h4>
 <h5>oXhrSettings</h5>
 <p><a href="../../FileUploaderXHRSettings/classes/FileUploaderXHRSettings.html"><code>FileUploaderXHRSettings</code></a></p>
@@ -2303,7 +2304,6 @@ set the property <code>sendXHR</code> to &quot;true&quot;. This property is not 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Sets the aggregated #getXhrSettings xhrSettings.</p>
 <hr>
 <h3>upload()</h3>
 <blockquote>
@@ -2358,6 +2358,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

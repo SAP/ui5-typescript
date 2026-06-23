@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Column — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Column — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Column — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Column/classes/Column.html">
 <meta property="og:title" content="Class: Column — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Column — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Column — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Column/classes/Column.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Column/README.html">Column</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Column</a> / Column</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Column</a> / Column</p>
 <h1>Class: Column</h1>
 <pre class="sig"><span class="kw">import</span> Column <span class="kw">from</span> <span class="str">"sap/m/Column"</span>;</pre>
-<h2>Since</h2>
-<p>1.12</p>
 <p>The <code>sap.m.Column</code> allows to define column specific properties that will be applied when rendering the
 <code>sap.m.Table</code>.</p>
 <p>See section &quot;<a href="https://ui5.sap.com/#/topic/6f778a805bc3453dbb66e246d8271839">Defining Column Width</a>&quot;
 in the documentation to understand how to define the <code>width</code> property of the <code>sap.m.Column</code> to render
 a <code>sap.m.Table</code> control properly.</p>
+<h2>Since</h2>
+<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -90,13 +90,13 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>clearLastValue</strong>(): <code>this</code></p>
 </blockquote>
+<p>Clears the last value of the column if mergeDuplicates property is true</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <h4>Since</h4>
 <p>1.20.4</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Clears the last value of the column if mergeDuplicates property is true</p>
 <hr>
 <h3>destroyFooter()</h3>
 <blockquote>
@@ -120,11 +120,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getAutoPopinWidth</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>autoPopinWidth</code></p>
-<h4>Since</h4>
-<p>1.76</p>
 <p>Gets current value of property #getAutoPopinWidth autoPopinWidth.</p>
 <p>Defines the auto pop-in width for the column.</p>
 <p>If the <code>sap.m.Table</code> control is configured with <code>autoPopinMode=true</code>, then the <code>autoPopinWidth</code> property
@@ -132,11 +127,18 @@ is used to calculate the <code>minScreenWidth</code> property of the column in c
 the column. See sap.m.Column#getWidth and sap.m.Table#getAutoPopinMode. <strong>Note:</strong> A float
 value is set for the <code>autoPopinWidth</code> property which is internally treated as a rem value.</p>
 <p>Default value is <code>8</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>autoPopinWidth</code></p>
+<h4>Since</h4>
+<p>1.76</p>
 <hr>
 <h3>getCssAlign()</h3>
 <blockquote>
 <p><strong>getCssAlign</strong>(<code>sAlign?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns CSS alignment according to column hAlign setting or given parameter for Begin/End values checks
+the locale settings</p>
 <h4>Parameters</h4>
 <h5>sAlign?</h5>
 <p><code>string</code></p>
@@ -146,8 +148,6 @@ value is set for the <code>autoPopinWidth</code> property which is internally tr
 <p>left|center|right</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns CSS alignment according to column hAlign setting or given parameter for Begin/End values checks
-the locale settings</p>
 <hr>
 <h3>getDemandPopin()</h3>
 <blockquote>
@@ -196,71 +196,66 @@ overwritten if the <code>sap.m.Table</code> control is configured with <code>aut
 <blockquote>
 <p><strong>getHeaderMenu</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getHeaderMenu headerMenu, or
+<code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.98.0</p>
-<p>ID of the element which is the current target of the association #getHeaderMenu headerMenu, or
-<code>null</code>.</p>
 <hr>
 <h3>getImportance()</h3>
 <blockquote>
 <p><strong>getImportance</strong>(): <code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
-<p>Value of property <code>importance</code></p>
-<h4>Since</h4>
-<p>1.76</p>
 <p>Gets current value of property #getImportance importance.</p>
 <p>Defines the column importance.</p>
 <p>If the <code>sap.m.Table</code> control is configured with <code>autoPopinMode=true</code>, then the column importance is taken
 into consideration for calculating the <code>minScreenWidth</code> property and for setting the <code>demandPopin</code> property
 of the column. See sap.m.Table#getAutoPopinMode</p>
 <p>Default value is <code>&quot;None&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
+<p>Value of property <code>importance</code></p>
+<h4>Since</h4>
+<p>1.76</p>
 <hr>
 <h3>getIndex()</h3>
 <blockquote>
 <p><strong>getIndex</strong>(): <code>void</code></p>
 </blockquote>
+<p>Gets the rendering index of the column</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets the rendering index of the column</p>
 <hr>
 <h3>getInitialOrder()</h3>
 <blockquote>
 <p><strong>getInitialOrder</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets the initial order of the column</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>initial order of the column</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets the initial order of the column</p>
 <hr>
 <h3>getLastValue()</h3>
 <blockquote>
 <p><strong>getLastValue</strong>(): <code>void</code></p>
 </blockquote>
+<p>Gets the last value of the column</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.16</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets the last value of the column</p>
 <hr>
 <h3>getMergeDuplicates()</h3>
 <blockquote>
 <p><strong>getMergeDuplicates</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>mergeDuplicates</code></p>
-<h4>Since</h4>
-<p>1.16</p>
 <p>Gets current value of property #getMergeDuplicates mergeDuplicates.</p>
 <p>Set <code>true</code> to merge repeating/duplicate cells into one cell block. See <code>mergeFunctionName</code> property to
 customize.</p>
@@ -270,16 +265,16 @@ used together with two-way binding. This property is ignored if any column is co
 as a pop-in. Don&#39;t set this property for cells for which the content provides a user interaction, such
 as <code>sap.m.Link</code>.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>mergeDuplicates</code></p>
+<h4>Since</h4>
+<p>1.16</p>
 <hr>
 <h3>getMergeFunctionName()</h3>
 <blockquote>
 <p><strong>getMergeFunctionName</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>mergeFunctionName</code></p>
-<h4>Since</h4>
-<p>1.16</p>
 <p>Gets current value of property #getMergeFunctionName mergeFunctionName.</p>
 <p>Defines the control serialization function if <code>mergeDuplicates</code> property is set to <code>true</code>. The control
 itself uses this function to compare values of two repeating cells. Default value &quot;getText&quot; is suitable
@@ -287,6 +282,11 @@ for <code>sap.m.Label</code> and <code>sap.m.Text</code> controls but for the <c
 should be used to merge icons. <strong>Note:</strong> You can pass one string parameter to given function after &quot;#&quot;
 sign. e.g. &quot;data#myparameter&quot;</p>
 <p>Default value is <code>&#39;getText&#39;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>mergeFunctionName</code></p>
+<h4>Since</h4>
+<p>1.16</p>
 <hr>
 <h3>getMinScreenWidth()</h3>
 <blockquote>
@@ -308,54 +308,54 @@ control is configured with <code>autoPopinMode=true</code>. See sap.m.Table#getA
 <blockquote>
 <p><strong>getOrder</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets the order of the column</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>nOrder order of the column</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets the order of the column</p>
 <hr>
 <h3>getPopinDisplay()</h3>
 <blockquote>
 <p><strong>getPopinDisplay</strong>(): <a href="../../library/enumerations/PopinDisplay.html"><code>PopinDisplay</code></a> | <code>&quot;Block&quot;</code> | <code>&quot;Inline&quot;</code> | <code>&quot;WithoutHeader&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getPopinDisplay popinDisplay.</p>
+<p>Defines enumerated display options for the pop-in.</p>
+<p>Default value is <code>Block</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/enumerations/PopinDisplay.html"><code>PopinDisplay</code></a> | <code>&quot;Block&quot;</code> | <code>&quot;Inline&quot;</code> | <code>&quot;WithoutHeader&quot;</code></p>
 <p>Value of property <code>popinDisplay</code></p>
 <h4>Since</h4>
 <p>1.13.2</p>
-<p>Gets current value of property #getPopinDisplay popinDisplay.</p>
-<p>Defines enumerated display options for the pop-in.</p>
-<p>Default value is <code>Block</code>.</p>
 <hr>
 <h3><del>getPopinHAlign()</del></h3>
 <blockquote>
 <p><strong>getPopinHAlign</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code></p>
-<p>Value of property <code>popinHAlign</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.14) - Use popinDisplay property instead.</p>
 <p>Gets current value of property #getPopinHAlign popinHAlign.</p>
 <p>Horizontal alignment of the pop-in content. Available alignment settings are &quot;Begin&quot;, &quot;Center&quot;, &quot;End&quot;,
 &quot;Left&quot;, and &quot;Right&quot;.</p>
 <p><strong>Note:</strong> Controls with a text align do not inherit the horizontal alignment.</p>
 <p>Default value is <code>Begin</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code></p>
+<p>Value of property <code>popinHAlign</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.14) - Use popinDisplay property instead.</p>
 <hr>
 <h3>getSortIndicator()</h3>
 <blockquote>
 <p><strong>getSortIndicator</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/SortOrder.html"><code>SortOrder</code></a> | <code>&quot;Ascending&quot;</code> | <code>&quot;Descending&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getSortIndicator sortIndicator.</p>
+<p>Defines if a column is sorted by setting the sort indicator for this column.</p>
+<p><strong>Note:</strong> Defining this property does not trigger the sorting.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/SortOrder.html"><code>SortOrder</code></a> | <code>&quot;Ascending&quot;</code> | <code>&quot;Descending&quot;</code></p>
 <p>Value of property <code>sortIndicator</code></p>
 <h4>Since</h4>
 <p>1.61</p>
-<p>Gets current value of property #getSortIndicator sortIndicator.</p>
-<p>Defines if a column is sorted by setting the sort indicator for this column.</p>
-<p><strong>Note:</strong> Defining this property does not trigger the sorting.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getStyleClass()</h3>
 <blockquote>
@@ -411,38 +411,46 @@ the <code>minScreenWidth</code>.</p>
 <blockquote>
 <p><strong>isHidden</strong>(): <code>void</code></p>
 </blockquote>
+<p>Determines whether the column is hidden without being in the popin area</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Determines whether the column is hidden without being in the popin area</p>
 <hr>
 <h3>isPopin()</h3>
 <blockquote>
 <p><strong>isPopin</strong>(): <code>void</code></p>
 </blockquote>
+<p>Determines whether the column is shown as pop-in or not</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Determines whether the column is shown as pop-in or not</p>
 <hr>
 <h3>onItemsRemoved()</h3>
 <blockquote>
 <p><strong>onItemsRemoved</strong>(): <code>void</code></p>
 </blockquote>
+<p>Gets called from the Table when the all items are removed</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.16</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets called from the Table when the all items are removed</p>
 <hr>
 <h3>setAutoPopinWidth()</h3>
 <blockquote>
 <p><strong>setAutoPopinWidth</strong>(<code>fAutoPopinWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAutoPopinWidth autoPopinWidth.</p>
+<p>Defines the auto pop-in width for the column.</p>
+<p>If the <code>sap.m.Table</code> control is configured with <code>autoPopinMode=true</code>, then the <code>autoPopinWidth</code> property
+is used to calculate the <code>minScreenWidth</code> property of the column in case a fixed width is not set for
+the column. See sap.m.Column#getWidth and sap.m.Table#getAutoPopinMode. <strong>Note:</strong> A float
+value is set for the <code>autoPopinWidth</code> property which is internally treated as a rem value.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>8</code>.</p>
 <h4>Parameters</h4>
 <h5>fAutoPopinWidth?</h5>
 <p><code>number</code></p>
@@ -452,14 +460,6 @@ the <code>minScreenWidth</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.76</p>
-<p>Sets a new value for property #getAutoPopinWidth autoPopinWidth.</p>
-<p>Defines the auto pop-in width for the column.</p>
-<p>If the <code>sap.m.Table</code> control is configured with <code>autoPopinMode=true</code>, then the <code>autoPopinWidth</code> property
-is used to calculate the <code>minScreenWidth</code> property of the column in case a fixed width is not set for
-the column. See sap.m.Column#getWidth and sap.m.Table#getAutoPopinMode. <strong>Note:</strong> A float
-value is set for the <code>autoPopinWidth</code> property which is internally treated as a rem value.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>8</code>.</p>
 <hr>
 <h3>setDemandPopin()</h3>
 <blockquote>
@@ -526,6 +526,7 @@ overwritten if the <code>sap.m.Table</code> control is configured with <code>aut
 <blockquote>
 <p><strong>setHeaderMenu</strong>(<code>oHeaderMenu</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getHeaderMenu headerMenu.</p>
 <h4>Parameters</h4>
 <h5>oHeaderMenu</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IColumnHeaderMenu.html"><code>IColumnHeaderMenu</code></a></p>
@@ -536,12 +537,18 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98.0</p>
-<p>Sets the associated #getHeaderMenu headerMenu.</p>
 <hr>
 <h3>setImportance()</h3>
 <blockquote>
 <p><strong>setImportance</strong>(<code>sImportance?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getImportance importance.</p>
+<p>Defines the column importance.</p>
+<p>If the <code>sap.m.Table</code> control is configured with <code>autoPopinMode=true</code>, then the column importance is taken
+into consideration for calculating the <code>minScreenWidth</code> property and for setting the <code>demandPopin</code> property
+of the column. See sap.m.Table#getAutoPopinMode</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;None&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sImportance?</h5>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
@@ -551,18 +558,12 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.76</p>
-<p>Sets a new value for property #getImportance importance.</p>
-<p>Defines the column importance.</p>
-<p>If the <code>sap.m.Table</code> control is configured with <code>autoPopinMode=true</code>, then the column importance is taken
-into consideration for calculating the <code>minScreenWidth</code> property and for setting the <code>demandPopin</code> property
-of the column. See sap.m.Table#getAutoPopinMode</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;None&quot;</code>.</p>
 <hr>
 <h3>setIndex()</h3>
 <blockquote>
 <p><strong>setIndex</strong>(<code>nIndex</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the visible column index Negative index values can be used to clear</p>
 <h4>Parameters</h4>
 <h5>nIndex</h5>
 <p><code>number</code></p>
@@ -571,12 +572,12 @@ of the column. See sap.m.Table#getAutoPopinMode</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the visible column index Negative index values can be used to clear</p>
 <hr>
 <h3>setInitialOrder()</h3>
 <blockquote>
 <p><strong>setInitialOrder</strong>(<code>nOrder</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the initial order of the column</p>
 <h4>Parameters</h4>
 <h5>nOrder</h5>
 <p><code>number</code></p>
@@ -585,12 +586,12 @@ of the column. See sap.m.Table#getAutoPopinMode</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the initial order of the column</p>
 <hr>
 <h3>setLastValue()</h3>
 <blockquote>
 <p><strong>setLastValue</strong>(<code>value</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the last value of the column if mergeDuplicates property is true</p>
 <h4>Parameters</h4>
 <h5>value</h5>
 <p><code>any</code></p>
@@ -601,21 +602,11 @@ of the column. See sap.m.Table#getAutoPopinMode</p>
 <p>1.16</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the last value of the column if mergeDuplicates property is true</p>
 <hr>
 <h3>setMergeDuplicates()</h3>
 <blockquote>
 <p><strong>setMergeDuplicates</strong>(<code>bMergeDuplicates?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bMergeDuplicates?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>mergeDuplicates</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.16</p>
 <p>Sets a new value for property #getMergeDuplicates mergeDuplicates.</p>
 <p>Set <code>true</code> to merge repeating/duplicate cells into one cell block. See <code>mergeFunctionName</code> property to
 customize.</p>
@@ -626,11 +617,28 @@ as a pop-in. Don&#39;t set this property for cells for which the content provide
 as <code>sap.m.Link</code>.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bMergeDuplicates?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>mergeDuplicates</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.16</p>
 <hr>
 <h3>setMergeFunctionName()</h3>
 <blockquote>
 <p><strong>setMergeFunctionName</strong>(<code>sMergeFunctionName?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMergeFunctionName mergeFunctionName.</p>
+<p>Defines the control serialization function if <code>mergeDuplicates</code> property is set to <code>true</code>. The control
+itself uses this function to compare values of two repeating cells. Default value &quot;getText&quot; is suitable
+for <code>sap.m.Label</code> and <code>sap.m.Text</code> controls but for the <code>sap.ui.core.Icon</code> control &quot;getSrc&quot; function
+should be used to merge icons. <strong>Note:</strong> You can pass one string parameter to given function after &quot;#&quot;
+sign. e.g. &quot;data#myparameter&quot;</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;getText&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sMergeFunctionName?</h5>
 <p><code>string</code></p>
@@ -640,14 +648,6 @@ as <code>sap.m.Link</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Sets a new value for property #getMergeFunctionName mergeFunctionName.</p>
-<p>Defines the control serialization function if <code>mergeDuplicates</code> property is set to <code>true</code>. The control
-itself uses this function to compare values of two repeating cells. Default value &quot;getText&quot; is suitable
-for <code>sap.m.Label</code> and <code>sap.m.Text</code> controls but for the <code>sap.ui.core.Icon</code> control &quot;getSrc&quot; function
-should be used to merge icons. <strong>Note:</strong> You can pass one string parameter to given function after &quot;#&quot;
-sign. e.g. &quot;data#myparameter&quot;</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;getText&#39;</code>.</p>
 <hr>
 <h3>setMinScreenWidth()</h3>
 <blockquote>
@@ -674,6 +674,7 @@ control is configured with <code>autoPopinMode=true</code>. See sap.m.Table#getA
 <blockquote>
 <p><strong>setOrder</strong>(<code>nOrder</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the order of the column Does not do the visual effect Table should be invalidate to re-render</p>
 <h4>Parameters</h4>
 <h5>nOrder</h5>
 <p><code>number</code></p>
@@ -682,12 +683,15 @@ control is configured with <code>autoPopinMode=true</code>. See sap.m.Table#getA
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the order of the column Does not do the visual effect Table should be invalidate to re-render</p>
 <hr>
 <h3>setPopinDisplay()</h3>
 <blockquote>
 <p><strong>setPopinDisplay</strong>(<code>sPopinDisplay?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPopinDisplay popinDisplay.</p>
+<p>Defines enumerated display options for the pop-in.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Block</code>.</p>
 <h4>Parameters</h4>
 <h5>sPopinDisplay?</h5>
 <p><a href="../../library/enumerations/PopinDisplay.html"><code>PopinDisplay</code></a> | <code>&quot;Block&quot;</code> | <code>&quot;Inline&quot;</code> | <code>&quot;WithoutHeader&quot;</code></p>
@@ -697,15 +701,17 @@ control is configured with <code>autoPopinMode=true</code>. See sap.m.Table#getA
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.2</p>
-<p>Sets a new value for property #getPopinDisplay popinDisplay.</p>
-<p>Defines enumerated display options for the pop-in.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Block</code>.</p>
 <hr>
 <h3><del>setPopinHAlign()</del></h3>
 <blockquote>
 <p><strong>setPopinHAlign</strong>(<code>sPopinHAlign?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPopinHAlign popinHAlign.</p>
+<p>Horizontal alignment of the pop-in content. Available alignment settings are &quot;Begin&quot;, &quot;Center&quot;, &quot;End&quot;,
+&quot;Left&quot;, and &quot;Right&quot;.</p>
+<p><strong>Note:</strong> Controls with a text align do not inherit the horizontal alignment.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Begin</code>.</p>
 <h4>Parameters</h4>
 <h5>sPopinHAlign?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code></p>
@@ -715,17 +721,16 @@ control is configured with <code>autoPopinMode=true</code>. See sap.m.Table#getA
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.14) - Use popinDisplay property instead.</p>
-<p>Sets a new value for property #getPopinHAlign popinHAlign.</p>
-<p>Horizontal alignment of the pop-in content. Available alignment settings are &quot;Begin&quot;, &quot;Center&quot;, &quot;End&quot;,
-&quot;Left&quot;, and &quot;Right&quot;.</p>
-<p><strong>Note:</strong> Controls with a text align do not inherit the horizontal alignment.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Begin</code>.</p>
 <hr>
 <h3>setSortIndicator()</h3>
 <blockquote>
 <p><strong>setSortIndicator</strong>(<code>sSortIndicator?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSortIndicator sortIndicator.</p>
+<p>Defines if a column is sorted by setting the sort indicator for this column.</p>
+<p><strong>Note:</strong> Defining this property does not trigger the sorting.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sSortIndicator?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/SortOrder.html"><code>SortOrder</code></a> | <code>&quot;Ascending&quot;</code> | <code>&quot;Descending&quot;</code></p>
@@ -735,11 +740,6 @@ control is configured with <code>autoPopinMode=true</code>. See sap.m.Table#getA
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.61</p>
-<p>Sets a new value for property #getSortIndicator sortIndicator.</p>
-<p>Defines if a column is sorted by setting the sort indicator for this column.</p>
-<p><strong>Note:</strong> Defining this property does not trigger the sorting.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setStyleClass()</h3>
 <blockquote>
@@ -850,6 +850,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TreeTableSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TreeTableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $TreeTableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/TreeTable/interfaces/$TreeTableSettings.html">
 <meta property="og:title" content="Interface: $TreeTableSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TreeTableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $TreeTableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/TreeTable/interfaces/$TreeTableSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › <a href="../../../../../../sap.ui.table/sap/ui/table/TreeTable/README.html">TreeTable</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/TreeTable</a> / $TreeTableSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/TreeTable</a> / $TreeTableSettings</p>
 <h1>Interface: $TreeTableSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TreeTableSettings } <span class="kw">from</span> <span class="str">"sap/ui/table/TreeTable"</span>;</pre>
+<p>Describes the settings that can be provided to the TreeTable constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Table/interfaces/$TableSettings.html"><code>$TableSettings</code></a></li>
@@ -47,9 +48,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>collapseRecursive?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter. May not work with all
-bindings.</p>
 <p>Setting collapseRecursive to true means, that when collapsing a node all subsequent child nodes will
 also be collapsed. This property is only supported with sap.ui.model.odata.v2.ODataModel. <strong>Note:</strong> collapseRecursive
 is currently <strong>not</strong> supported if your OData service exposes the hierarchy annotation <code>hierarchy-node-descendant-count-for</code>.
@@ -64,14 +62,14 @@ hierarchy annotations, please see the <strong>SAP Annotations for OData Version 
     }
   });
 </code></pre>
+<h4>Deprecated</h4>
+<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter. May not work with all
+bindings.</p>
 <hr>
 <h3><del>expandFirstLevel?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>expandFirstLevel?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.46.3) - replaced by the <code>numberOfExpandedLevels</code> binding parameter. May not work
-with all bindings.</p>
 <p>Specifies whether the first level is expanded.</p>
 <p>The value of the property is only taken into account if no parameter <code>numberOfExpandedLevels</code> is given
 in the binding information. Changes to this property after the table is bound do not have any effect
@@ -85,6 +83,9 @@ unless an explicit (re-)bind of the <code>rows</code> aggregation is done.</p>
     }
   });
 </code></pre>
+<h4>Deprecated</h4>
+<p>(since 1.46.3) - replaced by the <code>numberOfExpandedLevels</code> binding parameter. May not work
+with all bindings.</p>
 <hr>
 <h3>groupHeaderProperty?</h3>
 <blockquote>
@@ -96,8 +97,6 @@ unless an explicit (re-)bind of the <code>rows</code> aggregation is done.</p>
 <blockquote>
 <p><code>optional</code> <strong>rootLevel?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.76) - replaced by the <code>rootLevel</code> binding parameter. May not work with all bindings.</p>
 <p>The root level is the level of the topmost tree nodes, which will be used as an entry point for OData
 services. This property is only supported when the TreeTable uses an underlying odata services with hierarchy
 annotations. This property is only supported with sap.ui.model.odata.v2.ODataModel The hierarchy annotations
@@ -111,6 +110,8 @@ may also be provided locally as a parameter for the ODataTreeBinding.</p>
     }
   });
 </code></pre>
+<h4>Deprecated</h4>
+<p>(since 1.76) - replaced by the <code>rootLevel</code> binding parameter. May not work with all bindings.</p>
 <hr>
 <h3>toggleOpenState?</h3>
 <blockquote>
@@ -131,6 +132,6 @@ may also be provided locally as a parameter for the ODataTreeBinding.</p>
 used to do the grouping for an OData service on the backend and visualize this in a table.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SmartFilterBar — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SmartFilterBar — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SmartFilterBar — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartfilterbar/SmartFilterBar/classes/SmartFilterBar.html">
 <meta property="og:title" content="Class: SmartFilterBar — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SmartFilterBar — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SmartFilterBar — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartfilterbar/SmartFilterBar/classes/SmartFilterBar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartfilterbar › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartfilterbar/SmartFilterBar/README.html">SmartFilterBar</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartfilterbar/SmartFilterBar</a> / SmartFilterBar</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartfilterbar/SmartFilterBar</a> / SmartFilterBar</p>
 <h1>Class: SmartFilterBar</h1>
 <pre class="sig"><span class="kw">import</span> SmartFilterBar <span class="kw">from</span> <span class="str">"sap/ui/comp/smartfilterbar/SmartFilterBar"</span>;</pre>
 <p>The <code>SmartFilterBar</code> control uses the OData metadata of an entity in order to create a FilterBar.
@@ -157,6 +157,10 @@ area. If there is no corresponding field in the OData metadata, this method has 
 <blockquote>
 <p><strong>attachPendingChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:pendingChange pendingChange event of this <code>sap.ui.comp.smartfilterbar.SmartFilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterBar</code> itself.</p>
+<p>This event is fired after the pending state of the <code>FilterBar</code> control changes.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -174,14 +178,14 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:pendingChange pendingChange event of this <code>sap.ui.comp.smartfilterbar.SmartFilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterBar</code> itself.</p>
-<p>This event is fired after the pending state of the <code>FilterBar</code> control changes.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPendingChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:pendingChange pendingChange event of this <code>sap.ui.comp.smartfilterbar.SmartFilterBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterBar</code> itself.</p>
+<p>This event is fired after the pending state of the <code>FilterBar</code> control changes.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -195,10 +199,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:pendingChange pendingChange event of this <code>sap.ui.comp.smartfilterbar.SmartFilterBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterBar</code> itself.</p>
-<p>This event is fired after the pending state of the <code>FilterBar</code> control changes.</p>
 <hr>
 <h3>destroyControlConfiguration()</h3>
 <blockquote>
@@ -222,6 +222,9 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterB
 <blockquote>
 <p><strong>detachPendingChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:pendingChange pendingChange event of this
+<code>sap.ui.comp.smartfilterbar.SmartFilterBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -234,14 +237,12 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterB
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:pendingChange pendingChange event of this
-<code>sap.ui.comp.smartfilterbar.SmartFilterBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>determineControlByFilterItem()</del></h3>
 <blockquote>
 <p><strong>determineControlByFilterItem</strong>(<code>oFilterItem</code>, <code>bConsiderParameters</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Retrieves the control associated to the filter.</p>
 <h4>Parameters</h4>
 <h5>oFilterItem</h5>
 <p><a href="../../../filterbar/FilterItem/classes/FilterItem.html"><code>FilterItem</code></a></p>
@@ -254,7 +255,6 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterB
 <p>The corresponding control. If no match is found <code>null</code> is returned.</p>
 <h4>Deprecated</h4>
 <p>(since 1.99) - Use sap.ui.core.Core.byId instead.</p>
-<p>Retrieves the control associated to the filter.</p>
 <h4>Overrides</h4>
 <p><a href="../../../filterbar/FilterBar/classes/FilterBar.html"><code>FilterBar</code></a>.<a href="../../../filterbar/FilterBar/classes/FilterBar.html#determinecontrolbyfilteritem"><code>determineControlByFilterItem</code></a></p>
 <hr>
@@ -262,6 +262,7 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterB
 <blockquote>
 <p><strong>determineControlByName</strong>(<code>sName</code>, <code>sGroupName?</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Retrieves the control based on the name and group name.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -274,7 +275,6 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfilterbar.SmartFilterB
 <p>The corresponding control, if no match is found, <code>null</code> is returned.</p>
 <h4>Deprecated</h4>
 <p>(since 1.99) - Use sap.ui.core.Core.byId instead.</p>
-<p>Retrieves the control based on the name and group name.</p>
 <h4>Overrides</h4>
 <p><a href="../../../filterbar/FilterBar/classes/FilterBar.html"><code>FilterBar</code></a>.<a href="../../../filterbar/FilterBar/classes/FilterBar.html#determinecontrolbyname"><code>determineControlByName</code></a></p>
 <hr>
@@ -327,6 +327,8 @@ be passed on as a JSON object to the callee smart variant control.</p>
 
 &gt; **firePendingChange**(`mParameters?`): `this`
 
+Fires event #event:pendingChange pendingChange to attached listeners.
+
 #### Parameters
 
 ##### mParameters?
@@ -349,8 +351,6 @@ Reference to `this` in order to allow method chaining
 
 Do not call from applications (only from related classes in the framework)
 
-Fires event #event:pendingChange pendingChange to attached listeners.
-
 ***
 
 ### getAnalyticBindingPath()
@@ -359,9 +359,9 @@ Fires event #event:pendingChange pendingChange to attached listeners.
 
 **`Experimental`**
 
-(since 1.42.0) - The API is NOT stable yet. Use at your own risk.
-
 Returns the binding paths for the parameters.
+
+ (since 1.42.0) - The API is NOT stable yet. Use at your own risk.
 
 #### Returns
 
@@ -407,6 +407,12 @@ Value of property `basicSearchFieldName`
 
 **`Experimental`**
 
+Gets current value of property #getConsiderAnalyticalParameters considerAnalyticalParameters.
+
+Indicates if the analytical parameters (SelectionVariant) must be taken into consideration.
+
+Default value is `false`.
+
 #### Returns
 
 `boolean`
@@ -418,17 +424,36 @@ Value of property `considerAnalyticalParameters`
 1.42.0
  (since 1.42.0) - This property is NOT stable yet. Use at your own risk.
 
-Gets current value of property #getConsiderAnalyticalParameters considerAnalyticalParameters.
+***
 
-Indicates if the analytical parameters (SelectionVariant) must be taken into consideration.
+### getConsiderPresentationVariant()
 
-Default value is `false`.
+&gt; **getConsiderPresentationVariant**(): `boolean`
+
+Gets current value of property #getConsiderPresentationVariant considerPresentationVariant.
+
+Indicates if the annotation `com.sap.vocabularies.UI.v1.PresentationVariant` is taken into account.
+
+Default value is `true`.
+
+#### Returns
+
+`boolean`
+
+Value of property `considerPresentationVariant`
 
 ***
 
 ### ~~getConsiderSelectionVariants()~~
 
 &gt; **getConsiderSelectionVariants**(): `boolean`
+
+Gets current value of property #getConsiderSelectionVariants considerSelectionVariants.
+
+Indicates if the annotation `com.sap.vocabularies.UI.v1.SelectionVariant` is taken into account.
+ **Note**: Only relevant for control level personalization.
+
+Default value is `false`.
 
 #### Returns
 
@@ -441,18 +466,15 @@ Value of property `considerSelectionVariants`
 (since 1.87) - Please use the `com.sap.vocabularies.UI.v1.SelectionPresentationVariant` annotation
 through the sap.ui.comp.smartvariants.SmartVariantManagement#setEntitySet
 
-Gets current value of property #getConsiderSelectionVariants considerSelectionVariants.
-
-Indicates if the annotation `com.sap.vocabularies.UI.v1.SelectionVariant` is taken into account.
- **Note**: Only relevant for control level personalization.
-
-Default value is `false`.
-
 ***
 
 ### ~~getControlByKey()~~
 
 &gt; **getControlByKey**(`sKey`): `Object` \| [`Control`](../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html)
+
+Returns the control (if any) with the specified key (Property name in OData entity). Use just the property
+name as the key when getting a control from the basic area. Example: &quot;CompanyCode&quot; &amp; Use &quot;EntityName/GroupName.FieldName&quot;
+format to get controls from groups. Example:&quot;Account.CompanyCode&quot;
 
 #### Parameters
 
@@ -472,10 +494,6 @@ The control in the filter bar, if any
 
 (since 1.99) - Use sap.ui.core.Core.byId for custom controls provided by you. To
 modify data use sap.ui.comp.smartfilterbar.SmartFilterBar#setFilterData or sap.ui.comp.filterbar.FilterBar#setUiState.
-
-Returns the control (if any) with the specified key (Property name in OData entity). Use just the property
-name as the key when getting a control from the basic area. Example: &quot;CompanyCode&quot; &amp; Use &quot;EntityName/GroupName.FieldName&quot;
-format to get controls from groups. Example:&quot;Account.CompanyCode&quot;
 
 ***
 
@@ -499,6 +517,9 @@ here after the SmartFilter is initialized (`initialise` event was fired) has no 
 
 &gt; **getDateRangeTypeByKey**(`sKey`): `Promise`\&lt;[`DateRangeTypeByKeyResponse`](../type-aliases/DateRangeTypeByKeyResponse.html)\&gt;
 
+Returns the condition type object (if any) with the specified key (Property name in OData entity). Use
+just the property name as the key when getting a control from the basic area.
+
 #### Parameters
 
 ##### sKey
@@ -517,14 +538,19 @@ returns Promise with condition type object
 
 Do not call from applications (only from related classes in the framework)
 
-Returns the condition type object (if any) with the specified key (Property name in OData entity). Use
-just the property name as the key when getting a control from the basic area.
-
 ***
 
 ### ~~getDefaultSelectionVariantName()~~
 
 &gt; **getDefaultSelectionVariantName**(): `string`
+
+Gets current value of property #getDefaultSelectionVariantName defaultSelectionVariantName.
+
+Determines one specific variant that is based on the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation,
+which is then used as the default variant.
+ This property is only relevant in case `considerSelectionVariants` is set to `true` and will only be
+applied if there is no user-defined default variant specified.
+ **Note**: Only relevant for control level personalization.
 
 #### Returns
 
@@ -537,19 +563,13 @@ Value of property `defaultSelectionVariantName`
 (since 1.87) - Please use the `com.sap.vocabularies.UI.v1.SelectionPresentationVariant` annotation
 through the sap.ui.comp.smartvariants.SmartVariantManagement#setEntitySet
 
-Gets current value of property #getDefaultSelectionVariantName defaultSelectionVariantName.
-
-Determines one specific variant that is based on the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation,
-which is then used as the default variant.
- This property is only relevant in case `considerSelectionVariants` is set to `true` and will only be
-applied if there is no user-defined default variant specified.
- **Note**: Only relevant for control level personalization.
-
 ***
 
 ### getDescriptionForKeys()
 
 &gt; **getDescriptionForKeys**(`aFiltersWithKeyValues`): `void`
+
+Reads the descriptions for given filters and value keys.
 
 #### Parameters
 
@@ -570,8 +590,6 @@ List of filters with value keys to be retrieved
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
-
-Reads the descriptions for given filters and value keys.
 
 #### Overrides
 
@@ -621,6 +639,11 @@ Value of property `entitySet`
 
 &gt; **getEntityType**(): `string`
 
+Gets current value of property #getEntityType entityType.
+
+The OData entity type whose metadata is used to create the `SmartFilterBar`. **Note:** Changing this
+value after the `SmartFilterBar` is initialized (`initialise` event was fired) has no effect.
+
 #### Returns
 
 `string`
@@ -631,16 +654,13 @@ Value of property `entityType`
 
 (since 1.40) - Use `entitySet` property instead of this one, to enable V4 annotation support
 
-Gets current value of property #getEntityType entityType.
-
-The OData entity type whose metadata is used to create the `SmartFilterBar`. **Note:** Changing this
-value after the `SmartFilterBar` is initialized (`initialise` event was fired) has no effect.
-
 ***
 
 ### getFilterContextUrl()
 
 &gt; **getFilterContextUrl**(): `string`
+
+Get the filter context url.
 
 #### Returns
 
@@ -651,8 +671,6 @@ Filter context url.
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
-
-Get the filter context url.
 
 ***
 
@@ -770,16 +788,6 @@ labels or change the order of groups. **Note:** Changing the values here after t
 
 &gt; **getLiveMode**(): `boolean`
 
-#### Returns
-
-`boolean`
-
-Value of property `liveMode`
-
-#### Since
-
-1.40
-
 Gets current value of property #getLiveMode liveMode.
 
 If set the search will be automatically triggered, when a filter value was set via the change
@@ -792,11 +800,23 @@ event.
 
 Default value is `false`.
 
+#### Returns
+
+`boolean`
+
+Value of property `liveMode`
+
+#### Since
+
+1.40
+
 ***
 
 ### getModelData()
 
 &gt; **getModelData**(): `Record`\&lt;`string`, `any`\&gt;
+
+Get the model data.
 
 #### Returns
 
@@ -808,13 +828,19 @@ of the model data.
 
 Do not call from applications (only from related classes in the framework)
 
-Get the model data.
-
 ***
 
 ### getNavigationProperties()
 
 &gt; **getNavigationProperties**(): `string`
+
+Gets current value of property #getNavigationProperties navigationProperties.
+
+This property is only evaluated if the property sap.ui.comp.smartfilterbar.SmartFilterBar#getUseProvidedNavigationProperties
+is set to `true`. It contains a comma-separated list of navigation property names which are checked for
+filters.
+
+Default value is `empty string`.
 
 #### Returns
 
@@ -826,19 +852,14 @@ Value of property `navigationProperties`
 
 1.48
 
-Gets current value of property #getNavigationProperties navigationProperties.
-
-This property is only evaluated if the property sap.ui.comp.smartfilterbar.SmartFilterBar#getUseProvidedNavigationProperties
-is set to `true`. It contains a comma-separated list of navigation property names which are checked for
-filters.
-
-Default value is `empty string`.
-
 ***
 
 ### getParameterBindingPath()
 
 &gt; **getParameterBindingPath**(): `string`
+
+Returns the binding paths for the parameters. This API can be used for both analytical and non-analytical
+services. **Note**For analytical services, the API is NOT stable yet. Use at your own risk.
 
 #### Returns
 
@@ -850,14 +871,13 @@ Binding path of the parameters
 
 1.53.0
 
-Returns the binding paths for the parameters. This API can be used for both analytical and non-analytical
-services. **Note**For analytical services, the API is NOT stable yet. Use at your own risk.
-
 ***
 
 ### getParameterContextUrl()
 
 &gt; **getParameterContextUrl**(): `string`
+
+Get the parameter context url.
 
 #### Returns
 
@@ -868,8 +888,6 @@ Parameter context url.
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
-
-Get the parameter context url.
 
 ***
 
@@ -898,66 +916,61 @@ search is performed. Example of a returned object:
 <blockquote>
 <p><strong>getResourceUri</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getResourceUri resourceUri.</p>
+<p>Optional. The OData service URL. If it is not specified, the service URL from the OData model (this.getModel())
+will be used. <strong>Note:</strong> Changing this value after the SmartFilterBar is initialized (initialise event
+was fired) has no effect.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>resourceUri</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.29) - Set an ODataModel as the main model on your control/view instead</p>
-<p>Gets current value of property #getResourceUri resourceUri.</p>
-<p>Optional. The OData service URL. If it is not specified, the service URL from the OData model (this.getModel())
-will be used. <strong>Note:</strong> Changing this value after the SmartFilterBar is initialized (initialise event
-was fired) has no effect.</p>
 <hr>
 <h3>getShowMessages()</h3>
 <blockquote>
 <p><strong>getShowMessages</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>showMessages</code></p>
-<h4>Since</h4>
-<p>1.40</p>
 <p>Gets current value of property #getShowMessages showMessages.</p>
 <p>If set to <code>true</code>, any errors that occur during the search, are displayed in a message box in addition
 to the <code>valueState</code> with the error. <strong>Note:</strong> As of version 1.89, the default value has been changed
 from <code>true</code> to <code>false</code>.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showMessages</code></p>
+<h4>Since</h4>
+<p>1.40</p>
 <hr>
 <h3>getSmartVariant()</h3>
 <blockquote>
 <p><strong>getSmartVariant</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getSmartVariant smartVariant,
+or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.38</p>
-<p>ID of the element which is the current target of the association #getSmartVariant smartVariant,
-or <code>null</code>.</p>
 <hr>
 <h3>getSuppressSelection()</h3>
 <blockquote>
 <p><strong>getSuppressSelection</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>suppressSelection</code></p>
-<h4>Since</h4>
-<p>1.44.0</p>
 <p>Gets current value of property #getSuppressSelection suppressSelection.</p>
 <p>If set to <code>true</code> all search requests will be ignored. This functionality is only intended to be used
 internally to enable an optimal solution when the filter bar is controlled by the smart templates. NOTE:
 As long as this property is set to <code>true</code>, all search requests will be neglected.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>suppressSelection</code></p>
+<h4>Since</h4>
+<p>1.44.0</p>
 <hr>
 <h3>getUseDateRangeType()</h3>
 <blockquote>
 <p><strong>getUseDateRangeType</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>useDateRangeType</code></p>
-<h4>Since</h4>
-<p>1.46.0</p>
 <p>Gets current value of property #getUseDateRangeType useDateRangeType.</p>
 <p>If set to <code>true</code> all date fields with filter restriction <code>interval</code> will be treated as <code>DateTimeRange</code>
 filters. The <code>useDateRangeType</code> can be set only once during initialization. <strong>Note:</strong> If this property
@@ -965,20 +978,25 @@ is set to <code>true</code> and any date filters with filter restriction <code>i
 the values of these filters cannot be applied. If this property is set to <code>false</code>, any previously stored
 filters which were treated as type <code>DateTimeRange</code> based on the former setting, cannot be converted back
 to the standard date interval.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>useDateRangeType</code></p>
+<h4>Since</h4>
+<p>1.46.0</p>
 <hr>
 <h3>getUseProvidedNavigationProperties()</h3>
 <blockquote>
 <p><strong>getUseProvidedNavigationProperties</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getUseProvidedNavigationProperties useProvidedNavigationProperties.</p>
+<p>If set to <code>true</code>, only the navigation properties mentioned in property sap.ui.comp.smartfilterbar.SmartFilterBar#getNavigationProperties
+are checked for further filters.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>useProvidedNavigationProperties</code></p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>Gets current value of property #getUseProvidedNavigationProperties useProvidedNavigationProperties.</p>
-<p>If set to <code>true</code>, only the navigation properties mentioned in property sap.ui.comp.smartfilterbar.SmartFilterBar#getNavigationProperties
-are checked for further filters.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>indexOfControlConfiguration()</h3>
 <blockquote>
@@ -1048,23 +1066,23 @@ the groupConfiguration is inserted at the last position</p>
 <blockquote>
 <p><strong>isInitialised</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Checks whether the control is initialised</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>returns whether control is already initialised</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks whether the control is initialised</p>
 <hr>
 <h3>isInUTCMode()</h3>
 <blockquote>
 <p><strong>isInUTCMode</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Determines if the custom data &#39;dateFormatSettings&#39; is set with UTC mode <code>true</code></p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>returns whether the filter bar is running in UTC mode</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Determines if the custom data &#39;dateFormatSettings&#39; is set with UTC mode <code>true</code></p>
 <hr>
 <h3>isPending()</h3>
 <blockquote>
@@ -1170,6 +1188,10 @@ is set). This cannot be expressed in the TypeScript API because this is incompat
 <p><strong>setConsiderAnalyticalParameters</strong>(<code>bConsiderAnalyticalParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getConsiderAnalyticalParameters considerAnalyticalParameters.</p>
+<p>Indicates if the analytical parameters (SelectionVariant) must be taken into consideration.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bConsiderAnalyticalParameters?</h5>
 <p><code>boolean</code></p>
@@ -1180,15 +1202,32 @@ is set). This cannot be expressed in the TypeScript API because this is incompat
 <h4>Since</h4>
 <p>1.42.0
  (since 1.42.0) - This property is NOT stable yet. Use at your own risk.</p>
-<p>Sets a new value for property #getConsiderAnalyticalParameters considerAnalyticalParameters.</p>
-<p>Indicates if the analytical parameters (SelectionVariant) must be taken into consideration.</p>
+<hr>
+<h3>setConsiderPresentationVariant()</h3>
+<blockquote>
+<p><strong>setConsiderPresentationVariant</strong>(<code>bConsiderPresentationVariant?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getConsiderPresentationVariant considerPresentationVariant.</p>
+<p>Indicates if the annotation <code>com.sap.vocabularies.UI.v1.PresentationVariant</code> is taken into account.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bConsiderPresentationVariant?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>considerPresentationVariant</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
 <h3><del>setConsiderSelectionVariants()</del></h3>
 <blockquote>
 <p><strong>setConsiderSelectionVariants</strong>(<code>bConsiderSelectionVariants?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getConsiderSelectionVariants considerSelectionVariants.</p>
+<p>Indicates if the annotation <code>com.sap.vocabularies.UI.v1.SelectionVariant</code> is taken into account.
+ <strong>Note</strong>: Only relevant for control level personalization.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bConsiderSelectionVariants?</h5>
 <p><code>boolean</code></p>
@@ -1199,16 +1238,12 @@ is set). This cannot be expressed in the TypeScript API because this is incompat
 <h4>Deprecated</h4>
 <p>(since 1.87) - Please use the <code>com.sap.vocabularies.UI.v1.SelectionPresentationVariant</code> annotation
 through the sap.ui.comp.smartvariants.SmartVariantManagement#setEntitySet</p>
-<p>Sets a new value for property #getConsiderSelectionVariants considerSelectionVariants.</p>
-<p>Indicates if the annotation <code>com.sap.vocabularies.UI.v1.SelectionVariant</code> is taken into account.
- <strong>Note</strong>: Only relevant for control level personalization.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setDateRangeTypeOperationByKey()</h3>
 <blockquote>
 <p><strong>setDateRangeTypeOperationByKey</strong>(<code>sKey</code>, <code>sOption</code>): <code>Promise</code>&lt;<a href="../type-aliases/DateRangeTypeByKeyResponse.html"><code>DateRangeTypeByKeyResponse</code></a>&gt;</p>
 </blockquote>
+<p>Sets the the Dynamic Date Option of condition type (if any) data in the filter data model.</p>
 <h4>Parameters</h4>
 <h5>sKey</h5>
 <p><code>string</code></p>
@@ -1221,12 +1256,18 @@ through the sap.ui.comp.smartvariants.SmartVariantManagement#setEntitySet</p>
 <p>returns Promise</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the the Dynamic Date Option of condition type (if any) data in the filter data model.</p>
 <hr>
 <h3><del>setDefaultSelectionVariantName()</del></h3>
 <blockquote>
 <p><strong>setDefaultSelectionVariantName</strong>(<code>sDefaultSelectionVariantName?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDefaultSelectionVariantName defaultSelectionVariantName.</p>
+<p>Determines one specific variant that is based on the <code>com.sap.vocabularies.UI.v1.SelectionVariant</code> annotation,
+which is then used as the default variant.
+ This property is only relevant in case <code>considerSelectionVariants</code> is set to <code>true</code> and will only be
+applied if there is no user-defined default variant specified.
+ <strong>Note</strong>: Only relevant for control level personalization.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sDefaultSelectionVariantName?</h5>
 <p><code>string</code></p>
@@ -1237,13 +1278,6 @@ through the sap.ui.comp.smartvariants.SmartVariantManagement#setEntitySet</p>
 <h4>Deprecated</h4>
 <p>(since 1.87) - Please use the <code>com.sap.vocabularies.UI.v1.SelectionPresentationVariant</code> annotation
 through the sap.ui.comp.smartvariants.SmartVariantManagement#setEntitySet</p>
-<p>Sets a new value for property #getDefaultSelectionVariantName defaultSelectionVariantName.</p>
-<p>Determines one specific variant that is based on the <code>com.sap.vocabularies.UI.v1.SelectionVariant</code> annotation,
-which is then used as the default variant.
- This property is only relevant in case <code>considerSelectionVariants</code> is set to <code>true</code> and will only be
-applied if there is no user-defined default variant specified.
- <strong>Note</strong>: Only relevant for control level personalization.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setEnableBasicSearch()</h3>
 <blockquote>
@@ -1268,6 +1302,10 @@ entities that support basic search.</p>
 <blockquote>
 <p><strong>setEntityType</strong>(<code>sEntityType?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEntityType entityType.</p>
+<p>The OData entity type whose metadata is used to create the <code>SmartFilterBar</code>. <strong>Note:</strong> Changing this
+value after the <code>SmartFilterBar</code> is initialized (<code>initialise</code> event was fired) has no effect.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sEntityType?</h5>
 <p><code>string</code></p>
@@ -1277,10 +1315,6 @@ entities that support basic search.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.40) - Use <code>entitySet</code> property instead of this one, to enable V4 annotation support</p>
-<p>Sets a new value for property #getEntityType entityType.</p>
-<p>The OData entity type whose metadata is used to create the <code>SmartFilterBar</code>. <strong>Note:</strong> Changing this
-value after the <code>SmartFilterBar</code> is initialized (<code>initialise</code> event was fired) has no effect.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setFilterData()</h3>
 <blockquote>
@@ -1317,15 +1351,6 @@ _CUSTOM data is set.</p>
 <blockquote>
 <p><strong>setLiveMode</strong>(<code>bLiveMode?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bLiveMode?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>liveMode</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.40</p>
 <p>Sets a new value for property #getLiveMode liveMode.</p>
 <p>If set the search will be automatically triggered, when a filter value was set via the change
 event.
@@ -1336,11 +1361,26 @@ event.
 	 - Execute on Select for <code>VariantManagement</code> is not shown and not taken into account</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bLiveMode?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>liveMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.40</p>
 <hr>
 <h3>setNavigationProperties()</h3>
 <blockquote>
 <p><strong>setNavigationProperties</strong>(<code>sNavigationProperties?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNavigationProperties navigationProperties.</p>
+<p>This property is only evaluated if the property sap.ui.comp.smartfilterbar.SmartFilterBar#getUseProvidedNavigationProperties
+is set to <code>true</code>. It contains a comma-separated list of navigation property names which are checked for
+filters.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sNavigationProperties?</h5>
 <p><code>string</code></p>
@@ -1350,17 +1390,13 @@ event.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>Sets a new value for property #getNavigationProperties navigationProperties.</p>
-<p>This property is only evaluated if the property sap.ui.comp.smartfilterbar.SmartFilterBar#getUseProvidedNavigationProperties
-is set to <code>true</code>. It contains a comma-separated list of navigation property names which are checked for
-filters.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>setResourceUri()</del></h3>
 <blockquote>
 <p><strong>setResourceUri</strong>(<code>sResourceUri</code>): <code>this</code></p>
 </blockquote>
+<p>Uses the provided resource URI to fetch the OData metadata instead of using the default ODataModel (getModel()).
+You should only set this if you intend to get the metadata for the filter bar from elsewhere!</p>
 <h4>Parameters</h4>
 <h5>sResourceUri</h5>
 <p><code>string</code></p>
@@ -1370,13 +1406,17 @@ filters.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.29) - Set an ODataModel as the main model on your control/view instead</p>
-<p>Uses the provided resource URI to fetch the OData metadata instead of using the default ODataModel (getModel()).
-You should only set this if you intend to get the metadata for the filter bar from elsewhere!</p>
 <hr>
 <h3>setShowMessages()</h3>
 <blockquote>
 <p><strong>setShowMessages</strong>(<code>bShowMessages?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowMessages showMessages.</p>
+<p>If set to <code>true</code>, any errors that occur during the search, are displayed in a message box in addition
+to the <code>valueState</code> with the error. <strong>Note:</strong> As of version 1.89, the default value has been changed
+from <code>true</code> to <code>false</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowMessages?</h5>
 <p><code>boolean</code></p>
@@ -1386,17 +1426,12 @@ You should only set this if you intend to get the metadata for the filter bar fr
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40</p>
-<p>Sets a new value for property #getShowMessages showMessages.</p>
-<p>If set to <code>true</code>, any errors that occur during the search, are displayed in a message box in addition
-to the <code>valueState</code> with the error. <strong>Note:</strong> As of version 1.89, the default value has been changed
-from <code>true</code> to <code>false</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSmartVariant()</h3>
 <blockquote>
 <p><strong>setSmartVariant</strong>(<code>oSmartVariant</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getSmartVariant smartVariant.</p>
 <h4>Parameters</h4>
 <h5>oSmartVariant</h5>
 <p><code>string</code> | <a href="../../../smartvariants/SmartVariantManagement/classes/SmartVariantManagement.html"><code>SmartVariantManagement</code></a></p>
@@ -1407,12 +1442,17 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38</p>
-<p>Sets the associated #getSmartVariant smartVariant.</p>
 <hr>
 <h3>setSuppressSelection()</h3>
 <blockquote>
 <p><strong>setSuppressSelection</strong>(<code>bSuppressSelection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSuppressSelection suppressSelection.</p>
+<p>If set to <code>true</code> all search requests will be ignored. This functionality is only intended to be used
+internally to enable an optimal solution when the filter bar is controlled by the smart templates. NOTE:
+As long as this property is set to <code>true</code>, all search requests will be neglected.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bSuppressSelection?</h5>
 <p><code>boolean</code></p>
@@ -1422,17 +1462,19 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Sets a new value for property #getSuppressSelection suppressSelection.</p>
-<p>If set to <code>true</code> all search requests will be ignored. This functionality is only intended to be used
-internally to enable an optimal solution when the filter bar is controlled by the smart templates. NOTE:
-As long as this property is set to <code>true</code>, all search requests will be neglected.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setUseDateRangeType()</h3>
 <blockquote>
 <p><strong>setUseDateRangeType</strong>(<code>bUseDateRangeType?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUseDateRangeType useDateRangeType.</p>
+<p>If set to <code>true</code> all date fields with filter restriction <code>interval</code> will be treated as <code>DateTimeRange</code>
+filters. The <code>useDateRangeType</code> can be set only once during initialization. <strong>Note:</strong> If this property
+is set to <code>true</code> and any date filters with filter restriction <code>interval</code> were stored as part of a variant,
+the values of these filters cannot be applied. If this property is set to <code>false</code>, any previously stored
+filters which were treated as type <code>DateTimeRange</code> based on the former setting, cannot be converted back
+to the standard date interval.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bUseDateRangeType?</h5>
 <p><code>boolean</code></p>
@@ -1442,19 +1484,16 @@ As long as this property is set to <code>true</code>, all search requests will b
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46.0</p>
-<p>Sets a new value for property #getUseDateRangeType useDateRangeType.</p>
-<p>If set to <code>true</code> all date fields with filter restriction <code>interval</code> will be treated as <code>DateTimeRange</code>
-filters. The <code>useDateRangeType</code> can be set only once during initialization. <strong>Note:</strong> If this property
-is set to <code>true</code> and any date filters with filter restriction <code>interval</code> were stored as part of a variant,
-the values of these filters cannot be applied. If this property is set to <code>false</code>, any previously stored
-filters which were treated as type <code>DateTimeRange</code> based on the former setting, cannot be converted back
-to the standard date interval.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setUseProvidedNavigationProperties()</h3>
 <blockquote>
 <p><strong>setUseProvidedNavigationProperties</strong>(<code>bUseProvidedNavigationProperties?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUseProvidedNavigationProperties useProvidedNavigationProperties.</p>
+<p>If set to <code>true</code>, only the navigation properties mentioned in property sap.ui.comp.smartfilterbar.SmartFilterBar#getNavigationProperties
+are checked for further filters.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bUseProvidedNavigationProperties?</h5>
 <p><code>boolean</code></p>
@@ -1464,11 +1503,6 @@ to the standard date interval.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>Sets a new value for property #getUseProvidedNavigationProperties useProvidedNavigationProperties.</p>
-<p>If set to <code>true</code>, only the navigation properties mentioned in property sap.ui.comp.smartfilterbar.SmartFilterBar#getNavigationProperties
-are checked for further filters.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>suspendSelection()</h3>
 <blockquote>
@@ -1482,7 +1516,7 @@ are checked for further filters.</p>
 <blockquote>
 <p><strong>validateMandatoryFields</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Verify if all mandatory filters or parameters have values.</p>
+<p>Verifies if all mandatory filters or parameters have values.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>true indicates that all mandatory filters and parameters have values.</p>
@@ -1538,6 +1572,6 @@ used by this class</p>
 <p><a href="../../../filterbar/FilterBar/classes/FilterBar.html"><code>FilterBar</code></a>.<a href="../../../filterbar/FilterBar/classes/FilterBar.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

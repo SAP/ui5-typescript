@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ApplicationController — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ApplicationController — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ApplicationController — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.generic.app/sap/ui/generic/app/ApplicationController/classes/ApplicationController.html">
 <meta property="og:title" content="Class: ApplicationController — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ApplicationController — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ApplicationController — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.generic.app/sap/ui/generic/app/ApplicationController/classes/ApplicationController.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.generic.app/README.html">sap.ui.generic.app</a> › sap › ui › generic › app › <a href="../../../../../../../sap.ui.generic.app/sap/ui/generic/app/ApplicationController/README.html">ApplicationController</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.generic.app</a> / <a href="../README.html">sap/ui/generic/app/ApplicationController</a> / ApplicationController</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.generic.app</a> / <a href="../README.html">sap/ui/generic/app/ApplicationController</a> / ApplicationController</p>
 <h1>Class: ApplicationController</h1>
 <pre class="sig"><span class="kw">import</span> ApplicationController <span class="kw">from</span> <span class="str">"sap/ui/generic/app/ApplicationController"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<p>Application Controller.</p>
 <h2>Since</h2>
 <p>1.32.0
  (since 1.32.0)</p>
-<p>Application Controller.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../transaction/BaseController/classes/BaseController.html"><code>BaseController</code></a></li>
@@ -71,8 +71,8 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><strong>destroy</strong>(): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.32.0)</p>
 <p>Frees all resources claimed during the life-time of this instance.</p>
+<p> (since 1.32.0)</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Overrides</h4>
@@ -114,6 +114,7 @@ shall be executed. Can be <code>undefined</code>.</p>
 <p><strong>getNewActionContext</strong>(<code>sFunctionName</code>, <code>oEntityContext</code>, <code>mParameters</code>): <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Creates a context for an action call (OData function import)</p>
 <h4>Parameters</h4>
 <h5>sFunctionName</h5>
 <p><code>string</code></p>
@@ -131,7 +132,6 @@ to the resolve function <code>result</code> which resolves when the success hand
 error handler is called; The result of the promises is normalized in both cases, error and success.</p>
 <h4>Since</h4>
 <p>1.38</p>
-<p>Creates a context for an action call (OData function import)</p>
 <hr>
 <h3>getTransactionController()</h3>
 <blockquote>
@@ -173,9 +173,9 @@ call is sent in same changeset else a new changeset. Default value of this prope
 <p><strong>propertyChanged</strong>(<code>sPath</code>, <code>oContext</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.32.0)</p>
 <p>Notifies the application controller of a change of a property. Please note that the method is not meant
 for productive use currently. It is experimental.</p>
+<p> (since 1.32.0)</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -192,8 +192,8 @@ for productive use currently. It is experimental.</p>
 <p><strong>registerGroupChange</strong>(<code>sGroupId</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.32.0)</p>
 <p>Registers a change for the given group id.</p>
+<p> (since 1.32.0)</p>
 <h4>Parameters</h4>
 <h5>sGroupId</h5>
 <p><code>string</code></p>
@@ -206,8 +206,8 @@ for productive use currently. It is experimental.</p>
 <p><strong>registerView</strong>(<code>oView</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.32.0)</p>
 <p>Registers the given view with the Application Controller.</p>
+<p> (since 1.32.0)</p>
 <h4>Parameters</h4>
 <h5>oView</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/mvc/View/classes/View.html"><code>View</code></a></p>
@@ -256,6 +256,6 @@ used by this class</p>
 <p><a href="../../transaction/BaseController/classes/BaseController.html"><code>BaseController</code></a>.<a href="../../transaction/BaseController/classes/BaseController.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

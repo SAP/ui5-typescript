@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: InstanceManager — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: InstanceManager — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: InstanceManager — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/InstanceManager/interfaces/InstanceManager.html">
 <meta property="og:title" content="Interface: InstanceManager — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: InstanceManager — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: InstanceManager — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/InstanceManager/interfaces/InstanceManager.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/InstanceManager/README.html">InstanceManager</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/InstanceManager</a> / InstanceManager</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/InstanceManager</a> / InstanceManager</p>
 <h1>Interface: InstanceManager</h1>
 <pre class="sig"><span class="kw">import</span> InstanceManager <span class="kw">from</span> <span class="str">"sap/m/InstanceManager"</span>;</pre>
-<h2>Since</h2>
-<p>1.9.2</p>
 <p>Provides methods to manage instances. This is specifically designed for managing the opened Popover,
 Dialog, ActionSheet, and it&#39;s possible to close all of the opened Popover, Dialog, ActionSheet in history
 handling.</p>
@@ -53,11 +51,14 @@ handling.</p>
     ...
   });
 </code></pre>
+<h2>Since</h2>
+<p>1.9.2</p>
 <h2>Methods</h2>
 <h3>addDialogInstance()</h3>
 <blockquote>
 <p><strong>addDialogInstance</strong>(<code>oDialog</code>): <code>this</code></p>
 </blockquote>
+<p>Adds a control to predefined dialog category in instance manager.</p>
 <h4>Parameters</h4>
 <h5>oDialog</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -68,12 +69,13 @@ as long as it has a close method.</p>
 <p>Enable method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds a control to predefined dialog category in instance manager.</p>
 <hr>
 <h3>addInstance()</h3>
 <blockquote>
 <p><strong>addInstance</strong>(<code>sCategoryId</code>, <code>oInstance</code>): <code>this</code></p>
 </blockquote>
+<p>Adds an instance to the given category. If the instance is already added to the same category, it won&#39;t
+be added again.</p>
 <h4>Parameters</h4>
 <h5>sCategoryId</h5>
 <p><code>string</code></p>
@@ -86,13 +88,12 @@ as long as it has a close method.</p>
 <p>Enable method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds an instance to the given category. If the instance is already added to the same category, it won&#39;t
-be added again.</p>
 <hr>
 <h3>addLightBoxInstance()</h3>
 <blockquote>
 <p><strong>addLightBoxInstance</strong>(<code>oLightBox</code>): <code>this</code></p>
 </blockquote>
+<p>Adds a control to predefined lightbox category in instance manager.</p>
 <h4>Parameters</h4>
 <h5>oLightBox</h5>
 <p><a href="../../LightBox/classes/LightBox.html"><code>LightBox</code></a></p>
@@ -102,12 +103,12 @@ be added again.</p>
 <p>Enable method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds a control to predefined lightbox category in instance manager.</p>
 <hr>
 <h3>addPopoverInstance()</h3>
 <blockquote>
 <p><strong>addPopoverInstance</strong>(<code>oPopover</code>): <code>this</code></p>
 </blockquote>
+<p>Adds a control to predefined popover category in instance manager.</p>
 <h4>Parameters</h4>
 <h5>oPopover</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -118,7 +119,6 @@ also be added as long as it has a close method.</p>
 <p>Enable method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds a control to predefined popover category in instance manager.</p>
 <hr>
 <h3>closeAllDialogs()</h3>
 <blockquote>
@@ -154,6 +154,7 @@ also be added as long as it has a close method.</p>
 <blockquote>
 <p><strong>getInstancesByCategoryId</strong>(<code>sCategoryId</code>): <code>object</code>[]</p>
 </blockquote>
+<p>Returns an array of managed instances in the given category.</p>
 <h4>Parameters</h4>
 <h5>sCategoryId</h5>
 <p><code>string</code></p>
@@ -163,7 +164,6 @@ also be added as long as it has a close method.</p>
 <p>Managed instances in the given category.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns an array of managed instances in the given category.</p>
 <hr>
 <h3>getOpenDialogs()</h3>
 <blockquote>
@@ -226,6 +226,7 @@ returns false.</p>
 <blockquote>
 <p><strong>isCategoryEmpty</strong>(<code>sCategoryId</code>): <code>boolean</code></p>
 </blockquote>
+<p>Returns if there&#39;s no managed instance in the given category.</p>
 <h4>Parameters</h4>
 <h5>sCategoryId</h5>
 <p><code>string</code></p>
@@ -235,7 +236,6 @@ returns false.</p>
 <p>Whether the category is empty.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns if there&#39;s no managed instance in the given category.</p>
 <hr>
 <h3>isDialogOpen()</h3>
 <blockquote>
@@ -258,6 +258,7 @@ method on the instance is preferred to be called than this function.</p>
 <blockquote>
 <p><strong>isInstanceManaged</strong>(<code>sCategoryId</code>, <code>oInstance</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks if an instance is managed under the given category.</p>
 <h4>Parameters</h4>
 <h5>sCategoryId</h5>
 <p><code>string</code></p>
@@ -270,7 +271,6 @@ method on the instance is preferred to be called than this function.</p>
 <p>Whether the instance is managed in the given category.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks if an instance is managed under the given category.</p>
 <hr>
 <h3>isLightBoxOpen()</h3>
 <blockquote>
@@ -310,6 +310,7 @@ method on the instance is preferred to be called than this function.</p>
 <blockquote>
 <p><strong>removeDialogInstance</strong>(<code>oDialog</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Removes control from predefined dialog category in instance manager.</p>
 <h4>Parameters</h4>
 <h5>oDialog</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -319,12 +320,12 @@ method on the instance is preferred to be called than this function.</p>
 <p>The removed dialog, or <code>null</code> if the dialog isn&#39;t managed.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes control from predefined dialog category in instance manager.</p>
 <hr>
 <h3>removeInstance()</h3>
 <blockquote>
 <p><strong>removeInstance</strong>(<code>sCategoryId</code>, <code>oInstance</code>): <code>object</code></p>
 </blockquote>
+<p>Removes a managed instance from the given category.</p>
 <h4>Parameters</h4>
 <h5>sCategoryId</h5>
 <p><code>string</code></p>
@@ -337,12 +338,12 @@ method on the instance is preferred to be called than this function.</p>
 <p>The removed instance, or <code>null</code> if the instance isn&#39;t managed.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes a managed instance from the given category.</p>
 <hr>
 <h3>removeLightBoxInstance()</h3>
 <blockquote>
 <p><strong>removeLightBoxInstance</strong>(<code>oLightBox</code>): <a href="../../LightBox/classes/LightBox.html"><code>LightBox</code></a></p>
 </blockquote>
+<p>Removes control from predefined lightbox category in instance manager.</p>
 <h4>Parameters</h4>
 <h5>oLightBox</h5>
 <p><a href="../../LightBox/classes/LightBox.html"><code>LightBox</code></a></p>
@@ -352,12 +353,12 @@ method on the instance is preferred to be called than this function.</p>
 <p>The removed LightBox, or <code>null</code> if the LightBox isn&#39;t managed.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes control from predefined lightbox category in instance manager.</p>
 <hr>
 <h3>removePopoverInstance()</h3>
 <blockquote>
 <p><strong>removePopoverInstance</strong>(<code>oPopover</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Removes control from predefined popover category in instance manager.</p>
 <h4>Parameters</h4>
 <h5>oPopover</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -367,8 +368,7 @@ method on the instance is preferred to be called than this function.</p>
 <p>The removed popover, or <code>null</code> if the popover isn&#39;t managed.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes control from predefined popover category in instance manager.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

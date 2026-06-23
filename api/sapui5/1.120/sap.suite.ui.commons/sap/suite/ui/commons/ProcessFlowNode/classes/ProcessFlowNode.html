@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ProcessFlowNode — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ProcessFlowNode — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ProcessFlowNode — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlowNode/classes/ProcessFlowNode.html">
 <meta property="og:title" content="Class: ProcessFlowNode — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ProcessFlowNode — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ProcessFlowNode — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlowNode/classes/ProcessFlowNode.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlowNode/README.html">ProcessFlowNode</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/ProcessFlowNode</a> / ProcessFlowNode</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/ProcessFlowNode</a> / ProcessFlowNode</p>
 <h1>Class: ProcessFlowNode</h1>
 <pre class="sig"><span class="kw">import</span> ProcessFlowNode <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/ProcessFlowNode"</span>;</pre>
 <p>This control enables you to see documents (or other items) in respect to their statuses – positive, negative,
@@ -103,6 +103,11 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlowNode</code> itself.</p>
+<p>This event is fired when the user clicks on the node. However, this event is not fired if the titlePress
+event has been fired.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -121,15 +126,15 @@ itself</p>
 <h5>Deprecated</h5>
 <p>(since 1.50.0) - This event is deprecated, use nodePress event instead. See
 sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlowNode</code> itself.</p>
 <p>This event is fired when the user clicks on the node. However, this event is not fired if the titlePress
 event has been fired.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -144,17 +149,17 @@ itself</p>
 <h5>Deprecated</h5>
 <p>(since 1.50.0) - This event is deprecated, use nodePress event instead. See
 sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlowNode</code> itself.</p>
-<p>This event is fired when the user clicks on the node. However, this event is not fired if the titlePress
-event has been fired.</p>
 <hr>
 <h3><del>attachTitlePress()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTitlePress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:titlePress titlePress event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlowNode</code> itself.</p>
+<p>This event handler is executed when the user clicks the node title. This event is fired only when the
+title is clickable (isTitleClickable equals true).</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -172,15 +177,15 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.26) - Should not be used any longer, use Press event instead ( click on the node)</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:titlePress titlePress event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlowNode</code> itself.</p>
 <p>This event handler is executed when the user clicks the node title. This event is fired only when the
 title is clickable (isTitleClickable equals true).</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -194,11 +199,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.26) - Should not be used any longer, use Press event instead ( click on the node)</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:titlePress titlePress event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.suite.ui.commons.ProcessFlowNode</code> itself.</p>
-<p>This event handler is executed when the user clicks the node title. This event is fired only when the
-title is clickable (isTitleClickable equals true).</p>
 <hr>
 <h3>destroyAriaProperties()</h3>
 <blockquote>
@@ -213,50 +213,52 @@ title is clickable (isTitleClickable equals true).</p>
 <blockquote>
 <p><strong>destroyZoomLevelFourContent</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the zoomLevelFourContent in the aggregation #getZoomLevelFourContent zoomLevelFourContent.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Destroys the zoomLevelFourContent in the aggregation #getZoomLevelFourContent zoomLevelFourContent.</p>
 <hr>
 <h3>destroyZoomLevelOneContent()</h3>
 <blockquote>
 <p><strong>destroyZoomLevelOneContent</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the zoomLevelOneContent in the aggregation #getZoomLevelOneContent zoomLevelOneContent.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Destroys the zoomLevelOneContent in the aggregation #getZoomLevelOneContent zoomLevelOneContent.</p>
 <hr>
 <h3>destroyZoomLevelThreeContent()</h3>
 <blockquote>
 <p><strong>destroyZoomLevelThreeContent</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the zoomLevelThreeContent in the aggregation #getZoomLevelThreeContent zoomLevelThreeContent.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Destroys the zoomLevelThreeContent in the aggregation #getZoomLevelThreeContent zoomLevelThreeContent.</p>
 <hr>
 <h3>destroyZoomLevelTwoContent()</h3>
 <blockquote>
 <p><strong>destroyZoomLevelTwoContent</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the zoomLevelTwoContent in the aggregation #getZoomLevelTwoContent zoomLevelTwoContent.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Destroys the zoomLevelTwoContent in the aggregation #getZoomLevelTwoContent zoomLevelTwoContent.</p>
 <hr>
 <h3><del>detachPress()</del></h3>
 <blockquote>
 <p><strong>detachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -270,13 +272,13 @@ title is clickable (isTitleClickable equals true).</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.0) - This event is deprecated, use nodePress event instead. See
 sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachTitlePress()</del></h3>
 <blockquote>
 <p><strong>detachTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:titlePress titlePress event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -289,13 +291,12 @@ sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.26) - Should not be used any longer, use Press event instead ( click on the node)</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:titlePress titlePress event of this <code>sap.suite.ui.commons.ProcessFlowNode</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>firePress()</del></h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ProcessFlowNode$PressEventParameters.html"><code>ProcessFlowNode$PressEventParameters</code></a></p>
@@ -308,12 +309,12 @@ sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
 sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3><del>fireTitlePress()</del></h3>
 <blockquote>
 <p><strong>fireTitlePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:titlePress titlePress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ProcessFlowNode$TitlePressEventParameters.html"><code>ProcessFlowNode$TitlePressEventParameters</code></a></p>
@@ -325,7 +326,6 @@ sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
 <p>(since 1.26) - Should not be used any longer, use Press event instead ( click on the node)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:titlePress titlePress to attached listeners.</p>
 <hr>
 <h3>getAriaProperties()</h3>
 <blockquote>
@@ -372,6 +372,9 @@ sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
 <blockquote>
 <p><strong>getIsTitleClickable</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getIsTitleClickable isTitleClickable.</p>
+<p>Specifies if the node title is clickable.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>isTitleClickable</code></p>
@@ -379,9 +382,6 @@ sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
 <p>(since 1.26) - According to the new requirement there should be only one click event for
 each node (click on the whole node – see Press event) that is why titlePress event should not be used
 any longer. Hence isTitleClickable should not be used either.</p>
-<p>Gets current value of property #getIsTitleClickable isTitleClickable.</p>
-<p>Specifies if the node title is clickable.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getLaneId()</h3>
 <blockquote>
@@ -499,49 +499,49 @@ must not contain more than two strings. Additional strings in the array will be 
 <blockquote>
 <p><strong>getZoomLevelFourContent</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getZoomLevelFourContent zoomLevelFourContent.</p>
+<p>The node&#39;s content used for zoom level 4. If this aggregation is set, no default content like title and
+texts is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Gets content of aggregation #getZoomLevelFourContent zoomLevelFourContent.</p>
-<p>The node&#39;s content used for zoom level 4. If this aggregation is set, no default content like title and
-texts is used.</p>
 <hr>
 <h3>getZoomLevelOneContent()</h3>
 <blockquote>
 <p><strong>getZoomLevelOneContent</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getZoomLevelOneContent zoomLevelOneContent.</p>
+<p>The node&#39;s content used for zoom level 1. If this aggregation is set, no default content like title and
+texts is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Gets content of aggregation #getZoomLevelOneContent zoomLevelOneContent.</p>
-<p>The node&#39;s content used for zoom level 1. If this aggregation is set, no default content like title and
-texts is used.</p>
 <hr>
 <h3>getZoomLevelThreeContent()</h3>
 <blockquote>
 <p><strong>getZoomLevelThreeContent</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getZoomLevelThreeContent zoomLevelThreeContent.</p>
+<p>The node&#39;s content used for zoom level 3. If this aggregation is set, no default content like title and
+texts is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Gets content of aggregation #getZoomLevelThreeContent zoomLevelThreeContent.</p>
-<p>The node&#39;s content used for zoom level 3. If this aggregation is set, no default content like title and
-texts is used.</p>
 <hr>
 <h3>getZoomLevelTwoContent()</h3>
 <blockquote>
 <p><strong>getZoomLevelTwoContent</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getZoomLevelTwoContent zoomLevelTwoContent.</p>
+<p>The node&#39;s content used for zoom level 2. If this aggregation is set, no default content like title and
+texts is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Gets content of aggregation #getZoomLevelTwoContent zoomLevelTwoContent.</p>
-<p>The node&#39;s content used for zoom level 2. If this aggregation is set, no default content like title and
-texts is used.</p>
 <hr>
 <h3>removeAllParents()</h3>
 <blockquote>
@@ -629,6 +629,10 @@ texts is used.</p>
 <blockquote>
 <p><strong>setIsTitleClickable</strong>(<code>bIsTitleClickable?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIsTitleClickable isTitleClickable.</p>
+<p>Specifies if the node title is clickable.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bIsTitleClickable?</h5>
 <p><code>boolean</code></p>
@@ -640,10 +644,6 @@ texts is used.</p>
 <p>(since 1.26) - According to the new requirement there should be only one click event for
 each node (click on the whole node – see Press event) that is why titlePress event should not be used
 any longer. Hence isTitleClickable should not be used either.</p>
-<p>Sets a new value for property #getIsTitleClickable isTitleClickable.</p>
-<p>Specifies if the node title is clickable.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setLaneId()</h3>
 <blockquote>
@@ -803,6 +803,7 @@ must not contain more than two strings. Additional strings in the array will be 
 <blockquote>
 <p><strong>setZoomLevelFourContent</strong>(<code>oZoomLevelFourContent</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getZoomLevelFourContent zoomLevelFourContent.</p>
 <h4>Parameters</h4>
 <h5>oZoomLevelFourContent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -812,12 +813,12 @@ must not contain more than two strings. Additional strings in the array will be 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Sets the aggregated #getZoomLevelFourContent zoomLevelFourContent.</p>
 <hr>
 <h3>setZoomLevelOneContent()</h3>
 <blockquote>
 <p><strong>setZoomLevelOneContent</strong>(<code>oZoomLevelOneContent</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getZoomLevelOneContent zoomLevelOneContent.</p>
 <h4>Parameters</h4>
 <h5>oZoomLevelOneContent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -827,12 +828,12 @@ must not contain more than two strings. Additional strings in the array will be 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Sets the aggregated #getZoomLevelOneContent zoomLevelOneContent.</p>
 <hr>
 <h3>setZoomLevelThreeContent()</h3>
 <blockquote>
 <p><strong>setZoomLevelThreeContent</strong>(<code>oZoomLevelThreeContent</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getZoomLevelThreeContent zoomLevelThreeContent.</p>
 <h4>Parameters</h4>
 <h5>oZoomLevelThreeContent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -842,12 +843,12 @@ must not contain more than two strings. Additional strings in the array will be 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Sets the aggregated #getZoomLevelThreeContent zoomLevelThreeContent.</p>
 <hr>
 <h3>setZoomLevelTwoContent()</h3>
 <blockquote>
 <p><strong>setZoomLevelTwoContent</strong>(<code>oZoomLevelTwoContent</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getZoomLevelTwoContent zoomLevelTwoContent.</p>
 <h4>Parameters</h4>
 <h5>oZoomLevelTwoContent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -857,7 +858,6 @@ must not contain more than two strings. Additional strings in the array will be 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Sets the aggregated #getZoomLevelTwoContent zoomLevelTwoContent.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -898,6 +898,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

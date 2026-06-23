@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: IconTabBar — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: IconTabBar — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: IconTabBar — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/IconTabBar/classes/IconTabBar.html">
 <meta property="og:title" content="Class: IconTabBar — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: IconTabBar — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: IconTabBar — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/IconTabBar/classes/IconTabBar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/IconTabBar/README.html">IconTabBar</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/IconTabBar</a> / IconTabBar</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/IconTabBar</a> / IconTabBar</p>
 <h1>Class: IconTabBar</h1>
 <pre class="sig"><span class="kw">import</span> IconTabBar <span class="kw">from</span> <span class="str">"sap/m/IconTabBar"</span>;</pre>
 <p>The IconTabBar represents a collection of tabs with associated content. Overview: The IconTabBar can
@@ -172,6 +172,10 @@ See:
 <blockquote>
 <p><strong>attachExpand</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:expand expand event of this <code>sap.m.IconTabBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
+<p>Indicates that the tab will expand or collapse.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -188,14 +192,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.15.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:expand expand event of this <code>sap.m.IconTabBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
-<p>Indicates that the tab will expand or collapse.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachExpand</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:expand expand event of this <code>sap.m.IconTabBar</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
+<p>Indicates that the tab will expand or collapse.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -208,10 +212,6 @@ otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.15.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:expand expand event of this <code>sap.m.IconTabBar</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
-<p>Indicates that the tab will expand or collapse.</p>
 <hr>
 <h3>attachSelect()</h3>
 <h4>Call Signature</h4>
@@ -277,6 +277,8 @@ otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
 <blockquote>
 <p><strong>detachExpand</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:expand expand event of this <code>sap.m.IconTabBar</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -289,8 +291,6 @@ otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:expand expand event of this <code>sap.m.IconTabBar</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSelect()</h3>
 <blockquote>
@@ -313,6 +313,7 @@ otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
 <blockquote>
 <p><strong>fireExpand</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:expand expand to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/IconTabBar$ExpandEventParameters.html"><code>IconTabBar$ExpandEventParameters</code></a></p>
@@ -324,12 +325,12 @@ otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
 <p>1.15.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:expand expand to attached listeners.</p>
 <hr>
 <h3>fireSelect()</h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/IconTabBar$SelectEventParameters.html"><code>IconTabBar$SelectEventParameters</code></a></p>
@@ -339,21 +340,20 @@ otherwise it will be bound to this <code>sap.m.IconTabBar</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>getApplyContentPadding()</h3>
 <blockquote>
 <p><strong>getApplyContentPadding</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getApplyContentPadding applyContentPadding.</p>
+<p>Determines whether the IconTabBar content fits to the full area. The paddings are removed if it&#39;s set
+to false.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>applyContentPadding</code></p>
 <h4>Since</h4>
 <p>1.26</p>
-<p>Gets current value of property #getApplyContentPadding applyContentPadding.</p>
-<p>Determines whether the IconTabBar content fits to the full area. The paddings are removed if it&#39;s set
-to false.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getAriaTexts()</h3>
 <blockquote>
@@ -379,16 +379,16 @@ to false.</p>
 <blockquote>
 <p><strong>getBackgroundDesign</strong>(): <a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
-<p>Value of property <code>backgroundDesign</code></p>
-<h4>Since</h4>
-<p>1.26</p>
 <p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
 <p>Specifies the background color of the IconTabBar.</p>
 <p>Depending on the theme, you can change the state of the background color to &quot;Solid&quot;, &quot;Translucent&quot;, or
 &quot;Transparent&quot;. Default is &quot;Solid&quot;.</p>
 <p>Default value is <code>Solid</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
+<p>Value of property <code>backgroundDesign</code></p>
+<h4>Since</h4>
+<p>1.26</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
@@ -405,71 +405,71 @@ inside the IconTabFilter (which will be displayed instead if it is set).</p>
 <blockquote>
 <p><strong>getEnableTabReordering</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableTabReordering</code></p>
-<h4>Since</h4>
-<p>1.46</p>
 <p>Gets current value of property #getEnableTabReordering enableTabReordering.</p>
 <p>Specifies whether tab reordering is enabled. Relevant only for desktop devices. The sap.m.IconTabSeparator sap.m.IconTabSeparator
 cannot be dragged and dropped Items can be moved around sap.m.IconTabSeparator sap.m.IconTabSeparator
 Reordering is enabled via keyboard using <code>Ctrl</code> + arrow keys (Windows) and <code>Control</code> + arrow keys (Mac
 OS)</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableTabReordering</code></p>
+<h4>Since</h4>
+<p>1.46</p>
 <hr>
 <h3>getExpandable()</h3>
 <blockquote>
 <p><strong>getExpandable</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getExpandable expandable.</p>
+<p>Defines if the tabs are collapsible and expandable.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>expandable</code></p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>Gets current value of property #getExpandable expandable.</p>
-<p>Defines if the tabs are collapsible and expandable.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getExpanded()</h3>
 <blockquote>
 <p><strong>getExpanded</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getExpanded expanded.</p>
+<p>Indicates if the actual tab content is expanded or not.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>expanded</code></p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>Gets current value of property #getExpanded expanded.</p>
-<p>Indicates if the actual tab content is expanded or not.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getHeaderBackgroundDesign()</h3>
 <blockquote>
 <p><strong>getHeaderBackgroundDesign</strong>(): <a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
-<p>Value of property <code>headerBackgroundDesign</code></p>
-<h4>Since</h4>
-<p>1.44</p>
 <p>Gets current value of property #getHeaderBackgroundDesign headerBackgroundDesign.</p>
 <p>Specifies the background color of the header.</p>
 <p>Depending on the theme, you can change the state of the background color to &quot;Solid&quot;, &quot;Translucent&quot;, or
 &quot;Transparent&quot;. <strong>Note:</strong> In SAP Belize Deep (sap_belize_plus) theme this property should be set to &quot;Solid&quot;.</p>
 <p>Default value is <code>Solid</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
+<p>Value of property <code>headerBackgroundDesign</code></p>
+<h4>Since</h4>
+<p>1.44</p>
 <hr>
 <h3>getHeaderMode()</h3>
 <blockquote>
 <p><strong>getHeaderMode</strong>(): <code>&quot;Standard&quot;</code> | <code>&quot;Inline&quot;</code> | <a href="../../library/enumerations/IconTabHeaderMode.html"><code>IconTabHeaderMode</code></a></p>
 </blockquote>
+<p>Gets current value of property #getHeaderMode headerMode.</p>
+<p>Specifies the header mode.</p>
+<p>Default value is <code>Standard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Standard&quot;</code> | <code>&quot;Inline&quot;</code> | <a href="../../library/enumerations/IconTabHeaderMode.html"><code>IconTabHeaderMode</code></a></p>
 <p>Value of property <code>headerMode</code></p>
 <h4>Since</h4>
 <p>1.40</p>
-<p>Gets current value of property #getHeaderMode headerMode.</p>
-<p>Specifies the header mode.</p>
-<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3>getItems()</h3>
 <blockquote>
@@ -484,16 +484,16 @@ OS)</p>
 <blockquote>
 <p><strong>getMaxNestingLevel</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>maxNestingLevel</code></p>
-<h4>Since</h4>
-<p>1.79</p>
 <p>Gets current value of property #getMaxNestingLevel maxNestingLevel.</p>
 <p>Specifies the allowed level of tabs nesting within one another using drag and drop. Default value is
 0 which means nesting via interaction is not allowed. Maximum value is 100. This property allows nesting
 via user interaction only, and does not restrict adding items to the <code>items</code> aggregation of sap.m.IconTabFilter sap.m.IconTabFilter.</p>
 <p>Default value is <code>0</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>maxNestingLevel</code></p>
+<h4>Since</h4>
+<p>1.79</p>
 <hr>
 <h3>getSelectedKey()</h3>
 <blockquote>
@@ -508,6 +508,11 @@ via user interaction only, and does not restrict adding items to the <code>items
 <blockquote>
 <p><strong>getShowOverflowSelectList</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowOverflowSelectList showOverflowSelectList.</p>
+<p>Specifies if the overflow select list is displayed.</p>
+<p>The overflow select list represents a list, where all tab filters are displayed, so the user can select
+specific tab filter easier.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showOverflowSelectList</code></p>
@@ -515,83 +520,78 @@ via user interaction only, and does not restrict adding items to the <code>items
 <p>1.42</p>
 <h4>Deprecated</h4>
 <p>(since 1.77)</p>
-<p>Gets current value of property #getShowOverflowSelectList showOverflowSelectList.</p>
-<p>Specifies if the overflow select list is displayed.</p>
-<p>The overflow select list represents a list, where all tab filters are displayed, so the user can select
-specific tab filter easier.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getShowSelection()</del></h3>
 <blockquote>
 <p><strong>getShowSelection</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowSelection showSelection.</p>
+<p>Defines whether the current selection should be visualized.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showSelection</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.15.0) - Regarding to changes of this control this property is not needed anymore.</p>
-<p>Gets current value of property #getShowSelection showSelection.</p>
-<p>Defines whether the current selection should be visualized.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getStretchContentHeight()</h3>
 <blockquote>
 <p><strong>getStretchContentHeight</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getStretchContentHeight stretchContentHeight.</p>
+<p>Determines whether the IconTabBar height is stretched to the maximum possible height of its parent container.
+As a prerequisite, the height of the parent container must be defined as a fixed value.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>stretchContentHeight</code></p>
 <h4>Since</h4>
 <p>1.26</p>
-<p>Gets current value of property #getStretchContentHeight stretchContentHeight.</p>
-<p>Determines whether the IconTabBar height is stretched to the maximum possible height of its parent container.
-As a prerequisite, the height of the parent container must be defined as a fixed value.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getTabDensityMode()</h3>
 <blockquote>
 <p><strong>getTabDensityMode</strong>(): <code>&quot;Inherit&quot;</code> | <a href="../../library/enumerations/IconTabDensityMode.html"><code>IconTabDensityMode</code></a> | <code>&quot;Compact&quot;</code> | <code>&quot;Cozy&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Inherit&quot;</code> | <a href="../../library/enumerations/IconTabDensityMode.html"><code>IconTabDensityMode</code></a> | <code>&quot;Compact&quot;</code> | <code>&quot;Cozy&quot;</code></p>
-<p>Value of property <code>tabDensityMode</code></p>
-<h4>Since</h4>
-<p>1.56</p>
 <p>Gets current value of property #getTabDensityMode tabDensityMode.</p>
 <p>Specifies the visual density mode of the tabs.</p>
 <p>The values that can be applied are <code>Cozy</code>, <code>Compact</code> and <code>Inherit</code>. <code>Cozy</code> and <code>Compact</code> render the control
 in one of these modes independent of the global density settings. The <code>Inherit</code> value follows the global
 density settings which are applied. For compatibility reasons, the default value is <code>Cozy</code>.</p>
 <p>Default value is <code>Cozy</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Inherit&quot;</code> | <a href="../../library/enumerations/IconTabDensityMode.html"><code>IconTabDensityMode</code></a> | <code>&quot;Compact&quot;</code> | <code>&quot;Cozy&quot;</code></p>
+<p>Value of property <code>tabDensityMode</code></p>
+<h4>Since</h4>
+<p>1.56</p>
 <hr>
 <h3>getTabsOverflowMode()</h3>
 <blockquote>
 <p><strong>getTabsOverflowMode</strong>(): <code>&quot;End&quot;</code> | <a href="../../library/enumerations/TabsOverflowMode.html"><code>TabsOverflowMode</code></a> | <code>&quot;StartAndEnd&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;End&quot;</code> | <a href="../../library/enumerations/TabsOverflowMode.html"><code>TabsOverflowMode</code></a> | <code>&quot;StartAndEnd&quot;</code></p>
-<p>Value of property <code>tabsOverflowMode</code></p>
-<h4>Since</h4>
-<p>1.90</p>
 <p>Gets current value of property #getTabsOverflowMode tabsOverflowMode.</p>
 <p>Specifies the overflow mode of the header.</p>
 <p>The default <code>End</code> mode shows as many tabs that can fit on the screen, then shows one overflow at the
 end containing the remaining items. The <code>StartAndEnd</code> is used to keep the order of tabs intact and offers
 two overflow tabs on both ends of the bar.</p>
 <p>Default value is <code>End</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;End&quot;</code> | <a href="../../library/enumerations/TabsOverflowMode.html"><code>TabsOverflowMode</code></a> | <code>&quot;StartAndEnd&quot;</code></p>
+<p>Value of property <code>tabsOverflowMode</code></p>
+<h4>Since</h4>
+<p>1.90</p>
 <hr>
 <h3>getUpperCase()</h3>
 <blockquote>
 <p><strong>getUpperCase</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getUpperCase upperCase.</p>
+<p>Determines whether the text of the icon tab filter (not the count) is displayed in uppercase.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>upperCase</code></p>
 <h4>Since</h4>
 <p>1.22</p>
-<p>Gets current value of property #getUpperCase upperCase.</p>
-<p>Determines whether the text of the icon tab filter (not the count) is displayed in uppercase.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -707,6 +707,11 @@ the last position</p>
 <blockquote>
 <p><strong>setApplyContentPadding</strong>(<code>bApplyContentPadding?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getApplyContentPadding applyContentPadding.</p>
+<p>Determines whether the IconTabBar content fits to the full area. The paddings are removed if it&#39;s set
+to false.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bApplyContentPadding?</h5>
 <p><code>boolean</code></p>
@@ -716,11 +721,6 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26</p>
-<p>Sets a new value for property #getApplyContentPadding applyContentPadding.</p>
-<p>Determines whether the IconTabBar content fits to the full area. The paddings are removed if it&#39;s set
-to false.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setAriaTexts()</h3>
 <blockquote>
@@ -742,6 +742,12 @@ to false.</p>
 <blockquote>
 <p><strong>setBackgroundDesign</strong>(<code>sBackgroundDesign?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
+<p>Specifies the background color of the IconTabBar.</p>
+<p>Depending on the theme, you can change the state of the background color to &quot;Solid&quot;, &quot;Translucent&quot;, or
+&quot;Transparent&quot;. Default is &quot;Solid&quot;.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Solid</code>.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundDesign?</h5>
 <p><a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code></p>
@@ -751,12 +757,6 @@ to false.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26</p>
-<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
-<p>Specifies the background color of the IconTabBar.</p>
-<p>Depending on the theme, you can change the state of the background color to &quot;Solid&quot;, &quot;Translucent&quot;, or
-&quot;Transparent&quot;. Default is &quot;Solid&quot;.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Solid</code>.</p>
 <hr>
 <h3>setEnableTabReordering()</h3>
 <blockquote>
@@ -775,6 +775,10 @@ to false.</p>
 <blockquote>
 <p><strong>setExpandable</strong>(<code>bExpandable?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getExpandable expandable.</p>
+<p>Defines if the tabs are collapsible and expandable.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bExpandable?</h5>
 <p><code>boolean</code></p>
@@ -784,10 +788,6 @@ to false.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>Sets a new value for property #getExpandable expandable.</p>
-<p>Defines if the tabs are collapsible and expandable.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setExpanded()</h3>
 <blockquote>
@@ -832,6 +832,12 @@ to false.</p>
 <blockquote>
 <p><strong>setMaxNestingLevel</strong>(<code>iMaxNestingLevel?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMaxNestingLevel maxNestingLevel.</p>
+<p>Specifies the allowed level of tabs nesting within one another using drag and drop. Default value is
+0 which means nesting via interaction is not allowed. Maximum value is 100. This property allows nesting
+via user interaction only, and does not restrict adding items to the <code>items</code> aggregation of sap.m.IconTabFilter sap.m.IconTabFilter.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iMaxNestingLevel?</h5>
 <p><code>number</code></p>
@@ -841,12 +847,6 @@ to false.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.79</p>
-<p>Sets a new value for property #getMaxNestingLevel maxNestingLevel.</p>
-<p>Specifies the allowed level of tabs nesting within one another using drag and drop. Default value is
-0 which means nesting via interaction is not allowed. Maximum value is 100. This property allows nesting
-via user interaction only, and does not restrict adding items to the <code>items</code> aggregation of sap.m.IconTabFilter sap.m.IconTabFilter.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setSelectedKey()</h3>
 <blockquote>
@@ -865,6 +865,12 @@ via user interaction only, and does not restrict adding items to the <code>items
 <blockquote>
 <p><strong>setShowOverflowSelectList</strong>(<code>bShowOverflowSelectList?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowOverflowSelectList showOverflowSelectList.</p>
+<p>Specifies if the overflow select list is displayed.</p>
+<p>The overflow select list represents a list, where all tab filters are displayed, so the user can select
+specific tab filter easier.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowOverflowSelectList?</h5>
 <p><code>boolean</code></p>
@@ -876,17 +882,12 @@ via user interaction only, and does not restrict adding items to the <code>items
 <p>1.42</p>
 <h4>Deprecated</h4>
 <p>(since 1.77)</p>
-<p>Sets a new value for property #getShowOverflowSelectList showOverflowSelectList.</p>
-<p>Specifies if the overflow select list is displayed.</p>
-<p>The overflow select list represents a list, where all tab filters are displayed, so the user can select
-specific tab filter easier.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setShowSelection()</del></h3>
 <blockquote>
 <p><strong>setShowSelection</strong>(<code>bValue</code>): <code>this</code></p>
 </blockquote>
+<p>Reflector for the internal header&#39;s showSelection property.</p>
 <h4>Parameters</h4>
 <h5>bValue</h5>
 <p><code>boolean</code></p>
@@ -896,12 +897,16 @@ specific tab filter easier.</p>
 <p>this IconTabBar reference for chaining.</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.0) - Regarding to changes of this control this property is not needed anymore.</p>
-<p>Reflector for the internal header&#39;s showSelection property.</p>
 <hr>
 <h3>setStretchContentHeight()</h3>
 <blockquote>
 <p><strong>setStretchContentHeight</strong>(<code>bStretchContentHeight?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getStretchContentHeight stretchContentHeight.</p>
+<p>Determines whether the IconTabBar height is stretched to the maximum possible height of its parent container.
+As a prerequisite, the height of the parent container must be defined as a fixed value.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bStretchContentHeight?</h5>
 <p><code>boolean</code></p>
@@ -911,11 +916,6 @@ specific tab filter easier.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.26</p>
-<p>Sets a new value for property #getStretchContentHeight stretchContentHeight.</p>
-<p>Determines whether the IconTabBar height is stretched to the maximum possible height of its parent container.
-As a prerequisite, the height of the parent container must be defined as a fixed value.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setTabDensityMode()</h3>
 <blockquote>
@@ -934,6 +934,13 @@ As a prerequisite, the height of the parent container must be defined as a fixed
 <blockquote>
 <p><strong>setTabsOverflowMode</strong>(<code>sTabsOverflowMode?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTabsOverflowMode tabsOverflowMode.</p>
+<p>Specifies the overflow mode of the header.</p>
+<p>The default <code>End</code> mode shows as many tabs that can fit on the screen, then shows one overflow at the
+end containing the remaining items. The <code>StartAndEnd</code> is used to keep the order of tabs intact and offers
+two overflow tabs on both ends of the bar.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>End</code>.</p>
 <h4>Parameters</h4>
 <h5>sTabsOverflowMode?</h5>
 <p><code>&quot;End&quot;</code> | <a href="../../library/enumerations/TabsOverflowMode.html"><code>TabsOverflowMode</code></a> | <code>&quot;StartAndEnd&quot;</code></p>
@@ -943,18 +950,15 @@ As a prerequisite, the height of the parent container must be defined as a fixed
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.90</p>
-<p>Sets a new value for property #getTabsOverflowMode tabsOverflowMode.</p>
-<p>Specifies the overflow mode of the header.</p>
-<p>The default <code>End</code> mode shows as many tabs that can fit on the screen, then shows one overflow at the
-end containing the remaining items. The <code>StartAndEnd</code> is used to keep the order of tabs intact and offers
-two overflow tabs on both ends of the bar.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>End</code>.</p>
 <hr>
 <h3>setUpperCase()</h3>
 <blockquote>
 <p><strong>setUpperCase</strong>(<code>bUpperCase?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUpperCase upperCase.</p>
+<p>Determines whether the text of the icon tab filter (not the count) is displayed in uppercase.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bUpperCase?</h5>
 <p><code>boolean</code></p>
@@ -964,10 +968,6 @@ two overflow tabs on both ends of the bar.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.22</p>
-<p>Sets a new value for property #getUpperCase upperCase.</p>
-<p>Determines whether the text of the icon tab filter (not the count) is displayed in uppercase.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1008,6 +1008,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SmartVariantManagementUi2 — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SmartVariantManagementUi2 — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SmartVariantManagementUi2 — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartvariants/SmartVariantManagementUi2/classes/SmartVariantManagementUi2.html">
 <meta property="og:title" content="Class: SmartVariantManagementUi2 — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SmartVariantManagementUi2 — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SmartVariantManagementUi2 — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartvariants/SmartVariantManagementUi2/classes/SmartVariantManagementUi2.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartvariants › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartvariants/SmartVariantManagementUi2/README.html">SmartVariantManagementUi2</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartvariants/SmartVariantManagementUi2</a> / SmartVariantManagementUi2</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartvariants/SmartVariantManagementUi2</a> / SmartVariantManagementUi2</p>
 <h1>Class: SmartVariantManagementUi2</h1>
 <pre class="sig"><span class="kw">import</span> SmartVariantManagementUi2 <span class="kw">from</span> <span class="str">"sap/ui/comp/smartvariants/SmartVariantManagementUi2"</span>;</pre>
 <p>The SmartVariantManagementUi2 control communicates with the Ui2 personalization layer to manage the variants.</p>
@@ -424,6 +424,7 @@ itself</p>
 <blockquote>
 <p><strong>fireAfterSave</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterSave afterSave to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -433,12 +434,12 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterSave afterSave to attached listeners.</p>
 <hr>
 <h3>fireInitialise()</h3>
 <blockquote>
 <p><strong>fireInitialise</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:initialise initialise to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -448,7 +449,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:initialise initialise to attached listeners.</p>
 <hr>
 <h3>getCurrentVariantId()</h3>
 <blockquote>
@@ -474,27 +474,27 @@ itself</p>
 <blockquote>
 <p><strong>getHeaderLevel</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getHeaderLevel headerLevel.</p>
+<p>Semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 <p>Value of property <code>headerLevel</code></p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Gets current value of property #getHeaderLevel headerLevel.</p>
-<p>Semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>getMaxWidth()</h3>
 <blockquote>
 <p><strong>getMaxWidth</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getMaxWidth maxWidth.</p>
+<p>Sets the maximum width of the control.</p>
+<p>Default value is <code>&quot;100%&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>maxWidth</code></p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Gets current value of property #getMaxWidth maxWidth.</p>
-<p>Sets the maximum width of the control.</p>
-<p>Default value is <code>&quot;100%&quot;</code>.</p>
 <hr>
 <h3>getPersonalizableControl()</h3>
 <blockquote>
@@ -510,26 +510,26 @@ known is the <code>FilterBar</code> control.</p>
 <blockquote>
 <p><strong>getStandardItemText</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getStandardItemText standardItemText.</p>
+<p>Overwrites the default Standard variant title.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>standardItemText</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getStandardItemText standardItemText.</p>
-<p>Overwrites the default Standard variant title.</p>
 <hr>
 <h3>getTitleStyle()</h3>
 <blockquote>
 <p><strong>getTitleStyle</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getTitleStyle titleStyle.</p>
+<p>Defines the style of the title. For more information, see sap.m.Title#setTitleStyle.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 <p>Value of property <code>titleStyle</code></p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Gets current value of property #getTitleStyle titleStyle.</p>
-<p>Defines the style of the title. For more information, see sap.m.Title#setTitleStyle.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>getVariantContent()</h3>
 <blockquote>
@@ -610,6 +610,10 @@ before the initialise event has be executed</p>
 <blockquote>
 <p><strong>setHeaderLevel</strong>(<code>sHeaderLevel?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHeaderLevel headerLevel.</p>
+<p>Semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeaderLevel?</h5>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
@@ -619,15 +623,15 @@ before the initialise event has be executed</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Sets a new value for property #getHeaderLevel headerLevel.</p>
-<p>Semantic level of the header. For more information, see sap.m.Title#setLevel.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>setMaxWidth()</h3>
 <blockquote>
 <p><strong>setMaxWidth</strong>(<code>sMaxWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMaxWidth maxWidth.</p>
+<p>Sets the maximum width of the control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;100%&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sMaxWidth?</h5>
 <p><code>string</code></p>
@@ -637,10 +641,6 @@ before the initialise event has be executed</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Sets a new value for property #getMaxWidth maxWidth.</p>
-<p>Sets the maximum width of the control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;100%&quot;</code>.</p>
 <hr>
 <h3>setPersonalizableControl()</h3>
 <blockquote>
@@ -659,6 +659,9 @@ before the initialise event has be executed</p>
 <blockquote>
 <p><strong>setStandardItemText</strong>(<code>sStandardItemText?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getStandardItemText standardItemText.</p>
+<p>Overwrites the default Standard variant title.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sStandardItemText?</h5>
 <p><code>string</code></p>
@@ -668,14 +671,15 @@ before the initialise event has be executed</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getStandardItemText standardItemText.</p>
-<p>Overwrites the default Standard variant title.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setTitleStyle()</h3>
 <blockquote>
 <p><strong>setTitleStyle</strong>(<code>sTitleStyle?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleStyle titleStyle.</p>
+<p>Defines the style of the title. For more information, see sap.m.Title#setTitleStyle.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleStyle?</h5>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
@@ -685,10 +689,6 @@ before the initialise event has be executed</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Sets a new value for property #getTitleStyle titleStyle.</p>
-<p>Defines the style of the title. For more information, see sap.m.Title#setTitleStyle.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -729,6 +729,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

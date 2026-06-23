@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SmartFieldSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SmartFieldSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $SmartFieldSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartfield/SmartField/interfaces/$SmartFieldSettings.html">
 <meta property="og:title" content="Interface: $SmartFieldSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SmartFieldSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $SmartFieldSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartfield/SmartField/interfaces/$SmartFieldSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartfield › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartfield/SmartField/README.html">SmartField</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartfield/SmartField</a> / $SmartFieldSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartfield/SmartField</a> / $SmartFieldSettings</p>
 <h1>Interface: $SmartFieldSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SmartFieldSettings } <span class="kw">from</span> <span class="str">"sap/ui/comp/smartfield/SmartField"</span>;</pre>
+<p>Describes the settings that can be provided to the SmartField constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -51,17 +52,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaDescribedBy?</strong>: (<code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs that describe this control (see WAI-ARIA attribute <code>aria-describedby</code>).</p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Association to controls / IDs that describe this control (see WAI-ARIA attribute <code>aria-describedby</code>).</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <h4>Since</h4>
 <p>1.34.2</p>
-<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <hr>
 <h3>change?</h3>
 <blockquote>
@@ -100,8 +101,6 @@ which implies the value is stored in the binding/model before the event is fired
 <blockquote>
 <p><code>optional</code> <strong>clientSideMandatoryCheck?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.38.3</p>
 <p>Determines if the mandatory check of whether the field has a value happens on the client side - <code>true</code>
 or on the server side - <code>false</code>.</p>
 <p><strong>Note:</strong> If the sap.ui.comp.smartfield.SmartField#value property of the <code>SmartField</code> control
@@ -112,6 +111,8 @@ setting.</p>
 <pre><code class="language-javascript">
     &lt;Property Name=&quot;CategoryID&quot; Type=&quot;Edm.Decimal&quot; Nullable=&quot;false&quot;/&gt;
 </code></pre>
+<h4>Since</h4>
+<p>1.38.3</p>
 <hr>
 <h3>configuration?</h3>
 <blockquote>
@@ -125,14 +126,15 @@ enable this feature in edit mode, set the <code>textInEditModeSource</code> cont
 <blockquote>
 <p><code>optional</code> <strong>contextEditable?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Notifies the control whether controls using the <code>SmartField</code> control are editable.</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Notifies the control whether controls using the <code>SmartField</code> control are editable.</p>
 <hr>
 <h3>contextEditableChanged?</h3>
 <blockquote>
 <p><code>optional</code> <strong>contextEditableChanged?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the control is rendered if the value of <code>contextEditable</code> property of the control has changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartField$ContextEditableChangedEvent.html"><code>SmartField$ContextEditableChangedEvent</code></a></p>
@@ -140,25 +142,24 @@ enable this feature in edit mode, set the <code>textInEditModeSource</code> cont
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Fired when the control is rendered if the value of <code>contextEditable</code> property of the control has changed.</p>
 <hr>
 <h3>controlContext?</h3>
 <blockquote>
 <p><code>optional</code> <strong>controlContext?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../library/namespaces/smartfield/enumerations/ControlContextType.html"><code>ControlContextType</code></a></p>
 </blockquote>
+<p>Defines the context in which the layout of the <code>SmartField</code> control has to be interpreted.</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Defines the context in which the layout of the <code>SmartField</code> control has to be interpreted.</p>
 <hr>
 <h3><del>controlProposal?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>controlProposal?</strong>: <a href="../../ControlProposal/classes/ControlProposal.html"><code>ControlProposal</code></a></p>
 </blockquote>
+<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
 <h4>Since</h4>
 <p>1.32.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.34.0)</p>
-<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
 <hr>
 <h3>editable?</h3>
 <blockquote>
@@ -184,6 +185,7 @@ annotation.
 <blockquote>
 <p><code>optional</code> <strong>editableChanged?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the control is rendered if the value of <code>editable</code> property of the control has changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartField$EditableChangedEvent.html"><code>SmartField$EditableChangedEvent</code></a></p>
@@ -191,7 +193,6 @@ annotation.
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Fired when the control is rendered if the value of <code>editable</code> property of the control has changed.</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
@@ -224,10 +225,6 @@ property, if a value for it is specified. In both cases this event is fired.</p>
 <blockquote>
 <p><code>optional</code> <strong>expandNavigationProperties?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48</p>
-<h4>Deprecated</h4>
-<p>(since 1.117) - It is recommended the expand to be using the OData Model.</p>
 <p>Indicates if entities related to navigation properties inside the metadata are requested. If set to <code>true</code>,
 then these related entities are loaded with an <code>$expand</code> request.</p>
 <p>Annotations that can have navigation properties are the following:
@@ -238,13 +235,15 @@ from the backend.</p>
 <p><strong>Note:</strong> The back-end request to expand the navigation properties is sent only if the entity to which
 <code>SmartField</code> is bound is persisted. For transient entities, there is no back-end request since no such
 data is available.</p>
+<h4>Since</h4>
+<p>1.48</p>
+<h4>Deprecated</h4>
+<p>(since 1.117) - It is recommended the expand to be using the OData Model.</p>
 <hr>
 <h3>fetchValueListReadOnly?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fetchValueListReadOnly?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.42.0</p>
 <p>Indicates whether the value list collection is fetched in display mode from the resource path specified
 in the <code>com.sap.vocabularies.Common.v1.ValueList</code> annotation.</p>
 <p>This collection data is used to infer a descriptive text for the value of the <code>SmartField</code> control. However,
@@ -257,13 +256,13 @@ control is fetched, for example, LT (Laptop).</p>
 control is bound to an Entity Data Model (EDM) property typed as <code>Edm.String</code>. In addition, applications
 or frameworks have to make sure the descriptive text is fetched, for example, by expanding a navigation
 property.</p>
+<h4>Since</h4>
+<p>1.42.0</p>
 <hr>
 <h3>fixedValueListValidationEnabled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fixedValueListValidationEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.88</p>
 <p>If the property is set to <code>true</code>, a standard validation for sap.m.ComboBox is performed. An inner
 control sap.m.ComboBox is created and the binding is to <code>selectedKey</code>. Changes at runtime are
 not reflected.</p>
@@ -273,25 +272,27 @@ setting to <code>textInEditModeSource</code> property regarding ComboBox validat
 and the binding is to <code>enteredValue</code>. In this case, any entered value is valid irrespective of whether
 it&#39;s in the predefined list or not.</p>
 <p><strong>Note:</strong> This property is applicable only for fixed-value scenarios.</p>
+<h4>Since</h4>
+<p>1.88</p>
 <hr>
 <h3>historyEnabled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>historyEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.84</p>
 <p>If the property is set to <code>false</code>, history values are disabled. Changes at runtime are not reflected.
 The <code>historyEnabled</code> property is not applied to custom controls.</p>
 <p><strong>Note:</strong> For sap.m.ComboBox and sap.m.MultiComboBox the history values are disabled
 by default. To enable them for these controls, you need to set the <code>historyEnabled</code> property to <code>true</code>.</p>
+<h4>Since</h4>
+<p>1.84</p>
 <hr>
 <h3>importance?</h3>
 <blockquote>
 <p><code>optional</code> <strong>importance?</strong>: <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/Importance.html"><code>Importance</code></a></p>
 </blockquote>
+<p>Specifies the importance of the field. Applicable only when the <code>SmartField</code> is used inside <code>SmartForm</code>.</p>
 <h4>Since</h4>
 <p>1.87</p>
-<p>Specifies the importance of the field. Applicable only when the <code>SmartField</code> is used inside <code>SmartForm</code>.</p>
 <hr>
 <h3>initialise?</h3>
 <blockquote>
@@ -319,10 +320,10 @@ by default. To enable them for these controls, you need to set the <code>history
 <blockquote>
 <p><code>optional</code> <strong>jsontype?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Date&quot;</code> | <code>&quot;DateTime&quot;</code> | <code>&quot;Boolean&quot;</code> | <code>&quot;Float&quot;</code> | <code>&quot;Integer&quot;</code> | <code>&quot;String&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/JSONType.html"><code>JSONType</code></a></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.31.0)</p>
 <p>Data types to be used, if the <code>SmartField</code> control is interacting with a JSON model. If the value property
 of the control is bound to a property of an OData entity set, this property is not taken into consideration.</p>
+<h4>Deprecated</h4>
+<p>(since 1.31.0)</p>
 <hr>
 <h3>mandatory?</h3>
 <blockquote>
@@ -362,6 +363,7 @@ setting.</p>
 <blockquote>
 <p><code>optional</code> <strong>modeToggled?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>The event is fired after the inner controls have been toggled.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -369,7 +371,6 @@ setting.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.117.0</p>
-<p>The event is fired after the inner controls have been toggled.</p>
 <hr>
 <h3>name?</h3>
 <blockquote>
@@ -387,6 +388,8 @@ setting.</p>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires when the user triggers the link control or taps/clicks on an active title of the object identifier
+control. When handler attached, the rendered control is <code>sap.m.Link</code></p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -396,18 +399,16 @@ setting.</p>
 <p>1.36.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.116.0)</p>
-<p>Fires when the user triggers the link control or taps/clicks on an active title of the object identifier
-control. When handler attached, the rendered control is <code>sap.m.Link</code></p>
 <hr>
 <h3><del>proposedControl?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>proposedControl?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../library/namespaces/smartfield/enumerations/ControlProposalType.html"><code>ControlProposalType</code></a></p>
 </blockquote>
+<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
 <h4>Since</h4>
 <p>1.32.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.32.0)</p>
-<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
 <hr>
 <h3>semanticObjectController?</h3>
 <blockquote>
@@ -452,21 +453,19 @@ supports this.</p>
 <blockquote>
 <p><code>optional</code> <strong>textDirection?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.86.0</p>
 <p>The available text direction options are LTR and RTL. By default, the control inherits the text direction
 from its parent control.</p>
 <p>The <code>textDirection</code> property can be used when, for example, the text direction in the application is
 LTR but you want a specific field to have RTL text direction.</p>
 <p><strong>Note:</strong> The <code>textDirection</code> property is not applicable for the <code>SmartField</code> control for units of measure
 use cases.</p>
+<h4>Since</h4>
+<p>1.86.0</p>
 <hr>
 <h3>textInEditModeSource?</h3>
 <blockquote>
 <p><code>optional</code> <strong>textInEditModeSource?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/TextInEditModeSource.html"><code>TextInEditModeSource</code></a> | <code>&quot;NavigationProperty&quot;</code> | <code>&quot;ValueList&quot;</code> | <code>&quot;ValueListNoValidation&quot;</code> | <code>&quot;ValueListWarning&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.83</p>
 <p>Sets the source from which text descriptions for <code>IDs</code> are fetched in edit mode, for example, for LT
 (Laptop).</p>
 <p><strong>Note</strong>: The <code>sap.ui.comp.smartfield.TextInEditModeSource.NavigationProperty</code> and <code>sap.ui.comp.smartfield.TextInEditModeSource.ValueList</code>
@@ -504,6 +503,8 @@ override the <code>defaultTextInEditModeSource</code> propagated from the <code>
 of type <code>ComboBox</code>. The values that will be considered:
 	 - ValueList - strict validation
 	 - ValueListWarning - non-strict validation</p>
+<h4>Since</h4>
+<p>1.83</p>
 <hr>
 <h3>textLabel?</h3>
 <blockquote>
@@ -551,9 +552,9 @@ annotation.
 <blockquote>
 <p><code>optional</code> <strong>uomEditState?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>This property is for internal use only.</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>This property is for internal use only.</p>
 <hr>
 <h3>uomEnabled?</h3>
 <blockquote>
@@ -605,6 +606,8 @@ the <code>&gt;</code> is the binding path.</p>
 <blockquote>
 <p><code>optional</code> <strong>valueListChanged?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>The event is fired when after selection of values with value help or auto-suggest, the model is updated
+with the selected data.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SmartField$ValueListChangedEvent.html"><code>SmartField$ValueListChangedEvent</code></a></p>
@@ -612,8 +615,6 @@ the <code>&gt;</code> is the binding path.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.31.0</p>
-<p>The event is fired when after selection of values with value help or auto-suggest, the model is updated
-with the selected data.</p>
 <hr>
 <h3>valueState?</h3>
 <blockquote>
@@ -666,10 +667,10 @@ handler.</p>
 <blockquote>
 <p><code>optional</code> <strong>wrapping?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Indicates whether the control break lines (in display mode) to prevent overflow.</p>
 <h4>Since</h4>
 <p>1.36.6</p>
-<p>Indicates whether the control break lines (in display mode) to prevent overflow.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Controller — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Controller — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Controller — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/mvc/Controller/classes/Controller.html">
 <meta property="og:title" content="Class: Controller — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Controller — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Controller — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/mvc/Controller/classes/Controller.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › mvc › <a href="../../../../../../../sap.ui.core/sap/ui/core/mvc/Controller/README.html">Controller</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/mvc/Controller</a> / Controller</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/mvc/Controller</a> / Controller</p>
 <h1>Class: Controller</h1>
 <pre class="sig"><span class="kw">import</span> Controller <span class="kw">from</span> <span class="str">"sap/ui/core/mvc/Controller"</span>;</pre>
 <p>A generic controller implementation for the UI5 Model-View-Controller concept.</p>
@@ -101,14 +101,14 @@ is returned.</p>
 <blockquote>
 <p><strong>getOwnerComponent</strong>(): <a href="../../../Component/classes/Component.html"><code>Component</code></a></p>
 </blockquote>
+<p>Gets the component of the controller&#39;s view</p>
+<p>If there is no Component connected to the view or the view is not connected to the controller, <code>undefined</code>
+is returned.</p>
 <h4>Returns</h4>
 <p><a href="../../../Component/classes/Component.html"><code>Component</code></a></p>
 <p>Component instance</p>
 <h4>Since</h4>
 <p>1.23.0</p>
-<p>Gets the component of the controller&#39;s view</p>
-<p>If there is no Component connected to the view or the view is not connected to the controller, <code>undefined</code>
-is returned.</p>
 <hr>
 <h3>getView()</h3>
 <blockquote>
@@ -123,6 +123,23 @@ is returned.</p>
 <blockquote>
 <p><strong>loadFragment</strong>(<code>mOptions</code>): <code>Promise</code>&lt;<a href="../../../Control/classes/Control.html"><code>Control</code></a> | <a href="../../../Control/classes/Control.html"><code>Control</code></a>[]&gt;</p>
 </blockquote>
+<p>Loads a Fragment by sap.ui.core.Fragment.load.</p>
+<p>The fragment content will be added to the <code>dependents</code> aggregation of the view by default. This behavior
+can be suppressed by setting <code>mOptions.addToDependents</code> to false.</p>
+<p>The controller is passed to the Fragment by default, so the (event handler) methods referenced in the
+Fragment will be called on this Controller.</p>
+<p>If the controller has an owner component, it is passed to the fragment content. By default the fragment
+content will be prefixed with the view ID to avoid duplicate ID issues. The prefixing can be switched
+off with the <code>autoPrefixId</code> option.</p>
+<p>When <code>autoPrefixId</code> is enabled, the fragment content can be accessed by calling sap.ui.core.mvc.Controller.byId.</p>
+<p><strong>Destroy behavior</strong>: Different scenarios concerning the destruction of the fragment&#39;s content exist,
+of which some must be addressed by the caller, while others are handled automatically.
+	 - The controller instance is destroyed before the fragment content creation has finished: In this case,
+    the controller instance takes care of asynchronously destroying the fragment content
+	 - The fragment content is aggregated within a control (e.g. <code>dependents</code> aggregation by default): In
+    this case, the content will be destroyed during the regular destroy lifecycle.
+	 - The fragment content is not aggregated within a control: In this case, <em><strong>it must be destroyed manually</strong></em>
+    in the exit hook of the controller.</p>
 <h4>Parameters</h4>
 <h5>mOptions</h5>
 <p>Options regarding fragment loading</p>
@@ -149,75 +166,72 @@ is returned.</p>
 <p>A Promise that resolves with the fragment content</p>
 <h4>Since</h4>
 <p>1.93</p>
-<p>Loads a Fragment by sap.ui.core.Fragment.load.</p>
-<p>The fragment content will be added to the <code>dependents</code> aggregation of the view by default. This behavior
-can be suppressed by setting <code>mOptions.addToDependents</code> to false.</p>
-<p>The controller is passed to the Fragment by default, so the (event handler) methods referenced in the
-Fragment will be called on this Controller.</p>
-<p>If the controller has an owner component, it is passed to the fragment content. By default the fragment
-content will be prefixed with the view ID to avoid duplicate ID issues. The prefixing can be switched
-off with the <code>autoPrefixId</code> option.</p>
-<p>When <code>autoPrefixId</code> is enabled, the fragment content can be accessed by calling sap.ui.core.mvc.Controller.byId.</p>
-<p><strong>Destroy behavior</strong>: Different scenarios concerning the destruction of the fragment&#39;s content exist,
-of which some must be addressed by the caller, while others are handled automatically.
-	 - The controller instance is destroyed before the fragment content creation has finished: In this case,
-    the controller instance takes care of asynchronously destroying the fragment content
-	 - The fragment content is aggregated within a control (e.g. <code>dependents</code> aggregation by default): In
-    this case, the content will be destroyed during the regular destroy lifecycle.
-	 - The fragment content is not aggregated within a control: In this case, <em><strong>it must be destroyed manually</strong></em>
-    in the exit hook of the controller.</p>
 <hr>
 <h3>onAfterRendering()</h3>
 <blockquote>
 <p><strong>onAfterRendering</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>This method is called every time the View is rendered, after the HTML is placed in the DOM-Tree. It can
 be used to apply additional changes to the DOM after the Renderer has finished. (Even though this method
 is declared as &quot;abstract&quot;, it does not need to be defined in controllers, if the method does not exist,
 it will simply not be called.)
 See:
 	sap.ui.core.Control.prototype.onAfterRendering</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<p>This lifecycle hook must not have a return value. Return value <code>void</code> is deprecated since 1.120,
+as it does not force functions to <strong>not</strong> return something. This implies that, for instance, no async
+function returning a Promise should be used.</p>
+<p><strong>Note:</strong> While the return type is currently <code>void|undefined</code>, any implementation of this hook must not
+return anything but undefined. Any other return value will cause an error log in this version of UI5
+and will fail in future major versions of UI5.</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>onBeforeRendering()</h3>
 <blockquote>
 <p><strong>onBeforeRendering</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>This method is called every time the View is rendered, before the Renderer is called and the HTML is
 placed in the DOM-Tree. It can be used to perform clean-up-tasks before re-rendering. (Even though this
 method is declared as &quot;abstract&quot;, it does not need to be defined in controllers, if the method does not
 exist, it will simply not be called.)
 See:
 	sap.ui.core.Control.prototype.onBeforeRendering</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<p>This lifecycle hook must not have a return value. Return value <code>void</code> is deprecated since 1.120,
+as it does not force functions to <strong>not</strong> return something. This implies that, for instance, no async
+function returning a Promise should be used.</p>
+<p><strong>Note:</strong> While the return type is currently <code>void|undefined</code>, any implementation of this hook must not
+return anything but undefined. Any other return value will cause an error log in this version of UI5
+and will fail in future major versions of UI5.</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>onExit()</h3>
 <blockquote>
 <p><strong>onExit</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>This method is called upon desctuction of the View. The controller should perform its internal destruction
 in this hook. It is only called once per View instance, unlike the onBeforeRendering and onAfterRendering
 hooks. (Even though this method is declared as &quot;abstract&quot;, it does not need to be defined in controllers,
 if the method does not exist, it will simply not be called.)</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<p>This lifecycle hook must not have a return value. Return value <code>void</code> is deprecated since 1.120,
+as it does not force functions to <strong>not</strong> return something. This implies that, for instance, no async
+function returning a Promise should be used.</p>
+<p><strong>Note:</strong> While the return type is currently <code>void|undefined</code>, any implementation of this hook must not
+return anything but undefined. Any other return value will cause an error log in this version of UI5
+and will fail in future major versions of UI5.</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>onInit()</h3>
 <blockquote>
 <p><strong>onInit</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>This method is called upon initialization of the View. The controller can perform its internal setup
 in this hook. It is only called once per View instance, unlike the onBeforeRendering and onAfterRendering
 hooks. (Even though this method is declared as &quot;abstract&quot;, it does not need to be defined in controllers,
@@ -227,11 +241,22 @@ to get a model assigned to the component instead of using <code>this.getView().g
 might return <code>undefined</code> because the view might not have been attached to a parent yet (i.e. the component),
 and thus the view can&#39;t inherit a model from that parent. You could also attach to the <code>modelContextChange</code>
 event. The event is fired when either the context or the model changes for the control.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<p>This lifecycle hook must not have a return value. Return value <code>void</code> is deprecated since 1.120,
+as it does not force functions to <strong>not</strong> return something. This implies that, for instance, no async
+function returning a Promise should be used.</p>
+<p><strong>Note:</strong> While the return type is currently <code>void|undefined</code>, any implementation of this hook must not
+return anything but undefined. Any other return value will cause an error log in this version of UI5
+and will fail in future major versions of UI5.</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>create()</h3>
 <blockquote>
 <p><code>static</code> <strong>create</strong>(<code>mOptions</code>): <code>Promise</code>&lt;<code>Controller</code>&gt;</p>
 </blockquote>
+<p>Creates an instance of controller class.</p>
 <h4>Parameters</h4>
 <h5>mOptions</h5>
 <p>A map containing the controller configuration options.</p>
@@ -246,7 +271,6 @@ event. The event is fired when either the context or the model changes for the c
 <p>the Promise resolves with a new instance of the controller</p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Creates an instance of controller class.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -290,15 +314,6 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>registerExtensionProvider</strong>(<code>sExtensionProvider</code>): <code>void</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sExtensionProvider</h5>
-<p><code>string</code></p>
-<p>the module name of the extension provider</p>
-<p>See sap.ui.core.mvc.Controller for an overview of the available functions for controllers.</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Registers a callback module, which provides code enhancements for the lifecycle and event handler functions
 of a specific controller. The code enhancements are returned either in sync or async mode.</p>
 <p>The extension provider module provides the <code>getControllerExtensions</code> function which returns either directly
@@ -361,7 +376,16 @@ or after the lifecycle functions of the original controller. The event handler f
 are replacing the original controller&#39;s function.</p>
 <p>When using an async extension provider, you need to ensure that the view is loaded in async mode.</p>
 <p>In both cases, return <code>undefined</code> if no controller extension shall be applied.</p>
+<h4>Parameters</h4>
+<h5>sExtensionProvider</h5>
+<p><code>string</code></p>
+<p>the module name of the extension provider</p>
+<p>See sap.ui.core.mvc.Controller for an overview of the available functions for controllers.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

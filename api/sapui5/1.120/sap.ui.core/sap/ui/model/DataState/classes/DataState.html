@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DataState — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: DataState — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: DataState — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/DataState/classes/DataState.html">
 <meta property="og:title" content="Class: DataState — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: DataState — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: DataState — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/DataState/classes/DataState.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › <a href="../../../../../../sap.ui.core/sap/ui/model/DataState/README.html">DataState</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/DataState</a> / DataState</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/DataState</a> / DataState</p>
 <h1>Class: DataState</h1>
 <pre class="sig"><span class="kw">import</span> DataState <span class="kw">from</span> <span class="str">"sap/ui/model/DataState"</span>;</pre>
 <p>Holds the status data of a binding. To react to changes of this status data, a control must implement
@@ -95,6 +95,10 @@ The sap.ui.core.message.Message messages available for the binding in its sap.ui
 <blockquote>
 <p><strong>changed</strong>(<code>bNewState?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether the data state is changed, or resets the data state in case the parameter <code>bNewState</code>
+is false; reset data state means that the data state properties are replaced with the changed properties.
+As long as there was no call to this method with <code>bNewState</code> set to false, the data state is dirty, and
+the corresponding binding will fire data state change events.</p>
 <h4>Parameters</h4>
 <h5>bNewState?</h5>
 <p><code>boolean</code></p>
@@ -104,21 +108,17 @@ The sap.ui.core.message.Message messages available for the binding in its sap.ui
 <p>Whether the data state was changed</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns whether the data state is changed, or resets the data state in case the parameter <code>bNewState</code>
-is false; reset data state means that the data state properties are replaced with the changed properties.
-As long as there was no call to this method with <code>bNewState</code> set to false, the data state is dirty, and
-the corresponding binding will fire data state change events.</p>
 <hr>
 <h3>getAllMessages()</h3>
 <blockquote>
-<p><strong>getAllMessages</strong>(): <a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><strong>getAllMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
+<p>Returns an array of all model and control messages, regardless of whether they are old or new.</p>
 <h4>Returns</h4>
-<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The array of all messages</p>
 <h4>Since</h4>
 <p>1.98.0</p>
-<p>Returns an array of all model and control messages, regardless of whether they are old or new.</p>
 <hr>
 <h3>getChanges()</h3>
 <blockquote>
@@ -134,11 +134,11 @@ map only contains the changed properties.</p>
 <hr>
 <h3>getControlMessages()</h3>
 <blockquote>
-<p><strong>getControlMessages</strong>(): <a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><strong>getControlMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
 <p>Returns the array of this data state&#39;s current control messages.</p>
 <h4>Returns</h4>
-<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The array of control messages</p>
 <hr>
 <h3>getInvalidValue()</h3>
@@ -154,21 +154,21 @@ can be accessed using the #getValue method.</p>
 <hr>
 <h3>getMessages()</h3>
 <blockquote>
-<p><strong>getMessages</strong>(): <a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><strong>getMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
 <p>Returns the array of this data state&#39;s current messages combining the model and control messages. The
 array is sorted descendingly by message severity.</p>
 <h4>Returns</h4>
-<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The sorted array of all messages</p>
 <hr>
 <h3>getModelMessages()</h3>
 <blockquote>
-<p><strong>getModelMessages</strong>(): <a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><strong>getModelMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
 <p>Returns the array of this data state&#39;s current model messages.</p>
 <h4>Returns</h4>
-<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The array of messages of the model</p>
 <hr>
 <h3>getOriginalValue()</h3>
@@ -223,21 +223,22 @@ laundering until the data was accepted or rejected.</p>
 <blockquote>
 <p><strong>setControlMessages</strong>(<code>aMessages</code>): <code>this</code></p>
 </blockquote>
+<p>Sets an array of control state messages.</p>
 <h4>Parameters</h4>
 <h5>aMessages</h5>
-<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The control messages</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets an array of control state messages.</p>
 <hr>
 <h3>setInvalidValue()</h3>
 <blockquote>
 <p><strong>setInvalidValue</strong>(<code>vInvalidValue</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the dirty value that was rejected by the type validation.</p>
 <h4>Parameters</h4>
 <h5>vInvalidValue</h5>
 <p><code>any</code></p>
@@ -247,12 +248,12 @@ laundering until the data was accepted or rejected.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the dirty value that was rejected by the type validation.</p>
 <hr>
 <h3>setLaundering()</h3>
 <blockquote>
 <p><strong>setLaundering</strong>(<code>bLaundering</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the laundering state of the data state.</p>
 <h4>Parameters</h4>
 <h5>bLaundering</h5>
 <p><code>boolean</code></p>
@@ -262,7 +263,6 @@ laundering until the data was accepted or rejected.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the laundering state of the data state.</p>
 <hr>
 <h3>setModelMessages()</h3>
 <blockquote>
@@ -271,7 +271,7 @@ laundering until the data was accepted or rejected.</p>
 <p>Sets an array of model state messages.</p>
 <h4>Parameters</h4>
 <h5>aMessages?</h5>
-<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The model messages for this data state.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
@@ -281,6 +281,7 @@ laundering until the data was accepted or rejected.</p>
 <blockquote>
 <p><strong>setOriginalValue</strong>(<code>vOriginalValue</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the formatted original value of the data.</p>
 <h4>Parameters</h4>
 <h5>vOriginalValue</h5>
 <p><code>boolean</code></p>
@@ -290,12 +291,12 @@ laundering until the data was accepted or rejected.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the formatted original value of the data.</p>
 <hr>
 <h3>setValue()</h3>
 <blockquote>
 <p><strong>setValue</strong>(<code>vValue</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the formatted value of the data state,</p>
 <h4>Parameters</h4>
 <h5>vValue</h5>
 <p><code>any</code></p>
@@ -305,7 +306,6 @@ laundering until the data was accepted or rejected.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the formatted value of the data state,</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -344,6 +344,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

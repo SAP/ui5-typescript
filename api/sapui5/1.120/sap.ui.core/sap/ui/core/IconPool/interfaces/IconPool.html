@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: IconPool — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: IconPool — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: IconPool — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/IconPool/interfaces/IconPool.html">
 <meta property="og:title" content="Interface: IconPool — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: IconPool — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: IconPool — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/IconPool/interfaces/IconPool.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/IconPool/README.html">IconPool</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/IconPool</a> / IconPool</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/IconPool</a> / IconPool</p>
 <h1>Interface: IconPool</h1>
 <pre class="sig"><span class="kw">import</span> IconPool <span class="kw">from</span> <span class="str">"sap/ui/core/IconPool"</span>;</pre>
 <p>The IconPool is a static class for retrieving or registering icons. It also provides helping methods
@@ -118,6 +118,7 @@ named src. If it&#39;s given with a string type, it will be taken as the value o
 <blockquote>
 <p><strong>fontLoaded</strong>(<code>sCollectionName</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Checks if the icon font is loaded</p>
 <h4>Parameters</h4>
 <h5>sCollectionName</h5>
 <p><code>string</code></p>
@@ -128,7 +129,6 @@ named src. If it&#39;s given with a string type, it will be taken as the value o
 been registered yet</p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Checks if the icon font is loaded</p>
 <hr>
 <h3>getIconCollectionNames()</h3>
 <blockquote>
@@ -143,6 +143,7 @@ been registered yet</p>
 <blockquote>
 <p><strong>getIconForMimeType</strong>(<code>sMimeType</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the icon url based on the given mime type</p>
 <h4>Parameters</h4>
 <h5>sMimeType</h5>
 <p><code>string</code></p>
@@ -152,7 +153,6 @@ been registered yet</p>
 <p>the icon url (e.g. &quot;sap-icon://attachment-zip-file&quot;)</p>
 <h4>Since</h4>
 <p>1.25.0</p>
-<p>Returns the icon url based on the given mime type</p>
 <hr>
 <h3>getIconInfo()</h3>
 <blockquote>
@@ -255,6 +255,7 @@ can&#39;t be found or no icon name was given.</p>
 <blockquote>
 <p><strong>registerFont</strong>(<code>oConfig</code>): <code>void</code></p>
 </blockquote>
+<p>Registers an additional icon font to the icon pool</p>
 <h4>Parameters</h4>
 <h5>oConfig</h5>
 <p>configuration object for registering the font</p>
@@ -281,8 +282,7 @@ a JSON file with the name oConfig.fontFamily will be loaded from the location sp
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Registers an additional icon font to the icon pool</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

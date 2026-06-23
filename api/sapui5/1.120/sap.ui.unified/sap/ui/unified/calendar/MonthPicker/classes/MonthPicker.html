@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: MonthPicker — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: MonthPicker — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: MonthPicker — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/MonthPicker/classes/MonthPicker.html">
 <meta property="og:title" content="Class: MonthPicker — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: MonthPicker — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: MonthPicker — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/MonthPicker/classes/MonthPicker.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › calendar › <a href="../../../../../../../sap.ui.unified/sap/ui/unified/calendar/MonthPicker/README.html">MonthPicker</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/MonthPicker</a> / MonthPicker</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/MonthPicker</a> / MonthPicker</p>
 <h1>Class: MonthPicker</h1>
 <pre class="sig"><span class="kw">import</span> MonthPicker <span class="kw">from</span> <span class="str">"sap/ui/unified/calendar/MonthPicker"</span>;</pre>
+<p>renders a MonthPicker with ItemNavigation This is used inside the calendar. Not for stand alone usage</p>
 <h2>Since</h2>
 <p>1.28.0</p>
-<p>renders a MonthPicker with ItemNavigation This is used inside the calendar. Not for stand alone usage</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -86,6 +86,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -95,12 +96,12 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addSelectedDate()</h3>
 <blockquote>
 <p><strong>addSelectedDate</strong>(<code>oSelectedDate</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some selectedDate to the aggregation #getSelectedDates selectedDates.</p>
 <h4>Parameters</h4>
 <h5>oSelectedDate</h5>
 <p><a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a></p>
@@ -110,13 +111,17 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Adds some selectedDate to the aggregation #getSelectedDates selectedDates.</p>
 <hr>
 <h3>attachPageChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPageChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:pageChange pageChange event of this <code>sap.ui.unified.calendar.MonthPicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.calendar.MonthPicker</code> itself.</p>
+<p>If less than 12 months are displayed the <code>pageChange</code> event is fired if the displayed months are changed
+by user navigation.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -134,15 +139,15 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPageChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:pageChange pageChange event of this <code>sap.ui.unified.calendar.MonthPicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.calendar.MonthPicker</code> itself.</p>
 <p>If less than 12 months are displayed the <code>pageChange</code> event is fired if the displayed months are changed
 by user navigation.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPageChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -156,11 +161,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:pageChange pageChange event of this <code>sap.ui.unified.calendar.MonthPicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.calendar.MonthPicker</code> itself.</p>
-<p>If less than 12 months are displayed the <code>pageChange</code> event is fired if the displayed months are changed
-by user navigation.</p>
 <hr>
 <h3>attachSelect()</h3>
 <h4>Call Signature</h4>
@@ -210,17 +210,19 @@ itself</p>
 <blockquote>
 <p><strong>destroySelectedDates</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the selectedDates in the aggregation #getSelectedDates selectedDates.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Destroys all the selectedDates in the aggregation #getSelectedDates selectedDates.</p>
 <hr>
 <h3>detachPageChange()</h3>
 <blockquote>
 <p><strong>detachPageChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:pageChange pageChange event of this <code>sap.ui.unified.calendar.MonthPicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -233,8 +235,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:pageChange pageChange event of this <code>sap.ui.unified.calendar.MonthPicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSelect()</h3>
 <blockquote>
@@ -257,6 +257,7 @@ itself</p>
 <blockquote>
 <p><strong>firePageChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:pageChange pageChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -268,12 +269,12 @@ itself</p>
 <p>1.38.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:pageChange pageChange to attached listeners.</p>
 <hr>
 <h3>fireSelect()</h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -283,44 +284,43 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.92</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getColumns()</h3>
 <blockquote>
 <p><strong>getColumns</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getColumns columns.</p>
+<p>number of months in each row The value must be between 0 and 12 (0 means just to have all months in one
+row, independent of the number)</p>
+<p>Default value is <code>3</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>columns</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Gets current value of property #getColumns columns.</p>
-<p>number of months in each row The value must be between 0 and 12 (0 means just to have all months in one
-row, independent of the number)</p>
-<p>Default value is <code>3</code>.</p>
 <hr>
 <h3>getIntervalSelection()</h3>
 <blockquote>
 <p><strong>getIntervalSelection</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getIntervalSelection intervalSelection.</p>
+<p>If set, interval selection is allowed</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>intervalSelection</code></p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Gets current value of property #getIntervalSelection intervalSelection.</p>
-<p>If set, interval selection is allowed</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getMonth()</h3>
 <blockquote>
@@ -337,56 +337,58 @@ row, independent of the number)</p>
 <blockquote>
 <p><strong>getMonths</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getMonths months.</p>
+<p>number of displayed months The value must be between 1 and 12</p>
+<p>Default value is <code>12</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>months</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Gets current value of property #getMonths months.</p>
-<p>number of displayed months The value must be between 1 and 12</p>
-<p>Default value is <code>12</code>.</p>
 <hr>
 <h3>getPrimaryCalendarType()</h3>
 <blockquote>
 <p><strong>getPrimaryCalendarType</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getPrimaryCalendarType primaryCalendarType.</p>
+<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
+is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 <p>Value of property <code>primaryCalendarType</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets current value of property #getPrimaryCalendarType primaryCalendarType.</p>
-<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
-is used.</p>
 <hr>
 <h3>getSecondaryCalendarType()</h3>
 <blockquote>
 <p><strong>getSecondaryCalendarType</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getSecondaryCalendarType secondaryCalendarType.</p>
+<p>If set, the months are also displayed in this calendar type If not set, the months are only displayed
+in the primary calendar type</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 <p>Value of property <code>secondaryCalendarType</code></p>
 <h4>Since</h4>
 <p>1.104.0</p>
-<p>Gets current value of property #getSecondaryCalendarType secondaryCalendarType.</p>
-<p>If set, the months are also displayed in this calendar type If not set, the months are only displayed
-in the primary calendar type</p>
 <hr>
 <h3>getSelectedDates()</h3>
 <blockquote>
 <p><strong>getSelectedDates</strong>(): <a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getSelectedDates selectedDates.</p>
+<p>Date Ranges for selected dates of the MonthPicker</p>
 <h4>Returns</h4>
 <p><a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a>[]</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Gets content of aggregation #getSelectedDates selectedDates.</p>
-<p>Date Ranges for selected dates of the MonthPicker</p>
 <hr>
 <h3>indexOfSelectedDate()</h3>
 <blockquote>
 <p><strong>indexOfSelectedDate</strong>(<code>oSelectedDate</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.unified.DateRange</code> in the aggregation #getSelectedDates selectedDates.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oSelectedDate</h5>
 <p><a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a></p>
@@ -396,13 +398,12 @@ in the primary calendar type</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Checks for the provided <code>sap.ui.unified.DateRange</code> in the aggregation #getSelectedDates selectedDates.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertSelectedDate()</h3>
 <blockquote>
 <p><strong>insertSelectedDate</strong>(<code>oSelectedDate</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a selectedDate into the aggregation #getSelectedDates selectedDates.</p>
 <h4>Parameters</h4>
 <h5>oSelectedDate</h5>
 <p><a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a></p>
@@ -417,7 +418,6 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Inserts a selectedDate into the aggregation #getSelectedDates selectedDates.</p>
 <hr>
 <h3>nextPage()</h3>
 <blockquote>
@@ -441,29 +441,30 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.92</p>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllSelectedDates()</h3>
 <blockquote>
 <p><strong>removeAllSelectedDates</strong>(): <a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getSelectedDates selectedDates.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Removes all the controls from the aggregation #getSelectedDates selectedDates.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -473,12 +474,12 @@ is inserted at the last position</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.92</p>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeSelectedDate()</h3>
 <blockquote>
 <p><strong>removeSelectedDate</strong>(<code>vSelectedDate</code>): <a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a></p>
 </blockquote>
+<p>Removes a selectedDate from the aggregation #getSelectedDates selectedDates.</p>
 <h4>Parameters</h4>
 <h5>vSelectedDate</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../DateRange/classes/DateRange.html"><code>DateRange</code></a></p>
@@ -488,12 +489,16 @@ is inserted at the last position</p>
 <p>The removed selectedDate or <code>null</code></p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Removes a selectedDate from the aggregation #getSelectedDates selectedDates.</p>
 <hr>
 <h3>setColumns()</h3>
 <blockquote>
 <p><strong>setColumns</strong>(<code>iColumns?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getColumns columns.</p>
+<p>number of months in each row The value must be between 0 and 12 (0 means just to have all months in one
+row, independent of the number)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>3</code>.</p>
 <h4>Parameters</h4>
 <h5>iColumns?</h5>
 <p><code>number</code></p>
@@ -503,16 +508,15 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Sets a new value for property #getColumns columns.</p>
-<p>number of months in each row The value must be between 0 and 12 (0 means just to have all months in one
-row, independent of the number)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>3</code>.</p>
 <hr>
 <h3>setIntervalSelection()</h3>
 <blockquote>
 <p><strong>setIntervalSelection</strong>(<code>bIntervalSelection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIntervalSelection intervalSelection.</p>
+<p>If set, interval selection is allowed</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bIntervalSelection?</h5>
 <p><code>boolean</code></p>
@@ -522,10 +526,6 @@ row, independent of the number)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Sets a new value for property #getIntervalSelection intervalSelection.</p>
-<p>If set, interval selection is allowed</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setMinMax()</h3>
 <blockquote>
@@ -563,6 +563,10 @@ row, independent of the number)</p>
 <blockquote>
 <p><strong>setMonths</strong>(<code>iMonths?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMonths months.</p>
+<p>number of displayed months The value must be between 1 and 12</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>12</code>.</p>
 <h4>Parameters</h4>
 <h5>iMonths?</h5>
 <p><code>number</code></p>
@@ -572,15 +576,15 @@ row, independent of the number)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Sets a new value for property #getMonths months.</p>
-<p>number of displayed months The value must be between 1 and 12</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>12</code>.</p>
 <hr>
 <h3>setPrimaryCalendarType()</h3>
 <blockquote>
 <p><strong>setPrimaryCalendarType</strong>(<code>sPrimaryCalendarType</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPrimaryCalendarType primaryCalendarType.</p>
+<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
+is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sPrimaryCalendarType</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
@@ -590,15 +594,15 @@ row, independent of the number)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getPrimaryCalendarType primaryCalendarType.</p>
-<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
-is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSecondaryCalendarType()</h3>
 <blockquote>
 <p><strong>setSecondaryCalendarType</strong>(<code>sSecondaryCalendarType</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSecondaryCalendarType secondaryCalendarType.</p>
+<p>If set, the months are also displayed in this calendar type If not set, the months are only displayed
+in the primary calendar type</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSecondaryCalendarType</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
@@ -608,10 +612,6 @@ is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.104.0</p>
-<p>Sets a new value for property #getSecondaryCalendarType secondaryCalendarType.</p>
-<p>If set, the months are also displayed in this calendar type If not set, the months are only displayed
-in the primary calendar type</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -652,6 +652,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

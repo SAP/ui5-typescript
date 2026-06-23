@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Header — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Header — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Header — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/cards/Header/classes/Header.html">
 <meta property="og:title" content="Class: Header — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Header — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Header — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/cards/Header/classes/Header.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.f/README.html">sap.f</a> › sap › f › cards › <a href="../../../../../../sap.f/sap/f/cards/Header/README.html">Header</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/cards/Header</a> / Header</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/cards/Header</a> / Header</p>
 <h1>Class: Header</h1>
 <pre class="sig"><span class="kw">import</span> Header <span class="kw">from</span> <span class="str">"sap/f/cards/Header"</span>;</pre>
-<h2>Since</h2>
-<p>1.64</p>
 <p>Displays general information in the header of the sap.f.Card.</p>
 <p>You can configure the title, subtitle, status text and icon, using the provided properties.</p>
 <p><strong>Notes:</strong>
 	 - You should always set a title.
 	 - To show a KPI or any numeric information, use sap.f.cards.NumericHeader instead.</p>
+<h2>Since</h2>
+<p>1.64</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../BaseHeader/classes/BaseHeader.html"><code>BaseHeader</code></a></li>
@@ -160,6 +160,8 @@ otherwise it will be bound to this <code>sap.f.cards.Header</code> itself.</p>
 <blockquote>
 <p><strong>enhanceAccessibilityState</strong>(<code>oElement</code>, <code>mAriaProps</code>): <code>void</code></p>
 </blockquote>
+<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
+It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -174,8 +176,6 @@ otherwise it will be bound to this <code>sap.f.cards.Header</code> itself.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
-It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Overrides</h4>
 <p><a href="../../BaseHeader/classes/BaseHeader.html"><code>BaseHeader</code></a>.<a href="../../BaseHeader/classes/BaseHeader.html#enhanceaccessibilitystate"><code>enhanceAccessibilityState</code></a></p>
 <hr>
@@ -183,6 +183,7 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -192,17 +193,16 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getIconAlt()</h3>
 <blockquote>
 <p><strong>getIconAlt</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.81) - this feature is experimental and the API may change.</p>
 <p>Gets current value of property #getIconAlt iconAlt.</p>
 <p>Defines an alt text for the avatar or icon.</p>
 <p>Default value is <code>empty string</code>.</p>
+<p> (since 1.81) - this feature is experimental and the API may change.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>iconAlt</code></p>
@@ -212,10 +212,10 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>getIconBackgroundColor</strong>(): <code>&quot;Transparent&quot;</code> | <a href="../../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.83) - this feature is experimental and the API may change.</p>
 <p>Gets current value of property #getIconBackgroundColor iconBackgroundColor.</p>
 <p>Defines a background color for the avatar or icon.</p>
 <p>Default value is <code>Transparent</code>.</p>
+<p> (since 1.83) - this feature is experimental and the API may change.</p>
 <h4>Returns</h4>
 <p><code>&quot;Transparent&quot;</code> | <a href="../../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code></p>
 <p>Value of property <code>iconBackgroundColor</code></p>
@@ -247,10 +247,10 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>getIconSize</strong>(): <a href="../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.119) - this feature is experimental and the API may change.</p>
 <p>Gets current value of property #getIconSize iconSize.</p>
 <p>Defines the size of the icon.</p>
 <p>Default value is <code>S</code>.</p>
+<p> (since 1.119) - this feature is experimental and the API may change.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 <p>Value of property <code>iconSize</code></p>
@@ -271,10 +271,10 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>getIconVisible</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.83) - this feature is experimental and the API may change.</p>
 <p>Gets current value of property #getIconVisible iconVisible.</p>
 <p>Defines whether the card icon is visible.</p>
 <p>Default value is <code>true</code>.</p>
+<p> (since 1.83) - this feature is experimental and the API may change.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>iconVisible</code></p>
@@ -306,10 +306,10 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>getSubtitleMaxLines</strong>(): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Gets current value of property #getSubtitleMaxLines subtitleMaxLines.</p>
 <p>Limits the number of lines for the subtitle.</p>
 <p>Default value is <code>2</code>.</p>
+<p> (since 1.101)</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>subtitleMaxLines</code></p>
@@ -330,10 +330,10 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>getTitleMaxLines</strong>(): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Gets current value of property #getTitleMaxLines titleMaxLines.</p>
 <p>Limits the number of lines for the title.</p>
 <p>Default value is <code>3</code>.</p>
+<p> (since 1.101)</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>titleMaxLines</code></p>
@@ -343,11 +343,11 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>setIconAlt</strong>(<code>sIconAlt?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.81) - this feature is experimental and the API may change.</p>
 <p>Sets a new value for property #getIconAlt iconAlt.</p>
 <p>Defines an alt text for the avatar or icon.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>empty string</code>.</p>
+<p> (since 1.81) - this feature is experimental and the API may change.</p>
 <h4>Parameters</h4>
 <h5>sIconAlt?</h5>
 <p><code>string</code></p>
@@ -361,11 +361,11 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>setIconBackgroundColor</strong>(<code>sIconBackgroundColor?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.83) - this feature is experimental and the API may change.</p>
 <p>Sets a new value for property #getIconBackgroundColor iconBackgroundColor.</p>
 <p>Defines a background color for the avatar or icon.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>Transparent</code>.</p>
+<p> (since 1.83) - this feature is experimental and the API may change.</p>
 <h4>Parameters</h4>
 <h5>sIconBackgroundColor?</h5>
 <p><code>&quot;Transparent&quot;</code> | <a href="../../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code></p>
@@ -411,11 +411,11 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>setIconSize</strong>(<code>sIconSize?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.119) - this feature is experimental and the API may change.</p>
 <p>Sets a new value for property #getIconSize iconSize.</p>
 <p>Defines the size of the icon.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>S</code>.</p>
+<p> (since 1.119) - this feature is experimental and the API may change.</p>
 <h4>Parameters</h4>
 <h5>sIconSize?</h5>
 <p><a href="../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
@@ -445,11 +445,11 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>setIconVisible</strong>(<code>bIconVisible?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.83) - this feature is experimental and the API may change.</p>
 <p>Sets a new value for property #getIconVisible iconVisible.</p>
 <p>Defines whether the card icon is visible.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<p> (since 1.83) - this feature is experimental and the API may change.</p>
 <h4>Parameters</h4>
 <h5>bIconVisible?</h5>
 <p><code>boolean</code></p>
@@ -495,11 +495,11 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>setSubtitleMaxLines</strong>(<code>iSubtitleMaxLines?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Sets a new value for property #getSubtitleMaxLines subtitleMaxLines.</p>
 <p>Limits the number of lines for the subtitle.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>2</code>.</p>
+<p> (since 1.101)</p>
 <h4>Parameters</h4>
 <h5>iSubtitleMaxLines?</h5>
 <p><code>number</code></p>
@@ -529,11 +529,11 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>setTitleMaxLines</strong>(<code>iTitleMaxLines?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Sets a new value for property #getTitleMaxLines titleMaxLines.</p>
 <p>Limits the number of lines for the title.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>3</code>.</p>
+<p> (since 1.101)</p>
 <h4>Parameters</h4>
 <h5>iTitleMaxLines?</h5>
 <p><code>number</code></p>
@@ -591,6 +591,6 @@ used by this class</p>
 <p><a href="../../BaseHeader/classes/BaseHeader.html"><code>BaseHeader</code></a>.<a href="../../BaseHeader/classes/BaseHeader.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

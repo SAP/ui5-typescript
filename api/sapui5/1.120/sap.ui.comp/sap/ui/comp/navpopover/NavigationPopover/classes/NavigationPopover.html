@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NavigationPopover — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: NavigationPopover — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: NavigationPopover — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/navpopover/NavigationPopover/classes/NavigationPopover.html">
 <meta property="og:title" content="Class: NavigationPopover — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: NavigationPopover — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: NavigationPopover — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/navpopover/NavigationPopover/classes/NavigationPopover.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › navpopover › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/navpopover/NavigationPopover/README.html">NavigationPopover</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/navpopover/NavigationPopover</a> / NavigationPopover</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/navpopover/NavigationPopover</a> / NavigationPopover</p>
 <h1>Class: NavigationPopover</h1>
 <pre class="sig"><span class="kw">import</span> NavigationPopover <span class="kw">from</span> <span class="str">"sap/ui/comp/navpopover/NavigationPopover"</span>;</pre>
 <p>The NavigationPopover control is used to present information in a specific format. <strong>Note</strong>: This control
@@ -86,6 +86,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAvailableAction</strong>(<code>oAvailableAction</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some availableAction to the aggregation #getAvailableActions availableActions.</p>
 <h4>Parameters</h4>
 <h5>oAvailableAction</h5>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
@@ -95,13 +96,17 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Adds some availableAction to the aggregation #getAvailableActions availableActions.</p>
 <hr>
 <h3>attachAvailableActionsPersonalizationPress()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAvailableActionsPersonalizationPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:availableActionsPersonalizationPress availableActionsPersonalizationPress
+event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
+<p>This event is fired when personalization of <code>availableActions</code> is chosen.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -119,15 +124,15 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.44.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAvailableActionsPersonalizationPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:availableActionsPersonalizationPress availableActionsPersonalizationPress
 event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
 <p>This event is fired when personalization of <code>availableActions</code> is chosen.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAvailableActionsPersonalizationPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -141,17 +146,16 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.44.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:availableActionsPersonalizationPress availableActionsPersonalizationPress
-event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
-<p>This event is fired when personalization of <code>availableActions</code> is chosen.</p>
 <hr>
 <h3>attachNavigate()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
+<p>This event is fired when a link is chosen.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -169,14 +173,14 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
-<p>This event is fired when a link is chosen.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
+<p>This event is fired when a link is chosen.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -190,16 +194,17 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
-<p>This event is fired when a link is chosen.</p>
 <hr>
 <h3><del>attachTargetsObtained()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTargetsObtained</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:targetsObtained targetsObtained event of this
+<code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
+<p>The navigation targets that are shown.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -222,15 +227,15 @@ itself</p>
 is no longer done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target
 determination. The event <code>navigationTargetsObtained</code> is fired from NavigationPopoverHandler after navigation
 targets are determined.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:targetsObtained targetsObtained event of this
 <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
 <p>The navigation targets that are shown.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -249,38 +254,34 @@ itself</p>
 is no longer done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target
 determination. The event <code>navigationTargetsObtained</code> is fired from NavigationPopoverHandler after navigation
 targets are determined.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:targetsObtained targetsObtained event of this
-<code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopover</code> itself.</p>
-<p>The navigation targets that are shown.</p>
 <hr>
 <h3>destroyAvailableActions()</h3>
 <blockquote>
 <p><strong>destroyAvailableActions</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the availableActions in the aggregation #getAvailableActions availableActions.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Destroys all the availableActions in the aggregation #getAvailableActions availableActions.</p>
 <hr>
 <h3>destroyMainNavigation()</h3>
 <blockquote>
 <p><strong>destroyMainNavigation</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the mainNavigation in the aggregation #getMainNavigation mainNavigation.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Destroys the mainNavigation in the aggregation #getMainNavigation mainNavigation.</p>
 <hr>
 <h3><del>destroyOwnNavigation()</del></h3>
 <blockquote>
 <p><strong>destroyOwnNavigation</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the ownNavigation in the aggregation #getOwnNavigation ownNavigation.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -289,12 +290,14 @@ otherwise it will be bound to this <code>sap.ui.comp.navpopover.NavigationPopove
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>ownNavigation</code> is obsolete as target determination is no longer
 done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Destroys the ownNavigation in the aggregation #getOwnNavigation ownNavigation.</p>
 <hr>
 <h3>detachAvailableActionsPersonalizationPress()</h3>
 <blockquote>
 <p><strong>detachAvailableActionsPersonalizationPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:availableActionsPersonalizationPress availableActionsPersonalizationPress
+event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -307,14 +310,13 @@ done by NavigationPopover. Instead the NavigationPopoverHandler is responsible f
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:availableActionsPersonalizationPress availableActionsPersonalizationPress
-event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachNavigate()</h3>
 <blockquote>
 <p><strong>detachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -327,13 +329,14 @@ event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachTargetsObtained()</del></h3>
 <blockquote>
 <p><strong>detachTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:targetsObtained targetsObtained event of
+this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -351,14 +354,13 @@ event of this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
 is no longer done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target
 determination. The event <code>navigationTargetsObtained</code> is fired from NavigationPopoverHandler after navigation
 targets are determined.</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:targetsObtained targetsObtained event of
-this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireAvailableActionsPersonalizationPress()</h3>
 <blockquote>
 <p><strong>fireAvailableActionsPersonalizationPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:availableActionsPersonalizationPress availableActionsPersonalizationPress
+to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -370,13 +372,12 @@ this <code>sap.ui.comp.navpopover.NavigationPopover</code>.</p>
 <p>1.44.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:availableActionsPersonalizationPress availableActionsPersonalizationPress
-to attached listeners.</p>
 <hr>
 <h3>fireNavigate()</h3>
 <blockquote>
 <p><strong>fireNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:navigate navigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NavigationPopover$NavigateEventParameters.html"><code>NavigationPopover$NavigateEventParameters</code></a></p>
@@ -388,12 +389,12 @@ to attached listeners.</p>
 <p>1.28.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:navigate navigate to attached listeners.</p>
 <hr>
 <h3><del>fireTargetsObtained()</del></h3>
 <blockquote>
 <p><strong>fireTargetsObtained</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:targetsObtained targetsObtained to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -410,12 +411,13 @@ determination. The event <code>navigationTargetsObtained</code> is fired from Na
 targets are determined.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:targetsObtained targetsObtained to attached listeners.</p>
 <hr>
 <h3><del>getAppStateKey()</del></h3>
 <blockquote>
 <p><strong>getAppStateKey</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getAppStateKey appStateKey.</p>
+<p>The application state key passed to retrieve the navigation targets.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>appStateKey</code></p>
@@ -424,34 +426,32 @@ targets are determined.</p>
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>appStateKey</code> is obsolete as target determination is no longer
 done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Gets current value of property #getAppStateKey appStateKey.</p>
-<p>The application state key passed to retrieve the navigation targets.</p>
 <hr>
 <h3>getAvailableActions()</h3>
 <blockquote>
 <p><strong>getAvailableActions</strong>(): <a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getAvailableActions availableActions.</p>
+<p>A list of available actions shown as links.</p>
 <h4>Returns</h4>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a>[]</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets content of aggregation #getAvailableActions availableActions.</p>
-<p>A list of available actions shown as links.</p>
 <hr>
 <h3>getAvailableActionsPersonalizationText()</h3>
 <blockquote>
 <p><strong>getAvailableActionsPersonalizationText</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>availableActionsPersonalizationText</code></p>
-<h4>Since</h4>
-<p>1.44.0</p>
 <p>Gets current value of property #getAvailableActionsPersonalizationText availableActionsPersonalizationText.</p>
 <p>Determines the text of personalization link. If this property is set to some string, choosing the personalization
 link will trigger the <code>availableActionsPersonalizationPress</code> event. If this property is not set, the
 personalization link is not shown.</p>
 <p>Default value is <code>undefined</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>availableActionsPersonalizationText</code></p>
+<h4>Since</h4>
+<p>1.44.0</p>
 <hr>
 <h3>getComponent()</h3>
 <blockquote>
@@ -476,43 +476,45 @@ and no <code>extraContent</code>.</p>
 <blockquote>
 <p><strong>getExtraContent</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getExtraContent extraContent,
+or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>ID of the element which is the current target of the association #getExtraContent extraContent,
-or <code>null</code>.</p>
 <hr>
 <h3>getMainNavigation()</h3>
 <blockquote>
 <p><strong>getMainNavigation</strong>(): <a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getMainNavigation mainNavigation.</p>
+<p>The main navigation link. If <code>mainNavigationId</code> is not set then <code>text</code> of <code>mainNavigation</code> is displayed.
+Otherwise the <code>mainNavigationId</code> is displayed.</p>
 <h4>Returns</h4>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets content of aggregation #getMainNavigation mainNavigation.</p>
-<p>The main navigation link. If <code>mainNavigationId</code> is not set then <code>text</code> of <code>mainNavigation</code> is displayed.
-Otherwise the <code>mainNavigationId</code> is displayed.</p>
 <hr>
 <h3>getMainNavigationId()</h3>
 <blockquote>
 <p><strong>getMainNavigationId</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getMainNavigationId mainNavigationId.</p>
+<p>Sets the description of the main navigation link. If <code>mainNavigation</code> also contains an href description,
+then <code>mainNavigationId</code> is displayed. If <code>mainNavigationId</code> is set to an empty string <code>&#39;&#39;</code>, neither description
+nor subtitle are displayed.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>mainNavigationId</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getMainNavigationId mainNavigationId.</p>
-<p>Sets the description of the main navigation link. If <code>mainNavigation</code> also contains an href description,
-then <code>mainNavigationId</code> is displayed. If <code>mainNavigationId</code> is set to an empty string <code>&#39;&#39;</code>, neither description
-nor subtitle are displayed.</p>
 <hr>
 <h3><del>getOwnNavigation()</del></h3>
 <blockquote>
 <p><strong>getOwnNavigation</strong>(): <a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getOwnNavigation ownNavigation.</p>
+<p>The navigation taking the user back to the source application.</p>
 <h4>Returns</h4>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
 <h4>Since</h4>
@@ -520,13 +522,13 @@ nor subtitle are displayed.</p>
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>ownNavigation</code> is obsolete as target determination is no longer
 done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Gets content of aggregation #getOwnNavigation ownNavigation.</p>
-<p>The navigation taking the user back to the source application.</p>
 <hr>
 <h3><del>getSemanticAttributes()</del></h3>
 <blockquote>
 <p><strong>getSemanticAttributes</strong>(): <code>object</code></p>
 </blockquote>
+<p>Gets current value of property #getSemanticAttributes semanticAttributes.</p>
+<p>Describes the semantic attributes. The attribute has to be a map.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>semanticAttributes</code></p>
@@ -535,13 +537,13 @@ done by NavigationPopover. Instead the NavigationPopoverHandler is responsible f
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>semanticAttributes</code> is obsolete as target determination is
 no longer done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Gets current value of property #getSemanticAttributes semanticAttributes.</p>
-<p>Describes the semantic attributes. The attribute has to be a map.</p>
 <hr>
 <h3><del>getSemanticObjectName()</del></h3>
 <blockquote>
 <p><strong>getSemanticObjectName</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getSemanticObjectName semanticObjectName.</p>
+<p>The name of the semantic object.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>semanticObjectName</code></p>
@@ -550,23 +552,23 @@ no longer done by NavigationPopover. Instead the NavigationPopoverHandler is res
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>semanticObjectName</code> is obsolete as target determination is
 no longer done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Gets current value of property #getSemanticObjectName semanticObjectName.</p>
-<p>The name of the semantic object.</p>
 <hr>
 <h3>getSource()</h3>
 <blockquote>
 <p><strong>getSource</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getSource source, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>ID of the element which is the current target of the association #getSource source, or <code>null</code>.</p>
 <hr>
 <h3>indexOfAvailableAction()</h3>
 <blockquote>
 <p><strong>indexOfAvailableAction</strong>(<code>oAvailableAction</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.comp.navpopover.LinkData</code> in the aggregation #getAvailableActions availableActions.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oAvailableAction</h5>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
@@ -576,13 +578,12 @@ no longer done by NavigationPopover. Instead the NavigationPopoverHandler is res
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Checks for the provided <code>sap.ui.comp.navpopover.LinkData</code> in the aggregation #getAvailableActions availableActions.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertAvailableAction()</h3>
 <blockquote>
 <p><strong>insertAvailableAction</strong>(<code>oAvailableAction</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a availableAction into the aggregation #getAvailableActions availableActions.</p>
 <h4>Parameters</h4>
 <h5>oAvailableAction</h5>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
@@ -597,24 +598,24 @@ the availableAction is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Inserts a availableAction into the aggregation #getAvailableActions availableActions.</p>
 <hr>
 <h3>removeAllAvailableActions()</h3>
 <blockquote>
 <p><strong>removeAllAvailableActions</strong>(): <a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getAvailableActions availableActions.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Removes all the controls from the aggregation #getAvailableActions availableActions.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAvailableAction()</h3>
 <blockquote>
 <p><strong>removeAvailableAction</strong>(<code>vAvailableAction</code>): <a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
 </blockquote>
+<p>Removes a availableAction from the aggregation #getAvailableActions availableActions.</p>
 <h4>Parameters</h4>
 <h5>vAvailableAction</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
@@ -624,23 +625,25 @@ the availableAction is inserted at the last position</p>
 <p>The removed availableAction or <code>null</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Removes a availableAction from the aggregation #getAvailableActions availableActions.</p>
 <hr>
 <h3><del>retrieveNavTargets()</del></h3>
 <blockquote>
 <p><strong>retrieveNavTargets</strong>(): <code>void</code></p>
 </blockquote>
+<p>Determines the potential navigation targets for the semantical object and visualize the popover.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - Target determination is no longer done by NavigationPopover. Instead the
 NavigationPopoverHandler is responsible for target determination.</p>
-<p>Determines the potential navigation targets for the semantical object and visualize the popover.</p>
 <hr>
 <h3><del>setAppStateKey()</del></h3>
 <blockquote>
 <p><strong>setAppStateKey</strong>(<code>sAppStateKey?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAppStateKey appStateKey.</p>
+<p>The application state key passed to retrieve the navigation targets.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAppStateKey?</h5>
 <p><code>string</code></p>
@@ -653,14 +656,17 @@ NavigationPopoverHandler is responsible for target determination.</p>
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>appStateKey</code> is obsolete as target determination is no longer
 done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Sets a new value for property #getAppStateKey appStateKey.</p>
-<p>The application state key passed to retrieve the navigation targets.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setAvailableActionsPersonalizationText()</h3>
 <blockquote>
 <p><strong>setAvailableActionsPersonalizationText</strong>(<code>sAvailableActionsPersonalizationText?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAvailableActionsPersonalizationText availableActionsPersonalizationText.</p>
+<p>Determines the text of personalization link. If this property is set to some string, choosing the personalization
+link will trigger the <code>availableActionsPersonalizationPress</code> event. If this property is not set, the
+personalization link is not shown.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>undefined</code>.</p>
 <h4>Parameters</h4>
 <h5>sAvailableActionsPersonalizationText?</h5>
 <p><code>string</code></p>
@@ -670,12 +676,6 @@ done by NavigationPopover. Instead the NavigationPopoverHandler is responsible f
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Sets a new value for property #getAvailableActionsPersonalizationText availableActionsPersonalizationText.</p>
-<p>Determines the text of personalization link. If this property is set to some string, choosing the personalization
-link will trigger the <code>availableActionsPersonalizationPress</code> event. If this property is not set, the
-personalization link is not shown.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>undefined</code>.</p>
 <hr>
 <h3>setComponent()</h3>
 <blockquote>
@@ -695,6 +695,7 @@ instance may be given</p>
 <blockquote>
 <p><strong>setExtraContent</strong>(<code>oExtraContent</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getExtraContent extraContent.</p>
 <h4>Parameters</h4>
 <h5>oExtraContent</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -705,12 +706,12 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets the associated #getExtraContent extraContent.</p>
 <hr>
 <h3>setMainNavigation()</h3>
 <blockquote>
 <p><strong>setMainNavigation</strong>(<code>oMainNavigation</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getMainNavigation mainNavigation.</p>
 <h4>Parameters</h4>
 <h5>oMainNavigation</h5>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
@@ -720,12 +721,16 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets the aggregated #getMainNavigation mainNavigation.</p>
 <hr>
 <h3>setMainNavigationId()</h3>
 <blockquote>
 <p><strong>setMainNavigationId</strong>(<code>sMainNavigationId?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMainNavigationId mainNavigationId.</p>
+<p>Sets the description of the main navigation link. If <code>mainNavigation</code> also contains an href description,
+then <code>mainNavigationId</code> is displayed. If <code>mainNavigationId</code> is set to an empty string <code>&#39;&#39;</code>, neither description
+nor subtitle are displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sMainNavigationId?</h5>
 <p><code>string</code></p>
@@ -735,16 +740,12 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getMainNavigationId mainNavigationId.</p>
-<p>Sets the description of the main navigation link. If <code>mainNavigation</code> also contains an href description,
-then <code>mainNavigationId</code> is displayed. If <code>mainNavigationId</code> is set to an empty string <code>&#39;&#39;</code>, neither description
-nor subtitle are displayed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setOwnNavigation()</del></h3>
 <blockquote>
 <p><strong>setOwnNavigation</strong>(<code>oOwnNavigation</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getOwnNavigation ownNavigation.</p>
 <h4>Parameters</h4>
 <h5>oOwnNavigation</h5>
 <p><a href="../../LinkData/classes/LinkData.html"><code>LinkData</code></a></p>
@@ -757,12 +758,14 @@ nor subtitle are displayed.</p>
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>ownNavigation</code> is obsolete as target determination is no longer
 done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Sets the aggregated #getOwnNavigation ownNavigation.</p>
 <hr>
 <h3><del>setSemanticAttributes()</del></h3>
 <blockquote>
 <p><strong>setSemanticAttributes</strong>(<code>oSemanticAttributes?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSemanticAttributes semanticAttributes.</p>
+<p>Describes the semantic attributes. The attribute has to be a map.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oSemanticAttributes?</h5>
 <p><code>object</code></p>
@@ -775,14 +778,14 @@ done by NavigationPopover. Instead the NavigationPopoverHandler is responsible f
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>semanticAttributes</code> is obsolete as target determination is
 no longer done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Sets a new value for property #getSemanticAttributes semanticAttributes.</p>
-<p>Describes the semantic attributes. The attribute has to be a map.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setSemanticObjectName()</del></h3>
 <blockquote>
 <p><strong>setSemanticObjectName</strong>(<code>sSemanticObjectName?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSemanticObjectName semanticObjectName.</p>
+<p>The name of the semantic object.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSemanticObjectName?</h5>
 <p><code>string</code></p>
@@ -795,14 +798,12 @@ no longer done by NavigationPopover. Instead the NavigationPopoverHandler is res
 <h4>Deprecated</h4>
 <p>(since 1.40.0) - The property <code>semanticObjectName</code> is obsolete as target determination is
 no longer done by NavigationPopover. Instead the NavigationPopoverHandler is responsible for target determination.</p>
-<p>Sets a new value for property #getSemanticObjectName semanticObjectName.</p>
-<p>The name of the semantic object.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSource()</h3>
 <blockquote>
 <p><strong>setSource</strong>(<code>oSource</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getSource source.</p>
 <h4>Parameters</h4>
 <h5>oSource</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -813,7 +814,6 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets the associated #getSource source.</p>
 <hr>
 <h3>show()</h3>
 <blockquote>
@@ -862,6 +862,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.m/sap/m/ResponsivePopover/classes/ResponsivePopover.html"><code>ResponsivePopover</code></a>.<a href="../../../../../../../sap.m/sap/m/ResponsivePopover/classes/ResponsivePopover.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

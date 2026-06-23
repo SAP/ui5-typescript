@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: EventBus — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: EventBus — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: EventBus — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/EventBus/classes/EventBus.html">
 <meta property="og:title" content="Class: EventBus — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: EventBus — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: EventBus — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/EventBus/classes/EventBus.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/EventBus/README.html">EventBus</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/EventBus</a> / EventBus</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/EventBus</a> / EventBus</p>
 <h1>Class: EventBus</h1>
 <pre class="sig"><span class="kw">import</span> EventBus <span class="kw">from</span> <span class="str">"sap/ui/core/EventBus"</span>;</pre>
-<h2>Since</h2>
-<p>1.8.0</p>
 <p>Provides eventing capabilities for applications like firing events and attaching or detaching event handlers
 for events which are notified when events are fired.</p>
 <p>It is recommended to use the EventBus only when there is no other option to communicate between different
@@ -48,6 +46,8 @@ such as sap.ui.core.Control, sap.ui.core.mvc.View or sap.ui.core.Component, and 
 by other classes to achieve communication between different instances.</p>
 <p>Heavily using the EventBus can easily result in code which is hard to read and maintain because it&#39;s
 difficult to keep an overview of all event publishers and subscribers.</p>
+<h2>Since</h2>
+<p>1.8.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
@@ -169,6 +169,10 @@ If it is not specified, the handler function is called in the context of the eve
 <blockquote>
 <p><strong>subscribeOnce</strong>(<code>sChannelId</code>, <code>sEventId</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches an event handler, called one time only, to the event with the given identifier on the given
+event channel.</p>
+<p>When the event occurs, the handler function is called and the handler registration is automatically removed
+afterwards.</p>
 <h5>Parameters</h5>
 <h6>sChannelId</h6>
 <p><code>string</code></p>
@@ -194,14 +198,14 @@ If it is not specified, the handler function is called in the context of the eve
 <p>Returns <code>this</code> to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32.0</p>
-<p>Attaches an event handler, called one time only, to the event with the given identifier on the given
-event channel.</p>
-<p>When the event occurs, the handler function is called and the handler registration is automatically removed
-afterwards.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>subscribeOnce</strong>(<code>sEventId</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches an event handler, called one time only, to the event with the given identifier on the given
+event channel.</p>
+<p>When the event occurs, the handler function is called and the handler registration is automatically removed
+afterwards.</p>
 <h5>Parameters</h5>
 <h6>sEventId</h6>
 <p><code>string</code></p>
@@ -222,10 +226,6 @@ If it is not specified, the handler function is called in the context of the eve
 <p>Returns <code>this</code> to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32.0</p>
-<p>Attaches an event handler, called one time only, to the event with the given identifier on the given
-event channel.</p>
-<p>When the event occurs, the handler function is called and the handler registration is automatically removed
-afterwards.</p>
 <hr>
 <h3>unsubscribe()</h3>
 <h4>Call Signature</h4>
@@ -303,12 +303,12 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>getInstance</strong>(): <code>EventBus</code></p>
 </blockquote>
+<p>Returns the singleton instance of the EventBus for global usage.</p>
 <h4>Returns</h4>
 <p><code>EventBus</code></p>
 <p>the event bus</p>
 <h4>Since</h4>
 <p>1.119.0</p>
-<p>Returns the singleton instance of the EventBus for global usage.</p>
 <hr>
 <h3>getMetadata()</h3>
 <blockquote>
@@ -320,6 +320,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

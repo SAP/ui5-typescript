@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Renderer~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Renderer~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: Renderer~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/renderers/fiori2/Renderer/classes/Renderer.html">
 <meta property="og:title" content="~~Class: Renderer~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Renderer~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: Renderer~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/renderers/fiori2/Renderer/classes/Renderer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › renderers › fiori2 › <a href="../../../../../../../sap.ushell/sap/ushell/renderers/fiori2/Renderer/README.html">Renderer</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/renderers/fiori2/Renderer</a> / Renderer</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/renderers/fiori2/Renderer</a> / Renderer</p>
 <h1><del>Class: Renderer</del></h1>
 <pre class="sig"><span class="kw">import</span> Renderer <span class="kw">from</span> <span class="str">"sap/ushell/renderers/fiori2/Renderer"</span>;</pre>
+<p>The SAPUI5 component of SAP Fiori Launchpad renderer for the Unified Shell.</p>
 <h2>Since</h2>
 <p>1.15.0</p>
 <h2>Deprecated</h2>
 <p>(since 1.120.0) - Please use sap.ushell.services.Extension instead.</p>
-<p>The SAPUI5 component of SAP Fiori Launchpad renderer for the Unified Shell.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/UIComponent/classes/UIComponent.html"><code>UIComponent</code></a></li>
@@ -62,16 +62,31 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><strong>LaunchpadState</strong>: <code>undefined</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.30</p>
 <p>The launchpad states that can be passed as a parameter.</p>
 <p><strong>Values:</strong> App - launchpad state when running a Fiori app
  Home - launchpad state when the home page is open</p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3><del>addActionButton()</del></h3>
 <blockquote>
 <p><strong>addActionButton</strong>(<code>controlType</code>, <code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Creates an action button in the User Actions Menu in the SAP Fiori launchpad, in the given launchpad
+states (LaunchpadState).</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addActionButton(&quot;sap.m.Button&quot;, {id: &quot;testBtn2&quot;, text: &quot;test button&quot;}, true, true);
+</code></pre>
+<p>This function is marked for deprecation as of version 1.48.
+ It will continue to work as expected as long as one of the following conditions apply:</p>
+<ol>
+<li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
+<li>The control type resource is already loaded
+See:
+sap.ushell.renderers.fiori2.Renderer.LaunchpadState
+  If no launchpad state is provided, the content is added in all states.</li>
+</ol>
 <h4>Parameters</h4>
 <h5>controlType</h5>
 <p><code>string</code></p>
@@ -99,26 +114,13 @@ control. Valid only if bCurrentState is set to false.</p>
 <p>1.30</p>
 <h4>Deprecated</h4>
 <p>(since 1.48) - Please use #addUserAction instead.</p>
-<p>Creates an action button in the User Actions Menu in the SAP Fiori launchpad, in the given launchpad
-states (LaunchpadState).</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addActionButton(&quot;sap.m.Button&quot;, {id: &quot;testBtn2&quot;, text: &quot;test button&quot;}, true, true);
-</code></pre>
-<p>This function is marked for deprecation as of version 1.48.
- It will continue to work as expected as long as one of the following conditions apply:</p>
-<ol>
-<li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
-<li>The control type resource is already loaded
-See:
-sap.ushell.renderers.fiori2.Renderer.LaunchpadState
-  If no launchpad state is provided, the content is added in all states.</li>
-</ol>
 <hr>
 <h3><del>addEndUserFeedbackCustomUI()</del></h3>
 <blockquote>
 <p><strong>addEndUserFeedbackCustomUI</strong>(<code>oCustomUIContent</code>, <code>bShowCustomUIContent</code>): <code>void</code></p>
 </blockquote>
+<p>Adds the given sap.ui.core.Control to the EndUserFeedback dialog.
+ The EndUserFeedback dialog is opened via the user actions menu in the Fiori Launchpad shell header.</p>
 <h4>Parameters</h4>
 <h5>oCustomUIContent</h5>
 <p><code>object</code></p>
@@ -132,13 +134,26 @@ sap.ushell.renderers.fiori2.Renderer.LaunchpadState
 <p>1.30</p>
 <h4>Deprecated</h4>
 <p>(since 1.93)</p>
-<p>Adds the given sap.ui.core.Control to the EndUserFeedback dialog.
- The EndUserFeedback dialog is opened via the user actions menu in the Fiori Launchpad shell header.</p>
 <hr>
 <h3><del>addFloatingActionButton()</del></h3>
 <blockquote>
 <p><strong>addFloatingActionButton</strong>(<code>controlType</code>, <code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>object</code></p>
 </blockquote>
+<p>Creates a FloatingActionButton in Fiori launchpad, in the given launchpad states.
+ The FloatingActionButton is rendered in the bottom right corner of the shell.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addFloatingActionButton(&quot;sap.ushell.ui.shell.ShellFloatingAction&quot;, {id: &quot;testBtn&quot;}, true, true);
+</code></pre>
+<p>This function is marked for deprecation as of version 1.48.
+ It will continue to work as expected as long as one of the following conditions apply:</p>
+<ol>
+<li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
+<li>The control type resource is already loaded
+See:
+LaunchpadState
+  If no launchpad state is provided the content is added in all states.</li>
+</ol>
 <h4>Parameters</h4>
 <h5>controlType</h5>
 <p><code>string</code></p>
@@ -164,26 +179,20 @@ in which to add the control.</p>
 <p>1.30</p>
 <h4>Deprecated</h4>
 <p>(since 1.48) - Please use #addFloatingButton instead.</p>
+<hr>
+<h3><del>addFloatingButton()</del></h3>
+<blockquote>
+<p><strong>addFloatingButton</strong>(<code>oParameters</code>): <code>object</code></p>
+</blockquote>
 <p>Creates a FloatingActionButton in Fiori launchpad, in the given launchpad states.
  The FloatingActionButton is rendered in the bottom right corner of the shell.</p>
 <p><strong>Example:</strong></p>
 <pre><code class="language-javascript">
 sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addFloatingActionButton(&quot;sap.ushell.ui.shell.ShellFloatingAction&quot;, {id: &quot;testBtn&quot;}, true, true);
 </code></pre>
-<p>This function is marked for deprecation as of version 1.48.
- It will continue to work as expected as long as one of the following conditions apply:</p>
-<ol>
-<li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
-<li>The control type resource is already loaded
-See:
-LaunchpadState
-  If no launchpad state is provided the content is added in all states.</li>
-</ol>
-<hr>
-<h3><del>addFloatingButton()</del></h3>
-<blockquote>
-<p><strong>addFloatingButton</strong>(<code>oParameters</code>): <code>object</code></p>
-</blockquote>
+<p>See:
+	LaunchpadState
+  If no launchpad state is provided the content is added in all states.</p>
 <h4>Parameters</h4>
 <h5>oParameters</h5>
 <p><code>object</code></p>
@@ -210,53 +219,11 @@ in which to add the control.</li>
 <p>1.48</p>
 <h4>Deprecated</h4>
 <p>(since 1.52)</p>
-<p>Creates a FloatingActionButton in Fiori launchpad, in the given launchpad states.
- The FloatingActionButton is rendered in the bottom right corner of the shell.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addFloatingActionButton(&quot;sap.ushell.ui.shell.ShellFloatingAction&quot;, {id: &quot;testBtn&quot;}, true, true);
-</code></pre>
-<p>See:
-	LaunchpadState
-  If no launchpad state is provided the content is added in all states.</p>
 <hr>
 <h3><del>addHeaderEndItem()</del></h3>
 <blockquote>
 <p><strong>addHeaderEndItem</strong>(<code>controlType</code>, <code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>controlType</h5>
-<p><code>string</code></p>
-<p>The (class) name of the control type to create. <strong>Deprecated</strong>: Since version 1.38. This parameter is
-no longer supported and can be omitted.</p>
-<h5>oControlProperties</h5>
-<p><code>object</code></p>
-<p>The properties that will be passed to the created control. The object may contain the following properties:</p>
-<pre><code>{string} [id] - The ID of the object.
-</code></pre>
-<p> {string} icon - The button icon source.
- {string} [text] - The button text. It is only rendered in the overflow popover but not in the shell
-header.
- {string} [target] - target URI for a navigation link.
- {string} [ariaLabel] - Accessibility: aria-label attribute.
- {string} [ariaHaspopup] - Accessibility: aria-haspopup attribute.
- {Function} [press] - A function to be called when the button is depressed.</p>
-<h5>bIsVisible</h5>
-<p><code>boolean</code></p>
-<p>Specify whether to display the control.</p>
-<h5>bCurrentState</h5>
-<p><code>boolean</code></p>
-<p>If true, add the current control only to the current rendered shell state. Once the user navigates to
-another app or back to the Home page, this control will be removed.</p>
-<h5>aStates</h5>
-<p><code>string</code>[]</p>
-<p>(only valid if bCurrentState is set to false) - list of the sap.ushell.renderers.fiori2.Renderer.LaunchpadState
-in which to add the control.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-<p>oItem - the created control</p>
-<h4>Since</h4>
-<p>1.30</p>
 <p>Creates and displays a shell header icon in Fiori launchpad, in the given launchpad states.
  The icon is displayed in the right side of the Fiori Launchpad shell header or in an overflow menu.
  The text property is mandatory as it might be used in the overflow menu.
@@ -290,12 +257,65 @@ var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
 <p>See:
 	LaunchpadState
   If no launchpad state is provided the content is added in all states.</p>
+<h4>Parameters</h4>
+<h5>controlType</h5>
+<p><code>string</code></p>
+<p>The (class) name of the control type to create. <strong>Deprecated</strong>: Since version 1.38. This parameter is
+no longer supported and can be omitted.</p>
+<h5>oControlProperties</h5>
+<p><code>object</code></p>
+<p>The properties that will be passed to the created control. The object may contain the following properties:</p>
+<pre><code>{string} [id] - The ID of the object.
+</code></pre>
+<p> {string} icon - The button icon source.
+ {string} [text] - The button text. It is only rendered in the overflow popover but not in the shell
+header.
+ {string} [target] - target URI for a navigation link.
+ {string} [ariaLabel] - Accessibility: aria-label attribute.
+ {string} [ariaHaspopup] - Accessibility: aria-haspopup attribute.
+ {Function} [press] - A function to be called when the button is depressed.</p>
+<h5>bIsVisible</h5>
+<p><code>boolean</code></p>
+<p>Specify whether to display the control.</p>
+<h5>bCurrentState</h5>
+<p><code>boolean</code></p>
+<p>If true, add the current control only to the current rendered shell state. Once the user navigates to
+another app or back to the Home page, this control will be removed.</p>
+<h5>aStates</h5>
+<p><code>string</code>[]</p>
+<p>(only valid if bCurrentState is set to false) - list of the sap.ushell.renderers.fiori2.Renderer.LaunchpadState
+in which to add the control.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>oItem - the created control</p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3><del>addHeaderItem()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>addHeaderItem</strong>(<code>controlType</code>, <code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Creates and displays an item in the header of Fiori launchpad, in the given launchpad states.
+ The new header item will be displayed on the left-hand side of the Fiori Launchpad shell header, according
+to the given display parameters.
+ The new header item will be added to the right of any existing header items. The header can contain
+a maximum of three header items.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+    oRenderer.addHeaderItem({
+        id: &quot;myTestButton&quot;,
+        ariaLabel: resources.i18n.getText(&quot;testButton.label&quot;),
+        ariaHaspopup: &quot;dialog&quot;,
+        icon: &quot;sap-icon://action-settings&quot;,
+        tooltip: resources.i18n.getText(&quot;testButton.tooltip&quot;),
+        text: resources.i18n.getText(&quot;testButton.text&quot;),
+        press: controller.handleTestButtonPress
+    }, true, true);
+</code></pre>
+<p>See:
+	LaunchpadState</p>
 <h5>Parameters</h5>
 <h6>controlType</h6>
 <p><code>string</code></p>
@@ -326,6 +346,10 @@ is added.
 <p>The created control</p>
 <h5>Since</h5>
 <p>1.30</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>addHeaderItem</strong>(<code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+</blockquote>
 <p>Creates and displays an item in the header of Fiori launchpad, in the given launchpad states.
  The new header item will be displayed on the left-hand side of the Fiori Launchpad shell header, according
 to the given display parameters.
@@ -346,10 +370,6 @@ var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
 </code></pre>
 <p>See:
 	LaunchpadState</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>addHeaderItem</strong>(<code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>oControlProperties</h6>
 <p><code>object</code></p>
@@ -376,31 +396,25 @@ is added.
 <p>The created control</p>
 <h5>Since</h5>
 <p>1.30</p>
-<p>Creates and displays an item in the header of Fiori launchpad, in the given launchpad states.
- The new header item will be displayed on the left-hand side of the Fiori Launchpad shell header, according
-to the given display parameters.
- The new header item will be added to the right of any existing header items. The header can contain
-a maximum of three header items.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-    oRenderer.addHeaderItem({
-        id: &quot;myTestButton&quot;,
-        ariaLabel: resources.i18n.getText(&quot;testButton.label&quot;),
-        ariaHaspopup: &quot;dialog&quot;,
-        icon: &quot;sap-icon://action-settings&quot;,
-        tooltip: resources.i18n.getText(&quot;testButton.tooltip&quot;),
-        text: resources.i18n.getText(&quot;testButton.text&quot;),
-        press: controller.handleTestButtonPress
-    }, true, true);
-</code></pre>
-<p>See:
-	LaunchpadState</p>
 <hr>
 <h3><del>addLeftPaneContent()</del></h3>
 <blockquote>
 <p><strong>addLeftPaneContent</strong>(<code>controlType</code>, <code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>object</code></p>
 </blockquote>
+<p>Creates the Left Pane content in Fiori launchpad, in the given launchpad states.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addLeftPaneContent(&quot;sap.m.Button&quot;, {id: &quot;testBtn&quot;, text: &quot;Test Button&quot;}, true, true);
+</code></pre>
+<p>This function is marked for deprecation as of version 1.48.
+ It will continue to work as expected as long as one of the following conditions apply:</p>
+<ol>
+<li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
+<li>The control type resource is already loaded
+See:
+LaunchpadState
+  If no launchpad state is provided the content is added in all states.</li>
+</ol>
 <h4>Parameters</h4>
 <h5>controlType</h5>
 <p><code>string</code></p>
@@ -426,25 +440,34 @@ in which to add the control.</p>
 <p>1.30</p>
 <h4>Deprecated</h4>
 <p>(since 1.48) - Please use #addSidePaneContent instead.</p>
-<p>Creates the Left Pane content in Fiori launchpad, in the given launchpad states.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addLeftPaneContent(&quot;sap.m.Button&quot;, {id: &quot;testBtn&quot;, text: &quot;Test Button&quot;}, true, true);
-</code></pre>
-<p>This function is marked for deprecation as of version 1.48.
- It will continue to work as expected as long as one of the following conditions apply:</p>
-<ol>
-<li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
-<li>The control type resource is already loaded
-See:
-LaunchpadState
-  If no launchpad state is provided the content is added in all states.</li>
-</ol>
 <hr>
 <h3><del>addShellSubHeader()</del></h3>
 <blockquote>
 <p><strong>addShellSubHeader</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
+<p>Creates and displays a sub header control in Fiori launchpad, in the given launchpad states.
+ The new control is displayed in FLP UI according to the given display parameters.
+ If a sub header already exists, the new created one will replace the existing one.</p>
+<p> <strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
+    oAddSubHeaderProperties = {
+        controlType : &quot;sap.m.Bar&quot;,
+        oControlProperties : {
+            id: &quot;testBar&quot;,
+            contentLeft: [new sap.m.Button({
+                text: &quot;Test SubHeader Button&quot;,
+                press: function () {
+                    sap.m.MessageToast.show(&quot;Pressed&quot;);
+                }
+            })
+        },
+        bIsVisible: true,
+        bCurrentState: true
+    };
+
+oRenderer.addShellSubHeader(oAddSubHeaderProperties);
+</code></pre>
 <h4>Parameters</h4>
 <h5>oParameters</h5>
 <p>Contains the required parameters for creating and showing the new control object.</p>
@@ -470,34 +493,30 @@ another app or back to the Home page, this control will be removed.</p>
 <p>jQuery.Deferred.promise object that when resolved, returns the newly created control</p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>Creates and displays a sub header control in Fiori launchpad, in the given launchpad states.
- The new control is displayed in FLP UI according to the given display parameters.
- If a sub header already exists, the new created one will replace the existing one.</p>
-<p> <strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
-    oAddSubHeaderProperties = {
-        controlType : &quot;sap.m.Bar&quot;,
-        oControlProperties : {
-            id: &quot;testBar&quot;,
-            contentLeft: [new sap.m.Button({
-                text: &quot;Test SubHeader Button&quot;,
-                press: function () {
-                    sap.m.MessageToast.show(&quot;Pressed&quot;);
-                }
-            })
-        },
-        bIsVisible: true,
-        bCurrentState: true
-    };
-
-oRenderer.addShellSubHeader(oAddSubHeaderProperties);
-</code></pre>
 <hr>
 <h3><del>addSidePaneContent()</del></h3>
 <blockquote>
 <p><strong>addSidePaneContent</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
+<p>Creates the Left Pane content in Fiori launchpad, in the given launchpad states.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
+    oSidePaneContentProperties = {
+        controlType : &quot;sap.m.Button&quot;,
+        oControlProperties : {
+            id: &quot;testBtn&quot;,
+            text: &quot;Test Button&quot;
+        },
+        bIsVisible: true,
+        bCurrentState: true
+    };
+
+oRenderer.addSidePaneContent(oSidePaneContentProperties);
+</code></pre>
+<p>See:
+	LaunchpadState
+     If no launchpad state is provided the content is added in all states.</p>
 <h4>Parameters</h4>
 <h5>oParameters</h5>
 <p>Contains the parameters for the control that should be added to the side pane</p>
@@ -523,30 +542,31 @@ another app or back to the Home page, this control will be removed.</p>
 <p>jQuery.Deferred.promise object that when resolved, returns the newly created control.</p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>Creates the Left Pane content in Fiori launchpad, in the given launchpad states.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
-    oSidePaneContentProperties = {
-        controlType : &quot;sap.m.Button&quot;,
-        oControlProperties : {
-            id: &quot;testBtn&quot;,
-            text: &quot;Test Button&quot;
-        },
-        bIsVisible: true,
-        bCurrentState: true
-    };
-
-oRenderer.addSidePaneContent(oSidePaneContentProperties);
-</code></pre>
-<p>See:
-	LaunchpadState
-     If no launchpad state is provided the content is added in all states.</p>
 <hr>
 <h3><del>addSubHeader()</del></h3>
 <blockquote>
 <p><strong>addSubHeader</strong>(<code>controlType</code>, <code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>object</code></p>
 </blockquote>
+<p>Creates and displays a sub header control in Fiori launchpad, in the given launchpad states.
+ The new control is displayed in FLP UI according to the given display parameters.
+ If a sub header already exists, the new created one will replace the existing one.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+oRenderer.addSubHeader(&quot;sap.m.Bar&quot;, {id: &quot;testBar&quot;, contentLeft: [new sap.m.Button({text: &quot;Test SubHeader Button&quot;,
+  press: function () {
+    sap.m.MessageToast.show(&quot;Pressed&quot;);
+  }})
+]}, true, true);
+</code></pre>
+<p>This function is marked for deprecation as of version 1.48.
+ It will continue to work as expected as long as one of the following conditions apply:</p>
+<ol>
+<li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
+<li>The control type resource is already loaded
+See:
+LaunchpadState</li>
+</ol>
 <h4>Parameters</h4>
 <h5>controlType</h5>
 <p><code>string</code></p>
@@ -579,51 +599,11 @@ is added.
 <p>1.30</p>
 <h4>Deprecated</h4>
 <p>(since 1.48) - Please use #addShellSubHeader instead.</p>
-<p>Creates and displays a sub header control in Fiori launchpad, in the given launchpad states.
- The new control is displayed in FLP UI according to the given display parameters.
- If a sub header already exists, the new created one will replace the existing one.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-oRenderer.addSubHeader(&quot;sap.m.Bar&quot;, {id: &quot;testBar&quot;, contentLeft: [new sap.m.Button({text: &quot;Test SubHeader Button&quot;,
-  press: function () {
-    sap.m.MessageToast.show(&quot;Pressed&quot;);
-  }})
-]}, true, true);
-</code></pre>
-<p>This function is marked for deprecation as of version 1.48.
- It will continue to work as expected as long as one of the following conditions apply:</p>
-<ol>
-<li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
-<li>The control type resource is already loaded
-See:
-LaunchpadState</li>
-</ol>
 <hr>
 <h3><del>addToolAreaItem()</del></h3>
 <blockquote>
 <p><strong>addToolAreaItem</strong>(<code>oControlProperties</code>, <code>bIsVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oControlProperties</h5>
-<p><code>object</code></p>
-<p>The properties object that will be passed to the constructor of sap.ushell.ui.shell.ToolAreaItem control.</p>
-<h5>bIsVisible</h5>
-<p><code>boolean</code></p>
-<p>Specify whether to display the control.</p>
-<h5>bCurrentState</h5>
-<p><code>boolean</code></p>
-<p>If <code>true</code>, add the item to the currently rendered shell. If <code>false</code>, add the item to the given LaunchPadStates
-This causes the items to be rendered every time the given states are active.</p>
-<h5>aStates</h5>
-<p><code>string</code>[]</p>
-<p>(only valid if bCurrentState is set to <code>false</code>) - An array of shell states (i.e. sap.ushell.renderers.fiori2.Renderer.LaunchpadState)
-in which the controls are added. If no launchpad state is provided the items are added in all states.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-<p>the added control</p>
-<h4>Since</h4>
-<p>1.30</p>
 <p>Creates a ToolAreaItem in Fiori Launchpad and adds it to the Tool Area, in the given launchpad states.
 Once the item is added, the Tool Area is rendered on the left side on the Fiori Launchpad shell.</p>
 <p><strong>Example:</strong></p>
@@ -644,11 +624,52 @@ sap.ushell.Container.getRenderer(&quot;fiori2&quot;).addToolAreaItem({
 <p>See:
 	sap.ushell.ui.shell.ToolAreaItem
 	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.</p>
+<h4>Parameters</h4>
+<h5>oControlProperties</h5>
+<p><code>object</code></p>
+<p>The properties object that will be passed to the constructor of sap.ushell.ui.shell.ToolAreaItem control.</p>
+<h5>bIsVisible</h5>
+<p><code>boolean</code></p>
+<p>Specify whether to display the control.</p>
+<h5>bCurrentState</h5>
+<p><code>boolean</code></p>
+<p>If <code>true</code>, add the item to the currently rendered shell. If <code>false</code>, add the item to the given LaunchPadStates
+This causes the items to be rendered every time the given states are active.</p>
+<h5>aStates</h5>
+<p><code>string</code>[]</p>
+<p>(only valid if bCurrentState is set to <code>false</code>) - An array of shell states (i.e. sap.ushell.renderers.fiori2.Renderer.LaunchpadState)
+in which the controls are added. If no launchpad state is provided the items are added in all states.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>the added control</p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3><del>addUserAction()</del></h3>
 <blockquote>
 <p><strong>addUserAction</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
+<p>Creates an Action Button in Fiori launchpad, in the given launchpad states.
+ The button will be displayed in the user actions menu, that is opened from the user button in the shell
+header.
+ <strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
+    oAddActionButtonProperties = {
+        controlType : &quot;sap.m.Button&quot;,
+        oControlProperties : {
+            id: &quot;exampleButton&quot;,
+            text: &quot;Example Button&quot;,
+            icon: &quot;sap-icon://refresh&quot;,
+            press: function () {
+                alert(&quot;Example Button was pressed!&quot;);
+            }
+        },
+        bIsVisible: true,
+        bCurrentState: true
+    };
+oRenderer.addUserAction(oAddActionButtonProperties);
+</code></pre>
 <h4>Parameters</h4>
 <h5>oParameters</h5>
 <p>Contains the required parameters for creating and showing the new control object.</p>
@@ -676,32 +697,30 @@ another app or back to the Home page, this control will be removed.</p>
 <p>jQuery.Deferred.promise object that when resolved, returns the newly created control</p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>Creates an Action Button in Fiori launchpad, in the given launchpad states.
- The button will be displayed in the user actions menu, that is opened from the user button in the shell
-header.
- <strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
-    oAddActionButtonProperties = {
-        controlType : &quot;sap.m.Button&quot;,
-        oControlProperties : {
-            id: &quot;exampleButton&quot;,
-            text: &quot;Example Button&quot;,
-            icon: &quot;sap-icon://refresh&quot;,
-            press: function () {
-                alert(&quot;Example Button was pressed!&quot;);
-            }
-        },
-        bIsVisible: true,
-        bCurrentState: true
-    };
-oRenderer.addUserAction(oAddActionButtonProperties);
-</code></pre>
 <hr>
 <h3><del>addUserPreferencesEntry()</del></h3>
 <blockquote>
 <p><strong>addUserPreferencesEntry</strong>(<code>entryObject</code>, <code>value</code>): <code>void</code></p>
 </blockquote>
+<p>Adds an entry to the User Preferences dialog box including the UI control that appears when the user
+clicks the new entry, and handling of User Preferences actions such as SAVE and CANCEL.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+var oEntry = {
+  title: &quot;title&quot;,
+  value: function() {
+      return jQuery.Deferred().resolve(&quot;entryTitleToBeDisplayed&quot;);
+  },
+  content: function() {
+      return jQuery.Deferred().resolve(new sap.m.Button(&quot;userPrefEntryButton&quot;, {text: &quot;Button&quot;}));
+  },
+  onSave: function() {
+      return jQuery.Deferred().resolve();
+  }
+};
+oRenderer.addUserPreferencesEntry(oEntry);
+</code></pre>
 <h4>Parameters</h4>
 <h5>entryObject</h5>
 <p>The data of the new added User Preference entry.</p>
@@ -737,30 +756,12 @@ object.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Adds an entry to the User Preferences dialog box including the UI control that appears when the user
-clicks the new entry, and handling of User Preferences actions such as SAVE and CANCEL.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-var oEntry = {
-  title: &quot;title&quot;,
-  value: function() {
-      return jQuery.Deferred().resolve(&quot;entryTitleToBeDisplayed&quot;);
-  },
-  content: function() {
-      return jQuery.Deferred().resolve(new sap.m.Button(&quot;userPrefEntryButton&quot;, {text: &quot;Button&quot;}));
-  },
-  onSave: function() {
-      return jQuery.Deferred().resolve();
-  }
-};
-oRenderer.addUserPreferencesEntry(oEntry);
-</code></pre>
 <hr>
 <h3><del>getCurrentViewportState()</del></h3>
 <blockquote>
 <p><strong>getCurrentViewportState</strong>(): <code>string</code></p>
 </blockquote>
+<p>This method returns the current state of the Viewport Container control.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The current Viewport State.</p>
@@ -768,12 +769,18 @@ oRenderer.addUserPreferencesEntry(oEntry);
 <p>1.37</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0) - This functionality was discontinued</p>
-<p>This method returns the current state of the Viewport Container control.</p>
 <hr>
 <h3><del>hideActionButton()</del></h3>
 <blockquote>
 <p><strong>hideActionButton</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Hides an action button from the User Actions Menu in the SAP Fiori launchpad, in the given launchpad
+states (LaunchpadState). The removed button will not be destroyed.</p>
+<p> This API is meant to be used for custom elements in the SAP Fiori launchpad. We do not recommend using
+it on standard launchpad elements, as this may interfere with the standard launchpad functionality.
+See:
+	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.
+  If no launchpad state is provided, the content is hidden in all states.</p>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -788,18 +795,19 @@ oRenderer.addUserPreferencesEntry(oEntry);
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Hides an action button from the User Actions Menu in the SAP Fiori launchpad, in the given launchpad
-states (LaunchpadState). The removed button will not be destroyed.</p>
-<p> This API is meant to be used for custom elements in the SAP Fiori launchpad. We do not recommend using
-it on standard launchpad elements, as this may interfere with the standard launchpad functionality.
-See:
-	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.
-  If no launchpad state is provided, the content is hidden in all states.</p>
 <hr>
 <h3><del>hideFloatingActionButton()</del></h3>
 <blockquote>
 <p><strong>hideFloatingActionButton</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Hide the given sap.ushell.ui.shell.ShellFloatingAction from Fiori Launchpad, in the given launchpad states.
+The removed control will not be destroyed.</p>
+<p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
+recommend using it on a standard launchpad element, as this may interfere with the standard launchpad
+functionality.
+See:
+	LaunchpadState
+  If no launchpad state is provided the content is removed in all states.</p>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -817,19 +825,19 @@ valid if bCurrentState is set to false)</p>
 <p>1.30</p>
 <h4>Deprecated</h4>
 <p>(since 1.52)</p>
-<p>Hide the given sap.ushell.ui.shell.ShellFloatingAction from Fiori Launchpad, in the given launchpad states.
-The removed control will not be destroyed.</p>
-<p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
-recommend using it on a standard launchpad element, as this may interfere with the standard launchpad
-functionality.
-See:
-	LaunchpadState
-  If no launchpad state is provided the content is removed in all states.</p>
 <hr>
 <h3><del>hideHeaderEndItem()</del></h3>
 <blockquote>
 <p><strong>hideHeaderEndItem</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Hide the given sap.ushell.ui.shell.ShellHeadItem from Fiori Launchpad, in the given launchpad states.
+The removed control will not be destroyed.</p>
+<p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
+recommend using it on a standard launchpad element, as this may interfere with the standard launchpad
+functionality.
+See:
+	LaunchpadState
+  If no launchpad state is provided the content is removed in all states.</p>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -845,19 +853,19 @@ valid if bCurrentState is set to false)</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Hide the given sap.ushell.ui.shell.ShellHeadItem from Fiori Launchpad, in the given launchpad states.
-The removed control will not be destroyed.</p>
-<p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
-recommend using it on a standard launchpad element, as this may interfere with the standard launchpad
-functionality.
-See:
-	LaunchpadState
-  If no launchpad state is provided the content is removed in all states.</p>
 <hr>
 <h3><del>hideHeaderItem()</del></h3>
 <blockquote>
 <p><strong>hideHeaderItem</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Hide the given sap.ushell.ui.shell.ShellHeadItem from Fiori Launchpad, in the given launchpad states.
+The removed control will not be destroyed.</p>
+<p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
+recommend using it on a standard launchpad element, as this may interfere with the standard launchpad
+functionality.
+See:
+	LaunchpadState
+  If no launchpad state is provided the content is removed in all states.</p>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -873,34 +881,11 @@ valid if bCurrentState is set to false)</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Hide the given sap.ushell.ui.shell.ShellHeadItem from Fiori Launchpad, in the given launchpad states.
-The removed control will not be destroyed.</p>
-<p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
-recommend using it on a standard launchpad element, as this may interfere with the standard launchpad
-functionality.
-See:
-	LaunchpadState
-  If no launchpad state is provided the content is removed in all states.</p>
 <hr>
 <h3><del>hideLeftPaneContent()</del></h3>
 <blockquote>
 <p><strong>hideLeftPaneContent</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>aIds</h5>
-<p><code>string</code>[]</p>
-<p>the Ids of the controls to remove.</p>
-<h5>bCurrentState</h5>
-<p><code>boolean</code></p>
-<p>if true, remove the current control only from the current rendered shell state.</p>
-<h5>aStates</h5>
-<p><code>string</code>[]</p>
-<p>list of the sap.ushell.renderers.fiori2.Renderer.LaunchpadState in which to remove the control. (Only
-valid if bCurrentState is set to false)</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.30</p>
 <p>Hide the given control from Fiori Launchpad, in the given launchpad states. The removed control will
 not be destroyed.</p>
 <p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
@@ -909,11 +894,6 @@ functionality.
 See:
 	LaunchpadState
   If no launchpad state is provided the content is removed in all states.</p>
-<hr>
-<h3><del>hideSubHeader()</del></h3>
-<blockquote>
-<p><strong>hideSubHeader</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
-</blockquote>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -929,6 +909,11 @@ valid if bCurrentState is set to false)</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
+<hr>
+<h3><del>hideSubHeader()</del></h3>
+<blockquote>
+<p><strong>hideSubHeader</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
+</blockquote>
 <p>Hide the given control from the Fiori Launchpad sub header, in the given launchpad states. The removed
 control will not be destroyed.</p>
 <p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
@@ -937,24 +922,44 @@ functionality.
 See:
 	LaunchpadState
   If no launchpad state is provided the content is removed in all states.</p>
+<h4>Parameters</h4>
+<h5>aIds</h5>
+<p><code>string</code>[]</p>
+<p>the Ids of the controls to remove.</p>
+<h5>bCurrentState</h5>
+<p><code>boolean</code></p>
+<p>if true, remove the current control only from the current rendered shell state.</p>
+<h5>aStates</h5>
+<p><code>string</code>[]</p>
+<p>list of the sap.ushell.renderers.fiori2.Renderer.LaunchpadState in which to remove the control. (Only
+valid if bCurrentState is set to false)</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3><del>removeFooter()</del></h3>
 <blockquote>
 <p><strong>removeFooter</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.30</p>
 <p>If exists, this method will remove the footer from the Fiori Launchpad.</p>
 <p> This API is meant to be used for implementing custom elements in the SAP Fiori launchpad. We do not
 recommend using it on a standard launchpad element, as this may interfere with the standard launchpad
 functionality.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3><del>removeToolAreaItem()</del></h3>
 <blockquote>
 <p><strong>removeToolAreaItem</strong>(<code>vIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Remove the given Tool Area Item from Fiori Launchpad, in the given launchpad states. This API is meant
+to be used for implementing custom elements in the SAP Fiori launchpad. We do not recommend using it
+on a standard launchpad element, as this may interfere with the standard launchpad functionality.
+See:
+	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.</p>
 <h4>Parameters</h4>
 <h5>vIds</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -972,26 +977,11 @@ states.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Remove the given Tool Area Item from Fiori Launchpad, in the given launchpad states. This API is meant
-to be used for implementing custom elements in the SAP Fiori launchpad. We do not recommend using it
-on a standard launchpad element, as this may interfere with the standard launchpad functionality.
-See:
-	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.</p>
 <hr>
 <h3><del>setFooter()</del></h3>
 <blockquote>
 <p><strong>setFooter</strong>(<code>oFooter</code>): <code>void</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oFooter</h5>
-<p><a href="../../../../../../../sap.m/sap/m/Bar/classes/Bar.html"><code>Bar</code></a></p>
-<p>sap.m.Bar, the control to be added as the footer of the Fiori Launchpad</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.30</p>
-<h4>Deprecated</h4>
-<p>(since 1.120.0) - Please use #setShellFooter instead.</p>
 <p>Displays the given sap.m.Bar as the footer of the Fiori launchpad shell.
  The footer will be displayed in all states.</p>
 <p><strong>Example:</strong></p>
@@ -1004,27 +994,21 @@ var bar = new sap.m.Bar({contentLeft: [new sap.m.Button({text: &quot;Test Footer
 var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
 renderer.setFooter(bar);
 </code></pre>
+<h4>Parameters</h4>
+<h5>oFooter</h5>
+<p><a href="../../../../../../../sap.m/sap/m/Bar/classes/Bar.html"><code>Bar</code></a></p>
+<p>sap.m.Bar, the control to be added as the footer of the Fiori Launchpad</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.30</p>
+<h4>Deprecated</h4>
+<p>(since 1.120.0) - Please use #setShellFooter instead.</p>
 <hr>
 <h3><del>setFooterControl()</del></h3>
 <blockquote>
 <p><strong>setFooterControl</strong>(<code>controlType</code>, <code>oControlProperties</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>controlType</h5>
-<p><code>string</code></p>
-<p>The (class) name of the control type to create.
- For example: <code>&quot;sap.m.Bar&quot;</code></p>
-<h5>oControlProperties</h5>
-<p><code>object</code></p>
-<p>The properties that will be passed to the created control.
- For example: <code>{id: &quot;testBar&quot;}</code></p>
-<h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-<p>The created control</p>
-<h4>Since</h4>
-<p>1.42</p>
-<h4>Deprecated</h4>
-<p>(since 1.48) - Please use #setShellFooter instead.</p>
 <p>Creates and displays an SAPUI5 control as the footer of the Fiori launchpad shell.
  The footer will be displayed in all states.
  Previously created footer will be removed.</p>
@@ -1043,11 +1027,28 @@ oRenderer.setFooterControl(&quot;sap.m.Bar&quot;, {id: &quot;testBar&quot;, cont
 <li>The control instance is already created and its ID is included in the input parameter oControlProperties</li>
 <li>The control type resource is already loaded</li>
 </ol>
+<h4>Parameters</h4>
+<h5>controlType</h5>
+<p><code>string</code></p>
+<p>The (class) name of the control type to create.
+ For example: <code>&quot;sap.m.Bar&quot;</code></p>
+<h5>oControlProperties</h5>
+<p><code>object</code></p>
+<p>The properties that will be passed to the created control.
+ For example: <code>{id: &quot;testBar&quot;}</code></p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The created control</p>
+<h4>Since</h4>
+<p>1.42</p>
+<h4>Deprecated</h4>
+<p>(since 1.48) - Please use #setShellFooter instead.</p>
 <hr>
 <h3><del>setHeaderTitle()</del></h3>
 <blockquote>
 <p><strong>setHeaderTitle</strong>(<code>sTitle</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the title in the Fiori Launchpad shell header.</p>
 <h4>Parameters</h4>
 <h5>sTitle</h5>
 <p><code>string</code></p>
@@ -1058,12 +1059,19 @@ oRenderer.setFooterControl(&quot;sap.m.Bar&quot;, {id: &quot;testBar&quot;, cont
 <p>1.30</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0) - Please use sap.ushell.ui5service.ShellUIService#getTitle instead.</p>
-<p>Sets the title in the Fiori Launchpad shell header.</p>
 <hr>
 <h3><del>setHeaderVisibility()</del></h3>
 <blockquote>
 <p><strong>setHeaderVisibility</strong>(<code>bVisible</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the header visibility according to the given value and shell states. (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+oRenderer.setHeaderVisibility(false, false, [&quot;home&quot;, &quot;app&quot;]);
+</code></pre>
+<p>See:
+	LaunchpadState</p>
 <h4>Parameters</h4>
 <h5>bVisible</h5>
 <p><code>boolean</code></p>
@@ -1086,19 +1094,12 @@ visibility flag should be set.
 <p>1.38</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0) - This functionality was discontinued</p>
-<p>Sets the header visibility according to the given value and shell states. (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-oRenderer.setHeaderVisibility(false, false, [&quot;home&quot;, &quot;app&quot;]);
-</code></pre>
-<p>See:
-	LaunchpadState</p>
 <hr>
 <h3><del>setLeftPaneVisibility()</del></h3>
 <blockquote>
 <p><strong>setLeftPaneVisibility</strong>(<code>sLaunchpadState</code>, <code>bVisible</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the visibility of the left pane in the Fiori Launchpad shell, in the given launchpad state</p>
 <h4>Parameters</h4>
 <h5>sLaunchpadState</h5>
 <p><code>string</code></p>
@@ -1108,30 +1109,15 @@ oRenderer.setHeaderVisibility(false, false, [&quot;home&quot;, &quot;app&quot;])
 <p>specify whether to display the left pane or not</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
-<h4>Since</h4>
-<p>1.30</p>
-<p>Sets the visibility of the left pane in the Fiori Launchpad shell, in the given launchpad state</p>
 <h4>See</h4>
 <p>LaunchpadState</p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3><del>setShellFooter()</del></h3>
 <blockquote>
 <p><strong>setShellFooter</strong>(<code>oParameters</code>): <code>Promise</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oParameters</h5>
-<p>Contains the required parameters for creating and showing the new control object.</p>
-<h6>controlType</h6>
-<p><code>string</code></p>
-<p>The (class) name of the control type to create, for example: <code>sap.m.Bar</code></p>
-<h6>oControlProperties</h6>
-<p><code>object</code></p>
-<p>The properties that will be passed to the created control, for example: <code>{id: &quot;testBar&quot;}</code></p>
-<h4>Returns</h4>
-<p><code>Promise</code></p>
-<p>jQuery.deferred.promise object that when resolved, returns the newly created control</p>
-<h4>Since</h4>
-<p>1.48</p>
 <p>Creates and displays an SAPUI5 control as the footer of the Fiori launchpad shell.
  The footer will be displayed in all states.
  Previously created footer will be removed.</p>
@@ -1152,11 +1138,38 @@ var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
   };
 oRenderer.setShellFooter(oFooterControlProperties);
 </code></pre>
+<h4>Parameters</h4>
+<h5>oParameters</h5>
+<p>Contains the required parameters for creating and showing the new control object.</p>
+<h6>controlType</h6>
+<p><code>string</code></p>
+<p>The (class) name of the control type to create, for example: <code>sap.m.Bar</code></p>
+<h6>oControlProperties</h6>
+<p><code>object</code></p>
+<p>The properties that will be passed to the created control, for example: <code>{id: &quot;testBar&quot;}</code></p>
+<h4>Returns</h4>
+<p><code>Promise</code></p>
+<p>jQuery.deferred.promise object that when resolved, returns the newly created control</p>
+<h4>Since</h4>
+<p>1.48</p>
 <hr>
 <h3><del>showActionButton()</del></h3>
 <blockquote>
 <p><strong>showActionButton</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Displays action buttons in the User Actions Menu in the SAP Fiori launchpad, in the given launchpad states
+(LaunchpadState). (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).
+ If no launchpad state is provided the content is displayed in all states.
+ The user actions menu is opened via the button on the right hand side of the shell header.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var button1 = new sap.m.Button();
+var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+renderer.showActionButton([button1.getId()], false, [&quot;home&quot;, &quot;app&quot;]);
+</code></pre>
+<p>See:
+	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.
+  If no launchpad state is provided, the content is added in all states.</p>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -1174,24 +1187,21 @@ aIds. Valid only if bCurrentState is set to false.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Displays action buttons in the User Actions Menu in the SAP Fiori launchpad, in the given launchpad states
-(LaunchpadState). (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).
- If no launchpad state is provided the content is displayed in all states.
- The user actions menu is opened via the button on the right hand side of the shell header.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var button1 = new sap.m.Button();
-var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-renderer.showActionButton([button1.getId()], false, [&quot;home&quot;, &quot;app&quot;]);
-</code></pre>
-<p>See:
-	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.
-  If no launchpad state is provided, the content is added in all states.</p>
 <hr>
 <h3><del>showFloatingActionButton()</del></h3>
 <blockquote>
 <p><strong>showFloatingActionButton</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Displays FloatingActionButton on the bottom right corner of the Fiori launchpad, in the given launchpad
+states. The FloatingActionButton is rendered in the bottom right corner of the shell.
+ (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).
+ If no launchpad state is provided the content is displayed in all states.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var button1 = new sap.ushell.ui.shell.ShellFloatingAction();
+var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+renderer.showFloatingActionButton([button1.getId()], true);
+</code></pre>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -1210,21 +1220,22 @@ in which to add the aIds.</p>
 <p>1.30</p>
 <h4>Deprecated</h4>
 <p>(since 1.52) - Support for the FloatingActionButton has been discontinued.</p>
-<p>Displays FloatingActionButton on the bottom right corner of the Fiori launchpad, in the given launchpad
-states. The FloatingActionButton is rendered in the bottom right corner of the shell.
- (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).
- If no launchpad state is provided the content is displayed in all states.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var button1 = new sap.ushell.ui.shell.ShellFloatingAction();
-var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-renderer.showFloatingActionButton([button1.getId()], true);
-</code></pre>
 <hr>
 <h3><del>showHeaderEndItem()</del></h3>
 <blockquote>
 <p><strong>showHeaderEndItem</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Displays HeaderItems on the right side of the Fiori launchpad shell header, in the given launchpad states
+(see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).
+ If no launchpad state is provided the content is displayed in all states.
+ The shell header can display the user HeaderItem, and just one more HeaderItem.
+ If this method is called when the right side of the header is full, this method will not do anything.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var button1 = new sap.ushell.ui.shell.ShellHeadItem();
+var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+renderer.showHeaderEndItem ([button1.getId()], false, [&quot;home&quot;, &quot;app&quot;]);
+</code></pre>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -1241,22 +1252,26 @@ in which to add the aIds.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Displays HeaderItems on the right side of the Fiori launchpad shell header, in the given launchpad states
-(see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).
- If no launchpad state is provided the content is displayed in all states.
- The shell header can display the user HeaderItem, and just one more HeaderItem.
- If this method is called when the right side of the header is full, this method will not do anything.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var button1 = new sap.ushell.ui.shell.ShellHeadItem();
-var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-renderer.showHeaderEndItem ([button1.getId()], false, [&quot;home&quot;, &quot;app&quot;]);
-</code></pre>
 <hr>
 <h3><del>showHeaderItem()</del></h3>
 <blockquote>
 <p><strong>showHeaderItem</strong>(<code>vIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Creates and displays one or more HeaderItem controls according to the given control IDs and Shell states
+ (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).</p>
+<p> The HeaderItem controls will be displayed on the left side of the Fiori Launchpad shell header according
+to the given display parameters.
+ There can be up to three header items. If the number of existing header items plus the given ones exceeds
+3, then the operation fails and no new header items are created.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var button1 = new sap.ushell.ui.shell.ShellHeadItem();
+var button2 = new sap.ushell.ui.shell.ShellHeadItem();
+var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+renderer.showHeaderItem ([button1.getId(), button2.getId()], false, [&quot;home&quot;, &quot;app&quot;]);
+</code></pre>
+<p>See:
+	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.</p>
 <h4>Parameters</h4>
 <h5>vIds</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -1274,26 +1289,26 @@ in which the controls are added. If no launchpad state is provided the controls 
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Creates and displays one or more HeaderItem controls according to the given control IDs and Shell states
- (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).</p>
-<p> The HeaderItem controls will be displayed on the left side of the Fiori Launchpad shell header according
-to the given display parameters.
- There can be up to three header items. If the number of existing header items plus the given ones exceeds
-3, then the operation fails and no new header items are created.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var button1 = new sap.ushell.ui.shell.ShellHeadItem();
-var button2 = new sap.ushell.ui.shell.ShellHeadItem();
-var renderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-renderer.showHeaderItem ([button1.getId(), button2.getId()], false, [&quot;home&quot;, &quot;app&quot;]);
-</code></pre>
-<p>See:
-	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.</p>
 <hr>
 <h3><del>showSubHeader()</del></h3>
 <blockquote>
 <p><strong>showSubHeader</strong>(<code>aIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Displays one or more sub header controls according to the given control IDs and shell states.
+ (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).</p>
+<p> A sub header is placed in a container, located directly below the main Fiori launchpad shell header.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+var bar = new sap.m.Bar({id: &quot;testBar&quot;, contentLeft: [new sap.m.Button({text: &quot;Test SubHeader Button&quot;,
+  press: function () {
+    sap.m.MessageToast.show(&quot;Pressed&quot;);
+  }})
+]});
+var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
+oRenderer.showSubHeader([bar.getId()], false, [&quot;home&quot;, &quot;app&quot;]);
+</code></pre>
+<p>See:
+	LaunchpadState</p>
 <h4>Parameters</h4>
 <h5>aIds</h5>
 <p><code>string</code>[]</p>
@@ -1313,21 +1328,6 @@ are added.
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Displays one or more sub header controls according to the given control IDs and shell states.
- (see sap.ushell.renderers.fiori2.Renderer.LaunchpadState).</p>
-<p> A sub header is placed in a container, located directly below the main Fiori launchpad shell header.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-var bar = new sap.m.Bar({id: &quot;testBar&quot;, contentLeft: [new sap.m.Button({text: &quot;Test SubHeader Button&quot;,
-  press: function () {
-    sap.m.MessageToast.show(&quot;Pressed&quot;);
-  }})
-]});
-var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;);
-oRenderer.showSubHeader([bar.getId()], false, [&quot;home&quot;, &quot;app&quot;]);
-</code></pre>
-<p>See:
-	LaunchpadState</p>
 <hr>
 <h3><del>showToolArea()</del></h3>
 <blockquote>
@@ -1350,6 +1350,17 @@ oRenderer.showSubHeader([bar.getId()], false, [&quot;home&quot;, &quot;app&quot;
 <blockquote>
 <p><strong>showToolAreaItem</strong>(<code>vIds</code>, <code>bCurrentState</code>, <code>aStates</code>): <code>void</code></p>
 </blockquote>
+<p>Displays ToolAreaItems on the left side of the Fiori Launchpad shell, in the given launchpad states.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-javascript">
+sap.ui.require([&quot;sap/ushell/ui/shell/ToolAreaItem&quot;], function (ToolAreaItem) {
+    var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
+        oToolAreaItem = new ToolAreaItem({ icon: &quot;sap-icon://wrench&quot; });
+    renderer.showToolAreaItem(oToolAreaItem.getId(), false, [&quot;home&quot;, &quot;app&quot;]);
+});
+</code></pre>
+<p>See:
+	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.</p>
 <h4>Parameters</h4>
 <h5>vIds</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -1366,19 +1377,8 @@ in which the controls are added. If no launchpad state is provided the items are
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Displays ToolAreaItems on the left side of the Fiori Launchpad shell, in the given launchpad states.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-javascript">
-sap.ui.require([&quot;sap/ushell/ui/shell/ToolAreaItem&quot;], function (ToolAreaItem) {
-    var oRenderer = sap.ushell.Container.getRenderer(&quot;fiori2&quot;),
-        oToolAreaItem = new ToolAreaItem({ icon: &quot;sap-icon://wrench&quot; });
-    renderer.showToolAreaItem(oToolAreaItem.getId(), false, [&quot;home&quot;, &quot;app&quot;]);
-});
-</code></pre>
-<p>See:
-	sap.ushell.renderers.fiori2.Renderer.LaunchpadState.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ControllerExtension — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ControllerExtension — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ControllerExtension — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/mvc/ControllerExtension/classes/ControllerExtension.html">
 <meta property="og:title" content="Class: ControllerExtension — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ControllerExtension — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ControllerExtension — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/mvc/ControllerExtension/classes/ControllerExtension.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › mvc › <a href="../../../../../../../sap.ui.core/sap/ui/core/mvc/ControllerExtension/README.html">ControllerExtension</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/mvc/ControllerExtension</a> / ControllerExtension</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/mvc/ControllerExtension</a> / ControllerExtension</p>
 <h1>Class: ControllerExtension</h1>
 <pre class="sig"><span class="kw">import</span> ControllerExtension <span class="kw">from</span> <span class="str">"sap/ui/core/mvc/ControllerExtension"</span>;</pre>
 <p>Base class for controller extensions.</p>
@@ -134,7 +134,7 @@ used by this class</p>
 <hr>
 <h3>override()</h3>
 <blockquote>
-<p><code>static</code> <strong>override</strong>(<code>oExtension</code>): <code>Function</code></p>
+<p><code>static</code> <strong>override</strong>&lt;<code>TheExtension</code>, <code>AddtlProps</code>&gt;(<code>this</code>, <code>customExtension</code>): () =&gt; <code>InstanceType</code>&lt;<code>TheExtension</code>&gt; &amp; <code>AddtlProps</code></p>
 </blockquote>
 <p>Override the ControllerExtension class with the given custom extension definition.</p>
 <p>Only public methods that are not final could be overridden. The lifecycle methods <code>onInit</code>, <code>onExit</code>,
@@ -150,14 +150,65 @@ extension.</p>
 }
 </code></pre>
 <p><strong>Note:</strong> This static method is automatically propagated to subclasses of <code>ControllerExtension</code>.</p>
+<h4>Type Parameters</h4>
+<h5>TheExtension</h5>
+<p><code>TheExtension</code> <em>extends</em> () =&gt; <code>ControllerExtension</code></p>
+<h5>AddtlProps</h5>
+<p><code>AddtlProps</code> <em>extends</em> <code>object</code></p>
 <h4>Parameters</h4>
-<h5>oExtension</h5>
-<p><code>Record</code>&lt;<code>string</code>, <code>Function</code>&gt;</p>
+<h5>this</h5>
+<p><code>TheExtension</code></p>
+<h5>customExtension</h5>
+<p><code>AddtlProps</code></p>
 <p>The custom extension definition</p>
 <h4>Returns</h4>
-<p><code>Function</code></p>
-<p>A controller extension class</p>
+<p>The adapted controller extension class</p>
+<p>() =&gt; <code>InstanceType</code>&lt;<code>TheExtension</code>&gt; &amp; <code>AddtlProps</code></p>
+<hr>
+<h3>use()</h3>
+<blockquote>
+<p><code>static</code> <strong>use</strong>&lt;<code>TheExtension</code>&gt;(<code>extensionClass</code>): <code>TheExtension</code></p>
+</blockquote>
+<p>A marker method for applying controller extensions to controller class members in TypeScript code.
+This method is only used to make TypeScript usage compatible to the UI5 runtime behavior, where an extension
+<em>class</em> is assigned when the controller is defined, but each controller instance gets an <em>instance</em> of
+this extension. This method call is removed in the class transformer when the ES class is transformed
+to the traditional UI5 class definition syntax.</p>
+<p>To allow for proper removal, it may only be called directly on the base class <code>ControllerExtension</code>,
+at the place where a controller extension is assigned to a member property of the new controller class.
+The class transformation then removes this call. If it is not removed because it is used in any other
+way, then it throws an error at runtime.</p>
+<p>Usage example:</p>
+<pre><code class="language-javascript">import Routing from &quot;sap/fe/core/controllerextensions/Routing&quot;;
+import ControllerExtension from &quot;sap/ui/core/mvc/ControllerExtension&quot;;
+...
+export class App extends Controller {
+   routing = ControllerExtension.use(Routing);
+</code></pre>
+<p>Usage example with overriding extension callbacks:</p>
+<pre><code class="language-javascript">import Routing from &quot;sap/fe/core/controllerextensions/Routing&quot;;
+import ControllerExtension from &quot;sap/ui/core/mvc/ControllerExtension&quot;;
+...
+export class App extends Controller {
+   routing = ControllerExtension.use(Routing.override({
+      ...
+   }));
+</code></pre>
+<h4>Type Parameters</h4>
+<h5>TheExtension</h5>
+<p><code>TheExtension</code> <em>extends</em> <code>ControllerExtension</code></p>
+<h4>Parameters</h4>
+<h5>extensionClass</h5>
+<p>() =&gt; <code>TheExtension</code></p>
+<p>The ControllerExtension to use</p>
+<h4>Returns</h4>
+<p><code>TheExtension</code></p>
+<p>An instance of the given <code>ControllerExtension</code>. <strong>NOTE:</strong> this is only a dummy return type for
+proper usage in TypeScript. This method does not actually return an instance of <code>ControllerExtension</code>,
+but only throws an error at runtime. The sole purpose of this method is to mimic the actual runtime behavior
+where a <em>class</em> is given when a controller is defined, but an <em>instance</em> is present in each controller
+instance.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

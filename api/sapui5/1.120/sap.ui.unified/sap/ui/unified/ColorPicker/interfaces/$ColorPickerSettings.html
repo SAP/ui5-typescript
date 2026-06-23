@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ColorPickerSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ColorPickerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ColorPickerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/ColorPicker/interfaces/$ColorPickerSettings.html">
 <meta property="og:title" content="Interface: $ColorPickerSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ColorPickerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ColorPickerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/ColorPicker/interfaces/$ColorPickerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/ColorPicker/README.html">ColorPicker</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/ColorPicker</a> / $ColorPickerSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/ColorPicker</a> / $ColorPickerSettings</p>
 <h1>Interface: $ColorPickerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ColorPickerSettings } <span class="kw">from</span> <span class="str">"sap/ui/unified/ColorPicker"</span>;</pre>
+<p>Describes the settings that can be provided to the ColorPicker constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -51,6 +52,8 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>change?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the value is changed by user action.</p>
+<p><strong>Note:</strong> When the user action is mouse dragging, the <code>change</code> event fires on the mouseup event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ColorPicker$ChangeEvent.html"><code>ColorPicker$ChangeEvent</code></a></p>
@@ -58,34 +61,34 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
-<p>Fired when the value is changed by user action.</p>
-<p><strong>Note:</strong> When the user action is mouse dragging, the <code>change</code> event fires on the mouseup event.</p>
 <hr>
 <h3>colorString?</h3>
 <blockquote>
 <p><code>optional</code> <strong>colorString?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48.0</p>
 <p>Determines the input parameter that can be a string of type HEX, RGB, HSV, or a CSS color name:</p>
 <pre><code> - HEX - #FFFFFF
  - RGB - rgb(255,255,255)
  - HSV - hsv(360,100,100)
  - CSS - red  **Note:** The output parameter is an RGB string of the current color.
 </code></pre>
+<h4>Since</h4>
+<p>1.48.0</p>
 <hr>
 <h3>displayMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>displayMode?</strong>: <code>&quot;Large&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Default&quot;</code> | <a href="../../ColorPickerDisplayMode/enumerations/ColorPickerDisplayMode.html"><code>ColorPickerDisplayMode</code></a> | <code>&quot;Simplified&quot;</code></p>
 </blockquote>
+<p>Determines the display mode of the <code>ColorPicker</code> among three types - Default, Large and Simplified</p>
 <h4>Since</h4>
 <p>1.58</p>
-<p>Determines the display mode of the <code>ColorPicker</code> among three types - Default, Large and Simplified</p>
 <hr>
 <h3>liveChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>liveChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the value is changed during the mouse move.</p>
+<p><strong>Note:</strong> When the user action is mouse move, the <code>liveChange</code> event is fired during the mousedown event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ColorPicker$LiveChangeEvent.html"><code>ColorPicker$LiveChangeEvent</code></a></p>
@@ -93,21 +96,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
-<p>Fired when the value is changed during the mouse move.</p>
-<p><strong>Note:</strong> When the user action is mouse move, the <code>liveChange</code> event is fired during the mousedown event.</p>
 <hr>
 <h3>mode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>mode?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/ColorPickerMode.html"><code>ColorPickerMode</code></a> | <code>&quot;HSL&quot;</code> | <code>&quot;HSV&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48.0</p>
 <p>Determines the color representation mode the ColorPicker works with - Hue, Saturation, and Value (HSV)
 or Hue, Saturation, and Lightness (HSL).</p>
 <p><strong>Note:</strong> The <code>ColorPickerMode.HSV</code> is set by default. For color composing with alpha values, please
 set the mode to <code>ColorPickerMode.HSL</code></p>
+<h4>Since</h4>
+<p>1.48.0</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

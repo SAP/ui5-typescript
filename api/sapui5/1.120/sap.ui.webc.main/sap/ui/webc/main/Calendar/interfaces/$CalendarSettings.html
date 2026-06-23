@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $CalendarSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $CalendarSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $CalendarSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $CalendarSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Calendar/interfaces/$CalendarSettings.html">
-<meta property="og:title" content="Interface: $CalendarSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $CalendarSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $CalendarSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $CalendarSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Calendar/interfaces/$CalendarSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,69 +33,84 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/Calendar/README.html">Calendar</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Calendar</a> / $CalendarSettings</p>
-<h1>Interface: $CalendarSettings</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Calendar</a> / $CalendarSettings</p>
+<h1><del>Interface: $CalendarSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $CalendarSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/Calendar"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the Calendar constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
+Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
+functionality.
+ (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>dates?</h3>
+<h3><del>dates?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>dates?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/interfaces/ICalendarDate.html"><code>ICalendarDate</code></a> | <a href="../../library/interfaces/ICalendarDate.html"><code>ICalendarDate</code></a>[]</p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the selected date or dates (depending on the <code>selectionMode</code> property) for this calendar as instances
 of <code>sap.ui.webc.main.CalendarDate</code>.</p>
 <hr>
-<h3>formatPattern?</h3>
+<h3><del>formatPattern?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>formatPattern?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Determines the format, displayed in the input field.</p>
 <hr>
-<h3>hideWeekNumbers?</h3>
+<h3><del>hideWeekNumbers?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>hideWeekNumbers?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the visibility of the week numbers column.</p>
 <p><strong>Note:</strong> For calendars other than Gregorian, the week numbers are not displayed regardless of what is
 set.</p>
 <hr>
-<h3>maxDate?</h3>
+<h3><del>maxDate?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>maxDate?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Determines the maximum date available for selection.</p>
 <p><strong>Note:</strong> If the formatPattern property is not set, the maxDate value must be provided in the ISO date
 format (YYYY-MM-dd).</p>
 <hr>
-<h3>minDate?</h3>
+<h3><del>minDate?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>minDate?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Determines the minimum date available for selection.</p>
 <p><strong>Note:</strong> If the formatPattern property is not set, the minDate value must be provided in the ISO date
 format (YYYY-MM-dd).</p>
 <hr>
-<h3>primaryCalendarType?</h3>
+<h3><del>primaryCalendarType?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>primaryCalendarType?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets a calendar type used for display. If not set, the calendar type of the global configuration is used.</p>
 <hr>
-<h3>secondaryCalendarType?</h3>
+<h3><del>secondaryCalendarType?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>secondaryCalendarType?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the secondary calendar type. If not set, the calendar will only show the primary calendar type.</p>
 <hr>
-<h3>selectedDatesChange?</h3>
+<h3><del>selectedDatesChange?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>selectedDatesChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the selected dates change. <strong>Note:</strong> If you call <code>preventDefault()</code> for this event, the component
 will not create instances of <code>sap.ui.webc.main.CalendarDate</code> for the newly selected dates. In that case
 you should do this manually.</p>
@@ -105,10 +120,11 @@ you should do this manually.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>selectionMode?</h3>
+<h3><del>selectionMode?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionMode?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Multiple&quot;</code> | <code>&quot;Single&quot;</code> | <a href="../../library/enumerations/CalendarSelectionMode.html"><code>CalendarSelectionMode</code></a> | <code>&quot;Range&quot;</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the type of selection used in the calendar component. Accepted property values are:</p>
 <pre><code> - `CalendarSelectionMode.Single` - enables a single date selection.(default value)
  - `CalendarSelectionMode.Range` - enables selection of a date range.
@@ -116,6 +132,6 @@ you should do this manually.</p>
 </code></pre>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

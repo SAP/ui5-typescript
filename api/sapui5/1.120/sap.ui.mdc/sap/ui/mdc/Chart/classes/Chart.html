@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Chart — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Chart — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Chart — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/Chart/classes/Chart.html">
 <meta property="og:title" content="Class: Chart — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Chart — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Chart — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/Chart/classes/Chart.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/Chart/README.html">Chart</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Chart</a> / Chart</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Chart</a> / Chart</p>
 <h1>Class: Chart</h1>
 <pre class="sig"><span class="kw">import</span> Chart <span class="kw">from</span> <span class="str">"sap/ui/mdc/Chart"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<p>The <code>Chart</code> control creates a chart based on metadata and the configuration specified.
+ <strong>Note:</strong> The inner chart needs to be assigned <code>ChartDelegate</code>.</p>
 <h2>Since</h2>
 <p>1.88
  (since 1.88)</p>
-<p>The <code>Chart</code> control creates a chart based on metadata and the configuration specified.
- <strong>Note:</strong> The inner chart needs to be assigned <code>ChartDelegate</code>.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Control/classes/Control.html"><code>Control</code></a></li>
@@ -159,12 +159,12 @@ otherwise it will be bound to this <code>sap.ui.mdc.Chart</code> itself.</p>
 <p><strong>destroyNoData</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Destroys the noData in the aggregation #getNoData noData.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.107</p>
-<p>Destroys the noData in the aggregation #getNoData noData.</p>
 <hr>
 <h3>destroySelectionDetailsActions()</h3>
 <blockquote>
@@ -210,6 +210,7 @@ event of this <code>sap.ui.mdc.Chart</code>.</p>
 <p><strong>fireSelectionDetailsActionPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:selectionDetailsActionPressed selectionDetailsActionPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Chart$SelectionDetailsActionPressedEventParameters.html"><code>Chart$SelectionDetailsActionPressedEventParameters</code></a></p>
@@ -219,7 +220,6 @@ event of this <code>sap.ui.mdc.Chart</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectionDetailsActionPressed selectionDetailsActionPressed to attached listeners.</p>
 <hr>
 <h3>getActions()</h3>
 <blockquote>
@@ -297,11 +297,11 @@ have to be made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <p><strong>getFilter</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>ID of the element which is the current target of the association #getFilter filter, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>ID of the element which is the current target of the association #getFilter filter, or <code>null</code>.</p>
 <hr>
 <h3>getHeader()</h3>
 <blockquote>
@@ -319,43 +319,43 @@ have to be made with the sap.ui.mdc.p13n.StateUtil StateUtil.</p>
 <p><strong>getHeaderLevel</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeaderLevel headerLevel.</p>
+<p>Semantic level of the header.
+ For more information, see sap.m.Title#setLevel.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 <p>Value of property <code>headerLevel</code></p>
 <h4>Since</h4>
 <p>1.104</p>
-<p>Gets current value of property #getHeaderLevel headerLevel.</p>
-<p>Semantic level of the header.
- For more information, see sap.m.Title#setLevel.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>getHeaderStyle()</h3>
 <blockquote>
 <p><strong>getHeaderStyle</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeaderStyle headerStyle.</p>
+<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 <p>Value of property <code>headerStyle</code></p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Gets current value of property #getHeaderStyle headerStyle.</p>
-<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
 <hr>
 <h3>getHeaderVisible()</h3>
 <blockquote>
 <p><strong>getHeaderVisible</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeaderVisible headerVisible.</p>
+<p>Determines whether the header text is shown in the chart. Regardless of its value, the given header text
+is used to label the chart correctly for accessibility purposes.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>headerVisible</code></p>
 <h4>Since</h4>
 <p>1.111</p>
-<p>Gets current value of property #getHeaderVisible headerVisible.</p>
-<p>Determines whether the header text is shown in the chart. Regardless of its value, the given header text
-is used to label the chart correctly for accessibility purposes.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getHeight()</h3>
 <blockquote>
@@ -374,14 +374,14 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p><strong>getIgnoreToolbarActions</strong>(): (<a href="../../enums/ChartToolbarActionType/enumerations/ChartToolbarActionType.html"><code>ChartToolbarActionType</code></a> | <code>&quot;DrillDownUp&quot;</code> | <code>&quot;FullScreen&quot;</code> | <code>&quot;Legend&quot;</code> | <code>&quot;ZoomInOut&quot;</code>)[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIgnoreToolbarActions ignoreToolbarActions.</p>
+<p>Specifies which actions must not be available in the chart&#39;s toolbar.</p>
+<p>Default value is <code>[]</code>.</p>
 <h4>Returns</h4>
 <p>(<a href="../../enums/ChartToolbarActionType/enumerations/ChartToolbarActionType.html"><code>ChartToolbarActionType</code></a> | <code>&quot;DrillDownUp&quot;</code> | <code>&quot;FullScreen&quot;</code> | <code>&quot;Legend&quot;</code> | <code>&quot;ZoomInOut&quot;</code>)[]</p>
 <p>Value of property <code>ignoreToolbarActions</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getIgnoreToolbarActions ignoreToolbarActions.</p>
-<p>Specifies which actions must not be available in the chart&#39;s toolbar.</p>
-<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>getItems()</h3>
 <blockquote>
@@ -401,14 +401,14 @@ might result in undesired effects. Changes of the aggregation have to be made wi
 <p><strong>getLegendVisible</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getLegendVisible legendVisible.</p>
+<p>Enables the legend of the chart. <strong>Note:</strong> The setter calls <code>setLegendVisible</code> of the delegate class.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>legendVisible</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getLegendVisible legendVisible.</p>
-<p>Enables the legend of the chart. <strong>Note:</strong> The setter calls <code>setLegendVisible</code> of the delegate class.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getMinHeight()</h3>
 <blockquote>
@@ -439,45 +439,45 @@ might result in undesired effects. Changes of the aggregation have to be made wi
 <p><strong>getNoData</strong>(): <code>Control1</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<h4>Returns</h4>
-<p><code>Control1</code></p>
-<h4>Since</h4>
-<p>1.107</p>
 <p>Gets content of aggregation #getNoData noData.</p>
 <p>Defines the custom visualization if there is no data available.
  This control will be displayed on top of the chart when no data is visible inside the chart.
  <strong>Note:</strong> If both a <code>noDataText</code> property and a <code>noData</code> aggregation are provided, the <code>noData</code> aggregation
 takes priority.
  If the <code>noData</code> aggregation is undefined or set to null, the <code>noDataText</code> property is used instead.</p>
+<h4>Returns</h4>
+<p><code>Control1</code></p>
+<h4>Since</h4>
+<p>1.107</p>
 <hr>
 <h3>getNoDataText()</h3>
 <blockquote>
 <p><strong>getNoDataText</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getNoDataText noDataText.</p>
+<p>Defines the no data text shown in the chart.</p>
+<p>Default value is <code>&quot;No data&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>noDataText</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getNoDataText noDataText.</p>
-<p>Defines the no data text shown in the chart.</p>
-<p>Default value is <code>&quot;No data&quot;</code>.</p>
 <hr>
 <h3>getP13nMode()</h3>
 <blockquote>
 <p><strong>getP13nMode</strong>(): (<code>&quot;Item&quot;</code> | <code>&quot;Filter&quot;</code> | <code>&quot;Sort&quot;</code> | <code>&quot;Type&quot;</code> | <a href="../../enums/ChartP13nMode/enumerations/ChartP13nMode.html"><code>ChartP13nMode</code></a>)[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getP13nMode p13nMode.</p>
+<p>Specifies the personalization options available for the chart.
+ <strong>Note:</strong> The order of the provided options does not influence the arrangement of the icons on the UI.</p>
+<p>Default value is <code>[]</code>.</p>
 <h4>Returns</h4>
 <p>(<code>&quot;Item&quot;</code> | <code>&quot;Filter&quot;</code> | <code>&quot;Sort&quot;</code> | <code>&quot;Type&quot;</code> | <a href="../../enums/ChartP13nMode/enumerations/ChartP13nMode.html"><code>ChartP13nMode</code></a>)[]</p>
 <p>Value of property <code>p13nMode</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getP13nMode p13nMode.</p>
-<p>Specifies the personalization options available for the chart.
- <strong>Note:</strong> The order of the provided options does not influence the arrangement of the icons on the UI.</p>
-<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>getSelectionDetailsActions()</h3>
 <blockquote>
@@ -505,15 +505,15 @@ takes priority.
 <p><strong>getShowChartTooltip</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getShowChartTooltip showChartTooltip.</p>
+<p>Controls the visibility of the chart tooltip. If set to <code>true</code>, a call of the <code>delegate.setChartTooltipVisibility</code>
+will be triggered and can be used to make the <code>Chart</code> tooltip visible.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showChartTooltip</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getShowChartTooltip showChartTooltip.</p>
-<p>Controls the visibility of the chart tooltip. If set to <code>true</code>, a call of the <code>delegate.setChartTooltipVisibility</code>
-will be triggered and can be used to make the <code>Chart</code> tooltip visible.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getShowSelectionDetails()</h3>
 <blockquote>
@@ -619,6 +619,7 @@ its index if found or -1 otherwise.</p>
 <p><strong>setFilter</strong>(<code>oFilter</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets the associated #getFilter filter.</p>
 <h4>Parameters</h4>
 <h5>oFilter</h5>
 <p><code>string</code> | <a href="../../library/interfaces/IFilter.html"><code>IFilter</code></a></p>
@@ -629,7 +630,6 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets the associated #getFilter filter.</p>
 <hr>
 <h3>setHeader()</h3>
 <blockquote>
@@ -652,6 +652,11 @@ may be given</p>
 <p><strong>setHeaderLevel</strong>(<code>sHeaderLevel?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeaderLevel headerLevel.</p>
+<p>Semantic level of the header.
+ For more information, see sap.m.Title#setLevel.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeaderLevel?</h5>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
@@ -661,17 +666,15 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.104</p>
-<p>Sets a new value for property #getHeaderLevel headerLevel.</p>
-<p>Semantic level of the header.
- For more information, see sap.m.Title#setLevel.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>setHeaderStyle()</h3>
 <blockquote>
 <p><strong>setHeaderStyle</strong>(<code>sHeaderStyle</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeaderStyle headerStyle.</p>
+<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sHeaderStyle</h5>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
@@ -681,15 +684,17 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Sets a new value for property #getHeaderStyle headerStyle.</p>
-<p>Defines style of the header. For more information, see sap.m.Title#setTitleStyle.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setHeaderVisible()</h3>
 <blockquote>
 <p><strong>setHeaderVisible</strong>(<code>bHeaderVisible?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeaderVisible headerVisible.</p>
+<p>Determines whether the header text is shown in the chart. Regardless of its value, the given header text
+is used to label the chart correctly for accessibility purposes.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bHeaderVisible?</h5>
 <p><code>boolean</code></p>
@@ -699,11 +704,6 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.111</p>
-<p>Sets a new value for property #getHeaderVisible headerVisible.</p>
-<p>Determines whether the header text is shown in the chart. Regardless of its value, the given header text
-is used to label the chart correctly for accessibility purposes.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setHeight()</h3>
 <blockquote>
@@ -727,6 +727,10 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p><strong>setIgnoreToolbarActions</strong>(<code>sIgnoreToolbarActions?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIgnoreToolbarActions ignoreToolbarActions.</p>
+<p>Specifies which actions must not be available in the chart&#39;s toolbar.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
 <h4>Parameters</h4>
 <h5>sIgnoreToolbarActions?</h5>
 <p>(<a href="../../enums/ChartToolbarActionType/enumerations/ChartToolbarActionType.html"><code>ChartToolbarActionType</code></a> | <code>&quot;DrillDownUp&quot;</code> | <code>&quot;FullScreen&quot;</code> | <code>&quot;Legend&quot;</code> | <code>&quot;ZoomInOut&quot;</code>)[]</p>
@@ -736,16 +740,16 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getIgnoreToolbarActions ignoreToolbarActions.</p>
-<p>Specifies which actions must not be available in the chart&#39;s toolbar.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>setLegendVisible()</h3>
 <blockquote>
 <p><strong>setLegendVisible</strong>(<code>bLegendVisible?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getLegendVisible legendVisible.</p>
+<p>Enables the legend of the chart. <strong>Note:</strong> The setter calls <code>setLegendVisible</code> of the delegate class.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bLegendVisible?</h5>
 <p><code>boolean</code></p>
@@ -755,10 +759,6 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getLegendVisible legendVisible.</p>
-<p>Enables the legend of the chart. <strong>Note:</strong> The setter calls <code>setLegendVisible</code> of the delegate class.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setMinHeight()</h3>
 <blockquote>
@@ -799,6 +799,7 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p><strong>setNoData</strong>(<code>oNoData</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets the aggregated #getNoData noData.</p>
 <h4>Parameters</h4>
 <h5>oNoData</h5>
 <p><code>Control1</code></p>
@@ -808,13 +809,17 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.107</p>
-<p>Sets the aggregated #getNoData noData.</p>
 <hr>
 <h3>setP13nMode()</h3>
 <blockquote>
 <p><strong>setP13nMode</strong>(<code>sP13nMode?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getP13nMode p13nMode.</p>
+<p>Specifies the personalization options available for the chart.
+ <strong>Note:</strong> The order of the provided options does not influence the arrangement of the icons on the UI.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
 <h4>Parameters</h4>
 <h5>sP13nMode?</h5>
 <p>(<code>&quot;Item&quot;</code> | <code>&quot;Filter&quot;</code> | <code>&quot;Sort&quot;</code> | <code>&quot;Type&quot;</code> | <a href="../../enums/ChartP13nMode/enumerations/ChartP13nMode.html"><code>ChartP13nMode</code></a>)[]</p>
@@ -824,11 +829,6 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getP13nMode p13nMode.</p>
-<p>Specifies the personalization options available for the chart.
- <strong>Note:</strong> The order of the provided options does not influence the arrangement of the icons on the UI.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>setSelectionDetailsActions()</h3>
 <blockquote>
@@ -849,6 +849,11 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p><strong>setShowChartTooltip</strong>(<code>bShowChartTooltip?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getShowChartTooltip showChartTooltip.</p>
+<p>Controls the visibility of the chart tooltip. If set to <code>true</code>, a call of the <code>delegate.setChartTooltipVisibility</code>
+will be triggered and can be used to make the <code>Chart</code> tooltip visible.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowChartTooltip?</h5>
 <p><code>boolean</code></p>
@@ -858,11 +863,6 @@ is used to label the chart correctly for accessibility purposes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getShowChartTooltip showChartTooltip.</p>
-<p>Controls the visibility of the chart tooltip. If set to <code>true</code>, a call of the <code>delegate.setChartTooltipVisibility</code>
-will be triggered and can be used to make the <code>Chart</code> tooltip visible.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setShowSelectionDetails()</h3>
 <blockquote>
@@ -952,6 +952,6 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../Control/classes/Control.html"><code>Control</code></a>.<a href="../../Control/classes/Control.html#getmetadata"><code>getMetadata</code></a></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

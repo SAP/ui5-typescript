@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: Control — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Control — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: Control — SAPUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: Control — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/Control/classes/Control.html">
-<meta property="og:title" content="Class: Control — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Control — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: Control — SAPUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: Control — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/Control/classes/Control.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/Control/README.html">Control</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Control</a> / Control</p>
-<h1>Class: Control</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Control</a> / Control</p>
+<h1>Abstract Class: Control</h1>
 <pre class="sig"><span class="kw">import</span> Control <span class="kw">from</span> <span class="str">"sap/ui/core/Control"</span>;</pre>
 <p>Base Class for Controls.</p>
 <p>Controls provide the following features:
@@ -440,6 +440,10 @@ in the documentation for an introduction to control development.</p>
 <li><a href="../../../../../../sap.ui.ux3/sap/ui/ux3/ThingViewer/classes/ThingViewer.html"><code>ThingViewer</code></a></li>
 <li><a href="../../../../../../sap.ui.ux3/sap/ui/ux3/ToolPopup/classes/ToolPopup.html"><code>ToolPopup</code></a></li>
 <li><a href="../../../../../../sap.ui.vbm/sap/ui/vbm/Cluster/classes/Cluster.html"><code>Cluster</code></a></li>
+<li><a href="../../../../../../sap.ui.vbm/sap/ui/vbm/ContainerBase/classes/ContainerBase.html"><code>ContainerBase</code></a></li>
+<li><a href="../../../../../../sap.ui.vbm/sap/ui/vbm/ContainerContent/classes/ContainerContent.html"><code>ContainerContent</code></a></li>
+<li><a href="../../../../../../sap.ui.vbm/sap/ui/vbm/ListPanel/classes/ListPanel.html"><code>ListPanel</code></a></li>
+<li><a href="../../../../../../sap.ui.vbm/sap/ui/vbm/ListPanelStack/classes/ListPanelStack.html"><code>ListPanelStack</code></a></li>
 <li><a href="../../../../../../sap.ui.vbm/sap/ui/vbm/VBI/classes/VBI.html"><code>VBI</code></a></li>
 <li><a href="../../../../../../sap.ui.vbm/sap/ui/vbm/Viewport/classes/Viewport.html"><code>Viewport</code></a></li>
 <li><a href="../../../../../../sap.ui.vk/sap/ui/vk/Annotation/classes/Annotation.html"><code>Annotation</code></a></li>
@@ -740,6 +744,7 @@ of this <code>sap.ui.core.Control</code>.</p>
 <blockquote>
 <p><strong>fireValidateFieldGroup</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:validateFieldGroup validateFieldGroup to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Control$ValidateFieldGroupEventParameters.html"><code>Control$ValidateFieldGroupEventParameters</code></a></p>
@@ -749,19 +754,11 @@ of this <code>sap.ui.core.Control</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:validateFieldGroup validateFieldGroup to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
-<p>Current accessibility state of the control.</p>
-<h4>Since</h4>
-<p>1.37.0</p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>This function (if available on the concrete control) provides the current accessibility state of the
 control.</p>
 <p>Applications must not call this hook method directly, it is called by the framework.</p>
@@ -782,11 +779,21 @@ MyControl.prototype.getAccessibilityInfo = function() {
 </code></pre>
 <p>Note: The returned object provides the accessibility state of the control at the point in time when this
 function is called.</p>
+<h4>Returns</h4>
+<p><a href="../../library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
+<p>Current accessibility state of the control.</p>
+<h4>Since</h4>
+<p>1.37.0</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3><del>getBlocked()</del></h3>
 <blockquote>
 <p><strong>getBlocked</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getBlocked blocked.</p>
+<p>Whether the control is currently in blocked state.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>blocked</code></p>
@@ -794,9 +801,6 @@ function is called.</p>
 <p>(since 1.69) - The blocked property is deprecated. There is no accessibility support for
 this property. Blocked controls should not be used inside Controls, which rely on keyboard navigation,
 e.g. List controls.</p>
-<p>Gets current value of property #getBlocked blocked.</p>
-<p>Whether the control is currently in blocked state.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getBusy()</h3>
 <blockquote>
@@ -824,17 +828,17 @@ e.g. List controls.</p>
 <blockquote>
 <p><strong>getBusyIndicatorSize</strong>(): <a href="../../library/enumerations/BusyIndicatorSize.html"><code>BusyIndicatorSize</code></a> | <code>&quot;Auto&quot;</code> | <code>&quot;Large&quot;</code> | <code>&quot;Medium&quot;</code> | <code>&quot;Section&quot;</code> | <code>&quot;Small&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../library/enumerations/BusyIndicatorSize.html"><code>BusyIndicatorSize</code></a> | <code>&quot;Auto&quot;</code> | <code>&quot;Large&quot;</code> | <code>&quot;Medium&quot;</code> | <code>&quot;Section&quot;</code> | <code>&quot;Small&quot;</code></p>
-<p>Value of property <code>busyIndicatorSize</code></p>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Gets current value of property #getBusyIndicatorSize busyIndicatorSize.</p>
 <p>The size of the BusyIndicator. For controls with a width smaller 3rem a <code>sap.ui.core.BusyIndicatorSize.Small</code>
 should be used. If the size could vary in width and the width could get smaller than 3rem, the <code>sap.ui.core.BusyIndicatorSize.Auto</code>
 option could be used. The default is set to <code>sap.ui.core.BusyIndicatorSize.Medium</code> For a full screen
 BusyIndicator use <code>sap.ui.core.BusyIndicatorSize.Large</code>.</p>
 <p>Default value is <code>&#39;Medium&#39;</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../library/enumerations/BusyIndicatorSize.html"><code>BusyIndicatorSize</code></a> | <code>&quot;Auto&quot;</code> | <code>&quot;Large&quot;</code> | <code>&quot;Medium&quot;</code> | <code>&quot;Section&quot;</code> | <code>&quot;Small&quot;</code></p>
+<p>Value of property <code>busyIndicatorSize</code></p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>getControlsByFieldGroupId()</h3>
 <blockquote>
@@ -874,13 +878,13 @@ to apply the changes.</p>
 <blockquote>
 <p><strong>getRenderer</strong>(): <a href="../../ElementMetadata/type-aliases/ControlRenderer.html"><code>ControlRenderer</code></a></p>
 </blockquote>
+<p>Returns a renderer for this control instance.</p>
+<p>It is retrieved using the RenderManager as done during rendering.</p>
 <h4>Returns</h4>
 <p><a href="../../ElementMetadata/type-aliases/ControlRenderer.html"><code>ControlRenderer</code></a></p>
 <p>a Renderer suitable for this Control instance.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a renderer for this control instance.</p>
-<p>It is retrieved using the RenderManager as done during rendering.</p>
 <hr>
 <h3>getVisible()</h3>
 <blockquote>
@@ -914,14 +918,6 @@ the given string with space are already set on the control via previous call(s) 
 <blockquote>
 <p><strong>invalidate</strong>(<code>oOrigin?</code>): <code>void</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oOrigin?</h5>
-<p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></p>
-<p>Child control for which the method was called</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Marks this control and its children for a re-rendering, usually because its state has changed and now
 differs from the rendered DOM.</p>
 <p>Managed settings (properties, aggregations, associations) automatically invalidate the corresponding
@@ -933,6 +929,14 @@ areas that have been invalidated by their children. As there is no strong guidel
 whether or not to provide the parameter, it is not a reliable source of information. It is, therefore,
 not recommended in general to use it, only in scenarios where a control and its descendants know each
 other very well (e.g. complex controls where parent and children have the same code owner).</p>
+<h4>Parameters</h4>
+<h5>oOrigin?</h5>
+<p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></p>
+<p>Child control for which the method was called</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <h4>Overrides</h4>
 <p><a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../Element/classes/UI5Element.html#invalidate"><code>invalidate</code></a></p>
 <hr>
@@ -940,43 +944,55 @@ other very well (e.g. complex controls where parent and children have the same c
 <blockquote>
 <p><strong>isBusy</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Check if the control is currently in busy state.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.15) - use #getBusy instead</p>
-<p>Check if the control is currently in busy state.</p>
 <hr>
 <h3>onAfterRendering()</h3>
 <blockquote>
 <p><strong>onAfterRendering</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Function is called when the rendering of the control is completed.</p>
+<p>Applications must not call this hook method directly, it is called by the framework.</p>
+<p>Subclasses of Control should override this hook to implement any necessary actions after the rendering.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
 <p>onAfterRendering event object</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
+<p>This hook method must not have a return value. Return value <code>void</code> is deprecated since 1.120,
+as it does not force functions to <strong>not</strong> return something. This implies that, for instance, no async
+function returning a Promise should be used.</p>
+<p><strong>Note:</strong> While the return type is currently <code>void|undefined</code>, any implementation of this hook must not
+return anything but undefined. Any other return value will cause an error log in this version of UI5
+and will fail in future major versions of UI5.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Function is called when the rendering of the control is completed.</p>
-<p>Applications must not call this hook method directly, it is called by the framework.</p>
-<p>Subclasses of Control should override this hook to implement any necessary actions after the rendering.</p>
 <hr>
 <h3>onBeforeRendering()</h3>
 <blockquote>
 <p><strong>onBeforeRendering</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Function is called before the rendering of the control is started.</p>
+<p>Applications must not call this hook method directly, it is called by the framework.</p>
+<p>Subclasses of Control should override this hook to implement any necessary actions before the rendering.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
 <p>onBeforeRendering event object</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
+<p>This hook method must not have a return value. Return value <code>void</code> is deprecated since 1.120,
+as it does not force functions to <strong>not</strong> return something. This implies that, for instance, no async
+function returning a Promise should be used.</p>
+<p><strong>Note:</strong> While the return type is currently <code>void|undefined</code>, any implementation of this hook must not
+return anything but undefined. Any other return value will cause an error log in this version of UI5
+and will fail in future major versions of UI5.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Function is called before the rendering of the control is started.</p>
-<p>Applications must not call this hook method directly, it is called by the framework.</p>
-<p>Subclasses of Control should override this hook to implement any necessary actions before the rendering.</p>
 <hr>
 <h3>placeAt()</h3>
 <blockquote>
@@ -1023,6 +1039,9 @@ style classes like &quot;sapUiBtn&quot; cannot be removed.</p>
 <blockquote>
 <p><strong>rerender</strong>(): <code>void</code></p>
 </blockquote>
+<p>Synchronously updates the DOM of this control to reflect the current object state.</p>
+<p>Note that this method can only be called when the control already has a DOM representation (it has been
+rendered before) and when the control still is assigned to a UIArea.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
@@ -1034,9 +1053,6 @@ async re-rendering.</p>
 <p>The recommended alternative is to rely on invalidation and standard re-rendering.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Synchronously updates the DOM of this control to reflect the current object state.</p>
-<p>Note that this method can only be called when the control already has a DOM representation (it has been
-rendered before) and when the control still is assigned to a UIArea.</p>
 <h4>Overrides</h4>
 <p><a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../Element/classes/UI5Element.html#rerender"><code>rerender</code></a></p>
 <hr>
@@ -1072,6 +1088,13 @@ following tags as DOM root element: area|base|br|col|embed|hr|img|input|keygen|l
 <blockquote>
 <p><strong>setBusyIndicatorSize</strong>(<code>sBusyIndicatorSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBusyIndicatorSize busyIndicatorSize.</p>
+<p>The size of the BusyIndicator. For controls with a width smaller 3rem a <code>sap.ui.core.BusyIndicatorSize.Small</code>
+should be used. If the size could vary in width and the width could get smaller than 3rem, the <code>sap.ui.core.BusyIndicatorSize.Auto</code>
+option could be used. The default is set to <code>sap.ui.core.BusyIndicatorSize.Medium</code> For a full screen
+BusyIndicator use <code>sap.ui.core.BusyIndicatorSize.Large</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;Medium&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sBusyIndicatorSize?</h5>
 <p><a href="../../library/enumerations/BusyIndicatorSize.html"><code>BusyIndicatorSize</code></a> | <code>&quot;Auto&quot;</code> | <code>&quot;Large&quot;</code> | <code>&quot;Medium&quot;</code> | <code>&quot;Section&quot;</code> | <code>&quot;Small&quot;</code></p>
@@ -1081,27 +1104,11 @@ following tags as DOM root element: area|base|br|col|embed|hr|img|input|keygen|l
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Sets a new value for property #getBusyIndicatorSize busyIndicatorSize.</p>
-<p>The size of the BusyIndicator. For controls with a width smaller 3rem a <code>sap.ui.core.BusyIndicatorSize.Small</code>
-should be used. If the size could vary in width and the width could get smaller than 3rem, the <code>sap.ui.core.BusyIndicatorSize.Auto</code>
-option could be used. The default is set to <code>sap.ui.core.BusyIndicatorSize.Medium</code> For a full screen
-BusyIndicator use <code>sap.ui.core.BusyIndicatorSize.Large</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;Medium&#39;</code>.</p>
 <hr>
 <h3>setFieldGroupIds()</h3>
 <blockquote>
 <p><strong>setFieldGroupIds</strong>(<code>sFieldGroupIds?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sFieldGroupIds?</h5>
-<p><code>string</code>[]</p>
-<p>New value for property <code>fieldGroupIds</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.31</p>
 <p>Sets a new value for property #getFieldGroupIds fieldGroupIds.</p>
 <p>The IDs of a logical field group that this control belongs to.</p>
 <p>All fields in a logical field group should share the same <code>fieldGroupId</code>. Once a logical field group
@@ -1112,6 +1119,15 @@ is suggested to use only valid sap.ui.core.IDs.</p>
 documentation.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>[]</code>.</p>
+<h4>Parameters</h4>
+<h5>sFieldGroupIds?</h5>
+<p><code>string</code>[]</p>
+<p>New value for property <code>fieldGroupIds</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.31</p>
 <hr>
 <h3>setVisible()</h3>
 <blockquote>
@@ -1249,6 +1265,11 @@ this property, please ensure that the constraints documented in section &quot;Co
 <blockquote>
 <p><code>static</code> <strong>getControlsByFieldGroupId</strong>(<code>vFieldGroupIds?</code>): <code>Control</code>[]</p>
 </blockquote>
+<p>Returns a list of all controls with a field group ID. See sap.ui.core.Control#checkFieldGroupIds Control.prototype.checkFieldGroupIds
+for a description of the <code>vFieldGroupIds</code> parameter.</p>
+<p>If possible please use the respective method on a Control instance (see sap.ui.core.Control#getControlsByFieldGroupId).
+The control method only respects aggregated child controls, which is more effective and should be sufficient
+for most use-cases.</p>
 <h4>Parameters</h4>
 <h5>vFieldGroupIds?</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -1258,11 +1279,6 @@ this property, please ensure that the constraints documented in section &quot;Co
 <p>The list of controls with matching field group IDs</p>
 <h4>Since</h4>
 <p>1.118</p>
-<p>Returns a list of all controls with a field group ID. See sap.ui.core.Control#checkFieldGroupIds Control.prototype.checkFieldGroupIds
-for a description of the <code>vFieldGroupIds</code> parameter.</p>
-<p>If possible please use the respective method on a Control instance (see sap.ui.core.Control#getControlsByFieldGroupId).
-The control method only respects aggregated child controls, which is more effective and should be sufficient
-for most use-cases.</p>
 <hr>
 <h3>getMetadata()</h3>
 <blockquote>
@@ -1276,6 +1292,6 @@ for most use-cases.</p>
 <p><a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: BlockBase — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: BlockBase — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: BlockBase — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/BlockBase/classes/BlockBase.html">
 <meta property="og:title" content="Class: BlockBase — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: BlockBase — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: BlockBase — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/BlockBase/classes/BlockBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/BlockBase/README.html">BlockBase</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/BlockBase</a> / BlockBase</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/BlockBase</a> / BlockBase</p>
 <h1>Class: BlockBase</h1>
 <pre class="sig"><span class="kw">import</span> BlockBase <span class="kw">from</span> <span class="str">"sap/uxap/BlockBase"</span>;</pre>
-<h2>Since</h2>
-<p>1.26</p>
 <p>The main element that holds the content that is displayed in an sap.uxap.ObjectPageLayout ObjectPageLayout,
 but not necessarily only there.</p>
 <p>Overview:</p>
@@ -52,6 +50,8 @@ but not necessarily only there.</p>
 attribute (so that the controller can interact with the block). The <code>oParentBlock</code> is firstly available
 in <code>onParentBlockModeChange</code> method. If the controller implements the <code>onParentBlockModeChange</code> method,
 this method will be called with the <code>sMode</code> parameter when the view is used or reused by the block.</p>
+<h2>Since</h2>
+<p>1.26</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -117,6 +117,10 @@ See:
 <blockquote>
 <p><strong>attachViewInit</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:viewInit viewInit event of this <code>sap.uxap.BlockBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
+<p>Fired when an aggregated view is instantiated.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -133,14 +137,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.72</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:viewInit viewInit event of this <code>sap.uxap.BlockBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
-<p>Fired when an aggregated view is instantiated.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachViewInit</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:viewInit viewInit event of this <code>sap.uxap.BlockBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
+<p>Fired when an aggregated view is instantiated.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -153,15 +157,12 @@ otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.72</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:viewInit viewInit event of this <code>sap.uxap.BlockBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
-<p>Fired when an aggregated view is instantiated.</p>
 <hr>
 <h3>createView()</h3>
 <blockquote>
 <p><strong>createView</strong>(<code>mParameter</code>, <code>sMode</code>): <code>Promise</code>&lt;<a href="../../../../../sap.ui.core/sap/ui/core/mvc/View/classes/View.html"><code>View</code></a>&gt;</p>
 </blockquote>
+<p>Creates a view.</p>
 <h4>Parameters</h4>
 <h5>mParameter</h5>
 <p><code>object</code></p>
@@ -174,7 +175,6 @@ otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
 <p>A promise on the created view.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a view.</p>
 <hr>
 <h3>destroyMappings()</h3>
 <blockquote>
@@ -189,6 +189,8 @@ otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
 <blockquote>
 <p><strong>detachViewInit</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:viewInit viewInit event of this <code>sap.uxap.BlockBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -201,13 +203,12 @@ otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:viewInit viewInit event of this <code>sap.uxap.BlockBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireViewInit()</h3>
 <blockquote>
 <p><strong>fireViewInit</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:viewInit viewInit to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/BlockBase$ViewInitEventParameters.html"><code>BlockBase$ViewInitEventParameters</code></a></p>
@@ -219,7 +220,6 @@ otherwise it will be bound to this <code>sap.uxap.BlockBase</code> itself.</p>
 <p>1.72</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:viewInit viewInit to attached listeners.</p>
 <hr>
 <h3>getColumnLayout()</h3>
 <blockquote>
@@ -495,6 +495,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

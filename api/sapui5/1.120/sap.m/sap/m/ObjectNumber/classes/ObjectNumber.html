@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectNumber — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectNumber — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ObjectNumber — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ObjectNumber/classes/ObjectNumber.html">
 <meta property="og:title" content="Class: ObjectNumber — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectNumber — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ObjectNumber — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ObjectNumber/classes/ObjectNumber.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ObjectNumber/README.html">ObjectNumber</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectNumber</a> / ObjectNumber</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectNumber</a> / ObjectNumber</p>
 <h1>Class: ObjectNumber</h1>
 <pre class="sig"><span class="kw">import</span> ObjectNumber <span class="kw">from</span> <span class="str">"sap/m/ObjectNumber"</span>;</pre>
-<h2>Since</h2>
-<p>1.12</p>
 <p>The ObjectNumber control displays number and number unit properties for an object. The number can be
 displayed using semantic colors to provide additional meaning about the object to the user.</p>
 <p>With 1.63, large design of the control is supported by setting <code>sapMObjectNumberLarge</code> CSS class to the
@@ -48,6 +46,8 @@ displayed using semantic colors to provide additional meaning about the object t
 the <code>ObjectNumber</code>. This class can be added by using оObjectStatus.addStyleClass(&quot;sapMObjectNumberLongText&quot;);</p>
 <p><strong>Note:</strong> To fulfill the design guidelines when you are using <code>sapMObjectNumberLarge</code> CSS class set the
 <code>emphasized</code> property to <code>false</code>.</p>
+<h2>Since</h2>
+<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -135,6 +135,10 @@ See:
 <blockquote>
 <p><strong>attachPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.ObjectNumber</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
+<p>Fires when the user clicks/taps on active <code>Object Number</code>.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -151,14 +155,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.86</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.ObjectNumber</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
-<p>Fires when the user clicks/taps on active <code>Object Number</code>.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.ObjectNumber</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
+<p>Fires when the user clicks/taps on active <code>Object Number</code>.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -171,15 +175,13 @@ otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.86</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.ObjectNumber</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
-<p>Fires when the user clicks/taps on active <code>Object Number</code>.</p>
 <hr>
 <h3>detachPress()</h3>
 <blockquote>
 <p><strong>detachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.m.ObjectNumber</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -192,13 +194,12 @@ otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.m.ObjectNumber</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>firePress()</h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -210,19 +211,18 @@ otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
 <p>1.86</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -230,15 +230,15 @@ otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
 <blockquote>
 <p><strong>getActive</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getActive active.</p>
+<p>Indicates if the <code>ObjectNumber</code> text and icon can be clicked/tapped by the user.</p>
+<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to set also the <code>number</code> or <code>unit</code> property.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>active</code></p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Gets current value of property #getActive active.</p>
-<p>Indicates if the <code>ObjectNumber</code> text and icon can be clicked/tapped by the user.</p>
-<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to set also the <code>number</code> or <code>unit</code> property.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -271,27 +271,27 @@ otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
 <blockquote>
 <p><strong>getEmptyIndicatorMode</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getEmptyIndicatorMode emptyIndicatorMode.</p>
+<p>Specifies if an empty indicator should be displayed when there is no number.</p>
+<p>Default value is <code>Off</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
 <p>Value of property <code>emptyIndicatorMode</code></p>
 <h4>Since</h4>
 <p>1.89</p>
-<p>Gets current value of property #getEmptyIndicatorMode emptyIndicatorMode.</p>
-<p>Specifies if an empty indicator should be displayed when there is no number.</p>
-<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>getInverted()</h3>
 <blockquote>
 <p><strong>getInverted</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getInverted inverted.</p>
+<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>inverted</code></p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Gets current value of property #getInverted inverted.</p>
-<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getNumber()</h3>
 <blockquote>
@@ -307,13 +307,13 @@ otherwise it will be bound to this <code>sap.m.ObjectNumber</code> itself.</p>
 <blockquote>
 <p><strong>getNumberUnit</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getNumberUnit numberUnit.</p>
+<p>Defines the number units qualifier.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>numberUnit</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.16.1) - replaced by <code>unit</code> property</p>
-<p>Gets current value of property #getNumberUnit numberUnit.</p>
-<p>Defines the number units qualifier.</p>
 <hr>
 <h3>getState()</h3>
 <blockquote>
@@ -354,13 +354,13 @@ By default, the control inherits the text direction from its parent control.</p>
 <blockquote>
 <p><strong>getUnit</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getUnit unit.</p>
+<p>Defines the number units qualifier. If numberUnit and unit are both set, the unit value is used.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>unit</code></p>
 <h4>Since</h4>
 <p>1.16.1</p>
-<p>Gets current value of property #getUnit unit.</p>
-<p>Defines the number units qualifier. If numberUnit and unit are both set, the unit value is used.</p>
 <hr>
 <h3>removeAllAriaDescribedBy()</h3>
 <blockquote>
@@ -410,6 +410,11 @@ By default, the control inherits the text direction from its parent control.</p>
 <blockquote>
 <p><strong>setActive</strong>(<code>bActive?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getActive active.</p>
+<p>Indicates if the <code>ObjectNumber</code> text and icon can be clicked/tapped by the user.</p>
+<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to set also the <code>number</code> or <code>unit</code> property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bActive?</h5>
 <p><code>boolean</code></p>
@@ -419,11 +424,6 @@ By default, the control inherits the text direction from its parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Sets a new value for property #getActive active.</p>
-<p>Indicates if the <code>ObjectNumber</code> text and icon can be clicked/tapped by the user.</p>
-<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to set also the <code>number</code> or <code>unit</code> property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEmphasized()</h3>
 <blockquote>
@@ -445,6 +445,10 @@ By default, the control inherits the text direction from its parent control.</p>
 <blockquote>
 <p><strong>setEmptyIndicatorMode</strong>(<code>sEmptyIndicatorMode?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptyIndicatorMode emptyIndicatorMode.</p>
+<p>Specifies if an empty indicator should be displayed when there is no number.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Off</code>.</p>
 <h4>Parameters</h4>
 <h5>sEmptyIndicatorMode?</h5>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
@@ -454,15 +458,15 @@ By default, the control inherits the text direction from its parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.89</p>
-<p>Sets a new value for property #getEmptyIndicatorMode emptyIndicatorMode.</p>
-<p>Specifies if an empty indicator should be displayed when there is no number.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>setInverted()</h3>
 <blockquote>
 <p><strong>setInverted</strong>(<code>bInverted?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getInverted inverted.</p>
+<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bInverted?</h5>
 <p><code>boolean</code></p>
@@ -472,10 +476,6 @@ By default, the control inherits the text direction from its parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Sets a new value for property #getInverted inverted.</p>
-<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setNumber()</h3>
 <blockquote>
@@ -496,6 +496,9 @@ By default, the control inherits the text direction from its parent control.</p>
 <blockquote>
 <p><strong>setNumberUnit</strong>(<code>sNumberUnit?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNumberUnit numberUnit.</p>
+<p>Defines the number units qualifier.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sNumberUnit?</h5>
 <p><code>string</code></p>
@@ -505,9 +508,6 @@ By default, the control inherits the text direction from its parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.1) - replaced by <code>unit</code> property</p>
-<p>Sets a new value for property #getNumberUnit numberUnit.</p>
-<p>Defines the number units qualifier.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setState()</h3>
 <blockquote>
@@ -563,6 +563,9 @@ By default, the control inherits the text direction from its parent control.</p>
 <blockquote>
 <p><strong>setUnit</strong>(<code>sUnit?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUnit unit.</p>
+<p>Defines the number units qualifier. If numberUnit and unit are both set, the unit value is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sUnit?</h5>
 <p><code>string</code></p>
@@ -572,9 +575,6 @@ By default, the control inherits the text direction from its parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.1</p>
-<p>Sets a new value for property #getUnit unit.</p>
-<p>Defines the number units qualifier. If numberUnit and unit are both set, the unit value is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -615,6 +615,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

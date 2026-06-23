@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $AnnotationSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $AnnotationSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $AnnotationSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/Annotation/interfaces/$AnnotationSettings.html">
 <meta property="og:title" content="Interface: $AnnotationSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $AnnotationSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $AnnotationSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/Annotation/interfaces/$AnnotationSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/Annotation/README.html">Annotation</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/Annotation</a> / $AnnotationSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/Annotation</a> / $AnnotationSettings</p>
 <h1>Interface: $AnnotationSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $AnnotationSettings } <span class="kw">from</span> <span class="str">"sap/ui/vk/Annotation"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the Annotation constructor.</p>
+<p> (since 1.76.0) - This class is experimental and might be modified or removed in future
+versions.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,12 +51,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>animate?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Controls the animation of the annotation. If set to <code>false</code> then animation is not played.</p>
 <hr>
 <h3>animationDelay?</h3>
 <blockquote>
 <p><code>optional</code> <strong>animationDelay?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Amount of time in seconds to wait before animation is played. Default value of -1 means that this is
 not set.</p>
 <hr>
@@ -60,18 +66,21 @@ not set.</p>
 <blockquote>
 <p><code>optional</code> <strong>annotationId?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Reference to the annotation Id</p>
 <hr>
 <h3>display?</h3>
 <blockquote>
 <p><code>optional</code> <strong>display?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Controls the visibility of the annotation</p>
 <hr>
 <h3>editable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>editable?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>If annotation is editable then double click event is fired when user double clicks on the annotation
 and text editing is allowed by calling openEditor() method. If annotation is also selected then resize
 and reposition handles will be displayed.</p>
@@ -80,6 +89,7 @@ and reposition handles will be displayed.</p>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets the height of the annotation. This uses a scale of 0 to 1, 0% to 100% respectively. This is relative
 to the Viewport&#39;s safe area if present, otherwise it is relative to the Viewport. Negative values will
 be ignored.</p>
@@ -88,46 +98,54 @@ be ignored.</p>
 <blockquote>
 <p><code>optional</code> <strong>name?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Reference to the annotation name</p>
 <hr>
 <h3>nodeRef?</h3>
 <blockquote>
 <p><code>optional</code> <strong>nodeRef?</strong>: <code>any</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Reference to the node that represents the annotation</p>
 <hr>
 <h3>selected?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selected?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Controls the annotation selected state</p>
 <hr>
 <h3>style?</h3>
 <blockquote>
 <p><code>optional</code> <strong>style?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Square&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;Random&quot;</code> | <a href="../../AnnotationStyle/enumerations/AnnotationStyle.html"><code>AnnotationStyle</code></a> | <code>&quot;Expand&quot;</code> | <code>&quot;Explode&quot;</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>The style of the annotation</p>
 <hr>
 <h3>text?</h3>
 <blockquote>
 <p><code>optional</code> <strong>text?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>The text that will be displayed in the annotation</p>
 <hr>
 <h3>textEditor?</h3>
 <blockquote>
 <p><code>optional</code> <strong>textEditor?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <hr>
 <h3>viewport?</h3>
 <blockquote>
 <p><code>optional</code> <strong>viewport?</strong>: <code>string</code> | <a href="../../Viewport/classes/Viewport.html"><code>Viewport</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <hr>
 <h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets the width of the annotation. This uses a scale of 0 to 1, 0% to 100% respectively. This is relative
 to the Viewport&#39;s safe area if present, otherwise it is relative to the Viewport. Negative values will
 be ignored.</p>
@@ -136,6 +154,7 @@ be ignored.</p>
 <blockquote>
 <p><code>optional</code> <strong>xCoordinate?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets the X Coordinate of the annotation. This uses a scale of -0.5 to 0.5, left to right respectively.
 This is relative to the Viewport&#39;s safe area if present, otherwise it is relative to the Viewport.</p>
 <hr>
@@ -143,6 +162,7 @@ This is relative to the Viewport&#39;s safe area if present, otherwise it is rel
 <blockquote>
 <p><code>optional</code> <strong>xOffset?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets horizontal offset of annotation&#39;s position relative to the point where it should be normally placed.
 Can be used to offset annotation from attachment node (if set). This uses a scale of -0.5 to 0.5, left
 to right respectively.</p>
@@ -151,6 +171,7 @@ to right respectively.</p>
 <blockquote>
 <p><code>optional</code> <strong>yCoordinate?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets the Y Coordinate of the annotation. This uses a scale of -0.5 to 0.5, top to bottom respectively.
 This is relative to the Viewport&#39;s safe area if present, otherwise it is relative to the Viewport.</p>
 <hr>
@@ -158,10 +179,11 @@ This is relative to the Viewport&#39;s safe area if present, otherwise it is rel
 <blockquote>
 <p><code>optional</code> <strong>yOffset?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets horizontal offset of annotation&#39;s position relative to the point where it should be normally placed.
 Can be used to offset annotation from attachment node (if set). This uses a scale of -0.5 to 0.5, top
 to bottom respectively.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

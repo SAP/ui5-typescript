@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Context — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Context — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Context — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v4/Context/classes/Context.html">
 <meta property="og:title" content="Class: Context — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Context — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Context — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v4/Context/classes/Context.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › v4 › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/v4/Context/README.html">Context</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/Context</a> / Context</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/Context</a> / Context</p>
 <h1>Class: Context</h1>
 <pre class="sig"><span class="kw">import</span> Context <span class="kw">from</span> <span class="str">"sap/ui/model/odata/v4/Context"</span>;</pre>
-<h2>Since</h2>
-<p>1.39.0</p>
 <p>Implementation of an OData V4 model&#39;s context.</p>
 <p>The context is a pointer to model data as returned by a query from an sap.ui.model.odata.v4.ODataContextBinding
 or an sap.ui.model.odata.v4.ODataListBinding. Contexts are always and only created by such bindings.
@@ -50,6 +48,8 @@ access its value via sap.ui.model.odata.v4.ODataPropertyBinding#getValue.</p>
 are not available yet (#getProperty and #getObject) or asynchronously (#requestProperty
 and #requestObject).</p>
 <p>Context instances are immutable except for their indexes.</p>
+<h2>Since</h2>
+<p>1.39.0</p>
 <h2>Extends</h2>
 <ul>
 <li><code>unknown</code></li>
@@ -68,28 +68,19 @@ and #requestObject).</p>
 <blockquote>
 <p><strong>collapse</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.83.0</p>
 <p>Collapses the group node that this context points to.
 See:
 	#expand
 	#isExpanded</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.83.0</p>
 <hr>
 <h3>created()</h3>
 <blockquote>
 <p><strong>created</strong>(): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
-<p>A promise which is resolved without a defined result when the entity represented by this context
-has been created in the back end. It is rejected with an <code>Error</code> instance where <code>oError.canceled === true</code> if the transient entity is deleted before it is created in the back end, for example via sap.ui.model.odata.v4.Context#delete,
-sap.ui.model.odata.v4.ODataListBinding#resetChanges or sap.ui.model.odata.v4.ODataModel#resetChanges,
-and for all nested contexts within a deep create. It is rejected with an <code>Error</code> instance without <code>oError.canceled</code>
-if loading of $metadata fails. Returns <code>undefined</code> if the context has not been created using sap.ui.model.odata.v4.ODataListBinding#create.</p>
-<h4>Since</h4>
-<p>1.43.0</p>
 <p>Returns a promise that is resolved without data when the entity represented by this context has been
 created in the back end and all selected properties of this entity are available. Expanded navigation
 properties are only available if the context&#39;s binding is refreshable. sap.ui.model.odata.v4.ODataContextBinding#refresh
@@ -99,37 +90,20 @@ and sap.ui.model.odata.v4.ODataListBinding#refresh describe which bindings are r
 entity. This requires that all key properties are available.</p>
 <p>Note that the promise of a nested context within a deep create is always rejected, even if the deep create
 succeeds. See sap.ui.model.odata.v4.ODataListBinding#create for more details.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<p>A promise which is resolved without a defined result when the entity represented by this context
+has been created in the back end. It is rejected with an <code>Error</code> instance where <code>oError.canceled === true</code> if the transient entity is deleted before it is created in the back end, for example via sap.ui.model.odata.v4.Context#delete,
+sap.ui.model.odata.v4.ODataListBinding#resetChanges or sap.ui.model.odata.v4.ODataModel#resetChanges,
+and for all nested contexts within a deep create. It is rejected with an <code>Error</code> instance without <code>oError.canceled</code>
+if loading of $metadata fails. Returns <code>undefined</code> if the context has not been created using sap.ui.model.odata.v4.ODataListBinding#create.</p>
+<h4>Since</h4>
+<p>1.43.0</p>
 <hr>
 <h3>delete()</h3>
 <blockquote>
 <p><strong>delete</strong>(<code>sGroupId?</code>, <code>bDoNotRequestCount?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sGroupId?</h5>
-<p><code>string</code></p>
-<p>The group ID to be used for the DELETE request; if not specified, the update group ID for the context&#39;s
-binding is used, see #getUpdateGroupId. Since 1.81, if this context is transient (see #isTransient),
-no group ID needs to be specified. Since 1.98.0, you can use <code>null</code> to prevent the DELETE request in
-case of a kept-alive context that is not in the collection and of which you know that it does not exist
-on the server anymore (for example, a draft after activation). Since 1.108.0 the usage of a group ID
-with sap.ui.model.odata.v4.SubmitMode.API is possible.</p>
-<h5>bDoNotRequestCount?</h5>
-<p><code>boolean</code></p>
-<p>Whether not to request the new count from the server; useful in case of #replaceWith where it
-is known that the count remains unchanged (since 1.97.0). Since 1.98.0, this is implied if a <code>null</code> group
-ID is used.</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
-<p>A promise which is resolved without a defined result in case of success, or rejected with an
-instance of <code>Error</code> in case of failure, for example if:
-	 the given context does not point to an entity,  the deletion on the server fails,  the deletion
-is canceled via <code>resetChanges</code> (in this case the error instance has the property <code>canceled</code> with value
-<code>true</code>).  The error instance has the property <code>isConcurrentModification</code> with value <code>true</code> in case
-a concurrent modification (e.g. by another user) of the entity between loading and deletion has been
-detected; this should be shown to the user who needs to decide whether to try deletion again. If the
-entity does not exist, we assume it has already been deleted by someone else and report success.</p>
-<h4>Since</h4>
-<p>1.41.0</p>
 <p>Deletes the OData entity this context points to. The context is removed from the binding immediately,
 even if sap.ui.model.odata.v4.SubmitMode.API is used, and the request is only sent later when
 sap.ui.model.odata.v4.ODataModel#submitBatch is called. As soon as the context is deleted on
@@ -159,15 +133,37 @@ See:
 	sap.ui.model.odata.v4.ODataContextBinding#resetChanges
 	sap.ui.model.odata.v4.ODataListBinding#resetChanges
 	sap.ui.model.odata.v4.ODataModel#resetChanges</p>
+<h4>Parameters</h4>
+<h5>sGroupId?</h5>
+<p><code>string</code></p>
+<p>The group ID to be used for the DELETE request; if not specified, the update group ID for the context&#39;s
+binding is used, see #getUpdateGroupId. Since 1.81, if this context is transient (see #isTransient),
+no group ID needs to be specified. Since 1.98.0, you can use <code>null</code> to prevent the DELETE request in
+case of a kept-alive context that is not in the collection and of which you know that it does not exist
+on the server anymore (for example, a draft after activation). Since 1.108.0 the usage of a group ID
+with sap.ui.model.odata.v4.SubmitMode.API is possible.</p>
+<h5>bDoNotRequestCount?</h5>
+<p><code>boolean</code></p>
+<p>Whether not to request the new count from the server; useful in case of #replaceWith where it
+is known that the count remains unchanged (since 1.97.0). Since 1.98.0, this is implied if a <code>null</code> group
+ID is used.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<p>A promise which is resolved without a defined result in case of success, or rejected with an
+instance of <code>Error</code> in case of failure, for example if:
+	 the given context does not point to an entity,  the deletion on the server fails,  the deletion
+is canceled via <code>resetChanges</code> (in this case the error instance has the property <code>canceled</code> with value
+<code>true</code>).  The error instance has the property <code>isConcurrentModification</code> with value <code>true</code> in case
+a concurrent modification (e.g. by another user) of the entity between loading and deletion has been
+detected; this should be shown to the user who needs to decide whether to try deletion again. If the
+entity does not exist, we assume it has already been deleted by someone else and report success.</p>
+<h4>Since</h4>
+<p>1.41.0</p>
 <hr>
 <h3>destroy()</h3>
 <blockquote>
 <p><strong>destroy</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.41.0</p>
 <p>Destroys this context, that is, it removes this context from all dependent bindings and drops references
 to binding and model, so that the context cannot be used anymore; it keeps path and index for debugging
 purposes.</p>
@@ -175,63 +171,70 @@ purposes.</p>
 its binding.
 See:
 	sap.ui.base.Object#destroy</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.41.0</p>
 <hr>
 <h3>expand()</h3>
 <blockquote>
 <p><strong>expand</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.77.0</p>
 <p>Expands the group node that this context points to.
 See:
 	#collapse
 	#isExpanded</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.77.0</p>
 <hr>
 <h3>getBinding()</h3>
 <blockquote>
 <p><strong>getBinding</strong>(): <a href="../../ODataListBinding/classes/ODataListBinding.html"><code>ODataListBinding</code></a> | <a href="../../ODataContextBinding/classes/ODataContextBinding.html"><code>ODataContextBinding</code></a></p>
 </blockquote>
+<p>Returns the binding this context belongs to.</p>
 <h4>Returns</h4>
 <p><a href="../../ODataListBinding/classes/ODataListBinding.html"><code>ODataListBinding</code></a> | <a href="../../ODataContextBinding/classes/ODataContextBinding.html"><code>ODataContextBinding</code></a></p>
 <p>The context&#39;s binding</p>
 <h4>Since</h4>
 <p>1.39.0</p>
-<p>Returns the binding this context belongs to.</p>
 <hr>
 <h3>getCanonicalPath()</h3>
 <blockquote>
 <p><strong>getCanonicalPath</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>The canonical path (e.g. &quot;/SalesOrderList(&#39;0500000000&#39;)&quot;)</p>
-<h4>Since</h4>
-<p>1.39.0</p>
 <p>Returns the &quot;canonical path&quot; of the entity for this context. According to &quot;4.3.1 Canonical URL&quot; of the specification &quot;OData Version 4.0 Part 2: URL Conventions&quot;, this is
 the &quot;name of the entity set associated with the entity followed by the key predicate identifying the
 entity within the collection&quot;. Use the canonical path in sap.ui.core.Element#bindElement to create
 an element binding.</p>
 <p>Note: For a transient context (see #isTransient) a wrong path is returned unless all key properties
 are available within the initial data.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>The canonical path (e.g. &quot;/SalesOrderList(&#39;0500000000&#39;)&quot;)</p>
+<h4>Since</h4>
+<p>1.39.0</p>
 <hr>
 <h3>getGroupId()</h3>
 <blockquote>
 <p><strong>getGroupId</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the group ID of the context&#39;s binding that is used for read requests. See sap.ui.model.odata.v4.ODataListBinding#getGroupId
+and sap.ui.model.odata.v4.ODataContextBinding#getGroupId.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The group ID</p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Returns the group ID of the context&#39;s binding that is used for read requests. See sap.ui.model.odata.v4.ODataListBinding#getGroupId
-and sap.ui.model.odata.v4.ODataContextBinding#getGroupId.</p>
 <hr>
 <h3>getIndex()</h3>
 <blockquote>
 <p><strong>getIndex</strong>(): <code>number</code></p>
 </blockquote>
+<p>Returns the context&#39;s index within the binding&#39;s collection. The return value changes when a new entity
+is added via sap.ui.model.odata.v4.ODataListBinding#create without <code>bAtEnd</code>, and when a context
+representing a created entity is deleted again.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>The context&#39;s index within the binding&#39;s collection. It is <code>undefined</code> if
@@ -239,23 +242,11 @@ and sap.ui.model.odata.v4.ODataContextBinding#getGroupId.</p>
 currently.</p>
 <h4>Since</h4>
 <p>1.39.0</p>
-<p>Returns the context&#39;s index within the binding&#39;s collection. The return value changes when a new entity
-is added via sap.ui.model.odata.v4.ODataListBinding#create without <code>bAtEnd</code>, and when a context
-representing a created entity is deleted again.</p>
 <hr>
 <h3>getObject()</h3>
 <blockquote>
 <p><strong>getObject</strong>(<code>sPath?</code>): <code>any</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sPath?</h5>
-<p><code>string</code></p>
-<p>A path relative to this context</p>
-<h4>Returns</h4>
-<p><code>any</code></p>
-<p>The requested value</p>
-<h4>Since</h4>
-<p>1.39.0</p>
 <p>Returns the value for the given path relative to this context. The function allows access to the complete
 data the context points to (if <code>sPath</code> is &quot;&quot;) or any part thereof. The data is a JSON structure as described
 in &quot;OData
@@ -265,25 +256,39 @@ for asynchronous access.</p>
 <p>The header context of a list binding only delivers <code>$count</code> (wrapped in an object if <code>sPath</code> is &quot;&quot;).
 See:
 	sap.ui.model.Context#getObject</p>
+<h4>Parameters</h4>
+<h5>sPath?</h5>
+<p><code>string</code></p>
+<p>A path relative to this context</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>The requested value</p>
+<h4>Since</h4>
+<p>1.39.0</p>
 <hr>
 <h3>getParent()</h3>
 <blockquote>
 <p><strong>getParent</strong>(): <code>Context</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120.0)</p>
-<p>Returns the parent node (in case of a recursive hierarchy, see #setAggregation, where <code>oAggregation.expandTo</code>
-must be equal to one).
-See:
-	#requestParent</p>
+<p>Returns the parent node (in case of a recursive hierarchy; see sap.ui.model.odata.v4.ODataListBinding#setAggregation)
+or <code>undefined</code> if the parent of this node hasn&#39;t been read yet; it can then be requested via #requestParent.</p>
+<p> (since 1.120.0)</p>
 <h4>Returns</h4>
 <p><code>Context</code></p>
-<p>The parent node, or <code>null</code> if this node is a root node and thus has no parent</p>
+<p>The parent node, or <code>null</code> if this node is a root node and thus has no parent, or <code>undefined</code>
+if the parent node hasn&#39;t been read yet</p>
 <hr>
 <h3>getProperty()</h3>
 <blockquote>
 <p><strong>getProperty</strong>(<code>sPath</code>, <code>bExternalFormat?</code>): <code>any</code></p>
 </blockquote>
+<p>Returns the property value for the given path relative to this context. The path is expected to point
+to a structural property with primitive type. Returns <code>undefined</code> if the data is not (yet) available;
+no request is triggered. Use #requestProperty for asynchronous access.
+See:
+	sap.ui.model.Context#getProperty
+	sap.ui.model.odata.v4.ODataMetaModel#requestUI5Type</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -298,47 +303,43 @@ is returned.</p>
 <p>The requested property value</p>
 <h4>Since</h4>
 <p>1.39.0</p>
-<p>Returns the property value for the given path relative to this context. The path is expected to point
-to a structural property with primitive type. Returns <code>undefined</code> if the data is not (yet) available;
-no request is triggered. Use #requestProperty for asynchronous access.
-See:
-	sap.ui.model.Context#getProperty
-	sap.ui.model.odata.v4.ODataMetaModel#requestUI5Type</p>
 <hr>
 <h3>getUpdateGroupId()</h3>
 <blockquote>
 <p><strong>getUpdateGroupId</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the group ID of the context&#39;s binding that is used for update requests. See sap.ui.model.odata.v4.ODataListBinding#getUpdateGroupId
+and sap.ui.model.odata.v4.ODataContextBinding#getUpdateGroupId.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The update group ID</p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Returns the group ID of the context&#39;s binding that is used for update requests. See sap.ui.model.odata.v4.ODataListBinding#getUpdateGroupId
-and sap.ui.model.odata.v4.ODataContextBinding#getUpdateGroupId.</p>
 <hr>
 <h3>hasPendingChanges()</h3>
 <blockquote>
 <p><strong>hasPendingChanges</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Whether there are pending changes</p>
-<h4>Since</h4>
-<p>1.53.0</p>
 <p>Returns whether there are pending changes for bindings dependent on this context, or for unresolved bindings
 (see sap.ui.model.Binding#isResolved) which were dependent on this context at the time the pending
 change was created. This includes the context itself being #isTransient transient or #delete deleted
 on the client, but not yet on the server. Since 1.98.0, #isInactive inactive contexts are ignored,
 unless their sap.ui.model.odata.v4.ODataListBinding#event:createActivate activation has been
 prevented and therefore #isInactive returns <code>1</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Whether there are pending changes</p>
+<h4>Since</h4>
+<p>1.53.0</p>
 <hr>
 <h3>isAncestorOf()</h3>
 <blockquote>
-<p><strong>isAncestorOf</strong>(<code>oNode</code>): <code>boolean</code></p>
+<p><strong>isAncestorOf</strong>(<code>oNode?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Tells whether this node is an ancestor of (or the same as) the given node (in case of a recursive hierarchy,
+see sap.ui.model.odata.v4.ODataListBinding#setAggregation).</p>
 <h4>Parameters</h4>
-<h5>oNode</h5>
+<h5>oNode?</h5>
 <p><code>Context</code></p>
 <p>Some node which may be a descendant</p>
 <h4>Returns</h4>
@@ -346,50 +347,42 @@ prevented and therefore #isInactive returns <code>1</code>.</p>
 <p>Whether the assumed ancestor relation holds</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Tells whether this node is an ancestor of (or the same as) the given node (in case of a recursive hierarchy,
-see sap.ui.model.odata.v4.ODataListBinding#setAggregation).</p>
 <hr>
 <h3>isDeleted()</h3>
 <blockquote>
 <p><strong>isDeleted</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p><code>true</code> if this context is deleted</p>
-<h4>Since</h4>
-<p>1.105.0</p>
 <p>Returns whether this context is deleted. It becomes <code>true</code> immediately after calling #delete,
 even while the request is waiting for sap.ui.model.odata.v4.ODataModel#submitBatch submitBatch
 or is in process. It becomes <code>false</code> again when the DELETE request fails or is canceled. The result of
 this function can also be accessed via the &quot;@$ui5.context.isDeleted&quot; instance annotation at the entity.
 See:
 	#delete</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p><code>true</code> if this context is deleted</p>
+<h4>Since</h4>
+<p>1.105.0</p>
 <hr>
 <h3>isExpanded()</h3>
 <blockquote>
 <p><strong>isExpanded</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Tells whether the group node that this context points to is expanded.
+See:
+	#collapse
+	#expand</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the group node that this context points to is expanded, or <code>undefined</code> if the node is
 not expandable</p>
 <h4>Since</h4>
 <p>1.77.0</p>
-<p>Tells whether the group node that this context points to is expanded.
-See:
-	#collapse
-	#expand</p>
 <hr>
 <h3>isInactive()</h3>
 <blockquote>
 <p><strong>isInactive</strong>(): <code>number</code> | <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code> | <code>boolean</code></p>
-<p><code>true</code> if this context is inactive, <code>false</code> if it was created in an inactive state and has been
-activated, <code>1</code> in case activation has been prevented (since 1.110.0), and <code>undefined</code> otherwise.</p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <p>Returns whether this context is inactive. The result of this function can also be accessed via instance
 annotation &quot;@$ui5.context.isInactive&quot; at the entity.</p>
 <p>Since 1.110.0, <code>1</code> is returned in case sap.ui.model.odata.v4.ODataListBinding#event:createActivate activation
@@ -400,30 +393,36 @@ same, no matter whether activation has been prevented or not.
 See:
 	#isTransient
 	sap.ui.model.odata.v4.ODataListBinding#create</p>
+<h4>Returns</h4>
+<p><code>number</code> | <code>boolean</code></p>
+<p><code>true</code> if this context is inactive, <code>false</code> if it was created in an inactive state and has been
+activated, <code>1</code> in case activation has been prevented (since 1.110.0), and <code>undefined</code> otherwise.</p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <hr>
 <h3>isKeepAlive()</h3>
 <blockquote>
 <p><strong>isKeepAlive</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether this context is kept alive even when it is removed from its binding&#39;s collection, for
+example if a filter is applied and the entity represented by this context does not match the filter criteria.
+See:
+	#setKeepAlive</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p><code>true</code> if this context is kept alive</p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Returns whether this context is kept alive even when it is removed from its binding&#39;s collection, for
-example if a filter is applied and the entity represented by this context does not match the filter criteria.
-See:
-	#setKeepAlive</p>
 <hr>
 <h3>isSelected()</h3>
 <blockquote>
 <p><strong>isSelected</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.111.0)</p>
 <p>Tells whether this context is currently selected, but not #delete deleted on the client.
 See:
 	#setSelected</p>
+<p> (since 1.111.0)</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether this context is currently selected</p>
@@ -432,35 +431,36 @@ See:
 <blockquote>
 <p><strong>isTransient</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Whether this context is transient if it is created using sap.ui.model.odata.v4.ODataListBinding#create;
-<code>undefined</code> if it is not created using sap.ui.model.odata.v4.ODataListBinding#create</p>
-<h4>Since</h4>
-<p>1.43.0</p>
 <p>For a context created using sap.ui.model.odata.v4.ODataListBinding#create, the method returns
 <code>true</code> if the context is transient, meaning that the promise returned by #created is not yet
 resolved or rejected, and returns <code>false</code> if the context is not transient. The result of this function
 can also be accessed via instance annotation &quot;@$ui5.context.isTransient&quot; at the entity.
 See:
 	#isInactive</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Whether this context is transient if it is created using sap.ui.model.odata.v4.ODataListBinding#create;
+<code>undefined</code> if it is not created using sap.ui.model.odata.v4.ODataListBinding#create</p>
+<h4>Since</h4>
+<p>1.43.0</p>
 <hr>
 <h3>move()</h3>
 <blockquote>
-<p><strong>move</strong>(<code>oParameters</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
+<p><strong>move</strong>(<code>oParameters?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.119.0)</p>
 <p>Moves this node to the given parent (in case of a recursive hierarchy, see sap.ui.model.odata.v4.ODataListBinding#setAggregation,
-where <code>oAggregation.expandTo</code> must be one). No other sap.ui.model.odata.v4.ODataListBinding#create creation,
+where <code>oAggregation.expandTo</code> must be either one or at least <code>Number.MAX_SAFE_INTEGER</code>). No other sap.ui.model.odata.v4.ODataListBinding#create creation,
 #delete deletion, or move must be pending, and no other modification (including collapse of some
-ancestor node) must happen while this move is pending!</p>
+ancestor node) must happen while this move is pending! Omitting a new parent turns this node into a root
+node (since 1.121.0).</p>
 <p>This context&#39;s #getIndex index may change and it becomes &quot;created persisted&quot;, with #isTransient
 returning <code>false</code> etc.</p>
+<p> (since 1.119.0)</p>
 <h4>Parameters</h4>
-<h5>oParameters</h5>
+<h5>oParameters?</h5>
 <p>A parameter object</p>
-<h6>parent</h6>
+<h6>parent?</h6>
 <p><code>Context</code></p>
 <p>The new parent&#39;s context</p>
 <h4>Returns</h4>
@@ -472,6 +472,8 @@ in case of an error</p>
 <blockquote>
 <p><strong>refresh</strong>(<code>sGroupId?</code>, <code>bAllowRemoval?</code>): <code>void</code></p>
 </blockquote>
+<p>Refreshes the single entity represented by this context. Use #requestRefresh if you want to wait
+for the refresh.</p>
 <h4>Parameters</h4>
 <h5>sGroupId?</h5>
 <p><code>string</code></p>
@@ -490,13 +492,14 @@ entity does no longer exist in the back end. In this case, the <code>fnOnBeforeD
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.53.0</p>
-<p>Refreshes the single entity represented by this context. Use #requestRefresh if you want to wait
-for the refresh.</p>
 <hr>
 <h3>replaceWith()</h3>
 <blockquote>
 <p><strong>replaceWith</strong>(<code>oOtherContext</code>): <code>void</code></p>
 </blockquote>
+<p>Replaces this context with the given other context &quot;in situ&quot;, that is, at the index it currently has
+in its list binding&#39;s collection. You probably want to delete this context afterwards without requesting
+the new count from the server, see the <code>bDoNotRequestCount</code> parameter of #delete.</p>
 <h4>Parameters</h4>
 <h5>oOtherContext</h5>
 <p><code>Context</code></p>
@@ -505,14 +508,17 @@ for the refresh.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.97.0</p>
-<p>Replaces this context with the given other context &quot;in situ&quot;, that is, at the index it currently has
-in its list binding&#39;s collection. You probably want to delete this context afterwards without requesting
-the new count from the server, see the <code>bDoNotRequestCount</code> parameter of #delete.</p>
 <hr>
 <h3>requestCanonicalPath()</h3>
 <blockquote>
 <p><strong>requestCanonicalPath</strong>(): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Returns a promise for the &quot;canonical path&quot; of the entity for this context. According to &quot;4.3.1 Canonical URL&quot; of the specification &quot;OData Version 4.0 Part 2: URL Conventions&quot;, this is
+the &quot;name of the entity set associated with the entity followed by the key predicate identifying the
+entity within the collection&quot;. Use the canonical path in sap.ui.core.Element#bindElement to create
+an element binding.</p>
+<p>Note: For a transient context (see #isTransient) a wrong path is returned unless all key properties
+are available within the initial data.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>string</code>&gt;</p>
 <p>A promise which is resolved with the canonical path (e.g. &quot;/SalesOrderList(&#39;0500000000&#39;)&quot;) in
@@ -520,26 +526,11 @@ case of success, or rejected with an instance of <code>Error</code> in case of f
 does not point to an entity</p>
 <h4>Since</h4>
 <p>1.39.0</p>
-<p>Returns a promise for the &quot;canonical path&quot; of the entity for this context. According to &quot;4.3.1 Canonical URL&quot; of the specification &quot;OData Version 4.0 Part 2: URL Conventions&quot;, this is
-the &quot;name of the entity set associated with the entity followed by the key predicate identifying the
-entity within the collection&quot;. Use the canonical path in sap.ui.core.Element#bindElement to create
-an element binding.</p>
-<p>Note: For a transient context (see #isTransient) a wrong path is returned unless all key properties
-are available within the initial data.</p>
 <hr>
 <h3>requestObject()</h3>
 <blockquote>
 <p><strong>requestObject</strong>(<code>sPath?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sPath?</h5>
-<p><code>string</code></p>
-<p>A path relative to this context</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
-<p>A promise on the requested value</p>
-<h4>Since</h4>
-<p>1.39.0</p>
 <p>Returns a promise on the value for the given path relative to this context. The function allows access
 to the complete data the context points to (if <code>sPath</code> is &quot;&quot;) or any part thereof. The data is a JSON
 structure as described in &quot;OData JSON Format Version 4.0&quot;. Note that the function clones the result. Modify values via sap.ui.model.odata.v4.Context#setProperty.</p>
@@ -549,17 +540,26 @@ See:
 	#getBinding
 	sap.ui.model.odata.v4.ODataContextBinding#refresh
 	sap.ui.model.odata.v4.ODataListBinding#refresh</p>
+<h4>Parameters</h4>
+<h5>sPath?</h5>
+<p><code>string</code></p>
+<p>A path relative to this context</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>A promise on the requested value</p>
+<h4>Since</h4>
+<p>1.39.0</p>
 <hr>
 <h3>requestParent()</h3>
 <blockquote>
 <p><strong>requestParent</strong>(): <code>Promise</code>&lt;<code>Context</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120.0)</p>
-<p>Requests the parent node (in case of a recursive hierarchy, see #setAggregation, where <code>oAggregation.expandTo</code>
-must be equal to one).
+<p>Requests the parent node (in case of a recursive hierarchy; see sap.ui.model.odata.v4.ODataListBinding#setAggregation).</p>
+<p>Note: <strong>DO NOT</strong> call #setKeepAlive on the resulting context!
 See:
 	#getParent</p>
+<p> (since 1.120.0)</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>Context</code>&gt;</p>
 <p>A promise which:
@@ -571,6 +571,11 @@ See:
 <blockquote>
 <p><strong>requestProperty</strong>(<code>vPath?</code>, <code>bExternalFormat?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Returns a promise on the property value for the given path relative to this context. The path is expected
+to point to a structural property with primitive type. Since 1.81.1 it is possible to request more than
+one property. Property values that are not cached yet are requested from the back end.
+See:
+	sap.ui.model.odata.v4.ODataMetaModel#requestUI5Type</p>
 <h4>Parameters</h4>
 <h5>vPath?</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -585,16 +590,13 @@ format corresponding to the properties&#39; EDM types and constraints</p>
 the context is a header context and a path is not &quot;$count&quot;</p>
 <h4>Since</h4>
 <p>1.39.0</p>
-<p>Returns a promise on the property value for the given path relative to this context. The path is expected
-to point to a structural property with primitive type. Since 1.81.1 it is possible to request more than
-one property. Property values that are not cached yet are requested from the back end.
-See:
-	sap.ui.model.odata.v4.ODataMetaModel#requestUI5Type</p>
 <hr>
 <h3>requestRefresh()</h3>
 <blockquote>
 <p><strong>requestRefresh</strong>(<code>sGroupId?</code>, <code>bAllowRemoval?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
+<p>Refreshes the single entity represented by this context and returns a promise to wait for it. See #refresh
+for details. Use #refresh if you do not need the promise.</p>
 <h4>Parameters</h4>
 <h5>sGroupId?</h5>
 <p><code>string</code></p>
@@ -608,48 +610,11 @@ See:
 with an error if the refresh failed</p>
 <h4>Since</h4>
 <p>1.87.0</p>
-<p>Refreshes the single entity represented by this context and returns a promise to wait for it. See #refresh
-for details. Use #refresh if you do not need the promise.</p>
 <hr>
 <h3>requestSideEffects()</h3>
 <blockquote>
 <p><strong>requestSideEffects</strong>(<code>aPathExpressions</code>, <code>sGroupId?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>aPathExpressions</h5>
-<p>(<code>string</code> | <a href="../../ts/type-aliases/NavigationPropertyPathExpression.html"><code>NavigationPropertyPathExpression</code></a> | <a href="../../ts/type-aliases/PropertyPathExpression.html"><code>PropertyPathExpression</code></a>)[]</p>
-<p>The &quot;14.5.11 Expression edm:NavigationPropertyPath&quot; or &quot;14.5.13 Expression edm:PropertyPath&quot; objects
-describing which properties need to be loaded because they may have changed due to side effects of a
-previous update, for example <code>[{$PropertyPath : &quot;TEAM_ID&quot;}, {$NavigationPropertyPath : &quot;EMPLOYEE_2_MANAGER&quot;}, {$PropertyPath : &quot;EMPLOYEE_2_TEAM/Team_Id&quot;}]</code>. An empty navigation property path means that the whole
-entity may have changed, including its navigation properties. Since 1.75, a property path may end with
-a &quot;*&quot; segment to indicate that all structural properties may have changed, but no navigation properties
-(unless listed explicitly), for example <code>[{$PropertyPath : &quot;*&quot;}, {$NavigationPropertyPath : &quot;EMPLOYEE_2_MANAGER&quot;}]</code>
-or <code>[{$PropertyPath : &quot;EMPLOYEE_2_MANAGER/*&quot;}]</code>.</p>
-<p>Since 1.82.0 absolute paths are supported. Absolute paths must start with the entity container (example
-&quot;/com.sap.gateway.default.iwbep.tea_busi.v0001.Container/TEAMS&quot;) of the service. All (navigation) properties
-in the complete model matching such an absolute path are updated. Since 1.85.0, &quot;14.4.11 Expression edm:String&quot;
-is accepted as well.</p>
-<p>Since 1.108.8, a property path matching the &quot;com.sap.vocabularies.Common.v1.Messages&quot; annotation of a
-list binding&#39;s entity type is treated specially for a row context of a list binding: It is loaded even
-if it has not yet been requested by that list binding. This way, exactly the messages for a single row
-can be updated. Same for a &quot;*&quot; segment or an empty navigation property path.</p>
-<h5>sGroupId?</h5>
-<p><code>string</code></p>
-<p>The group ID to be used (since 1.69.0); if not specified, the update group ID for the context&#39;s binding
-is used, see #getUpdateGroupId. If a different group ID is specified, make sure that #requestSideEffects
-is called after the corresponding updates have been successfully processed by the server and that there
-are no pending changes for the affected properties.</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
-<p>A promise which is resolved without a defined result, or rejected with an error if loading of
-side effects fails. Use it to set fields affected by side effects to read-only before #requestSideEffects
-and make them editable again when the promise resolves; in the error handler, you can repeat the loading
-of side effects.
- The promise is rejected if the call wants to refresh a whole list binding (via header context or an
-absolute path), but the deletion of a row context (see #delete) is pending with a different group
-ID.</p>
-<h4>Since</h4>
-<p>1.61.0</p>
 <p>Loads side effects for this context using the given &quot;14.5.11 Expression edm:NavigationPropertyPath&quot; or
 &quot;14.5.13 Expression edm:PropertyPath&quot; objects. Use this method to explicitly load side effects in case
 implicit loading is switched off via the binding-specific parameter <code>$$patchWithoutSideEffects</code>. The
@@ -682,17 +647,47 @@ See:
 	sap.ui.model.odata.v4.ODataContextBinding#getBoundContext
 	sap.ui.model.odata.v4.ODataListBinding#getHeaderContext
 	sap.ui.model.odata.v4.ODataModel#bindContext</p>
+<h4>Parameters</h4>
+<h5>aPathExpressions</h5>
+<p>(<code>string</code> | <a href="../../ts/type-aliases/NavigationPropertyPathExpression.html"><code>NavigationPropertyPathExpression</code></a> | <a href="../../ts/type-aliases/PropertyPathExpression.html"><code>PropertyPathExpression</code></a>)[]</p>
+<p>The &quot;14.5.11 Expression edm:NavigationPropertyPath&quot; or &quot;14.5.13 Expression edm:PropertyPath&quot; objects
+describing which properties need to be loaded because they may have changed due to side effects of a
+previous update, for example <code>[{$PropertyPath : &quot;TEAM_ID&quot;}, {$NavigationPropertyPath : &quot;EMPLOYEE_2_MANAGER&quot;}, {$PropertyPath : &quot;EMPLOYEE_2_TEAM/Team_Id&quot;}]</code>. An empty navigation property path means that the whole
+entity may have changed, including its navigation properties. Since 1.75, a property path may end with
+a &quot;*&quot; segment to indicate that all structural properties may have changed, but no navigation properties
+(unless listed explicitly), for example <code>[{$PropertyPath : &quot;*&quot;}, {$NavigationPropertyPath : &quot;EMPLOYEE_2_MANAGER&quot;}]</code>
+or <code>[{$PropertyPath : &quot;EMPLOYEE_2_MANAGER/*&quot;}]</code>.</p>
+<p>Since 1.82.0 absolute paths are supported. Absolute paths must start with the entity container (example
+&quot;/com.sap.gateway.default.iwbep.tea_busi.v0001.Container/TEAMS&quot;) of the service. All (navigation) properties
+in the complete model matching such an absolute path are updated. Since 1.85.0, &quot;14.4.11 Expression edm:String&quot;
+is accepted as well. Since 1.145.0, you can use <code>null</code> values (and <code>{$Null : null}</code>) as synonyms for
+empty navigation property paths.</p>
+<p>Since 1.108.8, a property path matching the &quot;com.sap.vocabularies.Common.v1.Messages&quot; annotation of a
+list binding&#39;s entity type is treated specially for a row context of a list binding: It is loaded even
+if it has not yet been requested by that list binding. This way, exactly the messages for a single row
+can be updated. Same for a &quot;*&quot; segment or an empty navigation property path.</p>
+<h5>sGroupId?</h5>
+<p><code>string</code></p>
+<p>The group ID to be used (since 1.69.0); if not specified, the update group ID for the context&#39;s binding
+is used, see #getUpdateGroupId. If a different group ID is specified, make sure that #requestSideEffects
+is called after the corresponding updates have been successfully processed by the server and that there
+are no pending changes for the affected properties.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<p>A promise which is resolved without a defined result, or rejected with an error if loading of
+side effects fails. Use it to set fields affected by side effects to read-only before #requestSideEffects
+and make them editable again when the promise resolves; in the error handler, you can repeat the loading
+of side effects.
+ The promise is rejected if the call wants to refresh a whole list binding (via header context or an
+absolute path), but the deletion of a row context (see #delete) is pending with a different group
+ID.</p>
+<h4>Since</h4>
+<p>1.61.0</p>
 <hr>
 <h3>resetChanges()</h3>
 <blockquote>
 <p><strong>resetChanges</strong>(): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
-<p>A promise which is resolved without a defined result as soon as all changes in the context and
-its current dependent bindings are canceled</p>
-<h4>Since</h4>
-<p>1.113.0</p>
 <p>Resets all property changes, created entities, and entity deletions of this context. Resets also invalid
 user input and inactive contexts which had their activation prevented (see sap.ui.model.odata.v4.Context#isInactive).
 This function does not reset the execution of OData operations (see sap.ui.model.odata.v4.ODataContextBinding#execute).
@@ -700,11 +695,28 @@ For a context which is currently #delete deleted on the client, but not yet on t
 method cancels the deletion and restores the context.
 See:
 	#hasPendingChanges</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>&gt;</p>
+<p>A promise which is resolved without a defined result as soon as all changes in the context and
+its current dependent bindings are canceled</p>
+<h4>Since</h4>
+<p>1.113.0</p>
 <hr>
 <h3>setKeepAlive()</h3>
 <blockquote>
 <p><strong>setKeepAlive</strong>(<code>bKeepAlive</code>, <code>fnOnBeforeDestroy?</code>, <code>bRequestMessages?</code>): <code>void</code></p>
 </blockquote>
+<p>Sets this context&#39;s <code>keepAlive</code> attribute. If <code>true</code> the context is kept alive even when it is removed
+from its binding&#39;s collection, for example if a filter is applied and the entity represented by this
+context does not match the filter criteria.</p>
+<p>Normally, a context&#39;s lifecycle is managed implicitly. It is created once it is needed and destroyed
+if it is not needed anymore, for example, because it is no longer part of its list binding&#39;s collection.
+It is thus unsafe to keep a reference to a context instance which is not explicitly kept alive. Once
+a context is not kept alive anymore, the implicit lifecycle management again takes control and destroys
+the context if it is no longer needed.</p>
+<p>Note: This is only supported if the model uses the <code>autoExpandSelect</code> parameter.
+See:
+	#isKeepAlive</p>
 <h4>Parameters</h4>
 <h5>bKeepAlive</h5>
 <p><code>boolean</code></p>
@@ -726,22 +738,20 @@ and no messages are requested. Supported since 1.92.0</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Sets this context&#39;s <code>keepAlive</code> attribute. If <code>true</code> the context is kept alive even when it is removed
-from its binding&#39;s collection, for example if a filter is applied and the entity represented by this
-context does not match the filter criteria.</p>
-<p>Normally, a context&#39;s lifecycle is managed implicitly. It is created once it is needed and destroyed
-if it is not needed anymore, for example, because it is no longer part of its list binding&#39;s collection.
-It is thus unsafe to keep a reference to a context instance which is not explicitly kept alive. Once
-a context is not kept alive anymore, the implicit lifecycle management again takes control and destroys
-the context if it is no longer needed.</p>
-<p>Note: This is only supported if the model uses the <code>autoExpandSelect</code> parameter.
-See:
-	#isKeepAlive</p>
 <hr>
 <h3>setProperty()</h3>
 <blockquote>
 <p><strong>setProperty</strong>(<code>sPath</code>, <code>vValue</code>, <code>sGroupId?</code>, <code>bRetry?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
+<p>Sets a new value for the property identified by the given path. The path is relative to this context
+and is expected to point to a structural property with primitive type or, since 1.85.0, to an instance
+annotation.
+See:
+	#getProperty
+	sap.ui.model.odata.v4.ODataContextBinding#event:patchSent
+	sap.ui.model.odata.v4.ODataContextBinding#event:patchCompleted
+	sap.ui.model.odata.v4.ODataListBinding#event:patchSent
+	sap.ui.model.odata.v4.ODataListBinding#event:patchCompleted</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -777,28 +787,19 @@ methods
 or  sap.ui.model.odata.v4.ODataListBinding#resetChanges.</p>
 <h4>Since</h4>
 <p>1.67.0</p>
-<p>Sets a new value for the property identified by the given path. The path is relative to this context
-and is expected to point to a structural property with primitive type or, since 1.85.0, to an instance
-annotation.
-See:
-	#getProperty
-	sap.ui.model.odata.v4.ODataContextBinding#event:patchSent
-	sap.ui.model.odata.v4.ODataContextBinding#event:patchCompleted
-	sap.ui.model.odata.v4.ODataListBinding#event:patchSent
-	sap.ui.model.odata.v4.ODataListBinding#event:patchCompleted</p>
 <hr>
 <h3>setSelected()</h3>
 <blockquote>
 <p><strong>setSelected</strong>(<code>bSelected</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.111.0)</p>
 <p>Determines whether this context is currently selected. If the preconditions of #setKeepAlive
 hold, a best effort is made to implicitly keep a selected context alive in order to preserve the selection
 state. While a context is currently #delete deleted on the client, it does not appear as #isSelected selected.</p>
 <p><strong>Note:</strong> It is unsafe to keep a reference to a context instance which is not #isKeepAlive kept alive.
 See:
 	#isSelected</p>
+<p> (since 1.111.0)</p>
 <h4>Parameters</h4>
 <h5>bSelected</h5>
 <p><code>boolean</code></p>
@@ -810,11 +811,6 @@ See:
 <blockquote>
 <p><strong>toString</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>A string description of this binding</p>
-<h4>Since</h4>
-<p>1.39.0</p>
 <p>Returns a string representation of this object including the following information:
 	 #getPath Binding path,  #getIndex Index,  State (see also &quot;Context states&quot;
 of <a href="https://ui5.sap.com/#/topic/c9723f8265f644af91c0ed941e114d46">Creating an Entity</a>), including
@@ -824,6 +820,11 @@ See:
 	#isDeleted
 	#isInactive
 	#isTransient</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>A string description of this binding</p>
+<h4>Since</h4>
+<p>1.39.0</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -859,6 +860,6 @@ used by this class</p>
 <p><a href="../../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

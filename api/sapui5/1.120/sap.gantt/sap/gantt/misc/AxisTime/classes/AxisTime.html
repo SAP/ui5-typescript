@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: AxisTime — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: AxisTime — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: AxisTime — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/misc/AxisTime/classes/AxisTime.html">
 <meta property="og:title" content="Class: AxisTime — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: AxisTime — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: AxisTime — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/misc/AxisTime/classes/AxisTime.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › misc › <a href="../../../../../../sap.gantt/sap/gantt/misc/AxisTime/README.html">AxisTime</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/misc/AxisTime</a> / AxisTime</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/misc/AxisTime</a> / AxisTime</p>
 <h1>Class: AxisTime</h1>
 <pre class="sig"><span class="kw">import</span> AxisTime <span class="kw">from</span> <span class="str">"sap/gantt/misc/AxisTime"</span>;</pre>
 <p>The reusable functional class represents an instance of time-value linear coordinate mapping.</p>
@@ -84,23 +84,23 @@ of values.</p>
 <blockquote>
 <p><strong>getCurrentTickTimeIntervalKey</strong>(): <code>string</code></p>
 </blockquote>
+<p>Retrieves a key of the time interval level in array oZoomStrategy.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Key of the time interval level in array oZoomStrategy.</p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - replaced by sap.gantt.axistime.AxisTimeStrategyBase.getZoomLevel</p>
-<p>Retrieves a key of the time interval level in array oZoomStrategy.</p>
 <hr>
 <h3><del>getCurrentTickTimeIntervalLevel()</del></h3>
 <blockquote>
 <p><strong>getCurrentTickTimeIntervalLevel</strong>(): <code>number</code></p>
 </blockquote>
+<p>Retrieves an index of the time interval level in array oZoomStrategy.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Index of the time interval level in array oZoomStrategy.</p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - replaced by sap.gantt.axistime.AxisTimeStrategyBase.getZoomLevel</p>
-<p>Retrieves an index of the time interval level in array oZoomStrategy.</p>
 <hr>
 <h3>getFirstSmallIntervalIndex()</h3>
 <blockquote>
@@ -120,11 +120,11 @@ of values.</p>
 <hr>
 <h3>getNowLabel()</h3>
 <blockquote>
-<p><strong>getNowLabel</strong>(<code>timeInUTC</code>): <code>object</code></p>
+<p><strong>getNowLabel</strong>(<code>bTimeInUTC</code>): <code>object</code></p>
 </blockquote>
 <p>Retrieves an object containing the information of current time, its position, and label.</p>
 <h4>Parameters</h4>
-<h5>timeInUTC</h5>
+<h5>bTimeInUTC</h5>
 <p><code>boolean</code></p>
 <p>Convert date to UTC.</p>
 <h4>Returns</h4>
@@ -164,6 +164,7 @@ within the given timeBoundary or viewBoundary.</p>
 <blockquote>
 <p><strong>getTimeRangeSlice</strong>(<code>iStartX</code>, <code>iEndX</code>): <code>void</code></p>
 </blockquote>
+<p>Calculate a slice of time range out of the total range</p>
 <h4>Parameters</h4>
 <h5>iStartX</h5>
 <p><code>number</code></p>
@@ -173,7 +174,6 @@ within the given timeBoundary or viewBoundary.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculate a slice of time range out of the total range</p>
 <hr>
 <h3>getViewOffset()</h3>
 <blockquote>
@@ -311,6 +311,6 @@ within the given timeBoundary or viewBoundary.</p>
 <p><code>Date</code></p>
 <p>Date corresponding to the given value within the timeRange</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

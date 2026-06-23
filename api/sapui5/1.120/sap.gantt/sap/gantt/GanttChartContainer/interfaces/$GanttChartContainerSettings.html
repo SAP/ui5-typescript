@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $GanttChartContainerSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $GanttChartContainerSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/GanttChartContainer/interfaces/$GanttChartContainerSettings.html">
-<meta property="og:title" content="Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $GanttChartContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $GanttChartContainerSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $GanttChartContainerSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/GanttChartContainer/interfaces/$GanttChartContainerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,24 +33,27 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › <a href="../../../../../sap.gantt/sap/gantt/GanttChartContainer/README.html">GanttChartContainer</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/GanttChartContainer</a> / $GanttChartContainerSettings</p>
-<h1>Interface: $GanttChartContainerSettings</h1>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/GanttChartContainer</a> / $GanttChartContainerSettings</p>
+<h1><del>Interface: $GanttChartContainerSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $GanttChartContainerSettings } <span class="kw">from</span> <span class="str">"sap/gantt/GanttChartContainer"</span>;</pre>
+<p>Describes the settings that can be provided to the GanttChartContainer constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.64) - sap.gantt.simple.GanttChartContainer should be used instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>containerLayoutKey?</h3>
+<h3><del>containerLayoutKey?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>containerLayoutKey?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Current container layout key.</p>
 <p>This is a key configured in configuration property <code>containerLayouts</code>.</p>
 <hr>
-<h3>containerLayouts?</h3>
+<h3><del>containerLayouts?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>containerLayouts?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>object</code>[]</p>
 </blockquote>
@@ -61,7 +64,7 @@ We recommend that you set the type of this argument to <code>sap.gantt.config.Co
 some properties you set may not function properly.</p>
 <p>Restriction: It is defined as a property, and hence cannot be used in an XML view.</p>
 <hr>
-<h3>customSettingChange?</h3>
+<h3><del>customSettingChange?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>customSettingChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -74,7 +77,7 @@ This event allows the application to handle these settings. Only check boxes are
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>customToolbarItems?</h3>
+<h3><del>customToolbarItems?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>customToolbarItems?</strong>: <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -86,41 +89,41 @@ controls are free controls created by the application, but are only placed in th
 <p>If the source selection group is enabled and you want your application to use a container layout pre-configured
 for a specific source, you can implement your custom toolbar items in the event handler of event <code>ganttChartChangeRequested</code>.</p>
 <hr>
-<h3>enableAdhocLine?</h3>
+<h3><del>enableAdhocLine?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableAdhocLine?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Switch to enable and disable adhoc lines representing milestones and events along the time axis.</p>
 <p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
 <hr>
-<h3>enableCursorLine?</h3>
+<h3><del>enableCursorLine?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableCursorLine?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Switch to enable and disable the cursor line that follows the cursor.</p>
 <p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
 <hr>
-<h3>enableNowLine?</h3>
+<h3><del>enableNowLine?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableNowLine?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Switch to enable and disable the present time indicator.</p>
 <p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
 <hr>
-<h3>enableTimeScrollSync?</h3>
+<h3><del>enableTimeScrollSync?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableTimeScrollSync?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Switch to enable and disable scroll synchronization by time on instances of aggregation <code>ganttCharts</code>.</p>
 <hr>
-<h3>enableVerticalLine?</h3>
+<h3><del>enableVerticalLine?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableVerticalLine?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Switch to enable and disable vertical lines representing intervals along the time axis.</p>
 <p>When this value is set, it overrides the corresponding value on instances of aggregation <code>ganttCharts</code>.</p>
 <hr>
-<h3>ganttChartChangeRequested?</h3>
+<h3><del>ganttChartChangeRequested?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>ganttChartChangeRequested?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -136,7 +139,7 @@ for a specific source, you can implement your custom toolbar items in the event 
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>ganttCharts?</h3>
+<h3><del>ganttCharts?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>ganttCharts?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../GanttChartBase/classes/GanttChartBase.html"><code>GanttChartBase</code></a> | <a href="../../GanttChartBase/classes/GanttChartBase.html"><code>GanttChartBase</code></a>[]</p>
 </blockquote>
@@ -146,13 +149,13 @@ for a specific source, you can implement your custom toolbar items in the event 
 Provide a Gantt chart in compliance with the container layout setting. GanttChartContainer is designed
 to support Gantt chart layouts that include multiple views.</p>
 <hr>
-<h3>height?</h3>
+<h3><del>height?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Height of the control</p>
 <hr>
-<h3>hierarchies?</h3>
+<h3><del>hierarchies?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>hierarchies?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>object</code>[]</p>
 </blockquote>
@@ -161,21 +164,21 @@ you set the type of this argument to <code>sap.gantt.config.Hierarchy[]</code>. 
 may not function properly.</p>
 <p>Restriction: It is defined as a property, and hence cannot be used in an XML view.</p>
 <hr>
-<h3>legendContainer?</h3>
+<h3><del>legendContainer?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>legendContainer?</strong>: <a href="../../legend/LegendContainer/classes/LegendContainer.html"><code>LegendContainer</code></a></p>
 </blockquote>
 <p>Legend shown when the legend button is clicked.</p>
 <p>This aggregation is used only when the Legend button is configured to be shown in the container toolbar.</p>
 <hr>
-<h3>maxNumOfGanttCharts?</h3>
+<h3><del>maxNumOfGanttCharts?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>maxNumOfGanttCharts?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Define the maximum number of Gantt charts to be displayed on the same screen. When this number is reached,
 the &quot;Add Gantt Chart&quot; button is grayed out.</p>
 <hr>
-<h3>modes?</h3>
+<h3><del>modes?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>modes?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>object</code>[]</p>
 </blockquote>
@@ -189,12 +192,12 @@ to <code>sap.gantt.config.Mode[]</code>. Otherwise some properties you set may n
 <blockquote>
 <p><code>optional</code> <strong>sliderStep?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.44) - please set the property &#39;stepCountOfSlider&#39; in sap.gantt.config.TimeZoomGroup.</p>
 <p>Define the amount of units to change the time zoom slider.</p>
 <p>See sap.m.Slider#setStep</p>
+<h4>Deprecated</h4>
+<p>(since 1.44) - please set the property &#39;stepCountOfSlider&#39; in sap.gantt.config.TimeZoomGroup.</p>
 <hr>
-<h3>svgDefs?</h3>
+<h3><del>svgDefs?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>svgDefs?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -206,7 +209,7 @@ Then the definition is rendered only once. We recommend that you set the type of
 Otherwise some properties you set may not function properly.</p>
 <p>Restriction: It is defined as a property, and hence cannot be used in an XML view.</p>
 <hr>
-<h3>toolbarSchemes?</h3>
+<h3><del>toolbarSchemes?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>toolbarSchemes?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>object</code>[]</p>
 </blockquote>
@@ -215,7 +218,7 @@ that you set the type of this argument to <code>sap.gantt.config.ToolbarScheme[]
 you set may not function properly.</p>
 <p>Restriction: It is defined as a property, and hence cannot be used in an XML view.</p>
 <hr>
-<h3>treeTableToggleEvent?</h3>
+<h3><del>treeTableToggleEvent?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>treeTableToggleEvent?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -226,12 +229,12 @@ you set may not function properly.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>width?</h3>
+<h3><del>width?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Width of the control</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

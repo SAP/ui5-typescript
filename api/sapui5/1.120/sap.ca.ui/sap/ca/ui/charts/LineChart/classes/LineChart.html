@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: LineChart~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: LineChart~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: LineChart~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/charts/LineChart/classes/LineChart.html">
 <meta property="og:title" content="~~Class: LineChart~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: LineChart~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: LineChart~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/charts/LineChart/classes/LineChart.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ca.ui/README.html">sap.ca.ui</a> › sap › ca › ui › charts › <a href="../../../../../../../sap.ca.ui/sap/ca/ui/charts/LineChart/README.html">LineChart</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/charts/LineChart</a> / LineChart</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/charts/LineChart</a> / LineChart</p>
 <h1><del>Class: LineChart</del></h1>
 <pre class="sig"><span class="kw">import</span> LineChart <span class="kw">from</span> <span class="str">"sap/ca/ui/charts/LineChart"</span>;</pre>
+<p>Line Chart for the Fiori Project</p>
 <h2>Since</h2>
 <p>1.0.0</p>
 <h2>Deprecated</h2>
@@ -45,7 +46,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 control &quot;sap.viz.ui5.controls.VizFrame&quot; serves as a single point of entry for all the new charts. Now
 that 1.24 is available you are asked to use sap.viz charts and the VizFrame instead! This control will
 not be supported anymore from 1.24.</p>
-<p>Line Chart for the Fiori Project</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Chart/classes/Chart.html"><code>Chart</code></a></li>
@@ -92,6 +92,11 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachOnDetailsSelected</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:onDetailsSelected onDetailsSelected event of
+this <code>sap.ca.ui.charts.LineChart</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ca.ui.charts.LineChart</code> itself.</p>
+<p>Event fired when the details button is pressed on the selected Datapoint Popover</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -108,15 +113,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachOnDetailsSelected</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:onDetailsSelected onDetailsSelected event of
 this <code>sap.ca.ui.charts.LineChart</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ca.ui.charts.LineChart</code> itself.</p>
 <p>Event fired when the details button is pressed on the selected Datapoint Popover</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachOnDetailsSelected</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -129,27 +134,25 @@ otherwise it will be bound to this <code>sap.ca.ui.charts.LineChart</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:onDetailsSelected onDetailsSelected event of
-this <code>sap.ca.ui.charts.LineChart</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ca.ui.charts.LineChart</code> itself.</p>
-<p>Event fired when the details button is pressed on the selected Datapoint Popover</p>
 <hr>
 <h3><del>destroyVertical()</del></h3>
 <blockquote>
 <p><strong>destroyVertical</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the vertical in the aggregation #getVertical vertical.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Destroys the vertical in the aggregation #getVertical vertical.</p>
 <hr>
 <h3><del>detachOnDetailsSelected()</del></h3>
 <blockquote>
 <p><strong>detachOnDetailsSelected</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:onDetailsSelected onDetailsSelected event
+of this <code>sap.ca.ui.charts.LineChart</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -162,14 +165,12 @@ otherwise it will be bound to this <code>sap.ca.ui.charts.LineChart</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:onDetailsSelected onDetailsSelected event
-of this <code>sap.ca.ui.charts.LineChart</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireOnDetailsSelected()</del></h3>
 <blockquote>
 <p><strong>fireOnDetailsSelected</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:onDetailsSelected onDetailsSelected to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -181,76 +182,75 @@ of this <code>sap.ca.ui.charts.LineChart</code>.</p>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:onDetailsSelected onDetailsSelected to attached listeners.</p>
 <hr>
 <h3><del>getChartBusinessData()</del></h3>
 <blockquote>
 <p><strong>getChartBusinessData</strong>(): <code>any</code></p>
 </blockquote>
+<p>Gets current value of property #getChartBusinessData chartBusinessData.</p>
+<p>Allow the chart data to be set, that is the measure and dimension values</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>Value of property <code>chartBusinessData</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;data&#39; property, do not use as it will be removed in
 a future release.</p>
-<p>Gets current value of property #getChartBusinessData chartBusinessData.</p>
-<p>Allow the chart data to be set, that is the measure and dimension values</p>
 <hr>
 <h3><del>getChartDataset()</del></h3>
 <blockquote>
 <p><strong>getChartDataset</strong>(): <code>any</code></p>
 </blockquote>
+<p>Gets current value of property #getChartDataset chartDataset.</p>
+<p>Allow the Dataset for the chart to be set, includes the dimensions, and measures, any data binding is
+removed, this will disable the chart scroll context view, use the dataset settings if you want the scroll
+context to work</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>Value of property <code>chartDataset</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;dataset&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>Gets current value of property #getChartDataset chartDataset.</p>
-<p>Allow the Dataset for the chart to be set, includes the dimensions, and measures, any data binding is
-removed, this will disable the chart scroll context view, use the dataset settings if you want the scroll
-context to work</p>
 <hr>
 <h3><del>getChartDatasetSettings()</del></h3>
 <blockquote>
 <p><strong>getChartDatasetSettings</strong>(): <code>any</code></p>
 </blockquote>
+<p>Gets current value of property #getChartDatasetSettings chartDatasetSettings.</p>
+<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
+two datasets are created, one for the main chart and one for the scroll context)</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>Value of property <code>chartDatasetSettings</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;datasetSettings&#39; property, do not use as it will be
 removed in a future release.</p>
-<p>Gets current value of property #getChartDatasetSettings chartDatasetSettings.</p>
-<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
-two datasets are created, one for the main chart and one for the scroll context)</p>
 <hr>
 <h3><del>getChartTitle()</del></h3>
 <blockquote>
 <p><strong>getChartTitle</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getChartTitle chartTitle.</p>
+<p>The title to display on the chart</p>
+<p>Default value is <code>&#39;Line Chart&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>chartTitle</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;title&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>Gets current value of property #getChartTitle chartTitle.</p>
-<p>The title to display on the chart</p>
-<p>Default value is <code>&#39;Line Chart&#39;</code>.</p>
 <hr>
 <h3><del>getData()</del></h3>
 <blockquote>
 <p><strong>getData</strong>(): <code>any</code></p>
 </blockquote>
+<p>Gets current value of property #getData data.</p>
+<p>Allow the chart data to be set, that is the measure and dimension values</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>Value of property <code>data</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the binding on &#39;dataset&#39;, do not use as it will be removed in
 a future release.</p>
-<p>Gets current value of property #getData data.</p>
-<p>Allow the chart data to be set, that is the measure and dimension values</p>
 <hr>
 <h3><del>getDataLabelFormat()</del></h3>
 <blockquote>
@@ -268,114 +268,117 @@ Format String following the &#39;sap.viz.ui5.Line&#39; documentation</p>
 <blockquote>
 <p><strong>getDataPath</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getDataPath dataPath.</p>
+<p>Allow the data path for binding the model to the dimensions and measures to be set</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>dataPath</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the binding on &#39;dataset&#39;, do not use as it will be removed in
 a future release.</p>
-<p>Gets current value of property #getDataPath dataPath.</p>
-<p>Allow the data path for binding the model to the dimensions and measures to be set</p>
 <hr>
 <h3><del>getDatasetSettings()</del></h3>
 <blockquote>
 <p><strong>getDatasetSettings</strong>(): <code>any</code></p>
 </blockquote>
+<p>Gets current value of property #getDatasetSettings datasetSettings.</p>
+<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
+two datasets are created, one for the main chart and one for the scroll context)</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>Value of property <code>datasetSettings</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is property is not needed any more, do not use as it will be removed
 in a future release.</p>
-<p>Gets current value of property #getDatasetSettings datasetSettings.</p>
-<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
-two datasets are created, one for the main chart and one for the scroll context)</p>
 <hr>
 <h3><del>getMinTouchSize()</del></h3>
 <blockquote>
 <p><strong>getMinTouchSize</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getMinTouchSize minTouchSize.</p>
+<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
+device, only applies if the chart width is not set</p>
+<p>Default value is <code>&#39;48px&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>minTouchSize</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the &#39;dataLabelFormatter&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>Gets current value of property #getMinTouchSize minTouchSize.</p>
-<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
-device, only applies if the chart width is not set</p>
-<p>Default value is <code>&#39;48px&#39;</code>.</p>
 <hr>
 <h3><del>getMinTouchWidth()</del></h3>
 <blockquote>
 <p><strong>getMinTouchWidth</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getMinTouchWidth minTouchWidth.</p>
+<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
+device, only applies if the chart width is not set</p>
+<p>Default value is <code>&#39;48px&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>minTouchWidth</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the &#39;minShapeSize&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>Gets current value of property #getMinTouchWidth minTouchWidth.</p>
-<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
-device, only applies if the chart width is not set</p>
-<p>Default value is <code>&#39;48px&#39;</code>.</p>
 <hr>
 <h3><del>getShowLabel()</del></h3>
 <blockquote>
 <p><strong>getShowLabel</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowLabel showLabel.</p>
+<p>Show the data label value on the chart</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showLabel</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;showDataLabel&#39; property, do not use as it will be
 removed in a future release.</p>
-<p>Gets current value of property #getShowLabel showLabel.</p>
-<p>Show the data label value on the chart</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getShowScrollContext()</del></h3>
 <blockquote>
 <p><strong>getShowScrollContext</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowScrollContext showScrollContext.</p>
+<p>Show the chart scroll context, (the preview of the whole chart as a small image when scrolling)</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showScrollContext</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Feature does not work correctly yet.</p>
-<p>Gets current value of property #getShowScrollContext showScrollContext.</p>
-<p>Show the chart scroll context, (the preview of the whole chart as a small image when scrolling)</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getUseDelayedResize()</del></h3>
 <blockquote>
 <p><strong>getUseDelayedResize</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getUseDelayedResize useDelayedResize.</p>
+<p>Use a delayed resize event to cause the chart to render when navigated to after resize when in the background</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>useDelayedResize</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Gets current value of property #getUseDelayedResize useDelayedResize.</p>
-<p>Use a delayed resize event to cause the chart to render when navigated to after resize when in the background</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getVertical()</del></h3>
 <blockquote>
 <p><strong>getVertical</strong>(): <a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html"><code>VBox</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getVertical vertical.</p>
+<p>The vertical layout</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html"><code>VBox</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Gets content of aggregation #getVertical vertical.</p>
-<p>The vertical layout</p>
 <hr>
 <h3><del>setChartBusinessData()</del></h3>
 <blockquote>
 <p><strong>setChartBusinessData</strong>(<code>oChartBusinessData?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getChartBusinessData chartBusinessData.</p>
+<p>Allow the chart data to be set, that is the measure and dimension values</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oChartBusinessData?</h5>
 <p><code>any</code></p>
@@ -386,14 +389,16 @@ removed in a future release.</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;data&#39; property, do not use as it will be removed in
 a future release.</p>
-<p>Sets a new value for property #getChartBusinessData chartBusinessData.</p>
-<p>Allow the chart data to be set, that is the measure and dimension values</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setChartDataset()</del></h3>
 <blockquote>
 <p><strong>setChartDataset</strong>(<code>oChartDataset?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getChartDataset chartDataset.</p>
+<p>Allow the Dataset for the chart to be set, includes the dimensions, and measures, any data binding is
+removed, this will disable the chart scroll context view, use the dataset settings if you want the scroll
+context to work</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oChartDataset?</h5>
 <p><code>any</code></p>
@@ -404,16 +409,15 @@ a future release.</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;dataset&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>Sets a new value for property #getChartDataset chartDataset.</p>
-<p>Allow the Dataset for the chart to be set, includes the dimensions, and measures, any data binding is
-removed, this will disable the chart scroll context view, use the dataset settings if you want the scroll
-context to work</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setChartDatasetSettings()</del></h3>
 <blockquote>
 <p><strong>setChartDatasetSettings</strong>(<code>oChartDatasetSettings?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getChartDatasetSettings chartDatasetSettings.</p>
+<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
+two datasets are created, one for the main chart and one for the scroll context)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oChartDatasetSettings?</h5>
 <p><code>any</code></p>
@@ -424,15 +428,15 @@ context to work</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;datasetSettings&#39; property, do not use as it will be
 removed in a future release.</p>
-<p>Sets a new value for property #getChartDatasetSettings chartDatasetSettings.</p>
-<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
-two datasets are created, one for the main chart and one for the scroll context)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setChartTitle()</del></h3>
 <blockquote>
 <p><strong>setChartTitle</strong>(<code>sChartTitle?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getChartTitle chartTitle.</p>
+<p>The title to display on the chart</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;Line Chart&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sChartTitle?</h5>
 <p><code>string</code></p>
@@ -443,15 +447,14 @@ two datasets are created, one for the main chart and one for the scroll context)
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;title&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>Sets a new value for property #getChartTitle chartTitle.</p>
-<p>The title to display on the chart</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;Line Chart&#39;</code>.</p>
 <hr>
 <h3><del>setData()</del></h3>
 <blockquote>
 <p><strong>setData</strong>(<code>oData?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getData data.</p>
+<p>Allow the chart data to be set, that is the measure and dimension values</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oData?</h5>
 <p><code>any</code></p>
@@ -462,9 +465,6 @@ in a future release.</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the binding on &#39;dataset&#39;, do not use as it will be removed in
 a future release.</p>
-<p>Sets a new value for property #getData data.</p>
-<p>Allow the chart data to be set, that is the measure and dimension values</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setDataLabelFormat()</del></h3>
 <blockquote>
@@ -487,6 +487,9 @@ Format String following the &#39;sap.viz.ui5.Line&#39; documentation</p>
 <blockquote>
 <p><strong>setDataPath</strong>(<code>sDataPath?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDataPath dataPath.</p>
+<p>Allow the data path for binding the model to the dimensions and measures to be set</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sDataPath?</h5>
 <p><code>string</code></p>
@@ -497,14 +500,15 @@ Format String following the &#39;sap.viz.ui5.Line&#39; documentation</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the binding on &#39;dataset&#39;, do not use as it will be removed in
 a future release.</p>
-<p>Sets a new value for property #getDataPath dataPath.</p>
-<p>Allow the data path for binding the model to the dimensions and measures to be set</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setDatasetSettings()</del></h3>
 <blockquote>
 <p><strong>setDatasetSettings</strong>(<code>oDatasetSettings?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDatasetSettings datasetSettings.</p>
+<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
+two datasets are created, one for the main chart and one for the scroll context)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oDatasetSettings?</h5>
 <p><code>any</code></p>
@@ -515,15 +519,16 @@ a future release.</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is property is not needed any more, do not use as it will be removed
 in a future release.</p>
-<p>Sets a new value for property #getDatasetSettings datasetSettings.</p>
-<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
-two datasets are created, one for the main chart and one for the scroll context)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setMinTouchSize()</del></h3>
 <blockquote>
 <p><strong>setMinTouchSize</strong>(<code>sMinTouchSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMinTouchSize minTouchSize.</p>
+<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
+device, only applies if the chart width is not set</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;48px&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sMinTouchSize?</h5>
 <p><code>string</code></p>
@@ -534,16 +539,16 @@ two datasets are created, one for the main chart and one for the scroll context)
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the &#39;dataLabelFormatter&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>Sets a new value for property #getMinTouchSize minTouchSize.</p>
-<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
-device, only applies if the chart width is not set</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;48px&#39;</code>.</p>
 <hr>
 <h3><del>setMinTouchWidth()</del></h3>
 <blockquote>
 <p><strong>setMinTouchWidth</strong>(<code>sMinTouchWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMinTouchWidth minTouchWidth.</p>
+<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
+device, only applies if the chart width is not set</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;48px&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sMinTouchWidth?</h5>
 <p><code>string</code></p>
@@ -554,16 +559,15 @@ device, only applies if the chart width is not set</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the &#39;minShapeSize&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>Sets a new value for property #getMinTouchWidth minTouchWidth.</p>
-<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
-device, only applies if the chart width is not set</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;48px&#39;</code>.</p>
 <hr>
 <h3><del>setShowLabel()</del></h3>
 <blockquote>
 <p><strong>setShowLabel</strong>(<code>bShowLabel?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowLabel showLabel.</p>
+<p>Show the data label value on the chart</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowLabel?</h5>
 <p><code>boolean</code></p>
@@ -574,15 +578,15 @@ device, only applies if the chart width is not set</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;showDataLabel&#39; property, do not use as it will be
 removed in a future release.</p>
-<p>Sets a new value for property #getShowLabel showLabel.</p>
-<p>Show the data label value on the chart</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setShowScrollContext()</del></h3>
 <blockquote>
 <p><strong>setShowScrollContext</strong>(<code>bShowScrollContext?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowScrollContext showScrollContext.</p>
+<p>Show the chart scroll context, (the preview of the whole chart as a small image when scrolling)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowScrollContext?</h5>
 <p><code>boolean</code></p>
@@ -592,15 +596,15 @@ removed in a future release.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Feature does not work correctly yet.</p>
-<p>Sets a new value for property #getShowScrollContext showScrollContext.</p>
-<p>Show the chart scroll context, (the preview of the whole chart as a small image when scrolling)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setUseDelayedResize()</del></h3>
 <blockquote>
 <p><strong>setUseDelayedResize</strong>(<code>bUseDelayedResize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUseDelayedResize useDelayedResize.</p>
+<p>Use a delayed resize event to cause the chart to render when navigated to after resize when in the background</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bUseDelayedResize?</h5>
 <p><code>boolean</code></p>
@@ -610,15 +614,12 @@ removed in a future release.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Sets a new value for property #getUseDelayedResize useDelayedResize.</p>
-<p>Use a delayed resize event to cause the chart to render when navigated to after resize when in the background</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setVertical()</del></h3>
 <blockquote>
 <p><strong>setVertical</strong>(<code>oVertical</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getVertical vertical.</p>
 <h4>Parameters</h4>
 <h5>oVertical</h5>
 <p><a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html"><code>VBox</code></a></p>
@@ -628,7 +629,6 @@ removed in a future release.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Sets the aggregated #getVertical vertical.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -669,6 +669,6 @@ used by this class</p>
 <p><a href="../../Chart/classes/Chart.html"><code>Chart</code></a>.<a href="../../Chart/classes/Chart.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

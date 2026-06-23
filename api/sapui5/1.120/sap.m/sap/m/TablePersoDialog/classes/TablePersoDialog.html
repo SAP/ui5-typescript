@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: TablePersoDialog~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: TablePersoDialog~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: TablePersoDialog~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/TablePersoDialog/classes/TablePersoDialog.html">
 <meta property="og:title" content="~~Class: TablePersoDialog~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: TablePersoDialog~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: TablePersoDialog~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/TablePersoDialog/classes/TablePersoDialog.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/TablePersoDialog/README.html">TablePersoDialog</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TablePersoDialog</a> / TablePersoDialog</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TablePersoDialog</a> / TablePersoDialog</p>
 <h1><del>Class: TablePersoDialog</del></h1>
 <pre class="sig"><span class="kw">import</span> TablePersoDialog <span class="kw">from</span> <span class="str">"sap/m/TablePersoDialog"</span>;</pre>
+<p>Table Personalization Dialog</p>
 <h2>Deprecated</h2>
 <p>(since 1.115) - Please use the sap.m.p13n.Popup Popup for personalization instead.</p>
-<p>Table Personalization Dialog</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></li>
@@ -183,13 +183,13 @@ otherwise it will be bound to this <code>sap.m.TablePersoDialog</code> itself.</
 <blockquote>
 <p><strong>destroyPersoService</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the persoService in the aggregation #getPersoService persoService.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.30.1) - This aggregate is no longer used. It collided with the TablePersoController&#39;s
 persoService reference</p>
-<p>Destroys the persoService in the aggregation #getPersoService persoService.</p>
 <hr>
 <h3><del>detachCancel()</del></h3>
 <blockquote>
@@ -229,6 +229,7 @@ persoService reference</p>
 <blockquote>
 <p><strong>fireCancel</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:cancel cancel to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -238,12 +239,12 @@ persoService reference</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:cancel cancel to attached listeners.</p>
 <hr>
 <h3><del>fireConfirm()</del></h3>
 <blockquote>
 <p><strong>fireConfirm</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:confirm confirm to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -253,7 +254,6 @@ persoService reference</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:confirm confirm to attached listeners.</p>
 <hr>
 <h3><del>getColumnInfoCallback()</del></h3>
 <blockquote>
@@ -322,13 +322,13 @@ or <code>null</code>.</p>
 <blockquote>
 <p><strong>getPersoService</strong>(): <code>Object</code></p>
 </blockquote>
+<p>Gets content of aggregation #getPersoService persoService.</p>
+<p>Refers to the service for reading and writing the personalization.</p>
 <h4>Returns</h4>
 <p><code>Object</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.30.1) - This aggregate is no longer used. It collided with the TablePersoController&#39;s
 persoService reference</p>
-<p>Gets content of aggregation #getPersoService persoService.</p>
-<p>Refers to the service for reading and writing the personalization.</p>
 <hr>
 <h3><del>getShowResetAll()</del></h3>
 <blockquote>
@@ -352,11 +352,11 @@ persoService reference</p>
 <blockquote>
 <p><strong>init</strong>(): <code>void</code></p>
 </blockquote>
+<p>Initializes the TablePersoDialog instance after creation.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Initializes the TablePersoDialog instance after creation.</p>
 <hr>
 <h3><del>open()</del></h3>
 <blockquote>
@@ -480,6 +480,7 @@ instance may be given</p>
 <blockquote>
 <p><strong>setPersoService</strong>(<code>oPersoService</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getPersoService persoService.</p>
 <h4>Parameters</h4>
 <h5>oPersoService</h5>
 <p><code>Object</code></p>
@@ -490,7 +491,6 @@ instance may be given</p>
 <h4>Deprecated</h4>
 <p>(since 1.30.1) - This aggregate is no longer used. It collided with the TablePersoController&#39;s
 persoService reference</p>
-<p>Sets the aggregated #getPersoService persoService.</p>
 <hr>
 <h3><del>setShowResetAll()</del></h3>
 <blockquote>
@@ -557,6 +557,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

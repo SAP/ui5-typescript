@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Metadata — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Metadata — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Metadata — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html">
 <meta property="og:title" content="Class: Metadata — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Metadata — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Metadata — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › base › <a href="../../../../../../sap.ui.core/sap/ui/base/Metadata/README.html">Metadata</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/Metadata</a> / Metadata</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/Metadata</a> / Metadata</p>
 <h1>Class: Metadata</h1>
 <pre class="sig"><span class="kw">import</span> Metadata <span class="kw">from</span> <span class="str">"sap/ui/base/Metadata"</span>;</pre>
+<p>Metadata for a class.</p>
 <h2>Since</h2>
 <p>0.8.6</p>
-<p>Metadata for a class.</p>
 <h2>Extended by</h2>
 <ul>
 <li><a href="../../ManagedObjectMetadata/classes/ManagedObjectMetadata.html"><code>ManagedObjectMetadata</code></a></li>
@@ -69,6 +69,8 @@ described class.</p>
 <blockquote>
 <p><strong>getAllPublicMethods</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns an array with the names of all public methods declared by the described class and all its ancestors
+classes.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>array with names of all public methods provided by the described class and its ancestors</p>
@@ -80,8 +82,6 @@ visibility information should not be exposed in runtime metadata but be part of 
 of <code>sap.ui.base.Object</code> might decide to provide runtime metadata describing their public API, but this
 then should not be backed by this method. See sap.ui.core.mvc.ControllerMetadata#getAllMethods
 for an example.</p>
-<p>Returns an array with the names of all public methods declared by the described class and all its ancestors
-classes.</p>
 <hr>
 <h3>getClass()</h3>
 <blockquote>
@@ -115,6 +115,8 @@ classes.</p>
 <blockquote>
 <p><strong>getPublicMethods</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns an array with the names of the public methods declared by the described class, methods of ancestors
+are not listed.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>array with names of public methods declared by the described class</p>
@@ -126,13 +128,19 @@ visibility information should not be exposed in runtime metadata but be part of 
 of <code>sap.ui.base.Object</code> might decide to provide runtime metadata describing their public API, but this
 then should not be backed by this method. See sap.ui.core.mvc.ControllerMetadata#getAllMethods
 for an example.</p>
-<p>Returns an array with the names of the public methods declared by the described class, methods of ancestors
-are not listed.</p>
 <hr>
 <h3>isA()</h3>
 <blockquote>
 <p><strong>isA</strong>(<code>vTypeName</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks whether the class described by this metadata object is of the named type.</p>
+<p>This check is solely based on the type names as declared in the class metadata. It compares the given
+<code>vTypeName</code> with the name of this class, with the names of any base class of this class and with the
+names of all interfaces implemented by any of the aforementioned classes.</p>
+<p>Instead of a single type name, an array of type names can be given and the method will check if this
+class is of any of the listed types (logical or).</p>
+<p>Should the UI5 class system in future implement additional means of associating classes with type names
+(e.g. by introducing mixins), then this method might detect matches for those names as well.</p>
 <h4>Parameters</h4>
 <h5>vTypeName</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -142,14 +150,6 @@ are not listed.</p>
 <p>Whether this class is of the given type or of any of the given types</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Checks whether the class described by this metadata object is of the named type.</p>
-<p>This check is solely based on the type names as declared in the class metadata. It compares the given
-<code>vTypeName</code> with the name of this class, with the names of any base class of this class and with the
-names of all interfaces implemented by any of the aforementioned classes.</p>
-<p>Instead of a single type name, an array of type names can be given and the method will check if this
-class is of any of the listed types (logical or).</p>
-<p>Should the UI5 class system in future implement additional means of associating classes with type names
-(e.g. by introducing mixins), then this method might detect matches for those names as well.</p>
 <hr>
 <h3>isAbstract()</h3>
 <blockquote>
@@ -164,12 +164,12 @@ class is of any of the listed types (logical or).</p>
 <blockquote>
 <p><strong>isDeprecated</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Whether the described class is deprecated and should not be used any more</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>whether the class is considered deprecated</p>
 <h4>Since</h4>
 <p>1.26.4</p>
-<p>Whether the described class is deprecated and should not be used any more</p>
 <hr>
 <h3>isFinal()</h3>
 <blockquote>
@@ -193,6 +193,6 @@ class is of any of the listed types (logical or).</p>
 <p><code>boolean</code></p>
 <p>whether this class implements the interface</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

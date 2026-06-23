@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: XMLView — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: XMLView — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: XMLView — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/mvc/XMLView/classes/XMLView.html">
 <meta property="og:title" content="Class: XMLView — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: XMLView — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: XMLView — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/mvc/XMLView/classes/XMLView.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › mvc › <a href="../../../../../../../sap.ui.core/sap/ui/core/mvc/XMLView/README.html">XMLView</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/mvc/XMLView</a> / XMLView</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/mvc/XMLView</a> / XMLView</p>
 <h1>Class: XMLView</h1>
 <pre class="sig"><span class="kw">import</span> XMLView <span class="kw">from</span> <span class="str">"sap/ui/core/mvc/XMLView"</span>;</pre>
 <p>A View defined using XML and, optionally, pure HTML markup.</p>
@@ -111,25 +111,40 @@ can be used.</p>
 <blockquote>
 <p><code>static</code> <strong>asyncSupport</strong>: <code>boolean</code></p>
 </blockquote>
+<p>Flag for feature detection of asynchronous loading/rendering</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Flag for feature detection of asynchronous loading/rendering</p>
 <hr>
 <h3>PreprocessorType</h3>
 <blockquote>
 <p><code>static</code> <strong>PreprocessorType</strong>: <em>typeof</em> <a href="../enumerations/PreprocessorType.html"><code>PreprocessorType</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.34</p>
 <p>Specifies the available preprocessor types for XMLViews
 See:
 	sap.ui.core.mvc.XMLView
 	sap.ui.core.mvc.View.Preprocessor</p>
+<h4>Since</h4>
+<p>1.34</p>
 <hr>
 <h3>create()</h3>
 <blockquote>
 <p><code>static</code> <strong>create</strong>(<code>oOptions</code>): <code>Promise</code>&lt;<code>XMLView</code>&gt;</p>
 </blockquote>
+<p>Instantiates an XMLView from the given configuration options.</p>
+<p>If a <code>viewName</code> is given, it must be a dot-separated name of an XML view resource (without the mandatory
+suffix &quot;.view.xml&quot;). The resource will be loaded asynchronously via the module system (preload caches
+might apply) and will be parsed as XML. Alternatively, an already loaded view <code>definition</code> can be provided,
+either as XML string or as an already parsed XML document. Exactly one of <code>viewName</code> or <code>definition</code>
+must be given, if none or both are given, an error will be reported.</p>
+<p>The <code>controller</code> property is optional and can hold a controller instance. When given, it overrides the
+controller class defined in the view definition.</p>
+<p><strong>Note</strong>: On root level, you can only define content for the default aggregation, e.g. without adding
+the <code>&lt;content&gt;</code> tag. If you want to specify content for another aggregation of a view like <code>dependents</code>,
+place it in a child control&#39;s <code>dependents</code> aggregation or add it by using sap.ui.core.mvc.XMLView#addDependent.</p>
+<p><strong>Note</strong>: If you enable caching, you need to take care of the invalidation via keys. Automatic invalidation
+takes only place if the UI5 version or the component descriptor (manifest.json) change. This is still
+an experimental feature and may experience slight changes of the invalidation parameters or the cache
+key format.</p>
 <h4>Parameters</h4>
 <h5>oOptions</h5>
 <p>An object containing the view configuration options.</p>
@@ -162,21 +177,6 @@ available to this instance. For global or on-demand availability use sap.ui.core
 <p>A Promise that resolves with the view instance or rejects with any thrown error.</p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Instantiates an XMLView from the given configuration options.</p>
-<p>If a <code>viewName</code> is given, it must be a dot-separated name of an XML view resource (without the mandatory
-suffix &quot;.view.xml&quot;). The resource will be loaded asynchronously via the module system (preload caches
-might apply) and will be parsed as XML. Alternatively, an already loaded view <code>definition</code> can be provided,
-either as XML string or as an already parsed XML document. Exactly one of <code>viewName</code> or <code>definition</code>
-must be given, if none or both are given, an error will be reported.</p>
-<p>The <code>controller</code> property is optional and can hold a controller instance. When given, it overrides the
-controller class defined in the view definition.</p>
-<p><strong>Note</strong>: On root level, you can only define content for the default aggregation, e.g. without adding
-the <code>&lt;content&gt;</code> tag. If you want to specify content for another aggregation of a view like <code>dependents</code>,
-place it in a child control&#39;s <code>dependents</code> aggregation or add it by using sap.ui.core.mvc.XMLView#addDependent.</p>
-<p><strong>Note</strong>: If you enable caching, you need to take care of the invalidation via keys. Automatic invalidation
-takes only place if the UI5 version or the component descriptor (manifest.json) change. This is still
-an experimental feature and may experience slight changes of the invalidation parameters or the cache
-key format.</p>
 <h4>Overrides</h4>
 <p><a href="../../View/classes/View.html"><code>View</code></a>.<a href="../../View/classes/View.html#create"><code>create</code></a></p>
 <hr>
@@ -223,6 +223,17 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>registerPreprocessor</strong>(<code>sType</code>, <code>vPreprocessor</code>, <code>sViewType</code>, <code>bSyncSupport</code>, <code>bOnDemand?</code>, <code>mSettings?</code>): <code>void</code></p>
 </blockquote>
+<p>Register a preprocessor for all views of a specific type.</p>
+<p>The preprocessor can be registered for several stages of view initialization, for xml views these are
+either the plain &quot;xml&quot; or the already initialized &quot;controls&quot; , see sap.ui.core.mvc.XMLView.PreprocessorType.
+For each type one preprocessor is executed. If there is a preprocessor passed to or activated at the
+view instance already, that one is used. When several preprocessors are registered for one hook, it has
+to be made sure, that they do not conflict when being processed serially.</p>
+<p>It can be either a module name as string of an implementation of sap.ui.core.mvc.View.Preprocessor
+or a function with a signature according to sap.ui.core.mvc.View.Preprocessor.process.</p>
+<p><strong>Note</strong>: Preprocessors work only in async views and will be ignored when the view is instantiated in
+sync mode by default, as this could have unexpected side effects. You may override this behaviour by
+setting the bSyncSupport flag to true.</p>
 <h5>Parameters</h5>
 <h6>sType</h6>
 <p><code>string</code></p>
@@ -250,6 +261,12 @@ break the view initialization and lead to unexpected results.</p>
 <p><code>void</code></p>
 <h5>Since</h5>
 <p>1.30</p>
+<h5>Overrides</h5>
+<p><a href="../../View/classes/View.html"><code>View</code></a>.<a href="../../View/classes/View.html#registerpreprocessor"><code>registerPreprocessor</code></a></p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><code>static</code> <strong>registerPreprocessor</strong>(<code>sType</code>, <code>vPreprocessor</code>, <code>bSyncSupport</code>, <code>bOnDemand?</code>, <code>mSettings?</code>): <code>void</code></p>
+</blockquote>
 <p>Register a preprocessor for all views of a specific type.</p>
 <p>The preprocessor can be registered for several stages of view initialization, for xml views these are
 either the plain &quot;xml&quot; or the already initialized &quot;controls&quot; , see sap.ui.core.mvc.XMLView.PreprocessorType.
@@ -261,12 +278,6 @@ or a function with a signature according to sap.ui.core.mvc.View.Preprocessor.pr
 <p><strong>Note</strong>: Preprocessors work only in async views and will be ignored when the view is instantiated in
 sync mode by default, as this could have unexpected side effects. You may override this behaviour by
 setting the bSyncSupport flag to true.</p>
-<h5>Overrides</h5>
-<p><a href="../../View/classes/View.html"><code>View</code></a>.<a href="../../View/classes/View.html#registerpreprocessor"><code>registerPreprocessor</code></a></p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><code>static</code> <strong>registerPreprocessor</strong>(<code>sType</code>, <code>vPreprocessor</code>, <code>bSyncSupport</code>, <code>bOnDemand?</code>, <code>mSettings?</code>): <code>void</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>sType</h6>
 <p><code>string</code></p>
@@ -290,20 +301,9 @@ break the view initialization and lead to unexpected results.</p>
 <p><code>void</code></p>
 <h5>Since</h5>
 <p>1.30</p>
-<p>Register a preprocessor for all views of a specific type.</p>
-<p>The preprocessor can be registered for several stages of view initialization, for xml views these are
-either the plain &quot;xml&quot; or the already initialized &quot;controls&quot; , see sap.ui.core.mvc.XMLView.PreprocessorType.
-For each type one preprocessor is executed. If there is a preprocessor passed to or activated at the
-view instance already, that one is used. When several preprocessors are registered for one hook, it has
-to be made sure, that they do not conflict when being processed serially.</p>
-<p>It can be either a module name as string of an implementation of sap.ui.core.mvc.View.Preprocessor
-or a function with a signature according to sap.ui.core.mvc.View.Preprocessor.process.</p>
-<p><strong>Note</strong>: Preprocessors work only in async views and will be ignored when the view is instantiated in
-sync mode by default, as this could have unexpected side effects. You may override this behaviour by
-setting the bSyncSupport flag to true.</p>
 <h5>Overrides</h5>
 <p><code>View.registerPreprocessor</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

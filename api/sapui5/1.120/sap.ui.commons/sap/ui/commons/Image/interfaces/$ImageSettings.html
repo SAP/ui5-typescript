@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $ImageSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ImageSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $ImageSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $ImageSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/Image/interfaces/$ImageSettings.html">
-<meta property="og:title" content="Interface: $ImageSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ImageSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $ImageSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $ImageSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/Image/interfaces/$ImageSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,24 +33,27 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/Image/README.html">Image</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Image</a> / $ImageSettings</p>
-<h1>Interface: $ImageSettings</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Image</a> / $ImageSettings</p>
+<h1><del>Interface: $ImageSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $ImageSettings } <span class="kw">from</span> <span class="str">"sap/ui/commons/Image"</span>;</pre>
+<p>Describes the settings that can be provided to the Image constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - replaced by sap.m.Image</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>alt?</h3>
+<h3><del>alt?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>alt?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The alternative text that is displayed in case the Image is not available, or cannot be displayed. If
 the image is set to decorative this property is ignored.</p>
 <hr>
-<h3>decorative?</h3>
+<h3><del>decorative?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>decorative?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -59,14 +62,14 @@ Note: If the Image has an image map (useMap is set), this property will be overr
 not be rendered as decorative). A decorative image has no ALT attribute, so the Alt property is ignored
 if the image is decorative.</p>
 <hr>
-<h3>height?</h3>
+<h3><del>height?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>When the empty value is kept, the original size is not changed. It is also possible to make settings
 for width or height only, the overall size is maintained then, considering the aspect ratio.</p>
 <hr>
-<h3>press?</h3>
+<h3><del>press?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -77,25 +80,25 @@ for width or height only, the overall size is maintained then, considering the a
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>src?</h3>
+<h3><del>src?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>src?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Relative or absolute path to URL where the image file is stored.</p>
 <hr>
-<h3>useMap?</h3>
+<h3><del>useMap?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>useMap?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The name of the image map that defines the clickable areas</p>
 <hr>
-<h3>width?</h3>
+<h3><del>width?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>When the empty value is kept, the original size is not changed. It is also possible to make settings
 for width or height only, the overall size is maintained then, considering the aspect ratio.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

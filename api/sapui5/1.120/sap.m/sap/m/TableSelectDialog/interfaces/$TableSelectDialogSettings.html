@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TableSelectDialogSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TableSelectDialogSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $TableSelectDialogSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/TableSelectDialog/interfaces/$TableSelectDialogSettings.html">
 <meta property="og:title" content="Interface: $TableSelectDialogSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TableSelectDialogSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $TableSelectDialogSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/TableSelectDialog/interfaces/$TableSelectDialogSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/TableSelectDialog/README.html">TableSelectDialog</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TableSelectDialog</a> / $TableSelectDialogSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TableSelectDialog</a> / $TableSelectDialogSettings</p>
 <h1>Interface: $TableSelectDialogSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TableSelectDialogSettings } <span class="kw">from</span> <span class="str">"sap/m/TableSelectDialog"</span>;</pre>
+<p>Describes the settings that can be provided to the TableSelectDialog constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../SelectDialogBase/interfaces/$SelectDialogBaseSettings.html"><code>$SelectDialogBaseSettings</code></a></li>
@@ -76,10 +77,10 @@ button in multi-selection mode. The items being selected are returned as event p
 <blockquote>
 <p><code>optional</code> <strong>confirmButtonText?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.68</p>
 <p>Overwrites the default text for the confirmation button. Note: This property applies only when the property
 <code>multiSelect</code> is set to <code>true</code>.</p>
+<h4>Since</h4>
+<p>1.68</p>
 <hr>
 <h3>contentHeight?</h3>
 <blockquote>
@@ -91,31 +92,31 @@ button in multi-selection mode. The items being selected are returned as event p
 <blockquote>
 <p><code>optional</code> <strong>contentWidth?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Determines the content width of the inner dialog. For more information, see the Dialog documentation.</p>
 <h4>Since</h4>
 <p>1.18</p>
-<p>Determines the content width of the inner dialog. For more information, see the Dialog documentation.</p>
 <hr>
 <h3>draggable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>draggable?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.71</p>
 <p>When set to <code>true</code>, the TableSelectDialog is draggable by its header. The default value is <code>false</code>. <strong>Note</strong>:
 The TableSelectDialog can be draggable only in desktop mode.</p>
+<h4>Since</h4>
+<p>1.71</p>
 <hr>
 <h3>growing?</h3>
 <blockquote>
 <p><code>optional</code> <strong>growing?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.56</p>
 <p>Determines the progressive loading. When set to <code>true</code>, enables the growing feature of the control to
 load more items by requesting from the bound model. <strong>Note:</strong> This feature only works when an <code>items</code>
 aggregation is bound. Growing must not be used together with two-way binding. <strong>Note:</strong> If the property
 is set to <code>true</code>, selected count (if present) and search, will work for currently loaded items only.
 To make sure that all items in the table are loaded at once and the above features work properly, we
 recommend setting the <code>growing</code> property to <code>false</code>.</p>
+<h4>Since</h4>
+<p>1.56</p>
 <hr>
 <h3>growingThreshold?</h3>
 <blockquote>
@@ -158,21 +159,21 @@ to <code>true</code>.</p>
 <blockquote>
 <p><code>optional</code> <strong>rememberSelections?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.18</p>
 <p>Controls whether the dialog clears the selection or not. When the dialog is opened multiple times in
 the same context to allow for corrections of previous user inputs, set this flag to <code>true</code>. When the
 dialog should reset the selection to allow for a new selection each time set it to <code>false</code> Note: This
 property must be set before the Dialog is opened to have an effect.</p>
+<h4>Since</h4>
+<p>1.18</p>
 <hr>
 <h3>resizable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>resizable?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.71</p>
 <p>When set to <code>true</code>, the TableSelectDialog will have a resize handler in its bottom right corner. The
 default value is <code>false</code>. <strong>Note</strong>: The TableSelectDialog can be resizable only in desktop mode.</p>
+<h4>Since</h4>
+<p>1.71</p>
 <hr>
 <h3>search?</h3>
 <blockquote>
@@ -189,17 +190,15 @@ default value is <code>false</code>. <strong>Note</strong>: The TableSelectDialo
 <blockquote>
 <p><code>optional</code> <strong>searchPlaceholder?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.110</p>
 <p>Allows overriding the SearchField&#39;s default placeholder text. If not set, the word &quot;Search&quot; in the current
 local language or English will be used as a placeholder.</p>
+<h4>Since</h4>
+<p>1.110</p>
 <hr>
 <h3>showClearButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showClearButton?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.58</p>
 <p>This flag controls whether the Clear button is shown. When set to <code>true</code>, it provides a way to clear
 a selection made in Table Select Dialog.</p>
 <p>We recommend enabling of the Clear button in the following cases, where a mechanism to clear the value
@@ -210,6 +209,8 @@ the selection. In case the application stores a value and uses only Table Select
 it.</p>
 <p>Optional: In case <code>multiSelect</code> is set to <code>true</code>, the selection can be easily cleared with one click.</p>
 <p><strong>Note:</strong> When used with OData, only the loaded selections will be cleared.</p>
+<h4>Since</h4>
+<p>1.58</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -221,13 +222,13 @@ it.</p>
 <blockquote>
 <p><code>optional</code> <strong>titleAlignment?</strong>: <code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.72</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
 as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
 (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<h4>Since</h4>
+<p>1.72</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

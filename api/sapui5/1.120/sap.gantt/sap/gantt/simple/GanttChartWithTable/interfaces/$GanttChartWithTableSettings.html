@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $GanttChartWithTableSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $GanttChartWithTableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $GanttChartWithTableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/GanttChartWithTable/interfaces/$GanttChartWithTableSettings.html">
 <meta property="og:title" content="Interface: $GanttChartWithTableSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $GanttChartWithTableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $GanttChartWithTableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/GanttChartWithTable/interfaces/$GanttChartWithTableSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/GanttChartWithTable/README.html">GanttChartWithTable</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/GanttChartWithTable</a> / $GanttChartWithTableSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/GanttChartWithTable</a> / $GanttChartWithTableSettings</p>
 <h1>Interface: $GanttChartWithTableSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $GanttChartWithTableSettings } <span class="kw">from</span> <span class="str">"sap/gantt/simple/GanttChartWithTable"</span>;</pre>
+<p>Describes the settings that can be provided to the GanttChartWithTable constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -54,10 +55,10 @@ patterns.</p>
 <blockquote>
 <p><code>optional</code> <strong>adhocLines?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../AdhocLine/classes/AdhocLine.html"><code>AdhocLine</code></a> | <a href="../../../AdhocLine/classes/AdhocLine.html"><code>AdhocLine</code></a>[]</p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.84) - use sap.gantt.simple.AdhocLine instead.</p>
 <p>The aggregation is used to store configuration of adhoc lines, adhoc lines represent milestones and events
 in axis time.</p>
+<h4>Deprecated</h4>
+<p>(since 1.84) - use sap.gantt.simple.AdhocLine instead.</p>
 <hr>
 <h3>axisTimeStrategy?</h3>
 <blockquote>
@@ -80,34 +81,34 @@ for each row. Notes for classes extended from <code>sap.gantt.def.cal.CalendarDe
 <blockquote>
 <p><code>optional</code> <strong>datePattern?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Specifies how the application&#39;s date is displayed in the gantt chart. For example: &quot;dd.MM.yyyy&quot; (31.01.2018)</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Specifies how the application&#39;s date is displayed in the gantt chart. For example: &quot;dd.MM.yyyy&quot; (31.01.2018)</p>
 <hr>
 <h3>deltaAreaHighlightColor?</h3>
 <blockquote>
 <p><code>optional</code> <strong>deltaAreaHighlightColor?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.86</p>
 <p>Property to add custom color to the highlighted area between delta lines. This would default to Fiori
 standard color</p>
+<h4>Since</h4>
+<p>1.86</p>
 <hr>
 <h3>deltaLineLayer?</h3>
 <blockquote>
 <p><code>optional</code> <strong>deltaLineLayer?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Specifies the layer on which Delta Lines reside. By default, Delta Lines are above all shapes and patterns.</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Specifies the layer on which Delta Lines reside. By default, Delta Lines are above all shapes and patterns.</p>
 <hr>
 <h3>deltaLines?</h3>
 <blockquote>
 <p><code>optional</code> <strong>deltaLines?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../DeltaLine/classes/DeltaLine.html"><code>DeltaLine</code></a> | <a href="../../DeltaLine/classes/DeltaLine.html"><code>DeltaLine</code></a>[]</p>
 </blockquote>
+<p>The aggregation is used to store configuration of Delta Lines</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>The aggregation is used to store configuration of Delta Lines</p>
 <hr>
 <h3>disableShapeDoubleClickEvent?</h3>
 <blockquote>
@@ -161,33 +162,33 @@ around. This property has 3 values:
 <blockquote>
 <p><code>optional</code> <strong>enableChartDeltaAreaHighlight?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Flag to show or hide Chart Delta Area highlighting</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Flag to show or hide Chart Delta Area highlighting</p>
 <hr>
 <h3>enableChartHoverState?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableChartHoverState?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Option to disable or enable the chart row&#39;s hover state.</p>
 <h4>Since</h4>
 <p>1.93</p>
-<p>Option to disable or enable the chart row&#39;s hover state.</p>
 <hr>
 <h3>enableChartOverflowToolbar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableChartOverflowToolbar?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Option to show or hide the chart overflow toolbar.</p>
 <h4>Since</h4>
 <p>1.92</p>
-<p>Option to show or hide the chart overflow toolbar.</p>
 <hr>
 <h3>enableChartSelectionState?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableChartSelectionState?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Option to disable or enable the chart row&#39;s selection state.</p>
 <h4>Since</h4>
 <p>1.93</p>
-<p>Option to disable or enable the chart row&#39;s selection state.</p>
 <hr>
 <h3>enableCursorLine?</h3>
 <blockquote>
@@ -200,37 +201,37 @@ around. This property has 3 values:
 <p><code>optional</code> <strong>enableDateTimezoneFormatter?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<h4>Deprecated</h4>
-<p>(since 1.119)
- (since 1.115)</p>
 <p>Flag to check whether the DateFormat should be used for Fiori launchpad timezone support. This flag is
 experimental, and it might be removed in a future release. When the flag is enabled, the start and end
 time for the shapes that are created outside of the <code>GanttChartWithTable</code> scope are not formatted to
 the Fiori launchpad timezone, unless those property values are binded again.</p>
+<h4>Deprecated</h4>
+<p>(since 1.119)
+ (since 1.115)</p>
 <hr>
 <h3>enableDeltaLine?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableDeltaLine?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Flag to show or hide Delta Lines</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Flag to show or hide Delta Lines</p>
 <hr>
 <h3>enableExpandedRowBackground?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableExpandedRowBackground?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Property to enable the background color for expanded rows. By default, this would show the row background</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Property to enable the background color for expanded rows. By default, this would show the row background</p>
 <hr>
 <h3>enableExpandedRowBorders?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableExpandedRowBorders?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Property to enable borders for expanded rows. By default, only row borders are enabled.</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Property to enable borders for expanded rows. By default, only row borders are enabled.</p>
 <hr>
 <h3>enableLassoInvert?</h3>
 <blockquote>
@@ -238,13 +239,19 @@ the Fiori launchpad timezone, unless those property values are binded again.</p>
 </blockquote>
 <p>Enables inversion on shape selection while drawing lasso</p>
 <hr>
+<h3>enableMultipleGhosts?</h3>
+<blockquote>
+<p><code>optional</code> <strong>enableMultipleGhosts?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Flag to enable displaying multiple ghosts when multiple shapes are selected and dragged.</p>
+<hr>
 <h3>enableNonWorkingTime?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableNonWorkingTime?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Flag to show or hide non-working time</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Flag to show or hide non-working time</p>
 <hr>
 <h3>enableNowLine?</h3>
 <blockquote>
@@ -257,16 +264,16 @@ the Fiori launchpad timezone, unless those property values are binded again.</p>
 <p><code>optional</code> <strong>enablePseudoShapes?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.110)</p>
 <p>Optimizes the rendering of overlapping shapes</p>
+<p> (since 1.110)</p>
 <hr>
 <h3>enableSelectAndDrag?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableSelectAndDrag?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Allows to drag, drop, and resize a shape on explicitly selecting the shape.</p>
 <h4>Since</h4>
 <p>1.85</p>
-<p>Allows to drag, drop, and resize a shape on explicitly selecting the shape.</p>
 <hr>
 <h3>enableVerticalLine?</h3>
 <blockquote>
@@ -287,25 +294,25 @@ the Fiori launchpad timezone, unless those property values are binded again.</p>
 <p><code>optional</code> <strong>findBy?</strong>: <code>string</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.100)</p>
 <p>Defines the property names for which findAll method should search in different entities</p>
+<p> (since 1.100)</p>
 <hr>
 <h3>findByOperator?</h3>
 <blockquote>
 <p><code>optional</code> <strong>findByOperator?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.100)</p>
 <p>Defines relationship between the operator and the property names using the findAll method</p>
+<p> (since 1.100)</p>
 <hr>
 <h3>ganttAdaptationData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ganttAdaptationData?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../GanttAdaptationData/classes/GanttAdaptationData.html"><code>GanttAdaptationData</code></a> | <a href="../../GanttAdaptationData/classes/GanttAdaptationData.html"><code>GanttAdaptationData</code></a>[]</p>
 </blockquote>
-<h4>Since</h4>
-<p>1.90</p>
 <p>Specifies a data structure with arbitrary key value pairs to support customization of Gantt charts with
 tables.</p>
+<h4>Since</h4>
+<p>1.90</p>
 <hr>
 <h3>ghostAlignment?</h3>
 <blockquote>
@@ -325,19 +332,19 @@ on dragging, it also effect the parameter value in event <code>shapeDragEnd</cod
 <p><code>optional</code> <strong>horizontalLazyLoadingEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.109)</p>
 <p>Set to true if Gantt chart is configured to be lazy loaded horizontally. Application should fetch the
 data only for the visible horizon. Application also should make sure to fetch the relevant data on user
 interactions like horizontal scroll, zoom out, bird eye which changes the visible horizon until the time
 when all the data is fetched. This property has to be used with <code>setAllDataLoadedPromise()</code>.</p>
+<p> (since 1.109)</p>
 <hr>
 <h3>isConnectorDetailsVisible?</h3>
 <blockquote>
 <p><code>optional</code> <strong>isConnectorDetailsVisible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Defines whether shapeConnectorList is displayed upon the click of connector/relationship or not</p>
 <h4>Since</h4>
 <p>1.102</p>
-<p>Defines whether shapeConnectorList is displayed upon the click of connector/relationship or not</p>
 <hr>
 <h3>locale?</h3>
 <blockquote>
@@ -352,43 +359,44 @@ time options are provided by locale settings. We recommend that you set the type
 <blockquote>
 <p><code>optional</code> <strong>nowLineInUTC?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Flag whether to show the <code>nowLine</code> in UTC or in FLP time.</p>
 <h4>Since</h4>
 <p>1.68</p>
-<p>Flag whether to show the <code>nowLine</code> in UTC or in FLP time.</p>
 <hr>
 <h3>overflowToolbarItems?</h3>
 <blockquote>
 <p><code>optional</code> <strong>overflowToolbarItems?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Items can be added in chart overflow toolbar using this aggregation.</p>
 <h4>Since</h4>
 <p>1.102</p>
-<p>Items can be added in chart overflow toolbar using this aggregation.</p>
 <hr>
 <h3>printingBatchSize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>printingBatchSize?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.90</p>
 <p>Defines the batch size, that is the number of rows, to be printed per iteration. If set to 0, batching
 is disabled and the entire Gantt chart is printed. This could slow the performance and make the browser
 non-responsive. Note: Relationship lines can be interrupted if the start and end points are in different
 canvases. To minimize this effect, choose a bigger batch size, ensuring that the browser is responsive
 during printing.</p>
+<h4>Since</h4>
+<p>1.90</p>
 <hr>
 <h3>relationshipShapeSize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>relationshipShapeSize?</strong>: <code>&quot;Large&quot;</code> | <code>&quot;Medium&quot;</code> | <code>&quot;Small&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../library/namespaces/simple/enumerations/relationshipShapeSize.html"><code>relationshipShapeSize</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.96</p>
 <p>Specifies the size of the relationship&#39;s shape. Applicable to triangles, square, diamond, and circle
 shapes; excluding horizontal rectangle and vertical rectangle shapes.</p>
+<h4>Since</h4>
+<p>1.96</p>
 <hr>
 <h3>renderingComplete?</h3>
 <blockquote>
 <p><code>optional</code> <strong>renderingComplete?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when Gantt chart is rendered completely.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -396,25 +404,24 @@ shapes; excluding horizontal rectangle and vertical rectangle shapes.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.100</p>
-<p>This event is fired when Gantt chart is rendered completely.</p>
 <hr>
 <h3>rowHighlightAndHoverFill?</h3>
 <blockquote>
 <p><code>optional</code> <strong>rowHighlightAndHoverFill?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.108</p>
 <p>The rowHighlightAndHoverFill property defines the color that is filled for the highlighted and hovered
 rows when a shape is being dragged The highlighted rows are the ones where the shape drop is allowed</p>
+<h4>Since</h4>
+<p>1.108</p>
 <hr>
 <h3>rowHighlightFill?</h3>
 <blockquote>
 <p><code>optional</code> <strong>rowHighlightFill?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.108</p>
 <p>The rowHighlightFill property defines the color that is filled for the highlighted rows when a shape
 is being dragged The highlighted rows are the ones where the shape drop is allowed</p>
+<h4>Since</h4>
+<p>1.108</p>
 <hr>
 <h3>selectionPanelSize?</h3>
 <blockquote>
@@ -428,9 +435,9 @@ embedded Splitter.</p>
 <blockquote>
 <p><code>optional</code> <strong>selectOnlyGraphicalShape?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Enables selection of only graphical shapes excluding labels.</p>
 <h4>Since</h4>
 <p>1.93</p>
-<p>Enables selection of only graphical shapes excluding labels.</p>
 <hr>
 <h3>shapeConnect?</h3>
 <blockquote>
@@ -447,6 +454,7 @@ embedded Splitter.</p>
 <blockquote>
 <p><code>optional</code> <strong>shapeConnectorList?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when you click the connector/relationship.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/GanttChartWithTable$ShapeConnectorListEvent.html"><code>GanttChartWithTable$ShapeConnectorListEvent</code></a></p>
@@ -454,7 +462,6 @@ embedded Splitter.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.102</p>
-<p>This event is fired when you click the connector/relationship.</p>
 <hr>
 <h3>shapeContextMenu?</h3>
 <blockquote>
@@ -493,6 +500,7 @@ embedded Splitter.</p>
 <blockquote>
 <p><code>optional</code> <strong>shapeHighlightChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the shape&#39;s highlight has been changed</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/GanttChartWithTable$ShapeHighlightChangeEvent.html"><code>GanttChartWithTable$ShapeHighlightChangeEvent</code></a></p>
@@ -500,14 +508,11 @@ embedded Splitter.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.100</p>
-<p>Fired when the shape&#39;s highlight has been changed</p>
 <hr>
 <h3>shapeHighlightSettings?</h3>
 <blockquote>
 <p><code>optional</code> <strong>shapeHighlightSettings?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.100</p>
 <p>A JSON object containing the shapeHighlightSettings that is used to configure shape highlight styles.
 If nothing is specified, then the default highlight styles (2px dashed black border) is set. Below
 you can find a brief example</p>
@@ -520,6 +525,8 @@ you can find a brief example</p>
    fillOpacity: 0
 }
 </code></pre>
+<h4>Since</h4>
+<p>1.100</p>
 <hr>
 <h3>shapeMouseEnter?</h3>
 <blockquote>
@@ -536,10 +543,10 @@ you can find a brief example</p>
 <blockquote>
 <p><code>optional</code> <strong>shapeMouseEnterDelay?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.112</p>
 <p>Time in milliseconds where the mouse has to be on the same shape for the specified time before triggering
 the <code>shapeMouseEnter</code> event</p>
+<h4>Since</h4>
+<p>1.112</p>
 <hr>
 <h3>shapeMouseLeave?</h3>
 <blockquote>
@@ -556,20 +563,20 @@ the <code>shapeMouseEnter</code> event</p>
 <blockquote>
 <p><code>optional</code> <strong>shapeMouseLeaveDelay?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.112</p>
 <p>Time in milliseconds where the mouse has moved out of the hovered shape for the specified time before
 triggering the <code>shapeMouseLeave</code> event</p>
+<h4>Since</h4>
+<p>1.112</p>
 <hr>
 <h3>shapeOverRelationship?</h3>
 <blockquote>
 <p><code>optional</code> <strong>shapeOverRelationship?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.76</p>
 <p>Specifies whether shape is rendered over relationship or relationship over shape when relationship leads
 through shape.</p>
 <p>If enabled, shapes are rendered over relationships. If disabled, relationships are rendered over shapes.</p>
+<h4>Since</h4>
+<p>1.76</p>
 <hr>
 <h3>shapePress?</h3>
 <blockquote>
@@ -587,11 +594,11 @@ through shape.</p>
 <p><code>optional</code> <strong>shapeRenderOrder?</strong>: <code>string</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.113)</p>
 <p>Comma-separated value of shape aggregations to decide the rendering order The aggregations first in the
 array are rendered first. Aggregations not mentioned in the array will be rendered at the very first
 Example: &quot;shapes3,shapes2,shapes1&quot; means shapes3 will be rendered at the bottom, and shapes1 will be
 rendered at the top</p>
+<p> (since 1.113)</p>
 <hr>
 <h3>shapeResize?</h3>
 <blockquote>
@@ -694,58 +701,59 @@ data are:
 <blockquote>
 <p><code>optional</code> <strong>showGanttHeader?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Option to show or hide the header of the Gantt chart</p>
 <h4>Since</h4>
 <p>1.90</p>
-<p>Option to show or hide the header of the Gantt chart</p>
 <hr>
 <h3>showParentRowOnExpand?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showParentRowOnExpand?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Option to show or hide the parent row on expand. This is applicable only for multi-activity row settings.</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Option to show or hide the parent row on expand. This is applicable only for multi-activity row settings.</p>
 <hr>
 <h3>showShapeTimeOnDrag?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showShapeTimeOnDrag?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Flag to show or hide the start time and end time of a shape when you drag it along the time line. The
-property takes effect if only one shape is selected.</p>
+property takes effect if only one shape is selected or <code>enableMultipleGhosts</code> is set to false.</p>
 <hr>
 <h3>showTextOnGhost?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showTextOnGhost?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Option to show or hide shape labels on ghost while dragging. The property takes effect only when <code>enableMultipleGhosts</code>
+is set to true.</p>
 <h4>Since</h4>
 <p>1.94</p>
-<p>Option to show or hide shape labels on ghost while dragging.</p>
 <hr>
 <h3>simpleAdhocLines?</h3>
 <blockquote>
 <p><code>optional</code> <strong>simpleAdhocLines?</strong>: <code>any</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.84</p>
 <p>The aggregation is used to store configuration of adhoc lines, adhoc lines represent milestones and events
 in axis time.</p>
+<h4>Since</h4>
+<p>1.84</p>
 <hr>
 <h3>snapMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>snapMode?</strong>: <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Both&quot;</code> | <a href="../../../library/namespaces/dragdrop/enumerations/SnapMode.html"><code>SnapMode</code></a></p>
 </blockquote>
+<p>Enables snapping of shapes to attach to the nearest visual element while dragging.</p>
 <h4>Since</h4>
 <p>1.91</p>
-<p>Enables snapping of shapes to attach to the nearest visual element while dragging.</p>
 <hr>
 <h3>snapTimeInterval?</h3>
 <blockquote>
 <p><code>optional</code> <strong>snapTimeInterval?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.91</p>
 <p>Defines the least time taken in seconds for a shape to snap while in a particular zoom level. eg. { &quot;4hour&quot;:{timeInterval:1800},
 ---&gt; 30mins Snap &quot;1hour&quot;:{timeInterval:900} ---&gt; 15mins Snap }</p>
+<h4>Since</h4>
+<p>1.91</p>
 <hr>
 <h3>svgDefs?</h3>
 <blockquote>
@@ -769,22 +777,23 @@ hierarchical data.</p>
 <blockquote>
 <p><code>optional</code> <strong>timePattern?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Specifies how the application&#39;s time is displayed in the gantt chart. For example: &quot;hh:mm a&quot; (12:05 PM)</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Specifies how the application&#39;s time is displayed in the gantt chart. For example: &quot;hh:mm a&quot; (12:05 PM)</p>
 <hr>
 <h3>useParentShapeOnExpand?</h3>
 <blockquote>
 <p><code>optional</code> <strong>useParentShapeOnExpand?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.98)</p>
 <p>Determines if only tasks need to be used for rendering the expanded shapes. Subtasks are not required.</p>
+<p> (since 1.98)</p>
 <hr>
 <h3>visibleHorizonUpdate?</h3>
 <blockquote>
 <p><code>optional</code> <strong>visibleHorizonUpdate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the visible horizon is changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/GanttChartWithTable$VisibleHorizonUpdateEvent.html"><code>GanttChartWithTable$VisibleHorizonUpdateEvent</code></a></p>
@@ -792,7 +801,6 @@ hierarchical data.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.68</p>
-<p>This event is fired when the visible horizon is changed.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -800,6 +808,6 @@ hierarchical data.</p>
 </blockquote>
 <p>Width of the control.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

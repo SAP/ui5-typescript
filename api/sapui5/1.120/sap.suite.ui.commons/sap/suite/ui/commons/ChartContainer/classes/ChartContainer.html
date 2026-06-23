@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ChartContainer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ChartContainer — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ChartContainer — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/ChartContainer/classes/ChartContainer.html">
 <meta property="og:title" content="Class: ChartContainer — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ChartContainer — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ChartContainer — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/ChartContainer/classes/ChartContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/ChartContainer/README.html">ChartContainer</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/ChartContainer</a> / ChartContainer</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/ChartContainer</a> / ChartContainer</p>
 <h1>Class: ChartContainer</h1>
 <pre class="sig"><span class="kw">import</span> ChartContainer <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/ChartContainer"</span>;</pre>
 <p>Provides a toolbar with generic functions for tables and charts based on the VizFrame control like zoom,
@@ -416,6 +416,7 @@ event of this <code>sap.suite.ui.commons.ChartContainer</code>.</p>
 <blockquote>
 <p><strong>fireContentChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:contentChange contentChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ChartContainer$ContentChangeEventParameters.html"><code>ChartContainer$ContentChangeEventParameters</code></a></p>
@@ -425,12 +426,12 @@ event of this <code>sap.suite.ui.commons.ChartContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:contentChange contentChange to attached listeners.</p>
 <hr>
 <h3>fireCustomZoomInPress()</h3>
 <blockquote>
 <p><strong>fireCustomZoomInPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:customZoomInPress customZoomInPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -440,12 +441,12 @@ event of this <code>sap.suite.ui.commons.ChartContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:customZoomInPress customZoomInPress to attached listeners.</p>
 <hr>
 <h3>fireCustomZoomOutPress()</h3>
 <blockquote>
 <p><strong>fireCustomZoomOutPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:customZoomOutPress customZoomOutPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -455,12 +456,12 @@ event of this <code>sap.suite.ui.commons.ChartContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:customZoomOutPress customZoomOutPress to attached listeners.</p>
 <hr>
 <h3>firePersonalizationPress()</h3>
 <blockquote>
 <p><strong>firePersonalizationPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:personalizationPress personalizationPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -470,7 +471,6 @@ event of this <code>sap.suite.ui.commons.ChartContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:personalizationPress personalizationPress to attached listeners.</p>
 <hr>
 <h3>getAutoAdjustHeight()</h3>
 <blockquote>
@@ -548,12 +548,12 @@ the Container control itself.</p>
 <blockquote>
 <p><strong>getScrollDelegate</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/delegate/ScrollEnablement/classes/ScrollEnablement.html"><code>ScrollEnablement</code></a></p>
 </blockquote>
+<p>Returns the current instance of the delegate to other controls.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/delegate/ScrollEnablement/classes/ScrollEnablement.html"><code>ScrollEnablement</code></a></p>
 <p>The current instance of the delegate</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the current instance of the delegate to other controls.</p>
 <hr>
 <h3>getSelectedContent()</h3>
 <blockquote>
@@ -568,13 +568,13 @@ the Container control itself.</p>
 <blockquote>
 <p><strong>getSelectorGroupLabel</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getSelectorGroupLabel selectorGroupLabel.</p>
+<p>Custom Label for Selectors Group.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>selectorGroupLabel</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.32.0) - Obsolete property as sap.m.Toolbar is replaced by sap.m.OverflowToolbar.</p>
-<p>Gets current value of property #getSelectorGroupLabel selectorGroupLabel.</p>
-<p>Custom Label for Selectors Group.</p>
 <hr>
 <h3>getShowFullScreen()</h3>
 <blockquote>
@@ -627,15 +627,15 @@ The execution order of the combined properties is not guaranteed by the control.
 <blockquote>
 <p><strong>getShowSelectionDetails</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowSelectionDetails showSelectionDetails.</p>
+<p>Set to true to display the &#39;Details&#39; button that opens a popup dialog with details about the selected
+data from the VizFrame based chart.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showSelectionDetails</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
-<p>Gets current value of property #getShowSelectionDetails showSelectionDetails.</p>
-<p>Set to true to display the &#39;Details&#39; button that opens a popup dialog with details about the selected
-data from the VizFrame based chart.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowZoom()</h3>
 <blockquote>
@@ -684,14 +684,14 @@ a placeholder. This placeholder is mandatory, and it needs to be of type &#39;sa
 <blockquote>
 <p><strong>getWrapLabels</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getWrapLabels wrapLabels.</p>
+<p>Set to true to wrap text labels in the dialog that opens when the user clicks or taps the &#39;Details&#39; button.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>wrapLabels</code></p>
 <h4>Since</h4>
 <p>1.58.0</p>
-<p>Gets current value of property #getWrapLabels wrapLabels.</p>
-<p>Set to true to wrap text labels in the dialog that opens when the user clicks or taps the &#39;Details&#39; button.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -980,6 +980,11 @@ The execution order of the combined properties is not guaranteed by the control.
 <blockquote>
 <p><strong>setShowSelectionDetails</strong>(<code>bShowSelectionDetails?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowSelectionDetails showSelectionDetails.</p>
+<p>Set to true to display the &#39;Details&#39; button that opens a popup dialog with details about the selected
+data from the VizFrame based chart.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowSelectionDetails?</h5>
 <p><code>boolean</code></p>
@@ -989,11 +994,6 @@ The execution order of the combined properties is not guaranteed by the control.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
-<p>Sets a new value for property #getShowSelectionDetails showSelectionDetails.</p>
-<p>Set to true to display the &#39;Details&#39; button that opens a popup dialog with details about the selected
-data from the VizFrame based chart.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowZoom()</h3>
 <blockquote>
@@ -1057,6 +1057,10 @@ data from the VizFrame based chart.</p>
 <blockquote>
 <p><strong>setWrapLabels</strong>(<code>bWrapLabels?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWrapLabels wrapLabels.</p>
+<p>Set to true to wrap text labels in the dialog that opens when the user clicks or taps the &#39;Details&#39; button.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bWrapLabels?</h5>
 <p><code>boolean</code></p>
@@ -1066,10 +1070,6 @@ data from the VizFrame based chart.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58.0</p>
-<p>Sets a new value for property #getWrapLabels wrapLabels.</p>
-<p>Set to true to wrap text labels in the dialog that opens when the user clicks or taps the &#39;Details&#39; button.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>switchChart()</h3>
 <blockquote>
@@ -1131,6 +1131,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

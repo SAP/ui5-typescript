@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: Message — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Message — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Class: Message~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Class: Message~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/Message/classes/Message.html">
-<meta property="og:title" content="Class: Message — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Message — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Class: Message~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Class: Message~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/Message/classes/Message.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/Message/README.html">Message</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Message</a> / Message</p>
-<h1>Class: Message</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Message</a> / Message</p>
+<h1><del>Class: Message</del></h1>
 <pre class="sig"><span class="kw">import</span> Message <span class="kw">from</span> <span class="str">"sap/ui/core/Message"</span>;</pre>
 <p>This element is used to provide messages.</p>
 <p>Rendering must be done within the control that uses this kind of element. Its default level is none.</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - Please use sap.ui.core.message.Message instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -81,7 +83,7 @@ of the syntax of the settings object.</p>
 <h4>Overrides</h4>
 <p><a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../Element/classes/UI5Element.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
-<h3>compareByType()</h3>
+<h3><del>compareByType()</del></h3>
 <blockquote>
 <p><strong>compareByType</strong>(<code>oOther</code>): <code>number</code></p>
 </blockquote>
@@ -97,7 +99,7 @@ from &quot;Error&quot; &gt; &quot;Warning&quot; &gt; &quot;Success&quot; &gt; &q
 <p>returns <code>0</code> if both messages are at the same level. <code>-1</code> if <code>this</code> message has a lower level.
 <code>1</code> if <code>this</code> message has a higher level.</p>
 <hr>
-<h3>getDefaultIcon()</h3>
+<h3><del>getDefaultIcon()</del></h3>
 <blockquote>
 <p><strong>getDefaultIcon</strong>(<code>sSize?</code>): <code>string</code></p>
 </blockquote>
@@ -110,7 +112,7 @@ from &quot;Error&quot; &gt; &quot;Warning&quot; &gt; &quot;Success&quot; &gt; &q
 <p><code>string</code></p>
 <p>URI of the default icon.</p>
 <hr>
-<h3>getIcon()</h3>
+<h3><del>getIcon()</del></h3>
 <blockquote>
 <p><strong>getIcon</strong>(): <code>string</code></p>
 </blockquote>
@@ -120,7 +122,7 @@ from &quot;Error&quot; &gt; &quot;Warning&quot; &gt; &quot;Success&quot; &gt; &q
 <p><code>string</code></p>
 <p>Value of property <code>icon</code></p>
 <hr>
-<h3>getLevel()</h3>
+<h3><del>getLevel()</del></h3>
 <blockquote>
 <p><strong>getLevel</strong>(): <a href="../../library/enumerations/MessageType.html"><code>MessageType</code></a></p>
 </blockquote>
@@ -131,21 +133,21 @@ from &quot;Error&quot; &gt; &quot;Warning&quot; &gt; &quot;Success&quot; &gt; &q
 <p><a href="../../library/enumerations/MessageType.html"><code>MessageType</code></a></p>
 <p>Value of property <code>level</code></p>
 <hr>
-<h3>getReadOnly()</h3>
+<h3><del>getReadOnly()</del></h3>
 <blockquote>
 <p><strong>getReadOnly</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getReadOnly readOnly.</p>
+<p>Determines whether the message should be read only. This helps the application to handle a message a
+different way if the application differentiates between read-only and common messages.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>readOnly</code></p>
 <h4>Since</h4>
 <p>1.19.0</p>
-<p>Gets current value of property #getReadOnly readOnly.</p>
-<p>Determines whether the message should be read only. This helps the application to handle a message a
-different way if the application differentiates between read-only and common messages.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
-<h3>getText()</h3>
+<h3><del>getText()</del></h3>
 <blockquote>
 <p><strong>getText</strong>(): <code>string</code></p>
 </blockquote>
@@ -155,7 +157,7 @@ different way if the application differentiates between read-only and common mes
 <p><code>string</code></p>
 <p>Value of property <code>text</code></p>
 <hr>
-<h3>getTimestamp()</h3>
+<h3><del>getTimestamp()</del></h3>
 <blockquote>
 <p><strong>getTimestamp</strong>(): <code>string</code></p>
 </blockquote>
@@ -166,7 +168,7 @@ application that uses messages needs to format the timestamp to its own needs.</
 <p><code>string</code></p>
 <p>Value of property <code>timestamp</code></p>
 <hr>
-<h3>setIcon()</h3>
+<h3><del>setIcon()</del></h3>
 <blockquote>
 <p><strong>setIcon</strong>(<code>sIcon?</code>): <code>this</code></p>
 </blockquote>
@@ -181,7 +183,7 @@ application that uses messages needs to format the timestamp to its own needs.</
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setLevel()</h3>
+<h3><del>setLevel()</del></h3>
 <blockquote>
 <p><strong>setLevel</strong>(<code>sLevel?</code>): <code>this</code></p>
 </blockquote>
@@ -197,10 +199,15 @@ application that uses messages needs to format the timestamp to its own needs.</
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setReadOnly()</h3>
+<h3><del>setReadOnly()</del></h3>
 <blockquote>
 <p><strong>setReadOnly</strong>(<code>bReadOnly?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getReadOnly readOnly.</p>
+<p>Determines whether the message should be read only. This helps the application to handle a message a
+different way if the application differentiates between read-only and common messages.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bReadOnly?</h5>
 <p><code>boolean</code></p>
@@ -210,13 +217,8 @@ application that uses messages needs to format the timestamp to its own needs.</
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.19.0</p>
-<p>Sets a new value for property #getReadOnly readOnly.</p>
-<p>Determines whether the message should be read only. This helps the application to handle a message a
-different way if the application differentiates between read-only and common messages.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
-<h3>setText()</h3>
+<h3><del>setText()</del></h3>
 <blockquote>
 <p><strong>setText</strong>(<code>sText?</code>): <code>this</code></p>
 </blockquote>
@@ -231,7 +233,7 @@ different way if the application differentiates between read-only and common mes
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setTimestamp()</h3>
+<h3><del>setTimestamp()</del></h3>
 <blockquote>
 <p><strong>setTimestamp</strong>(<code>sTimestamp?</code>): <code>this</code></p>
 </blockquote>
@@ -247,7 +249,7 @@ application that uses messages needs to format the timestamp to its own needs.</
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>compareByType()</h3>
+<h3><del>compareByType()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>compareByType</strong>(<code>oMessage1</code>, <code>oMessage2</code>): <code>number</code></p>
 </blockquote>
@@ -268,7 +270,7 @@ application that uses messages needs to format the timestamp to its own needs.</
 <p>returns <code>0</code> if both messages are at the same level. <code>-1</code> if <code>this</code> message has a lower level.
 <code>1</code> if <code>this</code> message has a higher level.</p>
 <hr>
-<h3>extend()</h3>
+<h3><del>extend()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
@@ -295,7 +297,7 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../Element/classes/UI5Element.html#extend"><code>extend</code></a></p>
 <hr>
-<h3>getMetadata()</h3>
+<h3><del>getMetadata()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
 </blockquote>
@@ -307,6 +309,6 @@ used by this class</p>
 <p><a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

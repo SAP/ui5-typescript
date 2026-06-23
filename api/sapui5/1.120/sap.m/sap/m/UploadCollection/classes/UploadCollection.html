@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: UploadCollection~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: UploadCollection~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: UploadCollection~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/UploadCollection/classes/UploadCollection.html">
 <meta property="og:title" content="~~Class: UploadCollection~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: UploadCollection~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: UploadCollection~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/UploadCollection/classes/UploadCollection.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/UploadCollection/README.html">UploadCollection</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/UploadCollection</a> / UploadCollection</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/UploadCollection</a> / UploadCollection</p>
 <h1><del>Class: UploadCollection</del></h1>
 <pre class="sig"><span class="kw">import</span> UploadCollection <span class="kw">from</span> <span class="str">"sap/m/UploadCollection"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.88) - replaced by sap.m.upload.UploadSet</p>
 <p>This control allows you to upload single or multiple files from your devices (desktop, tablet or phone)
 and attach them to the application.</p>
 <p>The consuming application needs to take into account that the consistency checks of the model during
@@ -47,6 +45,8 @@ the upload of the file need to be performed, for example, if the user is editing
 <p> As of version 1.63, there is an sap.m.upload.UploadSet control available that is based on this
 control. sap.m.upload.UploadSet provides enhanced handling of headers and requests, unified behavior
 of instant and deferred uploads, as well as improved progress indication.</p>
+<h2>Deprecated</h2>
+<p>(since 1.88) - replaced by sap.m.upload.UploadSet</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -400,6 +400,11 @@ was provided by the application). This event is not supported by Internet Explor
 <blockquote>
 <p><strong>attachSelectionChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
+<code>sap.m.UploadCollection</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.UploadCollection</code> itself.</p>
+<p>Fires when selection is changed via user interaction inside the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -416,15 +421,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
 <code>sap.m.UploadCollection</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.UploadCollection</code> itself.</p>
 <p>Fires when selection is changed via user interaction inside the control.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -437,11 +442,6 @@ otherwise it will be bound to this <code>sap.m.UploadCollection</code> itself.</
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
-<code>sap.m.UploadCollection</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.UploadCollection</code> itself.</p>
-<p>Fires when selection is changed via user interaction inside the control.</p>
 <hr>
 <h3><del>attachTypeMissmatch()</del></h3>
 <h4>Call Signature</h4>
@@ -603,12 +603,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyInfoToolbar</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the infoToolbar in the aggregation #getInfoToolbar infoToolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Destroys the infoToolbar in the aggregation #getInfoToolbar infoToolbar.</p>
 <hr>
 <h3><del>destroyItems()</del></h3>
 <blockquote>
@@ -632,12 +632,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyToolbar</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <hr>
 <h3><del>detachBeforeUploadStarts()</del></h3>
 <blockquote>
@@ -748,6 +748,9 @@ event of this <code>sap.m.UploadCollection</code>.</p>
 <blockquote>
 <p><strong>detachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
+this <code>sap.m.UploadCollection</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -760,9 +763,6 @@ event of this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
-this <code>sap.m.UploadCollection</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachTypeMissmatch()</del></h3>
 <blockquote>
@@ -822,6 +822,7 @@ this <code>sap.m.UploadCollection</code>.</p>
 <blockquote>
 <p><strong>downloadItem</strong>(<code>uploadCollectionItem</code>, <code>askForLocation</code>): <code>boolean</code></p>
 </blockquote>
+<p>Downloads the given item. This function delegates to sap.m.UploadCollectionItem#download uploadCollectionItem.download.</p>
 <h4>Parameters</h4>
 <h5>uploadCollectionItem</h5>
 <p><a href="../../UploadCollectionItem/classes/UploadCollectionItem.html"><code>UploadCollectionItem</code></a></p>
@@ -834,12 +835,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>True if the download has started successfully. False if the download couldn&#39;t be started.</p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Downloads the given item. This function delegates to sap.m.UploadCollectionItem#download uploadCollectionItem.download.</p>
 <hr>
 <h3><del>fireBeforeUploadStarts()</del></h3>
 <blockquote>
 <p><strong>fireBeforeUploadStarts</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeUploadStarts beforeUploadStarts to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$BeforeUploadStartsEventParameters.html"><code>UploadCollection$BeforeUploadStartsEventParameters</code></a></p>
@@ -849,12 +850,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeUploadStarts beforeUploadStarts to attached listeners.</p>
 <hr>
 <h3><del>fireChange()</del></h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$ChangeEventParameters.html"><code>UploadCollection$ChangeEventParameters</code></a></p>
@@ -864,12 +865,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3><del>fireFileDeleted()</del></h3>
 <blockquote>
 <p><strong>fireFileDeleted</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:fileDeleted fileDeleted to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$FileDeletedEventParameters.html"><code>UploadCollection$FileDeletedEventParameters</code></a></p>
@@ -879,12 +880,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileDeleted fileDeleted to attached listeners.</p>
 <hr>
 <h3><del>fireFilenameLengthExceed()</del></h3>
 <blockquote>
 <p><strong>fireFilenameLengthExceed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:filenameLengthExceed filenameLengthExceed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$FilenameLengthExceedEventParameters.html"><code>UploadCollection$FilenameLengthExceedEventParameters</code></a></p>
@@ -894,12 +895,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:filenameLengthExceed filenameLengthExceed to attached listeners.</p>
 <hr>
 <h3><del>fireFileRenamed()</del></h3>
 <blockquote>
 <p><strong>fireFileRenamed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:fileRenamed fileRenamed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$FileRenamedEventParameters.html"><code>UploadCollection$FileRenamedEventParameters</code></a></p>
@@ -909,12 +910,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileRenamed fileRenamed to attached listeners.</p>
 <hr>
 <h3><del>fireFileSizeExceed()</del></h3>
 <blockquote>
 <p><strong>fireFileSizeExceed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:fileSizeExceed fileSizeExceed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$FileSizeExceedEventParameters.html"><code>UploadCollection$FileSizeExceedEventParameters</code></a></p>
@@ -924,12 +925,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileSizeExceed fileSizeExceed to attached listeners.</p>
 <hr>
 <h3><del>fireSelectionChange()</del></h3>
 <blockquote>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$SelectionChangeEventParameters.html"><code>UploadCollection$SelectionChangeEventParameters</code></a></p>
@@ -941,12 +942,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>1.36.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3><del>fireTypeMissmatch()</del></h3>
 <blockquote>
 <p><strong>fireTypeMissmatch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:typeMissmatch typeMissmatch to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$TypeMissmatchEventParameters.html"><code>UploadCollection$TypeMissmatchEventParameters</code></a></p>
@@ -956,12 +957,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:typeMissmatch typeMissmatch to attached listeners.</p>
 <hr>
 <h3><del>fireUploadComplete()</del></h3>
 <blockquote>
 <p><strong>fireUploadComplete</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:uploadComplete uploadComplete to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$UploadCompleteEventParameters.html"><code>UploadCollection$UploadCompleteEventParameters</code></a></p>
@@ -971,12 +972,12 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:uploadComplete uploadComplete to attached listeners.</p>
 <hr>
 <h3><del>fireUploadTerminated()</del></h3>
 <blockquote>
 <p><strong>fireUploadTerminated</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:uploadTerminated uploadTerminated to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadCollection$UploadTerminatedEventParameters.html"><code>UploadCollection$UploadTerminatedEventParameters</code></a></p>
@@ -986,7 +987,6 @@ this <code>sap.m.UploadCollection</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:uploadTerminated uploadTerminated to attached listeners.</p>
 <hr>
 <h3><del>getFileType()</del></h3>
 <blockquote>
@@ -1014,38 +1014,38 @@ parameters are not supported by Internet Explorer 8 and 9.</p>
 <blockquote>
 <p><strong>getInfoToolbar</strong>(): <a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getInfoToolbar infoToolbar.</p>
+<p>Specifies the info toolbar for filtering information. Sorting information will not displayed.</p>
 <h4>Returns</h4>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Gets content of aggregation #getInfoToolbar infoToolbar.</p>
-<p>Specifies the info toolbar for filtering information. Sorting information will not displayed.</p>
 <hr>
 <h3><del>getInstantUpload()</del></h3>
 <blockquote>
 <p><strong>getInstantUpload</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getInstantUpload instantUpload.</p>
+<p>If false, no upload is triggered when a file is selected. In addition, if a file was selected, a new
+FileUploader instance is created to ensure that multiple files can be chosen.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>instantUpload</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Gets current value of property #getInstantUpload instantUpload.</p>
-<p>If false, no upload is triggered when a file is selected. In addition, if a file was selected, a new
-FileUploader instance is created to ensure that multiple files can be chosen.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getInternalRequestHeaderNames()</del></h3>
 <blockquote>
 <p><strong>getInternalRequestHeaderNames</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Provides access to the internally used request headers to allow adding them to the &quot;Access-Control-Allow-Headers&quot;
+header parameter if needed.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of request header strings</p>
 <h4>Since</h4>
 <p>1.50.0</p>
-<p>Provides access to the internally used request headers to allow adding them to the &quot;Access-Control-Allow-Headers&quot;
-header parameter if needed.</p>
 <hr>
 <h3><del>getItems()</del></h3>
 <blockquote>
@@ -1094,11 +1094,6 @@ This property is not supported by Internet Explorer 8 and 9. Example: mimeType [
 <blockquote>
 <p><strong>getMode</strong>(): <code>&quot;None&quot;</code> | <a href="../../library/enumerations/ListMode.html"><code>ListMode</code></a> | <code>&quot;Delete&quot;</code> | <code>&quot;MultiSelect&quot;</code> | <code>&quot;SingleSelect&quot;</code> | <code>&quot;SingleSelectLeft&quot;</code> | <code>&quot;SingleSelectMaster&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;None&quot;</code> | <a href="../../library/enumerations/ListMode.html"><code>ListMode</code></a> | <code>&quot;Delete&quot;</code> | <code>&quot;MultiSelect&quot;</code> | <code>&quot;SingleSelect&quot;</code> | <code>&quot;SingleSelectLeft&quot;</code> | <code>&quot;SingleSelectMaster&quot;</code></p>
-<p>Value of property <code>mode</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getMode mode.</p>
 <p>Defines the selection mode of the control (e.g. None, SingleSelect, MultiSelect, SingleSelectLeft, SingleSelectMaster).
 Since the UploadCollection reacts like a list for attachments, the API is close to the ListBase Interface.
@@ -1106,6 +1101,11 @@ sap.m.ListMode.Delete mode is not supported and will be automatically set to sap
 addition, if instant upload is set to false the mode sap.m.ListMode.MultiSelect is not supported and
 will be automatically set to sap.m.ListMode.None.</p>
 <p>Default value is <code>&quot;None&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <a href="../../library/enumerations/ListMode.html"><code>ListMode</code></a> | <code>&quot;Delete&quot;</code> | <code>&quot;MultiSelect&quot;</code> | <code>&quot;SingleSelect&quot;</code> | <code>&quot;SingleSelectLeft&quot;</code> | <code>&quot;SingleSelectMaster&quot;</code></p>
+<p>Value of property <code>mode</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3><del>getMultiple()</del></h3>
 <blockquote>
@@ -1126,13 +1126,13 @@ for drag &amp; drop.</p>
 <blockquote>
 <p><strong>getNoDataDescription</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getNoDataDescription noDataDescription.</p>
+<p>Allows you to set your own text for the &#39;No data&#39; description label.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>noDataDescription</code></p>
 <h4>Since</h4>
 <p>1.46.0</p>
-<p>Gets current value of property #getNoDataDescription noDataDescription.</p>
-<p>Allows you to set your own text for the &#39;No data&#39; description label.</p>
 <hr>
 <h3><del>getNoDataText()</del></h3>
 <blockquote>
@@ -1148,16 +1148,16 @@ for drag &amp; drop.</p>
 <blockquote>
 <p><strong>getNumberOfAttachmentsText</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>numberOfAttachmentsText</code></p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <p>Gets current value of property #getNumberOfAttachmentsText numberOfAttachmentsText.</p>
 <p>Sets the title text in the toolbar of the list of attachments. To show as well the number of attachments
 in brackets like the default text does. The number of attachments could be retrieved via &quot;getItems().length&quot;.
 If a new title is set, the default is deactivated. The default value is set to language-dependent &quot;Attachments
 (n)&quot;.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>numberOfAttachmentsText</code></p>
+<h4>Since</h4>
+<p>1.30.0</p>
 <hr>
 <h3><del>getParameters()</del></h3>
 <blockquote>
@@ -1184,23 +1184,23 @@ already existing file name in the list.</p>
 <blockquote>
 <p><strong>getSelectedItem</strong>(): <a href="../../UploadCollectionItem/classes/UploadCollectionItem.html"><code>UploadCollectionItem</code></a></p>
 </blockquote>
+<p>Retrieves the currently selected UploadCollectionItem.</p>
 <h4>Returns</h4>
 <p><a href="../../UploadCollectionItem/classes/UploadCollectionItem.html"><code>UploadCollectionItem</code></a></p>
 <p>The currently selected item or <code>null</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Retrieves the currently selected UploadCollectionItem.</p>
 <hr>
 <h3><del>getSelectedItems()</del></h3>
 <blockquote>
 <p><strong>getSelectedItems</strong>(): <a href="../../UploadCollectionItem/classes/UploadCollectionItem.html"><code>UploadCollectionItem</code></a>[]</p>
 </blockquote>
+<p>Returns an array containing the selected UploadCollectionItems.</p>
 <h4>Returns</h4>
 <p><a href="../../UploadCollectionItem/classes/UploadCollectionItem.html"><code>UploadCollectionItem</code></a>[]</p>
 <p>Array of all selected items</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Returns an array containing the selected UploadCollectionItems.</p>
 <hr>
 <h3><del>getShowSeparators()</del></h3>
 <blockquote>
@@ -1217,39 +1217,39 @@ already existing file name in the list.</p>
 <blockquote>
 <p><strong>getTerminationEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getTerminationEnabled terminationEnabled.</p>
+<p>If true, the button that is used to terminate the instant file upload gets visible. The button normally
+appears when a file is being uploaded.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>terminationEnabled</code></p>
 <h4>Since</h4>
 <p>1.42.0</p>
-<p>Gets current value of property #getTerminationEnabled terminationEnabled.</p>
-<p>If true, the button that is used to terminate the instant file upload gets visible. The button normally
-appears when a file is being uploaded.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getToolbar()</del></h3>
 <blockquote>
 <p><strong>getToolbar</strong>(): <a href="../../OverflowToolbar/classes/OverflowToolbar.html"><code>OverflowToolbar</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getToolbar toolbar.</p>
+<p>Specifies the toolbar.</p>
 <h4>Returns</h4>
 <p><a href="../../OverflowToolbar/classes/OverflowToolbar.html"><code>OverflowToolbar</code></a></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets content of aggregation #getToolbar toolbar.</p>
-<p>Specifies the toolbar.</p>
 <hr>
 <h3><del>getUploadButtonInvisible()</del></h3>
 <blockquote>
 <p><strong>getUploadButtonInvisible</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getUploadButtonInvisible uploadButtonInvisible.</p>
+<p>If true, the button used for uploading files is invisible.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>uploadButtonInvisible</code></p>
 <h4>Since</h4>
 <p>1.42.0</p>
-<p>Gets current value of property #getUploadButtonInvisible uploadButtonInvisible.</p>
-<p>If true, the button used for uploading files is invisible.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getUploadEnabled()</del></h3>
 <blockquote>
@@ -1374,6 +1374,11 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>openFileDialog</strong>(<code>item</code>): <code>this</code></p>
 </blockquote>
+<p>Opens the FileUploader dialog. When an UploadCollectionItem is provided, this method can be used to update
+a file with a new version. In this case, the upload progress can be sequenced using the events: beforeUploadStarts,
+uploadComplete and uploadTerminated. For this use, multiple properties from the UploadCollection have
+to be set to false. If no UploadCollectionItem is provided, only the dialog opens and no further configuration
+of the UploadCollection is needed.</p>
 <h4>Parameters</h4>
 <h5>item</h5>
 <p><a href="../../UploadCollectionItem/classes/UploadCollectionItem.html"><code>UploadCollectionItem</code></a></p>
@@ -1383,11 +1388,6 @@ is inserted at the last position</p>
 <p>this to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Opens the FileUploader dialog. When an UploadCollectionItem is provided, this method can be used to update
-a file with a new version. In this case, the upload progress can be sequenced using the events: beforeUploadStarts,
-uploadComplete and uploadTerminated. For this use, multiple properties from the UploadCollection have
-to be set to false. If no UploadCollectionItem is provided, only the dialog opens and no further configuration
-of the UploadCollection is needed.</p>
 <hr>
 <h3><del>removeAllHeaderParameters()</del></h3>
 <blockquote>
@@ -1462,12 +1462,12 @@ of the UploadCollection is needed.</p>
 <blockquote>
 <p><strong>selectAll</strong>(): <code>this</code></p>
 </blockquote>
+<p>Select all items in &quot;MultiSelection&quot; mode.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>this to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Select all items in &quot;MultiSelection&quot; mode.</p>
 <hr>
 <h3><del>setFileType()</del></h3>
 <blockquote>
@@ -1490,6 +1490,7 @@ types. If at least one file does not fit the file type requirements, the upload 
 <blockquote>
 <p><strong>setInfoToolbar</strong>(<code>oInfoToolbar</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getInfoToolbar infoToolbar.</p>
 <h4>Parameters</h4>
 <h5>oInfoToolbar</h5>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
@@ -1499,12 +1500,16 @@ types. If at least one file does not fit the file type requirements, the upload 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Sets the aggregated #getInfoToolbar infoToolbar.</p>
 <hr>
 <h3><del>setInstantUpload()</del></h3>
 <blockquote>
 <p><strong>setInstantUpload</strong>(<code>bInstantUpload?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getInstantUpload instantUpload.</p>
+<p>If false, no upload is triggered when a file is selected. In addition, if a file was selected, a new
+FileUploader instance is created to ensure that multiple files can be chosen.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bInstantUpload?</h5>
 <p><code>boolean</code></p>
@@ -1514,11 +1519,6 @@ types. If at least one file does not fit the file type requirements, the upload 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Sets a new value for property #getInstantUpload instantUpload.</p>
-<p>If false, no upload is triggered when a file is selected. In addition, if a file was selected, a new
-FileUploader instance is created to ensure that multiple files can be chosen.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setMaximumFilenameLength()</del></h3>
 <blockquote>
@@ -1573,6 +1573,14 @@ This property is not supported by Internet Explorer 8 and 9. Example: mimeType [
 <blockquote>
 <p><strong>setMode</strong>(<code>sMode?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMode mode.</p>
+<p>Defines the selection mode of the control (e.g. None, SingleSelect, MultiSelect, SingleSelectLeft, SingleSelectMaster).
+Since the UploadCollection reacts like a list for attachments, the API is close to the ListBase Interface.
+sap.m.ListMode.Delete mode is not supported and will be automatically set to sap.m.ListMode.None. In
+addition, if instant upload is set to false the mode sap.m.ListMode.MultiSelect is not supported and
+will be automatically set to sap.m.ListMode.None.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;None&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sMode?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../library/enumerations/ListMode.html"><code>ListMode</code></a> | <code>&quot;Delete&quot;</code> | <code>&quot;MultiSelect&quot;</code> | <code>&quot;SingleSelect&quot;</code> | <code>&quot;SingleSelectLeft&quot;</code> | <code>&quot;SingleSelectMaster&quot;</code></p>
@@ -1582,14 +1590,6 @@ This property is not supported by Internet Explorer 8 and 9. Example: mimeType [
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getMode mode.</p>
-<p>Defines the selection mode of the control (e.g. None, SingleSelect, MultiSelect, SingleSelectLeft, SingleSelectMaster).
-Since the UploadCollection reacts like a list for attachments, the API is close to the ListBase Interface.
-sap.m.ListMode.Delete mode is not supported and will be automatically set to sap.m.ListMode.None. In
-addition, if instant upload is set to false the mode sap.m.ListMode.MultiSelect is not supported and
-will be automatically set to sap.m.ListMode.None.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;None&quot;</code>.</p>
 <hr>
 <h3><del>setMultiple()</del></h3>
 <blockquote>
@@ -1615,6 +1615,9 @@ for drag &amp; drop.</p>
 <blockquote>
 <p><strong>setNoDataDescription</strong>(<code>sNoDataDescription?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNoDataDescription noDataDescription.</p>
+<p>Allows you to set your own text for the &#39;No data&#39; description label.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sNoDataDescription?</h5>
 <p><code>string</code></p>
@@ -1624,9 +1627,6 @@ for drag &amp; drop.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46.0</p>
-<p>Sets a new value for property #getNoDataDescription noDataDescription.</p>
-<p>Allows you to set your own text for the &#39;No data&#39; description label.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setNoDataText()</del></h3>
 <blockquote>
@@ -1647,6 +1647,12 @@ for drag &amp; drop.</p>
 <blockquote>
 <p><strong>setNumberOfAttachmentsText</strong>(<code>sNumberOfAttachmentsText?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNumberOfAttachmentsText numberOfAttachmentsText.</p>
+<p>Sets the title text in the toolbar of the list of attachments. To show as well the number of attachments
+in brackets like the default text does. The number of attachments could be retrieved via &quot;getItems().length&quot;.
+If a new title is set, the default is deactivated. The default value is set to language-dependent &quot;Attachments
+(n)&quot;.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sNumberOfAttachmentsText?</h5>
 <p><code>string</code></p>
@@ -1656,12 +1662,6 @@ for drag &amp; drop.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Sets a new value for property #getNumberOfAttachmentsText numberOfAttachmentsText.</p>
-<p>Sets the title text in the toolbar of the list of attachments. To show as well the number of attachments
-in brackets like the default text does. The number of attachments could be retrieved via &quot;getItems().length&quot;.
-If a new title is set, the default is deactivated. The default value is set to language-dependent &quot;Attachments
-(n)&quot;.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setSameFilenameAllowed()</del></h3>
 <blockquote>
@@ -1684,6 +1684,7 @@ already existing file name in the list.</p>
 <blockquote>
 <p><strong>setSelectedItem</strong>(<code>uploadCollectionItem</code>, <code>select?</code>): <code>this</code></p>
 </blockquote>
+<p>Selects or deselects the given list item.</p>
 <h4>Parameters</h4>
 <h5>uploadCollectionItem</h5>
 <p><a href="../../UploadCollectionItem/classes/UploadCollectionItem.html"><code>UploadCollectionItem</code></a></p>
@@ -1696,12 +1697,13 @@ already existing file name in the list.</p>
 <p>this to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Selects or deselects the given list item.</p>
 <hr>
 <h3><del>setSelectedItemById()</del></h3>
 <blockquote>
 <p><strong>setSelectedItemById</strong>(<code>id</code>, <code>select?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets an UploadCollectionItem to be selected by ID. In single selection mode, the method removes the previous
+selection.</p>
 <h4>Parameters</h4>
 <h5>id</h5>
 <p><code>string</code></p>
@@ -1714,8 +1716,6 @@ already existing file name in the list.</p>
 <p>this to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets an UploadCollectionItem to be selected by ID. In single selection mode, the method removes the previous
-selection.</p>
 <hr>
 <h3><del>setShowSeparators()</del></h3>
 <blockquote>
@@ -1737,6 +1737,11 @@ selection.</p>
 <blockquote>
 <p><strong>setTerminationEnabled</strong>(<code>bTerminationEnabled?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTerminationEnabled terminationEnabled.</p>
+<p>If true, the button that is used to terminate the instant file upload gets visible. The button normally
+appears when a file is being uploaded.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bTerminationEnabled?</h5>
 <p><code>boolean</code></p>
@@ -1746,16 +1751,12 @@ selection.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.42.0</p>
-<p>Sets a new value for property #getTerminationEnabled terminationEnabled.</p>
-<p>If true, the button that is used to terminate the instant file upload gets visible. The button normally
-appears when a file is being uploaded.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setToolbar()</del></h3>
 <blockquote>
 <p><strong>setToolbar</strong>(<code>oToolbar</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getToolbar toolbar.</p>
 <h4>Parameters</h4>
 <h5>oToolbar</h5>
 <p><a href="../../OverflowToolbar/classes/OverflowToolbar.html"><code>OverflowToolbar</code></a></p>
@@ -1765,12 +1766,15 @@ appears when a file is being uploaded.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets the aggregated #getToolbar toolbar.</p>
 <hr>
 <h3><del>setUploadButtonInvisible()</del></h3>
 <blockquote>
 <p><strong>setUploadButtonInvisible</strong>(<code>bUploadButtonInvisible?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUploadButtonInvisible uploadButtonInvisible.</p>
+<p>If true, the button used for uploading files is invisible.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bUploadButtonInvisible?</h5>
 <p><code>boolean</code></p>
@@ -1780,10 +1784,6 @@ appears when a file is being uploaded.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.42.0</p>
-<p>Sets a new value for property #getUploadButtonInvisible uploadButtonInvisible.</p>
-<p>If true, the button used for uploading files is invisible.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setUploadEnabled()</del></h3>
 <blockquote>
@@ -1831,11 +1831,11 @@ at runtime.</p>
 <blockquote>
 <p><strong>upload</strong>(): <code>void</code></p>
 </blockquote>
+<p>Starts the upload for all selected files.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Starts the upload for all selected files.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -1876,6 +1876,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

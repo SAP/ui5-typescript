@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ClientListBinding — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ClientListBinding — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ClientListBinding — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/ClientListBinding/classes/ClientListBinding.html">
 <meta property="og:title" content="Class: ClientListBinding — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ClientListBinding — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ClientListBinding — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/ClientListBinding/classes/ClientListBinding.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › <a href="../../../../../../sap.ui.core/sap/ui/model/ClientListBinding/README.html">ClientListBinding</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/ClientListBinding</a> / ClientListBinding</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/ClientListBinding</a> / ClientListBinding</p>
 <h1>Class: ClientListBinding</h1>
 <pre class="sig"><span class="kw">import</span> ClientListBinding <span class="kw">from</span> <span class="str">"sap/ui/model/ClientListBinding"</span>;</pre>
+<p>List binding implementation for client models.</p>
 <h2>Ui5-protected</h2>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
-<p>List binding implementation for client models.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></li>
@@ -49,40 +49,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <ul>
 <li><a href="../../json/JSONListBinding/classes/JSONListBinding.html"><code>JSONListBinding</code></a></li>
 </ul>
-<h2>Constructors</h2>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new ClientListBinding</strong>(<code>oModel</code>, <code>sPath</code>, <code>oContext</code>, <code>aSorters?</code>, <code>aFilters?</code>, <code>mParameters?</code>): <code>ClientListBinding</code></p>
-</blockquote>
-<h4>Parameters</h4>
-<h5>oModel</h5>
-<p><a href="../../Model/classes/Model.html"><code>Model</code></a></p>
-<p>Model instance that this binding is created for and that it belongs to</p>
-<h5>sPath</h5>
-<p><code>string</code></p>
-<p>Binding path to be used for this binding, syntax depends on the concrete subclass</p>
-<h5>oContext</h5>
-<p><a href="../../Context/classes/Context.html"><code>Context</code></a></p>
-<p>Binding context relative to which a relative binding path will be resolved</p>
-<h5>aSorters?</h5>
-<p><a href="../../Sorter/classes/Sorter.html"><code>Sorter</code></a> | <a href="../../Sorter/classes/Sorter.html"><code>Sorter</code></a>[]</p>
-<p>Initial sort order (can be either a sorter or an array of sorters)</p>
-<h5>aFilters?</h5>
-<p><a href="../../Filter/classes/Filter.html"><code>Filter</code></a> | <a href="../../Filter/classes/Filter.html"><code>Filter</code></a>[]</p>
-<p>Predefined filter/s (can be either a filter or an array of filters)</p>
-<h5>mParameters?</h5>
-<p><code>object</code></p>
-<p>Map of optional parameters as defined by subclasses; this class does not introduce any own parameters</p>
-<h4>Returns</h4>
-<p><code>ClientListBinding</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new ClientListBinding.</p>
-<p>This constructor should only be called by subclasses or model implementations, not by application or
-control code. Such code should use sap.ui.model.Model#bindList Model#bindList on the corresponding
-model implementation instead.</p>
-<h4>Overrides</h4>
-<p><a href="../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../ListBinding/classes/ListBinding.html#constructor"><code>constructor</code></a></p>
 <h2>Methods</h2>
 <h3>filter()</h3>
 <blockquote>
@@ -111,6 +77,12 @@ filters are cleared and the given filters are used as control filters</p>
 <blockquote>
 <p><strong>getContexts</strong>(<code>iStartIndex?</code>, <code>iLength?</code>, <code>iMaximumPrefetchSize?</code>, <code>bKeepCurrent?</code>): <a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
+<p>Returns an array of binding contexts for the bound target list.</p>
+<p>In case of extended change detection, the context array may have an additional <code>diff</code> property, see <a href="https://ui5.sap.com/#/topic/7cdff73f308b4b10bdf7d83b7aba72e7">documentation on extended change detection</a>
+for details.</p>
+<p>**Note:**The public usage of this method is deprecated, as calls from outside of controls will lead to
+unexpected side effects. To avoid this, use sap.ui.model.ListBinding.prototype.getCurrentContexts
+instead.</p>
 <h4>Parameters</h4>
 <h5>iStartIndex?</h5>
 <p><code>number</code></p>
@@ -130,12 +102,6 @@ up to the model&#39;s size limit; see sap.ui.model.Model#setSizeLimit</p>
 <p>The array of contexts for each row of the bound list</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns an array of binding contexts for the bound target list.</p>
-<p>In case of extended change detection, the context array may have an additional <code>diff</code> property, see <a href="https://ui5.sap.com/#/topic/7cdff73f308b4b10bdf7d83b7aba72e7">documentation on extended change detection</a>
-for details.</p>
-<p>**Note:**The public usage of this method is deprecated, as calls from outside of controls will lead to
-unexpected side effects. To avoid this, use sap.ui.model.ListBinding.prototype.getCurrentContexts
-instead.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../ListBinding/classes/ListBinding.html#getcontexts"><code>getContexts</code></a></p>
 <hr>
@@ -143,6 +109,9 @@ instead.</p>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
+<p>Creates a new subclass of class sap.ui.model.ClientListBinding with name <code>sClassName</code> and enriches it
+with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.model.ListBinding.extend.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
@@ -162,9 +131,6 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new subclass of class sap.ui.model.ClientListBinding with name <code>sClassName</code> and enriches it
-with the information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.model.ListBinding.extend.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../ListBinding/classes/ListBinding.html#extend"><code>extend</code></a></p>
 <hr>
@@ -172,16 +138,16 @@ with the information contained in <code>oClassInfo</code>.</p>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 </blockquote>
+<p>Returns a metadata object for class sap.ui.model.ClientListBinding.</p>
 <h4>Returns</h4>
 <p><a href="../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a metadata object for class sap.ui.model.ClientListBinding.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../ListBinding/classes/ListBinding.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

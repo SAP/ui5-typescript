@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DecisionTableConfiguration — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: DecisionTableConfiguration — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: DecisionTableConfiguration — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.rules.ui/sap/rules/ui/DecisionTableConfiguration/classes/DecisionTableConfiguration.html">
 <meta property="og:title" content="Class: DecisionTableConfiguration — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: DecisionTableConfiguration — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: DecisionTableConfiguration — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.rules.ui/sap/rules/ui/DecisionTableConfiguration/classes/DecisionTableConfiguration.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.rules.ui/README.html">sap.rules.ui</a> › sap › rules › ui › <a href="../../../../../../sap.rules.ui/sap/rules/ui/DecisionTableConfiguration/README.html">DecisionTableConfiguration</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.rules.ui</a> / <a href="../README.html">sap/rules/ui/DecisionTableConfiguration</a> / DecisionTableConfiguration</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.rules.ui</a> / <a href="../README.html">sap/rules/ui/DecisionTableConfiguration</a> / DecisionTableConfiguration</p>
 <h1>Class: DecisionTableConfiguration</h1>
 <pre class="sig"><span class="kw">import</span> DecisionTableConfiguration <span class="kw">from</span> <span class="str">"sap/rules/ui/DecisionTableConfiguration"</span>;</pre>
 <h2>Since</h2>
@@ -183,39 +183,48 @@ or rule Format</p>
 <p><a href="../../library/enumerations/DecisionTableFormat.html"><code>DecisionTableFormat</code></a></p>
 <p>Value of property <code>decisionTableFormat</code></p>
 <hr>
-<h3>getEnableSettingResult()</h3>
+<h3><del>getEnableSettingResult()</del></h3>
 <blockquote>
 <p><strong>getEnableSettingResult</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableSettingResult enableSettingResult.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableSettingResult</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.120.2) - to configure the settings, use the Manage Rules Project app or the Rule
+Authoring APIs.</p>
+<p>Gets current value of property #getEnableSettingResult enableSettingResult.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
-<h3>getEnableSettings()</h3>
+<h3><del>getEnableSettings()</del></h3>
 <blockquote>
 <p><strong>getEnableSettings</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableSettings</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.120.2) - to configure the settings, use the Manage Rules Project app or the Rule
+Authoring APIs.</p>
 <p>Gets current value of property #getEnableSettings enableSettings.</p>
 <p>The value determines whether the Settings button is displayed in a decision table when the control is
 used with S/4 HANA 17.05 (Cloud) or 17.09 (On Premise) and higher (On Premise).</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableSettings</code></p>
 <hr>
-<h3>getHitPolicies()</h3>
+<h3><del>getHitPolicies()</del></h3>
 <blockquote>
 <p><strong>getHitPolicies</strong>(): <a href="../../library/enumerations/RuleHitPolicy.html"><code>RuleHitPolicy</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../library/enumerations/RuleHitPolicy.html"><code>RuleHitPolicy</code></a>[]</p>
+<p>Value of property <code>hitPolicies</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.120.2) - to configure the settings, use the Manage Rules Project app or the Rule
+Authoring APIs.</p>
 <p>Gets current value of property #getHitPolicies hitPolicies.</p>
 <p>The value determines how the results of the decision table are evaluated when more than one rule is matched
 for a given set of inputs.</p>
 <p>Default value is <code>[FirstMatch, AllMatch]</code>.</p>
-<h4>Returns</h4>
-<p><a href="../../library/enumerations/RuleHitPolicy.html"><code>RuleHitPolicy</code></a>[]</p>
-<p>Value of property <code>hitPolicies</code></p>
 <hr>
 <h3>getThreshold()</h3>
 <blockquote>
@@ -277,13 +286,10 @@ or rule Format</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setEnableSettingResult()</h3>
+<h3><del>setEnableSettingResult()</del></h3>
 <blockquote>
 <p><strong>setEnableSettingResult</strong>(<code>bEnableSettingResult?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableSettingResult enableSettingResult.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableSettingResult?</h5>
 <p><code>boolean</code></p>
@@ -291,16 +297,17 @@ or rule Format</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.120.2) - to configure the settings, use the Manage Rules Project app or the Rule
+Authoring APIs.</p>
+<p>Sets a new value for property #getEnableSettingResult enableSettingResult.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
-<h3>setEnableSettings()</h3>
+<h3><del>setEnableSettings()</del></h3>
 <blockquote>
 <p><strong>setEnableSettings</strong>(<code>bEnableSettings?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableSettings enableSettings.</p>
-<p>The value determines whether the Settings button is displayed in a decision table when the control is
-used with S/4 HANA 17.05 (Cloud) or 17.09 (On Premise) and higher (On Premise).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableSettings?</h5>
 <p><code>boolean</code></p>
@@ -308,16 +315,19 @@ used with S/4 HANA 17.05 (Cloud) or 17.09 (On Premise) and higher (On Premise).<
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.120.2) - to configure the settings, use the Manage Rules Project app or the Rule
+Authoring APIs.</p>
+<p>Sets a new value for property #getEnableSettings enableSettings.</p>
+<p>The value determines whether the Settings button is displayed in a decision table when the control is
+used with S/4 HANA 17.05 (Cloud) or 17.09 (On Premise) and higher (On Premise).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
-<h3>setHitPolicies()</h3>
+<h3><del>setHitPolicies()</del></h3>
 <blockquote>
 <p><strong>setHitPolicies</strong>(<code>sHitPolicies?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHitPolicies hitPolicies.</p>
-<p>The value determines how the results of the decision table are evaluated when more than one rule is matched
-for a given set of inputs.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>[FirstMatch, AllMatch]</code>.</p>
 <h4>Parameters</h4>
 <h5>sHitPolicies?</h5>
 <p><a href="../../library/enumerations/RuleHitPolicy.html"><code>RuleHitPolicy</code></a>[]</p>
@@ -325,6 +335,14 @@ for a given set of inputs.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.120.2) - to configure the settings, use the Manage Rules Project app or the Rule
+Authoring APIs.</p>
+<p>Sets a new value for property #getHitPolicies hitPolicies.</p>
+<p>The value determines how the results of the decision table are evaluated when more than one rule is matched
+for a given set of inputs.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[FirstMatch, AllMatch]</code>.</p>
 <hr>
 <h3>setThreshold()</h3>
 <blockquote>
@@ -399,6 +417,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

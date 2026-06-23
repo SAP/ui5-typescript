@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: BaseObject — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: BaseObject — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: BaseObject — SAPUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: BaseObject — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/base/Object/classes/BaseObject.html">
-<meta property="og:title" content="Class: BaseObject — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: BaseObject — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: BaseObject — SAPUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: BaseObject — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/base/Object/classes/BaseObject.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › base › <a href="../../../../../../sap.ui.core/sap/ui/base/Object/README.html">Object</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/Object</a> / BaseObject</p>
-<h1>Class: BaseObject</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/Object</a> / BaseObject</p>
+<h1>Abstract Class: BaseObject</h1>
 <pre class="sig"><span class="kw">import</span> BaseObject <span class="kw">from</span> <span class="str">"sap/ui/base/Object"</span>;</pre>
 <p>Base class for all SAPUI5 Objects.</p>
 <h2>Extended by</h2>
@@ -50,6 +50,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <li><a href="../../../../../../sap.fe.navigation/sap/fe/navigation/SelectionVariant/classes/SelectionVariant.html"><code>SelectionVariant</code></a></li>
 <li><a href="../../../../../../sap.fe.test/sap/fe/test/JourneyRunner/classes/JourneyRunner.html"><code>JourneyRunner</code></a></li>
 <li><a href="../../../../../../sap.insights/sap/insights/CardsChannel/classes/CardsChannel.html"><code>CardsChannel</code></a></li>
+<li><a href="../../../../../../sap.insights/sap/insights/channels/ContextChannel/classes/ContextChannel.html"><code>ContextChannel</code></a></li>
 <li><a href="../../../../../../sap.m/sap/m/BarInPageEnabler/classes/BarInPageEnabler.html"><code>BarInPageEnabler</code></a></li>
 <li><a href="../../../../../../sap.m/sap/m/GrowingEnablement/classes/GrowingEnablement.html"><code>GrowingEnablement</code></a></li>
 <li><a href="../../../../../../sap.m/sap/m/p13n/GroupController/classes/GroupController.html"><code>GroupController</code></a></li>
@@ -169,6 +170,14 @@ or sap.ui.base.Object.extend.</p>
 <blockquote>
 <p><strong>isA</strong>&lt;<code>T</code>&gt;(<code>vTypeName</code>): <code>this is T</code></p>
 </blockquote>
+<p>Checks whether this object is an instance of the named type.</p>
+<p>This check is solely based on the type names as declared in the class metadata. It compares the given
+<code>vTypeName</code> with the name of the class of this object, with the names of any base class of that class
+and with the names of all interfaces implemented by any of the aforementioned classes.</p>
+<p>Instead of a single type name, an array of type names can be given and the method will check if this
+object is an instance of any of the listed types (logical or).</p>
+<p>Should the UI5 class system in future implement additional means of associating classes with type names
+(e.g. by introducing mixins), then this method might detect matches for those names as well.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>BaseObject</code> = <code>BaseObject</code></p>
@@ -181,19 +190,17 @@ or sap.ui.base.Object.extend.</p>
 <p>Whether this object is an instance of the given type or of any of the given types</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Checks whether this object is an instance of the named type.</p>
-<p>This check is solely based on the type names as declared in the class metadata. It compares the given
-<code>vTypeName</code> with the name of the class of this object, with the names of any base class of that class
-and with the names of all interfaces implemented by any of the aforementioned classes.</p>
-<p>Instead of a single type name, an array of type names can be given and the method will check if this
-object is an instance of any of the listed types (logical or).</p>
-<p>Should the UI5 class system in future implement additional means of associating classes with type names
-(e.g. by introducing mixins), then this method might detect matches for those names as well.</p>
 <hr>
 <h3><del>defineClass()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>defineClass</strong>(<code>sClassName</code>, <code>oStaticInfo</code>, <code>FNMetaImpl?</code>): <a href="../../Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 </blockquote>
+<p>Creates metadata for a given class and attaches it to the constructor and prototype of that class.</p>
+<p>After creation, metadata can be retrieved with getMetadata().</p>
+<p>The static info can at least contain the following entries:
+	 - baseType: {string} fully qualified name of a base class or empty
+	 - publicMethods: {string} an array of method names that will be visible in the interface proxy returned
+    by #getInterface</p>
 <h4>Parameters</h4>
 <h5>sClassName</h5>
 <p><code>string</code></p>
@@ -214,35 +221,11 @@ object is an instance of any of the listed types (logical or).</p>
 <p>the created metadata object</p>
 <h4>Deprecated</h4>
 <p>(since 1.3.1) - Use the static <code>extend</code> method of the desired base class (e.g. sap.ui.base.Object.extend)</p>
-<p>Creates metadata for a given class and attaches it to the constructor and prototype of that class.</p>
-<p>After creation, metadata can be retrieved with getMetadata().</p>
-<p>The static info can at least contain the following entries:
-	 - baseType: {string} fully qualified name of a base class or empty
-	 - publicMethods: {string} an array of method names that will be visible in the interface proxy returned
-    by #getInterface</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
-<h4>Type Parameters</h4>
-<h5>T</h5>
-<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
-<h4>Parameters</h4>
-<h5>sClassName</h5>
-<p><code>string</code></p>
-<p>name of the class to be created</p>
-<h5>oClassInfo?</h5>
-<p><code>ClassInfo</code>&lt;<code>T</code>, <code>BaseObject</code>&gt;</p>
-<p>structured object with information about the class</p>
-<h5>FNMetaImpl?</h5>
-<p><code>Function</code></p>
-<p>constructor function for the metadata object. If not given, it defaults to sap.ui.base.Metadata.</p>
-<h4>Returns</h4>
-<p><code>Function</code></p>
-<p>the created class / constructor function</p>
-<h4>Since</h4>
-<p>1.3.1</p>
 <p>Creates a subclass of class sap.ui.base.Object with name <code>sClassName</code> and enriches it with the information
 contained in <code>oClassInfo</code>.</p>
 <p><code>oClassInfo</code> might contain three kinds of information:
@@ -272,11 +255,32 @@ itself.</p>
 Instances of that class will be used to represent metadata for the newly created class and for any subclass
 created from it. Typically, only frameworks will use this parameter to enrich the metadata for a new
 class hierarchy they introduce (e.g. sap.ui.core.Element.extend Element).</p>
+<h4>Type Parameters</h4>
+<h5>T</h5>
+<p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
+<h4>Parameters</h4>
+<h5>sClassName</h5>
+<p><code>string</code></p>
+<p>name of the class to be created</p>
+<h5>oClassInfo?</h5>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>BaseObject</code>&gt;</p>
+<p>structured object with information about the class</p>
+<h5>FNMetaImpl?</h5>
+<p><code>Function</code></p>
+<p>constructor function for the metadata object. If not given, it defaults to sap.ui.base.Metadata.</p>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>the created class / constructor function</p>
+<h4>Since</h4>
+<p>1.3.1</p>
 <hr>
 <h3><del>isA()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>isA</strong>&lt;<code>T</code>&gt;(<code>oObject</code>, <code>vTypeName</code>): <code>oObject is T</code></p>
 </blockquote>
+<p>Checks whether the given object is an instance of the named type. This function is a short-hand convenience
+for sap.ui.base.Object#isA.</p>
+<p>Please see the API documentation of sap.ui.base.Object#isA for more details.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>BaseObject</code> = <code>BaseObject</code></p>
@@ -294,14 +298,14 @@ class hierarchy they introduce (e.g. sap.ui.core.Element.extend Element).</p>
 <p>1.56</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - please use sap.ui.base.Object.isObjectA.</p>
-<p>Checks whether the given object is an instance of the named type. This function is a short-hand convenience
-for sap.ui.base.Object#isA.</p>
-<p>Please see the API documentation of sap.ui.base.Object#isA for more details.</p>
 <hr>
 <h3>isObjectA()</h3>
 <blockquote>
 <p><code>static</code> <strong>isObjectA</strong>(<code>oObject</code>, <code>vTypeName</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks whether the given object is an instance of the named type. This function is a short-hand convenience
+for sap.ui.base.Object#isA.</p>
+<p>Please see the API documentation of sap.ui.base.Object#isA for more details.</p>
 <h4>Parameters</h4>
 <h5>oObject</h5>
 <p><code>any</code></p>
@@ -314,10 +318,7 @@ for sap.ui.base.Object#isA.</p>
 <p>Whether the given object is an instance of the given type or of any of the given types</p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Checks whether the given object is an instance of the named type. This function is a short-hand convenience
-for sap.ui.base.Object#isA.</p>
-<p>Please see the API documentation of sap.ui.base.Object#isA for more details.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

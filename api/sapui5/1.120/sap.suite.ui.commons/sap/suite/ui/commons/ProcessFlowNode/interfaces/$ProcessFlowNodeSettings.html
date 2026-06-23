@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ProcessFlowNodeSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ProcessFlowNodeSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ProcessFlowNodeSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlowNode/interfaces/$ProcessFlowNodeSettings.html">
 <meta property="og:title" content="Interface: $ProcessFlowNodeSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ProcessFlowNodeSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ProcessFlowNodeSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlowNode/interfaces/$ProcessFlowNodeSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/ProcessFlowNode/README.html">ProcessFlowNode</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/ProcessFlowNode</a> / $ProcessFlowNodeSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/ProcessFlowNode</a> / $ProcessFlowNodeSettings</p>
 <h1>Interface: $ProcessFlowNodeSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ProcessFlowNodeSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/ProcessFlowNode"</span>;</pre>
+<p>Describes the settings that can be provided to the ProcessFlowNode constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -71,11 +72,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>isTitleClickable?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Specifies if the node title is clickable.</p>
 <h4>Deprecated</h4>
 <p>(since 1.26) - According to the new requirement there should be only one click event for
 each node (click on the whole node – see Press event) that is why titlePress event should not be used
 any longer. Hence isTitleClickable should not be used either.</p>
-<p>Specifies if the node title is clickable.</p>
 <hr>
 <h3>laneId?</h3>
 <blockquote>
@@ -99,6 +100,8 @@ any longer. Hence isTitleClickable should not be used either.</p>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the user clicks on the node. However, this event is not fired if the titlePress
+event has been fired.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ProcessFlowNode$PressEvent.html"><code>ProcessFlowNode$PressEvent</code></a></p>
@@ -107,8 +110,6 @@ any longer. Hence isTitleClickable should not be used either.</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.0) - This event is deprecated, use nodePress event instead. See
 sap.suite.ui.commons.ProcessFlow.html#event:nodePress.</p>
-<p>This event is fired when the user clicks on the node. However, this event is not fired if the titlePress
-event has been fired.</p>
 <hr>
 <h3>selected?</h3>
 <blockquote>
@@ -157,6 +158,8 @@ must not contain more than two strings. Additional strings in the array will be 
 <blockquote>
 <p><code>optional</code> <strong>titlePress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event handler is executed when the user clicks the node title. This event is fired only when the
+title is clickable (isTitleClickable equals true).</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ProcessFlowNode$TitlePressEvent.html"><code>ProcessFlowNode$TitlePressEvent</code></a></p>
@@ -164,8 +167,6 @@ must not contain more than two strings. Additional strings in the array will be 
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.26) - Should not be used any longer, use Press event instead ( click on the node)</p>
-<p>This event handler is executed when the user clicks the node title. This event is fired only when the
-title is clickable (isTitleClickable equals true).</p>
 <hr>
 <h3>type?</h3>
 <blockquote>
@@ -177,38 +178,38 @@ title is clickable (isTitleClickable equals true).</p>
 <blockquote>
 <p><code>optional</code> <strong>zoomLevelFourContent?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.50</p>
 <p>The node&#39;s content used for zoom level 4. If this aggregation is set, no default content like title and
 texts is used.</p>
+<h4>Since</h4>
+<p>1.50</p>
 <hr>
 <h3>zoomLevelOneContent?</h3>
 <blockquote>
 <p><code>optional</code> <strong>zoomLevelOneContent?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.50</p>
 <p>The node&#39;s content used for zoom level 1. If this aggregation is set, no default content like title and
 texts is used.</p>
+<h4>Since</h4>
+<p>1.50</p>
 <hr>
 <h3>zoomLevelThreeContent?</h3>
 <blockquote>
 <p><code>optional</code> <strong>zoomLevelThreeContent?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.50</p>
 <p>The node&#39;s content used for zoom level 3. If this aggregation is set, no default content like title and
 texts is used.</p>
+<h4>Since</h4>
+<p>1.50</p>
 <hr>
 <h3>zoomLevelTwoContent?</h3>
 <blockquote>
 <p><code>optional</code> <strong>zoomLevelTwoContent?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.50</p>
 <p>The node&#39;s content used for zoom level 2. If this aggregation is set, no default content like title and
 texts is used.</p>
+<h4>Since</h4>
+<p>1.50</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

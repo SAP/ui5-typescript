@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $FieldBaseSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FieldBaseSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $FieldBaseSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/field/FieldBase/interfaces/$FieldBaseSettings.html">
 <meta property="og:title" content="Interface: $FieldBaseSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FieldBaseSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $FieldBaseSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/field/FieldBase/interfaces/$FieldBaseSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › field › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/field/FieldBase/README.html">FieldBase</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/field/FieldBase</a> / $FieldBaseSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/field/FieldBase</a> / $FieldBaseSettings</p>
 <h1>Interface: $FieldBaseSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FieldBaseSettings } <span class="kw">from</span> <span class="str">"sap/ui/mdc/field/FieldBase"</span>;</pre>
+<p>Describes the settings that can be provided to the FieldBase constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -93,8 +94,6 @@ interface needs to be implemented by these controls.</p>
 <blockquote>
 <p><code>optional</code> <strong>contentDisplay?</strong>: <code>Control1</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.61.0</p>
 <p>Optional content to be rendered if the <code>editMode</code> property is set to <code>Display</code>.</p>
 <p>Per default, depending on <code>multipleLines</code> and the used data type, a content control is rendered in display
 mode. For simple string types, a sap.m.Text Text control is rendered in display mode. If a control
@@ -108,13 +107,13 @@ as type.</p>
 <p><strong>Warning:</strong> Only controls allowed in a sap.ui.layout.form.Form Form are allowed to be used for
 this optional content. Other controls might break the layout. This means the sap.ui.core.IFormContent IFormContent
 interface needs to be implemented by these controls.</p>
+<h4>Since</h4>
+<p>1.61.0</p>
 <hr>
 <h3>contentEdit?</h3>
 <blockquote>
 <p><code>optional</code> <strong>contentEdit?</strong>: <code>Control1</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.61.0</p>
 <p>Optional content to be rendered if the <code>editMode</code> property is not set to <code>Display</code>.</p>
 <p>Per default, depending on <code>multipleLines</code> and the used data type, a content control is rendered in edit
 mode. For simple string types, an sap.m.Input Input control is rendered in edit mode. If a control
@@ -128,6 +127,8 @@ as type.</p>
 <p><strong>Warning:</strong> Only controls allowed in a sap.ui.layout.form.Form Form are allowed to be used for
 this optional content. Other controls might break the layout. This means the sap.ui.core.IFormContent IFormContent
 interface needs to be implemented by these controls.</p>
+<h4>Since</h4>
+<p>1.61.0</p>
 <hr>
 <h3>dataType?</h3>
 <blockquote>
@@ -152,13 +153,13 @@ interface needs to be implemented by these controls.</p>
 <p><code>optional</code> <strong>delegate?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<h4>Since</h4>
-<p>1.72.0</p>
 <p>Path to <code>FieldBaseDelegate</code> module that provides the required APIs to execute model-specific logic.
  <strong>Note:</strong> Ensure that the related file can be requested (any required library has to be loaded before
 that).
  Do not bind or modify the module. Once the required module is associated, this property might not be
 needed any longer.</p>
+<h4>Since</h4>
+<p>1.72.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a>.<a href="../../../Control/interfaces/$ControlSettings.html#delegate"><code>delegate</code></a></p>
 <hr>
@@ -178,8 +179,6 @@ needed any longer.</p>
 <blockquote>
 <p><code>optional</code> <strong>fieldHelp?</strong>: <code>string</code> | <a href="../../../ValueHelp/classes/ValueHelp.html"><code>ValueHelp</code></a></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.114.0) - replaced by #setValueHelp valueHelp association</p>
 <p>Optional <code>FieldHelp</code>.</p>
 <p>This is an association that allows the usage of one <code>ValueHelp</code> instance for multiple fields.</p>
 <p><strong>Note:</strong> If the field is inside of a table, do not set the <code>ValueHelp</code> instance as <code>dependent</code> to the
@@ -187,6 +186,8 @@ field. If you do, every field instance in every table row gets a clone of it. Pu
 e.g. as dependent on the table or page. The <code>FieldHelp</code> instance must be somewhere in the control tree,
 otherwise there might be rendering or update issues.</p>
 <p><strong>Note:</strong> For <code>Boolean</code> fields, no <code>ValueHelp</code> should be added, but a default <code>ValueHelp</code> used instead.</p>
+<h4>Deprecated</h4>
+<p>(since 1.114.0) - replaced by #setValueHelp valueHelp association</p>
 <hr>
 <h3>fieldInfo?</h3>
 <blockquote>
@@ -200,11 +201,11 @@ can be used to activate link features.</p>
 <blockquote>
 <p><code>optional</code> <strong>label?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.62.0</p>
 <p>Defines the label text for the field.</p>
 <p>This can be used by sap.ui.mdc.FilterBar FilterBar or sap.ui.layout.form.Form Form controls
 to create a sap.m.Label Label control for the field.</p>
+<h4>Since</h4>
+<p>1.62.0</p>
 <hr>
 <h3>liveChange?</h3>
 <blockquote>
@@ -264,17 +265,20 @@ the value is <code>null</code>, no placeholder is shown.</p>
 <blockquote>
 <p><code>optional</code> <strong>showEmptyIndicator?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.85.0</p>
 <p>If set, an empty <code>Field</code> renders an empty indicator in display mode.</p>
 <p>This property only takes effect if <code>editMode</code> is set to <code>Display</code>.</p>
 <p><strong>Note</strong> Empty means the <code>Field</code> holds no value. If an empty string is a valid value, the <code>Field</code> might
 show nothing, depending on the <code>display</code> settings and assigned description or <code>ValueHelp</code>.</p>
+<h4>Since</h4>
+<p>1.85.0</p>
 <hr>
 <h3>submit?</h3>
 <blockquote>
 <p><code>optional</code> <strong>submit?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the user presses Enter. It allows the application to implement some
+submit logic.</p>
+<p><strong>Note</strong> This event is only triggered if the field is editable.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/FieldBase$SubmitEvent.html"><code>FieldBase$SubmitEvent</code></a></p>
@@ -282,9 +286,6 @@ show nothing, depending on the <code>display</code> settings and assigned descri
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.82.0</p>
-<p>This event is fired when the user presses Enter. It allows the application to implement some
-submit logic.</p>
-<p><strong>Note</strong> This event is only triggered if the field is editable.</p>
 <hr>
 <h3>textAlign?</h3>
 <blockquote>
@@ -334,6 +335,6 @@ text from the resource bundle is shown.</p>
 </blockquote>
 <p>Defines the width of the control.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

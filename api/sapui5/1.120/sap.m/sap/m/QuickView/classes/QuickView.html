@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: QuickView — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: QuickView — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: QuickView — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/QuickView/classes/QuickView.html">
 <meta property="og:title" content="Class: QuickView — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: QuickView — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: QuickView — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/QuickView/classes/QuickView.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/QuickView/README.html">QuickView</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/QuickView</a> / QuickView</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/QuickView</a> / QuickView</p>
 <h1>Class: QuickView</h1>
 <pre class="sig"><span class="kw">import</span> QuickView <span class="kw">from</span> <span class="str">"sap/m/QuickView"</span>;</pre>
-<h2>Since</h2>
-<p>1.28.11</p>
 <p>A responsive popover that displays information on an object in a business-card format. Overview: The
 quick view is used to show business information on either a person or an entity (e.g. a company). It
 uses a set of pre-defined controls. Objects can be linked together and you can navigate between several
@@ -51,6 +49,8 @@ can hold multiple objects, each showing information on a single entity. Usage: W
 	 - You want to display complex information about an object.  Responsive Behavior: The quick view
     is displayed in a sap.m.Popover popover on desktop and a full-screen sap.m.Dialog dialog
     on mobile devices.</p>
+<h2>Since</h2>
+<p>1.28.11</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../QuickViewBase/classes/QuickViewBase.html"><code>QuickViewBase</code></a></li>
@@ -345,6 +345,7 @@ otherwise it will be bound to this <code>sap.m.QuickView</code> itself.</p>
 <blockquote>
 <p><strong>fireAfterClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/QuickView$AfterCloseEventParameters.html"><code>QuickView$AfterCloseEventParameters</code></a></p>
@@ -354,12 +355,12 @@ otherwise it will be bound to this <code>sap.m.QuickView</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <hr>
 <h3>fireAfterOpen()</h3>
 <blockquote>
 <p><strong>fireAfterOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/QuickView$AfterOpenEventParameters.html"><code>QuickView$AfterOpenEventParameters</code></a></p>
@@ -369,12 +370,12 @@ otherwise it will be bound to this <code>sap.m.QuickView</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <hr>
 <h3>fireBeforeClose()</h3>
 <blockquote>
 <p><strong>fireBeforeClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/QuickView$BeforeCloseEventParameters.html"><code>QuickView$BeforeCloseEventParameters</code></a></p>
@@ -384,12 +385,12 @@ otherwise it will be bound to this <code>sap.m.QuickView</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <hr>
 <h3>fireBeforeOpen()</h3>
 <blockquote>
 <p><strong>fireBeforeOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/QuickView$BeforeOpenEventParameters.html"><code>QuickView$BeforeOpenEventParameters</code></a></p>
@@ -399,7 +400,6 @@ otherwise it will be bound to this <code>sap.m.QuickView</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <hr>
 <h3>getPlacement()</h3>
 <blockquote>
@@ -502,6 +502,6 @@ used by this class</p>
 <p><a href="../../QuickViewBase/classes/QuickViewBase.html"><code>QuickViewBase</code></a>.<a href="../../QuickViewBase/classes/QuickViewBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

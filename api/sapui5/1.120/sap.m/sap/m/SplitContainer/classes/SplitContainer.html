@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SplitContainer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SplitContainer — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SplitContainer — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/SplitContainer/classes/SplitContainer.html">
 <meta property="og:title" content="Class: SplitContainer — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SplitContainer — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SplitContainer — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/SplitContainer/classes/SplitContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SplitContainer/README.html">SplitContainer</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SplitContainer</a> / SplitContainer</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SplitContainer</a> / SplitContainer</p>
 <h1>Class: SplitContainer</h1>
 <pre class="sig"><span class="kw">import</span> SplitContainer <span class="kw">from</span> <span class="str">"sap/m/SplitContainer"</span>;</pre>
 <p>A container control that is used to display a master-detail view.</p>
@@ -141,6 +141,9 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addPage</strong>(<code>oPage</code>, <code>bMaster</code>): <code>this</code></p>
 </blockquote>
+<p>Adds a content entity either to master area or detail area depending on the master parameter.</p>
+<p>The method is provided mainly for providing API consistency between sap.m.SplitContainer and sap.m.App.
+So that the same code line can be reused.</p>
 <h4>Parameters</h4>
 <h5>oPage</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -156,9 +159,6 @@ area.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.1</p>
-<p>Adds a content entity either to master area or detail area depending on the master parameter.</p>
-<p>The method is provided mainly for providing API consistency between sap.m.SplitContainer and sap.m.App.
-So that the same code line can be reused.</p>
 <hr>
 <h3>attachAfterDetailNavigate()</h3>
 <h4>Call Signature</h4>
@@ -630,6 +630,15 @@ are actually used to influence the transition.</p>
 <blockquote>
 <p><strong>backToPage</strong>(<code>pageId</code>, <code>backData?</code>, <code>transitionParameters?</code>): <code>void</code></p>
 </blockquote>
+<p>Navigates back to the nearest previous page in the SplitContainer history with the given ID (if there
+is no such page among the previous pages, nothing happens). The transition effect, which had been used
+to get to the current page is inverted and used for this navigation.</p>
+<p>Calling this navigation method, first triggers the (cancelable) navigate event on the SplitContainer,
+then the BeforeHide pseudo event on the source page, BeforeFirstShow (if applicable), and BeforeShow
+on the target page. Later, after the transition has completed, the AfterShow pseudo event is triggered
+on the target page and AfterHide - on the page, which has been left. The given backData object is available
+in the BeforeFirstShow, BeforeShow, and AfterShow event objects as data property. The original &quot;data&quot;
+object from the &quot;to&quot; navigation is also available in these event objects.</p>
 <h4>Parameters</h4>
 <h5>pageId</h5>
 <p><code>string</code></p>
@@ -658,15 +667,6 @@ are actually used to influence the transition.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.10.0</p>
-<p>Navigates back to the nearest previous page in the SplitContainer history with the given ID (if there
-is no such page among the previous pages, nothing happens). The transition effect, which had been used
-to get to the current page is inverted and used for this navigation.</p>
-<p>Calling this navigation method, first triggers the (cancelable) navigate event on the SplitContainer,
-then the BeforeHide pseudo event on the source page, BeforeFirstShow (if applicable), and BeforeShow
-on the target page. Later, after the transition has completed, the AfterShow pseudo event is triggered
-on the target page and AfterHide - on the page, which has been left. The given backData object is available
-in the BeforeFirstShow, BeforeShow, and AfterShow event objects as data property. The original &quot;data&quot;
-object from the &quot;to&quot; navigation is also available in these event objects.</p>
 <hr>
 <h3>backToTopDetail()</h3>
 <blockquote>
@@ -913,6 +913,7 @@ this <code>sap.m.SplitContainer</code>.</p>
 <blockquote>
 <p><strong>fireAfterDetailNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterDetailNavigate afterDetailNavigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SplitContainer$AfterDetailNavigateEventParameters.html"><code>SplitContainer$AfterDetailNavigateEventParameters</code></a></p>
@@ -922,12 +923,12 @@ this <code>sap.m.SplitContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterDetailNavigate afterDetailNavigate to attached listeners.</p>
 <hr>
 <h3>fireAfterMasterClose()</h3>
 <blockquote>
 <p><strong>fireAfterMasterClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterMasterClose afterMasterClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -937,12 +938,12 @@ this <code>sap.m.SplitContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterMasterClose afterMasterClose to attached listeners.</p>
 <hr>
 <h3>fireAfterMasterNavigate()</h3>
 <blockquote>
 <p><strong>fireAfterMasterNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterMasterNavigate afterMasterNavigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SplitContainer$AfterMasterNavigateEventParameters.html"><code>SplitContainer$AfterMasterNavigateEventParameters</code></a></p>
@@ -952,12 +953,12 @@ this <code>sap.m.SplitContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterMasterNavigate afterMasterNavigate to attached listeners.</p>
 <hr>
 <h3>fireAfterMasterOpen()</h3>
 <blockquote>
 <p><strong>fireAfterMasterOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterMasterOpen afterMasterOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -967,12 +968,12 @@ this <code>sap.m.SplitContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterMasterOpen afterMasterOpen to attached listeners.</p>
 <hr>
 <h3>fireBeforeMasterClose()</h3>
 <blockquote>
 <p><strong>fireBeforeMasterClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeMasterClose beforeMasterClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -982,12 +983,12 @@ this <code>sap.m.SplitContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeMasterClose beforeMasterClose to attached listeners.</p>
 <hr>
 <h3>fireBeforeMasterOpen()</h3>
 <blockquote>
 <p><strong>fireBeforeMasterOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeMasterOpen beforeMasterOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -997,12 +998,14 @@ this <code>sap.m.SplitContainer</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeMasterOpen beforeMasterOpen to attached listeners.</p>
 <hr>
 <h3>fireDetailNavigate()</h3>
 <blockquote>
 <p><strong>fireDetailNavigate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:detailNavigate detailNavigate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SplitContainer$DetailNavigateEventParameters.html"><code>SplitContainer$DetailNavigateEventParameters</code></a></p>
@@ -1012,14 +1015,12 @@ this <code>sap.m.SplitContainer</code>.</p>
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:detailNavigate detailNavigate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireMasterButton()</h3>
 <blockquote>
 <p><strong>fireMasterButton</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:masterButton masterButton to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1029,12 +1030,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:masterButton masterButton to attached listeners.</p>
 <hr>
 <h3>fireMasterNavigate()</h3>
 <blockquote>
 <p><strong>fireMasterNavigate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:masterNavigate masterNavigate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SplitContainer$MasterNavigateEventParameters.html"><code>SplitContainer$MasterNavigateEventParameters</code></a></p>
@@ -1044,69 +1047,66 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:masterNavigate masterNavigate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>getBackgroundColor()</h3>
 <blockquote>
 <p><strong>getBackgroundColor</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundColor</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Gets current value of property #getBackgroundColor backgroundColor.</p>
 <p>Determines the background color of the SplitContainer. If set, this color overrides the default one,
 which is defined by the theme (should only be used when really required). Any configured background image
 will be placed above this colored background, but any theme adaptation in the Theme Designer will override
 this setting. Use the backgroundRepeat property to define whether this image should be stretched to cover
 the complete SplitContainer or whether it should be tiled.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundColor</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>getBackgroundImage()</h3>
 <blockquote>
 <p><strong>getBackgroundImage</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundImage</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Gets current value of property #getBackgroundImage backgroundImage.</p>
 <p>Sets the background image of the SplitContainer. When set, this image overrides the default background
 defined by the theme (should only be used when really required). This background image will be placed
 above any color set for the background, but any theme adaptation in the Theme Designer will override
 this image setting. Use the backgroundRepeat property to define whether this image should be stretched
 to cover the complete SplitContainer or whether it should be tiled.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundImage</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>getBackgroundOpacity()</h3>
 <blockquote>
 <p><strong>getBackgroundOpacity</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getBackgroundOpacity backgroundOpacity.</p>
+<p>Defines the opacity of the background image - between 0 (fully transparent) and 1 (fully opaque). This
+can be used to improve the content visibility by making the background image partly transparent.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>backgroundOpacity</code></p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Gets current value of property #getBackgroundOpacity backgroundOpacity.</p>
-<p>Defines the opacity of the background image - between 0 (fully transparent) and 1 (fully opaque). This
-can be used to improve the content visibility by making the background image partly transparent.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>getBackgroundRepeat()</h3>
 <blockquote>
 <p><strong>getBackgroundRepeat</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getBackgroundRepeat backgroundRepeat.</p>
+<p>Defines whether the background image (if configured) is proportionally stretched to cover the whole SplitContainer
+(false) or whether it should be tiled (true).</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>backgroundRepeat</code></p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Gets current value of property #getBackgroundRepeat backgroundRepeat.</p>
-<p>Defines whether the background image (if configured) is proportionally stretched to cover the whole SplitContainer
-(false) or whether it should be tiled (true).</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getCurrentDetailPage()</h3>
 <blockquote>
@@ -1128,6 +1128,10 @@ can be used to improve the content visibility by making the background image par
 <blockquote>
 <p><strong>getCurrentPage</strong>(<code>bMaster</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Returns the currently displayed page either in master area or in detail area. When the parameter is set
+to true, the current page in master area is returned, otherwise, the current page in detail area is returned.</p>
+<p>This method is provided mainly for API consistency between sap.m.SplitContainer and sap.m.App, so that
+the same code line can be reused.</p>
 <h4>Parameters</h4>
 <h5>bMaster</h5>
 <p><code>boolean</code></p>
@@ -1137,10 +1141,6 @@ in detail area will be returned.</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.11.1</p>
-<p>Returns the currently displayed page either in master area or in detail area. When the parameter is set
-to true, the current page in master area is returned, otherwise, the current page in detail area is returned.</p>
-<p>This method is provided mainly for API consistency between sap.m.SplitContainer and sap.m.App, so that
-the same code line can be reused.</p>
 <hr>
 <h3>getDefaultTransitionNameDetail()</h3>
 <blockquote>
@@ -1172,6 +1172,8 @@ transitions.</p>
 <blockquote>
 <p><strong>getDetailPage</strong>(<code>pageId</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Returns the page with the given ID in detail area. If there&#39;s no page that has the given ID, null is
+returned.</p>
 <h4>Parameters</h4>
 <h5>pageId</h5>
 <p><code>string</code></p>
@@ -1181,8 +1183,6 @@ transitions.</p>
 <p>the requested page</p>
 <h4>Since</h4>
 <p>1.11.1</p>
-<p>Returns the page with the given ID in detail area. If there&#39;s no page that has the given ID, null is
-returned.</p>
 <hr>
 <h3>getDetailPages()</h3>
 <blockquote>
@@ -1234,19 +1234,21 @@ the show/hide of master button needs to be managed by the application.</p>
 <blockquote>
 <p><strong>getMasterButtonTooltip</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getMasterButtonTooltip masterButtonTooltip.</p>
+<p>Specifies the tooltip of the master button. If the tooltip is not specified, the title of the page, which
+is displayed is the master part, is set as tooltip to the master button.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>masterButtonTooltip</code></p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>Gets current value of property #getMasterButtonTooltip masterButtonTooltip.</p>
-<p>Specifies the tooltip of the master button. If the tooltip is not specified, the title of the page, which
-is displayed is the master part, is set as tooltip to the master button.</p>
 <hr>
 <h3>getMasterPage()</h3>
 <blockquote>
 <p><strong>getMasterPage</strong>(<code>pageId</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Returns the page with the given ID in master area (if there&#39;s no page that has the given ID, null is
+returned).</p>
 <h4>Parameters</h4>
 <h5>pageId</h5>
 <p><code>string</code></p>
@@ -1256,8 +1258,6 @@ is displayed is the master part, is set as tooltip to the master button.</p>
 <p>The requested page</p>
 <h4>Since</h4>
 <p>1.11.1</p>
-<p>Returns the page with the given ID in master area (if there&#39;s no page that has the given ID, null is
-returned).</p>
 <hr>
 <h3>getMasterPages()</h3>
 <blockquote>
@@ -1288,6 +1288,8 @@ values are Hide (Master is always hidden) and Popover (master is displayed in po
 <blockquote>
 <p><strong>getPage</strong>(<code>pageId</code>, <code>bMaster</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Returns the page with the given ID from either master area, or detail area depending on the master parameter
+(if there&#39;s no page that has the given ID, null is returned).</p>
 <h4>Parameters</h4>
 <h5>pageId</h5>
 <p><code>string</code></p>
@@ -1300,8 +1302,6 @@ be fetched from detail area.</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.11.1</p>
-<p>Returns the page with the given ID from either master area, or detail area depending on the master parameter
-(if there&#39;s no page that has the given ID, null is returned).</p>
 <hr>
 <h3>getPreviousPage()</h3>
 <blockquote>
@@ -1443,14 +1443,14 @@ page if the user would have done a normal forward navigation to it.</p>
 <blockquote>
 <p><strong>isMasterShown</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<h4>Since</h4>
-<p>1.16.5</p>
 <p>Returns whether master area is currently displayed on the screen.</p>
 <p>In desktop browser or tablet, this method returns true when master area is displayed on the screen, regardless
 if in portrait or landscape mode. On mobile phone devices, this method returns true when the currently
 displayed page is from the pages, which are added to the master area, otherwise, it returns false.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<h4>Since</h4>
+<p>1.16.5</p>
 <hr>
 <h3>removeAllDetailPages()</h3>
 <blockquote>
@@ -1502,6 +1502,13 @@ displayed page is from the pages, which are added to the master area, otherwise,
 <blockquote>
 <p><strong>setBackgroundColor</strong>(<code>sBackgroundColor?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundColor backgroundColor.</p>
+<p>Determines the background color of the SplitContainer. If set, this color overrides the default one,
+which is defined by the theme (should only be used when really required). Any configured background image
+will be placed above this colored background, but any theme adaptation in the Theme Designer will override
+this setting. Use the backgroundRepeat property to define whether this image should be stretched to cover
+the complete SplitContainer or whether it should be tiled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundColor?</h5>
 <p><code>string</code></p>
@@ -1511,18 +1518,18 @@ displayed page is from the pages, which are added to the master area, otherwise,
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getBackgroundColor backgroundColor.</p>
-<p>Determines the background color of the SplitContainer. If set, this color overrides the default one,
-which is defined by the theme (should only be used when really required). Any configured background image
-will be placed above this colored background, but any theme adaptation in the Theme Designer will override
-this setting. Use the backgroundRepeat property to define whether this image should be stretched to cover
-the complete SplitContainer or whether it should be tiled.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBackgroundImage()</h3>
 <blockquote>
 <p><strong>setBackgroundImage</strong>(<code>sBackgroundImage?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundImage backgroundImage.</p>
+<p>Sets the background image of the SplitContainer. When set, this image overrides the default background
+defined by the theme (should only be used when really required). This background image will be placed
+above any color set for the background, but any theme adaptation in the Theme Designer will override
+this image setting. Use the backgroundRepeat property to define whether this image should be stretched
+to cover the complete SplitContainer or whether it should be tiled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundImage?</h5>
 <p><code>string</code></p>
@@ -1532,18 +1539,16 @@ the complete SplitContainer or whether it should be tiled.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getBackgroundImage backgroundImage.</p>
-<p>Sets the background image of the SplitContainer. When set, this image overrides the default background
-defined by the theme (should only be used when really required). This background image will be placed
-above any color set for the background, but any theme adaptation in the Theme Designer will override
-this image setting. Use the backgroundRepeat property to define whether this image should be stretched
-to cover the complete SplitContainer or whether it should be tiled.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBackgroundOpacity()</h3>
 <blockquote>
 <p><strong>setBackgroundOpacity</strong>(<code>fBackgroundOpacity?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundOpacity backgroundOpacity.</p>
+<p>Defines the opacity of the background image - between 0 (fully transparent) and 1 (fully opaque). This
+can be used to improve the content visibility by making the background image partly transparent.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Parameters</h4>
 <h5>fBackgroundOpacity?</h5>
 <p><code>number</code></p>
@@ -1553,16 +1558,16 @@ to cover the complete SplitContainer or whether it should be tiled.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getBackgroundOpacity backgroundOpacity.</p>
-<p>Defines the opacity of the background image - between 0 (fully transparent) and 1 (fully opaque). This
-can be used to improve the content visibility by making the background image partly transparent.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>setBackgroundRepeat()</h3>
 <blockquote>
 <p><strong>setBackgroundRepeat</strong>(<code>bBackgroundRepeat?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundRepeat backgroundRepeat.</p>
+<p>Defines whether the background image (if configured) is proportionally stretched to cover the whole SplitContainer
+(false) or whether it should be tiled (true).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bBackgroundRepeat?</h5>
 <p><code>boolean</code></p>
@@ -1572,11 +1577,6 @@ can be used to improve the content visibility by making the background image par
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getBackgroundRepeat backgroundRepeat.</p>
-<p>Defines whether the background image (if configured) is proportionally stretched to cover the whole SplitContainer
-(false) or whether it should be tiled (true).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setDefaultTransitionNameDetail()</h3>
 <blockquote>
@@ -1667,6 +1667,10 @@ the show/hide of master button needs to be managed by the application.</p>
 <blockquote>
 <p><strong>setMasterButtonTooltip</strong>(<code>sMasterButtonTooltip?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMasterButtonTooltip masterButtonTooltip.</p>
+<p>Specifies the tooltip of the master button. If the tooltip is not specified, the title of the page, which
+is displayed is the master part, is set as tooltip to the master button.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sMasterButtonTooltip?</h5>
 <p><code>string</code></p>
@@ -1676,10 +1680,6 @@ the show/hide of master button needs to be managed by the application.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>Sets a new value for property #getMasterButtonTooltip masterButtonTooltip.</p>
-<p>Specifies the tooltip of the master button. If the tooltip is not specified, the title of the page, which
-is displayed is the master part, is set as tooltip to the master button.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setMode()</h3>
 <blockquote>
@@ -1712,6 +1712,8 @@ values are Hide (Master is always hidden) and Popover (master is displayed in po
 <blockquote>
 <p><strong>to</strong>(<code>pageId</code>, <code>transitionName?</code>, <code>data?</code>, <code>transitionParameters?</code>): <code>void</code></p>
 </blockquote>
+<p>Navigates to the given page inside the SplitContainer. The navigation is done inside the master area
+if the page has been added, otherwise, it tries to do the page navigation in the detail area.</p>
 <h4>Parameters</h4>
 <h5>pageId</h5>
 <p><code>string</code></p>
@@ -1743,8 +1745,6 @@ any parameter.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.10.0</p>
-<p>Navigates to the given page inside the SplitContainer. The navigation is done inside the master area
-if the page has been added, otherwise, it tries to do the page navigation in the detail area.</p>
 <hr>
 <h3>toDetail()</h3>
 <blockquote>
@@ -1855,6 +1855,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: UploadSetwithTable — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: UploadSetwithTable — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: UploadSetwithTable — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/upload/UploadSetwithTable/classes/UploadSetwithTable.html">
 <meta property="og:title" content="Class: UploadSetwithTable — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: UploadSetwithTable — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: UploadSetwithTable — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/upload/UploadSetwithTable/classes/UploadSetwithTable.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.m/README.html">sap.m</a> › sap › m › upload › <a href="../../../../../../sap.m/sap/m/upload/UploadSetwithTable/README.html">UploadSetwithTable</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/upload/UploadSetwithTable</a> / UploadSetwithTable</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/upload/UploadSetwithTable</a> / UploadSetwithTable</p>
 <h1>Class: UploadSetwithTable</h1>
 <pre class="sig"><span class="kw">import</span> UploadSetwithTable <span class="kw">from</span> <span class="str">"sap/m/upload/UploadSetwithTable"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<h2>Since</h2>
-<p>1.120
- (since 1.120)</p>
 <p>This control allows you to upload one or more files from your device, such as desktop, tablet or phone,
 and attach them to your application in a responsive tabular manner.
  This control builds on the sap.m.upload.UploadSet UploadSet control. Provides flexibility to
@@ -52,6 +49,9 @@ should match the order of the cells aggregation (sap.m.upload.UploadSetwithTable
 control is built on <code>sap.m.Column</code> (sap.m.Column Column) control and provides ability to define
 personalization specific properties for column and is essential to setup personalization for the <code>sap.m.upload.UploadSetwithTable</code>
 control.</p>
+<h2>Since</h2>
+<p>1.120
+ (since 1.120)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../Table/classes/Table.html"><code>Table</code></a></li>
@@ -817,6 +817,7 @@ this <code>sap.m.upload.UploadSetwithTable</code>.</p>
 <p><strong>fireBeforeInitiatingItemUpload</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:beforeInitiatingItemUpload beforeInitiatingItemUpload to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadSetwithTable$BeforeInitiatingItemUploadEventParameters.html"><code>UploadSetwithTable$BeforeInitiatingItemUploadEventParameters</code></a></p>
@@ -826,13 +827,15 @@ this <code>sap.m.upload.UploadSetwithTable</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeInitiatingItemUpload beforeInitiatingItemUpload to attached listeners.</p>
 <hr>
 <h3>fireBeforeUploadStarts()</h3>
 <blockquote>
 <p><strong>fireBeforeUploadStarts</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:beforeUploadStarts beforeUploadStarts to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadSetwithTable$BeforeUploadStartsEventParameters.html"><code>UploadSetwithTable$BeforeUploadStartsEventParameters</code></a></p>
@@ -842,15 +845,13 @@ this <code>sap.m.upload.UploadSetwithTable</code>.</p>
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeUploadStarts beforeUploadStarts to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireFileNameLengthExceeded()</h3>
 <blockquote>
 <p><strong>fireFileNameLengthExceeded</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:fileNameLengthExceeded fileNameLengthExceeded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadSetwithTable$FileNameLengthExceededEventParameters.html"><code>UploadSetwithTable$FileNameLengthExceededEventParameters</code></a></p>
@@ -860,13 +861,13 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileNameLengthExceeded fileNameLengthExceeded to attached listeners.</p>
 <hr>
 <h3>fireFileSizeExceeded()</h3>
 <blockquote>
 <p><strong>fireFileSizeExceeded</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:fileSizeExceeded fileSizeExceeded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadSetwithTable$FileSizeExceededEventParameters.html"><code>UploadSetwithTable$FileSizeExceededEventParameters</code></a></p>
@@ -876,13 +877,13 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileSizeExceeded fileSizeExceeded to attached listeners.</p>
 <hr>
 <h3>fireFileTypeMismatch()</h3>
 <blockquote>
 <p><strong>fireFileTypeMismatch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:fileTypeMismatch fileTypeMismatch to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadSetwithTable$FileTypeMismatchEventParameters.html"><code>UploadSetwithTable$FileTypeMismatchEventParameters</code></a></p>
@@ -892,13 +893,13 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileTypeMismatch fileTypeMismatch to attached listeners.</p>
 <hr>
 <h3>fireItemDragStart()</h3>
 <blockquote>
 <p><strong>fireItemDragStart</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:itemDragStart itemDragStart to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -908,13 +909,13 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:itemDragStart itemDragStart to attached listeners.</p>
 <hr>
 <h3>fireItemDrop()</h3>
 <blockquote>
 <p><strong>fireItemDrop</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:itemDrop itemDrop to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -924,13 +925,13 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:itemDrop itemDrop to attached listeners.</p>
 <hr>
 <h3>fireItemRenamed()</h3>
 <blockquote>
 <p><strong>fireItemRenamed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:itemRenamed itemRenamed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadSetwithTable$ItemRenamedEventParameters.html"><code>UploadSetwithTable$ItemRenamedEventParameters</code></a></p>
@@ -940,13 +941,13 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:itemRenamed itemRenamed to attached listeners.</p>
 <hr>
 <h3>fireMediaTypeMismatch()</h3>
 <blockquote>
 <p><strong>fireMediaTypeMismatch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:mediaTypeMismatch mediaTypeMismatch to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadSetwithTable$MediaTypeMismatchEventParameters.html"><code>UploadSetwithTable$MediaTypeMismatchEventParameters</code></a></p>
@@ -956,13 +957,13 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:mediaTypeMismatch mediaTypeMismatch to attached listeners.</p>
 <hr>
 <h3>fireUploadCompleted()</h3>
 <blockquote>
 <p><strong>fireUploadCompleted</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:uploadCompleted uploadCompleted to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UploadSetwithTable$UploadCompletedEventParameters.html"><code>UploadSetwithTable$UploadCompletedEventParameters</code></a></p>
@@ -972,18 +973,17 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:uploadCompleted uploadCompleted to attached listeners.</p>
 <hr>
 <h3>getCloudFilePickerButtonText()</h3>
 <blockquote>
 <p><strong>getCloudFilePickerButtonText</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>Gets current value of property #getCloudFilePickerButtonText cloudFilePickerButtonText.</p>
 <p>The text of the CloudFile picker button. The default text is &quot;Upload from cloud&quot; (translated to the respective
 language).</p>
 <p>Default value is <code>empty string</code>.</p>
+<p> (since 1.120)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>cloudFilePickerButtonText</code></p>
@@ -993,10 +993,10 @@ language).</p>
 <p><strong>getCloudFilePickerEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>Gets current value of property #getCloudFilePickerEnabled cloudFilePickerEnabled.</p>
 <p>Enables CloudFile picker feature to upload files from cloud.</p>
 <p>Default value is <code>false</code>.</p>
+<p> (since 1.120)</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>cloudFilePickerEnabled</code></p>
@@ -1006,10 +1006,10 @@ language).</p>
 <p><strong>getCloudFilePickerServiceUrl</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>Gets current value of property #getCloudFilePickerServiceUrl cloudFilePickerServiceUrl.</p>
 <p>Url of the FileShare OData V4 service supplied for CloudFile picker control.</p>
 <p>Default value is <code>empty string</code>.</p>
+<p> (since 1.120)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>cloudFilePickerServiceUrl</code></p>
@@ -1336,12 +1336,12 @@ upload can be displayed and monitored. This is necessary in case when custom upl
 <p><strong>setCloudFilePickerButtonText</strong>(<code>sCloudFilePickerButtonText?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>Sets a new value for property #getCloudFilePickerButtonText cloudFilePickerButtonText.</p>
 <p>The text of the CloudFile picker button. The default text is &quot;Upload from cloud&quot; (translated to the respective
 language).</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>empty string</code>.</p>
+<p> (since 1.120)</p>
 <h4>Parameters</h4>
 <h5>sCloudFilePickerButtonText?</h5>
 <p><code>string</code></p>
@@ -1355,11 +1355,11 @@ language).</p>
 <p><strong>setCloudFilePickerEnabled</strong>(<code>bCloudFilePickerEnabled?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>Sets a new value for property #getCloudFilePickerEnabled cloudFilePickerEnabled.</p>
 <p>Enables CloudFile picker feature to upload files from cloud.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<p> (since 1.120)</p>
 <h4>Parameters</h4>
 <h5>bCloudFilePickerEnabled?</h5>
 <p><code>boolean</code></p>
@@ -1373,11 +1373,11 @@ language).</p>
 <p><strong>setCloudFilePickerServiceUrl</strong>(<code>sCloudFilePickerServiceUrl?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>Sets a new value for property #getCloudFilePickerServiceUrl cloudFilePickerServiceUrl.</p>
 <p>Url of the FileShare OData V4 service supplied for CloudFile picker control.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>empty string</code>.</p>
+<p> (since 1.120)</p>
 <h4>Parameters</h4>
 <h5>sCloudFilePickerServiceUrl?</h5>
 <p><code>string</code></p>
@@ -1785,6 +1785,6 @@ used by this class</p>
 <p><a href="../../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../../Table/classes/Table.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

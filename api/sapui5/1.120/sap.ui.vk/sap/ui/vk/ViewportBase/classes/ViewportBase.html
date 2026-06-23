@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: ViewportBase — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ViewportBase — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: ViewportBase — SAPUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: ViewportBase — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/ViewportBase/classes/ViewportBase.html">
-<meta property="og:title" content="Class: ViewportBase — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ViewportBase — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: ViewportBase — SAPUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: ViewportBase — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/ViewportBase/classes/ViewportBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/ViewportBase/README.html">ViewportBase</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ViewportBase</a> / ViewportBase</p>
-<h1>Class: ViewportBase</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ViewportBase</a> / ViewportBase</p>
+<h1>Abstract Class: ViewportBase</h1>
 <pre class="sig"><span class="kw">import</span> ViewportBase <span class="kw">from</span> <span class="str">"sap/ui/vk/ViewportBase"</span>;</pre>
+<p>Provides a rendering canvas for the 3D elements of a loaded scene.</p>
 <h2>Since</h2>
 <p>1.50.0</p>
-<p>Provides a rendering canvas for the 3D elements of a loaded scene.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -94,6 +94,8 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_setContent</strong>(<code>content</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a scene obtained as content from the associated content connector.</p>
+<p>This method should be overridden in derived classes.</p>
 <h4>Parameters</h4>
 <h5>content</h5>
 <p><a href="../../Scene/classes/Scene.html"><code>Scene</code></a></p>
@@ -103,8 +105,6 @@ of the syntax of the settings object.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets a scene obtained as content from the associated content connector.</p>
-<p>This method should be overridden in derived classes.</p>
 <hr>
 <h3>activateView()</h3>
 <blockquote>
@@ -686,6 +686,9 @@ of this <code>sap.ui.vk.ViewportBase</code>.</p>
 <blockquote>
 <p><strong>exclusiveSelectionHandler</strong>(<code>nodes</code>): <code>void</code></p>
 </blockquote>
+<p>Helper method used to provide exclusive selection method. If this method is used then nodes are marked
+as selected while all previously selected objects are deselected. If this is called with empty nodes
+list then all already selected nodes are deselected.</p>
 <h4>Parameters</h4>
 <h5>nodes</h5>
 <p><code>any</code>[]</p>
@@ -694,14 +697,12 @@ of this <code>sap.ui.vk.ViewportBase</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Helper method used to provide exclusive selection method. If this method is used then nodes are marked
-as selected while all previously selected objects are deselected. If this is called with empty nodes
-list then all already selected nodes are deselected.</p>
 <hr>
 <h3>fireNodeClicked()</h3>
 <blockquote>
 <p><strong>fireNodeClicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:nodeClicked nodeClicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewportBase$NodeClickedEventParameters.html"><code>ViewportBase$NodeClickedEventParameters</code></a></p>
@@ -711,12 +712,12 @@ list then all already selected nodes are deselected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:nodeClicked nodeClicked to attached listeners.</p>
 <hr>
 <h3>fireNodesPicked()</h3>
 <blockquote>
 <p><strong>fireNodesPicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:nodesPicked nodesPicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewportBase$NodesPickedEventParameters.html"><code>ViewportBase$NodesPickedEventParameters</code></a></p>
@@ -726,12 +727,12 @@ list then all already selected nodes are deselected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:nodesPicked nodesPicked to attached listeners.</p>
 <hr>
 <h3>fireNodeZoomed()</h3>
 <blockquote>
 <p><strong>fireNodeZoomed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:nodeZoomed nodeZoomed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewportBase$NodeZoomedEventParameters.html"><code>ViewportBase$NodeZoomedEventParameters</code></a></p>
@@ -741,12 +742,12 @@ list then all already selected nodes are deselected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:nodeZoomed nodeZoomed to attached listeners.</p>
 <hr>
 <h3>fireProcedureFinished()</h3>
 <blockquote>
 <p><strong>fireProcedureFinished</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:procedureFinished procedureFinished to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -756,12 +757,12 @@ list then all already selected nodes are deselected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:procedureFinished procedureFinished to attached listeners.</p>
 <hr>
 <h3>fireResize()</h3>
 <blockquote>
 <p><strong>fireResize</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:resize resize to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewportBase$ResizeEventParameters.html"><code>ViewportBase$ResizeEventParameters</code></a></p>
@@ -771,12 +772,12 @@ list then all already selected nodes are deselected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:resize resize to attached listeners.</p>
 <hr>
 <h3>fireUrlClicked()</h3>
 <blockquote>
 <p><strong>fireUrlClicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:urlClicked urlClicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewportBase$UrlClickedEventParameters.html"><code>ViewportBase$UrlClickedEventParameters</code></a></p>
@@ -786,12 +787,12 @@ list then all already selected nodes are deselected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:urlClicked urlClicked to attached listeners.</p>
 <hr>
 <h3>fireViewActivated()</h3>
 <blockquote>
 <p><strong>fireViewActivated</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:viewActivated viewActivated to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewportBase$ViewActivatedEventParameters.html"><code>ViewportBase$ViewActivatedEventParameters</code></a></p>
@@ -801,12 +802,12 @@ list then all already selected nodes are deselected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:viewActivated viewActivated to attached listeners.</p>
 <hr>
 <h3>fireViewFinished()</h3>
 <blockquote>
 <p><strong>fireViewFinished</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:viewFinished viewFinished to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewportBase$ViewFinishedEventParameters.html"><code>ViewportBase$ViewFinishedEventParameters</code></a></p>
@@ -816,7 +817,6 @@ list then all already selected nodes are deselected.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:viewFinished viewFinished to attached listeners.</p>
 <hr>
 <h3>getAnnotations()</h3>
 <blockquote>
@@ -942,6 +942,36 @@ or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>hotspotColorABGR</code></p>
+<hr>
+<h3>getHotspotCustomTextHaloWidth()</h3>
+<blockquote>
+<p><strong>getHotspotCustomTextHaloWidth</strong>(): <code>number</code></p>
+</blockquote>
+<p>Gets current value of property #getHotspotCustomTextHaloWidth hotspotCustomTextHaloWidth.</p>
+<p>Default value is <code>10</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>hotspotCustomTextHaloWidth</code></p>
+<hr>
+<h3>getHotspotCustomTextOutlineColor()</h3>
+<blockquote>
+<p><strong>getHotspotCustomTextOutlineColor</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getHotspotCustomTextOutlineColor hotspotCustomTextOutlineColor.</p>
+<p>Default value is <code>&quot;white&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>hotspotCustomTextOutlineColor</code></p>
+<hr>
+<h3>getHotspotCustomTextOutlineWidth()</h3>
+<blockquote>
+<p><strong>getHotspotCustomTextOutlineWidth</strong>(): <code>number</code></p>
+</blockquote>
+<p>Gets current value of property #getHotspotCustomTextOutlineWidth hotspotCustomTextOutlineWidth.</p>
+<p>Default value is <code>1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>hotspotCustomTextOutlineWidth</code></p>
 <hr>
 <h3>getKeepOutputSize()</h3>
 <blockquote>
@@ -1239,6 +1269,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>renderContent</strong>(<code>rm</code>): <code>void</code></p>
 </blockquote>
+<p>Renders viewport content.</p>
 <h4>Parameters</h4>
 <h5>rm</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/RenderManager/classes/RenderManager.html"><code>RenderManager</code></a></p>
@@ -1247,12 +1278,12 @@ is inserted at the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Renders viewport content.</p>
 <hr>
 <h3>renderTools()</h3>
 <blockquote>
 <p><strong>renderTools</strong>(<code>rm</code>): <code>void</code></p>
 </blockquote>
+<p>Renders viewport tools.</p>
 <h4>Parameters</h4>
 <h5>rm</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/RenderManager/classes/RenderManager.html"><code>RenderManager</code></a></p>
@@ -1261,7 +1292,6 @@ is inserted at the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Renders viewport tools.</p>
 <hr>
 <h3>rotate()</h3>
 <blockquote>
@@ -1332,6 +1362,7 @@ automatically or not.</p>
 <blockquote>
 <p><strong>setCamera</strong>(<code>camera</code>): <code>this</code></p>
 </blockquote>
+<p>Sets current camera to the viewport</p>
 <h4>Parameters</h4>
 <h5>camera</h5>
 <p><a href="../../Camera/classes/Camera.html"><code>Camera</code></a></p>
@@ -1342,7 +1373,6 @@ the current camera is destroyed.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.52.0</p>
-<p>Sets current camera to the viewport</p>
 <hr>
 <h3>setContentConnector()</h3>
 <blockquote>
@@ -1434,6 +1464,51 @@ element instance may be given</p>
 <h5>iHotspotColorABGR?</h5>
 <p><code>number</code></p>
 <p>New value for property <code>hotspotColorABGR</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHotspotCustomTextHaloWidth()</h3>
+<blockquote>
+<p><strong>setHotspotCustomTextHaloWidth</strong>(<code>fHotspotCustomTextHaloWidth?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getHotspotCustomTextHaloWidth hotspotCustomTextHaloWidth.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>10</code>.</p>
+<h4>Parameters</h4>
+<h5>fHotspotCustomTextHaloWidth?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>hotspotCustomTextHaloWidth</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHotspotCustomTextOutlineColor()</h3>
+<blockquote>
+<p><strong>setHotspotCustomTextOutlineColor</strong>(<code>sHotspotCustomTextOutlineColor?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getHotspotCustomTextOutlineColor hotspotCustomTextOutlineColor.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;white&quot;</code>.</p>
+<h4>Parameters</h4>
+<h5>sHotspotCustomTextOutlineColor?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>hotspotCustomTextOutlineColor</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setHotspotCustomTextOutlineWidth()</h3>
+<blockquote>
+<p><strong>setHotspotCustomTextOutlineWidth</strong>(<code>fHotspotCustomTextOutlineWidth?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getHotspotCustomTextOutlineWidth hotspotCustomTextOutlineWidth.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
+<h4>Parameters</h4>
+<h5>fHotspotCustomTextOutlineWidth?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>hotspotCustomTextOutlineWidth</code></p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -1641,6 +1716,9 @@ element instance may be given</p>
 <blockquote>
 <p><strong>stickySelectionHandler</strong>(<code>nodes</code>): <code>void</code></p>
 </blockquote>
+<p>Helper method to provide &quot;sticky&quot; selection method. If this method is used then nodes are added into
+selection if they were not selected before, otherwise they are removed from selection. If this is called
+with empty nodes list then all already selected nodes are deselected.</p>
 <h4>Parameters</h4>
 <h5>nodes</h5>
 <p><code>any</code>[]</p>
@@ -1649,9 +1727,6 @@ element instance may be given</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Helper method to provide &quot;sticky&quot; selection method. If this method is used then nodes are added into
-selection if they were not selected before, otherwise they are removed from selection. If this is called
-with empty nodes list then all already selected nodes are deselected.</p>
 <hr>
 <h3>zoom()</h3>
 <blockquote>
@@ -1705,6 +1780,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

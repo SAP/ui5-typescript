@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Header — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Header — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Header — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/Header/classes/Header.html">
 <meta property="og:title" content="Class: Header — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Header — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Header — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/Header/classes/Header.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › calendar › <a href="../../../../../../../sap.ui.unified/sap/ui/unified/calendar/Header/README.html">Header</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/Header</a> / Header</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/Header</a> / Header</p>
 <h1>Class: Header</h1>
 <pre class="sig"><span class="kw">import</span> Header <span class="kw">from</span> <span class="str">"sap/ui/unified/calendar/Header"</span>;</pre>
-<h2>Since</h2>
-<p>1.28.0</p>
 <p>renders a calendar header</p>
 <p>The calendar header consists of 3 buttons where the text can be set and a previous and a next button.
 In the normal calendar the first button contains the displayed day, the second button the displayed month
 and the third button the displayed year.</p>
 <p><strong>Note:</strong> This is used inside the calendar. Not for standalone usage</p>
+<h2>Since</h2>
+<p>1.28.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -91,6 +91,10 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachPressButton0</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:pressButton0 pressButton0 event of this <code>sap.ui.unified.calendar.Header</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.calendar.Header</code> itself.</p>
+<p>First button pressed (normally day)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -107,14 +111,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:pressButton0 pressButton0 event of this <code>sap.ui.unified.calendar.Header</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.calendar.Header</code> itself.</p>
-<p>First button pressed (normally day)</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPressButton0</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:pressButton0 pressButton0 event of this <code>sap.ui.unified.calendar.Header</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.calendar.Header</code> itself.</p>
+<p>First button pressed (normally day)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -127,10 +131,6 @@ otherwise it will be bound to this <code>sap.ui.unified.calendar.Header</code> i
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:pressButton0 pressButton0 event of this <code>sap.ui.unified.calendar.Header</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.calendar.Header</code> itself.</p>
-<p>First button pressed (normally day)</p>
 <hr>
 <h3>attachPressButton1()</h3>
 <h4>Call Signature</h4>
@@ -348,6 +348,8 @@ otherwise it will be bound to this <code>sap.ui.unified.calendar.Header</code> i
 <blockquote>
 <p><strong>detachPressButton0</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:pressButton0 pressButton0 event of this <code>sap.ui.unified.calendar.Header</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -360,8 +362,6 @@ otherwise it will be bound to this <code>sap.ui.unified.calendar.Header</code> i
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:pressButton0 pressButton0 event of this <code>sap.ui.unified.calendar.Header</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachPressButton1()</h3>
 <blockquote>
@@ -454,6 +454,7 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <blockquote>
 <p><strong>firePressButton0</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:pressButton0 pressButton0 to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -465,12 +466,12 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>1.32.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:pressButton0 pressButton0 to attached listeners.</p>
 <hr>
 <h3>firePressButton1()</h3>
 <blockquote>
 <p><strong>firePressButton1</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:pressButton1 pressButton1 to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -480,12 +481,12 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:pressButton1 pressButton1 to attached listeners.</p>
 <hr>
 <h3>firePressButton2()</h3>
 <blockquote>
 <p><strong>firePressButton2</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:pressButton2 pressButton2 to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -495,12 +496,12 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:pressButton2 pressButton2 to attached listeners.</p>
 <hr>
 <h3>firePressCurrentDate()</h3>
 <blockquote>
 <p><strong>firePressCurrentDate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:pressCurrentDate pressCurrentDate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -510,12 +511,12 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:pressCurrentDate pressCurrentDate to attached listeners.</p>
 <hr>
 <h3>firePressNext()</h3>
 <blockquote>
 <p><strong>firePressNext</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:pressNext pressNext to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -525,12 +526,12 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:pressNext pressNext to attached listeners.</p>
 <hr>
 <h3>firePressPrevious()</h3>
 <blockquote>
 <p><strong>firePressPrevious</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:pressPrevious pressPrevious to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -540,55 +541,54 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:pressPrevious pressPrevious to attached listeners.</p>
 <hr>
 <h3>getAdditionalTextButton0()</h3>
 <blockquote>
 <p><strong>getAdditionalTextButton0</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getAdditionalTextButton0 additionalTextButton0.</p>
+<p>Additional text of the first button (normally day)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>additionalTextButton0</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets current value of property #getAdditionalTextButton0 additionalTextButton0.</p>
-<p>Additional text of the first button (normally day)</p>
 <hr>
 <h3>getAdditionalTextButton1()</h3>
 <blockquote>
 <p><strong>getAdditionalTextButton1</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getAdditionalTextButton1 additionalTextButton1.</p>
+<p>Additional text of the second button (normally month)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>additionalTextButton1</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets current value of property #getAdditionalTextButton1 additionalTextButton1.</p>
-<p>Additional text of the second button (normally month)</p>
 <hr>
 <h3>getAdditionalTextButton2()</h3>
 <blockquote>
 <p><strong>getAdditionalTextButton2</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getAdditionalTextButton2 additionalTextButton2.</p>
+<p>Additional text of the third button (normally year)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>additionalTextButton2</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets current value of property #getAdditionalTextButton2 additionalTextButton2.</p>
-<p>Additional text of the third button (normally year)</p>
 <hr>
 <h3>getAriaLabelButton0()</h3>
 <blockquote>
 <p><strong>getAriaLabelButton0</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getAriaLabelButton0 ariaLabelButton0.</p>
+<p>aria-label of the first button (normally day)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>ariaLabelButton0</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Gets current value of property #getAriaLabelButton0 ariaLabelButton0.</p>
-<p>aria-label of the first button (normally day)</p>
 <hr>
 <h3>getAriaLabelButton1()</h3>
 <blockquote>
@@ -636,13 +636,13 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <blockquote>
 <p><strong>getTextButton0</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getTextButton0 textButton0.</p>
+<p>Text of the first button (normally day)</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>textButton0</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Gets current value of property #getTextButton0 textButton0.</p>
-<p>Text of the first button (normally day)</p>
 <hr>
 <h3>getTextButton1()</h3>
 <blockquote>
@@ -668,59 +668,62 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <blockquote>
 <p><strong>getVisibleButton0</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getVisibleButton0 visibleButton0.</p>
+<p>If set, the first button will be displayed</p>
+<p><strong>Note:</strong> The default is set to false to be compatible to older versions</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>visibleButton0</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Gets current value of property #getVisibleButton0 visibleButton0.</p>
-<p>If set, the first button will be displayed</p>
-<p><strong>Note:</strong> The default is set to false to be compatible to older versions</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getVisibleButton1()</h3>
 <blockquote>
 <p><strong>getVisibleButton1</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getVisibleButton1 visibleButton1.</p>
+<p>If set, the second button will be displayed</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>visibleButton1</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Gets current value of property #getVisibleButton1 visibleButton1.</p>
-<p>If set, the second button will be displayed</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getVisibleButton2()</h3>
 <blockquote>
 <p><strong>getVisibleButton2</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getVisibleButton2 visibleButton2.</p>
+<p>If set, the third button will be displayed</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>visibleButton2</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Gets current value of property #getVisibleButton2 visibleButton2.</p>
-<p>If set, the third button will be displayed</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getVisibleCurrentDateButton()</h3>
 <blockquote>
 <p><strong>getVisibleCurrentDateButton</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getVisibleCurrentDateButton visibleCurrentDateButton.</p>
+<p>If set, the Current date button will be displayed.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>visibleCurrentDateButton</code></p>
 <h4>Since</h4>
 <p>1.95.0</p>
-<p>Gets current value of property #getVisibleCurrentDateButton visibleCurrentDateButton.</p>
-<p>If set, the Current date button will be displayed.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setAdditionalTextButton0()</h3>
 <blockquote>
 <p><strong>setAdditionalTextButton0</strong>(<code>sAdditionalTextButton0</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAdditionalTextButton0 additionalTextButton0.</p>
+<p>Additional text of the first button (normally day)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAdditionalTextButton0</h5>
 <p><code>string</code></p>
@@ -730,14 +733,14 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getAdditionalTextButton0 additionalTextButton0.</p>
-<p>Additional text of the first button (normally day)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setAdditionalTextButton1()</h3>
 <blockquote>
 <p><strong>setAdditionalTextButton1</strong>(<code>sAdditionalTextButton1</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAdditionalTextButton1 additionalTextButton1.</p>
+<p>Additional text of the second button (normally month)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAdditionalTextButton1</h5>
 <p><code>string</code></p>
@@ -747,14 +750,14 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getAdditionalTextButton1 additionalTextButton1.</p>
-<p>Additional text of the second button (normally month)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setAdditionalTextButton2()</h3>
 <blockquote>
 <p><strong>setAdditionalTextButton2</strong>(<code>sAdditionalTextButton2</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAdditionalTextButton2 additionalTextButton2.</p>
+<p>Additional text of the third button (normally year)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAdditionalTextButton2</h5>
 <p><code>string</code></p>
@@ -764,14 +767,14 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getAdditionalTextButton2 additionalTextButton2.</p>
-<p>Additional text of the third button (normally year)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setAriaLabelButton0()</h3>
 <blockquote>
 <p><strong>setAriaLabelButton0</strong>(<code>sAriaLabelButton0</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAriaLabelButton0 ariaLabelButton0.</p>
+<p>aria-label of the first button (normally day)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAriaLabelButton0</h5>
 <p><code>string</code></p>
@@ -781,9 +784,6 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Sets a new value for property #getAriaLabelButton0 ariaLabelButton0.</p>
-<p>aria-label of the first button (normally day)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setAriaLabelButton1()</h3>
 <blockquote>
@@ -851,6 +851,9 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <blockquote>
 <p><strong>setTextButton0</strong>(<code>sTextButton0</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTextButton0 textButton0.</p>
+<p>Text of the first button (normally day)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sTextButton0</h5>
 <p><code>string</code></p>
@@ -860,9 +863,6 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Sets a new value for property #getTextButton0 textButton0.</p>
-<p>Text of the first button (normally day)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setTextButton1()</h3>
 <blockquote>
@@ -898,6 +898,11 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <blockquote>
 <p><strong>setVisibleButton0</strong>(<code>bVisibleButton0?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getVisibleButton0 visibleButton0.</p>
+<p>If set, the first button will be displayed</p>
+<p><strong>Note:</strong> The default is set to false to be compatible to older versions</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bVisibleButton0?</h5>
 <p><code>boolean</code></p>
@@ -907,16 +912,15 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Sets a new value for property #getVisibleButton0 visibleButton0.</p>
-<p>If set, the first button will be displayed</p>
-<p><strong>Note:</strong> The default is set to false to be compatible to older versions</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setVisibleButton1()</h3>
 <blockquote>
 <p><strong>setVisibleButton1</strong>(<code>bVisibleButton1?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getVisibleButton1 visibleButton1.</p>
+<p>If set, the second button will be displayed</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bVisibleButton1?</h5>
 <p><code>boolean</code></p>
@@ -926,15 +930,15 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Sets a new value for property #getVisibleButton1 visibleButton1.</p>
-<p>If set, the second button will be displayed</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setVisibleButton2()</h3>
 <blockquote>
 <p><strong>setVisibleButton2</strong>(<code>bVisibleButton2?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getVisibleButton2 visibleButton2.</p>
+<p>If set, the third button will be displayed</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bVisibleButton2?</h5>
 <p><code>boolean</code></p>
@@ -944,15 +948,15 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Sets a new value for property #getVisibleButton2 visibleButton2.</p>
-<p>If set, the third button will be displayed</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setVisibleCurrentDateButton()</h3>
 <blockquote>
 <p><strong>setVisibleCurrentDateButton</strong>(<code>bVisibleCurrentDateButton?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getVisibleCurrentDateButton visibleCurrentDateButton.</p>
+<p>If set, the Current date button will be displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bVisibleCurrentDateButton?</h5>
 <p><code>boolean</code></p>
@@ -962,10 +966,6 @@ this <code>sap.ui.unified.calendar.Header</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.95.0</p>
-<p>Sets a new value for property #getVisibleCurrentDateButton visibleCurrentDateButton.</p>
-<p>If set, the Current date button will be displayed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1006,6 +1006,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

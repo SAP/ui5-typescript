@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: ManagedObject — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ManagedObject — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: ManagedObject — SAPUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: ManagedObject — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html">
-<meta property="og:title" content="Class: ManagedObject — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ManagedObject — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: ManagedObject — SAPUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: ManagedObject — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › base › <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/README.html">ManagedObject</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/ManagedObject</a> / ManagedObject</p>
-<h1>Class: ManagedObject</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/ManagedObject</a> / ManagedObject</p>
+<h1>Abstract Class: ManagedObject</h1>
 <pre class="sig"><span class="kw">import</span> ManagedObject <span class="kw">from</span> <span class="str">"sap/ui/base/ManagedObject"</span>;</pre>
 <p>Base Class that introduces some basic concepts, such as, state management and data binding.</p>
 <p>New subclasses of ManagedObject are created with a call to #.extend ManagedObject.extend and
@@ -392,6 +392,15 @@ is given, <code>mSettings</code> cannot be omitted, at least <code>null</code> o
 <blockquote>
 <p><strong>addAggregation</strong>(<code>sAggregationName</code>, <code>oObject</code>, <code>bSuppressInvalidate?</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some entity <code>oObject</code> to the aggregation identified by <code>sAggregationName</code>.</p>
+<p>If the given object is not valid with regard to the aggregation (if it is not an instance of the type
+specified for that aggregation) or when the method is called for an aggregation of cardinality 0..1,
+then an Error is thrown (see #validateAggregation.</p>
+<p>If the aggregation already has content, the new object will be added after the current content. If the
+new object was already contained in the aggregation, it will be moved to the end.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically add an object to an aggregation. Use
+the concrete method addXYZ for aggregation &#39;XYZ&#39; or the generic #applySettings instead.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -407,20 +416,17 @@ is given, <code>mSettings</code> cannot be omitted, at least <code>null</code> o
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds some entity <code>oObject</code> to the aggregation identified by <code>sAggregationName</code>.</p>
-<p>If the given object is not valid with regard to the aggregation (if it is not an instance of the type
-specified for that aggregation) or when the method is called for an aggregation of cardinality 0..1,
-then an Error is thrown (see #validateAggregation.</p>
-<p>If the aggregation already has content, the new object will be added after the current content. If the
-new object was already contained in the aggregation, it will be moved to the end.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically add an object to an aggregation. Use
-the concrete method addXYZ for aggregation &#39;XYZ&#39; or the generic #applySettings instead.</p>
 <hr>
 <h3>addAssociation()</h3>
 <blockquote>
 <p><strong>addAssociation</strong>(<code>sAssociationName</code>, <code>sId</code>, <code>bSuppressInvalidate?</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some object with the ID <code>sId</code> to the association identified by <code>sAssociationName</code> and marks this
+ManagedObject as changed.</p>
+<p>This method does not avoid duplicates.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically add an object to an association. Use
+the concrete method addXYZ for association &#39;XYZ&#39; or the generic #applySettings instead.</p>
 <h4>Parameters</h4>
 <h5>sAssociationName</h5>
 <p><code>string</code></p>
@@ -437,12 +443,6 @@ is given, its ID is added</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds some object with the ID <code>sId</code> to the association identified by <code>sAssociationName</code> and marks this
-ManagedObject as changed.</p>
-<p>This method does not avoid duplicates.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically add an object to an association. Use
-the concrete method addXYZ for association &#39;XYZ&#39; or the generic #applySettings instead.</p>
 <hr>
 <h3>applySettings()</h3>
 <blockquote>
@@ -725,6 +725,9 @@ in the documentation.</p>
 <blockquote>
 <p><strong>bindContext</strong>(<code>sPath</code>): <code>this</code></p>
 </blockquote>
+<p>Bind the object to the referenced entity in the model, which is used as the binding context to resolve
+bound properties or aggregations of the object itself and all of its children relatively to the given
+path.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -734,9 +737,6 @@ in the documentation.</p>
 <p>reference to the instance itself</p>
 <h4>Deprecated</h4>
 <p>(since 1.11.1) - please use #bindObject instead.</p>
-<p>Bind the object to the referenced entity in the model, which is used as the binding context to resolve
-bound properties or aggregations of the object itself and all of its children relatively to the given
-path.</p>
 <hr>
 <h3>bindObject()</h3>
 <blockquote>
@@ -907,6 +907,11 @@ not be used by any application code.</p>
 <blockquote>
 <p><strong>destroyAggregation</strong>(<code>sAggregationName</code>, <code>bSuppressInvalidate?</code>): <code>this</code></p>
 </blockquote>
+<p>Destroys (all) the managed object(s) in the aggregation named <code>sAggregationName</code> and empties the aggregation.
+If the aggregation did contain any object, this ManagedObject is marked as changed.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically destroy all objects in an aggregation.
+Use the concrete method destroyXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -919,11 +924,6 @@ not be used by any application code.</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Destroys (all) the managed object(s) in the aggregation named <code>sAggregationName</code> and empties the aggregation.
-If the aggregation did contain any object, this ManagedObject is marked as changed.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically destroy all objects in an aggregation.
-Use the concrete method destroyXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>detachFormatError()</h3>
 <blockquote>
@@ -1042,6 +1042,7 @@ array.</p>
 <blockquote>
 <p><strong>fireFormatError</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:formatError formatError to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ManagedObject$FormatErrorEventParameters.html"><code>ManagedObject$FormatErrorEventParameters</code></a></p>
@@ -1051,12 +1052,12 @@ array.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:formatError formatError to attached listeners.</p>
 <hr>
 <h3>fireModelContextChange()</h3>
 <blockquote>
 <p><strong>fireModelContextChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:modelContextChange modelContextChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1066,12 +1067,12 @@ array.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:modelContextChange modelContextChange to attached listeners.</p>
 <hr>
 <h3>fireParseError()</h3>
 <blockquote>
 <p><strong>fireParseError</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:parseError parseError to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ManagedObject$ParseErrorEventParameters.html"><code>ManagedObject$ParseErrorEventParameters</code></a></p>
@@ -1081,12 +1082,12 @@ array.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:parseError parseError to attached listeners.</p>
 <hr>
 <h3>fireValidationError()</h3>
 <blockquote>
 <p><strong>fireValidationError</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:validationError validationError to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ManagedObject$ValidationErrorEventParameters.html"><code>ManagedObject$ValidationErrorEventParameters</code></a></p>
@@ -1096,12 +1097,12 @@ array.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:validationError validationError to attached listeners.</p>
 <hr>
 <h3>fireValidationSuccess()</h3>
 <blockquote>
 <p><strong>fireValidationSuccess</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:validationSuccess validationSuccess to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ManagedObject$ValidationSuccessEventParameters.html"><code>ManagedObject$ValidationSuccessEventParameters</code></a></p>
@@ -1111,12 +1112,20 @@ array.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:validationSuccess validationSuccess to attached listeners.</p>
 <hr>
 <h3>getAggregation()</h3>
 <blockquote>
 <p><strong>getAggregation</strong>(<code>sAggregationName</code>, <code>oDefaultForCreation?</code>): <code>ManagedObject</code> | <code>ManagedObject</code>[]</p>
 </blockquote>
+<p>Returns the aggregated object(s) for the named aggregation of this ManagedObject.</p>
+<p>If the aggregation does not contain any objects(s), the given <code>oDefaultForCreation</code> (or <code>null</code>) is set
+as new value of the aggregation and returned to the caller.</p>
+<p><strong>Note:</strong> the need to specify a default value and the fact that it is stored as new value of a so far
+empty aggregation is recognized as a shortcoming of this API but can no longer be changed for compatibility
+reasons.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically read the content of an aggregation.
+Use the concrete method getXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -1133,33 +1142,11 @@ to this method therefore is not possible and will result in inconsistencies.</p>
 <p>Aggregation array in case of 0..n-aggregations or the managed object or <code>null</code> in case of 0..1-aggregations</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the aggregated object(s) for the named aggregation of this ManagedObject.</p>
-<p>If the aggregation does not contain any objects(s), the given <code>oDefaultForCreation</code> (or <code>null</code>) is set
-as new value of the aggregation and returned to the caller.</p>
-<p><strong>Note:</strong> the need to specify a default value and the fact that it is stored as new value of a so far
-empty aggregation is recognized as a shortcoming of this API but can no longer be changed for compatibility
-reasons.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically read the content of an aggregation.
-Use the concrete method getXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>getAssociation()</h3>
 <blockquote>
 <p><strong>getAssociation</strong>(<code>sAssociationName</code>, <code>oDefaultForCreation</code>): <code>string</code> | <code>string</code>[]</p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sAssociationName</h5>
-<p><code>string</code></p>
-<p>the name of the association</p>
-<h5>oDefaultForCreation</h5>
-<p><code>any</code>[]</p>
-<p>the value that is used in case the current aggregation is empty (only null or empty array is allowed)</p>
-<h4>Returns</h4>
-<p><code>string</code> | <code>string</code>[]</p>
-<p>the ID of the associated managed object or an array of such IDs; may be null if the association
-has not been populated</p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Returns the content of the association with the given name.</p>
 <p>For associations of cardinality 0..1, a single string with the ID of an associated object is returned
 (if any). For cardinality 0..n, an array with the IDs of the associated objects is returned.</p>
@@ -1173,6 +1160,19 @@ reasons.</p>
 <p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
 Applications or frameworks must not use this method to generically retrieve the content of an association.
 Use the concrete method getXYZ for association &#39;XYZ&#39; instead.</p>
+<h4>Parameters</h4>
+<h5>sAssociationName</h5>
+<p><code>string</code></p>
+<p>the name of the association</p>
+<h5>oDefaultForCreation</h5>
+<p><code>any</code>[]</p>
+<p>the value that is used in case the current aggregation is empty (only null or empty array is allowed)</p>
+<h4>Returns</h4>
+<p><code>string</code> | <code>string</code>[]</p>
+<p>the ID of the associated managed object or an array of such IDs; may be null if the association
+has not been populated</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>getBinding()</h3>
 <blockquote>
@@ -1213,6 +1213,10 @@ is explicitly allowed and refers to the default model.
 <blockquote>
 <p><strong>getBindingInfo</strong>(<code>sName</code>): <a href="../type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Returns the binding info for the given property or aggregation.</p>
+<p>The binding info contains information about path, binding object, format options, sorter, filter etc.
+for the property or aggregation. As the binding object is only created when the model becomes available,
+the <code>binding</code> property may be undefined.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -1223,15 +1227,12 @@ is explicitly allowed and refers to the default model.
 binding type, additional properties</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the binding info for the given property or aggregation.</p>
-<p>The binding info contains information about path, binding object, format options, sorter, filter etc.
-for the property or aggregation. As the binding object is only created when the model becomes available,
-the <code>binding</code> property may be undefined.</p>
 <hr>
 <h3>getBindingPath()</h3>
 <blockquote>
 <p><strong>getBindingPath</strong>(<code>sName</code>): <code>string</code></p>
 </blockquote>
+<p>Get the binding path for a specific aggregation/property.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -1241,19 +1242,18 @@ the <code>binding</code> property may be undefined.</p>
 <p>the binding path for the given name</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Get the binding path for a specific aggregation/property.</p>
 <hr>
 <h3>getEventingParent()</h3>
 <blockquote>
 <p><strong>getEventingParent</strong>(): <a href="../../EventProvider/classes/EventProvider.html"><code>EventProvider</code></a></p>
 </blockquote>
+<p>Returns the parent managed object as new eventing parent to enable control event bubbling or <code>null</code> if
+this object hasn&#39;t been added to a parent yet.</p>
 <h4>Returns</h4>
 <p><a href="../../EventProvider/classes/EventProvider.html"><code>EventProvider</code></a></p>
 <p>the parent event provider</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the parent managed object as new eventing parent to enable control event bubbling or <code>null</code> if
-this object hasn&#39;t been added to a parent yet.</p>
 <h4>Overrides</h4>
 <p><a href="../../EventProvider/classes/EventProvider.html"><code>EventProvider</code></a>.<a href="../../EventProvider/classes/EventProvider.html#geteventingparent"><code>getEventingParent</code></a></p>
 <hr>
@@ -1354,14 +1354,14 @@ be present for all properties and their values depending on where the value came
 <blockquote>
 <p><strong>getOwnModels</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../../../model/Model/classes/Model.html"><code>Model</code></a>&gt;</p>
 </blockquote>
+<p>Returns a map of all models assigned to this ManagedObject.</p>
+<p>The default model is available on key <code>undefined</code>.</p>
+<p><strong>Note:</strong> Models propagated from the parent are not included.</p>
 <h4>Returns</h4>
 <p><code>Record</code>&lt;<code>string</code>, <a href="../../../model/Model/classes/Model.html"><code>Model</code></a>&gt;</p>
 <p>The models</p>
 <h4>Since</h4>
 <p>1.88.0</p>
-<p>Returns a map of all models assigned to this ManagedObject.</p>
-<p>The default model is available on key <code>undefined</code>.</p>
-<p><strong>Note:</strong> Models propagated from the parent are not included.</p>
 <hr>
 <h3>getParent()</h3>
 <blockquote>
@@ -1402,6 +1402,10 @@ being returned by <code>getParent</code>.</p>
 <blockquote>
 <p><strong>getProperty</strong>(<code>sPropertyName</code>): <code>any</code></p>
 </blockquote>
+<p>Returns the value for the property with the given <code>sPropertyName</code>.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically retrieve the value of a property.
+Use the concrete method getXYZ for property &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -1411,10 +1415,6 @@ being returned by <code>getParent</code>.</p>
 <p>the value of the property</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the value for the property with the given <code>sPropertyName</code>.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically retrieve the value of a property.
-Use the concrete method getXYZ for property &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>hasModel()</h3>
 <blockquote>
@@ -1430,6 +1430,12 @@ Use the concrete method getXYZ for property &#39;XYZ&#39; instead.</p>
 <blockquote>
 <p><strong>indexOfAggregation</strong>(<code>sAggregationName</code>, <code>oObject</code>): <code>number</code></p>
 </blockquote>
+<p>Searches for the provided ManagedObject in the named aggregation and returns its 0-based index if found,
+or -1 otherwise. Returns -2 if the given named aggregation is of cardinality 0..1 and doesn&#39;t reference
+the given object.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically determine the position of an object
+in an aggregation. Use the concrete method indexOfXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -1442,17 +1448,23 @@ Use the concrete method getXYZ for property &#39;XYZ&#39; instead.</p>
 <p>the index of the provided managed object in the aggregation.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Searches for the provided ManagedObject in the named aggregation and returns its 0-based index if found,
-or -1 otherwise. Returns -2 if the given named aggregation is of cardinality 0..1 and doesn&#39;t reference
-the given object.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically determine the position of an object
-in an aggregation. Use the concrete method indexOfXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>insertAggregation()</h3>
 <blockquote>
 <p><strong>insertAggregation</strong>(<code>sAggregationName</code>, <code>oObject</code>, <code>iIndex</code>, <code>bSuppressInvalidate?</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts managed object <code>oObject</code> to the aggregation named <code>sAggregationName</code> at position <code>iIndex</code>.</p>
+<p>If the given object is not valid with regard to the aggregation (if it is not an instance of the type
+specified for that aggregation) or when the method is called for an aggregation of cardinality 0..1,
+then an Error is thrown (see #validateAggregation.</p>
+<p>If the given index is out of range with respect to the current content of the aggregation, it is clipped
+to that range (0 for iIndex &lt; 0, n for iIndex &gt; n).</p>
+<p>Please note that this method does not work as expected when an object is added that is already part of
+the aggregation. In order to change the index of an object inside an aggregation, first remove it, then
+insert it again.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically insert an object into an aggregation.
+Use the concrete method insertXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -1473,27 +1485,11 @@ inserted at the last position</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Inserts managed object <code>oObject</code> to the aggregation named <code>sAggregationName</code> at position <code>iIndex</code>.</p>
-<p>If the given object is not valid with regard to the aggregation (if it is not an instance of the type
-specified for that aggregation) or when the method is called for an aggregation of cardinality 0..1,
-then an Error is thrown (see #validateAggregation.</p>
-<p>If the given index is out of range with respect to the current content of the aggregation, it is clipped
-to that range (0 for iIndex &lt; 0, n for iIndex &gt; n).</p>
-<p>Please note that this method does not work as expected when an object is added that is already part of
-the aggregation. In order to change the index of an object inside an aggregation, first remove it, then
-insert it again.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically insert an object into an aggregation.
-Use the concrete method insertXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>invalidate()</h3>
 <blockquote>
 <p><strong>invalidate</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Marks this object and its aggregated children as &#39;invalid&#39;.</p>
 <p>The term &#39;invalid&#39; originally was introduced by controls where a change to the object&#39;s state made the
 rendered DOM invalid. Later, the concept of invalidation was moved up in the inheritance hierarchy
@@ -1503,6 +1499,10 @@ Changing the state via the standard mutators, therefore, does not require an exp
 The same applies to changes made via data binding, as it internally uses the standard mutators.</p>
 <p>By default, a <code>ManagedObject</code> propagates any invalidation to its parent, unless the invalidation is suppressed
 on the parent. Controls or UIAreas handle invalidation on their own by triggering a re-rendering.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>isBound()</h3>
 <blockquote>
@@ -1521,17 +1521,20 @@ on the parent. Controls or UIAreas handle invalidation on their own by triggerin
 <blockquote>
 <p><strong>isDestroyed</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether this object is destroyed or not. A destroyed object cannot be used anymore.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the object is destroyed</p>
 <h4>Since</h4>
 <p>1.93</p>
-<p>Returns whether this object is destroyed or not. A destroyed object cannot be used anymore.</p>
 <hr>
 <h3>isDestroyStarted()</h3>
 <blockquote>
 <p><strong>isDestroyStarted</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Checks if an object&#39;s destruction has been started. During the descruction of an object its ID is still
+registered, and child objects could be still aggregated. Creating another object with the same ID would
+lead to duplicate ID issues. To check if the destruction is finished, call <code>isDestroyed</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether an object&#39;s destruction has been started</p>
@@ -1539,25 +1542,25 @@ on the parent. Controls or UIAreas handle invalidation on their own by triggerin
 <p>1.93</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks if an object&#39;s destruction has been started. During the descruction of an object its ID is still
-registered, and child objects could be still aggregated. Creating another object with the same ID would
-lead to duplicate ID issues. To check if the destruction is finished, call <code>isDestroyed</code>.</p>
 <hr>
 <h3>isInvalidateSuppressed()</h3>
 <blockquote>
 <p><strong>isInvalidateSuppressed</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether re-rendering is currently suppressed on this ManagedObject.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether re-rendering is suppressed</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns whether re-rendering is currently suppressed on this ManagedObject.</p>
 <hr>
 <h3>isPropertyInitial()</h3>
 <blockquote>
 <p><strong>isPropertyInitial</strong>(<code>sPropertyName</code>): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether the given property value is initial and has not been explicitly set or bound. Even after
+setting the default value or setting null/undefined (which also causes the default value to be set),
+the property is no longer initial. A property can be reset to initial state by calling <code>resetProperty(sPropertyName)</code>.</p>
 <h4>Parameters</h4>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -1567,14 +1570,14 @@ lead to duplicate ID issues. To check if the destruction is finished, call <code
 <p>true if the property is initial</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns whether the given property value is initial and has not been explicitly set or bound. Even after
-setting the default value or setting null/undefined (which also causes the default value to be set),
-the property is no longer initial. A property can be reset to initial state by calling <code>resetProperty(sPropertyName)</code>.</p>
 <hr>
 <h3>isTreeBinding()</h3>
 <blockquote>
 <p><strong>isTreeBinding</strong>(<code>sName</code>): <code>boolean</code></p>
 </blockquote>
+<p>This method is used internally and should only be overridden by a tree managed object which utilizes
+the tree binding. In this case and if the aggregation is a tree node the overridden method should then
+return true. If true is returned the tree binding will be used instead of the list binding.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -1585,14 +1588,12 @@ the property is no longer initial. A property can be reset to initial state by c
 this behavior.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>This method is used internally and should only be overridden by a tree managed object which utilizes
-the tree binding. In this case and if the aggregation is a tree node the overridden method should then
-return true. If true is returned the tree binding will be used instead of the list binding.</p>
 <hr>
 <h3>propagateMessages()</h3>
 <blockquote>
 <p><strong>propagateMessages</strong>(<code>sName</code>, <code>aMessages</code>): <code>void</code></p>
 </blockquote>
+<p>Generic method which is called, whenever messages for this object exist.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -1606,12 +1607,17 @@ return true. If true is returned the tree binding will be used instead of the li
 <p>1.28</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Generic method which is called, whenever messages for this object exist.</p>
 <hr>
 <h3>refreshAggregation()</h3>
 <blockquote>
 <p><strong>refreshAggregation</strong>(<code>sName</code>): <code>void</code></p>
 </blockquote>
+<p>Generic method which can be called, when an aggregation needs to be refreshed. This method does not make
+any change on the aggregation, but just calls the <code>getContexts</code> method of the binding to trigger fetching
+of new data.</p>
+<p>Subclasses should call this method only in the implementation of a named refresh method and for no other
+purposes. The framework might change the conditions under which the method is called and the method implementation
+might rely on those conditions.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -1620,17 +1626,21 @@ return true. If true is returned the tree binding will be used instead of the li
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Generic method which can be called, when an aggregation needs to be refreshed. This method does not make
-any change on the aggregation, but just calls the <code>getContexts</code> method of the binding to trigger fetching
-of new data.</p>
-<p>Subclasses should call this method only in the implementation of a named refresh method and for no other
-purposes. The framework might change the conditions under which the method is called and the method implementation
-might rely on those conditions.</p>
 <hr>
 <h3>removeAggregation()</h3>
 <blockquote>
 <p><strong>removeAggregation</strong>(<code>sAggregationName</code>, <code>vObject</code>, <code>bSuppressInvalidate?</code>): <code>ManagedObject</code></p>
 </blockquote>
+<p>Removes an object from the aggregation named <code>sAggregationName</code> with cardinality 0..n.</p>
+<p>The removed object is not destroyed nor is it marked as changed.</p>
+<p>If the given object is found in the aggregation, it is removed, it&#39;s parent relationship is unset and
+this ManagedObject is marked as changed. The removed object is returned as result of this method. If
+the object could not be found, <code>null</code> is returned.</p>
+<p>This method must only be called for aggregations of cardinality 0..n. The only way to remove objects
+from a 0..1 aggregation is to set a <code>null</code> value for them.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically remove an object from an aggregation.
+Use the concrete method removeXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -1648,21 +1658,20 @@ is removed.</p>
 <p>the removed object or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes an object from the aggregation named <code>sAggregationName</code> with cardinality 0..n.</p>
-<p>The removed object is not destroyed nor is it marked as changed.</p>
-<p>If the given object is found in the aggregation, it is removed, it&#39;s parent relationship is unset and
-this ManagedObject is marked as changed. The removed object is returned as result of this method. If
-the object could not be found, <code>null</code> is returned.</p>
-<p>This method must only be called for aggregations of cardinality 0..n. The only way to remove objects
-from a 0..1 aggregation is to set a <code>null</code> value for them.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically remove an object from an aggregation.
-Use the concrete method removeXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>removeAllAggregation()</h3>
 <blockquote>
 <p><strong>removeAllAggregation</strong>(<code>sAggregationName</code>, <code>bSuppressInvalidate?</code>): <code>ManagedObject</code>[]</p>
 </blockquote>
+<p>Removes all objects from the 0..n-aggregation named <code>sAggregationName</code>.</p>
+<p>The removed objects are not destroyed nor are they marked as changed.</p>
+<p>Additionally, it clears the parent relationship of all removed objects, marks this ManagedObject as changed
+and returns an array with the removed objects.</p>
+<p>If the aggregation did not contain any objects, an empty array is returned and this ManagedObject is
+not marked as changed.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically remove all objects from an aggregation.
+Use the concrete method removeAllXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -1675,20 +1684,16 @@ Use the concrete method removeXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes all objects from the 0..n-aggregation named <code>sAggregationName</code>.</p>
-<p>The removed objects are not destroyed nor are they marked as changed.</p>
-<p>Additionally, it clears the parent relationship of all removed objects, marks this ManagedObject as changed
-and returns an array with the removed objects.</p>
-<p>If the aggregation did not contain any objects, an empty array is returned and this ManagedObject is
-not marked as changed.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically remove all objects from an aggregation.
-Use the concrete method removeAllXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>removeAllAssociation()</h3>
 <blockquote>
 <p><strong>removeAllAssociation</strong>(<code>sAssociationName</code>, <code>bSuppressInvalidate?</code>): <code>any</code>[]</p>
 </blockquote>
+<p>Removes all the objects in the 0..n-association named <code>sAssociationName</code> and returns an array with their
+IDs. This ManagedObject is marked as changed, if the association contained any objects.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically remove all object from an association.
+Use the concrete method removeAllXYZ for association &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sAssociationName</h5>
 <p><code>string</code></p>
@@ -1701,16 +1706,21 @@ Use the concrete method removeAllXYZ for aggregation &#39;XYZ&#39; instead.</p>
 <p>an array with the IDs of the removed objects (might be empty)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes all the objects in the 0..n-association named <code>sAssociationName</code> and returns an array with their
-IDs. This ManagedObject is marked as changed, if the association contained any objects.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically remove all object from an association.
-Use the concrete method removeAllXYZ for association &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>removeAssociation()</h3>
 <blockquote>
 <p><strong>removeAssociation</strong>(<code>sAssociationName</code>, <code>vObject</code>, <code>bSuppressInvalidate?</code>): <code>string</code></p>
 </blockquote>
+<p>Removes a <code>ManagedObject</code> from the association named <code>sAssociationName</code>.</p>
+<p>If an object is removed, the ID of that object is returned and this <code>ManagedObject</code> is marked as changed.
+Otherwise <code>null</code> is returned.</p>
+<p>If the same object was added multiple times to the same association, only a single occurrence of it will
+be removed by this method. If the object is not found or if the parameter can&#39;t be interpreted neither
+as a <code>ManagedObject</code> (or ID) nor as an index in the association, nothing will be removed. The same is
+true if an index is given and if that index is out of range for the association.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically remove an object from an association.
+Use the concrete method removeXYZ for association &#39;XYZ&#39; instead.</p>
 <h4>Parameters</h4>
 <h5>sAssociationName</h5>
 <p><code>string</code></p>
@@ -1728,21 +1738,17 @@ is removed</p>
 <p>ID of the removed <code>ManagedObject</code> or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes a <code>ManagedObject</code> from the association named <code>sAssociationName</code>.</p>
-<p>If an object is removed, the ID of that object is returned and this <code>ManagedObject</code> is marked as changed.
-Otherwise <code>null</code> is returned.</p>
-<p>If the same object was added multiple times to the same association, only a single occurrence of it will
-be removed by this method. If the object is not found or if the parameter can&#39;t be interpreted neither
-as a <code>ManagedObject</code> (or ID) nor as an index in the association, nothing will be removed. The same is
-true if an index is given and if that index is out of range for the association.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically remove an object from an association.
-Use the concrete method removeXYZ for association &#39;XYZ&#39; instead.</p>
 <hr>
 <h3>resetProperty()</h3>
 <blockquote>
 <p><strong>resetProperty</strong>(<code>sPropertyName</code>): <code>this</code></p>
 </blockquote>
+<p>Resets the given property to the default value and also restores the &quot;initial&quot; state (like it has never
+been set).</p>
+<p>As subclasses might have implemented side effects in the named setter <code>setXYZ</code> for property &#39;xyz&#39;, that
+setter is called with a value of <code>null</code>, which by convention restores the default value of the property.
+This is only done to notify subclasses, the internal state is anyhow reset.</p>
+<p>When the property has not been modified so far, nothing will be done.</p>
 <h4>Parameters</h4>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -1752,32 +1758,11 @@ Use the concrete method removeXYZ for association &#39;XYZ&#39; instead.</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Resets the given property to the default value and also restores the &quot;initial&quot; state (like it has never
-been set).</p>
-<p>As subclasses might have implemented side effects in the named setter <code>setXYZ</code> for property &#39;xyz&#39;, that
-setter is called with a value of <code>null</code>, which by convention restores the default value of the property.
-This is only done to notify subclasses, the internal state is anyhow reset.</p>
-<p>When the property has not been modified so far, nothing will be done.</p>
 <hr>
 <h3>setAggregation()</h3>
 <blockquote>
 <p><strong>setAggregation</strong>(<code>sAggregationName</code>, <code>oObject</code>, <code>bSuppressInvalidate?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sAggregationName</h5>
-<p><code>string</code></p>
-<p>name of an 0..1 aggregation</p>
-<h5>oObject</h5>
-<p><code>ManagedObject</code></p>
-<p>the managed object that is set as aggregated object</p>
-<h5>bSuppressInvalidate?</h5>
-<p><code>boolean</code></p>
-<p>if true, this ManagedObject is not marked as changed</p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Returns <code>this</code> to allow method chaining</p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Sets a new object in the named 0..1 aggregation of this ManagedObject and marks this ManagedObject as
 changed.</p>
 <p>If the given object is not valid with regard to the aggregation (if it is not an instance of the type
@@ -1798,11 +1783,33 @@ will be called again, the new status is not recognized as being &#39;clean&#39; 
 <p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
 Applications or frameworks must not use this method to generically set an object in an aggregation. Use
 the concrete method setXYZ for aggregation &#39;XYZ&#39; or the generic #applySettings instead.</p>
+<h4>Parameters</h4>
+<h5>sAggregationName</h5>
+<p><code>string</code></p>
+<p>name of an 0..1 aggregation</p>
+<h5>oObject</h5>
+<p><code>ManagedObject</code></p>
+<p>the managed object that is set as aggregated object</p>
+<h5>bSuppressInvalidate?</h5>
+<p><code>boolean</code></p>
+<p>if true, this ManagedObject is not marked as changed</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Returns <code>this</code> to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>setAssociation()</h3>
 <blockquote>
 <p><strong>setAssociation</strong>(<code>sAssociationName</code>, <code>sId</code>, <code>bSuppressInvalidate?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated object for the given managed association of cardinality &#39;0..1&#39; and marks this ManagedObject
+as changed.</p>
+<p>The associated object can either be given by itself or by its id. If <code>null</code> or <code>undefined</code> is given,
+the association is cleared.</p>
+<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
+Applications or frameworks must not use this method to generically set an object in an association. Use
+the concrete method setXYZ for association &#39;XYZ&#39; or the generic #applySettings instead.</p>
 <h4>Parameters</h4>
 <h5>sAssociationName</h5>
 <p><code>string</code></p>
@@ -1818,13 +1825,6 @@ the concrete method setXYZ for aggregation &#39;XYZ&#39; or the generic #applySe
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the associated object for the given managed association of cardinality &#39;0..1&#39; and marks this ManagedObject
-as changed.</p>
-<p>The associated object can either be given by itself or by its id. If <code>null</code> or <code>undefined</code> is given,
-the association is cleared.</p>
-<p><strong>Note:</strong> This method is a low-level API as described in the class documentation.
-Applications or frameworks must not use this method to generically set an object in an association. Use
-the concrete method setXYZ for association &#39;XYZ&#39; or the generic #applySettings instead.</p>
 <hr>
 <h3>setBindingContext()</h3>
 <blockquote>
@@ -1889,21 +1889,6 @@ model. Applications can set an empty model to achieve the same.</p>
 <blockquote>
 <p><strong>setProperty</strong>(<code>sPropertyName</code>, <code>oValue</code>, <code>bSuppressInvalidate?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sPropertyName</h5>
-<p><code>string</code></p>
-<p>name of the property to set</p>
-<h5>oValue</h5>
-<p><code>any</code></p>
-<p>value to set the property to</p>
-<h5>bSuppressInvalidate?</h5>
-<p><code>boolean</code></p>
-<p>if true, the managed object is not marked as changed</p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Returns <code>this</code> to allow method chaining</p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Sets the given value for the given property after validating and normalizing it, marks this object as
 changed.</p>
 <p>If the value is not valid with regard to the declared data type of the property, an Error is thrown.
@@ -1919,6 +1904,21 @@ will be called again, the new status is not recognized as being &#39;clean&#39; 
 <p><strong>Note:</strong> This method is a low level API as described in the class documentation.
 Applications or frameworks must not use this method to generically set a property. Use the concrete method
 setXYZ for property &#39;XYZ&#39; or the generic #applySettings instead.</p>
+<h4>Parameters</h4>
+<h5>sPropertyName</h5>
+<p><code>string</code></p>
+<p>name of the property to set</p>
+<h5>oValue</h5>
+<p><code>any</code></p>
+<p>value to set the property to</p>
+<h5>bSuppressInvalidate?</h5>
+<p><code>boolean</code></p>
+<p>if true, the managed object is not marked as changed</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Returns <code>this</code> to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>toString()</h3>
 <blockquote>
@@ -1954,6 +1954,8 @@ parameter is set, it is however retained.</p>
 <blockquote>
 <p><strong>unbindContext</strong>(<code>sModelName?</code>): <code>this</code></p>
 </blockquote>
+<p>Removes the defined binding context of this object, all bindings will now resolve relative to the parent
+context again.</p>
 <h4>Parameters</h4>
 <h5>sModelName?</h5>
 <p><code>string</code></p>
@@ -1963,8 +1965,6 @@ parameter is set, it is however retained.</p>
 <p>reference to the instance itself</p>
 <h4>Deprecated</h4>
 <p>(since 1.11.1) - please use #unbindObject instead.</p>
-<p>Removes the defined binding context of this object, all bindings will now resolve relative to the parent
-context again.</p>
 <hr>
 <h3>unbindObject()</h3>
 <blockquote>
@@ -2000,6 +2000,16 @@ context again.</p>
 <blockquote>
 <p><strong>updateAggregation</strong>(<code>sName</code>, <code>sChangeReason</code>, <code>oEventInfo</code>): <code>void</code></p>
 </blockquote>
+<p>Generic method which is called whenever an aggregation binding has changed.</p>
+<p>Depending on the type of the list binding and on additional configuration, this method either destroys
+all elements in the aggregation <code>sName</code> and recreates them anew or tries to reuse as many existing objects
+as possible. It is up to the method which strategy it uses.</p>
+<p>In case a managed object needs special handling for an aggregation binding, it can create a named update
+method (e.g. <code>updateRows</code> for an aggregation <code>rows</code>) which then will be called by the framework
+instead of this generic method. THe method will be called with two arguments <code>sChangeReason</code> and <code>oEventInfo</code>.</p>
+<p>Subclasses should call this method only in the implementation of such a named update method and for no
+other purposes. The framework might change the conditions under which the method is called and the method
+implementation might rely on those conditions.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -2018,21 +2028,14 @@ will be used.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Generic method which is called whenever an aggregation binding has changed.</p>
-<p>Depending on the type of the list binding and on additional configuration, this method either destroys
-all elements in the aggregation <code>sName</code> and recreates them anew or tries to reuse as many existing objects
-as possible. It is up to the method which strategy it uses.</p>
-<p>In case a managed object needs special handling for an aggregation binding, it can create a named update
-method (e.g. <code>updateRows</code> for an aggregation <code>rows</code>) which then will be called by the framework
-instead of this generic method. THe method will be called with two arguments <code>sChangeReason</code> and <code>oEventInfo</code>.</p>
-<p>Subclasses should call this method only in the implementation of such a named update method and for no
-other purposes. The framework might change the conditions under which the method is called and the method
-implementation might rely on those conditions.</p>
 <hr>
 <h3>validateAggregation()</h3>
 <blockquote>
 <p><strong>validateAggregation</strong>(<code>sAggregationName</code>, <code>oObject</code>, <code>bMultiple</code>): <code>any</code></p>
 </blockquote>
+<p>Checks whether the given value is of the proper type for the given aggregation name.</p>
+<p>This method is already called by #setAggregation, #addAggregation and #insertAggregation.
+In many cases, subclasses of ManagedObject don&#39;t need to call it again in their mutator methods.</p>
 <h4>Parameters</h4>
 <h5>sAggregationName</h5>
 <p><code>string</code></p>
@@ -2048,14 +2051,19 @@ implementation might rely on those conditions.</p>
 <p>the passed object</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks whether the given value is of the proper type for the given aggregation name.</p>
-<p>This method is already called by #setAggregation, #addAggregation and #insertAggregation.
-In many cases, subclasses of ManagedObject don&#39;t need to call it again in their mutator methods.</p>
 <hr>
 <h3>validateProperty()</h3>
 <blockquote>
 <p><strong>validateProperty</strong>(<code>sPropertyName</code>, <code>oValue</code>): <code>any</code></p>
 </blockquote>
+<p>Checks whether the given value is of the proper type for the given property name.</p>
+<p>In case <code>null</code> or <code>undefined</code> is passed, the default value for this property is used as value. If no
+default value is defined for the property, the default value of the type of the property is used.</p>
+<p>If the property has a data type that is an instance of sap.ui.base.DataType and if a <code>normalize</code> function
+is defined for that type, that function will be called with the resulting value as only argument. The
+result of the function call is then used instead of the raw value.</p>
+<p>This method is called by #setProperty. In many cases, subclasses of ManagedObject don&#39;t need
+to call it themselves.</p>
 <h4>Parameters</h4>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -2069,19 +2077,13 @@ In many cases, subclasses of ManagedObject don&#39;t need to call it again in th
 was passed</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks whether the given value is of the proper type for the given property name.</p>
-<p>In case <code>null</code> or <code>undefined</code> is passed, the default value for this property is used as value. If no
-default value is defined for the property, the default value of the type of the property is used.</p>
-<p>If the property has a data type that is an instance of sap.ui.base.DataType and if a <code>normalize</code> function
-is defined for that type, that function will be called with the resulting value as only argument. The
-result of the function call is then used instead of the raw value.</p>
-<p>This method is called by #setProperty. In many cases, subclasses of ManagedObject don&#39;t need
-to call it themselves.</p>
 <hr>
 <h3>escapeSettingsValue()</h3>
 <blockquote>
 <p><code>static</code> <strong>escapeSettingsValue</strong>(<code>vValue</code>): <code>any</code></p>
 </blockquote>
+<p>Escapes the given value so it can be used in the constructor&#39;s settings object. Should be used when property
+values are initialized with static string values which could contain binding characters (curly braces).</p>
 <h4>Parameters</h4>
 <h5>vValue</h5>
 <p><code>any</code></p>
@@ -2092,8 +2094,6 @@ to call it themselves.</p>
 (or unchanged, if not of type string)</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Escapes the given value so it can be used in the constructor&#39;s settings object. Should be used when property
-values are initialized with static string values which could contain binding characters (curly braces).</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -2178,6 +2178,6 @@ ManagedObject.extend(&#39;sap.mylib.MyClass&#39;, {
 <p><a href="../../EventProvider/classes/EventProvider.html"><code>EventProvider</code></a>.<a href="../../EventProvider/classes/EventProvider.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

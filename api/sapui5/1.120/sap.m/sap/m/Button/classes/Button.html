@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Button — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Button — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Button — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Button/classes/Button.html">
 <meta property="og:title" content="Class: Button — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Button — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Button — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Button/classes/Button.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Button/README.html">Button</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Button</a> / Button</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Button</a> / Button</p>
 <h1>Class: Button</h1>
 <pre class="sig"><span class="kw">import</span> Button <span class="kw">from</span> <span class="str">"sap/m/Button"</span>;</pre>
 <p>Enables users to trigger actions.</p>
@@ -203,6 +203,10 @@ otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
 <blockquote>
 <p><strong>attachTap</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.Button</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
+<p>Fired when the user taps the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -219,14 +223,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.20) - replaced by <code>press</code> event</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.Button</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
-<p>Fired when the user taps the control.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.Button</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
+<p>Fired when the user taps the control.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -239,10 +243,6 @@ otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.20) - replaced by <code>press</code> event</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.Button</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
-<p>Fired when the user taps the control.</p>
 <hr>
 <h3>detachPress()</h3>
 <blockquote>
@@ -265,6 +265,8 @@ otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
 <blockquote>
 <p><strong>detachTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tap tap event of this <code>sap.m.Button</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -277,13 +279,12 @@ otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - replaced by <code>press</code> event</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tap tap event of this <code>sap.m.Button</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>firePress()</h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -293,12 +294,12 @@ otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3><del>fireTap()</del></h3>
 <blockquote>
 <p><strong>fireTap</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:tap tap to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -310,19 +311,18 @@ otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
 <p>(since 1.20) - replaced by <code>press</code> event</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:tap tap to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -330,11 +330,6 @@ otherwise it will be bound to this <code>sap.m.Button</code> itself.</p>
 <blockquote>
 <p><strong>getAccessibleRole</strong>(): <code>&quot;Default&quot;</code> | <code>&quot;Link&quot;</code> | <a href="../../library/enumerations/ButtonAccessibleRole.html"><code>ButtonAccessibleRole</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Default&quot;</code> | <code>&quot;Link&quot;</code> | <a href="../../library/enumerations/ButtonAccessibleRole.html"><code>ButtonAccessibleRole</code></a></p>
-<p>Value of property <code>accessibleRole</code></p>
-<h4>Since</h4>
-<p>1.114.0</p>
 <p>Gets current value of property #getAccessibleRole accessibleRole.</p>
 <p>Describes the accessibility role of the button:
 	<code>ButtonAccessibleRole.Default</code> - The accessibility semantics is derived from the button tag and no role
@@ -343,6 +338,11 @@ a custom role attribute with &quot;link&quot; value.</p>
 <p>NOTE: Use link role only with a press handler, which performs a navigation. In all other scenarios the
 default button semantics is recommended.</p>
 <p>Default value is <code>Default</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Default&quot;</code> | <code>&quot;Link&quot;</code> | <a href="../../library/enumerations/ButtonAccessibleRole.html"><code>ButtonAccessibleRole</code></a></p>
+<p>Value of property <code>accessibleRole</code></p>
+<h4>Since</h4>
+<p>1.114.0</p>
 <hr>
 <h3>getActiveIcon()</h3>
 <blockquote>
@@ -368,11 +368,6 @@ property is not set or has a different type, the active icon is not displayed.</
 <blockquote>
 <p><strong>getAriaHasPopup</strong>(): <code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
-<p>Value of property <code>ariaHasPopup</code></p>
-<h4>Since</h4>
-<p>1.84.0</p>
 <p>Gets current value of property #getAriaHasPopup ariaHasPopup.</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
@@ -383,6 +378,11 @@ if you have menu -&gt; menu; if you have list -&gt; list; if you have dialog con
 Do not use it, if you open a standard sap.m.Dialog, MessageBox or other type of dialogs displayed as
 on overlay over the application.</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
+<p>Value of property <code>ariaHasPopup</code></p>
+<h4>Since</h4>
+<p>1.84.0</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
@@ -445,12 +445,12 @@ perfect image.</p>
 <blockquote>
 <p><strong>getPopupAnchorDomRef</strong>(): <code>Element</code></p>
 </blockquote>
+<p>Defines to which DOM reference the Popup should be docked</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>the DOM reference that Popup should dock to</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Defines to which DOM reference the Popup should be docked</p>
 <hr>
 <h3>getText()</h3>
 <blockquote>
@@ -467,15 +467,15 @@ perfect image.</p>
 <blockquote>
 <p><strong>getTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getTextDirection textDirection.</p>
+<p>Specifies the element&#39;s text directionality with enumerated options. By default, the control inherits
+text direction from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>textDirection</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getTextDirection textDirection.</p>
-<p>Specifies the element&#39;s text directionality with enumerated options. By default, the control inherits
-text direction from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>getType()</h3>
 <blockquote>
@@ -546,15 +546,6 @@ text direction from the DOM.</p>
 <blockquote>
 <p><strong>setAccessibleRole</strong>(<code>sAccessibleRole?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sAccessibleRole?</h5>
-<p><code>&quot;Default&quot;</code> | <code>&quot;Link&quot;</code> | <a href="../../library/enumerations/ButtonAccessibleRole.html"><code>ButtonAccessibleRole</code></a></p>
-<p>New value for property <code>accessibleRole</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.114.0</p>
 <p>Sets a new value for property #getAccessibleRole accessibleRole.</p>
 <p>Describes the accessibility role of the button:
 	<code>ButtonAccessibleRole.Default</code> - The accessibility semantics is derived from the button tag and no role
@@ -564,6 +555,15 @@ a custom role attribute with &quot;link&quot; value.</p>
 default button semantics is recommended.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>Default</code>.</p>
+<h4>Parameters</h4>
+<h5>sAccessibleRole?</h5>
+<p><code>&quot;Default&quot;</code> | <code>&quot;Link&quot;</code> | <a href="../../library/enumerations/ButtonAccessibleRole.html"><code>ButtonAccessibleRole</code></a></p>
+<p>New value for property <code>accessibleRole</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.114.0</p>
 <hr>
 <h3>setActiveIcon()</h3>
 <blockquote>
@@ -586,15 +586,6 @@ property is not set or has a different type, the active icon is not displayed.</
 <blockquote>
 <p><strong>setAriaHasPopup</strong>(<code>sAriaHasPopup?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sAriaHasPopup?</h5>
-<p><code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
-<p>New value for property <code>ariaHasPopup</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.84.0</p>
 <p>Sets a new value for property #getAriaHasPopup ariaHasPopup.</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
@@ -606,6 +597,15 @@ Do not use it, if you open a standard sap.m.Dialog, MessageBox or other type of 
 on overlay over the application.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Parameters</h4>
+<h5>sAriaHasPopup?</h5>
+<p><code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
+<p>New value for property <code>ariaHasPopup</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.84.0</p>
 <hr>
 <h3>setBadgeMaxValue()</h3>
 <blockquote>
@@ -723,6 +723,11 @@ perfect image.</p>
 <blockquote>
 <p><strong>setTextDirection</strong>(<code>sTextDirection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTextDirection textDirection.</p>
+<p>Specifies the element&#39;s text directionality with enumerated options. By default, the control inherits
+text direction from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -732,11 +737,6 @@ perfect image.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getTextDirection textDirection.</p>
-<p>Specifies the element&#39;s text directionality with enumerated options. By default, the control inherits
-text direction from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>setType()</h3>
 <blockquote>
@@ -808,6 +808,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

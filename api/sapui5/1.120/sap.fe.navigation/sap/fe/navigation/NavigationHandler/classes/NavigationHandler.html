@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NavigationHandler — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: NavigationHandler — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: NavigationHandler — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.fe.navigation/sap/fe/navigation/NavigationHandler/classes/NavigationHandler.html">
 <meta property="og:title" content="Class: NavigationHandler — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: NavigationHandler — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: NavigationHandler — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.fe.navigation/sap/fe/navigation/NavigationHandler/classes/NavigationHandler.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.fe.navigation/README.html">sap.fe.navigation</a> › sap › fe › navigation › <a href="../../../../../../sap.fe.navigation/sap/fe/navigation/NavigationHandler/README.html">NavigationHandler</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.fe.navigation</a> / <a href="../README.html">sap/fe/navigation/NavigationHandler</a> / NavigationHandler</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.fe.navigation</a> / <a href="../README.html">sap/fe/navigation/NavigationHandler</a> / NavigationHandler</p>
 <h1>Class: NavigationHandler</h1>
 <pre class="sig"><span class="kw">import</span> NavigationHandler <span class="kw">from</span> <span class="str">"sap/fe/navigation/NavigationHandler"</span>;</pre>
-<h2>Since</h2>
-<p>1.83.0</p>
 <p>This is the successor of sap.ui.generic.app.navigation.service.NavigationHandler.
  Creates a new NavigationHandler class by providing the required environment.</p>
 <p>The <code>NavigationHandler</code> supports the verification of sensitive information. All properties that are part
@@ -61,6 +59,8 @@ method.</p>
 context.</p>
 <p><strong>Note:</strong> This class requires that the UShell sap.ushell.services.CrossApplicationNavigation
 is available and initialized.</p>
+<h2>Since</h2>
+<p>1.83.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
@@ -79,6 +79,9 @@ is available and initialized.</p>
 <blockquote>
 <p><strong>constructContextUrl</strong>(<code>sEntitySetName</code>, <code>oModel?</code>): <code>string</code></p>
 </blockquote>
+<p>The method creates a context url based on provided data. This context url can either be used as
+sap.fe.navigation.NavigationHandler#setParameterContextUrl ParameterContextUrl or
+sap.fe.navigation.NavigationHandler#setFilterContextUrl FilterContextUrl.</p>
 <h4>Parameters</h4>
 <h5>sEntitySetName</h5>
 <p><code>string</code></p>
@@ -91,9 +94,6 @@ is available and initialized.</p>
 <p>The context url for the given entities</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>The method creates a context url based on provided data. This context url can either be used as
-sap.fe.navigation.NavigationHandler#setParameterContextUrl ParameterContextUrl or
-sap.fe.navigation.NavigationHandler#setFilterContextUrl FilterContextUrl.</p>
 <hr>
 <h3>getTechnicalParameters()</h3>
 <blockquote>
@@ -371,6 +371,7 @@ application. As a default the following values are considered as technical param
 <blockquote>
 <p><strong>storeInnerAppState</strong>(<code>mInnerAppData</code>, <code>bImmediateHashReplace?</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Changes the URL according to the current app state and stores the app state for later retrieval.</p>
 <h4>Parameters</h4>
 <h5>mInnerAppData</h5>
 <p><code>any</code></p>
@@ -390,7 +391,6 @@ returned</p>
 <h4>Deprecated</h4>
 <p>(since 1.104) - Use the sap.fe.navigation.NavigationHandler.storeInnerAppStateAsync
 instead.</p>
-<p>Changes the URL according to the current app state and stores the app state for later retrieval.</p>
 <hr>
 <h3>storeInnerAppStateAsync()</h3>
 <blockquote>
@@ -422,6 +422,7 @@ returned</p>
 <blockquote>
 <p><strong>storeInnerAppStateWithImmediateReturn</strong>(<code>mInnerAppData</code>, <code>bImmediateHashReplace?</code>): <code>object</code></p>
 </blockquote>
+<p>Changes the URL according to the current app state and stores the app state for later retrieval.</p>
 <h4>Parameters</h4>
 <h5>mInnerAppData</h5>
 <p><code>any</code></p>
@@ -442,9 +443,8 @@ executed; Please note that the appStateKey may be undefined or empty.</p>
 <h4>Deprecated</h4>
 <p>(since 1.104) - Use the sap.fe.navigation.NavigationHandler.storeInnerAppStateAsync
 instead.</p>
-<p>Changes the URL according to the current app state and stores the app state for later retrieval.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

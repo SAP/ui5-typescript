@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: TimesRow — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: TimesRow — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: TimesRow — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/TimesRow/classes/TimesRow.html">
 <meta property="og:title" content="Class: TimesRow — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: TimesRow — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: TimesRow — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/calendar/TimesRow/classes/TimesRow.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › calendar › <a href="../../../../../../../sap.ui.unified/sap/ui/unified/calendar/TimesRow/README.html">TimesRow</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/TimesRow</a> / TimesRow</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/calendar/TimesRow</a> / TimesRow</p>
 <h1>Class: TimesRow</h1>
 <pre class="sig"><span class="kw">import</span> TimesRow <span class="kw">from</span> <span class="str">"sap/ui/unified/calendar/TimesRow"</span>;</pre>
-<h2>Since</h2>
-<p>1.32.0</p>
 <p>Renders a row of time items using ItemNavigation. There is no paging or navigation outside the rendered
 area implemented. This is done inside the CalendarTimeInterval. If used inside the CalendarTimeInterval
 the properties and aggregation are directly taken from the parent (to not duplicate and synchronize DateRanges
 and so on...).</p>
 <p>The TimesRow works with UI5Date or JavaScript Date objects.</p>
+<h2>Since</h2>
+<p>1.32.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -294,6 +294,7 @@ it is not focusable.</p>
 <blockquote>
 <p><strong>fireFocus</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:focus focus to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimesRow$FocusEventParameters.html"><code>TimesRow$FocusEventParameters</code></a></p>
@@ -303,12 +304,12 @@ it is not focusable.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:focus focus to attached listeners.</p>
 <hr>
 <h3>fireSelect()</h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -318,7 +319,6 @@ it is not focusable.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
@@ -383,37 +383,37 @@ date should be set to be in the visible range.</li>
 <blockquote>
 <p><strong>getLegend</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.38.5</p>
-<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
 <hr>
 <h3>getPrimaryCalendarType()</h3>
 <blockquote>
 <p><strong>getPrimaryCalendarType</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getPrimaryCalendarType primaryCalendarType.</p>
+<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
+is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 <p>Value of property <code>primaryCalendarType</code></p>
 <h4>Since</h4>
 <p>1.108.0</p>
-<p>Gets current value of property #getPrimaryCalendarType primaryCalendarType.</p>
-<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
-is used.</p>
 <hr>
 <h3>getSecondaryCalendarType()</h3>
 <blockquote>
 <p><strong>getSecondaryCalendarType</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getSecondaryCalendarType secondaryCalendarType.</p>
+<p>If set, the days are also displayed in this calendar type If not set, the dates are only displayed in
+the primary calendar type</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 <p>Value of property <code>secondaryCalendarType</code></p>
 <h4>Since</h4>
 <p>1.109.0</p>
-<p>Gets current value of property #getSecondaryCalendarType secondaryCalendarType.</p>
-<p>If set, the days are also displayed in this calendar type If not set, the dates are only displayed in
-the primary calendar type</p>
 <hr>
 <h3>getSelectedDates()</h3>
 <blockquote>
@@ -667,6 +667,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setLegend</strong>(<code>oLegend</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getLegend legend.</p>
 <h4>Parameters</h4>
 <h5>oLegend</h5>
 <p><code>string</code> | <a href="../../../CalendarLegend/classes/CalendarLegend.html"><code>CalendarLegend</code></a></p>
@@ -677,12 +678,15 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.5</p>
-<p>Sets the associated #getLegend legend.</p>
 <hr>
 <h3>setPrimaryCalendarType()</h3>
 <blockquote>
 <p><strong>setPrimaryCalendarType</strong>(<code>sPrimaryCalendarType</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPrimaryCalendarType primaryCalendarType.</p>
+<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
+is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sPrimaryCalendarType</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
@@ -692,15 +696,15 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.108.0</p>
-<p>Sets a new value for property #getPrimaryCalendarType primaryCalendarType.</p>
-<p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
-is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSecondaryCalendarType()</h3>
 <blockquote>
 <p><strong>setSecondaryCalendarType</strong>(<code>sSecondaryCalendarType</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSecondaryCalendarType secondaryCalendarType.</p>
+<p>If set, the days are also displayed in this calendar type If not set, the dates are only displayed in
+the primary calendar type</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sSecondaryCalendarType</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
@@ -710,10 +714,6 @@ is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.109.0</p>
-<p>Sets a new value for property #getSecondaryCalendarType secondaryCalendarType.</p>
-<p>If set, the days are also displayed in this calendar type If not set, the dates are only displayed in
-the primary calendar type</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setShowHeader()</h3>
 <blockquote>
@@ -800,6 +800,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

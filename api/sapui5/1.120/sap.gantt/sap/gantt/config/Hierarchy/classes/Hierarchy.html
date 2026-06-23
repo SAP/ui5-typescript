@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Hierarchy~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Hierarchy~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: Hierarchy~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/config/Hierarchy/classes/Hierarchy.html">
 <meta property="og:title" content="~~Class: Hierarchy~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Hierarchy~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: Hierarchy~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/config/Hierarchy/classes/Hierarchy.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › config › <a href="../../../../../../sap.gantt/sap/gantt/config/Hierarchy/README.html">Hierarchy</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/config/Hierarchy</a> / Hierarchy</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/config/Hierarchy</a> / Hierarchy</p>
 <h1><del>Class: Hierarchy</del></h1>
 <pre class="sig"><span class="kw">import</span> Hierarchy <span class="kw">from</span> <span class="str">"sap/gantt/config/Hierarchy"</span>;</pre>
+<p>Defines the hierarchy in the Gantt chart. The hierarchy is used for building the tree table in sap.gantt.GanttChartWithTable.</p>
 <h2>Deprecated</h2>
 <p>(since 1.64)</p>
-<p>Defines the hierarchy in the Gantt chart. The hierarchy is used for building the tree table in sap.gantt.GanttChartWithTable.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -107,6 +107,13 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getExpandedLevels</strong>(): <code>string</code>[][]</p>
 </blockquote>
+<p>Gets current value of property #getExpandedLevels expandedLevels.</p>
+<p>expandedLevels determines how the tree table is initially expanded. This property is a two-dimensional
+array containing object types of row data. Only rows with data of the specified object types are expanded.
+Each child array represents a specific level in the hierarchy with the first child array representing
+the first level and so forth. For example, if this property is set to [[&quot;02&quot;, &quot;03&quot;], [&quot;05&quot;]], rows containing
+data of object types 02 or 03 in the first level and rows containing data of object type 05 in the second
+level are expanded.</p>
 <h4>Returns</h4>
 <p><code>string</code>[][]</p>
 <p>Value of property <code>expandedLevels</code></p>
@@ -115,13 +122,6 @@ of the syntax of the settings object.</p>
 have API to expand specific multiple rows in one call, GanttChart expand the tree tale to level calculated
 from the configuration, then loop all data in the model, collapse the node which does not full-fill the
 configuration one by one. This feature is application specific and should be handled by application.</p>
-<p>Gets current value of property #getExpandedLevels expandedLevels.</p>
-<p>expandedLevels determines how the tree table is initially expanded. This property is a two-dimensional
-array containing object types of row data. Only rows with data of the specified object types are expanded.
-Each child array represents a specific level in the hierarchy with the first child array representing
-the first level and so forth. For example, if this property is set to [[&quot;02&quot;, &quot;03&quot;], [&quot;05&quot;]], rows containing
-data of object types 02 or 03 in the first level and rows containing data of object type 05 in the second
-level are expanded.</p>
 <hr>
 <h3><del>getKey()</del></h3>
 <blockquote>
@@ -191,6 +191,14 @@ level are expanded.</p>
 <blockquote>
 <p><strong>setExpandedLevels</strong>(<code>sExpandedLevels</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getExpandedLevels expandedLevels.</p>
+<p>expandedLevels determines how the tree table is initially expanded. This property is a two-dimensional
+array containing object types of row data. Only rows with data of the specified object types are expanded.
+Each child array represents a specific level in the hierarchy with the first child array representing
+the first level and so forth. For example, if this property is set to [[&quot;02&quot;, &quot;03&quot;], [&quot;05&quot;]], rows containing
+data of object types 02 or 03 in the first level and rows containing data of object type 05 in the second
+level are expanded.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sExpandedLevels</h5>
 <p><code>string</code>[][]</p>
@@ -203,14 +211,6 @@ level are expanded.</p>
 have API to expand specific multiple rows in one call, GanttChart expand the tree tale to level calculated
 from the configuration, then loop all data in the model, collapse the node which does not full-fill the
 configuration one by one. This feature is application specific and should be handled by application.</p>
-<p>Sets a new value for property #getExpandedLevels expandedLevels.</p>
-<p>expandedLevels determines how the tree table is initially expanded. This property is a two-dimensional
-array containing object types of row data. Only rows with data of the specified object types are expanded.
-Each child array represents a specific level in the hierarchy with the first child array representing
-the first level and so forth. For example, if this property is set to [[&quot;02&quot;, &quot;03&quot;], [&quot;05&quot;]], rows containing
-data of object types 02 or 03 in the first level and rows containing data of object type 05 in the second
-level are expanded.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setKey()</del></h3>
 <blockquote>
@@ -299,6 +299,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

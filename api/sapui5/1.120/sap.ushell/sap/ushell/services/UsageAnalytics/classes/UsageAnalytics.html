@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: UsageAnalytics~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: UsageAnalytics~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: UsageAnalytics~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/UsageAnalytics/classes/UsageAnalytics.html">
 <meta property="og:title" content="~~Class: UsageAnalytics~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: UsageAnalytics~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: UsageAnalytics~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/UsageAnalytics/classes/UsageAnalytics.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../sap.ushell/sap/ushell/services/UsageAnalytics/README.html">UsageAnalytics</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/UsageAnalytics</a> / UsageAnalytics</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/UsageAnalytics</a> / UsageAnalytics</p>
 <h1><del>Class: UsageAnalytics</del></h1>
 <pre class="sig"><span class="kw">import</span> UsageAnalytics <span class="kw">from</span> <span class="str">"sap/ushell/services/UsageAnalytics"</span>;</pre>
-<h2>Since</h2>
-<p>1.32.0</p>
-<h2>Deprecated</h2>
-<p>(since 1.120.0) - The corresponding cloud service &quot;SAP Web Analytics&quot; has been retired, therefore
-this client-side service API cannot be used any longer.</p>
 <p>A UShell service for tracking business flows and user actions. The UsageAnalytics service exposes API
 for logging custom events and setting custom field values in the logged events.
  The data is sent via http and recorded on a server, whose URL is defined by the <code>baseUrl</code> service configuration
@@ -60,6 +55,11 @@ property.
 <p>Each tracked event (either automatic or custom) is represented by a database row, that includes 10 custom
 attributes named custom1...custom10.
  Some of these values can be set using UsageAnalytics service API.</p>
+<h2>Since</h2>
+<p>1.32.0</p>
+<h2>Deprecated</h2>
+<p>(since 1.120.0) - The corresponding cloud service &quot;SAP Web Analytics&quot; has been retired, therefore
+this client-side service API cannot be used any longer.</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -72,6 +72,9 @@ attributes named custom1...custom10.
 <blockquote>
 <p><strong>setCustomAttributes</strong>(<code>oCustomFieldValues</code>): <code>void</code></p>
 </blockquote>
+<p>Sets up to 6 customer attributes of logged events according to the given object attributes.
+ A customer attribute can be set only once during a session.
+ Currently these attributes correspond to database columns custom5...custom10.</p>
 <h4>Parameters</h4>
 <h5>oCustomFieldValues</h5>
 <p><code>object</code></p>
@@ -91,49 +94,46 @@ attributes named custom1...custom10.
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Sets up to 6 customer attributes of logged events according to the given object attributes.
- A customer attribute can be set only once during a session.
- Currently these attributes correspond to database columns custom5...custom10.</p>
 <hr>
 <h3><del>setLegalText()</del></h3>
 <blockquote>
 <p><strong>setLegalText</strong>(): <code>void</code></p>
 </blockquote>
+<p>Enables the renderer to set the content of the legal message..</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Enables the renderer to set the content of the legal message..</p>
 <hr>
 <h3><del>systemEnabled()</del></h3>
 <blockquote>
 <p><strong>systemEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>A boolean value indicating whether the UsageAnalytics service is enabled</p>
-<h4>Since</h4>
-<p>1.32.0</p>
 <p>Indicates whether the service is available.</p>
 <p>Returns <code>true</code> if the following conditions exist, and <code>false</code> otherwise:
  a) Service configuration property <code>enable</code> is set to <code>true</code>
  b) Service configuration property <code>pubToken</code> is not empty
  c) Agreement text exists or <code>setUsageAnalyticsPermitted</code> is set to <code>false</code></p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>A boolean value indicating whether the UsageAnalytics service is enabled</p>
+<h4>Since</h4>
+<p>1.32.0</p>
 <hr>
 <h3><del>userEnabled()</del></h3>
 <blockquote>
 <p><strong>userEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Indicates whether the user has specified to track activities.</p>
+<p>Returns <code>true</code> if the following conditions exist, and <code>false</code> otherwise:
+ a) The function <code>system enabled</code> returns <code>true</code>
+ b) The user property <code>trackUsageAnalytics</code> is set to <code>true</code></p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>A boolean value indicating whether the user has specified to track activities</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Indicates whether the user has specified to track activities.</p>
-<p>Returns <code>true</code> if the following conditions exist, and <code>false</code> otherwise:
- a) The function <code>system enabled</code> returns <code>true</code>
- b) The user property <code>trackUsageAnalytics</code> is set to <code>true</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ODataListBinding~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ODataListBinding~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: ODataListBinding~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/ODataListBinding/classes/ODataListBinding.html">
 <meta property="og:title" content="~~Class: ODataListBinding~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ODataListBinding~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: ODataListBinding~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/ODataListBinding/classes/ODataListBinding.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › <a href="../../../../../../../sap.ui.core/sap/ui/model/odata/ODataListBinding/README.html">ODataListBinding</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/ODataListBinding</a> / ODataListBinding</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/ODataListBinding</a> / ODataListBinding</p>
 <h1><del>Class: ODataListBinding</del></h1>
 <pre class="sig"><span class="kw">import</span> ODataListBinding <span class="kw">from</span> <span class="str">"sap/ui/model/odata/ODataListBinding"</span>;</pre>
+<p>List binding implementation for OData format.</p>
 <h2>Deprecated</h2>
 <p>(since 1.66) - please use sap.ui.model.odata.v2.ODataListBinding instead.</p>
-<p>List binding implementation for OData format.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></li>
@@ -114,15 +114,15 @@ on different table columns are combined with AND. Please note that a custom filt
 <blockquote>
 <p><strong>getAllCurrentContexts</strong>(): <code>Context1</code>[]</p>
 </blockquote>
+<p>Returns all current contexts of this list binding in no special order. Just like #getCurrentContexts,
+this method does not request any data from a back end and does not change the binding&#39;s state. In contrast
+to #getCurrentContexts, it does not only return those contexts that were last requested by a
+control, but all contexts that are currently available in the binding.</p>
 <h4>Returns</h4>
 <p><code>Context1</code>[]</p>
 <p>All current contexts of this list binding, in no special order</p>
 <h4>Since</h4>
 <p>1.98.0</p>
-<p>Returns all current contexts of this list binding in no special order. Just like #getCurrentContexts,
-this method does not request any data from a back end and does not change the binding&#39;s state. In contrast
-to #getCurrentContexts, it does not only return those contexts that were last requested by a
-control, but all contexts that are currently available in the binding.</p>
 <h4>Overrides</h4>
 <p><a href="../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../ListBinding/classes/ListBinding.html#getallcurrentcontexts"><code>getAllCurrentContexts</code></a></p>
 <hr>
@@ -130,6 +130,7 @@ control, but all contexts that are currently available in the binding.</p>
 <blockquote>
 <p><strong>getContexts</strong>(<code>iStartIndex?</code>, <code>iLength?</code>, <code>iThreshold?</code>): <a href="../../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
+<p>Return contexts for the list</p>
 <h4>Parameters</h4>
 <h5>iStartIndex?</h5>
 <p><code>number</code></p>
@@ -146,7 +147,6 @@ data that is likely to be needed soon, e.g. when scrolling down in a table</p>
 <p>The array of contexts for each row of the bound list</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Return contexts for the list</p>
 <h4>Overrides</h4>
 <p><a href="../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../ListBinding/classes/ListBinding.html#getcontexts"><code>getContexts</code></a></p>
 <hr>
@@ -154,6 +154,7 @@ data that is likely to be needed soon, e.g. when scrolling down in a table</p>
 <blockquote>
 <p><strong>getDownloadUrl</strong>(<code>sFormat</code>): <code>string</code></p>
 </blockquote>
+<p>Get a download URL with the specified format considering the sort/filter/custom parameters.</p>
 <h4>Parameters</h4>
 <h5>sFormat</h5>
 <p><code>string</code></p>
@@ -163,7 +164,6 @@ data that is likely to be needed soon, e.g. when scrolling down in a table</p>
 <p>URL which can be used for downloading</p>
 <h4>Since</h4>
 <p>1.24</p>
-<p>Get a download URL with the specified format considering the sort/filter/custom parameters.</p>
 <hr>
 <h3><del>initialize()</del></h3>
 <blockquote>
@@ -256,6 +256,6 @@ used by this class</p>
 <p><a href="../../../ListBinding/classes/ListBinding.html"><code>ListBinding</code></a>.<a href="../../../ListBinding/classes/ListBinding.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

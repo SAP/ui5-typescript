@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SimpleForm — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SimpleForm — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SimpleForm — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.layout/sap/ui/layout/form/SimpleForm/classes/SimpleForm.html">
 <meta property="og:title" content="Class: SimpleForm — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SimpleForm — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SimpleForm — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.layout/sap/ui/layout/form/SimpleForm/classes/SimpleForm.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.layout/README.html">sap.ui.layout</a> › sap › ui › layout › form › <a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/SimpleForm/README.html">SimpleForm</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/SimpleForm</a> / SimpleForm</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/SimpleForm</a> / SimpleForm</p>
 <h1>Class: SimpleForm</h1>
 <pre class="sig"><span class="kw">import</span> SimpleForm <span class="kw">from</span> <span class="str">"sap/ui/layout/form/SimpleForm"</span>;</pre>
-<h2>Since</h2>
-<p>1.16.0</p>
 <p>The <code>SimpleForm</code> control provides an easy-to-use API to create simple forms. Inside a <code>SimpleForm</code> control,
 a <code>{@link sap.ui.layout.form.Form Form}</code> control is created along with its <code>{@link sap.ui.layout.form.FormContainer FormContainer}</code>
 elements and <code>{@link sap.ui.layout.form.FormElement FormElement}</code> elements, but the complexity in the
@@ -52,6 +50,8 @@ API is not exposed to the user.
     that started with the last label.  Use <code>LayoutData</code> to influence the layout for special cases in
     the Input/Display controls.</p>
 <p><strong>Note:</strong> If a more complex form is needed, use the <code>{@link sap.ui.layout.form.Form Form}</code> control instead.</p>
+<h2>Since</h2>
+<p>1.16.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -97,6 +97,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -106,7 +107,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addContent()</h3>
 <blockquote>
@@ -134,33 +134,28 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>destroyTitle</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the title in the aggregation #getTitle title.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Destroys the title in the aggregation #getTitle title.</p>
 <hr>
 <h3>destroyToolbar()</h3>
 <blockquote>
 <p><strong>destroyToolbar</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <hr>
 <h3>getAdjustLabelSpan()</h3>
 <blockquote>
 <p><strong>getAdjustLabelSpan</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>adjustLabelSpan</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getAdjustLabelSpan adjustLabelSpan.</p>
 <p>If set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the number of <code>FormContainers</code> in
 one row. If only one <code>FormContainer</code> is displayed in one row, <code>labelSpanM</code> is used to define the size
@@ -171,111 +166,111 @@ where full-size <code>FormContainers</code> and multiple-column rows are used in
 <code>FormContainers</code> doesn&#39;t matter in this case.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>adjustLabelSpan</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getBackgroundDesign()</h3>
 <blockquote>
 <p><strong>getBackgroundDesign</strong>(): <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code> | <a href="../../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a></p>
 </blockquote>
+<p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
+<p>Specifies the background color of the <code>SimpleForm</code> content.</p>
+<p>The visualization of the different options depends on the used theme.</p>
+<p>Default value is <code>Translucent</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code> | <a href="../../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a></p>
 <p>Value of property <code>backgroundDesign</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
-<p>Specifies the background color of the <code>SimpleForm</code> content.</p>
-<p>The visualization of the different options depends on the used theme.</p>
-<p>Default value is <code>Translucent</code>.</p>
 <hr>
 <h3>getBreakpointL()</h3>
 <blockquote>
 <p><strong>getBreakpointL</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getBreakpointL breakpointL.</p>
+<p>Breakpoint between Medium size and Large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>Default value is <code>1024</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>breakpointL</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getBreakpointL breakpointL.</p>
-<p>Breakpoint between Medium size and Large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>Default value is <code>1024</code>.</p>
 <hr>
 <h3>getBreakpointM()</h3>
 <blockquote>
 <p><strong>getBreakpointM</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getBreakpointM breakpointM.</p>
+<p>Breakpoint between Small size and Medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>Default value is <code>600</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>breakpointM</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getBreakpointM breakpointM.</p>
-<p>Breakpoint between Small size and Medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>Default value is <code>600</code>.</p>
 <hr>
 <h3>getBreakpointXL()</h3>
 <blockquote>
 <p><strong>getBreakpointXL</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getBreakpointXL breakpointXL.</p>
+<p>Breakpoint between Medium size and Large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>Default value is <code>1440</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>breakpointXL</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets current value of property #getBreakpointXL breakpointXL.</p>
-<p>Breakpoint between Medium size and Large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>Default value is <code>1440</code>.</p>
 <hr>
 <h3>getColumnsL()</h3>
 <blockquote>
 <p><strong>getColumnsL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>columnsL</code></p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <p>Gets current value of property #getColumnsL columnsL.</p>
 <p>Form columns for large size. The number of columns for large size must not be smaller than the number
 of columns for medium size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
 <p>Default value is <code>2</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>columnsL</code></p>
+<h4>Since</h4>
+<p>1.16.3</p>
 <hr>
 <h3>getColumnsM()</h3>
 <blockquote>
 <p><strong>getColumnsM</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getColumnsM columnsM.</p>
+<p>Form columns for medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>columnsM</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getColumnsM columnsM.</p>
-<p>Form columns for medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>getColumnsXL()</h3>
 <blockquote>
 <p><strong>getColumnsXL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>columnsXL</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getColumnsXL columnsXL.</p>
 <p>Form columns for extra large size. The number of columns for extra large size must not be smaller than
 the number of columns for large size.</p>
@@ -283,6 +278,11 @@ the number of columns for large size.</p>
 If the default value -1 is not overwritten with the meaningful one then the <code>columnsL</code> value is used
 (from the backward compatibility reasons).</p>
 <p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>columnsXL</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
@@ -350,84 +350,79 @@ controls might be wrong. Also, controls that do not fit the mode might be render
 <blockquote>
 <p><strong>getEmptySpanL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>emptySpanL</code></p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <p>Gets current value of property #getEmptySpanL emptySpanL.</p>
 <p>Number of grid cells that are empty at the end of each line on large size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.
 If a <code>ColumnLayout</code> is used, this property defines the empty cells for large columns.</p>
 <p>Default value is <code>0</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>emptySpanL</code></p>
+<h4>Since</h4>
+<p>1.16.3</p>
 <hr>
 <h3>getEmptySpanM()</h3>
 <blockquote>
 <p><strong>getEmptySpanM</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getEmptySpanM emptySpanM.</p>
+<p>Number of grid cells that are empty at the end of each line on medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>emptySpanM</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getEmptySpanM emptySpanM.</p>
-<p>Number of grid cells that are empty at the end of each line on medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getEmptySpanS()</h3>
 <blockquote>
 <p><strong>getEmptySpanS</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getEmptySpanS emptySpanS.</p>
+<p>Number of grid cells that are empty at the end of each line on small size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>emptySpanS</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getEmptySpanS emptySpanS.</p>
-<p>Number of grid cells that are empty at the end of each line on small size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getEmptySpanXL()</h3>
 <blockquote>
 <p><strong>getEmptySpanXL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>emptySpanXL</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getEmptySpanXL emptySpanXL.</p>
 <p>Number of grid cells that are empty at the end of each line on extra large size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout. If the default
 value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value is used (from the backward
 compatibility reasons).</p>
 <p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>emptySpanXL</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3><del>getLabelMinWidth()</del></h3>
 <blockquote>
 <p><strong>getLabelMinWidth</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getLabelMinWidth labelMinWidth.</p>
+<p>Specifies the min-width in pixels of the label in all form rows.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
+<p>Default value is <code>192</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>labelMinWidth</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.93) - use another <code>Layout</code></p>
-<p>Gets current value of property #getLabelMinWidth labelMinWidth.</p>
-<p>Specifies the min-width in pixels of the label in all form rows.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
-<p>Default value is <code>192</code>.</p>
 <hr>
 <h3>getLabelSpanL()</h3>
 <blockquote>
 <p><strong>getLabelSpanL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>labelSpanL</code></p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <p>Gets current value of property #getLabelSpanL labelSpanL.</p>
 <p>Default span for labels in large size.</p>
 <p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is only used if more than 1 <code>FormContainer</code> is in
@@ -435,52 +430,57 @@ one line. If only 1 <code>FormContainer</code> is in the line, then the <code>la
 <p><strong>Note:</strong> This property is only used if <code>ResponsiveGridLayout</code> or <code>ColumnLayout</code> is used as a layout.
 If a <code>ColumnLayout</code> is used, this property defines the label size for large columns.</p>
 <p>Default value is <code>4</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>labelSpanL</code></p>
+<h4>Since</h4>
+<p>1.16.3</p>
 <hr>
 <h3>getLabelSpanM()</h3>
 <blockquote>
 <p><strong>getLabelSpanM</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>labelSpanM</code></p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <p>Gets current value of property #getLabelSpanM labelSpanM.</p>
 <p>Default span for labels in medium size.</p>
 <p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is used for full-size <code>FormContainers</code>. If more
 than one <code>FormContainer</code> is in one line, <code>labelSpanL</code> is used.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <p>Default value is <code>2</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>labelSpanM</code></p>
+<h4>Since</h4>
+<p>1.16.3</p>
 <hr>
 <h3>getLabelSpanS()</h3>
 <blockquote>
 <p><strong>getLabelSpanS</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getLabelSpanS labelSpanS.</p>
+<p>Default span for labels in small size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>Default value is <code>12</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>labelSpanS</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getLabelSpanS labelSpanS.</p>
-<p>Default span for labels in small size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>Default value is <code>12</code>.</p>
 <hr>
 <h3>getLabelSpanXL()</h3>
 <blockquote>
 <p><strong>getLabelSpanXL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>labelSpanXL</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getLabelSpanXL labelSpanXL.</p>
 <p>Default span for labels in extra large size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout. If the default
 value -1 is not overwritten with the meaningful one then the <code>labelSpanL</code> value is used (from the backward
 compatibility reasons).</p>
 <p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>labelSpanXL</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>getLayout()</h3>
 <blockquote>
@@ -517,11 +517,6 @@ this property is not used. Please use the properties <code>ColumnsL</code> and <
 <blockquote>
 <p><strong>getMinWidth</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>minWidth</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.93) - use another <code>Layout</code></p>
 <p>Gets current value of property #getMinWidth minWidth.</p>
 <p>The overall minimum width in pixels that is used for the <code>SimpleForm</code>.</p>
 <p>If the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next
@@ -530,16 +525,16 @@ inner groups (<code>{@link sap.ui.layout.form.FormContainer FormContainers}</cod
 is reached, irrespective of whether a <code>width</code> is reached or the available parents width is reached.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
 <p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>minWidth</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.93) - use another <code>Layout</code></p>
 <hr>
 <h3>getSingleContainerFullSize()</h3>
 <blockquote>
 <p><strong>getSingleContainerFullSize</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>singleContainerFullSize</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getSingleContainerFullSize singleContainerFullSize.</p>
 <p>If the <code>Form</code> contains only one single <code>FormContainer</code> and this property is set, the <code>FormContainer</code>
 is displayed using the full size of the <code>Form</code>. In this case the properties <code>columnsL</code> and <code>columnsM</code>
@@ -547,42 +542,47 @@ are ignored.</p>
 <p>In all other cases the <code>FormContainer</code> is displayed in the size of one column.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>singleContainerFullSize</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
 <p><strong>getTitle</strong>(): <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Title/classes/Title.html"><code>Title</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getTitle title.</p>
+<p>Title element of the <code>SimpleForm</code>. Can either be a <code>Title</code> element, or a string.</p>
 <h4>Returns</h4>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Title/classes/Title.html"><code>Title</code></a></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets content of aggregation #getTitle title.</p>
-<p>Title element of the <code>SimpleForm</code>. Can either be a <code>Title</code> element, or a string.</p>
 <hr>
 <h3>getToolbar()</h3>
 <blockquote>
 <p><strong>getToolbar</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
-<h4>Since</h4>
-<p>1.36.0</p>
 <p>Gets content of aggregation #getToolbar toolbar.</p>
 <p>Toolbar of the <code>SimpleForm</code>.</p>
 <p><strong>Note:</strong> If a <code>Toolbar</code> is used, the <code>Title</code> is ignored. If a title is needed inside the <code>Toolbar</code> it
 must be added at content to the <code>Toolbar</code>. In this case add the <code>Title</code> to the <code>ariaLabelledBy</code> association.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
+<h4>Since</h4>
+<p>1.36.0</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getWidth width.</p>
+<p>Width of the form.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getWidth width.</p>
-<p>Width of the form.</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -620,12 +620,12 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllContent()</h3>
 <blockquote>
@@ -641,6 +641,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -650,7 +651,6 @@ is inserted at the last position</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeContent()</h3>
 <blockquote>
@@ -669,15 +669,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setAdjustLabelSpan</strong>(<code>bAdjustLabelSpan?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bAdjustLabelSpan?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>adjustLabelSpan</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Sets a new value for property #getAdjustLabelSpan adjustLabelSpan.</p>
 <p>If set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the number of <code>FormContainers</code> in
 one row. If only one <code>FormContainer</code> is displayed in one row, <code>labelSpanM</code> is used to define the size
@@ -689,11 +680,25 @@ where full-size <code>FormContainers</code> and multiple-column rows are used in
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bAdjustLabelSpan?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>adjustLabelSpan</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>setBackgroundDesign()</h3>
 <blockquote>
 <p><strong>setBackgroundDesign</strong>(<code>sBackgroundDesign?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
+<p>Specifies the background color of the <code>SimpleForm</code> content.</p>
+<p>The visualization of the different options depends on the used theme.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Translucent</code>.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundDesign?</h5>
 <p><code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <code>&quot;Transparent&quot;</code> | <a href="../../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a></p>
@@ -703,16 +708,16 @@ where full-size <code>FormContainers</code> and multiple-column rows are used in
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
-<p>Specifies the background color of the <code>SimpleForm</code> content.</p>
-<p>The visualization of the different options depends on the used theme.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Translucent</code>.</p>
 <hr>
 <h3>setBreakpointL()</h3>
 <blockquote>
 <p><strong>setBreakpointL</strong>(<code>iBreakpointL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBreakpointL breakpointL.</p>
+<p>Breakpoint between Medium size and Large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1024</code>.</p>
 <h4>Parameters</h4>
 <h5>iBreakpointL?</h5>
 <p><code>number</code></p>
@@ -722,16 +727,16 @@ where full-size <code>FormContainers</code> and multiple-column rows are used in
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getBreakpointL breakpointL.</p>
-<p>Breakpoint between Medium size and Large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1024</code>.</p>
 <hr>
 <h3>setBreakpointM()</h3>
 <blockquote>
 <p><strong>setBreakpointM</strong>(<code>iBreakpointM?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBreakpointM breakpointM.</p>
+<p>Breakpoint between Small size and Medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>600</code>.</p>
 <h4>Parameters</h4>
 <h5>iBreakpointM?</h5>
 <p><code>number</code></p>
@@ -741,16 +746,16 @@ where full-size <code>FormContainers</code> and multiple-column rows are used in
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getBreakpointM breakpointM.</p>
-<p>Breakpoint between Small size and Medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>600</code>.</p>
 <hr>
 <h3>setBreakpointXL()</h3>
 <blockquote>
 <p><strong>setBreakpointXL</strong>(<code>iBreakpointXL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBreakpointXL breakpointXL.</p>
+<p>Breakpoint between Medium size and Large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1440</code>.</p>
 <h4>Parameters</h4>
 <h5>iBreakpointXL?</h5>
 <p><code>number</code></p>
@@ -760,16 +765,17 @@ where full-size <code>FormContainers</code> and multiple-column rows are used in
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getBreakpointXL breakpointXL.</p>
-<p>Breakpoint between Medium size and Large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1440</code>.</p>
 <hr>
 <h3>setColumnsL()</h3>
 <blockquote>
 <p><strong>setColumnsL</strong>(<code>iColumnsL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getColumnsL columnsL.</p>
+<p>Form columns for large size. The number of columns for large size must not be smaller than the number
+of columns for medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>2</code>.</p>
 <h4>Parameters</h4>
 <h5>iColumnsL?</h5>
 <p><code>number</code></p>
@@ -779,17 +785,16 @@ where full-size <code>FormContainers</code> and multiple-column rows are used in
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getColumnsL columnsL.</p>
-<p>Form columns for large size. The number of columns for large size must not be smaller than the number
-of columns for medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>2</code>.</p>
 <hr>
 <h3>setColumnsM()</h3>
 <blockquote>
 <p><strong>setColumnsM</strong>(<code>iColumnsM?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getColumnsM columnsM.</p>
+<p>Form columns for medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Parameters</h4>
 <h5>iColumnsM?</h5>
 <p><code>number</code></p>
@@ -799,16 +804,19 @@ of columns for medium size.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getColumnsM columnsM.</p>
-<p>Form columns for medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>setColumnsXL()</h3>
 <blockquote>
 <p><strong>setColumnsXL</strong>(<code>iColumnsXL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getColumnsXL columnsXL.</p>
+<p>Form columns for extra large size. The number of columns for extra large size must not be smaller than
+the number of columns for large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.
+If the default value -1 is not overwritten with the meaningful one then the <code>columnsL</code> value is used
+(from the backward compatibility reasons).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>-1</code>.</p>
 <h4>Parameters</h4>
 <h5>iColumnsXL?</h5>
 <p><code>number</code></p>
@@ -818,14 +826,6 @@ of columns for medium size.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getColumnsXL columnsXL.</p>
-<p>Form columns for extra large size. The number of columns for extra large size must not be smaller than
-the number of columns for large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.
-If the default value -1 is not overwritten with the meaningful one then the <code>columnsL</code> value is used
-(from the backward compatibility reasons).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>-1</code>.</p>
 <hr>
 <h3>setEditable()</h3>
 <blockquote>
@@ -854,6 +854,12 @@ controls might be wrong. Also, controls that do not fit the mode might be render
 <blockquote>
 <p><strong>setEmptySpanL</strong>(<code>iEmptySpanL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptySpanL emptySpanL.</p>
+<p>Number of grid cells that are empty at the end of each line on large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.
+If a <code>ColumnLayout</code> is used, this property defines the empty cells for large columns.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iEmptySpanL?</h5>
 <p><code>number</code></p>
@@ -863,17 +869,16 @@ controls might be wrong. Also, controls that do not fit the mode might be render
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getEmptySpanL emptySpanL.</p>
-<p>Number of grid cells that are empty at the end of each line on large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.
-If a <code>ColumnLayout</code> is used, this property defines the empty cells for large columns.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setEmptySpanM()</h3>
 <blockquote>
 <p><strong>setEmptySpanM</strong>(<code>iEmptySpanM?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptySpanM emptySpanM.</p>
+<p>Number of grid cells that are empty at the end of each line on medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iEmptySpanM?</h5>
 <p><code>number</code></p>
@@ -883,16 +888,16 @@ If a <code>ColumnLayout</code> is used, this property defines the empty cells fo
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getEmptySpanM emptySpanM.</p>
-<p>Number of grid cells that are empty at the end of each line on medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setEmptySpanS()</h3>
 <blockquote>
 <p><strong>setEmptySpanS</strong>(<code>iEmptySpanS?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptySpanS emptySpanS.</p>
+<p>Number of grid cells that are empty at the end of each line on small size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iEmptySpanS?</h5>
 <p><code>number</code></p>
@@ -902,16 +907,18 @@ If a <code>ColumnLayout</code> is used, this property defines the empty cells fo
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getEmptySpanS emptySpanS.</p>
-<p>Number of grid cells that are empty at the end of each line on small size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setEmptySpanXL()</h3>
 <blockquote>
 <p><strong>setEmptySpanXL</strong>(<code>iEmptySpanXL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptySpanXL emptySpanXL.</p>
+<p>Number of grid cells that are empty at the end of each line on extra large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout. If the default
+value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value is used (from the backward
+compatibility reasons).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>-1</code>.</p>
 <h4>Parameters</h4>
 <h5>iEmptySpanXL?</h5>
 <p><code>number</code></p>
@@ -921,18 +928,16 @@ If a <code>ColumnLayout</code> is used, this property defines the empty cells fo
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getEmptySpanXL emptySpanXL.</p>
-<p>Number of grid cells that are empty at the end of each line on extra large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout. If the default
-value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value is used (from the backward
-compatibility reasons).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>-1</code>.</p>
 <hr>
 <h3><del>setLabelMinWidth()</del></h3>
 <blockquote>
 <p><strong>setLabelMinWidth</strong>(<code>iLabelMinWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelMinWidth labelMinWidth.</p>
+<p>Specifies the min-width in pixels of the label in all form rows.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>192</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelMinWidth?</h5>
 <p><code>number</code></p>
@@ -942,16 +947,19 @@ compatibility reasons).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.93) - use another <code>Layout</code></p>
-<p>Sets a new value for property #getLabelMinWidth labelMinWidth.</p>
-<p>Specifies the min-width in pixels of the label in all form rows.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>192</code>.</p>
 <hr>
 <h3>setLabelSpanL()</h3>
 <blockquote>
 <p><strong>setLabelSpanL</strong>(<code>iLabelSpanL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelSpanL labelSpanL.</p>
+<p>Default span for labels in large size.</p>
+<p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is only used if more than 1 <code>FormContainer</code> is in
+one line. If only 1 <code>FormContainer</code> is in the line, then the <code>labelSpanM</code> value is used.</p>
+<p><strong>Note:</strong> This property is only used if <code>ResponsiveGridLayout</code> or <code>ColumnLayout</code> is used as a layout.
+If a <code>ColumnLayout</code> is used, this property defines the label size for large columns.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>4</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelSpanL?</h5>
 <p><code>number</code></p>
@@ -961,19 +969,18 @@ compatibility reasons).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getLabelSpanL labelSpanL.</p>
-<p>Default span for labels in large size.</p>
-<p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is only used if more than 1 <code>FormContainer</code> is in
-one line. If only 1 <code>FormContainer</code> is in the line, then the <code>labelSpanM</code> value is used.</p>
-<p><strong>Note:</strong> This property is only used if <code>ResponsiveGridLayout</code> or <code>ColumnLayout</code> is used as a layout.
-If a <code>ColumnLayout</code> is used, this property defines the label size for large columns.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>4</code>.</p>
 <hr>
 <h3>setLabelSpanM()</h3>
 <blockquote>
 <p><strong>setLabelSpanM</strong>(<code>iLabelSpanM?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelSpanM labelSpanM.</p>
+<p>Default span for labels in medium size.</p>
+<p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is used for full-size <code>FormContainers</code>. If more
+than one <code>FormContainer</code> is in one line, <code>labelSpanL</code> is used.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>2</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelSpanM?</h5>
 <p><code>number</code></p>
@@ -983,18 +990,16 @@ If a <code>ColumnLayout</code> is used, this property defines the label size for
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getLabelSpanM labelSpanM.</p>
-<p>Default span for labels in medium size.</p>
-<p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is used for full-size <code>FormContainers</code>. If more
-than one <code>FormContainer</code> is in one line, <code>labelSpanL</code> is used.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>2</code>.</p>
 <hr>
 <h3>setLabelSpanS()</h3>
 <blockquote>
 <p><strong>setLabelSpanS</strong>(<code>iLabelSpanS?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelSpanS labelSpanS.</p>
+<p>Default span for labels in small size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>12</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelSpanS?</h5>
 <p><code>number</code></p>
@@ -1004,16 +1009,18 @@ than one <code>FormContainer</code> is in one line, <code>labelSpanL</code> is u
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getLabelSpanS labelSpanS.</p>
-<p>Default span for labels in small size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>12</code>.</p>
 <hr>
 <h3>setLabelSpanXL()</h3>
 <blockquote>
 <p><strong>setLabelSpanXL</strong>(<code>iLabelSpanXL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelSpanXL labelSpanXL.</p>
+<p>Default span for labels in extra large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout. If the default
+value -1 is not overwritten with the meaningful one then the <code>labelSpanL</code> value is used (from the backward
+compatibility reasons).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>-1</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelSpanXL?</h5>
 <p><code>number</code></p>
@@ -1023,13 +1030,6 @@ than one <code>FormContainer</code> is in one line, <code>labelSpanL</code> is u
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getLabelSpanXL labelSpanXL.</p>
-<p>Default span for labels in extra large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout. If the default
-value -1 is not overwritten with the meaningful one then the <code>labelSpanL</code> value is used (from the backward
-compatibility reasons).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>-1</code>.</p>
 <hr>
 <h3>setLayout()</h3>
 <blockquote>
@@ -1076,15 +1076,6 @@ this property is not used. Please use the properties <code>ColumnsL</code> and <
 <blockquote>
 <p><strong>setMinWidth</strong>(<code>iMinWidth?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>iMinWidth?</h5>
-<p><code>number</code></p>
-<p>New value for property <code>minWidth</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.93) - use another <code>Layout</code></p>
 <p>Sets a new value for property #getMinWidth minWidth.</p>
 <p>The overall minimum width in pixels that is used for the <code>SimpleForm</code>.</p>
 <p>If the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next
@@ -1094,11 +1085,28 @@ is reached, irrespective of whether a <code>width</code> is reached or the avail
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>-1</code>.</p>
+<h4>Parameters</h4>
+<h5>iMinWidth?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>minWidth</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.93) - use another <code>Layout</code></p>
 <hr>
 <h3>setSingleContainerFullSize()</h3>
 <blockquote>
 <p><strong>setSingleContainerFullSize</strong>(<code>bSingleContainerFullSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSingleContainerFullSize singleContainerFullSize.</p>
+<p>If the <code>Form</code> contains only one single <code>FormContainer</code> and this property is set, the <code>FormContainer</code>
+is displayed using the full size of the <code>Form</code>. In this case the properties <code>columnsL</code> and <code>columnsM</code>
+are ignored.</p>
+<p>In all other cases the <code>FormContainer</code> is displayed in the size of one column.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bSingleContainerFullSize?</h5>
 <p><code>boolean</code></p>
@@ -1108,19 +1116,12 @@ is reached, irrespective of whether a <code>width</code> is reached or the avail
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getSingleContainerFullSize singleContainerFullSize.</p>
-<p>If the <code>Form</code> contains only one single <code>FormContainer</code> and this property is set, the <code>FormContainer</code>
-is displayed using the full size of the <code>Form</code>. In this case the properties <code>columnsL</code> and <code>columnsM</code>
-are ignored.</p>
-<p>In all other cases the <code>FormContainer</code> is displayed in the size of one column.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
 <p><strong>setTitle</strong>(<code>vTitle</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getTitle title.</p>
 <h4>Parameters</h4>
 <h5>vTitle</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Title/classes/Title.html"><code>Title</code></a></p>
@@ -1130,12 +1131,12 @@ are ignored.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets the aggregated #getTitle title.</p>
 <hr>
 <h3>setToolbar()</h3>
 <blockquote>
 <p><strong>setToolbar</strong>(<code>oToolbar</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getToolbar toolbar.</p>
 <h4>Parameters</h4>
 <h5>oToolbar</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
@@ -1145,12 +1146,14 @@ are ignored.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Sets the aggregated #getToolbar toolbar.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWidth width.</p>
+<p>Width of the form.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sWidth?</h5>
 <p><code>string</code></p>
@@ -1160,9 +1163,6 @@ are ignored.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getWidth width.</p>
-<p>Width of the form.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1203,6 +1203,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

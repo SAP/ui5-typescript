@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: FileUpload~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: FileUpload~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: FileUpload~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/FileUpload/classes/FileUpload.html">
 <meta property="og:title" content="~~Class: FileUpload~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: FileUpload~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: FileUpload~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/FileUpload/classes/FileUpload.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ca.ui/README.html">sap.ca.ui</a> › sap › ca › ui › <a href="../../../../../../sap.ca.ui/sap/ca/ui/FileUpload/README.html">FileUpload</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/FileUpload</a> / FileUpload</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/FileUpload</a> / FileUpload</p>
 <h1><del>Class: FileUpload</del></h1>
 <pre class="sig"><span class="kw">import</span> FileUpload <span class="kw">from</span> <span class="str">"sap/ca/ui/FileUpload"</span>;</pre>
+<p>Allows you to display a list of uploaded files. You can also upload a new one, rename or delete them</p>
 <h2>Deprecated</h2>
 <p>(since 1.26) - This control is available in sap.m in 1.26, as sap.m.UploadCollection. Please
 use UploadCollection, as sap.ca.ui.FileUpload will not be supported anymore from 1.26.</p>
-<p>Allows you to display a list of uploaded files. You can also upload a new one, rename or delete them</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -136,6 +136,10 @@ implementation requires it.</p>
 <blockquote>
 <p><strong>attachCancelClicked</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:cancelClicked cancelClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ca.ui.FileUpload</code> itself.</p>
+<p>Fired when the cancel button is clicked. The consumer may handle the event if required.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -152,14 +156,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.21.1) - This method is deprecated now</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:cancelClicked cancelClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ca.ui.FileUpload</code> itself.</p>
-<p>Fired when the cancel button is clicked. The consumer may handle the event if required.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachCancelClicked</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:cancelClicked cancelClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ca.ui.FileUpload</code> itself.</p>
+<p>Fired when the cancel button is clicked. The consumer may handle the event if required.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -172,10 +176,6 @@ otherwise it will be bound to this <code>sap.ca.ui.FileUpload</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.21.1) - This method is deprecated now</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:cancelClicked cancelClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ca.ui.FileUpload</code> itself.</p>
-<p>Fired when the cancel button is clicked. The consumer may handle the event if required.</p>
 <hr>
 <h3><del>attachDeleteFile()</del></h3>
 <h4>Call Signature</h4>
@@ -316,6 +316,11 @@ data and also a property, newFilename, that contains the new filename.</p>
 <blockquote>
 <p><strong>attachSaveClicked</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:saveClicked saveClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ca.ui.FileUpload</code> itself.</p>
+<p>Fired when the save button is clicked. The consumer should handle the event and save all the file renames
+to backend.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -333,15 +338,15 @@ object when firing the event</p>
 <h5>Deprecated</h5>
 <p>(since 1.21.1) - This method is deprecated now. The rename or delete event is enough and
 should be use to commit the action immediatly</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSaveClicked</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:saveClicked saveClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ca.ui.FileUpload</code> itself.</p>
 <p>Fired when the save button is clicked. The consumer should handle the event and save all the file renames
 to backend.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSaveClicked</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -355,11 +360,6 @@ to backend.</p>
 <h5>Deprecated</h5>
 <p>(since 1.21.1) - This method is deprecated now. The rename or delete event is enough and
 should be use to commit the action immediatly</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:saveClicked saveClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ca.ui.FileUpload</code> itself.</p>
-<p>Fired when the save button is clicked. The consumer should handle the event and save all the file renames
-to backend.</p>
 <hr>
 <h3><del>attachUploadFile()</del></h3>
 <h4>Call Signature</h4>
@@ -411,12 +411,12 @@ json structure and pass it back to the control using commitUploadFile method.</p
 <blockquote>
 <p><strong>destroyAttachmentNumberLabel</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the attachmentNumberLabel in the aggregation #getAttachmentNumberLabel attachmentNumberLabel.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.21.0) - This aggregation is deprecatd now. The label is part of the ToolBar</p>
-<p>Destroys the attachmentNumberLabel in the aggregation #getAttachmentNumberLabel attachmentNumberLabel.</p>
 <hr>
 <h3><del>destroyToolBar()</del></h3>
 <blockquote>
@@ -458,6 +458,9 @@ this <code>sap.ca.ui.FileUpload</code>.</p>
 <blockquote>
 <p><strong>detachCancelClicked</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:cancelClicked cancelClicked event of this
+<code>sap.ca.ui.FileUpload</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -470,9 +473,6 @@ this <code>sap.ca.ui.FileUpload</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.21.1) - This method is deprecated now</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:cancelClicked cancelClicked event of this
-<code>sap.ca.ui.FileUpload</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachDeleteFile()</del></h3>
 <blockquote>
@@ -530,6 +530,8 @@ this <code>sap.ca.ui.FileUpload</code>.</p>
 <blockquote>
 <p><strong>detachSaveClicked</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:saveClicked saveClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -543,8 +545,6 @@ this <code>sap.ca.ui.FileUpload</code>.</p>
 <h4>Deprecated</h4>
 <p>(since 1.21.1) - This method is deprecated now. The rename or delete event is enough and
 should be use to commit the action immediatly</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:saveClicked saveClicked event of this <code>sap.ca.ui.FileUpload</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachUploadFile()</del></h3>
 <blockquote>
@@ -567,6 +567,7 @@ should be use to commit the action immediatly</p>
 <blockquote>
 <p><strong>fireBeforeUploadFile</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeUploadFile beforeUploadFile to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -576,12 +577,12 @@ should be use to commit the action immediatly</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeUploadFile beforeUploadFile to attached listeners.</p>
 <hr>
 <h3><del>fireCancelClicked()</del></h3>
 <blockquote>
 <p><strong>fireCancelClicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:cancelClicked cancelClicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -593,12 +594,12 @@ should be use to commit the action immediatly</p>
 <p>(since 1.21.1) - This method is deprecated now</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:cancelClicked cancelClicked to attached listeners.</p>
 <hr>
 <h3><del>fireDeleteFile()</del></h3>
 <blockquote>
 <p><strong>fireDeleteFile</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:deleteFile deleteFile to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -608,12 +609,12 @@ should be use to commit the action immediatly</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:deleteFile deleteFile to attached listeners.</p>
 <hr>
 <h3><del>fireFileUploadFailed()</del></h3>
 <blockquote>
 <p><strong>fireFileUploadFailed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:fileUploadFailed fileUploadFailed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -623,12 +624,12 @@ should be use to commit the action immediatly</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:fileUploadFailed fileUploadFailed to attached listeners.</p>
 <hr>
 <h3><del>fireRenameFile()</del></h3>
 <blockquote>
 <p><strong>fireRenameFile</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:renameFile renameFile to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -638,12 +639,12 @@ should be use to commit the action immediatly</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:renameFile renameFile to attached listeners.</p>
 <hr>
 <h3><del>fireSaveClicked()</del></h3>
 <blockquote>
 <p><strong>fireSaveClicked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:saveClicked saveClicked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -656,12 +657,12 @@ should be use to commit the action immediatly</p>
 should be use to commit the action immediatly</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:saveClicked saveClicked to attached listeners.</p>
 <hr>
 <h3><del>fireUploadFile()</del></h3>
 <blockquote>
 <p><strong>fireUploadFile</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:uploadFile uploadFile to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -671,7 +672,6 @@ should be use to commit the action immediatly</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:uploadFile uploadFile to attached listeners.</p>
 <hr>
 <h3><del>getAcceptRequestHeader()</del></h3>
 <blockquote>
@@ -708,15 +708,15 @@ should be use to commit the action immediatly</p>
 <blockquote>
 <p><strong>getEditMode</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getEditMode editMode.</p>
+<p>Property to allow toggling between edit and view screens.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>editMode</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.21.0) - This method is deprecatd now. If you want to prevent edit you can use useEditControls
 property or the deleteEnabled, renameEnabed and uploadEnabled properties</p>
-<p>Gets current value of property #getEditMode editMode.</p>
-<p>Property to allow toggling between edit and view screens.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getEncodeUrl()</del></h3>
 <blockquote>
@@ -827,14 +827,14 @@ or mimeType may be used, but mimeType is preferable.</p>
 <blockquote>
 <p><strong>getShowAttachmentsLabelInEditMode</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowAttachmentsLabelInEditMode showAttachmentsLabelInEditMode.</p>
+<p>Show the Attachments label in edit mode</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showAttachmentsLabelInEditMode</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.21.0) - This method is deprecated now. Use the showAttachmentsLabel instead</p>
-<p>Gets current value of property #getShowAttachmentsLabelInEditMode showAttachmentsLabelInEditMode.</p>
-<p>Show the Attachments label in edit mode</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getShowNoData()</del></h3>
 <blockquote>
@@ -968,6 +968,7 @@ not use a security token.</p>
 <blockquote>
 <p><strong>setAttachmentNumberLabel</strong>(<code>oAttachmentNumberLabel</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getAttachmentNumberLabel attachmentNumberLabel.</p>
 <h4>Parameters</h4>
 <h5>oAttachmentNumberLabel</h5>
 <p><a href="../../../../../../sap.m/sap/m/Label/classes/Label.html"><code>Label</code></a></p>
@@ -977,7 +978,6 @@ not use a security token.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.21.0) - This aggregation is deprecatd now. The label is part of the ToolBar</p>
-<p>Sets the aggregated #getAttachmentNumberLabel attachmentNumberLabel.</p>
 <hr>
 <h3><del>setEncodeUrl()</del></h3>
 <blockquote>
@@ -1169,6 +1169,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

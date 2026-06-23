@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $BaseShapeSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $BaseShapeSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $BaseShapeSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/BaseShape/interfaces/$BaseShapeSettings.html">
 <meta property="og:title" content="Interface: $BaseShapeSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $BaseShapeSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $BaseShapeSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/BaseShape/interfaces/$BaseShapeSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/BaseShape/README.html">BaseShape</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/BaseShape</a> / $BaseShapeSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/BaseShape</a> / $BaseShapeSettings</p>
 <h1>Interface: $BaseShapeSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $BaseShapeSettings } <span class="kw">from</span> <span class="str">"sap/gantt/simple/BaseShape"</span>;</pre>
+<p>Describes the settings that can be provided to the BaseShape constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -68,8 +69,6 @@ set to BaseChevron, BaseRectangle, BaseCursor BaseDiamond, BaseText, BaseTriangl
 <blockquote>
 <p><code>optional</code> <strong>animationSettings?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.88</p>
 <p><code>animationSettings</code> - A JSON object used to apply animation to the color of the specified shape.</p>
 <pre><code> - `&quot;values&quot;: null` - A list of values defining the sequence of colors appearing during animation.
  - `&quot;duration&quot;: &quot;1s&quot;` - Denotes the duration of the animation. The value must be greater than 0, and
@@ -87,6 +86,8 @@ Refer to an example below:
 	  &quot;repeatCount&quot;: &quot;indefinite&quot;
 }
 </code></pre>
+<h4>Since</h4>
+<p>1.88</p>
 <hr>
 <h3>connectable?</h3>
 <blockquote>
@@ -114,18 +115,18 @@ well.</p>
 <blockquote>
 <p><code>optional</code> <strong>dragHighlightRows?</strong>: <code>string</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.108</p>
 <p>Comma-separated value of row IDs for the rows that are highlighted when the shape is being dragged. The
 highlighted rows are the ones where the shape drop is allowed.</p>
+<h4>Since</h4>
+<p>1.108</p>
 <hr>
 <h3>enableChainSelection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableChainSelection?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Enables selection of all shapes that are part of a shape chain in a Gantt chart</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Enables selection of all shapes that are part of a shape chain in a Gantt chart</p>
 <hr>
 <h3>endTime?</h3>
 <blockquote>
@@ -167,49 +168,49 @@ to its element</p>
 <blockquote>
 <p><code>optional</code> <strong>fontFamily?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>This property indicates the font family that gets used to render the text in the shape.</p>
 <h4>Since</h4>
 <p>1.94</p>
-<p>This property indicates the font family that gets used to render the text in the shape.</p>
 <hr>
 <h3>fontSize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fontSize?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>The fontSize property refers to the size of the font</p>
 <h4>Since</h4>
 <p>1.100</p>
-<p>The fontSize property refers to the size of the font</p>
 <hr>
 <h3>fontWeight?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fontWeight?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>The fontWeight property refers to the font weight that gets used to render the text in the shape.</p>
 <h4>Since</h4>
 <p>1.100</p>
-<p>The fontWeight property refers to the font weight that gets used to render the text in the shape.</p>
 <hr>
 <h3>highlightable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>highlightable?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Whether the shape is highlightable</p>
 <h4>Since</h4>
 <p>1.100</p>
-<p>Whether the shape is highlightable</p>
 <hr>
 <h3>highlighted?</h3>
 <blockquote>
 <p><code>optional</code> <strong>highlighted?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Whether the shape is highlighted</p>
 <h4>Since</h4>
 <p>1.100</p>
-<p>Whether the shape is highlighted</p>
 <hr>
 <h3>horizontalTextAlignment?</h3>
 <blockquote>
 <p><code>optional</code> <strong>horizontalTextAlignment?</strong>: <code>&quot;End&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Start&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../library/namespaces/simple/enumerations/horizontalTextAlignment.html"><code>horizontalTextAlignment</code></a> | <code>&quot;Dynamic&quot;</code></p>
 </blockquote>
+<p>Horizontal alignment for the title of the Shape.</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Horizontal alignment for the title of the Shape.</p>
 <hr>
 <h3>hoverable?</h3>
 <blockquote>
@@ -257,10 +258,10 @@ in <code>sap.gantt.simple.ShapeScheme</code></p>
 <blockquote>
 <p><code>optional</code> <strong>selectableInChainSelection?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.86</p>
 <p>Enables selection of a shape when it is part of the shape chain. By default, this property is set as
 True.</p>
+<h4>Since</h4>
+<p>1.86</p>
 <hr>
 <h3>selected?</h3>
 <blockquote>
@@ -272,19 +273,19 @@ True.</p>
 <blockquote>
 <p><code>optional</code> <strong>selectedFill?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.99</p>
 <p>The selectedFill property defines the color (or any SVG paint servers like gradients or patterns) of
 the shape when it is selected.</p>
+<h4>Since</h4>
+<p>1.99</p>
 <hr>
 <h3>selectedTitleColor?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectedTitleColor?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.99</p>
 <p>The selectedTitleColor property defines the color (or any SVG paint servers like gradients or patterns)
 of the shape&#39;s title when it is selected.</p>
+<h4>Since</h4>
+<p>1.99</p>
 <hr>
 <h3>shapeId?</h3>
 <blockquote>
@@ -297,9 +298,9 @@ shall be bound to a property during initialization, it requires an unique non-em
 <blockquote>
 <p><code>optional</code> <strong>showAnimation?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Flag to show or hide animation of an active shape.</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Flag to show or hide animation of an active shape.</p>
 <hr>
 <h3>showTitle?</h3>
 <blockquote>
@@ -352,18 +353,18 @@ the shape is not visible.</p>
 <blockquote>
 <p><code>optional</code> <strong>titleColor?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.90</p>
 <p>The titleColor property defines the color (or any SVG paint servers like gradients or patterns) of the
 shape title;</p>
+<h4>Since</h4>
+<p>1.90</p>
 <hr>
 <h3>titleSpacing?</h3>
 <blockquote>
 <p><code>optional</code> <strong>titleSpacing?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>The titleSpacing property defines the space between the start of the shape and the shape title in pixels</p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>The titleSpacing property defines the space between the start of the shape and the shape title in pixels</p>
 <hr>
 <h3>transform?</h3>
 <blockquote>
@@ -378,9 +379,9 @@ update xBias and yBias if translate the corresponding axis is matched.</p>
 <blockquote>
 <p><code>optional</code> <strong>verticalTextAlignment?</strong>: <code>&quot;Center&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <a href="../../../library/namespaces/simple/enumerations/verticalTextAlignment.html"><code>verticalTextAlignment</code></a></p>
 </blockquote>
+<p>Vertical alignment for the title of the Shape.</p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>Vertical alignment for the title of the Shape.</p>
 <hr>
 <h3>visible?</h3>
 <blockquote>
@@ -402,6 +403,6 @@ the right in pixel unit. If the value is negative, the logic is inverted.</p>
 <p>Y offset in pixel. If the value is positive, in non-RTL mode, it means translate the visual object to
 the bottom in pixel unit. If the value is negative, the logic is inverted.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

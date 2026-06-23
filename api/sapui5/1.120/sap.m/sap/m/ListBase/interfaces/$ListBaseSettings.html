@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ListBaseSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ListBaseSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ListBaseSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ListBase/interfaces/$ListBaseSettings.html">
 <meta property="og:title" content="Interface: $ListBaseSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ListBaseSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ListBaseSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ListBase/interfaces/$ListBaseSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ListBase/README.html">ListBase</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ListBase</a> / $ListBaseSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ListBase</a> / $ListBaseSettings</p>
 <h1>Interface: $ListBaseSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ListBaseSettings } <span class="kw">from</span> <span class="str">"sap/m/ListBase"</span>;</pre>
+<p>Describes the settings that can be provided to the ListBase constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -55,14 +56,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <hr>
 <h3>beforeOpenContextMenu?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeOpenContextMenu?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the context menu is opened. When the context menu is opened, the binding context of the item
+is set to the given <code>contextMenu</code>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ListBase$BeforeOpenContextMenuEvent.html"><code>ListBase$BeforeOpenContextMenuEvent</code></a></p>
@@ -70,16 +73,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Fired when the context menu is opened. When the context menu is opened, the binding context of the item
-is set to the given <code>contextMenu</code>.</p>
 <hr>
 <h3>contextMenu?</h3>
 <blockquote>
 <p><code>optional</code> <strong>contextMenu?</strong>: <a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
 </blockquote>
+<p>Defines the context menu of the items.</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Defines the context menu of the items.</p>
 <hr>
 <h3>delete?</h3>
 <blockquote>
@@ -96,12 +97,12 @@ is set to the given <code>contextMenu</code>.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableBusyIndicator?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.20.2</p>
 <p>When this property is set to <code>true</code>, the control will automatically display a busy indicator when it
 detects that data is being loaded. This busy indicator blocks the interaction with the items until data
 loading is finished. By default, the busy indicator will be shown after one second. This behavior can
 be customized by setting the <code>busyIndicatorDelay</code> property.</p>
+<h4>Since</h4>
+<p>1.20.2</p>
 <hr>
 <h3>footerText?</h3>
 <blockquote>
@@ -113,26 +114,27 @@ be customized by setting the <code>busyIndicatorDelay</code> property.</p>
 <blockquote>
 <p><code>optional</code> <strong>growing?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.16.0</p>
 <p>If set to <code>true</code>, enables the growing feature of the control to load more items by requesting from the
 model. <strong>Note:</strong>: This feature only works when an <code>items</code> aggregation is bound. Growing must not be used
 together with two-way binding.</p>
+<h4>Since</h4>
+<p>1.16.0</p>
 <hr>
 <h3>growingDirection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>growingDirection?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/ListGrowingDirection.html"><code>ListGrowingDirection</code></a> | <code>&quot;Downwards&quot;</code> | <code>&quot;Upwards&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.40.0</p>
 <p>Defines the direction of the growing feature. If set to <code>Downwards</code> the user has to scroll down to load
 more items or the growing button is displayed at the bottom. If set to <code>Upwards</code> the user has to scroll
 up to load more items or the growing button is displayed at the top.</p>
+<h4>Since</h4>
+<p>1.40.0</p>
 <hr>
 <h3><del>growingFinished?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>growingFinished?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires after the new growing chunk has been fetched from the model and processed by the control.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ListBase$GrowingFinishedEvent.html"><code>ListBase$GrowingFinishedEvent</code></a></p>
@@ -142,23 +144,23 @@ up to load more items or the growing button is displayed at the top.</p>
 <p>1.16</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.3) - Instead, use &quot;updateFinished&quot; event.</p>
-<p>Fires after the new growing chunk has been fetched from the model and processed by the control.</p>
 <hr>
 <h3>growingScrollToLoad?</h3>
 <blockquote>
 <p><code>optional</code> <strong>growingScrollToLoad?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.16.0</p>
 <p>If set to true, the user can scroll down/up to load more items. Otherwise a growing button is displayed
 at the bottom/top of the control. <strong>Note:</strong> This property can only be used if the <code>growing</code> property
 is set to <code>true</code> and only if there is one instance of <code>sap.m.List</code> or <code>sap.m.Table</code> inside the scrollable
 scroll container (e.g <code>sap.m.Page</code>).</p>
+<h4>Since</h4>
+<p>1.16.0</p>
 <hr>
 <h3><del>growingStarted?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>growingStarted?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires before the new growing chunk is requested from the model.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ListBase$GrowingStartedEvent.html"><code>ListBase$GrowingStartedEvent</code></a></p>
@@ -168,48 +170,47 @@ scroll container (e.g <code>sap.m.Page</code>).</p>
 <p>1.16</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.3) - Instead, use <code>updateStarted</code> event with listening <code>changeReason</code>.</p>
-<p>Fires before the new growing chunk is requested from the model.</p>
 <hr>
 <h3>growingThreshold?</h3>
 <blockquote>
 <p><code>optional</code> <strong>growingThreshold?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.16.0</p>
 <p>Defines the number of items to be requested from the model for each grow. This property can only be used
 if the <code>growing</code> property is set to <code>true</code>.</p>
+<h4>Since</h4>
+<p>1.16.0</p>
 <hr>
 <h3>growingTriggerText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>growingTriggerText?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.16.0</p>
 <p>Defines the text displayed on the growing button. The default is a translated text (&quot;More&quot;) coming from
 the message bundle. This property can only be used if the <code>growing</code> property is set to <code>true</code>.</p>
+<h4>Since</h4>
+<p>1.16.0</p>
 <hr>
 <h3><del>headerDesign?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>headerDesign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Standard&quot;</code> | <a href="../../library/enumerations/ListHeaderDesign.html"><code>ListHeaderDesign</code></a> | <code>&quot;Plain&quot;</code></p>
 </blockquote>
+<p>Defines the header style of the control. Possible values are <code>Standard</code> and <code>Plain</code>.</p>
 <h4>Since</h4>
 <p>1.14</p>
 <h4>Deprecated</h4>
 <p>(since 1.16) - No longer has any functionality.</p>
-<p>Defines the header style of the control. Possible values are <code>Standard</code> and <code>Plain</code>.</p>
 <hr>
 <h3>headerLevel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerLevel?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.117.0</p>
 <p>Defines the semantic header level of the header text (see #getHeaderText headerText property}).
 This information is, for example, used by assistive technologies, such as screenreaders, to create a
 hierarchical site map for faster navigation. Depending on this setting, either the ARIA equivalent of
 an HTML h1-h6 element is used or, when using the <code>Auto</code> level, no explicit level information is used.</p>
 <p><strong>Note:</strong> If the <code>headerToolbar</code> aggregation is set, then this property is ignored. If this is the case,
 use, for example, a <code>sap.m.Title</code> control in the toolbar to define a header.</p>
+<h4>Since</h4>
+<p>1.117.0</p>
 <hr>
 <h3>headerText?</h3>
 <blockquote>
@@ -223,10 +224,10 @@ the toolbar to define a header.</p>
 <blockquote>
 <p><code>optional</code> <strong>headerToolbar?</strong>: <a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.16</p>
 <p>The header area can be used as a toolbar to add extra controls for user interactions. <strong>Note:</strong> When
 set, this overwrites the <code>headerText</code> property.</p>
+<h4>Since</h4>
+<p>1.16</p>
 <hr>
 <h3>includeItemInSelection?</h3>
 <blockquote>
@@ -240,9 +241,9 @@ by default.</p>
 <blockquote>
 <p><code>optional</code> <strong>infoToolbar?</strong>: <a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
+<p>A toolbar that is placed below the header to show extra information to the user.</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>A toolbar that is placed below the header to show extra information to the user.</p>
 <hr>
 <h3>inset?</h3>
 <blockquote>
@@ -254,6 +255,7 @@ by default.</p>
 <blockquote>
 <p><code>optional</code> <strong>itemPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires when an item is pressed unless the item&#39;s <code>type</code> property is <code>Inactive</code>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ListBase$ItemPressEvent.html"><code>ListBase$ItemPressEvent</code></a></p>
@@ -261,7 +263,6 @@ by default.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.20</p>
-<p>Fires when an item is pressed unless the item&#39;s <code>type</code> property is <code>Inactive</code>.</p>
 <hr>
 <h3>items?</h3>
 <blockquote>
@@ -273,9 +274,9 @@ by default.</p>
 <blockquote>
 <p><code>optional</code> <strong>keyboardMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Navigation&quot;</code> | <a href="../../library/enumerations/ListKeyboardMode.html"><code>ListKeyboardMode</code></a> | <code>&quot;Edit&quot;</code></p>
 </blockquote>
+<p>Defines keyboard handling behavior of the control.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Defines keyboard handling behavior of the control.</p>
 <hr>
 <h3>mode?</h3>
 <blockquote>
@@ -293,8 +294,6 @@ by default.</p>
 <blockquote>
 <p><code>optional</code> <strong>multiSelectMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/MultiSelectMode.html"><code>MultiSelectMode</code></a> | <code>&quot;ClearAll&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;SelectAll&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.93</p>
 <p>Defines the multi-selection mode for the control.</p>
 <p>If the property is set to <code>ClearAll</code>, then selecting items via the keyboard shortcut CTRL + A
 and via the <code>selectAll</code> method is not possible. See #selectAll selectAll for more details. A
@@ -304,16 +303,18 @@ about the range selection, see <a href="https://ui5.sap.com/#/topic/8a0d4efa29d4
 column header, otherwise a Select All checkbox is shown. The Select All checkbox allows the user to select
 all the items in the control, and the Deselect All icon deselects the items.</p>
 <p><strong>Note:</strong> This property must be used with the <code>MultiSelect</code> mode.</p>
+<h4>Since</h4>
+<p>1.93</p>
 <hr>
 <h3>noData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noData?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.101</p>
 <p>Defines the custom visualization if there is no data available. <strong>Note:</strong> If both a <code>noDataText</code> property
 and a <code>noData</code> aggregation are provided, the <code>noData</code> aggregation takes priority. If the <code>noData</code> aggregation
 is undefined or set to null, the <code>noDataText</code> property is used instead.</p>
+<h4>Since</h4>
+<p>1.101</p>
 <hr>
 <h3>noDataText?</h3>
 <blockquote>
@@ -327,8 +328,6 @@ is undefined or set to null, the <code>noDataText</code> property is used instea
 <blockquote>
 <p><code>optional</code> <strong>rememberSelections?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.16.6</p>
 <p>If set to true, this control remembers and retains the selection of the items after a binding update
 has been performed (e.g. sorting, filtering). <strong>Note:</strong> This feature works only if two-way data binding
 for the <code>selected</code> property of the item is not used. It also needs to be turned off if the binding context
@@ -338,11 +337,15 @@ corresponding binding context when the OData V4 model is used. Therefore, all bi
 apply in this context as well. For more details, see the sap.ui.model.odata.v4.Context#setSelected setSelected,
 the sap.ui.model.odata.v4.ODataModel#bindList bindList, and the sap.ui.model.odata.v4.ODataMetaModel#requestValueListInfo requestValueListInfo
 API documentation. Do not enable this feature when <code>$$SharedRequests</code> is active.</p>
+<h4>Since</h4>
+<p>1.16.6</p>
 <hr>
 <h3><del>select?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>select?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires when selection is changed via user interaction. In <code>MultiSelect</code> mode, this event is also fired
+on deselection.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ListBase$SelectEvent.html"><code>ListBase$SelectEvent</code></a></p>
@@ -350,13 +353,12 @@ API documentation. Do not enable this feature when <code>$$SharedRequests</code>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.16) - Use the <code>selectionChange</code> event instead.</p>
-<p>Fires when selection is changed via user interaction. In <code>MultiSelect</code> mode, this event is also fired
-on deselection.</p>
 <hr>
 <h3>selectionChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires when selection is changed via user interaction inside the control.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ListBase$SelectionChangeEvent.html"><code>ListBase$SelectionChangeEvent</code></a></p>
@@ -364,7 +366,6 @@ on deselection.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Fires when selection is changed via user interaction inside the control.</p>
 <hr>
 <h3>showNoData?</h3>
 <blockquote>
@@ -388,8 +389,6 @@ on deselection.</p>
 <blockquote>
 <p><code>optional</code> <strong>sticky?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | (<a href="../../library/enumerations/Sticky.html"><code>Sticky</code></a> | <code>&quot;ColumnHeaders&quot;</code> | <code>&quot;HeaderToolbar&quot;</code> | <code>&quot;InfoToolbar&quot;</code>)[]</p>
 </blockquote>
-<h4>Since</h4>
-<p>1.58</p>
 <p>Defines the section of the control that remains fixed at the top of the page during vertical scrolling
 as long as the control is in the viewport.</p>
 <p><strong>Note:</strong> Enabling sticky column headers in List controls will not have any effect.</p>
@@ -402,6 +401,8 @@ as long as the control is in the viewport.</p>
 	 - A transparent toolbar design is not supported for sticky bars. The toolbar will automatically get
     an intransparent background color.
 	 - This feature supports only the default height of the toolbar control.</p>
+<h4>Since</h4>
+<p>1.58</p>
 <hr>
 <h3>swipe?</h3>
 <blockquote>
@@ -438,6 +439,7 @@ defined in the <code>swipeContent</code> aggregation.</p>
 <blockquote>
 <p><code>optional</code> <strong>updateFinished?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires after <code>items</code> binding is updated and processed by the control.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ListBase$UpdateFinishedEvent.html"><code>ListBase$UpdateFinishedEvent</code></a></p>
@@ -445,12 +447,13 @@ defined in the <code>swipeContent</code> aggregation.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Fires after <code>items</code> binding is updated and processed by the control.</p>
 <hr>
 <h3>updateStarted?</h3>
 <blockquote>
 <p><code>optional</code> <strong>updateStarted?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires before <code>items</code> binding is updated (e.g. sorting, filtering)</p>
+<p><strong>Note:</strong> Event handler should not invalidate the control.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ListBase$UpdateStartedEvent.html"><code>ListBase$UpdateStartedEvent</code></a></p>
@@ -458,8 +461,6 @@ defined in the <code>swipeContent</code> aggregation.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Fires before <code>items</code> binding is updated (e.g. sorting, filtering)</p>
-<p><strong>Note:</strong> Event handler should not invalidate the control.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -467,6 +468,6 @@ defined in the <code>swipeContent</code> aggregation.</p>
 </blockquote>
 <p>Sets the width of the control.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Chart~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Chart~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: Chart~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.makit/sap/makit/Chart/classes/Chart.html">
 <meta property="og:title" content="~~Class: Chart~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Chart~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: Chart~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.makit/sap/makit/Chart/classes/Chart.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.makit/README.html">sap.makit</a> › sap › makit › <a href="../../../../../sap.makit/sap/makit/Chart/README.html">Chart</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.makit</a> / <a href="../README.html">sap/makit/Chart</a> / Chart</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.makit</a> / <a href="../README.html">sap/makit/Chart</a> / Chart</p>
 <h1><del>Class: Chart</del></h1>
 <pre class="sig"><span class="kw">import</span> Chart <span class="kw">from</span> <span class="str">"sap/makit/Chart"</span>;</pre>
+<p>The Chart control.</p>
 <h2>Since</h2>
 <p>1.8</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and VizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>The Chart control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -89,6 +89,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addColumn</strong>(<code>oColumn</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some column to the aggregation #getColumns columns.</p>
 <h4>Parameters</h4>
 <h5>oColumn</h5>
 <p><a href="../../Column/classes/Column.html"><code>Column</code></a></p>
@@ -99,7 +100,6 @@ of the syntax of the settings object.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Adds some column to the aggregation #getColumns columns.</p>
 <hr>
 <h3><del>attachDoubletap()</del></h3>
 <h4>Call Signature</h4>
@@ -231,6 +231,9 @@ otherwise it will be bound to this <code>sap.makit.Chart</code> itself.</p>
 <blockquote>
 <p><strong>bindColumns</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getColumns columns to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -241,14 +244,14 @@ otherwise it will be bound to this <code>sap.makit.Chart</code> itself.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Binds aggregation #getColumns columns to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3><del>bindRows()</del></h3>
 <blockquote>
 <p><strong>bindRows</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getRows rows to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -259,93 +262,90 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Binds aggregation #getRows rows to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3><del>destroyCategoryAxis()</del></h3>
 <blockquote>
 <p><strong>destroyCategoryAxis</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the categoryAxis in the aggregation #getCategoryAxis categoryAxis.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Destroys the categoryAxis in the aggregation #getCategoryAxis categoryAxis.</p>
 <hr>
 <h3><del>destroyCategoryRegions()</del></h3>
 <blockquote>
 <p><strong>destroyCategoryRegions</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the categoryRegions in the aggregation #getCategoryRegions categoryRegions.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Destroys all the categoryRegions in the aggregation #getCategoryRegions categoryRegions.</p>
 <hr>
 <h3><del>destroyColumns()</del></h3>
 <blockquote>
 <p><strong>destroyColumns</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the columns in the aggregation #getColumns columns.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Destroys all the columns in the aggregation #getColumns columns.</p>
 <hr>
 <h3><del>destroySeries()</del></h3>
 <blockquote>
 <p><strong>destroySeries</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the series in the aggregation #getSeries series.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Destroys the series in the aggregation #getSeries series.</p>
 <hr>
 <h3><del>destroyValueAxis()</del></h3>
 <blockquote>
 <p><strong>destroyValueAxis</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the valueAxis in the aggregation #getValueAxis valueAxis.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Destroys the valueAxis in the aggregation #getValueAxis valueAxis.</p>
 <hr>
 <h3><del>destroyValueBubble()</del></h3>
 <blockquote>
 <p><strong>destroyValueBubble</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the valueBubble in the aggregation #getValueBubble valueBubble.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Destroys the valueBubble in the aggregation #getValueBubble valueBubble.</p>
 <hr>
 <h3><del>destroyValues()</del></h3>
 <blockquote>
 <p><strong>destroyValues</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the values in the aggregation #getValues values.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Destroys all the values in the aggregation #getValues values.</p>
 <hr>
 <h3><del>detachDoubletap()</del></h3>
 <blockquote>
@@ -402,6 +402,7 @@ will not be supported anymore from 1.38.</p>
 <blockquote>
 <p><strong>fireDoubletap</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:doubletap doubletap to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -411,12 +412,12 @@ will not be supported anymore from 1.38.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:doubletap doubletap to attached listeners.</p>
 <hr>
 <h3><del>fireLongpress()</del></h3>
 <blockquote>
 <p><strong>fireLongpress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:longpress longpress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -426,12 +427,12 @@ will not be supported anymore from 1.38.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:longpress longpress to attached listeners.</p>
 <hr>
 <h3><del>fireTap()</del></h3>
 <blockquote>
 <p><strong>fireTap</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:tap tap to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -441,43 +442,42 @@ will not be supported anymore from 1.38.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:tap tap to attached listeners.</p>
 <hr>
 <h3><del>getCategoryAxis()</del></h3>
 <blockquote>
 <p><strong>getCategoryAxis</strong>(): <a href="../../CategoryAxis/classes/CategoryAxis.html"><code>CategoryAxis</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getCategoryAxis categoryAxis.</p>
+<p>Category Axis property of the Chart. Accepts only an instance of CategoryAxis element.</p>
 <h4>Returns</h4>
 <p><a href="../../CategoryAxis/classes/CategoryAxis.html"><code>CategoryAxis</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Gets content of aggregation #getCategoryAxis categoryAxis.</p>
-<p>Category Axis property of the Chart. Accepts only an instance of CategoryAxis element.</p>
 <hr>
 <h3><del>getCategoryRegions()</del></h3>
 <blockquote>
 <p><strong>getCategoryRegions</strong>(): <a href="../../Category/classes/Category.html"><code>Category</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getCategoryRegions categoryRegions.</p>
+<p>Data region property of the chart&#39;s Categories</p>
 <h4>Returns</h4>
 <p><a href="../../Category/classes/Category.html"><code>Category</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Gets content of aggregation #getCategoryRegions categoryRegions.</p>
-<p>Data region property of the chart&#39;s Categories</p>
 <hr>
 <h3><del>getColumns()</del></h3>
 <blockquote>
 <p><strong>getColumns</strong>(): <a href="../../Column/classes/Column.html"><code>Column</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getColumns columns.</p>
+<p>The data column map of the chart.</p>
 <h4>Returns</h4>
 <p><a href="../../Column/classes/Column.html"><code>Column</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Gets content of aggregation #getColumns columns.</p>
-<p>The data column map of the chart.</p>
 <hr>
 <h3><del>getHeight()</del></h3>
 <blockquote>
@@ -572,13 +572,13 @@ format or hex format. e.g. 0xff0000 &quot;red&quot; &quot;rgb(255,0,0)&quot;</p>
 <blockquote>
 <p><strong>getRows</strong>(): <a href="../../Row/classes/Row.html"><code>Row</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getRows rows.</p>
+<p>The data rows of the chart. User should bind these to their data source</p>
 <h4>Returns</h4>
 <p><a href="../../Row/classes/Row.html"><code>Row</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Gets content of aggregation #getRows rows.</p>
-<p>The data rows of the chart. User should bind these to their data source</p>
 <hr>
 <h3><del>getSelectedCategory()</del></h3>
 <blockquote>
@@ -608,13 +608,13 @@ will not be supported anymore from 1.38.</p>
 <blockquote>
 <p><strong>getSeries</strong>(): <a href="../../Series/classes/Series.html"><code>Series</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getSeries series.</p>
+<p>Data region property of the chart&#39;s Series</p>
 <h4>Returns</h4>
 <p><a href="../../Series/classes/Series.html"><code>Series</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Gets content of aggregation #getSeries series.</p>
-<p>Data region property of the chart&#39;s Series</p>
 <hr>
 <h3><del>getShowRangeSelector()</del></h3>
 <blockquote>
@@ -676,37 +676,37 @@ chart.</p>
 <blockquote>
 <p><strong>getValueAxis</strong>(): <a href="../../ValueAxis/classes/ValueAxis.html"><code>ValueAxis</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getValueAxis valueAxis.</p>
+<p>Value Axis property of the Chart. Accept only an instance of ValueAxis element.</p>
 <h4>Returns</h4>
 <p><a href="../../ValueAxis/classes/ValueAxis.html"><code>ValueAxis</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Gets content of aggregation #getValueAxis valueAxis.</p>
-<p>Value Axis property of the Chart. Accept only an instance of ValueAxis element.</p>
 <hr>
 <h3><del>getValueBubble()</del></h3>
 <blockquote>
 <p><strong>getValueBubble</strong>(): <a href="../../ValueBubble/classes/ValueBubble.html"><code>ValueBubble</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getValueBubble valueBubble.</p>
+<p>Value Bubble property of the Chart. Accept only an instance of ValueBubble element.</p>
 <h4>Returns</h4>
 <p><a href="../../ValueBubble/classes/ValueBubble.html"><code>ValueBubble</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Gets content of aggregation #getValueBubble valueBubble.</p>
-<p>Value Bubble property of the Chart. Accept only an instance of ValueBubble element.</p>
 <hr>
 <h3><del>getValues()</del></h3>
 <blockquote>
 <p><strong>getValues</strong>(): <a href="../../Value/classes/Value.html"><code>Value</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getValues values.</p>
+<p>Data region property of the chart&#39;s Values</p>
 <h4>Returns</h4>
 <p><a href="../../Value/classes/Value.html"><code>Value</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Gets content of aggregation #getValues values.</p>
-<p>Data region property of the chart&#39;s Values</p>
 <hr>
 <h3><del>getWidth()</del></h3>
 <blockquote>
@@ -723,6 +723,8 @@ will not be supported anymore from 1.38.</p>
 <blockquote>
 <p><strong>indexOfCategoryRegion</strong>(<code>oCategoryRegion</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.makit.Category</code> in the aggregation #getCategoryRegions categoryRegions.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oCategoryRegion</h5>
 <p><a href="../../Category/classes/Category.html"><code>Category</code></a></p>
@@ -733,13 +735,13 @@ will not be supported anymore from 1.38.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Checks for the provided <code>sap.makit.Category</code> in the aggregation #getCategoryRegions categoryRegions.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3><del>indexOfColumn()</del></h3>
 <blockquote>
 <p><strong>indexOfColumn</strong>(<code>oColumn</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.makit.Column</code> in the aggregation #getColumns columns. and returns
+its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oColumn</h5>
 <p><a href="../../Column/classes/Column.html"><code>Column</code></a></p>
@@ -750,13 +752,13 @@ and returns its index if found or -1 otherwise.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Checks for the provided <code>sap.makit.Column</code> in the aggregation #getColumns columns. and returns
-its index if found or -1 otherwise.</p>
 <hr>
 <h3><del>indexOfRow()</del></h3>
 <blockquote>
 <p><strong>indexOfRow</strong>(<code>oRow</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.makit.Row</code> in the aggregation #getRows rows. and returns its index
+if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oRow</h5>
 <p><a href="../../Row/classes/Row.html"><code>Row</code></a></p>
@@ -767,13 +769,13 @@ its index if found or -1 otherwise.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Checks for the provided <code>sap.makit.Row</code> in the aggregation #getRows rows. and returns its index
-if found or -1 otherwise.</p>
 <hr>
 <h3><del>indexOfValue()</del></h3>
 <blockquote>
 <p><strong>indexOfValue</strong>(<code>oValue</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.makit.Value</code> in the aggregation #getValues values. and returns its
+index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oValue</h5>
 <p><a href="../../Value/classes/Value.html"><code>Value</code></a></p>
@@ -784,13 +786,12 @@ if found or -1 otherwise.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Checks for the provided <code>sap.makit.Value</code> in the aggregation #getValues values. and returns its
-index if found or -1 otherwise.</p>
 <hr>
 <h3><del>insertColumn()</del></h3>
 <blockquote>
 <p><strong>insertColumn</strong>(<code>oColumn</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a column into the aggregation #getColumns columns.</p>
 <h4>Parameters</h4>
 <h5>oColumn</h5>
 <p><a href="../../Column/classes/Column.html"><code>Column</code></a></p>
@@ -806,25 +807,25 @@ at the last position</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Inserts a column into the aggregation #getColumns columns.</p>
 <hr>
 <h3><del>removeAllColumns()</del></h3>
 <blockquote>
 <p><strong>removeAllColumns</strong>(): <a href="../../Column/classes/Column.html"><code>Column</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getColumns columns.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../Column/classes/Column.html"><code>Column</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Removes all the controls from the aggregation #getColumns columns.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeColumn()</del></h3>
 <blockquote>
 <p><strong>removeColumn</strong>(<code>vColumn</code>): <a href="../../Column/classes/Column.html"><code>Column</code></a></p>
 </blockquote>
+<p>Removes a column from the aggregation #getColumns columns.</p>
 <h4>Parameters</h4>
 <h5>vColumn</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../Column/classes/Column.html"><code>Column</code></a></p>
@@ -835,7 +836,6 @@ will not be supported anymore from 1.38.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Removes a column from the aggregation #getColumns columns.</p>
 <hr>
 <h3><del>setHeight()</del></h3>
 <blockquote>
@@ -1037,25 +1037,25 @@ chart.</p>
 <blockquote>
 <p><strong>unbindColumns</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getColumns columns from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Unbinds aggregation #getColumns columns from model data.</p>
 <hr>
 <h3><del>unbindRows()</del></h3>
 <blockquote>
 <p><strong>unbindRows</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getRows rows from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
 will not be supported anymore from 1.38.</p>
-<p>Unbinds aggregation #getRows rows from model data.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -1096,6 +1096,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

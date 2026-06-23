@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $FilterBarBaseSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FilterBarBaseSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $FilterBarBaseSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/filterbar/FilterBarBase/interfaces/$FilterBarBaseSettings.html">
 <meta property="og:title" content="Interface: $FilterBarBaseSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FilterBarBaseSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $FilterBarBaseSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/filterbar/FilterBarBase/interfaces/$FilterBarBaseSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › filterbar › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/filterbar/FilterBarBase/README.html">FilterBarBase</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/filterbar/FilterBarBase</a> / $FilterBarBaseSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/filterbar/FilterBarBase</a> / $FilterBarBaseSettings</p>
 <h1>Interface: $FilterBarBaseSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FilterBarBaseSettings } <span class="kw">from</span> <span class="str">"sap/ui/mdc/filterbar/FilterBarBase"</span>;</pre>
+<p>Describes the settings that can be provided to the FilterBarBase constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -59,14 +60,14 @@ property.</p>
 <blockquote>
 <p><code>optional</code> <strong>delegate?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.74</p>
 <p>Defines the path to the metadata retrieval class for the <code>FilterBarBase</code> control. It basically identifies
 the sap.ui.mdc.FilterBarDelegate FilterBarDelegate file that provides the required APIs to create
 the content of the sap.ui.mdc.FilterBar FilterBar control.
  <strong>Note:</strong> Ensure that the related file can be requested (any required library has to be loaded before
 that).
  <strong>Note:</strong> This property must not be bound.</p>
+<h4>Since</h4>
+<p>1.74</p>
 <h4>Overrides</h4>
 <p><a href="../../../Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a>.<a href="../../../Control/interfaces/$ControlSettings.html#delegate"><code>delegate</code></a></p>
 <hr>
@@ -74,11 +75,11 @@ that).
 <blockquote>
 <p><code>optional</code> <strong>filterConditions?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.66.0</p>
 <p>Specifies the filter conditions.
  <strong>Note</strong>: This property must not be bound.
  <strong>Note</strong>: This property is used exclusively for SAPUI5 flexibility. Do not use it otherwise.</p>
+<h4>Since</h4>
+<p>1.66.0</p>
 <hr>
 <h3>filterItems?</h3>
 <blockquote>
@@ -104,24 +105,24 @@ effects. Changes of the aggregation have to be made with the sap.ui.mdc.p13n.Sta
 <blockquote>
 <p><code>optional</code> <strong>liveMode?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.74</p>
 <p>Triggers a search automatically after a filter value has been changed.
  <strong>Note:</strong> The <code>liveMode</code> property only operates in non-mobile scenarios.
  Additionally, if the <code>liveMode</code> property is active, the following applies:
  The error message box is not displayed, and the <code>showMessages</code> property is ignored.</p>
+<h4>Since</h4>
+<p>1.74</p>
 <hr>
 <h3>propertyInfo?</h3>
 <blockquote>
 <p><code>optional</code> <strong>propertyInfo?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.97</p>
 <p>Specifies the filter metadata.
  <strong>Note</strong>: This property must not be bound.
  <strong>Note</strong>: This property is used exclusively for SAPUI5 flexibility/ Fiori Elements. Do not use it otherwise.
  <strong>Node</strong>: Please check sap.ui.mdc.filterbar.PropertyInfo for more information about the supported
 inner elements.</p>
+<h4>Since</h4>
+<p>1.97</p>
 <hr>
 <h3>search?</h3>
 <blockquote>
@@ -147,19 +148,19 @@ after the <code>triggerSearch</code> function has been executed.</p>
 <blockquote>
 <p><code>optional</code> <strong>showMessages?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Indicates whether possible errors during the search in a message box are displayed.</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Indicates whether possible errors during the search in a message box are displayed.</p>
 <hr>
 <h3>suspendSelection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>suspendSelection?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.79.0</p>
 <p>If set to <code>true</code>, all search requests are ignored. Once it has been set to <code>false</code>, a search is triggered
 immediately if one or more search requests have been triggered in the meantime but were ignored based
 on the setting.</p>
+<h4>Since</h4>
+<p>1.79.0</p>
 <hr>
 <h3>variantBackreference?</h3>
 <blockquote>
@@ -171,6 +172,6 @@ whenever a variant was applied, with &#39;apply automatically&#39; set to <code>
 must only be assigned once.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

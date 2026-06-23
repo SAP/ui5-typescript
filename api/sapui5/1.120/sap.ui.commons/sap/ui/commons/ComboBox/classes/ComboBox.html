@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ComboBox~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ComboBox~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: ComboBox~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/ComboBox/classes/ComboBox.html">
 <meta property="og:title" content="~~Class: ComboBox~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ComboBox~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: ComboBox~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/ComboBox/classes/ComboBox.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/ComboBox/README.html">ComboBox</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/ComboBox</a> / ComboBox</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/ComboBox</a> / ComboBox</p>
 <h1><del>Class: ComboBox</del></h1>
 <pre class="sig"><span class="kw">import</span> ComboBox <span class="kw">from</span> <span class="str">"sap/ui/commons/ComboBox"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.38) - replaced by sap.m.ComboBox</p>
 <p>The control provides a field that allows end users to either enter some text, or to choose an entry out
 of a list of pre-defined items. The choosable items can be provided in the form of a complete <code>ListBox</code>,
 single <code>ListItems</code>.</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - replaced by sap.m.ComboBox</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../TextField/classes/TextField.html"><code>TextField</code></a></li>
@@ -106,6 +106,8 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_checkChange</strong>(<code>oEvent</code>, <code>bImmediate?</code>): <code>void</code></p>
 </blockquote>
+<p>Compares the previous value with the current value and fires the &quot;Change&quot; event if the ComboBox is editable
+and the value has changed or whether the value has been changed e.g. via up/down or auto-complete feature</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -118,8 +120,6 @@ event processing)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Compares the previous value with the current value and fires the &quot;Change&quot; event if the ComboBox is editable
-and the value has changed or whether the value has been changed e.g. via up/down or auto-complete feature</p>
 <h4>Overrides</h4>
 <p><a href="../../TextField/classes/TextField.html"><code>TextField</code></a>.<a href="../../TextField/classes/TextField.html#_checkchange"><code>_checkChange</code></a></p>
 <hr>
@@ -164,6 +164,10 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mArguments?</code>): <code>this</code></p>
 </blockquote>
+<p>Fire event change to attached listeners.</p>
+<p>Expects following event parameters:
+	 - &#39;newValue&#39; of type <code>string</code> The new / changed value of the textfield.
+	 - &#39;selectedItem&#39; of type <code>sap.ui.core.ListItem</code> selected item</p>
 <h4>Parameters</h4>
 <h5>mArguments?</h5>
 <p><code>object</code></p>
@@ -173,10 +177,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fire event change to attached listeners.</p>
-<p>Expects following event parameters:
-	 - &#39;newValue&#39; of type <code>string</code> The new / changed value of the textfield.
-	 - &#39;selectedItem&#39; of type <code>sap.ui.core.ListItem</code> selected item</p>
 <h4>Overrides</h4>
 <p><a href="../../TextField/classes/TextField.html"><code>TextField</code></a>.<a href="../../TextField/classes/TextField.html#firechange"><code>fireChange</code></a></p>
 <hr>
@@ -184,13 +184,13 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>The accessibility info</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../TextField/classes/TextField.html"><code>TextField</code></a>.<a href="../../TextField/classes/TextField.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -210,12 +210,12 @@ displayed in the list.</p>
 <blockquote>
 <p><strong>getF4ButtonDomRef</strong>(): <code>Element</code></p>
 </blockquote>
+<p>Returns the DOM element which represents the icon for value help. Could be overwritten in child-classes.</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>The F4-element&#39;s DOM reference or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the DOM element which represents the icon for value help. Could be overwritten in child-classes.</p>
 <hr>
 <h3><del>getItems()</del></h3>
 <blockquote>
@@ -306,6 +306,7 @@ the last position</p>
 <blockquote>
 <p><strong>onsapenter</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle sapenter pseudo events on the control</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -314,7 +315,6 @@ the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle sapenter pseudo events on the control</p>
 <h4>Overrides</h4>
 <p><a href="../../TextField/classes/TextField.html"><code>TextField</code></a>.<a href="../../TextField/classes/TextField.html#onsapenter"><code>onsapenter</code></a></p>
 <hr>
@@ -322,6 +322,7 @@ the last position</p>
 <blockquote>
 <p><strong>onsapescape</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle sapescape pseudo events on the control</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -330,12 +331,12 @@ the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle sapescape pseudo events on the control</p>
 <hr>
 <h3><del>onsaphide()</del></h3>
 <blockquote>
 <p><strong>onsaphide</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle saphide pseudo events on the control</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -344,12 +345,13 @@ the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle saphide pseudo events on the control</p>
 <hr>
 <h3><del>onsapnextmodifiers()</del></h3>
 <blockquote>
 <p><strong>onsapnextmodifiers</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle sapnextmodifiers pseudo events on the control if in toolbar prevent item navigation if popup is
+opened.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -358,13 +360,12 @@ the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle sapnextmodifiers pseudo events on the control if in toolbar prevent item navigation if popup is
-opened.</p>
 <hr>
 <h3><del>onsapshow()</del></h3>
 <blockquote>
 <p><strong>onsapshow</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle sapshow pseudo events on the control</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -373,7 +374,6 @@ opened.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle sapshow pseudo events on the control</p>
 <hr>
 <h3><del>removeAllItems()</del></h3>
 <blockquote>
@@ -528,6 +528,6 @@ used by this class</p>
 <p><a href="../../TextField/classes/TextField.html"><code>TextField</code></a>.<a href="../../TextField/classes/TextField.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

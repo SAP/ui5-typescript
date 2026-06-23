@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Card — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Card — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Card — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/Card/classes/Card.html">
 <meta property="og:title" content="Class: Card — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Card — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Card — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/Card/classes/Card.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/Card/README.html">Card</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/Card</a> / Card</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/Card</a> / Card</p>
 <h1>Class: Card</h1>
 <pre class="sig"><span class="kw">import</span> Card <span class="kw">from</span> <span class="str">"sap/f/Card"</span>;</pre>
-<h2>Since</h2>
-<p>1.64</p>
 <p>A control that represents a container with a predefined header and content.</p>
 <p>Overview: The card is a container for grouping and displaying information.</p>
 <p>Structure: You can control the width and height of the card, using properties. The <code>Card</code> has the following
@@ -62,6 +60,8 @@ content: - List - Table - Object information - Charts - Timelines - Images</p>
  - When the card is not part of a card layout. For such cases, use: sap.m.Panel Panel.
  - When you need more header configuration flexibility.
 </code></pre>
+<h2>Since</h2>
+<p>1.64</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../CardBase/classes/CardBase.html"><code>CardBase</code></a></li>
@@ -143,14 +143,14 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getHeaderPosition</strong>(): <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <a href="../../library/namespaces/cards/enumerations/HeaderPosition.html"><code>HeaderPosition</code></a></p>
 </blockquote>
+<p>Gets current value of property #getHeaderPosition headerPosition.</p>
+<p>Defines the position of the Card Header.</p>
+<p>Default value is <code>Top</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <a href="../../library/namespaces/cards/enumerations/HeaderPosition.html"><code>HeaderPosition</code></a></p>
 <p>Value of property <code>headerPosition</code></p>
 <h4>Since</h4>
 <p>1.65</p>
-<p>Gets current value of property #getHeaderPosition headerPosition.</p>
-<p>Defines the position of the Card Header.</p>
-<p>Default value is <code>Top</code>.</p>
 <hr>
 <h3>setContent()</h3>
 <blockquote>
@@ -182,6 +182,10 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>setHeaderPosition</strong>(<code>sHeaderPosition?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHeaderPosition headerPosition.</p>
+<p>Defines the position of the Card Header.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Top</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeaderPosition?</h5>
 <p><code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <a href="../../library/namespaces/cards/enumerations/HeaderPosition.html"><code>HeaderPosition</code></a></p>
@@ -191,10 +195,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.65</p>
-<p>Sets a new value for property #getHeaderPosition headerPosition.</p>
-<p>Defines the position of the Card Header.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Top</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -235,6 +235,6 @@ used by this class</p>
 <p><a href="../../CardBase/classes/CardBase.html"><code>CardBase</code></a>.<a href="../../CardBase/classes/CardBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

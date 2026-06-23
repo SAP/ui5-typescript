@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ObjectPageHeaderSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ObjectPageHeaderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ObjectPageHeaderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/ObjectPageHeader/interfaces/$ObjectPageHeaderSettings.html">
 <meta property="og:title" content="Interface: $ObjectPageHeaderSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ObjectPageHeaderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ObjectPageHeaderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.uxap/sap/uxap/ObjectPageHeader/interfaces/$ObjectPageHeaderSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/ObjectPageHeader/README.html">ObjectPageHeader</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageHeader</a> / $ObjectPageHeaderSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageHeader</a> / $ObjectPageHeaderSettings</p>
 <h1>Interface: $ObjectPageHeaderSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ObjectPageHeaderSettings } <span class="kw">from</span> <span class="str">"sap/uxap/ObjectPageHeader"</span>;</pre>
+<p>Describes the settings that can be provided to the ObjectPageHeader constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -58,27 +59,27 @@ should be used instead.</p>
 <blockquote>
 <p><code>optional</code> <strong>breadcrumbs?</strong>: <a href="../../../../../sap.m/sap/m/Breadcrumbs/classes/Breadcrumbs.html"><code>Breadcrumbs</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.50</p>
 <p>The breadcrumbs displayed in the <code>ObjectPageHeader</code>. If this aggregation is set, the <code>breadCrumbsLinks</code>
 aggregation is omitted.</p>
+<h4>Since</h4>
+<p>1.50</p>
 <hr>
 <h3><del>breadCrumbsLinks?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>breadCrumbsLinks?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a> | <a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a>[]</p>
 </blockquote>
+<p>A list of all the active link elements in the BreadCrumbs control.</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - use the <code>breadcrumbs</code> aggregation instead.</p>
-<p>A list of all the active link elements in the BreadCrumbs control.</p>
 <hr>
 <h3><del>headerDesign?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>headerDesign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Light&quot;</code> | <code>&quot;Dark&quot;</code> | <a href="../../library/enumerations/ObjectPageHeaderDesign.html"><code>ObjectPageHeaderDesign</code></a></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.40.1)</p>
 <p>Determines the design of the header - Light or Dark. **Note: **This property is deprecated. It will continue
 to work in the Blue Crystal theme, but it will not be taken into account for the Belize themes.</p>
+<h4>Deprecated</h4>
+<p>(since 1.40.1)</p>
 <hr>
 <h3>isActionAreaAlwaysVisible?</h3>
 <blockquote>
@@ -108,10 +109,10 @@ to work in the Blue Crystal theme, but it will not be taken into account for the
 <blockquote>
 <p><code>optional</code> <strong>markChanges?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Marks that there are unsaved changes in the objectPageHeader. The markChanges state cannot be used together
 with the markLocked state. If both are set to true, only the locked state will be displayed.</p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>markChangesPress?</h3>
 <blockquote>
@@ -171,9 +172,9 @@ effect.</p>
 <blockquote>
 <p><code>optional</code> <strong>objectImageBackgroundColor?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Transparent&quot;</code> | <a href="../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code></p>
 </blockquote>
+<p>Determines the background color of the image placeholder or icon if valid icon URI is provided.</p>
 <h4>Since</h4>
 <p>1.73</p>
-<p>Determines the background color of the image placeholder or icon if valid icon URI is provided.</p>
 <hr>
 <h3>objectImageDensityAware?</h3>
 <blockquote>
@@ -229,9 +230,9 @@ is invalid.</p>
 <blockquote>
 <p><code>optional</code> <strong>sideContentButton?</strong>: <a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
+<p>A button that is used for opening the side content of the page or some additional content.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>A button that is used for opening the side content of the page or some additional content.</p>
 <hr>
 <h3>titleSelectorPress?</h3>
 <blockquote>
@@ -248,14 +249,14 @@ is invalid.</p>
 <blockquote>
 <p><code>optional</code> <strong>titleSelectorTooltip?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.56</p>
 <p>A custom tooltip for the title selector button.</p>
 <p>The custom tooltip will be visible if the <code>showTitleSelector</code> property is set to <code>true</code>.</p>
 <p><strong>Note:</strong> If the aggregation is destroyed or set to invalid value, the default tooltip will be set. The
 default tooltip text is &quot;Related options&quot;.</p>
+<h4>Since</h4>
+<p>1.56</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

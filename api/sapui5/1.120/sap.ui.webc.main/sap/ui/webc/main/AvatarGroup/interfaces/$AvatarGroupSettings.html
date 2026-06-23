@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $AvatarGroupSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $AvatarGroupSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $AvatarGroupSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $AvatarGroupSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/AvatarGroup/interfaces/$AvatarGroupSettings.html">
-<meta property="og:title" content="Interface: $AvatarGroupSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $AvatarGroupSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $AvatarGroupSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $AvatarGroupSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/AvatarGroup/interfaces/$AvatarGroupSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,20 +33,28 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/AvatarGroup/README.html">AvatarGroup</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/AvatarGroup</a> / $AvatarGroupSettings</p>
-<h1>Interface: $AvatarGroupSettings</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/AvatarGroup</a> / $AvatarGroupSettings</p>
+<h1><del>Interface: $AvatarGroupSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $AvatarGroupSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/AvatarGroup"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the AvatarGroup constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
+Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
+functionality.
+ (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>click?</h3>
+<h3><del>click?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>click?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the component is activated either with a click/tap or by using the Enter or Space key.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -54,19 +62,21 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>items?</h3>
+<h3><del>items?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>items?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/interfaces/IAvatar.html"><code>IAvatar</code></a> | <a href="../../library/interfaces/IAvatar.html"><code>IAvatar</code></a>[]</p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the items of the component. Use the <code>sap.ui.webc.main.Avatar</code> component as an item.</p>
 <p> <strong>Note:</strong> The UX guidelines recommends using avatars with &quot;Circle&quot; shape. Moreover, if you use avatars
 with &quot;Square&quot; shape, there will be visual inconsistency as the built-in overflow action has &quot;Circle&quot;
 shape.</p>
 <hr>
-<h3>overflow?</h3>
+<h3><del>overflow?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>overflow?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the count of visible <code>sap.ui.webc.main.Avatar</code> elements in the component has changed</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -74,24 +84,26 @@ shape.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>overflowButton?</h3>
+<h3><del>overflowButton?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>overflowButton?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the overflow button of the component. <strong>Note:</strong> We recommend using the <code>sap.ui.webc.main.Button</code>
 component.</p>
 <p> <strong>Note:</strong> If this slot is not used, the component will display the built-in overflow button.</p>
 <hr>
-<h3>type?</h3>
+<h3><del>type?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>type?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Group&quot;</code> | <code>&quot;Individual&quot;</code> | <a href="../../library/enumerations/AvatarGroupType.html"><code>AvatarGroupType</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the mode of the <code>AvatarGroup</code>.</p>
 <p> Available options are:
 	 - <code>Group</code>
 	 - <code>Individual</code></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

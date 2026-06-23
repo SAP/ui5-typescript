@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ColumnSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/Column/interfaces/$ColumnSettings.html">
 <meta property="og:title" content="Interface: $ColumnSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/Column/interfaces/$ColumnSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › <a href="../../../../../../sap.ui.table/sap/ui/table/Column/README.html">Column</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/Column</a> / $ColumnSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/Column</a> / $ColumnSettings</p>
 <h1>Interface: $ColumnSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ColumnSettings } <span class="kw">from</span> <span class="str">"sap/ui/table/Column"</span>;</pre>
+<p>Describes the settings that can be provided to the Column constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -51,16 +52,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>autoResizable?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.21.1</p>
 <p>Enables auto-resizing of the column on double clicking the resize bar. The width is determined on the
 widest currently displayed content. It does not consider rows which are currently not scrolled into view.
 Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.CheckBox</code></p>
+<h4>Since</h4>
+<p>1.21.1</p>
 <hr>
 <h3><del>columnMenuOpen?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>columnMenuOpen?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires before the column menu is opened.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Column$ColumnMenuOpenEvent.html"><code>Column$ColumnMenuOpenEvent</code></a></p>
@@ -70,7 +72,6 @@ Currently only implemented to work with the following controls: <code>sap.m.Text
 <p>1.33.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.117)</p>
-<p>Fires before the column menu is opened.</p>
 <hr>
 <h3>defaultFilterOperator?</h3>
 <blockquote>
@@ -107,8 +108,6 @@ entry is a text input field.</p>
 <blockquote>
 <p><code>optional</code> <strong>filterType?</strong>: <code>any</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.9.2</p>
 <p>Type of filter. It is used to transform the search term into the specified type and should be the same
 as defined in the binding for the column template. Default value is <code>sap.ui.model.type.String</code>. It can
 be set to the class name of the type, e.g.: <code>sap.ui.model.type.Date</code>, or an expression similar to the
@@ -118,6 +117,8 @@ instead.</p>
 <p><strong>Note:</strong> The usage of string-based type definitions without explicitly loading these types (<code>sap.ui.require</code>)
 in the controller has been deprecated and might no longer work in future releases. Please ensure that
 the types are requested correctly before setting this property.</p>
+<h4>Since</h4>
+<p>1.9.2</p>
 <hr>
 <h3>filterValue?</h3>
 <blockquote>
@@ -143,21 +144,21 @@ some..thing   between
 <blockquote>
 <p><code>optional</code> <strong>flexible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.44) - this property has no effect. Use the property <code>minWidth</code> in combination with
-the property <code>width=&quot;auto&quot;</code> instead.</p>
 <p>If the table is wider than the sum of widths of the visible columns, the columns will be resized proportionally
 to their widths that were set originally. If set to false, the column will be displayed in the original
 width. If all columns are set to not be flexible, an extra &quot;dummy&quot; column will be created at the end
 of the table.</p>
+<h4>Deprecated</h4>
+<p>(since 1.44) - this property has no effect. Use the property <code>minWidth</code> in combination with
+the property <code>width=&quot;auto&quot;</code> instead.</p>
 <hr>
 <h3><del>grouped?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>grouped?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Indicates if the column is grouped.</p>
 <h4>Deprecated</h4>
 <p>(since 1.118)</p>
-<p>Indicates if the column is grouped.</p>
 <hr>
 <h3>hAlign?</h3>
 <blockquote>
@@ -170,9 +171,9 @@ alignment. You have to set the text align directly on the template.</p>
 <blockquote>
 <p><code>optional</code> <strong>headerMenu?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IColumnHeaderMenu.html"><code>IColumnHeaderMenu</code></a></p>
 </blockquote>
+<p>The menu that can be opened by the header element of this column.</p>
 <h4>Since</h4>
 <p>1.110</p>
-<p>The menu that can be opened by the header element of this column.</p>
 <hr>
 <h3>headerSpan?</h3>
 <blockquote>
@@ -198,42 +199,42 @@ will be created. Which control this is depends on the loaded libraries.</p>
 <blockquote>
 <p><code>optional</code> <strong>menu?</strong>: <a href="../../../../../../sap.ui.unified/sap/ui/unified/Menu/classes/Menu.html"><code>Menu</code></a></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.117) - use the <code>headerMenu</code> association instead.</p>
 <p>The menu used by the column. By default the sap.ui.table.ColumnMenu is used.</p>
 <p><strong>Note:</strong> Applications must not use or change the default <code>sap.ui.table.ColumnMenu</code> of a column in any
 way or create own instances of <code>sap.ui.table.ColumnMenu</code>. To add a custom menu to a column, use the aggregation
 <code>menu</code> with a new instance of <code>sap.ui.unified.Menu</code>.</p>
+<h4>Deprecated</h4>
+<p>(since 1.117) - use the <code>headerMenu</code> association instead.</p>
 <hr>
 <h3>minWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minWidth?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.44.1</p>
 <p>Defines the minimum width of a column in pixels. This property only has an effect if the given column
 width is flexible, for example with width <code>auto</code>. This property only influences the automatic behavior.
 If a user adjusts the column width manually, the column width can become smaller. Minimal column width
 is device-dependent, for example on desktop devices the column will not be smaller than 48px.</p>
+<h4>Since</h4>
+<p>1.44.1</p>
 <hr>
 <h3>multiLabels?</h3>
 <blockquote>
 <p><code>optional</code> <strong>multiLabels?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.13.1</p>
 <p>Labels of the column which are displayed in the column header. Define a control for each header row in
 the table. Use this aggregation if you want to use multiple headers per column.</p>
+<h4>Since</h4>
+<p>1.13.1</p>
 <hr>
 <h3>name?</h3>
 <blockquote>
 <p><code>optional</code> <strong>name?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.1</p>
 <p>The name of the column which is used for the text representation of this column, for example, in menus.
 If not set, the text from the multiLabels aggregation or the label aggregation (in that order) is used
 as a fallback option.</p>
+<h4>Since</h4>
+<p>1.11.1</p>
 <hr>
 <h3>resizable?</h3>
 <blockquote>
@@ -246,29 +247,29 @@ as a fallback option.</p>
 <blockquote>
 <p><code>optional</code> <strong>showFilterMenuEntry?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Defines if the filter menu entry is displayed</p>
 <h4>Since</h4>
 <p>1.13.0</p>
-<p>Defines if the filter menu entry is displayed</p>
 <hr>
 <h3>showSortMenuEntry?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showSortMenuEntry?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Defines if the sort menu entries are displayed</p>
 <h4>Since</h4>
 <p>1.13.0</p>
-<p>Defines if the sort menu entries are displayed</p>
 <hr>
 <h3><del>sorted?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>sorted?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.120) - replaced by sap.ui.core.SortOrder SortOrder.None for the <code>sortOrder</code>
-property</p>
 <p>Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the
 column header - it does not trigger the sort function. The column can be sorted using sap.ui.table.Table#sort.</p>
 <p>If this property is set to <code>true</code> and the <code>sortOrder</code> property is <code>None</code>, <code>sortOrder</code> is automatically
 set to <code>Ascending</code>. If this property is <code>true</code> and <code>sortOrder</code> is <code>None</code>, the sort indicator is not shown.</p>
+<h4>Deprecated</h4>
+<p>(since 1.120) - replaced by sap.ui.core.SortOrder SortOrder.None for the <code>sortOrder</code>
+property</p>
 <hr>
 <h3>sortOrder?</h3>
 <blockquote>
@@ -318,6 +319,6 @@ than 48px. This property can be changed by the user or by the application config
 If a user adjusts the column width manually, the resulting value is always set in pixels. In addition,
 other columns with width <code>auto</code> get a fixed minimum width and do not shrink after the resizing.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

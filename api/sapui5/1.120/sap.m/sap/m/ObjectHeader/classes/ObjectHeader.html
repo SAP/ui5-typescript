@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectHeader — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectHeader — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ObjectHeader — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ObjectHeader/classes/ObjectHeader.html">
 <meta property="og:title" content="Class: ObjectHeader — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectHeader — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ObjectHeader — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ObjectHeader/classes/ObjectHeader.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ObjectHeader/README.html">ObjectHeader</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectHeader</a> / ObjectHeader</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectHeader</a> / ObjectHeader</p>
 <h1>Class: ObjectHeader</h1>
 <pre class="sig"><span class="kw">import</span> ObjectHeader <span class="kw">from</span> <span class="str">"sap/m/ObjectHeader"</span>;</pre>
-<h2>Since</h2>
-<p>1.12</p>
 <p><code>ObjectHeader</code> is a display control that enables the user to easily identify a specific object. The object
 header title is the key identifier of the object and additional text and icons can be used to further
 distinguish it from other objects.</p>
@@ -47,6 +45,8 @@ distinguish it from other objects.</p>
 <p>When using the <code>sap.m.ObjectHeader</code> in SAP Quartz theme, the breakpoints and layout paddings could be
 automatically determined by the container&#39;s width. To enable this concept and implement responsive padding
 to the <code>ObjectHeader</code> control, add the following class: <code>sapUiResponsivePadding--header</code>.</p>
+<h2>Since</h2>
+<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -92,6 +92,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAdditionalNumber</strong>(<code>oAdditionalNumber</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some additionalNumber to the aggregation #getAdditionalNumbers additionalNumbers.</p>
 <h4>Parameters</h4>
 <h5>oAdditionalNumber</h5>
 <p><a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a></p>
@@ -101,7 +102,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Adds some additionalNumber to the aggregation #getAdditionalNumbers additionalNumbers.</p>
 <hr>
 <h3>addAriaDescribedBy()</h3>
 <blockquote>
@@ -159,6 +159,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addStatus</strong>(<code>oStatus</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some status to the aggregation #getStatuses statuses.</p>
 <h4>Parameters</h4>
 <h5>oStatus</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -168,7 +169,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Adds some status to the aggregation #getStatuses statuses.</p>
 <hr>
 <h3>attachIconPress()</h3>
 <h4>Call Signature</h4>
@@ -301,6 +301,11 @@ otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
 <blockquote>
 <p><strong>attachTitleSelectorPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:titleSelectorPress titleSelectorPress event
+of this <code>sap.m.ObjectHeader</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
+<p>Event is fired when the object header title selector (down-arrow) is pressed</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -317,15 +322,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTitleSelectorPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:titleSelectorPress titleSelectorPress event
 of this <code>sap.m.ObjectHeader</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
 <p>Event is fired when the object header title selector (down-arrow) is pressed</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTitleSelectorPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -338,22 +343,17 @@ otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:titleSelectorPress titleSelectorPress event
-of this <code>sap.m.ObjectHeader</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
-<p>Event is fired when the object header title selector (down-arrow) is pressed</p>
 <hr>
 <h3>destroyAdditionalNumbers()</h3>
 <blockquote>
 <p><strong>destroyAdditionalNumbers</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the additionalNumbers in the aggregation #getAdditionalNumbers additionalNumbers.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Destroys all the additionalNumbers in the aggregation #getAdditionalNumbers additionalNumbers.</p>
 <hr>
 <h3>destroyAttributes()</h3>
 <blockquote>
@@ -368,23 +368,23 @@ otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
 <blockquote>
 <p><strong>destroyFirstStatus</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the firstStatus in the aggregation #getFirstStatus firstStatus.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - replaced by <code>statuses</code> aggregation</p>
-<p>Destroys the firstStatus in the aggregation #getFirstStatus firstStatus.</p>
 <hr>
 <h3>destroyHeaderContainer()</h3>
 <blockquote>
 <p><strong>destroyHeaderContainer</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the headerContainer in the aggregation #getHeaderContainer headerContainer.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Destroys the headerContainer in the aggregation #getHeaderContainer headerContainer.</p>
 <hr>
 <h3>destroyMarkers()</h3>
 <blockquote>
@@ -399,23 +399,23 @@ otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
 <blockquote>
 <p><strong>destroySecondStatus</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the secondStatus in the aggregation #getSecondStatus secondStatus.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - replaced by <code>statuses</code> aggregation</p>
-<p>Destroys the secondStatus in the aggregation #getSecondStatus secondStatus.</p>
 <hr>
 <h3>destroyStatuses()</h3>
 <blockquote>
 <p><strong>destroyStatuses</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the statuses in the aggregation #getStatuses statuses.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Destroys all the statuses in the aggregation #getStatuses statuses.</p>
 <hr>
 <h3>detachIconPress()</h3>
 <blockquote>
@@ -472,6 +472,9 @@ otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
 <blockquote>
 <p><strong>detachTitleSelectorPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:titleSelectorPress titleSelectorPress event
+of this <code>sap.m.ObjectHeader</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -484,14 +487,12 @@ otherwise it will be bound to this <code>sap.m.ObjectHeader</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:titleSelectorPress titleSelectorPress event
-of this <code>sap.m.ObjectHeader</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireIconPress()</h3>
 <blockquote>
 <p><strong>fireIconPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:iconPress iconPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectHeader$IconPressEventParameters.html"><code>ObjectHeader$IconPressEventParameters</code></a></p>
@@ -501,12 +502,12 @@ of this <code>sap.m.ObjectHeader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:iconPress iconPress to attached listeners.</p>
 <hr>
 <h3>fireIntroPress()</h3>
 <blockquote>
 <p><strong>fireIntroPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:introPress introPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectHeader$IntroPressEventParameters.html"><code>ObjectHeader$IntroPressEventParameters</code></a></p>
@@ -516,12 +517,12 @@ of this <code>sap.m.ObjectHeader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:introPress introPress to attached listeners.</p>
 <hr>
 <h3>fireTitlePress()</h3>
 <blockquote>
 <p><strong>fireTitlePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:titlePress titlePress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectHeader$TitlePressEventParameters.html"><code>ObjectHeader$TitlePressEventParameters</code></a></p>
@@ -531,12 +532,12 @@ of this <code>sap.m.ObjectHeader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:titlePress titlePress to attached listeners.</p>
 <hr>
 <h3>fireTitleSelectorPress()</h3>
 <blockquote>
 <p><strong>fireTitleSelectorPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:titleSelectorPress titleSelectorPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectHeader$TitleSelectorPressEventParameters.html"><code>ObjectHeader$TitleSelectorPressEventParameters</code></a></p>
@@ -548,20 +549,19 @@ of this <code>sap.m.ObjectHeader</code>.</p>
 <p>1.16.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:titleSelectorPress titleSelectorPress to attached listeners.</p>
 <hr>
 <h3>getAdditionalNumbers()</h3>
 <blockquote>
 <p><strong>getAdditionalNumbers</strong>(): <a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a>[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a>[]</p>
-<h4>Since</h4>
-<p>1.38.0</p>
 <p>Gets content of aggregation #getAdditionalNumbers additionalNumbers.</p>
 <p>NOTE: Only applied if you set &quot;responsive=false&quot;. Additional object numbers and units are managed in
 this aggregation. The numbers are hidden on tablet and phone size screens. When only one number is provided,
 it is rendered with additional separator from the main ObjectHeader number.</p>
+<h4>Returns</h4>
+<p><a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a>[]</p>
+<h4>Since</h4>
+<p>1.38.0</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -618,23 +618,18 @@ it is rendered with additional separator from the main ObjectHeader number.</p>
 <blockquote>
 <p><strong>getFirstStatus</strong>(): <a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getFirstStatus firstStatus.</p>
+<p>First status shown on the right side of the attributes above the second status. If it is not set the
+first attribute will expand to take the entire row.</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - replaced by <code>statuses</code> aggregation</p>
-<p>Gets content of aggregation #getFirstStatus firstStatus.</p>
-<p>First status shown on the right side of the attributes above the second status. If it is not set the
-first attribute will expand to take the entire row.</p>
 <hr>
 <h3>getFullScreenOptimized()</h3>
 <blockquote>
 <p><strong>getFullScreenOptimized</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>fullScreenOptimized</code></p>
-<h4>Since</h4>
-<p>1.28</p>
 <p>Gets current value of property #getFullScreenOptimized fullScreenOptimized.</p>
 <p>Optimizes the display of the elements of the <code>ObjectHeader</code>.</p>
 <p>Set this property to <code>true</code> if your app uses a fullscreen layout (as opposed to a master-detail or other
@@ -654,20 +649,25 @@ in 2 or 3 columns depending on their number:
 	 - On desktop, 5+ attributes/statuses - 3 columns
 	 - On tablet, always in 2 columns</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>fullScreenOptimized</code></p>
+<h4>Since</h4>
+<p>1.28</p>
 <hr>
 <h3>getHeaderContainer()</h3>
 <blockquote>
 <p><strong>getHeaderContainer</strong>(): <a href="../../library/interfaces/ObjectHeaderContainer.html"><code>ObjectHeaderContainer</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../library/interfaces/ObjectHeaderContainer.html"><code>ObjectHeaderContainer</code></a></p>
-<h4>Since</h4>
-<p>1.21.1</p>
 <p>Gets content of aggregation #getHeaderContainer headerContainer.</p>
 <p>This aggregation takes only effect when you set &quot;responsive&quot; to true. It can either be filled with an
 sap.m.IconTabBar or an sap.suite.ui.commons.HeaderContainer control. Overflow handling must be taken
 care of by the inner control. If used with an IconTabBar control, only the header will be displayed inside
 the object header, the content will be displayed below the ObjectHeader.</p>
+<h4>Returns</h4>
+<p><a href="../../library/interfaces/ObjectHeaderContainer.html"><code>ObjectHeaderContainer</code></a></p>
+<h4>Since</h4>
+<p>1.21.1</p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
@@ -731,16 +731,16 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><strong>getImageShape</strong>(): <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code> | <a href="../../library/enumerations/ObjectHeaderPictureShape.html"><code>ObjectHeaderPictureShape</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code> | <a href="../../library/enumerations/ObjectHeaderPictureShape.html"><code>ObjectHeaderPictureShape</code></a></p>
-<p>Value of property <code>imageShape</code></p>
-<h4>Since</h4>
-<p>1.61</p>
 <p>Gets current value of property #getImageShape imageShape.</p>
 <p>Determines whether the picture should be displayed in a square or with a circle-shaped mask just like
 in sap.uxap.ObjectPageHeader.</p>
 <p><strong>Note:</strong> This property takes effect only on Images and it is ignored for Icons.</p>
 <p>Default value is <code>Square</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code> | <a href="../../library/enumerations/ObjectHeaderPictureShape.html"><code>ObjectHeaderPictureShape</code></a></p>
+<p>Value of property <code>imageShape</code></p>
+<h4>Since</h4>
+<p>1.61</p>
 <hr>
 <h3>getIntro()</h3>
 <blockquote>
@@ -766,41 +766,41 @@ in sap.uxap.ObjectPageHeader.</p>
 <blockquote>
 <p><strong>getIntroHref</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getIntroHref introHref.</p>
+<p>Determines the intro link target URI. Supports standard hyperlink behavior. If an action should be triggered,
+this should not be set, but instead an event handler for the <code>introPress</code> event should be registered.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>introHref</code></p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Gets current value of property #getIntroHref introHref.</p>
-<p>Determines the intro link target URI. Supports standard hyperlink behavior. If an action should be triggered,
-this should not be set, but instead an event handler for the <code>introPress</code> event should be registered.</p>
 <hr>
 <h3>getIntroTarget()</h3>
 <blockquote>
 <p><strong>getIntroTarget</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getIntroTarget introTarget.</p>
+<p>Determines the <code>target</code> attribute for the intro link. Options are <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>,
+<code>_search</code>. Alternatively, a frame name can be entered.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>introTarget</code></p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Gets current value of property #getIntroTarget introTarget.</p>
-<p>Determines the <code>target</code> attribute for the intro link. Options are <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>,
-<code>_search</code>. Alternatively, a frame name can be entered.</p>
 <hr>
 <h3>getIntroTextDirection()</h3>
 <blockquote>
 <p><strong>getIntroTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getIntroTextDirection introTextDirection.</p>
+<p>Specifies the intro text directionality with enumerated options. By default, the control inherits text
+direction from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>introTextDirection</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getIntroTextDirection introTextDirection.</p>
-<p>Specifies the intro text directionality with enumerated options. By default, the control inherits text
-direction from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>getMarkers()</h3>
 <blockquote>
@@ -818,6 +818,10 @@ and <code>markFavorite</code>. Using both can lead to unexpected results.</p>
 <blockquote>
 <p><strong>getMarkFavorite</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getMarkFavorite markFavorite.</p>
+<p>Sets the favorite state for the <code>ObjectHeader</code>. The <code>showMarkers</code> property must be set to <code>true</code> for
+this property to take effect.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>markFavorite</code></p>
@@ -827,15 +831,15 @@ and <code>markFavorite</code>. Using both can lead to unexpected results.</p>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Favorite</code>. You should use either this property or the <code>markers</code> aggregation,
 using both may lead to unpredicted behavior.</p>
-<p>Gets current value of property #getMarkFavorite markFavorite.</p>
-<p>Sets the favorite state for the <code>ObjectHeader</code>. The <code>showMarkers</code> property must be set to <code>true</code> for
-this property to take effect.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getMarkFlagged()</del></h3>
 <blockquote>
 <p><strong>getMarkFlagged</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getMarkFlagged markFlagged.</p>
+<p>Sets the flagged state for the <code>ObjectHeader</code>. The <code>showMarkers</code> property must be set to <code>true</code> for this
+property to take effect.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>markFlagged</code></p>
@@ -845,10 +849,6 @@ this property to take effect.</p>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Flagged</code>. You should use either this property or the <code>markers</code> aggregation, using
 both may lead to unpredicted behavior.</p>
-<p>Gets current value of property #getMarkFlagged markFlagged.</p>
-<p>Sets the flagged state for the <code>ObjectHeader</code>. The <code>showMarkers</code> property must be set to <code>true</code> for this
-property to take effect.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getNumber()</h3>
 <blockquote>
@@ -864,28 +864,28 @@ property to take effect.</p>
 <blockquote>
 <p><strong>getNumberState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getNumberState numberState.</p>
+<p>Determines the value state of the <code>number</code> and <code>numberUnit</code> properties.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>numberState</code></p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Gets current value of property #getNumberState numberState.</p>
-<p>Determines the value state of the <code>number</code> and <code>numberUnit</code> properties.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getNumberTextDirection()</h3>
 <blockquote>
 <p><strong>getNumberTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getNumberTextDirection numberTextDirection.</p>
+<p>Specifies the number and unit text directionality with enumerated options. By default, the control inherits
+text direction from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>numberTextDirection</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getNumberTextDirection numberTextDirection.</p>
-<p>Specifies the number and unit text directionality with enumerated options. By default, the control inherits
-text direction from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>getNumberUnit()</h3>
 <blockquote>
@@ -902,11 +902,6 @@ text direction from the DOM.</p>
 <blockquote>
 <p><strong>getResponsive</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>responsive</code></p>
-<h4>Since</h4>
-<p>1.21.1</p>
 <p>Gets current value of property #getResponsive responsive.</p>
 <p>Determines whether the <code>ObjectHeader</code> is rendered with a different design that reacts responsively to
 the screen sizes.</p>
@@ -917,23 +912,31 @@ the screen sizes.</p>
 to 50 characters.
 </code></pre>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>responsive</code></p>
+<h4>Since</h4>
+<p>1.21.1</p>
 <hr>
 <h3><del>getSecondStatus()</del></h3>
 <blockquote>
 <p><strong>getSecondStatus</strong>(): <a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getSecondStatus secondStatus.</p>
+<p>Second status shown on the right side of the attributes below the first status. If it is not set the
+second attribute will expand to take the entire row.</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - replaced by <code>statuses</code> aggregation</p>
-<p>Gets content of aggregation #getSecondStatus secondStatus.</p>
-<p>Second status shown on the right side of the attributes below the first status. If it is not set the
-second attribute will expand to take the entire row.</p>
 <hr>
 <h3><del>getShowMarkers()</del></h3>
 <blockquote>
 <p><strong>getShowMarkers</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowMarkers showMarkers.</p>
+<p>If set to <code>true</code>, the <code>ObjectHeader</code> can be marked with icons such as favorite and flag.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showMarkers</code></p>
@@ -943,34 +946,31 @@ second attribute will expand to take the entire row.</p>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregationv. This property is valid only if you are
 using the already deprecated properties - <code>markFlagged</code> and <code>markFavorite</code>. If you are using <code>markers</code>,
 the visibility of the markers depends on what is set in the aggregation itself.</p>
-<p>Gets current value of property #getShowMarkers showMarkers.</p>
-<p>If set to <code>true</code>, the <code>ObjectHeader</code> can be marked with icons such as favorite and flag.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowTitleSelector()</h3>
 <blockquote>
 <p><strong>getShowTitleSelector</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowTitleSelector showTitleSelector.</p>
+<p>Determines whether the selector arrow icon/image is displayed and can be pressed.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showTitleSelector</code></p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Gets current value of property #getShowTitleSelector showTitleSelector.</p>
-<p>Determines whether the selector arrow icon/image is displayed and can be pressed.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getStatuses()</h3>
 <blockquote>
 <p><strong>getStatuses</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getStatuses statuses.</p>
+<p>The list of Object sap.ui.core.Control. It will only allow sap.m.ObjectStatus and sap.m.ProgressIndicator
+controls.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Gets content of aggregation #getStatuses statuses.</p>
-<p>The list of Object sap.ui.core.Control. It will only allow sap.m.ObjectStatus and sap.m.ProgressIndicator
-controls.</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -996,15 +996,15 @@ controls.</p>
 <blockquote>
 <p><strong>getTitleHref</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getTitleHref titleHref.</p>
+<p>Defines the title link target URI. Supports standard hyperlink behavior.</p>
+<p><strong>Note:</strong> If an action should be triggered, this property should not be set, but instead an event handler
+for the <code>titlePress</code> event should be registered.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>titleHref</code></p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Gets current value of property #getTitleHref titleHref.</p>
-<p>Defines the title link target URI. Supports standard hyperlink behavior.</p>
-<p><strong>Note:</strong> If an action should be triggered, this property should not be set, but instead an event handler
-for the <code>titlePress</code> event should be registered.</p>
 <hr>
 <h3>getTitleLevel()</h3>
 <blockquote>
@@ -1023,47 +1023,49 @@ map for faster navigation. Depending on this setting an HTML h1-h6 element is us
 <blockquote>
 <p><strong>getTitleSelectorTooltip</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getTitleSelectorTooltip titleSelectorTooltip.</p>
+<p>Determines a custom text for the tooltip of the select title arrow. If not set, a default text of the
+tooltip will be displayed.</p>
+<p>Default value is <code>&quot;Options&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>titleSelectorTooltip</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Gets current value of property #getTitleSelectorTooltip titleSelectorTooltip.</p>
-<p>Determines a custom text for the tooltip of the select title arrow. If not set, a default text of the
-tooltip will be displayed.</p>
-<p>Default value is <code>&quot;Options&quot;</code>.</p>
 <hr>
 <h3>getTitleTarget()</h3>
 <blockquote>
 <p><strong>getTitleTarget</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getTitleTarget titleTarget.</p>
+<p>Determines the <code>target</code> attribute for the title link. Options are <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>,
+<code>_search</code>. Alternatively, a frame name can be entered.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>titleTarget</code></p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Gets current value of property #getTitleTarget titleTarget.</p>
-<p>Determines the <code>target</code> attribute for the title link. Options are <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>,
-<code>_search</code>. Alternatively, a frame name can be entered.</p>
 <hr>
 <h3>getTitleTextDirection()</h3>
 <blockquote>
 <p><strong>getTitleTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getTitleTextDirection titleTextDirection.</p>
+<p>Specifies the title text directionality with enumerated options. By default, the control inherits text
+direction from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>titleTextDirection</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getTitleTextDirection titleTextDirection.</p>
-<p>Specifies the title text directionality with enumerated options. By default, the control inherits text
-direction from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>indexOfAdditionalNumber()</h3>
 <blockquote>
 <p><strong>indexOfAdditionalNumber</strong>(<code>oAdditionalNumber</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.ObjectNumber</code> in the aggregation #getAdditionalNumbers additionalNumbers.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oAdditionalNumber</h5>
 <p><a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a></p>
@@ -1073,8 +1075,6 @@ direction from the DOM.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Checks for the provided <code>sap.m.ObjectNumber</code> in the aggregation #getAdditionalNumbers additionalNumbers.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfAttribute()</h3>
 <blockquote>
@@ -1108,6 +1108,8 @@ its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfStatus</strong>(<code>oStatus</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getStatuses statuses. and returns
+its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oStatus</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1117,13 +1119,12 @@ its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getStatuses statuses. and returns
-its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertAdditionalNumber()</h3>
 <blockquote>
 <p><strong>insertAdditionalNumber</strong>(<code>oAdditionalNumber</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a additionalNumber into the aggregation #getAdditionalNumbers additionalNumbers.</p>
 <h4>Parameters</h4>
 <h5>oAdditionalNumber</h5>
 <p><a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a></p>
@@ -1138,7 +1139,6 @@ the additionalNumber is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Inserts a additionalNumber into the aggregation #getAdditionalNumbers additionalNumbers.</p>
 <hr>
 <h3>insertAttribute()</h3>
 <blockquote>
@@ -1180,6 +1180,7 @@ at the last position</p>
 <blockquote>
 <p><strong>insertStatus</strong>(<code>oStatus</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a status into the aggregation #getStatuses statuses.</p>
 <h4>Parameters</h4>
 <h5>oStatus</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1194,12 +1195,12 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Inserts a status into the aggregation #getStatuses statuses.</p>
 <hr>
 <h3>removeAdditionalNumber()</h3>
 <blockquote>
 <p><strong>removeAdditionalNumber</strong>(<code>vAdditionalNumber</code>): <a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a></p>
 </blockquote>
+<p>Removes a additionalNumber from the aggregation #getAdditionalNumbers additionalNumbers.</p>
 <h4>Parameters</h4>
 <h5>vAdditionalNumber</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a></p>
@@ -1209,19 +1210,18 @@ at the last position</p>
 <p>The removed additionalNumber or <code>null</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Removes a additionalNumber from the aggregation #getAdditionalNumbers additionalNumbers.</p>
 <hr>
 <h3>removeAllAdditionalNumbers()</h3>
 <blockquote>
 <p><strong>removeAllAdditionalNumbers</strong>(): <a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getAdditionalNumbers additionalNumbers.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectNumber/classes/ObjectNumber.html"><code>ObjectNumber</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Removes all the controls from the aggregation #getAdditionalNumbers additionalNumbers.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllAriaDescribedBy()</h3>
 <blockquote>
@@ -1265,13 +1265,13 @@ at the last position</p>
 <blockquote>
 <p><strong>removeAllStatuses</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getStatuses statuses.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Removes all the controls from the aggregation #getStatuses statuses.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAriaDescribedBy()</h3>
 <blockquote>
@@ -1329,6 +1329,7 @@ at the last position</p>
 <blockquote>
 <p><strong>removeStatus</strong>(<code>vStatus</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Removes a status from the aggregation #getStatuses statuses.</p>
 <h4>Parameters</h4>
 <h5>vStatus</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1338,7 +1339,6 @@ at the last position</p>
 <p>The removed status or <code>null</code></p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Removes a status from the aggregation #getStatuses statuses.</p>
 <hr>
 <h3>setBackgroundDesign()</h3>
 <blockquote>
@@ -1376,6 +1376,7 @@ at the last position</p>
 <blockquote>
 <p><strong>setFirstStatus</strong>(<code>oFirstStatus</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getFirstStatus firstStatus.</p>
 <h4>Parameters</h4>
 <h5>oFirstStatus</h5>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
@@ -1385,21 +1386,11 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - replaced by <code>statuses</code> aggregation</p>
-<p>Sets the aggregated #getFirstStatus firstStatus.</p>
 <hr>
 <h3>setFullScreenOptimized()</h3>
 <blockquote>
 <p><strong>setFullScreenOptimized</strong>(<code>bFullScreenOptimized?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bFullScreenOptimized?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>fullScreenOptimized</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.28</p>
 <p>Sets a new value for property #getFullScreenOptimized fullScreenOptimized.</p>
 <p>Optimizes the display of the elements of the <code>ObjectHeader</code>.</p>
 <p>Set this property to <code>true</code> if your app uses a fullscreen layout (as opposed to a master-detail or other
@@ -1420,11 +1411,21 @@ in 2 or 3 columns depending on their number:
 	 - On tablet, always in 2 columns</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bFullScreenOptimized?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>fullScreenOptimized</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.28</p>
 <hr>
 <h3>setHeaderContainer()</h3>
 <blockquote>
 <p><strong>setHeaderContainer</strong>(<code>oHeaderContainer</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getHeaderContainer headerContainer.</p>
 <h4>Parameters</h4>
 <h5>oHeaderContainer</h5>
 <p><a href="../../library/interfaces/ObjectHeaderContainer.html"><code>ObjectHeaderContainer</code></a></p>
@@ -1434,7 +1435,6 @@ in 2 or 3 columns depending on their number:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Sets the aggregated #getHeaderContainer headerContainer.</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
@@ -1518,6 +1518,12 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><strong>setImageShape</strong>(<code>sImageShape?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getImageShape imageShape.</p>
+<p>Determines whether the picture should be displayed in a square or with a circle-shaped mask just like
+in sap.uxap.ObjectPageHeader.</p>
+<p><strong>Note:</strong> This property takes effect only on Images and it is ignored for Icons.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Square</code>.</p>
 <h4>Parameters</h4>
 <h5>sImageShape?</h5>
 <p><code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code> | <a href="../../library/enumerations/ObjectHeaderPictureShape.html"><code>ObjectHeaderPictureShape</code></a></p>
@@ -1527,12 +1533,6 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.61</p>
-<p>Sets a new value for property #getImageShape imageShape.</p>
-<p>Determines whether the picture should be displayed in a square or with a circle-shaped mask just like
-in sap.uxap.ObjectPageHeader.</p>
-<p><strong>Note:</strong> This property takes effect only on Images and it is ignored for Icons.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Square</code>.</p>
 <hr>
 <h3>setIntro()</h3>
 <blockquote>
@@ -1568,6 +1568,10 @@ in sap.uxap.ObjectPageHeader.</p>
 <blockquote>
 <p><strong>setIntroHref</strong>(<code>sIntroHref?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIntroHref introHref.</p>
+<p>Determines the intro link target URI. Supports standard hyperlink behavior. If an action should be triggered,
+this should not be set, but instead an event handler for the <code>introPress</code> event should be registered.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sIntroHref?</h5>
 <p><code>string</code></p>
@@ -1577,15 +1581,15 @@ in sap.uxap.ObjectPageHeader.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Sets a new value for property #getIntroHref introHref.</p>
-<p>Determines the intro link target URI. Supports standard hyperlink behavior. If an action should be triggered,
-this should not be set, but instead an event handler for the <code>introPress</code> event should be registered.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setIntroTarget()</h3>
 <blockquote>
 <p><strong>setIntroTarget</strong>(<code>sIntroTarget?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIntroTarget introTarget.</p>
+<p>Determines the <code>target</code> attribute for the intro link. Options are <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>,
+<code>_search</code>. Alternatively, a frame name can be entered.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sIntroTarget?</h5>
 <p><code>string</code></p>
@@ -1595,15 +1599,16 @@ this should not be set, but instead an event handler for the <code>introPress</c
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Sets a new value for property #getIntroTarget introTarget.</p>
-<p>Determines the <code>target</code> attribute for the intro link. Options are <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>,
-<code>_search</code>. Alternatively, a frame name can be entered.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setIntroTextDirection()</h3>
 <blockquote>
 <p><strong>setIntroTextDirection</strong>(<code>sIntroTextDirection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIntroTextDirection introTextDirection.</p>
+<p>Specifies the intro text directionality with enumerated options. By default, the control inherits text
+direction from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sIntroTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -1613,16 +1618,12 @@ this should not be set, but instead an event handler for the <code>introPress</c
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getIntroTextDirection introTextDirection.</p>
-<p>Specifies the intro text directionality with enumerated options. By default, the control inherits text
-direction from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3><del>setMarkFavorite()</del></h3>
 <blockquote>
 <p><strong>setMarkFavorite</strong>(<code>bMarked</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the visibility value of the Favorite marker.</p>
 <h4>Parameters</h4>
 <h5>bMarked</h5>
 <p><code>boolean</code></p>
@@ -1633,12 +1634,12 @@ direction from the DOM.</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Favorite</code>.</p>
-<p>Sets the visibility value of the Favorite marker.</p>
 <hr>
 <h3><del>setMarkFlagged()</del></h3>
 <blockquote>
 <p><strong>setMarkFlagged</strong>(<code>bMarked</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the visibility value of the Flagged marker.</p>
 <h4>Parameters</h4>
 <h5>bMarked</h5>
 <p><code>boolean</code></p>
@@ -1649,7 +1650,6 @@ direction from the DOM.</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Flagged</code>.</p>
-<p>Sets the visibility value of the Flagged marker.</p>
 <hr>
 <h3>setNumber()</h3>
 <blockquote>
@@ -1681,6 +1681,11 @@ direction from the DOM.</p>
 <blockquote>
 <p><strong>setNumberTextDirection</strong>(<code>sNumberTextDirection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNumberTextDirection numberTextDirection.</p>
+<p>Specifies the number and unit text directionality with enumerated options. By default, the control inherits
+text direction from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sNumberTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -1690,11 +1695,6 @@ direction from the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getNumberTextDirection numberTextDirection.</p>
-<p>Specifies the number and unit text directionality with enumerated options. By default, the control inherits
-text direction from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>setNumberUnit()</h3>
 <blockquote>
@@ -1713,15 +1713,6 @@ text direction from the DOM.</p>
 <blockquote>
 <p><strong>setResponsive</strong>(<code>bResponsive?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bResponsive?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>responsive</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.21.1</p>
 <p>Sets a new value for property #getResponsive responsive.</p>
 <p>Determines whether the <code>ObjectHeader</code> is rendered with a different design that reacts responsively to
 the screen sizes.</p>
@@ -1733,11 +1724,21 @@ to 50 characters.
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bResponsive?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>responsive</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.21.1</p>
 <hr>
 <h3><del>setSecondStatus()</del></h3>
 <blockquote>
 <p><strong>setSecondStatus</strong>(<code>oSecondStatus</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getSecondStatus secondStatus.</p>
 <h4>Parameters</h4>
 <h5>oSecondStatus</h5>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
@@ -1747,12 +1748,12 @@ to 50 characters.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - replaced by <code>statuses</code> aggregation</p>
-<p>Sets the aggregated #getSecondStatus secondStatus.</p>
 <hr>
 <h3><del>setShowMarkers()</del></h3>
 <blockquote>
 <p><strong>setShowMarkers</strong>(<code>bMarked</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the visibility value of the Flagged and Favorite markers.</p>
 <h4>Parameters</h4>
 <h5>bMarked</h5>
 <p><code>boolean</code></p>
@@ -1762,12 +1763,15 @@ to 50 characters.
 <p>this pointer for chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregationv.</p>
-<p>Sets the visibility value of the Flagged and Favorite markers.</p>
 <hr>
 <h3>setShowTitleSelector()</h3>
 <blockquote>
 <p><strong>setShowTitleSelector</strong>(<code>bShowTitleSelector?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowTitleSelector showTitleSelector.</p>
+<p>Determines whether the selector arrow icon/image is displayed and can be pressed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowTitleSelector?</h5>
 <p><code>boolean</code></p>
@@ -1777,10 +1781,6 @@ to 50 characters.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Sets a new value for property #getShowTitleSelector showTitleSelector.</p>
-<p>Determines whether the selector arrow icon/image is displayed and can be pressed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -1816,6 +1816,11 @@ to 50 characters.
 <blockquote>
 <p><strong>setTitleHref</strong>(<code>sTitleHref?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleHref titleHref.</p>
+<p>Defines the title link target URI. Supports standard hyperlink behavior.</p>
+<p><strong>Note:</strong> If an action should be triggered, this property should not be set, but instead an event handler
+for the <code>titlePress</code> event should be registered.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sTitleHref?</h5>
 <p><code>string</code></p>
@@ -1825,11 +1830,6 @@ to 50 characters.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Sets a new value for property #getTitleHref titleHref.</p>
-<p>Defines the title link target URI. Supports standard hyperlink behavior.</p>
-<p><strong>Note:</strong> If an action should be triggered, this property should not be set, but instead an event handler
-for the <code>titlePress</code> event should be registered.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setTitleLevel()</h3>
 <blockquote>
@@ -1866,6 +1866,10 @@ map for faster navigation. Depending on this setting an HTML h1-h6 element is us
 <blockquote>
 <p><strong>setTitleTarget</strong>(<code>sTitleTarget?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleTarget titleTarget.</p>
+<p>Determines the <code>target</code> attribute for the title link. Options are <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>,
+<code>_search</code>. Alternatively, a frame name can be entered.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sTitleTarget?</h5>
 <p><code>string</code></p>
@@ -1875,15 +1879,16 @@ map for faster navigation. Depending on this setting an HTML h1-h6 element is us
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Sets a new value for property #getTitleTarget titleTarget.</p>
-<p>Determines the <code>target</code> attribute for the title link. Options are <code>_self</code>, <code>_top</code>, <code>_blank</code>, <code>_parent</code>,
-<code>_search</code>. Alternatively, a frame name can be entered.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setTitleTextDirection()</h3>
 <blockquote>
 <p><strong>setTitleTextDirection</strong>(<code>sTitleTextDirection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleTextDirection titleTextDirection.</p>
+<p>Specifies the title text directionality with enumerated options. By default, the control inherits text
+direction from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -1893,11 +1898,6 @@ map for faster navigation. Depending on this setting an HTML h1-h6 element is us
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getTitleTextDirection titleTextDirection.</p>
-<p>Specifies the title text directionality with enumerated options. By default, the control inherits text
-direction from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1938,6 +1938,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

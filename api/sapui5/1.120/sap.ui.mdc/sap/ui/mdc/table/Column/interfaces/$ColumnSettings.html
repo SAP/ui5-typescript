@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ColumnSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/table/Column/interfaces/$ColumnSettings.html">
 <meta property="og:title" content="Interface: $ColumnSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ColumnSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/table/Column/interfaces/$ColumnSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › table › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/table/Column/README.html">Column</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/table/Column</a> / $ColumnSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/table/Column</a> / $ColumnSettings</p>
 <h1>Interface: $ColumnSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ColumnSettings } <span class="kw">from</span> <span class="str">"sap/ui/mdc/table/Column"</span>;</pre>
+<p>Describes the settings that can be provided to the Column constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -48,84 +49,84 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>optional</code> <strong>creationTemplate?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p><code>CreationRow</code> template.</p>
+<p><strong>Note:</strong> Once the binding supports creating transient records, this aggregation will be removed.</p>
 <ul>
 <li>Do not use</li>
 </ul>
-<p><code>CreationRow</code> template.</p>
-<p><strong>Note:</strong> Once the binding supports creating transient records, this aggregation will be removed.</p>
 <hr>
 <h3><del>dataProperty?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>dataProperty?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Defines data property related to the column.</p>
 <h4>Since</h4>
 <p>1.84</p>
 <h4>Deprecated</h4>
 <p>(since 1.115) - Please use <code>propertyKey</code> instead.</p>
-<p>Defines data property related to the column.</p>
 <hr>
 <h3>extendedSettings?</h3>
 <blockquote>
 <p><code>optional</code> <strong>extendedSettings?</strong>: <a href="../../ColumnSettings/classes/ColumnSettings.html"><code>ColumnSettings</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.110</p>
 <p>Defines type-specific column settings based on the used sap.ui.mdc.table.TableTypeBase.</p>
 <p><strong>Note:</strong> Once <code>sap.ui.mdc.table.ColumnSettings</code> are defined, all properties provided by the <code>ColumnSettings</code>
 are automatically assigned to the column.</p>
+<h4>Since</h4>
+<p>1.110</p>
 <hr>
 <h3>hAlign?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hAlign?</strong>: <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/HorizontalAlign.html"><code>HorizontalAlign</code></a></p>
 </blockquote>
+<p>Defines the horizontal alignment of the column content.</p>
 <h4>Since</h4>
 <p>1.80</p>
-<p>Defines the horizontal alignment of the column content.</p>
 <hr>
 <h3>header?</h3>
 <blockquote>
 <p><code>optional</code> <strong>header?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Defines the column header text.</p>
 <h4>Since</h4>
 <p>1.80</p>
-<p>Defines the column header text.</p>
 <hr>
 <h3>headerVisible?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerVisible?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Defines whether the column header is visible.</p>
 <h4>Since</h4>
 <p>1.80</p>
-<p>Defines whether the column header is visible.</p>
 <hr>
 <h3><del>importance?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>importance?</strong>: <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.110) - replaced with sap.ui.mdc.table.ResponsiveColumnSettings#importance</p>
-<p> This property will be ignored whenever the sap.ui.mdc.table.ResponsiveColumnSettings are applied
-to the column.</p>
 <p>Defines the column importance.</p>
 <p>The column importance is taken into consideration for calculating the <code>minScreenWidth</code> property and for
 setting the <code>demandPopin</code> property of the column. See sap.m.Table#getAutoPopinMode for more details,
 which is automatically set to <code>true</code>.</p>
+<h4>Deprecated</h4>
+<p>(since 1.110) - replaced with sap.ui.mdc.table.ResponsiveColumnSettings#importance</p>
+<p> This property will be ignored whenever the sap.ui.mdc.table.ResponsiveColumnSettings are applied
+to the column.</p>
 <hr>
 <h3>minWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minWidth?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Defines the minimum width of the column.</p>
 <h4>Since</h4>
 <p>1.80</p>
-<p>Defines the minimum width of the column.</p>
 <hr>
 <h3>propertyKey?</h3>
 <blockquote>
 <p><code>optional</code> <strong>propertyKey?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Defines data property related to the column.</p>
 <h4>Since</h4>
 <p>1.115</p>
-<p>Defines data property related to the column.</p>
 <hr>
 <h3>required?</h3>
 <blockquote>
@@ -146,10 +147,10 @@ property to <code>true</code> for <code>sap.m.Input</code>.</p>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Defines the width of the column.</p>
 <h4>Since</h4>
 <p>1.80</p>
-<p>Defines the width of the column.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

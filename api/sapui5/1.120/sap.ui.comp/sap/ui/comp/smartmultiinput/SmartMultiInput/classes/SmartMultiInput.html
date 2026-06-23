@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SmartMultiInput — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SmartMultiInput — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SmartMultiInput — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartmultiinput/SmartMultiInput/classes/SmartMultiInput.html">
 <meta property="og:title" content="Class: SmartMultiInput — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SmartMultiInput — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SmartMultiInput — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartmultiinput/SmartMultiInput/classes/SmartMultiInput.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartmultiinput › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartmultiinput/SmartMultiInput/README.html">SmartMultiInput</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartmultiinput/SmartMultiInput</a> / SmartMultiInput</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartmultiinput/SmartMultiInput</a> / SmartMultiInput</p>
 <h1>Class: SmartMultiInput</h1>
 <pre class="sig"><span class="kw">import</span> SmartMultiInput <span class="kw">from</span> <span class="str">"sap/ui/comp/smartmultiinput/SmartMultiInput"</span>;</pre>
-<h2>Since</h2>
-<p>1.56.0</p>
 <p>The <code>SmartMultiInput</code> control is a wrapper for other controls that extends the sap.ui.comp.smartfield.SmartField
 control and supports the same settings and annotations.
  It interprets OData metadata to create multi-input controls, such as sap.m.MultiInput and sap.m.MultiComboBox.
@@ -57,6 +55,8 @@ control and supports the same settings and annotations.
 <p>For more details, see the <a href="https://ui5.sap.com/#/entity/sap.ui.comp.smartmultiinput.SmartMultiInput">samples</a>.</p>
 <p>Note: Just as the rest of the sap.ui.comp library, this control supports only OData V2 (see sap.ui.model.odata.v2.ODataModel)
 and default models.</p>
+<h2>Since</h2>
+<p>1.56.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../smartfield/SmartField/classes/SmartField.html"><code>SmartField</code></a></li>
@@ -439,6 +439,9 @@ this <code>sap.ui.comp.smartmultiinput.SmartMultiInput</code>.</p>
 <blockquote>
 <p><strong>fireBeforeCreate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:beforeCreate beforeCreate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartMultiInput$BeforeCreateEventParameters.html"><code>SmartMultiInput$BeforeCreateEventParameters</code></a></p>
@@ -448,14 +451,14 @@ this <code>sap.ui.comp.smartmultiinput.SmartMultiInput</code>.</p>
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeCreate beforeCreate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireBeforeRemove()</h3>
 <blockquote>
 <p><strong>fireBeforeRemove</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:beforeRemove beforeRemove to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartMultiInput$BeforeRemoveEventParameters.html"><code>SmartMultiInput$BeforeRemoveEventParameters</code></a></p>
@@ -465,14 +468,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeRemove beforeRemove to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireSelectionChange()</h3>
 <blockquote>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartMultiInput$SelectionChangeEventParameters.html"><code>SmartMultiInput$SelectionChangeEventParameters</code></a></p>
@@ -482,12 +483,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3>fireSelectionFinish()</h3>
 <blockquote>
 <p><strong>fireSelectionFinish</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:selectionFinish selectionFinish to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartMultiInput$SelectionFinishEventParameters.html"><code>SmartMultiInput$SelectionFinishEventParameters</code></a></p>
@@ -497,12 +498,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectionFinish selectionFinish to attached listeners.</p>
 <hr>
 <h3>fireTokenUpdate()</h3>
 <blockquote>
 <p><strong>fireTokenUpdate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:tokenUpdate tokenUpdate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartMultiInput$TokenUpdateEventParameters.html"><code>SmartMultiInput$TokenUpdateEventParameters</code></a></p>
@@ -512,7 +513,6 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:tokenUpdate tokenUpdate to attached listeners.</p>
 <hr>
 <h3>getEnableODataSelect()</h3>
 <blockquote>
@@ -524,6 +524,20 @@ event object. The return value of this method indicates whether the default acti
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableODataSelect</code></p>
+<hr>
+<h3>getEnableValueHelpSelectAll()</h3>
+<blockquote>
+<p><strong>getEnableValueHelpSelectAll</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getEnableValueHelpSelectAll enableValueHelpSelectAll.</p>
+<p>Enable/Disable &quot;Select All&quot; checkbox in ValueHelpDialog. If set to true, the Select All checkbox is enabled
+in the ValueHelpDialog.</p>
+<p>Default value is <code>undefined</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableValueHelpSelectAll</code></p>
+<h4>Since</h4>
+<p>1.120</p>
 <hr>
 <h3>getFilter()</h3>
 <blockquote>
@@ -560,15 +574,15 @@ are comma-separated value of fields that must be requested from the backend.</p>
 <p><strong>getSingleTokenMode</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getSingleTokenMode singleTokenMode.</p>
+<p>Allows only one token to be added to the SmartMultiInput. Works only in No Data Binding Scenario.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>singleTokenMode</code></p>
 <h4>Since</h4>
 <p>1.101
  (since 1.101)</p>
-<p>Gets current value of property #getSingleTokenMode singleTokenMode.</p>
-<p>Allows only one token to be added to the SmartMultiInput. Works only in No Data Binding Scenario.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSupportMultiSelect()</h3>
 <blockquote>
@@ -628,6 +642,25 @@ are comma-separated value of fields that must be requested from the backend.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
+<h3>setEnableValueHelpSelectAll()</h3>
+<blockquote>
+<p><strong>setEnableValueHelpSelectAll</strong>(<code>bEnableValueHelpSelectAll?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getEnableValueHelpSelectAll enableValueHelpSelectAll.</p>
+<p>Enable/Disable &quot;Select All&quot; checkbox in ValueHelpDialog. If set to true, the Select All checkbox is enabled
+in the ValueHelpDialog.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>undefined</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableValueHelpSelectAll?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableValueHelpSelectAll</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.120</p>
+<hr>
 <h3>setRangeData()</h3>
 <blockquote>
 <p><strong>setRangeData</strong>(<code>vRangeData</code>): <code>void</code></p>
@@ -664,6 +697,10 @@ are comma-separated value of fields that must be requested from the backend.</p>
 <p><strong>setSingleTokenMode</strong>(<code>bSingleTokenMode?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getSingleTokenMode singleTokenMode.</p>
+<p>Allows only one token to be added to the SmartMultiInput. Works only in No Data Binding Scenario.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bSingleTokenMode?</h5>
 <p><code>boolean</code></p>
@@ -674,10 +711,6 @@ are comma-separated value of fields that must be requested from the backend.</p>
 <h4>Since</h4>
 <p>1.101
  (since 1.101)</p>
-<p>Sets a new value for property #getSingleTokenMode singleTokenMode.</p>
-<p>Allows only one token to be added to the SmartMultiInput. Works only in No Data Binding Scenario.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSupportMultiSelect()</h3>
 <blockquote>
@@ -766,6 +799,6 @@ used by this class</p>
 <p><a href="../../../smartfield/SmartField/classes/SmartField.html"><code>SmartField</code></a>.<a href="../../../smartfield/SmartField/classes/SmartField.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

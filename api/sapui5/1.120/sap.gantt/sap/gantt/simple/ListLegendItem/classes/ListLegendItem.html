@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ListLegendItem — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ListLegendItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ListLegendItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/ListLegendItem/classes/ListLegendItem.html">
 <meta property="og:title" content="Class: ListLegendItem — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ListLegendItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ListLegendItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/simple/ListLegendItem/classes/ListLegendItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/ListLegendItem/README.html">ListLegendItem</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/ListLegendItem</a> / ListLegendItem</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/ListLegendItem</a> / ListLegendItem</p>
 <h1>Class: ListLegendItem</h1>
 <pre class="sig"><span class="kw">import</span> ListLegendItem <span class="kw">from</span> <span class="str">"sap/gantt/simple/ListLegendItem"</span>;</pre>
 <p>Aggregation element for the List Legend. A List Legend Item consists of a marker and an associated text.
@@ -130,12 +130,12 @@ otherwise it will be bound to this <code>sap.gantt.simple.ListLegendItem</code> 
 <blockquote>
 <p><strong>destroyLegendShapeGroup</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the legendShapeGroup in the aggregation #getLegendShapeGroup legendShapeGroup.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Destroys the legendShapeGroup in the aggregation #getLegendShapeGroup legendShapeGroup.</p>
 <hr>
 <h3>destroyShape()</h3>
 <blockquote>
@@ -168,6 +168,7 @@ of this <code>sap.gantt.simple.ListLegendItem</code>.</p>
 <blockquote>
 <p><strong>fireInteractiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:interactiveChange interactiveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListLegendItem$InteractiveChangeEventParameters.html"><code>ListLegendItem$InteractiveChangeEventParameters</code></a></p>
@@ -177,7 +178,6 @@ of this <code>sap.gantt.simple.ListLegendItem</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:interactiveChange interactiveChange to attached listeners.</p>
 <hr>
 <h3>getInteractive()</h3>
 <blockquote>
@@ -203,13 +203,13 @@ of this <code>sap.gantt.simple.ListLegendItem</code>.</p>
 <blockquote>
 <p><strong>getLegendShapeGroup</strong>(): <a href="../../LegendShapeGroup/classes/LegendShapeGroup.html"><code>LegendShapeGroup</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getLegendShapeGroup legendShapeGroup.</p>
+<p>Defines a Legend Shape Group class for the List Legend Item. The shapes are normalized in the rendering
+phase.</p>
 <h4>Returns</h4>
 <p><a href="../../LegendShapeGroup/classes/LegendShapeGroup.html"><code>LegendShapeGroup</code></a></p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Gets content of aggregation #getLegendShapeGroup legendShapeGroup.</p>
-<p>Defines a Legend Shape Group class for the List Legend Item. The shapes are normalized in the rendering
-phase.</p>
 <hr>
 <h3>getSelected()</h3>
 <blockquote>
@@ -235,14 +235,14 @@ phase.</p>
 <blockquote>
 <p><strong>getVisible</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getVisible visible.</p>
+<p>Indicates whether the list item is visible</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>visible</code></p>
 <h4>Since</h4>
 <p>1.92</p>
-<p>Gets current value of property #getVisible visible.</p>
-<p>Indicates whether the list item is visible</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setInteractive()</h3>
 <blockquote>
@@ -278,6 +278,7 @@ phase.</p>
 <blockquote>
 <p><strong>setLegendShapeGroup</strong>(<code>oLegendShapeGroup</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getLegendShapeGroup legendShapeGroup.</p>
 <h4>Parameters</h4>
 <h5>oLegendShapeGroup</h5>
 <p><a href="../../LegendShapeGroup/classes/LegendShapeGroup.html"><code>LegendShapeGroup</code></a></p>
@@ -287,7 +288,6 @@ phase.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Sets the aggregated #getLegendShapeGroup legendShapeGroup.</p>
 <hr>
 <h3>setSelected()</h3>
 <blockquote>
@@ -322,6 +322,10 @@ phase.</p>
 <blockquote>
 <p><strong>setVisible</strong>(<code>bVisible?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getVisible visible.</p>
+<p>Indicates whether the list item is visible</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bVisible?</h5>
 <p><code>boolean</code></p>
@@ -331,10 +335,6 @@ phase.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
-<p>Sets a new value for property #getVisible visible.</p>
-<p>Indicates whether the list item is visible</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -375,6 +375,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

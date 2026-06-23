@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: GeoMap — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: GeoMap — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: GeoMap — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vbm/sap/ui/vbm/GeoMap/classes/GeoMap.html">
 <meta property="og:title" content="Class: GeoMap — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: GeoMap — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: GeoMap — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vbm/sap/ui/vbm/GeoMap/classes/GeoMap.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vbm/README.html">sap.ui.vbm</a> › sap › ui › vbm › <a href="../../../../../../sap.ui.vbm/sap/ui/vbm/GeoMap/README.html">GeoMap</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.vbm</a> / <a href="../README.html">sap/ui/vbm/GeoMap</a> / GeoMap</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.vbm</a> / <a href="../README.html">sap/ui/vbm/GeoMap</a> / GeoMap</p>
 <h1>Class: GeoMap</h1>
 <pre class="sig"><span class="kw">import</span> GeoMap <span class="kw">from</span> <span class="str">"sap/ui/vbm/GeoMap"</span>;</pre>
 <p>Map control with the option to position multiple visual objects on top of a map. The GeoMap control shows
@@ -112,6 +112,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addFeatureCollection</strong>(<code>oFeatureCollection</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some featureCollection to the aggregation #getFeatureCollections featureCollections.</p>
 <h4>Parameters</h4>
 <h5>oFeatureCollection</h5>
 <p><a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a></p>
@@ -122,7 +123,6 @@ of the syntax of the settings object.</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This aggregation should not longer be used. Its functionality has been replaced
 by the more generic<code>geoJsonLayers</code> aggregation.</p>
-<p>Adds some featureCollection to the aggregation #getFeatureCollections featureCollections.</p>
 <hr>
 <h3>addGeoJsonLayer()</h3>
 <blockquote>
@@ -562,13 +562,13 @@ otherwise it will be bound to this <code>sap.ui.vbm.GeoMap</code> itself.</p>
 <blockquote>
 <p><strong>destroyFeatureCollections</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the featureCollections in the aggregation #getFeatureCollections featureCollections.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This aggregation should not longer be used. Its functionality has been replaced
 by the more generic<code>geoJsonLayers</code> aggregation.</p>
-<p>Destroys all the featureCollections in the aggregation #getFeatureCollections featureCollections.</p>
 <hr>
 <h3>destroyGeoJsonLayers()</h3>
 <blockquote>
@@ -764,6 +764,7 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <blockquote>
 <p><strong>fireCenterChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:centerChanged centerChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GeoMap$CenterChangedEventParameters.html"><code>GeoMap$CenterChangedEventParameters</code></a></p>
@@ -773,12 +774,12 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:centerChanged centerChanged to attached listeners.</p>
 <hr>
 <h3>fireClick()</h3>
 <blockquote>
 <p><strong>fireClick</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:click click to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GeoMap$ClickEventParameters.html"><code>GeoMap$ClickEventParameters</code></a></p>
@@ -788,12 +789,12 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:click click to attached listeners.</p>
 <hr>
 <h3>fireContextMenu()</h3>
 <blockquote>
 <p><strong>fireContextMenu</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:contextMenu contextMenu to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GeoMap$ContextMenuEventParameters.html"><code>GeoMap$ContextMenuEventParameters</code></a></p>
@@ -803,12 +804,12 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:contextMenu contextMenu to attached listeners.</p>
 <hr>
 <h3>fireDrop()</h3>
 <blockquote>
 <p><strong>fireDrop</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:drop drop to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GeoMap$DropEventParameters.html"><code>GeoMap$DropEventParameters</code></a></p>
@@ -818,12 +819,12 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:drop drop to attached listeners.</p>
 <hr>
 <h3>fireKeyDown()</h3>
 <blockquote>
 <p><strong>fireKeyDown</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:keyDown keyDown to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GeoMap$KeyDownEventParameters.html"><code>GeoMap$KeyDownEventParameters</code></a></p>
@@ -833,12 +834,12 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:keyDown keyDown to attached listeners.</p>
 <hr>
 <h3>fireKeyPress()</h3>
 <blockquote>
 <p><strong>fireKeyPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:keyPress keyPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GeoMap$KeyPressEventParameters.html"><code>GeoMap$KeyPressEventParameters</code></a></p>
@@ -848,12 +849,12 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:keyPress keyPress to attached listeners.</p>
 <hr>
 <h3>fireKeyUp()</h3>
 <blockquote>
 <p><strong>fireKeyUp</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:keyUp keyUp to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GeoMap$KeyUpEventParameters.html"><code>GeoMap$KeyUpEventParameters</code></a></p>
@@ -863,12 +864,12 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:keyUp keyUp to attached listeners.</p>
 <hr>
 <h3>fireSelect()</h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -878,12 +879,12 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>fireZoomChanged()</h3>
 <blockquote>
 <p><strong>fireZoomChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:zoomChanged zoomChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GeoMap$ZoomChangedEventParameters.html"><code>GeoMap$ZoomChangedEventParameters</code></a></p>
@@ -893,7 +894,6 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:zoomChanged zoomChanged to attached listeners.</p>
 <hr>
 <h3>getCenterPosition()</h3>
 <blockquote>
@@ -921,13 +921,13 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <blockquote>
 <p><strong>getClustering</strong>(): <code>object</code></p>
 </blockquote>
+<p>Gets current value of property #getClustering clustering.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>clustering</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This property should not longer be used. Its functionality has been replaced
 by the <code>clusters</code> aggregation.</p>
-<p>Gets current value of property #getClustering clustering.</p>
 <hr>
 <h3>getClusters()</h3>
 <blockquote>
@@ -975,12 +975,12 @@ by the <code>clusters</code> aggregation.</p>
 <blockquote>
 <p><strong>getFeatureCollections</strong>(): <a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getFeatureCollections featureCollections.</p>
 <h4>Returns</h4>
 <p><a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This aggregation should not longer be used. Its functionality has been replaced
 by the more generic<code>geoJsonLayers</code> aggregation.</p>
-<p>Gets content of aggregation #getFeatureCollections featureCollections.</p>
 <hr>
 <h3>getGeoJsonLayers()</h3>
 <blockquote>
@@ -1062,9 +1062,9 @@ of the maps and the servers that can be used to request the map tiles.</p>
 <p><strong>getPositionInteractive</strong>(<code>bPosArray</code>, <code>callback</code>): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.30.0) - This method is experimental and might be modified or removerd in future
-versions.</p>
 <p>Trigger the interactive creation mode to get a position or position array.</p>
+<p> (since 1.30.0) - This method is experimental and might be modified or removerd in future
+versions.</p>
 <h4>Parameters</h4>
 <h5>bPosArray</h5>
 <p><code>boolean</code></p>
@@ -1181,6 +1181,8 @@ returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfFeatureCollection</strong>(<code>oFeatureCollection</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.vbm.FeatureCollection</code> in the aggregation #getFeatureCollections featureCollections.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oFeatureCollection</h5>
 <p><a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a></p>
@@ -1191,8 +1193,6 @@ returns its index if found or -1 otherwise.</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This aggregation should not longer be used. Its functionality has been replaced
 by the more generic<code>geoJsonLayers</code> aggregation.</p>
-<p>Checks for the provided <code>sap.ui.vbm.FeatureCollection</code> in the aggregation #getFeatureCollections featureCollections.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfGeoJsonLayer()</h3>
 <blockquote>
@@ -1258,6 +1258,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>insertFeatureCollection</strong>(<code>oFeatureCollection</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a featureCollection into the aggregation #getFeatureCollections featureCollections.</p>
 <h4>Parameters</h4>
 <h5>oFeatureCollection</h5>
 <p><a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a></p>
@@ -1273,7 +1274,6 @@ the featureCollection is inserted at the last position</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This aggregation should not longer be used. Its functionality has been replaced
 by the more generic<code>geoJsonLayers</code> aggregation.</p>
-<p>Inserts a featureCollection into the aggregation #getFeatureCollections featureCollections.</p>
 <hr>
 <h3>insertGeoJsonLayer()</h3>
 <blockquote>
@@ -1360,14 +1360,14 @@ last position</p>
 <blockquote>
 <p><strong>removeAllFeatureCollections</strong>(): <a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getFeatureCollections featureCollections.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This aggregation should not longer be used. Its functionality has been replaced
 by the more generic<code>geoJsonLayers</code> aggregation.</p>
-<p>Removes all the controls from the aggregation #getFeatureCollections featureCollections.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllGeoJsonLayers()</h3>
 <blockquote>
@@ -1416,6 +1416,7 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <blockquote>
 <p><strong>removeFeatureCollection</strong>(<code>vFeatureCollection</code>): <a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a></p>
 </blockquote>
+<p>Removes a featureCollection from the aggregation #getFeatureCollections featureCollections.</p>
 <h4>Parameters</h4>
 <h5>vFeatureCollection</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../FeatureCollection/classes/FeatureCollection.html"><code>FeatureCollection</code></a></p>
@@ -1426,7 +1427,6 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This aggregation should not longer be used. Its functionality has been replaced
 by the more generic<code>geoJsonLayers</code> aggregation.</p>
-<p>Removes a featureCollection from the aggregation #getFeatureCollections featureCollections.</p>
 <hr>
 <h3>removeGeoJsonLayer()</h3>
 <blockquote>
@@ -1487,6 +1487,7 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <blockquote>
 <p><strong>setClustering</strong>(<code>oClustering</code>): <code>GeoMap</code></p>
 </blockquote>
+<p>Set clustering definitions.</p>
 <h4>Parameters</h4>
 <h5>oClustering</h5>
 <p><code>object</code></p>
@@ -1497,7 +1498,6 @@ by the more generic<code>geoJsonLayers</code> aggregation.</p>
 <h4>Deprecated</h4>
 <p>(since 1.31) - This property should not longer be used. Its functionality has been replaced
 by the <code>clusters</code> aggregation.</p>
-<p>Set clustering definitions.</p>
 <hr>
 <h3>setDisablePan()</h3>
 <blockquote>
@@ -1827,6 +1827,6 @@ used by this class</p>
 <p><a href="../../VBI/classes/VBI.html"><code>VBI</code></a>.<a href="../../VBI/classes/VBI.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

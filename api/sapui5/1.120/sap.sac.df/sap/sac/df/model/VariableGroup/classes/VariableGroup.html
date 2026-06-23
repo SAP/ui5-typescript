@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: VariableGroup — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: VariableGroup — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: VariableGroup — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.sac.df/sap/sac/df/model/VariableGroup/classes/VariableGroup.html">
 <meta property="og:title" content="Class: VariableGroup — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: VariableGroup — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: VariableGroup — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.sac.df/sap/sac/df/model/VariableGroup/classes/VariableGroup.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,21 +33,22 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.sac.df/README.html">sap.sac.df</a> › sap › sac › df › model › <a href="../../../../../../../sap.sac.df/sap/sac/df/model/VariableGroup/README.html">VariableGroup</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.sac.df</a> / <a href="../README.html">sap/sac/df/model/VariableGroup</a> / VariableGroup</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.sac.df</a> / <a href="../README.html">sap/sac/df/model/VariableGroup</a> / VariableGroup</p>
 <h1>Class: VariableGroup</h1>
 <pre class="sig"><span class="kw">import</span> VariableGroup <span class="kw">from</span> <span class="str">"sap/sac/df/model/VariableGroup"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<h2>Since</h2>
-<p>1.119
- (since 1.119)</p>
-<p>Variable Group</p>
+<p>Variable Group Object</p>
+<p><strong>Structure of Exposed Data:</strong></p>
 <pre><code class="language-javascript">
 &quot;Name&quot;: &quot;&quot;,
 &quot;MergedVariable&quot;: { },
 &quot;Rule: function () {}
 </code></pre>
+<h2>Since</h2>
+<p>1.119
+ (since 1.119)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
@@ -77,6 +78,178 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><strong><code>Experimental</code></strong></p>
 <p>Name</p>
 <h2>Methods</h2>
+<h3>addMemberFilter()</h3>
+<blockquote>
+<p><strong>addMemberFilter</strong>(<code>oMemberFilter</code>, <code>bInvalidateDataProvider</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Add variable group filters</p>
+<h4>Parameters</h4>
+<h5>oMemberFilter</h5>
+<p><code>any</code></p>
+<p>a member filter object</p>
+<h5>bInvalidateDataProvider</h5>
+<p><code>boolean</code></p>
+<p>If true, the result set is invalidated and must be refreshed</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>addMemberFilterByKey()</h3>
+<blockquote>
+<p><strong>addMemberFilterByKey</strong>(<code>sKey</code>, <code>bInvalidateDataProvider</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Add a member filter by its key</p>
+<h4>Parameters</h4>
+<h5>sKey</h5>
+<p><code>string</code></p>
+<p>(internal) key of a dimension member</p>
+<h5>bInvalidateDataProvider</h5>
+<p><code>boolean</code></p>
+<p>If true, the result set is invalidated and must be refreshed</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>clearMemberFilter()</h3>
+<blockquote>
+<p><strong>clearMemberFilter</strong>(<code>bInvalidateDataProvider</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Clear variable group filter</p>
+<h4>Parameters</h4>
+<h5>bInvalidateDataProvider</h5>
+<p><code>boolean</code></p>
+<p>If true, the result set is invalidated and must be refreshed</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>getMemberFilter()</h3>
+<blockquote>
+<p><strong>getMemberFilter</strong>(): <code>any</code>[]</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Get effective variable group filters</p>
+<h4>Returns</h4>
+<p><code>any</code>[]</p>
+<p>array of member filters</p>
+<hr>
+<h3>openValueHelpDialog()</h3>
+<blockquote>
+<p><strong>openValueHelpDialog</strong>(<code>bInvalidateDataProvider</code>): <code>Promise</code>&lt;<code>boolean</code>&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Opens the value help dialog so the user choose a value for a variable group After the value is selected
+only teh VariableGroup.MergedVariable is updated. The variables of the aggregated DataProviders are updated
+with the next ResultSet fetch</p>
+<h4>Parameters</h4>
+<h5>bInvalidateDataProvider</h5>
+<p><code>boolean</code></p>
+<p>If true, the result set is invalidated and must be refreshed</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>boolean</code>&gt;</p>
+<p>to indicate if the VariableGroup has been updated</p>
+<hr>
+<h3>removeMemberFilter()</h3>
+<blockquote>
+<p><strong>removeMemberFilter</strong>(<code>oMemberFilter</code>, <code>bInvalidateDataProvider</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Remove variable group filter</p>
+<h4>Parameters</h4>
+<h5>oMemberFilter</h5>
+<p><code>any</code></p>
+<p>a member filter object</p>
+<h5>bInvalidateDataProvider</h5>
+<p><code>boolean</code></p>
+<p>If true, the result set is invalidated and must be refreshed</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>removeMemberFilterByKey()</h3>
+<blockquote>
+<p><strong>removeMemberFilterByKey</strong>(<code>sKey</code>, <code>bInvalidateDataProvider</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Remove a member filter by its key</p>
+<h4>Parameters</h4>
+<h5>sKey</h5>
+<p><code>string</code></p>
+<p>(internal) key of a dimension member</p>
+<h5>bInvalidateDataProvider</h5>
+<p><code>boolean</code></p>
+<p>If true, the result set is invalidated and must be refreshed</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
+<h3>searchMember()</h3>
+<blockquote>
+<p><strong>searchMember</strong>(<code>sSearchString</code>, <code>bFuzzy</code>, <code>bText</code>, <code>bKey</code>, <code>iMaxNumberOfResults</code>, <code>bRequestParents</code>): <code>Promise</code>&lt;<code>any</code>[]&gt;</p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Performs the search in values of a given Variable</p>
+<h4>Parameters</h4>
+<h5>sSearchString</h5>
+<p><code>string</code></p>
+<p>string to search for</p>
+<h5>bFuzzy</h5>
+<p><code>boolean</code></p>
+<p>if a fuzzy search is performed</p>
+<h5>bText</h5>
+<p><code>boolean</code></p>
+<p>if to search in text/description (default true)</p>
+<h5>bKey</h5>
+<p><code>boolean</code></p>
+<p>if to search in key/id (default true)</p>
+<h5>iMaxNumberOfResults</h5>
+<p><code>number</code></p>
+<p>maximal number of search results (default 1)</p>
+<h5>bRequestParents</h5>
+<p><code>boolean</code></p>
+<p>if to provide the parents of the search result for hierarchical variables (only relevant if iMaxNumberOfResults
+is set)</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>[]&gt;</p>
+<p>array with found values</p>
+<hr>
+<h3>setMemberFilter()</h3>
+<blockquote>
+<p><strong>setMemberFilter</strong>(<code>aMemberFilter</code>, <code>bInvalidateDataProvider</code>): <code>undefined</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set variable group filters</p>
+<h4>Parameters</h4>
+<h5>aMemberFilter</h5>
+<p><code>any</code>[]</p>
+<p>array of member filters</p>
+<h5>bInvalidateDataProvider</h5>
+<p><code>boolean</code></p>
+<p>If true, the result set is invalidated and must be refreshed</p>
+<h4>Returns</h4>
+<p><code>undefined</code></p>
+<p>Promise which resolve when the value is set</p>
+<hr>
+<h3>setMemberFilterByKey()</h3>
+<blockquote>
+<p><strong>setMemberFilterByKey</strong>(<code>sKey</code>, <code>bInvalidateDataProvider</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Set a member filter by its key</p>
+<h4>Parameters</h4>
+<h5>sKey</h5>
+<p><code>string</code></p>
+<p>(internal) key of a dimension member</p>
+<h5>bInvalidateDataProvider</h5>
+<p><code>boolean</code></p>
+<p>If true, the result set is invalidated and must be refreshed</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to this in order to allow method chaining</p>
+<hr>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
@@ -116,6 +289,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

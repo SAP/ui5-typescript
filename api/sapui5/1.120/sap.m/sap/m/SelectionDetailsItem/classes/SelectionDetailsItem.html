@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SelectionDetailsItem — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SelectionDetailsItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SelectionDetailsItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/SelectionDetailsItem/classes/SelectionDetailsItem.html">
 <meta property="og:title" content="Class: SelectionDetailsItem — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SelectionDetailsItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SelectionDetailsItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/SelectionDetailsItem/classes/SelectionDetailsItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,67 +33,28 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SelectionDetailsItem/README.html">SelectionDetailsItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SelectionDetailsItem</a> / SelectionDetailsItem</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SelectionDetailsItem</a> / SelectionDetailsItem</p>
 <h1>Class: SelectionDetailsItem</h1>
 <pre class="sig"><span class="kw">import</span> SelectionDetailsItem <span class="kw">from</span> <span class="str">"sap/m/SelectionDetailsItem"</span>;</pre>
+<p>This protected element provides an item for sap.m.SelectionDetails that is shown inside a list.
+The item includes SelectionDetailsItemLine as its lines that are displayed in one block above the optional
+actions. **Note:**It is protected and should only be used within the framework itself.</p>
 <h2>Since</h2>
 <p>1.48.0</p>
 <h2>Ui5-protected</h2>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
-<p>This protected element provides an item for sap.m.SelectionDetails that is shown inside a list.
-The item includes SelectionDetailsItemLine as its lines that are displayed in one block above the optional
-actions. **Note:**It is protected and should only be used within the framework itself.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
 </ul>
-<h2>Constructors</h2>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new SelectionDetailsItem</strong>(<code>mSettings?</code>): <code>SelectionDetailsItem</code></p>
-</blockquote>
-<h4>Parameters</h4>
-<h5>mSettings?</h5>
-<p><a href="../interfaces/$SelectionDetailsItemSettings.html"><code>$SelectionDetailsItemSettings</code></a></p>
-<p>Initial settings for the new control</p>
-<h4>Returns</h4>
-<p><code>SelectionDetailsItem</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<p>Constructor for a new SelectionDetailsItem.</p>
-<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
-objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
-of the syntax of the settings object.</p>
-<h4>Overrides</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#constructor"><code>constructor</code></a></p>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new SelectionDetailsItem</strong>(<code>sId?</code>, <code>mSettings?</code>): <code>SelectionDetailsItem</code></p>
-</blockquote>
-<h4>Parameters</h4>
-<h5>sId?</h5>
-<p><code>string</code></p>
-<p>Id for the new control, generated automatically if no id is given</p>
-<h5>mSettings?</h5>
-<p><a href="../interfaces/$SelectionDetailsItemSettings.html"><code>$SelectionDetailsItemSettings</code></a></p>
-<p>Initial settings for the new control</p>
-<h4>Returns</h4>
-<p><code>SelectionDetailsItem</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<p>Constructor for a new SelectionDetailsItem.</p>
-<p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
-objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
-of the syntax of the settings object.</p>
-<h4>Overrides</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
 <h3>addAction()</h3>
 <blockquote>
 <p><strong>addAction</strong>(<code>oAction</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some action to the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
@@ -103,12 +64,12 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds some action to the aggregation #getActions actions.</p>
 <hr>
 <h3>addLine()</h3>
 <blockquote>
 <p><strong>addLine</strong>(<code>oLine</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some line to the aggregation #getLines lines.</p>
 <h4>Parameters</h4>
 <h5>oLine</h5>
 <p><a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a></p>
@@ -118,12 +79,14 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds some line to the aggregation #getLines lines.</p>
 <hr>
 <h3>bindLines()</h3>
 <blockquote>
 <p><strong>bindLines</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getLines lines to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -133,83 +96,82 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Binds aggregation #getLines lines to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3>destroyActions()</h3>
 <blockquote>
 <p><strong>destroyActions</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the actions in the aggregation #getActions actions.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Destroys all the actions in the aggregation #getActions actions.</p>
 <hr>
 <h3>destroyLines()</h3>
 <blockquote>
 <p><strong>destroyLines</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the lines in the aggregation #getLines lines.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Destroys all the lines in the aggregation #getLines lines.</p>
 <hr>
 <h3>getActions()</h3>
 <blockquote>
 <p><strong>getActions</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getActions actions.</p>
+<p>Contains custom actions shown below the main content of the item.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets content of aggregation #getActions actions.</p>
-<p>Contains custom actions shown below the main content of the item.</p>
 <hr>
 <h3>getEnableNav()</h3>
 <blockquote>
 <p><strong>getEnableNav</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getEnableNav enableNav.</p>
+<p>Determines whether or not the item is active and a navigation event is triggered on press.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableNav</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets current value of property #getEnableNav enableNav.</p>
-<p>Determines whether or not the item is active and a navigation event is triggered on press.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getFacade()</h3>
 <blockquote>
 <p><strong>getFacade</strong>(): <a href="../../../../../sap.ui.core/sap/ui/base/Interface/classes/Interface.html"><code>Interface</code></a></p>
 </blockquote>
+<p>Returns the public facade of the SelectionDetailsItem for non inner framework usages.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Interface/classes/Interface.html"><code>Interface</code></a></p>
 <p>The reduced facade for outer framework usages.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the public facade of the SelectionDetailsItem for non inner framework usages.</p>
 <hr>
 <h3>getLines()</h3>
 <blockquote>
 <p><strong>getLines</strong>(): <a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getLines lines.</p>
+<p>Contains a record of information about, for example, measures and dimensions. These entries are usually
+obtained via selection in chart controls.</p>
 <h4>Returns</h4>
 <p><a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a>[]</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets content of aggregation #getLines lines.</p>
-<p>Contains a record of information about, for example, measures and dimensions. These entries are usually
-obtained via selection in chart controls.</p>
 <hr>
 <h3>indexOfAction()</h3>
 <blockquote>
 <p><strong>indexOfAction</strong>(<code>oAction</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.core.Item</code> in the aggregation #getActions actions. and returns
+its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
@@ -219,13 +181,13 @@ obtained via selection in chart controls.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks for the provided <code>sap.ui.core.Item</code> in the aggregation #getActions actions. and returns
-its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfLine()</h3>
 <blockquote>
 <p><strong>indexOfLine</strong>(<code>oLine</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.SelectionDetailsItemLine</code> in the aggregation #getLines lines.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oLine</h5>
 <p><a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a></p>
@@ -235,13 +197,12 @@ its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks for the provided <code>sap.m.SelectionDetailsItemLine</code> in the aggregation #getLines lines.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertAction()</h3>
 <blockquote>
 <p><strong>insertAction</strong>(<code>oAction</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a action into the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
@@ -256,12 +217,12 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Inserts a action into the aggregation #getActions actions.</p>
 <hr>
 <h3>insertLine()</h3>
 <blockquote>
 <p><strong>insertLine</strong>(<code>oLine</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a line into the aggregation #getLines lines.</p>
 <h4>Parameters</h4>
 <h5>oLine</h5>
 <p><a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a></p>
@@ -276,12 +237,12 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Inserts a line into the aggregation #getLines lines.</p>
 <hr>
 <h3>removeAction()</h3>
 <blockquote>
 <p><strong>removeAction</strong>(<code>vAction</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 </blockquote>
+<p>Removes a action from the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>vAction</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
@@ -291,36 +252,36 @@ the last position</p>
 <p>The removed action or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes a action from the aggregation #getActions actions.</p>
 <hr>
 <h3>removeAllActions()</h3>
 <blockquote>
 <p><strong>removeAllActions</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getActions actions.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes all the controls from the aggregation #getActions actions.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllLines()</h3>
 <blockquote>
 <p><strong>removeAllLines</strong>(): <a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getLines lines.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes all the controls from the aggregation #getLines lines.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeLine()</h3>
 <blockquote>
 <p><strong>removeLine</strong>(<code>vLine</code>): <a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a></p>
 </blockquote>
+<p>Removes a line from the aggregation #getLines lines.</p>
 <h4>Parameters</h4>
 <h5>vLine</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../SelectionDetailsItemLine/classes/SelectionDetailsItemLine.html"><code>SelectionDetailsItemLine</code></a></p>
@@ -330,12 +291,15 @@ the last position</p>
 <p>The removed line or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Removes a line from the aggregation #getLines lines.</p>
 <hr>
 <h3>setEnableNav()</h3>
 <blockquote>
 <p><strong>setEnableNav</strong>(<code>bEnableNav?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEnableNav enableNav.</p>
+<p>Determines whether or not the item is active and a navigation event is triggered on press.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableNav?</h5>
 <p><code>boolean</code></p>
@@ -345,26 +309,25 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets a new value for property #getEnableNav enableNav.</p>
-<p>Determines whether or not the item is active and a navigation event is triggered on press.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>unbindLines()</h3>
 <blockquote>
 <p><strong>unbindLines</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getLines lines from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Unbinds aggregation #getLines lines from model data.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
+<p>Creates a new subclass of class sap.m.SelectionDetailsItem with name <code>sClassName</code> and enriches it with
+the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.Element.extend.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
@@ -384,9 +347,6 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new subclass of class sap.m.SelectionDetailsItem with name <code>sClassName</code> and enriches it with
-the information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.Element.extend.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#extend"><code>extend</code></a></p>
 <hr>
@@ -394,16 +354,16 @@ the information contained in <code>oClassInfo</code>.</p>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
 </blockquote>
+<p>Returns a metadata object for class sap.m.SelectionDetailsItem.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a metadata object for class sap.m.SelectionDetailsItem.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

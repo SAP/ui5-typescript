@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SmartFormSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SmartFormSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $SmartFormSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartform/SmartForm/interfaces/$SmartFormSettings.html">
 <meta property="og:title" content="Interface: $SmartFormSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SmartFormSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $SmartFormSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartform/SmartForm/interfaces/$SmartFormSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartform › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartform/SmartForm/README.html">SmartForm</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartform/SmartForm</a> / $SmartFormSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartform/SmartForm</a> / $SmartFormSettings</p>
 <h1>Interface: $SmartFormSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SmartFormSettings } <span class="kw">from</span> <span class="str">"sap/ui/comp/smartform/SmartForm"</span>;</pre>
+<p>Describes the settings that can be provided to the SmartForm constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,9 +48,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs that label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Association to controls / IDs that label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <hr>
 <h3>checkButton?</h3>
 <blockquote>
@@ -151,10 +152,10 @@ is rendered.</p>
 <blockquote>
 <p><code>optional</code> <strong>horizontalLayoutGroupElementMinWidth?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Specifies the minimal size in pixels of all group elements of the form if the horizontal layout is used.</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please do not use this property as it does not have any effect on the current
 layout of the <code>SmartForm</code> control.</p>
-<p>Specifies the minimal size in pixels of all group elements of the form if the horizontal layout is used.</p>
 <hr>
 <h3>ignoredFields?</h3>
 <blockquote>
@@ -171,14 +172,14 @@ control itself.</p>
 <blockquote>
 <p><code>optional</code> <strong>importance?</strong>: <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/Importance.html"><code>Importance</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.87</p>
 <p>Specifies which smart fields will be visible inside the <code>SmartForm</code>.</p>
 <p>If set to <strong>high</strong>, only smart fields with high importance will be visible.</p>
 <p>If set to <strong>medium</strong>, only smart fields with high and medium importance will be visible.</p>
 <p>If set to <strong>low</strong> (default), all the smart fields will be visible regardless of their importance.</p>
 <p>Note: If a smart field is annotated as mandatory or hidden, its visibility will not be affected
 by the <code>importance</code> property.</p>
+<h4>Since</h4>
+<p>1.87</p>
 <hr>
 <h3>layout?</h3>
 <blockquote>
@@ -209,22 +210,20 @@ the <code>customToolbar</code> aggregation.</p>
 <blockquote>
 <p><code>optional</code> <strong>useHorizontalLayout?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
-<code>layout</code> aggregation.</p>
 <p>Specifies whether the groups are rendered in a sap.ui.layout.form.ResponsiveLayout ResponsiveLayout
 with the label above the field. Each group is rendered in a new line.</p>
 <p><strong>Note:</strong> This property should no longer be used. To arrange the fields in columns, sap.ui.comp.smartform.ColumnLayout ColumnLayout
 should be used in the <code>layout</code> aggregation.</p>
 <p><strong>Note:</strong> The value of this property will be passed on to the <code>useHorizontalLayout</code> property of all <code>Group</code>
 and <code>GroupElement</code> elements.</p>
+<h4>Deprecated</h4>
+<p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
+<code>layout</code> aggregation.</p>
 <hr>
 <h3>validationMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>validationMode?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Standard&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/SmartFormValidationMode.html"><code>SmartFormValidationMode</code></a> | <code>&quot;Async&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.81</p>
 <p>Controls the SmartForm validation mode. The default mode handles only nested <code>SmartField</code> controls with
 synchronous validation. If the <code>SmartForm</code> should also handle controls with asynchronous validation the
 property should be set to <code>Async</code> mode which is the recommended mode to be used as all types of nested
@@ -232,8 +231,10 @@ fields validation are handled.</p>
 <p>Note: Using <code>Async</code> mode the method <code>check</code> will return a promise instead of an array.</p>
 <p>Note: Using <code>Async</code> mode the event <code>checked</code> will be called asynchronously when all the nested <code>SmartField</code>
 validations are executed.</p>
+<h4>Since</h4>
+<p>1.81</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

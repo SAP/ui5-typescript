@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Common~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Common~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: Common~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/types/legend/Common/classes/Common.html">
 <meta property="og:title" content="~~Class: Common~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Common~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: Common~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/types/legend/Common/classes/Common.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › types › legend › <a href="../../../../../../../../sap.viz/sap/viz/ui5/types/legend/Common/README.html">Common</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/types/legend/Common</a> / Common</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/types/legend/Common</a> / Common</p>
 <h1><del>Class: Common</del></h1>
 <pre class="sig"><span class="kw">import</span> Common <span class="kw">from</span> <span class="str">"sap/viz/ui5/types/legend/Common"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<p>Module sap.viz.ui5.types.legend.Common</p>
 <h2>Since</h2>
 <p>1.7.2</p>
 <h2>Deprecated</h2>
@@ -51,7 +52,6 @@ control to benefit from new charting enhancements and timely support. **</p>
 <p><strong>Note</strong>: As the feature set, design and API usage of VizFrame might differ from the old chart controls,
 make sure you evaluate it thoroughly before migration.
  (since 1.7.2) - Charting API is not finished yet and might change completely.</p>
-<p>Module sap.viz.ui5.types.legend.Common</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../core/BaseStructuredType/classes/BaseStructuredType.html"><code>BaseStructuredType</code></a></li>
@@ -110,15 +110,15 @@ of the syntax of the settings object.</p>
 <p><strong>getAlignment</strong>(): <code>&quot;end&quot;</code> | <code>&quot;start&quot;</code> | <code>Common_alignment</code> | <code>&quot;middle&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getAlignment alignment.</p>
+<p>Set the alignment of the legend</p>
+<p>Default value is <code>start</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;end&quot;</code> | <code>&quot;start&quot;</code> | <code>Common_alignment</code> | <code>&quot;middle&quot;</code></p>
 <p>Value of property <code>alignment</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Gets current value of property #getAlignment alignment.</p>
-<p>Set the alignment of the legend</p>
-<p>Default value is <code>start</code>.</p>
 <hr>
 <h3><del>getDrawingEffect()</del></h3>
 <blockquote>
@@ -138,15 +138,15 @@ If this value is set to &#39;normal&#39;, colors are matte.</p>
 <p><strong>getFormatString</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getFormatString formatString.</p>
+<p>Set the format string for the legend. The following characters are reserved as tokens for format code:
+MDYHSAmdyhsa#?%0@.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>formatString</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Gets current value of property #getFormatString formatString.</p>
-<p>Set the format string for the legend. The following characters are reserved as tokens for format code:
-MDYHSAmdyhsa#?%0@.</p>
 <hr>
 <h3><del>getIsHierarchical()</del></h3>
 <blockquote>
@@ -179,15 +179,15 @@ show the whole legend, an ellipsis (...) indicates the missing legend items.</p>
 <p><strong>getPosition</strong>(): <code>&quot;bottom&quot;</code> | <code>&quot;top&quot;</code> | <code>&quot;left&quot;</code> | <code>&quot;right&quot;</code> | <code>Common_position</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getPosition position.</p>
+<p>It is a deprecated property. Please use &quot;legendGroup.layout.position&quot; property to set legend position.</p>
+<p>Default value is <code>right</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;bottom&quot;</code> | <code>&quot;top&quot;</code> | <code>&quot;left&quot;</code> | <code>&quot;right&quot;</code> | <code>Common_position</code></p>
 <p>Value of property <code>position</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Gets current value of property #getPosition position.</p>
-<p>It is a deprecated property. Please use &quot;legendGroup.layout.position&quot; property to set legend position.</p>
-<p>Default value is <code>right</code>.</p>
 <hr>
 <h3><del>getTitle()</del></h3>
 <blockquote>
@@ -204,15 +204,15 @@ SAPUI5 delivery in one of the next releases.</p>
 <p><strong>getType</strong>(): <code>Common_type</code> | <code>&quot;BubbleColorLegend&quot;</code> | <code>&quot;ColorLegend&quot;</code> | <code>&quot;MeasureBasedColoringLegend&quot;</code> | <code>&quot;SizeLegend&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getType type.</p>
+<p>Set legend type for Bubble charts. Non-bubble charts are not supported.</p>
+<p>Default value is <code>ColorLegend</code>.</p>
 <h4>Returns</h4>
 <p><code>Common_type</code> | <code>&quot;BubbleColorLegend&quot;</code> | <code>&quot;ColorLegend&quot;</code> | <code>&quot;MeasureBasedColoringLegend&quot;</code> | <code>&quot;SizeLegend&quot;</code></p>
 <p>Value of property <code>type</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Gets current value of property #getType type.</p>
-<p>Set legend type for Bubble charts. Non-bubble charts are not supported.</p>
-<p>Default value is <code>ColorLegend</code>.</p>
 <hr>
 <h3><del>getVisible()</del></h3>
 <blockquote>
@@ -231,6 +231,10 @@ SAPUI5 delivery in one of the next releases.</p>
 <p><strong>setAlignment</strong>(<code>sAlignment?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getAlignment alignment.</p>
+<p>Set the alignment of the legend</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>start</code>.</p>
 <h4>Parameters</h4>
 <h5>sAlignment?</h5>
 <p><code>&quot;end&quot;</code> | <code>&quot;start&quot;</code> | <code>Common_alignment</code> | <code>&quot;middle&quot;</code></p>
@@ -241,10 +245,6 @@ SAPUI5 delivery in one of the next releases.</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Sets a new value for property #getAlignment alignment.</p>
-<p>Set the alignment of the legend</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>start</code>.</p>
 <hr>
 <h3><del>setDrawingEffect()</del></h3>
 <blockquote>
@@ -269,6 +269,10 @@ If this value is set to &#39;normal&#39;, colors are matte.</p>
 <p><strong>setFormatString</strong>(<code>sFormatString?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getFormatString formatString.</p>
+<p>Set the format string for the legend. The following characters are reserved as tokens for format code:
+MDYHSAmdyhsa#?%0@.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sFormatString?</h5>
 <p><code>string</code></p>
@@ -279,10 +283,6 @@ If this value is set to &#39;normal&#39;, colors are matte.</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Sets a new value for property #getFormatString formatString.</p>
-<p>Set the format string for the legend. The following characters are reserved as tokens for format code:
-MDYHSAmdyhsa#?%0@.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setIsHierarchical()</del></h3>
 <blockquote>
@@ -325,6 +325,10 @@ show the whole legend, an ellipsis (...) indicates the missing legend items.</p>
 <p><strong>setPosition</strong>(<code>sPosition?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getPosition position.</p>
+<p>It is a deprecated property. Please use &quot;legendGroup.layout.position&quot; property to set legend position.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>right</code>.</p>
 <h4>Parameters</h4>
 <h5>sPosition?</h5>
 <p><code>&quot;bottom&quot;</code> | <code>&quot;top&quot;</code> | <code>&quot;left&quot;</code> | <code>&quot;right&quot;</code> | <code>Common_position</code></p>
@@ -335,10 +339,6 @@ show the whole legend, an ellipsis (...) indicates the missing legend items.</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Sets a new value for property #getPosition position.</p>
-<p>It is a deprecated property. Please use &quot;legendGroup.layout.position&quot; property to set legend position.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>right</code>.</p>
 <hr>
 <h3><del>setTitle()</del></h3>
 <blockquote>
@@ -359,6 +359,10 @@ SAPUI5 delivery in one of the next releases.</p>
 <p><strong>setType</strong>(<code>sType?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getType type.</p>
+<p>Set legend type for Bubble charts. Non-bubble charts are not supported.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>ColorLegend</code>.</p>
 <h4>Parameters</h4>
 <h5>sType?</h5>
 <p><code>Common_type</code> | <code>&quot;BubbleColorLegend&quot;</code> | <code>&quot;ColorLegend&quot;</code> | <code>&quot;MeasureBasedColoringLegend&quot;</code> | <code>&quot;SizeLegend&quot;</code></p>
@@ -369,10 +373,6 @@ SAPUI5 delivery in one of the next releases.</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Sets a new value for property #getType type.</p>
-<p>Set legend type for Bubble charts. Non-bubble charts are not supported.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>ColorLegend</code>.</p>
 <hr>
 <h3><del>setVisible()</del></h3>
 <blockquote>
@@ -432,6 +432,6 @@ used by this class</p>
 <p><a href="../../../../core/BaseStructuredType/classes/BaseStructuredType.html"><code>BaseStructuredType</code></a>.<a href="../../../../core/BaseStructuredType/classes/BaseStructuredType.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $UploadSetwithTableSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $UploadSetwithTableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $UploadSetwithTableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/upload/UploadSetwithTable/interfaces/$UploadSetwithTableSettings.html">
 <meta property="og:title" content="Interface: $UploadSetwithTableSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $UploadSetwithTableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $UploadSetwithTableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/upload/UploadSetwithTable/interfaces/$UploadSetwithTableSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.m/README.html">sap.m</a> › sap › m › upload › <a href="../../../../../../sap.m/sap/m/upload/UploadSetwithTable/README.html">UploadSetwithTable</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/upload/UploadSetwithTable</a> / $UploadSetwithTableSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/upload/UploadSetwithTable</a> / $UploadSetwithTableSettings</p>
 <h1>Interface: $UploadSetwithTableSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $UploadSetwithTableSettings } <span class="kw">from</span> <span class="str">"sap/m/upload/UploadSetwithTable"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the UploadSetwithTable constructor.</p>
+<p> (since 1.120)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../Table/interfaces/$TableSettings.html"><code>$TableSettings</code></a></li>
@@ -47,6 +50,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>beforeInitiatingItemUpload?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired just before initiating the file upload process when a file is selected to be uploaded.
 Use this event to set additional info dynamically, specific for each item before upload process is initiated.</p>
 <h4>Parameters</h4>
@@ -59,6 +63,7 @@ Use this event to set additional info dynamically, specific for each item before
 <blockquote>
 <p><code>optional</code> <strong>beforeUploadStarts?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired right before the upload process begins.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -71,42 +76,45 @@ Use this event to set additional info dynamically, specific for each item before
 <p><code>optional</code> <strong>cloudFilePickerButtonText?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>The text of the CloudFile picker button. The default text is &quot;Upload from cloud&quot; (translated to the respective
 language).</p>
+<p> (since 1.120)</p>
 <hr>
 <h3>cloudFilePickerEnabled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>cloudFilePickerEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>Enables CloudFile picker feature to upload files from cloud.</p>
+<p> (since 1.120)</p>
 <hr>
 <h3>cloudFilePickerServiceUrl?</h3>
 <blockquote>
 <p><code>optional</code> <strong>cloudFilePickerServiceUrl?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.120)</p>
 <p>Url of the FileShare OData V4 service supplied for CloudFile picker control.</p>
+<p> (since 1.120)</p>
 <hr>
 <h3>directory?</h3>
 <blockquote>
 <p><code>optional</code> <strong>directory?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Lets the user upload entire files from directories and sub directories.</p>
 <hr>
 <h3>enableVariantManagement?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableVariantManagement?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>If set to true, the variant management gets enabled.</p>
 <hr>
 <h3>fileNameLengthExceeded?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fileNameLengthExceeded?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired in either of the following cases:
 	 - When a file that is selected to be uploaded fails to meet the file name length restriction specified
     in the <code>maxFileNameLength</code> property.
@@ -122,6 +130,7 @@ language).</p>
 <blockquote>
 <p><code>optional</code> <strong>fileSizeExceeded?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired in either of the following cases:
 	 - When a file that is selected to be uploaded fails to meet the file size restriction specified in
     the <code>maxFileSize</code> property.
@@ -136,6 +145,7 @@ language).</p>
 <blockquote>
 <p><code>optional</code> <strong>fileTypeMismatch?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired in either of the following cases:
 	 - When a file that is selected to be uploaded fails to meet the file type restriction (<code>fileType</code> property).</p>
 <pre><code> - When the file type restriction changes, and the file to be uploaded fails to meet the new restriction.
@@ -150,6 +160,7 @@ language).</p>
 <blockquote>
 <p><code>optional</code> <strong>fileTypes?</strong>: <code>string</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>File types that are allowed to be uploaded.
 If this property is not set, any file can be uploaded.</p>
 <hr>
@@ -157,18 +168,21 @@ If this property is not set, any file can be uploaded.</p>
 <blockquote>
 <p><code>optional</code> <strong>headerFields?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Header fields to be included in the header section of an XHR request.</p>
 <hr>
 <h3>httpRequestMethod?</h3>
 <blockquote>
 <p><code>optional</code> <strong>httpRequestMethod?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../UploaderHttpRequestMethod/enumerations/UploaderHttpRequestMethod.html"><code>UploaderHttpRequestMethod</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>HTTP request method chosen for file upload.</p>
 <hr>
 <h3>itemDragStart?</h3>
 <blockquote>
 <p><code>optional</code> <strong>itemDragStart?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when the user starts dragging an uploaded item.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -180,6 +194,7 @@ If this property is not set, any file can be uploaded.</p>
 <blockquote>
 <p><code>optional</code> <strong>itemDrop?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when an uploaded item is dropped on the new table row position.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -191,6 +206,7 @@ If this property is not set, any file can be uploaded.</p>
 <blockquote>
 <p><code>optional</code> <strong>itemRenamed?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>The event is triggered when the file name is changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -202,6 +218,7 @@ If this property is not set, any file can be uploaded.</p>
 <blockquote>
 <p><code>optional</code> <strong>itemValidationHandler?</strong>: <code>Function</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines a sap.m.upload.UploadSetwithTable.itemValidationHandler callback function that is invoked
 when each UploadSetwithTableItem is queued up for upload. This callback is invoked with sap.m.upload.UploadSetwithTable.ItemInfo parameters
 and the callback is expected to return a promise to the control. Once the promise is resolved, the control
@@ -213,6 +230,7 @@ the promise returned to the control.</p>
 <blockquote>
 <p><code>optional</code> <strong>maxFileNameLength?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defined maximum length for a name of files that are to be uploaded.
 If set to <code>null</code> or <code>0</code>, any file can be uploaded regardless length of its name.</p>
 <hr>
@@ -220,6 +238,7 @@ If set to <code>null</code> or <code>0</code>, any file can be uploaded regardle
 <blockquote>
 <p><code>optional</code> <strong>maxFileSize?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defined size limit in megabytes for files that are to be uploaded.
 If set to <code>null</code> or <code>0</code>, files of any size can be uploaded.</p>
 <hr>
@@ -227,6 +246,7 @@ If set to <code>null</code> or <code>0</code>, files of any size can be uploaded
 <blockquote>
 <p><code>optional</code> <strong>mediaTypeMismatch?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired in either of the following cases:
 	 - When a file that is selected to be uploaded fails to meet the media type restriction specified in
     the <code>mediaTypes</code> property.
@@ -241,6 +261,7 @@ If set to <code>null</code> or <code>0</code>, files of any size can be uploaded
 <blockquote>
 <p><code>optional</code> <strong>mediaTypes?</strong>: <code>string</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Media types of files that are allowed to be uploaded.
 If this property is not set, any file can be uploaded.</p>
 <hr>
@@ -248,6 +269,7 @@ If this property is not set, any file can be uploaded.</p>
 <blockquote>
 <p><code>optional</code> <strong>multiple?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Lets the user select multiple files from the same folder and then upload them.</p>
 <p>If multiple property is set to false, the control shows an error message if more than one file is chosen
 for drag &amp; drop.</p>
@@ -256,6 +278,7 @@ for drag &amp; drop.</p>
 <blockquote>
 <p><code>optional</code> <strong>noDataDescription?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Custom text can be defined for the &#39;No data&#39; text description. Customisation of text can be done for
 the empty state of the control.</p>
 <hr>
@@ -263,12 +286,14 @@ the empty state of the control.</p>
 <blockquote>
 <p><code>optional</code> <strong>noDataIllustrationType?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../IllustratedMessageType/enumerations/IllustratedMessageType.html"><code>IllustratedMessageType</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Determines which illustration type is displayed when the control holds no data.</p>
 <hr>
 <h3>noDataText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noDataText?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Custom text can be defined for the &#39;No data&#39; text label. Customisation of text can be done for the empty
 state of the control.</p>
 <h4>Overrides</h4>
@@ -278,6 +303,7 @@ state of the control.</p>
 <blockquote>
 <p><code>optional</code> <strong>previewDialog?</strong>: <code>string</code> | <a href="../../FilePreviewDialog/classes/FilePreviewDialog.html"><code>FilePreviewDialog</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Dialog with a carousel to preview files uploaded.
 If it is not defined, the control creates and uses the instance of sap.m.upload.FilePreviewDialog FilePreviewDialog.</p>
 <hr>
@@ -285,12 +311,14 @@ If it is not defined, the control creates and uses the instance of sap.m.upload.
 <blockquote>
 <p><code>optional</code> <strong>uploadButtonInvisible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>If set to true, the button used for uploading files becomes invisible.</p>
 <hr>
 <h3>uploadCompleted?</h3>
 <blockquote>
 <p><code>optional</code> <strong>uploadCompleted?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired right after the upload process is finished.
 Based on the backend response of the application, listeners can use the parameters to determine if the
 upload was successful or if it failed.</p>
@@ -304,21 +332,24 @@ upload was successful or if it failed.</p>
 <blockquote>
 <p><code>optional</code> <strong>uploadEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the upload action is allowed.</p>
 <hr>
 <h3>uploader?</h3>
 <blockquote>
 <p><code>optional</code> <strong>uploader?</strong>: <a href="../../UploaderTableItem/classes/UploaderTableItem.html"><code>UploaderTableItem</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the uploader to be used. If not specified, the default implementation is used.</p>
 <hr>
 <h3>uploadUrl?</h3>
 <blockquote>
 <p><code>optional</code> <strong>uploadUrl?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Url where the uploaded files are stored.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

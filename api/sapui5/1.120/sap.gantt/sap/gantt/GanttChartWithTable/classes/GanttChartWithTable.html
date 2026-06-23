@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: GanttChartWithTable~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: GanttChartWithTable~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: GanttChartWithTable~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/GanttChartWithTable/classes/GanttChartWithTable.html">
 <meta property="og:title" content="~~Class: GanttChartWithTable~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: GanttChartWithTable~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: GanttChartWithTable~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/GanttChartWithTable/classes/GanttChartWithTable.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › <a href="../../../../../sap.gantt/sap/gantt/GanttChartWithTable/README.html">GanttChartWithTable</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/GanttChartWithTable</a> / GanttChartWithTable</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/GanttChartWithTable</a> / GanttChartWithTable</p>
 <h1><del>Class: GanttChartWithTable</del></h1>
 <pre class="sig"><span class="kw">import</span> GanttChartWithTable <span class="kw">from</span> <span class="str">"sap/gantt/GanttChartWithTable"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.64) - sap.gantt.simple.GanttChartWithTable should be used instead.</p>
 <p>Embed a <code>sap.ui.table.TreeTable</code> and a <code>sap.gantt.GanttChart</code> side-by-side.</p>
 <p>This class defines: The TreeTable part provide a column view of data with sorting/filtering functions
 available. The svg chart part provide graphic Gantt chart view of data. Both width can be adjusted by
 a splitter bar, and row scrolling are always synchronized.3</p>
+<h2>Deprecated</h2>
+<p>(since 1.64) - sap.gantt.simple.GanttChartWithTable should be used instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../GanttChartBase/classes/GanttChartBase.html"><code>GanttChartBase</code></a></li>
@@ -203,27 +203,27 @@ container layouts, the chance to change custom toolbar items is in event handler
 <blockquote>
 <p><strong>getFirstVisibleRow</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets the first visible row of the selection panel.
+See:
+	sap.ui.table.Table.getFirstVisibleRow</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>the first visible row index</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.7) - We recommend use getTableProperties function instead</p>
-<p>Gets the first visible row of the selection panel.
-See:
-	sap.ui.table.Table.getFirstVisibleRow</p>
 <hr>
 <h3><del>getFixedColumnCount()</del></h3>
 <blockquote>
 <p><strong>getFixedColumnCount</strong>(): <code>number</code></p>
 </blockquote>
+<p>To get fixedColumnCount value
+See:
+	sap.ui.table.Table.getFixedColumnCount</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>The value of fixedColumnCount</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.7) - We recommend use getTableProperties function instead</p>
-<p>To get fixedColumnCount value
-See:
-	sap.ui.table.Table.getFixedColumnCount</p>
 <hr>
 <h3><del>getSelectedIndex()</del></h3>
 <blockquote>
@@ -396,6 +396,9 @@ cellCallback adds <code>sap.m.Label</code> to fill cells.</p>
 <blockquote>
 <p><strong>setFirstVisibleRow</strong>(<code>iRowIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the first visible row in the selection panel.
+See:
+	sap.ui.table.Table.setFirstVisibleRow</p>
 <h4>Parameters</h4>
 <h5>iRowIndex</h5>
 <p><code>number</code></p>
@@ -405,14 +408,14 @@ cellCallback adds <code>sap.m.Label</code> to fill cells.</p>
 <p>A reference to the GanttChartWithTable control, which can be used for chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.7) - We recommend use setTableProperties function instead</p>
-<p>Sets the first visible row in the selection panel.
-See:
-	sap.ui.table.Table.setFirstVisibleRow</p>
 <hr>
 <h3><del>setFixedColumnCount()</del></h3>
 <blockquote>
 <p><strong>setFixedColumnCount</strong>(<code>iFixedColumnCount</code>): <code>this</code></p>
 </blockquote>
+<p>To set fixedColumnCount value
+See:
+	sap.ui.table.Table.setFixedColumnCount</p>
 <h4>Parameters</h4>
 <h5>iFixedColumnCount</h5>
 <p><code>number</code></p>
@@ -421,9 +424,6 @@ See:
 <p>A reference to the GanttChartWithTable control, which can be used for chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.7) - We recommend use setTableProperties function instead</p>
-<p>To set fixedColumnCount value
-See:
-	sap.ui.table.Table.setFixedColumnCount</p>
 <hr>
 <h3><del>setSelectedIndex()</del></h3>
 <blockquote>
@@ -444,6 +444,9 @@ See:
 <blockquote>
 <p><strong>setUseFlatMode</strong>(<code>bFlat</code>): <code>void</code></p>
 </blockquote>
+<p>Allows to hide the hierarchy structure (tree icons, indentation) in left table. This might be useful
+in some scenarios when the data is not hierarchical, no need for any expand/collapse. <strong>Note:</strong> In flat
+mode the hierarchy is not visible to the user.</p>
 <h4>Parameters</h4>
 <h5>bFlat</h5>
 <p><code>boolean</code></p>
@@ -452,9 +455,6 @@ See:
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Allows to hide the hierarchy structure (tree icons, indentation) in left table. This might be useful
-in some scenarios when the data is not hierarchical, no need for any expand/collapse. <strong>Note:</strong> In flat
-mode the hierarchy is not visible to the user.</p>
 <hr>
 <h3><del>unbindCustomToolbarItems()</del></h3>
 <blockquote>
@@ -469,6 +469,7 @@ mode the hierarchy is not visible to the user.</p>
 <blockquote>
 <p><strong>useSelectionPlugin</strong>(<code>oSelectionPlugin</code>): <code>void</code></p>
 </blockquote>
+<p>Configures Gantt chart to use the provided selection plugin in its tables.</p>
 <h4>Parameters</h4>
 <h5>oSelectionPlugin</h5>
 <p><a href="../../../../../sap.ui.table/sap/ui/table/plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a></p>
@@ -477,7 +478,6 @@ mode the hierarchy is not visible to the user.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.76</p>
-<p>Configures Gantt chart to use the provided selection plugin in its tables.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -518,6 +518,6 @@ used by this class</p>
 <p><a href="../../GanttChartBase/classes/GanttChartBase.html"><code>GanttChartBase</code></a>.<a href="../../GanttChartBase/classes/GanttChartBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

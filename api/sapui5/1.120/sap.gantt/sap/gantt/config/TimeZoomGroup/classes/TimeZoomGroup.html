@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: TimeZoomGroup~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: TimeZoomGroup~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: TimeZoomGroup~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/config/TimeZoomGroup/classes/TimeZoomGroup.html">
 <meta property="og:title" content="~~Class: TimeZoomGroup~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: TimeZoomGroup~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: TimeZoomGroup~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/config/TimeZoomGroup/classes/TimeZoomGroup.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › config › <a href="../../../../../../sap.gantt/sap/gantt/config/TimeZoomGroup/README.html">TimeZoomGroup</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/config/TimeZoomGroup</a> / TimeZoomGroup</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/config/TimeZoomGroup</a> / TimeZoomGroup</p>
 <h1><del>Class: TimeZoomGroup</del></h1>
 <pre class="sig"><span class="kw">import</span> TimeZoomGroup <span class="kw">from</span> <span class="str">"sap/gantt/config/TimeZoomGroup"</span>;</pre>
+<p>You can define time zooming related toolbar items in the Gantt chart toolbar.</p>
 <h2>Deprecated</h2>
 <p>(since 1.64)</p>
-<p>You can define time zooming related toolbar items in the Gantt chart toolbar.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ToolbarGroup/classes/ToolbarGroup.html"><code>ToolbarGroup</code></a></li>
@@ -97,27 +97,27 @@ the items in the Select control when the zoom control type is sap.gantt.config.Z
 <blockquote>
 <p><strong>getShowZoomButtons</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowZoomButtons showZoomButtons.</p>
+<p>Enables zoom in and zoom out buttons for the time zooming function.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showZoomButtons</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - replaced by zoomControlType</p>
-<p>Gets current value of property #getShowZoomButtons showZoomButtons.</p>
-<p>Enables zoom in and zoom out buttons for the time zooming function.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getShowZoomSlider()</del></h3>
 <blockquote>
 <p><strong>getShowZoomSlider</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowZoomSlider showZoomSlider.</p>
+<p>Enables the Slider control for the time zooming function.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showZoomSlider</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - replaced by zoomControlType</p>
-<p>Gets current value of property #getShowZoomSlider showZoomSlider.</p>
-<p>Enables the Slider control for the time zooming function.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getStepCountOfSlider()</del></h3>
 <blockquote>
@@ -161,6 +161,10 @@ the items in the Select control when the zoom control type is sap.gantt.config.Z
 <blockquote>
 <p><strong>setShowZoomButtons</strong>(<code>bShowZoomButtons?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowZoomButtons showZoomButtons.</p>
+<p>Enables zoom in and zoom out buttons for the time zooming function.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowZoomButtons?</h5>
 <p><code>boolean</code></p>
@@ -170,15 +174,15 @@ the items in the Select control when the zoom control type is sap.gantt.config.Z
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - replaced by zoomControlType</p>
-<p>Sets a new value for property #getShowZoomButtons showZoomButtons.</p>
-<p>Enables zoom in and zoom out buttons for the time zooming function.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setShowZoomSlider()</del></h3>
 <blockquote>
 <p><strong>setShowZoomSlider</strong>(<code>bShowZoomSlider?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowZoomSlider showZoomSlider.</p>
+<p>Enables the Slider control for the time zooming function.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowZoomSlider?</h5>
 <p><code>boolean</code></p>
@@ -188,10 +192,6 @@ the items in the Select control when the zoom control type is sap.gantt.config.Z
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - replaced by zoomControlType</p>
-<p>Sets a new value for property #getShowZoomSlider showZoomSlider.</p>
-<p>Enables the Slider control for the time zooming function.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setStepCountOfSlider()</del></h3>
 <blockquote>
@@ -264,6 +264,6 @@ used by this class</p>
 <p><a href="../../ToolbarGroup/classes/ToolbarGroup.html"><code>ToolbarGroup</code></a>.<a href="../../ToolbarGroup/classes/ToolbarGroup.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

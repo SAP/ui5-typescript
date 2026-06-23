@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Group — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Group — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Group — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartform/Group/classes/Group.html">
 <meta property="og:title" content="Class: Group — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Group — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Group — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartform/Group/classes/Group.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartform › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartform/Group/README.html">Group</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartform/Group</a> / Group</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartform/Group</a> / Group</p>
 <h1>Class: Group</h1>
 <pre class="sig"><span class="kw">import</span> Group <span class="kw">from</span> <span class="str">"sap/ui/comp/smartform/Group"</span>;</pre>
 <p>Groups are used to group group elements.</p>
@@ -124,12 +124,12 @@ used by the <code>SmartField</code> control internally might not be added.</p>
 <blockquote>
 <p><strong>destroyLayout</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the layout in the aggregation #getLayout layout.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please use <code>layoutData</code> aggregation instead.</p>
-<p>Destroys the layout in the aggregation #getLayout layout.</p>
 <hr>
 <h3>destroyTitle()</h3>
 <blockquote>
@@ -155,40 +155,40 @@ used by the <code>SmartField</code> control internally might not be added.</p>
 <blockquote>
 <p><strong>getHorizontalLayoutGroupElementMinWidth</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getHorizontalLayoutGroupElementMinWidth horizontalLayoutGroupElementMinWidth.</p>
+<p>Specifies the minimal size in pixels of all group elements of the form if horizontal Layout is used.</p>
+<p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
+control. So don&#39;t set it manually.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>horizontalLayoutGroupElementMinWidth</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please do not use this property as it does not have any effect on the current
 layout of the <code>SmartForm</code> control.</p>
-<p>Gets current value of property #getHorizontalLayoutGroupElementMinWidth horizontalLayoutGroupElementMinWidth.</p>
-<p>Specifies the minimal size in pixels of all group elements of the form if horizontal Layout is used.</p>
-<p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
-control. So don&#39;t set it manually.</p>
 <hr>
 <h3><del>getLabel()</del></h3>
 <blockquote>
 <p><strong>getLabel</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getLabel label.</p>
+<p>Label for the group.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>label</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.88) - replaced by <code>title</code> aggregation.</p>
-<p>Gets current value of property #getLabel label.</p>
-<p>Label for the group.</p>
 <hr>
 <h3><del>getLayout()</del></h3>
 <blockquote>
 <p><strong>getLayout</strong>(): <a href="../../../../../../../sap.ui.layout/sap/ui/layout/GridData/classes/GridData.html"><code>GridData</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getLayout layout.</p>
+<p>Layout to specify how the group shall be rendered (e.g. span and line-break)</p>
+<p><strong>Note:</strong> Do not use <code>layout</code> and <code>layoutData</code> aggregations combined.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.layout/sap/ui/layout/GridData/classes/GridData.html"><code>GridData</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please use <code>layoutData</code> aggregation instead.</p>
-<p>Gets content of aggregation #getLayout layout.</p>
-<p>Layout to specify how the group shall be rendered (e.g. span and line-break)</p>
-<p><strong>Note:</strong> Do not use <code>layout</code> and <code>layoutData</code> aggregations combined.</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -206,12 +206,6 @@ control. So don&#39;t set it manually.</p>
 <blockquote>
 <p><strong>getUseHorizontalLayout</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>useHorizontalLayout</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
-<code>layout</code> aggregation of the <code>SmartForm</code> control.</p>
 <p>Gets current value of property #getUseHorizontalLayout useHorizontalLayout.</p>
 <p>Specifies whether the groups are rendered in a <code>ResponsiveLayout</code> with label on top of the group element.
 Each group will be rendered in a new line.</p>
@@ -220,6 +214,12 @@ control.</p>
 <p>So don&#39;t set it to a different value from the one in the <code>SmartForm</code> control. For performance reasons
 it might make sense to set it manually to the same value as the one in the <code>SmartForm</code> control when creating
 the <code>Group</code> element.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>useHorizontalLayout</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
+<code>layout</code> aggregation of the <code>SmartForm</code> control.</p>
 <hr>
 <h3>indexOfGroupElement()</h3>
 <blockquote>
@@ -303,6 +303,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setEditMode</strong>(<code>bEditMode</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for property <code>editable</code> of all smart fields in children hierarchy.</p>
 <h4>Parameters</h4>
 <h5>bEditMode</h5>
 <p><code>boolean</code></p>
@@ -313,12 +314,16 @@ is inserted at the last position</p>
 <h4>Deprecated</h4>
 <p>(since 1.74.0) - please do not change the edit mode on group level, let the SmartForm inheritance
 do it</p>
-<p>Setter for property <code>editable</code> of all smart fields in children hierarchy.</p>
 <hr>
 <h3><del>setHorizontalLayoutGroupElementMinWidth()</del></h3>
 <blockquote>
 <p><strong>setHorizontalLayoutGroupElementMinWidth</strong>(<code>iHorizontalLayoutGroupElementMinWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHorizontalLayoutGroupElementMinWidth horizontalLayoutGroupElementMinWidth.</p>
+<p>Specifies the minimal size in pixels of all group elements of the form if horizontal Layout is used.</p>
+<p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
+control. So don&#39;t set it manually.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>iHorizontalLayoutGroupElementMinWidth?</h5>
 <p><code>number</code></p>
@@ -329,16 +334,14 @@ do it</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please do not use this property as it does not have any effect on the current
 layout of the <code>SmartForm</code> control.</p>
-<p>Sets a new value for property #getHorizontalLayoutGroupElementMinWidth horizontalLayoutGroupElementMinWidth.</p>
-<p>Specifies the minimal size in pixels of all group elements of the form if horizontal Layout is used.</p>
-<p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
-control. So don&#39;t set it manually.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setLabel()</del></h3>
 <blockquote>
 <p><strong>setLabel</strong>(<code>sLabel?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabel label.</p>
+<p>Label for the group.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sLabel?</h5>
 <p><code>string</code></p>
@@ -348,14 +351,12 @@ control. So don&#39;t set it manually.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.88) - replaced by <code>title</code> aggregation.</p>
-<p>Sets a new value for property #getLabel label.</p>
-<p>Label for the group.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setLayout()</del></h3>
 <blockquote>
 <p><strong>setLayout</strong>(<code>oLayout</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getLayout layout.</p>
 <h4>Parameters</h4>
 <h5>oLayout</h5>
 <p><a href="../../../../../../../sap.ui.layout/sap/ui/layout/GridData/classes/GridData.html"><code>GridData</code></a></p>
@@ -365,7 +366,6 @@ control. So don&#39;t set it manually.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please use <code>layoutData</code> aggregation instead.</p>
-<p>Sets the aggregated #getLayout layout.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -392,6 +392,15 @@ to the required value.</p>
 <blockquote>
 <p><strong>setUseHorizontalLayout</strong>(<code>bUseHorizontalLayout?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUseHorizontalLayout useHorizontalLayout.</p>
+<p>Specifies whether the groups are rendered in a <code>ResponsiveLayout</code> with label on top of the group element.
+Each group will be rendered in a new line.</p>
+<p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
+control.</p>
+<p>So don&#39;t set it to a different value from the one in the <code>SmartForm</code> control. For performance reasons
+it might make sense to set it manually to the same value as the one in the <code>SmartForm</code> control when creating
+the <code>Group</code> element.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bUseHorizontalLayout?</h5>
 <p><code>boolean</code></p>
@@ -402,15 +411,6 @@ to the required value.</p>
 <h4>Deprecated</h4>
 <p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
 <code>layout</code> aggregation of the <code>SmartForm</code> control.</p>
-<p>Sets a new value for property #getUseHorizontalLayout useHorizontalLayout.</p>
-<p>Specifies whether the groups are rendered in a <code>ResponsiveLayout</code> with label on top of the group element.
-Each group will be rendered in a new line.</p>
-<p><strong>Note:</strong> If <code>Group</code> is assigned to a <code>SmartForm</code> control, this property is inherited from the <code>SmartForm</code>
-control.</p>
-<p>So don&#39;t set it to a different value from the one in the <code>SmartForm</code> control. For performance reasons
-it might make sense to set it manually to the same value as the one in the <code>SmartForm</code> control when creating
-the <code>Group</code> element.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setVisible()</h3>
 <blockquote>
@@ -467,6 +467,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/FormContainer/classes/FormContainer.html"><code>FormContainer</code></a>.<a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/FormContainer/classes/FormContainer.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

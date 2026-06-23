@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: LocaleData — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: LocaleData — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: LocaleData — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/LocaleData/classes/LocaleData.html">
 <meta property="og:title" content="Class: LocaleData — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: LocaleData — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: LocaleData — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/LocaleData/classes/LocaleData.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/LocaleData/README.html">LocaleData</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/LocaleData</a> / LocaleData</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/LocaleData</a> / LocaleData</p>
 <h1>Class: LocaleData</h1>
 <pre class="sig"><span class="kw">import</span> LocaleData <span class="kw">from</span> <span class="str">"sap/ui/core/LocaleData"</span>;</pre>
 <p>Provides access to locale-specific data, such as, date formats, number formats, and currencies.</p>
@@ -62,18 +62,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><strong>firstDayStartsFirstWeek</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Whether 1 January is the first day of the first calendar week. This is the definition of the calendar
+week in the US.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>true if the first week of the year starts with 1 January.</p>
 <h4>Since</h4>
 <p>1.92.0</p>
-<p>Whether 1 January is the first day of the first calendar week. This is the definition of the calendar
-week in the US.</p>
 <hr>
 <h3>getCalendarWeek()</h3>
 <blockquote>
 <p><strong>getCalendarWeek</strong>(<code>sStyle</code>, <code>iWeekNumber</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the defined pattern for representing the calendar week number.</p>
 <h4>Parameters</h4>
 <h5>sStyle</h5>
 <p><code>string</code></p>
@@ -86,7 +87,6 @@ week in the US.</p>
 <p>the week number string</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Returns the defined pattern for representing the calendar week number.</p>
 <hr>
 <h3>getCombinedDateTimePattern()</h3>
 <blockquote>
@@ -112,6 +112,9 @@ or calculated from locale.</p>
 <blockquote>
 <p><strong>getCombinedIntervalPattern</strong>(<code>sPattern</code>, <code>sCalendarType?</code>): <code>string</code></p>
 </blockquote>
+<p>Get combined interval pattern using a given pattern and the fallback interval pattern.</p>
+<p>If a skeleton based pattern is not available or not wanted, this method can be used to create an interval
+pattern based on a given pattern, using the fallback interval pattern.</p>
 <h4>Parameters</h4>
 <h5>sPattern</h5>
 <p><code>string</code></p>
@@ -125,14 +128,12 @@ or calculated from locale.</p>
 <p>the calculated interval pattern</p>
 <h4>Since</h4>
 <p>1.46</p>
-<p>Get combined interval pattern using a given pattern and the fallback interval pattern.</p>
-<p>If a skeleton based pattern is not available or not wanted, this method can be used to create an interval
-pattern based on a given pattern, using the fallback interval pattern.</p>
 <hr>
 <h3>getCurrencyCodeBySymbol()</h3>
 <blockquote>
 <p><strong>getCurrencyCodeBySymbol</strong>(<code>sCurrencySymbol</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the currency code which is corresponded with the given currency symbol.</p>
 <h4>Parameters</h4>
 <h5>sCurrencySymbol</h5>
 <p><code>string</code></p>
@@ -143,12 +144,12 @@ pattern based on a given pattern, using the fallback interval pattern.</p>
 is returned if no currency code can be found by using the given currency symbol.</p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<p>Returns the currency code which is corresponded with the given currency symbol.</p>
 <hr>
 <h3>getCurrencyDigits()</h3>
 <blockquote>
 <p><strong>getCurrencyDigits</strong>(<code>sCurrency</code>): <code>number</code></p>
 </blockquote>
+<p>Returns the number of digits of the specified currency.</p>
 <h4>Parameters</h4>
 <h5>sCurrency</h5>
 <p><code>string</code></p>
@@ -158,12 +159,12 @@ is returned if no currency code can be found by using the given currency symbol.
 <p>digits of the currency</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Returns the number of digits of the specified currency.</p>
 <hr>
 <h3>getCurrencyFormat()</h3>
 <blockquote>
 <p><strong>getCurrencyFormat</strong>(<code>sStyle</code>, <code>sNumber</code>, <code>sPlural</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the short currency formats (like 1K USD, 1M USD....).</p>
 <h4>Parameters</h4>
 <h5>sStyle</h5>
 <p><code>string</code></p>
@@ -179,7 +180,6 @@ is returned if no currency code can be found by using the given currency symbol.
 <p>decimal format</p>
 <h4>Since</h4>
 <p>1.51.0</p>
-<p>Returns the short currency formats (like 1K USD, 1M USD....).</p>
 <hr>
 <h3>getCurrencyPattern()</h3>
 <blockquote>
@@ -201,6 +201,8 @@ See:
 <blockquote>
 <p><strong>getCurrencySymbol</strong>(<code>sCurrency</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the currency symbol for the specified currency, if no symbol is found the ISO 4217 currency code
+is returned.</p>
 <h4>Parameters</h4>
 <h5>sCurrency</h5>
 <p><code>string</code></p>
@@ -210,26 +212,30 @@ See:
 <p>the currency symbol</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Returns the currency symbol for the specified currency, if no symbol is found the ISO 4217 currency code
-is returned.</p>
 <hr>
 <h3>getCurrencySymbols()</h3>
 <blockquote>
 <p><strong>getCurrencySymbols</strong>(): <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
 </blockquote>
+<p>Returns the currency symbols available for this locale. Currency symbols get accumulated by custom currency
+symbols.</p>
 <h4>Returns</h4>
 <p><code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
 <p>the map of all currency symbols available in this locale, e.g. { &quot;AUD&quot;: &quot;A$&quot;, &quot;BRL&quot;: &quot;R$&quot;, &quot;EUR&quot;:
 &quot;€&quot;, &quot;GBP&quot;: &quot;£&quot;, }</p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>Returns the currency symbols available for this locale. Currency symbols get accumulated by custom currency
-symbols.</p>
 <hr>
 <h3>getCustomDateTimePattern()</h3>
 <blockquote>
 <p><strong>getCustomDateTimePattern</strong>(<code>sSkeleton</code>, <code>sCalendarType?</code>): <code>string</code></p>
 </blockquote>
+<p>Get custom datetime pattern for a given skeleton format.</p>
+<p>The format string does contain pattern symbols (e.g. &quot;yMMMd&quot; or &quot;Hms&quot;) and will be converted into the
+pattern in the used locale, which matches the wanted symbols best. The symbols must be in canonical order,
+that is: Era (G), Year (y/Y), Quarter (q/Q), Month (M/L), Week (w/W), Day-Of-Week (E/e/c), Day (d/D),
+Hour (h/H/k/K/), Minute (m), Second (s), Timezone (z/Z/v/V/O/X/x)</p>
+<p>See <a href="https://unicode.org/reports/tr35/tr35-dates.html#availableFormats_appendItems">https://unicode.org/reports/tr35/tr35-dates.html#availableFormats_appendItems</a></p>
 <h4>Parameters</h4>
 <h5>sSkeleton</h5>
 <p><code>string</code></p>
@@ -243,17 +249,17 @@ or calculated from locale.</p>
 <p>the best matching datetime pattern</p>
 <h4>Since</h4>
 <p>1.34</p>
-<p>Get custom datetime pattern for a given skeleton format.</p>
-<p>The format string does contain pattern symbols (e.g. &quot;yMMMd&quot; or &quot;Hms&quot;) and will be converted into the
-pattern in the used locale, which matches the wanted symbols best. The symbols must be in canonical order,
-that is: Era (G), Year (y/Y), Quarter (q/Q), Month (M/L), Week (w/W), Day-Of-Week (E/e/c), Day (d/D),
-Hour (h/H/k/K/), Minute (m), Second (s), Timezone (z/Z/v/V/O/X/x)</p>
-<p>See <a href="https://unicode.org/reports/tr35/tr35-dates.html#availableFormats_appendItems">https://unicode.org/reports/tr35/tr35-dates.html#availableFormats_appendItems</a></p>
 <hr>
 <h3>getCustomIntervalPattern()</h3>
 <blockquote>
 <p><strong>getCustomIntervalPattern</strong>(<code>sSkeleton</code>, <code>vGreatestDiff</code>, <code>sCalendarType?</code>): <code>string</code> | <code>string</code>[]</p>
 </blockquote>
+<p>Get interval pattern for a given skeleton format.</p>
+<p>The format string does contain pattern symbols (e.g. &quot;yMMMd&quot; or &quot;Hms&quot;) and will be converted into the
+pattern in the used locale, which matches the wanted symbols best. The symbols must be in canonical order,
+that is: Era (G), Year (y/Y), Quarter (q/Q), Month (M/L), Week (w/W), Day-Of-Week (E/e/c), Day (d/D),
+Hour (h/H/k/K/), Minute (m), Second (s), Timezone (z/Z/v/V/O/X/x)</p>
+<p>See <a href="https://unicode.org/reports/tr35/tr35-dates.html#availableFormats_appendItems">https://unicode.org/reports/tr35/tr35-dates.html#availableFormats_appendItems</a></p>
 <h4>Parameters</h4>
 <h5>sSkeleton</h5>
 <p><code>string</code></p>
@@ -274,12 +280,6 @@ or calculated from locale.</p>
 possible interval patterns which match the given skeleton format</p>
 <h4>Since</h4>
 <p>1.46</p>
-<p>Get interval pattern for a given skeleton format.</p>
-<p>The format string does contain pattern symbols (e.g. &quot;yMMMd&quot; or &quot;Hms&quot;) and will be converted into the
-pattern in the used locale, which matches the wanted symbols best. The symbols must be in canonical order,
-that is: Era (G), Year (y/Y), Quarter (q/Q), Month (M/L), Week (w/W), Day-Of-Week (E/e/c), Day (d/D),
-Hour (h/H/k/K/), Minute (m), Second (s), Timezone (z/Z/v/V/O/X/x)</p>
-<p>See <a href="https://unicode.org/reports/tr35/tr35-dates.html#availableFormats_appendItems">https://unicode.org/reports/tr35/tr35-dates.html#availableFormats_appendItems</a></p>
 <hr>
 <h3>getDatePattern()</h3>
 <blockquote>
@@ -387,6 +387,7 @@ or calculated from locale.</p>
 <blockquote>
 <p><strong>getDecimalFormat</strong>(<code>sStyle</code>, <code>sNumber</code>, <code>sPlural</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the short decimal formats (like 1K, 1M....).</p>
 <h4>Parameters</h4>
 <h5>sStyle</h5>
 <p><code>string</code></p>
@@ -402,7 +403,6 @@ or calculated from locale.</p>
 <p>decimal format</p>
 <h4>Since</h4>
 <p>1.25.0</p>
-<p>Returns the short decimal formats (like 1K, 1M....).</p>
 <hr>
 <h3>getDecimalPattern()</h3>
 <blockquote>
@@ -417,6 +417,7 @@ or calculated from locale.</p>
 <blockquote>
 <p><strong>getDisplayName</strong>(<code>sType</code>, <code>sStyle?</code>): <code>void</code></p>
 </blockquote>
+<p>Returns the display name for a time unit (second, minute, hour, day, week, month, year).</p>
 <h4>Parameters</h4>
 <h5>sType</h5>
 <p><code>string</code></p>
@@ -430,12 +431,12 @@ or calculated from locale.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Returns the display name for a time unit (second, minute, hour, day, week, month, year).</p>
 <hr>
 <h3>getEraDates()</h3>
 <blockquote>
 <p><strong>getEraDates</strong>(<code>sCalendarType?</code>): <code>any</code>[]</p>
 </blockquote>
+<p>Returns the map of era IDs to era dates.</p>
 <h4>Parameters</h4>
 <h5>sCalendarType?</h5>
 <p><a href="../../CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
@@ -445,12 +446,12 @@ or calculated from locale.</p>
 <p>the array of eras containing objects with either an _end or _start property with a date</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Returns the map of era IDs to era dates.</p>
 <hr>
 <h3>getEras()</h3>
 <blockquote>
 <p><strong>getEras</strong>(<code>sWidth</code>, <code>sCalendarType?</code>): <code>any</code>[]</p>
 </blockquote>
+<p>Returns array of eras.</p>
 <h4>Parameters</h4>
 <h5>sWidth</h5>
 <p><code>string</code></p>
@@ -463,7 +464,6 @@ or calculated from locale.</p>
 <p>the array of eras</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Returns array of eras.</p>
 <hr>
 <h3>getFirstDayOfWeek()</h3>
 <blockquote>
@@ -482,6 +482,9 @@ information of the CLDR is taken into account to guess the &quot;most likely&quo
 <blockquote>
 <p><strong>getIntervalPattern</strong>(<code>sId</code>, <code>sCalendarType?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the interval format with the given Id (see CLDR documentation for valid Ids) or the fallback
+format if no interval format with that Id is known.</p>
+<p>The empty Id (&quot;&quot;) might be used to retrieve the interval format fallback.</p>
 <h4>Parameters</h4>
 <h5>sId</h5>
 <p><code>string</code></p>
@@ -495,9 +498,6 @@ or calculated from locale.</p>
 <p>interval format string with placeholders {0} and {1}</p>
 <h4>Since</h4>
 <p>1.17.0</p>
-<p>Returns the interval format with the given Id (see CLDR documentation for valid Ids) or the fallback
-format if no interval format with that Id is known.</p>
-<p>The empty Id (&quot;&quot;) might be used to retrieve the interval format fallback.</p>
 <hr>
 <h3>getLanguageName()</h3>
 <blockquote>
@@ -570,37 +570,35 @@ information of the CLDR is taken into account to guess the &quot;most likely&quo
 <hr>
 <h3>getMonths()</h3>
 <blockquote>
-<p><strong>getMonths</strong>(<code>sWidth</code>, <code>sCalendarType?</code>): <code>any</code>[]</p>
+<p><strong>getMonths</strong>(<code>sWidth</code>, <code>sCalendarType?</code>): <code>string</code>[]</p>
 </blockquote>
 <p>Get month names in width &quot;narrow&quot;, &quot;abbreviated&quot; or &quot;wide&quot;.</p>
 <h4>Parameters</h4>
 <h5>sWidth</h5>
-<p><code>string</code></p>
-<p>the required width for the month names</p>
+<p><code>&quot;narrow&quot;</code> | <code>&quot;abbreviated&quot;</code> | <code>&quot;wide&quot;</code></p>
+<p>The required width for the month names</p>
 <h5>sCalendarType?</h5>
 <p><a href="../../CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
-<p>the type of calendar. If it&#39;s not set, it falls back to the calendar type either set in configuration
-or calculated from locale.</p>
+<p>The type of calendar; defaults to the calendar type either set in configuration or calculated from locale</p>
 <h4>Returns</h4>
-<p><code>any</code>[]</p>
-<p>array of month names (starting with January)</p>
+<p><code>string</code>[]</p>
+<p>The array of month names</p>
 <hr>
 <h3>getMonthsStandAlone()</h3>
 <blockquote>
-<p><strong>getMonthsStandAlone</strong>(<code>sWidth</code>, <code>sCalendarType?</code>): <code>any</code>[]</p>
+<p><strong>getMonthsStandAlone</strong>(<code>sWidth</code>, <code>sCalendarType?</code>): <code>string</code>[]</p>
 </blockquote>
 <p>Get standalone month names in width &quot;narrow&quot;, &quot;abbreviated&quot; or &quot;wide&quot;.</p>
 <h4>Parameters</h4>
 <h5>sWidth</h5>
-<p><code>string</code></p>
-<p>the required width for the month names</p>
+<p><code>&quot;narrow&quot;</code> | <code>&quot;abbreviated&quot;</code> | <code>&quot;wide&quot;</code></p>
+<p>The required width for the month names</p>
 <h5>sCalendarType?</h5>
 <p><a href="../../CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
-<p>the type of calendar. If it&#39;s not set, it falls back to the calendar type either set in configuration
-or calculated from locale.</p>
+<p>The type of calendar; defaults to the calendar type either set in configuration or calculated from locale</p>
 <h4>Returns</h4>
-<p><code>any</code>[]</p>
-<p>array of month names (starting with January)</p>
+<p><code>string</code>[]</p>
+<p>The array of standalone month names</p>
 <hr>
 <h3>getNumberSymbol()</h3>
 <blockquote>
@@ -637,26 +635,17 @@ or calculated from locale.</p>
 <blockquote>
 <p><strong>getPluralCategories</strong>(): <code>any</code>[]</p>
 </blockquote>
+<p>Returns an array of all plural categories available in this language.</p>
 <h4>Returns</h4>
 <p><code>any</code>[]</p>
 <p>The array of plural categories</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Returns an array of all plural categories available in this language.</p>
 <hr>
 <h3>getPluralCategory()</h3>
 <blockquote>
 <p><strong>getPluralCategory</strong>(<code>vNumber</code>): <code>string</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>vNumber</h5>
-<p><code>string</code> | <code>number</code></p>
-<p>The number to find the plural category for</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>The plural category</p>
-<h4>Since</h4>
-<p>1.50</p>
 <p>Returns the plural category (zero, one, two, few, many or other) for the given number value. The number
 must be passed as an unformatted number string with dot as decimal separator (for example &quot;12345.67&quot;).
 To determine the correct plural category, it is also necessary to keep the same number of decimal digits
@@ -667,28 +656,37 @@ notation. This notation uses the plural rule operand &quot;c&quot; for the compa
 &quot;1.2c3&quot; for &quot;1.2K&quot; (1200) or &quot;4c6&quot; for &quot;4M&quot; (4000000).</p>
 <p>Note that the operand &quot;e&quot; is deprecated, but is a synonym corresponding to the CLDR specification for
 &quot;c&quot; and may be redefined in the future.</p>
+<h4>Parameters</h4>
+<h5>vNumber</h5>
+<p><code>string</code> | <code>number</code></p>
+<p>The number to find the plural category for</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>The plural category</p>
+<h4>Since</h4>
+<p>1.50</p>
 <hr>
 <h3>getPreferredCalendarType()</h3>
 <blockquote>
 <p><strong>getPreferredCalendarType</strong>(): <a href="../../CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
+<p>Returns the preferred calendar type for the current locale which exists in sap.ui.core.CalendarType</p>
 <h4>Returns</h4>
 <p><a href="../../CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 <p>the preferred calendar type</p>
 <h4>Since</h4>
 <p>1.28.6</p>
-<p>Returns the preferred calendar type for the current locale which exists in sap.ui.core.CalendarType</p>
 <hr>
 <h3>getPreferredHourSymbol()</h3>
 <blockquote>
 <p><strong>getPreferredHourSymbol</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the preferred hour pattern symbol (h for 12, H for 24 hours) for the current locale.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>the preferred hour symbol</p>
 <h4>Since</h4>
 <p>1.34</p>
-<p>Returns the preferred hour pattern symbol (h for 12, H for 24 hours) for the current locale.</p>
 <hr>
 <h3>getQuarters()</h3>
 <blockquote>
@@ -728,6 +726,8 @@ or calculated from locale.</p>
 <blockquote>
 <p><strong>getRelativeDay</strong>(<code>iDiff</code>, <code>sStyle?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the relative day resource pattern (like &quot;Today&quot;, &quot;Yesterday&quot;, &quot;{0} days ago&quot;) based on the given
+difference of days (0 means today, 1 means tomorrow, -1 means yesterday, ...).</p>
 <h4>Parameters</h4>
 <h5>iDiff</h5>
 <p><code>number</code></p>
@@ -741,13 +741,17 @@ or calculated from locale.</p>
 <p>the relative day resource pattern</p>
 <h4>Since</h4>
 <p>1.25.0</p>
-<p>Returns the relative day resource pattern (like &quot;Today&quot;, &quot;Yesterday&quot;, &quot;{0} days ago&quot;) based on the given
-difference of days (0 means today, 1 means tomorrow, -1 means yesterday, ...).</p>
 <hr>
 <h3>getRelativeHour()</h3>
 <blockquote>
 <p><strong>getRelativeHour</strong>(<code>iDiff</code>, <code>sStyle?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the relative resource pattern with unit &#39;hour&#39; (like &quot;in {0} hour(s)&quot;, &quot;{0} hour(s) ago&quot; under
+locale &#39;en&#39;) based on the given difference value (positive value means in the future and negative value
+means in the past).</p>
+<p>There&#39;s no pattern defined for 0 difference and the function returns null if 0 is given. In the 0 difference
+case, you can use the getRelativeMinute or getRelativeSecond function to format the difference using
+unit &#39;minute&#39; or &#39;second&#39;.</p>
 <h4>Parameters</h4>
 <h5>iDiff</h5>
 <p><code>number</code></p>
@@ -761,17 +765,16 @@ difference of days (0 means today, 1 means tomorrow, -1 means yesterday, ...).</
 <p>the relative resource pattern in unit &#39;hour&#39;. The method returns null if 0 is given as parameter.</p>
 <h4>Since</h4>
 <p>1.31.0</p>
-<p>Returns the relative resource pattern with unit &#39;hour&#39; (like &quot;in {0} hour(s)&quot;, &quot;{0} hour(s) ago&quot; under
-locale &#39;en&#39;) based on the given difference value (positive value means in the future and negative value
-means in the past).</p>
-<p>There&#39;s no pattern defined for 0 difference and the function returns null if 0 is given. In the 0 difference
-case, you can use the getRelativeMinute or getRelativeSecond function to format the difference using
-unit &#39;minute&#39; or &#39;second&#39;.</p>
 <hr>
 <h3>getRelativeMinute()</h3>
 <blockquote>
 <p><strong>getRelativeMinute</strong>(<code>iDiff</code>, <code>sStyle?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the relative resource pattern with unit &#39;minute&#39; (like &quot;in {0} minute(s)&quot;, &quot;{0} minute(s) ago&quot;
+under locale &#39;en&#39;) based on the given difference value (positive value means in the future and negative
+value means in the past).</p>
+<p>There&#39;s no pattern defined for 0 difference and the function returns null if 0 is given. In the 0 difference
+case, you can use the getRelativeSecond function to format the difference using unit &#39;second&#39;.</p>
 <h4>Parameters</h4>
 <h5>iDiff</h5>
 <p><code>number</code></p>
@@ -785,16 +788,13 @@ unit &#39;minute&#39; or &#39;second&#39;.</p>
 <p>the relative resource pattern in unit &#39;minute&#39;. The method returns null if 0 is given as parameter.</p>
 <h4>Since</h4>
 <p>1.31.0</p>
-<p>Returns the relative resource pattern with unit &#39;minute&#39; (like &quot;in {0} minute(s)&quot;, &quot;{0} minute(s) ago&quot;
-under locale &#39;en&#39;) based on the given difference value (positive value means in the future and negative
-value means in the past).</p>
-<p>There&#39;s no pattern defined for 0 difference and the function returns null if 0 is given. In the 0 difference
-case, you can use the getRelativeSecond function to format the difference using unit &#39;second&#39;.</p>
 <hr>
 <h3>getRelativeMonth()</h3>
 <blockquote>
 <p><strong>getRelativeMonth</strong>(<code>iDiff</code>, <code>sStyle?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the relative month resource pattern (like &quot;This month&quot;, &quot;Last month&quot;, &quot;{0} months ago&quot;) based
+on the given difference of months (0 means this month, 1 means next month, -1 means last month, ...).</p>
 <h4>Parameters</h4>
 <h5>iDiff</h5>
 <p><code>number</code></p>
@@ -808,13 +808,12 @@ case, you can use the getRelativeSecond function to format the difference using 
 <p>the relative month resource pattern</p>
 <h4>Since</h4>
 <p>1.25.0</p>
-<p>Returns the relative month resource pattern (like &quot;This month&quot;, &quot;Last month&quot;, &quot;{0} months ago&quot;) based
-on the given difference of months (0 means this month, 1 means next month, -1 means last month, ...).</p>
 <hr>
 <h3>getRelativePattern()</h3>
 <blockquote>
 <p><strong>getRelativePattern</strong>(<code>sScale</code>, <code>iDiff</code>, <code>bFuture?</code>, <code>sStyle?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the relative format pattern with given scale (year, month, week, ...) and difference value.</p>
 <h4>Parameters</h4>
 <h5>sScale</h5>
 <p><code>string</code></p>
@@ -834,12 +833,23 @@ on the given difference of months (0 means this month, 1 means next month, -1 me
 <p>the relative format pattern</p>
 <h4>Since</h4>
 <p>1.34</p>
-<p>Returns the relative format pattern with given scale (year, month, week, ...) and difference value.</p>
 <hr>
 <h3>getRelativePatterns()</h3>
 <blockquote>
 <p><strong>getRelativePatterns</strong>(<code>aScales</code>, <code>sStyle?</code>): <code>object</code>[]</p>
 </blockquote>
+<p>Returns relative time patterns for the given scales as an array of objects containing scale, value and
+pattern.</p>
+<p>The array may contain the following values: &quot;year&quot;, &quot;month&quot;, &quot;week&quot;, &quot;day&quot;, &quot;hour&quot;, &quot;minute&quot; and &quot;second&quot;.
+If no scales are given, patterns for all available scales will be returned.</p>
+<p>The return array will contain objects looking like:</p>
+<pre><code class="language-javascript">
+{
+    scale: &quot;minute&quot;,
+    sign: 1,
+    pattern: &quot;in {0} minutes&quot;
+}
+</code></pre>
 <h4>Parameters</h4>
 <h5>aScales</h5>
 <p><code>string</code>[]</p>
@@ -853,23 +863,14 @@ on the given difference of months (0 means this month, 1 means next month, -1 me
 <p>An array of all relative time patterns</p>
 <h4>Since</h4>
 <p>1.34</p>
-<p>Returns relative time patterns for the given scales as an array of objects containing scale, value and
-pattern.</p>
-<p>The array may contain the following values: &quot;year&quot;, &quot;month&quot;, &quot;week&quot;, &quot;day&quot;, &quot;hour&quot;, &quot;minute&quot; and &quot;second&quot;.
-If no scales are given, patterns for all available scales will be returned.</p>
-<p>The return array will contain objects looking like:</p>
-<pre><code class="language-javascript">
-{
-    scale: &quot;minute&quot;,
-    sign: 1,
-    pattern: &quot;in {0} minutes&quot;
-}
-</code></pre>
 <hr>
 <h3>getRelativeSecond()</h3>
 <blockquote>
 <p><strong>getRelativeSecond</strong>(<code>iDiff</code>, <code>sStyle?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the relative resource pattern with unit &#39;second&#39; (like now, &quot;in {0} seconds&quot;, &quot;{0} seconds ago&quot;
+under locale &#39;en&#39;) based on the given difference value (0 means now, positive value means in the future
+and negative value means in the past).</p>
 <h4>Parameters</h4>
 <h5>iDiff</h5>
 <p><code>number</code></p>
@@ -883,14 +884,13 @@ If no scales are given, patterns for all available scales will be returned.</p>
 <p>the relative resource pattern in unit &#39;second&#39;</p>
 <h4>Since</h4>
 <p>1.31.0</p>
-<p>Returns the relative resource pattern with unit &#39;second&#39; (like now, &quot;in {0} seconds&quot;, &quot;{0} seconds ago&quot;
-under locale &#39;en&#39;) based on the given difference value (0 means now, positive value means in the future
-and negative value means in the past).</p>
 <hr>
 <h3>getRelativeWeek()</h3>
 <blockquote>
 <p><strong>getRelativeWeek</strong>(<code>iDiff</code>, <code>sStyle?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the relative week resource pattern (like &quot;This week&quot;, &quot;Last week&quot;, &quot;{0} weeks ago&quot;) based on
+the given difference of weeks (0 means this week, 1 means next week, -1 means last week, ...).</p>
 <h4>Parameters</h4>
 <h5>iDiff</h5>
 <p><code>number</code></p>
@@ -904,13 +904,13 @@ and negative value means in the past).</p>
 <p>the relative week resource pattern</p>
 <h4>Since</h4>
 <p>1.31.0</p>
-<p>Returns the relative week resource pattern (like &quot;This week&quot;, &quot;Last week&quot;, &quot;{0} weeks ago&quot;) based on
-the given difference of weeks (0 means this week, 1 means next week, -1 means last week, ...).</p>
 <hr>
 <h3>getRelativeYear()</h3>
 <blockquote>
 <p><strong>getRelativeYear</strong>(<code>iDiff</code>, <code>sStyle?</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the relative year resource pattern (like &quot;This year&quot;, &quot;Last year&quot;, &quot;{0} year ago&quot;) based on the
+given difference of years (0 means this year, 1 means next year, -1 means last year, ...).</p>
 <h4>Parameters</h4>
 <h5>iDiff</h5>
 <p><code>number</code></p>
@@ -924,13 +924,14 @@ the given difference of weeks (0 means this week, 1 means next week, -1 means la
 <p>the relative year resource pattern</p>
 <h4>Since</h4>
 <p>1.25.0</p>
-<p>Returns the relative year resource pattern (like &quot;This year&quot;, &quot;Last year&quot;, &quot;{0} year ago&quot;) based on the
-given difference of years (0 means this year, 1 means next year, -1 means last year, ...).</p>
 <hr>
 <h3>getResolvedUnitFormat()</h3>
 <blockquote>
 <p><strong>getResolvedUnitFormat</strong>(<code>sUnit</code>): <code>object</code></p>
 </blockquote>
+<p>Retrieves the unit format pattern for a specific unit name considering the unit mappings.
+See:
+	sap.ui.core.LocaleData#getUnitFromMapping</p>
 <h4>Parameters</h4>
 <h5>sUnit</h5>
 <p><code>string</code></p>
@@ -940,9 +941,6 @@ given difference of years (0 means this year, 1 means next year, -1 means last y
 <p>The unit format configuration for the given unit name</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Retrieves the unit format pattern for a specific unit name considering the unit mappings.
-See:
-	sap.ui.core.LocaleData#getUnitFromMapping</p>
 <hr>
 <h3>getScripts()</h3>
 <blockquote>
@@ -988,6 +986,7 @@ or calculated from locale.</p>
 <blockquote>
 <p><strong>getUnitDisplayName</strong>(<code>sUnit</code>): <code>string</code></p>
 </blockquote>
+<p>Retrieves the localized display name of a unit by sUnit, e.g. &quot;duration-hour&quot;.</p>
 <h4>Parameters</h4>
 <h5>sUnit</h5>
 <p><code>string</code></p>
@@ -998,12 +997,13 @@ or calculated from locale.</p>
 not found</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Retrieves the localized display name of a unit by sUnit, e.g. &quot;duration-hour&quot;.</p>
 <hr>
 <h3>getUnitFormat()</h3>
 <blockquote>
 <p><strong>getUnitFormat</strong>(<code>sUnit</code>): <code>object</code></p>
 </blockquote>
+<p>Retrieves the unit format pattern for a specific unit name.</p>
+<p>Note: Does not take unit mapping into consideration.</p>
 <h4>Parameters</h4>
 <h5>sUnit</h5>
 <p><code>string</code></p>
@@ -1013,25 +1013,25 @@ not found</p>
 <p>The unit format configuration for the given unit name</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Retrieves the unit format pattern for a specific unit name.</p>
-<p>Note: Does not take unit mapping into consideration.</p>
 <hr>
 <h3>getUnitFormats()</h3>
 <blockquote>
 <p><strong>getUnitFormats</strong>(): <code>object</code></p>
 </blockquote>
+<p>Retrieves all unit format patterns merged.</p>
+<p>Note: Does not take unit mapping into consideration.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>The unit format patterns</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Retrieves all unit format patterns merged.</p>
-<p>Note: Does not take unit mapping into consideration.</p>
 <hr>
 <h3>getUnitFromMapping()</h3>
 <blockquote>
 <p><strong>getUnitFromMapping</strong>(<code>sMapping</code>): <code>string</code></p>
 </blockquote>
+<p>Looks up the unit from defined unit mapping. E.g. for defined unit mapping <code>{ &quot;my&quot;: &quot;my-custom-unit&quot;, &quot;cm&quot;: &quot;length-centimeter&quot; }</code></p>
+<p>Call: <code>getUnitFromMapping(&quot;my&quot;)</code> would result in <code>&quot;my-custom-unit&quot;</code></p>
 <h4>Parameters</h4>
 <h5>sMapping</h5>
 <p><code>string</code></p>
@@ -1041,8 +1041,6 @@ not found</p>
 <p>unit from the mapping</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Looks up the unit from defined unit mapping. E.g. for defined unit mapping <code>{ &quot;my&quot;: &quot;my-custom-unit&quot;, &quot;cm&quot;: &quot;length-centimeter&quot; }</code></p>
-<p>Call: <code>getUnitFromMapping(&quot;my&quot;)</code> would result in <code>&quot;my-custom-unit&quot;</code></p>
 <hr>
 <h3>getWeekendEnd()</h3>
 <blockquote>
@@ -1107,6 +1105,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

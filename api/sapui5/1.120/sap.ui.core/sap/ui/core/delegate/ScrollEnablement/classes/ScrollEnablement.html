@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ScrollEnablement — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ScrollEnablement — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ScrollEnablement — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/delegate/ScrollEnablement/classes/ScrollEnablement.html">
 <meta property="og:title" content="Class: ScrollEnablement — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ScrollEnablement — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ScrollEnablement — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/delegate/ScrollEnablement/classes/ScrollEnablement.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,79 +33,33 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › delegate › <a href="../../../../../../../sap.ui.core/sap/ui/core/delegate/ScrollEnablement/README.html">ScrollEnablement</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/delegate/ScrollEnablement</a> / ScrollEnablement</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/delegate/ScrollEnablement</a> / ScrollEnablement</p>
 <h1>Class: ScrollEnablement</h1>
 <pre class="sig"><span class="kw">import</span> ScrollEnablement <span class="kw">from</span> <span class="str">"sap/ui/core/delegate/ScrollEnablement"</span>;</pre>
-<h2>Ui5-protected</h2>
-<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <p>Delegate for touch scrolling on mobile devices.</p>
 <p>This delegate uses native scrolling of mobile and desktop browsers. Third party scrolling libraries are
 not supported.</p>
 <p>Controls that implement ScrollEnablement should additionally provide the getScrollDelegate method that
 returns the current instance of this delegate object</p>
+<h2>Ui5-protected</h2>
+<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
 </ul>
-<h2>Constructors</h2>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new ScrollEnablement</strong>(<code>oControl</code>, <code>sScrollContentDom</code>, <code>oConfig</code>): <code>ScrollEnablement</code></p>
-</blockquote>
-<h4>Parameters</h4>
-<h5>oControl</h5>
-<p><a href="../../../Control/classes/Control.html"><code>Control</code></a></p>
-<p>the Control of which this Scroller is the delegate</p>
-<h5>sScrollContentDom</h5>
-<p><code>string</code></p>
-<p>the Id of the element within the DOM of the Control which should be scrollable</p>
-<h5>oConfig</h5>
-<p>the configuration of the scroll delegate</p>
-<h6>horizontal?</h6>
-<p><code>boolean</code></p>
-<p>Whether the element should be scrollable horizontally</p>
-<h6>iscroll?</h6>
-<p><code>boolean</code></p>
-<p><strong>Deprecated</strong></p>
-<p>since 1.42, the parameter has no effect</p>
-<h6>nonTouchScrolling?</h6>
-<p><code>boolean</code></p>
-<p>If true, the delegate will also be active to allow touch like scrolling with the mouse on non-touch platforms.</p>
-<h6>preventDefault?</h6>
-<p><code>boolean</code></p>
-<p><strong>Deprecated</strong></p>
-<p>since 1.42, the parameter has no effect</p>
-<h6>scrollContainerId?</h6>
-<p><code>string</code></p>
-<p>Native scrolling does not need content wrapper. In this case, ID of the container element should be provided.</p>
-<h6>vertical?</h6>
-<p><code>boolean</code></p>
-<p>Whether the element should be scrollable vertically</p>
-<h6>zynga?</h6>
-<p><code>boolean</code></p>
-<p><strong>Deprecated</strong></p>
-<p>since 1.42, the parameter has no effect</p>
-<h4>Returns</h4>
-<p><code>ScrollEnablement</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a ScrollEnablement delegate that can be attached to Controls requiring capabilities for scrolling
-of a certain part of their DOM.</p>
-<h4>Overrides</h4>
-<p><a href="../../../../base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../base/Object/classes/BaseObject.html#constructor"><code>constructor</code></a></p>
 <h2>Methods</h2>
 <h3>destroy()</h3>
 <blockquote>
 <p><strong>destroy</strong>(): <code>void</code></p>
 </blockquote>
+<p>Destroys this Scrolling delegate.</p>
+<p>This function must be called by the control which uses this delegate in the <code>exit</code> function.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Destroys this Scrolling delegate.</p>
-<p>This function must be called by the control which uses this delegate in the <code>exit</code> function.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../base/Object/classes/BaseObject.html#destroy"><code>destroy</code></a></p>
 <hr>
@@ -113,6 +67,7 @@ of a certain part of their DOM.</p>
 <blockquote>
 <p><strong>getChildPosition</strong>(<code>vElement</code>): <code>object</code></p>
 </blockquote>
+<p>Calculates scroll position of a child of a container.</p>
 <h4>Parameters</h4>
 <h5>vElement</h5>
 <p><code>HTMLElement</code> | <code>jQuery</code>&lt;<code>HTMLElement</code>&gt;</p>
@@ -122,12 +77,12 @@ of a certain part of their DOM.</p>
 <p>Position object.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculates scroll position of a child of a container.</p>
 <hr>
 <h3>getHorizontal()</h3>
 <blockquote>
 <p><strong>getHorizontal</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Get current setting for horizontal scrolling.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>true if horizontal scrolling is enabled</p>
@@ -135,12 +90,12 @@ of a certain part of their DOM.</p>
 <p>1.9.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Get current setting for horizontal scrolling.</p>
 <hr>
 <h3>getVertical()</h3>
 <blockquote>
 <p><strong>getVertical</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Get current setting for vertical scrolling.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>true if vertical scrolling is enabled</p>
@@ -148,17 +103,16 @@ of a certain part of their DOM.</p>
 <p>1.9.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Get current setting for vertical scrolling.</p>
 <hr>
 <h3>refresh()</h3>
 <blockquote>
 <p><strong>refresh</strong>(): <code>void</code></p>
 </blockquote>
+<p>Refreshes this Scrolling delegate.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Refreshes this Scrolling delegate.</p>
 <hr>
 <h3>scrollTo()</h3>
 <h4>Call Signature</h4>
@@ -204,6 +158,7 @@ value.</p>
 <blockquote>
 <p><strong>scrollToElement</strong>(<code>oElement</code>, <code>iTime?</code>, <code>aOffset?</code>, <code>bSkipElementsInScrollport?</code>): <code>this</code></p>
 </blockquote>
+<p>Scrolls to an element within a container.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><code>HTMLElement</code></p>
@@ -225,12 +180,12 @@ view port</p>
 <p><code>this</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Scrolls to an element within a container.</p>
 <hr>
 <h3><del>setBounce()</del></h3>
 <blockquote>
 <p><strong>setBounce</strong>(<code>bBounce</code>): <code>void</code></p>
 </blockquote>
+<p>Setter for property <code>bounce</code>.</p>
 <h4>Parameters</h4>
 <h5>bBounce</h5>
 <p><code>boolean</code></p>
@@ -243,12 +198,12 @@ view port</p>
 <p>(since 1.42)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Setter for property <code>bounce</code>.</p>
 <hr>
 <h3>setGrowingList()</h3>
 <blockquote>
 <p><strong>setGrowingList</strong>(<code>fnScrollLoadCallback</code>, <code>sScrollLoadDirection</code>, <code>fnOverflowChange</code>): <code>void</code></p>
 </blockquote>
+<p>Sets GrowingList control to scroll container</p>
 <h4>Parameters</h4>
 <h5>fnScrollLoadCallback</h5>
 <p><code>Function</code></p>
@@ -265,12 +220,12 @@ view port</p>
 <p>1.11.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets GrowingList control to scroll container</p>
 <hr>
 <h3>setHorizontal()</h3>
 <blockquote>
 <p><strong>setHorizontal</strong>(<code>bHorizontal</code>): <code>void</code></p>
 </blockquote>
+<p>Enable or disable horizontal scrolling.</p>
 <h4>Parameters</h4>
 <h5>bHorizontal</h5>
 <p><code>boolean</code></p>
@@ -279,12 +234,12 @@ view port</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Enable or disable horizontal scrolling.</p>
 <hr>
 <h3>setIconTabBar()</h3>
 <blockquote>
 <p><strong>setIconTabBar</strong>(<code>oIconTabBar</code>, <code>fnScrollEndCallback</code>, <code>fnScrollStartCallback</code>): <code>void</code></p>
 </blockquote>
+<p>Sets IconTabBar control to scroll container</p>
 <h4>Parameters</h4>
 <h5>oIconTabBar</h5>
 <p><code>any</code></p>
@@ -301,12 +256,12 @@ view port</p>
 <p>1.16.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets IconTabBar control to scroll container</p>
 <hr>
 <h3>setPullDown()</h3>
 <blockquote>
 <p><strong>setPullDown</strong>(<code>oControl</code>): <code>void</code></p>
 </blockquote>
+<p>Set overflow control on top of scroll container.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><a href="../../../Control/classes/Control.html"><code>Control</code></a></p>
@@ -317,12 +272,12 @@ view port</p>
 <p>1.9.2</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Set overflow control on top of scroll container.</p>
 <hr>
 <h3>setVertical()</h3>
 <blockquote>
 <p><strong>setVertical</strong>(<code>bVertical</code>): <code>void</code></p>
 </blockquote>
+<p>Enable or disable vertical scrolling.</p>
 <h4>Parameters</h4>
 <h5>bVertical</h5>
 <p><code>boolean</code></p>
@@ -331,12 +286,14 @@ view port</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Enable or disable vertical scrolling.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
+<p>Creates a new subclass of class sap.ui.core.delegate.ScrollEnablement with name <code>sClassName</code> and enriches
+it with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.Object.extend.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
@@ -356,9 +313,6 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new subclass of class sap.ui.core.delegate.ScrollEnablement with name <code>sClassName</code> and enriches
-it with the information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.Object.extend.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../base/Object/classes/BaseObject.html#extend"><code>extend</code></a></p>
 <hr>
@@ -366,14 +320,14 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 </blockquote>
+<p>Returns a metadata object for class sap.ui.core.delegate.ScrollEnablement.</p>
 <h4>Returns</h4>
 <p><a href="../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a metadata object for class sap.ui.core.delegate.ScrollEnablement.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

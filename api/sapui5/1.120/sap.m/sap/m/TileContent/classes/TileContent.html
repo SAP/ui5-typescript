@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: TileContent — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: TileContent — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: TileContent — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/TileContent/classes/TileContent.html">
 <meta property="og:title" content="Class: TileContent — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: TileContent — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: TileContent — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/TileContent/classes/TileContent.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/TileContent/README.html">TileContent</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TileContent</a> / TileContent</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TileContent</a> / TileContent</p>
 <h1>Class: TileContent</h1>
 <pre class="sig"><span class="kw">import</span> TileContent <span class="kw">from</span> <span class="str">"sap/m/TileContent"</span>;</pre>
+<p>This control is used within the GenericTile control.</p>
 <h2>Since</h2>
 <p>1.34.0</p>
-<p>This control is used within the GenericTile control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -140,14 +140,14 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>getFooterColor</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <a href="../../library/enumerations/ValueColor.html"><code>ValueColor</code></a> | <code>&quot;Critical&quot;</code> | <code>&quot;Good&quot;</code> | <code>&quot;Neutral&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getFooterColor footerColor.</p>
+<p>The semantic color of the footer.</p>
+<p>Default value is <code>&quot;Neutral&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <a href="../../library/enumerations/ValueColor.html"><code>ValueColor</code></a> | <code>&quot;Critical&quot;</code> | <code>&quot;Good&quot;</code> | <code>&quot;Neutral&quot;</code></p>
 <p>Value of property <code>footerColor</code></p>
 <h4>Since</h4>
 <p>1.44</p>
-<p>Gets current value of property #getFooterColor footerColor.</p>
-<p>The semantic color of the footer.</p>
-<p>Default value is <code>&quot;Neutral&quot;</code>.</p>
 <hr>
 <h3>getFrameType()</h3>
 <blockquote>
@@ -164,54 +164,56 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>getPriority</strong>(): <code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;VeryHigh&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>(since 1.96)</p>
 <p>Gets current value of property #getPriority priority.</p>
-<p>Adds a priority badge before the content. Works only in Generic Tile ActionMode.</p>
+<p>Adds a priority badge before the content. Works only in Generic Tiles in ActionMode or Article Mode containing
+NewsContent.</p>
 <p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;VeryHigh&quot;</code></p>
 <p>Value of property <code>priority</code></p>
+<h4>Since</h4>
+<p>1.96</p>
 <hr>
 <h3>getPriorityText()</h3>
 <blockquote>
 <p><strong>getPriorityText</strong>(): <code>string</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>(since 1.103)</p>
 <p>Gets current value of property #getPriorityText priorityText.</p>
-<p>Sets the Text inside the Priority badge in Generic Tile ActionMode.</p>
+<p>Sets the Text inside the Priority badge in Generic Tile. Works only in Generic Tiles in ActionMode or
+Article Mode containing NewsContent.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>priorityText</code></p>
+<h4>Since</h4>
+<p>1.103</p>
 <hr>
 <h3><del>getSize()</del></h3>
 <blockquote>
 <p><strong>getSize</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getSize size.</p>
+<p>Updates the size of the tile. If it is not set, then the default size is applied based on the device
+tile.</p>
+<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
 <p>Value of property <code>size</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.38.0) - The TileContent control has now a fixed size, depending on the used media
 (desktop, tablet or phone).</p>
-<p>Gets current value of property #getSize size.</p>
-<p>Updates the size of the tile. If it is not set, then the default size is applied based on the device
-tile.</p>
-<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <hr>
 <h3>getState()</h3>
 <blockquote>
 <p><strong>getState</strong>(): <a href="../../library/enumerations/LoadState.html"><code>LoadState</code></a> | <code>&quot;Disabled&quot;</code> | <code>&quot;Failed&quot;</code> | <code>&quot;Loaded&quot;</code> | <code>&quot;Loading&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getState state.</p>
+<p>The load status.</p>
+<p>Default value is <code>Loaded</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/enumerations/LoadState.html"><code>LoadState</code></a> | <code>&quot;Disabled&quot;</code> | <code>&quot;Failed&quot;</code> | <code>&quot;Loaded&quot;</code> | <code>&quot;Loading&quot;</code></p>
 <p>Value of property <code>state</code></p>
 <h4>Since</h4>
 <p>1.100.0</p>
-<p>Gets current value of property #getState state.</p>
-<p>The load status.</p>
-<p>Default value is <code>Loaded</code>.</p>
 <hr>
 <h3>getUnit()</h3>
 <blockquote>
@@ -271,6 +273,10 @@ tile.</p>
 <blockquote>
 <p><strong>setFooterColor</strong>(<code>sFooterColor?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getFooterColor footerColor.</p>
+<p>The semantic color of the footer.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Neutral&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sFooterColor?</h5>
 <p><code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <a href="../../library/enumerations/ValueColor.html"><code>ValueColor</code></a> | <code>&quot;Critical&quot;</code> | <code>&quot;Good&quot;</code> | <code>&quot;Neutral&quot;</code></p>
@@ -280,10 +286,6 @@ tile.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44</p>
-<p>Sets a new value for property #getFooterColor footerColor.</p>
-<p>The semantic color of the footer.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Neutral&quot;</code>.</p>
 <hr>
 <h3>setFrameType()</h3>
 <blockquote>
@@ -303,43 +305,36 @@ tile.</p>
 <hr>
 <h3>setPriority()</h3>
 <blockquote>
-<p><strong>setPriority</strong>(<code>sPriority?</code>): <code>this</code></p>
+<p><strong>setPriority</strong>(<code>sPriority</code>): <code>this</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>(since 1.96)</p>
-<p>Sets a new value for property #getPriority priority.</p>
-<p>Adds a priority badge before the content. Works only in Generic Tile ActionMode.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
+<p>Sets the priority of the tile content.</p>
 <h4>Parameters</h4>
-<h5>sPriority?</h5>
+<h5>sPriority</h5>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;VeryHigh&quot;</code></p>
-<p>New value for property <code>priority</code></p>
+<p>The priority level.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
+<p>Reference to the current instance for method chaining.</p>
 <hr>
 <h3>setPriorityText()</h3>
 <blockquote>
-<p><strong>setPriorityText</strong>(<code>sPriorityText?</code>): <code>this</code></p>
+<p><strong>setPriorityText</strong>(<code>sPriorityText</code>): <code>this</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
-<p>(since 1.103)</p>
-<p>Sets a new value for property #getPriorityText priorityText.</p>
-<p>Sets the Text inside the Priority badge in Generic Tile ActionMode.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Sets the text for the priority badge.</p>
 <h4>Parameters</h4>
-<h5>sPriorityText?</h5>
+<h5>sPriorityText</h5>
 <p><code>string</code></p>
-<p>New value for property <code>priorityText</code></p>
+<p>The text to be displayed on the badge.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
+<p>Reference to the current instance for method chaining.</p>
 <hr>
 <h3>setRenderContent()</h3>
 <blockquote>
 <p><strong>setRenderContent</strong>(<code>value</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for protected property to enable or disable content rendering. This function does not invalidate
+the control.</p>
 <h4>Parameters</h4>
 <h5>value</h5>
 <p><code>boolean</code></p>
@@ -349,13 +344,13 @@ tile.</p>
 <p>this To allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Setter for protected property to enable or disable content rendering. This function does not invalidate
-the control.</p>
 <hr>
 <h3>setRenderFooter()</h3>
 <blockquote>
 <p><strong>setRenderFooter</strong>(<code>value</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for protected property to enable or disable footer rendering. This function does not invalidate
+the control.</p>
 <h4>Parameters</h4>
 <h5>value</h5>
 <p><code>boolean</code></p>
@@ -365,13 +360,16 @@ the control.</p>
 <p>this to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Setter for protected property to enable or disable footer rendering. This function does not invalidate
-the control.</p>
 <hr>
 <h3><del>setSize()</del></h3>
 <blockquote>
 <p><strong>setSize</strong>(<code>sSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSize size.</p>
+<p>Updates the size of the tile. If it is not set, then the default size is applied based on the device
+tile.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sSize?</h5>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
@@ -382,16 +380,15 @@ the control.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38.0) - The TileContent control has now a fixed size, depending on the used media
 (desktop, tablet or phone).</p>
-<p>Sets a new value for property #getSize size.</p>
-<p>Updates the size of the tile. If it is not set, then the default size is applied based on the device
-tile.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <hr>
 <h3>setState()</h3>
 <blockquote>
 <p><strong>setState</strong>(<code>sState?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getState state.</p>
+<p>The load status.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Loaded</code>.</p>
 <h4>Parameters</h4>
 <h5>sState?</h5>
 <p><a href="../../library/enumerations/LoadState.html"><code>LoadState</code></a> | <code>&quot;Disabled&quot;</code> | <code>&quot;Failed&quot;</code> | <code>&quot;Loaded&quot;</code> | <code>&quot;Loading&quot;</code></p>
@@ -401,10 +398,6 @@ tile.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.100.0</p>
-<p>Sets a new value for property #getState state.</p>
-<p>The load status.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Loaded</code>.</p>
 <hr>
 <h3>setUnit()</h3>
 <blockquote>
@@ -469,6 +462,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

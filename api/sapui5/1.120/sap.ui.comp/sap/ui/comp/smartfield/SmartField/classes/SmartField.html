@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SmartField — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SmartField — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SmartField — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartfield/SmartField/classes/SmartField.html">
 <meta property="og:title" content="Class: SmartField — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SmartField — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SmartField — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartfield/SmartField/classes/SmartField.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartfield › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartfield/SmartField/README.html">SmartField</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartfield/SmartField</a> / SmartField</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartfield/SmartField</a> / SmartField</p>
 <h1>Class: SmartField</h1>
 <pre class="sig"><span class="kw">import</span> SmartField <span class="kw">from</span> <span class="str">"sap/ui/comp/smartfield/SmartField"</span>;</pre>
 <p>The <code>SmartField</code> control interprets metadata that represents entity-relationship models, data types,
@@ -142,6 +142,7 @@ See:
 <blockquote>
 <p><strong>addAriaDescribedBy</strong>(<code>vAriaDescribedBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaDescribedBy into the association #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaDescribedBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -151,12 +152,12 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Adds some ariaDescribedBy into the association #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>addAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -166,7 +167,6 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.2</p>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>attachChange()</h3>
 <h4>Call Signature</h4>
@@ -281,6 +281,11 @@ which implies the value is stored in the binding/model before the event is fired
 <blockquote>
 <p><strong>attachContextEditableChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:contextEditableChanged contextEditableChanged
+event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
+<p>Fired when the control is rendered if the value of <code>contextEditable</code> property of the control has changed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -297,15 +302,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachContextEditableChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:contextEditableChanged contextEditableChanged
 event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
 <p>Fired when the control is rendered if the value of <code>contextEditable</code> property of the control has changed.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachContextEditableChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -318,17 +323,17 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:contextEditableChanged contextEditableChanged
-event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
-<p>Fired when the control is rendered if the value of <code>contextEditable</code> property of the control has changed.</p>
 <hr>
 <h3>attachEditableChanged()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachEditableChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:editableChanged editableChanged event of this
+<code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
+<p>Fired when the control is rendered if the value of <code>editable</code> property of the control has changed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -345,15 +350,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.30.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachEditableChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:editableChanged editableChanged event of this
 <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
 <p>Fired when the control is rendered if the value of <code>editable</code> property of the control has changed.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachEditableChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -366,11 +371,6 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.30.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:editableChanged editableChanged event of this
-<code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
-<p>Fired when the control is rendered if the value of <code>editable</code> property of the control has changed.</p>
 <hr>
 <h3>attachEntitySetFound()</h3>
 <h4>Call Signature</h4>
@@ -509,6 +509,10 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code
 <blockquote>
 <p><strong>attachModeToggled</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:modeToggled modeToggled event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
+<p>The event is fired after the inner controls have been toggled.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -525,14 +529,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.117.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:modeToggled modeToggled event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
-<p>The event is fired after the inner controls have been toggled.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachModeToggled</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:modeToggled modeToggled event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
+<p>The event is fired after the inner controls have been toggled.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -545,16 +549,17 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.117.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:modeToggled modeToggled event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
-<p>The event is fired after the inner controls have been toggled.</p>
 <hr>
 <h3><del>attachPress()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
+<p>Fires when the user triggers the link control or taps/clicks on an active title of the object identifier
+control. When handler attached, the rendered control is <code>sap.m.Link</code></p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -573,15 +578,15 @@ object when firing the event</p>
 <p>1.36.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.116.0)</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
 <p>Fires when the user triggers the link control or taps/clicks on an active title of the object identifier
 control. When handler attached, the rendered control is <code>sap.m.Link</code></p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -596,17 +601,18 @@ control. When handler attached, the rendered control is <code>sap.m.Link</code><
 <p>1.36.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.116.0)</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
-<p>Fires when the user triggers the link control or taps/clicks on an active title of the object identifier
-control. When handler attached, the rendered control is <code>sap.m.Link</code></p>
 <hr>
 <h3>attachValueListChanged()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachValueListChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:valueListChanged valueListChanged event of
+this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
+<p>The event is fired when after selection of values with value help or auto-suggest, the model is updated
+with the selected data.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -623,16 +629,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.31.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachValueListChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:valueListChanged valueListChanged event of
 this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
 <p>The event is fired when after selection of values with value help or auto-suggest, the model is updated
 with the selected data.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachValueListChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -645,12 +651,6 @@ with the selected data.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.31.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:valueListChanged valueListChanged event of
-this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code> itself.</p>
-<p>The event is fired when after selection of values with value help or auto-suggest, the model is updated
-with the selected data.</p>
 <hr>
 <h3>attachVisibleChanged()</h3>
 <h4>Call Signature</h4>
@@ -700,19 +700,6 @@ otherwise it will be bound to this <code>sap.ui.comp.smartfield.SmartField</code
 <blockquote>
 <p><strong>checkClientError</strong>(<code>oSettings?</code>): <code>boolean</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oSettings?</h5>
-<p>Settings</p>
-<h6>handleSuccess?</h6>
-<p><code>boolean</code></p>
-<p>Indicates whether client error checks are performed for the current value regardless of the current error
-state of the control. If the <code>handleSuccess</code> setting is set to <code>true</code>, the text input field fires a sap.ui.base.EventProvider#event:validationSuccess
-if its validation passes.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p><code>true</code>, if a client error has been detected, <code>false</code> otherwise</p>
-<h4>Deprecated</h4>
-<p>(since 1.64) - replaced by sap.ui.comp.smartfield.SmartField#checkValuesValidity</p>
 <p>Checks whether a client error has been detected in edit mode. Additionally the error message is shown,
 if this is not the case already.</p>
 <p>This method is typically used to check whether the value of every inner text input field in edit mode
@@ -730,11 +717,25 @@ object instance if, for example, a view object instance is registered to it.
  - The inner private text input field fires a sap.ui.base.EventProvider#event:validationError,
 or sap.ui.base.EventProvider#event:parseError event.
 </code></pre>
+<h4>Parameters</h4>
+<h5>oSettings?</h5>
+<p>Settings</p>
+<h6>handleSuccess?</h6>
+<p><code>boolean</code></p>
+<p>Indicates whether client error checks are performed for the current value regardless of the current error
+state of the control. If the <code>handleSuccess</code> setting is set to <code>true</code>, the text input field fires a sap.ui.base.EventProvider#event:validationSuccess
+if its validation passes.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p><code>true</code>, if a client error has been detected, <code>false</code> otherwise</p>
+<h4>Deprecated</h4>
+<p>(since 1.64) - replaced by sap.ui.comp.smartfield.SmartField#checkValuesValidity</p>
 <hr>
 <h3>checkUnitValidity()</h3>
 <blockquote>
 <p><strong>checkUnitValidity</strong>(<code>oSettings?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks the validity of the values for the given control.</p>
 <h4>Parameters</h4>
 <h5>oSettings?</h5>
 <p><code>Object</code></p>
@@ -746,26 +747,11 @@ or sap.ui.base.EventProvider#event:parseError event.
 <p>1.90</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks the validity of the values for the given control.</p>
 <hr>
 <h3>checkValuesValidity()</h3>
 <blockquote>
 <p><strong>checkValuesValidity</strong>(<code>oSettings?</code>): <code>Promise</code>&lt;<a href="../type-aliases/checkValuesValidityInfo.html"><code>checkValuesValidityInfo</code></a>&gt;</p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oSettings?</h5>
-<p>Settings</p>
-<h6>handleSuccess?</h6>
-<p><code>boolean</code></p>
-<p>Indicates whether client error checks are performed for the current value regardless of the current error
-state of the control. If the <code>handleSuccess</code> setting is set to <code>false</code>, the text input field will not
-fire a sap.ui.base.EventProvider#event:validationSuccess if its validation passes.</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<a href="../type-aliases/checkValuesValidityInfo.html"><code>checkValuesValidityInfo</code></a>&gt;</p>
-<p>A fulfilled <code>Promise</code> object or a <code>Promise</code> object to be fulfilled if the value of every text
-input field is valid, otherwise a rejected <code>Promise</code> object or a <code>Promise</code> object to be rejected</p>
-<h4>Since</h4>
-<p>1.64</p>
 <p>Checks whether the value of every inner text input field in edit mode is valid.</p>
 <p>This method is typically used to check whether the value of every inner text input field in edit mode
 is subject to data type constraints and whether the constraints are fulfilled.</p>
@@ -794,6 +780,20 @@ to validate user input, as the data type validation is done automatically when t
 field has changed and the focus leaves the text input field or the enter key is pressed. However, in
 two-way data binding scenarios, this method may be used to check whether a value is valid before submitting
 it to the back-end system.</p>
+<h4>Parameters</h4>
+<h5>oSettings?</h5>
+<p>Settings</p>
+<h6>handleSuccess?</h6>
+<p><code>boolean</code></p>
+<p>Indicates whether client error checks are performed for the current value regardless of the current error
+state of the control. If the <code>handleSuccess</code> setting is set to <code>false</code>, the text input field will not
+fire a sap.ui.base.EventProvider#event:validationSuccess if its validation passes.</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<a href="../type-aliases/checkValuesValidityInfo.html"><code>checkValuesValidityInfo</code></a>&gt;</p>
+<p>A fulfilled <code>Promise</code> object or a <code>Promise</code> object to be fulfilled if the value of every text
+input field is valid, otherwise a rejected <code>Promise</code> object or a <code>Promise</code> object to be rejected</p>
+<h4>Since</h4>
+<p>1.64</p>
 <hr>
 <h3>destroyConfiguration()</h3>
 <blockquote>
@@ -808,6 +808,7 @@ it to the back-end system.</p>
 <blockquote>
 <p><strong>destroyControlProposal</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the controlProposal in the aggregation #getControlProposal controlProposal.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -815,7 +816,6 @@ it to the back-end system.</p>
 <p>1.32.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.34.0)</p>
-<p>Destroys the controlProposal in the aggregation #getControlProposal controlProposal.</p>
 <hr>
 <h3>destroySemanticObjectController()</h3>
 <blockquote>
@@ -865,6 +865,9 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <blockquote>
 <p><strong>detachContextEditableChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:contextEditableChanged contextEditableChanged
+event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -877,14 +880,14 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:contextEditableChanged contextEditableChanged
-event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachEditableChanged()</h3>
 <blockquote>
 <p><strong>detachEditableChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:editableChanged editableChanged event of
+this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -897,9 +900,6 @@ event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:editableChanged editableChanged event of
-this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachEntitySetFound()</h3>
 <blockquote>
@@ -958,6 +958,8 @@ event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <blockquote>
 <p><strong>detachModeToggled</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:modeToggled modeToggled event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -970,13 +972,13 @@ event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.117.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:modeToggled modeToggled event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachPress()</del></h3>
 <blockquote>
 <p><strong>detachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -991,13 +993,14 @@ event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>1.36.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.116.0)</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachValueListChanged()</h3>
 <blockquote>
 <p><strong>detachValueListChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:valueListChanged valueListChanged event of
+this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1010,9 +1013,6 @@ event of this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.31.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:valueListChanged valueListChanged event of
-this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachVisibleChanged()</h3>
 <blockquote>
@@ -1036,6 +1036,7 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartField$ChangeEventParameters.html"><code>SmartField$ChangeEventParameters</code></a></p>
@@ -1045,12 +1046,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>fireChangeModelValue()</h3>
 <blockquote>
 <p><strong>fireChangeModelValue</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:changeModelValue changeModelValue to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartField$ChangeModelValueEventParameters.html"><code>SmartField$ChangeModelValueEventParameters</code></a></p>
@@ -1060,12 +1061,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:changeModelValue changeModelValue to attached listeners.</p>
 <hr>
 <h3>fireContextEditableChanged()</h3>
 <blockquote>
 <p><strong>fireContextEditableChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:contextEditableChanged contextEditableChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartField$ContextEditableChangedEventParameters.html"><code>SmartField$ContextEditableChangedEventParameters</code></a></p>
@@ -1077,12 +1078,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>1.32.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:contextEditableChanged contextEditableChanged to attached listeners.</p>
 <hr>
 <h3>fireEditableChanged()</h3>
 <blockquote>
 <p><strong>fireEditableChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:editableChanged editableChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartField$EditableChangedEventParameters.html"><code>SmartField$EditableChangedEventParameters</code></a></p>
@@ -1094,12 +1095,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>1.30.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:editableChanged editableChanged to attached listeners.</p>
 <hr>
 <h3>fireEntitySetFound()</h3>
 <blockquote>
 <p><strong>fireEntitySetFound</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:entitySetFound entitySetFound to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartField$EntitySetFoundEventParameters.html"><code>SmartField$EntitySetFoundEventParameters</code></a></p>
@@ -1109,12 +1110,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:entitySetFound entitySetFound to attached listeners.</p>
 <hr>
 <h3>fireInitialise()</h3>
 <blockquote>
 <p><strong>fireInitialise</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:initialise initialise to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1124,12 +1125,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:initialise initialise to attached listeners.</p>
 <hr>
 <h3>fireInnerControlsCreated()</h3>
 <blockquote>
 <p><strong>fireInnerControlsCreated</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:innerControlsCreated innerControlsCreated to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1139,12 +1140,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:innerControlsCreated innerControlsCreated to attached listeners.</p>
 <hr>
 <h3>fireModeToggled()</h3>
 <blockquote>
 <p><strong>fireModeToggled</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:modeToggled modeToggled to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1156,12 +1157,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>1.117.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:modeToggled modeToggled to attached listeners.</p>
 <hr>
 <h3><del>firePress()</del></h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1175,12 +1176,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>(since 1.116.0)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>fireValueListChanged()</h3>
 <blockquote>
 <p><strong>fireValueListChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:valueListChanged valueListChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartField$ValueListChangedEventParameters.html"><code>SmartField$ValueListChangedEventParameters</code></a></p>
@@ -1192,12 +1193,12 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>1.31.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:valueListChanged valueListChanged to attached listeners.</p>
 <hr>
 <h3>fireVisibleChanged()</h3>
 <blockquote>
 <p><strong>fireVisibleChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:visibleChanged visibleChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartField$VisibleChangedEventParameters.html"><code>SmartField$VisibleChangedEventParameters</code></a></p>
@@ -1207,37 +1208,31 @@ this <code>sap.ui.comp.smartfield.SmartField</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:visibleChanged visibleChanged to attached listeners.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
 <p><strong>getAriaDescribedBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.34.2</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getClientSideMandatoryCheck()</h3>
 <blockquote>
 <p><strong>getClientSideMandatoryCheck</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>clientSideMandatoryCheck</code></p>
-<h4>Since</h4>
-<p>1.38.3</p>
 <p>Gets current value of property #getClientSideMandatoryCheck clientSideMandatoryCheck.</p>
 <p>Determines if the mandatory check of whether the field has a value happens on the client side - <code>true</code>
 or on the server side - <code>false</code>.</p>
@@ -1250,6 +1245,11 @@ setting.</p>
     &lt;Property Name=&quot;CategoryID&quot; Type=&quot;Edm.Decimal&quot; Nullable=&quot;false&quot;/&gt;
 </code></pre>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>clientSideMandatoryCheck</code></p>
+<h4>Since</h4>
+<p>1.38.3</p>
 <hr>
 <h3>getConfiguration()</h3>
 <blockquote>
@@ -1266,40 +1266,40 @@ enable this feature in edit mode, set the <code>textInEditModeSource</code> cont
 <blockquote>
 <p><strong>getContextEditable</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getContextEditable contextEditable.</p>
+<p>Notifies the control whether controls using the <code>SmartField</code> control are editable.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>contextEditable</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Gets current value of property #getContextEditable contextEditable.</p>
-<p>Notifies the control whether controls using the <code>SmartField</code> control are editable.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getControlContext()</h3>
 <blockquote>
 <p><strong>getControlContext</strong>(): <a href="../../../library/namespaces/smartfield/enumerations/ControlContextType.html"><code>ControlContextType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getControlContext controlContext.</p>
+<p>Defines the context in which the layout of the <code>SmartField</code> control has to be interpreted.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../library/namespaces/smartfield/enumerations/ControlContextType.html"><code>ControlContextType</code></a></p>
 <p>Value of property <code>controlContext</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Gets current value of property #getControlContext controlContext.</p>
-<p>Defines the context in which the layout of the <code>SmartField</code> control has to be interpreted.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3><del>getControlProposal()</del></h3>
 <blockquote>
 <p><strong>getControlProposal</strong>(): <a href="../../ControlProposal/classes/ControlProposal.html"><code>ControlProposal</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getControlProposal controlProposal.</p>
+<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
 <h4>Returns</h4>
 <p><a href="../../ControlProposal/classes/ControlProposal.html"><code>ControlProposal</code></a></p>
 <h4>Since</h4>
 <p>1.32.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.34.0)</p>
-<p>Gets content of aggregation #getControlProposal controlProposal.</p>
-<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
 <hr>
 <h3>getDataProperty()</h3>
 <blockquote>
@@ -1374,13 +1374,6 @@ focused and they are out of the tab order.</p>
 <blockquote>
 <p><strong>getExpandNavigationProperties</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>expandNavigationProperties</code></p>
-<h4>Since</h4>
-<p>1.48</p>
-<h4>Deprecated</h4>
-<p>(since 1.117) - It is recommended the expand to be using the OData Model.</p>
 <p>Gets current value of property #getExpandNavigationProperties expandNavigationProperties.</p>
 <p>Indicates if entities related to navigation properties inside the metadata are requested. If set to <code>true</code>,
 then these related entities are loaded with an <code>$expand</code> request.</p>
@@ -1393,16 +1386,18 @@ from the backend.</p>
 <code>SmartField</code> is bound is persisted. For transient entities, there is no back-end request since no such
 data is available.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>expandNavigationProperties</code></p>
+<h4>Since</h4>
+<p>1.48</p>
+<h4>Deprecated</h4>
+<p>(since 1.117) - It is recommended the expand to be using the OData Model.</p>
 <hr>
 <h3>getFetchValueListReadOnly()</h3>
 <blockquote>
 <p><strong>getFetchValueListReadOnly</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>fetchValueListReadOnly</code></p>
-<h4>Since</h4>
-<p>1.42.0</p>
 <p>Gets current value of property #getFetchValueListReadOnly fetchValueListReadOnly.</p>
 <p>Indicates whether the value list collection is fetched in display mode from the resource path specified
 in the <code>com.sap.vocabularies.Common.v1.ValueList</code> annotation.</p>
@@ -1417,16 +1412,16 @@ control is bound to an Entity Data Model (EDM) property typed as <code>Edm.Strin
 or frameworks have to make sure the descriptive text is fetched, for example, by expanding a navigation
 property.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>fetchValueListReadOnly</code></p>
+<h4>Since</h4>
+<p>1.42.0</p>
 <hr>
 <h3>getFixedValueListValidationEnabled()</h3>
 <blockquote>
 <p><strong>getFixedValueListValidationEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>fixedValueListValidationEnabled</code></p>
-<h4>Since</h4>
-<p>1.88</p>
 <p>Gets current value of property #getFixedValueListValidationEnabled fixedValueListValidationEnabled.</p>
 <p>If the property is set to <code>true</code>, a standard validation for sap.m.ComboBox is performed. An inner
 control sap.m.ComboBox is created and the binding is to <code>selectedKey</code>. Changes at runtime are
@@ -1438,6 +1433,11 @@ and the binding is to <code>enteredValue</code>. In this case, any entered value
 it&#39;s in the predefined list or not.</p>
 <p><strong>Note:</strong> This property is applicable only for fixed-value scenarios.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>fixedValueListValidationEnabled</code></p>
+<h4>Since</h4>
+<p>1.88</p>
 <hr>
 <h3>getFocusDomRef()</h3>
 <blockquote>
@@ -1454,12 +1454,12 @@ it&#39;s in the predefined list or not.</p>
 <blockquote>
 <p><strong>getFormFormattedValue</strong>(): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Returns the formatted value of a control used in a <code>SemanticFormElement</code>.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>string</code>&gt;</p>
 <p>Formatted value or a <code>Promise</code> returning the formatted value if resolved</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Returns the formatted value of a control used in a <code>SemanticFormElement</code>.</p>
 <h4>Implementation of</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/ISemanticFormContent.html"><code>ISemanticFormContent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/ISemanticFormContent.html#getformformattedvalue"><code>getFormFormattedValue</code></a></p>
 <hr>
@@ -1467,11 +1467,11 @@ it&#39;s in the predefined list or not.</p>
 <blockquote>
 <p><strong>getFormValueProperty</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the name of the value-holding property of a control used in a <code>SemanticFormElement</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Returns the name of the value-holding property of a control used in a <code>SemanticFormElement</code>.</p>
 <h4>Implementation of</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/ISemanticFormContent.html"><code>ISemanticFormContent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/ISemanticFormContent.html#getformvalueproperty"><code>getFormValueProperty</code></a></p>
 <hr>
@@ -1479,17 +1479,17 @@ it&#39;s in the predefined list or not.</p>
 <blockquote>
 <p><strong>getHistoryEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>historyEnabled</code></p>
-<h4>Since</h4>
-<p>1.84</p>
 <p>Gets current value of property #getHistoryEnabled historyEnabled.</p>
 <p>If the property is set to <code>false</code>, history values are disabled. Changes at runtime are not reflected.
 The <code>historyEnabled</code> property is not applied to custom controls.</p>
 <p><strong>Note:</strong> For sap.m.ComboBox and sap.m.MultiComboBox the history values are disabled
 by default. To enable them for these controls, you need to set the <code>historyEnabled</code> property to <code>true</code>.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>historyEnabled</code></p>
+<h4>Since</h4>
+<p>1.84</p>
 <hr>
 <h3>getIdForLabel()</h3>
 <blockquote>
@@ -1506,38 +1506,38 @@ by default. To enable them for these controls, you need to set the <code>history
 <blockquote>
 <p><strong>getImportance</strong>(): <code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/Importance.html"><code>Importance</code></a></p>
 </blockquote>
+<p>Gets current value of property #getImportance importance.</p>
+<p>Specifies the importance of the field. Applicable only when the <code>SmartField</code> is used inside <code>SmartForm</code>.</p>
+<p>Default value is <code>Low</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/Importance.html"><code>Importance</code></a></p>
 <p>Value of property <code>importance</code></p>
 <h4>Since</h4>
 <p>1.87</p>
-<p>Gets current value of property #getImportance importance.</p>
-<p>Specifies the importance of the field. Applicable only when the <code>SmartField</code> is used inside <code>SmartForm</code>.</p>
-<p>Default value is <code>Low</code>.</p>
 <hr>
 <h3>getInnerControls()</h3>
 <blockquote>
 <p><strong>getInnerControls</strong>(): <code>any</code>[]</p>
 </blockquote>
+<p>Resolves the controls hosted currently by this <code>SmartField</code> control.</p>
 <h4>Returns</h4>
 <p><code>any</code>[]</p>
 <p>The controls hosted currently by this <code>SmartField</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Resolves the controls hosted currently by this <code>SmartField</code> control.</p>
 <hr>
 <h3><del>getJsontype()</del></h3>
 <blockquote>
 <p><strong>getJsontype</strong>(): <code>&quot;Date&quot;</code> | <code>&quot;DateTime&quot;</code> | <code>&quot;Boolean&quot;</code> | <code>&quot;Float&quot;</code> | <code>&quot;Integer&quot;</code> | <code>&quot;String&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/JSONType.html"><code>JSONType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getJsontype jsontype.</p>
+<p>Data types to be used, if the <code>SmartField</code> control is interacting with a JSON model. If the value property
+of the control is bound to a property of an OData entity set, this property is not taken into consideration.</p>
 <h4>Returns</h4>
 <p><code>&quot;Date&quot;</code> | <code>&quot;DateTime&quot;</code> | <code>&quot;Boolean&quot;</code> | <code>&quot;Float&quot;</code> | <code>&quot;Integer&quot;</code> | <code>&quot;String&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/JSONType.html"><code>JSONType</code></a></p>
 <p>Value of property <code>jsontype</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.31.0)</p>
-<p>Gets current value of property #getJsontype jsontype.</p>
-<p>Data types to be used, if the <code>SmartField</code> control is interacting with a JSON model. If the value property
-of the control is bound to a property of an OData entity set, this property is not taken into consideration.</p>
 <hr>
 <h3>getMandatory()</h3>
 <blockquote>
@@ -1587,12 +1587,12 @@ setting.</p>
 <blockquote>
 <p><strong>getMode</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the current SmartField&#39;s edit mode</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Returns &quot;edit&quot; or &quot;display&quot;</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the current SmartField&#39;s edit mode</p>
 <hr>
 <h3>getName()</h3>
 <blockquote>
@@ -1620,6 +1620,9 @@ setting.</p>
 <blockquote>
 <p><strong>getProposedControl</strong>(): <a href="../../../library/namespaces/smartfield/enumerations/ControlProposalType.html"><code>ControlProposalType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getProposedControl proposedControl.</p>
+<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../library/namespaces/smartfield/enumerations/ControlProposalType.html"><code>ControlProposalType</code></a></p>
 <p>Value of property <code>proposedControl</code></p>
@@ -1627,14 +1630,14 @@ setting.</p>
 <p>1.32.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.32.0)</p>
-<p>Gets current value of property #getProposedControl proposedControl.</p>
-<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getRequired()</h3>
 <blockquote>
 <p><strong>getRequired</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets the value of the <code>mandatory</code> property.</p>
+<p>This function is needed as the &quot;mandatory&quot; feature is named &quot;required&quot; in a lot of other controls (like
+<code>Label</code> or <code>Form</code>).</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>the true if the <code>SmartField</code> should be marked as required</p>
@@ -1642,9 +1645,6 @@ setting.</p>
 <p>1.48.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets the value of the <code>mandatory</code> property.</p>
-<p>This function is needed as the &quot;mandatory&quot; feature is named &quot;required&quot; in a lot of other controls (like
-<code>Label</code> or <code>Form</code>).</p>
 <hr>
 <h3>getSemanticObjectController()</h3>
 <blockquote>
@@ -1717,11 +1717,6 @@ supports this.</p>
 <blockquote>
 <p><strong>getTextDirection</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
-<p>Value of property <code>textDirection</code></p>
-<h4>Since</h4>
-<p>1.86.0</p>
 <p>Gets current value of property #getTextDirection textDirection.</p>
 <p>The available text direction options are LTR and RTL. By default, the control inherits the text direction
 from its parent control.</p>
@@ -1730,16 +1725,16 @@ LTR but you want a specific field to have RTL text direction.</p>
 <p><strong>Note:</strong> The <code>textDirection</code> property is not applicable for the <code>SmartField</code> control for units of measure
 use cases.</p>
 <p>Default value is <code>Inherit</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
+<p>Value of property <code>textDirection</code></p>
+<h4>Since</h4>
+<p>1.86.0</p>
 <hr>
 <h3>getTextInEditModeSource()</h3>
 <blockquote>
 <p><strong>getTextInEditModeSource</strong>(): <code>&quot;None&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/TextInEditModeSource.html"><code>TextInEditModeSource</code></a> | <code>&quot;NavigationProperty&quot;</code> | <code>&quot;ValueList&quot;</code> | <code>&quot;ValueListNoValidation&quot;</code> | <code>&quot;ValueListWarning&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;None&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/TextInEditModeSource.html"><code>TextInEditModeSource</code></a> | <code>&quot;NavigationProperty&quot;</code> | <code>&quot;ValueList&quot;</code> | <code>&quot;ValueListNoValidation&quot;</code> | <code>&quot;ValueListWarning&quot;</code></p>
-<p>Value of property <code>textInEditModeSource</code></p>
-<h4>Since</h4>
-<p>1.83</p>
 <p>Gets current value of property #getTextInEditModeSource textInEditModeSource.</p>
 <p>Sets the source from which text descriptions for <code>IDs</code> are fetched in edit mode, for example, for LT
 (Laptop).</p>
@@ -1779,6 +1774,11 @@ of type <code>ComboBox</code>. The values that will be considered:
 	 - ValueList - strict validation
 	 - ValueListWarning - non-strict validation</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/TextInEditModeSource.html"><code>TextInEditModeSource</code></a> | <code>&quot;NavigationProperty&quot;</code> | <code>&quot;ValueList&quot;</code> | <code>&quot;ValueListNoValidation&quot;</code> | <code>&quot;ValueListWarning&quot;</code></p>
+<p>Value of property <code>textInEditModeSource</code></p>
+<h4>Since</h4>
+<p>1.83</p>
 <hr>
 <h3>getTextLabel()</h3>
 <blockquote>
@@ -1851,14 +1851,14 @@ annotation.
 <blockquote>
 <p><strong>getUomEditState</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getUomEditState uomEditState.</p>
+<p>This property is for internal use only.</p>
+<p>Default value is <code>-1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>uomEditState</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Gets current value of property #getUomEditState uomEditState.</p>
-<p>This property is for internal use only.</p>
-<p>Default value is <code>-1</code>.</p>
 <hr>
 <h3>getUomEnabled()</h3>
 <blockquote>
@@ -1980,41 +1980,42 @@ handler.</p>
 <blockquote>
 <p><strong>getWrapping</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getWrapping wrapping.</p>
+<p>Indicates whether the control break lines (in display mode) to prevent overflow.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>wrapping</code></p>
 <h4>Since</h4>
 <p>1.36.6</p>
-<p>Gets current value of property #getWrapping wrapping.</p>
-<p>Indicates whether the control break lines (in display mode) to prevent overflow.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>removeAllAriaDescribedBy()</h3>
 <blockquote>
 <p><strong>removeAllAriaDescribedBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Removes all the controls in the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>removeAllAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.34.2</p>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAriaDescribedBy()</h3>
 <blockquote>
 <p><strong>removeAriaDescribedBy</strong>(<code>vAriaDescribedBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaDescribedBy from the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaDescribedBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -2024,12 +2025,12 @@ handler.</p>
 <p>The removed ariaDescribedBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Removes an ariaDescribedBy from the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -2039,21 +2040,11 @@ handler.</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.34.2</p>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>setClientSideMandatoryCheck()</h3>
 <blockquote>
 <p><strong>setClientSideMandatoryCheck</strong>(<code>bClientSideMandatoryCheck?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bClientSideMandatoryCheck?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>clientSideMandatoryCheck</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.38.3</p>
 <p>Sets a new value for property #getClientSideMandatoryCheck clientSideMandatoryCheck.</p>
 <p>Determines if the mandatory check of whether the field has a value happens on the client side - <code>true</code>
 or on the server side - <code>false</code>.</p>
@@ -2067,6 +2058,15 @@ setting.</p>
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bClientSideMandatoryCheck?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>clientSideMandatoryCheck</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.38.3</p>
 <hr>
 <h3>setConfiguration()</h3>
 <blockquote>
@@ -2085,6 +2085,10 @@ setting.</p>
 <blockquote>
 <p><strong>setContextEditable</strong>(<code>bContextEditable?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContextEditable contextEditable.</p>
+<p>Notifies the control whether controls using the <code>SmartField</code> control are editable.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bContextEditable?</h5>
 <p><code>boolean</code></p>
@@ -2094,15 +2098,15 @@ setting.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Sets a new value for property #getContextEditable contextEditable.</p>
-<p>Notifies the control whether controls using the <code>SmartField</code> control are editable.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setControlContext()</h3>
 <blockquote>
 <p><strong>setControlContext</strong>(<code>sControlContext?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getControlContext controlContext.</p>
+<p>Defines the context in which the layout of the <code>SmartField</code> control has to be interpreted.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sControlContext?</h5>
 <p><a href="../../../library/namespaces/smartfield/enumerations/ControlContextType.html"><code>ControlContextType</code></a></p>
@@ -2112,15 +2116,12 @@ setting.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Sets a new value for property #getControlContext controlContext.</p>
-<p>Defines the context in which the layout of the <code>SmartField</code> control has to be interpreted.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3><del>setControlProposal()</del></h3>
 <blockquote>
 <p><strong>setControlProposal</strong>(<code>oControlProposal</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getControlProposal controlProposal.</p>
 <h4>Parameters</h4>
 <h5>oControlProposal</h5>
 <p><a href="../../ControlProposal/classes/ControlProposal.html"><code>ControlProposal</code></a></p>
@@ -2132,7 +2133,6 @@ setting.</p>
 <p>1.32.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.34.0)</p>
-<p>Sets the aggregated #getControlProposal controlProposal.</p>
 <hr>
 <h3>setEditable()</h3>
 <blockquote>
@@ -2203,17 +2203,6 @@ focused and they are out of the tab order.</p>
 <blockquote>
 <p><strong>setExpandNavigationProperties</strong>(<code>bExpandNavigationProperties?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bExpandNavigationProperties?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>expandNavigationProperties</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.48</p>
-<h4>Deprecated</h4>
-<p>(since 1.117) - It is recommended the expand to be using the OData Model.</p>
 <p>Sets a new value for property #getExpandNavigationProperties expandNavigationProperties.</p>
 <p>Indicates if entities related to navigation properties inside the metadata are requested. If set to <code>true</code>,
 then these related entities are loaded with an <code>$expand</code> request.</p>
@@ -2227,20 +2216,22 @@ from the backend.</p>
 data is available.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bExpandNavigationProperties?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>expandNavigationProperties</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.48</p>
+<h4>Deprecated</h4>
+<p>(since 1.117) - It is recommended the expand to be using the OData Model.</p>
 <hr>
 <h3>setFetchValueListReadOnly()</h3>
 <blockquote>
 <p><strong>setFetchValueListReadOnly</strong>(<code>bFetchValueListReadOnly?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bFetchValueListReadOnly?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>fetchValueListReadOnly</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.42.0</p>
 <p>Sets a new value for property #getFetchValueListReadOnly fetchValueListReadOnly.</p>
 <p>Indicates whether the value list collection is fetched in display mode from the resource path specified
 in the <code>com.sap.vocabularies.Common.v1.ValueList</code> annotation.</p>
@@ -2256,20 +2247,20 @@ or frameworks have to make sure the descriptive text is fetched, for example, by
 property.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bFetchValueListReadOnly?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>fetchValueListReadOnly</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.42.0</p>
 <hr>
 <h3>setFixedValueListValidationEnabled()</h3>
 <blockquote>
 <p><strong>setFixedValueListValidationEnabled</strong>(<code>bFixedValueListValidationEnabled?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bFixedValueListValidationEnabled?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>fixedValueListValidationEnabled</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.88</p>
 <p>Sets a new value for property #getFixedValueListValidationEnabled fixedValueListValidationEnabled.</p>
 <p>If the property is set to <code>true</code>, a standard validation for sap.m.ComboBox is performed. An inner
 control sap.m.ComboBox is created and the binding is to <code>selectedKey</code>. Changes at runtime are
@@ -2282,11 +2273,27 @@ it&#39;s in the predefined list or not.</p>
 <p><strong>Note:</strong> This property is applicable only for fixed-value scenarios.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bFixedValueListValidationEnabled?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>fixedValueListValidationEnabled</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.88</p>
 <hr>
 <h3>setHistoryEnabled()</h3>
 <blockquote>
 <p><strong>setHistoryEnabled</strong>(<code>bHistoryEnabled?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHistoryEnabled historyEnabled.</p>
+<p>If the property is set to <code>false</code>, history values are disabled. Changes at runtime are not reflected.
+The <code>historyEnabled</code> property is not applied to custom controls.</p>
+<p><strong>Note:</strong> For sap.m.ComboBox and sap.m.MultiComboBox the history values are disabled
+by default. To enable them for these controls, you need to set the <code>historyEnabled</code> property to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bHistoryEnabled?</h5>
 <p><code>boolean</code></p>
@@ -2296,18 +2303,15 @@ it&#39;s in the predefined list or not.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Sets a new value for property #getHistoryEnabled historyEnabled.</p>
-<p>If the property is set to <code>false</code>, history values are disabled. Changes at runtime are not reflected.
-The <code>historyEnabled</code> property is not applied to custom controls.</p>
-<p><strong>Note:</strong> For sap.m.ComboBox and sap.m.MultiComboBox the history values are disabled
-by default. To enable them for these controls, you need to set the <code>historyEnabled</code> property to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setImportance()</h3>
 <blockquote>
 <p><strong>setImportance</strong>(<code>sImportance?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getImportance importance.</p>
+<p>Specifies the importance of the field. Applicable only when the <code>SmartField</code> is used inside <code>SmartForm</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Low</code>.</p>
 <h4>Parameters</h4>
 <h5>sImportance?</h5>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/Importance.html"><code>Importance</code></a></p>
@@ -2317,15 +2321,15 @@ by default. To enable them for these controls, you need to set the <code>history
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.87</p>
-<p>Sets a new value for property #getImportance importance.</p>
-<p>Specifies the importance of the field. Applicable only when the <code>SmartField</code> is used inside <code>SmartForm</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Low</code>.</p>
 <hr>
 <h3><del>setJsontype()</del></h3>
 <blockquote>
 <p><strong>setJsontype</strong>(<code>sJsontype?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getJsontype jsontype.</p>
+<p>Data types to be used, if the <code>SmartField</code> control is interacting with a JSON model. If the value property
+of the control is bound to a property of an OData entity set, this property is not taken into consideration.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sJsontype?</h5>
 <p><code>&quot;Date&quot;</code> | <code>&quot;DateTime&quot;</code> | <code>&quot;Boolean&quot;</code> | <code>&quot;Float&quot;</code> | <code>&quot;Integer&quot;</code> | <code>&quot;String&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/JSONType.html"><code>JSONType</code></a></p>
@@ -2335,10 +2339,6 @@ by default. To enable them for these controls, you need to set the <code>history
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.31.0)</p>
-<p>Sets a new value for property #getJsontype jsontype.</p>
-<p>Data types to be used, if the <code>SmartField</code> control is interacting with a JSON model. If the value property
-of the control is bound to a property of an OData entity set, this property is not taken into consideration.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setMandatory()</h3>
 <blockquote>
@@ -2430,6 +2430,10 @@ setting.</p>
 <blockquote>
 <p><strong>setProposedControl</strong>(<code>sProposedControl?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getProposedControl proposedControl.</p>
+<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sProposedControl?</h5>
 <p><a href="../../../library/namespaces/smartfield/enumerations/ControlProposalType.html"><code>ControlProposalType</code></a></p>
@@ -2441,10 +2445,6 @@ setting.</p>
 <p>1.32.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.32.0)</p>
-<p>Sets a new value for property #getProposedControl proposedControl.</p>
-<p>Proposes a control to be rendered. The <code>SmartField</code> control can ignore the proposal.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setSemanticObjectController()</h3>
 <blockquote>
@@ -2545,15 +2545,6 @@ supports this.</p>
 <blockquote>
 <p><strong>setTextDirection</strong>(<code>sTextDirection?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sTextDirection?</h5>
-<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
-<p>New value for property <code>textDirection</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.86.0</p>
 <p>Sets a new value for property #getTextDirection textDirection.</p>
 <p>The available text direction options are LTR and RTL. By default, the control inherits the text direction
 from its parent control.</p>
@@ -2563,20 +2554,20 @@ LTR but you want a specific field to have RTL text direction.</p>
 use cases.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>Inherit</code>.</p>
+<h4>Parameters</h4>
+<h5>sTextDirection?</h5>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
+<p>New value for property <code>textDirection</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.86.0</p>
 <hr>
 <h3>setTextInEditModeSource()</h3>
 <blockquote>
 <p><strong>setTextInEditModeSource</strong>(<code>sTextInEditModeSource?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sTextInEditModeSource?</h5>
-<p><code>&quot;None&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/TextInEditModeSource.html"><code>TextInEditModeSource</code></a> | <code>&quot;NavigationProperty&quot;</code> | <code>&quot;ValueList&quot;</code> | <code>&quot;ValueListNoValidation&quot;</code> | <code>&quot;ValueListWarning&quot;</code></p>
-<p>New value for property <code>textInEditModeSource</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.83</p>
 <p>Sets a new value for property #getTextInEditModeSource textInEditModeSource.</p>
 <p>Sets the source from which text descriptions for <code>IDs</code> are fetched in edit mode, for example, for LT
 (Laptop).</p>
@@ -2617,6 +2608,15 @@ of type <code>ComboBox</code>. The values that will be considered:
 	 - ValueListWarning - non-strict validation</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Parameters</h4>
+<h5>sTextInEditModeSource?</h5>
+<p><code>&quot;None&quot;</code> | <a href="../../../library/namespaces/smartfield/enumerations/TextInEditModeSource.html"><code>TextInEditModeSource</code></a> | <code>&quot;NavigationProperty&quot;</code> | <code>&quot;ValueList&quot;</code> | <code>&quot;ValueListNoValidation&quot;</code> | <code>&quot;ValueListWarning&quot;</code></p>
+<p>New value for property <code>textInEditModeSource</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.83</p>
 <hr>
 <h3>setTextLabel()</h3>
 <blockquote>
@@ -2792,6 +2792,7 @@ the <code>&gt;</code> is the binding path.</p>
 <blockquote>
 <p><strong>setValueState</strong>(<code>sValueState</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for property <code>valueState</code>. Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sValueState</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -2801,12 +2802,12 @@ the <code>&gt;</code> is the binding path.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Setter for property <code>valueState</code>. Default value is <code>None</code>.</p>
 <hr>
 <h3>setValueStateText()</h3>
 <blockquote>
 <p><strong>setValueStateText</strong>(<code>sText</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for property <code>valueStateText</code>. Default value is empty/<code>undefined</code>.</p>
 <h4>Parameters</h4>
 <h5>sText</h5>
 <p><code>string</code></p>
@@ -2816,7 +2817,6 @@ the <code>&gt;</code> is the binding path.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.29</p>
-<p>Setter for property <code>valueStateText</code>. Default value is empty/<code>undefined</code>.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -2838,6 +2838,10 @@ the <code>&gt;</code> is the binding path.</p>
 <blockquote>
 <p><strong>setWrapping</strong>(<code>bWrapping?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWrapping wrapping.</p>
+<p>Indicates whether the control break lines (in display mode) to prevent overflow.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bWrapping?</h5>
 <p><code>boolean</code></p>
@@ -2847,10 +2851,6 @@ the <code>&gt;</code> is the binding path.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.6</p>
-<p>Sets a new value for property #getWrapping wrapping.</p>
-<p>Indicates whether the control break lines (in display mode) to prevent overflow.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -2913,6 +2913,6 @@ used by this class</p>
 <p>The resulting paths are returned</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

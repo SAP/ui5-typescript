@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $LineChartSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $LineChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $LineChartSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $LineChartSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/charts/LineChart/interfaces/$LineChartSettings.html">
-<meta property="og:title" content="Interface: $LineChartSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $LineChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $LineChartSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $LineChartSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/charts/LineChart/interfaces/$LineChartSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ca.ui/README.html">sap.ca.ui</a> › sap › ca › ui › charts › <a href="../../../../../../../sap.ca.ui/sap/ca/ui/charts/LineChart/README.html">LineChart</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/charts/LineChart</a> / $LineChartSettings</p>
-<h1>Interface: $LineChartSettings</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/charts/LineChart</a> / $LineChartSettings</p>
+<h1><del>Interface: $LineChartSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $LineChartSettings } <span class="kw">from</span> <span class="str">"sap/ca/ui/charts/LineChart"</span>;</pre>
+<p>Describes the settings that can be provided to the LineChart constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.24) - Sap.ca charts have been replaced with sap.viz and vizFrame in 1.24. The UI5
+control &quot;sap.viz.ui5.controls.VizFrame&quot; serves as a single point of entry for all the new charts. Now
+that 1.24 is available you are asked to use sap.viz charts and the VizFrame instead! This control will
+not be supported anymore from 1.24.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Chart/interfaces/$ChartSettings.html"><code>$ChartSettings</code></a></li>
@@ -47,51 +53,51 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>chartBusinessData?</strong>: <code>any</code></p>
 </blockquote>
+<p>Allow the chart data to be set, that is the measure and dimension values</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;data&#39; property, do not use as it will be removed in
 a future release.</p>
-<p>Allow the chart data to be set, that is the measure and dimension values</p>
 <hr>
 <h3><del>chartDataset?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>chartDataset?</strong>: <code>any</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.0.0) - This is a copy of the &#39;dataset&#39; property, do not use as it will be removed
-in a future release.</p>
 <p>Allow the Dataset for the chart to be set, includes the dimensions, and measures, any data binding is
 removed, this will disable the chart scroll context view, use the dataset settings if you want the scroll
 context to work</p>
+<h4>Deprecated</h4>
+<p>(since 1.0.0) - This is a copy of the &#39;dataset&#39; property, do not use as it will be removed
+in a future release.</p>
 <hr>
 <h3><del>chartDatasetSettings?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>chartDatasetSettings?</strong>: <code>any</code></p>
 </blockquote>
+<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
+two datasets are created, one for the main chart and one for the scroll context)</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;datasetSettings&#39; property, do not use as it will be
 removed in a future release.</p>
-<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
-two datasets are created, one for the main chart and one for the scroll context)</p>
 <hr>
 <h3><del>chartTitle?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>chartTitle?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>The title to display on the chart</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;title&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>The title to display on the chart</p>
 <hr>
 <h3><del>data?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>data?</strong>: <code>any</code></p>
 </blockquote>
+<p>Allow the chart data to be set, that is the measure and dimension values</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the binding on &#39;dataset&#39;, do not use as it will be removed in
 a future release.</p>
-<p>Allow the chart data to be set, that is the measure and dimension values</p>
 <hr>
-<h3>dataLabelFormat?</h3>
+<h3><del>dataLabelFormat?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>dataLabelFormat?</strong>: <code>any</code></p>
 </blockquote>
@@ -102,45 +108,46 @@ Format String following the &#39;sap.viz.ui5.Line&#39; documentation</p>
 <blockquote>
 <p><code>optional</code> <strong>dataPath?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Allow the data path for binding the model to the dimensions and measures to be set</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the binding on &#39;dataset&#39;, do not use as it will be removed in
 a future release.</p>
-<p>Allow the data path for binding the model to the dimensions and measures to be set</p>
 <hr>
 <h3><del>datasetSettings?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>datasetSettings?</strong>: <code>any</code></p>
 </blockquote>
+<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
+two datasets are created, one for the main chart and one for the scroll context)</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is property is not needed any more, do not use as it will be removed
 in a future release.</p>
-<p>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally
-two datasets are created, one for the main chart and one for the scroll context)</p>
 <hr>
 <h3><del>minTouchSize?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>minTouchSize?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
+device, only applies if the chart width is not set</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the &#39;dataLabelFormatter&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
-device, only applies if the chart width is not set</p>
 <hr>
 <h3><del>minTouchWidth?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>minTouchWidth?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
+device, only applies if the chart width is not set</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Please use the &#39;minShapeSize&#39; property, do not use as it will be removed
 in a future release.</p>
-<p>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile
-device, only applies if the chart width is not set</p>
 <hr>
 <h3><del>onDetailsSelected?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>onDetailsSelected?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Event fired when the details button is pressed on the selected Datapoint Popover</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -148,42 +155,41 @@ device, only applies if the chart width is not set</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Event fired when the details button is pressed on the selected Datapoint Popover</p>
 <hr>
 <h3><del>showLabel?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showLabel?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Show the data label value on the chart</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - This is a copy of the &#39;showDataLabel&#39; property, do not use as it will be
 removed in a future release.</p>
-<p>Show the data label value on the chart</p>
 <hr>
 <h3><del>showScrollContext?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showScrollContext?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Show the chart scroll context, (the preview of the whole chart as a small image when scrolling)</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Feature does not work correctly yet.</p>
-<p>Show the chart scroll context, (the preview of the whole chart as a small image when scrolling)</p>
 <hr>
 <h3><del>useDelayedResize?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>useDelayedResize?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Use a delayed resize event to cause the chart to render when navigated to after resize when in the background</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>Use a delayed resize event to cause the chart to render when navigated to after resize when in the background</p>
 <hr>
 <h3><del>vertical?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>vertical?</strong>: <a href="../../../../../../../sap.m/sap/m/VBox/classes/VBox.html"><code>VBox</code></a></p>
 </blockquote>
+<p>The vertical layout</p>
 <h4>Deprecated</h4>
 <p>(since 1.0.0) - Do not use as it will be removed in a future release.</p>
-<p>The vertical layout</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

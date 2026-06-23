@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TableSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $TableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/Table/interfaces/$TableSettings.html">
 <meta property="og:title" content="Interface: $TableSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TableSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $TableSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/Table/interfaces/$TableSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › <a href="../../../../../../sap.ui.table/sap/ui/table/Table/README.html">Table</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/Table</a> / $TableSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/Table</a> / $TableSettings</p>
 <h1>Interface: $TableSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TableSettings } <span class="kw">from</span> <span class="str">"sap/ui/table/Table"</span>;</pre>
+<p>Describes the settings that can be provided to the Table constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -52,9 +53,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>alternateRowColors?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Enables alternating table row colors. Alternate row coloring is not available for the tree mode.</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Enables alternating table row colors. Alternate row coloring is not available for the tree mode.</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
@@ -66,6 +67,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>beforeOpenContextMenu?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the user requests the context menu for a table cell.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$BeforeOpenContextMenuEvent.html"><code>Table$BeforeOpenContextMenuEvent</code></a></p>
@@ -73,12 +75,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Fired when the user requests the context menu for a table cell.</p>
 <hr>
 <h3>busyStateChanged?</h3>
 <blockquote>
 <p><code>optional</code> <strong>busyStateChanged?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event gets fired when the busy state of the table changes. It should only be used by composite controls.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$BusyStateChangedEvent.html"><code>Table$BusyStateChangedEvent</code></a></p>
@@ -86,12 +88,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>This event gets fired when the busy state of the table changes. It should only be used by composite controls.</p>
 <hr>
 <h3>cellClick?</h3>
 <blockquote>
 <p><code>optional</code> <strong>cellClick?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>fired when the user clicks a cell of the table (experimental!).</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$CellClickEvent.html"><code>Table$CellClickEvent</code></a></p>
@@ -99,12 +101,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.21.0</p>
-<p>fired when the user clicks a cell of the table (experimental!).</p>
 <hr>
 <h3><del>cellContextmenu?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>cellContextmenu?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>fired when the user clicks a cell of the table.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$CellContextmenuEvent.html"><code>Table$CellContextmenuEvent</code></a></p>
@@ -114,12 +116,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>1.21.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.54) - replaced by <code>beforeOpenContextMenu</code>.</p>
-<p>fired when the user clicks a cell of the table.</p>
 <hr>
 <h3>columnFreeze?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columnFreeze?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>fired when a column of the table should be freezed</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$ColumnFreezeEvent.html"><code>Table$ColumnFreezeEvent</code></a></p>
@@ -127,7 +129,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.21.0</p>
-<p>fired when a column of the table should be freezed</p>
 <hr>
 <h3>columnHeaderHeight?</h3>
 <blockquote>
@@ -180,6 +181,7 @@ table can&#39;t be guaranteed any more.</p>
 <blockquote>
 <p><code>optional</code> <strong>columnSelect?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>fired when a column of the table has been selected</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$ColumnSelectEvent.html"><code>Table$ColumnSelectEvent</code></a></p>
@@ -187,12 +189,12 @@ table can&#39;t be guaranteed any more.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.117)</p>
-<p>fired when a column of the table has been selected</p>
 <hr>
 <h3><del>columnVisibility?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>columnVisibility?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>fired when the visibility of a table column is changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$ColumnVisibilityEvent.html"><code>Table$ColumnVisibilityEvent</code></a></p>
@@ -200,24 +202,25 @@ table can&#39;t be guaranteed any more.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.117)</p>
-<p>fired when the visibility of a table column is changed.</p>
 <hr>
 <h3>contextMenu?</h3>
 <blockquote>
 <p><code>optional</code> <strong>contextMenu?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Defines the context menu for the table.</p>
 <p><strong>Note:</strong> The context menu will also be available for the row selectors as well as in the row actions
 cell of the table control.</p>
 <p>The custom context menu will not be shown in group header and summary rows.</p>
 <p>If this aggregation is set, then the <code>enableCellFilter</code> property will have no effect.</p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>customFilter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>customFilter?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is triggered when the custom filter item of the column menu is pressed. The column on which
+the event was triggered is passed as parameter.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$CustomFilterEvent.html"><code>Table$CustomFilterEvent</code></a></p>
@@ -225,45 +228,43 @@ cell of the table control.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.23.0</p>
-<p>This event is triggered when the custom filter item of the column menu is pressed. The column on which
-the event was triggered is passed as parameter.</p>
 <hr>
 <h3><del>editable?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>editable?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.115)</p>
 <p>Flag whether the controls of the Table are editable or not (currently this only controls the background
 color in certain themes!)</p>
+<h4>Deprecated</h4>
+<p>(since 1.115)</p>
 <hr>
 <h3>enableBusyIndicator?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableBusyIndicator?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.27.0</p>
 <p>If set to <code>true</code>, the table changes its busy state, resulting in showing or hiding the busy indicator.
 The table will switch to busy as soon as data is retrieved to be displayed in the currently visible rows.
 This happens, for example, during scrolling, filtering, or sorting. As soon as the data has been retrieved,
 the table switches back to not busy. The busy state of the table can still be set manually by calling
 sap.ui.core.Control#setBusy.</p>
+<h4>Since</h4>
+<p>1.27.0</p>
 <hr>
 <h3>enableCellFilter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableCellFilter?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Flag whether to enable or disable the context menu on cells to trigger a filtering with the cell value.</p>
 <h4>Since</h4>
 <p>1.21.0</p>
-<p>Flag whether to enable or disable the context menu on cells to trigger a filtering with the cell value.</p>
 <hr>
 <h3>enableColumnFreeze?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableColumnFreeze?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Flag whether to show or hide the column menu item to freeze or unfreeze a column.</p>
 <h4>Since</h4>
 <p>1.21.0</p>
-<p>Flag whether to show or hide the column menu item to freeze or unfreeze a column.</p>
 <hr>
 <h3>enableColumnReordering?</h3>
 <blockquote>
@@ -275,17 +276,15 @@ sap.ui.core.Control#setBusy.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableCustomFilter?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.23.0</p>
 <p>Set this parameter to true to implement your own filter behaviour. Instead of the filter input box a
 button will be rendered for which&#39; press event (customFilter) you can register an event handler.</p>
+<h4>Since</h4>
+<p>1.23.0</p>
 <hr>
 <h3><del>enableGrouping?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableGrouping?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.110) - this feature has a limited functionality and should not be used anymore.</p>
 <p>Enables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined
 in the <code>groupBy</code> association.</p>
 <p>The following restrictions apply:
@@ -300,15 +299,17 @@ in the <code>groupBy</code> association.</p>
 <pre><code> - The column, by which the table is grouped, is not visible. It will become visible again only if the
 table is grouped by another column or grouping is disabled.
 </code></pre>
+<h4>Deprecated</h4>
+<p>(since 1.110) - this feature has a limited functionality and should not be used anymore.</p>
 <hr>
 <h3>enableSelectAll?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableSelectAll?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.23.0</p>
 <p>Specifies if a select all button should be displayed in the top left corner. This button is only displayed
 if the row selector is visible and the selection mode is set to any kind of multi selection.</p>
+<h4>Since</h4>
+<p>1.23.0</p>
 <hr>
 <h3>extension?</h3>
 <blockquote>
@@ -340,6 +341,8 @@ call or user interaction with the column header.</p>
 <blockquote>
 <p><code>optional</code> <strong>firstVisibleRowChanged?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event gets fired when the first visible row is changed. It should only be used by composite controls.
+The event even is fired when setFirstVisibleRow is called programmatically.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$FirstVisibleRowChangedEvent.html"><code>Table$FirstVisibleRowChangedEvent</code></a></p>
@@ -347,19 +350,17 @@ call or user interaction with the column header.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>This event gets fired when the first visible row is changed. It should only be used by composite controls.
-The event even is fired when setFirstVisibleRow is called programmatically.</p>
 <hr>
 <h3><del>fixedBottomRowCount?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>fixedBottomRowCount?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Number of rows that are fix on the bottom. When you use a vertical scrollbar, only the rows which are
+not fixed, will scroll.</p>
 <h4>Since</h4>
 <p>1.18.7</p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
-<p>Number of rows that are fix on the bottom. When you use a vertical scrollbar, only the rows which are
-not fixed, will scroll.</p>
 <hr>
 <h3>fixedColumnCount?</h3>
 <blockquote>
@@ -376,10 +377,10 @@ not fixed, will scroll.</p>
 <blockquote>
 <p><code>optional</code> <strong>fixedRowCount?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <p>Number of rows that are fix on the top. When you use a vertical scrollbar, only the rows which are not
 fixed, will scroll.</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <hr>
 <h3>footer?</h3>
 <blockquote>
@@ -392,6 +393,7 @@ fixed, will scroll.</p>
 <blockquote>
 <p><code>optional</code> <strong>group?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>fired when the table is grouped (experimental!).</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$GroupEvent.html"><code>Table$GroupEvent</code></a></p>
@@ -399,37 +401,36 @@ fixed, will scroll.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.118)</p>
-<p>fired when the table is grouped (experimental!).</p>
 <hr>
 <h3><del>groupBy?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>groupBy?</strong>: <code>string</code> | <a href="../../Column/classes/Column.html"><code>Column</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<h4>Deprecated</h4>
-<p>(since 1.110)
- (since 1.28) - This feature has a limited functionality.</p>
 <p>The column by which the table is grouped. Grouping will only be performed if <code>enableGrouping</code> is set
 to <code>true</code>. Setting <code>groupBy</code> in the view does not work and throws an error. It can only be set if the
 column by which the table is grouped is already part of the <code>columns</code> aggregation of the table.</p>
+<h4>Deprecated</h4>
+<p>(since 1.110)
+ (since 1.28) - This feature has a limited functionality.</p>
 <hr>
 <h3><del>minAutoRowCount?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>minAutoRowCount?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <p>This property is used to set the minimum count of visible rows when the property visibleRowCountMode
 is set to Auto or Interactive. For any other visibleRowCountMode, it is ignored.</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <hr>
 <h3><del>navigationMode?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>navigationMode?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/NavigationMode.html"><code>NavigationMode</code></a> | <code>&quot;Paginator&quot;</code> | <code>&quot;Scrollbar&quot;</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.38)</p>
 <p>This property has been deprecated and must not be used anymore, since <code>Scrollbar</code> is the only supported
 option.</p>
+<h4>Deprecated</h4>
+<p>(since 1.38)</p>
 <hr>
 <h3>noData?</h3>
 <blockquote>
@@ -443,6 +444,8 @@ replace the no data text.</p>
 <blockquote>
 <p><code>optional</code> <strong>paste?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
+with the standard keyboard shortcut, if the focus is inside the table.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Table$PasteEvent.html"><code>Table$PasteEvent</code></a></p>
@@ -450,29 +453,27 @@ replace the no data text.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
-with the standard keyboard shortcut, if the focus is inside the table.</p>
 <hr>
 <h3><del>plugins?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>plugins?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a> | <a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a>[]</p>
 </blockquote>
+<p>Plugin section of the table. Multiple plugins are possible, but always only <strong>one</strong> of a certain type.</p>
+<p>If a selection plugin is used, the table&#39;s selection API must not be used. Instead, use the API of the
+plugin.</p>
 <h4>Since</h4>
 <p>1.64</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - Please add plugins to the <code>dependents</code> aggregation instead.</p>
-<p>Plugin section of the table. Multiple plugins are possible, but always only <strong>one</strong> of a certain type.</p>
-<p>If a selection plugin is used, the table&#39;s selection API must not be used. Instead, use the API of the
-plugin.</p>
 <hr>
 <h3>rowActionCount?</h3>
 <blockquote>
 <p><code>optional</code> <strong>rowActionCount?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.45.0</p>
 <p>Number of row actions made visible which determines the width of the row action column. The values <code>0</code>,
 <code>1</code> and <code>2</code> are possible.</p>
+<h4>Since</h4>
+<p>1.45.0</p>
 <hr>
 <h3>rowActionTemplate?</h3>
 <blockquote>
@@ -486,8 +487,6 @@ changes to take effect.</p>
 <blockquote>
 <p><code>optional</code> <strong>rowHeight?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <p>Row height in pixel.</p>
 <p>In the table&#39;s header, it defines the minimum height of the row, but it cannot be less than the default
 height based on the content density configuration. The actual height can increase based on the content.</p>
@@ -498,15 +497,17 @@ actual height can increase based on the content. If the mode is sap.ui.table.Vis
 the value defines the actual height, and any content that doesn&#39;t fit is cut off.</p>
 <p>If no value is set (includes 0), a default height is applied based on the content density configuration.
 In any <code>visibleRowCountMode</code>, the actual height can increase based on the content.</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <hr>
 <h3>rowMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>rowMode?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Fixed&quot;</code> | <a href="../../rowmodes/RowMode/classes/RowMode.html"><code>RowMode</code></a> | <a href="../../rowmodes/Type/enumerations/Type.html"><code>Type</code></a> | <code>&quot;Interactive&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.119</p>
 <p>Defines how the table handles the rows. By default, the table operates in sap.ui.table.rowmodes.Type Fixed
 mode.</p>
+<h4>Since</h4>
+<p>1.119</p>
 <hr>
 <h3>rows?</h3>
 <blockquote>
@@ -558,6 +559,9 @@ changes to take effect.</p>
 <blockquote>
 <p><code>optional</code> <strong>rowsUpdated?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired after the table rows have been updated due to rendering, a model update, or a user
+interaction, for example.</p>
+<p><strong>Note</strong>: This event is fired often and must not be used for performance-critical tasks.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -565,21 +569,18 @@ changes to take effect.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.86</p>
-<p>This event is fired after the table rows have been updated due to rendering, a model update, or a user
-interaction, for example.</p>
-<p><strong>Note</strong>: This event is fired often and must not be used for performance-critical tasks.</p>
 <hr>
 <h3><del>selectedIndex?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>selectedIndex?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.69) - replaced by sap.ui.table.Table#getSelectedIndices and sap.ui.table.Table#setSelectedIndex</p>
 <p>Zero-based index of selected item. Index value for no selection is -1. When multi-selection is enabled
 and multiple items are selected, the method returns the lead selected item. Sets the zero-based index
 of the currently selected item. This method removes any previous selections. When the given index is
 invalid, the call is ignored. <strong>Note:</strong> If the rows of the table are bound, the value of the property
 is reset to -1. If a selection plugin is applied to the table, the property is not bindable.</p>
+<h4>Deprecated</h4>
+<p>(since 1.69) - replaced by sap.ui.table.Table#getSelectedIndices and sap.ui.table.Table#setSelectedIndex</p>
 <hr>
 <h3>selectionBehavior?</h3>
 <blockquote>
@@ -607,11 +608,11 @@ the selection mode is controlled by the plugin.</p>
 <blockquote>
 <p><code>optional</code> <strong>showColumnVisibilityMenu?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Flag to show or hide the column visibility menu. This menu will get displayed in each generated column
+header menu. It allows to show or hide columns</p>
 <h4>Deprecated</h4>
 <p>(since 1.117) - use a <code>ColumnMenu</code> with a custom menu item in the <code>headerMenu</code> association
 instead.</p>
-<p>Flag to show or hide the column visibility menu. This menu will get displayed in each generated column
-header menu. It allows to show or hide columns</p>
 <hr>
 <h3>showNoData?</h3>
 <blockquote>
@@ -624,10 +625,10 @@ just show a grid of empty cells</p>
 <blockquote>
 <p><code>optional</code> <strong>showOverlay?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.21.2</p>
 <p>Setting this property to true will show an overlay on top of the Table content and users cannot click
 anymore on the Table content.</p>
+<h4>Since</h4>
+<p>1.21.2</p>
 <hr>
 <h3>sort?</h3>
 <blockquote>
@@ -656,35 +657,31 @@ this number is used as the <code>threshold</code>. If the value is 0, thresholdi
 <blockquote>
 <p><code>optional</code> <strong>title?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Control or text of title section of the Table (if not set it will be hidden)</p>
 <h4>Deprecated</h4>
 <p>(since 1.72) - Use, for example, a <code>sap.m.Title</code> control in the <code>extension</code> aggregation instead.</p>
-<p>Control or text of title section of the Table (if not set it will be hidden)</p>
 <hr>
 <h3><del>toolbar?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>toolbar?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.38) - This aggregation is deprecated, use the <code>extension</code> aggregation instead.</p>
 <p>Toolbar of the Table If not set, no toolbar area will be rendered. Note: The CSS class sapMTBHeader-CTX
 is applied on the given toolbar.</p>
+<h4>Deprecated</h4>
+<p>(since 1.38) - This aggregation is deprecated, use the <code>extension</code> aggregation instead.</p>
 <hr>
 <h3><del>visibleRowCount?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>visibleRowCount?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Number of visible rows of the table.</p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
-<p>Number of visible rows of the table.</p>
 <hr>
 <h3><del>visibleRowCountMode?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>visibleRowCountMode?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Fixed&quot;</code> | <code>&quot;Interactive&quot;</code> | <a href="../../library/enumerations/VisibleRowCountMode.html"><code>VisibleRowCountMode</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.9.2</p>
-<h4>Deprecated</h4>
-<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <p>Defines how the table handles the visible rows in the table.</p>
 <p>In the <code>&quot;Fixed&quot;</code> mode, the table always has as many rows as defined in the <code>visibleRowCount</code> property.</p>
 <p>In the <code>&quot;Auto&quot;</code> mode, the <code>visibleRowCount</code> property is changed by the table automatically. It will then
@@ -696,6 +693,10 @@ be set manually. Restrictions:
     parent element is a CSS flex container, and the table is a CSS flex item allowed to grow and shrink.</p>
 <p>In the <code>&quot;Interactive&quot;</code> mode, the table has as many rows as defined in the <code>visibleRowCount</code> property
 after rendering. The user can change the <code>visibleRowCount</code> by dragging a resizer.</p>
+<h4>Since</h4>
+<p>1.9.2</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -703,6 +704,6 @@ after rendering. The user can change the <code>visibleRowCount</code> by draggin
 </blockquote>
 <p>Width of the Table.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

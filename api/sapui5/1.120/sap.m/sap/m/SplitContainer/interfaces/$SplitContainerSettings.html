@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SplitContainerSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SplitContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $SplitContainerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/SplitContainer/interfaces/$SplitContainerSettings.html">
 <meta property="og:title" content="Interface: $SplitContainerSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SplitContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $SplitContainerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/SplitContainer/interfaces/$SplitContainerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SplitContainer/README.html">SplitContainer</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SplitContainer</a> / $SplitContainerSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SplitContainer</a> / $SplitContainerSettings</p>
 <h1>Interface: $SplitContainerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SplitContainerSettings } <span class="kw">from</span> <span class="str">"sap/m/SplitContainer"</span>;</pre>
+<p>Describes the settings that can be provided to the SplitContainer constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -97,43 +98,43 @@ this event is fired with some delay after the navigate event.</p>
 <blockquote>
 <p><code>optional</code> <strong>backgroundColor?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Determines the background color of the SplitContainer. If set, this color overrides the default one,
 which is defined by the theme (should only be used when really required). Any configured background image
 will be placed above this colored background, but any theme adaptation in the Theme Designer will override
 this setting. Use the backgroundRepeat property to define whether this image should be stretched to cover
 the complete SplitContainer or whether it should be tiled.</p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>backgroundImage?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundImage?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Sets the background image of the SplitContainer. When set, this image overrides the default background
 defined by the theme (should only be used when really required). This background image will be placed
 above any color set for the background, but any theme adaptation in the Theme Designer will override
 this image setting. Use the backgroundRepeat property to define whether this image should be stretched
 to cover the complete SplitContainer or whether it should be tiled.</p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>backgroundOpacity?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundOpacity?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Defines the opacity of the background image - between 0 (fully transparent) and 1 (fully opaque). This
 can be used to improve the content visibility by making the background image partly transparent.</p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>backgroundRepeat?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundRepeat?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Defines whether the background image (if configured) is proportionally stretched to cover the whole SplitContainer
 (false) or whether it should be tiled (true).</p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>beforeMasterClose?</h3>
 <blockquote>
@@ -235,10 +236,10 @@ the show/hide of master button needs to be managed by the application.</p>
 <blockquote>
 <p><code>optional</code> <strong>masterButtonTooltip?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48</p>
 <p>Specifies the tooltip of the master button. If the tooltip is not specified, the title of the page, which
 is displayed is the master part, is set as tooltip to the master button.</p>
+<h4>Since</h4>
+<p>1.48</p>
 <hr>
 <h3>masterNavigate?</h3>
 <blockquote>
@@ -271,6 +272,6 @@ or if it should be hidden when in portrait mode (ShowHideMode). Default is ShowH
 values are Hide (Master is always hidden) and Popover (master is displayed in popover).</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

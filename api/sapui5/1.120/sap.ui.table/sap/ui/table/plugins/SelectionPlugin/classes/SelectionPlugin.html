@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: SelectionPlugin — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SelectionPlugin — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: SelectionPlugin — SAPUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: SelectionPlugin — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/plugins/SelectionPlugin/classes/SelectionPlugin.html">
-<meta property="og:title" content="Class: SelectionPlugin — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SelectionPlugin — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: SelectionPlugin — SAPUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: SelectionPlugin — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.table/sap/ui/table/plugins/SelectionPlugin/classes/SelectionPlugin.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › plugins › <a href="../../../../../../../sap.ui.table/sap/ui/table/plugins/SelectionPlugin/README.html">SelectionPlugin</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/plugins/SelectionPlugin</a> / SelectionPlugin</p>
-<h1>Class: SelectionPlugin</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/plugins/SelectionPlugin</a> / SelectionPlugin</p>
+<h1>Abstract Class: SelectionPlugin</h1>
 <pre class="sig"><span class="kw">import</span> SelectionPlugin <span class="kw">from</span> <span class="str">"sap/ui/table/plugins/SelectionPlugin"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<p>Implements the selection methods for a table.</p>
 <h2>Since</h2>
 <p>1.64
  (since 1.64)</p>
-<p>Implements the selection methods for a table.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -142,6 +142,7 @@ this <code>sap.ui.table.plugins.SelectionPlugin</code>.</p>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -151,7 +152,6 @@ this <code>sap.ui.table.plugins.SelectionPlugin</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -210,6 +210,21 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#extend"><code>extend</code></a></p>
 <hr>
+<h3>findOn()</h3>
+<blockquote>
+<p><code>static</code> <strong>findOn</strong>(<code>oTable</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>Searches a plugin of the corresponding type in the aggregations of the given <code>Table</code> instance. The first
+plugin that is found is returned.</p>
+<h4>Parameters</h4>
+<h5>oTable</h5>
+<p><a href="../../../Table/classes/Table.html"><code>Table</code></a></p>
+<p>The <code>Table</code> instance to check for</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
+<p>The found plugin instance or <code>undefined</code> if not found</p>
+<hr>
 <h3>getMetadata()</h3>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
@@ -223,6 +238,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

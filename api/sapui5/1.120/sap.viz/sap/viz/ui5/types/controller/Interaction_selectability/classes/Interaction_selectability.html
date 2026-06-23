@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Interaction\_selectability~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Interaction\_selectability~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: Interaction\_selectability~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/types/controller/Interaction_selectability/classes/Interaction_selectability.html">
 <meta property="og:title" content="~~Class: Interaction\_selectability~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Interaction\_selectability~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: Interaction\_selectability~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/types/controller/Interaction_selectability/classes/Interaction_selectability.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › types › controller › <a href="../../../../../../../../sap.viz/sap/viz/ui5/types/controller/Interaction_selectability/README.html">Interaction_selectability</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/types/controller/Interaction_selectability</a> / Interaction_selectability</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/types/controller/Interaction_selectability</a> / Interaction_selectability</p>
 <h1><del>Class: Interaction_selectability</del></h1>
 <pre class="sig"><span class="kw">import</span> Interaction_selectability <span class="kw">from</span> <span class="str">"sap/viz/ui5/types/controller/Interaction_selectability"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<p>Settings for selectability</p>
 <h2>Since</h2>
 <p>1.7.2</p>
 <h2>Deprecated</h2>
@@ -51,7 +52,6 @@ control to benefit from new charting enhancements and timely support. **</p>
 <p><strong>Note</strong>: As the feature set, design and API usage of VizFrame might differ from the old chart controls,
 make sure you evaluate it thoroughly before migration.
  (since 1.7.2) - Charting API is not finished yet and might change completely.</p>
-<p>Settings for selectability</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../core/BaseStructuredType/classes/BaseStructuredType.html"><code>BaseStructuredType</code></a></li>
@@ -112,31 +112,31 @@ of the syntax of the settings object.</p>
 <p><strong>getDataPointsCacheable</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getDataPointsCacheable dataPointsCacheable.</p>
+<p>Set whether data points can be cached. If it&#39;s true, data points might be cached by Interaction for better
+performance.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>dataPointsCacheable</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Gets current value of property #getDataPointsCacheable dataPointsCacheable.</p>
-<p>Set whether data points can be cached. If it&#39;s true, data points might be cached by Interaction for better
-performance.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getLassoWithCtrlKey()</del></h3>
 <blockquote>
 <p><strong>getLassoWithCtrlKey</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getLassoWithCtrlKey lassoWithCtrlKey.</p>
+<p>Set whether the user must hold the ctrl key to use lasso selection</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>lassoWithCtrlKey</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Gets current value of property #getLassoWithCtrlKey lassoWithCtrlKey.</p>
-<p>Set whether the user must hold the ctrl key to use lasso selection</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getLegendSelection()</del></h3>
 <blockquote>
@@ -211,6 +211,11 @@ values &#39;single&#39; and &#39;multiple&#39; are deprecated; please remove the
 <p><strong>setDataPointsCacheable</strong>(<code>bDataPointsCacheable?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getDataPointsCacheable dataPointsCacheable.</p>
+<p>Set whether data points can be cached. If it&#39;s true, data points might be cached by Interaction for better
+performance.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bDataPointsCacheable?</h5>
 <p><code>boolean</code></p>
@@ -221,17 +226,16 @@ values &#39;single&#39; and &#39;multiple&#39; are deprecated; please remove the
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Sets a new value for property #getDataPointsCacheable dataPointsCacheable.</p>
-<p>Set whether data points can be cached. If it&#39;s true, data points might be cached by Interaction for better
-performance.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setLassoWithCtrlKey()</del></h3>
 <blockquote>
 <p><strong>setLassoWithCtrlKey</strong>(<code>bLassoWithCtrlKey?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getLassoWithCtrlKey lassoWithCtrlKey.</p>
+<p>Set whether the user must hold the ctrl key to use lasso selection</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bLassoWithCtrlKey?</h5>
 <p><code>boolean</code></p>
@@ -242,10 +246,6 @@ performance.</p>
 <h4>Deprecated</h4>
 <p>(since 1.12) - This Property has been deprecated. This interface will be removed from the
 SAPUI5 delivery in one of the next releases.</p>
-<p>Sets a new value for property #getLassoWithCtrlKey lassoWithCtrlKey.</p>
-<p>Set whether the user must hold the ctrl key to use lasso selection</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setLegendSelection()</del></h3>
 <blockquote>
@@ -359,6 +359,6 @@ used by this class</p>
 <p><a href="../../../../core/BaseStructuredType/classes/BaseStructuredType.html"><code>BaseStructuredType</code></a>.<a href="../../../../core/BaseStructuredType/classes/BaseStructuredType.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TimelineSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TimelineSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $TimelineSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/Timeline/interfaces/$TimelineSettings.html">
 <meta property="og:title" content="Interface: $TimelineSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TimelineSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $TimelineSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/Timeline/interfaces/$TimelineSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/Timeline/README.html">Timeline</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/Timeline</a> / $TimelineSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/Timeline</a> / $TimelineSettings</p>
 <h1>Interface: $TimelineSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TimelineSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/Timeline"</span>;</pre>
+<p>Describes the settings that can be provided to the Timeline constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,6 +48,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>addPost?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when a new post is added. As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Timeline$AddPostEvent.html"><code>Timeline$AddPostEvent</code></a></p>
@@ -54,7 +56,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
-<p>This event is fired when a new post is added. As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <hr>
 <h3>alignment?</h3>
 <blockquote>
@@ -105,9 +106,9 @@ as bottom alignment and the <code>Left</code> value as top alignment.</p>
 <blockquote>
 <p><code>optional</code> <strong>data?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Data for the Timeline control.</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - As of version 1.46, this property was replaced by JSONModel context binding.</p>
-<p>Data for the Timeline control.</p>
 <hr>
 <h3>dateTimePath?</h3>
 <blockquote>
@@ -122,19 +123,19 @@ won&#39;t work.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableAllInFilterItem?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Enables to add &#39;All&#39; at the beginning of the filter list.</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - The filter list now includes a Select All check box, so the All radio button
 is no longer required. This property is ignored.</p>
-<p>Enables to add &#39;All&#39; at the beginning of the filter list.</p>
 <hr>
 <h3><del>enableBackendFilter?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableBackendFilter?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.46.0) - Use the enableModelFilter property instead.</p>
 <p>Enables fetching data from backend instead of deriving filter values from the frontend values (displayed
 list). As of version 1.46, replaced by sap.suite.ui.commons.Timeline#getEnableModelFilter.</p>
+<h4>Deprecated</h4>
+<p>(since 1.46.0) - Use the enableModelFilter property instead.</p>
 <hr>
 <h3>enableBusyIndicator?</h3>
 <blockquote>
@@ -154,8 +155,6 @@ to use this option. Loading data without a busy indicator may confuse the users.
 <blockquote>
 <p><code>optional</code> <strong>enableModelFilter?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.46.0</p>
 <p>Enables filtering directly on the binding level. If set to <code>true</code>, all filters are translated into the
 filters in the model binding. When the OData model is used, the filtering is performed on the backend
 side. This option is strongly recommended. If set to <code>false</code>, all entries from the model need to be fetched
@@ -163,6 +162,8 @@ before they can be filtered on the frontend side. Please be aware that the <code
 determines how many entries can be rendered. Timeline requests all entries from the model before it performs
 the filtering. Some models may have internal limits for the number of entries that can be used in bindings.
 Such limits can be set using sap.ui.model.Model#setSizeLimit.</p>
+<h4>Since</h4>
+<p>1.46.0</p>
 <hr>
 <h3>enableScroll?</h3>
 <blockquote>
@@ -224,9 +225,9 @@ with the filter name.</p>
 <blockquote>
 <p><code>optional</code> <strong>group?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Groups the timeline posts by year. As of version 1.46, replaced by sap.suite.ui.commons.Timeline#getGroupByType.</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the groupByType property instead.</p>
-<p>Groups the timeline posts by year. As of version 1.46, replaced by sap.suite.ui.commons.Timeline#getGroupByType.</p>
 <hr>
 <h3>groupBy?</h3>
 <blockquote>
@@ -257,10 +258,10 @@ method, this function overrides the groupByType property settings.</p>
 <blockquote>
 <p><code>optional</code> <strong>growing?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.46.0) - Use the growingThreshold property instead, setting it to 0 to disable growing.</p>
 <p>If set to <code>true</code>, the timeline displays a limited number of posts with a button to show more. The displayed
 posts limit can be set using the growingThreshold property. As of version 1.46, replaced by sap.suite.ui.commons.Timeline#getGrowingThreshold.</p>
+<h4>Deprecated</h4>
+<p>(since 1.46.0) - Use the growingThreshold property instead, setting it to 0 to disable growing.</p>
 <hr>
 <h3>growingThreshold?</h3>
 <blockquote>
@@ -274,9 +275,9 @@ number. If set to <code>0</code>, all posts are fetched and displayed on the ini
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Sets the height of the Timeline.</p>
 <h4>Since</h4>
 <p>1.46.0</p>
-<p>Sets the height of the Timeline.</p>
 <hr>
 <h3>itemFiltering?</h3>
 <blockquote>
@@ -295,10 +296,10 @@ is set to <code>false</code>.</p>
 <blockquote>
 <p><code>optional</code> <strong>lazyLoading?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.46.0</p>
 <p>Enables the Lazy Loading feature that automatically loads more posts as the user scrolls along the timeline
 axis. This feature works only when the enableScroll property is set to <code>true</code>. See also sap.suite.ui.commons.Timeline#getEnableScroll.</p>
+<h4>Since</h4>
+<p>1.46.0</p>
 <hr>
 <h3>noDataText?</h3>
 <blockquote>
@@ -311,13 +312,13 @@ bundle.</p>
 <blockquote>
 <p><code>optional</code> <strong>scrollingFadeout?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TimelineScrollingFadeout.html"><code>TimelineScrollingFadeout</code></a> | <code>&quot;Area&quot;</code> | <code>&quot;AreaWithButtons&quot;</code></p>
 </blockquote>
+<p>If set to <code>Area</code>, the timeline fades into the visible area margin. If set to <code>AreaWithButtons</code>, the timeline
+fades into the visible area margin and scroll buttons are displayed. If set to <code>None</code>, the fading effect
+is not applied. This feature works only when the enableScroll property is set to <code>true</code>. See also sap.suite.ui.commons.Timeline#getEnableScroll.</p>
 <h4>Since</h4>
 <p>1.46.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.54.0) - Not Fiori.</p>
-<p>If set to <code>Area</code>, the timeline fades into the visible area margin. If set to <code>AreaWithButtons</code>, the timeline
-fades into the visible area margin and scroll buttons are displayed. If set to <code>None</code>, the fading effect
-is not applied. This feature works only when the enableScroll property is set to <code>true</code>. See also sap.suite.ui.commons.Timeline#getEnableScroll.</p>
 <hr>
 <h3>select?</h3>
 <blockquote>
@@ -334,10 +335,10 @@ is not applied. This feature works only when the enableScroll property is set to
 <blockquote>
 <p><code>optional</code> <strong>showFilterBar?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.46.0) - Use the showHeaderBar property instead.</p>
 <p>Sets the visibility of the filter in the timeline toolbar.
  As of version 1.46, replaced by sap.suite.ui.commons.Timeline#getShowHeaderBar.</p>
+<h4>Deprecated</h4>
+<p>(since 1.46.0) - Use the showHeaderBar property instead.</p>
 <hr>
 <h3>showHeaderBar?</h3>
 <blockquote>
@@ -374,13 +375,13 @@ replaced by dots.</p>
 <blockquote>
 <p><code>optional</code> <strong>showSuggestion?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If set to <code>true</code>, a suggest event is fired when the user enters text into the search field. Changing
+the suggestionItems aggregation in the suggest event listener will display suggestions inside a popup.
+As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <h4>Since</h4>
 <p>1.26.1</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
-<p>If set to <code>true</code>, a suggest event is fired when the user enters text into the search field. Changing
-the suggestionItems aggregation in the suggest event listener will display suggestions inside a popup.
-As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <hr>
 <h3>showTimeFilter?</h3>
 <blockquote>
@@ -404,6 +405,9 @@ As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <blockquote>
 <p><code>optional</code> <strong>suggest?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the user enters text into the search field, in cases when the showSuggestion
+property is set to <code>true</code>. Changing the suggestionItems aggregation will show the suggestions inside
+a popup.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Timeline$SuggestEvent.html"><code>Timeline$SuggestEvent</code></a></p>
@@ -413,22 +417,22 @@ As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <p>1.26.1</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Replaced by sap.collaboration.components.feed.Component.</p>
-<p>This event is fired when the user enters text into the search field, in cases when the showSuggestion
-property is set to <code>true</code>. Changing the suggestionItems aggregation will show the suggestions inside
-a popup.</p>
 <hr>
 <h3><del>suggestionItems?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>suggestionItems?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a> | <a href="../../../../../../../sap.m/sap/m/StandardListItem/classes/StandardListItem.html"><code>StandardListItem</code></a>[]</p>
 </blockquote>
+<p>Items for suggestions. As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Use the Group Feed Component instead.</p>
-<p>Items for suggestions. As of version 1.46, replaced by sap.collaboration.components.feed.Component.</p>
 <hr>
 <h3><del>suggestionItemSelected?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>suggestionItemSelected?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when a suggested post is selected in the suggestions popup list. This event is only
+fired when the showSuggestion property is set to <code>true</code> and there is at least one post in the suggestions
+popup list. See also the suggestionItems aggregation.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/Timeline$SuggestionItemSelectedEvent.html"><code>Timeline$SuggestionItemSelectedEvent</code></a></p>
@@ -438,9 +442,6 @@ a popup.</p>
 <p>1.26.1</p>
 <h4>Deprecated</h4>
 <p>(since 1.46.0) - Replaced by sap.collaboration.components.feed.Component.</p>
-<p>This event is fired when a suggested post is selected in the suggestions popup list. This event is only
-fired when the showSuggestion property is set to <code>true</code> and there is at least one post in the suggestions
-popup list. See also the suggestionItems aggregation.</p>
 <hr>
 <h3>textHeight?</h3>
 <blockquote>
@@ -464,6 +465,6 @@ without being changed.
 </blockquote>
 <p>Sets the width of the Timeline.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

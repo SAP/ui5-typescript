@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Page — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Page — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Page — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Page/classes/Page.html">
 <meta property="og:title" content="Class: Page — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Page — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Page — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Page/classes/Page.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Page/README.html">Page</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Page</a> / Page</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Page</a> / Page</p>
 <h1>Class: Page</h1>
 <pre class="sig"><span class="kw">import</span> Page <span class="kw">from</span> <span class="str">"sap/m/Page"</span>;</pre>
 <p>A container control that holds one whole screen of an application.</p>
@@ -126,6 +126,11 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachNavButtonPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navButtonPress navButtonPress event of this
+<code>sap.m.Page</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
+<p>this event is fired when Nav Button is pressed</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -142,15 +147,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.12.2</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavButtonPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navButtonPress navButtonPress event of this
 <code>sap.m.Page</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
 <p>this event is fired when Nav Button is pressed</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavButtonPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -163,17 +168,16 @@ otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.12.2</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navButtonPress navButtonPress event of this
-<code>sap.m.Page</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
-<p>this event is fired when Nav Button is pressed</p>
 <hr>
 <h3><del>attachNavButtonTap()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavButtonTap</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navButtonTap navButtonTap event of this <code>sap.m.Page</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
+<p>this event is fired when Nav Button is tapped</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -190,14 +194,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.12.2) - the navButtonPress event is replacing this event</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navButtonTap navButtonTap event of this <code>sap.m.Page</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
-<p>this event is fired when Nav Button is tapped</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavButtonTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navButtonTap navButtonTap event of this <code>sap.m.Page</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
+<p>this event is fired when Nav Button is tapped</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -210,10 +214,6 @@ otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.12.2) - the navButtonPress event is replacing this event</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navButtonTap navButtonTap event of this <code>sap.m.Page</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
-<p>this event is fired when Nav Button is tapped</p>
 <hr>
 <h3>destroyContent()</h3>
 <blockquote>
@@ -273,6 +273,9 @@ otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
 <blockquote>
 <p><strong>detachNavButtonPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navButtonPress navButtonPress event of this
+<code>sap.m.Page</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -285,14 +288,13 @@ otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navButtonPress navButtonPress event of this
-<code>sap.m.Page</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachNavButtonTap()</del></h3>
 <blockquote>
 <p><strong>detachNavButtonTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navButtonTap navButtonTap event of this <code>sap.m.Page</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -305,13 +307,12 @@ otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.12.2) - the navButtonPress event is replacing this event</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navButtonTap navButtonTap event of this <code>sap.m.Page</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireNavButtonPress()</h3>
 <blockquote>
 <p><strong>fireNavButtonPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:navButtonPress navButtonPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -323,12 +324,12 @@ otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
 <p>1.12.2</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:navButtonPress navButtonPress to attached listeners.</p>
 <hr>
 <h3><del>fireNavButtonTap()</del></h3>
 <blockquote>
 <p><strong>fireNavButtonTap</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:navButtonTap navButtonTap to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -340,7 +341,6 @@ otherwise it will be bound to this <code>sap.m.Page</code> itself.</p>
 <p>(since 1.12.2) - the navButtonPress event is replacing this event</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:navButtonTap navButtonTap to attached listeners.</p>
 <hr>
 <h3>getBackgroundDesign()</h3>
 <blockquote>
@@ -368,11 +368,6 @@ is used if not specified.</p>
 <blockquote>
 <p><strong>getContentOnlyBusy</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>contentOnlyBusy</code></p>
-<h4>Since</h4>
-<p>1.29.0</p>
 <p>Gets current value of property #getContentOnlyBusy contentOnlyBusy.</p>
 <p>Decides which area is covered by the local BusyIndicator when <code>page.setBusy()</code> is called. By default
 the entire page is covered, including headers and footer. When this property is set to &quot;true&quot;, only the
@@ -380,6 +375,11 @@ content area is covered (not header/sub header and footer), which is useful e.g.
 in the sub header and live search continuously updates the content area while the user is still able
 to type.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>contentOnlyBusy</code></p>
+<h4>Since</h4>
+<p>1.29.0</p>
 <hr>
 <h3>getCustomHeader()</h3>
 <blockquote>
@@ -444,15 +444,15 @@ handling when the space is insufficient. When a customHeader is used, this aggre
 <blockquote>
 <p><strong>getIcon</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getIcon icon.</p>
+<p>the icon that is rendered in the page header bar in non-iOS phone/tablet platforms. This property is
+theme-dependent and only has an effect in the MVI theme.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>icon</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - Deprecated since the MVI theme is removed now. This property only affected
 the NavButton in that theme.</p>
-<p>Gets current value of property #getIcon icon.</p>
-<p>the icon that is rendered in the page header bar in non-iOS phone/tablet platforms. This property is
-theme-dependent and only has an effect in the MVI theme.</p>
 <hr>
 <h3>getLandmarkInfo()</h3>
 <blockquote>
@@ -468,15 +468,15 @@ theme-dependent and only has an effect in the MVI theme.</p>
 <blockquote>
 <p><strong>getNavButtonText</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getNavButtonText navButtonText.</p>
+<p>The text of the nav button when running in iOS (if shown) in case it deviates from the default, which
+is &quot;Back&quot;. This property is mvi-theme-dependent and will not have any effect in other themes.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>navButtonText</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - Deprecated since the MVI theme is removed now. This property only affected
 the NavButton in that theme.</p>
-<p>Gets current value of property #getNavButtonText navButtonText.</p>
-<p>The text of the nav button when running in iOS (if shown) in case it deviates from the default, which
-is &quot;Back&quot;. This property is mvi-theme-dependent and will not have any effect in other themes.</p>
 <hr>
 <h3>getNavButtonTooltip()</h3>
 <blockquote>
@@ -493,6 +493,11 @@ is &quot;Back&quot;. This property is mvi-theme-dependent and will not have any 
 <blockquote>
 <p><strong>getNavButtonType</strong>(): <code>&quot;Success&quot;</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;Critical&quot;</code> | <code>&quot;Neutral&quot;</code> | <code>&quot;Up&quot;</code> | <a href="../../library/enumerations/ButtonType.html"><code>ButtonType</code></a> | <code>&quot;Accept&quot;</code> | <code>&quot;Attention&quot;</code> | <code>&quot;Back&quot;</code> | <code>&quot;Emphasized&quot;</code> | <code>&quot;Ghost&quot;</code> | <code>&quot;Negative&quot;</code> | <code>&quot;Reject&quot;</code> | <code>&quot;Unstyled&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getNavButtonType navButtonType.</p>
+<p>This property is used to set the appearance of the NavButton. By default when showNavButton is set to
+true, a back button will be shown in iOS and an up button in other platforms. In case you want to show
+a normal button in the left header area, you can set the value to &quot;Default&quot;.</p>
+<p>Default value is <code>Back</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Success&quot;</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;Critical&quot;</code> | <code>&quot;Neutral&quot;</code> | <code>&quot;Up&quot;</code> | <a href="../../library/enumerations/ButtonType.html"><code>ButtonType</code></a> | <code>&quot;Accept&quot;</code> | <code>&quot;Attention&quot;</code> | <code>&quot;Back&quot;</code> | <code>&quot;Emphasized&quot;</code> | <code>&quot;Ghost&quot;</code> | <code>&quot;Negative&quot;</code> | <code>&quot;Reject&quot;</code> | <code>&quot;Unstyled&quot;</code></p>
 <p>Value of property <code>navButtonType</code></p>
@@ -501,24 +506,19 @@ is &quot;Back&quot;. This property is mvi-theme-dependent and will not have any 
 <h4>Deprecated</h4>
 <p>(since 1.20) - Deprecated since the MVI theme is removed now. This property is only usable
 with a Button text in that theme.</p>
-<p>Gets current value of property #getNavButtonType navButtonType.</p>
-<p>This property is used to set the appearance of the NavButton. By default when showNavButton is set to
-true, a back button will be shown in iOS and an up button in other platforms. In case you want to show
-a normal button in the left header area, you can set the value to &quot;Default&quot;.</p>
-<p>Default value is <code>Back</code>.</p>
 <hr>
 <h3>getShowFooter()</h3>
 <blockquote>
 <p><strong>getShowFooter</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowFooter showFooter.</p>
+<p>Whether this page shall have a footer</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showFooter</code></p>
 <h4>Since</h4>
 <p>1.13.1</p>
-<p>Gets current value of property #getShowFooter showFooter.</p>
-<p>Whether this page shall have a footer</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getShowHeader()</h3>
 <blockquote>
@@ -548,14 +548,14 @@ is used, or if there is no such control, a Header control is constructed from th
 <blockquote>
 <p><strong>getShowSubHeader</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowSubHeader showSubHeader.</p>
+<p>Whether this page shall show the subheader.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showSubHeader</code></p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Gets current value of property #getShowSubHeader showSubHeader.</p>
-<p>Whether this page shall show the subheader.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getSubHeader()</h3>
 <blockquote>
@@ -580,16 +580,16 @@ is used, or if there is no such control, a Header control is constructed from th
 <blockquote>
 <p><strong>getTitleAlignment</strong>(): <code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
-<p>Value of property <code>titleAlignment</code></p>
-<h4>Since</h4>
-<p>1.72</p>
 <p>Gets current value of property #getTitleAlignment titleAlignment.</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
 as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
 (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
 <p>Default value is <code>Auto</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
+<p>Value of property <code>titleAlignment</code></p>
+<h4>Since</h4>
+<p>1.72</p>
 <hr>
 <h3>getTitleLevel()</h3>
 <blockquote>
@@ -734,6 +734,7 @@ animation.</p>
 <blockquote>
 <p><strong>scrollToElement</strong>(<code>oElement</code>, <code>iTime?</code>, <code>aOffset?</code>): <code>this</code></p>
 </blockquote>
+<p>Scrolls to an element (DOM or sap.ui.core.Element) within the page if the element is rendered.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a> | <code>HTMLElement</code></p>
@@ -751,7 +752,6 @@ corner of the DOM element</p>
 <p><code>this</code> to facilitate method chaining.</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Scrolls to an element (DOM or sap.ui.core.Element) within the page if the element is rendered.</p>
 <hr>
 <h3>setBackgroundDesign()</h3>
 <blockquote>
@@ -775,6 +775,14 @@ is used if not specified.</p>
 <blockquote>
 <p><strong>setContentOnlyBusy</strong>(<code>bContentOnlyBusy?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContentOnlyBusy contentOnlyBusy.</p>
+<p>Decides which area is covered by the local BusyIndicator when <code>page.setBusy()</code> is called. By default
+the entire page is covered, including headers and footer. When this property is set to &quot;true&quot;, only the
+content area is covered (not header/sub header and footer), which is useful e.g. when there is a SearchField
+in the sub header and live search continuously updates the content area while the user is still able
+to type.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bContentOnlyBusy?</h5>
 <p><code>boolean</code></p>
@@ -784,14 +792,6 @@ is used if not specified.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.29.0</p>
-<p>Sets a new value for property #getContentOnlyBusy contentOnlyBusy.</p>
-<p>Decides which area is covered by the local BusyIndicator when <code>page.setBusy()</code> is called. By default
-the entire page is covered, including headers and footer. When this property is set to &quot;true&quot;, only the
-content area is covered (not header/sub header and footer), which is useful e.g. when there is a SearchField
-in the sub header and live search continuously updates the content area while the user is still able
-to type.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setCustomHeader()</h3>
 <blockquote>
@@ -861,6 +861,10 @@ anymore, but rather floats over it with a slight offset from the bottom.</p>
 <blockquote>
 <p><strong>setIcon</strong>(<code>sIcon?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIcon icon.</p>
+<p>the icon that is rendered in the page header bar in non-iOS phone/tablet platforms. This property is
+theme-dependent and only has an effect in the MVI theme.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sIcon?</h5>
 <p><code>string</code></p>
@@ -871,10 +875,6 @@ anymore, but rather floats over it with a slight offset from the bottom.</p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - Deprecated since the MVI theme is removed now. This property only affected
 the NavButton in that theme.</p>
-<p>Sets a new value for property #getIcon icon.</p>
-<p>the icon that is rendered in the page header bar in non-iOS phone/tablet platforms. This property is
-theme-dependent and only has an effect in the MVI theme.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setLandmarkInfo()</h3>
 <blockquote>
@@ -893,6 +893,10 @@ theme-dependent and only has an effect in the MVI theme.</p>
 <blockquote>
 <p><strong>setNavButtonText</strong>(<code>sNavButtonText?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNavButtonText navButtonText.</p>
+<p>The text of the nav button when running in iOS (if shown) in case it deviates from the default, which
+is &quot;Back&quot;. This property is mvi-theme-dependent and will not have any effect in other themes.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sNavButtonText?</h5>
 <p><code>string</code></p>
@@ -903,10 +907,6 @@ theme-dependent and only has an effect in the MVI theme.</p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - Deprecated since the MVI theme is removed now. This property only affected
 the NavButton in that theme.</p>
-<p>Sets a new value for property #getNavButtonText navButtonText.</p>
-<p>The text of the nav button when running in iOS (if shown) in case it deviates from the default, which
-is &quot;Back&quot;. This property is mvi-theme-dependent and will not have any effect in other themes.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setNavButtonTooltip()</h3>
 <blockquote>
@@ -928,6 +928,12 @@ is &quot;Back&quot;. This property is mvi-theme-dependent and will not have any 
 <blockquote>
 <p><strong>setNavButtonType</strong>(<code>sNavButtonType?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNavButtonType navButtonType.</p>
+<p>This property is used to set the appearance of the NavButton. By default when showNavButton is set to
+true, a back button will be shown in iOS and an up button in other platforms. In case you want to show
+a normal button in the left header area, you can set the value to &quot;Default&quot;.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Back</code>.</p>
 <h4>Parameters</h4>
 <h5>sNavButtonType?</h5>
 <p><code>&quot;Success&quot;</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;Critical&quot;</code> | <code>&quot;Neutral&quot;</code> | <code>&quot;Up&quot;</code> | <a href="../../library/enumerations/ButtonType.html"><code>ButtonType</code></a> | <code>&quot;Accept&quot;</code> | <code>&quot;Attention&quot;</code> | <code>&quot;Back&quot;</code> | <code>&quot;Emphasized&quot;</code> | <code>&quot;Ghost&quot;</code> | <code>&quot;Negative&quot;</code> | <code>&quot;Reject&quot;</code> | <code>&quot;Unstyled&quot;</code></p>
@@ -940,17 +946,15 @@ is &quot;Back&quot;. This property is mvi-theme-dependent and will not have any 
 <h4>Deprecated</h4>
 <p>(since 1.20) - Deprecated since the MVI theme is removed now. This property is only usable
 with a Button text in that theme.</p>
-<p>Sets a new value for property #getNavButtonType navButtonType.</p>
-<p>This property is used to set the appearance of the NavButton. By default when showNavButton is set to
-true, a back button will be shown in iOS and an up button in other platforms. In case you want to show
-a normal button in the left header area, you can set the value to &quot;Default&quot;.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Back</code>.</p>
 <hr>
 <h3>setShowFooter()</h3>
 <blockquote>
 <p><strong>setShowFooter</strong>(<code>bShowFooter?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowFooter showFooter.</p>
+<p>Whether this page shall have a footer</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowFooter?</h5>
 <p><code>boolean</code></p>
@@ -960,10 +964,6 @@ a normal button in the left header area, you can set the value to &quot;Default&
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.1</p>
-<p>Sets a new value for property #getShowFooter showFooter.</p>
-<p>Whether this page shall have a footer</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setShowHeader()</h3>
 <blockquote>
@@ -1003,6 +1003,10 @@ is used, or if there is no such control, a Header control is constructed from th
 <blockquote>
 <p><strong>setShowSubHeader</strong>(<code>bShowSubHeader?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowSubHeader showSubHeader.</p>
+<p>Whether this page shall show the subheader.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowSubHeader?</h5>
 <p><code>boolean</code></p>
@@ -1012,10 +1016,6 @@ is used, or if there is no such control, a Header control is constructed from th
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Sets a new value for property #getShowSubHeader showSubHeader.</p>
-<p>Whether this page shall show the subheader.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setSubHeader()</h3>
 <blockquote>
@@ -1049,6 +1049,12 @@ is used, or if there is no such control, a Header control is constructed from th
 <blockquote>
 <p><strong>setTitleAlignment</strong>(<code>sTitleAlignment?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
+<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
+as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
+(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleAlignment?</h5>
 <p><code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
@@ -1058,12 +1064,6 @@ is used, or if there is no such control, a Header control is constructed from th
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
-<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
-as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
-(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>setTitleLevel()</h3>
 <blockquote>
@@ -1121,6 +1121,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

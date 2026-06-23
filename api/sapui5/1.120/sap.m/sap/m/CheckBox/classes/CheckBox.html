@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CheckBox — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: CheckBox — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: CheckBox — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/CheckBox/classes/CheckBox.html">
 <meta property="og:title" content="Class: CheckBox — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: CheckBox — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: CheckBox — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/CheckBox/classes/CheckBox.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/CheckBox/README.html">CheckBox</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/CheckBox</a> / CheckBox</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/CheckBox</a> / CheckBox</p>
 <h1>Class: CheckBox</h1>
 <pre class="sig"><span class="kw">import</span> CheckBox <span class="kw">from</span> <span class="str">"sap/m/CheckBox"</span>;</pre>
 <p>Allows the user to set a binary value, such as true/false or yes/no for an item.</p>
@@ -227,6 +227,7 @@ otherwise it will be bound to this <code>sap.m.CheckBox</code> itself.</p>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/CheckBox$SelectEventParameters.html"><code>CheckBox$SelectEventParameters</code></a></p>
@@ -236,19 +237,18 @@ otherwise it will be bound to this <code>sap.m.CheckBox</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>The object contains the accessibility information of <code>sap.m.CheckBox</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -284,30 +284,30 @@ state. Default value is &#39;true&#39;</p>
 <blockquote>
 <p><strong>getDisplayOnly</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>displayOnly</code></p>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Gets current value of property #getDisplayOnly displayOnly.</p>
 <p>Determines whether the <code>CheckBox</code> is in display only state.</p>
 <p>When set to <code>true</code>, the <code>CheckBox</code> is not interactive, not editable, not focusable and not in the tab
 chain. This setting is used for forms in review mode.</p>
 <p> When the property <code>enabled</code> is set to <code>false</code> this property has no effect.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>displayOnly</code></p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>getEditable()</h3>
 <blockquote>
 <p><strong>getEditable</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getEditable editable.</p>
+<p>Specifies whether the user shall be allowed to edit the state of the checkbox</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>editable</code></p>
 <h4>Since</h4>
 <p>1.25</p>
-<p>Gets current value of property #getEditable editable.</p>
-<p>Specifies whether the user shall be allowed to edit the state of the checkbox</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -336,11 +336,6 @@ via submit.</p>
 <blockquote>
 <p><strong>getPartiallySelected</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>partiallySelected</code></p>
-<h4>Since</h4>
-<p>1.58</p>
 <p>Gets current value of property #getPartiallySelected partiallySelected.</p>
 <p>Determines whether the <code>CheckBox</code> is displayed as partially selected.</p>
 <p><strong>Note:</strong> This property leads only to visual change of the checkbox and the state cannot be achieved
@@ -350,6 +345,11 @@ by user interaction. The visual state depends on the value of the <code>selected
  - If `selected` = `false`, the control is displayed as not selected regardless of what is set for `partiallySelected`
 </code></pre>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>partiallySelected</code></p>
+<h4>Since</h4>
+<p>1.58</p>
 <hr>
 <h3>getSelected()</h3>
 <blockquote>
@@ -368,6 +368,7 @@ property is also set to <code>true</code>. In this case, the control is displaye
 <blockquote>
 <p><strong>getTabIndex</strong>(): <code>number</code></p>
 </blockquote>
+<p>Returns the CheckBox`s tab index.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>iTabIndex for Checkbox</p>
@@ -375,7 +376,6 @@ property is also set to <code>true</code>. In this case, the control is displaye
 <p>1.22</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the CheckBox`s tab index.</p>
 <hr>
 <h3>getText()</h3>
 <blockquote>
@@ -415,29 +415,29 @@ from its parent container.</p>
 <blockquote>
 <p><strong>getUseEntireWidth</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getUseEntireWidth useEntireWidth.</p>
+<p>Indicates if the given width will be applied to the control as a whole or to its label only.</p>
+<p><strong>Note:</strong> by default the width is set to the label</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>useEntireWidth</code></p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Gets current value of property #getUseEntireWidth useEntireWidth.</p>
-<p>Indicates if the given width will be applied to the control as a whole or to its label only.</p>
-<p><strong>Note:</strong> by default the width is set to the label</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getValueState()</h3>
 <blockquote>
 <p><strong>getValueState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getValueState valueState.</p>
+<p>Accepts the core enumeration ValueState.type that supports &#39;None&#39;, &#39;Error&#39;, &#39;Warning&#39;, &#39;Success&#39; and
+&#39;Information&#39;.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>valueState</code></p>
 <h4>Since</h4>
 <p>1.38</p>
-<p>Gets current value of property #getValueState valueState.</p>
-<p>Accepts the core enumeration ValueState.type that supports &#39;None&#39;, &#39;Error&#39;, &#39;Warning&#39;, &#39;Success&#39; and
-&#39;Information&#39;.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -456,15 +456,15 @@ and label). Otherwise, <code>width</code> is applied to the label only.</p>
 <blockquote>
 <p><strong>getWrapping</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getWrapping wrapping.</p>
+<p>Determines whether the label&#39;s text is wrapped.</p>
+<p>When set to <code>false</code> (default), the label&#39;s text is truncated with ellipsis at the end.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>wrapping</code></p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Gets current value of property #getWrapping wrapping.</p>
-<p>Determines whether the label&#39;s text is wrapped.</p>
-<p>When set to <code>false</code> (default), the label&#39;s text is truncated with ellipsis at the end.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>removeAllAriaDescribedBy()</h3>
 <blockquote>
@@ -531,6 +531,13 @@ state. Default value is &#39;true&#39;</p>
 <blockquote>
 <p><strong>setDisplayOnly</strong>(<code>bDisplayOnly?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDisplayOnly displayOnly.</p>
+<p>Determines whether the <code>CheckBox</code> is in display only state.</p>
+<p>When set to <code>true</code>, the <code>CheckBox</code> is not interactive, not editable, not focusable and not in the tab
+chain. This setting is used for forms in review mode.</p>
+<p> When the property <code>enabled</code> is set to <code>false</code> this property has no effect.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bDisplayOnly?</h5>
 <p><code>boolean</code></p>
@@ -540,18 +547,15 @@ state. Default value is &#39;true&#39;</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Sets a new value for property #getDisplayOnly displayOnly.</p>
-<p>Determines whether the <code>CheckBox</code> is in display only state.</p>
-<p>When set to <code>true</code>, the <code>CheckBox</code> is not interactive, not editable, not focusable and not in the tab
-chain. This setting is used for forms in review mode.</p>
-<p> When the property <code>enabled</code> is set to <code>false</code> this property has no effect.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEditable()</h3>
 <blockquote>
 <p><strong>setEditable</strong>(<code>bEditable?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEditable editable.</p>
+<p>Specifies whether the user shall be allowed to edit the state of the checkbox</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEditable?</h5>
 <p><code>boolean</code></p>
@@ -561,10 +565,6 @@ chain. This setting is used for forms in review mode.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.25</p>
-<p>Sets a new value for property #getEditable editable.</p>
-<p>Specifies whether the user shall be allowed to edit the state of the checkbox</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
@@ -603,15 +603,6 @@ via submit.</p>
 <blockquote>
 <p><strong>setPartiallySelected</strong>(<code>bPartiallySelected?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bPartiallySelected?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>partiallySelected</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.58</p>
 <p>Sets a new value for property #getPartiallySelected partiallySelected.</p>
 <p>Determines whether the <code>CheckBox</code> is displayed as partially selected.</p>
 <p><strong>Note:</strong> This property leads only to visual change of the checkbox and the state cannot be achieved
@@ -622,6 +613,15 @@ by user interaction. The visual state depends on the value of the <code>selected
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bPartiallySelected?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>partiallySelected</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.58</p>
 <hr>
 <h3>setSelected()</h3>
 <blockquote>
@@ -645,6 +645,7 @@ property is also set to <code>true</code>. In this case, the control is displaye
 <blockquote>
 <p><strong>setTabIndex</strong>(<code>iTabIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the tab index of the control</p>
 <h4>Parameters</h4>
 <h5>iTabIndex</h5>
 <p><code>number</code></p>
@@ -656,7 +657,6 @@ property is also set to <code>true</code>. In this case, the control is displaye
 <p>1.16</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the tab index of the control</p>
 <hr>
 <h3>setText()</h3>
 <blockquote>
@@ -711,6 +711,11 @@ from its parent container.</p>
 <blockquote>
 <p><strong>setUseEntireWidth</strong>(<code>bUseEntireWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUseEntireWidth useEntireWidth.</p>
+<p>Indicates if the given width will be applied to the control as a whole or to its label only.</p>
+<p><strong>Note:</strong> by default the width is set to the label</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bUseEntireWidth?</h5>
 <p><code>boolean</code></p>
@@ -720,16 +725,16 @@ from its parent container.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Sets a new value for property #getUseEntireWidth useEntireWidth.</p>
-<p>Indicates if the given width will be applied to the control as a whole or to its label only.</p>
-<p><strong>Note:</strong> by default the width is set to the label</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setValueState()</h3>
 <blockquote>
 <p><strong>setValueState</strong>(<code>sValueState?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getValueState valueState.</p>
+<p>Accepts the core enumeration ValueState.type that supports &#39;None&#39;, &#39;Error&#39;, &#39;Warning&#39;, &#39;Success&#39; and
+&#39;Information&#39;.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sValueState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -739,11 +744,6 @@ from its parent container.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38</p>
-<p>Sets a new value for property #getValueState valueState.</p>
-<p>Accepts the core enumeration ValueState.type that supports &#39;None&#39;, &#39;Error&#39;, &#39;Warning&#39;, &#39;Success&#39; and
-&#39;Information&#39;.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -767,6 +767,11 @@ and label). Otherwise, <code>width</code> is applied to the label only.</p>
 <blockquote>
 <p><strong>setWrapping</strong>(<code>bWrapping?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWrapping wrapping.</p>
+<p>Determines whether the label&#39;s text is wrapped.</p>
+<p>When set to <code>false</code> (default), the label&#39;s text is truncated with ellipsis at the end.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bWrapping?</h5>
 <p><code>boolean</code></p>
@@ -776,11 +781,6 @@ and label). Otherwise, <code>width</code> is applied to the label only.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Sets a new value for property #getWrapping wrapping.</p>
-<p>Determines whether the label&#39;s text is wrapped.</p>
-<p>When set to <code>false</code> (default), the label&#39;s text is truncated with ellipsis at the end.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -821,6 +821,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

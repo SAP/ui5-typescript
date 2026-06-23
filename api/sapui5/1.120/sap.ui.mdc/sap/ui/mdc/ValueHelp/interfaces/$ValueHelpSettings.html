@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ValueHelpSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ValueHelpSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ValueHelpSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/ValueHelp/interfaces/$ValueHelpSettings.html">
 <meta property="og:title" content="Interface: $ValueHelpSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ValueHelpSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ValueHelpSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/ValueHelp/interfaces/$ValueHelpSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/ValueHelp/README.html">ValueHelp</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/ValueHelp</a> / $ValueHelpSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/ValueHelp</a> / $ValueHelpSettings</p>
 <h1>Interface: $ValueHelpSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ValueHelpSettings } <span class="kw">from</span> <span class="str">"sap/ui/mdc/ValueHelp"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the ValueHelp constructor.</p>
+<p> (since 1.95.0)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -47,6 +50,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>closed?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired after the value help has been closed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -58,6 +62,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>conditions?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>object</code>[]</p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>The conditions of the selected items.</p>
 <p><strong>Note:</strong> This property must only be set by the control the <code>ValueHelp</code> element belongs to, not by the
 application.</p>
@@ -79,12 +84,14 @@ that).
 <blockquote>
 <p><code>optional</code> <strong>dialog?</strong>: <code>any</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Container that is used and opened if the value help icon of the input field is pressed.</p>
 <hr>
 <h3>disconnect?</h3>
 <blockquote>
 <p><code>optional</code> <strong>disconnect?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when the <code>ValueHelp</code> element is disconnected from a control.</p>
 <p><strong>Note:</strong> This event must only be handled by the control the <code>ValueHelp</code> element belongs to, not by the
 application.</p>
@@ -98,6 +105,7 @@ application.</p>
 <blockquote>
 <p><code>optional</code> <strong>filterValue?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>The value by which the help is filtered. Here the field provides the typed value to allow the value help
 to filter for it.</p>
 <p><strong>Note:</strong> This only takes effect if the <code>ValueHelp</code> elements content supports filtering.</p>
@@ -108,6 +116,7 @@ application.</p>
 <blockquote>
 <p><code>optional</code> <strong>navigated?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired after the user navigated, using the arrow keys, in the value help.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -119,6 +128,7 @@ application.</p>
 <blockquote>
 <p><code>optional</code> <strong>open?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired as the value help opening is triggered.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -130,6 +140,7 @@ application.</p>
 <blockquote>
 <p><code>optional</code> <strong>opened?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired as the value help is fully open.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -141,6 +152,7 @@ application.</p>
 <blockquote>
 <p><code>optional</code> <strong>select?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired when a value is selected in the value help.</p>
 <p><strong>Note:</strong> This event must only be handled by the control the <code>ValueHelp</code> element belongs to, not by the
 application.</p>
@@ -154,6 +166,7 @@ application.</p>
 <blockquote>
 <p><code>optional</code> <strong>switchToValueHelp?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>This event is fired if the user wants to switch from typeahead to value help.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -165,12 +178,15 @@ application.</p>
 <blockquote>
 <p><code>optional</code> <strong>typeahead?</strong>: <code>any</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Container that is used and opened in typeahead</p>
 <hr>
 <h3>typeaheadSuggested?</h3>
 <blockquote>
 <p><code>optional</code> <strong>typeaheadSuggested?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
+<p>This event is fired after a suggested item has been found for a type-ahead.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/ValueHelp$TypeaheadSuggestedEvent.html"><code>ValueHelp$TypeaheadSuggestedEvent</code></a></p>
@@ -178,12 +194,12 @@ application.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>This event is fired after a suggested item has been found for a type-ahead.</p>
 <hr>
 <h3>validateInput?</h3>
 <blockquote>
 <p><code>optional</code> <strong>validateInput?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>If this property is set, the user input of the corresponding field is validated against the value help.
 If no entry is found for the user input, an error is shown on the field.</p>
 <p>If this property is not set, the user input is still checked against the value help. But if no entry
@@ -191,6 +207,6 @@ is found, the user input is set to the field if the used data type allows this. 
 is shown if the user input adheres to the requirements of the used data type.)</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

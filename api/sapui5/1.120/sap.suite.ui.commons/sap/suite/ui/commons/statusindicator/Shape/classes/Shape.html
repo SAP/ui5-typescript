@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Shape — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Shape — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Shape — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/statusindicator/Shape/classes/Shape.html">
 <meta property="og:title" content="Class: Shape — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Shape — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Shape — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/statusindicator/Shape/classes/Shape.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › statusindicator › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/statusindicator/Shape/README.html">Shape</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/statusindicator/Shape</a> / Shape</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/statusindicator/Shape</a> / Shape</p>
 <h1>Class: Shape</h1>
 <pre class="sig"><span class="kw">import</span> Shape <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/statusindicator/Shape"</span>;</pre>
-<h2>Since</h2>
-<p>1.50</p>
 <p>Abstract shape that displays the value of the status indicator. The shape reflects the status indicator&#39;s
 percentage value by filling one or more of its parts (SVG shapes) with the specified color.</p>
+<h2>Since</h2>
+<p>1.50</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -104,29 +104,29 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getAnimationOnStartup</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getAnimationOnStartup animationOnStartup.</p>
+<p>Defines if the initial value of the status indicator should be animated or directly displayed on startup.
+By default, it&#39;s displayed on startup without any animation.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>animationOnStartup</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.54.1) - Use the animationOnChange property instead.</p>
-<p>Gets current value of property #getAnimationOnStartup animationOnStartup.</p>
-<p>Defines if the initial value of the status indicator should be animated or directly displayed on startup.
-By default, it&#39;s displayed on startup without any animation.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getAnimationOnStartupDelay()</del></h3>
 <blockquote>
 <p><strong>getAnimationOnStartupDelay</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getAnimationOnStartupDelay animationOnStartupDelay.</p>
+<p>Specifies the delay of the initial value animation. Only applicable if the <code>animationOnStartup</code> property
+is set to <code>true</code>.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>animationOnStartupDelay</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.54.1)</p>
-<p>Gets current value of property #getAnimationOnStartupDelay animationOnStartupDelay.</p>
-<p>Specifies the delay of the initial value animation. Only applicable if the <code>animationOnStartup</code> property
-is set to <code>true</code>.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getDisplayedValue()</h3>
 <blockquote>
@@ -189,11 +189,6 @@ to <code>Linear</code>.</p>
 <blockquote>
 <p><strong>getFullAnimationDuration</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>fullAnimationDuration</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.54.1) - All animations are now limited to 250 ms.</p>
 <p>Gets current value of property #getFullAnimationDuration fullAnimationDuration.</p>
 <p>Specifies the duration, in milliseconds, of the animation that would fill an empty shape to the full.
 The actual time it takes to change the shape&#39;s filling is proportional to the difference between the
@@ -201,6 +196,11 @@ initial and the target status indicator&#39;s value. For example, a change from 
 takes only half of the time specified in the <code>fullAnimationDuration</code> property. If this property is set
 to <code>0</code>, changes are applied instantly without any animation.</p>
 <p>Default value is <code>0</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>fullAnimationDuration</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.54.1) - All animations are now limited to 250 ms.</p>
 <hr>
 <h3>getHorizontalAlignment()</h3>
 <blockquote>
@@ -245,6 +245,11 @@ to <code>0</code>, changes are applied instantly without any animation.</p>
 <blockquote>
 <p><strong>setAnimationOnStartup</strong>(<code>bAnimationOnStartup?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAnimationOnStartup animationOnStartup.</p>
+<p>Defines if the initial value of the status indicator should be animated or directly displayed on startup.
+By default, it&#39;s displayed on startup without any animation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAnimationOnStartup?</h5>
 <p><code>boolean</code></p>
@@ -254,16 +259,16 @@ to <code>0</code>, changes are applied instantly without any animation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.54.1) - Use the animationOnChange property instead.</p>
-<p>Sets a new value for property #getAnimationOnStartup animationOnStartup.</p>
-<p>Defines if the initial value of the status indicator should be animated or directly displayed on startup.
-By default, it&#39;s displayed on startup without any animation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setAnimationOnStartupDelay()</del></h3>
 <blockquote>
 <p><strong>setAnimationOnStartupDelay</strong>(<code>iAnimationOnStartupDelay?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAnimationOnStartupDelay animationOnStartupDelay.</p>
+<p>Specifies the delay of the initial value animation. Only applicable if the <code>animationOnStartup</code> property
+is set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iAnimationOnStartupDelay?</h5>
 <p><code>number</code></p>
@@ -273,11 +278,6 @@ By default, it&#39;s displayed on startup without any animation.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.54.1)</p>
-<p>Sets a new value for property #getAnimationOnStartupDelay animationOnStartupDelay.</p>
-<p>Specifies the delay of the initial value animation. Only applicable if the <code>animationOnStartup</code> property
-is set to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setFillColor()</h3>
 <blockquote>
@@ -352,6 +352,14 @@ to <code>Linear</code>.</p>
 <blockquote>
 <p><strong>setFullAnimationDuration</strong>(<code>iFullAnimationDuration?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getFullAnimationDuration fullAnimationDuration.</p>
+<p>Specifies the duration, in milliseconds, of the animation that would fill an empty shape to the full.
+The actual time it takes to change the shape&#39;s filling is proportional to the difference between the
+initial and the target status indicator&#39;s value. For example, a change from 20 percent to 70 percent
+takes only half of the time specified in the <code>fullAnimationDuration</code> property. If this property is set
+to <code>0</code>, changes are applied instantly without any animation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iFullAnimationDuration?</h5>
 <p><code>number</code></p>
@@ -361,14 +369,6 @@ to <code>Linear</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.54.1) - All animations are now limited to 250 ms.</p>
-<p>Sets a new value for property #getFullAnimationDuration fullAnimationDuration.</p>
-<p>Specifies the duration, in milliseconds, of the animation that would fill an empty shape to the full.
-The actual time it takes to change the shape&#39;s filling is proportional to the difference between the
-initial and the target status indicator&#39;s value. For example, a change from 20 percent to 70 percent
-takes only half of the time specified in the <code>fullAnimationDuration</code> property. If this property is set
-to <code>0</code>, changes are applied instantly without any animation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setHorizontalAlignment()</h3>
 <blockquote>
@@ -441,6 +441,6 @@ used by this class</p>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

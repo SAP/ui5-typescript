@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $DataStateIndicatorSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $DataStateIndicatorSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $DataStateIndicatorSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/plugins/DataStateIndicator/interfaces/$DataStateIndicatorSettings.html">
 <meta property="og:title" content="Interface: $DataStateIndicatorSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $DataStateIndicatorSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $DataStateIndicatorSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/plugins/DataStateIndicator/interfaces/$DataStateIndicatorSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.m/README.html">sap.m</a> › sap › m › plugins › <a href="../../../../../../sap.m/sap/m/plugins/DataStateIndicator/README.html">DataStateIndicator</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/plugins/DataStateIndicator</a> / $DataStateIndicatorSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/plugins/DataStateIndicator</a> / $DataStateIndicatorSettings</p>
 <h1>Interface: $DataStateIndicatorSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $DataStateIndicatorSettings } <span class="kw">from</span> <span class="str">"sap/m/plugins/DataStateIndicator"</span>;</pre>
+<p>Describes the settings that can be provided to the DataStateIndicator constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -47,6 +48,8 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>applyFilter?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the user filters data state messages and if the <code>enableFiltering</code> property is
+set to <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/DataStateIndicator$ApplyFilterEvent.html"><code>DataStateIndicator$ApplyFilterEvent</code></a></p>
@@ -54,13 +57,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.89</p>
-<p>This event is fired when the user filters data state messages and if the <code>enableFiltering</code> property is
-set to <code>true</code>.</p>
 <hr>
 <h3>clearFilter?</h3>
 <blockquote>
 <p><code>optional</code> <strong>clearFilter?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the user clears the data state message filter and if the <code>enableFiltering</code> property
+is set to <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -68,13 +71,13 @@ set to <code>true</code>.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.89</p>
-<p>This event is fired when the user clears the data state message filter and if the <code>enableFiltering</code> property
-is set to <code>true</code>.</p>
 <hr>
 <h3>close?</h3>
 <blockquote>
 <p><code>optional</code> <strong>close?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the user presses the <code>Close</code> button of the <code>MessageStrip</code> control which is managed
+by this plugin.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -82,8 +85,6 @@ is set to <code>true</code>.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.103</p>
-<p>This event is fired when the user presses the <code>Close</code> button of the <code>MessageStrip</code> control which is managed
-by this plugin.</p>
 <hr>
 <h3>dataStateChange?</h3>
 <blockquote>
@@ -100,12 +101,12 @@ by this plugin.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableFiltering?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.89</p>
 <p>Enables filtering for data state messages if this property is set to <code>true</code>. A link is provided to the
 user that allows them to filter. After the binding-related messages have been filtered by the user, all
 the existing filters are only taken into account once the message filter has been cleared again.</p>
 <p><strong>Note:</strong> This feature must be enabled for OData models only.</p>
+<h4>Since</h4>
+<p>1.89</p>
 <hr>
 <h3>filter?</h3>
 <blockquote>
@@ -116,6 +117,6 @@ the existing filters are only taken into account once the message filter has bee
 parameters. Return <code>true</code> to keep the message, <code>false</code> otherwise.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

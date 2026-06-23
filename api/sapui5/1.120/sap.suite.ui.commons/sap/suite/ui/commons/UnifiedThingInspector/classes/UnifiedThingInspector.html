@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: UnifiedThingInspector~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: UnifiedThingInspector~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: UnifiedThingInspector~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/UnifiedThingInspector/classes/UnifiedThingInspector.html">
 <meta property="og:title" content="~~Class: UnifiedThingInspector~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: UnifiedThingInspector~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: UnifiedThingInspector~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/UnifiedThingInspector/classes/UnifiedThingInspector.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/UnifiedThingInspector/README.html">UnifiedThingInspector</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/UnifiedThingInspector</a> / UnifiedThingInspector</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/UnifiedThingInspector</a> / UnifiedThingInspector</p>
 <h1><del>Class: UnifiedThingInspector</del></h1>
 <pre class="sig"><span class="kw">import</span> UnifiedThingInspector <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/UnifiedThingInspector"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.32) - Deprecated. Object page should be used instead.</p>
 <p>This control provides an ability to display a thing (for example, object factsheet) on the desktop, tablet,
 and phone devices in a Fiori style.</p>
+<h2>Deprecated</h2>
+<p>(since 1.32) - Deprecated. Object page should be used instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -87,6 +87,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAction</strong>(<code>oAction</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some action to the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -97,7 +98,6 @@ of the syntax of the settings object.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the actionsButtonPress event handler instead.</p>
-<p>Adds some action to the aggregation #getActions actions.</p>
 <hr>
 <h3><del>addFacet()</del></h3>
 <blockquote>
@@ -155,6 +155,7 @@ the actionsButtonPress event handler instead.</p>
 <blockquote>
 <p><strong>addTransaction</strong>(<code>oTransaction</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some transaction to the aggregation #getTransactions transactions.</p>
 <h4>Parameters</h4>
 <h5>oTransaction</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -165,7 +166,6 @@ the actionsButtonPress event handler instead.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the transactionsButtonPress event handler instead.</p>
-<p>Adds some transaction to the aggregation #getTransactions transactions.</p>
 <hr>
 <h3><del>attachActionsButtonPress()</del></h3>
 <h4>Call Signature</h4>
@@ -451,13 +451,13 @@ itself</p>
 <blockquote>
 <p><strong>destroyActions</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the actions in the aggregation #getActions actions.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the actionsButtonPress event handler instead.</p>
-<p>Destroys all the actions in the aggregation #getActions actions.</p>
 <hr>
 <h3><del>destroyFacetContent()</del></h3>
 <blockquote>
@@ -499,13 +499,13 @@ the actionsButtonPress event handler instead.</p>
 <blockquote>
 <p><strong>destroyTransactions</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the transactions in the aggregation #getTransactions transactions.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the transactionsButtonPress event handler instead.</p>
-<p>Destroys all the transactions in the aggregation #getTransactions transactions.</p>
 <hr>
 <h3><del>detachActionsButtonPress()</del></h3>
 <blockquote>
@@ -617,6 +617,9 @@ event of this <code>sap.suite.ui.commons.UnifiedThingInspector</code>.</p>
 <blockquote>
 <p><strong>fireActionsButtonPress</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:actionsButtonPress actionsButtonPress to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UnifiedThingInspector$ActionsButtonPressEventParameters.html"><code>UnifiedThingInspector$ActionsButtonPressEventParameters</code></a></p>
@@ -626,14 +629,12 @@ event of this <code>sap.suite.ui.commons.UnifiedThingInspector</code>.</p>
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:actionsButtonPress actionsButtonPress to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>fireAfterNavigate()</del></h3>
 <blockquote>
 <p><strong>fireAfterNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterNavigate afterNavigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UnifiedThingInspector$AfterNavigateEventParameters.html"><code>UnifiedThingInspector$AfterNavigateEventParameters</code></a></p>
@@ -643,12 +644,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterNavigate afterNavigate to attached listeners.</p>
 <hr>
 <h3><del>fireBackAction()</del></h3>
 <blockquote>
 <p><strong>fireBackAction</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:backAction backAction to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -658,12 +659,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:backAction backAction to attached listeners.</p>
 <hr>
 <h3><del>fireConfigurationButtonPress()</del></h3>
 <blockquote>
 <p><strong>fireConfigurationButtonPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:configurationButtonPress configurationButtonPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UnifiedThingInspector$ConfigurationButtonPressEventParameters.html"><code>UnifiedThingInspector$ConfigurationButtonPressEventParameters</code></a></p>
@@ -673,12 +674,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:configurationButtonPress configurationButtonPress to attached listeners.</p>
 <hr>
 <h3><del>fireNavigate()</del></h3>
 <blockquote>
 <p><strong>fireNavigate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:navigate navigate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UnifiedThingInspector$NavigateEventParameters.html"><code>UnifiedThingInspector$NavigateEventParameters</code></a></p>
@@ -688,14 +691,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:navigate navigate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>fireTransactionsButtonPress()</del></h3>
 <blockquote>
 <p><strong>fireTransactionsButtonPress</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:transactionsButtonPress transactionsButtonPress to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/UnifiedThingInspector$TransactionsButtonPressEventParameters.html"><code>UnifiedThingInspector$TransactionsButtonPressEventParameters</code></a></p>
@@ -705,21 +708,18 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:transactionsButtonPress transactionsButtonPress to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>getActions()</del></h3>
 <blockquote>
 <p><strong>getActions</strong>(): <a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getActions actions.</p>
+<p>Action sheet controls.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the actionsButtonPress event handler instead.</p>
-<p>Gets content of aggregation #getActions actions.</p>
-<p>Action sheet controls.</p>
 <hr>
 <h3><del>getActionsVisible()</del></h3>
 <blockquote>
@@ -847,13 +847,13 @@ on the desktop and tablet. On the phone, all tiles are displayed in a swipeable 
 <blockquote>
 <p><strong>getTransactions</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getTransactions transactions.</p>
+<p>Menu items for transaction popup.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the transactionsButtonPress event handler instead.</p>
-<p>Gets content of aggregation #getTransactions transactions.</p>
-<p>Menu items for transaction popup.</p>
 <hr>
 <h3><del>getTransactionsVisible()</del></h3>
 <blockquote>
@@ -870,6 +870,8 @@ the transactionsButtonPress event handler instead.</p>
 <blockquote>
 <p><strong>indexOfAction</strong>(<code>oAction</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getActions actions. and returns its
+index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -880,8 +882,6 @@ the transactionsButtonPress event handler instead.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the actionsButtonPress event handler instead.</p>
-<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getActions actions. and returns its
-index if found or -1 otherwise.</p>
 <hr>
 <h3><del>indexOfFacet()</del></h3>
 <blockquote>
@@ -943,6 +943,8 @@ its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfTransaction</strong>(<code>oTransaction</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getTransactions transactions.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oTransaction</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -953,13 +955,12 @@ its index if found or -1 otherwise.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the transactionsButtonPress event handler instead.</p>
-<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getTransactions transactions.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3><del>insertAction()</del></h3>
 <blockquote>
 <p><strong>insertAction</strong>(<code>oAction</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a action into the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -975,7 +976,6 @@ at the last position</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the actionsButtonPress event handler instead.</p>
-<p>Inserts a action into the aggregation #getActions actions.</p>
 <hr>
 <h3><del>insertFacet()</del></h3>
 <blockquote>
@@ -1053,6 +1053,7 @@ the last position</p>
 <blockquote>
 <p><strong>insertTransaction</strong>(<code>oTransaction</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a transaction into the aggregation #getTransactions transactions.</p>
 <h4>Parameters</h4>
 <h5>oTransaction</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1068,12 +1069,12 @@ is inserted at the last position</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the transactionsButtonPress event handler instead.</p>
-<p>Inserts a transaction into the aggregation #getTransactions transactions.</p>
 <hr>
 <h3><del>removeAction()</del></h3>
 <blockquote>
 <p><strong>removeAction</strong>(<code>vAction</code>): <a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
+<p>Removes a action from the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>vAction</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -1084,20 +1085,19 @@ the transactionsButtonPress event handler instead.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the actionsButtonPress event handler instead.</p>
-<p>Removes a action from the aggregation #getActions actions.</p>
 <hr>
 <h3><del>removeAllActions()</del></h3>
 <blockquote>
 <p><strong>removeAllActions</strong>(): <a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getActions actions.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the actionsButtonPress event handler instead.</p>
-<p>Removes all the controls from the aggregation #getActions actions.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeAllFacetContent()</del></h3>
 <blockquote>
@@ -1143,14 +1143,14 @@ the actionsButtonPress event handler instead.</p>
 <blockquote>
 <p><strong>removeAllTransactions</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getTransactions transactions.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the transactionsButtonPress event handler instead.</p>
-<p>Removes all the controls from the aggregation #getTransactions transactions.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeFacet()</del></h3>
 <blockquote>
@@ -1208,6 +1208,7 @@ the transactionsButtonPress event handler instead.</p>
 <blockquote>
 <p><strong>removeTransaction</strong>(<code>vTransaction</code>): <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Removes a transaction from the aggregation #getTransactions transactions.</p>
 <h4>Parameters</h4>
 <h5>vTransaction</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1218,7 +1219,6 @@ the transactionsButtonPress event handler instead.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the transactionsButtonPress event handler instead.</p>
-<p>Removes a transaction from the aggregation #getTransactions transactions.</p>
 <hr>
 <h3><del>setActionsVisible()</del></h3>
 <blockquote>
@@ -1400,6 +1400,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

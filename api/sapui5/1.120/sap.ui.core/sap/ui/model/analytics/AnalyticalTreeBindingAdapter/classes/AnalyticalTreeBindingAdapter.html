@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: AnalyticalTreeBindingAdapter — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: AnalyticalTreeBindingAdapter — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: AnalyticalTreeBindingAdapter — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/analytics/AnalyticalTreeBindingAdapter/classes/AnalyticalTreeBindingAdapter.html">
 <meta property="og:title" content="Class: AnalyticalTreeBindingAdapter — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: AnalyticalTreeBindingAdapter — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: AnalyticalTreeBindingAdapter — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/analytics/AnalyticalTreeBindingAdapter/classes/AnalyticalTreeBindingAdapter.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,33 +33,22 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › analytics › <a href="../../../../../../../sap.ui.core/sap/ui/model/analytics/AnalyticalTreeBindingAdapter/README.html">AnalyticalTreeBindingAdapter</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/analytics/AnalyticalTreeBindingAdapter</a> / AnalyticalTreeBindingAdapter</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/analytics/AnalyticalTreeBindingAdapter</a> / AnalyticalTreeBindingAdapter</p>
 <h1>Class: AnalyticalTreeBindingAdapter</h1>
 <pre class="sig"><span class="kw">import</span> AnalyticalTreeBindingAdapter <span class="kw">from</span> <span class="str">"sap/ui/model/analytics/AnalyticalTreeBindingAdapter"</span>;</pre>
-<h2>Constructors</h2>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new AnalyticalTreeBindingAdapter</strong>(): <code>AnalyticalTreeBindingAdapter</code></p>
-</blockquote>
-<h4>Returns</h4>
-<p><code>AnalyticalTreeBindingAdapter</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adapter for TreeBindings to add the ListBinding functionality and use the tree structure in list based
-controls.</p>
 <h2>Methods</h2>
 <h3>getNumberOfExpandedLevels()</h3>
 <blockquote>
 <p><strong>getNumberOfExpandedLevels</strong>(): <code>number</code></p>
 </blockquote>
+<p>Retrieves the currently set number of expanded levels from the Binding (commonly an AnalyticalBinding).</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>the number of expanded levels</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Retrieves the currently set number of expanded levels from the Binding (commonly an AnalyticalBinding).</p>
 <hr>
 <h3>hasTotaledMeasures()</h3>
 <blockquote>
@@ -74,6 +63,10 @@ controls.</p>
 <blockquote>
 <p><strong>setNumberOfExpandedLevels</strong>(<code>iLevels</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the number of expanded levels on the TreeBinding (commonly an AnalyticalBinding). This is NOT the
+same as AnalyticalTreeBindingAdapter#collapse or AnalyticalTreeBindingAdapter#expand. Setting the number
+of expanded levels leads to different requests. This function is used by the AnalyticalTable for the
+ungroup/ungroup-all feature.</p>
 <h4>Parameters</h4>
 <h5>iLevels</h5>
 <p><code>number</code></p>
@@ -82,11 +75,7 @@ controls.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the number of expanded levels on the TreeBinding (commonly an AnalyticalBinding). This is NOT the
-same as AnalyticalTreeBindingAdapter#collapse or AnalyticalTreeBindingAdapter#expand. Setting the number
-of expanded levels leads to different requests. This function is used by the AnalyticalTable for the
-ungroup/ungroup-all feature.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

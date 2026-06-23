@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $FeedTileSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FeedTileSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $FeedTileSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $FeedTileSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/FeedTile/interfaces/$FeedTileSettings.html">
-<meta property="og:title" content="Interface: $FeedTileSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FeedTileSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $FeedTileSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $FeedTileSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/FeedTile/interfaces/$FeedTileSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/FeedTile/README.html">FeedTile</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/FeedTile</a> / $FeedTileSettings</p>
-<h1>Interface: $FeedTileSettings</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/FeedTile</a> / $FeedTileSettings</p>
+<h1><del>Interface: $FeedTileSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $FeedTileSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/FeedTile"</span>;</pre>
+<p>Describes the settings that can be provided to the FeedTile constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.25) - This control has been deprecated in favor of new sap.suite.ui.commons.GenericTile.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>defaultImages?</h3>
+<h3><del>defaultImages?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>defaultImages?</strong>: <code>string</code>[] | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -51,26 +54,26 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 when no feed items exist. After a random image is displayed first time, control cycles through this list
 of images.</p>
 <hr>
-<h3>displayArticleImage?</h3>
+<h3><del>displayArticleImage?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>displayArticleImage?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>To display article Image or not. If it is true, the article Image will be displayed based on precedence.
 If it is false, the default image will be displayed.</p>
 <hr>
-<h3>displayDuration?</h3>
+<h3><del>displayDuration?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>displayDuration?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>The length of time in seconds the control displays each feed item. Default value is 5 seconds.</p>
 <hr>
-<h3>items?</h3>
+<h3><del>items?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>items?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../FeedItem/classes/FeedItem.html"><code>FeedItem</code></a> | <a href="../../FeedItem/classes/FeedItem.html"><code>FeedItem</code></a>[]</p>
 </blockquote>
 <p>The feed items the control cycles through.</p>
 <hr>
-<h3>press?</h3>
+<h3><del>press?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -81,13 +84,13 @@ If it is false, the default image will be displayed.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>source?</h3>
+<h3><del>source?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>source?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The source of the feed item.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

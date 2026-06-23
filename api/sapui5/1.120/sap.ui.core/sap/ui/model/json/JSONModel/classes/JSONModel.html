@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: JSONModel — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: JSONModel — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: JSONModel — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html">
 <meta property="og:title" content="Class: JSONModel — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: JSONModel — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: JSONModel — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/json/JSONModel/classes/JSONModel.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › json › <a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONModel/README.html">JSONModel</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/json/JSONModel</a> / JSONModel</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/json/JSONModel</a> / JSONModel</p>
 <h1>Class: JSONModel</h1>
 <pre class="sig"><span class="kw">import</span> JSONModel <span class="kw">from</span> <span class="str">"sap/ui/model/json/JSONModel"</span>;</pre>
 <p>Model implementation for the JSON format.</p>
@@ -116,18 +116,23 @@ by the returned Promise.</p>
 <blockquote>
 <p><strong>loadData</strong>(<code>sURL</code>, <code>oParameters?</code>, <code>bAsync?</code>, <code>sType?</code>, <code>bMerge?</code>, <code>bCache?</code>, <code>mHeaders?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
-<p>Load JSON-encoded data from the server using a GET HTTP request and store the resulting JSON data in
-the model. Note: Due to browser security restrictions, most &quot;Ajax&quot; requests are subject to the same origin
-policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.</p>
+<p>Loads JSON-encoded data from the server and stores the resulting JSON data in the model. Note: Due to
+browser security restrictions, most &quot;Ajax&quot; requests are subject to the same origin policy, the request
+can not successfully retrieve data from a different domain, subdomain, or protocol.</p>
+<p>Note: To send a JSON object in the body of a &quot;POST&quot; request to load the model data, <code>oParameters</code> has
+to be the JSON-stringified value of the object to be sent, and <code>mHeaders</code> has to contain a <code>&quot;Content-Type&quot;</code>
+property with the value <code>&quot;application/json;charset=utf-8&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sURL</h5>
 <p><code>string</code></p>
-<p>A string containing the URL to which the request is sent.</p>
+<p>A string containing the URL to which the request is sent</p>
 <h5>oParameters?</h5>
 <p><code>string</code> | <code>object</code></p>
-<p>A map or string that is sent to the server with the request. Data that is sent to the server is appended
-to the URL as a query string. If the value of the data parameter is an object (map), it is converted
-to a string and url-encoded before it is appended to the URL.</p>
+<p>The data to be sent to the server with the data-loading request. If <code>oParameters</code> is a string, it has
+to be encoded based on the used content type. The default encoding is <code>&#39;application/x-www-form-urlencoded; charset=UTF-8&#39;</code> but it may be overwritten via the <code>&quot;Content-Type&quot;</code> property given in <code>mHeaders</code>. If <code>oParameters</code>
+is an object, a string is generated and the keys and values are URL-encoded. The resulting string is
+appended to the URL if the HTTP request method cannot have a request body, e.g. for a &quot;GET&quot; request.
+Otherwise, the resulting string is added to the request body.</p>
 <h5>bAsync?</h5>
 <p><code>boolean</code></p>
 <p><strong>Deprecated as of Version 1.107</strong>; always use asynchronous loading for performance reasons. By default,
@@ -135,8 +140,7 @@ all requests are sent asynchronously. Synchronous requests may temporarily lock 
 any actions while the request is active. Cross-domain requests do not support synchronous operations.</p>
 <h5>sType?</h5>
 <p><code>string</code></p>
-<p>The type of request to make (&quot;POST&quot; or &quot;GET&quot;), default is &quot;GET&quot;. Note: Other HTTP request methods, such
-as PUT and DELETE, can also be used here, but they are not supported by all browsers.</p>
+<p>The HTTP verb to use for the request (&quot;GET&quot; or &quot;POST&quot;)</p>
 <h5>bMerge?</h5>
 <p><code>boolean</code></p>
 <p>Whether the data should be merged instead of replaced</p>
@@ -245,6 +249,6 @@ used by this class</p>
 <p><a href="../../../ClientModel/classes/ClientModel.html"><code>ClientModel</code></a>.<a href="../../../ClientModel/classes/ClientModel.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

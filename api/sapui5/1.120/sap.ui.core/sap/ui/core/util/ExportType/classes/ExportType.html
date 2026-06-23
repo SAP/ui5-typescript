@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ExportType~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ExportType~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: ExportType~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/util/ExportType/classes/ExportType.html">
 <meta property="og:title" content="~~Class: ExportType~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ExportType~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: ExportType~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/util/ExportType/classes/ExportType.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › util › <a href="../../../../../../../sap.ui.core/sap/ui/core/util/ExportType/README.html">ExportType</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/util/ExportType</a> / ExportType</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/util/ExportType</a> / ExportType</p>
 <h1><del>Class: ExportType</del></h1>
 <pre class="sig"><span class="kw">import</span> ExportType <span class="kw">from</span> <span class="str">"sap/ui/core/util/ExportType"</span>;</pre>
+<p>Base export type. Subclasses can be used for sap.ui.core.util.Export Export.</p>
 <h2>Since</h2>
 <p>1.22.0</p>
 <h2>Deprecated</h2>
 <p>(since 1.73)</p>
-<p>Base export type. Subclasses can be used for sap.ui.core.util.Export Export.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></li>
@@ -92,6 +92,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_generate</strong>(<code>oExport</code>): <code>string</code></p>
 </blockquote>
+<p>Handles the generation process of the file.</p>
 <h4>Parameters</h4>
 <h5>oExport</h5>
 <p><a href="../../Export/classes/Export.html"><code>Export</code></a></p>
@@ -101,41 +102,40 @@ of the syntax of the settings object.</p>
 <p>content</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handles the generation process of the file.</p>
 <hr>
 <h3><del>cellGenerator()</del></h3>
 <blockquote>
 <p><strong>cellGenerator</strong>(): <code>Generator</code></p>
 </blockquote>
+<p>Creates a cell &quot;generator&quot; (inspired by ES6 Generators)</p>
 <h4>Returns</h4>
 <p><code>Generator</code></p>
 <p>generator</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a cell &quot;generator&quot; (inspired by ES6 Generators)</p>
 <hr>
 <h3><del>columnGenerator()</del></h3>
 <blockquote>
 <p><strong>columnGenerator</strong>(): <code>Generator</code></p>
 </blockquote>
+<p>Creates a column &quot;generator&quot; (inspired by ES6 Generators)</p>
 <h4>Returns</h4>
 <p><code>Generator</code></p>
 <p>generator</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a column &quot;generator&quot; (inspired by ES6 Generators)</p>
 <hr>
 <h3><del>generate()</del></h3>
 <blockquote>
 <p><strong>generate</strong>(): <code>string</code></p>
 </blockquote>
+<p>Generates the file content.
+ Should be implemented by the individual types!</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>content</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Generates the file content.
- Should be implemented by the individual types!</p>
 <hr>
 <h3><del>getByteOrderMark()</del></h3>
 <blockquote>
@@ -162,12 +162,12 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getColumnCount</strong>(): <code>number</code></p>
 </blockquote>
+<p>Returns the number of columns.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>count</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the number of columns.</p>
 <hr>
 <h3><del>getFileExtension()</del></h3>
 <blockquote>
@@ -193,23 +193,23 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getRowCount</strong>(): <code>number</code></p>
 </blockquote>
+<p>Returns the number of rows.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>count</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the number of rows.</p>
 <hr>
 <h3><del>rowGenerator()</del></h3>
 <blockquote>
 <p><strong>rowGenerator</strong>(): <code>Generator</code></p>
 </blockquote>
+<p>Creates a row &quot;generator&quot; (inspired by ES6 Generators)</p>
 <h4>Returns</h4>
 <p><code>Generator</code></p>
 <p>generator</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a row &quot;generator&quot; (inspired by ES6 Generators)</p>
 <hr>
 <h3><del>setByteOrderMark()</del></h3>
 <blockquote>
@@ -311,6 +311,6 @@ used by this class</p>
 <p><a href="../../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../base/ManagedObject/classes/ManagedObject.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $PlanningCalendarSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $PlanningCalendarSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $PlanningCalendarSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/PlanningCalendar/interfaces/$PlanningCalendarSettings.html">
 <meta property="og:title" content="Interface: $PlanningCalendarSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $PlanningCalendarSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $PlanningCalendarSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/PlanningCalendar/interfaces/$PlanningCalendarSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/PlanningCalendar/README.html">PlanningCalendar</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendar</a> / $PlanningCalendarSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendar</a> / $PlanningCalendarSettings</p>
 <h1>Interface: $PlanningCalendarSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $PlanningCalendarSettings } <span class="kw">from</span> <span class="str">"sap/m/PlanningCalendar"</span>;</pre>
+<p>Describes the settings that can be provided to the PlanningCalendar constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,20 +48,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>appointmentHeight?</strong>: <code>&quot;Large&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Regular&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
 </blockquote>
+<p>Determines the different possible sizes for appointments.</p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Determines the different possible sizes for appointments.</p>
 <hr>
 <h3>appointmentRoundWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentRoundWidth?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentRoundWidth.html"><code>CalendarAppointmentRoundWidth</code></a> | <code>&quot;HalfColumn&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Defines rounding of the width <code>CalendarAppoinment</code> <strong>Note:</strong> This property is applied, when the calendar
+interval type is day and the view shows more than 20 days</p>
 <h4>Since</h4>
 <p>1.81.0
  (since 1.81.0)</p>
-<p>Defines rounding of the width <code>CalendarAppoinment</code> <strong>Note:</strong> This property is applied, when the calendar
-interval type is day and the view shows more than 20 days</p>
 <hr>
 <h3>appointmentSelect?</h3>
 <blockquote>
@@ -77,72 +78,72 @@ interval type is day and the view shows more than 20 days</p>
 <blockquote>
 <p><code>optional</code> <strong>appointmentsReducedHeight?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Determines whether the appointments that have only title without text are rendered with smaller height.</p>
+<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
+to facilitate touching.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - Please use the <code>appointmentHeight</code> with value &quot;Automatic&quot; property instead.</p>
-<p>Determines whether the appointments that have only title without text are rendered with smaller height.</p>
-<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
-to facilitate touching.</p>
 <hr>
 <h3>appointmentsVisualization?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentsVisualization?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Standard&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentVisualization.html"><code>CalendarAppointmentVisualization</code></a> | <code>&quot;Filled&quot;</code></p>
 </blockquote>
+<p>Determines how the appointments are visualized depending on the used theme.</p>
 <h4>Since</h4>
 <p>1.40.0</p>
-<p>Determines how the appointments are visualized depending on the used theme.</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <h4>Since</h4>
 <p>1.40.0</p>
-<p>Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <hr>
 <h3>builtInViews?</h3>
 <blockquote>
 <p><code>optional</code> <strong>builtInViews?</strong>: <code>string</code>[] | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.50</p>
 <p>Defines the list of predefined views as an array. The views should be specified by their keys.</p>
 <p>The default predefined views and their keys are available at sap.m.PlanningCalendarBuiltInView.</p>
 <p><strong>Note:</strong> If set, all specified views will be displayed along with any custom views (if available). If
 not set and no custom views are available, all default views will be displayed. If not set and there
 are any custom views available, only the custom views will be displayed.</p>
+<h4>Since</h4>
+<p>1.50</p>
 <hr>
 <h3>calendarWeekNumbering?</h3>
 <blockquote>
 <p><code>optional</code> <strong>calendarWeekNumbering?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.110.0</p>
 <p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
 global configuration is used.</p>
+<h4>Since</h4>
+<p>1.110.0</p>
 <hr>
 <h3>firstDayOfWeek?</h3>
 <blockquote>
 <p><code>optional</code> <strong>firstDayOfWeek?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.94</p>
 <p>If set, the first day of the displayed week is this day. Valid values are 0 to 6 starting on Sunday.
 If there is no valid value set, the default of the used locale is used.</p>
 <p>Note: this property will only have effect in the weekly – based views of the PlanningCalendar – Week
 view, and OneMonth view (on small devices).</p>
+<h4>Since</h4>
+<p>1.94</p>
 <hr>
 <h3>groupAppointmentsMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>groupAppointmentsMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/GroupAppointmentsMode.html"><code>GroupAppointmentsMode</code></a> | <code>&quot;Collapsed&quot;</code> | <code>&quot;Expanded&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48.0</p>
 <p>Defines the mode in which the overlapping appointments are displayed.</p>
 <p><strong>Note:</strong> This property takes effect, only if the <code>intervalType</code> of the current calendar view is set
 to <code>sap.ui.unified.CalendarIntervalType.Month</code>. On phone devices this property is ignored, and the default
 value is applied.</p>
+<h4>Since</h4>
+<p>1.48.0</p>
 <hr>
 <h3>height?</h3>
 <blockquote>
@@ -172,41 +173,41 @@ content, it will not be applied</p>
 <blockquote>
 <p><code>optional</code> <strong>legend?</strong>: <code>string</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/CalendarLegend/classes/CalendarLegend.html"><code>CalendarLegend</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.40.0</p>
 <p>Association to the <code>CalendarLegend</code> explaining the colors of the <code>Appointments</code>.</p>
 <p><strong>Note:</strong> The legend does not have to be rendered but must exist, and all required types must be assigned.</p>
+<h4>Since</h4>
+<p>1.40.0</p>
 <hr>
 <h3>maxDate?</h3>
 <blockquote>
 <p><code>optional</code> <strong>maxDate?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.38.0</p>
 <p>Defines the maximum date that can be displayed and selected in the <code>PlanningCalendar</code>. This must be a
 UI5Date or JavaScript Date object.</p>
 <p><strong>Note:</strong> If the <code>maxDate</code> is set to be before the current <code>minDate</code>, the <code>minDate</code> is set to the first
 date of the month in which the <code>maxDate</code> belongs.</p>
+<h4>Since</h4>
+<p>1.38.0</p>
 <hr>
 <h3>minDate?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minDate?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.38.0</p>
 <p>Defines the minimum date that can be displayed and selected in the <code>PlanningCalendar</code>. This must be a
 UI5Date or JavaScript Date object.</p>
 <p><strong>Note:</strong> If the <code>minDate</code> is set to be after the current <code>maxDate</code>, the <code>maxDate</code> is set to the last
 date of the month in which the <code>minDate</code> belongs.</p>
+<h4>Since</h4>
+<p>1.38.0</p>
 <hr>
 <h3>multipleAppointmentsSelection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>multipleAppointmentsSelection?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.97</p>
 <p>Determines whether the selection of multiple appointments is enabled.</p>
 <p>Note: selection of multiple appointments is possible using CTRL key regardless of the value of this property.</p>
+<h4>Since</h4>
+<p>1.97</p>
 <hr>
 <h3>noDataText?</h3>
 <blockquote>
@@ -219,15 +220,16 @@ assigned.</p>
 <blockquote>
 <p><code>optional</code> <strong>primaryCalendarType?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.108.0</p>
 <p>If set, the calendar type is used for display. If not set, the calendar type of the global configuration
 is used.</p>
+<h4>Since</h4>
+<p>1.108.0</p>
 <hr>
 <h3><del>rowHeaderClick?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>rowHeaderClick?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires when a row header is clicked.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/PlanningCalendar$RowHeaderClickEvent.html"><code>PlanningCalendar$RowHeaderClickEvent</code></a></p>
@@ -237,12 +239,12 @@ is used.</p>
 <p>1.46.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.119)</p>
-<p>Fires when a row header is clicked.</p>
 <hr>
 <h3>rowHeaderPress?</h3>
 <blockquote>
 <p><code>optional</code> <strong>rowHeaderPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fires when a row header press is triggered with mouse click, SPACE or ENTER press.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/PlanningCalendar$RowHeaderPressEvent.html"><code>PlanningCalendar$RowHeaderPressEvent</code></a></p>
@@ -250,7 +252,6 @@ is used.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.119.0</p>
-<p>Fires when a row header press is triggered with mouse click, SPACE or ENTER press.</p>
 <hr>
 <h3>rows?</h3>
 <blockquote>
@@ -273,30 +274,30 @@ is used.</p>
 <blockquote>
 <p><code>optional</code> <strong>secondaryCalendarType?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.109.0</p>
 <p>If set, the days are also represented in this calendar type. If not set, the dates are only represented
 in the primary calendar type. Note: The second calendar type won&#39;t be represented in the DOM when this
 property is not set explicitly.</p>
+<h4>Since</h4>
+<p>1.109.0</p>
 <hr>
 <h3>showDayNamesLine?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showDayNamesLine?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Determines whether the day names are displayed in a separate line or inside the single days.</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Determines whether the day names are displayed in a separate line or inside the single days.</p>
 <hr>
 <h3>showEmptyIntervalHeaders?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showEmptyIntervalHeaders?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.38.0</p>
 <p>Determines whether the space (at the top of the intervals), where the assigned interval headers appear,
 should remain visible even when no interval headers are present in the visible time frame. If set to
 <code>false</code>, this space would collapse/disappear when no interval headers are assigned.</p>
 <p><strong>Note:</strong> This property takes effect, only if <code>showIntervalHeaders</code> is also set to <code>true</code>.</p>
+<h4>Since</h4>
+<p>1.38.0</p>
 <hr>
 <h3>showIntervalHeaders?</h3>
 <blockquote>
@@ -319,9 +320,9 @@ is displayed.</p>
 <blockquote>
 <p><code>optional</code> <strong>showWeekNumbers?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Determines if the week numbers are displayed.</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Determines if the week numbers are displayed.</p>
 <hr>
 <h3>singleSelection?</h3>
 <blockquote>
@@ -361,8 +362,6 @@ the <code>startDate</code> property.</p>
 <blockquote>
 <p><code>optional</code> <strong>stickyHeader?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Determines whether the header area will remain visible (fixed on top) when the rest of the content is
 scrolled out of view.</p>
 <p>The sticky header behavior is automatically disabled on phones in landscape mode for better visibility
@@ -377,6 +376,8 @@ the column headers do not fix at the top of the viewport. Similar behavior is al
 <p>This API should not be used in production environment.</p>
 <p><strong>Note:</strong> The <code>stickyHeader</code> of the <code>PlanningCalendar</code> uses the <code>sticky</code> property of <code>sap.m.Table</code>. Therefore,
 all features and restrictions of the property in <code>sap.m.Table</code> apply to the <code>PlanningCalendar</code> as well.</p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>toolbarContent?</h3>
 <blockquote>
@@ -416,6 +417,6 @@ be used instead.</p>
 </blockquote>
 <p>Specifies the width of the <code>PlanningCalendar</code>.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

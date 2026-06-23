@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Tokenizer — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Tokenizer — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Tokenizer — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Tokenizer/classes/Tokenizer.html">
 <meta property="og:title" content="Class: Tokenizer — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Tokenizer — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Tokenizer — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Tokenizer/classes/Tokenizer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Tokenizer/README.html">Tokenizer</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Tokenizer</a> / Tokenizer</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Tokenizer</a> / Tokenizer</p>
 <h1>Class: Tokenizer</h1>
 <pre class="sig"><span class="kw">import</span> Tokenizer <span class="kw">from</span> <span class="str">"sap/m/Tokenizer"</span>;</pre>
-<h2>Since</h2>
-<p>1.22</p>
 <p>Overview: A tokenizer is a container for sap.m.Token Tokens. It also handles all actions associated
 with the tokens like adding, deleting, selecting and editing. Structure: The tokens are stored in the
 <code>tokens</code> aggregation. The tokenizer can determine, by setting the <code>editable</code> property, whether the tokens
@@ -47,6 +45,8 @@ in it are editable. Still the Token itself can determine if it is <code>editable
 non-editable Tokens in an editable Tokenizer.</p>
 <p>Usage: When to use:: The tokenizer can only be used as part of sap.m.MultiComboBox MultiComboBox,sap.m.MultiInput MultiInput
 or sap.ui.comp.valuehelpdialog.ValueHelpDialog ValueHelpDialog</p>
+<h2>Since</h2>
+<p>1.22</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -135,6 +135,7 @@ See:
 <blockquote>
 <p><strong>addValidateToken</strong>(<code>oParameters</code>): <code>void</code></p>
 </blockquote>
+<p>Function validates the given text and adds a new token if validation was successful.</p>
 <h4>Parameters</h4>
 <h5>oParameters</h5>
 <p>Parameter bag containing the following fields:</p>
@@ -154,12 +155,12 @@ See:
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.81) - replaced by MultiInput.prototype.addValidator</p>
-<p>Function validates the given text and adds a new token if validation was successful.</p>
 <hr>
 <h3><del>addValidator()</del></h3>
 <blockquote>
 <p><strong>addValidator</strong>(<code>fValidator</code>): <code>void</code></p>
 </blockquote>
+<p>Function adds a validation callback called before any new token gets added to the tokens aggregation.</p>
 <h4>Parameters</h4>
 <h5>fValidator</h5>
 <p><code>Function</code></p>
@@ -168,13 +169,16 @@ See:
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.81) - replaced by MultiInput.prototype.addValidator</p>
-<p>Function adds a validation callback called before any new token gets added to the tokens aggregation.</p>
 <hr>
 <h3><del>attachTokenChange()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTokenChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tokenChange tokenChange event of this <code>sap.m.Tokenizer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
+<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -191,14 +195,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tokenChange tokenChange event of this <code>sap.m.Tokenizer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
-<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTokenChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tokenChange tokenChange event of this <code>sap.m.Tokenizer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
+<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -211,16 +215,17 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tokenChange tokenChange event of this <code>sap.m.Tokenizer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
-<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <hr>
 <h3>attachTokenDelete()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTokenDelete</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tokenDelete tokenDelete event of this <code>sap.m.Tokenizer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
+<p>Fired when a token is deleted by clicking icon, pressing backspace or delete button.  Once the
+event is fired, application is responsible for removing / destroying the token from the aggregation.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -237,15 +242,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.82</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTokenDelete</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:tokenDelete tokenDelete event of this <code>sap.m.Tokenizer</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>Fired when a token is deleted by clicking icon, pressing backspace or delete button.  Once the
 event is fired, application is responsible for removing / destroying the token from the aggregation.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTokenDelete</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -258,17 +263,16 @@ event is fired, application is responsible for removing / destroying the token f
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.82</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tokenDelete tokenDelete event of this <code>sap.m.Tokenizer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
-<p>Fired when a token is deleted by clicking icon, pressing backspace or delete button.  Once the
-event is fired, application is responsible for removing / destroying the token from the aggregation.</p>
 <hr>
 <h3><del>attachTokenUpdate()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTokenUpdate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tokenUpdate tokenUpdate event of this <code>sap.m.Tokenizer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
+<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -287,14 +291,14 @@ object when firing the event</p>
 <p>1.46</p>
 <h5>Deprecated</h5>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tokenUpdate tokenUpdate event of this <code>sap.m.Tokenizer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
-<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTokenUpdate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tokenUpdate tokenUpdate event of this <code>sap.m.Tokenizer</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
+<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -309,10 +313,6 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>1.46</p>
 <h5>Deprecated</h5>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tokenUpdate tokenUpdate event of this <code>sap.m.Tokenizer</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
-<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <hr>
 <h3>destroyTokens()</h3>
 <blockquote>
@@ -327,6 +327,8 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <blockquote>
 <p><strong>detachTokenChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tokenChange tokenChange event of this <code>sap.m.Tokenizer</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -339,13 +341,13 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tokenChange tokenChange event of this <code>sap.m.Tokenizer</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachTokenDelete()</h3>
 <blockquote>
 <p><strong>detachTokenDelete</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tokenDelete tokenDelete event of this <code>sap.m.Tokenizer</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -358,13 +360,13 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.82</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tokenDelete tokenDelete event of this <code>sap.m.Tokenizer</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachTokenUpdate()</del></h3>
 <blockquote>
 <p><strong>detachTokenUpdate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tokenUpdate tokenUpdate event of this <code>sap.m.Tokenizer</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -379,13 +381,12 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>1.46</p>
 <h4>Deprecated</h4>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tokenUpdate tokenUpdate event of this <code>sap.m.Tokenizer</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireTokenChange()</del></h3>
 <blockquote>
 <p><strong>fireTokenChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:tokenChange tokenChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Tokenizer$TokenChangeEventParameters.html"><code>Tokenizer$TokenChangeEventParameters</code></a></p>
@@ -397,12 +398,12 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:tokenChange tokenChange to attached listeners.</p>
 <hr>
 <h3>fireTokenDelete()</h3>
 <blockquote>
 <p><strong>fireTokenDelete</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:tokenDelete tokenDelete to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Tokenizer$TokenDeleteEventParameters.html"><code>Tokenizer$TokenDeleteEventParameters</code></a></p>
@@ -414,12 +415,14 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>1.82</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:tokenDelete tokenDelete to attached listeners.</p>
 <hr>
 <h3><del>fireTokenUpdate()</del></h3>
 <blockquote>
 <p><strong>fireTokenUpdate</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:tokenUpdate tokenUpdate to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Tokenizer$TokenUpdateEventParameters.html"><code>Tokenizer$TokenUpdateEventParameters</code></a></p>
@@ -433,9 +436,6 @@ otherwise it will be bound to this <code>sap.m.Tokenizer</code> itself.</p>
 <p>(since 1.82) - replaced by <code>tokenDelete</code> event.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:tokenUpdate tokenUpdate to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -468,24 +468,24 @@ event object. The return value of this method indicates whether the default acti
 <blockquote>
 <p><strong>getEffectiveTabIndex</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Flag indicating if tabindex attribute should be rendered</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>True if tabindex should be rendered and false if not</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Flag indicating if tabindex attribute should be rendered</p>
 <hr>
 <h3>getHiddenTokensCount()</h3>
 <blockquote>
 <p><strong>getHiddenTokensCount</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets the count of hidden tokens that will be used for the n-More indicator. If the count is 0, there
+is no n-More indicator shown.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>The number of hidden tokens</p>
 <h4>Since</h4>
 <p>1.80</p>
-<p>Gets the count of hidden tokens that will be used for the n-More indicator. If the count is 0, there
-is no n-More indicator shown.</p>
 <hr>
 <h3>getMaxWidth()</h3>
 <blockquote>
@@ -552,12 +552,12 @@ is no n-More indicator shown.</p>
 <blockquote>
 <p><strong>getTokensInfoId</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets the accessibility text aggregation id.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Returns the InvisibleText control id</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets the accessibility text aggregation id.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -573,11 +573,11 @@ is no n-More indicator shown.</p>
 <blockquote>
 <p><strong>hasOneTruncatedToken</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Checks if the token is one and truncated.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks if the token is one and truncated.</p>
 <hr>
 <h3>indexOfToken()</h3>
 <blockquote>
@@ -615,6 +615,7 @@ the last position</p>
 <blockquote>
 <p><strong>onclick</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle the focus event on the control.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -623,7 +624,6 @@ the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle the focus event on the control.</p>
 <hr>
 <h3>removeAllAriaDescribedBy()</h3>
 <blockquote>
@@ -657,11 +657,11 @@ the last position</p>
 <blockquote>
 <p><strong>removeAllValidators</strong>(): <code>void</code></p>
 </blockquote>
+<p>Function removes all validation callbacks</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.81) - replaced by MultiInput.prototype.addValidator</p>
-<p>Function removes all validation callbacks</p>
 <hr>
 <h3>removeAriaDescribedBy()</h3>
 <blockquote>
@@ -706,6 +706,7 @@ the last position</p>
 <blockquote>
 <p><strong>removeValidator</strong>(<code>fValidator</code>): <code>void</code></p>
 </blockquote>
+<p>Function removes a validation callback.</p>
 <h4>Parameters</h4>
 <h5>fValidator</h5>
 <p><code>Function</code></p>
@@ -714,7 +715,6 @@ the last position</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.81) - replaced by MultiInput.prototype.addValidator</p>
-<p>Function removes a validation callback.</p>
 <hr>
 <h3>scrollToEnd()</h3>
 <blockquote>
@@ -765,6 +765,7 @@ the last position</p>
 <blockquote>
 <p><strong>setFirstTokenTruncated</strong>(<code>bValue</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the first token truncation.</p>
 <h4>Parameters</h4>
 <h5>bValue</h5>
 <p><code>boolean</code></p>
@@ -774,7 +775,6 @@ the last position</p>
 <p><code>this</code> instance for method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the first token truncation.</p>
 <hr>
 <h3>setMaxWidth()</h3>
 <blockquote>
@@ -827,6 +827,7 @@ the last position</p>
 <blockquote>
 <p><strong>setShouldRenderTabIndex</strong>(<code>bShouldRenderTabIndex</code>): <code>void</code></p>
 </blockquote>
+<p>Method for handling the state for tabindex rendering</p>
 <h4>Parameters</h4>
 <h5>bShouldRenderTabIndex</h5>
 <p><code>boolean</code></p>
@@ -835,7 +836,6 @@ the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Method for handling the state for tabindex rendering</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -891,6 +891,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

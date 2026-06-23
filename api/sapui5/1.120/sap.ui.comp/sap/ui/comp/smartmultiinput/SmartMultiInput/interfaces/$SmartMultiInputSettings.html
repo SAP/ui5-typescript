@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SmartMultiInputSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SmartMultiInputSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $SmartMultiInputSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartmultiinput/SmartMultiInput/interfaces/$SmartMultiInputSettings.html">
 <meta property="og:title" content="Interface: $SmartMultiInputSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SmartMultiInputSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $SmartMultiInputSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartmultiinput/SmartMultiInput/interfaces/$SmartMultiInputSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartmultiinput › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartmultiinput/SmartMultiInput/README.html">SmartMultiInput</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartmultiinput/SmartMultiInput</a> / $SmartMultiInputSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartmultiinput/SmartMultiInput</a> / $SmartMultiInputSettings</p>
 <h1>Interface: $SmartMultiInputSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SmartMultiInputSettings } <span class="kw">from</span> <span class="str">"sap/ui/comp/smartmultiinput/SmartMultiInput"</span>;</pre>
+<p>Describes the settings that can be provided to the SmartMultiInput constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../smartfield/SmartField/interfaces/$SmartFieldSettings.html"><code>$SmartFieldSettings</code></a></li>
@@ -72,6 +73,15 @@ of the call in key:value format for editing.</p>
 <p><code>optional</code> <strong>enableODataSelect?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Enables specific properties to be provided in the select query.</p>
+<hr>
+<h3>enableValueHelpSelectAll?</h3>
+<blockquote>
+<p><code>optional</code> <strong>enableValueHelpSelectAll?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Enable/Disable &quot;Select All&quot; checkbox in ValueHelpDialog. If set to true, the Select All checkbox is enabled
+in the ValueHelpDialog.</p>
+<h4>Since</h4>
+<p>1.120</p>
 <hr>
 <h3>requestAtLeastFields?</h3>
 <blockquote>
@@ -109,10 +119,10 @@ It is relevant only for selection finishes on <code>SmartMultiInput</code> eleme
 <p><code>optional</code> <strong>singleTokenMode?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Allows only one token to be added to the SmartMultiInput. Works only in No Data Binding Scenario.</p>
 <h4>Since</h4>
 <p>1.101
  (since 1.101)</p>
-<p>Allows only one token to be added to the SmartMultiInput. Works only in No Data Binding Scenario.</p>
 <hr>
 <h3>supportMultiSelect?</h3>
 <blockquote>
@@ -146,6 +156,6 @@ This event is fired only for token changes in <code>SmartMultiInput</code> eleme
 <p><code>void</code></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ObjectListItemSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ObjectListItemSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ObjectListItemSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ObjectListItem/interfaces/$ObjectListItemSettings.html">
 <meta property="og:title" content="Interface: $ObjectListItemSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ObjectListItemSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ObjectListItemSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ObjectListItem/interfaces/$ObjectListItemSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ObjectListItem/README.html">ObjectListItem</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectListItem</a> / $ObjectListItemSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectListItem</a> / $ObjectListItemSettings</p>
 <h1>Interface: $ObjectListItemSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ObjectListItemSettings } <span class="kw">from</span> <span class="str">"sap/m/ObjectListItem"</span>;</pre>
+<p>Describes the settings that can be provided to the ObjectListItem constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListItemBase/interfaces/$ListItemBaseSettings.html"><code>$ListItemBaseSettings</code></a></li>
@@ -101,37 +102,37 @@ and flagged.</p>
 <blockquote>
 <p><code>optional</code> <strong>markFavorite?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Sets the favorite state for the ObjectListItem.</p>
 <h4>Since</h4>
 <p>1.16.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Favorite</code>. You should use either this property or the <code>markers</code> aggregation,
 using both may lead to unpredicted behavior.</p>
-<p>Sets the favorite state for the ObjectListItem.</p>
 <hr>
 <h3><del>markFlagged?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>markFlagged?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Sets the flagged state for the ObjectListItem.</p>
 <h4>Since</h4>
 <p>1.16.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Flagged</code>. You should use either this property or the <code>markers</code> aggregation, using
 both may lead to unpredicted behavior.</p>
-<p>Sets the flagged state for the ObjectListItem.</p>
 <hr>
 <h3><del>markLocked?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>markLocked?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Sets the locked state of the ObjectListItem.</p>
 <h4>Since</h4>
 <p>1.28</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Locked</code>. You should use either this property or the <code>markers</code> aggregation, using
 both may lead to unpredicted behavior.</p>
-<p>Sets the locked state of the ObjectListItem.</p>
 <hr>
 <h3>number?</h3>
 <blockquote>
@@ -143,9 +144,9 @@ both may lead to unpredicted behavior.</p>
 <blockquote>
 <p><code>optional</code> <strong>numberState?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
+<p>Defines the ObjectListItem number and numberUnit value state.</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Defines the ObjectListItem number and numberUnit value state.</p>
 <hr>
 <h3>numberTextDirection?</h3>
 <blockquote>
@@ -171,6 +172,7 @@ its parent.</p>
 <blockquote>
 <p><code>optional</code> <strong>showMarkers?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If set to true, the ObjectListItem can be marked with icons such as favorite and flag.</p>
 <h4>Since</h4>
 <p>1.16.0</p>
 <h4>Deprecated</h4>
@@ -178,7 +180,6 @@ its parent.</p>
 using the already deprecated properties - <code>markFlagged</code>, <code>markFavorite</code>, and <code>markLocked</code>. If you are
 using the <code>markers</code> aggregation, the visibility of the markers depends on what is set in the aggregation
 itself.</p>
-<p>If set to true, the ObjectListItem can be marked with icons such as favorite and flag.</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -194,6 +195,6 @@ itself.</p>
 and RTL (right-to-left). By default the item title inherits the text direction from its parent.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

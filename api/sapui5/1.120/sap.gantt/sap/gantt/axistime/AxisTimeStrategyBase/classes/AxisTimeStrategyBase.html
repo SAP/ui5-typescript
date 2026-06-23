@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: AxisTimeStrategyBase — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: AxisTimeStrategyBase — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: AxisTimeStrategyBase — SAPUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: AxisTimeStrategyBase — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/axistime/AxisTimeStrategyBase/classes/AxisTimeStrategyBase.html">
-<meta property="og:title" content="Class: AxisTimeStrategyBase — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: AxisTimeStrategyBase — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: AxisTimeStrategyBase — SAPUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: AxisTimeStrategyBase — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.gantt/sap/gantt/axistime/AxisTimeStrategyBase/classes/AxisTimeStrategyBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › axistime › <a href="../../../../../../sap.gantt/sap/gantt/axistime/AxisTimeStrategyBase/README.html">AxisTimeStrategyBase</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/axistime/AxisTimeStrategyBase</a> / AxisTimeStrategyBase</p>
-<h1>Class: AxisTimeStrategyBase</h1>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/axistime/AxisTimeStrategyBase</a> / AxisTimeStrategyBase</p>
+<h1>Abstract Class: AxisTimeStrategyBase</h1>
 <pre class="sig"><span class="kw">import</span> AxisTimeStrategyBase <span class="kw">from</span> <span class="str">"sap/gantt/axistime/AxisTimeStrategyBase"</span>;</pre>
 <p>Base class for all zoom strategies. This base class defines basic properties and aggregations.</p>
 <p>This base class defines:
@@ -103,6 +103,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>calMiddleDate</strong>(<code>dStart</code>, <code>dEnd</code>): <code>Date</code></p>
 </blockquote>
+<p>Calculates the middle date of the given two dates.</p>
 <h4>Parameters</h4>
 <h5>dStart</h5>
 <p><code>Date</code></p>
@@ -115,12 +116,12 @@ of the syntax of the settings object.</p>
 <p>the middle date</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculates the middle date of the given two dates.</p>
 <hr>
 <h3>calVisibleHorizonByDelta()</h3>
 <blockquote>
 <p><strong>calVisibleHorizonByDelta</strong>(<code>nTimeSpanDelta</code>, <code>oAnchorTime?</code>): <code>object</code></p>
 </blockquote>
+<p>Calculate new visible horizon according to specified zoom center and zoom delta</p>
 <h4>Parameters</h4>
 <h5>nTimeSpanDelta</h5>
 <p><code>number</code></p>
@@ -134,12 +135,12 @@ horizon as the zoom center</p>
 <p>a new visible horizon</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculate new visible horizon according to specified zoom center and zoom delta</p>
 <hr>
 <h3>calVisibleHorizonByRate()</h3>
 <blockquote>
 <p><strong>calVisibleHorizonByRate</strong>(<code>nZoomRate</code>, <code>oAnchorTime?</code>): <code>object</code></p>
 </blockquote>
+<p>Calculate new visible horizon according to specified zoom center and zoom rate</p>
 <h4>Parameters</h4>
 <h5>nZoomRate</h5>
 <p><code>number</code></p>
@@ -153,7 +154,6 @@ horizon as the zoom center</p>
 <p>a new visible horizon</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculate new visible horizon according to specified zoom center and zoom rate</p>
 <hr>
 <h3>calZoomBase()</h3>
 <blockquote>
@@ -187,6 +187,7 @@ horizon as the zoom center</p>
 <blockquote>
 <p><strong>checkFirstDayOfWeek</strong>(<code>mSettings</code>): <code>void</code></p>
 </blockquote>
+<p>Defaults the firstDayOfWeek property to a value from locale if user didn&#39;t specify it</p>
 <h4>Parameters</h4>
 <h5>mSettings</h5>
 <p><code>object</code></p>
@@ -195,7 +196,6 @@ horizon as the zoom center</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Defaults the firstDayOfWeek property to a value from locale if user didn&#39;t specify it</p>
 <hr>
 <h3>createAxisTime()</h3>
 <blockquote>
@@ -244,14 +244,14 @@ argument to <code>sap.ui.core.CalendarType</code>. Otherwise some properties you
 <blockquote>
 <p><strong>getCalendarWeekNumbering</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 </blockquote>
+<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 <p>Value of property <code>calendarWeekNumbering</code></p>
 <h4>Since</h4>
 <p>1.110.0</p>
-<p>Gets current value of property #getCalendarWeekNumbering calendarWeekNumbering.</p>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used.</p>
 <hr>
 <h3>getCoarsestTimeLineOption()</h3>
 <blockquote>
@@ -277,15 +277,15 @@ global configuration is used.</p>
 <blockquote>
 <p><strong>getFirstDayOfWeek</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getFirstDayOfWeek firstDayOfWeek.</p>
+<p>Configures the first day of the week relevant for displaying the Gantt Chart time intervals.
+ This property has the same value type as sap.ui.core.LocaleData#getFirstDayOfWeek and by default
+uses the value from the current locale.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>firstDayOfWeek</code></p>
 <h4>Since</h4>
 <p>1.73</p>
-<p>Gets current value of property #getFirstDayOfWeek firstDayOfWeek.</p>
-<p>Configures the first day of the week relevant for displaying the Gantt Chart time intervals.
- This property has the same value type as sap.ui.core.LocaleData#getFirstDayOfWeek and by default
-uses the value from the current locale.</p>
 <hr>
 <h3>getLocale()</h3>
 <blockquote>
@@ -477,6 +477,10 @@ argument to <code>sap.ui.core.CalendarType</code>. Otherwise some properties you
 <blockquote>
 <p><strong>setCalendarWeekNumbering</strong>(<code>sCalendarWeekNumbering?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sCalendarWeekNumbering?</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
@@ -486,10 +490,6 @@ argument to <code>sap.ui.core.CalendarType</code>. Otherwise some properties you
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110.0</p>
-<p>Sets a new value for property #getCalendarWeekNumbering calendarWeekNumbering.</p>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setCoarsestTimeLineOption()</h3>
 <blockquote>
@@ -525,6 +525,11 @@ global configuration is used.</p>
 <blockquote>
 <p><strong>setFirstDayOfWeek</strong>(<code>iFirstDayOfWeek</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getFirstDayOfWeek firstDayOfWeek.</p>
+<p>Configures the first day of the week relevant for displaying the Gantt Chart time intervals.
+ This property has the same value type as sap.ui.core.LocaleData#getFirstDayOfWeek and by default
+uses the value from the current locale.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>iFirstDayOfWeek</h5>
 <p><code>number</code></p>
@@ -534,11 +539,6 @@ global configuration is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.73</p>
-<p>Sets a new value for property #getFirstDayOfWeek firstDayOfWeek.</p>
-<p>Configures the first day of the week relevant for displaying the Gantt Chart time intervals.
- This property has the same value type as sap.ui.core.LocaleData#getFirstDayOfWeek and by default
-uses the value from the current locale.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setLocale()</h3>
 <blockquote>
@@ -747,6 +747,7 @@ implement your zoom level change logic.</p>
 <blockquote>
 <p><strong>updateVisibleHorizonOnFineGranularMouseWheelZoom</strong>(<code>oTimeAtZoomCenter</code>, <code>bZoomIn</code>, <code>iZoomFactor</code>): <code>void</code></p>
 </blockquote>
+<p>Calculate and set new visible horizon for fine granular mouse wheel zoom</p>
 <h4>Parameters</h4>
 <h5>oTimeAtZoomCenter</h5>
 <p><code>Date</code></p>
@@ -761,12 +762,12 @@ implement your zoom level change logic.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculate and set new visible horizon for fine granular mouse wheel zoom</p>
 <hr>
 <h3>updateVisibleHorizonOnMouseWheelZoom()</h3>
 <blockquote>
 <p><strong>updateVisibleHorizonOnMouseWheelZoom</strong>(<code>oTimeAtZoomCenter</code>, <code>iScrollDelta</code>): <code>void</code></p>
 </blockquote>
+<p>update visible horizon for mouse wheel zoom according to configured zoom type</p>
 <h4>Parameters</h4>
 <h5>oTimeAtZoomCenter</h5>
 <p><code>Date</code></p>
@@ -778,12 +779,12 @@ implement your zoom level change logic.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>update visible horizon for mouse wheel zoom according to configured zoom type</p>
 <hr>
 <h3>updateVisibleHorizonOnStepWiseMouseWheelZoom()</h3>
 <blockquote>
 <p><strong>updateVisibleHorizonOnStepWiseMouseWheelZoom</strong>(<code>oTimeAtZoomCenter</code>, <code>bZoomIn</code>, <code>iZoomFactor</code>): <code>void</code></p>
 </blockquote>
+<p>Calculate and set new visible horizon for step-wise mouse wheel zoom</p>
 <h4>Parameters</h4>
 <h5>oTimeAtZoomCenter</h5>
 <p><code>Date</code></p>
@@ -798,7 +799,6 @@ implement your zoom level change logic.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculate and set new visible horizon for step-wise mouse wheel zoom</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -839,6 +839,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $LayerSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $LayerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $LayerSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $LayerSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.makit/sap/makit/Layer/interfaces/$LayerSettings.html">
-<meta property="og:title" content="Interface: $LayerSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $LayerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $LayerSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $LayerSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.makit/sap/makit/Layer/interfaces/$LayerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,35 +33,39 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.makit/README.html">sap.makit</a> › sap › makit › <a href="../../../../../sap.makit/sap/makit/Layer/README.html">Layer</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.makit</a> / <a href="../README.html">sap/makit/Layer</a> / $LayerSettings</p>
-<h1>Interface: $LayerSettings</h1>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.makit</a> / <a href="../README.html">sap/makit/Layer</a> / $LayerSettings</p>
+<h1><del>Interface: $LayerSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $LayerSettings } <span class="kw">from</span> <span class="str">"sap/makit/Layer"</span>;</pre>
+<p>Describes the settings that can be provided to the Layer constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - MAKIT charts have been replaced with sap.viz and vizFrame in 1.38. This control
+will not be supported anymore from 1.38.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>columns?</h3>
+<h3><del>columns?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>columns?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../Column/classes/Column.html"><code>Column</code></a> | <a href="../../Column/classes/Column.html"><code>Column</code></a>[]</p>
 </blockquote>
 <p>The data column map of the chart.</p>
 <hr>
-<h3>drawOnSecondaryAxis?</h3>
+<h3><del>drawOnSecondaryAxis?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>drawOnSecondaryAxis?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Specifiy whether this layer should be drawn on the secondary axis.</p>
 <hr>
-<h3>lineThickness?</h3>
+<h3><del>lineThickness?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>lineThickness?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Specify the line thickness of the line graph. Only applies to Line chart type.</p>
 <hr>
-<h3>primaryColorPalette?</h3>
+<h3><del>primaryColorPalette?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>primaryColorPalette?</strong>: <code>any</code></p>
 </blockquote>
@@ -70,30 +74,30 @@ screen. If not set, the chart will use the default color palette defined in the 
 will take precedence over other CombinationChart&#39;s color palette properties. Accept an array of color
 in string format or hex format. e.g. 0xff0000 &quot;red&quot; &quot;rgb(255,0,0)&quot;</p>
 <hr>
-<h3>rows?</h3>
+<h3><del>rows?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>rows?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../Row/classes/Row.html"><code>Row</code></a> | <a href="../../Row/classes/Row.html"><code>Row</code></a>[]</p>
 </blockquote>
 <p>The data rows of the chart. User should bind these to their data source</p>
 <hr>
-<h3>series?</h3>
+<h3><del>series?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>series?</strong>: <a href="../../Series/classes/Series.html"><code>Series</code></a></p>
 </blockquote>
 <p>Data region property of the chart&#39;s Series</p>
 <hr>
-<h3>type?</h3>
+<h3><del>type?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>type?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Column&quot;</code> | <code>&quot;Bar&quot;</code> | <a href="../../library/enumerations/ChartType.html"><code>ChartType</code></a> | <code>&quot;Bubble&quot;</code> | <code>&quot;Donut&quot;</code> | <code>&quot;HundredPercentStackedColumn&quot;</code> | <code>&quot;Line&quot;</code> | <code>&quot;Pie&quot;</code> | <code>&quot;StackedColumn&quot;</code> | <code>&quot;WaterfallBar&quot;</code> | <code>&quot;WaterfallColumn&quot;</code></p>
 </blockquote>
 <p>Chart type</p>
 <hr>
-<h3>values?</h3>
+<h3><del>values?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>values?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../Value/classes/Value.html"><code>Value</code></a> | <a href="../../Value/classes/Value.html"><code>Value</code></a>[]</p>
 </blockquote>
 <p>Data region property of the chart&#39;s Values</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FeedInput — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: FeedInput — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: FeedInput — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/FeedInput/classes/FeedInput.html">
 <meta property="og:title" content="Class: FeedInput — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: FeedInput — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: FeedInput — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/FeedInput/classes/FeedInput.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/FeedInput/README.html">FeedInput</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FeedInput</a> / FeedInput</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FeedInput</a> / FeedInput</p>
 <h1>Class: FeedInput</h1>
 <pre class="sig"><span class="kw">import</span> FeedInput <span class="kw">from</span> <span class="str">"sap/m/FeedInput"</span>;</pre>
+<p>The Feed Input allows the user to enter text for a new feed entry and then post it.</p>
 <h2>Since</h2>
 <p>1.22</p>
-<p>The Feed Input allows the user to enter text for a new feed entry and then post it.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -147,6 +147,7 @@ this event, the value is reset.</p>
 <blockquote>
 <p><strong>firePost</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:post post to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FeedInput$PostEventParameters.html"><code>FeedInput$PostEventParameters</code></a></p>
@@ -156,35 +157,34 @@ this event, the value is reset.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:post post to attached listeners.</p>
 <hr>
 <h3><del>getAriaLabelForPicture()</del></h3>
 <blockquote>
 <p><strong>getAriaLabelForPicture</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getAriaLabelForPicture ariaLabelForPicture.</p>
+<p>Text for Picture which will be read by screenreader. If a new ariaLabelForPicture is set, any previously
+set ariaLabelForPicture is deactivated.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>ariaLabelForPicture</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.88) - This will not have any effect in code now.</p>
-<p>Gets current value of property #getAriaLabelForPicture ariaLabelForPicture.</p>
-<p>Text for Picture which will be read by screenreader. If a new ariaLabelForPicture is set, any previously
-set ariaLabelForPicture is deactivated.</p>
 <hr>
 <h3>getButtonTooltip()</h3>
 <blockquote>
 <p><strong>getButtonTooltip</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a></p>
-<p>Value of property <code>buttonTooltip</code></p>
-<h4>Since</h4>
-<p>1.28</p>
 <p>Gets current value of property #getButtonTooltip buttonTooltip.</p>
 <p>Sets a new tooltip for Submit button. The tooltip can either be a simple string (which in most cases
 will be rendered as the title attribute of this element) or an instance of sap.ui.core.TooltipBase. If
 a new tooltip is set, any previously set tooltip is deactivated. The default value is set language dependent.</p>
 <p>Default value is <code>&quot;Submit&quot;</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a></p>
+<p>Value of property <code>buttonTooltip</code></p>
+<h4>Since</h4>
+<p>1.28</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -236,11 +236,6 @@ the icon font.</p>
 <blockquote>
 <p><strong>getIconDensityAware</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>iconDensityAware</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.88) - Image replaced by sap.m.Avatar</p>
 <p>Gets current value of property #getIconDensityAware iconDensityAware.</p>
 <p>Some mobile devices support higher resolution images while others do not. Therefore, you should provide
 image resources for all relevant densities. If the property is set to &quot;true&quot;, one or more requests are
@@ -250,45 +245,50 @@ is not available, the image control falls back to the default image, which shoul
 round-trips.</p>
 <p>Please be aware that this property is relevant only for images and not for icons.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>iconDensityAware</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.88) - Image replaced by sap.m.Avatar</p>
 <hr>
 <h3>getIconDisplayShape()</h3>
 <blockquote>
 <p><strong>getIconDisplayShape</strong>(): <a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getIconDisplayShape iconDisplayShape.</p>
+<p>Defines the shape of the icon.</p>
+<p>Default value is <code>Circle</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 <p>Value of property <code>iconDisplayShape</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getIconDisplayShape iconDisplayShape.</p>
-<p>Defines the shape of the icon.</p>
-<p>Default value is <code>Circle</code>.</p>
 <hr>
 <h3>getIconInitials()</h3>
 <blockquote>
 <p><strong>getIconInitials</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getIconInitials iconInitials.</p>
+<p>Defines the initials of the icon.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>iconInitials</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getIconInitials iconInitials.</p>
-<p>Defines the initials of the icon.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getIconSize()</h3>
 <blockquote>
 <p><strong>getIconSize</strong>(): <a href="../../AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getIconSize iconSize.</p>
+<p>Defines the size of the icon.</p>
+<p>Default value is <code>M</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 <p>Value of property <code>iconSize</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getIconSize iconSize.</p>
-<p>Defines the size of the icon.</p>
-<p>Default value is <code>M</code>.</p>
 <hr>
 <h3>getMaxLength()</h3>
 <blockquote>
@@ -366,6 +366,10 @@ will be displayed. if set to &quot;false&quot; icons are hidden</p>
 <blockquote>
 <p><strong>setAriaLabelForPicture</strong>(<code>sAriaLabelForPicture?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAriaLabelForPicture ariaLabelForPicture.</p>
+<p>Text for Picture which will be read by screenreader. If a new ariaLabelForPicture is set, any previously
+set ariaLabelForPicture is deactivated.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAriaLabelForPicture?</h5>
 <p><code>string</code></p>
@@ -375,15 +379,17 @@ will be displayed. if set to &quot;false&quot; icons are hidden</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.88) - This will not have any effect in code now.</p>
-<p>Sets a new value for property #getAriaLabelForPicture ariaLabelForPicture.</p>
-<p>Text for Picture which will be read by screenreader. If a new ariaLabelForPicture is set, any previously
-set ariaLabelForPicture is deactivated.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setButtonTooltip()</h3>
 <blockquote>
 <p><strong>setButtonTooltip</strong>(<code>sButtonTooltip?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getButtonTooltip buttonTooltip.</p>
+<p>Sets a new tooltip for Submit button. The tooltip can either be a simple string (which in most cases
+will be rendered as the title attribute of this element) or an instance of sap.ui.core.TooltipBase. If
+a new tooltip is set, any previously set tooltip is deactivated. The default value is set language dependent.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Submit&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sButtonTooltip?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a></p>
@@ -393,12 +399,6 @@ set ariaLabelForPicture is deactivated.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Sets a new value for property #getButtonTooltip buttonTooltip.</p>
-<p>Sets a new tooltip for Submit button. The tooltip can either be a simple string (which in most cases
-will be rendered as the title attribute of this element) or an instance of sap.ui.core.TooltipBase. If
-a new tooltip is set, any previously set tooltip is deactivated. The default value is set language dependent.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Submit&quot;</code>.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
@@ -470,15 +470,6 @@ the icon font.</p>
 <blockquote>
 <p><strong>setIconDensityAware</strong>(<code>bIconDensityAware?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bIconDensityAware?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>iconDensityAware</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.88) - Image replaced by sap.m.Avatar</p>
 <p>Sets a new value for property #getIconDensityAware iconDensityAware.</p>
 <p>Some mobile devices support higher resolution images while others do not. Therefore, you should provide
 image resources for all relevant densities. If the property is set to &quot;true&quot;, one or more requests are
@@ -489,11 +480,24 @@ round-trips.</p>
 <p>Please be aware that this property is relevant only for images and not for icons.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bIconDensityAware?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>iconDensityAware</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.88) - Image replaced by sap.m.Avatar</p>
 <hr>
 <h3>setIconDisplayShape()</h3>
 <blockquote>
 <p><strong>setIconDisplayShape</strong>(<code>sIconDisplayShape?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconDisplayShape iconDisplayShape.</p>
+<p>Defines the shape of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Circle</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconDisplayShape?</h5>
 <p><a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
@@ -503,15 +507,15 @@ round-trips.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getIconDisplayShape iconDisplayShape.</p>
-<p>Defines the shape of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Circle</code>.</p>
 <hr>
 <h3>setIconInitials()</h3>
 <blockquote>
 <p><strong>setIconInitials</strong>(<code>sIconInitials?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconInitials iconInitials.</p>
+<p>Defines the initials of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconInitials?</h5>
 <p><code>string</code></p>
@@ -521,15 +525,15 @@ round-trips.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getIconInitials iconInitials.</p>
-<p>Defines the initials of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setIconSize()</h3>
 <blockquote>
 <p><strong>setIconSize</strong>(<code>sIconSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconSize iconSize.</p>
+<p>Defines the size of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>M</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconSize?</h5>
 <p><a href="../../AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
@@ -539,10 +543,6 @@ round-trips.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getIconSize iconSize.</p>
-<p>Defines the size of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>M</code>.</p>
 <hr>
 <h3>setMaxLength()</h3>
 <blockquote>
@@ -685,6 +685,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

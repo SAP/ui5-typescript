@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: BaseHelperService — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: BaseHelperService — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: BaseHelperService — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/collaboration/BaseHelperService/interfaces/BaseHelperService.html">
 <meta property="og:title" content="Interface: BaseHelperService — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: BaseHelperService — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: BaseHelperService — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/collaboration/BaseHelperService/interfaces/BaseHelperService.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,29 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › collaboration › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/collaboration/BaseHelperService/README.html">BaseHelperService</a> › interfaces</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/collaboration/BaseHelperService</a> / BaseHelperService</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/collaboration/BaseHelperService</a> / BaseHelperService</p>
 <h1>Interface: BaseHelperService</h1>
 <pre class="sig"><span class="kw">import</span> BaseHelperService <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/collaboration/BaseHelperService"</span>;</pre>
+<p>Base class for the CollaborationHelpers</p>
 <h2>Since</h2>
 <p>1.108</p>
-<p>Base class for the CollaborationHelpers</p>
 <h2>Methods</h2>
+<h3>enableMinimalContactsCollaboration()</h3>
+<blockquote>
+<p><strong>enableMinimalContactsCollaboration</strong>(<code>sEmail</code>): <code>object</code></p>
+</blockquote>
+<p>Enables the Microsoft Teams collaboration functionality by providing a contact quick view with the options
+to start a message, audio call or video call</p>
+<h4>Parameters</h4>
+<h5>sEmail</h5>
+<p><code>string</code></p>
+<p>Provides the email of the contact to be used for the communication using Microsoft Teams</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Instance of the contact quick view providing the data for the collaboration functionality</p>
+<hr>
 <h3>getOptions()</h3>
 <blockquote>
 <p><strong>getOptions</strong>(<code>oParams</code>): <code>any</code>[]</p>
@@ -63,21 +77,39 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>any</code>[]</p>
 <p>Array of available options</p>
 <hr>
+<h3>getTeamsContactCollabOptions()</h3>
+<blockquote>
+<p><strong>getTeamsContactCollabOptions</strong>(): <code>object</code></p>
+</blockquote>
+<p>Provides the Microsoft Teams collaboration options for the contact quick view</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>The Microsoft Teams collaboration options</p>
+<hr>
+<h3>isContactsCollaborationSupported()</h3>
+<blockquote>
+<p><strong>isContactsCollaborationSupported</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Checks if collaboration with contacts is supported in Microsoft Teams</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>A Boolean that determines whether or not the collaboration with contacts is supported in Microsoft
+Teams</p>
+<hr>
 <h3>isFeatureFlagEnabled()</h3>
 <blockquote>
 <p><strong>isFeatureFlagEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Method tobe called to know if feature flag is enabled and based on that Adapptive Card Generation code
-can be executed or skipped.</p>
+<p>Checks whether the feature flag is enabled and executes the code for the Adaptive Card Generation accordingly</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
-<p>A boolean indicating feature flag is enabled</p>
+<p>If set to true, Adaptive Card Generation is enabled</p>
 <hr>
 <h3>share()</h3>
 <blockquote>
 <p><strong>share</strong>(<code>oOption</code>, <code>oParams</code>): <code>void</code></p>
 </blockquote>
-<p>Method to be called to trigger the &#39;Share&#39; operation</p>
+<p>Triggers the &#39;Share&#39; operation</p>
 <h4>Parameters</h4>
 <h5>oOption</h5>
 <p><code>Object</code></p>
@@ -89,10 +121,10 @@ can be executed or skipped.</p>
 <p>Title of the application which needs to be used during the integration</p>
 <h6>cardId</h6>
 <p><code>string</code></p>
-<p>ID of the Card to be stored. This need to constuct from SemanticObject_Action</p>
+<p>ID of the card that needs to be stored and is constructed from SemanticObject_Action</p>
 <h6>cardManifest</h6>
 <p><code>Object</code></p>
-<p>Card to be shared for &#39;Share as Card&#39; option</p>
+<p>Adaptive card json for a given instance of the object page used for the ‘Share as Card’ option</p>
 <h6>minifyUrlForChat</h6>
 <p><code>boolean</code></p>
 <p>Set the flag to &#39;true&#39; to minimize the URL</p>
@@ -105,6 +137,6 @@ can be executed or skipped.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

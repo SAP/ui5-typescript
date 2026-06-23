@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Extension — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Extension — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Extension — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/Extension/classes/Extension.html">
 <meta property="og:title" content="Class: Extension — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Extension — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Extension — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/Extension/classes/Extension.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,20 +33,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../sap.ushell/sap/ushell/services/Extension/README.html">Extension</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/Extension</a> / Extension</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/Extension</a> / Extension</p>
 <h1>Class: Extension</h1>
 <pre class="sig"><span class="kw">import</span> Extension <span class="kw">from</span> <span class="str">"sap/ushell/services/Extension"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<h2>Since</h2>
-<p>1.120.0
- (since 1.120.0) - Restriction: API calls might be ignored for apps running in an iframe</p>
 <p>The Unified Shell&#39;s Extension service. Allows adding extensions on the user&#39;s home page.</p>
 <p><strong>Note:</strong> To retrieve a valid instance of this service, it is necessary to call <code>sap.ushell.Container.getServiceAsync(&quot;Extension&quot;)</code>.
 For details, see sap.ushell.services.Container#getServiceAsync.</p>
 <p> All extension items and extension areas are instantiated as invisible. You have to call .show&lt;...&gt; to
 make them visible.</p>
+<h2>Since</h2>
+<p>1.120.0
+ (since 1.120.0) - Restriction: API calls might be ignored for apps running in an iframe</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -61,6 +61,9 @@ make them visible.</p>
 <p><strong>addUserSettingsEntry</strong>(<code>properties</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Adds an entry to the user settings dialog box including the UI control that appears when the user clicks
+the new entry, and handling of user settings actions such as SAVE and CANCEL. <strong>Restriction:</strong> Might
+be ignored for apps running in an iframe</p>
 <h4>Parameters</h4>
 <h5>properties</h5>
 <p>The data of the new added user settings entry.</p>
@@ -94,15 +97,15 @@ a string from the translation bundle.</p>
 <p>Resolves once the settings entry was added.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Adds an entry to the user settings dialog box including the UI control that appears when the user clicks
-the new entry, and handling of user settings actions such as SAVE and CANCEL. <strong>Restriction:</strong> Might
-be ignored for apps running in an iframe</p>
 <hr>
 <h3>createFooter()</h3>
 <blockquote>
 <p><strong>createFooter</strong>(<code>controlProperties</code>, <code>parameters?</code>): <code>Promise</code>&lt;<a href="../Footer/classes/Footer.html"><code>Footer</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Creates a new footer which is positioned below the launchpad content.</p>
+<p><strong>Note:</strong> Only one footer is displayed at once. Any new footer will replace the previous one <strong>Restriction:</strong>
+Might be ignored for apps running in an iframe</p>
 <h4>Parameters</h4>
 <h5>controlProperties</h5>
 <p><code>object</code></p>
@@ -117,15 +120,13 @@ be ignored for apps running in an iframe</p>
 <p>The newly created footer.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Creates a new footer which is positioned below the launchpad content.</p>
-<p><strong>Note:</strong> Only one footer is displayed at once. Any new footer will replace the previous one <strong>Restriction:</strong>
-Might be ignored for apps running in an iframe</p>
 <hr>
 <h3>createHeaderItem()</h3>
 <blockquote>
 <p><strong>createHeaderItem</strong>(<code>controlProperties</code>, <code>parameters?</code>): <code>Promise</code>&lt;<a href="../Item/classes/Item.html"><code>Item</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Creates a header item in the shell header.</p>
 <h4>Parameters</h4>
 <h5>controlProperties</h5>
 <p><code>object</code></p>
@@ -140,13 +141,15 @@ Might be ignored for apps running in an iframe</p>
 <p>The newly created header item.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Creates a header item in the shell header.</p>
 <hr>
 <h3>createSubHeader()</h3>
 <blockquote>
 <p><strong>createSubHeader</strong>(<code>controlProperties</code>, <code>parameters?</code>): <code>Promise</code>&lt;<a href="../Item/classes/Item.html"><code>Item</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Creates a new sub header which is positioned below the header.</p>
+<p><strong>Note:</strong> Only one sub header is displayed at once <strong>Restriction:</strong> Might be ignored for apps
+running in an iframe</p>
 <h4>Parameters</h4>
 <h5>controlProperties</h5>
 <p><code>object</code></p>
@@ -161,15 +164,13 @@ Might be ignored for apps running in an iframe</p>
 <p>The newly created sub header.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Creates a new sub header which is positioned below the header.</p>
-<p><strong>Note:</strong> Only one sub header is displayed at once <strong>Restriction:</strong> Might be ignored for apps
-running in an iframe</p>
 <hr>
 <h3>createUserAction()</h3>
 <blockquote>
 <p><strong>createUserAction</strong>(<code>controlProperties</code>, <code>parameters?</code>): <code>Promise</code>&lt;<a href="../Item/classes/Item.html"><code>Item</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Creates a user action in the user action menu.</p>
 <h4>Parameters</h4>
 <h5>controlProperties</h5>
 <p><code>object</code></p>
@@ -184,34 +185,33 @@ running in an iframe</p>
 <p>The newly created user action.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Creates a user action in the user action menu.</p>
 <hr>
 <h3>getSidePane()</h3>
 <blockquote>
 <p><strong>getSidePane</strong>(): <code>Promise</code>&lt;<a href="../SidePane/classes/SidePane.html"><code>SidePane</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Returns the API for the SidePane which is located next to the launchpad content. <strong>Restriction:</strong>
+Might be ignored for apps running in an iframe</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<a href="../SidePane/classes/SidePane.html"><code>SidePane</code></a>&gt;</p>
 <p>The SidePane.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Returns the API for the SidePane which is located next to the launchpad content. <strong>Restriction:</strong>
-Might be ignored for apps running in an iframe</p>
 <hr>
 <h3>getToolArea()</h3>
 <blockquote>
 <p><strong>getToolArea</strong>(): <code>Promise</code>&lt;<a href="../ToolArea/classes/ToolArea.html"><code>ToolArea</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Returns the API for the ToolArea which is located next to the launchpad content. <strong>Restriction:</strong>
+Might be ignored for apps running in an iframe</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<a href="../ToolArea/classes/ToolArea.html"><code>ToolArea</code></a>&gt;</p>
 <p>The ToolArea.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Returns the API for the ToolArea which is located next to the launchpad content. <strong>Restriction:</strong>
-Might be ignored for apps running in an iframe</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $GridContainerSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $GridContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $GridContainerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/GridContainer/interfaces/$GridContainerSettings.html">
 <meta property="og:title" content="Interface: $GridContainerSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $GridContainerSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $GridContainerSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.f/sap/f/GridContainer/interfaces/$GridContainerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/GridContainer/README.html">GridContainer</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/GridContainer</a> / $GridContainerSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/GridContainer</a> / $GridContainerSettings</p>
 <h1>Interface: $GridContainerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $GridContainerSettings } <span class="kw">from</span> <span class="str">"sap/f/GridContainer"</span>;</pre>
+<p>Describes the settings that can be provided to the GridContainer constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -48,11 +49,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>optional</code> <strong>allowDenseFill?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Increases the density when arranging the items. Smaller items will take up all of the available space,
 ignoring their order.</p>
 <p><strong>Note:</strong> The order of the items is ignored. An item which is normally at the bottom, can appear on top.</p>
+<p> (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <hr>
 <h3>ariaDescribedBy?</h3>
 <blockquote>
@@ -100,12 +101,12 @@ the <code>GridContainer</code>, instead of the device screen size (media Query).
 <p><code>optional</code> <strong>inlineBlockLayout?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Makes the grid items act like an inline-block elements. They will be arranged in rows with height equal
 to the highest item in the row.</p>
 <p><strong>Note:</strong> If set to <code>true</code> the properties <code>rowSize</code> for grid layout, and <code>minRows</code> and <code>rows</code> per item
 will be ignored.</p>
+<p> (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <hr>
 <h3>items?</h3>
 <blockquote>
@@ -163,19 +164,19 @@ in only a single aggregation.</p>
 <p><code>optional</code> <strong>layoutXS?</strong>: <a href="../../GridContainerSettings/classes/GridContainerSettings.html"><code>GridContainerSettings</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>The sap.f.GridContainerSettings applied for size &quot;XS&quot;. Range: up to 374px.</p>
+<p> (since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <hr>
 <h3>minHeight?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minHeight?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release.</p>
 <p>Defines the minimum height of the grid.</p>
 <p>Allows an empty grid to be available as a drop target.</p>
+<p> (since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release.</p>
 <hr>
 <h3>snapToRow?</h3>
 <blockquote>
@@ -190,6 +191,6 @@ may be done before its official public release.</p>
 </blockquote>
 <p>Defines the width of the control.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

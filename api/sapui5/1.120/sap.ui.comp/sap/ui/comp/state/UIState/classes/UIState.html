@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: UIState — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: UIState — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: UIState — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/state/UIState/classes/UIState.html">
 <meta property="og:title" content="Class: UIState — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: UIState — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: UIState — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/state/UIState/classes/UIState.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › state › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/state/UIState/README.html">UIState</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/state/UIState</a> / UIState</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/state/UIState</a> / UIState</p>
 <h1>Class: UIState</h1>
 <pre class="sig"><span class="kw">import</span> UIState <span class="kw">from</span> <span class="str">"sap/ui/comp/state/UIState"</span>;</pre>
+<p>Creates a new instance of an UIState class.</p>
 <h2>Since</h2>
 <p>1.50</p>
-<p>Creates a new instance of an UIState class.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></li>
@@ -339,6 +339,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><code>static</code> <strong>calcSemanticDates</strong>(<code>oSelectionVariant</code>, <code>mData</code>): <code>Record</code>&lt;<code>string</code>, <code>Object</code>[]&gt;</p>
 </blockquote>
+<p>Constructs the value state out of a given selection variant and the current model data</p>
 <h4>Parameters</h4>
 <h5>oSelectionVariant</h5>
 <p><a href="../type-aliases/SelectionVariantParam.html"><code>SelectionVariantParam</code></a></p>
@@ -351,12 +352,12 @@ of the syntax of the settings object.</p>
 <p>the values texts format</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Constructs the value state out of a given selection variant and the current model data</p>
 <hr>
 <h3>calculateValueTexts()</h3>
 <blockquote>
 <p><code>static</code> <strong>calculateValueTexts</strong>(<code>oSelectionVariant</code>, <code>mData</code>): <code>Record</code>&lt;<code>string</code>, <code>Object</code>[]&gt;</p>
 </blockquote>
+<p>Constructs the value state out of a given selection variant and the current model data</p>
 <h4>Parameters</h4>
 <h5>oSelectionVariant</h5>
 <p><a href="../type-aliases/SelectionVariantParam.html"><code>SelectionVariantParam</code></a></p>
@@ -369,12 +370,12 @@ of the syntax of the settings object.</p>
 <p>the values texts format</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Constructs the value state out of a given selection variant and the current model data</p>
 <hr>
 <h3>createFromSelectionAndPresentationVariantAnnotation()</h3>
 <blockquote>
 <p><code>static</code> <strong>createFromSelectionAndPresentationVariantAnnotation</strong>(<code>sVariantName</code>, <code>oSelectionVariantAnnotation</code>, <code>oPresentationVariantAnnotation</code>): <code>UIState</code></p>
 </blockquote>
+<p>Converts PresentationVariant annotation to UIState object.</p>
 <h4>Parameters</h4>
 <h5>sVariantName</h5>
 <p><code>string</code></p>
@@ -390,12 +391,12 @@ of the syntax of the settings object.</p>
 <p>UIState object containing converted parts of SelectionVariant and PresentationVariant annotations</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Converts PresentationVariant annotation to UIState object.</p>
 <hr>
 <h3>determineFiltersWithOnlyKeyValues()</h3>
 <blockquote>
 <p><code>static</code> <strong>determineFiltersWithOnlyKeyValues</strong>(<code>oValueTexts</code>, <code>oSelectionVariant</code>, <code>aIgnoreSelOptionNames</code>): <code>Record</code>&lt;<code>string</code>, <code>Object</code>[]&gt;</p>
 </blockquote>
+<p>Determines the filter names with value keys where the description is not available.</p>
 <h4>Parameters</h4>
 <h5>oValueTexts</h5>
 <p><code>object</code></p>
@@ -413,12 +414,12 @@ of the syntax of the settings object.</p>
 <p>1.75</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Determines the filter names with value keys where the description is not available.</p>
 <hr>
 <h3>enrichWithSemanticDates()</h3>
 <blockquote>
 <p><code>static</code> <strong>enrichWithSemanticDates</strong>(<code>sPayload</code>, <code>oSemanticDates</code>): <code>string</code></p>
 </blockquote>
+<p>Enriches the internal filter bar value format with the semantic date information.</p>
 <h4>Parameters</h4>
 <h5>sPayload</h5>
 <p><code>string</code></p>
@@ -431,12 +432,12 @@ of the syntax of the settings object.</p>
 <p>enriched the filter bar inner data format</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Enriches the internal filter bar value format with the semantic date information.</p>
 <hr>
 <h3>enrichWithValueTexts()</h3>
 <blockquote>
 <p><code>static</code> <strong>enrichWithValueTexts</strong>(<code>sPayload</code>, <code>oValueTexts</code>): <code>string</code></p>
 </blockquote>
+<p>Enriches the internal filter bar value format with the information from the value state.</p>
 <h4>Parameters</h4>
 <h5>sPayload</h5>
 <p><code>string</code></p>
@@ -449,7 +450,6 @@ of the syntax of the settings object.</p>
 <p>enriched the filter bar inner data format</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Enriches the internal filter bar value format with the information from the value state.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -490,6 +490,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

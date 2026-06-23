@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $DateTimeInputSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $DateTimeInputSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $DateTimeInputSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $DateTimeInputSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/DateTimeInput/interfaces/$DateTimeInputSettings.html">
-<meta property="og:title" content="Interface: $DateTimeInputSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $DateTimeInputSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $DateTimeInputSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $DateTimeInputSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/DateTimeInput/interfaces/$DateTimeInputSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,25 +33,28 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/DateTimeInput/README.html">DateTimeInput</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/DateTimeInput</a> / $DateTimeInputSettings</p>
-<h1>Interface: $DateTimeInputSettings</h1>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/DateTimeInput</a> / $DateTimeInputSettings</p>
+<h1><del>Interface: $DateTimeInputSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $DateTimeInputSettings } <span class="kw">from</span> <span class="str">"sap/m/DateTimeInput"</span>;</pre>
+<p>Describes the settings that can be provided to the DateTimeInput constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.32.8) - replaced by sap.m.DatePicker, sap.m.TimePicker or sap.m.DateTimePicker</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>ariaLabelledBy?</h3>
+<h3><del>ariaLabelledBy?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs that label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<p>Association to controls / IDs that label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <hr>
-<h3>change?</h3>
+<h3><del>change?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>change?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -62,13 +65,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>dateValue?</h3>
+<h3><del>dateValue?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>dateValue?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>This property as JavaScript Date Object can be used to assign a new value which is independent from valueFormat.</p>
 <hr>
-<h3>displayFormat?</h3>
+<h3><del>displayFormat?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>displayFormat?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
@@ -77,65 +80,65 @@ If you use data-binding on value property with type sap.ui.model.type.Date then 
 or the latter wins. If the user&#39;s browser supports native picker then this property is overwritten by
 browser with locale settings.</p>
 <hr>
-<h3>editable?</h3>
+<h3><del>editable?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>editable?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.12.0</p>
 <p>Defines whether the control can be modified by the user or not. <strong>Note:</strong> A user can tab to non-editable
 control, highlight it, and copy the text from it.</p>
+<h4>Since</h4>
+<p>1.12.0</p>
 <hr>
-<h3>enabled?</h3>
+<h3><del>enabled?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Indicates whether the user can interact with the control or not. <strong>Note:</strong> Disabled controls cannot be
 focused and they are out of the tab-chain.</p>
 <hr>
-<h3>name?</h3>
+<h3><del>name?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>name?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Defines the name of the control for the purposes of form submission.</p>
 <hr>
-<h3>placeholder?</h3>
+<h3><del>placeholder?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>placeholder?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
 <hr>
-<h3>showValueStateMessage?</h3>
+<h3><del>showValueStateMessage?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showValueStateMessage?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Indicates whether the value state message should be shown or not.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Indicates whether the value state message should be shown or not.</p>
 <hr>
-<h3>textAlign?</h3>
+<h3><del>textAlign?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>textAlign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Initial&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Defines the horizontal alignment of the text that is shown inside the input field.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>Defines the horizontal alignment of the text that is shown inside the input field.</p>
 <hr>
-<h3>textDirection?</h3>
+<h3><del>textDirection?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>textDirection?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<p>Defines the text directionality of the input field, e.g. <code>RTL</code>, <code>LTR</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Defines the text directionality of the input field, e.g. <code>RTL</code>, <code>LTR</code></p>
 <hr>
-<h3>type?</h3>
+<h3><del>type?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>type?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Date&quot;</code> | <a href="../../library/enumerations/DateTimeInputType.html"><code>DateTimeInputType</code></a> | <code>&quot;DateTime&quot;</code> | <code>&quot;Time&quot;</code></p>
 </blockquote>
 <p>Type of DateTimeInput (e.g. Date, Time, DateTime)</p>
 <hr>
-<h3>value?</h3>
+<h3><del>value?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>value?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
@@ -143,7 +146,7 @@ focused and they are out of the tab-chain.</p>
 <p>The new value must be in the format set by <code>valueFormat</code>.</p>
 <p>The &quot;Now&quot; literal can also be assigned as a parameter to show the current date and/or time.</p>
 <hr>
-<h3>valueFormat?</h3>
+<h3><del>valueFormat?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>valueFormat?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
@@ -151,27 +154,27 @@ focused and they are out of the tab-chain.</p>
 settings. You can only set and get value in this format. If you use data-binding on value property with
 type sap.ui.model.type.Date you can ignore this property or the latter wins.</p>
 <hr>
-<h3>valueState?</h3>
+<h3><del>valueState?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>valueState?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
 <p>Visualizes the validation state of the control, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>.</p>
 <hr>
-<h3>valueStateText?</h3>
+<h3><del>valueStateText?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>valueStateText?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.26.0</p>
 <p>Defines the text that appears in the value state message pop-up. If this is not specified, a default
 text is shown from the resource bundle.</p>
+<h4>Since</h4>
+<p>1.26.0</p>
 <hr>
-<h3>width?</h3>
+<h3><del>width?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Defines the width of the control.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

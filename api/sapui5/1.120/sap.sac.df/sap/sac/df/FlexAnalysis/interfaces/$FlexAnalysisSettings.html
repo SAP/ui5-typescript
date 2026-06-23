@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $FlexAnalysisSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FlexAnalysisSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $FlexAnalysisSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.sac.df/sap/sac/df/FlexAnalysis/interfaces/$FlexAnalysisSettings.html">
 <meta property="og:title" content="Interface: $FlexAnalysisSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FlexAnalysisSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $FlexAnalysisSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.sac.df/sap/sac/df/FlexAnalysis/interfaces/$FlexAnalysisSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.sac.df/README.html">sap.sac.df</a> › sap › sac › df › <a href="../../../../../../sap.sac.df/sap/sac/df/FlexAnalysis/README.html">FlexAnalysis</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.sac.df</a> / <a href="../README.html">sap/sac/df/FlexAnalysis</a> / $FlexAnalysisSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.sac.df</a> / <a href="../README.html">sap/sac/df/FlexAnalysis</a> / $FlexAnalysisSettings</p>
 <h1>Interface: $FlexAnalysisSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FlexAnalysisSettings } <span class="kw">from</span> <span class="str">"sap/sac/df/FlexAnalysis"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the FlexAnalysis constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,114 +49,133 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>autoUpdate?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Indicates if Flexible Analysis component automatically requests the ResultSet for the shown data source</p>
 <hr>
 <h3>clientIdentifier?</h3>
 <blockquote>
 <p><code>optional</code> <strong>clientIdentifier?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Client Identifier to be used for underlying InA queries</p>
 <hr>
 <h3>configId?</h3>
 <blockquote>
 <p><code>optional</code> <strong>configId?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>configuration Id</p>
 <hr>
 <h3>configObject?</h3>
 <blockquote>
 <p><code>optional</code> <strong>configObject?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>JSON object containing the configuration (alternative to configurationURI)</p>
 <hr>
 <h3>configurationURI?</h3>
 <blockquote>
 <p><code>optional</code> <strong>configurationURI?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>URI of the advanced configuration to be fetched</p>
 <hr>
 <h3>customPanels?</h3>
 <blockquote>
 <p><code>optional</code> <strong>customPanels?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a> | <a href="../../FlexAnalysisPanel/classes/FlexAnalysisPanel.html"><code>FlexAnalysisPanel</code></a>[]</p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Custom panels for the flexible analysis control</p>
 <hr>
 <h3>dataProvider?</h3>
 <blockquote>
 <p><code>optional</code> <strong>dataProvider?</strong>: <code>any</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Name of the Data Provider from the corresponding MultiDimModel to be used</p>
 <hr>
 <h3>dataSource?</h3>
 <blockquote>
 <p><code>optional</code> <strong>dataSource?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Data source (Query name/ View, InA model etc) to be used to get the data from</p>
 <hr>
 <h3>environment?</h3>
 <blockquote>
 <p><code>optional</code> <strong>environment?</strong>: <code>string</code>[] | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Additional Flag to be passed to the control TODO: Document the possibilities</p>
 <hr>
 <h3>height?</h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Height of the component</p>
 <hr>
 <h3>hideDesignPanel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideDesignPanel?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets if the Design Panel of FlexAnalysis is hidden</p>
 <hr>
 <h3>hideFilterLine?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideFilterLine?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets if the filter of FlexAnalysis is hidden</p>
 <hr>
 <h3>hideLandingPage?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideLandingPage?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets if the landing page of FlexAnalysis is hidden</p>
 <hr>
 <h3>hideMenuBar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideMenuBar?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets if the menu bar of FlexAnalysis is hidden</p>
 <hr>
 <h3>hideSideNavigation?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideSideNavigation?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets if the side navigation bar of FlexAnalysis is hidden</p>
 <hr>
 <h3>hideStatusBar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideStatusBar?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets if the status bar of FlexAnalysis is hidden</p>
 <hr>
 <h3>hideStylePanel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideStylePanel?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets if the Style Panel of FlexAnalysis is hidden</p>
 <hr>
 <h3>hideToolBar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideToolBar?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets if the toolbar of FlexAnalysis is hidden</p>
 <hr>
 <h3>implicitVariableHandling?</h3>
 <blockquote>
 <p><code>optional</code> <strong>implicitVariableHandling?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Indicates if the variable are handled internal handling by FlexAnalysis. If set to false it is done via
 corresponding MultiDimModel</p>
 <hr>
@@ -162,24 +183,28 @@ corresponding MultiDimModel</p>
 <blockquote>
 <p><code>optional</code> <strong>keepAliveInterval?</strong>: <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Interval to keep the InA session alive. values less than 1 deactivates the keep alive handling</p>
 <hr>
 <h3>multiDimModelId?</h3>
 <blockquote>
 <p><code>optional</code> <strong>multiDimModelId?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Id of the MultiDimModel to use</p>
 <hr>
 <h3>showTitle?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showTitle?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Indicates Flexible Analysis component should display the component title</p>
 <hr>
 <h3>styleTemplateName?</h3>
 <blockquote>
 <p><code>optional</code> <strong>styleTemplateName?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Indicates if the variable are handled internal handling by FlexAnalysis. If set to false it is done via
 corresponding MultiDimModel</p>
 <hr>
@@ -187,26 +212,30 @@ corresponding MultiDimModel</p>
 <blockquote>
 <p><code>optional</code> <strong>systemName?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>System to take data from. If not set or set to &quot;local&quot; current url will be used to determine the system</p>
 <hr>
 <h3>systemType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>systemType?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../types/SystemType/enumerations/SystemType.html"><code>SystemType</code></a> | <code>&quot;ABAP_MDS&quot;</code> | <code>&quot;BW&quot;</code> | <code>&quot;DWC&quot;</code> | <code>&quot;HANA&quot;</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Type the system to connect to get data</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
 <p><code>optional</code> <strong>title?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Sets title to be shown in the control. If not set the name of the corresponding back-end query is used</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Width of the component</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

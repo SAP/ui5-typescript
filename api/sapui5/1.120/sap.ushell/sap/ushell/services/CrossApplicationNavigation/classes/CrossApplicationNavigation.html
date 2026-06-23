@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/CrossApplicationNavigation/classes/CrossApplicationNavigation.html">
 <meta property="og:title" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: CrossApplicationNavigation~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/CrossApplicationNavigation/classes/CrossApplicationNavigation.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../sap.ushell/sap/ushell/services/CrossApplicationNavigation/README.html">CrossApplicationNavigation</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/CrossApplicationNavigation</a> / CrossApplicationNavigation</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/CrossApplicationNavigation</a> / CrossApplicationNavigation</p>
 <h1><del>Class: CrossApplicationNavigation</del></h1>
 <pre class="sig"><span class="kw">import</span> CrossApplicationNavigation <span class="kw">from</span> <span class="str">"sap/ushell/services/CrossApplicationNavigation"</span>;</pre>
-<h2>Since</h2>
-<p>1.15.0</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - Please use sap.ushell.services.Navigation instead</p>
 <p>The Unified Shell&#39;s CrossApplicationNavigation service. Allows navigating to &quot;external&quot; targets outside
 of the currently running app (but still in scope of the current Fiori launchpad) or to create links to
 such external targets.</p>
@@ -85,6 +81,10 @@ inside and outside the system.</p>
 <p>Note: When constructing large URLs, the URLs may be shortened and persisted on a database server for
 prolonged time, the actual data is persisted under a key accessible to any User (guessing the key).</p>
 <p>The same restrictions apply for the Application state.</p>
+<h2>Since</h2>
+<p>1.15.0</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - Please use sap.ushell.services.Navigation instead</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -125,6 +125,7 @@ it into a long url with all parameters expanded</p>
 <blockquote>
 <p><strong>getDistinctSemanticObjects</strong>(): <code>Promise</code></p>
 </blockquote>
+<p>Returns a list of semantic objects of the intents the current user can navigate to.</p>
 <h4>Returns</h4>
 <p><code>Promise</code></p>
 <p>A promise that resolves with an array of strings representing the semantic objects of the intents
@@ -133,12 +134,13 @@ duplicates. NOTE: the caller should not rely on the specific order the semantic 
 the returned array.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Returns a list of semantic objects of the intents the current user can navigate to.</p>
 <hr>
 <h3><del>getLinks()</del></h3>
 <blockquote>
 <p><strong>getLinks</strong>(<code>vArgs?</code>): <code>Promise</code></p>
 </blockquote>
+<p>Resolves the given semantic object (and action) and business parameters to a list of links available
+to the user.</p>
 <h4>Parameters</h4>
 <h5>vArgs?</h5>
 <p>{ <code>action?</code>: <code>string</code>; <code>appStateKey?</code>: <code>string</code>; <code>compactIntents?</code>: <code>boolean</code>; <code>params?</code>: <code>object</code>; <code>semanticObject?</code>: <code>string</code>; <code>sortResultsBy?</code>: <code>string</code>; <code>tags?</code>: <code>string</code>[]; <code>treatTechHintAsFilter?</code>: <code>boolean</code>; <code>ui5Component</code>: <a href="../../../../../../sap.ui.core/sap/ui/core/Component/classes/Component.html"><code>Component</code></a>; <code>withAtLeastOneUsedParam?</code>: <code>boolean</code>; } | <code>object</code>[]</p>
@@ -371,14 +373,19 @@ two arguments, the promise would resolve as follows:</p>
 
 1.38.0
 
-Resolves the given semantic object (and action) and business parameters to a list of links available
-to the user.
-
 ***
 
 ### ~~getPrimaryIntent()~~
 
 &gt; **getPrimaryIntent**(`sSemanticObject`, `mParameters?`): [`Deferred`](../../../../../../sap.ui.core/namespaces/jQuery/type-aliases/Deferred.html)
+
+For a given semantic object, this method considers all actions associated with the semantic object and
+returns the one tagged as a &quot;primaryAction&quot;. If no inbound tagged as &quot;primaryAction&quot; exists, then the
+intent of the first inbound (after sorting has been applied) matching the action &quot;displayFactSheet&quot;.
+
+The primary intent is determined by querying sap.ushell.services.CrossApplicationNavigation#getLinks
+with the given semantic object and optional parameter. Then the resulting list is filtered to the outcome
+that a single item remains.
 
 #### Parameters
 
@@ -415,17 +422,13 @@ following form:
 <p> Otherwise, the returned promise will resolve to null when no relevant link object exists.</p>
 <h4>Since</h4>
 <p>1.48</p>
-<p>For a given semantic object, this method considers all actions associated with the semantic object and
-returns the one tagged as a &quot;primaryAction&quot;. If no inbound tagged as &quot;primaryAction&quot; exists, then the
-intent of the first inbound (after sorting has been applied) matching the action &quot;displayFactSheet&quot;.</p>
-<p>The primary intent is determined by querying sap.ushell.services.CrossApplicationNavigation#getLinks
-with the given semantic object and optional parameter. Then the resulting list is filtered to the outcome
-that a single item remains.</p>
 <hr>
 <h3><del>getSemanticObjectLinks()</del></h3>
 <blockquote>
 <p><strong>getSemanticObjectLinks</strong>(<code>sSemanticObject</code>, <code>mParameters?</code>, <code>bIgnoreFormFactor?</code>, <code>oComponent?</code>, <code>sAppStateKey?</code>, <code>bCompactIntents?</code>): <code>Promise</code></p>
 </blockquote>
+<p>Resolves a given semantic object and business parameters to a list of links, taking into account the
+form factor of the current device.</p>
 <h4>Parameters</h4>
 <h5>sSemanticObject</h5>
 <p><code>string</code></p>
@@ -474,8 +477,6 @@ Note that the intent is in <strong>internal</strong> format, before putting it i
 <p>1.19.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - Please use #getLinks instead.</p>
-<p>Resolves a given semantic object and business parameters to a list of links, taking into account the
-form factor of the current device.</p>
 <hr>
 <h3><del>historyBack()</del></h3>
 <blockquote>
@@ -494,6 +495,11 @@ If no argument is provided it will navigate back 1 step.</p>
 <blockquote>
 <p><strong>hrefForAppSpecificHash</strong>(<code>sAppHash</code>): <code>string</code></p>
 </blockquote>
+<p>Returns a string which can be put into the DOM (e.g. in a link tag) given an application specific hash
+suffix</p>
+<p>Example: <code>hrefForAppSpecificHash(&quot;View1/details/0/&quot;)</code> returns <code>#SemanticObject-action&amp;/View1/details/0/</code>
+if the current application runs in the shell and was started using &quot;SemanticObject-action&quot; as shell navigation
+hash</p>
 <h4>Parameters</h4>
 <h5>sAppHash</h5>
 <p><code>string</code></p>
@@ -507,16 +513,16 @@ and the specified application specific hash suffix</p>
 <p>1.15.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.94) - Please use #hrefForAppSpecificHashAsync instead.</p>
-<p>Returns a string which can be put into the DOM (e.g. in a link tag) given an application specific hash
-suffix</p>
-<p>Example: <code>hrefForAppSpecificHash(&quot;View1/details/0/&quot;)</code> returns <code>#SemanticObject-action&amp;/View1/details/0/</code>
-if the current application runs in the shell and was started using &quot;SemanticObject-action&quot; as shell navigation
-hash</p>
 <hr>
 <h3><del>hrefForAppSpecificHashAsync()</del></h3>
 <blockquote>
 <p><strong>hrefForAppSpecificHashAsync</strong>(<code>sAppHash</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Returns a Promise which resolves a string that can be put into the DOM (e.g. in a link tag) given an
+application specific hash suffix</p>
+<p>Example: <code>hrefForAppSpecificHashAsync(&quot;View1/details/0/&quot;)</code> returns a Promise that resolves: <code>#SemanticObject-action&amp;/View1/details/0/</code>
+if the current application runs in the shell and was started using &quot;SemanticObject-action&quot; as shell navigation
+hash</p>
 <h4>Parameters</h4>
 <h5>sAppHash</h5>
 <p><code>string</code></p>
@@ -528,17 +534,14 @@ bytes when serialized as UTF-8.</p>
 shell navigation target and the specified application specific hash suffix</p>
 <h4>Since</h4>
 <p>1.94.0</p>
-<p>Returns a Promise which resolves a string that can be put into the DOM (e.g. in a link tag) given an
-application specific hash suffix</p>
-<p>Example: <code>hrefForAppSpecificHashAsync(&quot;View1/details/0/&quot;)</code> returns a Promise that resolves: <code>#SemanticObject-action&amp;/View1/details/0/</code>
-if the current application runs in the shell and was started using &quot;SemanticObject-action&quot; as shell navigation
-hash</p>
 <hr>
 <h3><del>hrefForExternal()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>hrefForExternal</strong>(<code>oArgs</code>, <code>oComponent</code>, <code>bAsync</code>): <code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Returns a string which can be put into the DOM (e.g. in a link tag). <strong>Note:</strong> The generated url / url
+segment must not be used as <code>shellHash</code> in the target definition of sap.ushell.services.CrossApplicationNavigation#toExternal</p>
 <h5>Parameters</h5>
 <h6>oArgs</h6>
 <p><code>object</code></p>
@@ -619,12 +622,12 @@ provided data is returned. The sap-xapp-state-data parameter does not appear in 
 <p>1.15.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.98) - Please use #hrefForExternalAsync instead.</p>
-<p>Returns a string which can be put into the DOM (e.g. in a link tag). <strong>Note:</strong> The generated url / url
-segment must not be used as <code>shellHash</code> in the target definition of sap.ushell.services.CrossApplicationNavigation#toExternal</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>hrefForExternal</strong>(<code>oArgs</code>, <code>bAsync</code>): <code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Returns a string which can be put into the DOM (e.g. in a link tag). <strong>Note:</strong> The generated url / url
+segment must not be used as <code>shellHash</code> in the target definition of sap.ushell.services.CrossApplicationNavigation#toExternal</p>
 <h5>Parameters</h5>
 <h6>oArgs</h6>
 <p><code>object</code></p>
@@ -699,13 +702,13 @@ provided data is returned. The sap-xapp-state-data parameter does not appear in 
 <p>1.15.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.98) - Please use #hrefForExternalAsync instead.</p>
-<p>Returns a string which can be put into the DOM (e.g. in a link tag). <strong>Note:</strong> The generated url / url
-segment must not be used as <code>shellHash</code> in the target definition of sap.ushell.services.CrossApplicationNavigation#toExternal</p>
 <hr>
 <h3><del>hrefForExternalAsync()</del></h3>
 <blockquote>
 <p><strong>hrefForExternalAsync</strong>(<code>oArgs</code>, <code>oComponent?</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Returns a promise resolving to a URL that launches an app with certain parameters. The URL can be used
+to define a link to a Fiori application, for example.</p>
 <h4>Parameters</h4>
 <h5>oArgs</h5>
 <p><code>object</code></p>
@@ -775,13 +778,14 @@ launch and application with certain data, for example:</p>
 provided data is returned. The sap-xapp-state-data parameter does not appear in the generated link.</p>
 <h4>Since</h4>
 <p>1.94.0</p>
-<p>Returns a promise resolving to a URL that launches an app with certain parameters. The URL can be used
-to define a link to a Fiori application, for example.</p>
 <hr>
 <h3><del>isInitialNavigation()</del></h3>
 <blockquote>
 <p><strong>isInitialNavigation</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Checks wether the FLP currently shows the initially loaded navigation target (i.e. the intent it was
+started with). This method can be used to e.g. detect whether the current app was started directly, that
+is, without a navigation from another app or FLP home.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the initial navigation occurred.</p>
@@ -789,27 +793,27 @@ to define a link to a Fiori application, for example.</p>
 <p>1.36.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.94) - Please use #isInitialNavigationAsync instead.</p>
-<p>Checks wether the FLP currently shows the initially loaded navigation target (i.e. the intent it was
-started with). This method can be used to e.g. detect whether the current app was started directly, that
-is, without a navigation from another app or FLP home.</p>
 <hr>
 <h3><del>isInitialNavigationAsync()</del></h3>
 <blockquote>
 <p><strong>isInitialNavigationAsync</strong>(): <code>Promise</code>&lt;<code>boolean</code>&gt;</p>
 </blockquote>
+<p>Checks whether the FLP has performed the first navigation. This method can be used to detect whether
+the current app was started directly, that is, without a previous navigation to another app, to the FLP
+home, or another target that adds an entry in the browser history.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>boolean</code>&gt;</p>
 <p>This promise resolves with a boolean indicating if the current navigation is considered initial</p>
 <h4>Since</h4>
 <p>1.94.0</p>
-<p>Checks whether the FLP has performed the first navigation. This method can be used to detect whether
-the current app was started directly, that is, without a previous navigation to another app, to the FLP
-home, or another target that adds an entry in the browser history.</p>
 <hr>
 <h3><del>isIntentSupported()</del></h3>
 <blockquote>
 <p><strong>isIntentSupported</strong>(<code>aIntents</code>, <code>oComponent?</code>): <code>Promise</code></p>
 </blockquote>
+<p>Tells whether the given intent(s) are supported, taking into account the form factor of the current device.
+&quot;Supported&quot; means that navigation to the intent is possible. Note that the intents are assumed to be
+in internal format and expanded.</p>
 <h4>Parameters</h4>
 <h5>aIntents</h5>
 <p><code>string</code>[]</p>
@@ -851,14 +855,18 @@ Example usage:
 <h4>Deprecated</h4>
 <p>(since 1.31) - Please use #isNavigationSupported instead. Note that this has a slightly
 different response format.</p>
-<p>Tells whether the given intent(s) are supported, taking into account the form factor of the current device.
-&quot;Supported&quot; means that navigation to the intent is possible. Note that the intents are assumed to be
-in internal format and expanded.</p>
 <hr>
 <h3><del>isNavigationSupported()</del></h3>
 <blockquote>
 <p><strong>isNavigationSupported</strong>(<code>aIntents</code>, <code>oComponent?</code>): <code>Promise</code></p>
 </blockquote>
+<p>Tells whether the given navigation intents are supported for the given parameters, form factor etc. .
+&quot;Supported&quot; means that a valid navigation target is configured for the user and for the given device.</p>
+<p><code>isNavigationSupported</code> is effectively a test function for sap.ushell.services.CrossApplicationNavigation#toExternal
+and sap.ushell.services.CrossApplicationNavigation#hrefForExternal.</p>
+<p>It is functionally equivalent to sap.ushell.services.CrossApplicationNavigation#isIntentSupported
+but accepts the same interface as sap.ushell.services.CrossApplicationNavigation#toExternal and
+sap.ushell.services.CrossApplicationNavigation#hrefForExternal.</p>
 <h4>Parameters</h4>
 <h5>aIntents</h5>
 <p><code>object</code>[]</p>
@@ -948,18 +956,14 @@ the intent is supported or not. Each object has a property <code>supported</code
 </code></pre>
 <h4>Since</h4>
 <p>1.32</p>
-<p>Tells whether the given navigation intents are supported for the given parameters, form factor etc. .
-&quot;Supported&quot; means that a valid navigation target is configured for the user and for the given device.</p>
-<p><code>isNavigationSupported</code> is effectively a test function for sap.ushell.services.CrossApplicationNavigation#toExternal
-and sap.ushell.services.CrossApplicationNavigation#hrefForExternal.</p>
-<p>It is functionally equivalent to sap.ushell.services.CrossApplicationNavigation#isIntentSupported
-but accepts the same interface as sap.ushell.services.CrossApplicationNavigation#toExternal and
-sap.ushell.services.CrossApplicationNavigation#hrefForExternal.</p>
 <hr>
 <h3><del>resolveIntent()</del></h3>
 <blockquote>
 <p><strong>resolveIntent</strong>(<code>sHashFragment</code>): <code>Promise</code></p>
 </blockquote>
+<p>Resolves the URL hash fragment.</p>
+<p>This function gets the hash part of the URL and returns the URL of the target application.</p>
+<p>This is an asynchronous operation.</p>
 <h4>Parameters</h4>
 <h5>sHashFragment</h5>
 <p><code>string</code></p>
@@ -970,14 +974,14 @@ given in <code>location.hash</code>)! Example: <code>#SemanticObject-action?P1=V
 <p>A jQuery.Promise.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Resolves the URL hash fragment.</p>
-<p>This function gets the hash part of the URL and returns the URL of the target application.</p>
-<p>This is an asynchronous operation.</p>
 <hr>
 <h3><del>toExternal()</del></h3>
 <blockquote>
 <p><strong>toExternal</strong>(<code>oArgs</code>, <code>oComponent?</code>): <code>Promise</code>&lt;<code>undefined</code>&gt;</p>
 </blockquote>
+<p>Triggers a navigation to a specified target outside of the currently running application (e.g. different
+launchpad application). Invocation will trigger a hash change and subsequent invocation of the target.</p>
+<p>If the navigation target opens in a new window the running application may be retained.</p>
 <h4>Parameters</h4>
 <h5>oArgs</h5>
 <p><code>object</code></p>
@@ -1061,10 +1065,7 @@ serialized as UTF-8.</p>
 or resolve when an error occurs during the navigation.</p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>Triggers a navigation to a specified target outside of the currently running application (e.g. different
-launchpad application). Invocation will trigger a hash change and subsequent invocation of the target.</p>
-<p>If the navigation target opens in a new window the running application may be retained.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

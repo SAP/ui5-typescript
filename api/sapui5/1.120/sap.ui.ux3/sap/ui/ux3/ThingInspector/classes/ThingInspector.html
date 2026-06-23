@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ThingInspector~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ThingInspector~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: ThingInspector~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.ux3/sap/ui/ux3/ThingInspector/classes/ThingInspector.html">
 <meta property="og:title" content="~~Class: ThingInspector~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ThingInspector~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: ThingInspector~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.ux3/sap/ui/ux3/ThingInspector/classes/ThingInspector.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.ux3/README.html">sap.ui.ux3</a> › sap › ui › ux3 › <a href="../../../../../../sap.ui.ux3/sap/ui/ux3/ThingInspector/README.html">ThingInspector</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/ThingInspector</a> / ThingInspector</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/ThingInspector</a> / ThingInspector</p>
 <h1><del>Class: ThingInspector</del></h1>
 <pre class="sig"><span class="kw">import</span> ThingInspector <span class="kw">from</span> <span class="str">"sap/ui/ux3/ThingInspector"</span>;</pre>
+<p>Thing Inspector</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - There is not an exact replacement.</p>
-<p>Thing Inspector</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Overlay/classes/Overlay.html"><code>Overlay</code></a></li>
@@ -370,6 +370,7 @@ otherwise it will be bound to this <code>sap.ui.ux3.ThingInspector</code> itself
 <blockquote>
 <p><strong>fireActionSelected</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:actionSelected actionSelected to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ThingInspector$ActionSelectedEventParameters.html"><code>ThingInspector$ActionSelectedEventParameters</code></a></p>
@@ -379,12 +380,14 @@ otherwise it will be bound to this <code>sap.ui.ux3.ThingInspector</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:actionSelected actionSelected to attached listeners.</p>
 <hr>
 <h3><del>fireFacetSelected()</del></h3>
 <blockquote>
 <p><strong>fireFacetSelected</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:facetSelected facetSelected to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ThingInspector$FacetSelectedEventParameters.html"><code>ThingInspector$FacetSelectedEventParameters</code></a></p>
@@ -394,14 +397,12 @@ otherwise it will be bound to this <code>sap.ui.ux3.ThingInspector</code> itself
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:facetSelected facetSelected to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>fireFeedSubmit()</del></h3>
 <blockquote>
 <p><strong>fireFeedSubmit</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:feedSubmit feedSubmit to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ThingInspector$FeedSubmitEventParameters.html"><code>ThingInspector$FeedSubmitEventParameters</code></a></p>
@@ -411,7 +412,6 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:feedSubmit feedSubmit to attached listeners.</p>
 <hr>
 <h3><del>getActionBar()</del></h3>
 <blockquote>
@@ -538,14 +538,14 @@ event object. The return value of this method indicates whether the default acti
 <blockquote>
 <p><strong>getHeaderType</strong>(): <code>&quot;Standard&quot;</code> | <code>&quot;Horizontal&quot;</code> | <a href="../../library/enumerations/ThingViewerHeaderType.html"><code>ThingViewerHeaderType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getHeaderType headerType.</p>
+<p>Defines which header type should be used.</p>
+<p>Default value is <code>Standard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Standard&quot;</code> | <code>&quot;Horizontal&quot;</code> | <a href="../../library/enumerations/ThingViewerHeaderType.html"><code>ThingViewerHeaderType</code></a></p>
 <p>Value of property <code>headerType</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getHeaderType headerType.</p>
-<p>Defines which header type should be used.</p>
-<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3><del>getIcon()</del></h3>
 <blockquote>
@@ -958,6 +958,10 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setHeaderType</strong>(<code>sHeaderType?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHeaderType headerType.</p>
+<p>Defines which header type should be used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Standard</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeaderType?</h5>
 <p><code>&quot;Standard&quot;</code> | <code>&quot;Horizontal&quot;</code> | <a href="../../library/enumerations/ThingViewerHeaderType.html"><code>ThingViewerHeaderType</code></a></p>
@@ -967,10 +971,6 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getHeaderType headerType.</p>
-<p>Defines which header type should be used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3><del>setIcon()</del></h3>
 <blockquote>
@@ -1086,6 +1086,6 @@ used by this class</p>
 <p><a href="../../Overlay/classes/Overlay.html"><code>Overlay</code></a>.<a href="../../Overlay/classes/Overlay.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $UnifiedThingInspectorSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $UnifiedThingInspectorSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $UnifiedThingInspectorSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $UnifiedThingInspectorSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/UnifiedThingInspector/interfaces/$UnifiedThingInspectorSettings.html">
-<meta property="og:title" content="Interface: $UnifiedThingInspectorSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $UnifiedThingInspectorSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $UnifiedThingInspectorSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $UnifiedThingInspectorSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/UnifiedThingInspector/interfaces/$UnifiedThingInspectorSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › <a href="../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/UnifiedThingInspector/README.html">UnifiedThingInspector</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/UnifiedThingInspector</a> / $UnifiedThingInspectorSettings</p>
-<h1>Interface: $UnifiedThingInspectorSettings</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/UnifiedThingInspector</a> / $UnifiedThingInspectorSettings</p>
+<h1><del>Interface: $UnifiedThingInspectorSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $UnifiedThingInspectorSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/UnifiedThingInspector"</span>;</pre>
+<p>Describes the settings that can be provided to the UnifiedThingInspector constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.32) - Deprecated. Object page should be used instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,12 +50,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>actions?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a> | <a href="../../../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
+<p>Action sheet controls.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the actionsButtonPress event handler instead.</p>
-<p>Action sheet controls.</p>
 <hr>
-<h3>actionsButtonPress?</h3>
+<h3><del>actionsButtonPress?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>actionsButtonPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -63,13 +66,13 @@ the actionsButtonPress event handler instead.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>actionsVisible?</h3>
+<h3><del>actionsVisible?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>actionsVisible?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>If set to true, the Actions button appears.</p>
 <hr>
-<h3>afterNavigate?</h3>
+<h3><del>afterNavigate?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>afterNavigate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -82,7 +85,7 @@ The event can also return internal Master and Detail pages.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>backAction?</h3>
+<h3><del>backAction?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>backAction?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -93,7 +96,7 @@ The event can also return internal Master and Detail pages.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>configurationButtonPress?</h3>
+<h3><del>configurationButtonPress?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>configurationButtonPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -104,63 +107,63 @@ The event can also return internal Master and Detail pages.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>configurationVisible?</h3>
+<h3><del>configurationVisible?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>configurationVisible?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>If set to true, the Configuration button appears.</p>
 <hr>
-<h3>description?</h3>
+<h3><del>description?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>description?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The description of the thing.</p>
 <hr>
-<h3>destroyPageOnBack?</h3>
+<h3><del>destroyPageOnBack?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>destroyPageOnBack?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>If set to true, destroys a page when the user chooses the Back button to leave this page.</p>
 <hr>
-<h3>facetContent?</h3>
+<h3><del>facetContent?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>facetContent?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>The content that appears on the detail page of the UnifiedThingInspector.</p>
 <hr>
-<h3>facets?</h3>
+<h3><del>facets?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>facets?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../FacetOverview/classes/FacetOverview.html"><code>FacetOverview</code></a> | <a href="../../FacetOverview/classes/FacetOverview.html"><code>FacetOverview</code></a>[]</p>
 </blockquote>
 <p>The list of the sap.suite.ui.commons.FacetOverview objects.</p>
 <hr>
-<h3>height?</h3>
+<h3><del>height?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The height of the control.</p>
 <hr>
-<h3>icon?</h3>
+<h3><del>icon?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The icon to be displayed as a graphical element within the header. This can be an image or an icon from
 the icon font.</p>
 <hr>
-<h3>kpis?</h3>
+<h3><del>kpis?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>kpis?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../KpiTile/classes/KpiTile.html"><code>KpiTile</code></a> | <a href="../../KpiTile/classes/KpiTile.html"><code>KpiTile</code></a>[]</p>
 </blockquote>
 <p>A set of the KPI tiles to be shown in the header. Currently only 3 tiles from the list are displayed
 on the desktop and tablet. On the phone, all tiles are displayed in a swipeable container.</p>
 <hr>
-<h3>name?</h3>
+<h3><del>name?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>name?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The name of the thing.</p>
 <hr>
-<h3>navigate?</h3>
+<h3><del>navigate?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>navigate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -174,13 +177,13 @@ can also return internal Master and Detail pages.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>pages?</h3>
+<h3><del>pages?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>pages?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Contains pages except for Master and Detail.</p>
 <hr>
-<h3>title?</h3>
+<h3><del>title?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>title?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
@@ -190,12 +193,12 @@ can also return internal Master and Detail pages.</p>
 <blockquote>
 <p><code>optional</code> <strong>transactions?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Menu items for transaction popup.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.2) - Deprecated due to the incorrect work with data binding. Open the popup in
 the transactionsButtonPress event handler instead.</p>
-<p>Menu items for transaction popup.</p>
 <hr>
-<h3>transactionsButtonPress?</h3>
+<h3><del>transactionsButtonPress?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>transactionsButtonPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -206,13 +209,13 @@ the transactionsButtonPress event handler instead.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>transactionsVisible?</h3>
+<h3><del>transactionsVisible?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>transactionsVisible?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>If set to true, the Transaction button appears.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

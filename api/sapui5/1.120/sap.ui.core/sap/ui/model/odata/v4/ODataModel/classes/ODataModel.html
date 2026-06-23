@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ODataModel — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ODataModel — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ODataModel — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v4/ODataModel/classes/ODataModel.html">
 <meta property="og:title" content="Class: ODataModel — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ODataModel — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ODataModel — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v4/ODataModel/classes/ODataModel.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › v4 › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/v4/ODataModel/README.html">ODataModel</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/ODataModel</a> / ODataModel</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/ODataModel</a> / ODataModel</p>
 <h1>Class: ODataModel</h1>
 <pre class="sig"><span class="kw">import</span> ODataModel <span class="kw">from</span> <span class="str">"sap/ui/model/odata/v4/ODataModel"</span>;</pre>
-<h2>Since</h2>
-<p>1.37.0</p>
 <p>Model implementation for OData V4.</p>
 <p>This model is not prepared to be inherited from.</p>
 <p>Every resource path (relative to the service root URL, no query options) according to &quot;4 Resource Path&quot; in specification &quot;OData Version 4.0 Part 2: URL Conventions&quot; is a valid data binding
@@ -60,6 +58,8 @@ sap.ui.model.odata.v4.SubmitMode#Direct.  An application group ID, which is a no
 consisting of alphanumeric characters from the basic Latin alphabet, including the underscore. By default,
 an application group has the submit mode sap.ui.model.odata.v4.SubmitMode#API. It is possible
 to use a different submit mode; for details see <code>mParameters.groupProperties</code>.</p>
+<h2>Since</h2>
+<p>1.37.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../Model/classes/Model.html"><code>Model</code></a></li>
@@ -167,6 +167,7 @@ cross-origin requests by the browser (since 1.120.0)</p>
 <blockquote>
 <p><strong>attachDataReceived</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attach event handler <code>fnFunction</code> to the &#39;dataReceived&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -179,12 +180,12 @@ cross-origin requests by the browser (since 1.120.0)</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.106.0</p>
-<p>Attach event handler <code>fnFunction</code> to the &#39;dataReceived&#39; event of this binding.</p>
 <hr>
 <h3>attachDataRequested()</h3>
 <blockquote>
 <p><strong>attachDataRequested</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attach event handler <code>fnFunction</code> to the &#39;dataRequested&#39; event of this binding.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -197,12 +198,14 @@ cross-origin requests by the browser (since 1.120.0)</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.106.0</p>
-<p>Attach event handler <code>fnFunction</code> to the &#39;dataRequested&#39; event of this binding.</p>
 <hr>
 <h3>attachEvent()</h3>
 <blockquote>
 <p><strong>attachEvent</strong>(<code>sEventId</code>, <code>_oData?</code>, <code>_fnFunction?</code>, <code>_oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>See sap.ui.base.EventProvider#attachEvent
+See:
+	sap.ui.base.EventProvider#attachEvent</p>
 <h4>Parameters</h4>
 <h5>sEventId</h5>
 <p><code>string</code></p>
@@ -218,9 +221,6 @@ cross-origin requests by the browser (since 1.120.0)</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>See sap.ui.base.EventProvider#attachEvent
-See:
-	sap.ui.base.EventProvider#attachEvent</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#attachevent"><code>attachEvent</code></a></p>
 <hr>
@@ -228,6 +228,7 @@ See:
 <blockquote>
 <p><strong>attachSessionTimeout</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attach event handler <code>fnFunction</code> to the &#39;sessionTimeout&#39; event of this model.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -240,12 +241,14 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.66.0</p>
-<p>Attach event handler <code>fnFunction</code> to the &#39;sessionTimeout&#39; event of this model.</p>
 <hr>
 <h3>bindContext()</h3>
 <blockquote>
 <p><strong>bindContext</strong>(<code>sPath</code>, <code>oContext?</code>, <code>mParameters?</code>): <a href="../../ODataContextBinding/classes/ODataContextBinding.html"><code>ODataContextBinding</code></a></p>
 </blockquote>
+<p>Creates a new context binding for the given path, context and parameters.
+See:
+	sap.ui.model.Model#bindContext</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -309,9 +312,6 @@ $expand&quot;.</p>
 <p>The context binding</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Creates a new context binding for the given path, context and parameters.
-See:
-	sap.ui.model.Model#bindContext</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#bindcontext"><code>bindContext</code></a></p>
 <hr>
@@ -319,6 +319,10 @@ See:
 <blockquote>
 <p><strong>bindList</strong>(<code>sPath</code>, <code>oContext?</code>, <code>vSorters?</code>, <code>vFilters?</code>, <code>mParameters?</code>): <a href="../../ODataListBinding/classes/ODataListBinding.html"><code>ODataListBinding</code></a></p>
 </blockquote>
+<p>Creates a new list binding for the given path and optional context which must resolve to an absolute
+OData path for an entity set.
+See:
+	sap.ui.model.Model#bindList</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -353,6 +357,10 @@ for details.</p>
 <p><code>boolean</code></p>
 <p>Whether a binding relative to an sap.ui.model.odata.v4.Context uses the canonical path computed
 from its context&#39;s path for data service requests; only the value <code>true</code> is allowed.</p>
+<h6>$$clearSelectionOnFilter?</h6>
+<p><code>boolean</code></p>
+<p>Whether the selection state of the list binding is cleared when a filter is changed; this includes dynamic
+filters, &#39;$filter&#39;, &#39;$search&#39;, and <code>$$aggregation.search</code>. Supported since 1.120.13.</p>
 <h6>$$getKeepAliveContext?</h6>
 <p><code>boolean</code></p>
 <p>Whether this binding is considered for a match when #getKeepAliveContext is called; only the
@@ -438,10 +446,6 @@ $expand&quot;.</p>
 <p>The list binding</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Creates a new list binding for the given path and optional context which must resolve to an absolute
-OData path for an entity set.
-See:
-	sap.ui.model.Model#bindList</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#bindlist"><code>bindList</code></a></p>
 <hr>
@@ -449,6 +453,21 @@ See:
 <blockquote>
 <p><strong>bindProperty</strong>(<code>sPath</code>, <code>oContext?</code>, <code>mParameters?</code>): <a href="../../ODataPropertyBinding/classes/ODataPropertyBinding.html"><code>ODataPropertyBinding</code></a></p>
 </blockquote>
+<p>Creates a new property binding for the given path. This binding is inactive and will not know the property
+value initially. You have to call sap.ui.model.Binding#initialize to get it updated asynchronously
+and register a change listener at the binding to be informed when the value is available.</p>
+<p>It is possible to create a property binding pointing to metadata. A &#39;##&#39; in the binding&#39;s path is recognized
+as a separator and splits it into two parts. The part before the separator is resolved with the binding&#39;s
+context and the result is transformed into a metadata context (see sap.ui.model.odata.v4.ODataMetaModel#getMetaContext).
+The part following the separator is then interpreted relative to this metadata context, even if it starts
+with a &#39;/&#39;; see sap.ui.model.odata.v4.ODataMetaModel#requestObject for more details.</p>
+<p>If the target type specified in the corresponding control property&#39;s binding info is &quot;any&quot; and the binding
+is relative or points to metadata, the binding may have an object value; in this case and unless the
+binding refers to an action advertisement the binding&#39;s mode must be sap.ui.model.BindingMode.OneTime.
+See:
+	sap.ui.base.ManagedObject#bindProperty
+	sap.ui.model.Model#bindProperty
+	sap.ui.model.PropertyBinding#setType</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -499,21 +518,6 @@ Extension for Data Aggregation Version 4.0), if the path ends with a &quot;$coun
 <p>The property binding</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Creates a new property binding for the given path. This binding is inactive and will not know the property
-value initially. You have to call sap.ui.model.Binding#initialize to get it updated asynchronously
-and register a change listener at the binding to be informed when the value is available.</p>
-<p>It is possible to create a property binding pointing to metadata. A &#39;##&#39; in the binding&#39;s path is recognized
-as a separator and splits it into two parts. The part before the separator is resolved with the binding&#39;s
-context and the result is transformed into a metadata context (see sap.ui.model.odata.v4.ODataMetaModel#getMetaContext).
-The part following the separator is then interpreted relative to this metadata context, even if it starts
-with a &#39;/&#39;; see sap.ui.model.odata.v4.ODataMetaModel#requestObject for more details.</p>
-<p>If the target type specified in the corresponding control property&#39;s binding info is &quot;any&quot; and the binding
-is relative or points to metadata, the binding may have an object value; in this case and unless the
-binding refers to an action advertisement the binding&#39;s mode must be sap.ui.model.BindingMode.OneTime.
-See:
-	sap.ui.base.ManagedObject#bindProperty
-	sap.ui.model.Model#bindProperty
-	sap.ui.model.PropertyBinding#setType</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#bindproperty"><code>bindProperty</code></a></p>
 <hr>
@@ -521,6 +525,9 @@ See:
 <blockquote>
 <p><strong>bindTree</strong>(<code>_sPath</code>, <code>_oContext?</code>, <code>_aFilters?</code>, <code>_mParameters?</code>, <code>_aSorters?</code>): <a href="../../../../TreeBinding/classes/TreeBinding.html"><code>TreeBinding</code></a></p>
 </blockquote>
+<p>Method not supported
+See:
+	sap.ui.model.Model#bindTree</p>
 <h4>Parameters</h4>
 <h5>_sPath</h5>
 <p><code>string</code></p>
@@ -536,9 +543,6 @@ See:
 <p><a href="../../../../TreeBinding/classes/TreeBinding.html"><code>TreeBinding</code></a></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Method not supported
-See:
-	sap.ui.model.Model#bindTree</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#bindtree"><code>bindTree</code></a></p>
 <hr>
@@ -546,14 +550,6 @@ See:
 <blockquote>
 <p><strong>changeHttpHeaders</strong>(<code>mHeaders?</code>): <code>void</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>mHeaders?</h5>
-<p><code>Record</code>&lt;<code>string</code>, <code>string</code> | <code>undefined</code>&gt;</p>
-<p>Map of HTTP header names to their values</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.71.0</p>
 <p>Changes the HTTP headers used for data and metadata requests sent by this model.</p>
 <p>If batch requests are used, the headers will be set for the batch itself, as well as for the individual
 requests within the batch. The headers are changed according to the given map of headers: Headers with
@@ -568,23 +564,19 @@ Version 2 v10.1&quot;  The headers &quot;Content-Id&quot; and &quot;Content-Tran
 not contain control characters.
 See:
 	#getHttpHeaders</p>
+<h4>Parameters</h4>
+<h5>mHeaders?</h5>
+<p><code>Record</code>&lt;<code>string</code>, <code>string</code> | <code>undefined</code>&gt;</p>
+<p>Map of HTTP header names to their values</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.71.0</p>
 <hr>
 <h3>createBindingContext()</h3>
 <blockquote>
 <p><strong>createBindingContext</strong>(<code>sPath</code>, <code>oContext?</code>): <code>Context1</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sPath</h5>
-<p><code>string</code></p>
-<p>The binding path, may be relative to the provided context</p>
-<h5>oContext?</h5>
-<p><code>Context1</code></p>
-<p>The context which is required as base for a relative path</p>
-<h4>Returns</h4>
-<p><code>Context1</code></p>
-<p>The binding context with the resolved path and the model instance</p>
-<h4>Since</h4>
-<p>1.37.0</p>
 <p>Creates a binding context for the given path. A relative path can only be resolved if a context is provided.
 Note: The parameters <code>mParameters</code>, <code>fnCallBack</code>, and <code>bReload</code> from sap.ui.model.Model#createBindingContext
 are not supported.</p>
@@ -607,6 +599,18 @@ metadata of an action bound to the entity set &quot;EMPLOYEES&quot;.  <code>/EMP
 not point to metadata, but to the action advertisement.
 See:
 	sap.ui.model.Model#createBindingContext</p>
+<h4>Parameters</h4>
+<h5>sPath</h5>
+<p><code>string</code></p>
+<p>The binding path, may be relative to the provided context</p>
+<h5>oContext?</h5>
+<p><code>Context1</code></p>
+<p>The context which is required as base for a relative path</p>
+<h4>Returns</h4>
+<p><code>Context1</code></p>
+<p>The binding context with the resolved path and the model instance</p>
+<h4>Since</h4>
+<p>1.37.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#createbindingcontext"><code>createBindingContext</code></a></p>
 <hr>
@@ -614,6 +618,13 @@ See:
 <blockquote>
 <p><strong>delete</strong>(<code>vCanonicalPath</code>, <code>sGroupId?</code>, <code>bRejectIfNotFound?</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
+<p>Deletes the entity with the given canonical path on the server and in all bindings. Pending changes in
+contexts for this entity or in dependents thereof are canceled.</p>
+<p>Deleting in the bindings is only possible if the given path is a canonical path, and all paths follow
+these rules in addition to the OData 4.0 specification:
+	 Key properties are ordered just as in the metadata,  for single key properties, the name of the
+key is omitted,  for collection-valued navigation properties, all keys are present,  the key-value
+pairs are encoded via encodeURIComponent.</p>
 <h4>Parameters</h4>
 <h5>vCanonicalPath</h5>
 <p><code>string</code> | <a href="../../Context/classes/Context.html"><code>Context</code></a></p>
@@ -635,25 +646,18 @@ with an instance of Error otherwise. In the latter case the HTTP status code of 
 in the error&#39;s property <code>status</code>.</p>
 <h4>Since</h4>
 <p>1.103.0</p>
-<p>Deletes the entity with the given canonical path on the server and in all bindings. Pending changes in
-contexts for this entity or in dependents thereof are canceled.</p>
-<p>Deleting in the bindings is only possible if the given path is a canonical path, and all paths follow
-these rules in addition to the OData 4.0 specification:
-	 Key properties are ordered just as in the metadata,  for single key properties, the name of the
-key is omitted,  for collection-valued navigation properties, all keys are present,  the key-value
-pairs are encoded via encodeURIComponent.</p>
 <hr>
 <h3>destroy()</h3>
 <blockquote>
 <p><strong>destroy</strong>(): <code>void</code></p>
 </blockquote>
+<p>Destroys this model, its requestor and its meta model.
+See:
+	sap.ui.model.Model#destroy</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Destroys this model, its requestor and its meta model.
-See:
-	sap.ui.model.Model#destroy</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#destroy"><code>destroy</code></a></p>
 <hr>
@@ -661,11 +665,11 @@ See:
 <blockquote>
 <p><strong>destroyBindingContext</strong>(): <code>void</code></p>
 </blockquote>
+<p>Method not supported</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Method not supported</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#destroybindingcontext"><code>destroyBindingContext</code></a></p>
 <hr>
@@ -673,6 +677,7 @@ See:
 <blockquote>
 <p><strong>detachDataReceived</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detach event handler <code>fnFunction</code> from the &#39;dataReceived&#39; event of this model.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>evt</code>) =&gt; <code>void</code></p>
@@ -685,12 +690,12 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.106.0</p>
-<p>Detach event handler <code>fnFunction</code> from the &#39;dataReceived&#39; event of this model.</p>
 <hr>
 <h3>detachDataRequested()</h3>
 <blockquote>
 <p><strong>detachDataRequested</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detach event handler <code>fnFunction</code> from the &#39;dataRequested&#39; event of this model.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>evt</code>) =&gt; <code>void</code></p>
@@ -703,12 +708,12 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.106.0</p>
-<p>Detach event handler <code>fnFunction</code> from the &#39;dataRequested&#39; event of this model.</p>
 <hr>
 <h3>detachSessionTimeout()</h3>
 <blockquote>
 <p><strong>detachSessionTimeout</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detach event handler <code>fnFunction</code> from the &#39;sessionTimeout&#39; event of this model.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -721,36 +726,40 @@ See:
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.66.0</p>
-<p>Detach event handler <code>fnFunction</code> from the &#39;sessionTimeout&#39; event of this model.</p>
 <hr>
 <h3>getAllBindings()</h3>
 <blockquote>
 <p><strong>getAllBindings</strong>(): <a href="../../../../Binding/classes/Binding.html"><code>Binding</code></a>[]</p>
 </blockquote>
+<p>Returns the model&#39;s bindings.</p>
 <h4>Returns</h4>
 <p><a href="../../../../Binding/classes/Binding.html"><code>Binding</code></a>[]</p>
 <p>A copy of an array with all bindings, or an empty array if there are no bindings</p>
 <h4>Since</h4>
 <p>1.73.0</p>
-<p>Returns the model&#39;s bindings.</p>
 <hr>
 <h3>getGroupId()</h3>
 <blockquote>
 <p><strong>getGroupId</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the model&#39;s group ID.
+See:
+	sap.ui.model.odata.v4.ODataModel#constructor</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The group ID</p>
 <h4>Since</h4>
 <p>1.41.0</p>
-<p>Returns the model&#39;s group ID.
-See:
-	sap.ui.model.odata.v4.ODataModel#constructor</p>
 <hr>
 <h3>getHttpHeaders()</h3>
 <blockquote>
 <p><strong>getHttpHeaders</strong>(<code>bIncludeContextId?</code>): <code>Record</code>&lt;<code>string</code>, <code>string</code>&gt;</p>
 </blockquote>
+<p>Returns a map of HTTP headers used for data and metadata requests. While the &quot;X-CSRF-Token&quot; header is
+not used for metadata requests, it is still included here if available. The &quot;SAP-ContextId&quot; header is
+only included if requested explicitly (@since 1.86.0).
+See:
+	#changeHttpHeaders</p>
 <h4>Parameters</h4>
 <h5>bIncludeContextId?</h5>
 <p><code>boolean</code></p>
@@ -760,16 +769,23 @@ See:
 <p>The map of HTTP headers</p>
 <h4>Since</h4>
 <p>1.71</p>
-<p>Returns a map of HTTP headers used for data and metadata requests. While the &quot;X-CSRF-Token&quot; header is
-not used for metadata requests, it is still included here if available. The &quot;SAP-ContextId&quot; header is
-only included if requested explicitly (@since 1.86.0).
-See:
-	#changeHttpHeaders</p>
 <hr>
 <h3>getKeepAliveContext()</h3>
 <blockquote>
 <p><strong>getKeepAliveContext</strong>(<code>sPath</code>, <code>bRequestMessages?</code>, <code>mParameters?</code>): <a href="../../Context/classes/Context.html"><code>Context</code></a></p>
 </blockquote>
+<p>Returns a context with the given path belonging to a matching list binding that has been marked with
+<code>$$getKeepAliveContext</code> (see #bindList). If such a matching binding can be found, a context is
+returned and kept alive (see sap.ui.model.odata.v4.ODataListBinding#getKeepAliveContext). Since
+1.100.0 a temporary binding is used if no such binding could be found. If such a binding is created or
+resolved later, the context and its data are transferred to it, and the temporary binding is destroyed
+again.</p>
+<p>A <code>$$getKeepAliveContext</code> binding matches if its resolved binding path is the collection path of the
+context. If the context is created using a temporary binding and the parameters of the <code>$$getKeepAliveContext</code>
+binding differ from the given <code>mParameters</code> (except <code>$$groupId</code> which is especially used for the context),
+that binding later runs into an error when trying to read data.</p>
+<p><strong>Note</strong>: The context received by this function may change its sap.ui.model.odata.v4.Context#getBinding binding
+during its lifetime.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -796,23 +812,15 @@ for details).</p>
 <p>The kept-alive context</p>
 <h4>Since</h4>
 <p>1.99.0</p>
-<p>Returns a context with the given path belonging to a matching list binding that has been marked with
-<code>$$getKeepAliveContext</code> (see #bindList). If such a matching binding can be found, a context is
-returned and kept alive (see sap.ui.model.odata.v4.ODataListBinding#getKeepAliveContext). Since
-1.100.0 a temporary binding is used if no such binding could be found. If such a binding is created or
-resolved later, the context and its data are transferred to it, and the temporary binding is destroyed
-again.</p>
-<p>A <code>$$getKeepAliveContext</code> binding matches if its resolved binding path is the collection path of the
-context. If the context is created using a temporary binding and the parameters of the <code>$$getKeepAliveContext</code>
-binding differ from the given <code>mParameters</code> (except <code>$$groupId</code> which is especially used for the context),
-that binding later runs into an error when trying to read data.</p>
-<p><strong>Note</strong>: The context received by this function may change its sap.ui.model.odata.v4.Context#getBinding binding
-during its lifetime.</p>
 <hr>
 <h3>getKeyPredicate()</h3>
 <blockquote>
 <p><strong>getKeyPredicate</strong>(<code>sMetaPath</code>, <code>oEntity</code>): <code>string</code></p>
 </blockquote>
+<p>Takes the metadata for the given meta path and calculates the key predicate by taking the key properties
+from the given entity instance.
+See:
+	#requestKeyPredicate</p>
 <h4>Parameters</h4>
 <h5>sMetaPath</h5>
 <p><code>string</code></p>
@@ -826,15 +834,16 @@ during its lifetime.</p>
 or <code>undefined</code> if at least one key property is undefined.</p>
 <h4>Since</h4>
 <p>1.107.0</p>
-<p>Takes the metadata for the given meta path and calculates the key predicate by taking the key properties
-from the given entity instance.
-See:
-	#requestKeyPredicate</p>
 <hr>
 <h3>getMessages()</h3>
 <blockquote>
 <p><strong>getMessages</strong>(<code>oContext</code>): <a href="../../../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
+<p>Returns messages of this model associated with the given context, that is messages belonging to the object
+referred to by this context or a child object of that object. The messages are sorted by their sap.ui.core.message.Message#getType type
+according to the type&#39;s severity in a way that messages with highest severity come first.
+See:
+	sap.ui.model.Model#getMessages</p>
 <h4>Parameters</h4>
 <h5>oContext</h5>
 <p><code>Context1</code></p>
@@ -845,11 +854,6 @@ See:
 exist</p>
 <h4>Since</h4>
 <p>1.85.0</p>
-<p>Returns messages of this model associated with the given context, that is messages belonging to the object
-referred to by this context or a child object of that object. The messages are sorted by their sap.ui.core.message.Message#getType type
-according to the type&#39;s severity in a way that messages with highest severity come first.
-See:
-	sap.ui.model.Model#getMessages</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#getmessages"><code>getMessages</code></a></p>
 <hr>
@@ -857,12 +861,12 @@ See:
 <blockquote>
 <p><strong>getMetaModel</strong>(): <a href="../../ODataMetaModel/classes/ODataMetaModel.html"><code>ODataMetaModel</code></a></p>
 </blockquote>
+<p>Returns the meta model for this ODataModel.</p>
 <h4>Returns</h4>
 <p><a href="../../ODataMetaModel/classes/ODataMetaModel.html"><code>ODataMetaModel</code></a></p>
 <p>The meta model for this ODataModel</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Returns the meta model for this ODataModel.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#getmetamodel"><code>getMetaModel</code></a></p>
 <hr>
@@ -870,11 +874,11 @@ See:
 <blockquote>
 <p><strong>getObject</strong>(): <code>void</code></p>
 </blockquote>
+<p>Method not supported</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Method not supported</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#getobject"><code>getObject</code></a></p>
 <hr>
@@ -882,22 +886,22 @@ See:
 <blockquote>
 <p><strong>getODataVersion</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the version of the OData service.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The version of the OData service</p>
 <h4>Since</h4>
 <p>1.49.0</p>
-<p>Returns the version of the OData service.</p>
 <hr>
 <h3>getOriginalProperty()</h3>
 <blockquote>
 <p><strong>getOriginalProperty</strong>(): <code>void</code></p>
 </blockquote>
+<p>Method not supported</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Method not supported</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#getoriginalproperty"><code>getOriginalProperty</code></a></p>
 <hr>
@@ -905,13 +909,13 @@ See:
 <blockquote>
 <p><strong>getProperty</strong>(): <code>void</code></p>
 </blockquote>
+<p>Method not supported
+See:
+	sap.ui.model.Model#getProperty</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Method not supported
-See:
-	sap.ui.model.Model#getProperty</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#getproperty"><code>getProperty</code></a></p>
 <hr>
@@ -919,31 +923,36 @@ See:
 <blockquote>
 <p><strong>getServiceUrl</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns this model&#39;s root URL of the service to request data from (as defined by the &quot;serviceUrl&quot; model
+parameter, see sap.ui.model.odata.v4.ODataModel#constructor), without query options.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The service URL</p>
 <h4>Since</h4>
 <p>1.107.0</p>
-<p>Returns this model&#39;s root URL of the service to request data from (as defined by the &quot;serviceUrl&quot; model
-parameter, see sap.ui.model.odata.v4.ODataModel#constructor), without query options.</p>
 <hr>
 <h3>getUpdateGroupId()</h3>
 <blockquote>
 <p><strong>getUpdateGroupId</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the model&#39;s update group ID.
+See:
+	sap.ui.model.odata.v4.ODataModel#constructor</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The update group ID</p>
 <h4>Since</h4>
 <p>1.41.0</p>
-<p>Returns the model&#39;s update group ID.
-See:
-	sap.ui.model.odata.v4.ODataModel#constructor</p>
 <hr>
 <h3>hasPendingChanges()</h3>
 <blockquote>
 <p><strong>hasPendingChanges</strong>(<code>sGroupId?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Returns <code>true</code> if there are pending changes, which can be updates, created entities (see sap.ui.model.odata.v4.ODataListBinding#create)
+or entity deletions (see sap.ui.model.odata.v4.Context#delete) that have not yet been successfully
+sent to the server. Those changes can be either sent via #submitBatch or reset via #resetChanges.
+Since 1.98.0, sap.ui.model.odata.v4.Context#isInactive inactive contexts are ignored, even when
+their sap.ui.model.odata.v4.ODataListBinding#event:createActivate activation has been prevented.</p>
 <h4>Parameters</h4>
 <h5>sGroupId?</h5>
 <p><code>string</code></p>
@@ -954,27 +963,11 @@ if specified, only pending changes related to that group ID are considered (sinc
 <p><code>true</code> if there are pending changes</p>
 <h4>Since</h4>
 <p>1.39.0</p>
-<p>Returns <code>true</code> if there are pending changes, which can be updates, created entities (see sap.ui.model.odata.v4.ODataListBinding#create)
-or entity deletions (see sap.ui.model.odata.v4.Context#delete) that have not yet been successfully
-sent to the server. Those changes can be either sent via #submitBatch or reset via #resetChanges.
-Since 1.98.0, sap.ui.model.odata.v4.Context#isInactive inactive contexts are ignored, even when
-their sap.ui.model.odata.v4.ODataListBinding#event:createActivate activation has been prevented.</p>
 <hr>
 <h3>refresh()</h3>
 <blockquote>
 <p><strong>refresh</strong>(<code>sGroupId?</code>): <code>void</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sGroupId?</h5>
-<p><code>string</code> | <code>boolean</code></p>
-<p>The group ID to be used for refresh; valid values are <code>undefined</code>, &#39;$auto&#39;, &#39;$auto.*&#39;, &#39;$direct&#39; or application
-group IDs as specified in sap.ui.model.odata.v4.ODataModel. It is ignored for suspended bindings,
-because resume uses the binding&#39;s group ID. A value of type boolean is not accepted and an error will
-be thrown (a forced refresh is not supported).</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.37.0</p>
 <p>Refreshes the model by calling refresh on all bindings which have a change event handler attached.</p>
 <p>Note: When calling #refresh multiple times, the result of the request triggered by the last call
 determines the model&#39;s data; it is <strong>independent</strong> of the order of calls to #submitBatch with
@@ -987,6 +980,17 @@ See:
 	sap.ui.model.odata.v4.ODataContextBinding#refresh
 	sap.ui.model.odata.v4.ODataListBinding#refresh
 	sap.ui.model.odata.v4.ODataPropertyBinding#refresh</p>
+<h4>Parameters</h4>
+<h5>sGroupId?</h5>
+<p><code>string</code> | <code>boolean</code></p>
+<p>The group ID to be used for refresh; valid values are <code>undefined</code>, &#39;$auto&#39;, &#39;$auto.*&#39;, &#39;$direct&#39; or application
+group IDs as specified in sap.ui.model.odata.v4.ODataModel. It is ignored for suspended bindings,
+because resume uses the binding&#39;s group ID. A value of type boolean is not accepted and an error will
+be thrown (a forced refresh is not supported).</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.37.0</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#refresh"><code>refresh</code></a></p>
 <hr>
@@ -994,6 +998,10 @@ See:
 <blockquote>
 <p><strong>requestCanonicalPath</strong>(<code>oEntityContext</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Returns a promise for the &quot;canonical path&quot; of the entity for the given context. According to &quot;4.3.1 Canonical URL&quot; of the specification &quot;OData Version 4.0 Part 2: URL Conventions&quot;, this is
+the &quot;name of the entity set associated with the entity followed by the key predicate identifying the
+entity within the collection&quot;. Use the canonical path in sap.ui.core.Element#bindElement to create
+an element binding.</p>
 <h4>Parameters</h4>
 <h5>oEntityContext</h5>
 <p><a href="../../Context/classes/Context.html"><code>Context</code></a></p>
@@ -1007,15 +1015,15 @@ does not point to an entity</p>
 <p>1.37.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.39.0) - Use sap.ui.model.odata.v4.Context#requestCanonicalPath instead.</p>
-<p>Returns a promise for the &quot;canonical path&quot; of the entity for the given context. According to &quot;4.3.1 Canonical URL&quot; of the specification &quot;OData Version 4.0 Part 2: URL Conventions&quot;, this is
-the &quot;name of the entity set associated with the entity followed by the key predicate identifying the
-entity within the collection&quot;. Use the canonical path in sap.ui.core.Element#bindElement to create
-an element binding.</p>
 <hr>
 <h3>requestKeyPredicate()</h3>
 <blockquote>
 <p><strong>requestKeyPredicate</strong>(<code>sMetaPath</code>, <code>oEntity</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Requests the metadata for the given meta path and calculates the key predicate by taking the key properties
+from the given entity instance.
+See:
+	#getKeyPredicate</p>
 <h4>Parameters</h4>
 <h5>sMetaPath</h5>
 <p><code>string</code></p>
@@ -1030,15 +1038,18 @@ or &quot;(&#39;42&#39;)&quot;, or <code>undefined</code> if at least one key pro
 cannot be fetched, or in case the entity has no key properties according to the metadata.</p>
 <h4>Since</h4>
 <p>1.107.0</p>
-<p>Requests the metadata for the given meta path and calculates the key predicate by taking the key properties
-from the given entity instance.
-See:
-	#getKeyPredicate</p>
 <hr>
 <h3>resetChanges()</h3>
 <blockquote>
 <p><strong>resetChanges</strong>(<code>sGroupId?</code>): <code>void</code></p>
 </blockquote>
+<p>Resets all property changes, created entities, and entity deletions associated with the given group ID
+which have not been successfully submitted via #submitBatch. Resets also invalid user input for
+the same group ID and (since 1.111.0) inactive contexts which had their activation prevented (see sap.ui.model.odata.v4.Context#isInactive).
+This function does not reset the execution of OData operations (see sap.ui.model.odata.v4.ODataContextBinding#execute).
+See:
+	sap.ui.model.odata.v4.ODataModel#constructor
+	#hasPendingChanges</p>
 <h4>Parameters</h4>
 <h5>sGroupId?</h5>
 <p><code>string</code></p>
@@ -1049,23 +1060,16 @@ since 1.67.0.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.39.0</p>
-<p>Resets all property changes, created entities, and entity deletions associated with the given group ID
-which have not been successfully submitted via #submitBatch. Resets also invalid user input for
-the same group ID and (since 1.111.0) inactive contexts which had their activation prevented (see sap.ui.model.odata.v4.Context#isInactive).
-This function does not reset the execution of OData operations (see sap.ui.model.odata.v4.ODataContextBinding#execute).
-See:
-	sap.ui.model.odata.v4.ODataModel#constructor
-	#hasPendingChanges</p>
 <hr>
 <h3>setLegacySyntax()</h3>
 <blockquote>
 <p><strong>setLegacySyntax</strong>(): <code>void</code></p>
 </blockquote>
+<p>Method not supported</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Method not supported</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#setlegacysyntax"><code>setLegacySyntax</code></a></p>
 <hr>
@@ -1073,6 +1077,13 @@ See:
 <blockquote>
 <p><strong>submitBatch</strong>(<code>sGroupId</code>): <code>Promise</code>&lt;<code>void</code>&gt;</p>
 </blockquote>
+<p>Submits the requests associated with the given group ID in one batch request. Requests from subsequent
+calls to this method for the same group ID may be combined in one batch request using separate change
+sets. For group IDs with sap.ui.model.odata.v4.SubmitMode.Auto, this method is useful to repeat
+failed updates or creates (see sap.ui.model.odata.v4.ODataListBinding#create) together with all
+other requests for the given group ID in one batch request.</p>
+<p>#resetChanges can be used to reset all pending changes instead. After that, or when the promise
+returned by this method is fulfilled, #hasPendingChanges will not report pending changes anymore.</p>
 <h4>Parameters</h4>
 <h5>sGroupId</h5>
 <p><code>string</code></p>
@@ -1083,24 +1094,17 @@ See:
 rejected with an error if the batch request itself fails</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Submits the requests associated with the given group ID in one batch request. Requests from subsequent
-calls to this method for the same group ID may be combined in one batch request using separate change
-sets. For group IDs with sap.ui.model.odata.v4.SubmitMode.Auto, this method is useful to repeat
-failed updates or creates (see sap.ui.model.odata.v4.ODataListBinding#create) together with all
-other requests for the given group ID in one batch request.</p>
-<p>#resetChanges can be used to reset all pending changes instead. After that, or when the promise
-returned by this method is fulfilled, #hasPendingChanges will not report pending changes anymore.</p>
 <hr>
 <h3>toString()</h3>
 <blockquote>
 <p><strong>toString</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns a string representation of this object including the service URL.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>A string description of this model</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Returns a string representation of this object including the service URL.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#tostring"><code>toString</code></a></p>
 <hr>
@@ -1143,6 +1147,6 @@ used by this class</p>
 <p><a href="../../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../../Model/classes/Model.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

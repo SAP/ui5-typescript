@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Item — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Item — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Item — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/Extension/Item/classes/Item.html">
 <meta property="og:title" content="Class: Item — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Item — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Item — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/Extension/Item/classes/Item.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../../sap.ushell/sap/ushell/services/Extension/README.html">Extension</a> › <a href="../../../../../../../sap.ushell/sap/ushell/services/Extension/Item/README.html">Item</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/Extension/Item</a> / Item</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/Extension/Item</a> / Item</p>
 <h1>Class: Item</h1>
 <pre class="sig"><span class="kw">import</span> Item <span class="kw">from</span> <span class="str">"sap/ushell/services/Extension/Item"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<p>Item wrapping an item positioned in an extension point. To be instantiated by sap.ushell.services.Extension.</p>
+<p> The item will be automatically destroyed when the user navigates away from the current application.
+After calling sap.ushell.services.Extension.Item#showOnHome or sap.ushell.services.Extension.Item#showForAllApps
+the item is not destroyed automatically and has to be destroyed manually via sap.ushell.services.Extension.Item#destroy.</p>
 <h2>Since</h2>
 <p>1.120.0
  (since 1.120.0)</p>
-<p>Item wrapping an item positioned in an extension point. To be instantiated by sap.ushell.services.Extension.</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -57,87 +60,89 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><strong>destroy</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Destroys the item and it&#39;s related content.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>Resolves once the item was destroyed.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Destroys the item and it&#39;s related content.</p>
 <hr>
 <h3>hideForAllApps()</h3>
 <blockquote>
 <p><strong>hideForAllApps</strong>(): <code>Item</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Shows the item for all applications. Does not change the visibility of the item for the launchpad &quot;home&quot;.</p>
 <h4>Returns</h4>
 <p><code>Item</code></p>
 <p>this to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Shows the item for all applications. Does not change the visibility of the item for the launchpad &quot;home&quot;.</p>
 <hr>
 <h3>hideForCurrentApp()</h3>
 <blockquote>
 <p><strong>hideForCurrentApp</strong>(): <code>Item</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Hides the item for the current application. Note: The item will not be hidden if it was set visible for
+all apps #showForAllApps</p>
 <h4>Returns</h4>
 <p><code>Item</code></p>
 <p>this to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Hides the item for the current application. Note: The item will not be hidden if it was set visible for
-all apps #showForAllApps</p>
 <hr>
 <h3>hideOnHome()</h3>
 <blockquote>
 <p><strong>hideOnHome</strong>(): <code>Item</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Hides the item for launchpad &quot;home&quot;. Does not change the visibility of the item within applications.
+Disables the automatic destruction of the item when the user navigates away from the current application.</p>
 <h4>Returns</h4>
 <p><code>Item</code></p>
 <p>this to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Hides the item for launchpad &quot;home&quot;. Does not change the visibility of the item within applications.</p>
 <hr>
 <h3>showForAllApps()</h3>
 <blockquote>
 <p><strong>showForAllApps</strong>(): <code>Item</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Shows the item for all applications. Does not change the visibility of the item for the launchpad &quot;home&quot;.
+Disables the automatic destruction of the item when the user navigates away from the current application.</p>
 <h4>Returns</h4>
 <p><code>Item</code></p>
 <p>this to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Shows the item for all applications. Does not change the visibility of the item for the launchpad &quot;home&quot;.</p>
 <hr>
 <h3>showForCurrentApp()</h3>
 <blockquote>
 <p><strong>showForCurrentApp</strong>(): <code>Item</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Shows the item for the current application. The item will be hidden after the user navigates away from
+this application. The item will not be added again if the user navigates back to the application.</p>
 <h4>Returns</h4>
 <p><code>Item</code></p>
 <p>this to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Shows the item for the current application. The item will be hidden after the user navigates away from
-this application. The item will not be added again if the user navigates back to the application.</p>
 <hr>
 <h3>showOnHome()</h3>
 <blockquote>
 <p><strong>showOnHome</strong>(): <code>Item</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Shows the item for launchpad &quot;home&quot;. Does not change the visibility of the item within applications.</p>
 <h4>Returns</h4>
 <p><code>Item</code></p>
 <p>this to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Shows the item for launchpad &quot;home&quot;. Does not change the visibility of the item within applications.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

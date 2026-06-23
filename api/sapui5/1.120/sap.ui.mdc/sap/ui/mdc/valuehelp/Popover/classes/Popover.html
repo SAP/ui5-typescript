@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Popover — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Popover — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Popover — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/valuehelp/Popover/classes/Popover.html">
 <meta property="og:title" content="Class: Popover — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Popover — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Popover — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/valuehelp/Popover/classes/Popover.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › valuehelp › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/valuehelp/Popover/README.html">Popover</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/valuehelp/Popover</a> / Popover</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/valuehelp/Popover</a> / Popover</p>
 <h1>Class: Popover</h1>
 <pre class="sig"><span class="kw">import</span> Popover <span class="kw">from</span> <span class="str">"sap/ui/mdc/valuehelp/Popover"</span>;</pre>
+<p>Container for the sap.ui.mdc.ValueHelp ValueHelp element showing a popover.</p>
 <h2>Since</h2>
 <p>1.95.0</p>
-<p>Container for the sap.ui.mdc.ValueHelp ValueHelp element showing a popover.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../base/Container/classes/Container.html"><code>Container</code></a></li>
@@ -97,11 +97,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getOpensOnClick</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>opensOnClick</code></p>
-<h4>Since</h4>
-<p>1.110.0</p>
 <p>Gets current value of property #getOpensOnClick opensOnClick.</p>
 <p>Controls the possibility to open this popover container by clicking on a connected control, even if no
 content enforces it.</p>
@@ -109,27 +104,40 @@ content enforces it.</p>
 control. This property enables scenarios where popovers need to be shown earlier (for example, recommendations
 or recently entered values). See also sap.ui.mdc.ValueHelpDelegate.showTypeahead showTypeahead</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>opensOnClick</code></p>
+<h4>Since</h4>
+<p>1.110.0</p>
 <hr>
 <h3>getOpensOnFocus()</h3>
 <blockquote>
 <p><strong>getOpensOnFocus</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>opensOnFocus</code></p>
-<h4>Since</h4>
-<p>1.112.0</p>
 <p>Gets current value of property #getOpensOnFocus opensOnFocus.</p>
 <p>Controls the possibility to open this popover container by focussing on a connected control.</p>
 <p><strong>Note:</strong> By default, a type-ahead is only shown to provide suggestions when users enter input in a connected
 control. This property enables scenarios where popovers need to be shown earlier (for example, recommendations
 or recently entered values). See also sap.ui.mdc.ValueHelpDelegate.showTypeahead showTypeahead</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>opensOnFocus</code></p>
+<h4>Since</h4>
+<p>1.112.0</p>
 <hr>
 <h3>setOpensOnClick()</h3>
 <blockquote>
 <p><strong>setOpensOnClick</strong>(<code>bOpensOnClick?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getOpensOnClick opensOnClick.</p>
+<p>Controls the possibility to open this popover container by clicking on a connected control, even if no
+content enforces it.</p>
+<p><strong>Note:</strong> By default, a type-ahead is only shown to provide suggestions when users enter input in a connected
+control. This property enables scenarios where popovers need to be shown earlier (for example, recommendations
+or recently entered values). See also sap.ui.mdc.ValueHelpDelegate.showTypeahead showTypeahead</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bOpensOnClick?</h5>
 <p><code>boolean</code></p>
@@ -139,19 +147,18 @@ or recently entered values). See also sap.ui.mdc.ValueHelpDelegate.showTypeahead
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110.0</p>
-<p>Sets a new value for property #getOpensOnClick opensOnClick.</p>
-<p>Controls the possibility to open this popover container by clicking on a connected control, even if no
-content enforces it.</p>
-<p><strong>Note:</strong> By default, a type-ahead is only shown to provide suggestions when users enter input in a connected
-control. This property enables scenarios where popovers need to be shown earlier (for example, recommendations
-or recently entered values). See also sap.ui.mdc.ValueHelpDelegate.showTypeahead showTypeahead</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setOpensOnFocus()</h3>
 <blockquote>
 <p><strong>setOpensOnFocus</strong>(<code>bOpensOnFocus?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getOpensOnFocus opensOnFocus.</p>
+<p>Controls the possibility to open this popover container by focussing on a connected control.</p>
+<p><strong>Note:</strong> By default, a type-ahead is only shown to provide suggestions when users enter input in a connected
+control. This property enables scenarios where popovers need to be shown earlier (for example, recommendations
+or recently entered values). See also sap.ui.mdc.ValueHelpDelegate.showTypeahead showTypeahead</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bOpensOnFocus?</h5>
 <p><code>boolean</code></p>
@@ -161,13 +168,6 @@ or recently entered values). See also sap.ui.mdc.ValueHelpDelegate.showTypeahead
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.112.0</p>
-<p>Sets a new value for property #getOpensOnFocus opensOnFocus.</p>
-<p>Controls the possibility to open this popover container by focussing on a connected control.</p>
-<p><strong>Note:</strong> By default, a type-ahead is only shown to provide suggestions when users enter input in a connected
-control. This property enables scenarios where popovers need to be shown earlier (for example, recommendations
-or recently entered values). See also sap.ui.mdc.ValueHelpDelegate.showTypeahead showTypeahead</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -208,6 +208,6 @@ used by this class</p>
 <p><a href="../../base/Container/classes/Container.html"><code>Container</code></a>.<a href="../../base/Container/classes/Container.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

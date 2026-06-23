@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $WizardStepSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $WizardStepSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $WizardStepSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/WizardStep/interfaces/$WizardStepSettings.html">
 <meta property="og:title" content="Interface: $WizardStepSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $WizardStepSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $WizardStepSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/WizardStep/interfaces/$WizardStepSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/WizardStep/README.html">WizardStep</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/WizardStep</a> / $WizardStepSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/WizardStep</a> / $WizardStepSettings</p>
 <h1>Interface: $WizardStepSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $WizardStepSettings } <span class="kw">from</span> <span class="str">"sap/m/WizardStep"</span>;</pre>
+<p>Describes the settings that can be provided to the WizardStep constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -84,30 +85,30 @@ should have this property defined, otherwise the default numbering will be displ
 <blockquote>
 <p><code>optional</code> <strong>nextStep?</strong>: <code>string</code> | <a href="../classes/WizardStep.html"><code>WizardStep</code></a></p>
 </blockquote>
+<p>The next step to be taken. It must be defined in order for the previous step to be completed.</p>
 <h4>Since</h4>
 <p>1.32</p>
-<p>The next step to be taken. It must be defined in order for the previous step to be completed.</p>
 <hr>
 <h3>optional?</h3>
 <blockquote>
 <p><code>optional</code> <strong>optional?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Indicates whether or not the step is optional. When a step is optional an &quot;(Optional)&quot; label is displayed
 under the step&#39;s title.</p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>subsequentSteps?</h3>
 <blockquote>
 <p><code>optional</code> <strong>subsequentSteps?</strong>: (<code>string</code> | <a href="../classes/WizardStep.html"><code>WizardStep</code></a>)[]</p>
 </blockquote>
-<h4>Since</h4>
-<p>1.32</p>
 <p>This association is used only when the <code>enableBranching</code> property of the Wizard is set to true. Use the
 association to store the next steps that are about to come after the current. If this is going to be
 a final step - leave this association empty. <strong>NOTE:</strong> The association needs to be set prior the step
 is shown. Dynamical addition of subsequent steps is not supported use case especially when the current
 step is final (the association was empty before the step was displayed).</p>
+<h4>Since</h4>
+<p>1.32</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -119,12 +120,12 @@ step is final (the association was empty before the step was displayed).</p>
 <blockquote>
 <p><code>optional</code> <strong>validated?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.32</p>
 <p>Indicates whether or not the step is validated. When a step is validated a Next button is visualized
 in the Wizard control.</p>
+<h4>Since</h4>
+<p>1.32</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

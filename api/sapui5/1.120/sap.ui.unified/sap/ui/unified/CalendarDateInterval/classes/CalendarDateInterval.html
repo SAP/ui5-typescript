@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CalendarDateInterval — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: CalendarDateInterval — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: CalendarDateInterval — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/CalendarDateInterval/classes/CalendarDateInterval.html">
 <meta property="og:title" content="Class: CalendarDateInterval — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: CalendarDateInterval — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: CalendarDateInterval — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.unified/sap/ui/unified/CalendarDateInterval/classes/CalendarDateInterval.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/CalendarDateInterval/README.html">CalendarDateInterval</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarDateInterval</a> / CalendarDateInterval</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarDateInterval</a> / CalendarDateInterval</p>
 <h1>Class: CalendarDateInterval</h1>
 <pre class="sig"><span class="kw">import</span> CalendarDateInterval <span class="kw">from</span> <span class="str">"sap/ui/unified/CalendarDateInterval"</span>;</pre>
-<h2>Since</h2>
-<p>1.30.0</p>
 <p><code>CalendarDateInterval</code> only visualizes the dates in a one-line interval and allows the selection of a
 single day.</p>
+<h2>Since</h2>
+<p>1.30.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Calendar/classes/Calendar.html"><code>Calendar</code></a></li>
@@ -87,12 +87,12 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_getDaysLarge</strong>(): <code>number</code></p>
 </blockquote>
+<p>If more than this number of days are displayed, start and end month are displayed on the button.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>The number of days to determine how the start and end of month are displayed</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>If more than this number of days are displayed, start and end month are displayed on the button.</p>
 <hr>
 <h3>getDays()</h3>
 <blockquote>
@@ -109,28 +109,28 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getPickerPopup</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getPickerPopup pickerPopup.</p>
+<p>If set, the month- and yearPicker opens on a popup</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>pickerPopup</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets current value of property #getPickerPopup pickerPopup.</p>
-<p>If set, the month- and yearPicker opens on a popup</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowDayNamesLine()</h3>
 <blockquote>
 <p><strong>getShowDayNamesLine</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowDayNamesLine showDayNamesLine.</p>
+<p>If set the day names are shown in a separate line. If not set the day names are shown inside the single
+days.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showDayNamesLine</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets current value of property #getShowDayNamesLine showDayNamesLine.</p>
-<p>If set the day names are shown in a separate line. If not set the day names are shown inside the single
-days.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getStartDate()</h3>
 <blockquote>
@@ -164,6 +164,8 @@ days.</p>
 <blockquote>
 <p><strong>setFirstDayOfWeek</strong>(<code>iFirstDayOfWeek?</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for property <code>firstDayOfWeek</code>.</p>
+<p>Property <code>firstDayOfWeek</code> is not supported in <code>sap.ui.unified.CalendarDateInterval</code> control.</p>
 <h4>Parameters</h4>
 <h5>iFirstDayOfWeek?</h5>
 <p><code>number</code></p>
@@ -173,8 +175,6 @@ days.</p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Setter for property <code>firstDayOfWeek</code>.</p>
-<p>Property <code>firstDayOfWeek</code> is not supported in <code>sap.ui.unified.CalendarDateInterval</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Calendar/classes/Calendar.html"><code>Calendar</code></a>.<a href="../../Calendar/classes/Calendar.html#setfirstdayofweek"><code>setFirstDayOfWeek</code></a></p>
 <hr>
@@ -182,6 +182,8 @@ days.</p>
 <blockquote>
 <p><strong>setMonths</strong>(<code>iMonths</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for property <code>months</code>.</p>
+<p>Property <code>months</code> is not supported in <code>sap.ui.unified.CalendarDateInterval</code> control.</p>
 <h4>Parameters</h4>
 <h5>iMonths</h5>
 <p><code>number</code></p>
@@ -191,8 +193,6 @@ days.</p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Setter for property <code>months</code>.</p>
-<p>Property <code>months</code> is not supported in <code>sap.ui.unified.CalendarDateInterval</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Calendar/classes/Calendar.html"><code>Calendar</code></a>.<a href="../../Calendar/classes/Calendar.html#setmonths"><code>setMonths</code></a></p>
 <hr>
@@ -200,6 +200,10 @@ days.</p>
 <blockquote>
 <p><strong>setPickerPopup</strong>(<code>bPickerPopup?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPickerPopup pickerPopup.</p>
+<p>If set, the month- and yearPicker opens on a popup</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bPickerPopup?</h5>
 <p><code>boolean</code></p>
@@ -209,15 +213,16 @@ days.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getPickerPopup pickerPopup.</p>
-<p>If set, the month- and yearPicker opens on a popup</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowDayNamesLine()</h3>
 <blockquote>
 <p><strong>setShowDayNamesLine</strong>(<code>bShowDayNamesLine?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowDayNamesLine showDayNamesLine.</p>
+<p>If set the day names are shown in a separate line. If not set the day names are shown inside the single
+days.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowDayNamesLine?</h5>
 <p><code>boolean</code></p>
@@ -227,11 +232,6 @@ days.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getShowDayNamesLine showDayNamesLine.</p>
-<p>If set the day names are shown in a separate line. If not set the day names are shown inside the single
-days.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setStartDate()</h3>
 <blockquote>
@@ -285,6 +285,6 @@ used by this class</p>
 <p><a href="../../Calendar/classes/Calendar.html"><code>Calendar</code></a>.<a href="../../Calendar/classes/Calendar.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

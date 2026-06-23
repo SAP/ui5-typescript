@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: TemplateBaseExtension — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: TemplateBaseExtension — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: TemplateBaseExtension — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ovp/sap/ovp/app/TemplateBaseExtension/interfaces/TemplateBaseExtension.html">
 <meta property="og:title" content="Interface: TemplateBaseExtension — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: TemplateBaseExtension — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: TemplateBaseExtension — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ovp/sap/ovp/app/TemplateBaseExtension/interfaces/TemplateBaseExtension.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ovp/README.html">sap.ovp</a> › sap › ovp › app › <a href="../../../../../../sap.ovp/sap/ovp/app/TemplateBaseExtension/README.html">TemplateBaseExtension</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ovp</a> / <a href="../README.html">sap/ovp/app/TemplateBaseExtension</a> / TemplateBaseExtension</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ovp</a> / <a href="../README.html">sap/ovp/app/TemplateBaseExtension</a> / TemplateBaseExtension</p>
 <h1>Interface: TemplateBaseExtension</h1>
 <pre class="sig"><span class="kw">import</span> TemplateBaseExtension <span class="kw">from</span> <span class="str">"sap/ovp/app/TemplateBaseExtension"</span>;</pre>
-<h2>Ui5-protected</h2>
-<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <p>This class contains all extension functions that can be implemented by the application developers in
 their extension code. Application developers must not override any methods that are not mentioned in
 this documentation.</p>
+<h2>Ui5-protected</h2>
+<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/mvc/ControllerExtension/classes/ControllerExtension.html"><code>ControllerExtension</code></a></li>
@@ -52,6 +52,9 @@ this documentation.</p>
 <blockquote>
 <p><strong>extend</strong>(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
+<p>Creates a new subclass of class sap.ovp.app.TemplateBaseExtension with name <code>sClassName</code> and enriches
+it with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.mvc.ControllerExtension.extend.</p>
 <h4>Parameters</h4>
 <h5>sClassName</h5>
 <p><code>string</code></p>
@@ -68,24 +71,21 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new subclass of class sap.ovp.app.TemplateBaseExtension with name <code>sClassName</code> and enriches
-it with the information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.mvc.ControllerExtension.extend.</p>
 <hr>
 <h3>getMetadata()</h3>
 <blockquote>
 <p><strong>getMetadata</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 </blockquote>
+<p>Returns a metadata object for class sap.ovp.app.TemplateBaseExtension.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a metadata object for class sap.ovp.app.TemplateBaseExtension.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/mvc/ControllerExtension/classes/ControllerExtension.html"><code>ControllerExtension</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/mvc/ControllerExtension/classes/ControllerExtension.html#getmetadata"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: DatePicker — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: DatePicker — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Class: DatePicker~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Class: DatePicker~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/DatePicker/classes/DatePicker.html">
-<meta property="og:title" content="Class: DatePicker — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: DatePicker — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Class: DatePicker~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Class: DatePicker~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/DatePicker/classes/DatePicker.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/DatePicker/README.html">DatePicker</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/DatePicker</a> / DatePicker</p>
-<h1>Class: DatePicker</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/DatePicker</a> / DatePicker</p>
+<h1><del>Class: DatePicker</del></h1>
 <pre class="sig"><span class="kw">import</span> DatePicker <span class="kw">from</span> <span class="str">"sap/ui/webc/main/DatePicker"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<h2>Since</h2>
-<p>1.92.0
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <p>Overview:</p>
 <p>The <code>sap.ui.webc.main.DatePicker</code> component provides an input field with assigned calendar which opens
 on user action. The <code>sap.ui.webc.main.DatePicker</code> allows users to select a localized date using touch,
@@ -83,6 +80,17 @@ following modules:</p>
 	&quot;calendarType&quot;: &quot;Japanese&quot;
 }
 &lt;/script&gt;```
+
+## Since
+
+1.92.0
+
+## Deprecated
+
+(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
+Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
+functionality.
+ (since 1.92.0) - This control is experimental and its API might change significantly.
 
 ## Extends
 
@@ -158,7 +166,7 @@ Initial settings for the new control
 
 ## Properties
 
-### \_\_implements\_\_sap\_ui\_core\_IFormContent
+### ~~\_\_implements\_\_sap\_ui\_core\_IFormContent~~
 
 &gt; **\_\_implements\_\_sap\_ui\_core\_IFormContent**: `boolean`
 
@@ -170,7 +178,7 @@ Initial settings for the new control
 
 ***
 
-### addAriaLabelledBy()
+### ~~addAriaLabelledBy()~~
 
 &gt; **addAriaLabelledBy**(`vAriaLabelledBy`): `this`
 
@@ -194,7 +202,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### attachChange()
+### ~~attachChange()~~
 
 #### Call Signature
 
@@ -271,7 +279,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### attachInput()
+### ~~attachInput()~~
 
 #### Call Signature
 
@@ -348,7 +356,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### closePicker()
+### ~~closePicker()~~
 
 &gt; **closePicker**(): `void`
 
@@ -362,7 +370,7 @@ Closes the picker.
 
 ***
 
-### detachChange()
+### ~~detachChange()~~
 
 &gt; **detachChange**(`fnFunction`, `oListener?`): `this`
 
@@ -394,7 +402,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### detachInput()
+### ~~detachInput()~~
 
 &gt; **detachInput**(`fnFunction`, `oListener?`): `this`
 
@@ -426,11 +434,16 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### fireChange()
+### ~~fireChange()~~
 
 &gt; **fireChange**(`mParameters?`): `boolean`
 
 **`Experimental`**
+
+Fires event #event:change change to attached listeners.
+
+Listeners may prevent the default action of this event by calling the `preventDefault` method on the
+event object. The return value of this method indicates whether the default action should be executed.
 
 #### Parameters
 
@@ -450,18 +463,18 @@ Whether or not to prevent the default action
 
 Do not call from applications (only from related classes in the framework)
 
-Fires event #event:change change to attached listeners.
-
-Listeners may prevent the default action of this event by calling the `preventDefault` method on the
-event object. The return value of this method indicates whether the default action should be executed.
-
 ***
 
-### fireInput()
+### ~~fireInput()~~
 
 &gt; **fireInput**(`mParameters?`): `boolean`
 
 **`Experimental`**
+
+Fires event #event:input input to attached listeners.
+
+Listeners may prevent the default action of this event by calling the `preventDefault` method on the
+event object. The return value of this method indicates whether the default action should be executed.
 
 #### Parameters
 
@@ -481,14 +494,9 @@ Whether or not to prevent the default action
 
 Do not call from applications (only from related classes in the framework)
 
-Fires event #event:input input to attached listeners.
-
-Listeners may prevent the default action of this event by calling the `preventDefault` method on the
-event object. The return value of this method indicates whether the default action should be executed.
-
 ***
 
-### formatValue()
+### ~~formatValue()~~
 
 &gt; **formatValue**(`date`): `void`
 
@@ -511,7 +519,7 @@ A Java Script date object to be formatted as string
 
 ***
 
-### getAccessibleName()
+### ~~getAccessibleName()~~
 
 &gt; **getAccessibleName**(): `string`
 
@@ -531,7 +539,7 @@ Value of property `accessibleName`
 
 ***
 
-### getAriaLabelledBy()
+### ~~getAriaLabelledBy()~~
 
 &gt; **getAriaLabelledBy**(): `string`[]
 
@@ -545,7 +553,7 @@ Returns array of IDs of the elements which are the current targets of the associ
 
 ***
 
-### getDateValue()
+### ~~getDateValue()~~
 
 &gt; **getDateValue**(): `void`
 
@@ -559,7 +567,7 @@ Returns the currently selected date represented as a Local JavaScript Date insta
 
 ***
 
-### getEnabled()
+### ~~getEnabled()~~
 
 &gt; **getEnabled**(): `boolean`
 
@@ -580,7 +588,7 @@ Value of property `enabled`
 
 ***
 
-### getFormatPattern()
+### ~~getFormatPattern()~~
 
 &gt; **getFormatPattern**(): `string`
 
@@ -600,7 +608,7 @@ Value of property `formatPattern`
 
 ***
 
-### getHideWeekNumbers()
+### ~~getHideWeekNumbers()~~
 
 &gt; **getHideWeekNumbers**(): `boolean`
 
@@ -623,7 +631,7 @@ Value of property `hideWeekNumbers`
 
 ***
 
-### getMaxDate()
+### ~~getMaxDate()~~
 
 &gt; **getMaxDate**(): `string`
 
@@ -646,7 +654,7 @@ Value of property `maxDate`
 
 ***
 
-### getMinDate()
+### ~~getMinDate()~~
 
 &gt; **getMinDate**(): `string`
 
@@ -669,7 +677,7 @@ Value of property `minDate`
 
 ***
 
-### getName()
+### ~~getName()~~
 
 &gt; **getName**(): `string`
 
@@ -692,7 +700,7 @@ Value of property `name`
 
 ***
 
-### getPlaceholder()
+### ~~getPlaceholder()~~
 
 &gt; **getPlaceholder**(): `string`
 
@@ -716,7 +724,7 @@ Value of property `placeholder`
 
 ***
 
-### getPrimaryCalendarType()
+### ~~getPrimaryCalendarType()~~
 
 &gt; **getPrimaryCalendarType**(): [`CalendarType`](../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html)
 
@@ -734,7 +742,7 @@ Value of property `primaryCalendarType`
 
 ***
 
-### getReadonly()
+### ~~getReadonly()~~
 
 &gt; **getReadonly**(): `boolean`
 
@@ -754,7 +762,7 @@ Value of property `readonly`
 
 ***
 
-### getRequired()
+### ~~getRequired()~~
 
 &gt; **getRequired**(): `boolean`
 
@@ -774,7 +782,7 @@ Value of property `required`
 
 ***
 
-### getSecondaryCalendarType()
+### ~~getSecondaryCalendarType()~~
 
 &gt; **getSecondaryCalendarType**(): [`CalendarType`](../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html)
 
@@ -794,7 +802,7 @@ Value of property `secondaryCalendarType`
 
 ***
 
-### getValue()
+### ~~getValue()~~
 
 &gt; **getValue**(): `string`
 
@@ -814,7 +822,7 @@ Value of property `value`
 
 ***
 
-### getValueState()
+### ~~getValueState()~~
 
 &gt; **getValueState**(): `&quot;None&quot;` \| [`ValueState`](../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html) \| `&quot;Error&quot;` \| `&quot;Information&quot;` \| `&quot;Success&quot;` \| `&quot;Warning&quot;`
 
@@ -834,7 +842,7 @@ Value of property `valueState`
 
 ***
 
-### getValueStateMessage()
+### ~~getValueStateMessage()~~
 
 &gt; **getValueStateMessage**(): `string`
 
@@ -856,7 +864,7 @@ Value of property `valueStateMessage`
 
 ***
 
-### getWidth()
+### ~~getWidth()~~
 
 &gt; **getWidth**(): `string`
 
@@ -874,7 +882,7 @@ Value of property `width`
 
 ***
 
-### isInValidRange()
+### ~~isInValidRange()~~
 
 &gt; **isInValidRange**(`value`): `void`
 
@@ -896,7 +904,7 @@ A value to be checked
 
 ***
 
-### isOpen()
+### ~~isOpen()~~
 
 &gt; **isOpen**(): `void`
 
@@ -910,7 +918,7 @@ Checks if the picker is open.
 
 ***
 
-### isValid()
+### ~~isValid()~~
 
 &gt; **isValid**(`value`): `void`
 
@@ -932,7 +940,7 @@ A value to be tested against the current date format
 
 ***
 
-### openPicker()
+### ~~openPicker()~~
 
 &gt; **openPicker**(): `void`
 
@@ -946,7 +954,7 @@ Opens the picker.
 
 ***
 
-### removeAllAriaLabelledBy()
+### ~~removeAllAriaLabelledBy()~~
 
 &gt; **removeAllAriaLabelledBy**(): `string`[]
 
@@ -962,7 +970,7 @@ An array of the removed elements (might be empty)
 
 ***
 
-### removeAriaLabelledBy()
+### ~~removeAriaLabelledBy()~~
 
 &gt; **removeAriaLabelledBy**(`vAriaLabelledBy`): `string`
 
@@ -986,7 +994,7 @@ The removed ariaLabelledBy or `null`
 
 ***
 
-### setAccessibleName()
+### ~~setAccessibleName()~~
 
 &gt; **setAccessibleName**(`sAccessibleName?`): `this`
 
@@ -1016,7 +1024,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setEnabled()
+### ~~setEnabled()~~
 
 &gt; **setEnabled**(`bEnabled?`): `this`
 
@@ -1047,7 +1055,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setFormatPattern()
+### ~~setFormatPattern()~~
 
 &gt; **setFormatPattern**(`sFormatPattern?`): `this`
 
@@ -1077,7 +1085,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setHideWeekNumbers()
+### ~~setHideWeekNumbers()~~
 
 &gt; **setHideWeekNumbers**(`bHideWeekNumbers?`): `this`
 
@@ -1110,7 +1118,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setMaxDate()
+### ~~setMaxDate()~~
 
 &gt; **setMaxDate**(`sMaxDate?`): `this`
 
@@ -1143,7 +1151,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setMinDate()
+### ~~setMinDate()~~
 
 &gt; **setMinDate**(`sMinDate?`): `this`
 
@@ -1176,7 +1184,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setName()
+### ~~setName()~~
 
 &gt; **setName**(`sName?`): `this`
 
@@ -1209,7 +1217,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setPlaceholder()
+### ~~setPlaceholder()~~
 
 &gt; **setPlaceholder**(`sPlaceholder?`): `this`
 
@@ -1243,7 +1251,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setPrimaryCalendarType()
+### ~~setPrimaryCalendarType()~~
 
 &gt; **setPrimaryCalendarType**(`sPrimaryCalendarType`): `this`
 
@@ -1271,7 +1279,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setReadonly()
+### ~~setReadonly()~~
 
 &gt; **setReadonly**(`bReadonly?`): `this`
 
@@ -1301,7 +1309,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setRequired()
+### ~~setRequired()~~
 
 &gt; **setRequired**(`bRequired?`): `this`
 
@@ -1331,7 +1339,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setSecondaryCalendarType()
+### ~~setSecondaryCalendarType()~~
 
 &gt; **setSecondaryCalendarType**(`sSecondaryCalendarType?`): `this`
 
@@ -1361,7 +1369,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setValue()
+### ~~setValue()~~
 
 &gt; **setValue**(`sValue?`): `this`
 
@@ -1391,7 +1399,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setValueState()
+### ~~setValueState()~~
 
 &gt; **setValueState**(`sValueState?`): `this`
 
@@ -1421,7 +1429,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setValueStateMessage()
+### ~~setValueStateMessage()~~
 
 &gt; **setValueStateMessage**(`sValueStateMessage?`): `this`
 
@@ -1453,7 +1461,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### setWidth()
+### ~~setWidth()~~
 
 &gt; **setWidth**(`sWidth`): `this`
 
@@ -1481,7 +1489,7 @@ Reference to `this` in order to allow method chaining
 
 ***
 
-### extend()
+### ~~extend()~~
 
 &gt; `static` **extend**\&lt;`T`\&gt;(`sClassName`, `oClassInfo?`, `FNMetaImpl?`): `Function`
 
@@ -1531,7 +1539,7 @@ Created class / constructor function
 
 ***
 
-### getMetadata()
+### ~~getMetadata()~~
 
 &gt; `static` **getMetadata**(): [`WebComponentMetadata`](../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponentMetadata/classes/WebComponentMetadata.html)
 
@@ -1552,6 +1560,6 @@ Metadata object describing this class
 ***
 </code></pre>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

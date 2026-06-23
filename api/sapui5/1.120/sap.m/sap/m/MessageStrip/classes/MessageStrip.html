@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: MessageStrip — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: MessageStrip — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: MessageStrip — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/MessageStrip/classes/MessageStrip.html">
 <meta property="og:title" content="Class: MessageStrip — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: MessageStrip — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: MessageStrip — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/MessageStrip/classes/MessageStrip.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MessageStrip/README.html">MessageStrip</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessageStrip</a> / MessageStrip</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessageStrip</a> / MessageStrip</p>
 <h1>Class: MessageStrip</h1>
 <pre class="sig"><span class="kw">import</span> MessageStrip <span class="kw">from</span> <span class="str">"sap/m/MessageStrip"</span>;</pre>
-<h2>Since</h2>
-<p>1.30</p>
 <p>MessageStrip is a control that enables the embedding of application-related messages in the application.
 Overview: The message strip displays 4 types of messages, each with a corresponding semantic color and
 icon: Information, Success, Warning and Error.</p>
@@ -60,6 +58,8 @@ as Information Bar, as shown in our “Dynamic Message Strip Generator sample.�
     to use:
 	 - You want to display information within the object page header, within a control, in the master list,
     or above the page header.</p>
+<h2>Since</h2>
+<p>1.30</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -186,6 +186,7 @@ can be shown again by setting the visible property to true.</p>
 <blockquote>
 <p><strong>fireClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:close close to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -195,7 +196,6 @@ can be shown again by setting the visible property to true.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:close close to attached listeners.</p>
 <hr>
 <h3>getCustomIcon()</h3>
 <blockquote>
@@ -213,11 +213,6 @@ used.</p>
 <blockquote>
 <p><strong>getEnableFormattedText</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableFormattedText</code></p>
-<h4>Since</h4>
-<p>1.50</p>
 <p>Gets current value of property #getEnableFormattedText enableFormattedText.</p>
 <p>Determines the limited collection of HTML elements passed to the <code>text</code> property should be evaluated.</p>
 <p><strong>Note:</strong> If this property is set to true the string passed to <code>text</code> property can evaluate the following
@@ -229,6 +224,11 @@ by the control:
 	 - <code>strong</code>
 	 - <code>u</code></p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableFormattedText</code></p>
+<h4>Since</h4>
+<p>1.50</p>
 <hr>
 <h3>getLink()</h3>
 <blockquote>
@@ -306,15 +306,6 @@ used.</p>
 <blockquote>
 <p><strong>setEnableFormattedText</strong>(<code>bEnableFormattedText?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bEnableFormattedText?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>enableFormattedText</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.50</p>
 <p>Sets a new value for property #getEnableFormattedText enableFormattedText.</p>
 <p>Determines the limited collection of HTML elements passed to the <code>text</code> property should be evaluated.</p>
 <p><strong>Note:</strong> If this property is set to true the string passed to <code>text</code> property can evaluate the following
@@ -327,6 +318,15 @@ by the control:
 	 - <code>u</code></p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableFormattedText?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableFormattedText</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.50</p>
 <hr>
 <h3>setLink()</h3>
 <blockquote>
@@ -443,6 +443,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

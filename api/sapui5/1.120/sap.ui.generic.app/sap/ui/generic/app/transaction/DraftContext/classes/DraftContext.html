@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DraftContext — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: DraftContext — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: DraftContext — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.generic.app/sap/ui/generic/app/transaction/DraftContext/classes/DraftContext.html">
 <meta property="og:title" content="Class: DraftContext — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: DraftContext — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: DraftContext — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.generic.app/sap/ui/generic/app/transaction/DraftContext/classes/DraftContext.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.generic.app/README.html">sap.ui.generic.app</a> › sap › ui › generic › app › transaction › <a href="../../../../../../../../sap.ui.generic.app/sap/ui/generic/app/transaction/DraftContext/README.html">DraftContext</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.generic.app</a> / <a href="../README.html">sap/ui/generic/app/transaction/DraftContext</a> / DraftContext</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.generic.app</a> / <a href="../README.html">sap/ui/generic/app/transaction/DraftContext</a> / DraftContext</p>
 <h1>Class: DraftContext</h1>
 <pre class="sig"><span class="kw">import</span> DraftContext <span class="kw">from</span> <span class="str">"sap/ui/generic/app/transaction/DraftContext"</span>;</pre>
-<h2>Since</h2>
-<p>1.30.0</p>
 <p>The class provides access to information on draft handling that is available in the OData service&#39;s metadata
 as it interprets draft-specific annotations.</p>
+<h2>Since</h2>
+<p>1.30.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
@@ -65,6 +65,8 @@ as it interprets draft-specific annotations.</p>
 <blockquote>
 <p><strong>checkUpdateOnChange</strong>(<code>sEntitySet</code>, <code>sProperty</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks whether an OData property is annotated with UpdateOnChange. The method is used in context of a
+validation success event.</p>
 <h4>Parameters</h4>
 <h5>sEntitySet</h5>
 <p><code>string</code></p>
@@ -77,8 +79,6 @@ as it interprets draft-specific annotations.</p>
 <p><code>true</code>, if the property is annotated with UpdateOnChange, <code>false</code> otherwise</p>
 <h4>Deprecated</h4>
 <p>(since 1.32.0)</p>
-<p>Checks whether an OData property is annotated with UpdateOnChange. The method is used in context of a
-validation success event.</p>
 <hr>
 <h3>destroy()</h3>
 <blockquote>
@@ -191,14 +191,14 @@ given binding context.</p>
 <blockquote>
 <p><strong>hasPreserveChanges</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Checks if the parameter &quot;PreserveChanges&quot; is supported by the edit function. If the edit action is triggered
+with the parameter set to <code>true</code> the ABAP application infrastructure will respond with HTTP response
+code 409 if unsaved changes (from another user) exist.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p><code>true</code>, if &quot;PreserveChanges&quot; is supported</p>
 <h4>Since</h4>
 <p>1.38</p>
-<p>Checks if the parameter &quot;PreserveChanges&quot; is supported by the edit function. If the edit action is triggered
-with the parameter set to <code>true</code> the ABAP application infrastructure will respond with HTTP response
-code 409 if unsaved changes (from another user) exist.</p>
 <hr>
 <h3>hasSiblingEntity()</h3>
 <blockquote>
@@ -308,6 +308,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

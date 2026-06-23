@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: PictureItem~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: PictureItem~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: PictureItem~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/PictureItem/classes/PictureItem.html">
 <meta property="og:title" content="~~Class: PictureItem~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: PictureItem~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: PictureItem~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ca.ui/sap/ca/ui/PictureItem/classes/PictureItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ca.ui/README.html">sap.ca.ui</a> › sap › ca › ui › <a href="../../../../../../sap.ca.ui/sap/ca/ui/PictureItem/README.html">PictureItem</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/PictureItem</a> / PictureItem</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ca.ui</a> / <a href="../README.html">sap/ca/ui/PictureItem</a> / PictureItem</p>
 <h1><del>Class: PictureItem</del></h1>
 <pre class="sig"><span class="kw">import</span> PictureItem <span class="kw">from</span> <span class="str">"sap/ca/ui/PictureItem"</span>;</pre>
+<p>A picture / photo Item for AddPicture and PictureViewer Controls</p>
 <h2>Deprecated</h2>
 <p>(since 1.22) - This control has been made available in sap.m. Please use the sap.m.Carousel
 instead! This control will not be supported anymore.</p>
-<p>A picture / photo Item for AddPicture and PictureViewer Controls</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -146,6 +146,7 @@ otherwise it will be bound to this <code>sap.ca.ui.PictureItem</code> itself.</p
 <blockquote>
 <p><strong>fireLoaded</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:loaded loaded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -155,20 +156,19 @@ otherwise it will be bound to this <code>sap.ca.ui.PictureItem</code> itself.</p
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:loaded loaded to attached listeners.</p>
 <hr>
 <h3><del>getHeight()</del></h3>
 <blockquote>
 <p><strong>getHeight</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getHeight height.</p>
+<p>The height of the picture.</p>
+<p>Default value is <code>&#39;62px&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>height</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.16.2) - Height is defined by the AddPicture control</p>
-<p>Gets current value of property #getHeight height.</p>
-<p>The height of the picture.</p>
-<p>Default value is <code>&#39;62px&#39;</code>.</p>
 <hr>
 <h3><del>getName()</del></h3>
 <blockquote>
@@ -204,14 +204,14 @@ otherwise it will be bound to this <code>sap.ca.ui.PictureItem</code> itself.</p
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getWidth width.</p>
+<p>The width of the picture.</p>
+<p>Default value is <code>&#39;62px&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.16.2) - Width is defined by the AddPicture control</p>
-<p>Gets current value of property #getWidth width.</p>
-<p>The width of the picture.</p>
-<p>Default value is <code>&#39;62px&#39;</code>.</p>
 <hr>
 <h3><del>setFile()</del></h3>
 <blockquote>
@@ -231,6 +231,10 @@ otherwise it will be bound to this <code>sap.ca.ui.PictureItem</code> itself.</p
 <blockquote>
 <p><strong>setHeight</strong>(<code>sHeight?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHeight height.</p>
+<p>The height of the picture.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;62px&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeight?</h5>
 <p><code>string</code></p>
@@ -240,10 +244,6 @@ otherwise it will be bound to this <code>sap.ca.ui.PictureItem</code> itself.</p
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.2) - Height is defined by the AddPicture control</p>
-<p>Sets a new value for property #getHeight height.</p>
-<p>The height of the picture.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;62px&#39;</code>.</p>
 <hr>
 <h3><del>setName()</del></h3>
 <blockquote>
@@ -291,6 +291,10 @@ otherwise it will be bound to this <code>sap.ca.ui.PictureItem</code> itself.</p
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWidth width.</p>
+<p>The width of the picture.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;62px&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sWidth?</h5>
 <p><code>string</code></p>
@@ -300,10 +304,6 @@ otherwise it will be bound to this <code>sap.ca.ui.PictureItem</code> itself.</p
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.2) - Width is defined by the AddPicture control</p>
-<p>Sets a new value for property #getWidth width.</p>
-<p>The width of the picture.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;62px&#39;</code>.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -344,6 +344,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

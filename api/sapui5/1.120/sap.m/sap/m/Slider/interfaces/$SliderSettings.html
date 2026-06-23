@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SliderSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SliderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $SliderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Slider/interfaces/$SliderSettings.html">
 <meta property="og:title" content="Interface: $SliderSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SliderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $SliderSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Slider/interfaces/$SliderSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Slider/README.html">Slider</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Slider</a> / $SliderSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Slider</a> / $SliderSettings</p>
 <h1>Interface: $SliderSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SliderSettings } <span class="kw">from</span> <span class="str">"sap/m/Slider"</span>;</pre>
+<p>Describes the settings that can be provided to the Slider constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -51,9 +52,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <hr>
 <h3>change?</h3>
 <blockquote>
@@ -70,11 +71,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>customTooltips?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../SliderTooltipBase/classes/SliderTooltipBase.html"><code>SliderTooltipBase</code></a> | <a href="../../SliderTooltipBase/classes/SliderTooltipBase.html"><code>SliderTooltipBase</code></a>[]</p>
 </blockquote>
-<h4>Since</h4>
-<p>1.56</p>
 <p>Aggregation for user-defined tooltips. <strong>Note:</strong> In case of Slider, only the first tooltip of the aggregation
 is used. In the RangeSlider case - the first two. If no custom tooltips are provided, the default are
 used</p>
+<h4>Since</h4>
+<p>1.56</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
@@ -86,18 +87,18 @@ used</p>
 <blockquote>
 <p><code>optional</code> <strong>enableTickmarks?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Enables tickmarks visualisation</p>
 <h4>Since</h4>
 <p>1.44</p>
-<p>Enables tickmarks visualisation</p>
 <hr>
 <h3>inputsAsTooltips?</h3>
 <blockquote>
 <p><code>optional</code> <strong>inputsAsTooltips?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.42</p>
 <p>Indicates whether input fields should be used as tooltips for the handles. <strong>Note:</strong> Setting this option
 to <code>true</code> will only work if <code>showAdvancedTooltip</code> is set to <code>true</code>.</p>
+<h4>Since</h4>
+<p>1.42</p>
 <hr>
 <h3>liveChange?</h3>
 <blockquote>
@@ -139,26 +140,26 @@ server via submit).</p>
 <blockquote>
 <p><code>optional</code> <strong>scale?</strong>: <a href="../../library/interfaces/IScale.html"><code>IScale</code></a></p>
 </blockquote>
+<p>Scale for visualisation of tickmarks and labels</p>
 <h4>Since</h4>
 <p>1.46</p>
-<p>Scale for visualisation of tickmarks and labels</p>
 <hr>
 <h3>showAdvancedTooltip?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showAdvancedTooltip?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.42</p>
 <p>Indicate whether the handle&#39;s advanced tooltip is shown. <strong>Note:</strong> Setting this option to <code>true</code> will
 ignore the value set in <code>showHandleTooltip</code>. This will cause only the advanced tooltip to be shown.</p>
+<h4>Since</h4>
+<p>1.42</p>
 <hr>
 <h3>showHandleTooltip?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showHandleTooltip?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Indicate whether the handle tooltip is shown.</p>
 <h4>Since</h4>
 <p>1.31</p>
-<p>Indicate whether the handle tooltip is shown.</p>
 <hr>
 <h3>step?</h3>
 <blockquote>
@@ -185,6 +186,6 @@ are used instead.</p>
 </blockquote>
 <p>Defines the width of the control.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

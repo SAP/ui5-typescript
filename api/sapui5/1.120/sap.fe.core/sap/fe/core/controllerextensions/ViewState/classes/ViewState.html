@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ViewState — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ViewState — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ViewState — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.fe.core/sap/fe/core/controllerextensions/ViewState/classes/ViewState.html">
 <meta property="og:title" content="Class: ViewState — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ViewState — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ViewState — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.fe.core/sap/fe/core/controllerextensions/ViewState/classes/ViewState.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.fe.core/README.html">sap.fe.core</a> › sap › fe › core › controllerextensions › <a href="../../../../../../../sap.fe.core/sap/fe/core/controllerextensions/ViewState/README.html">ViewState</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.fe.core</a> / <a href="../README.html">sap/fe/core/controllerextensions/ViewState</a> / ViewState</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.fe.core</a> / <a href="../README.html">sap/fe/core/controllerextensions/ViewState</a> / ViewState</p>
 <h1>Class: ViewState</h1>
 <pre class="sig"><span class="kw">import</span> ViewState <span class="kw">from</span> <span class="str">"sap/fe/core/controllerextensions/ViewState"</span>;</pre>
-<h2>Since</h2>
-<p>1.85.0</p>
 <p>A controller extension offering hooks for state handling
 If you need to maintain a specific state for your application, you can use the controller extension.</p>
+<h2>Since</h2>
+<p>1.85.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/mvc/ControllerExtension/classes/ControllerExtension.html"><code>ControllerExtension</code></a></li>
@@ -60,6 +60,9 @@ If you need to maintain a specific state for your application, you can use the c
 <blockquote>
 <p><strong>adaptBindingRefreshControls</strong>(<code>aCollectedControls</code>): <code>void</code></p>
 </blockquote>
+<p>This function should add all controls relevant for refreshing to the provided control array.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>aCollectedControls</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>[]</p>
@@ -68,14 +71,14 @@ If you need to maintain a specific state for your application, you can use the c
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>This function should add all controls relevant for refreshing to the provided control array.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>adaptBindingRefreshHandler()</h3>
 <blockquote>
 <p><strong>adaptBindingRefreshHandler</strong>(<code>oControl</code>, <code>oControlHandler</code>): <code>void</code></p>
 </blockquote>
+<p>Customize the <code>refreshBinding</code> function for a certain control.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></p>
@@ -87,14 +90,14 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Customize the <code>refreshBinding</code> function for a certain control.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>adaptControlStateHandler()</h3>
 <blockquote>
 <p><strong>adaptControlStateHandler</strong>(<code>oControl</code>, <code>aControlHandler</code>): <code>void</code></p>
 </blockquote>
+<p>Customize the <code>retrieve</code> and <code>apply</code> functions for a certain control.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></p>
@@ -106,14 +109,15 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Customize the <code>retrieve</code> and <code>apply</code> functions for a certain control.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>adaptStateControls()</h3>
 <blockquote>
 <p><strong>adaptStateControls</strong>(<code>aCollectedControls</code>): <code>void</code></p>
 </blockquote>
+<p>This function should add all controls for given view that should be considered for the state handling
+to the provided control array.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>aCollectedControls</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>[]</p>
@@ -122,15 +126,14 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>This function should add all controls for given view that should be considered for the state handling
-to the provided control array.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>applyAdditionalStates()</h3>
 <blockquote>
 <p><strong>applyAdditionalStates</strong>(<code>oViewState</code>, <code>aPromises</code>): <code>void</code></p>
 </blockquote>
+<p>Applying additional, not control related, states - is called only if navigation type is iAppState.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>oViewState</h5>
 <p><code>object</code></p>
@@ -142,30 +145,30 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Applying additional, not control related, states - is called only if navigation type is iAppState.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>applyInitialStateOnly()</h3>
 <blockquote>
 <p><strong>applyInitialStateOnly</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Defines whether the view state should only be applied once initially.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.Instead.
+Important:
+You should only override this method for custom pages and not for the standard ListReportPage and ObjectPage!</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>If <code>true</code>, only the initial view state is applied once,
 else any new view state is also applied on follow-up calls (default)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Defines whether the view state should only be applied once initially.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.Instead.
-Important:
-You should only override this method for custom pages and not for the standard ListReportPage and ObjectPage!</p>
 <hr>
 <h3>applyNavigationParameters()</h3>
 <blockquote>
 <p><strong>applyNavigationParameters</strong>(<code>oNavParameter</code>, <code>aPromises</code>): <code>void</code></p>
 </blockquote>
+<p>Apply navigation parameters is not called if the navigation type is iAppState
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>oNavParameter</h5>
 <p>The current navigation parameter</p>
@@ -188,9 +191,6 @@ You should only override this method for custom pages and not for the standard L
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Apply navigation parameters is not called if the navigation type is iAppState
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>applyViewState()</h3>
 <blockquote>
@@ -215,6 +215,9 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <blockquote>
 <p><strong>onAfterStateApplied</strong>(<code>aPromises</code>): <code>void</code></p>
 </blockquote>
+<p>Hook to react when state for given view was applied.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>aPromises</h5>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
@@ -223,14 +226,14 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Hook to react when state for given view was applied.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>onBeforeStateApplied()</h3>
 <blockquote>
 <p><strong>onBeforeStateApplied</strong>(<code>aPromises</code>, <code>navigationType?</code>): <code>void</code></p>
 </blockquote>
+<p>Hook to react before a state for given view is applied.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>aPromises</h5>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
@@ -242,9 +245,6 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Hook to react before a state for given view is applied.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>onRestore()</h3>
 <blockquote>
@@ -266,6 +266,10 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <blockquote>
 <p><strong>retrieveAdditionalStates</strong>(<code>mAdditionalStates</code>): <code>void</code></p>
 </blockquote>
+<p>Extend the map of additional states (not control bound) to be added to the current view state of the
+given view.
+This function is meant to be individually overridden by consuming controllers, but not to be called directly.
+The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <h4>Parameters</h4>
 <h5>mAdditionalStates</h5>
 <p><code>object</code></p>
@@ -274,10 +278,6 @@ The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Extend the map of additional states (not control bound) to be added to the current view state of the
-given view.
-This function is meant to be individually overridden by consuming controllers, but not to be called directly.
-The override execution is: sap.ui.core.mvc.OverrideExecution.After.</p>
 <hr>
 <h3>retrieveViewState()</h3>
 <blockquote>
@@ -291,6 +291,6 @@ to <code>undefined</code>.</p>
 <p>A promise resolving the view state</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

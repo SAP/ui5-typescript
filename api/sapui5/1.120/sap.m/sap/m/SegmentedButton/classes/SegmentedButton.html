@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SegmentedButton — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SegmentedButton — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SegmentedButton — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/SegmentedButton/classes/SegmentedButton.html">
 <meta property="og:title" content="Class: SegmentedButton — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SegmentedButton — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SegmentedButton — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/SegmentedButton/classes/SegmentedButton.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SegmentedButton/README.html">SegmentedButton</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SegmentedButton</a> / SegmentedButton</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SegmentedButton</a> / SegmentedButton</p>
 <h1>Class: SegmentedButton</h1>
 <pre class="sig"><span class="kw">import</span> SegmentedButton <span class="kw">from</span> <span class="str">"sap/m/SegmentedButton"</span>;</pre>
 <p>A horizontal control made of multiple buttons, which can display a title or an image.</p>
@@ -143,6 +143,7 @@ See:
 <blockquote>
 <p><strong>addButton</strong>(<code>oButton</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some button to the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -152,7 +153,6 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - replaced by <code>items</code> aggregation</p>
-<p>Adds some button to the aggregation #getButtons buttons.</p>
 <hr>
 <h3>addItem()</h3>
 <blockquote>
@@ -172,6 +172,10 @@ See:
 <blockquote>
 <p><strong>attachSelect</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.m.SegmentedButton</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p>
+<p>Fires when the user selects a button, which returns the ID and button object.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -188,14 +192,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.52) - replaced by <code>selectionChange</code> event</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.m.SegmentedButton</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p>
-<p>Fires when the user selects a button, which returns the ID and button object.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.m.SegmentedButton</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p>
+<p>Fires when the user selects a button, which returns the ID and button object.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -208,16 +212,17 @@ otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.52) - replaced by <code>selectionChange</code> event</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:select select event of this <code>sap.m.SegmentedButton</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p>
-<p>Fires when the user selects a button, which returns the ID and button object.</p>
 <hr>
 <h3>attachSelectionChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSelectionChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
+<code>sap.m.SegmentedButton</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p>
+<p>Fires when the user selects an item, which returns the item object.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -234,15 +239,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.52</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
 <code>sap.m.SegmentedButton</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p>
 <p>Fires when the user selects an item, which returns the item object.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -255,16 +260,14 @@ otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.52</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:selectionChange selectionChange event of this
-<code>sap.m.SegmentedButton</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p>
-<p>Fires when the user selects an item, which returns the item object.</p>
 <hr>
 <h3>bindItems()</h3>
 <blockquote>
 <p><strong>bindItems</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getItems items to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -274,14 +277,14 @@ otherwise it will be bound to this <code>sap.m.SegmentedButton</code> itself.</p
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Binds aggregation #getItems items to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3>bindSelectedKey()</h3>
 <blockquote>
 <p><strong>bindSelectedKey</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds property #getSelectedKey selectedKey to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindProperty ManagedObject.bindProperty for a detailed description
+of the possible properties of <code>oBindingInfo</code></p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
@@ -291,14 +294,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Binds property #getSelectedKey selectedKey to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindProperty ManagedObject.bindProperty for a detailed description
-of the possible properties of <code>oBindingInfo</code></p>
 <hr>
 <h3>createButton()</h3>
 <blockquote>
 <p><strong>createButton</strong>(<code>sText</code>, <code>sURI?</code>, <code>bEnabled?</code>, <code>sTextDirection?</code>): <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
+<p>Adds a Button with a text as title, a URI for an icon, enabled and textDirection. Only one is allowed.</p>
 <h4>Parameters</h4>
 <h5>sText</h5>
 <p><code>string</code></p>
@@ -319,34 +320,35 @@ settings.</p>
 <p>The created Button</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Adds a Button with a text as title, a URI for an icon, enabled and textDirection. Only one is allowed.</p>
 <hr>
 <h3><del>destroyButtons()</del></h3>
 <blockquote>
 <p><strong>destroyButtons</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the buttons in the aggregation #getButtons buttons.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - replaced by <code>items</code> aggregation</p>
-<p>Destroys all the buttons in the aggregation #getButtons buttons.</p>
 <hr>
 <h3>destroyItems()</h3>
 <blockquote>
 <p><strong>destroyItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the items in the aggregation #getItems items.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Destroys all the items in the aggregation #getItems items.</p>
 <hr>
 <h3><del>detachSelect()</del></h3>
 <blockquote>
 <p><strong>detachSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:select select event of this <code>sap.m.SegmentedButton</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -359,13 +361,14 @@ settings.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.52) - replaced by <code>selectionChange</code> event</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:select select event of this <code>sap.m.SegmentedButton</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSelectionChange()</h3>
 <blockquote>
 <p><strong>detachSelectionChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
+this <code>sap.m.SegmentedButton</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -378,14 +381,12 @@ settings.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:selectionChange selectionChange event of
-this <code>sap.m.SegmentedButton</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireSelect()</del></h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SegmentedButton$SelectEventParameters.html"><code>SegmentedButton$SelectEventParameters</code></a></p>
@@ -397,12 +398,12 @@ this <code>sap.m.SegmentedButton</code>.</p>
 <p>(since 1.52) - replaced by <code>selectionChange</code> event</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>fireSelectionChange()</h3>
 <blockquote>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SegmentedButton$SelectionChangeEventParameters.html"><code>SegmentedButton$SelectionChangeEventParameters</code></a></p>
@@ -414,19 +415,18 @@ this <code>sap.m.SegmentedButton</code>.</p>
 <p>1.52</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -450,15 +450,15 @@ this <code>sap.m.SegmentedButton</code>.</p>
 <blockquote>
 <p><strong>getButtons</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
-<h4>Deprecated</h4>
-<p>(since 1.28.0) - replaced by <code>items</code> aggregation</p>
 <p>Gets content of aggregation #getButtons buttons.</p>
 <p>The buttons of the SegmentedButton control. The items set in this aggregation are used as an interface
 for the buttons displayed by the control. Only the properties ID, icon, text, enabled and textDirections
 of the Button control are evaluated. Setting other properties of the button will have no effect. Alternatively,
 you can use the createButton method to add buttons.</p>
+<h4>Returns</h4>
+<p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
+<h4>Deprecated</h4>
+<p>(since 1.28.0) - replaced by <code>items</code> aggregation</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -476,13 +476,13 @@ you cannot focus or click on them.</p>
 <blockquote>
 <p><strong>getFormDoNotAdjustWidth</strong>(): <code>boolean</code></p>
 </blockquote>
+<p><code>SegmentedButton</code> must not be stretched in Form because ResizeHandler is used internally in order to
+manage the width of the SegmentedButton depending on the container size</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>True this method always returns <code>true</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p><code>SegmentedButton</code> must not be stretched in Form because ResizeHandler is used internally in order to
-manage the width of the SegmentedButton depending on the container size</p>
 <h4>Implementation of</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IFormContent.html"><code>IFormContent</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IFormContent.html#getformdonotadjustwidth"><code>getFormDoNotAdjustWidth</code></a></p>
 <hr>
@@ -490,49 +490,49 @@ manage the width of the SegmentedButton depending on the container size</p>
 <blockquote>
 <p><strong>getItems</strong>(): <a href="../../SegmentedButtonItem/classes/SegmentedButtonItem.html"><code>SegmentedButtonItem</code></a>[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../SegmentedButtonItem/classes/SegmentedButtonItem.html"><code>SegmentedButtonItem</code></a>[]</p>
-<h4>Since</h4>
-<p>1.28</p>
 <p>Gets content of aggregation #getItems items.</p>
 <p>Aggregation of items to be displayed. The items set in this aggregation are used as an interface for
 the buttons displayed by the control. The &quot;items&quot; and &quot;buttons&quot; aggregations should NOT be used simultaneously
 as it causes the control to work incorrectly. Note: If <code>width</code> is supplied in percetange to <code>SegmentedButtonItem</code>
 instances and the sum of all percentages exeeds 100%, then the buttons display could overlap other elements
 in the page.</p>
+<h4>Returns</h4>
+<p><a href="../../SegmentedButtonItem/classes/SegmentedButtonItem.html"><code>SegmentedButtonItem</code></a>[]</p>
+<h4>Since</h4>
+<p>1.28</p>
 <hr>
 <h3><del>getSelectedButton()</del></h3>
 <blockquote>
 <p><strong>getSelectedButton</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getSelectedButton selectedButton,
+or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.52) - replaced by <code>selectedItem</code> association</p>
-<p>ID of the element which is the current target of the association #getSelectedButton selectedButton,
-or <code>null</code>.</p>
 <hr>
 <h3>getSelectedItem()</h3>
 <blockquote>
 <p><strong>getSelectedItem</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getSelectedItem selectedItem,
+or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>ID of the element which is the current target of the association #getSelectedItem selectedItem,
-or <code>null</code>.</p>
 <hr>
 <h3>getSelectedKey()</h3>
 <blockquote>
 <p><strong>getSelectedKey</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets the <code>selectedKey</code> and is usable only when the control is initiated with the <code>items</code> aggregation.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Current selected key</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Gets the <code>selectedKey</code> and is usable only when the control is initiated with the <code>items</code> aggregation.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -549,6 +549,8 @@ all buttons inside of the same size (based on the biggest button).</p>
 <blockquote>
 <p><strong>indexOfButton</strong>(<code>oButton</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getButtons buttons. and returns its
+index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -558,13 +560,13 @@ all buttons inside of the same size (based on the biggest button).</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - replaced by <code>items</code> aggregation</p>
-<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getButtons buttons. and returns its
-index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfItem()</h3>
 <blockquote>
 <p><strong>indexOfItem</strong>(<code>oItem</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.SegmentedButtonItem</code> in the aggregation #getItems items. and returns
+its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oItem</h5>
 <p><a href="../../SegmentedButtonItem/classes/SegmentedButtonItem.html"><code>SegmentedButtonItem</code></a></p>
@@ -574,13 +576,12 @@ index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Checks for the provided <code>sap.m.SegmentedButtonItem</code> in the aggregation #getItems items. and returns
-its index if found or -1 otherwise.</p>
 <hr>
 <h3><del>insertButton()</del></h3>
 <blockquote>
 <p><strong>insertButton</strong>(<code>oButton</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a button into the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -595,7 +596,6 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - replaced by <code>items</code> aggregation</p>
-<p>Inserts a button into the aggregation #getButtons buttons.</p>
 <hr>
 <h3>insertItem()</h3>
 <blockquote>
@@ -635,13 +635,13 @@ at the last position</p>
 <blockquote>
 <p><strong>removeAllButtons</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getButtons buttons.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - replaced by <code>items</code> aggregation</p>
-<p>Removes all the controls from the aggregation #getButtons buttons.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllItems()</h3>
 <blockquote>
@@ -685,6 +685,7 @@ at the last position</p>
 <blockquote>
 <p><strong>removeButton</strong>(<code>vButton</code>): <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
+<p>Removes a button from the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>vButton</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -694,7 +695,6 @@ at the last position</p>
 <p>The removed button or <code>null</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - replaced by <code>items</code> aggregation</p>
-<p>Removes a button from the aggregation #getButtons buttons.</p>
 <hr>
 <h3>removeItem()</h3>
 <blockquote>
@@ -760,6 +760,7 @@ item will be selected.</p>
 <blockquote>
 <p><strong>setSelectedKey</strong>(<code>sKey</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the <code>selectedKey</code> and is usable only when the control is initiated with the <code>items</code> aggregation.</p>
 <h4>Parameters</h4>
 <h5>sKey</h5>
 <p><code>string</code></p>
@@ -769,7 +770,6 @@ item will be selected.</p>
 <p><code>this</code> pointer for chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Sets the <code>selectedKey</code> and is usable only when the control is initiated with the <code>items</code> aggregation.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -791,23 +791,23 @@ all buttons inside of the same size (based on the biggest button).</p>
 <blockquote>
 <p><strong>unbindItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getItems items from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Unbinds aggregation #getItems items from model data.</p>
 <hr>
 <h3>unbindSelectedKey()</h3>
 <blockquote>
 <p><strong>unbindSelectedKey</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds property #getSelectedKey selectedKey from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Unbinds property #getSelectedKey selectedKey from model data.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -848,6 +848,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

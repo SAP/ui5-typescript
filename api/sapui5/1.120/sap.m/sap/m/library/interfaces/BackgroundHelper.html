@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: BackgroundHelper — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: BackgroundHelper — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: BackgroundHelper — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/library/interfaces/BackgroundHelper.html">
 <meta property="og:title" content="Interface: BackgroundHelper — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: BackgroundHelper — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: BackgroundHelper — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/library/interfaces/BackgroundHelper.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,21 +33,24 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/library/README.html">library</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/library</a> / BackgroundHelper</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/library</a> / BackgroundHelper</p>
 <h1>Interface: BackgroundHelper</h1>
 <pre class="sig"><span class="kw">import</span> { BackgroundHelper } <span class="kw">from</span> <span class="str">"sap/m/library"</span>;</pre>
+<p>Helper for rendering themable background.</p>
 <h2>Since</h2>
 <p>1.12</p>
 <h2>Ui5-protected</h2>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
-<p>Helper for rendering themable background.</p>
 <h2>Methods</h2>
 <h3>addBackgroundColorStyles()</h3>
 <blockquote>
 <p><strong>addBackgroundColorStyles</strong>(<code>rm</code>, <code>sBgColor?</code>, <code>sBgImgUrl?</code>): <code>void</code></p>
 </blockquote>
+<p>Adds CSS classes and styles to the given RenderManager, depending on the given configuration for background
+color and background image. To be called by control renderers supporting the global themable background
+image within their root tag, before they call openEnd, voidEnd, writeClasses() and writeStyles().</p>
 <h4>Parameters</h4>
 <h5>rm</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/RenderManager/classes/RenderManager.html"><code>RenderManager</code></a></p>
@@ -62,14 +65,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds CSS classes and styles to the given RenderManager, depending on the given configuration for background
-color and background image. To be called by control renderers supporting the global themable background
-image within their root tag, before they call openEnd, voidEnd, writeClasses() and writeStyles().</p>
 <hr>
 <h3>renderBackgroundImageTag()</h3>
 <blockquote>
 <p><strong>renderBackgroundImageTag</strong>(<code>rm</code>, <code>oControl</code>, <code>vCssClass</code>, <code>sBgImgUrl?</code>, <code>bRepeat?</code>, <code>fOpacity?</code>): <code>void</code></p>
 </blockquote>
+<p>Renders an HTML tag into the given RenderManager which carries the background image which is either configured
+and given or coming from the current theme. Should be called right after the opening root tag has been
+completed, so this is the first child element inside the control.</p>
 <h4>Parameters</h4>
 <h5>rm</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/RenderManager/classes/RenderManager.html"><code>RenderManager</code></a></p>
@@ -94,10 +97,7 @@ also the other settings are ignored.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Renders an HTML tag into the given RenderManager which carries the background image which is either configured
-and given or coming from the current theme. Should be called right after the opening root tag has been
-completed, so this is the first child element inside the control.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ActionBar~~ — SAPUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ActionBar~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: ActionBar~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.ux3/sap/ui/ux3/ActionBar/classes/ActionBar.html">
 <meta property="og:title" content="~~Class: ActionBar~~ — SAPUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ActionBar~~ — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: ActionBar~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.ux3/sap/ui/ux3/ActionBar/classes/ActionBar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.ux3/README.html">sap.ui.ux3</a> › sap › ui › ux3 › <a href="../../../../../../sap.ui.ux3/sap/ui/ux3/ActionBar/README.html">ActionBar</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/ActionBar</a> / ActionBar</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/ActionBar</a> / ActionBar</p>
 <h1><del>Class: ActionBar</del></h1>
 <pre class="sig"><span class="kw">import</span> ActionBar <span class="kw">from</span> <span class="str">"sap/ui/ux3/ActionBar"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.38) - Instead, use the <code>sap.m.Toolbar</code> or <code>sap.m.OverflowToolbar</code> control.</p>
 <p>A special toolbar with predefined social actions which can be shown as needed. These are: Create an update
 (Feed), Follow, Mark for Follow Up, Mark as Favorite and Open Thing.</p>
 <p>In addition business actions (ThingAction instances) can be added which are either displayed as MenuItems
 of the &#39;More&#39; menu button or as individual tool bar buttons.</p>
 <p>When using this control, please be aware that it fulfills rather specific requirements: it has been designed
 for and is used within composite controls QuickView and ThingInspector.</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - Instead, use the <code>sap.m.Toolbar</code> or <code>sap.m.OverflowToolbar</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -231,6 +231,7 @@ the feeder popup</p>
 <blockquote>
 <p><strong>fireActionSelected</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:actionSelected actionSelected to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ActionBar$ActionSelectedEventParameters.html"><code>ActionBar$ActionSelectedEventParameters</code></a></p>
@@ -240,12 +241,12 @@ the feeder popup</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:actionSelected actionSelected to attached listeners.</p>
 <hr>
 <h3><del>fireFeedSubmit()</del></h3>
 <blockquote>
 <p><strong>fireFeedSubmit</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:feedSubmit feedSubmit to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ActionBar$FeedSubmitEventParameters.html"><code>ActionBar$FeedSubmitEventParameters</code></a></p>
@@ -255,7 +256,6 @@ the feeder popup</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:feedSubmit feedSubmit to attached listeners.</p>
 <hr>
 <h3><del>getAlwaysShowMoreMenu()</del></h3>
 <blockquote>
@@ -416,13 +416,13 @@ and returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>isActive</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Checks whether the control is still valid (is in the DOM). ActionBar instance is rendered if and only
+if &#39;isActive&#39; returns &#39;true&#39;. This check is called implicitely by the rendere, MUST not be removed.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>True if the control is still in the active DOM</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks whether the control is still valid (is in the DOM). ActionBar instance is rendered if and only
-if &#39;isActive&#39; returns &#39;true&#39;. This check is called implicitely by the rendere, MUST not be removed.</p>
 <hr>
 <h3><del>setAlwaysShowMoreMenu()</del></h3>
 <blockquote>
@@ -655,6 +655,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

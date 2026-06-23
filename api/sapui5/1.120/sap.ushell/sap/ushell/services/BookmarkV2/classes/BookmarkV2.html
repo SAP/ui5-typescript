@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: BookmarkV2 — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: BookmarkV2 — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: BookmarkV2 — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/BookmarkV2/classes/BookmarkV2.html">
 <meta property="og:title" content="Class: BookmarkV2 — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: BookmarkV2 — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: BookmarkV2 — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ushell/sap/ushell/services/BookmarkV2/classes/BookmarkV2.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ushell/README.html">sap.ushell</a> › sap › ushell › services › <a href="../../../../../../sap.ushell/sap/ushell/services/BookmarkV2/README.html">BookmarkV2</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/BookmarkV2</a> / BookmarkV2</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ushell</a> / <a href="../README.html">sap/ushell/services/BookmarkV2</a> / BookmarkV2</p>
 <h1>Class: BookmarkV2</h1>
 <pre class="sig"><span class="kw">import</span> BookmarkV2 <span class="kw">from</span> <span class="str">"sap/ushell/services/BookmarkV2"</span>;</pre>
-<h2>Since</h2>
-<p>1.119.0</p>
 <p>The Unified Shell&#39;s bookmark service. Allows creating shortcuts on the user&#39;s home page.</p>
 <p><strong>Note:</strong> To retrieve a valid instance of this service, it is necessary to call <code>sap.ushell.Container.getServiceAsync(&quot;BookmarkV2&quot;)</code>.
 For details, see sap.ushell.services.Container#getServiceAsync.</p>
+<h2>Since</h2>
+<p>1.119.0</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -55,6 +55,9 @@ For details, see sap.ushell.services.Container#getServiceAsync.</p>
 <blockquote>
 <p><strong>addBookmark</strong>(<code>oParameters</code>, <code>vContainer?</code>, <code>sContentProviderId?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Adds a bookmark tile to one of the user&#39;s classic home page groups or to multiple provided content nodes.
+See:
+	sap.ushell.services.URLParsing#getShellHash</p>
 <h4>Parameters</h4>
 <h5>oParameters</h5>
 <p>Bookmark parameters. In addition to title and URL, a bookmark might allow further settings, such as an
@@ -136,14 +139,16 @@ default page if spaces mode is active.</p>
 bookmark to the specified or implied group. The promise gets resolved if personalization is disabled.</p>
 <h4>Since</h4>
 <p>1.119.0</p>
-<p>Adds a bookmark tile to one of the user&#39;s classic home page groups or to multiple provided content nodes.
-See:
-	sap.ushell.services.URLParsing#getShellHash</p>
 <hr>
 <h3>countBookmarks()</h3>
 <blockquote>
 <p><strong>countBookmarks</strong>(<code>sUrl</code>, <code>sContentProviderId</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Counts <strong>all</strong> bookmarks pointing to the given URL from all of the user&#39;s pages. You can use this method
+to check if a bookmark already exists.  This is a potentially asynchronous operation in case the user&#39;s
+pages have not yet been loaded completely!
+See:
+	#addBookmark</p>
 <h4>Parameters</h4>
 <h5>sUrl</h5>
 <p><code>string</code></p>
@@ -158,16 +163,15 @@ success, the count of existing bookmarks is provided (which might be zero). In c
 message is passed.</p>
 <h4>Since</h4>
 <p>1.119.0</p>
-<p>Counts <strong>all</strong> bookmarks pointing to the given URL from all of the user&#39;s pages. You can use this method
-to check if a bookmark already exists.  This is a potentially asynchronous operation in case the user&#39;s
-pages have not yet been loaded completely!
-See:
-	#addBookmark</p>
 <hr>
 <h3>deleteBookmarks()</h3>
 <blockquote>
 <p><strong>deleteBookmarks</strong>(<code>sUrl</code>, <code>sContentProviderId?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Deletes <strong>all</strong> bookmarks pointing to the given URL from all of the user&#39;s pages.
+See:
+	#addBookmark
+	#countBookmarks</p>
 <h4>Parameters</h4>
 <h5>sUrl</h5>
 <p><code>string</code></p>
@@ -182,20 +186,11 @@ success, the number of deleted bookmarks is provided (which might be zero). In c
 message is passed.</p>
 <h4>Since</h4>
 <p>1.119.0</p>
-<p>Deletes <strong>all</strong> bookmarks pointing to the given URL from all of the user&#39;s pages.
-See:
-	#addBookmark
-	#countBookmarks</p>
 <hr>
 <h3>getContentNodes()</h3>
 <blockquote>
 <p><strong>getContentNodes</strong>(): <code>Promise</code>&lt;<a href="../type-aliases/ContentNode.html"><code>ContentNode</code></a>[]&gt;</p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<a href="../type-aliases/ContentNode.html"><code>ContentNode</code></a>[]&gt;</p>
-<p>Promise resolving the currently available content nodes.</p>
-<h4>Since</h4>
-<p>1.119.0</p>
 <p>Returns available content nodes based on the current launchpad context. (Classic home page, spaces mode)</p>
 <p>A content node may be:
 	 - a classic home page group
@@ -208,11 +203,22 @@ See:
 <pre><code> - isContainer: Specifies if a bookmark can be added
  - children: Specifies sub-nodes
 </code></pre>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<a href="../type-aliases/ContentNode.html"><code>ContentNode</code></a>[]&gt;</p>
+<p>Promise resolving the currently available content nodes.</p>
+<h4>Since</h4>
+<p>1.119.0</p>
 <hr>
 <h3>updateBookmarks()</h3>
 <blockquote>
 <p><strong>updateBookmarks</strong>(<code>sUrl</code>, <code>oParameters</code>, <code>sContentProviderId?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Updates <strong>all</strong> bookmarks pointing to the given URL on all of the user&#39;s pages with the given new parameters.
+Parameters which are omitted are not changed in the existing bookmarks.
+See:
+	#addBookmark
+	#countBookmarks
+	#deleteBookmarks</p>
 <h4>Parameters</h4>
 <h5>sUrl</h5>
 <p><code>string</code></p>
@@ -270,13 +276,7 @@ success, the number of updated bookmarks is provided (which might be zero). In c
 message is passed.</p>
 <h4>Since</h4>
 <p>1.119.0</p>
-<p>Updates <strong>all</strong> bookmarks pointing to the given URL on all of the user&#39;s pages with the given new parameters.
-Parameters which are omitted are not changed in the existing bookmarks.
-See:
-	#addBookmark
-	#countBookmarks
-	#deleteBookmarks</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

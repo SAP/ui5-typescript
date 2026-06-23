@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DraftController — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: DraftController — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: DraftController — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.generic.app/sap/ui/generic/app/transaction/DraftController/classes/DraftController.html">
 <meta property="og:title" content="Class: DraftController — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: DraftController — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: DraftController — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.generic.app/sap/ui/generic/app/transaction/DraftController/classes/DraftController.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.generic.app/README.html">sap.ui.generic.app</a> › sap › ui › generic › app › transaction › <a href="../../../../../../../../sap.ui.generic.app/sap/ui/generic/app/transaction/DraftController/README.html">DraftController</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.generic.app</a> / <a href="../README.html">sap/ui/generic/app/transaction/DraftController</a> / DraftController</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.generic.app</a> / <a href="../README.html">sap/ui/generic/app/transaction/DraftController</a> / DraftController</p>
 <h1>Class: DraftController</h1>
 <pre class="sig"><span class="kw">import</span> DraftController <span class="kw">from</span> <span class="str">"sap/ui/generic/app/transaction/DraftController"</span>;</pre>
-<h2>Since</h2>
-<p>1.30.0</p>
 <p>Gives access to runtime draft handling for applications. Assuming state-less communication, each single
 data modification request (or change set in an OData $batch request) is a &quot;mini-transaction&quot;, which saves
 data to the database. The class implements the transactional interaction patterns specified for OData
@@ -50,6 +48,8 @@ handling. It provides access to the simple interaction patterns of runtime handl
 to the draft specification. These can be combined as required by client applications. Additionally, error
 handling is provided to notify client implementations of error situations. The event <code>fatalError</code> is
 thrown, if fatal errors occur during execution of OData requests.</p>
+<h2>Since</h2>
+<p>1.30.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../BaseController/classes/BaseController.html"><code>BaseController</code></a></li>
@@ -195,6 +195,8 @@ have been collected on the client are sent to the back-end.</p>
 <blockquote>
 <p><strong>getDraftForActiveEntity</strong>(<code>oContext</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Retrieves a possibly existing draft entity for the given active entity using the binding context of the
+active entity from the back-end.</p>
 <h4>Parameters</h4>
 <h5>oContext</h5>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
@@ -204,13 +206,12 @@ have been collected on the client are sent to the back-end.</p>
 <p>A <code>Promise</code> for asynchronous execution</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Retrieves a possibly existing draft entity for the given active entity using the binding context of the
-active entity from the back-end.</p>
 <hr>
 <h3>hasActiveEntity()</h3>
 <blockquote>
 <p><strong>hasActiveEntity</strong>(<code>oContext</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks whether an entity has an active entity associated.</p>
 <h4>Parameters</h4>
 <h5>oContext</h5>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
@@ -220,7 +221,6 @@ active entity from the back-end.</p>
 <p><code>true</code>, if an active entity exists, <code>false</code> otherwise</p>
 <h4>Since</h4>
 <p>1.32.0</p>
-<p>Checks whether an entity has an active entity associated.</p>
 <hr>
 <h3>isActiveEntity()</h3>
 <blockquote>
@@ -319,6 +319,6 @@ used by this class</p>
 <p><a href="../../BaseController/classes/BaseController.html"><code>BaseController</code></a>.<a href="../../BaseController/classes/BaseController.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Text — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Text — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Text — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Text/classes/Text.html">
 <meta property="og:title" content="Class: Text — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Text — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Text — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Text/classes/Text.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Text/README.html">Text</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Text</a> / Text</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Text</a> / Text</p>
 <h1>Class: Text</h1>
 <pre class="sig"><span class="kw">import</span> Text <span class="kw">from</span> <span class="str">"sap/m/Text"</span>;</pre>
 <p>The <code>Text</code> control can be used for embedding longer text paragraphs, that need text wrapping, into your
@@ -128,47 +128,47 @@ See:
 <blockquote>
 <p><strong>cacheLineHeight</strong>: <code>boolean</code></p>
 </blockquote>
+<p>Determines per instance whether line height should be cached or not.</p>
+<p>Default value is true.</p>
 <h4>Since</h4>
 <p>1.22</p>
 <h4>Ui5-protected</h4>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
-<p>Determines per instance whether line height should be cached or not.</p>
-<p>Default value is true.</p>
 <hr>
 <h3>ellipsis</h3>
 <blockquote>
 <p><strong>ellipsis</strong>: <code>string</code></p>
 </blockquote>
+<p>Ellipsis(...) text to indicate more text when clampText function is used.</p>
+<p>Can be overwritten with 3dots(...) if fonts do not support this UTF-8 character.</p>
 <h4>Since</h4>
 <p>1.13.2</p>
 <h4>Ui5-protected</h4>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
-<p>Ellipsis(...) text to indicate more text when clampText function is used.</p>
-<p>Can be overwritten with 3dots(...) if fonts do not support this UTF-8 character.</p>
 <hr>
 <h3>normalLineHeight</h3>
 <blockquote>
 <p><strong>normalLineHeight</strong>: <code>number</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.22</p>
-<h4>Ui5-protected</h4>
-<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <p>Default line height value as a number when line height is normal.</p>
 <p>This value is required during max height calculation for the browsers that do not support line clamping.
 It is better to define line height in CSS instead of &quot;normal&quot; to get consistent <code>maxLines</code> results since
 normal line height not only varies from browser to browser but it also varies from one font face to another
 and can also vary within a given face.</p>
+<h4>Since</h4>
+<p>1.22</p>
+<h4>Ui5-protected</h4>
+<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <hr>
 <h3>hasNativeLineClamp</h3>
 <blockquote>
 <p><code>static</code> <strong>hasNativeLineClamp</strong>: <code>undefined</code></p>
 </blockquote>
+<p>Defines whether browser supports native line clamp or not</p>
 <h4>Since</h4>
 <p>1.13.2</p>
 <h4>Ui5-protected</h4>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
-<p>Defines whether browser supports native line clamp or not</p>
 <hr>
 <h3>bindText()</h3>
 <blockquote>
@@ -189,19 +189,20 @@ of the possible properties of <code>oBindingInfo</code></p>
 <blockquote>
 <p><strong>canUseNativeLineClamp</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Decides whether the control can use native line clamp feature or not.</p>
+<p>In RTL mode native line clamp feature is not supported.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Since</h4>
 <p>1.20</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Decides whether the control can use native line clamp feature or not.</p>
-<p>In RTL mode native line clamp feature is not supported.</p>
 <hr>
 <h3>clampHeight()</h3>
 <blockquote>
 <p><strong>clampHeight</strong>(<code>oDomRef?</code>): <code>number</code></p>
 </blockquote>
+<p>Sets the max height to support <code>maxLines</code> property.</p>
 <h4>Parameters</h4>
 <h5>oDomRef?</h5>
 <p><code>HTMLElement</code></p>
@@ -213,12 +214,13 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>1.22</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the max height to support <code>maxLines</code> property.</p>
 <hr>
 <h3>clampText()</h3>
 <blockquote>
 <p><strong>clampText</strong>(<code>oDomRef?</code>, <code>iStartPos?</code>, <code>iEndPos?</code>): <code>number</code></p>
 </blockquote>
+<p>Clamps the wrapping text according to max lines and returns the found ellipsis position. Parameters can
+be used for better performance.</p>
 <h4>Parameters</h4>
 <h5>oDomRef?</h5>
 <p><code>HTMLElement</code></p>
@@ -236,21 +238,19 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>1.20</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Clamps the wrapping text according to max lines and returns the found ellipsis position. Parameters can
-be used for better performance.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>Gets the accessibility information for the text.
+See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Accessibility information for the text.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets the accessibility information for the text.
-See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -258,6 +258,8 @@ See:
 <blockquote>
 <p><strong>getClampHeight</strong>(<code>oDomRef?</code>): <code>number</code></p>
 </blockquote>
+<p>Returns the max height according to max lines and line height calculation. This is not calculated max
+height!</p>
 <h4>Parameters</h4>
 <h5>oDomRef?</h5>
 <p><code>HTMLElement</code></p>
@@ -269,26 +271,27 @@ See:
 <p>1.22</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the max height according to max lines and line height calculation. This is not calculated max
-height!</p>
 <hr>
 <h3>getEmptyIndicatorMode()</h3>
 <blockquote>
 <p><strong>getEmptyIndicatorMode</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getEmptyIndicatorMode emptyIndicatorMode.</p>
+<p>Specifies if an empty indicator should be displayed when there is no text.</p>
+<p>Default value is <code>Off</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
 <p>Value of property <code>emptyIndicatorMode</code></p>
 <h4>Since</h4>
 <p>1.87</p>
-<p>Gets current value of property #getEmptyIndicatorMode emptyIndicatorMode.</p>
-<p>Specifies if an empty indicator should be displayed when there is no text.</p>
-<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>getLineHeight()</h3>
 <blockquote>
 <p><strong>getLineHeight</strong>(<code>oDomRef?</code>): <code>number</code></p>
 </blockquote>
+<p>Caches and returns the computed line height of the text.
+See:
+	sap.m.Text#cacheLineHeight</p>
 <h4>Parameters</h4>
 <h5>oDomRef?</h5>
 <p><code>HTMLElement</code></p>
@@ -300,38 +303,35 @@ height!</p>
 <p>1.22</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Caches and returns the computed line height of the text.
-See:
-	sap.m.Text#cacheLineHeight</p>
 <hr>
 <h3>getMaxLines()</h3>
 <blockquote>
 <p><strong>getMaxLines</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getMaxLines maxLines.</p>
+<p>Limits the number of lines for wrapping texts.</p>
+<p><strong>Note</strong>: The multi-line overflow indicator depends on the browser line clamping support. For such browsers,
+this will be shown as ellipsis, for the other browsers the overflow will just be hidden.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>maxLines</code></p>
 <h4>Since</h4>
 <p>1.13.2</p>
-<p>Gets current value of property #getMaxLines maxLines.</p>
-<p>Limits the number of lines for wrapping texts.</p>
-<p><strong>Note</strong>: The multi-line overflow indicator depends on the browser line clamping support. For such browsers,
-this will be shown as ellipsis, for the other browsers the overflow will just be hidden.</p>
 <hr>
 <h3>getRenderWhitespace()</h3>
 <blockquote>
 <p><strong>getRenderWhitespace</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>renderWhitespace</code></p>
-<h4>Since</h4>
-<p>1.51</p>
 <p>Gets current value of property #getRenderWhitespace renderWhitespace.</p>
 <p>Specifies how whitespace and tabs inside the control are handled. If true, whitespace will be preserved
 by the browser. Depending on wrapping property text will either only wrap on line breaks or wrap when
 necessary, and on line breaks.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>renderWhitespace</code></p>
+<h4>Since</h4>
+<p>1.51</p>
 <hr>
 <h3>getText()</h3>
 <blockquote>
@@ -373,6 +373,8 @@ from its parent control.</p>
 <blockquote>
 <p><strong>getTextDomRef</strong>(): <code>HTMLElement</code></p>
 </blockquote>
+<p>Returns the text node container&#39;s DOM reference. This can be different from <code>getDomRef</code> when inner wrapper
+is needed.</p>
 <h4>Returns</h4>
 <p><code>HTMLElement</code></p>
 <p>DOM reference of the text.</p>
@@ -380,8 +382,6 @@ from its parent control.</p>
 <p>1.22</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the text node container&#39;s DOM reference. This can be different from <code>getDomRef</code> when inner wrapper
-is needed.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -409,20 +409,21 @@ property to restrict the width to a custom value.</p>
 <blockquote>
 <p><strong>getWrappingType</strong>(): <code>&quot;Normal&quot;</code> | <a href="../../library/enumerations/WrappingType.html"><code>WrappingType</code></a> | <code>&quot;Hyphenated&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getWrappingType wrappingType.</p>
+<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
+<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
+<p>Default value is <code>Normal</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Normal&quot;</code> | <a href="../../library/enumerations/WrappingType.html"><code>WrappingType</code></a> | <code>&quot;Hyphenated&quot;</code></p>
 <p>Value of property <code>wrappingType</code></p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>Gets current value of property #getWrappingType wrappingType.</p>
-<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
-<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
-<p>Default value is <code>Normal</code>.</p>
 <hr>
 <h3>hasMaxLines()</h3>
 <blockquote>
 <p><strong>hasMaxLines</strong>(): <code>HTMLElement</code></p>
 </blockquote>
+<p>Determines whether max lines should be rendered or not.</p>
 <h4>Returns</h4>
 <p><code>HTMLElement</code></p>
 <p>Max lines of the text.</p>
@@ -430,7 +431,6 @@ property to restrict the width to a custom value.</p>
 <p>1.22</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Determines whether max lines should be rendered or not.</p>
 <hr>
 <h3>onAfterRendering()</h3>
 <blockquote>
@@ -446,6 +446,10 @@ property to restrict the width to a custom value.</p>
 <blockquote>
 <p><strong>setEmptyIndicatorMode</strong>(<code>sEmptyIndicatorMode?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptyIndicatorMode emptyIndicatorMode.</p>
+<p>Specifies if an empty indicator should be displayed when there is no text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Off</code>.</p>
 <h4>Parameters</h4>
 <h5>sEmptyIndicatorMode?</h5>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
@@ -455,15 +459,16 @@ property to restrict the width to a custom value.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.87</p>
-<p>Sets a new value for property #getEmptyIndicatorMode emptyIndicatorMode.</p>
-<p>Specifies if an empty indicator should be displayed when there is no text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>setMaxLines()</h3>
 <blockquote>
 <p><strong>setMaxLines</strong>(<code>iMaxLines?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMaxLines maxLines.</p>
+<p>Limits the number of lines for wrapping texts.</p>
+<p><strong>Note</strong>: The multi-line overflow indicator depends on the browser line clamping support. For such browsers,
+this will be shown as ellipsis, for the other browsers the overflow will just be hidden.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>iMaxLines?</h5>
 <p><code>number</code></p>
@@ -473,16 +478,17 @@ property to restrict the width to a custom value.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.2</p>
-<p>Sets a new value for property #getMaxLines maxLines.</p>
-<p>Limits the number of lines for wrapping texts.</p>
-<p><strong>Note</strong>: The multi-line overflow indicator depends on the browser line clamping support. For such browsers,
-this will be shown as ellipsis, for the other browsers the overflow will just be hidden.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setRenderWhitespace()</h3>
 <blockquote>
 <p><strong>setRenderWhitespace</strong>(<code>bRenderWhitespace?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getRenderWhitespace renderWhitespace.</p>
+<p>Specifies how whitespace and tabs inside the control are handled. If true, whitespace will be preserved
+by the browser. Depending on wrapping property text will either only wrap on line breaks or wrap when
+necessary, and on line breaks.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bRenderWhitespace?</h5>
 <p><code>boolean</code></p>
@@ -492,12 +498,6 @@ this will be shown as ellipsis, for the other browsers the overflow will just be
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.51</p>
-<p>Sets a new value for property #getRenderWhitespace renderWhitespace.</p>
-<p>Specifies how whitespace and tabs inside the control are handled. If true, whitespace will be preserved
-by the browser. Depending on wrapping property text will either only wrap on line breaks or wrap when
-necessary, and on line breaks.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setText()</h3>
 <blockquote>
@@ -584,6 +584,11 @@ property to restrict the width to a custom value.</p>
 <blockquote>
 <p><strong>setWrappingType</strong>(<code>sWrappingType?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWrappingType wrappingType.</p>
+<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
+<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Normal</code>.</p>
 <h4>Parameters</h4>
 <h5>sWrappingType?</h5>
 <p><code>&quot;Normal&quot;</code> | <a href="../../library/enumerations/WrappingType.html"><code>WrappingType</code></a> | <code>&quot;Hyphenated&quot;</code></p>
@@ -593,11 +598,6 @@ property to restrict the width to a custom value.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>Sets a new value for property #getWrappingType wrappingType.</p>
-<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
-<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Normal</code>.</p>
 <hr>
 <h3>unbindText()</h3>
 <blockquote>
@@ -650,6 +650,8 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>setNodeValue</strong>(<code>oDomRef</code>, <code>sNodeValue?</code>): <code>void</code></p>
 </blockquote>
+<p>To prevent from the layout thrashing of the <code>textContent</code> call, this method first tries to set the <code>nodeValue</code>
+of the first child if it exists.</p>
 <h4>Parameters</h4>
 <h5>oDomRef</h5>
 <p><code>HTMLElement</code></p>
@@ -663,9 +665,7 @@ used by this class</p>
 <p>1.30.3</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>To prevent from the layout thrashing of the <code>textContent</code> call, this method first tries to set the <code>nodeValue</code>
-of the first child if it exists.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

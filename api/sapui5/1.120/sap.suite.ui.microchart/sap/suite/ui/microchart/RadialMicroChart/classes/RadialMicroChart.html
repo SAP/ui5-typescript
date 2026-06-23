@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: RadialMicroChart — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: RadialMicroChart — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: RadialMicroChart — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.microchart/sap/suite/ui/microchart/RadialMicroChart/classes/RadialMicroChart.html">
 <meta property="og:title" content="Class: RadialMicroChart — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: RadialMicroChart — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: RadialMicroChart — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.microchart/sap/suite/ui/microchart/RadialMicroChart/classes/RadialMicroChart.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.microchart/README.html">sap.suite.ui.microchart</a> › sap › suite › ui › microchart › <a href="../../../../../../../sap.suite.ui.microchart/sap/suite/ui/microchart/RadialMicroChart/README.html">RadialMicroChart</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.microchart</a> / <a href="../README.html">sap/suite/ui/microchart/RadialMicroChart</a> / RadialMicroChart</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.microchart</a> / <a href="../README.html">sap/suite/ui/microchart/RadialMicroChart</a> / RadialMicroChart</p>
 <h1>Class: RadialMicroChart</h1>
 <pre class="sig"><span class="kw">import</span> RadialMicroChart <span class="kw">from</span> <span class="str">"sap/suite/ui/microchart/RadialMicroChart"</span>;</pre>
-<h2>Since</h2>
-<p>1.36.0</p>
 <p>Displays a ring chart highlighting a current status. The status is displayed with a semantically colored
 radial bar and a percentage value.
 Note: You can assign a custom tooltip for this microchart. The custom tooltip can be set using expression
 binding. When no custom tooltip is defined, the tooltip is generated automatically based on the logic
 described in sap.ui.core.Element#getTooltip_AsString. For a combination of a generated and a
 custom tooltip, use <code>((AltText))</code> inside of the tooltip string.</p>
+<h2>Since</h2>
+<p>1.36.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -68,6 +68,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -77,7 +78,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>attachPress()</h3>
 <h4>Call Signature</h4>
@@ -144,6 +144,7 @@ itself</p>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -153,30 +154,29 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getAlignContent()</h3>
 <blockquote>
 <p><strong>getAlignContent</strong>(): <code>&quot;Center&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../library/enumerations/HorizontalAlignmentType.html"><code>HorizontalAlignmentType</code></a></p>
 </blockquote>
+<p>Gets current value of property #getAlignContent alignContent.</p>
+<p>The alignment of the content. If it is not set, the <code>Left</code> alignment type is used.</p>
+<p>Default value is <code>&quot;Left&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Center&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../library/enumerations/HorizontalAlignmentType.html"><code>HorizontalAlignmentType</code></a></p>
 <p>Value of property <code>alignContent</code></p>
 <h4>Since</h4>
 <p>1.62.0</p>
-<p>Gets current value of property #getAlignContent alignContent.</p>
-<p>The alignment of the content. If it is not set, the <code>Left</code> alignment type is used.</p>
-<p>Default value is <code>&quot;Left&quot;</code>.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getFraction()</h3>
 <blockquote>
@@ -192,26 +192,26 @@ itself</p>
 <blockquote>
 <p><strong>getHeight</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getHeight height.</p>
+<p>The height of the chart. Overrides the height specified in the <code>size</code> property.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>height</code></p>
 <h4>Since</h4>
 <p>1.62.0</p>
-<p>Gets current value of property #getHeight height.</p>
-<p>The height of the chart. Overrides the height specified in the <code>size</code> property.</p>
 <hr>
 <h3>getHideOnNoData()</h3>
 <blockquote>
 <p><strong>getHideOnNoData</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getHideOnNoData hideOnNoData.</p>
+<p>If this is set to True, the control will be hidden in &#39;No data&#39; scenario.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>hideOnNoData</code></p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Gets current value of property #getHideOnNoData hideOnNoData.</p>
-<p>If this is set to True, the control will be hidden in &#39;No data&#39; scenario.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getPercentage()</h3>
 <blockquote>
@@ -227,14 +227,14 @@ itself</p>
 <blockquote>
 <p><strong>getSize</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getSize size.</p>
+<p>The size of the chart. If it is not set, the Auto size is used.</p>
+<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
 <p>Value of property <code>size</code></p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Gets current value of property #getSize size.</p>
-<p>The size of the chart. If it is not set, the Auto size is used.</p>
-<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <hr>
 <h3>getTotal()</h3>
 <blockquote>
@@ -261,29 +261,30 @@ itself</p>
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getWidth width.</p>
+<p>The width of the chart. Overrides the width specified in the <code>size</code> property.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <h4>Since</h4>
 <p>1.62.0</p>
-<p>Gets current value of property #getWidth width.</p>
-<p>The width of the chart. Overrides the width specified in the <code>size</code> property.</p>
 <hr>
 <h3>removeAllAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -293,12 +294,15 @@ itself</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>setAlignContent()</h3>
 <blockquote>
 <p><strong>setAlignContent</strong>(<code>sAlignContent?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAlignContent alignContent.</p>
+<p>The alignment of the content. If it is not set, the <code>Left</code> alignment type is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Left&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sAlignContent?</h5>
 <p><code>&quot;Center&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../library/enumerations/HorizontalAlignmentType.html"><code>HorizontalAlignmentType</code></a></p>
@@ -308,10 +312,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.62.0</p>
-<p>Sets a new value for property #getAlignContent alignContent.</p>
-<p>The alignment of the content. If it is not set, the <code>Left</code> alignment type is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Left&quot;</code>.</p>
 <hr>
 <h3>setFraction()</h3>
 <blockquote>
@@ -332,6 +332,9 @@ itself</p>
 <blockquote>
 <p><strong>setHeight</strong>(<code>sHeight</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHeight height.</p>
+<p>The height of the chart. Overrides the height specified in the <code>size</code> property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sHeight</h5>
 <p><code>string</code></p>
@@ -341,14 +344,15 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.62.0</p>
-<p>Sets a new value for property #getHeight height.</p>
-<p>The height of the chart. Overrides the height specified in the <code>size</code> property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setHideOnNoData()</h3>
 <blockquote>
 <p><strong>setHideOnNoData</strong>(<code>bHideOnNoData?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHideOnNoData hideOnNoData.</p>
+<p>If this is set to True, the control will be hidden in &#39;No data&#39; scenario.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bHideOnNoData?</h5>
 <p><code>boolean</code></p>
@@ -358,10 +362,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>Sets a new value for property #getHideOnNoData hideOnNoData.</p>
-<p>If this is set to True, the control will be hidden in &#39;No data&#39; scenario.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setPercentage()</h3>
 <blockquote>
@@ -382,6 +382,10 @@ itself</p>
 <blockquote>
 <p><strong>setSize</strong>(<code>sSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSize size.</p>
+<p>The size of the chart. If it is not set, the Auto size is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sSize?</h5>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
@@ -391,10 +395,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Sets a new value for property #getSize size.</p>
-<p>The size of the chart. If it is not set, the Auto size is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <hr>
 <h3>setTotal()</h3>
 <blockquote>
@@ -431,6 +431,9 @@ itself</p>
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWidth width.</p>
+<p>The width of the chart. Overrides the width specified in the <code>size</code> property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sWidth</h5>
 <p><code>string</code></p>
@@ -440,9 +443,6 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.62.0</p>
-<p>Sets a new value for property #getWidth width.</p>
-<p>The width of the chart. Overrides the width specified in the <code>size</code> property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -483,6 +483,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

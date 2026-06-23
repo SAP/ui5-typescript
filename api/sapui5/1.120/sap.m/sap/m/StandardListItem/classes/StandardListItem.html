@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: StandardListItem — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: StandardListItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: StandardListItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/StandardListItem/classes/StandardListItem.html">
 <meta property="og:title" content="Class: StandardListItem — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: StandardListItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: StandardListItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/StandardListItem/classes/StandardListItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/StandardListItem/README.html">StandardListItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/StandardListItem</a> / StandardListItem</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/StandardListItem</a> / StandardListItem</p>
 <h1>Class: StandardListItem</h1>
 <pre class="sig"><span class="kw">import</span> StandardListItem <span class="kw">from</span> <span class="str">"sap/m/StandardListItem"</span>;</pre>
 <p><code>sap.m.StandardListItem</code> is a list item providing the most common use cases, e.g. image, title and description.</p>
@@ -92,12 +92,12 @@ See:
 <blockquote>
 <p><strong>destroyAvatar</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the avatar in the aggregation #getAvatar avatar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98</p>
-<p>Destroys the avatar in the aggregation #getAvatar avatar.</p>
 <hr>
 <h3>getActiveIcon()</h3>
 <blockquote>
@@ -113,31 +113,31 @@ See:
 <blockquote>
 <p><strong>getAdaptTitleSize</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>adaptTitleSize</code></p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <p>Gets current value of property #getAdaptTitleSize adaptTitleSize.</p>
 <p>By default, the title size adapts to the available space and gets bigger if the description is empty.
 If you have list items with and without descriptions, this results in titles with different sizes. In
 this case, it can be better to switch the size adaption off by setting this property to <code>false</code>.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>adaptTitleSize</code></p>
+<h4>Since</h4>
+<p>1.16.3</p>
 <hr>
 <h3>getAvatar()</h3>
 <blockquote>
 <p><strong>getAvatar</strong>(): <a href="../../Avatar/classes/Avatar.html"><code>Avatar</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../Avatar/classes/Avatar.html"><code>Avatar</code></a></p>
-<h4>Since</h4>
-<p>1.98</p>
 <p>Gets content of aggregation #getAvatar avatar.</p>
 <p>A <code>sap.m.Avatar</code> control instance that, if set, is used instead of an icon or image.</p>
 <p>The size of the <code>Avatar</code> control depends on the <code>insetIcon</code> property of <code>StandardListItem</code>. The <code>displaySize</code>
 property of the <code>Avatar</code> control is not supported. If the <code>insetIcon</code> property of <code>StandardListItem</code>
 is set to <code>true</code>, the size of the <code>Avatar</code> control is set to XS; if the <code>insetIcon</code> property of <code>StandardListItem</code>
 is set to <code>false</code>, the size of the <code>Avatar</code> control is set to &quot;S&quot;.</p>
+<h4>Returns</h4>
+<p><a href="../../Avatar/classes/Avatar.html"><code>Avatar</code></a></p>
+<h4>Since</h4>
+<p>1.98</p>
 <hr>
 <h3>getDescription()</h3>
 <blockquote>
@@ -212,30 +212,30 @@ it is recommended to use short strings. For more details, see #getWrapping wrapp
 <blockquote>
 <p><strong>getInfoStateInverted</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>infoStateInverted</code></p>
-<h4>Since</h4>
-<p>1.74</p>
 <p>Gets current value of property #getInfoStateInverted infoStateInverted.</p>
 <p>Determines the inverted rendering behavior of the info text and the info state. The color defined by
 the <code>infoState</code> property is rendered as the background color for the info text, if this property is set
 to <code>true</code>.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>infoStateInverted</code></p>
+<h4>Since</h4>
+<p>1.74</p>
 <hr>
 <h3>getInfoTextDirection()</h3>
 <blockquote>
 <p><strong>getInfoTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getInfoTextDirection infoTextDirection.</p>
+<p>Defines the <code>info</code> directionality with enumerated options. By default, the control inherits text direction
+from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>infoTextDirection</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getInfoTextDirection infoTextDirection.</p>
-<p>Defines the <code>info</code> directionality with enumerated options. By default, the control inherits text direction
-from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -251,25 +251,20 @@ from the DOM.</p>
 <blockquote>
 <p><strong>getTitleTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getTitleTextDirection titleTextDirection.</p>
+<p>Defines the <code>title</code> text directionality with enumerated options. By default, the control inherits text
+direction from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>titleTextDirection</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getTitleTextDirection titleTextDirection.</p>
-<p>Defines the <code>title</code> text directionality with enumerated options. By default, the control inherits text
-direction from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>getWrapCharLimit()</h3>
 <blockquote>
 <p><strong>getWrapCharLimit</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>wrapCharLimit</code></p>
-<h4>Since</h4>
-<p>1.94</p>
 <p>Gets current value of property #getWrapCharLimit wrapCharLimit.</p>
 <p>This property can be used to change the default character limits for the wrapping behavior.</p>
 <p>If this property is set to 0, then the default character limit used by the wrapping behavior is used.
@@ -277,16 +272,16 @@ For details see #getWrapping wrapping.</p>
 <p><strong>Note:</strong></p>
 <p>0 or a positive integer must be used for this property.</p>
 <p>Default value is <code>0</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>wrapCharLimit</code></p>
+<h4>Since</h4>
+<p>1.94</p>
 <hr>
 <h3>getWrapping()</h3>
 <blockquote>
 <p><strong>getWrapping</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>wrapping</code></p>
-<h4>Since</h4>
-<p>1.67</p>
 <p>Gets current value of property #getWrapping wrapping.</p>
 <p>Defines the wrapping behavior of title and description texts.</p>
 <p><strong>Note:</strong></p>
@@ -296,6 +291,11 @@ expand and collapse the text whereas in the phone mode, the character limit is s
 text is not possible. A wrapping of the information text is disabled if <code>infoStateInverted</code> is set to
 <code>true</code>.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>wrapping</code></p>
+<h4>Since</h4>
+<p>1.67</p>
 <hr>
 <h3>setActiveIcon()</h3>
 <blockquote>
@@ -316,6 +316,12 @@ text is not possible. A wrapping of the information text is disabled if <code>in
 <blockquote>
 <p><strong>setAdaptTitleSize</strong>(<code>bAdaptTitleSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAdaptTitleSize adaptTitleSize.</p>
+<p>By default, the title size adapts to the available space and gets bigger if the description is empty.
+If you have list items with and without descriptions, this results in titles with different sizes. In
+this case, it can be better to switch the size adaption off by setting this property to <code>false</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bAdaptTitleSize?</h5>
 <p><code>boolean</code></p>
@@ -325,17 +331,12 @@ text is not possible. A wrapping of the information text is disabled if <code>in
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getAdaptTitleSize adaptTitleSize.</p>
-<p>By default, the title size adapts to the available space and gets bigger if the description is empty.
-If you have list items with and without descriptions, this results in titles with different sizes. In
-this case, it can be better to switch the size adaption off by setting this property to <code>false</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setAvatar()</h3>
 <blockquote>
 <p><strong>setAvatar</strong>(<code>oAvatar</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getAvatar avatar.</p>
 <h4>Parameters</h4>
 <h5>oAvatar</h5>
 <p><a href="../../Avatar/classes/Avatar.html"><code>Avatar</code></a></p>
@@ -345,7 +346,6 @@ this case, it can be better to switch the size adaption off by setting this prop
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98</p>
-<p>Sets the aggregated #getAvatar avatar.</p>
 <hr>
 <h3>setDescription()</h3>
 <blockquote>
@@ -450,6 +450,12 @@ it is recommended to use short strings. For more details, see #getWrapping wrapp
 <blockquote>
 <p><strong>setInfoStateInverted</strong>(<code>bInfoStateInverted?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getInfoStateInverted infoStateInverted.</p>
+<p>Determines the inverted rendering behavior of the info text and the info state. The color defined by
+the <code>infoState</code> property is rendered as the background color for the info text, if this property is set
+to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bInfoStateInverted?</h5>
 <p><code>boolean</code></p>
@@ -459,17 +465,16 @@ it is recommended to use short strings. For more details, see #getWrapping wrapp
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Sets a new value for property #getInfoStateInverted infoStateInverted.</p>
-<p>Determines the inverted rendering behavior of the info text and the info state. The color defined by
-the <code>infoState</code> property is rendered as the background color for the info text, if this property is set
-to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setInfoTextDirection()</h3>
 <blockquote>
 <p><strong>setInfoTextDirection</strong>(<code>sInfoTextDirection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getInfoTextDirection infoTextDirection.</p>
+<p>Defines the <code>info</code> directionality with enumerated options. By default, the control inherits text direction
+from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sInfoTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -479,11 +484,6 @@ to <code>true</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getInfoTextDirection infoTextDirection.</p>
-<p>Defines the <code>info</code> directionality with enumerated options. By default, the control inherits text direction
-from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -504,6 +504,11 @@ from the DOM.</p>
 <blockquote>
 <p><strong>setTitleTextDirection</strong>(<code>sTitleTextDirection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleTextDirection titleTextDirection.</p>
+<p>Defines the <code>title</code> text directionality with enumerated options. By default, the control inherits text
+direction from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -513,16 +518,19 @@ from the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getTitleTextDirection titleTextDirection.</p>
-<p>Defines the <code>title</code> text directionality with enumerated options. By default, the control inherits text
-direction from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>setWrapCharLimit()</h3>
 <blockquote>
 <p><strong>setWrapCharLimit</strong>(<code>iWrapCharLimit?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWrapCharLimit wrapCharLimit.</p>
+<p>This property can be used to change the default character limits for the wrapping behavior.</p>
+<p>If this property is set to 0, then the default character limit used by the wrapping behavior is used.
+For details see #getWrapping wrapping.</p>
+<p><strong>Note:</strong></p>
+<p>0 or a positive integer must be used for this property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iWrapCharLimit?</h5>
 <p><code>number</code></p>
@@ -532,28 +540,11 @@ direction from the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.94</p>
-<p>Sets a new value for property #getWrapCharLimit wrapCharLimit.</p>
-<p>This property can be used to change the default character limits for the wrapping behavior.</p>
-<p>If this property is set to 0, then the default character limit used by the wrapping behavior is used.
-For details see #getWrapping wrapping.</p>
-<p><strong>Note:</strong></p>
-<p>0 or a positive integer must be used for this property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setWrapping()</h3>
 <blockquote>
 <p><strong>setWrapping</strong>(<code>bWrapping?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bWrapping?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>wrapping</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.67</p>
 <p>Sets a new value for property #getWrapping wrapping.</p>
 <p>Defines the wrapping behavior of title and description texts.</p>
 <p><strong>Note:</strong></p>
@@ -564,6 +555,15 @@ text is not possible. A wrapping of the information text is disabled if <code>in
 <code>true</code>.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bWrapping?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>wrapping</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.67</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -604,6 +604,6 @@ used by this class</p>
 <p><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a>.<a href="../../ListItemBase/classes/ListItemBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NativeViewport — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: NativeViewport — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: NativeViewport — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/NativeViewport/classes/NativeViewport.html">
 <meta property="og:title" content="Class: NativeViewport — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: NativeViewport — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: NativeViewport — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.vk/sap/ui/vk/NativeViewport/classes/NativeViewport.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/NativeViewport/README.html">NativeViewport</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/NativeViewport</a> / NativeViewport</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/NativeViewport</a> / NativeViewport</p>
 <h1>Class: NativeViewport</h1>
 <pre class="sig"><span class="kw">import</span> NativeViewport <span class="kw">from</span> <span class="str">"sap/ui/vk/NativeViewport"</span>;</pre>
-<h2>Since</h2>
-<p>1.32.0</p>
 <p>Enables loading, pan, zoom and overlay capabilities for a subset of file formats capable of being loaded
 into a browser natively.</p>
 <pre><code class="language-javascript">
 viewer.loadContent(&quot;https://www.google.co.nz/images/srpr/logo11w.png&quot;, &quot;png&quot;, true);
 </code></pre>
+<h2>Since</h2>
+<p>1.32.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ViewportBase/classes/ViewportBase.html"><code>ViewportBase</code></a></li>
@@ -239,6 +239,7 @@ otherwise it will be bound to this <code>sap.ui.vk.NativeViewport</code> itself.
 <blockquote>
 <p><strong>fireMove</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:move move to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NativeViewport$MoveEventParameters.html"><code>NativeViewport$MoveEventParameters</code></a></p>
@@ -248,12 +249,12 @@ otherwise it will be bound to this <code>sap.ui.vk.NativeViewport</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:move move to attached listeners.</p>
 <hr>
 <h3>fireResize()</h3>
 <blockquote>
 <p><strong>fireResize</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:resize resize to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/NativeViewport$ResizeEventParameters.html"><code>NativeViewport$ResizeEventParameters</code></a></p>
@@ -263,7 +264,6 @@ otherwise it will be bound to this <code>sap.ui.vk.NativeViewport</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:resize resize to attached listeners.</p>
 <h4>Overrides</h4>
 <p><a href="../../ViewportBase/classes/ViewportBase.html"><code>ViewportBase</code></a>.<a href="../../ViewportBase/classes/ViewportBase.html#fireresize"><code>fireResize</code></a></p>
 <hr>
@@ -305,6 +305,7 @@ calculations when restoring Redlining elements.</p>
 <blockquote>
 <p><strong>loadUrl</strong>(<code>url</code>, <code>onload</code>, <code>onerror</code>, <code>onprogress</code>, <code>resourceType</code>): <code>NativeViewport</code></p>
 </blockquote>
+<p>Loads a image URL into Viewport.</p>
 <h4>Parameters</h4>
 <h5>url</h5>
 <p><code>string</code></p>
@@ -326,7 +327,6 @@ calculations when restoring Redlining elements.</p>
 <p>this</p>
 <h4>Deprecated</h4>
 <p>(since 1.50.0)</p>
-<p>Loads a image URL into Viewport.</p>
 <hr>
 <h3>pan()</h3>
 <blockquote>
@@ -491,6 +491,6 @@ used by this class</p>
 <p><a href="../../ViewportBase/classes/ViewportBase.html"><code>ViewportBase</code></a>.<a href="../../ViewportBase/classes/ViewportBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

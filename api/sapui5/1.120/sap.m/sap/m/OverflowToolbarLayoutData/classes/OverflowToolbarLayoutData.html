@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: OverflowToolbarLayoutData — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: OverflowToolbarLayoutData — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: OverflowToolbarLayoutData — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/OverflowToolbarLayoutData/classes/OverflowToolbarLayoutData.html">
 <meta property="og:title" content="Class: OverflowToolbarLayoutData — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: OverflowToolbarLayoutData — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: OverflowToolbarLayoutData — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/OverflowToolbarLayoutData/classes/OverflowToolbarLayoutData.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/OverflowToolbarLayoutData/README.html">OverflowToolbarLayoutData</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/OverflowToolbarLayoutData</a> / OverflowToolbarLayoutData</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/OverflowToolbarLayoutData</a> / OverflowToolbarLayoutData</p>
 <h1>Class: OverflowToolbarLayoutData</h1>
 <pre class="sig"><span class="kw">import</span> OverflowToolbarLayoutData <span class="kw">from</span> <span class="str">"sap/m/OverflowToolbarLayoutData"</span>;</pre>
+<p>Holds layout data for the sap.m.OverflowToolbar items.</p>
 <h2>Since</h2>
 <p>1.28</p>
-<p>Holds layout data for the sap.m.OverflowToolbar items.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ToolbarLayoutData/classes/ToolbarLayoutData.html"><code>ToolbarLayoutData</code></a></li>
@@ -86,75 +86,79 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getCloseOverflowOnInteraction</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getCloseOverflowOnInteraction closeOverflowOnInteraction.</p>
+<p>Defines whether the overflow area is automatically closed when interacting with a control in it</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>closeOverflowOnInteraction</code></p>
 <h4>Since</h4>
 <p>1.40</p>
-<p>Gets current value of property #getCloseOverflowOnInteraction closeOverflowOnInteraction.</p>
-<p>Defines whether the overflow area is automatically closed when interacting with a control in it</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getGroup()</h3>
 <blockquote>
 <p><strong>getGroup</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>group</code></p>
-<h4>Since</h4>
-<p>1.32</p>
 <p>Gets current value of property #getGroup group.</p>
 <p>Defines OverflowToolbar items group number. Default value is 0, which means that the control does not
 belong to any group. Elements that belong to a group overflow together. The overall priority of the group
 is defined by the element with highest priority. Elements that belong to a group are not allowed to have
 AlwaysOverflow or NeverOverflow priority.</p>
 <p>Default value is <code>0</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>group</code></p>
+<h4>Since</h4>
+<p>1.32</p>
 <hr>
 <h3><del>getMoveToOverflow()</del></h3>
 <blockquote>
 <p><strong>getMoveToOverflow</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getMoveToOverflow moveToOverflow.</p>
+<p>The OverflowToolbar item can or cannot move to the overflow area</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>moveToOverflow</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.32)</p>
-<p>Gets current value of property #getMoveToOverflow moveToOverflow.</p>
-<p>The OverflowToolbar item can or cannot move to the overflow area</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getPriority()</h3>
 <blockquote>
 <p><strong>getPriority</strong>(): <a href="../../library/enumerations/OverflowToolbarPriority.html"><code>OverflowToolbarPriority</code></a> | <code>&quot;Always&quot;</code> | <code>&quot;AlwaysOverflow&quot;</code> | <code>&quot;Disappear&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <code>&quot;Never&quot;</code> | <code>&quot;NeverOverflow&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getPriority priority.</p>
+<p>Defines OverflowToolbar items priority. Available priorities are NeverOverflow, High, Low, Disappear
+and AlwaysOverflow.</p>
+<p>Default value is <code>High</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/enumerations/OverflowToolbarPriority.html"><code>OverflowToolbarPriority</code></a> | <code>&quot;Always&quot;</code> | <code>&quot;AlwaysOverflow&quot;</code> | <code>&quot;Disappear&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <code>&quot;Never&quot;</code> | <code>&quot;NeverOverflow&quot;</code></p>
 <p>Value of property <code>priority</code></p>
 <h4>Since</h4>
 <p>1.32</p>
-<p>Gets current value of property #getPriority priority.</p>
-<p>Defines OverflowToolbar items priority. Available priorities are NeverOverflow, High, Low, Disappear
-and AlwaysOverflow.</p>
-<p>Default value is <code>High</code>.</p>
 <hr>
 <h3><del>getStayInOverflow()</del></h3>
 <blockquote>
 <p><strong>getStayInOverflow</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getStayInOverflow stayInOverflow.</p>
+<p>The OverflowToolbar item can or cannot stay in the overflow area</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>stayInOverflow</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.32)</p>
-<p>Gets current value of property #getStayInOverflow stayInOverflow.</p>
-<p>The OverflowToolbar item can or cannot stay in the overflow area</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setCloseOverflowOnInteraction()</h3>
 <blockquote>
 <p><strong>setCloseOverflowOnInteraction</strong>(<code>bCloseOverflowOnInteraction?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getCloseOverflowOnInteraction closeOverflowOnInteraction.</p>
+<p>Defines whether the overflow area is automatically closed when interacting with a control in it</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bCloseOverflowOnInteraction?</h5>
 <p><code>boolean</code></p>
@@ -164,15 +168,18 @@ and AlwaysOverflow.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40</p>
-<p>Sets a new value for property #getCloseOverflowOnInteraction closeOverflowOnInteraction.</p>
-<p>Defines whether the overflow area is automatically closed when interacting with a control in it</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setGroup()</h3>
 <blockquote>
 <p><strong>setGroup</strong>(<code>iGroup?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getGroup group.</p>
+<p>Defines OverflowToolbar items group number. Default value is 0, which means that the control does not
+belong to any group. Elements that belong to a group overflow together. The overall priority of the group
+is defined by the element with highest priority. Elements that belong to a group are not allowed to have
+AlwaysOverflow or NeverOverflow priority.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iGroup?</h5>
 <p><code>number</code></p>
@@ -182,18 +189,15 @@ and AlwaysOverflow.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
-<p>Sets a new value for property #getGroup group.</p>
-<p>Defines OverflowToolbar items group number. Default value is 0, which means that the control does not
-belong to any group. Elements that belong to a group overflow together. The overall priority of the group
-is defined by the element with highest priority. Elements that belong to a group are not allowed to have
-AlwaysOverflow or NeverOverflow priority.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3><del>setMoveToOverflow()</del></h3>
 <blockquote>
 <p><strong>setMoveToOverflow</strong>(<code>bMoveToOverflow?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMoveToOverflow moveToOverflow.</p>
+<p>The OverflowToolbar item can or cannot move to the overflow area</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bMoveToOverflow?</h5>
 <p><code>boolean</code></p>
@@ -203,15 +207,15 @@ AlwaysOverflow or NeverOverflow priority.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.32)</p>
-<p>Sets a new value for property #getMoveToOverflow moveToOverflow.</p>
-<p>The OverflowToolbar item can or cannot move to the overflow area</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setStayInOverflow()</del></h3>
 <blockquote>
 <p><strong>setStayInOverflow</strong>(<code>bStayInOverflow?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getStayInOverflow stayInOverflow.</p>
+<p>The OverflowToolbar item can or cannot stay in the overflow area</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bStayInOverflow?</h5>
 <p><code>boolean</code></p>
@@ -221,10 +225,6 @@ AlwaysOverflow or NeverOverflow priority.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.32)</p>
-<p>Sets a new value for property #getStayInOverflow stayInOverflow.</p>
-<p>The OverflowToolbar item can or cannot stay in the overflow area</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -265,6 +265,6 @@ used by this class</p>
 <p><a href="../../ToolbarLayoutData/classes/ToolbarLayoutData.html"><code>ToolbarLayoutData</code></a>.<a href="../../ToolbarLayoutData/classes/ToolbarLayoutData.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ResponsivePopover — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ResponsivePopover — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ResponsivePopover — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ResponsivePopover/classes/ResponsivePopover.html">
 <meta property="og:title" content="Class: ResponsivePopover — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ResponsivePopover — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ResponsivePopover — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ResponsivePopover/classes/ResponsivePopover.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ResponsivePopover/README.html">ResponsivePopover</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ResponsivePopover</a> / ResponsivePopover</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ResponsivePopover</a> / ResponsivePopover</p>
 <h1>Class: ResponsivePopover</h1>
 <pre class="sig"><span class="kw">import</span> ResponsivePopover <span class="kw">from</span> <span class="str">"sap/m/ResponsivePopover"</span>;</pre>
-<h2>Since</h2>
-<p>1.15.1</p>
 <p>Overview: The responsive popover acts as a sap.m.Popover popover on desktop and tablet, while
 on phone it acts as a sap.m.Dialog dialog with <code>stretch</code> set to true.</p>
 <p><strong>Note:</strong> It is recommended that <code>ResponsivePopover</code> is used in fragments otherwise there might be some
 implications on the user experience. For example, on desktop, open or close functions of the <code>Popover</code>
 might not be called.</p>
 <p>Usage: When you want to make sure that all content is visible on any device.</p>
+<h2>Since</h2>
+<p>1.15.1</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -429,6 +429,7 @@ otherwise it will be bound to this <code>sap.m.ResponsivePopover</code> itself.<
 <blockquote>
 <p><strong>fireAfterClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ResponsivePopover$AfterCloseEventParameters.html"><code>ResponsivePopover$AfterCloseEventParameters</code></a></p>
@@ -438,12 +439,12 @@ otherwise it will be bound to this <code>sap.m.ResponsivePopover</code> itself.<
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <hr>
 <h3>fireAfterOpen()</h3>
 <blockquote>
 <p><strong>fireAfterOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ResponsivePopover$AfterOpenEventParameters.html"><code>ResponsivePopover$AfterOpenEventParameters</code></a></p>
@@ -453,12 +454,12 @@ otherwise it will be bound to this <code>sap.m.ResponsivePopover</code> itself.<
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <hr>
 <h3>fireBeforeClose()</h3>
 <blockquote>
 <p><strong>fireBeforeClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ResponsivePopover$BeforeCloseEventParameters.html"><code>ResponsivePopover$BeforeCloseEventParameters</code></a></p>
@@ -468,12 +469,12 @@ otherwise it will be bound to this <code>sap.m.ResponsivePopover</code> itself.<
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <hr>
 <h3>fireBeforeOpen()</h3>
 <blockquote>
 <p><strong>fireBeforeOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ResponsivePopover$BeforeOpenEventParameters.html"><code>ResponsivePopover$BeforeOpenEventParameters</code></a></p>
@@ -483,7 +484,6 @@ otherwise it will be bound to this <code>sap.m.ResponsivePopover</code> itself.<
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -637,15 +637,15 @@ or <code>null</code>.</p>
 <p><strong>getResizable</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getResizable resizable.</p>
+<p>Whether resize option is enabled.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>resizable</code></p>
 <h4>Since</h4>
 <p>1.36.4
  (since 1.36.4) - Do not use directly on ResponsivePopover while in experimental mode!</p>
-<p>Gets current value of property #getResizable resizable.</p>
-<p>Whether resize option is enabled.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowArrow()</h3>
 <blockquote>
@@ -708,16 +708,16 @@ sap.m.Dialog#title</p>
 <blockquote>
 <p><strong>getTitleAlignment</strong>(): <code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
-<p>Value of property <code>titleAlignment</code></p>
-<h4>Since</h4>
-<p>1.72</p>
 <p>Gets current value of property #getTitleAlignment titleAlignment.</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
 as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
 (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
 <p>Default value is <code>Auto</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
+<p>Value of property <code>titleAlignment</code></p>
+<h4>Since</h4>
+<p>1.72</p>
 <hr>
 <h3>getVerticalScrolling()</h3>
 <blockquote>
@@ -1038,6 +1038,10 @@ instance may be given</p>
 <p><strong>setResizable</strong>(<code>bResizable?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getResizable resizable.</p>
+<p>Whether resize option is enabled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bResizable?</h5>
 <p><code>boolean</code></p>
@@ -1048,10 +1052,6 @@ instance may be given</p>
 <h4>Since</h4>
 <p>1.36.4
  (since 1.36.4) - Do not use directly on ResponsivePopover while in experimental mode!</p>
-<p>Sets a new value for property #getResizable resizable.</p>
-<p>Whether resize option is enabled.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowArrow()</h3>
 <blockquote>
@@ -1133,6 +1133,12 @@ sap.m.Dialog#title</p>
 <blockquote>
 <p><strong>setTitleAlignment</strong>(<code>sTitleAlignment?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
+<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
+as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
+(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleAlignment?</h5>
 <p><code>&quot;Center&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
@@ -1142,12 +1148,6 @@ sap.m.Dialog#title</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
-<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
-as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
-(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>setVerticalScrolling()</h3>
 <blockquote>
@@ -1205,6 +1205,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

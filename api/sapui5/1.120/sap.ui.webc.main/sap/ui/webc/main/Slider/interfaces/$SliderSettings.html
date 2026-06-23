@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $SliderSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SliderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $SliderSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $SliderSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Slider/interfaces/$SliderSettings.html">
-<meta property="og:title" content="Interface: $SliderSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SliderSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $SliderSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $SliderSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Slider/interfaces/$SliderSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,26 +33,35 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/Slider/README.html">Slider</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Slider</a> / $SliderSettings</p>
-<h1>Interface: $SliderSettings</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Slider</a> / $SliderSettings</p>
+<h1><del>Interface: $SliderSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $SliderSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/Slider"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the Slider constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
+Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
+functionality.
+ (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>accessibleName?</h3>
+<h3><del>accessibleName?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>accessibleName?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the accessible ARIA name of the component.</p>
 <hr>
-<h3>change?</h3>
+<h3><del>change?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>change?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the value changes and the user has finished interacting with the slider.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -60,17 +69,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>enabled?</h3>
+<h3><del>enabled?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the control is enabled. A disabled control can&#39;t be interacted with, and it is not in
 the tab chain.</p>
 <hr>
-<h3>input?</h3>
+<h3><del>input?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>input?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the value changes due to user interaction that is not yet finished - during mouse/touch dragging.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -78,61 +89,69 @@ the tab chain.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>labelInterval?</h3>
+<h3><del>labelInterval?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>labelInterval?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Displays a label with a value on every N-th step.</p>
 <p> <strong>Note:</strong> The step and tickmarks properties must be enabled. Example - if the step value is set to 2
 and the label interval is also specified to 2 - then every second tickmark will be labelled, which means
 every 4th value number.</p>
 <hr>
-<h3>max?</h3>
+<h3><del>max?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>max?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the maximum value of the slider.</p>
 <hr>
-<h3>min?</h3>
+<h3><del>min?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>min?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the minimum value of the slider.</p>
 <hr>
-<h3>showTickmarks?</h3>
+<h3><del>showTickmarks?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showTickmarks?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Enables tickmarks visualization for each step.</p>
 <p> <strong>Note:</strong> The step must be a positive number.</p>
 <hr>
-<h3>showTooltip?</h3>
+<h3><del>showTooltip?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showTooltip?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Enables handle tooltip displaying the current value.</p>
 <hr>
-<h3>step?</h3>
+<h3><del>step?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>step?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the size of the slider&#39;s selection intervals (e.g. min = 0, max = 10, step = 5 would result in
 possible selection of the values 0, 5, 10).</p>
 <p> <strong>Note:</strong> If set to 0 the slider handle movement is disabled. When negative number or value other than
 a number, the component fallbacks to its default value.</p>
 <hr>
-<h3>value?</h3>
+<h3><del>value?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>value?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Current value of the slider</p>
 <hr>
-<h3>width?</h3>
+<h3><del>width?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the width of the control</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

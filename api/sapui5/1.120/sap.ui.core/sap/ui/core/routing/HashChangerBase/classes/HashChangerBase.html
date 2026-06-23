@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: HashChangerBase — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: HashChangerBase — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: HashChangerBase — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/routing/HashChangerBase/classes/HashChangerBase.html">
 <meta property="og:title" content="Class: HashChangerBase — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: HashChangerBase — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: HashChangerBase — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/routing/HashChangerBase/classes/HashChangerBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › routing › <a href="../../../../../../../sap.ui.core/sap/ui/core/routing/HashChangerBase/README.html">HashChangerBase</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/routing/HashChangerBase</a> / HashChangerBase</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/routing/HashChangerBase</a> / HashChangerBase</p>
 <h1>Class: HashChangerBase</h1>
 <pre class="sig"><span class="kw">import</span> HashChangerBase <span class="kw">from</span> <span class="str">"sap/ui/core/routing/HashChangerBase"</span>;</pre>
-<h2>Ui5-protected</h2>
-<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <p>Base Class for manipulating and receiving changes of hash segment.</p>
 <p>Fires a <code>hashChanged</code> event if the relevant hash changes.</p>
+<h2>Ui5-protected</h2>
+<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a></li>
@@ -51,22 +51,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <li><a href="../../HashChanger/classes/HashChanger.html"><code>HashChanger</code></a></li>
 <li><a href="../../RouterHashChanger/classes/RouterHashChanger.html"><code>RouterHashChanger</code></a></li>
 </ul>
-<h2>Constructors</h2>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new HashChangerBase</strong>(): <code>HashChangerBase</code></p>
-</blockquote>
-<h4>Returns</h4>
-<p><code>HashChangerBase</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<h4>Overrides</h4>
-<p><a href="../../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a>.<a href="../../../../base/EventProvider/classes/EventProvider.html#constructor"><code>constructor</code></a></p>
 <h2>Methods</h2>
 <h3>replaceHash()</h3>
 <blockquote>
 <p><strong>replaceHash</strong>(<code>sHash</code>, <code>sDirection</code>): <code>void</code></p>
 </blockquote>
+<p>Replaces the hash with a certain value. When using the replace function, no browser history entry is
+written. If you want to have an entry in the browser history, please use the #setHash function.</p>
+<p>The <code>sDirection</code> parameter can be used to provide direction information on the navigation which leads
+to this hash replacement. This is typically used when synchronizing the hashes between multiple frames
+to provide information to the frame where the hash is replaced with the navigation direction in the other
+frame where the navigation occurs.</p>
 <h4>Parameters</h4>
 <h5>sHash</h5>
 <p><code>string</code></p>
@@ -78,17 +73,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Replaces the hash with a certain value. When using the replace function, no browser history entry is
-written. If you want to have an entry in the browser history, please use the #setHash function.</p>
-<p>The <code>sDirection</code> parameter can be used to provide direction information on the navigation which leads
-to this hash replacement. This is typically used when synchronizing the hashes between multiple frames
-to provide information to the frame where the hash is replaced with the navigation direction in the other
-frame where the navigation occurs.</p>
 <hr>
 <h3>setHash()</h3>
 <blockquote>
 <p><strong>setHash</strong>(<code>sHash</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the hash to a certain value. When using this function, a browser history entry is written. If you
+do not want to have an entry in the browser history, please use the #replaceHash function.</p>
 <h4>Parameters</h4>
 <h5>sHash</h5>
 <p><code>string</code></p>
@@ -97,13 +88,14 @@ frame where the navigation occurs.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the hash to a certain value. When using this function, a browser history entry is written. If you
-do not want to have an entry in the browser history, please use the #replaceHash function.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
+<p>Creates a new subclass of class sap.ui.core.routing.HashChangerBase with name <code>sClassName</code> and enriches
+it with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.EventProvider.extend.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
@@ -123,9 +115,6 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new subclass of class sap.ui.core.routing.HashChangerBase with name <code>sClassName</code> and enriches
-it with the information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.EventProvider.extend.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a>.<a href="../../../../base/EventProvider/classes/EventProvider.html#extend"><code>extend</code></a></p>
 <hr>
@@ -133,16 +122,16 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 </blockquote>
+<p>Returns a metadata object for class sap.ui.core.routing.HashChangerBase.</p>
 <h4>Returns</h4>
 <p><a href="../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a metadata object for class sap.ui.core.routing.HashChangerBase.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a>.<a href="../../../../base/EventProvider/classes/EventProvider.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

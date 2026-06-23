@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: TableDelegate — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: TableDelegate — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: TableDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/TableDelegate/interfaces/TableDelegate.html">
 <meta property="og:title" content="Interface: TableDelegate — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: TableDelegate — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: TableDelegate — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.mdc/sap/ui/mdc/TableDelegate/interfaces/TableDelegate.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/TableDelegate/README.html">TableDelegate</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/TableDelegate</a> / TableDelegate</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/TableDelegate</a> / TableDelegate</p>
 <h1>Interface: TableDelegate</h1>
 <pre class="sig"><span class="kw">import</span> TableDelegate <span class="kw">from</span> <span class="str">"sap/ui/mdc/TableDelegate"</span>;</pre>
+<p>Base delegate for sap.ui.mdc.Table.</p>
 <h2>Since</h2>
 <p>1.60</p>
-<p>Base delegate for sap.ui.mdc.Table.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../AggregationBaseDelegate/interfaces/AggregationBaseDelegate.html"><code>AggregationBaseDelegate</code></a></li>
@@ -50,6 +50,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><strong>collapseAll</strong>(<code>oTable</code>): <code>void</code></p>
 </blockquote>
+<p>Collapses all nodes.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -58,12 +59,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Collapses all nodes.</p>
 <hr>
 <h3>expandAll()</h3>
 <blockquote>
 <p><strong>expandAll</strong>(<code>oTable</code>): <code>void</code></p>
 </blockquote>
+<p>Expands all nodes.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -72,12 +73,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Expands all nodes.</p>
 <hr>
 <h3>fetchExportCapabilities()</h3>
 <blockquote>
 <p><strong>fetchExportCapabilities</strong>(<code>oTable</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Returns the feature set for exporting data in the MDC Table.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -87,12 +88,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>Export capabilities with specific features</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the feature set for exporting data in the MDC Table.</p>
 <hr>
 <h3>formatGroupHeader()</h3>
 <blockquote>
 <p><strong>formatGroupHeader</strong>(<code>oTable</code>, <code>oContext</code>, <code>sProperty</code>): <code>string</code></p>
 </blockquote>
+<p>Formats the title text of a group header row of the table.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -108,12 +109,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>The group header title. If <code>undefined</code> is returned, the default group header title is set.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Formats the title text of a group header row of the table.</p>
 <hr>
 <h3>getFilterDelegate()</h3>
 <blockquote>
 <p><strong>getFilterDelegate</strong>(): <code>object</code></p>
 </blockquote>
+<p>Returns the filter delegate of the table that provides basic filter functionality, such as adding filter
+fields. <strong>Note:</strong> The functionality provided in this delegate acts as a subset of a <code>FilterBarDelegate</code>
+to enable the table for inbuilt filtering.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Object for the tables filter personalization</p>
@@ -130,14 +133,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>Promise</code>&lt;<a href="../../FilterField/classes/FilterField.html"><code>FilterField</code></a>&gt;</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the filter delegate of the table that provides basic filter functionality, such as adding filter
-fields. <strong>Note:</strong> The functionality provided in this delegate acts as a subset of a <code>FilterBarDelegate</code>
-to enable the table for inbuilt filtering.</p>
 <hr>
 <h3>getFilters()</h3>
 <blockquote>
 <p><strong>getFilters</strong>(<code>oTable</code>): <a href="../../../../../../sap.ui.core/sap/ui/model/Filter/classes/Filter.html"><code>Filter</code></a>[]</p>
 </blockquote>
+<p>Returns filters that are used when updating the table&#39;s binding and are created based on the filter conditions
+of the table and its associated filter control.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -147,13 +149,12 @@ to enable the table for inbuilt filtering.</p>
 <p>Array of filters</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns filters that are used when updating the table&#39;s binding and are created based on the filter conditions
-of the table and its associated filter control.</p>
 <hr>
 <h3>getGroupSorter()</h3>
 <blockquote>
 <p><strong>getGroupSorter</strong>(<code>oTable</code>): <a href="../../../../../../sap.ui.core/sap/ui/model/Sorter/classes/Sorter.html"><code>Sorter</code></a></p>
 </blockquote>
+<p>Creates a new sorter for the grouping functionality.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -163,12 +164,12 @@ of the table and its associated filter control.</p>
 <p>New sorter</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new sorter for the grouping functionality.</p>
 <hr>
 <h3>getSorters()</h3>
 <blockquote>
 <p><strong>getSorters</strong>(<code>oTable</code>): <a href="../../../../../../sap.ui.core/sap/ui/model/Sorter/classes/Sorter.html"><code>Sorter</code></a>[]</p>
 </blockquote>
+<p>Returns the sort conditions that are used when updating the table&#39;s binding.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -178,12 +179,12 @@ of the table and its associated filter control.</p>
 <p>Sort Conditions</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the sort conditions that are used when updating the table&#39;s binding.</p>
 <hr>
 <h3>rebind()</h3>
 <blockquote>
 <p><strong>rebind</strong>(<code>oTable</code>, <code>oBindingInfo</code>): <code>void</code></p>
 </blockquote>
+<p>Rebinds the table.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -195,12 +196,14 @@ of the table and its associated filter control.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Rebinds the table.</p>
 <hr>
 <h3>updateBinding()</h3>
 <blockquote>
 <p><strong>updateBinding</strong>(<code>oTable</code>, <code>oBindingInfo</code>, <code>oBinding?</code>, <code>mSettings?</code>): <code>void</code></p>
 </blockquote>
+<p>Updates the row binding of the table.</p>
+<p>The default implementation rebinds the table, but model-specific subclasses must call dedicated binding
+methods to update the binding instead of using #rebind.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -220,14 +223,12 @@ of the table and its associated filter control.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Updates the row binding of the table.</p>
-<p>The default implementation rebinds the table, but model-specific subclasses must call dedicated binding
-methods to update the binding instead of using #rebind.</p>
 <hr>
 <h3>updateBindingInfo()</h3>
 <blockquote>
 <p><strong>updateBindingInfo</strong>(<code>oTable</code>, <code>oBindingInfo</code>): <code>void</code></p>
 </blockquote>
+<p>Provides a hook to update the binding info object that is used to bind the table to the model.</p>
 <h4>Parameters</h4>
 <h5>oTable</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a></p>
@@ -239,9 +240,7 @@ methods to update the binding instead of using #rebind.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Provides a hook to update the binding info object that is used to bind the table to the model.</p>
-<hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

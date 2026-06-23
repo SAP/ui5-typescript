@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $HarveyBallMicroChartSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $HarveyBallMicroChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $HarveyBallMicroChartSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.microchart/sap/suite/ui/microchart/HarveyBallMicroChart/interfaces/$HarveyBallMicroChartSettings.html">
 <meta property="og:title" content="Interface: $HarveyBallMicroChartSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $HarveyBallMicroChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $HarveyBallMicroChartSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.microchart/sap/suite/ui/microchart/HarveyBallMicroChart/interfaces/$HarveyBallMicroChartSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.suite.ui.microchart/README.html">sap.suite.ui.microchart</a> › sap › suite › ui › microchart › <a href="../../../../../../../sap.suite.ui.microchart/sap/suite/ui/microchart/HarveyBallMicroChart/README.html">HarveyBallMicroChart</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.suite.ui.microchart</a> / <a href="../README.html">sap/suite/ui/microchart/HarveyBallMicroChart</a> / $HarveyBallMicroChartSettings</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.suite.ui.microchart</a> / <a href="../README.html">sap/suite/ui/microchart/HarveyBallMicroChart</a> / $HarveyBallMicroChartSettings</p>
 <h1>Interface: $HarveyBallMicroChartSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $HarveyBallMicroChartSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/microchart/HarveyBallMicroChart"</span>;</pre>
+<p>Describes the settings that can be provided to the HarveyBallMicroChart constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -51,17 +52,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>alignContent?</strong>: <code>&quot;Center&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/HorizontalAlignmentType.html"><code>HorizontalAlignmentType</code></a></p>
 </blockquote>
+<p>The alignment of the content. If not set, the <code>Left</code> alignment type is used.</p>
 <h4>Since</h4>
 <p>1.62.0</p>
-<p>The alignment of the content. If not set, the <code>Left</code> alignment type is used.</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Controls or IDs that label this control. Can be used by screen reader software.</p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Controls or IDs that label this control. Can be used by screen reader software.</p>
 <hr>
 <h3>colorPalette?</h3>
 <blockquote>
@@ -84,28 +85,28 @@ the scaling factor, defined by the <code>totalScale</code> property, are display
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>The height of the chart. Overrides the height specified in the <code>size</code> property.</p>
 <h4>Since</h4>
 <p>1.62.0</p>
-<p>The height of the chart. Overrides the height specified in the <code>size</code> property.</p>
 <hr>
 <h3>hideOnNoData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideOnNoData?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If this is set to True, the control will be hidden in &#39;No data&#39; scenario.</p>
 <h4>Since</h4>
 <p>1.84</p>
-<p>If this is set to True, the control will be hidden in &#39;No data&#39; scenario.</p>
 <hr>
 <h3><del>isResponsive?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>isResponsive?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If set to <code>true</code>, the width and height of the control are determined by the width and height of the parent
+container, in which case the <code>size</code> and <code>width</code> properties are ignored.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.62.0)</p>
-<p>If set to <code>true</code>, the width and height of the control are determined by the width and height of the parent
-container, in which case the <code>size</code> and <code>width</code> properties are ignored.</p>
 <hr>
 <h3>items?</h3>
 <blockquote>
@@ -166,6 +167,6 @@ container, in which case the <code>size</code> and <code>width</code> properties
 </blockquote>
 <p>The width of the chart. Overrides the width specified in the <code>size</code> property.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

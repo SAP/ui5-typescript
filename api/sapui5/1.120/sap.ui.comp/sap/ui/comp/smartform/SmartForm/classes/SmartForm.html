@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SmartForm — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SmartForm — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SmartForm — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartform/SmartForm/classes/SmartForm.html">
 <meta property="og:title" content="Class: SmartForm — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SmartForm — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SmartForm — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartform/SmartForm/classes/SmartForm.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartform › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartform/SmartForm/README.html">SmartForm</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartform/SmartForm</a> / SmartForm</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartform/SmartForm</a> / SmartForm</p>
 <h1>Class: SmartForm</h1>
 <pre class="sig"><span class="kw">import</span> SmartForm <span class="kw">from</span> <span class="str">"sap/ui/comp/smartform/SmartForm"</span>;</pre>
 <p>The <code>SmartForm</code> control renders a form (<code>sap.ui.layout.form.Form</code>). When used with the <code>SmartField</code> control
@@ -91,6 +91,7 @@ See:
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -100,7 +101,6 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addCustomData()</h3>
 <blockquote>
@@ -335,6 +335,7 @@ of all the fields with errors.</p>
 <blockquote>
 <p><strong>fireChecked</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:checked checked to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartForm$CheckedEventParameters.html"><code>SmartForm$CheckedEventParameters</code></a></p>
@@ -344,12 +345,12 @@ of all the fields with errors.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:checked checked to attached listeners.</p>
 <hr>
 <h3>fireEditToggled()</h3>
 <blockquote>
 <p><strong>fireEditToggled</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:editToggled editToggled to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SmartForm$EditToggledEventParameters.html"><code>SmartForm$EditToggledEventParameters</code></a></p>
@@ -359,17 +360,16 @@ of all the fields with errors.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:editToggled editToggled to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getCheckButton()</h3>
 <blockquote>
@@ -488,14 +488,14 @@ is rendered.</p>
 <blockquote>
 <p><strong>getHorizontalLayoutGroupElementMinWidth</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getHorizontalLayoutGroupElementMinWidth horizontalLayoutGroupElementMinWidth.</p>
+<p>Specifies the minimal size in pixels of all group elements of the form if the horizontal layout is used.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>horizontalLayoutGroupElementMinWidth</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please do not use this property as it does not have any effect on the current
 layout of the <code>SmartForm</code> control.</p>
-<p>Gets current value of property #getHorizontalLayoutGroupElementMinWidth horizontalLayoutGroupElementMinWidth.</p>
-<p>Specifies the minimal size in pixels of all group elements of the form if the horizontal layout is used.</p>
 <hr>
 <h3>getIgnoredFields()</h3>
 <blockquote>
@@ -516,11 +516,6 @@ control itself.</p>
 <blockquote>
 <p><strong>getImportance</strong>(): <code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/Importance.html"><code>Importance</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/Importance.html"><code>Importance</code></a></p>
-<p>Value of property <code>importance</code></p>
-<h4>Since</h4>
-<p>1.87</p>
 <p>Gets current value of property #getImportance importance.</p>
 <p>Specifies which smart fields will be visible inside the <code>SmartForm</code>.</p>
 <p>If set to <strong>high</strong>, only smart fields with high importance will be visible.</p>
@@ -529,6 +524,11 @@ control itself.</p>
 <p>Note: If a smart field is annotated as mandatory or hidden, its visibility will not be affected
 by the <code>importance</code> property.</p>
 <p>Default value is <code>Low</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/Importance.html"><code>Importance</code></a></p>
+<p>Value of property <code>importance</code></p>
+<h4>Since</h4>
+<p>1.87</p>
 <hr>
 <h3>getLayout()</h3>
 <blockquote>
@@ -586,12 +586,6 @@ the <code>customToolbar</code> aggregation.</p>
 <blockquote>
 <p><strong>getUseHorizontalLayout</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>useHorizontalLayout</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
-<code>layout</code> aggregation.</p>
 <p>Gets current value of property #getUseHorizontalLayout useHorizontalLayout.</p>
 <p>Specifies whether the groups are rendered in a sap.ui.layout.form.ResponsiveLayout ResponsiveLayout
 with the label above the field. Each group is rendered in a new line.</p>
@@ -599,16 +593,17 @@ with the label above the field. Each group is rendered in a new line.</p>
 should be used in the <code>layout</code> aggregation.</p>
 <p><strong>Note:</strong> The value of this property will be passed on to the <code>useHorizontalLayout</code> property of all <code>Group</code>
 and <code>GroupElement</code> elements.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>useHorizontalLayout</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
+<code>layout</code> aggregation.</p>
 <hr>
 <h3>getValidationMode()</h3>
 <blockquote>
 <p><strong>getValidationMode</strong>(): <code>&quot;Standard&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/SmartFormValidationMode.html"><code>SmartFormValidationMode</code></a> | <code>&quot;Async&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Standard&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/SmartFormValidationMode.html"><code>SmartFormValidationMode</code></a> | <code>&quot;Async&quot;</code></p>
-<p>Value of property <code>validationMode</code></p>
-<h4>Since</h4>
-<p>1.81</p>
 <p>Gets current value of property #getValidationMode validationMode.</p>
 <p>Controls the SmartForm validation mode. The default mode handles only nested <code>SmartField</code> controls with
 synchronous validation. If the <code>SmartForm</code> should also handle controls with asynchronous validation the
@@ -618,6 +613,11 @@ fields validation are handled.</p>
 <p>Note: Using <code>Async</code> mode the event <code>checked</code> will be called asynchronously when all the nested <code>SmartField</code>
 validations are executed.</p>
 <p>Default value is <code>Standard</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Standard&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/SmartFormValidationMode.html"><code>SmartFormValidationMode</code></a> | <code>&quot;Async&quot;</code></p>
+<p>Value of property <code>validationMode</code></p>
+<h4>Since</h4>
+<p>1.81</p>
 <hr>
 <h3>getVisibleProperties()</h3>
 <blockquote>
@@ -699,12 +699,12 @@ changes or the <code>Layout</code> aggregation is added.</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllGroups()</h3>
 <blockquote>
@@ -720,6 +720,7 @@ changes or the <code>Layout</code> aggregation is added.</p>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -729,7 +730,6 @@ changes or the <code>Layout</code> aggregation is added.</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeGroup()</h3>
 <blockquote>
@@ -887,16 +887,19 @@ is rendered.</p>
 <blockquote>
 <p><strong>setFocusOnEditableControl</strong>(): <code>void</code></p>
 </blockquote>
+<p>Sets the focus on the first editable control.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Sets the focus on the first editable control.</p>
 <hr>
 <h3><del>setHorizontalLayoutGroupElementMinWidth()</del></h3>
 <blockquote>
 <p><strong>setHorizontalLayoutGroupElementMinWidth</strong>(<code>iHorizontalLayoutGroupElementMinWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHorizontalLayoutGroupElementMinWidth horizontalLayoutGroupElementMinWidth.</p>
+<p>Specifies the minimal size in pixels of all group elements of the form if the horizontal layout is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>iHorizontalLayoutGroupElementMinWidth?</h5>
 <p><code>number</code></p>
@@ -907,9 +910,6 @@ is rendered.</p>
 <h4>Deprecated</h4>
 <p>(since 1.48.0) - please do not use this property as it does not have any effect on the current
 layout of the <code>SmartForm</code> control.</p>
-<p>Sets a new value for property #getHorizontalLayoutGroupElementMinWidth horizontalLayoutGroupElementMinWidth.</p>
-<p>Specifies the minimal size in pixels of all group elements of the form if the horizontal layout is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setIgnoredFields()</h3>
 <blockquote>
@@ -935,15 +935,6 @@ control itself.</p>
 <blockquote>
 <p><strong>setImportance</strong>(<code>sImportance?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sImportance?</h5>
-<p><code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/Importance.html"><code>Importance</code></a></p>
-<p>New value for property <code>importance</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.87</p>
 <p>Sets a new value for property #getImportance importance.</p>
 <p>Specifies which smart fields will be visible inside the <code>SmartForm</code>.</p>
 <p>If set to <strong>high</strong>, only smart fields with high importance will be visible.</p>
@@ -953,6 +944,15 @@ control itself.</p>
 by the <code>importance</code> property.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>Low</code>.</p>
+<h4>Parameters</h4>
+<h5>sImportance?</h5>
+<p><code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/Importance.html"><code>Importance</code></a></p>
+<p>New value for property <code>importance</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.87</p>
 <hr>
 <h3>setLayout()</h3>
 <blockquote>
@@ -1004,6 +1004,14 @@ the <code>customToolbar</code> aggregation.</p>
 <blockquote>
 <p><strong>setUseHorizontalLayout</strong>(<code>bUseHorizontalLayout?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getUseHorizontalLayout useHorizontalLayout.</p>
+<p>Specifies whether the groups are rendered in a sap.ui.layout.form.ResponsiveLayout ResponsiveLayout
+with the label above the field. Each group is rendered in a new line.</p>
+<p><strong>Note:</strong> This property should no longer be used. To arrange the fields in columns, sap.ui.comp.smartform.ColumnLayout ColumnLayout
+should be used in the <code>layout</code> aggregation.</p>
+<p><strong>Note:</strong> The value of this property will be passed on to the <code>useHorizontalLayout</code> property of all <code>Group</code>
+and <code>GroupElement</code> elements.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bUseHorizontalLayout?</h5>
 <p><code>boolean</code></p>
@@ -1014,28 +1022,11 @@ the <code>customToolbar</code> aggregation.</p>
 <h4>Deprecated</h4>
 <p>(since 1.86) - replaced by sap.ui.comp.smartform.ColumnLayout ColumnLayout in the
 <code>layout</code> aggregation.</p>
-<p>Sets a new value for property #getUseHorizontalLayout useHorizontalLayout.</p>
-<p>Specifies whether the groups are rendered in a sap.ui.layout.form.ResponsiveLayout ResponsiveLayout
-with the label above the field. Each group is rendered in a new line.</p>
-<p><strong>Note:</strong> This property should no longer be used. To arrange the fields in columns, sap.ui.comp.smartform.ColumnLayout ColumnLayout
-should be used in the <code>layout</code> aggregation.</p>
-<p><strong>Note:</strong> The value of this property will be passed on to the <code>useHorizontalLayout</code> property of all <code>Group</code>
-and <code>GroupElement</code> elements.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setValidationMode()</h3>
 <blockquote>
 <p><strong>setValidationMode</strong>(<code>sValidationMode?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sValidationMode?</h5>
-<p><code>&quot;Standard&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/SmartFormValidationMode.html"><code>SmartFormValidationMode</code></a> | <code>&quot;Async&quot;</code></p>
-<p>New value for property <code>validationMode</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.81</p>
 <p>Sets a new value for property #getValidationMode validationMode.</p>
 <p>Controls the SmartForm validation mode. The default mode handles only nested <code>SmartField</code> controls with
 synchronous validation. If the <code>SmartForm</code> should also handle controls with asynchronous validation the
@@ -1046,6 +1037,15 @@ fields validation are handled.</p>
 validations are executed.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>Standard</code>.</p>
+<h4>Parameters</h4>
+<h5>sValidationMode?</h5>
+<p><code>&quot;Standard&quot;</code> | <a href="../../../library/namespaces/smartform/enumerations/SmartFormValidationMode.html"><code>SmartFormValidationMode</code></a> | <code>&quot;Async&quot;</code></p>
+<p>New value for property <code>validationMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.81</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1086,6 +1086,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

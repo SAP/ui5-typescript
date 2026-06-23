@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SemanticObjectController — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SemanticObjectController — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SemanticObjectController — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/navpopover/SemanticObjectController/classes/SemanticObjectController.html">
 <meta property="og:title" content="Class: SemanticObjectController — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SemanticObjectController — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SemanticObjectController — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/navpopover/SemanticObjectController/classes/SemanticObjectController.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › navpopover › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/navpopover/SemanticObjectController/README.html">SemanticObjectController</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/navpopover/SemanticObjectController</a> / SemanticObjectController</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/navpopover/SemanticObjectController</a> / SemanticObjectController</p>
 <h1>Class: SemanticObjectController</h1>
 <pre class="sig"><span class="kw">import</span> SemanticObjectController <span class="kw">from</span> <span class="str">"sap/ui/comp/navpopover/SemanticObjectController"</span>;</pre>
 <p>The <code>SemanticObjectController</code> control operates as a single entry point for <code>SmartLink</code> controls created
@@ -88,6 +88,13 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachBeforePopoverOpens</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforePopoverOpens beforePopoverOpens event
+of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
+<p>Event is fired before the navigation popover opens and before navigation target links are retrieved.
+Event can be used to change the parameters used to retrieve the navigation targets. In case of SmartLink,
+<code>beforePopoverOpens</code> is fired after the link has been clicked.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -105,6 +112,10 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforePopoverOpens</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforePopoverOpens beforePopoverOpens event
 of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -112,10 +123,6 @@ otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectCo
 <p>Event is fired before the navigation popover opens and before navigation target links are retrieved.
 Event can be used to change the parameters used to retrieve the navigation targets. In case of SmartLink,
 <code>beforePopoverOpens</code> is fired after the link has been clicked.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforePopoverOpens</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -129,19 +136,18 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforePopoverOpens beforePopoverOpens event
-of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
-<p>Event is fired before the navigation popover opens and before navigation target links are retrieved.
-Event can be used to change the parameters used to retrieve the navigation targets. In case of SmartLink,
-<code>beforePopoverOpens</code> is fired after the link has been clicked.</p>
 <hr>
 <h3>attachNavigate()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
+<p>This event is fired after a navigation link on the navigation popover has been clicked. This event is
+only fired, if the user left-clicks the link. Right-clicking the link and selecting &#39;Open in New Window&#39;
+etc. in the context menu does not fire the event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -159,16 +165,16 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
 <p>This event is fired after a navigation link on the navigation popover has been clicked. This event is
 only fired, if the user left-clicks the link. Right-clicking the link and selecting &#39;Open in New Window&#39;
 etc. in the context menu does not fire the event.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -182,18 +188,18 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
-<p>This event is fired after a navigation link on the navigation popover has been clicked. This event is
-only fired, if the user left-clicks the link. Right-clicking the link and selecting &#39;Open in New Window&#39;
-etc. in the context menu does not fire the event.</p>
 <hr>
 <h3>attachNavigationTargetsObtained()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavigationTargetsObtained</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navigationTargetsObtained navigationTargetsObtained
+event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
+<p>After the navigation targets have been retrieved, <code>navigationTargetsObtained</code> is fired and makes it possible
+you to change the targets.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -211,16 +217,16 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.0</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavigationTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navigationTargetsObtained navigationTargetsObtained
 event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
 <p>After the navigation targets have been retrieved, <code>navigationTargetsObtained</code> is fired and makes it possible
 you to change the targets.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavigationTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -234,18 +240,17 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navigationTargetsObtained navigationTargetsObtained
-event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
-<p>After the navigation targets have been retrieved, <code>navigationTargetsObtained</code> is fired and makes it possible
-you to change the targets.</p>
 <hr>
 <h3><del>attachPrefetchDone()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPrefetchDone</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:prefetchDone prefetchDone event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
+<p>If the property <code>prefetchNavigationTargets</code> is set to <code>true</code>, event <code>prefetchDone</code> is fired after all
+navigation targets have been retrieved.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -266,15 +271,15 @@ itself</p>
 <h5>Deprecated</h5>
 <p>(since 1.42.0) - The event <code>prefetchDone</code> is obsolete because it depends on the property
 <code>prefetchNavigationTargets</code> which has been deprecated.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPrefetchDone</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:prefetchDone prefetchDone event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
 <p>If the property <code>prefetchNavigationTargets</code> is set to <code>true</code>, event <code>prefetchDone</code> is fired after all
 navigation targets have been retrieved.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPrefetchDone</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -291,16 +296,14 @@ itself</p>
 <h5>Deprecated</h5>
 <p>(since 1.42.0) - The event <code>prefetchDone</code> is obsolete because it depends on the property
 <code>prefetchNavigationTargets</code> which has been deprecated.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:prefetchDone prefetchDone event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.comp.navpopover.SemanticObjectController</code> itself.</p>
-<p>If the property <code>prefetchNavigationTargets</code> is set to <code>true</code>, event <code>prefetchDone</code> is fired after all
-navigation targets have been retrieved.</p>
 <hr>
 <h3>detachBeforePopoverOpens()</h3>
 <blockquote>
 <p><strong>detachBeforePopoverOpens</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforePopoverOpens beforePopoverOpens event
+of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -313,14 +316,13 @@ navigation targets have been retrieved.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforePopoverOpens beforePopoverOpens event
-of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachNavigate()</h3>
 <blockquote>
 <p><strong>detachNavigate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -333,13 +335,14 @@ of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigate navigate event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachNavigationTargetsObtained()</h3>
 <blockquote>
 <p><strong>detachNavigationTargetsObtained</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navigationTargetsObtained navigationTargetsObtained
+event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -352,14 +355,13 @@ of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navigationTargetsObtained navigationTargetsObtained
-event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachPrefetchDone()</del></h3>
 <blockquote>
 <p><strong>detachPrefetchDone</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:prefetchDone prefetchDone event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -375,13 +377,12 @@ event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - The event <code>prefetchDone</code> is obsolete because it depends on the property
 <code>prefetchNavigationTargets</code> which has been deprecated.</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:prefetchDone prefetchDone event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireBeforePopoverOpens()</h3>
 <blockquote>
 <p><strong>fireBeforePopoverOpens</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforePopoverOpens beforePopoverOpens to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SemanticObjectController$BeforePopoverOpensEventParameters.html"><code>SemanticObjectController$BeforePopoverOpensEventParameters</code></a></p>
@@ -393,12 +394,12 @@ event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>1.28.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforePopoverOpens beforePopoverOpens to attached listeners.</p>
 <hr>
 <h3>fireNavigate()</h3>
 <blockquote>
 <p><strong>fireNavigate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:navigate navigate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SemanticObjectController$NavigateEventParameters.html"><code>SemanticObjectController$NavigateEventParameters</code></a></p>
@@ -410,12 +411,12 @@ event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>1.28.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:navigate navigate to attached listeners.</p>
 <hr>
 <h3>fireNavigationTargetsObtained()</h3>
 <blockquote>
 <p><strong>fireNavigationTargetsObtained</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:navigationTargetsObtained navigationTargetsObtained to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SemanticObjectController$NavigationTargetsObtainedEventParameters.html"><code>SemanticObjectController$NavigationTargetsObtainedEventParameters</code></a></p>
@@ -427,12 +428,12 @@ event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <p>1.28.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:navigationTargetsObtained navigationTargetsObtained to attached listeners.</p>
 <hr>
 <h3><del>firePrefetchDone()</del></h3>
 <blockquote>
 <p><strong>firePrefetchDone</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:prefetchDone prefetchDone to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SemanticObjectController$PrefetchDoneEventParameters.html"><code>SemanticObjectController$PrefetchDoneEventParameters</code></a></p>
@@ -447,17 +448,11 @@ event of this <code>sap.ui.comp.navpopover.SemanticObjectController</code>.</p>
 <code>prefetchNavigationTargets</code> which has been deprecated.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:prefetchDone prefetchDone to attached listeners.</p>
 <hr>
 <h3>getBeforeNavigationCallback()</h3>
 <blockquote>
 <p><strong>getBeforeNavigationCallback</strong>(): <code>Function</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>Function</code></p>
-<p>Value of property <code>beforeNavigationCallback</code></p>
-<h4>Since</h4>
-<p>1.75.0</p>
 <p>Gets current value of property #getBeforeNavigationCallback beforeNavigationCallback.</p>
 <p>Function that is called before the actual navigation happens. This function has to return a promise resolving
 into a Boolean value for which the navigation will wait. If the Boolean value is <code>true</code>, the navigation
@@ -468,69 +463,69 @@ will be processed. The <code>beforeNavigationCallback(oNavigationInfo)</code> pa
  - {String} semanticObject: Name of the `SemanticObject` of the navigation intent
  - {Object} semanticAttributes: Object containing the `SemanticAttributes` of the navigation intent
 </code></pre>
+<h4>Returns</h4>
+<p><code>Function</code></p>
+<p>Value of property <code>beforeNavigationCallback</code></p>
+<h4>Since</h4>
+<p>1.75.0</p>
 <hr>
 <h3>getContactAnnotationPaths()</h3>
 <blockquote>
 <p><strong>getContactAnnotationPaths</strong>(): <code>object</code></p>
 </blockquote>
+<p>Gets current value of property #getContactAnnotationPaths contactAnnotationPaths.</p>
+<p>Navigation property that points from the current to the related entity type where the <code>com.sap.vocabularies.Communication.v1.Contact</code>
+annotation is defined, for example, <code>&#39;\{&quot;Supplier&quot;:&quot;to_Supplier&quot;, &quot;CompanyName&quot;:&quot;to_Company&quot;\}&#39;</code>. An
+empty string means that the related entity type is the current one.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>contactAnnotationPaths</code></p>
 <h4>Since</h4>
 <p>1.40.0</p>
-<p>Gets current value of property #getContactAnnotationPaths contactAnnotationPaths.</p>
-<p>Navigation property that points from the current to the related entity type where the <code>com.sap.vocabularies.Communication.v1.Contact</code>
-annotation is defined, for example, <code>&#39;\{&quot;Supplier&quot;:&quot;to_Supplier&quot;, &quot;CompanyName&quot;:&quot;to_Company&quot;\}&#39;</code>. An
-empty string means that the related entity type is the current one.</p>
 <hr>
 <h3>getEnableAvailableActionsPersonalization()</h3>
 <blockquote>
 <p><strong>getEnableAvailableActionsPersonalization</strong>(): <code>object</code></p>
 </blockquote>
+<p>Gets current value of property #getEnableAvailableActionsPersonalization enableAvailableActionsPersonalization.</p>
+<p>Determines whether the personalization link is shown inside the NavigationPopover control. For example,
+<code>&#39;\{&quot;Supplier&quot;:false, &quot;CompanyName&quot;:true\}&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>enableAvailableActionsPersonalization</code></p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Gets current value of property #getEnableAvailableActionsPersonalization enableAvailableActionsPersonalization.</p>
-<p>Determines whether the personalization link is shown inside the NavigationPopover control. For example,
-<code>&#39;\{&quot;Supplier&quot;:false, &quot;CompanyName&quot;:true\}&#39;</code>.</p>
 <hr>
 <h3>getEntitySet()</h3>
 <blockquote>
 <p><strong>getEntitySet</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getEntitySet entitySet.</p>
+<p>The name of the entity set used. If <code>entitySet</code> has not been defined, the SemanticObjectController tries
+to retrieve the name from its parents. <strong>Note:</strong> This is not a dynamic UI5 property.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>entitySet</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getEntitySet entitySet.</p>
-<p>The name of the entity set used. If <code>entitySet</code> has not been defined, the SemanticObjectController tries
-to retrieve the name from its parents. <strong>Note:</strong> This is not a dynamic UI5 property.</p>
 <hr>
 <h3>getFieldSemanticObjectMap()</h3>
 <blockquote>
 <p><strong>getFieldSemanticObjectMap</strong>(): <code>object</code></p>
 </blockquote>
+<p>Gets current value of property #getFieldSemanticObjectMap fieldSemanticObjectMap.</p>
+<p>Maps the fields to the related semantic objects. When accessing this property for the first time, the
+mapping will be calculated from the metadata within the provided model.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>fieldSemanticObjectMap</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getFieldSemanticObjectMap fieldSemanticObjectMap.</p>
-<p>Maps the fields to the related semantic objects. When accessing this property for the first time, the
-mapping will be calculated from the metadata within the provided model.</p>
 <hr>
 <h3>getForceLinkRendering()</h3>
 <blockquote>
 <p><strong>getForceLinkRendering</strong>(): <code>object</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>object</code></p>
-<p>Value of property <code>forceLinkRendering</code></p>
-<h4>Since</h4>
-<p>1.58.0</p>
 <p>Gets current value of property #getForceLinkRendering forceLinkRendering.</p>
 <p>Object containing fields for which the corresponding <code>SmartLink</code> control is rendered as a link even if
 <code>contactAnnotationPaths</code> is not set and navigation targets do not exist. Setting this property to <code>true</code>
@@ -539,36 +534,45 @@ user has clicked on a link and the registered event handler has been called.\n</
 <p><strong>Note:</strong> The <code>ignoredFields</code> property and the <code>ignoreLinkRendering</code> property of the <code>SmartLink</code> control
 take precedence over <code>forceLinkRendering</code>.\n</p>
 <p>Example of usage: <code>&#39;\{&quot;Supplier&quot;:&quot;true&quot;, &quot;CompanyName&quot;:&quot;true&quot;\}&#39;</code></p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>forceLinkRendering</code></p>
+<h4>Since</h4>
+<p>1.58.0</p>
 <hr>
 <h3>getIgnoredFields()</h3>
 <blockquote>
 <p><strong>getIgnoredFields</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getIgnoredFields ignoredFields.</p>
+<p>Comma-separated list of fields that must not be displayed as links.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>ignoredFields</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getIgnoredFields ignoredFields.</p>
-<p>Comma-separated list of fields that must not be displayed as links.</p>
 <hr>
 <h3>getMapFieldToSemanticObject()</h3>
 <blockquote>
 <p><strong>getMapFieldToSemanticObject</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getMapFieldToSemanticObject mapFieldToSemanticObject.</p>
+<p>If set to <code>false</code>, the SmartLink control will not replace its field name with the according <code>semanticObject</code>
+property during the calculation of the semantic attributes.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>mapFieldToSemanticObject</code></p>
 <h4>Since</h4>
 <p>1.48.0</p>
-<p>Gets current value of property #getMapFieldToSemanticObject mapFieldToSemanticObject.</p>
-<p>If set to <code>false</code>, the SmartLink control will not replace its field name with the according <code>semanticObject</code>
-property during the calculation of the semantic attributes.</p>
 <hr>
 <h3><del>getPrefetchNavigationTargets()</del></h3>
 <blockquote>
 <p><strong>getPrefetchNavigationTargets</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getPrefetchNavigationTargets prefetchNavigationTargets.</p>
+<p>If set to <code>true</code>, the SemanticObjectController will retrieve all navigation targets once and will disable
+links for which no targets were found. Setting this value to <code>true</code> will trigger an additional roundtrip.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>prefetchNavigationTargets</code></p>
@@ -578,29 +582,28 @@ property during the calculation of the semantic attributes.</p>
 <p>(since 1.42.0) - The property <code>prefetchNavigationTargets</code> is obsolete as navigation targets
 are determined automatically. The SmartLink controls are re-rendered as soon as the asynchronous determination
 of navigation targets has been completed.</p>
-<p>Gets current value of property #getPrefetchNavigationTargets prefetchNavigationTargets.</p>
-<p>If set to <code>true</code>, the SemanticObjectController will retrieve all navigation targets once and will disable
-links for which no targets were found. Setting this value to <code>true</code> will trigger an additional roundtrip.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getReplaceSmartLinkNavigationTargetsObtained()</h3>
 <blockquote>
 <p><strong>getReplaceSmartLinkNavigationTargetsObtained</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getReplaceSmartLinkNavigationTargetsObtained replaceSmartLinkNavigationTargetsObtained.</p>
+<p>Determines if the <code>navigationTargetsObtained</code> event handling of the <code>SmartLink</code> should be replaced when
+this <code>SemanticObjectController</code> is set as <code>SemanticObjectController</code> on the SmartLink.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>replaceSmartLinkNavigationTargetsObtained</code></p>
 <h4>Since</h4>
 <p>1.97</p>
-<p>Gets current value of property #getReplaceSmartLinkNavigationTargetsObtained replaceSmartLinkNavigationTargetsObtained.</p>
-<p>Determines if the <code>navigationTargetsObtained</code> event handling of the <code>SmartLink</code> should be replaced when
-this <code>SemanticObjectController</code> is set as <code>SemanticObjectController</code> on the SmartLink.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>hasSemanticObjectLinks()</del></h3>
 <blockquote>
 <p><strong>hasSemanticObjectLinks</strong>(<code>sSemanticObject</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks if the given semantic object name has a navigation link. <strong>Note</strong>: this method returns a valid
+value only after the event <code>prefetchDone</code> has been raised. The event <code>prefetchDone</code> is raised if the
+property <code>prefetchNavigationTargets</code> is set to <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>sSemanticObject</h5>
 <p><code>string</code></p>
@@ -611,9 +614,6 @@ this <code>SemanticObjectController</code> is set as <code>SemanticObjectControl
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - The method <code>hasSemanticObjectLinks</code> is obsolete because it depends on the
 property <code>prefetchNavigationTargets</code> which has been deprecated.</p>
-<p>Checks if the given semantic object name has a navigation link. <strong>Note</strong>: this method returns a valid
-value only after the event <code>prefetchDone</code> has been raised. The event <code>prefetchDone</code> is raised if the
-property <code>prefetchNavigationTargets</code> is set to <code>true</code>.</p>
 <hr>
 <h3>isControlRegistered()</h3>
 <blockquote>
@@ -644,15 +644,6 @@ property <code>prefetchNavigationTargets</code> is set to <code>true</code>.</p>
 <blockquote>
 <p><strong>setBeforeNavigationCallback</strong>(<code>fnBeforeNavigationCallback</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>fnBeforeNavigationCallback</h5>
-<p><code>Function</code></p>
-<p>New value for property <code>beforeNavigationCallback</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.75.0</p>
 <p>Sets a new value for property #getBeforeNavigationCallback beforeNavigationCallback.</p>
 <p>Function that is called before the actual navigation happens. This function has to return a promise resolving
 into a Boolean value for which the navigation will wait. If the Boolean value is <code>true</code>, the navigation
@@ -664,11 +655,25 @@ will be processed. The <code>beforeNavigationCallback(oNavigationInfo)</code> pa
  - {Object} semanticAttributes: Object containing the `SemanticAttributes` of the navigation intent
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>fnBeforeNavigationCallback</h5>
+<p><code>Function</code></p>
+<p>New value for property <code>beforeNavigationCallback</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.75.0</p>
 <hr>
 <h3>setContactAnnotationPaths()</h3>
 <blockquote>
 <p><strong>setContactAnnotationPaths</strong>(<code>oContactAnnotationPaths?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContactAnnotationPaths contactAnnotationPaths.</p>
+<p>Navigation property that points from the current to the related entity type where the <code>com.sap.vocabularies.Communication.v1.Contact</code>
+annotation is defined, for example, <code>&#39;\{&quot;Supplier&quot;:&quot;to_Supplier&quot;, &quot;CompanyName&quot;:&quot;to_Company&quot;\}&#39;</code>. An
+empty string means that the related entity type is the current one.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oContactAnnotationPaths?</h5>
 <p><code>object</code></p>
@@ -678,16 +683,15 @@ will be processed. The <code>beforeNavigationCallback(oNavigationInfo)</code> pa
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
-<p>Sets a new value for property #getContactAnnotationPaths contactAnnotationPaths.</p>
-<p>Navigation property that points from the current to the related entity type where the <code>com.sap.vocabularies.Communication.v1.Contact</code>
-annotation is defined, for example, <code>&#39;\{&quot;Supplier&quot;:&quot;to_Supplier&quot;, &quot;CompanyName&quot;:&quot;to_Company&quot;\}&#39;</code>. An
-empty string means that the related entity type is the current one.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setEnableAvailableActionsPersonalization()</h3>
 <blockquote>
 <p><strong>setEnableAvailableActionsPersonalization</strong>(<code>oEnableAvailableActionsPersonalization?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEnableAvailableActionsPersonalization enableAvailableActionsPersonalization.</p>
+<p>Determines whether the personalization link is shown inside the NavigationPopover control. For example,
+<code>&#39;\{&quot;Supplier&quot;:false, &quot;CompanyName&quot;:true\}&#39;</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oEnableAvailableActionsPersonalization?</h5>
 <p><code>object</code></p>
@@ -697,15 +701,15 @@ empty string means that the related entity type is the current one.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<p>Sets a new value for property #getEnableAvailableActionsPersonalization enableAvailableActionsPersonalization.</p>
-<p>Determines whether the personalization link is shown inside the NavigationPopover control. For example,
-<code>&#39;\{&quot;Supplier&quot;:false, &quot;CompanyName&quot;:true\}&#39;</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setEntitySet()</h3>
 <blockquote>
 <p><strong>setEntitySet</strong>(<code>sEntitySet?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEntitySet entitySet.</p>
+<p>The name of the entity set used. If <code>entitySet</code> has not been defined, the SemanticObjectController tries
+to retrieve the name from its parents. <strong>Note:</strong> This is not a dynamic UI5 property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sEntitySet?</h5>
 <p><code>string</code></p>
@@ -715,15 +719,15 @@ empty string means that the related entity type is the current one.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getEntitySet entitySet.</p>
-<p>The name of the entity set used. If <code>entitySet</code> has not been defined, the SemanticObjectController tries
-to retrieve the name from its parents. <strong>Note:</strong> This is not a dynamic UI5 property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setFieldSemanticObjectMap()</h3>
 <blockquote>
 <p><strong>setFieldSemanticObjectMap</strong>(<code>oFieldSemanticObjectMap?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getFieldSemanticObjectMap fieldSemanticObjectMap.</p>
+<p>Maps the fields to the related semantic objects. When accessing this property for the first time, the
+mapping will be calculated from the metadata within the provided model.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oFieldSemanticObjectMap?</h5>
 <p><code>object</code></p>
@@ -733,24 +737,11 @@ to retrieve the name from its parents. <strong>Note:</strong> This is not a dyna
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getFieldSemanticObjectMap fieldSemanticObjectMap.</p>
-<p>Maps the fields to the related semantic objects. When accessing this property for the first time, the
-mapping will be calculated from the metadata within the provided model.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setForceLinkRendering()</h3>
 <blockquote>
 <p><strong>setForceLinkRendering</strong>(<code>oForceLinkRendering?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oForceLinkRendering?</h5>
-<p><code>object</code></p>
-<p>New value for property <code>forceLinkRendering</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.58.0</p>
 <p>Sets a new value for property #getForceLinkRendering forceLinkRendering.</p>
 <p>Object containing fields for which the corresponding <code>SmartLink</code> control is rendered as a link even if
 <code>contactAnnotationPaths</code> is not set and navigation targets do not exist. Setting this property to <code>true</code>
@@ -760,11 +751,23 @@ user has clicked on a link and the registered event handler has been called.\n</
 take precedence over <code>forceLinkRendering</code>.\n</p>
 <p>Example of usage: <code>&#39;\{&quot;Supplier&quot;:&quot;true&quot;, &quot;CompanyName&quot;:&quot;true&quot;\}&#39;</code></p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>oForceLinkRendering?</h5>
+<p><code>object</code></p>
+<p>New value for property <code>forceLinkRendering</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.58.0</p>
 <hr>
 <h3>setIgnoredFields()</h3>
 <blockquote>
 <p><strong>setIgnoredFields</strong>(<code>sIgnoredFields?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIgnoredFields ignoredFields.</p>
+<p>Comma-separated list of fields that must not be displayed as links.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sIgnoredFields?</h5>
 <p><code>string</code></p>
@@ -774,14 +777,12 @@ take precedence over <code>forceLinkRendering</code>.\n</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getIgnoredFields ignoredFields.</p>
-<p>Comma-separated list of fields that must not be displayed as links.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setIgnoredState()</del></h3>
 <blockquote>
 <p><strong>setIgnoredState</strong>(<code>oSmartLink</code>): <code>void</code></p>
 </blockquote>
+<p>Checks if the given SmartLink has to be enabled or disabled and sets the state.</p>
 <h4>Parameters</h4>
 <h5>oSmartLink</h5>
 <p><a href="../../SmartLink/classes/SmartLink.html"><code>SmartLink</code></a></p>
@@ -791,12 +792,15 @@ take precedence over <code>forceLinkRendering</code>.\n</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - The method <code>setIgnoredState</code> is obsolete as SmartLink is processing the
 internal state on its own.</p>
-<p>Checks if the given SmartLink has to be enabled or disabled and sets the state.</p>
 <hr>
 <h3>setMapFieldToSemanticObject()</h3>
 <blockquote>
 <p><strong>setMapFieldToSemanticObject</strong>(<code>bMapFieldToSemanticObject</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMapFieldToSemanticObject mapFieldToSemanticObject.</p>
+<p>If set to <code>false</code>, the SmartLink control will not replace its field name with the according <code>semanticObject</code>
+property during the calculation of the semantic attributes.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bMapFieldToSemanticObject</h5>
 <p><code>boolean</code></p>
@@ -806,15 +810,16 @@ internal state on its own.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
-<p>Sets a new value for property #getMapFieldToSemanticObject mapFieldToSemanticObject.</p>
-<p>If set to <code>false</code>, the SmartLink control will not replace its field name with the according <code>semanticObject</code>
-property during the calculation of the semantic attributes.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setPrefetchNavigationTargets()</del></h3>
 <blockquote>
 <p><strong>setPrefetchNavigationTargets</strong>(<code>bPrefetchNavigationTargets?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPrefetchNavigationTargets prefetchNavigationTargets.</p>
+<p>If set to <code>true</code>, the SemanticObjectController will retrieve all navigation targets once and will disable
+links for which no targets were found. Setting this value to <code>true</code> will trigger an additional roundtrip.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bPrefetchNavigationTargets?</h5>
 <p><code>boolean</code></p>
@@ -828,16 +833,16 @@ property during the calculation of the semantic attributes.</p>
 <p>(since 1.42.0) - The property <code>prefetchNavigationTargets</code> is obsolete as navigation targets
 are determined automatically. The SmartLink controls are re-rendered as soon as the asynchronous determination
 of navigation targets has been completed.</p>
-<p>Sets a new value for property #getPrefetchNavigationTargets prefetchNavigationTargets.</p>
-<p>If set to <code>true</code>, the SemanticObjectController will retrieve all navigation targets once and will disable
-links for which no targets were found. Setting this value to <code>true</code> will trigger an additional roundtrip.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setReplaceSmartLinkNavigationTargetsObtained()</h3>
 <blockquote>
 <p><strong>setReplaceSmartLinkNavigationTargetsObtained</strong>(<code>bReplaceSmartLinkNavigationTargetsObtained?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getReplaceSmartLinkNavigationTargetsObtained replaceSmartLinkNavigationTargetsObtained.</p>
+<p>Determines if the <code>navigationTargetsObtained</code> event handling of the <code>SmartLink</code> should be replaced when
+this <code>SemanticObjectController</code> is set as <code>SemanticObjectController</code> on the SmartLink.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bReplaceSmartLinkNavigationTargetsObtained?</h5>
 <p><code>boolean</code></p>
@@ -847,11 +852,6 @@ links for which no targets were found. Setting this value to <code>true</code> w
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.97</p>
-<p>Sets a new value for property #getReplaceSmartLinkNavigationTargetsObtained replaceSmartLinkNavigationTargetsObtained.</p>
-<p>Determines if the <code>navigationTargetsObtained</code> event handling of the <code>SmartLink</code> should be replaced when
-this <code>SemanticObjectController</code> is set as <code>SemanticObjectController</code> on the SmartLink.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>unregisterControl()</h3>
 <blockquote>
@@ -904,6 +904,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

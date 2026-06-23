@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: HtmlElement — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: HtmlElement — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: HtmlElement — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/util/HtmlElement/classes/HtmlElement.html">
 <meta property="og:title" content="Class: HtmlElement — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: HtmlElement — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: HtmlElement — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.suite.ui.commons/sap/suite/ui/commons/util/HtmlElement/classes/HtmlElement.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,39 +33,25 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › util › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/util/HtmlElement/README.html">HtmlElement</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/util/HtmlElement</a> / HtmlElement</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/util/HtmlElement</a> / HtmlElement</p>
 <h1>Class: HtmlElement</h1>
 <pre class="sig"><span class="kw">import</span> HtmlElement <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/util/HtmlElement"</span>;</pre>
+<p>HtmlElement A model class for holding information about one HTML tag.</p>
 <h2>Ui5-protected</h2>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
-<p>HtmlElement A model class for holding information about one HTML tag.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
 </ul>
-<h2>Constructors</h2>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new HtmlElement</strong>(<code>sName</code>): <code>HtmlElement</code></p>
-</blockquote>
-<h4>Parameters</h4>
-<h5>sName</h5>
-<p><code>string</code></p>
-<p>Tag name (eg. div, ul etc.).</p>
-<h4>Returns</h4>
-<p><code>HtmlElement</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a HtmlElement which resembles one HTML tag.</p>
-<h4>Overrides</h4>
-<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html#constructor"><code>constructor</code></a></p>
 <h2>Methods</h2>
 <h3>addChild()</h3>
 <blockquote>
 <p><strong>addChild</strong>(<code>oChild</code>): <code>void</code></p>
 </blockquote>
+<p>Adds a child to the element. A child can be either text, another HtmlElement or a Control. Children will
+e rendered as a content of this element.</p>
 <h4>Parameters</h4>
 <h5>oChild</h5>
 <p><code>string</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <code>HtmlElement</code></p>
@@ -74,13 +60,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds a child to the element. A child can be either text, another HtmlElement or a Control. Children will
-e rendered as a content of this element.</p>
 <hr>
 <h3>addChildEscaped()</h3>
 <blockquote>
 <p><strong>addChildEscaped</strong>(<code>sText</code>, <code>bConvertLineBreakToBr</code>): <code>void</code></p>
 </blockquote>
+<p>Adds a string child and escapes it using encodeHTML.</p>
 <h4>Parameters</h4>
 <h5>sText</h5>
 <p><code>string</code></p>
@@ -93,12 +78,12 @@ e rendered as a content of this element.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds a string child and escapes it using encodeHTML.</p>
 <hr>
 <h3>addClass()</h3>
 <blockquote>
 <p><strong>addClass</strong>(<code>sClass</code>): <code>void</code></p>
 </blockquote>
+<p>Adds a class.</p>
 <h4>Parameters</h4>
 <h5>sClass</h5>
 <p><code>string</code></p>
@@ -107,12 +92,14 @@ e rendered as a content of this element.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds a class.</p>
 <hr>
 <h3>addControlData()</h3>
 <blockquote>
 <p><strong>addControlData</strong>(<code>oControl</code>): <code>void</code></p>
 </blockquote>
+<p>Adds all html relevant data from UI5 control. It sets ID, adds all custom data and adds custom style
+classes. This function should be called on the element which resembles the rendered control. It&#39;s usually
+the top element.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -121,14 +108,12 @@ e rendered as a content of this element.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds all html relevant data from UI5 control. It sets ID, adds all custom data and adds custom style
-classes. This function should be called on the element which resembles the rendered control. It&#39;s usually
-the top element.</p>
 <hr>
 <h3>addStyle()</h3>
 <blockquote>
 <p><strong>addStyle</strong>(<code>sName</code>, <code>oValue</code>): <code>void</code></p>
 </blockquote>
+<p>Adds a HTML style (eg. &quot;color:red&quot;).</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -140,23 +125,23 @@ the top element.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Adds a HTML style (eg. &quot;color:red&quot;).</p>
 <hr>
 <h3>getRenderer()</h3>
 <blockquote>
 <p><strong>getRenderer</strong>(): <a href="../../HtmlElementRenderer/classes/HtmlElementRenderer.html"><code>HtmlElementRenderer</code></a></p>
 </blockquote>
+<p>Returns a renderer for this tag.</p>
 <h4>Returns</h4>
 <p><a href="../../HtmlElementRenderer/classes/HtmlElementRenderer.html"><code>HtmlElementRenderer</code></a></p>
 <p>The newly created renderer instance</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a renderer for this tag.</p>
 <hr>
 <h3>setAttribute()</h3>
 <blockquote>
 <p><strong>setAttribute</strong>(<code>sKey</code>, <code>oValue</code>, <code>bEscape?</code>): <code>void</code></p>
 </blockquote>
+<p>Sets an attribute.</p>
 <h4>Parameters</h4>
 <h5>sKey</h5>
 <p><code>string</code></p>
@@ -171,12 +156,12 @@ the top element.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets an attribute.</p>
 <hr>
 <h3>setId()</h3>
 <blockquote>
 <p><strong>setId</strong>(<code>sId</code>, <code>bAddSapUi?</code>): <code>void</code></p>
 </blockquote>
+<p>Sets id attribute.</p>
 <h4>Parameters</h4>
 <h5>sId</h5>
 <p><code>string</code></p>
@@ -188,12 +173,14 @@ the top element.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets id attribute.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
+<p>Creates a new subclass of class sap.suite.ui.commons.util.HtmlElement with name <code>sClassName</code> and enriches
+it with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.Object.extend.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
@@ -213,9 +200,6 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new subclass of class sap.suite.ui.commons.util.HtmlElement with name <code>sClassName</code> and enriches
-it with the information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.Object.extend.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html#extend"><code>extend</code></a></p>
 <hr>
@@ -223,14 +207,14 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 </blockquote>
+<p>Returns a metadata object for class sap.suite.ui.commons.util.HtmlElement.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a metadata object for class sap.suite.ui.commons.util.HtmlElement.</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

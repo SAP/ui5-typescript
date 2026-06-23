@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ButtonSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ButtonSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ButtonSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Button/interfaces/$ButtonSettings.html">
 <meta property="og:title" content="Interface: $ButtonSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ButtonSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ButtonSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/Button/interfaces/$ButtonSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Button/README.html">Button</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Button</a> / $ButtonSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Button</a> / $ButtonSettings</p>
 <h1>Interface: $ButtonSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ButtonSettings } <span class="kw">from</span> <span class="str">"sap/m/Button"</span>;</pre>
+<p>Describes the settings that can be provided to the Button constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -56,14 +57,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>accessibleRole?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Default&quot;</code> | <code>&quot;Link&quot;</code> | <a href="../../library/enumerations/ButtonAccessibleRole.html"><code>ButtonAccessibleRole</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.114.0</p>
 <p>Describes the accessibility role of the button:
 	<code>ButtonAccessibleRole.Default</code> - The accessibility semantics is derived from the button tag and no role
 attribute is rendered. <code>ButtonAccessibleRole.Link</code> - The accessibility semantics is derived from
 a custom role attribute with &quot;link&quot; value.</p>
 <p>NOTE: Use link role only with a press handler, which performs a navigation. In all other scenarios the
 default button semantics is recommended.</p>
+<h4>Since</h4>
+<p>1.114.0</p>
 <hr>
 <h3>activeIcon?</h3>
 <blockquote>
@@ -83,8 +84,6 @@ property is not set or has a different type, the active icon is not displayed.</
 <blockquote>
 <p><code>optional</code> <strong>ariaHasPopup?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Dialog&quot;</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;Tree&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.84.0</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
 value.</p>
@@ -93,6 +92,8 @@ to the main/root role of the popup - e.g. dialog, menu or list (examples: if you
 if you have menu -&gt; menu; if you have list -&gt; list; if you have dialog containing a list -&gt; dialog).
 Do not use it, if you open a standard sap.m.Dialog, MessageBox or other type of dialogs displayed as
 on overlay over the application.</p>
+<h4>Since</h4>
+<p>1.84.0</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
@@ -144,6 +145,7 @@ perfect image.</p>
 <blockquote>
 <p><code>optional</code> <strong>tap?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the user taps the control.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -151,7 +153,6 @@ perfect image.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - replaced by <code>press</code> event</p>
-<p>Fired when the user taps the control.</p>
 <hr>
 <h3>text?</h3>
 <blockquote>
@@ -163,10 +164,10 @@ perfect image.</p>
 <blockquote>
 <p><code>optional</code> <strong>textDirection?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.28.0</p>
 <p>Specifies the element&#39;s text directionality with enumerated options. By default, the control inherits
 text direction from the DOM.</p>
+<h4>Since</h4>
+<p>1.28.0</p>
 <hr>
 <h3>type?</h3>
 <blockquote>
@@ -180,6 +181,6 @@ text direction from the DOM.</p>
 </blockquote>
 <p>Defines the <code>Button</code> width.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

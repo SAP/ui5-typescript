@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: RouterHashChanger — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: RouterHashChanger — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: RouterHashChanger — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/routing/RouterHashChanger/classes/RouterHashChanger.html">
 <meta property="og:title" content="Class: RouterHashChanger — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: RouterHashChanger — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: RouterHashChanger — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/routing/RouterHashChanger/classes/RouterHashChanger.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,36 +33,27 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › routing › <a href="../../../../../../../sap.ui.core/sap/ui/core/routing/RouterHashChanger/README.html">RouterHashChanger</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/routing/RouterHashChanger</a> / RouterHashChanger</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/routing/RouterHashChanger</a> / RouterHashChanger</p>
 <h1>Class: RouterHashChanger</h1>
 <pre class="sig"><span class="kw">import</span> RouterHashChanger <span class="kw">from</span> <span class="str">"sap/ui/core/routing/RouterHashChanger"</span>;</pre>
-<h2>Ui5-protected</h2>
-<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <p>Class for manipulating and receiving changes of the relevant hash segment which belongs to a router.
 This Class doesn&#39;t change the browser hash directly, but informs its parent RouterHashChanger and finally
 changes the browser hash through the sap.ui.core.routing.HashChanger</p>
+<h2>Ui5-protected</h2>
+<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../HashChangerBase/classes/HashChangerBase.html"><code>HashChangerBase</code></a></li>
 </ul>
-<h2>Constructors</h2>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new RouterHashChanger</strong>(): <code>RouterHashChanger</code></p>
-</blockquote>
-<h4>Returns</h4>
-<p><code>RouterHashChanger</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<h4>Overrides</h4>
-<p><a href="../../HashChangerBase/classes/HashChangerBase.html"><code>HashChangerBase</code></a>.<a href="../../HashChangerBase/classes/HashChangerBase.html#constructor"><code>constructor</code></a></p>
 <h2>Methods</h2>
 <h3>fireHashChanged()</h3>
 <blockquote>
 <p><strong>fireHashChanged</strong>(<code>sHash</code>, <code>oSubHashMap</code>, <code>bUpdateHashOnly</code>): <code>void</code></p>
 </blockquote>
+<p>Save the given hash and potentially fires a &quot;hashChanged&quot; event; may be extended to modify the hash before
+firing the event.</p>
 <h4>Parameters</h4>
 <h5>sHash</h5>
 <p><code>string</code></p>
@@ -78,24 +69,24 @@ is fired.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Save the given hash and potentially fires a &quot;hashChanged&quot; event; may be extended to modify the hash before
-firing the event.</p>
 <hr>
 <h3>getHash()</h3>
 <blockquote>
 <p><strong>getHash</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets the current hash</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>the current hash</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Gets the current hash</p>
 <hr>
 <h3>replaceHash()</h3>
 <blockquote>
 <p><strong>replaceHash</strong>(<code>sHash</code>, <code>sDirection</code>, <code>pNestedHashChange?</code>, <code>bSuppressActiveHashCollect?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Replaces the hash with a certain value. When using the replace function, no browser history entry is
+written. If you want to have an entry in the browser history, please use the #setHash function.</p>
 <h4>Parameters</h4>
 <h5>sHash</h5>
 <p><code>string</code></p>
@@ -118,8 +109,6 @@ and forward them as delete prefixes within the next &quot;hashReplaced&quot; eve
 after the given promise resolves. Otherwise it returns <code>undefined</code>.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Replaces the hash with a certain value. When using the replace function, no browser history entry is
-written. If you want to have an entry in the browser history, please use the #setHash function.</p>
 <h4>Overrides</h4>
 <p><a href="../../HashChangerBase/classes/HashChangerBase.html"><code>HashChangerBase</code></a>.<a href="../../HashChangerBase/classes/HashChangerBase.html#replacehash"><code>replaceHash</code></a></p>
 <hr>
@@ -127,6 +116,9 @@ written. If you want to have an entry in the browser history, please use the #se
 <blockquote>
 <p><strong>resetHash</strong>(<code>oRouter</code>): <code>this</code></p>
 </blockquote>
+<p>Reset the hash if the given router is the active router that is saved in this RouterHashChanger</p>
+<p>This is needed for allowing to fire the hashChanged event with the previous hash again after displaying
+a Target without involving a Router.</p>
 <h4>Parameters</h4>
 <h5>oRouter</h5>
 <p><a href="../../Router/classes/Router.html"><code>Router</code></a></p>
@@ -136,14 +128,13 @@ written. If you want to have an entry in the browser history, please use the #se
 <p>The current RouterHashChanger for chaining the method</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Reset the hash if the given router is the active router that is saved in this RouterHashChanger</p>
-<p>This is needed for allowing to fire the hashChanged event with the previous hash again after displaying
-a Target without involving a Router.</p>
 <hr>
 <h3>setHash()</h3>
 <blockquote>
 <p><strong>setHash</strong>(<code>sHash</code>, <code>pNestedHashChange?</code>, <code>bSuppressActiveHashCollect?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Sets the hash to a certain value. When using this function, a browser history entry is written. If you
+do not want to have an entry in the browser history, please use the #replaceHash function.</p>
 <h4>Parameters</h4>
 <h5>sHash</h5>
 <p><code>string</code></p>
@@ -163,8 +154,6 @@ and forward them as delete prefixes within the next &quot;hashSet&quot; event</p
 after the given promise resolves. Otherwise it returns <code>undefined</code>.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the hash to a certain value. When using this function, a browser history entry is written. If you
-do not want to have an entry in the browser history, please use the #replaceHash function.</p>
 <h4>Overrides</h4>
 <p><a href="../../HashChangerBase/classes/HashChangerBase.html"><code>HashChangerBase</code></a>.<a href="../../HashChangerBase/classes/HashChangerBase.html#sethash"><code>setHash</code></a></p>
 <hr>
@@ -172,6 +161,9 @@ do not want to have an entry in the browser history, please use the #replaceHash
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
+<p>Creates a new subclass of class sap.ui.core.routing.RouterHashChanger with name <code>sClassName</code> and enriches
+it with the information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.routing.HashChangerBase.extend.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
@@ -191,9 +183,6 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new subclass of class sap.ui.core.routing.RouterHashChanger with name <code>sClassName</code> and enriches
-it with the information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.core.routing.HashChangerBase.extend.</p>
 <h4>Overrides</h4>
 <p><a href="../../HashChangerBase/classes/HashChangerBase.html"><code>HashChangerBase</code></a>.<a href="../../HashChangerBase/classes/HashChangerBase.html#extend"><code>extend</code></a></p>
 <hr>
@@ -201,16 +190,16 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 </blockquote>
+<p>Returns a metadata object for class sap.ui.core.routing.RouterHashChanger.</p>
 <h4>Returns</h4>
 <p><a href="../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns a metadata object for class sap.ui.core.routing.RouterHashChanger.</p>
 <h4>Overrides</h4>
 <p><a href="../../HashChangerBase/classes/HashChangerBase.html"><code>HashChangerBase</code></a>.<a href="../../HashChangerBase/classes/HashChangerBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

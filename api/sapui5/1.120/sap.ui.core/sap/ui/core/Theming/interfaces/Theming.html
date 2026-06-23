@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: Theming — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: Theming — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: Theming — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/Theming/interfaces/Theming.html">
 <meta property="og:title" content="Interface: Theming — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: Theming — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: Theming — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/Theming/interfaces/Theming.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,23 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/Theming/README.html">Theming</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Theming</a> / Theming</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Theming</a> / Theming</p>
 <h1>Interface: Theming</h1>
 <pre class="sig"><span class="kw">import</span> Theming <span class="kw">from</span> <span class="str">"sap/ui/core/Theming"</span>;</pre>
+<p>Provides theming related API</p>
 <h2>Since</h2>
 <p>1.118</p>
-<p>Provides theming related API</p>
 <h2>Methods</h2>
 <h3>attachApplied()</h3>
 <blockquote>
 <p><strong>attachApplied</strong>(<code>fnFunction</code>): <code>void</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:applied applied event.</p>
+<p>The given handler is called when the the applied event is fired. If the theme is already applied the
+handler will be called immediately. The handler stays attached to the applied event for future theme
+changes.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -54,15 +58,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.118.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:applied applied event.</p>
-<p>The given handler is called when the the applied event is fired. If the theme is already applied the
-handler will be called immediately. The handler stays attached to the applied event for future theme
-changes.</p>
 <hr>
 <h3>detachApplied()</h3>
 <blockquote>
 <p><strong>detachApplied</strong>(<code>fnFunction</code>): <code>void</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:applied applied event</p>
+<p>The passed function must match the one used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -71,34 +73,33 @@ changes.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.118.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:applied applied event</p>
-<p>The passed function must match the one used for event registration.</p>
 <hr>
 <h3>getTheme()</h3>
 <blockquote>
 <p><strong>getTheme</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the theme name</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>the theme name</p>
 <h4>Since</h4>
 <p>1.118</p>
-<p>Returns the theme name</p>
 <hr>
 <h3>notifyContentDensityChanged()</h3>
 <blockquote>
 <p><strong>notifyContentDensityChanged</strong>(): <code>void</code></p>
 </blockquote>
+<p>Notify content density changes</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.118.0</p>
-<p>Notify content density changes</p>
 <hr>
 <h3>setTheme()</h3>
 <blockquote>
 <p><strong>setTheme</strong>(<code>sTheme</code>): <code>void</code></p>
 </blockquote>
+<p>Allows setting the theme name</p>
 <h4>Parameters</h4>
 <h5>sTheme</h5>
 <p><code>string</code></p>
@@ -107,8 +108,7 @@ changes.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.118</p>
-<p>Allows setting the theme name</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

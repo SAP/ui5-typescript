@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $MatrixLayoutCellSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $MatrixLayoutCellSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $MatrixLayoutCellSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $MatrixLayoutCellSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/layout/MatrixLayoutCell/interfaces/$MatrixLayoutCellSettings.html">
-<meta property="og:title" content="Interface: $MatrixLayoutCellSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $MatrixLayoutCellSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $MatrixLayoutCellSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $MatrixLayoutCellSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.commons/sap/ui/commons/layout/MatrixLayoutCell/interfaces/$MatrixLayoutCellSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,29 +33,32 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › layout › <a href="../../../../../../../sap.ui.commons/sap/ui/commons/layout/MatrixLayoutCell/README.html">MatrixLayoutCell</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/layout/MatrixLayoutCell</a> / $MatrixLayoutCellSettings</p>
-<h1>Interface: $MatrixLayoutCellSettings</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/layout/MatrixLayoutCell</a> / $MatrixLayoutCellSettings</p>
+<h1><del>Interface: $MatrixLayoutCellSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $MatrixLayoutCellSettings } <span class="kw">from</span> <span class="str">"sap/ui/commons/layout/MatrixLayoutCell"</span>;</pre>
+<p>Describes the settings that can be provided to the MatrixLayoutCell constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - Instead, use the <code>sap.ui.layout.Grid</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>backgroundDesign?</h3>
+<h3><del>backgroundDesign?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundDesign?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Plain&quot;</code> | <code>&quot;Header&quot;</code> | <a href="../../../library/namespaces/layout/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Border&quot;</code> | <code>&quot;Fill1&quot;</code> | <code>&quot;Fill2&quot;</code> | <code>&quot;Fill3&quot;</code></p>
 </blockquote>
 <p>Determines the matrix layout cell&#39;s background design.</p>
 <hr>
-<h3>colSpan?</h3>
+<h3><del>colSpan?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>colSpan?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Determines how many columns of the underlying grid structure are occupied by this matrix layout cell.</p>
 <hr>
-<h3>content?</h3>
+<h3><del>content?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>content?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[] | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -63,13 +66,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>If the matrix row has a defined height and the matrix has layoutFixed = true, the controls inside of
 a cell should all use the same unit for its height property.</p>
 <hr>
-<h3>hAlign?</h3>
+<h3><del>hAlign?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>hAlign?</strong>: <code>&quot;Begin&quot;</code> | <code>&quot;Center&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../library/namespaces/layout/enumerations/HAlign.html"><code>HAlign</code></a></p>
 </blockquote>
 <p>Determines the horizontal alignment of the matrix layout cell&#39;s content with the cell&#39;s borders.</p>
 <hr>
-<h3>padding?</h3>
+<h3><del>padding?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>padding?</strong>: <code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Both&quot;</code> | <a href="../../../library/namespaces/layout/enumerations/Padding.html"><code>Padding</code></a> | <code>&quot;Neither&quot;</code></p>
 </blockquote>
@@ -77,26 +80,26 @@ a cell should all use the same unit for its height property.</p>
 is appropriate for all cells in a form-like layout. Consider to remove the padding on the outer layout
 in case of nesting.</p>
 <hr>
-<h3>rowSpan?</h3>
+<h3><del>rowSpan?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>rowSpan?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Determines how many rows of the underlying grid structure are occupied by this matrix layout cell. In
 case a row-height is used, all rows affected by the RowSpan must have the same unit.</p>
 <hr>
-<h3>separation?</h3>
+<h3><del>separation?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>separation?</strong>: <code>&quot;Large&quot;</code> | <code>&quot;Medium&quot;</code> | <code>&quot;Small&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../library/namespaces/layout/enumerations/Separation.html"><code>Separation</code></a> | <code>&quot;LargeWithLine&quot;</code> | <code>&quot;MediumWithLine&quot;</code> | <code>&quot;SmallWithLine&quot;</code></p>
 </blockquote>
 <p>Determines how a matrix layout cell is separated from its predecessor, via a vertical gutter of variable
 width, with or without a vertical line.</p>
 <hr>
-<h3>vAlign?</h3>
+<h3><del>vAlign?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>vAlign?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../library/namespaces/layout/enumerations/VAlign.html"><code>VAlign</code></a></p>
 </blockquote>
 <p>Determines the vertical alignment of the matrix layout cell&#39;s content with the cell&#39;s borders.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

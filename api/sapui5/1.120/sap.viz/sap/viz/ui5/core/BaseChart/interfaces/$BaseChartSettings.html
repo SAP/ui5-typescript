@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $BaseChartSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $BaseChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $BaseChartSettings~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $BaseChartSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/core/BaseChart/interfaces/$BaseChartSettings.html">
-<meta property="og:title" content="Interface: $BaseChartSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $BaseChartSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $BaseChartSettings~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $BaseChartSettings~~ — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.viz/sap/viz/ui5/core/BaseChart/interfaces/$BaseChartSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,23 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.viz/README.html">sap.viz</a> › sap › viz › ui5 › core › <a href="../../../../../../../sap.viz/sap/viz/ui5/core/BaseChart/README.html">BaseChart</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/core/BaseChart</a> / $BaseChartSettings</p>
-<h1>Interface: $BaseChartSettings</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.viz</a> / <a href="../README.html">sap/viz/ui5/core/BaseChart</a> / $BaseChartSettings</p>
+<h1><del>Interface: $BaseChartSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $BaseChartSettings } <span class="kw">from</span> <span class="str">"sap/viz/ui5/core/BaseChart"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the BaseChart constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.32.0) - The chart controls in the <code>sap.viz.ui5</code> package (which were always marked
+as experimental) have been deprecated since 1.32.0. They are no longer actively developed and
+won&#39;t receive new features or improvements, only important bug fixes. They will only remain in the SAPUI5
+distribution for backward compatibility.</p>
+<p>**SAP strongly recommends that existing consumers of those controls migrate to the new sap.viz.ui5.controls.VizFrame VizFrame
+control to benefit from new charting enhancements and timely support. **</p>
+<p><strong>Note</strong>: As the feature set, design and API usage of VizFrame might differ from the old chart controls,
+make sure you evaluate it thoroughly before migration.
+ (since 1.7.2) - Charting API is not finished yet and might change completely</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -70,10 +82,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <li><a href="../../../Treemap/interfaces/$TreemapSettings.html"><code>$TreemapSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>beforeCreateViz?</h3>
+<h3><del>beforeCreateViz?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeCreateViz?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Fired before a new VIZ instance is created. Event parameter &quot;usrOptions&quot; contains the intended value
 for the parameter with the same name of the createViz call.</p>
 <h4>Parameters</h4>
@@ -82,36 +95,41 @@ for the parameter with the same name of the createViz call.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>css?</h3>
+<h3><del>css?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>css?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>CSS style of Chart.</p>
 <hr>
-<h3>dataset?</h3>
+<h3><del>dataset?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>dataset?</strong>: <a href="../../../data/Dataset/classes/Dataset.html"><code>Dataset</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Dataset for this chart</p>
 <hr>
-<h3>height?</h3>
+<h3><del>height?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Height of the Chart as a CSS size.</p>
 <hr>
-<h3>noData?</h3>
+<h3><del>noData?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>noData?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Control tree to display when there is no data available</p>
 <hr>
-<h3>width?</h3>
+<h3><del>width?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Width of the Chart as a CSS size.</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

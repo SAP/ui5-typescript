@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SmartMicroChart — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SmartMicroChart — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SmartMicroChart — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartmicrochart/SmartMicroChart/classes/SmartMicroChart.html">
 <meta property="og:title" content="Class: SmartMicroChart — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SmartMicroChart — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SmartMicroChart — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/smartmicrochart/SmartMicroChart/classes/SmartMicroChart.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › smartmicrochart › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/smartmicrochart/SmartMicroChart/README.html">SmartMicroChart</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartmicrochart/SmartMicroChart</a> / SmartMicroChart</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/smartmicrochart/SmartMicroChart</a> / SmartMicroChart</p>
 <h1>Class: SmartMicroChart</h1>
 <pre class="sig"><span class="kw">import</span> SmartMicroChart <span class="kw">from</span> <span class="str">"sap/ui/comp/smartmicrochart/SmartMicroChart"</span>;</pre>
-<h2>Since</h2>
-<p>1.38</p>
 <p>The SmartMicroChart control creates a chart based on OData metadata and the configuration specified by
 <code>mSettings</code>.
 The <code>entitySet</code> property is required. This property is used to fetch metadata and annotation information
@@ -50,6 +48,8 @@ or sap.ui.comp.smartmicrochart.SmartRadialMicroChart SmartRadialMicroChart insta
 it to the internal control.
  <strong>Note:</strong> Most of the attributes are not dynamic and cannot be changed once the control has been
 initialized.</p>
+<h2>Since</h2>
+<p>1.38</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -95,6 +95,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -104,7 +105,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>attachInitialize()</h3>
 <h4>Call Signature</h4>
@@ -171,6 +171,7 @@ itself</p>
 <blockquote>
 <p><strong>fireInitialize</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:initialize initialize to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -180,17 +181,16 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:initialize initialize to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getChartBindingPath()</h3>
 <blockquote>
@@ -259,11 +259,11 @@ not a dynamic UI5 property.</p>
 <blockquote>
 <p><strong>getFreeText</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getFreeText freeText, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.42.0</p>
-<p>ID of the element which is the current target of the association #getFreeText freeText, or <code>null</code>.</p>
 <hr>
 <h3>getHeight()</h3>
 <blockquote>
@@ -279,15 +279,15 @@ not a dynamic UI5 property.</p>
 <blockquote>
 <p><strong>getIsResponsive</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getIsResponsive isResponsive.</p>
+<p>If this set to true, width and height of the control are determined by the width and height of the container
+in which the control is placed or by the width and height property.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>isResponsive</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.62)</p>
-<p>Gets current value of property #getIsResponsive isResponsive.</p>
-<p>If this set to true, width and height of the control are determined by the width and height of the container
-in which the control is placed or by the width and height property.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowLabel()</h3>
 <blockquote>
@@ -304,15 +304,15 @@ in which the control is placed or by the width and height property.</p>
 <blockquote>
 <p><strong>getSize</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getSize size.</p>
+<p>The size of the microchart. If not set, the default size is applied based on the size of the device tile.
+Responsive size takes width and height of the parent container where the micro chart is included.</p>
+<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
 <p>Value of property <code>size</code></p>
 <h4>Since</h4>
 <p>1.62</p>
-<p>Gets current value of property #getSize size.</p>
-<p>The size of the microchart. If not set, the default size is applied based on the size of the device tile.
-Responsive size takes width and height of the parent container where the micro chart is included.</p>
-<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <hr>
 <h3>getUnitOfMeasure()</h3>
 <blockquote>
@@ -337,17 +337,18 @@ or <code>null</code>.</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -357,7 +358,6 @@ or <code>null</code>.</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.60.0</p>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>setChartBindingPath()</h3>
 <blockquote>
@@ -441,6 +441,7 @@ not a dynamic UI5 property.</p>
 <blockquote>
 <p><strong>setFreeText</strong>(<code>oFreeText</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getFreeText freeText.</p>
 <h4>Parameters</h4>
 <h5>oFreeText</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.m/sap/m/Label/classes/Label.html"><code>Label</code></a></p>
@@ -451,7 +452,6 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.42.0</p>
-<p>Sets the associated #getFreeText freeText.</p>
 <hr>
 <h3>setHeight()</h3>
 <blockquote>
@@ -472,6 +472,11 @@ instance may be given</p>
 <blockquote>
 <p><strong>setIsResponsive</strong>(<code>bIsResponsive?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIsResponsive isResponsive.</p>
+<p>If this set to true, width and height of the control are determined by the width and height of the container
+in which the control is placed or by the width and height property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bIsResponsive?</h5>
 <p><code>boolean</code></p>
@@ -481,11 +486,6 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.62)</p>
-<p>Sets a new value for property #getIsResponsive isResponsive.</p>
-<p>If this set to true, width and height of the control are determined by the width and height of the container
-in which the control is placed or by the width and height property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowLabel()</h3>
 <blockquote>
@@ -507,6 +507,11 @@ in which the control is placed or by the width and height property.</p>
 <blockquote>
 <p><strong>setSize</strong>(<code>sSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSize size.</p>
+<p>The size of the microchart. If not set, the default size is applied based on the size of the device tile.
+Responsive size takes width and height of the parent container where the micro chart is included.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sSize?</h5>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
@@ -516,11 +521,6 @@ in which the control is placed or by the width and height property.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.62</p>
-<p>Sets a new value for property #getSize size.</p>
-<p>The size of the microchart. If not set, the default size is applied based on the size of the device tile.
-Responsive size takes width and height of the parent container where the micro chart is included.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Auto&quot;</code>.</p>
 <hr>
 <h3>setUnitOfMeasure()</h3>
 <blockquote>
@@ -590,6 +590,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

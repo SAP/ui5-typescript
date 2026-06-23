@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Context — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Context — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Context — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v2/Context/classes/Context.html">
 <meta property="og:title" content="Class: Context — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Context — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Context — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/model/odata/v2/Context/classes/Context.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › v2 › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/v2/Context/README.html">Context</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v2/Context</a> / Context</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v2/Context</a> / Context</p>
 <h1>Class: Context</h1>
 <pre class="sig"><span class="kw">import</span> Context <span class="kw">from</span> <span class="str">"sap/ui/model/odata/v2/Context"</span>;</pre>
-<h2>Since</h2>
-<p>1.93.0</p>
 <p>Implementation of an OData V2 model&#39;s context.</p>
 <p>The context is a pointer to model data. A context for a context binding points to the complete query
 result. A context for a list binding points to one specific entry in the binding&#39;s collection.</p>
@@ -50,6 +48,8 @@ result. A context for a list binding points to one specific entry in the binding
 	 - sap.ui.model.odata.v2.ODataModel#callFunction
 	 - sap.ui.model.odata.v2.ODataModel#createBindingContext
 	 - sap.ui.model.odata.v2.ODataModel#createEntry</p>
+<h2>Since</h2>
+<p>1.93.0</p>
 <h2>Extends</h2>
 <ul>
 <li><code>unknown</code></li>
@@ -68,6 +68,16 @@ result. A context for a list binding points to one specific entry in the binding
 <blockquote>
 <p><strong>created</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Returns a promise on the creation state of this context if it has been created via sap.ui.model.odata.v2.ODataModel#createEntry
+or sap.ui.model.odata.v2.ODataListBinding#create; otherwise returns <code>undefined</code>.</p>
+<p>As long as the promise is not yet resolved or rejected, the entity represented by this context is transient.</p>
+<p>Once the promise is resolved, the entity for this context is stored in the back end and #getPath
+returns a path including the key predicate of the new entity.</p>
+<p>If the context has been created via sap.ui.model.odata.v2.ODataListBinding#create and the entity
+for this context has been stored in the back end, #created returns <code>undefined</code> after the data
+has been re-read from the back end and inserted at the right position based on the list binding&#39;s filters
+and sorters. If the context has been created via sap.ui.model.odata.v2.ODataModel#createEntry
+and the entity for this context has been stored in the back end, #created returns <code>undefined</code>.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>A promise for a context which has been created via sap.ui.model.odata.v2.ODataModel#createEntry
@@ -79,21 +89,16 @@ with the <code>bDeleteCreatedEntities</code> parameter set to <code>true</code>,
 containing the error information, where <code>oError.aborted === true</code>.</p>
 <h4>Since</h4>
 <p>1.96.0</p>
-<p>Returns a promise on the creation state of this context if it has been created via sap.ui.model.odata.v2.ODataModel#createEntry
-or sap.ui.model.odata.v2.ODataListBinding#create; otherwise returns <code>undefined</code>.</p>
-<p>As long as the promise is not yet resolved or rejected, the entity represented by this context is transient.</p>
-<p>Once the promise is resolved, the entity for this context is stored in the back end and #getPath
-returns a path including the key predicate of the new entity.</p>
-<p>If the context has been created via sap.ui.model.odata.v2.ODataListBinding#create and the entity
-for this context has been stored in the back end, #created returns <code>undefined</code> after the data
-has been re-read from the back end and inserted at the right position based on the list binding&#39;s filters
-and sorters. If the context has been created via sap.ui.model.odata.v2.ODataModel#createEntry
-and the entity for this context has been stored in the back end, #created returns <code>undefined</code>.</p>
 <hr>
 <h3>delete()</h3>
 <blockquote>
 <p><strong>delete</strong>(<code>mParameters?</code>): <code>Promise</code>&lt;<code>undefined</code>&gt;</p>
 </blockquote>
+<p>Deletes the OData entity this context points to. Persisted contexts are only removed from the UI after
+their successful deletion in the back end. In this case, the <code>Promise</code> returned by this method is only
+resolved when the back-end request has been successful. <strong>Example:</strong> A persisted entry in a table control
+is deleted by this method. It remains visible on the UI and only disappears upon successful deletion
+in the back end. <strong>Note:</strong> The context must not be used anymore after successful deletion.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p>For a persistent context, a map of parameters as specified for sap.ui.model.odata.v2.ODataModel#remove,
@@ -118,21 +123,11 @@ in case the deletion failed. If the <code>DELETE</code> request has been aborted
 set to <code>true</code>.</p>
 <h4>Since</h4>
 <p>1.101</p>
-<p>Deletes the OData entity this context points to. Persisted contexts are only removed from the UI after
-their successful deletion in the back end. In this case, the <code>Promise</code> returned by this method is only
-resolved when the back-end request has been successful. <strong>Example:</strong> A persisted entry in a table control
-is deleted by this method. It remains visible on the UI and only disappears upon successful deletion
-in the back end. <strong>Note:</strong> The context must not be used anymore after successful deletion.</p>
 <hr>
 <h3>isInactive()</h3>
 <blockquote>
 <p><strong>isInactive</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Whether this context is inactive</p>
-<h4>Since</h4>
-<p>1.98.0</p>
 <p>Returns whether this context is inactive. An inactive context will not be sent to the server until it
 is activated. From then on it behaves like any other created context. The result of this function can
 also be accessed via the &quot;@$ui5.context.isInactive&quot; instance annotation at the entity, see sap.ui.model.odata.v2.ODataModel#getProperty
@@ -140,11 +135,21 @@ for details.
 See:
 	sap.ui.model.odata.v2.ODataListBinding#create
 	sap.ui.model.odata.v2.ODataModel#createEntry</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Whether this context is inactive</p>
+<h4>Since</h4>
+<p>1.98.0</p>
 <hr>
 <h3>isTransient()</h3>
 <blockquote>
 <p><strong>isTransient</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>For a context created using sap.ui.model.odata.v2.ODataModel#createEntry or sap.ui.model.odata.v2.ODataListBinding#create,
+the method returns <code>true</code> if the context is transient or <code>false</code> if the context is not transient. A transient
+context represents an entity created on the client which has not been persisted in the back end. The
+result of this function can also be accessed via the &quot;@$ui5.context.isTransient&quot; instance annotation
+at the entity, see sap.ui.model.odata.v2.ODataModel#getProperty for details.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <ul>
@@ -159,11 +164,6 @@ See:
 </ul>
 <h4>Since</h4>
 <p>1.94.0</p>
-<p>For a context created using sap.ui.model.odata.v2.ODataModel#createEntry or sap.ui.model.odata.v2.ODataListBinding#create,
-the method returns <code>true</code> if the context is transient or <code>false</code> if the context is not transient. A transient
-context represents an entity created on the client which has not been persisted in the back end. The
-result of this function can also be accessed via the &quot;@$ui5.context.isTransient&quot; instance annotation
-at the entity, see sap.ui.model.odata.v2.ODataModel#getProperty for details.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -199,6 +199,6 @@ used by this class</p>
 <p><a href="../../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

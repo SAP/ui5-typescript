@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $IllustratedMessageSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $IllustratedMessageSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $IllustratedMessageSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/IllustratedMessage/interfaces/$IllustratedMessageSettings.html">
 <meta property="og:title" content="Interface: $IllustratedMessageSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $IllustratedMessageSettings — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $IllustratedMessageSettings — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/IllustratedMessage/interfaces/$IllustratedMessageSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/IllustratedMessage/README.html">IllustratedMessage</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/IllustratedMessage</a> / $IllustratedMessageSettings</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/IllustratedMessage</a> / $IllustratedMessageSettings</p>
 <h1>Interface: $IllustratedMessageSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $IllustratedMessageSettings } <span class="kw">from</span> <span class="str">"sap/m/IllustratedMessage"</span>;</pre>
+<p>Describes the settings that can be provided to the IllustratedMessage constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -51,83 +52,81 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>additionalContent?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a> | <a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
-<h4>Since</h4>
-<p>1.98</p>
 <p>Defines the controls placed below the description as additional content.</p>
 <p><strong>Note:</strong> Not displayed when <code>illustrationSize</code> is set to <code>Base</code>.</p>
+<h4>Since</h4>
+<p>1.98</p>
 <hr>
 <h3>ariaTitleLevel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaTitleLevel?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.111</p>
 <p>Defines the semantic level of the title. When using <code>Auto</code>, no explicit level information is written.</p>
 <p><strong>Note:</strong> Used for accessibility purposes only.</p>
+<h4>Since</h4>
+<p>1.111</p>
 <hr>
 <h3>description?</h3>
 <blockquote>
 <p><code>optional</code> <strong>description?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.98</p>
 <p>Defines the description displayed below the title.</p>
 <p>If there is no initial input from the app developer, <code>enableDefaultTitleAndDescription</code> is <code>true</code> and
 the default illustration set is being used, a default description for the current illustration type is
 going to be displayed. The default description is stored in the <code>sap.m</code> resource bundle.</p>
+<h4>Since</h4>
+<p>1.98</p>
 <hr>
 <h3>enableDefaultTitleAndDescription?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableDefaultTitleAndDescription?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.111</p>
 <p>Defines whether the default title and description should be used when the input for their respective
 part is empty and the default illustration set is being used. Title and description are stored in the
 <code>sap.m</code> resource bundle.</p>
+<h4>Since</h4>
+<p>1.111</p>
 <hr>
 <h3>enableFormattedText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableFormattedText?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.98</p>
 <p>Defines whether the value set in the <code>description</code> property is displayed as formatted text in HTML format.</p>
 <p>For details regarding supported HTML tags, see sap.m.FormattedText.</p>
+<h4>Since</h4>
+<p>1.98</p>
 <hr>
 <h3>enableVerticalResponsiveness?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableVerticalResponsiveness?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.104</p>
 <p>Defines whether the <code>IllustratedMessage</code> would resize itself according to it&#39;s height if <code>illustrationSize</code>
 property is set to <code>IllustratedMessageSize.Auto</code>.</p>
+<h4>Since</h4>
+<p>1.104</p>
 <hr>
 <h3>illustrationAriaLabelledBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>illustrationAriaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs which label those controls (see WAI-ARIA attribute aria-labelledBy).</p>
 <h4>Since</h4>
 <p>1.106.0</p>
-<p>Association to controls / IDs which label those controls (see WAI-ARIA attribute aria-labelledBy).</p>
 <hr>
 <h3>illustrationSize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>illustrationSize?</strong>: <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Dialog&quot;</code> | <a href="../../IllustratedMessageSize/enumerations/IllustratedMessageSize.html"><code>IllustratedMessageSize</code></a> | <code>&quot;Base&quot;</code> | <code>&quot;Dot&quot;</code> | <code>&quot;Scene&quot;</code> | <code>&quot;Spot&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.98</p>
 <p>Determines which illustration breakpoint variant is used.</p>
 <p>As <code>IllustratedMessage</code> adapts itself around the <code>Illustration</code>, the other elements of the control are
 displayed differently on the different breakpoints/illustration sizes.</p>
+<h4>Since</h4>
+<p>1.98</p>
 <hr>
 <h3>illustrationType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>illustrationType?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.98</p>
 <p>Determines which illustration type is displayed.</p>
 <p><strong>Note:</strong> The sap.m.IllustratedMessageType enumeration contains a default illustration set. If
 you want to use another illustration set, you have to register it in the sap.m.IllustrationPool.</p>
@@ -135,19 +134,21 @@ you want to use another illustration set, you have to register it in the sap.m.I
 is as follows:
 	 - First is the the illustration set - sapIllus
 	 - Second is the illustration type - UnableToLoad</p>
+<h4>Since</h4>
+<p>1.98</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
 <p><code>optional</code> <strong>title?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.98</p>
 <p>Defines the title that is displayed below the illustration.</p>
 <p>If there is no initial input from the app developer, <code>enableDefaultTitleAndDescription</code> is <code>true</code> and
 the default illustration set is being used, a default title is displayed corresponding to the current
 <code>illustrationType</code>. The default title is stored in the <code>sap.m</code> resource bundle.</p>
+<h4>Since</h4>
+<p>1.98</p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

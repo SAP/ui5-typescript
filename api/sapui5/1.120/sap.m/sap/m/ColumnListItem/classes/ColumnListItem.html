@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ColumnListItem — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ColumnListItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ColumnListItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ColumnListItem/classes/ColumnListItem.html">
 <meta property="og:title" content="Class: ColumnListItem — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ColumnListItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ColumnListItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.m/sap/m/ColumnListItem/classes/ColumnListItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ColumnListItem/README.html">ColumnListItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ColumnListItem</a> / ColumnListItem</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ColumnListItem</a> / ColumnListItem</p>
 <h1>Class: ColumnListItem</h1>
 <pre class="sig"><span class="kw">import</span> ColumnListItem <span class="kw">from</span> <span class="str">"sap/m/ColumnListItem"</span>;</pre>
-<h2>Since</h2>
-<p>1.12</p>
 <p><code>sap.m.ColumnListItem</code> can be used with the <code>cells</code> aggregation to create rows for the <code>sap.m.Table</code>
 control. The <code>columns</code> aggregation of the <code>sap.m.Table</code> should match with the cells aggregation.</p>
 <p><strong>Note:</strong> This control should only be used within the <code>sap.m.Table</code> control. The inherited <code>counter</code>
 property of <code>sap.m.ListItemBase</code> is not supported.</p>
+<h2>Since</h2>
+<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a></li>
@@ -105,13 +105,13 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>$Popin</strong>(): <code>void</code></p>
 </blockquote>
+<p>Returns pop-in DOMRef as a jQuery Object</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.26</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns pop-in DOMRef as a jQuery Object</p>
 <hr>
 <h3>addCell()</h3>
 <blockquote>
@@ -164,18 +164,24 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>getPopin</strong>(): <code>void</code></p>
 </blockquote>
+<p>Returns the pop-in element.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30.9</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the pop-in element.</p>
 <hr>
 <h3>getTabbables()</h3>
 <blockquote>
-<p><strong>getTabbables</strong>(): <code>jQuery</code></p>
+<p><strong>getTabbables</strong>(<code>bContentOnly?</code>): <code>jQuery</code></p>
 </blockquote>
+<p>Returns the tabbable DOM elements as a jQuery collection When popin is available this separated dom should
+also be included</p>
+<h4>Parameters</h4>
+<h5>bContentOnly?</h5>
+<p><code>undefined</code></p>
+<p>Whether only tabbables of data cells</p>
 <h4>Returns</h4>
 <p><code>jQuery</code></p>
 <p>jQuery object</p>
@@ -183,8 +189,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>1.26</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the tabbable DOM elements as a jQuery collection When popin is available this separated dom should
-also be included</p>
 <h4>Overrides</h4>
 <p><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a>.<a href="../../ListItemBase/classes/ListItemBase.html#gettabbables"><code>getTabbables</code></a></p>
 <hr>
@@ -192,26 +196,26 @@ also be included</p>
 <blockquote>
 <p><strong>getVAlign</strong>(): <code>&quot;Inherit&quot;</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/VerticalAlign.html"><code>VerticalAlign</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Inherit&quot;</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/VerticalAlign.html"><code>VerticalAlign</code></a></p>
-<p>Value of property <code>vAlign</code></p>
-<h4>Since</h4>
-<p>1.20</p>
 <p>Gets current value of property #getVAlign vAlign.</p>
 <p>Sets the vertical alignment of all the cells within the table row (including selection and navigation).
 <strong>Note:</strong> <code>vAlign</code> property of <code>sap.m.Column</code> overrides the property for cell vertical alignment if both
 are set.</p>
 <p>Default value is <code>Inherit</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Inherit&quot;</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/VerticalAlign.html"><code>VerticalAlign</code></a></p>
+<p>Value of property <code>vAlign</code></p>
+<h4>Since</h4>
+<p>1.20</p>
 <hr>
 <h3>hasPopin()</h3>
 <blockquote>
 <p><strong>hasPopin</strong>(): <code>void</code></p>
 </blockquote>
+<p>Determines whether control has pop-in or not.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Determines whether control has pop-in or not.</p>
 <hr>
 <h3>indexOfCell()</h3>
 <blockquote>
@@ -272,16 +276,22 @@ the last position</p>
 <blockquote>
 <p><strong>removePopin</strong>(): <code>void</code></p>
 </blockquote>
+<p>Pemove pop-in from DOM</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Pemove pop-in from DOM</p>
 <hr>
 <h3>setVAlign()</h3>
 <blockquote>
 <p><strong>setVAlign</strong>(<code>sVAlign?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getVAlign vAlign.</p>
+<p>Sets the vertical alignment of all the cells within the table row (including selection and navigation).
+<strong>Note:</strong> <code>vAlign</code> property of <code>sap.m.Column</code> overrides the property for cell vertical alignment if both
+are set.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sVAlign?</h5>
 <p><code>&quot;Inherit&quot;</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/VerticalAlign.html"><code>VerticalAlign</code></a></p>
@@ -291,12 +301,6 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.20</p>
-<p>Sets a new value for property #getVAlign vAlign.</p>
-<p>Sets the vertical alignment of all the cells within the table row (including selection and navigation).
-<strong>Note:</strong> <code>vAlign</code> property of <code>sap.m.Column</code> overrides the property for cell vertical alignment if both
-are set.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>unbindCells()</h3>
 <blockquote>
@@ -346,6 +350,6 @@ used by this class</p>
 <p><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a>.<a href="../../ListItemBase/classes/ListItemBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

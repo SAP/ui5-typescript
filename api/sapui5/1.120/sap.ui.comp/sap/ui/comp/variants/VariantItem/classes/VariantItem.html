@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: VariantItem — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: VariantItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: VariantItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/variants/VariantItem/classes/VariantItem.html">
 <meta property="og:title" content="Class: VariantItem — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: VariantItem — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: VariantItem — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.comp/sap/ui/comp/variants/VariantItem/classes/VariantItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.comp/README.html">sap.ui.comp</a> › sap › ui › comp › variants › <a href="../../../../../../../sap.ui.comp/sap/ui/comp/variants/VariantItem/README.html">VariantItem</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/variants/VariantItem</a> / VariantItem</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.comp</a> / <a href="../README.html">sap/ui/comp/variants/VariantItem</a> / VariantItem</p>
 <h1>Class: VariantItem</h1>
 <pre class="sig"><span class="kw">import</span> VariantItem <span class="kw">from</span> <span class="str">"sap/ui/comp/variants/VariantItem"</span>;</pre>
 <p>The VariantItem class describes a variant item.</p>
@@ -143,6 +143,7 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/VariantItem$ChangeEventParameters.html"><code>VariantItem$ChangeEventParameters</code></a></p>
@@ -152,12 +153,13 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3><del>getAccessOptions()</del></h3>
 <blockquote>
 <p><strong>getAccessOptions</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getAccessOptions accessOptions.</p>
+<p>Flags for a variant to indicate why it might be read-only.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>accessOptions</code></p>
@@ -165,13 +167,14 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - Replaced by property <code>labelReadOnly</code></p>
-<p>Gets current value of property #getAccessOptions accessOptions.</p>
-<p>Flags for a variant to indicate why it might be read-only.</p>
 <hr>
 <h3><del>getExecuteOnSelection()</del></h3>
 <blockquote>
 <p><strong>getExecuteOnSelection</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getExecuteOnSelection executeOnSelection.</p>
+<p>Attribute for usage in <code>SmartFilterBar</code></p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>executeOnSelection</code></p>
@@ -179,14 +182,13 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Gets current value of property #getExecuteOnSelection executeOnSelection.</p>
-<p>Attribute for usage in <code>SmartFilterBar</code></p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getGlobal()</del></h3>
 <blockquote>
 <p><strong>getGlobal</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getGlobal global.</p>
+<p>Indicator if a variant is visible for all users.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>global</code></p>
@@ -194,13 +196,14 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Gets current value of property #getGlobal global.</p>
-<p>Indicator if a variant is visible for all users.</p>
 <hr>
 <h3><del>getLabelReadOnly()</del></h3>
 <blockquote>
 <p><strong>getLabelReadOnly</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getLabelReadOnly labelReadOnly.</p>
+<p>Indicates if the variant title can be changed.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>labelReadOnly</code></p>
@@ -208,14 +211,13 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Gets current value of property #getLabelReadOnly labelReadOnly.</p>
-<p>Indicates if the variant title can be changed.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getLifecyclePackage()</del></h3>
 <blockquote>
 <p><strong>getLifecyclePackage</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getLifecyclePackage lifecyclePackage.</p>
+<p>ABAP package the variant is assigned to. Used for transport functionality.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>lifecyclePackage</code></p>
@@ -223,13 +225,13 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Gets current value of property #getLifecyclePackage lifecyclePackage.</p>
-<p>ABAP package the variant is assigned to. Used for transport functionality.</p>
 <hr>
 <h3><del>getLifecycleTransportId()</del></h3>
 <blockquote>
 <p><strong>getLifecycleTransportId</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getLifecycleTransportId lifecycleTransportId.</p>
+<p>Identifier of the transport object the variant is assigned to.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>lifecycleTransportId</code></p>
@@ -237,13 +239,13 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Gets current value of property #getLifecycleTransportId lifecycleTransportId.</p>
-<p>Identifier of the transport object the variant is assigned to.</p>
 <hr>
 <h3><del>getNamespace()</del></h3>
 <blockquote>
 <p><strong>getNamespace</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getNamespace namespace.</p>
+<p>Variant namespace</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>namespace</code></p>
@@ -251,13 +253,14 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Gets current value of property #getNamespace namespace.</p>
-<p>Variant namespace</p>
 <hr>
 <h3><del>getReadOnly()</del></h3>
 <blockquote>
 <p><strong>getReadOnly</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getReadOnly readOnly.</p>
+<p>If set to <code>false</code>, the user is allowed to change the item&#39;s data</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>readOnly</code></p>
@@ -265,14 +268,14 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Gets current value of property #getReadOnly readOnly.</p>
-<p>If set to <code>false</code>, the user is allowed to change the item&#39;s data</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setAccessOptions()</del></h3>
 <blockquote>
 <p><strong>setAccessOptions</strong>(<code>sAccessOptions?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAccessOptions accessOptions.</p>
+<p>Flags for a variant to indicate why it might be read-only.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAccessOptions?</h5>
 <p><code>string</code></p>
@@ -284,14 +287,15 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - Replaced by property <code>labelReadOnly</code></p>
-<p>Sets a new value for property #getAccessOptions accessOptions.</p>
-<p>Flags for a variant to indicate why it might be read-only.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setExecuteOnSelection()</del></h3>
 <blockquote>
 <p><strong>setExecuteOnSelection</strong>(<code>bExecuteOnSelection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getExecuteOnSelection executeOnSelection.</p>
+<p>Attribute for usage in <code>SmartFilterBar</code></p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bExecuteOnSelection?</h5>
 <p><code>boolean</code></p>
@@ -303,15 +307,14 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Sets a new value for property #getExecuteOnSelection executeOnSelection.</p>
-<p>Attribute for usage in <code>SmartFilterBar</code></p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setGlobal()</del></h3>
 <blockquote>
 <p><strong>setGlobal</strong>(<code>bGlobal?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getGlobal global.</p>
+<p>Indicator if a variant is visible for all users.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bGlobal?</h5>
 <p><code>boolean</code></p>
@@ -323,14 +326,15 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Sets a new value for property #getGlobal global.</p>
-<p>Indicator if a variant is visible for all users.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setLabelReadOnly()</del></h3>
 <blockquote>
 <p><strong>setLabelReadOnly</strong>(<code>bLabelReadOnly?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelReadOnly labelReadOnly.</p>
+<p>Indicates if the variant title can be changed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bLabelReadOnly?</h5>
 <p><code>boolean</code></p>
@@ -342,15 +346,14 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Sets a new value for property #getLabelReadOnly labelReadOnly.</p>
-<p>Indicates if the variant title can be changed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setLifecyclePackage()</del></h3>
 <blockquote>
 <p><strong>setLifecyclePackage</strong>(<code>sLifecyclePackage?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLifecyclePackage lifecyclePackage.</p>
+<p>ABAP package the variant is assigned to. Used for transport functionality.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sLifecyclePackage?</h5>
 <p><code>string</code></p>
@@ -362,14 +365,14 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Sets a new value for property #getLifecyclePackage lifecyclePackage.</p>
-<p>ABAP package the variant is assigned to. Used for transport functionality.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setLifecycleTransportId()</del></h3>
 <blockquote>
 <p><strong>setLifecycleTransportId</strong>(<code>sLifecycleTransportId?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLifecycleTransportId lifecycleTransportId.</p>
+<p>Identifier of the transport object the variant is assigned to.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sLifecycleTransportId?</h5>
 <p><code>string</code></p>
@@ -381,14 +384,14 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Sets a new value for property #getLifecycleTransportId lifecycleTransportId.</p>
-<p>Identifier of the transport object the variant is assigned to.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setNamespace()</del></h3>
 <blockquote>
 <p><strong>setNamespace</strong>(<code>sNamespace?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNamespace namespace.</p>
+<p>Variant namespace</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sNamespace?</h5>
 <p><code>string</code></p>
@@ -400,14 +403,15 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Sets a new value for property #getNamespace namespace.</p>
-<p>Variant namespace</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setReadOnly()</del></h3>
 <blockquote>
 <p><strong>setReadOnly</strong>(<code>bReadOnly?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getReadOnly readOnly.</p>
+<p>If set to <code>false</code>, the user is allowed to change the item&#39;s data</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bReadOnly?</h5>
 <p><code>boolean</code></p>
@@ -419,10 +423,6 @@ otherwise it will be bound to this <code>sap.ui.comp.variants.VariantItem</code>
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.120.0)</p>
-<p>Sets a new value for property #getReadOnly readOnly.</p>
-<p>If set to <code>false</code>, the user is allowed to change the item&#39;s data</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setText()</h3>
 <blockquote>
@@ -471,6 +471,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
 <p>Metadata object describing this class</p>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

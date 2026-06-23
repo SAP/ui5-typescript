@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Router — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Router — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Router — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/routing/Router/classes/Router.html">
 <meta property="og:title" content="Class: Router — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Router — SAPUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Router — SAPUI5 TypeScript API Reference (1.120.47)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.120/sap.ui.core/sap/ui/core/routing/Router/classes/Router.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › routing › <a href="../../../../../../../sap.ui.core/sap/ui/core/routing/Router/README.html">Router</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.120.47)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/routing/Router</a> / Router</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.120.47)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/routing/Router</a> / Router</p>
 <h1>Class: Router</h1>
 <pre class="sig"><span class="kw">import</span> Router <span class="kw">from</span> <span class="str">"sap/ui/core/routing/Router"</span>;</pre>
 <p>Provides eventing capabilities for objects like attaching or detaching event handlers for events which
@@ -466,6 +466,9 @@ otherwise it will be bound to this <code>sap.ui.core.routing.Router</code> itsel
 <blockquote>
 <p><strong>attachViewCreated</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:viewCreated viewCreated event of this <code>sap.ui.core.routing.Router</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.core.routing.Router</code> itself.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -482,13 +485,13 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.28) - use #getViews instead.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:viewCreated viewCreated event of this <code>sap.ui.core.routing.Router</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.core.routing.Router</code> itself.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachViewCreated</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:viewCreated viewCreated event of this <code>sap.ui.core.routing.Router</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.core.routing.Router</code> itself.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p><code>Function</code></p>
@@ -501,9 +504,6 @@ otherwise it will be bound to this <code>sap.ui.core.routing.Router</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.28) - use #getViews instead.</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:viewCreated viewCreated event of this <code>sap.ui.core.routing.Router</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.core.routing.Router</code> itself.</p>
 <hr>
 <h3>destroy()</h3>
 <blockquote>
@@ -611,6 +611,8 @@ not for its parent routes.</p>
 <blockquote>
 <p><strong>detachViewCreated</strong>(<code>fnFunction</code>, <code>oListener</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:viewCreated viewCreated event of this <code>sap.ui.core.routing.Router</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -623,13 +625,12 @@ not for its parent routes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.28) - use #getViews instead.</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:viewCreated viewCreated event of this <code>sap.ui.core.routing.Router</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireBeforeRouteMatched()</h3>
 <blockquote>
 <p><strong>fireBeforeRouteMatched</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeRouteMatched beforeRouteMatched to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p><a href="../interfaces/Router$BeforeRouteMatchedEventParameters.html"><code>Router$BeforeRouteMatchedEventParameters</code></a></p>
@@ -639,12 +640,13 @@ not for its parent routes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeRouteMatched beforeRouteMatched to attached listeners.</p>
 <hr>
 <h3>fireBypassed()</h3>
 <blockquote>
 <p><strong>fireBypassed</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:bypassed bypassed to attached listeners.</p>
+<p>The event will get fired, if none of the routes of the router is matching.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p><a href="../interfaces/Router$BypassedEventParameters.html"><code>Router$BypassedEventParameters</code></a></p>
@@ -654,13 +656,12 @@ not for its parent routes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:bypassed bypassed to attached listeners.</p>
-<p>The event will get fired, if none of the routes of the router is matching.</p>
 <hr>
 <h3>fireRouteMatched()</h3>
 <blockquote>
 <p><strong>fireRouteMatched</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:routeMatched routeMatched to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p><a href="../interfaces/Router$RouteMatchedEventParameters.html"><code>Router$RouteMatchedEventParameters</code></a></p>
@@ -670,12 +671,14 @@ not for its parent routes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:routeMatched routeMatched to attached listeners.</p>
 <hr>
 <h3>fireRoutePatternMatched()</h3>
 <blockquote>
 <p><strong>fireRoutePatternMatched</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:routePatternMatched routePatternMatched to attached listeners.</p>
+<p>This event is similar to <code>routeMatched</code>. But it will only fire for the route that has a matching pattern,
+not for its parent routes.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p><a href="../interfaces/Router$RoutePatternMatchedEventParameters.html"><code>Router$RoutePatternMatchedEventParameters</code></a></p>
@@ -685,14 +688,12 @@ not for its parent routes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:routePatternMatched routePatternMatched to attached listeners.</p>
-<p>This event is similar to <code>routeMatched</code>. But it will only fire for the route that has a matching pattern,
-not for its parent routes.</p>
 <hr>
 <h3><del>fireViewCreated()</del></h3>
 <blockquote>
 <p><strong>fireViewCreated</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:viewCreated viewCreated to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p><code>object</code></p>
@@ -704,27 +705,27 @@ not for its parent routes.</p>
 <p>(since 1.28) - use #getViews instead.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:viewCreated viewCreated to attached listeners.</p>
 <hr>
 <h3>getHashChanger()</h3>
 <blockquote>
 <p><strong>getHashChanger</strong>(): <a href="../../RouterHashChanger/classes/RouterHashChanger.html"><code>RouterHashChanger</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../RouterHashChanger/classes/RouterHashChanger.html"><code>RouterHashChanger</code></a></p>
-<p>The hash changer</p>
-<h4>Since</h4>
-<p>1.75</p>
 <p>Returns the hash changer instance which is used in the router.</p>
 <p>This hash changer behaves differently than the hash changer that is returned by sap.ui.core.routing.HashChanger.getInstance,
 especially when the router is created in a component which is nested within another component. When this
 hash changer is used, the other hash parts which belong to the parent components are kept in the browser
 hash, while the complete browser hash is changed when it&#39;s changed by using the sap.ui.core.routing.HashChanger.getInstance.</p>
+<h4>Returns</h4>
+<p><a href="../../RouterHashChanger/classes/RouterHashChanger.html"><code>RouterHashChanger</code></a></p>
+<p>The hash changer</p>
+<h4>Since</h4>
+<p>1.75</p>
 <hr>
 <h3>getRoute()</h3>
 <blockquote>
 <p><strong>getRoute</strong>(<code>sName</code>): <code>any</code></p>
 </blockquote>
+<p>Returns the route with the given name or <code>undefined</code> if no route is found.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -734,12 +735,13 @@ hash, while the complete browser hash is changed when it&#39;s changed by using 
 <p>Route with the provided name or <code>undefined</code>.</p>
 <h4>Since</h4>
 <p>1.25.1</p>
-<p>Returns the route with the given name or <code>undefined</code> if no route is found.</p>
 <hr>
 <h3>getRouteInfoByHash()</h3>
 <blockquote>
 <p><strong>getRouteInfoByHash</strong>(<code>sHash</code>): <a href="../type-aliases/RouteInfo.html"><code>RouteInfo</code></a></p>
 </blockquote>
+<p>Returns a route info object containing the name and arguments of the route which matches the given hash
+or <code>undefined</code>.</p>
 <h4>Parameters</h4>
 <h5>sHash</h5>
 <p><code>string</code></p>
@@ -749,8 +751,6 @@ hash, while the complete browser hash is changed when it&#39;s changed by using 
 <p>An object containing the route <code>name</code> and the <code>arguments</code> or <code>undefined</code></p>
 <h4>Since</h4>
 <p>1.75</p>
-<p>Returns a route info object containing the name and arguments of the route which matches the given hash
-or <code>undefined</code>.</p>
 <hr>
 <h3>getTarget()</h3>
 <blockquote>
@@ -816,6 +816,7 @@ determined</p>
 <blockquote>
 <p><strong>getView</strong>(<code>sViewName</code>, <code>sViewType</code>, <code>sViewId</code>): <a href="../../../mvc/View/classes/View.html"><code>View</code></a></p>
 </blockquote>
+<p>Returns a cached view for a given name or creates it if it does not exist yet.</p>
 <h4>Parameters</h4>
 <h5>sViewName</h5>
 <p><code>string</code></p>
@@ -831,18 +832,17 @@ determined</p>
 <p>The view instance</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.1) - use #getViews instead.</p>
-<p>Returns a cached view for a given name or creates it if it does not exist yet.</p>
 <hr>
 <h3>getViews()</h3>
 <blockquote>
 <p><strong>getViews</strong>(): <a href="../../Views/classes/Views.html"><code>Views</code></a></p>
 </blockquote>
+<p>Returns the <code>sap.ui.core.routing.Views</code> instance created by the router.</p>
 <h4>Returns</h4>
 <p><a href="../../Views/classes/Views.html"><code>Views</code></a></p>
 <p>the Views instance</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Returns the <code>sap.ui.core.routing.Views</code> instance created by the router.</p>
 <hr>
 <h3>initialize()</h3>
 <blockquote>
@@ -862,28 +862,29 @@ determined</p>
 <blockquote>
 <p><strong>isInitialized</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether the router is initialized by calling sap.ui.core.routing.Router#initialize function.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the router is initialized</p>
 <h4>Since</h4>
 <p>1.62</p>
-<p>Returns whether the router is initialized by calling sap.ui.core.routing.Router#initialize function.</p>
 <hr>
 <h3>isStopped()</h3>
 <blockquote>
 <p><strong>isStopped</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether the router is stopped by calling sap.ui.core.routing.Router#stop function.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the router is stopped</p>
 <h4>Since</h4>
 <p>1.62</p>
-<p>Returns whether the router is stopped by calling sap.ui.core.routing.Router#stop function.</p>
 <hr>
 <h3>match()</h3>
 <blockquote>
 <p><strong>match</strong>(<code>sHash</code>): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether the given hash can be matched by any of the routes in the router.</p>
 <h4>Parameters</h4>
 <h5>sHash</h5>
 <p><code>string</code></p>
@@ -893,7 +894,6 @@ determined</p>
 <p>Whether the hash can be matched</p>
 <h4>Since</h4>
 <p>1.58.0</p>
-<p>Returns whether the given hash can be matched by any of the routes in the router.</p>
 <hr>
 <h3>navTo()</h3>
 <h4>Call Signature</h4>
@@ -1050,6 +1050,8 @@ this for chaining.
 
 &gt; **parse**(`sNewHash`): `void`
 
+Will trigger routing events + place targets for routes matching the string.
+
 #### Parameters
 
 ##### sNewHash
@@ -1065,8 +1067,6 @@ A new hash
 #### Ui5-protected
 
 Do not call from applications (only from related classes in the framework)
-
-Will trigger routing events + place targets for routes matching the string.
 
 ***
 
@@ -1099,6 +1099,9 @@ The router instance
 
 &gt; **setView**(`sViewName`, `oView`): `this`
 
+Adds or overwrites a view in the view cache of the router which will be cached under the given `sViewName`
+and the &quot;undefined&quot; key.
+
 #### Parameters
 
 ##### sViewName
@@ -1126,9 +1129,6 @@ Since 1.28, the `this` pointer for chaining
 #### Deprecated
 
 (since 1.28) - use #getViews instead.
-
-Adds or overwrites a view in the view cache of the router which will be cached under the given `sViewName`
-and the &quot;undefined&quot; key.
 
 ***
 
@@ -1237,6 +1237,6 @@ The router with the specified name, else `undefined`
 ***
 </code></pre>
 
-<footer>Generated from <code>@sapui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.120.47</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>
